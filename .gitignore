@@ -1,3 +1,32 @@
+.lvimrc
+.DS_Store
+output/
+
+# sources
+gits/
+gits
+data/*/*/src
+
+.ipynb_checkpoints
+
+# generated data
+*.mallet
+*.mallet.gz
+*.dict
+*.dict.gz
+*.index
+*.index.gz
+
+# generated models
+*.lda*
+*.lsi*
+*.npy
+
+src/grammars/
+
+# custom test dir
+tests/test_data/test_git/
+#
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -47,6 +76,9 @@ coverage.xml
 *.mo
 *.pot
 
+# Rope
+.ropeproject
+
 # Django stuff:
 *.log
 
@@ -55,3 +87,4 @@ docs/_build/
 
 # PyBuilder
 target/
+

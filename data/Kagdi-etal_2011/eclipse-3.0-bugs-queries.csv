@@ -1,0 +1,15 @@
+BUG ID;QUERY (Short Description of Bug)
+49828;browser browser control does not always send completed progress event 
+51394;classcastexception in synchronize view context menu 
+51637;quick fix compilation unit rename throws coreexception 
+51905;logviewer omits entries with depth 1 
+52863;bind f5 to refresh with remote when cvs synch view has focus 
+54094;assertion failed in auto indent strategy 
+56749;platformui isworkbenchrunning returns true after the job manager is shut down 
+60257;searchpattern api r case sensitive vs  boolean iscasesensitive 
+61893;controlmoved event fired by control setbounds on windows but not on photon bbawt 
+62069;nullpointerexception in launchviewcontextlistener initviewcollection 
+62966;team share project opens a progress dialog 
+64607;gc drawroundrectangle gc fillroundrectangle 
+68343;idomtype setsuperinterfaces with empty array has no impact on interfaces 
+71354;painting iae in styledtext getbidisegments upon revert 

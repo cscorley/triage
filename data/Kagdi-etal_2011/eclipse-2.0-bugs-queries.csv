@@ -1,0 +1,15 @@
+BUG ID;QUERY (Short Description of Bug)
+11172;organize imports pref page buttons have incorrect sizes
+11401;api on ilaunch getdebugtarget
+12101;newtypewizardpage createtype crashes in non ui thread
+13529;refactor sub menu placement inconsistent
+13904;changes to a read only project file are not thrown out
+16027;error messages are backwards
+16288;add from local history list of available editions flashes
+17649;objectcollectedexception written to console
+19723;inputstreamreader doesnt user workspace encoding
+20789;metohd entry breakpoints too slow
+21097;open modes swt error on properties page
+22360;fonts fontregistry can not instantiated using resources outside org eclipse jface resource
+23440;save on texteditor not call validateedit
+25260;resource history marks head version not loaded version
