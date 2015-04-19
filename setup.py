@@ -38,7 +38,7 @@ setup(
         "Topic :: Software Development :: Version Control",
         "Topic :: Text Processing",
         ],
-    py_modules=['cdi],
+    py_modules=['cdi'],
     install_requires=requirementstxt,
     entry_points='''
         [console_scripts]

@@ -11,8 +11,12 @@ DEP_FILES	= Makefile metadata.yaml $(CLS_FILES) $(BIB_FILES) $(LATEX_FILES) $(MD
 
 all: $(PAPER).pdf
 
-edit:
-	$(EDITOR) $(MD_FILES)
+.ONESHELL edit:
+	make view &> /dev/null
+	while true; \
+		do inotifywait -r -e modify,attrib,close_write,move,create,delete . && \
+		make; done &> /dev/null &
+	$(EDITOR) $(MD_FILES) && kill %1
 
 $(PAPER).pdf: $(PAPER).tex
 	pdflatex $(PAPER) || bibtex $(PAPER)
@@ -32,18 +36,19 @@ $(PAPER).tex: $(DEP_FILES)
 
 tidy:
 	$(RM) *.aux
-	$(RM) *.log
-	$(RM) *.out
-	$(RM) *.toc
 	$(RM) *.bbl
+	$(RM) *.bcf
 	$(RM) *.blg
-	$(RM) *.lot
+	$(RM) *.ilg
 	$(RM) *.lof
+	$(RM) *.log
+	$(RM) *.lot
 	$(RM) *.nlo
 	$(RM) *.nls
-	$(RM) *.ilg
+	$(RM) *.out
+	$(RM) *.out
 	$(RM) *.run.xml
-	$(RM) *.bcf
+	$(RM) *.toc
 
 
 clean: tidy
