@@ -1,0 +1,30 @@
+---
+biblio-files: papers
+biblio-style: IEEEtranN-nourl # custom BST to ignore URLs in papers.bib
+
+classoption:
+    - conference
+
+title: "Modeling Changeset Topics for Automating Change Request Triage"
+
+author:
+    - name: Christopher S. Corley
+      affiliation: University of Alabama
+      location: Tuscaloosa, AL, USA
+      email: cscorley@ua.edu
+
+keyword:
+    - developer identification
+    - triaging
+    - change requests
+    - topic modeling
+    - mining software repositories
+    - changesets
+
+abstract: |
+    Cool stuff
+
+# don't delete this line, bud
+...
+
+

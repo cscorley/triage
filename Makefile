@@ -12,7 +12,7 @@ clean-web:
 
 
 paper: always_make
-	cd paper/ && make
+	make -C paper
 
 always_make:
 	true
