@@ -1,4 +1,4 @@
-\documentclass[conference]{IEEEtran}
+\documentclass[10pt,journal,compsoc]{IEEEtran}
 
 \makeatletter
 % IEEEtran.cls defines \labelindent for backward compatibility reasons
@@ -6,6 +6,14 @@
 \let\labelindent\relax
 \makeatother
 
+\ifCLASSOPTIONcompsoc
+  % IEEE Computer Society needs nocompress option
+  % requires cite.sty v4.0 or later (November 2003)
+  \usepackage[nocompress]{cite}
+\else
+  % normal IEEE
+  \usepackage{cite}
+\fi
 
 \usepackage[T1]{fontenc}
 \usepackage[para]{footmisc}
@@ -14,7 +22,6 @@
 \usepackage{array}
 \usepackage{balance}
 \usepackage{booktabs}
-\usepackage{cite}
 \usepackage{color}
 \usepackage{comment}
 \usepackage{enumitem}
@@ -53,30 +60,17 @@
 
 \begin{document}
 \title{Modeling Changeset Topics for Feature Location}
-\author{
-    \IEEEauthorblockN{
-        Christopher S.\ Corley,
-        Kelly L.\ Kashuda
-    }
-    \IEEEauthorblockA{
-        The University of Alabama\\
-        Tuscaloosa, AL, USA\\
-        \{cscorley, klkashuda\}@ua.edu
-    }
-    \and
-    \IEEEauthorblockN{
-        Nicholas A.\ Kraft
-    }
-    \IEEEauthorblockA{
-        ABB Corporate Research\\
-        Raleigh, NC, USA\\
-        nicholas.a.kraft@us.abb.com
-    }
-}
+\author{%
+    Christopher~S.~Corley
+    and~Nicholas~A.~Kraft%
+    \thanks{Manuscript received never; revised in my dreams.}}
 
 
-\maketitle
+\markboth{Journal of WOOO}%
+{Corley & Kraft: Modeling Changeset Topics for Feature Location}
 
+
+\IEEEtitleabstractindextext{%
 \begin{abstract}
 Feature location is a program comprehension activity in which a developer
 inspects source code to locate the classes or methods that implement a feature of interest.
@@ -94,15 +88,21 @@ Our results indicate that the accuracy of a changeset-based FLT is similar to th
 \end{abstract}
 
 \begin{IEEEkeywords}
-program comprehension;
-feature location;
-topic modeling;
-mining software repositories;
-changesets
+program comprehension,
+feature location,
+topic modeling,
+mining software repositories,
+changesets.
 \end{IEEEkeywords}
+}
 
-\section{Introduction}
-\label{sec:intro}
+
+\maketitle
+
+\IEEEdisplaynontitleabstractindextext
+\IEEEpeerreviewmaketitle
+
+\IEEEraisesectionheading{\section{Introduction}\label{sec:intro}}
 \input{sec_intro}
 
 \section{Background \& Related Work}
