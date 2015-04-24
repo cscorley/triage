@@ -32,7 +32,7 @@
     - expand to include Saha-etal ICSME'14 C/C++ dataset (drop taser for srcML)
     - algo changes
         - LSI
-        - doc2vec (hacky inference for changesets -- snapshot should be ok w/o)
+        - doc2vec (cant do inference yet -- )
     - input corpus (all require experiment re-run... 15 combos)
         - add/remove/context lines?
         - use commit message?

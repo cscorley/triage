@@ -25,7 +25,6 @@ import scipy.stats
 import numpy
 from gensim.corpora import MalletCorpus, Dictionary
 from gensim.models import LdaModel, LsiModel
-from gensim.models.wrappers import LdaMallet
 from gensim.matutils import sparse2full
 from gensim.utils import smart_open
 
@@ -133,11 +132,11 @@ def cli(verbose, debug, force, nodownload, temporal, path, name, version, level)
             logger.info("Files needed for temporal evaluation not found. Skipping.")
         else:
             do_science('temporal', temporal_lda, changeset_lda, ignore=True)
-            #do_science('temporal_lsi', temporal_lsi, changeset_lsi, ignore=True)
+            do_science('temporal_lsi', temporal_lsi, changeset_lsi, ignore=True)
 
     # do this last so that the results are printed together
     do_science('basic', changeset_lda, release_lda)
-    #do_science('basic_lsi', changeset_lsi, release_lsi)
+    do_science('basic_lsi', changeset_lsi, release_lsi)
 
 def write_ranks(project, prefix, ranks):
     with smart_open(os.path.join(project.full_path, '-'.join([prefix, project.level, str(project.num_topics), 'ranks.csv.gz'])), 'w') as f:
@@ -187,7 +186,6 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, kind, use_level=
 
     lda_first_rels = get_frms(goldsets, lda_ranks)
 
-    """
     try:
         lsi_ranks = read_ranks(project, kind.lower() + '_lsi')
         logger.info("Sucessfully read previously written %s LSI ranks", kind)
@@ -204,8 +202,6 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, kind, use_level=
         write_ranks(project, kind.lower() + '_lsi', lsi_ranks)
 
     lsi_first_rels = get_frms(goldsets, lsi_ranks)
-    """
-    lsi_first_rels = dict()
 
     return lda_first_rels, lsi_first_rels
 
@@ -216,10 +212,8 @@ def run_temporal(project, repos, corpus, queries, goldsets, force=False):
         lda_ranks = read_ranks(project, 'temporal')
         lda_rels = get_frms(goldsets, lda_ranks)
 
-        """
         lsi_ranks = read_ranks(project, 'temporal_lsi')
         lsi_rels = get_frms(goldsets, lsi_ranks)
-        """
         logger.info("Sucessfully read previously written Temporal ranks")
     except IOError:
         force = True
@@ -241,13 +235,13 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
 
     logger.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
 
+    """
     lda, lda_fname = create_lda_model(project, None, corpus.id2word, 'Temporal',
                                       use_level=False, force=True)
-
     """
+
     lsi, lsi_fname = create_lsi_model(project, None, corpus.id2word, 'Temporal',
                                       use_level=False, force=True)
-    """
 
     indices = list()
     lda_ranks = dict()
@@ -274,8 +268,8 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
         for i in xrange(start, end):
             docs.append(corpus[i])
 
-        lda.update(docs, decay=2.0)#, offset=1024)
-        #lsi.add_documents(docs)
+        #lda.update(docs, decay=2.0)#, offset=1024)
+        lsi.add_documents(docs)
 
         for qid in git2issue[sha]:
             logger.info('Getting ranks for query id %s', qid)
@@ -285,6 +279,7 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
             except TaserError:
                 continue
 
+            """
             # do LDA magic
             lda_query_topic = get_topics(lda, queries, by_ids=[qid])
             lda_doc_topic = get_topics(lda, other_corpus)
@@ -297,13 +292,11 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
                 lda_ranks[qid].extend(rank)
             else:
                 logger.info('Couldnt find qid %s', qid)
-
             """
+
             # do LSI magic
-            lsi_query_topic = get_topics(lsi, queries, by_id=qid)
+            lsi_query_topic = get_topics(lsi, queries, by_ids=[qid])
             lsi_doc_topic = get_topics(lsi, other_corpus)
-            # for some reason the ranks from LSI cause hellinger_distance to
-            # cry, use cosine distance instead
             lsi_subranks = get_rank(lsi_query_topic, lsi_doc_topic)
             if qid in lsi_subranks:
                 if qid not in lsi_ranks:
@@ -313,17 +306,16 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
                 lsi_ranks[qid].extend(rank)
             else:
                 logger.info('Couldnt find qid %s', qid)
-            """
 
-    lda.save(lda_fname)
-    #lsi.save(lsi_fname)
+    #lda.save(lda_fname)
+    lsi.save(lsi_fname)
 
-    write_ranks(project, 'temporal', lda_ranks)
-    #write_ranks(project, 'temporal_lsi', lsi_ranks)
+    #write_ranks(project, 'temporal', lda_ranks)
+    write_ranks(project, 'temporal_lsi', lsi_ranks)
 
-    lda_rels = get_frms(goldsets, lda_ranks)
-    #lsi_rels = get_frms(goldsets, lsi_ranks)
-    lsi_rels = dict()
+    #lda_rels = get_frms(goldsets, lda_ranks)
+    lda_rels = dict()
+    lsi_rels = get_frms(goldsets, lsi_ranks)
 
     return lda_rels, lsi_rels
 
