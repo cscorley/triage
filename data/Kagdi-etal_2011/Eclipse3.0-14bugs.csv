@@ -1,4 +1,3 @@
-,,,Xfinder Recommendations,,,Xfinder Accuracy on Commit/Patch Files,,,
 BUG #,Developer that fixed the Bug,LSI Given Relevant File,File Experts,Package Experts,System Experts,File Level,Package Level,System Level,Overall
 49828,ccornu,\org.eclipse.help.base\src\org\eclipse\help\internal\browser\CustomBrowserFactory.java,kkolosow dbirsan ,kkolosow dbirsan droberts nick ,dbaeumer droberts dmegert othomann akiezun darins darin dejan jlanneluc ptff,0,0,0,0
 49828,ccornu,\org.eclipse.help.base\src\org\eclipse\help\internal\browser\CurrentBrowser.java,kkolosow ,kkolosow dbirsan droberts nick ,dbaeumer droberts dmegert othomann akiezun darins darin dejan jlanneluc ptff,0,0,0,0
@@ -140,5 +139,3 @@ BUG #,Developer that fixed the Bug,LSI Given Relevant File,File Experts,Package 
 71354,dmegert,\org.eclipse.ui.ide\src\org\eclipse\ui\internal\ide\dialogs\WelcomeItem.java,jeem sarsenau ,jeem sarsenau eidsness maeschli maeschlimann dmegert cvs cknaus akiezun dbaeumer ,dbaeumer droberts dmegert othomann akiezun darins darin dejan jlanneluc ptff,0,1,1,1
 71354,dmegert,\org.eclipse.debug.ui\ui\org\eclipse\debug\ui\AbstractLaunchConfigurationTabGroup.java,darin darins jburns droberts ,darins darin jszursze droberts jburns dmegert egamma cvs dbaeumer krbarnes ,dbaeumer droberts dmegert othomann akiezun darins darin dejan jlanneluc ptff,0,1,1,1
 71354,dmegert,\org.eclipse.pde.ui\src\org\eclipse\pde\internal\ui\editor\schema\DescriptionSection.java,dejan wmelhem cwong droberts vlad ,dejan vlad wmelhem droberts cwong darins darin dmegert dj dbaeumer ,dbaeumer droberts dmegert othomann akiezun darins darin dejan jlanneluc ptff,0,1,1,1
-,,,,,,22,38,50,66
-,,,,,,15.71,27.14,35.71,47.14

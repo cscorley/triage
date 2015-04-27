@@ -1,19 +1,19 @@
-BUG ID;QUERY (Short Description of Bug)
-124527;display of calculation results incorrect for number or scientific format cells but correct for text format cells 
-125306;cant undo insert calendar tool 
-130922;import from xls treats borders wrong 
-137639;karbon imports inverted radial gradient colors from open document graphics with patch 
-140603;!= in cell formula is buggy 
-141536;crash when pasting a new layer srcobject selected from a deleted layer 
-156754;cant rotate image by less than 0 5 degrees 
-162872;with filter paintop transparent pixels are replaced by black or white pixels 
-164688;cut copy paste is greyed when using the selection tool 
-166966;karbon14 crashes while closing unsaved document 
-167009;kword craches after deleting not existing page 
-167247;tooltips for resource choosers broken 
-169696;loaded shapes at wrong place 
-171969;decoration not in sync with shape 
-173354;start presentation from first page doesnt start from first page of custom slideshow 
-173630;format page layout does nothing 
-173882;cant set splitter orientation 
-176278;crash on loading image 
+BUG ID,QUERY (Short Description of Bug)
+124527,display of calculation results incorrect for number or scientific format cells but correct for text format cells
+125306,cant undo insert calendar tool
+130922,import from xls treats borders wrong
+137639,karbon imports inverted radial gradient colors from open document graphics with patch
+140603,!= in cell formula is buggy
+141536,crash when pasting a new layer srcobject selected from a deleted layer
+156754,cant rotate image by less than 0 5 degrees
+162872,with filter paintop transparent pixels are replaced by black or white pixels
+164688,cut copy paste is greyed when using the selection tool
+166966,karbon14 crashes while closing unsaved document
+167009,kword craches after deleting not existing page
+167247,tooltips for resource choosers broken
+169696,loaded shapes at wrong place
+171969,decoration not in sync with shape
+173354,start presentation from first page doesnt start from first page of custom slideshow
+173630,format page layout does nothing
+173882,cant set splitter orientation
+176278,crash on loading image

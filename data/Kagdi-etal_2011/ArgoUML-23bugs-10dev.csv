@@ -1,4 +1,3 @@
-,,,Xfinder Recommendations,,,Xfinder Accuracy on Commit/Patch Files,,,
 BUG #,Developer that fixed the Bug,LSI Given Relevant File,File Experts,Package Experts,System Experts,File Level,Package Level,System Level,Overall
 5001,penyaskito,C:\ArgoUML\src\src\argouml-app\src\org\argouml\persistence\VersionException.java,tfmorris ,bobtarling tfmorris mvw linus thn euluis penyaskito maurelio1234 ,tfmorris mvw linus bobtarling mkl thn euluis maurelio1234 penyaskito andrea_nironi ,0,1,1,1
 5001,penyaskito,C:\ArgoUML\src\src\argouml-core-diagrams-sequence2\src\org\argouml\uml\diagram\sequence2\ui\SelectionMessage.java,bobtarling penyaskito ,mvw tfmorris bobtarling linus penyaskito euluis mkl thn andrea_nironi maurelio1234 ,,1,1,0,1
@@ -230,5 +229,3 @@ BUG #,Developer that fixed the Bug,LSI Given Relevant File,File Experts,Package 
 5574,tfmorris,C:\ArgoUML\src\src\argouml-app\src\org\argouml\profile\ProfileModelLoader.java,tfmorris euluis ,euluis tfmorris maurelio1234 bobtarling mvw thn ,tfmorris mvw linus bobtarling mkl thn euluis maurelio1234 penyaskito andrea_nironi ,1,1,1,1
 5574,tfmorris,C:\ArgoUML\src\src\argouml-app\src\org\argouml\profile\internal\ProfileMeta.java,maurelio1234 tfmorris ,euluis tfmorris maurelio1234 mvw thn ,tfmorris mvw linus bobtarling mkl thn euluis maurelio1234 penyaskito andrea_nironi ,1,1,1,1
 5574,tfmorris,C:\ArgoUML\src\src\argouml-app\src\org\argouml\profile\UserDefinedProfile.java,tfmorris maurelio1234 euluis thn ,euluis tfmorris maurelio1234 bobtarling mvw thn ,tfmorris mvw linus bobtarling mkl thn euluis maurelio1234 penyaskito andrea_nironi ,1,1,1,1
-,,,,,,40,173,159,220
-,,,,,,17.39,75.22,69.13,95.65

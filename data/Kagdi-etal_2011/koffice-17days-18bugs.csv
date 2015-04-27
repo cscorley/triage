@@ -1,4 +1,3 @@
-,,,Xfinder Recommendations,,,Xfinder Accuracy on Commit/Patch Files,,,,,Maintainer Accuracy on Commit/Patch Files,,,
 Bug #,Developer that fixed the Bug,LSI Given Relevant File,File Experts,Package Experts,System Experts,File Level,Package Level,System Level,Overall,Listed contacts of maintainers,File Level,Package Level,System Level,Overall
 124527,mecir,export\listeformat.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
 124527,mecir,kotext\KoTextSelectionHandler.cpp,zander girish ,girish zander staniek fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
@@ -180,5 +179,3 @@ Bug #,Developer that fixed the Bug,LSI Given Relevant File,File Experts,Package 
 176278,berger,commands\kis_image_commands.h, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
 176278,berger,shape\KritaShape.cpp, ,jsimon zachmann ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
 176278,berger,flake\KoImageData_p.cpp, ,staniek zachmann fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
-,,,,,,2,23,30,40,,60,60,60,60
-,,,,,,1.11,12.78,16.67,22.22,,33.33,33.33,33.33,33.33
