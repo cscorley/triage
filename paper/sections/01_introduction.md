@@ -2,6 +2,3 @@
 
 Triage > biage
 
-g'day
-
-wiat

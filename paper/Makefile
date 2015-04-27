@@ -13,15 +13,16 @@ all: $(PAPER).pdf
 
 .ONESHELL edit:
 	make view &> /dev/null
-	while true; \
-		do inotifywait -r -e modify,attrib,close_write,move,create,delete . && \
+	while true; do \
+		sleep 1 && \
+		inotifywait -r -e modify,attrib,close_write,move,create,delete . && \
 		make; done &> /dev/null &
 	$(EDITOR) $(MD_FILES) && kill %1
 
 $(PAPER).pdf: $(PAPER).tex
-	pdflatex $(PAPER) || bibtex $(PAPER)
-	bibtex $(PAPER) || pdflatex $(PAPER)
-	pdflatex $(PAPER) || bibtex $(PAPER)
+	pdflatex -halt-on-error $(PAPER) || bibtex $(PAPER)
+	bibtex $(PAPER) || pdflatex -halt-on-error $(PAPER)
+	pdflatex -halt-on-error $(PAPER) || bibtex $(PAPER)
 
 $(PAPER).tex: $(DEP_FILES)
 	pandoc \

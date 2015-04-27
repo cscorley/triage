@@ -1,4 +1,5 @@
 \usepackage{color}
+\usepackage{booktabs}
 
 \definecolor{lightred}{RGB}{175,50,50}
 \definecolor{lightgreen}{RGB}{0,150,0}
@@ -38,3 +39,6 @@
 }
 
 \urlstyle{rm}
+
+\let\oldtabular\tabular
+\renewcommand{\tabular}{\footnotesize\oldtabular}
