@@ -1,0 +1,184 @@
+,,,Xfinder Recommendations,,,Xfinder Accuracy on Commit/Patch Files,,,,,Maintainer Accuracy on Commit/Patch Files,,,
+Bug #,Developer that fixed the Bug,LSI Given Relevant File,File Experts,Package Experts,System Experts,File Level,Package Level,System Level,Overall,Listed contacts of maintainers,File Level,Package Level,System Level,Overall
+124527,mecir,export\listeformat.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+124527,mecir,kotext\KoTextSelectionHandler.cpp,zander girish ,girish zander staniek fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+124527,mecir,export\listeformat.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+124527,mecir,odf\KoOdfNumberStyles.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+124527,mecir,main\KoPageFormat.cpp, ,fmerz staniek langkamp ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+124527,mecir,kotext\KoTextSelectionHandler.cpp,zander girish ,girish zander staniek fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+124527,mecir,wml\wmlparser.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+124527,mecir,kotext\KoTextSelectionHandler.cpp,zander girish ,girish zander staniek fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+124527,mecir,dialogs\LayoutDialog.cpp, ,girish ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+124527,mecir,export\listeformat.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+125306,mkruisselbrink,calendar\CalendarToolFactory.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+125306,mkruisselbrink,commands\TextCommandBase.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,0,1,zander zachmann ingwa staniek boud jaham,0,0,0,0
+125306,mkruisselbrink,commands\TextCommandBase.h, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,0,1,zander zachmann ingwa staniek boud jaham,0,0,0,0
+125306,mkruisselbrink,commands\TextInsertParagraphCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,0,1,zander zachmann ingwa staniek boud jaham,0,0,0,0
+125306,mkruisselbrink,commands\TextInsertTextCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,0,1,zander zachmann ingwa staniek boud jaham,0,0,0,0
+125306,mkruisselbrink,models\kptcalendarmodel.cpp, ,danders ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+125306,mkruisselbrink,tool_curves\kis_tool_example.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+125306,mkruisselbrink,RulerAssistantTool\kis_ruler_assistant_tool.h,berger ,berger ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+125306,mkruisselbrink,tool_curves\kis_tool_moutline.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+125306,mkruisselbrink,tool_polygon\kis_tool_polygon.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+130922,mkruisselbrink,kformula1.3\KFormula13Import.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+130922,mkruisselbrink,import\wpimport.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+130922,mkruisselbrink,wml\wmlimport.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+130922,mkruisselbrink,abiword\abiwordimport.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+130922,mkruisselbrink,pdf\pdfimport.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+130922,mkruisselbrink,amipro\amiproimport.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+130922,mkruisselbrink,import\excelimport.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+130922,mkruisselbrink,pdf\kis_pdf_import.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+130922,mkruisselbrink,import\xsltimport.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+130922,mkruisselbrink,xaml\xamlimport.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+137639,langkamp,common\KarbonGradientHelper.cpp, ,piggz fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+137639,langkamp,svg\SvgGradientHelper.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+137639,langkamp,flake\KoGradientBackground.cpp, ,staniek zachmann fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+137639,langkamp,widgets\KarbonGradientChooser.cpp, ,fmerz mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+137639,langkamp,tools\KarbonGradientEditStrategy.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+137639,langkamp,tools\KarbonGradientEditStrategy.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+137639,langkamp,opengl\kis_opengl_gradient_program.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+137639,langkamp,widgets\KarbonGradientItem.cpp, ,fmerz mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+137639,langkamp,widgets\KarbonGradientEditWidget.cpp, ,fmerz mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+137639,langkamp,tools\KarbonGradientEditStrategy.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+140603,mkruisselbrink,kspread\DependencyManager.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+140603,mkruisselbrink,kspread\OdfSavingContext.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+140603,mkruisselbrink,commands\LinkCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,0,1,zander zachmann ingwa staniek boud jaham,0,0,0,0
+140603,mkruisselbrink,kspread\Damages.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+140603,mkruisselbrink,kspread\RecalcManager.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+140603,mkruisselbrink,msword\tablehandler.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+140603,mkruisselbrink,opencalc\opencalcstyleexport.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+140603,mkruisselbrink,qpro\record.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+140603,mkruisselbrink,ui\SheetView.cpp, ,danders fmerz zander rempt fyanardi langkamp clicea berger ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+140603,mkruisselbrink,commands\Undo.h, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,0,1,zander zachmann ingwa staniek boud jaham,0,0,0,0
+141536,berger,commands\kis_layer_commands.h, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+141536,berger,kritacore\krs_paint_layer.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+141536,berger,kra\kis_kra_savexml_visitor.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+141536,berger,commands\KarbonLayerReorderCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+141536,berger,tests\kis_image_test.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+141536,berger,ui\kis_layer_manager.h, ,danders fmerz zander rempt fyanardi langkamp clicea berger ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,0,1,zander zachmann ingwa staniek boud jaham,0,0,0,0
+141536,berger,openrastertk\kis_open_raster_stack_save_visitor.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+141536,berger,image\kis_colorspace_convert_visitor.cpp, ,rempt ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+141536,berger,dockers\KarbonLayerDocker.cpp, ,zachmann fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+141536,berger,ui\kis_layermap_visitor.h, ,danders fmerz zander rempt fyanardi langkamp clicea berger ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,0,1,zander zachmann ingwa staniek boud jaham,0,0,0,0
+156754,langkamp,flake\KoImageData.cpp, ,staniek zachmann fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+156754,langkamp,commands\kis_image_commands.h, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+156754,langkamp,flake\KoImageCollection.cpp, ,staniek zachmann fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+156754,langkamp,tests\TestImageCollection.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+156754,langkamp,tests\kis_image_test.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+156754,langkamp,ui\kis_print_job.cpp, ,danders fmerz zander rempt fyanardi langkamp clicea berger ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,0,1,zander zachmann ingwa staniek boud jaham,0,0,0,0
+156754,langkamp,canvas\kis_prescaled_projection.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+156754,langkamp,commands\kis_image_commands.h, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+156754,langkamp,flake\KoImageData_p.cpp, ,staniek zachmann fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+156754,langkamp,genericimageexport\genericimageexport.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+162872,berger,pigment\KoColorSpaceAbstract.h,fmerz ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+162872,berger,image\kis_node_filter_interface.h, ,rempt ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+162872,berger,main\KoFilterChain.cpp,fmerz ,fmerz staniek langkamp ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+162872,berger,image\kis_filter_mask.cpp, ,rempt ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+162872,berger,metadata\kis_meta_data_filter_registry.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+162872,berger,pigment\KoBasicHistogramProducers.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+162872,berger,mswrite\mswriteimport.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+162872,berger,dialogs\kis_dlg_filter.cpp, ,girish ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+162872,berger,pigment\KoBasicHistogramProducers.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+162872,berger,pigment\KoBasicHistogramProducers.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+164688,berger,guiutils\KoCopyController.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+164688,berger,flake\KoToolSelection.cpp, ,staniek zachmann fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+164688,berger,defaulttool\DefaultTool.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+164688,berger,tool_curves\kis_tool_moutline.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+164688,berger,tool\kis_selection_tool_helper.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+164688,berger,selectiontools\kis_tool_select_eraser.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+164688,berger,tool_curves\kis_tool_example.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+164688,berger,selectiontools\kis_tool_select_polygonal.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+164688,berger,selectiontools\kis_tool_select_contiguous.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+164688,berger,selectiontools\kis_tool_select_outline.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+166966,langkamp,textshape\ChangeTracker.cpp, ,fmerz girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+166966,langkamp,kotext\KoVariable.cpp, ,girish zander staniek fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+166966,langkamp,tests\documentstructuretest.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+166966,langkamp,import\kwordfilter.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+166966,langkamp,libppt\powerpoint.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+166966,langkamp,kernel\kptcommand.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+166966,langkamp,kernel\kptcommand.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+166966,langkamp,msword\mswordimport.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+166966,langkamp,kernel\kptdocuments.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+166966,langkamp,kotext\KoTextDocument.cpp,girish ,girish zander staniek fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+167009,zander,tests\TestBasicLayout.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+167009,zander,part\KWPageTextInfo.cpp, ,zachmann fyanardi zander fmerz girish clicea langkamp boemann ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+167009,zander,part\KWPageManager.cpp,zander ,zachmann fyanardi zander fmerz girish clicea langkamp boemann ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,1,1,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+167009,zander,part\KWPageManager.cpp,zander ,zachmann fyanardi zander fmerz girish clicea langkamp boemann ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,1,1,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+167009,zander,tests\TestPageManager.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+167009,zander,tests\KWPageManagerTester.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+167009,zander,commands\KWPageInsertCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+167009,zander,dialogs\KWPageSettingsDialog.cpp, ,girish ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+167009,zander,part\KPrMasterPage.cpp, ,zachmann fyanardi zander fmerz girish clicea langkamp boemann ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+167009,zander,commands\KPrPageEffectSetCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+167247,langkamp,resources\KoResourceServerObserver.h, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+167247,langkamp,resources\KoResourceServerAdapter.h, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+167247,langkamp,resources\KoResourceServer.h,fmerz ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+167247,langkamp,resources\KoResourceServerAdapter.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+167247,langkamp,kernel\kptcommand.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+167247,langkamp,kernel\kptcommand.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+167247,langkamp,kernel\kptcommand.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+167247,langkamp,kernel\kptresource.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+167247,langkamp,kernel\kptcommand.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+167247,langkamp,kernel\kptcommand.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+169696,jaham,tests\TestShapeReorderCommand.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+169696,jaham,commands\KoShapeReorderCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+169696,jaham,commands\KoShapeShearCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+169696,jaham,tests\MockShapes.h, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+169696,jaham,commands\KoShapeLockCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+169696,jaham,commands\KoShapeMoveCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+169696,jaham,commands\KoShapeKeepAspectRatioCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+169696,jaham,commands\KoPADisplayMasterShapesCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+169696,jaham,tests\TestSelection.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+169696,jaham,commands\KoPathBaseCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+171969,jaham,flake\ShapeDeleter_p.cpp, ,staniek zachmann fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+171969,jaham,shape\KritaShapeFactory.cpp, ,jsimon zachmann ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+171969,jaham,flake\KoShapeManager.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+171969,jaham,shapeselector\Canvas.cpp, ,zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+171969,jaham,divineProportion\Intro.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+171969,jaham,flake\KoShapeManager.cpp, ,staniek zachmann fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+171969,jaham,shapeproperties\ShapePropertiesDocker.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+171969,jaham,commands\KoShapeCreateCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+171969,jaham,flake\KoShapeControllerBase.h, ,staniek zachmann fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+171969,jaham,divineProportion\DivineProportionShapeFactory.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173354,zachmann,part\KWPageTextInfo.cpp, ,zachmann fyanardi zander fmerz girish clicea langkamp boemann ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173354,zachmann,part\KWPageManager.cpp,zander ,zachmann fyanardi zander fmerz girish clicea langkamp boemann ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173354,zachmann,part\KWPageManager.cpp,zander ,zachmann fyanardi zander fmerz girish clicea langkamp boemann ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173354,zachmann,tests\TestBasicLayout.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173354,zachmann,tests\TestPageManager.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173354,zachmann,tests\KWPageManagerTester.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173354,zachmann,part\KPrMasterPage.cpp, ,zachmann fyanardi zander fmerz girish clicea langkamp boemann ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173354,zachmann,commands\KWPageInsertCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173354,zachmann,commands\KPrPageEffectSetCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173354,zachmann,dialogs\KWPageSettingsDialog.cpp, ,girish ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173630,zander,pagelayout\KPrPageLayouts.cpp,zachmann ,zachmann fmerz boemann dfaure ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173630,zander,main\KoPageFormat.cpp, ,fmerz staniek langkamp ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173630,zander,pagelayout\KPrPageLayoutSharedSavingData.cpp, ,zachmann fmerz boemann dfaure ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173630,zander,tests\TestBasicLayout.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173630,zander,pagelayout\KPrPageLayouts.cpp,zachmann ,zachmann fmerz boemann dfaure ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173630,zander,guiutils\KoPageLayoutDialog.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173630,zander,main\KoPageLayout.cpp, ,fmerz staniek langkamp ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173630,zander,tests\TestPageManager.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173630,zander,guiutils\KoPageLayoutWidget.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173630,zander,commands\KWPagePropertiesCommand.cpp, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,1,1,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173882,jaham,guiutils\KoUniColorChooser.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173882,jaham,shape\ChartConfigWidget.cpp, ,jsimon zachmann ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173882,jaham,chart\ChartDialog.h, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173882,jaham,dialogs\GoalSeekDialog.cpp, ,girish ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173882,jaham,tests\TestStatisticalFunctions.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173882,jaham,guiutils\KoEditColorSetDialog.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173882,jaham,ui\kptstandardworktimedialog.cpp, ,danders fmerz zander rempt fyanardi langkamp clicea berger ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173882,jaham,guiutils\KoEditColorSetDialog.cpp, ,fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173882,jaham,shape\ChartTool.cpp, ,jsimon zachmann ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+173882,jaham,refinepath\RefinePathPlugin.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,1,1,1,1
+176278,berger,flake\KoImageData.cpp, ,staniek zachmann fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+176278,berger,commands\kis_image_commands.h, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+176278,berger,flake\KoImageCollection.cpp, ,staniek zachmann fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+176278,berger,tests\TestImageCollection.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+176278,berger,ui\kis_print_job.cpp, ,danders fmerz zander rempt fyanardi langkamp clicea berger ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,1,0,1,zander zachmann ingwa staniek boud jaham,0,0,0,0
+176278,berger,tests\kis_image_test.cpp, ,girish zander ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+176278,berger,canvas\kis_prescaled_projection.cpp, , ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+176278,berger,commands\kis_image_commands.h, ,girish mkruisselbrink ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+176278,berger,shape\KritaShape.cpp, ,jsimon zachmann ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+176278,berger,flake\KoImageData_p.cpp, ,staniek zachmann fmerz ,fmerz staniek girish clicea zachmann rempt fyanardi zander piggz danders ,0,0,0,0,zander zachmann ingwa staniek boud jaham,0,0,0,0
+,,,,,,2,23,30,40,,60,60,60,60
+,,,,,,1.11,12.78,16.67,22.22,,33.33,33.33,33.33,33.33
