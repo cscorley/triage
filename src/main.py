@@ -47,10 +47,11 @@ def error(*args, **kwargs):
 @click.option('--verbose', is_flag=True)
 @click.option('--debug', is_flag=True)
 @click.option('--force', is_flag=True)
+@click.option('--temporal', is_flag=True)
 @click.option('--name', help="Name of project to run experiment on")
 @click.option('--version', help="Version of project to run experiment on")
 @click.option('--level', help="Granularity level of project to run experiment on")
-def cli(verbose, debug, force, name, version, level):
+def cli(verbose, debug, temporal, force, name, version, level):
     """
     Changesets for Feature Location
     """
@@ -75,13 +76,13 @@ def cli(verbose, debug, force, name, version, level):
                 if level and level != project.level:
                     continue
 
-                run_experiment(project, force)
+                run_experiment(project, temporal, force)
                 sys.exit(0) # done, boom shakalaka
         else:
-            run_experiment(project, force)
+            run_experiment(project, temporal, force)
 
 
-def run_experiment(project, force):
+def run_experiment(project, temporal, force):
     logger.info("Running project on %s", str(project))
     print(project)
 
@@ -106,18 +107,19 @@ def run_experiment(project, force):
                                              release_corpus, queries, goldsets,
                                              'Changeset', force=force)
 
-    try:
-        temporal_lda, temporal_lsi = run_temporal(project, repos,
-                                                changeset_corpus, queries,
-                                                goldsets, force=force)
-    except IOError:
-        logger.info("Files needed for temporal evaluation not found. Skipping.")
-    else:
-        do_science('temporal', temporal_lda, changeset_lda, ignore=True)
-        do_science('temporal_lsi', temporal_lsi, changeset_lsi, ignore=True)
+    if temporal:
+        try:
+            temporal_lda, temporal_lsi = run_temporal(project, repos,
+                                                    changeset_corpus, queries,
+                                                    goldsets, force=force)
+        except IOError:
+            logger.info("Files needed for temporal evaluation not found. Skipping.")
+        else:
+            do_science('temporal_lda', temporal_lda, changeset_lda, ignore=True)
+            do_science('temporal_lsi', temporal_lsi, changeset_lsi, ignore=True)
 
     # do this last so that the results are printed together
-    do_science('basic', changeset_lda, release_lda)
+    do_science('basic_lda', changeset_lda, release_lda)
     do_science('basic_lsi', changeset_lsi, release_lsi)
 
 def collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus):
@@ -162,7 +164,7 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, kind, use_level=
     """
     logger.info("Running basic evaluation on the %s", kind)
     try:
-        lda_ranks = read_ranks(project, kind.lower())
+        lda_ranks = read_ranks(project, kind.lower() + '_lda')
         logger.info("Sucessfully read previously written %s LDA ranks", kind)
         exists = True
     except IOError:
