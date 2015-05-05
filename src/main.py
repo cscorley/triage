@@ -33,6 +33,7 @@ from corpora import (ChangesetCorpus, SnapshotCorpus, ReleaseCorpus,
                      TaserSnapshotCorpus, TaserReleaseCorpus,
                      CorpusCombiner, GeneralCorpus)
 from errors import TaserError
+from goldsets import build_goldset
 
 
 def error(*args, **kwargs):
@@ -48,10 +49,11 @@ def error(*args, **kwargs):
 @click.option('--debug', is_flag=True)
 @click.option('--force', is_flag=True)
 @click.option('--temporal', is_flag=True)
+@click.option('--goldset', is_flag=True)
 @click.option('--name', help="Name of project to run experiment on")
 @click.option('--version', help="Version of project to run experiment on")
 @click.option('--level', help="Granularity level of project to run experiment on")
-def cli(verbose, debug, temporal, force, name, version, level):
+def cli(verbose, debug, temporal, goldset, force, name, version, level):
     """
     Changesets for Feature Location
     """
@@ -76,8 +78,13 @@ def cli(verbose, debug, temporal, force, name, version, level):
                 if level and level != project.level:
                     continue
 
-                run_experiment(project, temporal, force)
+                if goldset:
+                    build_goldset(project)
+                else:
+                    run_experiment(project, temporal, force)
                 sys.exit(0) # done, boom shakalaka
+        elif goldset:
+            build_goldset(project)
         else:
             run_experiment(project, temporal, force)
 
