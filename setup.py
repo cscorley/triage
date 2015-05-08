@@ -1,11 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-#
-# [The "New BSD" license]
-# Copyright (c) 2014 The Board of Trustees of The University of Alabama
-# All rights reserved.
-#
-# See LICENSE for details.
 
 from setuptools import setup, find_packages
 
