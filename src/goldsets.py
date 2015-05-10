@@ -36,7 +36,7 @@ def build_goldset(project):
 
         if res:
             diffs = wtp.parse_patch(patch)
-            for removed, added in parse_diff_changes(repo, changes, diffs):
+            for removed, added in parse_diff_changes(project, repo, changes, diffs):
                 commits[commit.id] = set(res)
 
                 for gid in res:
@@ -58,7 +58,7 @@ def build_goldset(project):
                 f.write(entity.full_name + '\n')
 
 
-def parse_diff_changes(repo, changes, diffs):
+def parse_diff_changes(project, repo, changes, diffs):
     for diff in diffs:
         removed = list()
         added = list()
@@ -74,11 +74,11 @@ def parse_diff_changes(repo, changes, diffs):
 
         removed_blocks = []
         if diff.header.old_path != "/dev/null":
-            removed_blocks = get_blocks(repo, changes.old, removed)
+            removed_blocks = get_blocks(project, repo, changes.old, removed)
 
         added_blocks = []
         if diff.header.new_path != "/dev/null":
-            added_blocks = get_blocks(repo, changes.new, added)
+            added_blocks = get_blocks(project, repo, changes.new, added)
 
         yield removed_blocks, added_blocks
 
@@ -116,31 +116,11 @@ def get_diff(repo, changeset):
                                     changeset.old, changeset.new)
     return patch_file.getvalue()
 
-def get_blocks(repo, gittree, line_nums):
+def get_blocks(project, repo, gittree, line_nums):
     cmd = "java -cp ./lib -jar ./lib/srcMLOLOL.jar Java".split()
     ftext = repo[gittree.sha].as_raw_string()
     xml = pipe(ftext, cmd)
     xml = xml[len('<?xml version="1.0" encoding="UTF-8" standalone="no"?>'):]
-
-    # typedecl -> class, enum, interface, annotationtype,
-    #
-    # memberdecl -> methods
-    #
-    # "block"
-    #   methodbody
-    #   constructorbody
-    #   classbodydecl
-
-    # MethodDeclaration
-        # GenericMethodDeclaration
-            # is type params followed by methoddecl
-    # ConstructorDeclaration
-        # GenericConstructorDeclaration
-            # is type params followed by constructordecl
-    # InterfaceMethodDeclaration
-        # InterfaceGenericMethodDeclaration
-            # is type params followed by interfacemethoddecl
-    # annotationMethodRest
 
     # need huge_tree since the depth gets kinda crazy
     p = etree.XMLParser(huge_tree=True)
@@ -156,6 +136,9 @@ def get_blocks(repo, gittree, line_nums):
                 pkg.append(child.text)
         package_name = '.'.join(pkg)
 
+    types = ['ClassDeclaration', 'EnumDeclaration', 'InterfaceDeclaration'
+             'AnnotationTypeDeclaration']
+
     # these are the method-like decls that come from the 4 'types' in the grammar
     methodTypes = ["MethodDeclaration", "GenericMethodDeclaration",
                    "ConstructorDeclaration", "GenericConstructorDeclaration",
@@ -164,35 +147,40 @@ def get_blocks(repo, gittree, line_nums):
 
     blocks = list()
 
-    for mt in methodTypes:
-        for method in tree.iterfind(".//" + mt):
+    if project.level == 'class':
+        findtype = types
+    elif project.level == 'method':
+        findtype = methodTypes
+
+    for t in findtype:
+        for elem in tree.iterfind(".//" + t):
             # in all types, there is a keyword marking the type
             # with the identifier following immediately
             params = list()
-            method_name = None
-            for child in method:
-                if method_name is None and child.tag == "CommonToken" and child.attrib["name"] == "Identifier":
-                    method_name = child.text
+            elem_name = None
+            for child in elem:
+                if elem_name is None and child.tag == "CommonToken" and child.attrib["name"] == "Identifier":
+                    elem_name = child.text
 
                 if child.tag == "FormalParameters":
                     for param in child.findall(".//Type"):
                         params.append(''.join(ct.text for ct in param.findall(".//CommonToken")))
 
-            if method_name is None:
-                method_name = "$method$"
+            if elem_name is None:
+                elem_name = "$" + t + "$"
 
-            start_line = int(method.attrib["start_line"])
-            end_line = int(method.attrib["end_line"])
+            start_line = int(elem.attrib["start_line"])
+            end_line = int(elem.attrib["end_line"])
 
             # TODO, find the body, get actual start_line
             body_line = start_line
 
             supers = list()
-            parent = method.getparent()
+            parent = elem.getparent()
             while parent != None:
                 if parent.tag == 'classCreatorRest':
                     # anonymous class time!
-                    supers.append("$class$")
+                    supers.append("$classCreatorRest$")
                 else:
                     for child in parent:
                         if child.tag == "CommonToken" and child.attrib["name"] == "Identifier":
@@ -203,14 +191,16 @@ def get_blocks(repo, gittree, line_nums):
             if package_name:
                 supers.append(package_name)
 
-            method_name += '(' + ','.join(params) + ')'
-            method_name = unescape(method_name)
+            if project.level == 'method':
+                elem_name += '(' + ','.join(params) + ')'
+
+            elem_name = unescape(elem_name)
             supers = [unescape(s) for s in supers]
 
-            methblock = Block(mt, method_name, start_line, body_line, end_line,
-                              super_block_name=u'.'.join(reversed(supers)))
+            block = Block(t, elem_name, start_line, body_line, end_line,
+                          super_block_name=u'.'.join(reversed(supers)))
 
-            blocks.append(methblock)
+            blocks.append(block)
 
     # figure out which methods changed
     changed = list()
@@ -222,8 +212,8 @@ def get_blocks(repo, gittree, line_nums):
         if keep:
             changed.append(method)
 
-    for c in changed:
-        print(c.full_name)
+    # for c in changed:
+    #    print(c.full_name)
 
     # shits the bed on unicode, but above works lol
     # print(changed)
