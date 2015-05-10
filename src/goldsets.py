@@ -3,6 +3,9 @@
 
 from __future__ import print_function
 
+import logging
+logger = logging.getLogger('cfl.goldsets')
+
 import csv
 from subprocess import Popen, PIPE
 import errno
@@ -26,25 +29,22 @@ def build_goldset(project):
     corpus = ChangesetCorpus(project=project, repo=repos[0], lazy_dict=True)
     repo = corpus.repo
 
-    matcher = re.compile("%s-(\d+)" % project.name, flags=re.IGNORECASE)
-
     goldsets = dict()
     commits = dict()
 
-    for commit, parent, patch, changes in walk_changes(repo):
-        res = matcher.findall(commit.message)
+    for commit, parent, patch, changes, links in walk_changes(project, repo):
+        diffs = wtp.parse_patch(patch)
+        for removed, added in parse_diff_changes(project, repo, changes, diffs):
+            commits[commit.id] = set(links)
 
-        if res:
-            diffs = wtp.parse_patch(patch)
-            for removed, added in parse_diff_changes(project, repo, changes, diffs):
-                commits[commit.id] = set(res)
+            for gid in links:
+                if gid not in goldsets:
+                    goldsets[gid] = set()
 
-                for gid in res:
-                    if gid not in goldsets:
-                        goldsets[gid] = set()
+                goldsets[gid].update(removed)
+                goldsets[gid].update(added)
 
-                    goldsets[gid].update(removed)
-                    goldsets[gid].update(added)
+                logger.info("Extracted %d changes from commit %s for issue %s", len(goldsets[gid]), commit.id, gid)
 
     with open(os.path.join(project.full_path, 'ids.txt'), 'w') as f:
         for gid in goldsets:
@@ -83,31 +83,34 @@ def parse_diff_changes(project, repo, changes, diffs):
         yield removed_blocks, added_blocks
 
 
-
-def walk_changes(repo):
+def walk_changes(project, repo):
     """ Returns one file change at a time, not the entire diff.
 
     """
+    matcher = re.compile("%s-(\d+)" % project.name, flags=re.IGNORECASE)
 
     for walk_entry in repo.get_walker():
         commit = walk_entry.commit
+        links = list(matcher.findall(commit.message))
 
-        # initial revision, has no parent
-        if len(commit.parents) == 0:
-            for changes in dulwich.diff_tree.tree_changes(
-                    repo.object_store, None, commit.tree
-            ):
-                diff = get_diff(repo, changes)
-                yield commit, None, diff, changes
+        if links:
+            logger.info("Found link in commit %s to issues %s", commit.id, links)
+            # initial revision, has no parent
+            if len(commit.parents) == 0:
+                for changes in dulwich.diff_tree.tree_changes(
+                        repo.object_store, None, commit.tree
+                ):
+                    diff = get_diff(repo, changes)
+                    yield commit, None, diff, changes, links
 
-        for parent in commit.parents:
-            # do I need to know the parent id?
+            for parent in commit.parents:
+                # do I need to know the parent id?
 
-            for changes in dulwich.diff_tree.tree_changes(
-                repo.object_store, repo[parent].tree, commit.tree
-            ):
-                diff = get_diff(repo, changes)
-                yield commit, parent, diff, changes
+                for changes in dulwich.diff_tree.tree_changes(
+                    repo.object_store, repo[parent].tree, commit.tree
+                ):
+                    diff = get_diff(repo, changes)
+                    yield commit, parent, diff, changes, links
 
 def get_diff(repo, changeset):
     patch_file = StringIO()
@@ -118,6 +121,7 @@ def get_diff(repo, changeset):
 
 def get_blocks(project, repo, gittree, line_nums):
     cmd = "java -cp ./lib -jar ./lib/srcMLOLOL.jar Java".split()
+    logger.info("Generating XML for file %s @ %s", gittree.path, gittree.sha)
     ftext = repo[gittree.sha].as_raw_string()
     xml = pipe(ftext, cmd)
     xml = xml[len('<?xml version="1.0" encoding="UTF-8" standalone="no"?>'):]

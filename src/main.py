@@ -149,7 +149,7 @@ def collect_info(project, repos, queries, goldsets, changeset_corpus, release_co
 
             writer.writerow(row)
 
-    path = os.path.join(project.full_path, '-'.join(['goldset', 'info.csv']))
+    path = os.path.join(project.full_path, 'goldset-info.csv')
     if not os.path.exists(path):
         with smart_open(path, 'w') as f:
             writer = csv.writer(f)
