@@ -1,6 +1,7 @@
 .lvimrc
 .DS_Store
 output/
+git_stats/
 
 # sources
 gits/

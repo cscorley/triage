@@ -179,9 +179,9 @@ def collect_helper(project, corpus, name):
     with smart_open(path, 'w') as f:
         writer = csv.writer(f)
         writer.writerow(["metadata", "unique_words", "total_words"])
-        row = list()
 
         for doc, meta in corpus:
+            row = list()
             row.append(meta[0])
             row.append(len(doc))
             row.append(sum(freq for word, freq in doc))
