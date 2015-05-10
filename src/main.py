@@ -124,14 +124,68 @@ def run_experiment(project, temporal, force):
     do_science('basic_lsi', changeset_lsi, release_lsi)
 
 def collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus):
+    logger.info("Collecting corpus metdata info")
     changeset_corpus.metadata = True
     release_corpus.metadata = True
-    with smart_open(os.path.join(project.full_path, '-'.join([project.level, 'info.csv'])), 'w') as f:
-        pass
+    queries.metadata = True
+    ids = set(i for i,g in goldsets)
+    try:
+        issue2git, git2issue = load_issue2git(project, ids)
+    except:
+        return
 
-    logger.info("Collecting basic info")
+    path = os.path.join(project.full_path, "general-info.csv")
+    if not os.path.exists(path):
+        with smart_open(path, 'w') as f:
+            writer = csv.writer(f)
+            writer.writerow(["changesets_before_first"])
+            row = list()
+
+            for i, docmeta in enumerate(changeset_corpus):
+                doc, meta = docmeta
+                if meta[0] in git2issue:
+                    row.append(i)
+                    break
+
+            writer.writerow(row)
+
+    path = os.path.join(project.full_path, '-'.join(['goldset', 'info.csv']))
+    if not os.path.exists(path):
+        with smart_open(path, 'w') as f:
+            writer = csv.writer(f)
+            writer.writerow(["metadata", "total_entities"])
+            row = list()
+
+            for gid, goldset in goldsets:
+                row.append(gid)
+                row.append(len(goldset))
+                writer.writerow(row)
+
+    collect_helper(project, changeset_corpus, 'changeset')
+    collect_helper(project, release_corpus, 'release' + project.level)
+    collect_helper(project, queries, 'queries')
+
     changeset_corpus.metadata = False
     release_corpus.metadata = False
+    queries.metadata = False
+
+def collect_helper(project, corpus, name):
+    logger.info("Helper corpus metdata info of " + name)
+    path = os.path.join(project.full_path, '-'.join([name, 'info.csv']))
+
+    if os.path.exists(path):
+        return
+
+    with smart_open(path, 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(["metadata", "unique_words", "total_words"])
+        row = list()
+
+        for doc, meta in corpus:
+            row.append(meta[0])
+            row.append(len(doc))
+            row.append(sum(freq for word, freq in doc))
+            writer.writerow(row)
 
 def write_ranks(project, prefix, ranks):
     with smart_open(os.path.join(project.full_path, '-'.join([prefix, project.level, str(project.num_topics), 'ranks.csv.gz'])), 'w') as f:

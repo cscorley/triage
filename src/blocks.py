@@ -10,9 +10,9 @@ class Block(object):
     def __init__(self, block_type, name, start_line, body_line, end_line,
             super_block_name=None, sub_blocks=None, text=None):
         # full_name will be reassigned once a super_block_name is given
-        self.block_type = str(block_type)
-        self.name = str(name)
-        self.full_name = str(name)
+        self.block_type = block_type
+        self.name = name
+        self.full_name = name
 
         # define all other metadata
         self.start_line = start_line
@@ -27,16 +27,17 @@ class Block(object):
 
         # define elements which have properties (the properties should all check
         # for NoneType values)
-        self.super_block_name = super_block_name
         self.sub_blocks = sub_blocks
         self.scp = None
+
+        self.super_block_name = super_block_name
         self.text = text
 
         self.added_count = 0
         self.removed_count = 0
 
     def __repr__(self):
-        return str(self)
+        return self.full_name
 
     def __str__(self):
         return self.full_name
@@ -77,11 +78,11 @@ class Block(object):
     @super_block_name.setter
     def super_block_name(self, value):
         self._super_block_name = value
-        if value is not None:
+        if value:
             # change the full name as well
-            self.full_name = '.'.join([str(value), self.name])
+            self.full_name = u'.'.join([value, self.name])
             # need to update all sub_blocks to use the new container name
-            if self.sub_blocks is not None:
+            if self.sub_blocks:
                 for sb in self.sub_blocks:
                     sb.super_block_name = self.full_name
 
@@ -92,11 +93,10 @@ class Block(object):
     @sub_blocks.setter
     def sub_blocks(self, values):
         self._sub_blocks = values
-        if values is not None:
+        if values:
             self._sub_blocks = list(values)
-            if self.sub_blocks is not None:
-                for sb in self.sub_blocks:
-                    sb.super_block_name = self.full_name
+            for sb in self.sub_blocks:
+                sb.super_block_name = self.full_name
 
     @property
     def scp(self):
@@ -212,10 +212,10 @@ class File(Block):
     def package_name(self, value):
         # change the full name as well
         self._package_name = value
-        if value is not None:
+        if value and self.sub_blocks:
             # use the package name instead of the file name for all classes
             for sb in self.sub_blocks:
-                sb.super_block_name = str(self.package_name)
+                sb.super_block_name = self.package_name
 
     @property
     def classes(self):
