@@ -154,9 +154,9 @@ def collect_info(project, repos, queries, goldsets, changeset_corpus, release_co
         with smart_open(path, 'w') as f:
             writer = csv.writer(f)
             writer.writerow(["metadata", "total_entities"])
-            row = list()
 
             for gid, goldset in goldsets:
+                row = list()
                 row.append(gid)
                 row.append(len(goldset))
                 writer.writerow(row)
