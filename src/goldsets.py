@@ -10,6 +10,8 @@ import csv
 from subprocess import Popen, PIPE
 import errno
 from StringIO import StringIO
+import os
+import os.path
 from xml.sax.saxutils import unescape
 
 import whatthepatch as wtp
@@ -25,8 +27,12 @@ from corpora import ChangesetCorpus
 from blocks import Block, File
 
 def build_goldset(project):
+    print(project)
     repos = main.load_repos(project)
-    corpus = ChangesetCorpus(project=project, repo=repos[0], lazy_dict=True)
+    corpus = ChangesetCorpus(project=project,
+                             repo=repos[0],
+                             ref='HEAD',  # build ALL the goldsets
+                             lazy_dict=True)
     repo = corpus.repo
 
     goldsets = dict()
@@ -46,11 +52,20 @@ def build_goldset(project):
 
                 logger.info("Extracted %d changes from commit %s for issue %s", len(goldsets[gid]), commit.id, gid)
 
+    if len(goldsets) == 0:
+        return
+
+    with open(os.path.join(project.full_path, 'issue2git.csv'), 'w') as f:
+        writer = csv.writer(f)
+        for cid, links in commits:
+            for link in links:
+                writer.writerow((link, cid))
+
     with open(os.path.join(project.full_path, 'ids.txt'), 'w') as f:
-        for gid in goldsets:
+        for gid in sorted(map(int, list(goldsets))):
             f.write(gid + '\n')
 
-    for gid, goldset in goldsets:
+    for gid, goldset in goldsets.items():
         with open(os.path.join(project.full_path, 'goldsets', project.level,
                                 gid + '.txt'), 'w') as f:
 
