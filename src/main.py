@@ -37,7 +37,6 @@ def error(*args, **kwargs):
 
     sys.exit(1)
 
-
 @click.command()
 @click.option('--verbose', is_flag=True)
 @click.option('--debug', is_flag=True)
@@ -46,7 +45,7 @@ def error(*args, **kwargs):
 @click.option('--goldset', is_flag=True)
 @click.option('--name', help="Name of project to run experiment on")
 @click.option('--version', help="Version of project to run experiment on")
-@click.option('--level', help="Granularity level of project to run experiment on")
+@click.option('--level', default="class", help="Granularity level of project to run experiment on")
 def cli(verbose, debug, temporal, goldset, force, name, version, level):
     """
     Changesets for Feature Location
@@ -62,14 +61,13 @@ def cli(verbose, debug, temporal, goldset, force, name, version, level):
         logging.root.setLevel(level=logging.ERROR)
 
     # load project info
-    projects = load_projects()
+    projects = load_projects(level)
     for project in projects:
         if name:
+            name = name.lower()
+
             if name == project.name:
                 if version and version != project.version:
-                    continue
-
-                if level and level != project.level:
                     continue
 
                 if goldset:
@@ -572,20 +570,21 @@ def load_issue2git(project, ids):
     return i2g, g2i
 
 
-def load_projects():
+def load_projects(level='class'):
     projects = list()
     with open("projects.csv", 'r') as f:
         reader = csv.reader(f)
         header = next(reader)
-        customs = ['data_path', 'full_path', 'src_path']
+        customs = ['level', 'data_path', 'full_path', 'src_path']
         Project = namedtuple('Project',  ' '.join(header + customs))
         # figure out which column index contains the project name
         name_idx = header.index("name")
         version_idx = header.index("version")
-        level_idx = header.index("level")
 
         # find the project in the csv, adding it's info to config
         for row in reader:
+            row += (level,)
+
             # built the data_path value
             row += (os.path.join('data', row[name_idx], ''),)
 

@@ -24,16 +24,16 @@ from gensim.utils import to_unicode
 
 import main
 import utils
-from corpora import ChangesetCorpus
+from corpora import GitCorpus
 from blocks import Block, File
 
 def build_goldset(project):
     print(project)
     repos = main.load_repos(project)
-    corpus = ChangesetCorpus(project=project,
-                             repo=repos[0],
-                             ref='HEAD',  # build ALL the goldsets
-                             lazy_dict=True)
+
+    # use the gitcorpus cause it'll do all the dulwich setup stuff for us
+    # also i am lazy, so...
+    corpus = GitCorpus(project=project, repo=repos[0], lazy_dict=True)
     repo = corpus.repo
 
     if os.path.exists(os.path.join(project.full_path, 'DONE')):
@@ -43,7 +43,7 @@ def build_goldset(project):
     cgoldsets = dict()
     commits = dict()
 
-    for commit, parent, patch, changes, links in walk_changes(project, repo):
+    for commit, parent, patch, changes, links in walk_changes(project, corpus):
         diffs = wtp.parse_patch(patch)
         for mremoved, madded, cremoved, cadded in parse_diff_changes(project, repo, changes, diffs):
             commits[commit.id] = set(links)
@@ -129,13 +129,14 @@ def parse_diff_changes(project, repo, changes, diffs):
         yield mremoved_blocks, madded_blocks, cremoved_blocks, cadded_blocks
 
 
-def walk_changes(project, repo):
+def walk_changes(project, corpus):
     """ Returns one file change at a time, not the entire diff.
 
     """
     matcher = re.compile("%s-(\d+)" % project.name, flags=re.IGNORECASE)
+    repo = corpus.repo
 
-    for walk_entry in repo.get_walker():
+    for walk_entry in repo.get_walker(include=[corpus.ref_commit_sha]):
         commit = walk_entry.commit
         links = list(matcher.findall(commit.message))
 
@@ -169,6 +170,8 @@ def get_blocks(text, line_nums):
     cmd = "java -cp ./lib -jar ./lib/srcMLOLOL.jar Java".split()
     xml = pipe(text, cmd)
     xml = xml[len('<?xml version="1.0" encoding="UTF-8" standalone="no"?>'):]
+
+    # while here, we could build the text, too?
 
     # need huge_tree since the depth gets kinda crazy
     p = etree.XMLParser(huge_tree=True)
