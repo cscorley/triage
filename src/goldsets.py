@@ -23,6 +23,7 @@ from lxml import etree
 from gensim.utils import to_unicode
 
 import main
+import utils
 from corpora import ChangesetCorpus
 from blocks import Block, File
 
@@ -35,43 +36,67 @@ def build_goldset(project):
                              lazy_dict=True)
     repo = corpus.repo
 
-    goldsets = dict()
+    if os.path.exists(os.path.join(project.full_path, 'DONE')):
+        return
+
+    mgoldsets = dict()
+    cgoldsets = dict()
     commits = dict()
 
     for commit, parent, patch, changes, links in walk_changes(project, repo):
         diffs = wtp.parse_patch(patch)
-        for removed, added in parse_diff_changes(project, repo, changes, diffs):
+        for mremoved, madded, cremoved, cadded in parse_diff_changes(project, repo, changes, diffs):
             commits[commit.id] = set(links)
 
             for gid in links:
-                if gid not in goldsets:
-                    goldsets[gid] = set()
+                if gid not in mgoldsets:
+                    mgoldsets[gid] = set()
+                if gid not in cgoldsets:
+                    cgoldsets[gid] = set()
 
-                goldsets[gid].update(removed)
-                goldsets[gid].update(added)
+                mgoldsets[gid].update(mremoved)
+                mgoldsets[gid].update(madded)
 
-                logger.info("Extracted %d changes from commit %s for issue %s", len(goldsets[gid]), commit.id, gid)
+                cgoldsets[gid].update(cremoved)
+                cgoldsets[gid].update(cadded)
 
-    if len(goldsets) == 0:
+                logger.info("Extracted %d method changes from commit %s for issue %s", len(mgoldsets[gid]), commit.id, gid)
+                logger.info("Extracted %d class changes from commit %s for issue %s", len(cgoldsets[gid]), commit.id, gid)
+
+    if len(mgoldsets) == 0 and len(cgoldsets) == 0:
         return
 
+    utils.mkdir(os.path.join(project.full_path, 'goldsets', 'method'))
+    utils.mkdir(os.path.join(project.full_path, 'goldsets', 'class'))
+
+    ids = set()
     with open(os.path.join(project.full_path, 'issue2git.csv'), 'w') as f:
         writer = csv.writer(f)
-        for cid, links in commits:
+        for cid, links in commits.items():
             for link in links:
                 writer.writerow((link, cid))
+                ids.add(link)
 
     with open(os.path.join(project.full_path, 'ids.txt'), 'w') as f:
-        for gid in sorted(map(int, list(goldsets))):
-            f.write(gid + '\n')
+        for gid in sorted(map(int, list(ids))):
+            f.write(str(gid) + '\n')
 
-    for gid, goldset in goldsets.items():
-        with open(os.path.join(project.full_path, 'goldsets', project.level,
-                                gid + '.txt'), 'w') as f:
+    for gid, goldset in mgoldsets.items():
+        with open(os.path.join(project.full_path, 'goldsets', 'method',
+                                str(gid) + '.txt'), 'w') as f:
 
-            for entity in goldset:
+            for entity in sorted(goldset):
                 f.write(entity.full_name + '\n')
 
+    for gid, goldset in cgoldsets.items():
+        with open(os.path.join(project.full_path, 'goldsets', 'class',
+                                str(gid) + '.txt'), 'w') as f:
+
+            for entity in sorted(goldset):
+                f.write(entity.full_name + '\n')
+
+    with open(os.path.join(project.full_path, 'DONE'), 'w') as f:
+        f.write('yes')
 
 def parse_diff_changes(project, repo, changes, diffs):
     for diff in diffs:
@@ -87,15 +112,17 @@ def parse_diff_changes(project, repo, changes, diffs):
             if a:
                 added.append(a)
 
-        removed_blocks = []
+        mremoved_blocks = []
+        cremoved_blocks = []
         if diff.header.old_path != "/dev/null":
-            removed_blocks = get_blocks(project, repo, changes.old, removed)
+            mremoved_blocks, cremoved_blocks = get_blocks(project, repo, changes.old, removed)
 
-        added_blocks = []
+        madded_blocks = []
+        cadded_blocks = []
         if diff.header.new_path != "/dev/null":
-            added_blocks = get_blocks(project, repo, changes.new, added)
+            madded_blocks, cadded_blocks = get_blocks(project, repo, changes.new, added)
 
-        yield removed_blocks, added_blocks
+        yield mremoved_blocks, madded_blocks, cremoved_blocks, cadded_blocks
 
 
 def walk_changes(project, repo):
@@ -164,72 +191,91 @@ def get_blocks(project, repo, gittree, line_nums):
                    "InterfaceMethodDeclaration", "InterfaceGenericMethodDeclaration",
                    "AnnotationMethodRest"]
 
-    blocks = list()
+    mblocks = list()
+    cblocks = list()
 
     if project.level == 'class':
         findtype = types
     elif project.level == 'method':
         findtype = methodTypes
 
-    for t in findtype:
-        for elem in tree.iterfind(".//" + t):
-            # in all types, there is a keyword marking the type
-            # with the identifier following immediately
-            params = list()
-            elem_name = None
-            for child in elem:
-                if elem_name is None and child.tag == "CommonToken" and child.attrib["name"] == "Identifier":
-                    elem_name = child.text
+    for level in ['class', 'method']:
+        if level == 'class':
+            findtype = types
+        elif level == 'method':
+            findtype = methodTypes
 
-                if child.tag == "FormalParameters":
-                    for param in child.findall(".//Type"):
-                        params.append(''.join(ct.text for ct in param.findall(".//CommonToken")))
+        for t in findtype:
+            for elem in tree.iterfind(".//" + t):
+                # in all types, there is a keyword marking the type
+                # with the identifier following immediately
+                params = list()
+                elem_name = None
+                for child in elem:
+                    if elem_name is None and child.tag == "CommonToken" and child.attrib["name"] == "Identifier":
+                        elem_name = child.text
 
-            if elem_name is None:
-                elem_name = "$" + t + "$"
+                    if child.tag == "FormalParameters":
+                        for param in child.findall(".//Type"):
+                            params.append(''.join(ct.text for ct in param.findall(".//CommonToken")))
 
-            start_line = int(elem.attrib["start_line"])
-            end_line = int(elem.attrib["end_line"])
+                if elem_name is None:
+                    elem_name = "$" + t + "$"
 
-            # TODO, find the body, get actual start_line
-            body_line = start_line
+                start_line = int(elem.attrib["start_line"])
+                end_line = int(elem.attrib["end_line"])
 
-            supers = list()
-            parent = elem.getparent()
-            while parent != None:
-                if parent.tag == 'classCreatorRest':
-                    # anonymous class time!
-                    supers.append("$classCreatorRest$")
-                else:
-                    for child in parent:
-                        if child.tag == "CommonToken" and child.attrib["name"] == "Identifier":
-                            supers.append(child.text)
-                            break
-                parent = parent.getparent()
+                # TODO, find the body, get actual start_line
+                body_line = start_line
 
-            if package_name:
-                supers.append(package_name)
+                supers = list()
+                parent = elem.getparent()
+                while parent != None:
+                    if parent.tag == 'classCreatorRest':
+                        # anonymous class time!
+                        supers.append("$classCreatorRest$")
+                    else:
+                        for child in parent:
+                            if child.tag == "CommonToken" and child.attrib["name"] == "Identifier":
+                                supers.append(child.text)
+                                break
+                    parent = parent.getparent()
 
-            if project.level == 'method':
-                elem_name += '(' + ','.join(params) + ')'
+                if package_name:
+                    supers.append(package_name)
 
-            elem_name = unescape(elem_name)
-            supers = [unescape(s) for s in supers]
+                if level == 'method':
+                    elem_name += '(' + ','.join(params) + ')'
 
-            block = Block(t, elem_name, start_line, body_line, end_line,
-                          super_block_name=u'.'.join(reversed(supers)))
+                elem_name = unescape(elem_name)
+                supers = [unescape(s) for s in supers]
 
-            blocks.append(block)
+                block = Block(t, elem_name, start_line, body_line, end_line,
+                            super_block_name=u'.'.join(reversed(supers)))
+
+                if level == 'method':
+                    mblocks.append(block)
+                elif level == 'class':
+                    cblocks.append(block)
 
     # figure out which methods changed
-    changed = list()
-    for method in blocks:
+    mchanged = list()
+    for method in mblocks:
         keep = False
         for line_num in line_nums:
             if line_num in method.line_range:
                 keep = True
         if keep:
-            changed.append(method)
+            mchanged.append(method)
+
+    cchanged = list()
+    for class_ in cblocks:
+        keep = False
+        for line_num in line_nums:
+            if line_num in class_.line_range:
+                keep = True
+        if keep:
+            cchanged.append(class_)
 
     # for c in changed:
     #    print(c.full_name)
@@ -237,7 +283,7 @@ def get_blocks(project, repo, gittree, line_nums):
     # shits the bed on unicode, but above works lol
     # print(changed)
 
-    return changed
+    return mchanged, cchanged
 
 
 def pipe(text, cmd):
