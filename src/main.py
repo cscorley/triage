@@ -315,7 +315,7 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
         for i in xrange(start, end):
             docs.append(corpus[i])
 
-        lda.update(docs, decay=0.99)
+        lda.update(docs)
         lsi.add_documents(docs)
 
         for qid in git2issue[sha]:

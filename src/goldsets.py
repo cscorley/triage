@@ -115,12 +115,16 @@ def parse_diff_changes(project, repo, changes, diffs):
         mremoved_blocks = []
         cremoved_blocks = []
         if diff.header.old_path != "/dev/null":
-            mremoved_blocks, cremoved_blocks = get_blocks(project, repo, changes.old, removed)
+            logger.info("Generating XML for file %s @ %s", changes.old.path, changes.old.sha)
+            ftext = repo[changes.old.sha].as_raw_string()
+            mremoved_blocks, cremoved_blocks = get_blocks(ftext, removed)
 
         madded_blocks = []
         cadded_blocks = []
         if diff.header.new_path != "/dev/null":
-            madded_blocks, cadded_blocks = get_blocks(project, repo, changes.new, added)
+            logger.info("Generating XML for file %s @ %s", changes.new.path, changes.new.sha)
+            ftext = repo[changes.new.sha].as_raw_string()
+            madded_blocks, cadded_blocks = get_blocks(ftext, added)
 
         yield mremoved_blocks, madded_blocks, cremoved_blocks, cadded_blocks
 
@@ -161,11 +165,9 @@ def get_diff(repo, changeset):
                                     changeset.old, changeset.new)
     return patch_file.getvalue()
 
-def get_blocks(project, repo, gittree, line_nums):
+def get_blocks(text, line_nums):
     cmd = "java -cp ./lib -jar ./lib/srcMLOLOL.jar Java".split()
-    logger.info("Generating XML for file %s @ %s", gittree.path, gittree.sha)
-    ftext = repo[gittree.sha].as_raw_string()
-    xml = pipe(ftext, cmd)
+    xml = pipe(text, cmd)
     xml = xml[len('<?xml version="1.0" encoding="UTF-8" standalone="no"?>'):]
 
     # need huge_tree since the depth gets kinda crazy
@@ -182,8 +184,7 @@ def get_blocks(project, repo, gittree, line_nums):
                 pkg.append(child.text)
         package_name = '.'.join(pkg)
 
-    types = ['ClassDeclaration', 'EnumDeclaration', 'InterfaceDeclaration'
-             'AnnotationTypeDeclaration']
+    classTypes = ['ClassDeclaration', 'EnumDeclaration', 'InterfaceDeclaration', 'AnnotationTypeDeclaration']
 
     # these are the method-like decls that come from the 4 'types' in the grammar
     methodTypes = ["MethodDeclaration", "GenericMethodDeclaration",
@@ -194,14 +195,9 @@ def get_blocks(project, repo, gittree, line_nums):
     mblocks = list()
     cblocks = list()
 
-    if project.level == 'class':
-        findtype = types
-    elif project.level == 'method':
-        findtype = methodTypes
-
     for level in ['class', 'method']:
         if level == 'class':
-            findtype = types
+            findtype = classTypes
         elif level == 'method':
             findtype = methodTypes
 
@@ -257,6 +253,7 @@ def get_blocks(project, repo, gittree, line_nums):
                     mblocks.append(block)
                 elif level == 'class':
                     cblocks.append(block)
+
 
     # figure out which methods changed
     mchanged = list()
