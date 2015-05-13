@@ -6,26 +6,28 @@ from __future__ import print_function
 import logging
 logger = logging.getLogger('cfl.goldsets')
 
-import csv
-from subprocess import Popen, PIPE
-import errno
 from StringIO import StringIO
+from subprocess import Popen, PIPE
+from xml.sax.saxutils import unescape
+import codecs
+import csv
+import errno
 import os
 import os.path
-from xml.sax.saxutils import unescape
 
-import whatthepatch as wtp
+from gensim.utils import to_unicode
+from lxml import etree
 import dulwich
 import dulwich.diff_tree
 import dulwich.patch
 import re
-from lxml import etree
-from gensim.utils import to_unicode
+import requests
+import whatthepatch as wtp
 
+from blocks import Block, File
+from corpora import GitCorpus
 import main
 import utils
-from corpora import GitCorpus
-from blocks import Block, File
 
 def build_goldset(project):
     print(project)
@@ -63,6 +65,15 @@ def build_goldset(project):
                 logger.info("Extracted %d method changes from commit %s for issue %s", len(mgoldsets[gid]), commit.id, gid)
                 logger.info("Extracted %d class changes from commit %s for issue %s", len(cgoldsets[gid]), commit.id, gid)
 
+    # cleanup
+    for gid, goldset in mgoldsets.items():
+        if len(goldset) == 0:
+            del mgoldsets[gid]
+
+    for gid, goldset in cgoldsets.items():
+        if len(goldset) == 0:
+            del cgoldsets[gid]
+
     if len(mgoldsets) == 0 and len(cgoldsets) == 0:
         return
 
@@ -77,8 +88,10 @@ def build_goldset(project):
                 writer.writerow((link, cid))
                 ids.add(link)
 
+    bugs = download_jira_bugs(project, ids)
+
     with open(os.path.join(project.full_path, 'ids.txt'), 'w') as f:
-        for gid in sorted(map(int, list(ids))):
+        for gid in bugs:
             f.write(str(gid) + '\n')
 
     for gid, goldset in mgoldsets.items():
@@ -97,6 +110,45 @@ def build_goldset(project):
 
     with open(os.path.join(project.full_path, 'DONE'), 'w') as f:
         f.write('yes')
+
+def download_jira_bugs(project, bugs):
+    url_base = 'https://issues.apache.org/jira/si/jira.issueviews:issue-xml/%s/%s.xml'
+    path = os.path.join([project.full_path, 'queries'])
+    mkdir(path)
+
+    p = etree.XMLParser()
+    hp = etree.HTMLParser()
+
+    downloaded = set()
+
+    for bugid in bugs:
+        logging.info("Fetching bugid %s", bugid)
+        fname = project.name.upper() + '-' + bugid
+#        fname = 'HHH-' + bugid
+        r = requests.get(url_base % (fname, fname))
+        try:
+            tree = etree.parse(StringIO(r.text), p)
+        except etree.XMLSyntaxError:
+            logging.error("Error in XML: %s %s %s", bugid, project, version)
+            continue
+        root = tree.getroot()
+        html = root.find('channel').find('item').find('description').text
+        summary = root.find('channel').find('item').find('summary').text
+        summary = to_unicode(summary)
+
+        htree = etree.parse(StringIO(html), hp)
+        desc = ''.join(htree.getroot().itertext())
+        desc = to_unicode(desc)
+
+        with codecs.open(os.path.join(path, 'ShortDescription%s.txt' % bugid), 'w', 'utf-8') as f:
+            f.write(summary)
+
+        with codecs.open(os.path.join(path, 'LongDescription%s.txt' % bugid), 'w', 'utf-8') as f:
+            f.write(desc)
+
+        downloaded.add(bugid)
+
+    return sorted(map(int, list(downloaded)))
 
 def parse_diff_changes(project, repo, changes, diffs):
     for diff in diffs:
