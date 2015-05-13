@@ -30,6 +30,9 @@ import main
 import utils
 
 def build_goldset(project):
+    if os.path.exists(os.path.join(project.full_path, 'DONE')):
+        return
+
     print(project)
     repos = main.load_repos(project)
 
@@ -37,9 +40,6 @@ def build_goldset(project):
     # also i am lazy, so...
     corpus = GitCorpus(project=project, repo=repos[0], lazy_dict=True)
     repo = corpus.repo
-
-    if os.path.exists(os.path.join(project.full_path, 'DONE')):
-        return
 
     mgoldsets = dict()
     cgoldsets = dict()
@@ -113,8 +113,8 @@ def build_goldset(project):
 
 def download_jira_bugs(project, bugs):
     url_base = 'https://issues.apache.org/jira/si/jira.issueviews:issue-xml/%s/%s.xml'
-    path = os.path.join([project.full_path, 'queries'])
-    mkdir(path)
+    path = os.path.join(project.full_path, 'queries')
+    utils.mkdir(path)
 
     p = etree.XMLParser()
     hp = etree.HTMLParser()
@@ -122,14 +122,14 @@ def download_jira_bugs(project, bugs):
     downloaded = set()
 
     for bugid in bugs:
-        logging.info("Fetching bugid %s", bugid)
+        logger.info("Fetching bugid %s", bugid)
         fname = project.name.upper() + '-' + bugid
 #        fname = 'HHH-' + bugid
         r = requests.get(url_base % (fname, fname))
         try:
             tree = etree.parse(StringIO(r.text), p)
         except etree.XMLSyntaxError:
-            logging.error("Error in XML: %s %s %s", bugid, project, version)
+            logger.error("Error in XML: %s %s %s", bugid, project, project.version)
             continue
         root = tree.getroot()
         html = root.find('channel').find('item').find('description').text
