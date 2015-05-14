@@ -1,0 +1,3 @@
+org.apache.lucene.util.CloseableThreadLocal
+org.apache.lucene.index.TestCloseableThreadLocal.InitValueThreadLocal
+org.apache.lucene.index.TestCloseableThreadLocal

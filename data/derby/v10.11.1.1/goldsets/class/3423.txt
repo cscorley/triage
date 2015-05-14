@@ -1,0 +1,4 @@
+org.apache.derby.client.am.DatabaseMetaData
+org.apache.derby.impl.jdbc.EmbedDatabaseMetaData40
+org.apache.derby.client.net.NetDatabaseMetaData
+org.apache.derby.client.net.NetDatabaseMetaData40

@@ -1,0 +1,2 @@
+org.apache.pig.newplan.logical.optimizer.LogicalPlanOptimizer.buildRuleSets()
+org.apache.pig.newplan.FilterExtractor.checkPushDown(BinaryExpression)

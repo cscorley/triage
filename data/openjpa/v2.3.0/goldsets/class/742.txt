@@ -1,0 +1,17 @@
+org.apache.openjpa.persistence.AnnotationPersistenceMetaDataSerializer
+org.apache.openjpa.jdbc.meta.ClassMappingInfo
+org.apache.openjpa.meta.ClassMetaData
+org.apache.openjpa.persistence.AnnotationPersistenceMetaDataSerializer.ClassQueries
+org.apache.openjpa.persistence.AnnotationPersistenceMetaDataSerializer.ClassSeqs
+org.apache.openjpa.meta.NonPersistentMetaData
+org.apache.openjpa.persistence.PersistenceUnitInfoImpl
+org.apache.openjpa.meta.QueryMetaData
+org.apache.openjpa.jdbc.meta.QueryResultMapping
+org.apache.openjpa.jdbc.schema.Sequence
+org.apache.openjpa.meta.SequenceMetaData
+org.apache.openjpa.lib.meta.SourceTracker
+org.apache.openjpa.jdbc.schema.Table
+org.apache.openjpa.persistence.jdbc.XMLPersistenceMappingParser
+org.apache.openjpa.persistence.XMLPersistenceMetaDataParser
+org.apache.openjpa.persistence.XMLPersistenceMetaDataSerializer
+org.apache.openjpa.jdbc.schema.XMLSchemaParser

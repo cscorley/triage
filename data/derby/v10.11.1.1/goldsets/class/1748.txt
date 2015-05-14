@@ -1,0 +1,11 @@
+org.apache.derby.impl.db.BasicDatabase
+org.apache.derbyTesting.functionTests.tests.lang.CollationTest
+org.apache.derby.impl.sql.compile.CreateTableNode
+org.apache.derby.impl.sql.catalog.DataDictionaryImpl
+org.apache.derby.iapi.types.DataTypeDescriptor
+org.apache.derby.iapi.types.DataValueFactoryImpl
+org.apache.derbyTesting.junit.Decorator
+org.apache.derby.iapi.services.i18n.LocaleFinder
+org.apache.derby.iapi.reference.Property
+org.apache.derby.iapi.types.SQLChar
+org.apache.derby.iapi.types.StringDataValue

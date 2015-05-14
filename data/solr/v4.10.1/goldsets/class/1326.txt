@@ -1,0 +1,10 @@
+org.apache.solr.highlight.DefaultSolrHighlighter
+org.apache.solr.core.PluginInfo
+org.apache.solr.util.plugin.PluginInfoInitialized
+org.apache.solr.core.RequestHandlers
+org.apache.solr.core.SolrConfig
+org.apache.solr.core.SolrCore
+org.apache.solr.highlight.SolrHighlighter
+org.apache.solr.core.SolrConfig.UpdateHandlerInfo
+org.apache.solr.update.processor.UpdateRequestProcessorChain
+org.apache.solr.update.processor.UpdateRequestProcessorFactoryTest

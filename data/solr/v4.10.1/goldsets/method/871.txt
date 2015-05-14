@@ -1,0 +1,2 @@
+org.apache.solr.handler.AnalysisRequestHandlerTest.getSchemaFile()
+org.apache.solr.handler.AnalysisRequestHandler.init(NamedList)

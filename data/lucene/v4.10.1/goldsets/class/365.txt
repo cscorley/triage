@@ -1,0 +1,4 @@
+org.apache.lucene.search.DisjunctionSumScorer
+org.apache.lucene.util.ScorerDocQueue.HeapedScorerDoc
+org.apache.lucene.util.ScorerDocQueue
+org.apache.lucene.search.DisjunctionSumScorer.ScorerQueue

@@ -1,0 +1,2 @@
+org.apache.openjpa.jdbc.sql.PostgresDictionary.PostgresConnection
+org.apache.openjpa.jdbc.sql.PostgresDictionary

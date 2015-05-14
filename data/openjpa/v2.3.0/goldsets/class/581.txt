@@ -1,0 +1,2 @@
+org.apache.openjpa.lib.conf.Configurations
+org.apache.openjpa.conf.OpenJPAConfigurationImpl

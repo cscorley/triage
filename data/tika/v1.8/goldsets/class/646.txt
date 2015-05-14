@@ -1,0 +1,4 @@
+org.apache.tika.sax.EndDocumentShieldingContentHandler
+org.apache.tika.parser.microsoft.ooxml.OOXMLExtractorFactory
+org.apache.tika.parser.microsoft.ooxml.OOXMLParser
+org.apache.tika.parser.odf.OpenDocumentParser

@@ -1,0 +1,2 @@
+org.apache.lucene.util.Constants
+org.apache.lucene.index.TestCheckIndex

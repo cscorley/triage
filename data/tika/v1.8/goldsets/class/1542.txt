@@ -1,0 +1,2 @@
+org.apache.tika.parser.font.FontParsersTest
+org.apache.tika.mime.TestMimeTypes

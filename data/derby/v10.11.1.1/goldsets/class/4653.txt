@@ -1,0 +1,4 @@
+org.apache.derbyTesting.junit.BaseJDBCTestCase
+org.apache.derby.client.am.Connection
+org.apache.derbyTesting.functionTests.tests.jdbcapi.J2EEDataSourceTest
+org.apache.derby.client.am.LogicalConnection

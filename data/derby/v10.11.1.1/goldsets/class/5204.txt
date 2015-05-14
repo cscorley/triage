@@ -1,0 +1,2 @@
+org.apache.derbyBuild.GeneratorBase
+org.apache.derbyBuild.ReleaseNotesGenerator

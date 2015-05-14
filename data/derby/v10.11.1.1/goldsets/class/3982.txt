@@ -1,0 +1,5 @@
+org.apache.derbyTesting.junit.BaseTestCase
+org.apache.derbyTesting.functionTests.tests.upgradeTests._Suite.OldVersions
+org.apache.derbyTesting.functionTests.tests.upgradeTests.PhaseChanger
+org.apache.derbyTesting.functionTests.tests.upgradeTests.UpgradeRun
+org.apache.derbyTesting.functionTests.tests.upgradeTests._Suite

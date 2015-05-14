@@ -1,0 +1,5 @@
+org.apache.openjpa.lib.conf.ConfigurationImpl
+org.apache.openjpa.persistence.EntityManagerImpl
+org.apache.openjpa.conf.OpenJPAConfigurationImpl
+org.apache.openjpa.persistence.simple.TestPropertiesMethods
+org.apache.openjpa.lib.conf.Value

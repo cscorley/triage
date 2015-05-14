@@ -1,0 +1,2 @@
+org.apache.lucene.store.RAMInputStream
+org.apache.lucene.index.store.TestRAMDirectory

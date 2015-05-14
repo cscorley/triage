@@ -1,0 +1,3 @@
+org.apache.derbyTesting.functionTests.tests.derbynet.NetworkServerControlApiTest
+org.apache.derby.impl.drda.NetworkServerControlImpl
+org.apache.derbyTesting.junit.SystemPropertyTestSetup

@@ -1,0 +1,17 @@
+org.apache.bookkeeper.meta.AbstractZkLedgerManager
+org.apache.hedwig.server.persistence.BookkeeperPersistenceManager.AcquireOp
+org.apache.hedwig.server.persistence.BookkeeperPersistenceManager
+org.apache.bookkeeper.client.LedgerMetadata
+org.apache.hedwig.server.topics.MMTopicManager.MMGetOwnerOp
+org.apache.hedwig.server.topics.MMTopicManager
+org.apache.bookkeeper.versioning.Version.Occurred
+org.apache.hedwig.server.meta.TestMetadataManager
+org.apache.bookkeeper.meta.TestZkVersion
+org.apache.hedwig.server.persistence.BookkeeperPersistenceManager.TopicInfo
+org.apache.hedwig.server.meta.TopicOwnershipManager
+org.apache.hedwig.server.meta.TopicPersistenceManager
+org.apache.bookkeeper.versioning.Version
+org.apache.hedwig.server.meta.ZkMetadataManagerFactory
+org.apache.hedwig.server.meta.ZkMetadataManagerFactory.ZkTopicOwnershipManagerImpl
+org.apache.hedwig.server.meta.ZkMetadataManagerFactory.ZkTopicPersistenceManagerImpl
+org.apache.bookkeeper.meta.ZkVersion

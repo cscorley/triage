@@ -1,0 +1,2 @@
+org.apache.derbyTesting.functionTests.tests.store.TableLockBasicTest
+org.apache.derbyTesting.functionTests.tests.store._Suite

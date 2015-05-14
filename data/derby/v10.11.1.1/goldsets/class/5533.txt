@@ -1,0 +1,6 @@
+org.apache.derby.client.am.CrossConverters
+org.apache.derby.client.am.LossOfPrecisionConversionException
+org.apache.derby.client.am.OutsideRangeForDataTypeException
+org.apache.derbyTesting.functionTests.tests.jdbcapi.ParameterMappingTest
+org.apache.derby.shared.common.reference.SQLState
+org.apache.derbyBuild.splitmessages

@@ -1,0 +1,5 @@
+org.apache.pig.test.TestMonitoredUDF.ErrorCallbackUDF
+org.apache.pig.test.TestMonitoredUDF.InheritedUdf
+org.apache.pig.builtin.MonitoredUDF
+org.apache.pig.test.TestMonitoredUDF.SimpleIntUDF
+org.apache.pig.test.TestMonitoredUDF

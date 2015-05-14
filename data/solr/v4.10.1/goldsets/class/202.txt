@@ -1,0 +1,2 @@
+org.apache.solr.servlet.SolrRequestParserTest
+org.apache.solr.servlet.SolrRequestParsers

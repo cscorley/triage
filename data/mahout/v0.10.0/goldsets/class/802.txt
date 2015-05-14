@@ -1,0 +1,3 @@
+org.apache.mahout.cf.taste.hadoop.item.AggregateAndRecommendReducer
+org.apache.mahout.common.HadoopUtil
+org.apache.mahout.cf.taste.hadoop.item.RecommenderJob

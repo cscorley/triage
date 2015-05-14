@@ -1,0 +1,5 @@
+org.apache.openjpa.kernel.DetachManager
+org.apache.openjpa.kernel.DetachState
+org.apache.openjpa.conf.OpenJPAConfigurationImpl
+org.apache.openjpa.persistence.detachment.TestGetReferenceAndImplicitDetachment
+org.apache.openjpa.kernel.VersionAttachStrategy

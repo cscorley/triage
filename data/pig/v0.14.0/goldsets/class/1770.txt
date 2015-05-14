@@ -1,0 +1,2 @@
+org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.regex.CompiledAutomaton
+org.apache.pig.test.TestPORegexp

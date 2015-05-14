@@ -1,0 +1,3 @@
+org.apache.pig.tez.TestGroupConstParallelTez
+org.apache.pig.tez.TestJobSubmissionTez
+org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler

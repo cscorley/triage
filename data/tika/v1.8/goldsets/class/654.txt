@@ -1,0 +1,2 @@
+org.apache.tika.io.TikaInputStream
+org.apache.tika.detect.ZipContainerDetector

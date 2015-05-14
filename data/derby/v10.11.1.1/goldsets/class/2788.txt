@@ -1,0 +1,2 @@
+org.apache.derby.jdbc.AutoloadedDriver
+org.apache.derby.catalog.types.TypeDescriptorImpl

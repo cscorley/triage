@@ -1,0 +1,4 @@
+org.apache.derbyTesting.functionTests.tests.jdbcapi.DataSourceTest
+org.apache.derbyTesting.functionTests.tests.jdbcapi.J2EEDataSourceTest
+org.apache.derby.client.net.NetConnection
+org.apache.derbyBuild.splitmessages

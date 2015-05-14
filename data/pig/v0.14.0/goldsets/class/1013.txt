@@ -1,0 +1,3 @@
+org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.Launcher
+org.apache.pig.impl.PigContext
+org.apache.pig.builtin.Utf8StorageConverter

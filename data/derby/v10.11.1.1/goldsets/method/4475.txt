@@ -1,0 +1,2 @@
+org.apache.derbyTesting.functionTests.tests.lang.RolesTest.doDynamicSetRole(Connection)
+org.apache.derby.iapi.util.IdUtil.parseRoleId(String)

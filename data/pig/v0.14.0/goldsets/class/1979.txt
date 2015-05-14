@@ -1,0 +1,2 @@
+org.apache.pig.newplan.logical.expression.DereferenceExpression
+org.apache.pig.test.TestEvalPipeline2

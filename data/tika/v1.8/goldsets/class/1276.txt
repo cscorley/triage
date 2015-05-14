@@ -1,0 +1,3 @@
+org.apache.tika.bundle.BundleIT
+org.apache.tika.config.ServiceLoader
+org.apache.tika.bundle.BundleIT.TestingServiceLoader

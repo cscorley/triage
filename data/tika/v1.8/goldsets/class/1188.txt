@@ -1,0 +1,3 @@
+org.apache.tika.utils.DateUtils
+org.apache.tika.metadata.Metadata
+org.apache.tika.parser.microsoft.SummaryExtractor

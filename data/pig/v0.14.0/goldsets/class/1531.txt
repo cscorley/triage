@@ -1,0 +1,6 @@
+org.apache.pig.test.TestInputOutputFileValidator.DummyStorer
+org.apache.pig.impl.logicalLayer.validators.InputOutputFileVisitor
+org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigInputFormat
+org.apache.pig.PigServer
+org.apache.pig.impl.plan.PlanValidator
+org.apache.pig.test.TestInputOutputFileValidator

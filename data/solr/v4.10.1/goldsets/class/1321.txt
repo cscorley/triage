@@ -1,0 +1,4 @@
+org.apache.solr.analysis.ReversedWildcardFilter
+org.apache.solr.analysis.ReversedWildcardFilterFactory
+org.apache.solr.search.SolrQueryParser
+org.apache.solr.analysis.TestReversedWildcardFilterFactory

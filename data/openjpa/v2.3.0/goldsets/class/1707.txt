@@ -1,0 +1,6 @@
+org.apache.openjpa.persistence.DummyPersistenceCapeable
+org.apache.openjpa.meta.MetaDataRepository
+org.apache.openjpa.enhance.PCEnhancer
+org.apache.openjpa.lib.util.svn.SVNUtils
+org.apache.openjpa.enhance.TestPCEnhancerEnhancementContractVersion
+org.apache.openjpa.lib.util.svn.TestSVNUtils

@@ -1,0 +1,6 @@
+org.apache.derbyTesting.junit.BaseTestCase
+org.apache.derby.impl.services.locks.ConcurrentLockSet
+org.apache.derbyTesting.functionTests.tests.engine.LockInterruptTest
+org.apache.derby.impl.services.locks.LockSet
+org.apache.derbyTesting.functionTests.tests.engine.LockInterruptTest.Waiter
+org.apache.derbyTesting.functionTests.tests.engine._Suite

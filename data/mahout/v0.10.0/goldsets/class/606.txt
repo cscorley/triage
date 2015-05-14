@@ -1,0 +1,3 @@
+org.apache.mahout.cf.taste.impl.recommender.svd.ALSWRFactorizer
+org.apache.mahout.cf.taste.impl.recommender.svd.ALSWRFactorizerTest
+org.apache.mahout.cf.taste.impl.recommender.svd.ALSWRFactorizer.Features

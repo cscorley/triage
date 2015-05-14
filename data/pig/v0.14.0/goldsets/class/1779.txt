@@ -1,0 +1,4 @@
+org.apache.pig.tools.pigstats.JobStats
+org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigRecordReader
+org.apache.pig.tools.pigstats.PigStatsUtil
+org.apache.pig.test.TestPigRunner

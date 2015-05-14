@@ -1,0 +1,7 @@
+org.apache.solr.request.DisMaxRequestHandler
+org.apache.solr.DisMaxRequestHandlerTest
+org.apache.solr.search.QueryParsing
+org.apache.solr.util.SolrPluginUtils
+org.apache.solr.util.SolrPluginUtilsTest
+org.apache.solr.request.StandardRequestHandler
+org.apache.solr.search.QueryParsing.StrParser

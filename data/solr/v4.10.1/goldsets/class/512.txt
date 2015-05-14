@@ -1,0 +1,2 @@
+org.apache.solr.client.solrj.request.UpdateRequest.ACTION
+org.apache.solr.client.solrj.request.UpdateRequest

@@ -1,0 +1,3 @@
+org.apache.derby.mbeans.drda.NetworkServerMBean
+org.apache.derby.impl.drda.NetworkServerMBeanImpl
+org.apache.derbyTesting.functionTests.tests.management.NetworkServerMBeanTest

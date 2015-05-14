@@ -1,0 +1,5 @@
+org.apache.derby.iapi.sql.dictionary.ConstraintDescriptor
+org.apache.derby.impl.sql.compile.OptimizerImpl
+org.apache.derbyTesting.functionTests.tests.lang.OrderByAndSortAvoidance
+org.apache.derby.impl.sql.compile.OrderByList
+org.apache.derby.iapi.sql.compile.RequiredRowOrdering

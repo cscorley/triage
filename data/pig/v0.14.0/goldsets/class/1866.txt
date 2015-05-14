@@ -1,0 +1,4 @@
+org.apache.pig.newplan.logical.relational.LogToPhyTranslationVisitor
+org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MRCompiler
+org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POProject
+org.apache.pig.test.TestEvalPipeline2

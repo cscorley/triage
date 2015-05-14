@@ -1,0 +1,3 @@
+org.apache.derbyTesting.functionTests.tests.jdbcapi.BlobClob4BlobTest
+org.apache.derbyTesting.functionTests.tests.jdbcapi.ClobStoredProcedureTest
+org.apache.derby.impl.jdbc.EmbedClob

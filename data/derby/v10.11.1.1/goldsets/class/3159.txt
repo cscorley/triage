@@ -1,0 +1,3 @@
+org.apache.derbyTesting.functionTests.tests.jdbcapi.AuthenticationTest
+org.apache.derby.iapi.util.IdUtil
+org.apache.derby.catalog.SystemProcedures

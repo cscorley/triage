@@ -1,0 +1,3 @@
+org.apache.derbyTesting.functionTests.tests.lang.ConcurrentImplicitCreateSchema
+org.apache.derbyTesting.functionTests.tests.lang.ConcurrentImplicitCreateSchema.CreateTable
+org.apache.derby.impl.sql.execute.DDLConstantAction

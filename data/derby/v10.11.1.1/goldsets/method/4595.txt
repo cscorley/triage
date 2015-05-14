@@ -1,0 +1,3 @@
+org.apache.derby.impl.sql.compile.ResultColumnList.getResultColumn(int,int)
+org.apache.derby.impl.sql.compile.ResultColumnList.getResultColumn(int,int,String)
+org.apache.derby.impl.sql.compile.ColumnReference.remapColumnReferencesToExpressions()

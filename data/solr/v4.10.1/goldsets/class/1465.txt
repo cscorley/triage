@@ -1,0 +1,2 @@
+org.apache.solr.handler.dataimport.XPathRecordReader.Node
+org.apache.solr.handler.dataimport.XPathRecordReader

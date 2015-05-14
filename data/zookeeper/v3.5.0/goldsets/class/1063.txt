@@ -1,0 +1,3 @@
+org.apache.zookeeper.ClientCnxnSocketNIO
+org.apache.zookeeper.ZooKeeper.ZKWatchManager
+org.apache.zookeeper.ZooKeeper

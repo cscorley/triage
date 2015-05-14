@@ -1,0 +1,4 @@
+org.apache.derbyTesting.functionTests.util.corruptio.CorruptFile
+org.apache.derby.impl.io.InputStreamFile
+org.apache.derby.impl.io.JarDBFile
+org.apache.derby.io.StorageFile

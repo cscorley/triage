@@ -1,0 +1,2 @@
+org.apache.openjpa.kernel.ResultPacker.ResultPacker(Class<?>,Class<?>[],String[],Class<?>)
+org.apache.openjpa.kernel.ResultPacker.isInterface(Class<?>,Class<?>)

@@ -1,0 +1,4 @@
+org.apache.derby.client.am.DatabaseMetaData
+org.apache.derby.client.am.EncryptionManager
+org.apache.derby.shared.common.reference.SQLState
+org.apache.derby.client.am.SqlException

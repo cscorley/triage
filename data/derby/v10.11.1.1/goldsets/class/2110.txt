@@ -1,0 +1,3 @@
+org.apache.derbyTesting.functionTests.tests.jdbcapi.BlobClob4BlobTest
+org.apache.derbyBuild.MessageBuilder
+org.apache.derbyBuild.MessageBuilder.XMLWriter

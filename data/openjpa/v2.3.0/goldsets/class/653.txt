@@ -1,0 +1,2 @@
+org.apache.openjpa.datacache.QueryCacheStoreQuery.CachingResultObjectProvider
+org.apache.openjpa.datacache.QueryCacheStoreQuery

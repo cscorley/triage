@@ -1,0 +1,13 @@
+org.apache.derbyTesting.junit.BaseTestCase
+org.apache.derbyTesting.functionTests.tests.upgradeTests.Changes10_3
+org.apache.derby.impl.sql.catalog.DataDictionaryImpl
+org.apache.derbyTesting.functionTests.tests.lang.SecurityPolicyReloadingTest.PropReadingAction
+org.apache.derby.catalog.SystemProcedures.ReloadPolicyAction
+org.apache.derby.shared.common.reference.SQLState
+org.apache.derbyTesting.junit.SecurityManagerSetup
+org.apache.derbyTesting.functionTests.tests.lang.SecurityPolicyReloadingTest
+org.apache.derbyTesting.junit.SupportFilesSetup
+org.apache.derby.catalog.SystemProcedures
+org.apache.derbyTesting.junit.TestConfiguration
+org.apache.derby.impl.jdbc.Util
+org.apache.derbyTesting.functionTests.tests.lang._Suite

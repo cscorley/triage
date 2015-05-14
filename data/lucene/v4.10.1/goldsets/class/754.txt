@@ -1,0 +1,2 @@
+org.apache.lucene.search.FieldCacheImpl.Cache
+org.apache.lucene.search.FieldCacheImpl

@@ -1,0 +1,3 @@
+org.apache.derby.impl.sql.compile.BinaryRelationalOperatorNode
+org.apache.derbyTesting.functionTests.tests.lang.InListMultiProbeTest
+org.apache.derby.impl.sql.compile.OrNode

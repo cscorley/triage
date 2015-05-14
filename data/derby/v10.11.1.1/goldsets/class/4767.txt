@@ -1,0 +1,12 @@
+org.apache.derbyTesting.functionTests.tests.jdbcapi.ClosedObjectTest
+org.apache.derby.impl.jdbc.EmbedResultSet
+org.apache.derby.client.net.NetResultSet40
+org.apache.derby.client.am.ResultSet
+org.apache.derbyTesting.functionTests.tests.jdbcapi.ResultSetMiscTest
+org.apache.derbyTesting.functionTests.tests.jdbcapi.ClosedObjectTest.ResultSetObjectDecorator
+org.apache.derbyTesting.functionTests.tests.jdbc4.ResultSetTest
+org.apache.derby.shared.common.reference.SQLState
+org.apache.derby.client.am.SectionManager
+org.apache.derbyTesting.functionTests.tests.jdbc4.TestDbMetaData
+org.apache.derbyTesting.functionTests.tests.lang.UpdatableResultSetTest
+org.apache.derbyBuild.splitmessages

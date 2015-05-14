@@ -1,0 +1,4 @@
+org.apache.derby.iapi.util.UTF8Util.SkipCount
+org.apache.derby.iapi.util.UTF8Util
+org.apache.derbyTesting.unitTests.junit.UTF8UtilTest
+org.apache.derbyTesting.unitTests.junit._Suite

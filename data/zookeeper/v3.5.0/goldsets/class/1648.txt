@@ -1,0 +1,2 @@
+org.apache.zookeeper.test.WatcherTest.MyWatcher
+org.apache.zookeeper.test.WatcherTest

@@ -1,0 +1,6 @@
+org.apache.derbyTesting.junit.JDBC
+org.apache.derbyTesting.functionTests.tests.lang.NullIfTest
+org.apache.derbyTesting.functionTests.tests.jdbcapi.PrepStmtMetaDataTest
+org.apache.derbyTesting.junit.RuntimeStatisticsParser
+org.apache.derbyTesting.junit.SQLUtilities
+org.apache.derbyTesting.functionTests.tests.jdbcapi._Suite

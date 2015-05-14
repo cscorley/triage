@@ -1,0 +1,13 @@
+org.apache.openjpa.jdbc.kernel.AbstractJDBCSeq
+org.apache.openjpa.ee.AbstractManagedRuntime
+org.apache.openjpa.jdbc.kernel.TableJDBCSeq.AllocateSequenceRunnable
+org.apache.openjpa.ee.AutomaticManagedRuntime
+org.apache.openjpa.jdbc.kernel.TableJDBCSeq.CurrentSequenceRunnable
+org.apache.openjpa.ee.WASRegistryManagedRuntime.DelegatingUOWAction
+org.apache.openjpa.lib.util.J2DoPrivHelper
+org.apache.openjpa.ee.ManagedRuntime
+org.apache.openjpa.ee.RegistryManagedRuntime
+org.apache.openjpa.jdbc.kernel.TableJDBCSeq
+org.apache.openjpa.ee.TestWASManagedRuntime
+org.apache.openjpa.ee.RegistryManagedRuntime.TransactionManagerRegistryFacade
+org.apache.openjpa.ee.WASRegistryManagedRuntime

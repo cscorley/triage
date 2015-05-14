@@ -1,0 +1,4 @@
+org.apache.tika.metadata.MSOffice
+org.apache.tika.parser.odf.OpenDocumentMetaParser
+org.apache.tika.metadata.Property
+org.apache.tika.parser.microsoft.SummaryExtractor

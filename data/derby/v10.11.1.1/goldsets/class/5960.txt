@@ -1,0 +1,3 @@
+org.apache.derby.impl.io.vfmem.VirtualFile
+org.apache.derbyTesting.unitTests.junit.VirtualFileTest
+org.apache.derby.impl.io.vfmem.VirtualRandomAccessFile

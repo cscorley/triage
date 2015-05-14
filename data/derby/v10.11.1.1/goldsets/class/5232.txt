@@ -1,0 +1,12 @@
+org.apache.derby.impl.services.monitor.BaseMonitor
+org.apache.derby.impl.store.raw.log.LogToFile
+org.apache.derby.shared.common.reference.MessageId
+org.apache.derby.iapi.services.monitor.PersistentService
+org.apache.derbyTesting.functionTests.util.PrivilegedFileOpsForTests
+org.apache.derby.impl.store.access.RAMAccessManager
+org.apache.derby.impl.store.raw.RawStore
+org.apache.derby.iapi.store.raw.RawStoreFactory
+org.apache.derbyTesting.functionTests.tests.engine.ReadMeFilesTest
+org.apache.derby.impl.services.monitor.StorageFactoryService
+org.apache.derby.impl.storeless.StorelessService
+org.apache.derbyTesting.functionTests.tests.engine._Suite

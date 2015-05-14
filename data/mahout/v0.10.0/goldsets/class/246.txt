@@ -1,0 +1,3 @@
+org.apache.mahout.classifier.BayesFileFormatter
+org.apache.mahout.utils.vectors.text.DocumentTokenizerMapper
+org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorMapper

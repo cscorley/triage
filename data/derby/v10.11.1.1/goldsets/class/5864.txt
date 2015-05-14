@@ -1,0 +1,2 @@
+org.apache.derbyTesting.junit.Derby
+org.apache.derbyTesting.functionTests.tests.derbynet._Suite

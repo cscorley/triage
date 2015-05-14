@@ -1,0 +1,2 @@
+org.apache.derby.jdbc.ClientBaseDataSource
+org.apache.derby.iapi.types.ReaderToUTF8Stream

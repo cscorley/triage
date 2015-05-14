@@ -1,0 +1,4 @@
+org.apache.derby.impl.services.jmx.JMXManagementService
+org.apache.derbyDemo.vtis.core.QueryVTIHelper
+org.apache.derbyDemo.vtis.snapshot.Subscription
+org.apache.derbyDemo.vtis.core.XmlVTI

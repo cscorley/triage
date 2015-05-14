@@ -1,0 +1,2 @@
+org.apache.tika.parser.opendocument.ODFParserTest
+org.apache.tika.parser.odf.OpenDocumentContentParser

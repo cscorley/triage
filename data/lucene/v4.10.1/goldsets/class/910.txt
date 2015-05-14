@@ -1,0 +1,4 @@
+org.apache.lucene.index.Payload
+org.apache.lucene.search.Similarity
+org.apache.lucene.index.TermPositions
+org.apache.lucene.analysis.Token

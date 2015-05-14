@@ -1,0 +1,2 @@
+org.apache.derbyTesting.functionTests.util.corruptio.CorruptDiskStorageFactory.getRealStorageFactory()
+org.apache.derby.jdbc.EmbedXAResource.wrapInXAException(SQLException)

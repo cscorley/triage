@@ -1,0 +1,4 @@
+org.apache.openjpa.jdbc.kernel.BatchingPreparedStatementManagerImpl.checkUpdateCount(int[],int)
+org.apache.openjpa.jdbc.kernel.BatchingPreparedStatementManagerImpl.checkUpdateCount(int[],int,PreparedStatement)
+org.apache.openjpa.jdbc.kernel.BatchingPreparedStatementManagerImpl.flushBatch()
+org.apache.openjpa.datacache.DataCacheStoreManager.transformToVersionSafePCDatas(DataCache,List)

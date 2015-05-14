@@ -1,0 +1,3 @@
+org.apache.lucene.search.highlight.SimpleHTMLFormatter.SimpleHTMLFormatter()
+org.apache.lucene.search.highlight.SimpleHTMLFormatter.SimpleHTMLFormatter(String,String)
+org.apache.lucene.search.highlight.SimpleHTMLFormatter.highlightTerm(String,TokenGroup)

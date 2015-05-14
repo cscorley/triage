@@ -1,0 +1,4 @@
+org.apache.solr.handler.component.TermVectorComponent.TVMapper
+org.apache.solr.handler.component.TermVectorComponent
+org.apache.solr.handler.component.TermVectorComponentTest
+org.apache.solr.common.params.TermVectorParams

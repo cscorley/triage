@@ -1,0 +1,2 @@
+org.apache.bookkeeper.streaming.LedgerInputStream.LedgerInputStream(LedgerHandle,int)
+org.apache.bookkeeper.streaming.LedgerInputStream.close()

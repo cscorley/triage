@@ -1,0 +1,5 @@
+org.apache.solr.request.JSONWriterTest
+org.apache.solr.handler.component.QueryComponent
+org.apache.solr.core.SolrCore
+org.apache.solr.servlet.SolrDispatchFilter
+org.apache.solr.request.SolrQueryResponse

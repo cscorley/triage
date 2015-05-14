@@ -1,0 +1,5 @@
+org.apache.derby.impl.io.BaseStorageFactory
+org.apache.derbyTesting.functionTests.util.corruptio.CorruptBaseStorageFactory
+org.apache.derby.io.StorageFactory
+org.apache.derby.impl.services.monitor.StorageFactoryService
+org.apache.derby.impl.io.VFMemoryStorageFactory

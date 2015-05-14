@@ -1,0 +1,2 @@
+org.apache.tika.parser.microsoft.POIFSContainerDetector
+org.apache.tika.detect.TestContainerAwareDetector

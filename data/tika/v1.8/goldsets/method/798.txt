@@ -1,0 +1,3 @@
+org.apache.tika.parser.microsoft.AbstractPOIContainerExtractionTest.process(String,ContainerExtractor,boolean)
+org.apache.tika.mime.TestMimeTypes.testWmfDetection()
+org.apache.tika.mime.TestMimeTypes.testprtDetection()

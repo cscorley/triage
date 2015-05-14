@@ -1,0 +1,3 @@
+org.apache.pig.builtin.BinStorage
+org.apache.pig.test.TestEvalPipeline2
+org.apache.pig.builtin.BinStorage.UnImplementedLoadCaster

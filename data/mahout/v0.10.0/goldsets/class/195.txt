@@ -1,0 +1,2 @@
+org.apache.mahout.cf.taste.model.DataModel
+org.apache.mahout.cf.taste.impl.recommender.slopeone.MemoryDiffStorage

@@ -1,0 +1,2 @@
+org.apache.derby.impl.sql.compile.StringSlicer
+org.apache.derby.iapi.util.StringUtil

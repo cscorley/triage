@@ -1,0 +1,5 @@
+org.apache.openjpa.ee.OSGiManagedRuntime.Listener
+org.apache.openjpa.ee.OSGiManagedRuntime
+org.apache.openjpa.persistence.osgi.PersistenceActivator
+org.apache.openjpa.ee.TestOSGiManagedRuntime.TestBundleContext
+org.apache.openjpa.ee.TestOSGiManagedRuntime

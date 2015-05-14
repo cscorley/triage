@@ -1,0 +1,4 @@
+org.apache.tika.parser.DefaultParser
+org.apache.tika.config.ServiceLoader.RankedService
+org.apache.tika.config.ServiceLoader
+org.apache.tika.config.TikaActivator

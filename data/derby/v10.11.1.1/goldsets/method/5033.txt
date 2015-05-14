@@ -1,0 +1,5 @@
+org.apache.derby.impl.drda.DecryptionManager.calculateDecryptionToken(int,byte[])
+org.apache.derby.client.am.EncryptionManager.calculateEncryptionToken(int,byte[])
+org.apache.derby.impl.jdbc.EmbedStatement.executeBatch()
+org.apache.derby.iapi.sql.dictionary.ConglomerateDescriptorList.getConglomerateDescriptors(UUID)
+org.apache.derby.iapi.sql.dictionary.ConglomerateDescriptorList.getConglomerateDescriptors(long)

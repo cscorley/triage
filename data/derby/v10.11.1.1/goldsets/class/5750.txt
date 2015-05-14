@@ -1,0 +1,3 @@
+org.apache.derbyTesting.functionTests.tests.lang.CompressTableTest
+org.apache.derby.catalog.SystemProcedures
+org.apache.derbyTesting.functionTests.tests.lang.UpdateStatisticsTest

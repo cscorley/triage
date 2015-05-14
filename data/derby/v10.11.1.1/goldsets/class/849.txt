@@ -1,0 +1,6 @@
+org.apache.derby.client.net.Reply
+org.apache.derby.client.net.Request
+org.apache.derby.shared.common.reference.SQLState
+org.apache.derbyTesting.functionTests.tests.derbynet.SuicideOfStreaming
+org.apache.derby.client.net.Typdef
+org.apache.derbyBuild.splitmessages

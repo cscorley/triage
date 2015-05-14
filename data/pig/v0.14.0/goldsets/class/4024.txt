@@ -1,0 +1,2 @@
+org.apache.pig.test.TestPigStreaming
+org.apache.pig.impl.streaming.TestPigStreamingUDF

@@ -1,0 +1,2 @@
+org.apache.pig.PigServer.PigServer(PigContext,boolean)
+org.apache.pig.PigServer.addJarsFromProperties()

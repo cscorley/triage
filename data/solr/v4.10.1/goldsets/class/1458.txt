@@ -1,0 +1,6 @@
+org.apache.solr.core.IndexDeletionPolicyWrapper.IndexCommitWrapper
+org.apache.solr.core.IndexDeletionPolicyWrapper
+org.apache.solr.handler.ReplicationHandler
+org.apache.solr.handler.SnapPuller
+org.apache.solr.core.SolrDeletionPolicy
+org.apache.solr.core.TestSolrDeletionPolicy1

@@ -1,0 +1,3 @@
+org.apache.solr.util.DisMaxParams
+org.apache.solr.request.DisMaxRequestHandler
+org.apache.solr.DisMaxRequestHandlerTest

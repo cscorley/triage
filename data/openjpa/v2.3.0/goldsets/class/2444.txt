@@ -1,0 +1,2 @@
+org.apache.openjpa.persistence.PersistenceMetaDataFactory
+org.apache.openjpa.persistence.jdbc.meta.TestUseSchemaElement

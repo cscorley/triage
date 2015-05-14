@@ -1,0 +1,2 @@
+org.apache.pig.test.TestPruneColumn.MyFilterFunc
+org.apache.pig.test.TestPruneColumn

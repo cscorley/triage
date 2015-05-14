@@ -1,0 +1,5 @@
+org.apache.derby.shared.common.reference.Attribute
+org.apache.derby.jdbc.ClientBaseDataSource
+org.apache.derbyTesting.functionTests.tests.derbynet.ClientSideSystemPropertiesTest
+org.apache.derby.client.am.LogWriter
+org.apache.derbyTesting.functionTests.tests.derbynet._Suite

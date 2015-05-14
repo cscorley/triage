@@ -1,0 +1,2 @@
+org.apache.tika.parser.image.ImageMetadataExtractor.ExifHandler
+org.apache.tika.parser.image.ImageMetadataExtractor

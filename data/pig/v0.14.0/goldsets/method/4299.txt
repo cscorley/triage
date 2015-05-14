@@ -1,0 +1,2 @@
+org.apache.pig.impl.util.SpillableMemoryManager.SpillableMemoryManager()
+org.apache.pig.impl.util.SpillableMemoryManager.getInstance()

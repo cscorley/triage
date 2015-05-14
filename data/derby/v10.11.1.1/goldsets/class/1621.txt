@@ -1,0 +1,10 @@
+org.apache.derby.impl.sql.depend.BasicDependencyManager
+org.apache.derby.iapi.sql.dictionary.DataDictionary
+org.apache.derby.impl.sql.catalog.DataDictionaryImpl
+org.apache.derby.iapi.sql.depend.DependencyManager
+org.apache.derby.iapi.sql.execute.RowChanger
+org.apache.derby.impl.sql.execute.RowChangerImpl
+org.apache.derby.iapi.sql.dictionary.SPSDescriptor
+org.apache.derby.iapi.sql.dictionary.TabInfo
+org.apache.derby.impl.sql.catalog.TabInfoImpl
+org.apache.derby.iapi.sql.dictionary.TriggerDescriptor

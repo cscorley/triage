@@ -1,0 +1,4 @@
+org.apache.derby.client.am.Connection
+org.apache.derby.client.am.ResultSet
+org.apache.derbyTesting.functionTests.tests.jdbcapi.SavepointJdbc30Test
+org.apache.derby.client.am.Utils

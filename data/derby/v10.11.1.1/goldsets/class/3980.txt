@@ -1,0 +1,6 @@
+org.apache.derbyTesting.functionTests.tests.lang.DeadlockDetectionTest.Barrier
+org.apache.derby.impl.services.locks.Deadlock
+org.apache.derbyTesting.functionTests.tests.lang.DeadlockDetectionTest
+org.apache.derbyTesting.functionTests.tests.store.Derby3980DeadlockTest
+org.apache.derbyTesting.functionTests.tests.store.LiveLockTest
+org.apache.derbyTesting.functionTests.tests.lang._Suite

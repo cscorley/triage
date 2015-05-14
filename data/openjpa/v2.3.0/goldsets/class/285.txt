@@ -1,0 +1,2 @@
+org.apache.openjpa.util.ImplHelper
+org.apache.openjpa.enhance.PCRegistry

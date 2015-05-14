@@ -1,0 +1,4 @@
+org.apache.openjpa.kernel.BrokerImpl
+org.apache.openjpa.persistence.event.PostRemoveCallbackEntity
+org.apache.openjpa.persistence.test.SingleEMFTestCase
+org.apache.openjpa.persistence.event.TestPostRemove

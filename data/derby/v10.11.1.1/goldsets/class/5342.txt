@@ -1,0 +1,3 @@
+org.apache.derbyTesting.functionTests.util.ScriptTestCase
+org.apache.derbyTesting.junit.SystemPropertyTestSetup
+org.apache.derby.impl.tools.ij.utilMain

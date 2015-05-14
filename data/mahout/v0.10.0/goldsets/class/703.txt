@@ -1,0 +1,3 @@
+org.apache.mahout.math.function.Functions
+org.apache.mahout.classifier.sgd.GradientMachine
+org.apache.mahout.classifier.sgd.GradientMachineTest

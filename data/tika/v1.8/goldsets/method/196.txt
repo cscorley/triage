@@ -1,0 +1,2 @@
+org.apache.tika.config.TikaConfig.TikaConfig(Element)
+org.apache.tika.config.TikaConfig.getText(Node)

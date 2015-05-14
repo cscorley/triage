@@ -1,0 +1,4 @@
+org.apache.pig.impl.plan.Operator
+org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POPackage
+org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POPackage.POPackageTupleBuffer
+org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POPackage.PackageType

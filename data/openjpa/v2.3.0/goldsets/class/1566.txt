@@ -1,0 +1,2 @@
+org.apache.openjpa.kernel.QueryStatistics.Default
+org.apache.openjpa.kernel.QueryStatistics

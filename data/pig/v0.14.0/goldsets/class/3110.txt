@@ -1,0 +1,2 @@
+org.apache.pig.test.TestConversions
+org.apache.pig.builtin.Utf8StorageConverter

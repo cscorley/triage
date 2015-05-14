@@ -1,0 +1,3 @@
+org.apache.tika.parser.rtf.TextExtractor.processControlWord()
+org.apache.tika.parser.rtf.RTFParserTest.testHyperlink()
+org.apache.tika.parser.rtf.RTFParserTest.testIgnoredControlWord()

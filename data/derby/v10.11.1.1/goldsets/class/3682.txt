@@ -1,0 +1,6 @@
+org.apache.derby.iapi.util.IdUtil
+org.apache.derbyTesting.junit.JDBC
+org.apache.derby.iapi.util.StringUtil
+org.apache.derby.catalog.SystemProcedures
+org.apache.derbyTesting.functionTests.tests.lang.TableVTI
+org.apache.derbyTesting.functionTests.tests.lang.VTITest

@@ -1,0 +1,2 @@
+org.apache.derbyTesting.functionTests.tests.jdbcapi.ClobStoredProcedureTest
+org.apache.derby.impl.jdbc.LOBStoredProcedure

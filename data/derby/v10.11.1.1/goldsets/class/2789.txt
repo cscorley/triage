@@ -1,0 +1,3 @@
+org.apache.derby.client.am.DatabaseMetaData
+org.apache.derbyTesting.functionTests.tests.jdbcapi.DatabaseMetaDataTest
+org.apache.derby.impl.jdbc.EmbedDatabaseMetaData

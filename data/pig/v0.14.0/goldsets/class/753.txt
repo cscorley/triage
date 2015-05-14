@@ -1,0 +1,3 @@
+org.apache.pig.test.utils.MyUDFWithoutParameter
+org.apache.pig.test.TestUDFWithoutParameter
+org.apache.pig.impl.logicalLayer.validators.TypeCheckingVisitor

@@ -1,0 +1,2 @@
+org.apache.openjpa.jdbc.sql.OracleDictionary.getColumns(DatabaseMetaData,DBIdentifier,DBIdentifier,DBIdentifier,DBIdentifier,Connection)
+org.apache.openjpa.jdbc.schema.Table.importColumn(Column)

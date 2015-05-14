@@ -1,0 +1,3 @@
+org.apache.lucene.store.FileSwitchDirectory
+org.apache.lucene.store.TestFileSwitchDirectory
+org.apache.lucene.index.TestIndexWriterReader

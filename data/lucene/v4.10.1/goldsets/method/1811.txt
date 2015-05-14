@@ -1,0 +1,2 @@
+org.apache.lucene.index.TestIndexReaderReopen.testThreadSafety.modifyIndex(int)
+org.apache.lucene.index.TestIndexReaderReopen.testThreadSafety()

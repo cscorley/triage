@@ -1,0 +1,4 @@
+org.apache.solr.search.DisMaxQParser.parse()
+org.apache.solr.search.TestExtendedDismaxParser.testFocusQueryParser()
+org.apache.solr.DisMaxRequestHandlerTest.testOldStyleDefaults()
+org.apache.solr.DisMaxRequestHandlerTest.testSimplestParams()

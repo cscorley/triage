@@ -1,0 +1,2 @@
+org.apache.derby.impl.store.replication.net.ReplicationMessageTransmit.MasterReceiverThread
+org.apache.derby.impl.store.replication.net.ReplicationMessageTransmit

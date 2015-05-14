@@ -1,0 +1,7 @@
+demo.Actor
+demo.DataLoader
+demo.Actor.Gender
+org.apache.openjpa.persistence.jest.LocalJESTTest
+demo.Movie
+demo.SimpleApp
+org.apache.openjpa.persistence.jest.TestRelaxQueryParameterType

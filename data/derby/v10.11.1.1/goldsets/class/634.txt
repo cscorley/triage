@@ -1,0 +1,2 @@
+org.apache.derby.impl.sql.execute.BaseActivation
+org.apache.derby.iapi.sql.compile.Optimizer

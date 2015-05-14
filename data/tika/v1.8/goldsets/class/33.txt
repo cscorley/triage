@@ -1,0 +1,4 @@
+org.apache.tika.utils.ParseUtils
+org.apache.tika.parser.Parser
+org.apache.tika.parser.ParserFactory
+org.apache.tika.TestParsers

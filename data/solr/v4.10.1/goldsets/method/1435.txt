@@ -1,0 +1,2 @@
+org.apache.solr.handler.SnapPuller.startExecutorService.run()
+org.apache.solr.handler.SnapPuller.startExecutorService()

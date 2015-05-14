@@ -1,0 +1,3 @@
+org.apache.tika.parser.pkg.GzipParser
+org.apache.tika.parser.pkg.GzipParserTest
+org.apache.tika.mime.TestMimeTypes

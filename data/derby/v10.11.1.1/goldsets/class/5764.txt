@@ -1,0 +1,3 @@
+org.apache.derbyTesting.functionTests.tests.jdbcapi.DatabaseMetaDataTest
+org.apache.derbyTesting.junit.JDBC
+org.apache.derbyTesting.functionTests.tests.upgradeTests.UpgradeRun

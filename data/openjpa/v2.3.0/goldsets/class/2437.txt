@@ -1,0 +1,4 @@
+org.apache.openjpa.kernel.AbstractBrokerFactory
+org.apache.openjpa.kernel.BrokerImpl
+org.apache.openjpa.audit.TestBeginEventOnTransactionListener.MockAuditor
+org.apache.openjpa.audit.TestBeginEventOnTransactionListener

@@ -1,0 +1,8 @@
+org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler
+org.apache.pig.backend.hadoop.executionengine.physicalLayer.LogToPhyTranslationVisitor
+org.apache.pig.impl.logicalLayer.LogicalOperator
+org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MRCompiler
+org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceOper
+org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POGlobalRearrange
+org.apache.pig.test.utils.SimpleCustomPartitioner
+org.apache.pig.test.TestEvalPipeline2

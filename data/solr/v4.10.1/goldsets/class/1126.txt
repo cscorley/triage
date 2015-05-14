@@ -1,0 +1,2 @@
+org.apache.solr.handler.SnapPuller.FileFetcher
+org.apache.solr.handler.SnapPuller

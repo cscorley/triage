@@ -1,0 +1,2 @@
+org.apache.zookeeper.test.CnxManagerTest
+org.apache.zookeeper.server.quorum.QuorumCnxManager

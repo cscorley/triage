@@ -1,0 +1,2 @@
+org.apache.derbyTesting.junit.SecurityManagerSetup.checkIfJacocoIsRunning()
+org.apache.derbyTesting.junit.BaseTestCase.execJavaCmd(String,String,String[],File)

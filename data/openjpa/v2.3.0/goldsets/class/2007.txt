@@ -1,0 +1,2 @@
+org.apache.openjpa.persistence.jdbc.JDBCPersistenceProductDerivation
+org.apache.openjpa.conf.TestQueryHints

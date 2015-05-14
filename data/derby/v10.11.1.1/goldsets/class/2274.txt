@@ -1,0 +1,5 @@
+org.apache.derbyTesting.junit.ChangeSSLSetup
+org.apache.derbyTesting.junit.NetworkServerTestSetup
+org.apache.derbyTesting.functionTests.tests.derbynet.SSLTest
+org.apache.derbyTesting.junit.TestConfiguration
+org.apache.derbyTesting.functionTests.tests.derbynet._Suite

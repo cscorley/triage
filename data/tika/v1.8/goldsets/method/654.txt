@@ -1,0 +1,3 @@
+org.apache.tika.io.TikaInputStream.close()
+org.apache.tika.detect.ZipContainerDetector.detect(InputStream,Metadata)
+org.apache.tika.detect.ZipContainerDetector.detectOfficeOpenXML(ZipFile,TikaInputStream)

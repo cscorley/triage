@@ -1,0 +1,13 @@
+org.apache.derby.impl.drda.DDMReader
+org.apache.derby.impl.drda.DDMWriter
+org.apache.derby.impl.drda.DRDAConnThread
+org.apache.derbyTesting.functionTests.tests.management.MBeanTest
+org.apache.derbyTesting.functionTests.tests.management.ManagementMBeanTest
+org.apache.derby.impl.drda.NetworkServerControlImpl
+org.apache.derby.mbeans.drda.NetworkServerMBean
+org.apache.derby.impl.drda.NetworkServerMBeanImpl
+org.apache.derbyTesting.functionTests.tests.management.NetworkServerMBeanTest
+org.apache.derby.iapi.services.info.Version
+org.apache.derby.mbeans.VersionMBean
+org.apache.derbyTesting.functionTests.tests.management.VersionMBeanTest
+org.apache.derbyTesting.functionTests.tests.management._Suite

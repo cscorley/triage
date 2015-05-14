@@ -1,0 +1,9 @@
+org.apache.derbyTesting.junit.BaseJDBCTestCase
+org.apache.derby.client.am.Diagnosable
+org.apache.derby.client.am.ExceptionFormatter
+org.apache.derbyTesting.functionTests.tests.lang.ProcedureInTriggerTest
+org.apache.derby.client.am.SqlException
+org.apache.derbyTesting.functionTests.tests.derbynet.SqlExceptionTest
+org.apache.derby.client.am.SqlWarning
+org.apache.derby.client.am.Sqlca
+org.apache.derby.client.am.XaException

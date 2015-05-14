@@ -1,0 +1,3 @@
+org.apache.derbyTesting.junit.Utilities
+org.apache.derbyTesting.functionTests.tests.jdbcapi.XATest
+org.apache.derby.jdbc.XATransactionState

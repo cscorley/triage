@@ -1,0 +1,4 @@
+org.apache.derby.impl.store.access.sort.MergeSort
+org.apache.derby.impl.sql.compile.SubqueryNode
+org.apache.derby.impl.sql.compile.TableElementList
+org.apache.derby.iapi.types.XML

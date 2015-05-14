@@ -1,0 +1,2 @@
+org.apache.tika.parser.image.ImageMetadataExtractor.GeotagHandler
+org.apache.tika.parser.image.ImageMetadataExtractor

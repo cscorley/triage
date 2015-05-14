@@ -1,0 +1,4 @@
+org.apache.pig.Main.BufferedReaderWithParamSub
+org.apache.pig.impl.io.FileLocalizer
+org.apache.pig.Main
+org.apache.pig.backend.hadoop.executionengine.tez.TezResourceManager

@@ -1,0 +1,3 @@
+org.apache.pig.PigServer.addJarsFromProperties()
+org.apache.pig.impl.io.FileLocalizer.fetchFilesInternal(Properties,String,boolean)
+org.apache.pig.Main.printProperties()

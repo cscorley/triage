@@ -1,0 +1,2 @@
+org.apache.solr.update.processor.UpdateRequestProcessorChain
+org.apache.solr.handler.XmlUpdateRequestHandler

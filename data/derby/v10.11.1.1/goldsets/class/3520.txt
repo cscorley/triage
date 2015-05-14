@@ -1,0 +1,4 @@
+org.apache.derbyTesting.junit.BaseJDBCTestCase
+org.apache.derbyTesting.functionTests.tests.lang.LangScripts
+org.apache.derbyTesting.functionTests.tests.lang.ViewsTest
+org.apache.derbyTesting.functionTests.tests.lang._Suite

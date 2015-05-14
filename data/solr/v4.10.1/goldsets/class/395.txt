@@ -1,0 +1,4 @@
+org.apache.solr.util.HiFrequencyDictionary
+org.apache.solr.util.HiFrequencyDictionary.HiFrequencyIterator
+org.apache.solr.handler.SpellCheckerRequestHandler
+org.apache.solr.handler.SpellCheckerRequestHandlerTest

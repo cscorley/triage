@@ -1,0 +1,6 @@
+demo.Actor
+demo.DataLoader
+demo.Actor.Gender
+org.apache.openjpa.persistence.jest.JESTServlet
+demo.Movie
+org.apache.openjpa.persistence.jest.TestJEST

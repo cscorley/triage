@@ -1,0 +1,3 @@
+org.apache.derby.jdbc.ClientBaseDataSource.getTraceDirectory(Properties)
+org.apache.derby.jdbc.ClientBaseDataSource.readSystemProperty(String)
+org.apache.derby.jdbc.ClientBaseDataSource.readSystemProperty.run()

@@ -1,0 +1,5 @@
+org.apache.derbyTesting.functionTests.tests.store.BackupRestoreTest
+org.apache.derbyTesting.functionTests.util.PrivilegedFileOpsForTests
+org.apache.derby.impl.store.raw.data.RAFContainer
+org.apache.derbyTesting.junit.Utilities
+org.apache.derbyTesting.functionTests.tests.store._Suite

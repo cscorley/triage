@@ -1,0 +1,5 @@
+org.apache.derbyTesting.functionTests.tests.lang.AlterColumnTest
+org.apache.derbyBuild.JiraConnector
+org.apache.derbyDemo.vtis.example.VTIs
+org.apache.derbyDemo.vtis.core.XmlVTI
+org.apache.derbyTesting.functionTests.tests.lang._Suite

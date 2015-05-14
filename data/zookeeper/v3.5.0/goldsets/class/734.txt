@@ -1,0 +1,3 @@
+org.apache.zookeeper.server.ZooKeeperServerMainTest.MainThread
+org.apache.zookeeper.server.quorum.QuorumPeerTestBase
+org.apache.zookeeper.server.ZooKeeperServerMainTest

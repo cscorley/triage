@@ -1,0 +1,6 @@
+org.apache.derby.impl.sql.catalog.DD_Version
+org.apache.derby.iapi.sql.dictionary.DataDictionary
+org.apache.derby.impl.sql.catalog.DataDictionaryImpl
+org.apache.derbyTesting.functionTests.tests.lang.NativeAuthenticationServiceTest
+org.apache.derbyTesting.functionTests.tests.upgradeTests.OldVersions
+org.apache.derbyBuild.ReleaseNotesTransformer

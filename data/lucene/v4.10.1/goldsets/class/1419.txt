@@ -1,0 +1,4 @@
+org.apache.lucene.index.DocumentsWriter.DocWriter
+org.apache.lucene.index.DocumentsWriter
+org.apache.lucene.index.IndexWriter
+org.apache.lucene.index.DocumentsWriter.IndexingChain

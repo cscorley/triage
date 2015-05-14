@@ -1,0 +1,3 @@
+org.apache.derbyTesting.functionTests.tests.memory.BlobMemTest
+org.apache.derbyTesting.functionTests.tests.memory.ClobMemTest
+org.apache.derby.iapi.types.DataTypeDescriptor

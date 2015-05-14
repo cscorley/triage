@@ -1,0 +1,6 @@
+org.apache.lucene.search.FieldCache
+org.apache.lucene.index.MergeDocIDRemapper
+org.apache.lucene.search.MultiSearcher
+org.apache.lucene.index.MultiSegmentReader
+org.apache.lucene.search.FieldCache.StringIndex
+org.apache.lucene.index.TermInfosReader

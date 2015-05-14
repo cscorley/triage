@@ -1,0 +1,4 @@
+org.apache.derbyTesting.functionTests.tests.lang.TriggerTest.actionTypesSetup(String)
+org.apache.derbyTesting.functionTests.tests.jdbcapi.BlobClob4BlobTest.testTriggerWithBlobColumn()
+org.apache.derbyTesting.functionTests.tests.jdbcapi.BlobClob4BlobTest.testTriggersWithClobColumn()
+org.apache.derby.impl.sql.compile.CreateTriggerNode.validateReferencesClause(DataDictionary)

@@ -1,0 +1,2 @@
+org.apache.pig.test.TestTypeCheckingValidatorNewLP
+org.apache.pig.newplan.logical.visitor.TypeCheckingExpVisitor

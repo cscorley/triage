@@ -1,0 +1,3 @@
+org.apache.tika.parser.AutoDetectParser
+org.apache.tika.parser.CompositeParser
+org.apache.tika.config.TikaConfig

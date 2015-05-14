@@ -1,0 +1,2 @@
+org.apache.derbyTesting.functionTests.tests.lang.DatabaseClassLoadingTest
+org.apache.derby.impl.services.reflect.JarLoader

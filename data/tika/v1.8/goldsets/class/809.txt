@@ -1,0 +1,2 @@
+org.apache.tika.gui.TikaGUI.ImageSavingParser
+org.apache.tika.gui.TikaGUI

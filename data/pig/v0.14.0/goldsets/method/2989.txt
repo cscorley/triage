@@ -1,0 +1,2 @@
+org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.PORank.addRank(Result)
+org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler.updateMROpPlan(List<Job>,Job)
