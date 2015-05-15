@@ -1,2 +1,2 @@
-org.apache.pig.test.TestTextDataParser
 org.apache.pig.builtin.Utf8StorageConverter
+org.apache.pig.test.TestTextDataParser

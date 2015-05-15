@@ -1,6 +1,6 @@
 org.apache.openjpa.lib.rop.AbstractNonSequentialResultList
-org.apache.openjpa.lib.rop.AbstractResultList
 org.apache.openjpa.lib.rop.AbstractNonSequentialResultList.Itr
+org.apache.openjpa.lib.rop.AbstractResultList
 org.apache.openjpa.lib.rop.LazyForwardResultList
 org.apache.openjpa.lib.rop.ListResultList
 org.apache.openjpa.lib.rop.ResultListTest

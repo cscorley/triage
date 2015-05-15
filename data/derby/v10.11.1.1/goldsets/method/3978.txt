@@ -1,3 +1,4 @@
+org.apache.derby.client.am.Clob.truncate(long)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.ClobTest.insertDataWithToken(String,long,long,int)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.ClobTest.testGetLengthAfterTruncate()
 org.apache.derbyTesting.functionTests.tests.jdbcapi.ClobTest.testPositionWithString_CJK()
@@ -6,4 +7,3 @@ org.apache.derbyTesting.functionTests.tests.jdbcapi.ClobTest.testTruncateExactOn
 org.apache.derbyTesting.functionTests.tests.jdbcapi.ClobTest.testTruncateTooLongInMemory()
 org.apache.derbyTesting.functionTests.tests.jdbcapi.ClobTest.testTruncateTooLongOnDisk()
 org.apache.derbyTesting.functionTests.tests.jdbcapi.ClobTest.transferData(Reader,int)
-org.apache.derby.client.am.Clob.truncate(long)

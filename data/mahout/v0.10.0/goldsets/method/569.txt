@@ -1,5 +1,5 @@
-org.apache.mahout.classifier.ConfusionMatrix.ConfusionMatrix(Collection<String>,String,String)
 org.apache.mahout.classifier.ConfusionMatrix.addInstance(String,String)
+org.apache.mahout.classifier.ConfusionMatrix.ConfusionMatrix(Collection<String>,String,String)
 org.apache.mahout.classifier.ConfusionMatrix.getAccuracy(String)
 org.apache.mahout.classifier.ConfusionMatrix.getConfusionMatrix()
 org.apache.mahout.classifier.ConfusionMatrix.getCount(String,String)

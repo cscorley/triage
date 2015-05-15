@@ -1,5 +1,5 @@
-org.apache.derbyTesting.functionTests.tests.jdbcapi.DatabaseMetaDataTest.assertGetImportedAndExportedKeysShape(ResultSet[])
 org.apache.derby.impl.sql.compile.CastNode.bindCastNodeOnly()
+org.apache.derbyTesting.functionTests.tests.jdbcapi.DatabaseMetaDataTest.assertGetImportedAndExportedKeysShape(ResultSet[])
 org.apache.derbyTesting.functionTests.tests.jdbcapi.DatabaseMetaDataTest.checkODBCKeysShape(ResultSet)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.DatabaseMetaDataTest.checkTablesShape(ResultSet)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.DatabaseMetaDataTest.getBestRowIdentifier(String,String,String,int,boolean)

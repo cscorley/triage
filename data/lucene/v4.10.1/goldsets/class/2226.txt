@@ -1,3 +1,9 @@
+org.apache.lucene.analysis.snowball.SnowballAnalyzer
+org.apache.lucene.analysis.snowball.SnowballAnalyzer.SavedStreams
+org.apache.lucene.analysis.snowball.SnowballFilter
+org.apache.lucene.analysis.snowball.TestSnowball
+org.apache.lucene.analysis.snowball.TestSnowball.TestTokenStream
+org.apache.lucene.analysis.snowball.TestSnowballVocab
 org.tartarus.snowball.Among
 org.tartarus.snowball.ext.DanishStemmer
 org.tartarus.snowball.ext.DutchStemmer
@@ -15,14 +21,8 @@ org.tartarus.snowball.ext.PorterStemmer
 org.tartarus.snowball.ext.PortugueseStemmer
 org.tartarus.snowball.ext.RomanianStemmer
 org.tartarus.snowball.ext.RussianStemmer
-org.apache.lucene.analysis.snowball.SnowballAnalyzer.SavedStreams
-org.apache.lucene.analysis.snowball.SnowballAnalyzer
-org.apache.lucene.analysis.snowball.SnowballFilter
-org.tartarus.snowball.SnowballProgram
 org.tartarus.snowball.ext.SpanishStemmer
 org.tartarus.snowball.ext.SwedishStemmer
-org.tartarus.snowball.TestApp
-org.apache.lucene.analysis.snowball.TestSnowball
-org.apache.lucene.analysis.snowball.TestSnowballVocab
-org.apache.lucene.analysis.snowball.TestSnowball.TestTokenStream
 org.tartarus.snowball.ext.TurkishStemmer
+org.tartarus.snowball.SnowballProgram
+org.tartarus.snowball.TestApp

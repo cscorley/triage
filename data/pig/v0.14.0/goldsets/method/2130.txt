@@ -1,6 +1,6 @@
-org.apache.pig.piggybank.test.storage.TestMultiStorageCompression.cleanUpDirs(List<String>,String)
 org.apache.pig.piggybank.storage.MultiStorage.MultiStorageOutputFormat.getRecordWriter.createOutputStream(String)
 org.apache.pig.piggybank.storage.MultiStorage.MultiStorageOutputFormat.getRecordWriter(TaskAttemptContext)
+org.apache.pig.piggybank.test.storage.TestMultiStorageCompression.cleanUpDirs(List<String>,String)
 org.apache.pig.piggybank.test.storage.TestMultiStorageCompression.runQuery(String,String)
 org.apache.pig.piggybank.test.storage.TestMultiStorageCompression.testMultiStorageShouldSupportBz2()
 org.apache.pig.piggybank.test.storage.TestMultiStorageCompression.testMultiStorageShouldSupportGz()

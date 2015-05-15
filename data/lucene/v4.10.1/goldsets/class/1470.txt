@@ -1,7 +1,5 @@
 org.apache.lucene.search.trie.AbstractTrieRangeFilter
-org.apache.lucene.search.trie.TrieUtils.IntRangeBuilder
 org.apache.lucene.search.trie.IntTrieRangeFilter
-org.apache.lucene.search.trie.TrieUtils.LongRangeBuilder
 org.apache.lucene.search.trie.LongTrieRangeFilter
 org.apache.lucene.search.trie.TestIntTrieRangeFilter
 org.apache.lucene.search.trie.TestLongTrieRangeFilter
@@ -10,3 +8,5 @@ org.apache.lucene.search.trie.TestTrieUtils
 org.apache.lucene.search.trie.TrieRangeFilter
 org.apache.lucene.search.trie.TrieRangeQuery
 org.apache.lucene.search.trie.TrieUtils
+org.apache.lucene.search.trie.TrieUtils.IntRangeBuilder
+org.apache.lucene.search.trie.TrieUtils.LongRangeBuilder

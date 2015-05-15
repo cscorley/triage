@@ -1,2 +1,2 @@
-org.apache.pig.test.pigmix.udf.PigPerformanceLoader.Caster
 org.apache.pig.test.pigmix.udf.PigPerformanceLoader
+org.apache.pig.test.pigmix.udf.PigPerformanceLoader.Caster

@@ -1,2 +1,2 @@
-org.apache.derbyTesting.functionTests.harness.RunTest
 org.apache.derbyTesting.functionTests.harness.jvm
+org.apache.derbyTesting.functionTests.harness.RunTest

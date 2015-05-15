@@ -5,7 +5,7 @@ org.apache.derby.impl.sql.execute.InsertResultSet
 org.apache.derby.impl.sql.execute.InsertVTIResultSet
 org.apache.derby.impl.sql.execute.MiscResultSet
 org.apache.derby.impl.sql.execute.NoRowsResultSetImpl
-org.apache.derbyTesting.functionTests.tests.lang.ResultSetsFromPreparedStatementTest
 org.apache.derby.impl.sql.execute.SetTransactionResultSet
 org.apache.derby.impl.sql.execute.UpdateResultSet
 org.apache.derby.impl.sql.execute.UpdateVTIResultSet
+org.apache.derbyTesting.functionTests.tests.lang.ResultSetsFromPreparedStatementTest

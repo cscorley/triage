@@ -1,6 +1,6 @@
-org.apache.pig.impl.io.FileLocalizer
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MRCompiler
 org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher
+org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MRCompiler
+org.apache.pig.impl.io.FileLocalizer
 org.apache.pig.test.TestEvalPipeline
 org.apache.pig.test.TestEvalPipeline2
 org.apache.pig.test.TestEvalPipelineLocal

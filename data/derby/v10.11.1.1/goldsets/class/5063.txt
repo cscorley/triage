@@ -1,2 +1,2 @@
-org.apache.derbyTesting.functionTests.tests.lang.BooleanValuesTest
 org.apache.derby.iapi.types.SQLBoolean
+org.apache.derbyTesting.functionTests.tests.lang.BooleanValuesTest

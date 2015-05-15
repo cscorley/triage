@@ -1,5 +1,5 @@
-org.apache.derbyTesting.functionTests.tests.jdbcapi.prepStmtNull.dumpSQLExceptions(SQLException)
 org.apache.derby.iapi.types.DataTypeDescriptor.isJDBCTypeEquivalent(int,int)
+org.apache.derbyTesting.functionTests.tests.jdbcapi.prepStmtNull.dumpSQLExceptions(SQLException)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.prepStmtNull.main(String[])
 org.apache.derbyTesting.functionTests.tests.jdbcapi.prepStmtNull.test1(String[])
 org.apache.derbyTesting.functionTests.tests.jdbcapi.prepStmtNull.test2(String[])

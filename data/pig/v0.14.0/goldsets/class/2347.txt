@@ -1,9 +1,8 @@
-org.apache.pig.backend.hadoop.executionengine.shims.HadoopShims
 org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher
-org.apache.pig.test.MiniCluster
-org.apache.pig.impl.io.PigFile
 org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigOutputCommitter
-org.apache.pig.tools.pigstats.PigStatsUtil
+org.apache.pig.backend.hadoop.executionengine.shims.HadoopShims
+org.apache.pig.impl.io.PigFile
+org.apache.pig.test.MiniCluster
 org.apache.pig.test.TestEvalPipeline2
 org.apache.pig.test.TestGrunt
 org.apache.pig.test.TestJobSubmission
@@ -15,3 +14,4 @@ org.apache.pig.test.TestPoissonSampleLoader
 org.apache.pig.test.TestScriptUDF
 org.apache.pig.test.TestUDFContext
 org.apache.pig.test.Util
+org.apache.pig.tools.pigstats.PigStatsUtil

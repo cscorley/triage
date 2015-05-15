@@ -1,6 +1,6 @@
 org.apache.pig.pigunit.Cluster
-org.apache.pig.pigunit.pig.GruntParser
 org.apache.pig.pigunit.MiniClusterRunner
+org.apache.pig.pigunit.pig.GruntParser
 org.apache.pig.pigunit.pig.PigServer
 org.apache.pig.pigunit.PigTest
 org.apache.pig.test.pigunit.pig.TestGruntParser

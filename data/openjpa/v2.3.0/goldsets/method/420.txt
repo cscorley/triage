@@ -1,5 +1,5 @@
-org.apache.openjpa.persistence.query.TestDistinctQueries.Holder.Holder(long)
 org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder.evalSelectClause(QueryExpressions)
+org.apache.openjpa.persistence.query.TestDistinctQueries.Holder.Holder(long)
 org.apache.openjpa.persistence.query.TestDistinctQueries.setUp()
 org.apache.openjpa.persistence.query.TestDistinctQueries.testDuplicateResultsInNonDistinctConstructorJoinQuery()
 org.apache.openjpa.persistence.query.TestDistinctQueries.testDuplicateResultsInNonDistinctJoinFetchQuery()

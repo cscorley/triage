@@ -1,3 +1,3 @@
-org.apache.tika.parser.CompositeParser
-org.apache.tika.mime.MediaType
 org.apache.tika.config.TikaConfig
+org.apache.tika.mime.MediaType
+org.apache.tika.parser.CompositeParser

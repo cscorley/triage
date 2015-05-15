@@ -1,2 +1,2 @@
-org.apache.pig.test.TestSchema
 org.apache.pig.impl.util.Utils
+org.apache.pig.test.TestSchema

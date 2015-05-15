@@ -9,6 +9,6 @@ org.apache.derby.impl.store.raw.data.BaseDataFileFactory.pageToDirty(RawTransact
 org.apache.derby.impl.store.raw.data.BaseDataFileFactory.privGetJBMSLockOnDB()
 org.apache.derby.impl.store.raw.data.BaseDataFileFactory.privReleaseJBMSLockOnDB()
 org.apache.derby.impl.store.raw.data.BaseDataFileFactory.removeTempDirectory()
-org.apache.derby.impl.store.raw.data.BaseDataFileFactory.restoreDataDirectory(String)
 org.apache.derby.impl.store.raw.data.BaseDataFileFactory.restoreDataDirectory.booleanValue.run()
+org.apache.derby.impl.store.raw.data.BaseDataFileFactory.restoreDataDirectory(String)
 org.apache.derby.impl.store.raw.data.BaseDataFileFactory.syncSideLog(long)

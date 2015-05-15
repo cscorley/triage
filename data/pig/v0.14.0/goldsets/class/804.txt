@@ -1,2 +1,2 @@
-org.apache.pig.test.TestTypeCheckingValidator.CastFinder
 org.apache.pig.test.TestTypeCheckingValidator
+org.apache.pig.test.TestTypeCheckingValidator.CastFinder

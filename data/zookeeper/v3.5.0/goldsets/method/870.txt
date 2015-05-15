@@ -1,2 +1,2 @@
-org.apache.zookeeper.test.ClientTest.testClientCleanup()
 org.apache.zookeeper.test.ClientBase.verifyRootOfAllServersMatch(String)
+org.apache.zookeeper.test.ClientTest.testClientCleanup()

@@ -1,4 +1,4 @@
 org.apache.zookeeper.JLineZNodeCompletor
+org.apache.zookeeper.ZooKeeperMain
 org.apache.zookeeper.ZooKeeperMain.MyCommandOptions
 org.apache.zookeeper.ZooKeeperMain.MyWatcher
-org.apache.zookeeper.ZooKeeperMain

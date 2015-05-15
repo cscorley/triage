@@ -1,2 +1,2 @@
-org.apache.derbyTesting.system.mailjdbc.utils.DbTasks
 org.apache.derbyTesting.system.mailjdbc.MailJdbc
+org.apache.derbyTesting.system.mailjdbc.utils.DbTasks

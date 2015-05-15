@@ -1,15 +1,15 @@
-org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.ExpressionOperator
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POCast
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POUserComparisonFunc
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POUserFunc
+org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POCollectedGroup
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POCombinerPackage
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.PODemux
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.PODistinct
-org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POFRJoin
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POFilter
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach
+org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POFRJoin
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLimit
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLoad
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLocalRearrange

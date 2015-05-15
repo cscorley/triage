@@ -1,4 +1,4 @@
-org.apache.derbyTesting.junit.BaseJDBCTestCase
-org.apache.derbyTesting.junit.BaseTestCase
 org.apache.derby.client.am.SqlException
 org.apache.derbyTesting.functionTests.tests.derbynet.SqlExceptionTest
+org.apache.derbyTesting.junit.BaseJDBCTestCase
+org.apache.derbyTesting.junit.BaseTestCase

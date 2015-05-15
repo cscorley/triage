@@ -1,2 +1,2 @@
-org.apache.mahout.classifier.sgd.MixedGradient.MixedGradient(double,int)
 org.apache.mahout.classifier.sgd.MixedGradient.apply(String,int,Vector,AbstractVectorClassifier)
+org.apache.mahout.classifier.sgd.MixedGradient.MixedGradient(double,int)

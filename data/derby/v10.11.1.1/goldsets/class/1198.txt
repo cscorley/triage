@@ -1,3 +1,4 @@
+org.apache.derbyBuild.splitmessages
 org.apache.derby.client.am.Agent
 org.apache.derby.client.am.ColumnIndexOutOfBoundsException
 org.apache.derby.client.am.ColumnTypeConversionException
@@ -9,13 +10,12 @@ org.apache.derby.client.am.Decimal
 org.apache.derby.client.am.DisconnectException
 org.apache.derby.client.am.LossOfPrecisionConversionException
 org.apache.derby.client.am.NumberFormatConversionException
-org.apache.derby.client.net.Request
-org.apache.derby.shared.common.reference.SQLState
 org.apache.derby.client.am.SectionManager
 org.apache.derby.client.am.SqlCode
 org.apache.derby.client.am.SqlException
 org.apache.derby.client.am.Statement
-org.apache.derbyTesting.functionTests.tests.jdbc4.StatementTest
 org.apache.derby.client.am.Utils
 org.apache.derby.client.am.Version
-org.apache.derbyBuild.splitmessages
+org.apache.derby.client.net.Request
+org.apache.derby.shared.common.reference.SQLState
+org.apache.derbyTesting.functionTests.tests.jdbc4.StatementTest

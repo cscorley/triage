@@ -1,2 +1,2 @@
-org.apache.tika.TestParsers
 org.apache.tika.parser.microsoft.WordExtractor
+org.apache.tika.TestParsers

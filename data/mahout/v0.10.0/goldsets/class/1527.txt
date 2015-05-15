@@ -1,2 +1,2 @@
-org.apache.mahout.text.wikipedia.WikipediaMapper
 org.apache.mahout.text.WikipediaToSequenceFile
+org.apache.mahout.text.wikipedia.WikipediaMapper

@@ -1,2 +1,2 @@
-org.apache.lucene.analysis.standard.StandardAnalyzer.SavedStreams
 org.apache.lucene.analysis.standard.StandardAnalyzer
+org.apache.lucene.analysis.standard.StandardAnalyzer.SavedStreams

@@ -1,5 +1,5 @@
-org.apache.tika.parser.internal.Activator
 org.apache.tika.bundle.BundleIT
+org.apache.tika.config.TikaActivator
+org.apache.tika.parser.internal.Activator
 org.apache.tika.parser.internal.OSGiDetector
 org.apache.tika.parser.internal.OSGiParser
-org.apache.tika.config.TikaActivator

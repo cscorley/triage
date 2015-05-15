@@ -12,6 +12,6 @@ org.apache.openjpa.integration.validation.IPerson
 org.apache.openjpa.integration.validation.Person
 org.apache.openjpa.integration.validation.TestConstraints
 org.apache.openjpa.integration.validation.TestMappedSuper
-org.apache.openjpa.persistence.validation.ValidatorImpl
 org.apache.openjpa.integration.validation.XMLBase
 org.apache.openjpa.integration.validation.XMLSuper
+org.apache.openjpa.persistence.validation.ValidatorImpl

@@ -1,5 +1,5 @@
+org.apache.mahout.classifier.NewsgroupHelper
+org.apache.mahout.text.MailArchivesClusteringAnalyzer
 org.apache.mahout.text.MailArchivesClusteringAnalyzer.AlphaNumericMaxLengthFilter
 org.apache.mahout.vectorizer.DefaultAnalyzer
 org.apache.mahout.vectorizer.EncodedVectorsFromSequenceFiles
-org.apache.mahout.text.MailArchivesClusteringAnalyzer
-org.apache.mahout.classifier.NewsgroupHelper

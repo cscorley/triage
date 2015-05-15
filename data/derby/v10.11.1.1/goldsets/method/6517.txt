@@ -1,5 +1,5 @@
-org.apache.derbyTesting.functionTests.tests.lang.ConsistencyCheckerTest.ConsistencyCheckerTest(String)
 org.apache.derbyTesting.functionTests.tests.lang.ConsistencyCheckerTest.c1()
+org.apache.derbyTesting.functionTests.tests.lang.ConsistencyCheckerTest.ConsistencyCheckerTest(String)
 org.apache.derbyTesting.functionTests.tests.lang.ConsistencyCheckerTest.dontThrow(Statement,String)
 org.apache.derbyTesting.functionTests.tests.lang.ConsistencyCheckerTest.e(String,String)
 org.apache.derbyTesting.functionTests.tests.lang.ConsistencyCheckerTest.q(String)

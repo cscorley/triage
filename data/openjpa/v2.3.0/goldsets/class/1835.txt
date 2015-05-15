@@ -1,2 +1,2 @@
-org.apache.openjpa.jdbc.sql.SybaseDictionary
 org.apache.openjpa.jdbc.meta.TestBooleanValue
+org.apache.openjpa.jdbc.sql.SybaseDictionary

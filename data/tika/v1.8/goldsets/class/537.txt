@@ -1,2 +1,2 @@
-org.apache.tika.parser.ParserDecorator
 org.apache.tika.cli.TikaCLI
+org.apache.tika.parser.ParserDecorator

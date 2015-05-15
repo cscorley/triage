@@ -1,10 +1,12 @@
-org.apache.lucene.search.FieldValueHitQueue.Entry
 org.apache.lucene.search.FieldValueHitQueue
+org.apache.lucene.search.FieldValueHitQueue.Entry
+org.apache.lucene.search.FieldValueHitQueue.MultiComparatorsFieldValueHitQueue
+org.apache.lucene.search.FieldValueHitQueue.OneComparatorFieldValueHitQueue
+org.apache.lucene.search.TopDocsCollector
+org.apache.lucene.search.TopFieldCollector
 org.apache.lucene.search.TopFieldCollector.MultiComparatorNonScoringCollector
 org.apache.lucene.search.TopFieldCollector.MultiComparatorScoringMaxScoreCollector
 org.apache.lucene.search.TopFieldCollector.MultiComparatorScoringNoMaxScoreCollector
-org.apache.lucene.search.FieldValueHitQueue.MultiComparatorsFieldValueHitQueue
-org.apache.lucene.search.FieldValueHitQueue.OneComparatorFieldValueHitQueue
 org.apache.lucene.search.TopFieldCollector.OneComparatorNonScoringCollector
 org.apache.lucene.search.TopFieldCollector.OneComparatorScoringMaxScoreCollector
 org.apache.lucene.search.TopFieldCollector.OneComparatorScoringNoMaxScoreCollector
@@ -14,5 +16,3 @@ org.apache.lucene.search.TopFieldCollector.OutOfOrderMultiComparatorScoringNoMax
 org.apache.lucene.search.TopFieldCollector.OutOfOrderOneComparatorNonScoringCollector
 org.apache.lucene.search.TopFieldCollector.OutOfOrderOneComparatorScoringMaxScoreCollector
 org.apache.lucene.search.TopFieldCollector.OutOfOrderOneComparatorScoringNoMaxScoreCollector
-org.apache.lucene.search.TopDocsCollector
-org.apache.lucene.search.TopFieldCollector

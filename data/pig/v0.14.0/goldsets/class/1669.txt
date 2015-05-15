@@ -1,6 +1,6 @@
-org.apache.pig.newplan.logical.rules.FilterAboveForeach.FilterAboveForEachTransformer
-org.apache.pig.newplan.logical.rules.FilterAboveForeach
 org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MRCompiler
+org.apache.pig.newplan.logical.rules.FilterAboveForeach
+org.apache.pig.newplan.logical.rules.FilterAboveForeach.FilterAboveForEachTransformer
 org.apache.pig.newplan.logical.rules.MergeFilter
 org.apache.pig.newplan.logical.rules.MergeFilter.MergeFilterTransformer
 org.apache.pig.newplan.logical.rules.PartitionFilterOptimizer

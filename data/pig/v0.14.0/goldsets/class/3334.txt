@@ -1,7 +1,6 @@
-org.apache.pig.piggybank.test.storage.TestMultiStorage.Mode
-org.apache.pig.piggybank.test.storage.TestAllLoader
 org.apache.pig.piggybank.test.storage.avro.TestAvroStorage
 org.apache.pig.piggybank.test.storage.avro.TestAvroStorageUtils
+org.apache.pig.piggybank.test.storage.TestAllLoader
 org.apache.pig.piggybank.test.storage.TestCombinedLogLoader
 org.apache.pig.piggybank.test.storage.TestCommonLogLoader
 org.apache.pig.piggybank.test.storage.TestDBStorage
@@ -11,6 +10,7 @@ org.apache.pig.piggybank.test.storage.TestIndexedStorage
 org.apache.pig.piggybank.test.storage.TestLoadFuncHelper
 org.apache.pig.piggybank.test.storage.TestMultiStorage
 org.apache.pig.piggybank.test.storage.TestMultiStorageCompression
+org.apache.pig.piggybank.test.storage.TestMultiStorage.Mode
 org.apache.pig.piggybank.test.storage.TestMyRegExLoader
 org.apache.pig.piggybank.test.storage.TestPathPartitioner
 org.apache.pig.piggybank.test.storage.TestRegExLoader

@@ -1,3 +1,4 @@
+org.apache.openjpa.jdbc.meta.MappingRepository
 org.apache.openjpa.persistence.inheritance.entity.AbstractClass
 org.apache.openjpa.persistence.inheritance.entity.BaseClass
 org.apache.openjpa.persistence.inheritance.entity.BaseClass2
@@ -9,11 +10,9 @@ org.apache.openjpa.persistence.inheritance.entity.ImplClassA
 org.apache.openjpa.persistence.inheritance.entity.ManagedIface
 org.apache.openjpa.persistence.inheritance.entity.ManagedIface2
 org.apache.openjpa.persistence.inheritance.entity.MappedSuper
-org.apache.openjpa.jdbc.meta.MappingRepository
 org.apache.openjpa.persistence.inheritance.entity.MidClass
 org.apache.openjpa.persistence.inheritance.entity.MidClass2
 org.apache.openjpa.persistence.inheritance.entity.MidClass3
-org.apache.openjpa.persistence.test.PersistenceTestCase
 org.apache.openjpa.persistence.inheritance.entity.SubclassA
 org.apache.openjpa.persistence.inheritance.entity.SubclassB
 org.apache.openjpa.persistence.inheritance.entity.SubclassC
@@ -26,3 +25,4 @@ org.apache.openjpa.persistence.inheritance.entity.SubclassI
 org.apache.openjpa.persistence.inheritance.entity.SubclassJ
 org.apache.openjpa.persistence.inheritance.entity.SubclassK
 org.apache.openjpa.persistence.inheritance.TestDefaultInheritanceStrategy
+org.apache.openjpa.persistence.test.PersistenceTestCase

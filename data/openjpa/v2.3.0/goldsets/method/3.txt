@@ -1,6 +1,6 @@
 org.apache.openjpa.lib.util.TestPropertiesParser.assertEquals(String,String)
-org.apache.openjpa.lib.util.TestPropertiesParser.assertProperties(String[][],Properties)
 org.apache.openjpa.lib.util.TestPropertiesParser.assertPropertiesSame(Properties,Properties)
+org.apache.openjpa.lib.util.TestPropertiesParser.assertProperties(String[][],Properties)
 org.apache.openjpa.lib.util.TestPropertiesParser.assertRoundTrip(String,Properties)
 org.apache.openjpa.lib.util.TestPropertiesParser.randomChar()
 org.apache.openjpa.lib.util.TestPropertiesParser.randomString(int)

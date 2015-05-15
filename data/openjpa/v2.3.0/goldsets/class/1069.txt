@@ -1,6 +1,6 @@
+org.apache.openjpa.meta.FieldMetaData
 org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser
 org.apache.openjpa.persistence.embed.attrOverrides.EmergencyContactInfo
-org.apache.openjpa.meta.FieldMetaData
 org.apache.openjpa.persistence.embed.attrOverrides.Person
 org.apache.openjpa.persistence.embed.attrOverrides.TestAssocOverrides
 org.apache.openjpa.persistence.embed.attrOverrides.TestAttrOverrides

@@ -1,2 +1,2 @@
-org.apache.openjpa.conf.TestCacheMarshallerEndToEnd.LogImpl
 org.apache.openjpa.conf.TestCacheMarshallerEndToEnd
+org.apache.openjpa.conf.TestCacheMarshallerEndToEnd.LogImpl

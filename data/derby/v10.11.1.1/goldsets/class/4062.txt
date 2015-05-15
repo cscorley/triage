@@ -1,12 +1,9 @@
-org.apache.derby.impl.sql.compile.BooleanConstantNode
-org.apache.derby.impl.sql.catalog.DataDictionaryImpl
 org.apache.derby.iapi.types.DataValueFactory
 org.apache.derby.iapi.types.DataValueFactoryImpl
-org.apache.derby.impl.sql.catalog.DropDependencyFilter
-org.apache.derby.impl.sql.compile.NumericConstantNode
-org.apache.derby.impl.sql.compile.SQLBooleanConstantNode
 org.apache.derby.iapi.types.SQLSmallint
 org.apache.derby.iapi.types.SQLTinyint
+org.apache.derby.impl.sql.catalog.DataDictionaryImpl
+org.apache.derby.impl.sql.catalog.DropDependencyFilter
 org.apache.derby.impl.sql.catalog.SYSALIASESRowFactory
 org.apache.derby.impl.sql.catalog.SYSCHECKSRowFactory
 org.apache.derby.impl.sql.catalog.SYSCOLPERMSRowFactory
@@ -18,4 +15,7 @@ org.apache.derby.impl.sql.catalog.SYSFILESRowFactory
 org.apache.derby.impl.sql.catalog.SYSSTATEMENTSRowFactory
 org.apache.derby.impl.sql.catalog.SYSSTATISTICSRowFactory
 org.apache.derby.impl.sql.catalog.SYSTRIGGERSRowFactory
+org.apache.derby.impl.sql.compile.BooleanConstantNode
+org.apache.derby.impl.sql.compile.NumericConstantNode
+org.apache.derby.impl.sql.compile.SQLBooleanConstantNode
 org.apache.derby.impl.sql.compile.UserTypeConstantNode

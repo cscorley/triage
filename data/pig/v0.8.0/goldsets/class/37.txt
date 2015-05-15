@@ -1,2 +1,2 @@
-org.apache.pig.tools.pigstats.JobStats
 org.apache.pig.test.TestPigRunner
+org.apache.pig.tools.pigstats.JobStats

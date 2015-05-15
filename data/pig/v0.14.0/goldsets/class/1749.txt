@@ -1,2 +1,2 @@
-org.apache.pig.test.TestParamSubPreproc
 org.apache.pig.parser.TestQueryParser
+org.apache.pig.test.TestParamSubPreproc

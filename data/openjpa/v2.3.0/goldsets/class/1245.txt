@@ -1,10 +1,11 @@
-org.apache.openjpa.persistence.lockmgr.SequencedActionsTest.Act
 org.apache.openjpa.persistence.enhance.DynamicEnhancementSuite
 org.apache.openjpa.persistence.lockmgr.LockEmployee
 org.apache.openjpa.persistence.lockmgr.LockEmployeeNonVersion
 org.apache.openjpa.persistence.lockmgr.MixedLockManagerGenericTest
-org.apache.openjpa.persistence.lockmgr.SequencedActionsTest.PlatformSpeedTestThread
 org.apache.openjpa.persistence.lockmgr.SequencedActionsTest
+org.apache.openjpa.persistence.lockmgr.SequencedActionsTest.Act
+org.apache.openjpa.persistence.lockmgr.SequencedActionsTest.PlatformSpeedTestThread
+org.apache.openjpa.persistence.lockmgr.SequencedActionsTest.TestThread
 org.apache.openjpa.persistence.lockmgr.TestEmLockMode
 org.apache.openjpa.persistence.lockmgr.TestEmLockTimeout
 org.apache.openjpa.persistence.lockmgr.TestFetchHints
@@ -18,4 +19,3 @@ org.apache.openjpa.persistence.lockmgr.TestMixedLockManagerNonVersion
 org.apache.openjpa.persistence.lockmgr.TestMixedLockManagerRefreshBasic
 org.apache.openjpa.persistence.lockmgr.TestMixedLockManagerRefreshException
 org.apache.openjpa.persistence.lockmgr.TestMixedLockManagerRefreshPermutation
-org.apache.openjpa.persistence.lockmgr.SequencedActionsTest.TestThread

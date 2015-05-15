@@ -1,5 +1,5 @@
-org.apache.solr.core.AbstractSolrEventListener
 org.apache.solr.common.params.EventParams
+org.apache.solr.core.AbstractSolrEventListener
 org.apache.solr.core.MockQuerySenderListenerReqHandler
 org.apache.solr.core.QuerySenderListener
 org.apache.solr.core.SolrEventListener

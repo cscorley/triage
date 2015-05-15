@@ -1,2 +1,2 @@
-org.apache.openjpa.jta.SimpleTransaction.commit()
 org.apache.openjpa.jta.JTAManagedRuntime.setRollbackOnly(Throwable)
+org.apache.openjpa.jta.SimpleTransaction.commit()

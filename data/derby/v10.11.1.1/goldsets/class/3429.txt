@@ -1,2 +1,2 @@
-org.apache.derby.impl.services.jmx.JMXManagementService
 org.apache.derby.iapi.reference.Property
+org.apache.derby.impl.services.jmx.JMXManagementService

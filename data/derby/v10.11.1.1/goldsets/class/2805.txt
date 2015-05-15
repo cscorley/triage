@@ -5,5 +5,5 @@ org.apache.derby.impl.sql.compile.ResultSetNode
 org.apache.derby.impl.sql.compile.RowResultSetNode
 org.apache.derby.impl.sql.compile.SelectNode
 org.apache.derby.impl.sql.compile.SingleChildResultSetNode
-org.apache.derbyTesting.functionTests.tests.lang.SysDiagVTIMappingTest
 org.apache.derby.impl.sql.compile.TableOperatorNode
+org.apache.derbyTesting.functionTests.tests.lang.SysDiagVTIMappingTest

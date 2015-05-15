@@ -9,7 +9,6 @@ org.apache.derby.impl.sql.execute.GroupedAggregateResultSet
 org.apache.derby.impl.sql.execute.HashScanResultSet
 org.apache.derby.impl.sql.execute.HashTableResultSet
 org.apache.derby.impl.sql.execute.IndexRowToBaseRowResultSet
-org.apache.derbyTesting.functionTests.tests.lang.LangScripts
 org.apache.derby.impl.sql.execute.LastIndexKeyResultSet
 org.apache.derby.impl.sql.execute.MaterializedResultSet
 org.apache.derby.impl.sql.execute.MergeJoinResultSet
@@ -29,4 +28,5 @@ org.apache.derby.impl.sql.execute.TableScanResultSet
 org.apache.derby.impl.sql.execute.UnionResultSet
 org.apache.derby.impl.sql.execute.VTIResultSet
 org.apache.derby.impl.sql.execute.WindowResultSet
+org.apache.derbyTesting.functionTests.tests.lang.LangScripts
 org.apache.derbyTesting.functionTests.tests.lang.XplainStatisticsTest

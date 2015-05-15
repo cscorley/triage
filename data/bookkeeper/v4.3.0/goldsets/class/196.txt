@@ -1,5 +1,7 @@
 org.apache.bookkeeper.bookie.Bookie
 org.apache.bookkeeper.bookie.Bookie.EntryLogCompactionScanner
+org.apache.bookkeeper.bookie.Bookie.NoEntryException
+org.apache.bookkeeper.bookie.Bookie.SyncThread
 org.apache.bookkeeper.bookie.EntryLogger
 org.apache.bookkeeper.bookie.GarbageCollectorThread
 org.apache.bookkeeper.bookie.HandleFactoryImpl
@@ -8,5 +10,3 @@ org.apache.bookkeeper.bookie.LedgerDescriptor
 org.apache.bookkeeper.bookie.LedgerDescriptorImpl
 org.apache.bookkeeper.bookie.LedgerDescriptorReadOnlyImpl
 org.apache.bookkeeper.bookie.LedgerStorage
-org.apache.bookkeeper.bookie.Bookie.NoEntryException
-org.apache.bookkeeper.bookie.Bookie.SyncThread

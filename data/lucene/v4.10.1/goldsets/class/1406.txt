@@ -6,5 +6,5 @@ org.apache.lucene.analysis.ar.ArabicStemFilter
 org.apache.lucene.analysis.ar.ArabicStemmer
 org.apache.lucene.analysis.ar.TestArabicNormalizationFilter
 org.apache.lucene.analysis.ar.TestArabicStemFilter
-org.apache.lucene.index.TestWordlistLoader
 org.apache.lucene.analysis.WordlistLoader
+org.apache.lucene.index.TestWordlistLoader

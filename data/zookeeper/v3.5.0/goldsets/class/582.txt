@@ -1,5 +1,5 @@
-org.apache.zookeeper.test.ClientBase
 org.apache.zookeeper.server.quorum.Follower
-org.apache.zookeeper.test.QuorumBase
 org.apache.zookeeper.server.quorum.QuorumPeer
+org.apache.zookeeper.test.ClientBase
+org.apache.zookeeper.test.QuorumBase
 org.apache.zookeeper.test.QuorumZxidSyncTest

@@ -1,4 +1,3 @@
-org.apache.derby.impl.services.replication.slave.ReplicationLogScan.ReplicationLogScan()
 org.apache.derby.impl.services.replication.slave.ReplicationLogScan.getData()
 org.apache.derby.impl.services.replication.slave.ReplicationLogScan.getDataLength()
 org.apache.derby.impl.services.replication.slave.ReplicationLogScan.getDataOffset()
@@ -10,6 +9,7 @@ org.apache.derby.impl.services.replication.slave.ReplicationLogScan.getTotalData
 org.apache.derby.impl.services.replication.slave.ReplicationLogScan.hasValidLogRecord()
 org.apache.derby.impl.services.replication.slave.ReplicationLogScan.init(byte[])
 org.apache.derby.impl.services.replication.slave.ReplicationLogScan.next()
+org.apache.derby.impl.services.replication.slave.ReplicationLogScan.ReplicationLogScan()
 org.apache.derby.impl.services.replication.slave.ReplicationLogScan.retrieveBytes(byte[],int)
 org.apache.derby.impl.services.replication.slave.ReplicationLogScan.retrieveInt()
 org.apache.derby.impl.services.replication.slave.ReplicationLogScan.retrieveLong()

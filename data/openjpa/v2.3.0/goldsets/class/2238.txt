@@ -1,3 +1,7 @@
+org.apache.openjpa.util.custom.CustomProxyDefaultScopeList
+org.apache.openjpa.util.custom.CustomProxyDefaultScopeType
+org.apache.openjpa.util.ProxyManagerImpl
+org.apache.openjpa.util.TestProxyManager
 org.apache.openjpa.util.TestProxyManager.CustomBean
 org.apache.openjpa.util.TestProxyManager.CustomCalendar
 org.apache.openjpa.util.TestProxyManager.CustomComparator
@@ -7,11 +11,7 @@ org.apache.openjpa.util.TestProxyManager.CustomCopyConstructorBean
 org.apache.openjpa.util.TestProxyManager.CustomDate
 org.apache.openjpa.util.TestProxyManager.CustomList
 org.apache.openjpa.util.TestProxyManager.CustomMap
-org.apache.openjpa.util.custom.CustomProxyDefaultScopeList
-org.apache.openjpa.util.custom.CustomProxyDefaultScopeType
 org.apache.openjpa.util.TestProxyManager.CustomSet
 org.apache.openjpa.util.TestProxyManager.CustomSortedMap
 org.apache.openjpa.util.TestProxyManager.CustomSortedSet
 org.apache.openjpa.util.TestProxyManager.NonproxyableBean
-org.apache.openjpa.util.ProxyManagerImpl
-org.apache.openjpa.util.TestProxyManager

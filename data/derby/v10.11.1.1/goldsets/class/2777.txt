@@ -2,8 +2,6 @@ org.apache.derby.impl.sql.compile.BinaryListOperatorNode
 org.apache.derby.impl.sql.compile.BinaryOperatorNode
 org.apache.derby.impl.sql.compile.CastNode
 org.apache.derby.impl.sql.compile.CoalesceFunctionNode
-org.apache.derbyTesting.functionTests.tests.lang.CollationTest
-org.apache.derbyTesting.functionTests.tests.lang.CollationTest2
 org.apache.derby.impl.sql.compile.ConcatenationOperatorNode
 org.apache.derby.impl.sql.compile.InListOperatorNode
 org.apache.derby.impl.sql.compile.IsNullNode
@@ -19,3 +17,5 @@ org.apache.derby.impl.sql.compile.TernaryOperatorNode
 org.apache.derby.impl.sql.compile.TimestampOperatorNode
 org.apache.derby.impl.sql.compile.UnaryArithmeticOperatorNode
 org.apache.derby.impl.sql.compile.ValueNodeList
+org.apache.derbyTesting.functionTests.tests.lang.CollationTest
+org.apache.derbyTesting.functionTests.tests.lang.CollationTest2

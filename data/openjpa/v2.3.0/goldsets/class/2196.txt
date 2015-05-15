@@ -1,2 +1,2 @@
-org.apache.openjpa.jdbc.sql.DBDictionary
 org.apache.openjpa.jdbc.kernel.NativeJDBCSeq
+org.apache.openjpa.jdbc.sql.DBDictionary

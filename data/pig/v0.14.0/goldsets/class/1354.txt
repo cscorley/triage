@@ -5,5 +5,5 @@ org.apache.pig.builtin.InvokeForInt
 org.apache.pig.builtin.InvokeForLong
 org.apache.pig.builtin.InvokeForString
 org.apache.pig.builtin.Invoker
-org.apache.pig.test.TestInvoker.Log
 org.apache.pig.test.TestInvoker
+org.apache.pig.test.TestInvoker.Log

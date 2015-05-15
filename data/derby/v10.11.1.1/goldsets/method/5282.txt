@@ -1,6 +1,6 @@
-org.apache.derbyTesting.functionTests.tests.store.RowLockBasicTest.RowLockBasicTest(String)
 org.apache.derbyTesting.functionTests.tests.store.RowLockBasicTest.createLockTableQueryEntries(Statement)
 org.apache.derbyTesting.functionTests.tests.store.RowLockBasicTest.createTableAandUniqueIndex(Statement)
+org.apache.derbyTesting.functionTests.tests.store.RowLockBasicTest.RowLockBasicTest(String)
 org.apache.derbyTesting.functionTests.tests.store.RowLockBasicTest.setUp()
 org.apache.derbyTesting.functionTests.tests.store.RowLockBasicTest.suite()
 org.apache.derbyTesting.functionTests.tests.store.RowLockBasicTest.tearDown()

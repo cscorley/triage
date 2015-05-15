@@ -1,5 +1,5 @@
-org.apache.openjpa.persistence.query.TestQueryPagination.helper(boolean,int,int,int)
 org.apache.openjpa.persistence.QueryImpl.setFirstResult(int)
+org.apache.openjpa.persistence.query.TestQueryPagination.helper(boolean,int,int,int)
 org.apache.openjpa.persistence.query.TestQueryPagination.setUp()
 org.apache.openjpa.persistence.query.TestQueryPagination.testAllResultsFirstFirst()
 org.apache.openjpa.persistence.query.TestQueryPagination.testAllResultsFirstLast()

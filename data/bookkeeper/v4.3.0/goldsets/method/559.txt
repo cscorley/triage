@@ -1,2 +1,2 @@
-org.apache.bookkeeper.replication.AuditorElector.submitElectionTask.run()
 org.apache.bookkeeper.replication.AuditorElector.submitElectionTask()
+org.apache.bookkeeper.replication.AuditorElector.submitElectionTask.run()

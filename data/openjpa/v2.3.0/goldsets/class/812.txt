@@ -1,2 +1,2 @@
-org.apache.openjpa.slice.TestQuery
 org.apache.openjpa.slice.jdbc.UniqueResultObjectProvider
+org.apache.openjpa.slice.TestQuery

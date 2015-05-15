@@ -1,6 +1,6 @@
-org.apache.solr.handler.TestReplicationHandler.copyFile(File,File)
 org.apache.solr.handler.SnapPuller.fetchLatestIndex(SolrCore)
 org.apache.solr.handler.SnapPuller.modifyIndexProps(String)
+org.apache.solr.handler.TestReplicationHandler.copyFile(File,File)
 org.apache.solr.handler.TestReplicationHandler.testIndexAndConfigAliasReplication()
 org.apache.solr.handler.TestReplicationHandler.testIndexAndConfigReplication()
 org.apache.solr.handler.TestReplicationHandler.testReplicateAfterStartup()

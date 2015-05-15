@@ -8,5 +8,5 @@ org.apache.bookkeeper.bookie.InterleavedLedgerStorage
 org.apache.bookkeeper.bookie.LedgerCacheTest
 org.apache.bookkeeper.bookie.LedgerDirsManager
 org.apache.bookkeeper.bookie.ReadOnlyEntryLogger
-org.apache.bookkeeper.conf.ServerConfiguration
 org.apache.bookkeeper.bookie.TestLedgerDirsManager
+org.apache.bookkeeper.conf.ServerConfiguration

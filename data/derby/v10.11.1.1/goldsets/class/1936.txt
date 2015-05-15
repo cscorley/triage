@@ -1,6 +1,6 @@
 AddEventRequest
-CalEvent
 CalendarController
+CalEvent
 DatabaseManager
 DeleteEventRequest
 EventManager

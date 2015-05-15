@@ -1,2 +1,2 @@
-org.apache.lucene.store.BufferedIndexOutput
 org.apache.lucene.index.TestCompoundFile
+org.apache.lucene.store.BufferedIndexOutput

@@ -1,7 +1,7 @@
-org.apache.tika.parser.microsoft.ExcelParserTest
 org.apache.tika.metadata.MSOffice
 org.apache.tika.parser.mail.MailContentHandler
 org.apache.tika.parser.mbox.MboxParser
+org.apache.tika.parser.microsoft.ExcelParserTest
 org.apache.tika.parser.microsoft.ooxml.MetadataExtractor
 org.apache.tika.parser.microsoft.OutlookExtractor
 org.apache.tika.parser.microsoft.OutlookParserTest

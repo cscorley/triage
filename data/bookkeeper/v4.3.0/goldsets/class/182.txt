@@ -1,2 +1,2 @@
-org.apache.bookkeeper.bookie.EntryLogTest
 org.apache.bookkeeper.bookie.EntryLogger
+org.apache.bookkeeper.bookie.EntryLogTest

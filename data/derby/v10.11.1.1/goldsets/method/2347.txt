@@ -4,5 +4,5 @@ org.apache.derby.client.net.NetResultSetRequest.buildOUTOVR(ResultSet,ColumnMeta
 org.apache.derby.client.net.NetResultSetRequest.buildPositioningCNTQRY(int,long,Section,boolean,long,int)
 org.apache.derby.client.net.NetResultSetRequest.buildRTNEXTDTA(int)
 org.apache.derby.client.net.NetStatementRequest.calculateOUTOVRLidAndLengthOverrides(ResultSet,ColumnMetaData)
-org.apache.derby.impl.drda.DRDAResultSet.getRsDRDAType(int)
 org.apache.derby.impl.drda.DRDAConnThread.writeFdocaVal(int,Object,int,int,int,boolean,DRDAStatement)
+org.apache.derby.impl.drda.DRDAResultSet.getRsDRDAType(int)

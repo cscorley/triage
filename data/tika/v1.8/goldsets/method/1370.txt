@@ -1,5 +1,5 @@
-org.apache.tika.language.translate.CachedTranslator.CachedTranslator(Translator)
 org.apache.tika.language.translate.CachedTranslator.buildCacheKeyString(String,String)
+org.apache.tika.language.translate.CachedTranslator.CachedTranslator(Translator)
 org.apache.tika.language.translate.CachedTranslator.contains(String,String)
 org.apache.tika.language.translate.CachedTranslator.contains(String,String,String)
 org.apache.tika.language.translate.CachedTranslator.getNumTranslationPairs()

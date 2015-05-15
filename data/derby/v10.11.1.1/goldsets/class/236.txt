@@ -1,4 +1,4 @@
-org.apache.derbyTesting.functionTests.tests.store.EncryptionTest
 org.apache.derby.impl.store.raw.RawStore
-org.apache.derbyTesting.functionTests.harness.RunTest
 org.apache.derby.impl.tools.ij.mtTestCase
+org.apache.derbyTesting.functionTests.harness.RunTest
+org.apache.derbyTesting.functionTests.tests.store.EncryptionTest

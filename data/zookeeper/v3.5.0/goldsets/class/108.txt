@@ -1,5 +1,5 @@
-org.apache.zookeeper.server.quorum.CommitProcessor
 org.apache.zookeeper.server.FinalRequestProcessor
+org.apache.zookeeper.server.quorum.CommitProcessor
 org.apache.zookeeper.server.quorum.FollowerRequestProcessor
 org.apache.zookeeper.server.quorum.FollowerZooKeeperServer
 org.apache.zookeeper.server.quorum.Leader

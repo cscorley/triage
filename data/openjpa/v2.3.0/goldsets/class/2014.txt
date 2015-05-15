@@ -1,5 +1,5 @@
-org.apache.openjpa.kernel.BrokerImpl
-org.apache.openjpa.persistence.detachment.model.DMCustomer
-org.apache.openjpa.kernel.DetachManagerLite
 org.apache.openjpa.conf.DetachOptions
+org.apache.openjpa.kernel.BrokerImpl
+org.apache.openjpa.kernel.DetachManagerLite
+org.apache.openjpa.persistence.detachment.model.DMCustomer
 org.apache.openjpa.persistence.detachment.TestDetachLite

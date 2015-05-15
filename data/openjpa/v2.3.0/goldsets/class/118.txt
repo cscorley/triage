@@ -1,5 +1,5 @@
 org.apache.openjpa.conf.AutoDetachValue
-org.apache.openjpa.persistence.EntityManagerFactoryImpl
-org.apache.openjpa.lib.conf.StringListValue
 org.apache.openjpa.conf.TestAutoDetachProperty
 org.apache.openjpa.conf.TestBadAutoDetachProperty
+org.apache.openjpa.lib.conf.StringListValue
+org.apache.openjpa.persistence.EntityManagerFactoryImpl

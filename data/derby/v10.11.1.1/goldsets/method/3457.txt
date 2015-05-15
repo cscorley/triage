@@ -1,5 +1,5 @@
-org.apache.derby.client.am.LogicalStatementEntity.LogicalStatementEntity(java.sql.PreparedStatement,StatementKey,StatementCacheInteractor)
 org.apache.derby.client.am.CachingLogicalConnection.close()
+org.apache.derby.client.am.LogicalStatementEntity.LogicalStatementEntity(java.sql.PreparedStatement,StatementKey,StatementCacheInteractor)
 org.apache.derby.client.am.StatementCacheInteractor.closeOpenLogicalStatements()
 org.apache.derby.client.am.StatementCacheInteractor.createLogicalCallableStatement(CallableStatement,StatementKey)
 org.apache.derby.client.am.StatementCacheInteractor.createLogicalPreparedStatement(PreparedStatement,StatementKey)

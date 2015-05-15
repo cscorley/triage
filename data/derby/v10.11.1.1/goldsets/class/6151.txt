@@ -1,4 +1,4 @@
-org.apache.derbyTesting.functionTests.tests.lang.TableFunctionTest
 org.apache.derby.impl.sql.execute.VTIResultSet
-org.apache.derby.vti.VTITemplateBase
+org.apache.derbyTesting.functionTests.tests.lang.TableFunctionTest
 org.apache.derbyTesting.functionTests.tests.lang.TableFunctionTest.WarningVTI
+org.apache.derby.vti.VTITemplateBase

@@ -1,2 +1,2 @@
-org.apache.pig.impl.streaming.StreamingCommand.HandleSpec.equals(Object)
 org.apache.pig.data.DataByteArray.toString()
+org.apache.pig.impl.streaming.StreamingCommand.HandleSpec.equals(Object)

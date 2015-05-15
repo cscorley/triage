@@ -1,6 +1,6 @@
 org.apache.mahout.utils.nlp.collocations.llr.BloomTokenFilter.BloomTokenFilter(Filter,boolean,TokenStream)
-org.apache.mahout.utils.nlp.collocations.llr.BloomTokenFilterTest.getFilter(String[])
 org.apache.mahout.utils.nlp.collocations.llr.BloomTokenFilter.incrementToken()
+org.apache.mahout.utils.nlp.collocations.llr.BloomTokenFilterTest.getFilter(String[])
 org.apache.mahout.utils.nlp.collocations.llr.BloomTokenFilterTest.setKey(Key,String)
 org.apache.mahout.utils.nlp.collocations.llr.BloomTokenFilterTest.testAnalyzer()
 org.apache.mahout.utils.nlp.collocations.llr.BloomTokenFilterTest.testFilter()

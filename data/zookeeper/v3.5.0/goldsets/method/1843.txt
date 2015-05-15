@@ -1,6 +1,6 @@
+org.apache.zookeeper.server.ByteBufferInputStream.skip(long)
 org.apache.zookeeper.server.ByteBufferInputStreamTest.setUp()
 org.apache.zookeeper.server.ByteBufferInputStreamTest.setUpClass()
-org.apache.zookeeper.server.ByteBufferInputStream.skip(long)
 org.apache.zookeeper.server.ByteBufferInputStreamTest.testAvailable()
 org.apache.zookeeper.server.ByteBufferInputStreamTest.testNegativeSkip()
 org.apache.zookeeper.server.ByteBufferInputStreamTest.testRead()

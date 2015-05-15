@@ -1,3 +1,5 @@
+org.apache.derby.impl.jdbc.EmbedResultSet40.updateNString(int,String)
+org.apache.derby.impl.jdbc.EmbedResultSet40.updateRowId(String,RowId)
 org.apache.derby.impl.jdbc.EmbedResultSet.getHoldability()
 org.apache.derby.impl.jdbc.EmbedResultSet.getMetaData()
 org.apache.derbyTesting.functionTests.tests.jdbc4.TestResultSetMethods.getResultSetWithHoldability(int,ResultSet[])
@@ -5,5 +7,3 @@ org.apache.derbyTesting.functionTests.tests.jdbc4.TestResultSetMethods.holdabili
 org.apache.derbyTesting.functionTests.tests.jdbc4.TestResultSetMethods.main(String)
 org.apache.derbyTesting.functionTests.tests.jdbc4.TestResultSetMethods.t_getHoldability()
 org.apache.derbyTesting.functionTests.tests.jdbc4.TestResultSetMethods.threeResultSets(ResultSet[],ResultSet[],ResultSet[])
-org.apache.derby.impl.jdbc.EmbedResultSet40.updateNString(int,String)
-org.apache.derby.impl.jdbc.EmbedResultSet40.updateRowId(String,RowId)

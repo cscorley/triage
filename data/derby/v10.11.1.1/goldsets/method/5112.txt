@@ -1,5 +1,5 @@
-org.apache.derbyTesting.functionTests.tests.tools.ImportExportTest.baseSuite(String)
 org.apache.derbyTesting.functionTests.tests.tools.ImportExportTest.baseSuite.decorateSQL(Statement)
+org.apache.derbyTesting.functionTests.tests.tools.ImportExportTest.baseSuite(String)
 org.apache.derbyTesting.functionTests.tests.tools.ImportExportTest.doImportAndVerify(String,String,String,String,String,int)
 org.apache.derbyTesting.functionTests.tests.tools.ImportExportTest.setUp()
 org.apache.derbyTesting.functionTests.tests.tools.ImportExportTest.testCastingProblem()

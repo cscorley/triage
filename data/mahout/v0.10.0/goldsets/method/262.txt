@@ -1,6 +1,6 @@
+org.apache.mahout.math.MultiLabelVectorWritable.getLabels()
 org.apache.mahout.math.MultiLabelVectorWritable.MultiLabelVectorWritable()
 org.apache.mahout.math.MultiLabelVectorWritable.MultiLabelVectorWritable(Vector,int[])
-org.apache.mahout.math.MultiLabelVectorWritable.getLabels()
 org.apache.mahout.math.MultiLabelVectorWritable.read(DataInput)
 org.apache.mahout.math.MultiLabelVectorWritable.readFields(DataInput)
 org.apache.mahout.math.MultiLabelVectorWritable.setLabels(int[])

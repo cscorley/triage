@@ -1,5 +1,4 @@
 org.apache.openjpa.persistence.common.utils.AbstractTestCase
-org.apache.openjpa.persistence.kernel.TestStaticInnerClasses.Inner
 org.apache.openjpa.persistence.common.utils.AbstractTestCase.Platform
 org.apache.openjpa.persistence.kernel.TestCalendarFields
 org.apache.openjpa.persistence.kernel.TestCheckConsistency
@@ -12,7 +11,6 @@ org.apache.openjpa.persistence.kernel.TestEJBLobs
 org.apache.openjpa.persistence.kernel.TestEJBLocales
 org.apache.openjpa.persistence.kernel.TestEJBManagedInverses
 org.apache.openjpa.persistence.kernel.TestEJBNullValues
-org.apache.openjpa.persistence.query.TestEJBQueryInterface
 org.apache.openjpa.persistence.kernel.TestEJBState
 org.apache.openjpa.persistence.kernel.TestExtents
 org.apache.openjpa.persistence.kernel.TestExtents2
@@ -33,5 +31,7 @@ org.apache.openjpa.persistence.kernel.TestSequence
 org.apache.openjpa.persistence.kernel.TestSimple
 org.apache.openjpa.persistence.kernel.TestStateManagerImplData
 org.apache.openjpa.persistence.kernel.TestStaticInnerClasses
+org.apache.openjpa.persistence.kernel.TestStaticInnerClasses.Inner
 org.apache.openjpa.persistence.kernel.TestStoreBlob
 org.apache.openjpa.persistence.kernel.TestTransition2
+org.apache.openjpa.persistence.query.TestEJBQueryInterface

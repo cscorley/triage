@@ -1,4 +1,4 @@
 org.apache.derby.impl.sql.compile.ConstantNode
-org.apache.derbyTesting.functionTests.tests.lang.GroupByExpressionTest
 org.apache.derby.impl.sql.compile.TernaryOperatorNode
 org.apache.derby.impl.sql.compile.ValueNode
+org.apache.derbyTesting.functionTests.tests.lang.GroupByExpressionTest

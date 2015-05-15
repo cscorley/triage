@@ -3,13 +3,10 @@ org.apache.tika.parser.microsoft.ExcelParser
 org.apache.tika.parser.microsoft.FastSavedException
 org.apache.tika.parser.microsoft.FilteredStringWriter
 org.apache.tika.parser.microsoft.MSParser
-org.apache.tika.parser.msexcel.MsExcelParser
-org.apache.tika.parser.mspowerpoint.MsPowerPointParser
-org.apache.tika.parser.msword.MsWordParser
 org.apache.tika.parser.microsoft.OfficeParser
-org.apache.tika.parser.microsoft.PPTConstants
 org.apache.tika.parser.microsoft.PasswordProtectedException
 org.apache.tika.parser.microsoft.PowerPointParser
+org.apache.tika.parser.microsoft.PPTConstants
 org.apache.tika.parser.microsoft.PropertiesReaderListener
 org.apache.tika.parser.microsoft.Slide
 org.apache.tika.parser.microsoft.TextBox
@@ -18,3 +15,6 @@ org.apache.tika.parser.microsoft.Word6Extractor
 org.apache.tika.parser.microsoft.WordParser
 org.apache.tika.parser.microsoft.WordTextBuffer
 org.apache.tika.parser.microsoft.WordTextPiece
+org.apache.tika.parser.msexcel.MsExcelParser
+org.apache.tika.parser.mspowerpoint.MsPowerPointParser
+org.apache.tika.parser.msword.MsWordParser

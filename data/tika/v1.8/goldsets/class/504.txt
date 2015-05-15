@@ -1,4 +1,4 @@
-org.apache.tika.parser.image.ImageMetadataExtractor
-org.apache.tika.parser.jpeg.JpegParserTest
 org.apache.tika.metadata.Metadata
 org.apache.tika.metadata.TIFF
+org.apache.tika.parser.image.ImageMetadataExtractor
+org.apache.tika.parser.jpeg.JpegParserTest

@@ -1,5 +1,5 @@
-org.apache.tika.mime.MediaType.parse(String)
 org.apache.tika.mime.MediaType.parseNoParams(String)
+org.apache.tika.mime.MediaType.parse(String)
 org.apache.tika.mime.MediaTypeTest.testBasics()
 org.apache.tika.mime.MediaTypeTest.testLowerCase()
 org.apache.tika.mime.MediaTypeTest.testParseNoParams()

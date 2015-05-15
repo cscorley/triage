@@ -1,6 +1,6 @@
 org.apache.lucene.benchmark.AbstractBenchmarker
-org.apache.lucene.benchmark.BenchmarkOptions
 org.apache.lucene.benchmark.Benchmarker
+org.apache.lucene.benchmark.BenchmarkOptions
 org.apache.lucene.benchmark.Driver
 org.apache.lucene.benchmark.standard.ReutersQueries
 org.apache.lucene.benchmark.standard.StandardBenchmarker

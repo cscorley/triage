@@ -1,6 +1,6 @@
 org.apache.pig.piggybank.evaluation.string.INDEXOF.exec(Tuple)
-org.apache.pig.piggybank.evaluation.string.LOWER.getArgToFuncMapping()
 org.apache.pig.piggybank.evaluation.string.INDEXOF.outputSchema(Schema)
+org.apache.pig.piggybank.evaluation.string.LOWER.getArgToFuncMapping()
 org.apache.pig.piggybank.test.evaluation.TestEvalString.testINDEXOF()
 org.apache.pig.piggybank.test.evaluation.TestEvalString.testLASTINDEXOF()
 org.apache.pig.piggybank.test.evaluation.TestEvalString.testLOWER()

@@ -1,2 +1,2 @@
-org.apache.pig.test.TestDataBag.MyCustomTuple
 org.apache.pig.test.TestDataBag
+org.apache.pig.test.TestDataBag.MyCustomTuple

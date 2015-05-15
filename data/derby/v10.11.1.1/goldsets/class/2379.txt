@@ -1,8 +1,6 @@
-org.apache.derbyTesting.functionTests.tests.jdbcapi.BlobClob4BlobTest
-org.apache.derby.impl.jdbc.ClobStreamControl
-org.apache.derbyTesting.functionTests.tests.jdbcapi.ClobUpdateableReaderTest
-org.apache.derby.impl.jdbc.ClobUtf8Writer
 org.apache.derby.iapi.store.raw.data.DataFactory
+org.apache.derby.impl.jdbc.ClobStreamControl
+org.apache.derby.impl.jdbc.ClobUtf8Writer
 org.apache.derby.impl.jdbc.EmbedBlob
 org.apache.derby.impl.jdbc.EmbedClob
 org.apache.derby.impl.jdbc.EncryptedLOBFile
@@ -11,4 +9,6 @@ org.apache.derby.impl.jdbc.LOBInputStream
 org.apache.derby.impl.jdbc.LOBOutputStream
 org.apache.derby.impl.jdbc.LOBStreamControl
 org.apache.derbyTesting.functionTests.tests.jdbc4.LobStreamTest
+org.apache.derbyTesting.functionTests.tests.jdbcapi.BlobClob4BlobTest
+org.apache.derbyTesting.functionTests.tests.jdbcapi.ClobUpdateableReaderTest
 org.apache.derbyTesting.functionTests.tests.jdbcapi.LobStreamsTest

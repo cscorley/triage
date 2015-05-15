@@ -1,2 +1,2 @@
-org.apache.derby.impl.store.access.btree.index.B2IRowLocking3
 org.apache.derby.impl.store.access.btree.BTreeLockingPolicy
+org.apache.derby.impl.store.access.btree.index.B2IRowLocking3

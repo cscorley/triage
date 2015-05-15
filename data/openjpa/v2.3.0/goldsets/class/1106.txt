@@ -11,5 +11,5 @@ org.apache.openjpa.integration.validation.SimpleEntity
 org.apache.openjpa.integration.validation.TestConstraints
 org.apache.openjpa.integration.validation.TestValidatingLEM
 org.apache.openjpa.integration.validation.TestValidationFactory
-org.apache.openjpa.validation.Validator
 org.apache.openjpa.persistence.validation.ValidatorImpl
+org.apache.openjpa.validation.Validator

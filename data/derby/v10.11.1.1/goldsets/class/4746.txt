@@ -5,10 +5,10 @@ org.apache.derby.impl.drda.CodePointNameTable
 org.apache.derby.impl.drda.DDMWriter
 org.apache.derby.impl.drda.DRDAConnThread
 org.apache.derby.impl.drda.EbcdicCcsidManager
-org.apache.derbyTesting.functionTests.tests.jdbcapi.InternationalConnectTest
 org.apache.derby.impl.drda.NetworkServerControlImpl
 org.apache.derby.impl.drda.ProtocolTest
-org.apache.derbyTesting.functionTests.util.ProtocolTestGrammar
 org.apache.derby.impl.drda.TestProto
 org.apache.derby.impl.drda.Utf8CcsidManager
 org.apache.derbyTesting.functionTests.tests.derbynet.Utf8CcsidManagerTest
+org.apache.derbyTesting.functionTests.tests.jdbcapi.InternationalConnectTest
+org.apache.derbyTesting.functionTests.util.ProtocolTestGrammar

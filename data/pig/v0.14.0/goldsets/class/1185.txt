@@ -4,5 +4,5 @@ org.apache.pig.data.DistinctDataBag
 org.apache.pig.data.DistinctDataBag.DistinctDataBagIterator
 org.apache.pig.data.InternalDistinctBag
 org.apache.pig.data.InternalSortedBag
-org.apache.pig.data.SortedDataBag
 org.apache.pig.data.InternalSortedBag.SortedDataBagIterator
+org.apache.pig.data.SortedDataBag

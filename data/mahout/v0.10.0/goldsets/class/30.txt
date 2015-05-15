@@ -1,5 +1,3 @@
-org.apache.mahout.clustering.dirichlet.models.AsymmetricSampledNormalDistribution
-org.apache.mahout.clustering.dirichlet.models.AsymmetricSampledNormalModel
 org.apache.mahout.clustering.dirichlet.DirichletCluster
 org.apache.mahout.clustering.dirichlet.DirichletClusterer
 org.apache.mahout.clustering.dirichlet.DirichletCombiner
@@ -20,9 +18,11 @@ org.apache.mahout.clustering.dirichlet.JsonModelAdapter
 org.apache.mahout.clustering.dirichlet.JsonModelDistributionAdapter
 org.apache.mahout.clustering.dirichlet.JsonModelHolderAdapter
 org.apache.mahout.clustering.dirichlet.JsonVectorAdapter
+org.apache.mahout.clustering.dirichlet.ModelHolder
+org.apache.mahout.clustering.dirichlet.models.AsymmetricSampledNormalDistribution
+org.apache.mahout.clustering.dirichlet.models.AsymmetricSampledNormalModel
 org.apache.mahout.clustering.dirichlet.models.Model
 org.apache.mahout.clustering.dirichlet.models.ModelDistribution
-org.apache.mahout.clustering.dirichlet.ModelHolder
 org.apache.mahout.clustering.dirichlet.models.NormalModel
 org.apache.mahout.clustering.dirichlet.models.NormalModelDistribution
 org.apache.mahout.clustering.dirichlet.models.SampledNormalDistribution

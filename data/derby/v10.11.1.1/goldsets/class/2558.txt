@@ -1,2 +1,2 @@
-org.apache.derbyTesting.functionTests.tests.derbynet.PrepareStatementTest
 org.apache.derby.client.am.PreparedStatement
+org.apache.derbyTesting.functionTests.tests.derbynet.PrepareStatementTest

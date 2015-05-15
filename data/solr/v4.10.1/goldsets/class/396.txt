@@ -1,9 +1,8 @@
 org.apache.solr.analysis.BrazilianStemFilterFactory
-org.apache.solr.analysis.CJKTokenizerFactory
 org.apache.solr.analysis.ChineseFilterFactory
 org.apache.solr.analysis.ChineseTokenizerFactory
+org.apache.solr.analysis.CJKTokenizerFactory
 org.apache.solr.analysis.DutchStemFilterFactory
-org.apache.solr.util.FindClasses
 org.apache.solr.analysis.FrenchStemFilterFactory
 org.apache.solr.analysis.GermanStemFilterFactory
 org.apache.solr.analysis.GreekLowerCaseFilterFactory
@@ -11,5 +10,6 @@ org.apache.solr.analysis.RussianCommon
 org.apache.solr.analysis.RussianLetterTokenizerFactory
 org.apache.solr.analysis.RussianLowerCaseFilterFactory
 org.apache.solr.analysis.RussianStemFilterFactory
-org.apache.solr.util.SuggestMissingFactories
 org.apache.solr.analysis.ThaiWordFilterFactory
+org.apache.solr.util.FindClasses
+org.apache.solr.util.SuggestMissingFactories

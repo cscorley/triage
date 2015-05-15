@@ -1,6 +1,6 @@
 org.apache.openjpa.kernel.AttachStrategy
-org.apache.openjpa.persistence.merge.model.Car
 org.apache.openjpa.kernel.DetachedStateManager
+org.apache.openjpa.persistence.merge.model.Car
 org.apache.openjpa.persistence.merge.model.Label
 org.apache.openjpa.persistence.merge.model.Label2
 org.apache.openjpa.persistence.merge.model.Make

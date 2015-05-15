@@ -4,8 +4,8 @@ org.apache.mahout.text.LuceneSegmentInputFormatTest
 org.apache.mahout.text.LuceneSegmentRecordReader
 org.apache.mahout.text.LuceneSegmentRecordReaderTest
 org.apache.mahout.text.LuceneSeqFileHelper
-org.apache.mahout.text.SequenceFilesFromLuceneStorage.SeqFileWriterCollector
 org.apache.mahout.text.SequenceFilesFromLuceneStorage
 org.apache.mahout.text.SequenceFilesFromLuceneStorageDriverTest
 org.apache.mahout.text.SequenceFilesFromLuceneStorageMapper
+org.apache.mahout.text.SequenceFilesFromLuceneStorage.SeqFileWriterCollector
 org.apache.mahout.text.SequenceFilesFromLuceneStorageTest

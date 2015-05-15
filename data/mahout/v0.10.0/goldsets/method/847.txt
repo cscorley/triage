@@ -1,6 +1,4 @@
 org.apache.mahout.cf.taste.impl.similarity.EuclideanDistanceSimilarity.computeResult(int,double,double,double,double)
-org.apache.mahout.math.hadoop.similarity.cooccurrence.measures.EuclideanDistanceSimilarity.similarity(double,double,double,int)
-org.apache.mahout.math.hadoop.similarity.cooccurrence.measures.VectorSimilarityMeasuresTest.testEuclideanDistanceSimilarity()
 org.apache.mahout.cf.taste.impl.similarity.EuclideanDistanceSimilarityTest.testNoCorrelation1()
 org.apache.mahout.cf.taste.impl.similarity.EuclideanDistanceSimilarityTest.testNoCorrelation1Weighted()
 org.apache.mahout.cf.taste.impl.similarity.EuclideanDistanceSimilarityTest.testNoCorrelation2()
@@ -12,3 +10,5 @@ org.apache.mahout.cf.taste.impl.similarity.EuclideanDistanceSimilarityTest.testS
 org.apache.mahout.cf.taste.impl.similarity.EuclideanDistanceSimilarityTest.testSimpleItem()
 org.apache.mahout.cf.taste.impl.similarity.EuclideanDistanceSimilarityTest.testSimpleItemWeighted()
 org.apache.mahout.cf.taste.impl.similarity.EuclideanDistanceSimilarityTest.testSimpleWeighted()
+org.apache.mahout.math.hadoop.similarity.cooccurrence.measures.EuclideanDistanceSimilarity.similarity(double,double,double,int)
+org.apache.mahout.math.hadoop.similarity.cooccurrence.measures.VectorSimilarityMeasuresTest.testEuclideanDistanceSimilarity()

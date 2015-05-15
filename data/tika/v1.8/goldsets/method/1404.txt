@@ -1,2 +1,2 @@
-org.apache.tika.cli.TikaCLI.TikaServer.processSocketInBackground(Socket)
 org.apache.tika.cli.TikaCLI.TikaServer.processSocketInBackground.run()
+org.apache.tika.cli.TikaCLI.TikaServer.processSocketInBackground(Socket)

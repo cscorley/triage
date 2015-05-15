@@ -1,2 +1,2 @@
-org.apache.solr.update.processor.SignatureUpdateProcessorFactory.SignatureUpdateProcessor
 org.apache.solr.update.processor.SignatureUpdateProcessorFactory
+org.apache.solr.update.processor.SignatureUpdateProcessorFactory.SignatureUpdateProcessor

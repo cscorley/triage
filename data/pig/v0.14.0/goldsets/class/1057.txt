@@ -1,4 +1,4 @@
 org.apache.hadoop.zebra.io.BasicTable
-org.apache.hadoop.zebra.io.TestDropColumnGroup.DropThread
 org.apache.hadoop.zebra.io.BasicTable.SchemaFile
 org.apache.hadoop.zebra.io.TestDropColumnGroup
+org.apache.hadoop.zebra.io.TestDropColumnGroup.DropThread

@@ -1,4 +1,4 @@
+org.apache.derby.iapi.sql.execute.ResultSetFactory
+org.apache.derby.impl.sql.compile.IndexToBaseRowNode
 org.apache.derby.impl.sql.execute.GenericResultSetFactory
 org.apache.derby.impl.sql.execute.IndexRowToBaseRowResultSet
-org.apache.derby.impl.sql.compile.IndexToBaseRowNode
-org.apache.derby.iapi.sql.execute.ResultSetFactory

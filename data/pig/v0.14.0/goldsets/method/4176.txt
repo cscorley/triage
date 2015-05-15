@@ -1,2 +1,2 @@
-org.apache.pig.builtin.Bloom.init.accept(File,String)
 org.apache.pig.builtin.Bloom.init()
+org.apache.pig.builtin.Bloom.init.accept(File,String)

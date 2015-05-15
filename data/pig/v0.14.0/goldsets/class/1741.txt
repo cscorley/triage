@@ -1,2 +1,2 @@
-org.apache.pig.test.TestTypeCheckingValidator
 org.apache.pig.impl.logicalLayer.validators.TypeCheckingVisitor
+org.apache.pig.test.TestTypeCheckingValidator

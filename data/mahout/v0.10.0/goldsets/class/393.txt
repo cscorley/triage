@@ -1,9 +1,4 @@
 org.apache.mahout.cf.taste.hadoop.similarity.AbstractDistributedItemSimilarity
-org.apache.mahout.cf.taste.hadoop.similarity.item.CountUsersKeyWritable.CountUsersGroupComparator
-org.apache.mahout.cf.taste.hadoop.similarity.item.CountUsersKeyWritable
-org.apache.mahout.cf.taste.hadoop.similarity.item.CountUsersMapper
-org.apache.mahout.cf.taste.hadoop.similarity.item.CountUsersKeyWritable.CountUsersPartitioner
-org.apache.mahout.cf.taste.hadoop.similarity.item.CountUsersReducer
 org.apache.mahout.cf.taste.hadoop.similarity.DistributedEuclideanDistanceSimilarity
 org.apache.mahout.cf.taste.hadoop.similarity.DistributedEuclideanDistanceSimilarityTest
 org.apache.mahout.cf.taste.hadoop.similarity.DistributedItemSimilarity
@@ -19,6 +14,11 @@ org.apache.mahout.cf.taste.hadoop.similarity.DistributedUncenteredCosineSimilari
 org.apache.mahout.cf.taste.hadoop.similarity.DistributedUncenteredCosineSimilarityTest
 org.apache.mahout.cf.taste.hadoop.similarity.DistributedUncenteredZeroAssumingCosineSimilarity
 org.apache.mahout.cf.taste.hadoop.similarity.DistributedUncenteredZeroAssumingCosineSimilarityTest
+org.apache.mahout.cf.taste.hadoop.similarity.item.CountUsersKeyWritable
+org.apache.mahout.cf.taste.hadoop.similarity.item.CountUsersKeyWritable.CountUsersGroupComparator
+org.apache.mahout.cf.taste.hadoop.similarity.item.CountUsersKeyWritable.CountUsersPartitioner
+org.apache.mahout.cf.taste.hadoop.similarity.item.CountUsersMapper
+org.apache.mahout.cf.taste.hadoop.similarity.item.CountUsersReducer
 org.apache.mahout.cf.taste.hadoop.similarity.item.ItemSimilarityJob
 org.apache.mahout.cf.taste.hadoop.similarity.item.ItemSimilarityTest
 org.apache.mahout.cf.taste.hadoop.similarity.item.PreferredItemsPerUserMapper

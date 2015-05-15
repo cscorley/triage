@@ -1,2 +1,2 @@
-org.apache.openjpa.meta.JavaTypes
 org.apache.openjpa.jdbc.meta.MappingRepository
+org.apache.openjpa.meta.JavaTypes

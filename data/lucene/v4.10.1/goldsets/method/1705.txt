@@ -1,7 +1,7 @@
-org.apache.lucene.index.TestIndexWriterDelete.addDoc(IndexWriter,int,int)
 org.apache.lucene.index.IndexWriter.deleteAll()
 org.apache.lucene.index.IndexWriter.finishMerges(boolean)
 org.apache.lucene.index.IndexWriter.rollbackInternal()
+org.apache.lucene.index.TestIndexWriterDelete.addDoc(IndexWriter,int,int)
 org.apache.lucene.index.TestIndexWriterDelete.testBatchDeletes()
 org.apache.lucene.index.TestIndexWriterDelete.testDeleteAll()
 org.apache.lucene.index.TestIndexWriterDelete.testDeleteAllNRT()

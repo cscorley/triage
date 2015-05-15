@@ -1,5 +1,5 @@
-org.apache.pig.piggybank.storage.HadoopJobHistoryLoader.HadoopJobHistoryInputFormat
 org.apache.pig.piggybank.storage.HadoopJobHistoryLoader
+org.apache.pig.piggybank.storage.HadoopJobHistoryLoader.HadoopJobHistoryInputFormat
 org.apache.pig.piggybank.storage.HadoopJobHistoryLoader.HadoopJobHistoryReader
 org.apache.pig.piggybank.storage.HadoopJobHistoryLoader.JobHistoryPathFilter
 org.apache.pig.piggybank.storage.HadoopJobHistoryLoader.JobKeys

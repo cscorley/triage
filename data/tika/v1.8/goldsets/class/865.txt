@@ -1,2 +1,2 @@
-org.apache.tika.parser.external.ExternalParsersFactory
 org.apache.tika.mime.MimeTypes
+org.apache.tika.parser.external.ExternalParsersFactory

@@ -1,2 +1,2 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner.Combine
 org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner
+org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner.Combine

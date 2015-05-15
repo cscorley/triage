@@ -1,5 +1,5 @@
-org.apache.solr.common.params.TermsParams.TermsRegexpFlag.TermsRegexpFlag(int)
 org.apache.solr.common.params.TermsParams.TermsRegexpFlag.getValue()
+org.apache.solr.common.params.TermsParams.TermsRegexpFlag.TermsRegexpFlag(int)
 org.apache.solr.handler.component.TermsComponent.prepare(ResponseBuilder)
 org.apache.solr.handler.component.TermsComponent.process(ResponseBuilder)
 org.apache.solr.handler.component.TermsComponent.resolveRegexpFlags(SolrParams)

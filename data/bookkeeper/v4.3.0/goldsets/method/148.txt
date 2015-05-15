@@ -1,2 +1,2 @@
-org.apache.bookkeeper.client.TestFencing.testManyOpenParallel.run()
 org.apache.bookkeeper.client.TestFencing.testManyOpenParallel()
+org.apache.bookkeeper.client.TestFencing.testManyOpenParallel.run()

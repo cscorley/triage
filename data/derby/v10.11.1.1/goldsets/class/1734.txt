@@ -1,3 +1,4 @@
+org.apache.derby.iapi.sql.dictionary.SystemColumn
 org.apache.derby.impl.sql.catalog.DataDictionaryImpl
 org.apache.derby.impl.sql.catalog.PermissionsCatalogRowFactory
 org.apache.derby.impl.sql.catalog.SYSALIASESRowFactory
@@ -17,7 +18,6 @@ org.apache.derby.impl.sql.catalog.SYSSTATEMENTSRowFactory
 org.apache.derby.impl.sql.catalog.SYSSTATISTICSRowFactory
 org.apache.derby.impl.sql.catalog.SYSTABLEPERMSRowFactory
 org.apache.derby.impl.sql.catalog.SYSTABLESRowFactory
+org.apache.derby.impl.sql.catalog.SystemColumnImpl
 org.apache.derby.impl.sql.catalog.SYSTRIGGERSRowFactory
 org.apache.derby.impl.sql.catalog.SYSVIEWSRowFactory
-org.apache.derby.iapi.sql.dictionary.SystemColumn
-org.apache.derby.impl.sql.catalog.SystemColumnImpl

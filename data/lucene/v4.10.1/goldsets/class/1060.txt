@@ -1,2 +1,2 @@
-org.apache.lucene.index.TermVectorsReader
 org.apache.lucene.analysis.Token
+org.apache.lucene.index.TermVectorsReader

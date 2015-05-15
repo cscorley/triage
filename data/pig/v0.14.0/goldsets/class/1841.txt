@@ -1,2 +1,2 @@
-org.apache.pig.test.TestBuiltin
 org.apache.pig.builtin.TupleSize
+org.apache.pig.test.TestBuiltin

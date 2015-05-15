@@ -1,2 +1,2 @@
-org.apache.derbyTesting.functionTests.tests.jdbcapi.SetQueryTimeoutTest
 org.apache.derby.client.am.Statement
+org.apache.derbyTesting.functionTests.tests.jdbcapi.SetQueryTimeoutTest

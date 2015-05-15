@@ -1,5 +1,5 @@
-org.apache.zookeeper.OpResult.OpResult(int)
 org.apache.zookeeper.OpResult.CreateResult.equals(Object)
+org.apache.zookeeper.OpResult.OpResult(int)
 org.apache.zookeeper.test.MultiTransactionTest.opEquals(OpResult,OpResult,OpResult)
 org.apache.zookeeper.test.MultiTransactionTest.testGetResults()
 org.apache.zookeeper.test.MultiTransactionTest.testOpResultEquals()

@@ -1,6 +1,6 @@
+org.apache.solr.search.DismaxQParser
 org.apache.solr.search.DisMaxQParser
 org.apache.solr.search.DisMaxQParserPlugin
-org.apache.solr.search.DismaxQParser
 org.apache.solr.search.function.FunctionQuery
 org.apache.solr.search.function.FunctionQuery.FunctionWeight
 org.apache.solr.search.QParser

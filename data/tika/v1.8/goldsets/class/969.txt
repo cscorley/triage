@@ -1,2 +1,2 @@
-org.apache.tika.parser.image.ImageMetadataExtractor.CopyUnknownFieldsHandler
 org.apache.tika.parser.image.ImageMetadataExtractor
+org.apache.tika.parser.image.ImageMetadataExtractor.CopyUnknownFieldsHandler

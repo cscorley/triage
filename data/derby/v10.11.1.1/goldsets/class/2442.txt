@@ -8,8 +8,8 @@ org.apache.derby.impl.sql.compile.JavaToSQLValueNode
 org.apache.derby.impl.sql.compile.OrderByColumn
 org.apache.derby.impl.sql.compile.ResultColumn
 org.apache.derby.impl.sql.compile.ResultColumnList
-org.apache.derby.impl.sql.compile.SQLToJavaValueNode
 org.apache.derby.impl.sql.compile.SelectNode
+org.apache.derby.impl.sql.compile.SQLToJavaValueNode
 org.apache.derby.impl.sql.compile.SubqueryNode
 org.apache.derby.impl.sql.compile.TernaryOperatorNode
 org.apache.derby.impl.sql.compile.UnaryOperatorNode

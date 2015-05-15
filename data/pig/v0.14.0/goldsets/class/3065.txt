@@ -1,2 +1,2 @@
-org.apache.pig.PigConfiguration
 org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigOutputCommitter
+org.apache.pig.PigConfiguration

@@ -1,6 +1,6 @@
-org.apache.lucene.store.FSDirectory
 org.apache.lucene.index.IndexReader
 org.apache.lucene.index.IndexWriter
+org.apache.lucene.store.FSDirectory
 org.apache.lucene.store.MMapDirectory
 org.apache.lucene.store.MMapDirectory.MMapIndexInput
 org.apache.lucene.store.NIOFSDirectory

@@ -1,4 +1,3 @@
-org.apache.derbyTesting.functionTests.tests.lang.UngroupedAggregatesNegativeTest.UngroupedAggregatesNegativeTest(String)
 org.apache.derbyTesting.functionTests.tests.lang.UngroupedAggregatesNegativeTest.setUp()
 org.apache.derbyTesting.functionTests.tests.lang.UngroupedAggregatesNegativeTest.suite()
 org.apache.derbyTesting.functionTests.tests.lang.UngroupedAggregatesNegativeTest.tearDown()
@@ -6,3 +5,4 @@ org.apache.derbyTesting.functionTests.tests.lang.UngroupedAggregatesNegativeTest
 org.apache.derbyTesting.functionTests.tests.lang.UngroupedAggregatesNegativeTest.testSelect()
 org.apache.derbyTesting.functionTests.tests.lang.UngroupedAggregatesNegativeTest.testSubquery()
 org.apache.derbyTesting.functionTests.tests.lang.UngroupedAggregatesNegativeTest.testWhereClause()
+org.apache.derbyTesting.functionTests.tests.lang.UngroupedAggregatesNegativeTest.UngroupedAggregatesNegativeTest(String)

@@ -1,2 +1,2 @@
-org.apache.pig.newplan.logical.relational.LOLoad
 org.apache.pig.impl.util.Utils
+org.apache.pig.newplan.logical.relational.LOLoad

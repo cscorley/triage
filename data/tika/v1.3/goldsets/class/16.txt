@@ -1,2 +1,2 @@
-org.apache.tika.parser.microsoft.ooxml.XWPFWordExtractorDecorator
 org.apache.tika.parser.microsoft.ooxml.OOXMLParserTest
+org.apache.tika.parser.microsoft.ooxml.XWPFWordExtractorDecorator

@@ -1,4 +1,4 @@
-org.apache.pig.impl.io.FileLocalizer.create(String,PigContext)
-org.apache.pig.impl.io.FileLocalizer.open(String,PigContext)
-org.apache.pig.impl.io.FileLocalizer.open(String,long,PigContext)
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLoad.setUp()
+org.apache.pig.impl.io.FileLocalizer.create(String,PigContext)
+org.apache.pig.impl.io.FileLocalizer.open(String,long,PigContext)
+org.apache.pig.impl.io.FileLocalizer.open(String,PigContext)

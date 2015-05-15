@@ -1,2 +1,2 @@
-org.apache.openjpa.persistence.PersistenceMetaDataFactory.mapPersistentTypeNames(Object,String[])
 org.apache.openjpa.meta.AbstractCFMetaDataFactory.parsePersistentTypeNames(ClassLoader)
+org.apache.openjpa.persistence.PersistenceMetaDataFactory.mapPersistentTypeNames(Object,String[])

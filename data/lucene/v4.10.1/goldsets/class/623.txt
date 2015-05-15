@@ -1,2 +1,2 @@
-org.apache.lucene.store.RAMDirectory
 org.apache.lucene.index.TestIndexWriterMerging
+org.apache.lucene.store.RAMDirectory

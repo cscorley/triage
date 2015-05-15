@@ -1,2 +1,2 @@
-org.apache.solr.core.CoreContainer
 org.apache.solr.client.solrj.MultiCoreExampleTestBase
+org.apache.solr.core.CoreContainer

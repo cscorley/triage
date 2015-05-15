@@ -1,5 +1,5 @@
-org.apache.zookeeper.server.persistence.FileTxnSnapLog.processTransaction(TxnHeader,DataTree,Map<Long,Integer>,Long,Integer,Record)
 org.apache.zookeeper.server.DataTree.processTxn(TxnHeader,Record)
+org.apache.zookeeper.server.persistence.FileTxnSnapLog.processTransaction(TxnHeader,DataTree,Map<Long,Integer>,Long,Integer,Record)
 org.apache.zookeeper.server.persistence.FileTxnSnapLog.restore(DataTree,Map<Long,Integer>,Long,Integer,PlayBackListener)
 org.apache.zookeeper.test.LoadFromLogTest.testLoad()
 org.apache.zookeeper.test.LoadFromLogTest.testRestore()

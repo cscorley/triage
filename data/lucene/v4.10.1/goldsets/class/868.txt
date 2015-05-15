@@ -13,5 +13,5 @@ org.apache.lucene.index.TermVectorEntryFreqSortedComparator
 org.apache.lucene.index.TermVectorMapper
 org.apache.lucene.index.TermVectorsReader
 org.apache.lucene.index.TestIndexReader
-org.apache.lucene.search.TestTermVectors
 org.apache.lucene.index.TestTermVectorsReader
+org.apache.lucene.search.TestTermVectors

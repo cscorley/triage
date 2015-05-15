@@ -1,6 +1,6 @@
 org.apache.tika.language.translate.GoogleTranslator.GoogleTranslator()
-org.apache.tika.language.translate.GoogleTranslatorTest.GoogleTranslatorTest()
 org.apache.tika.language.translate.GoogleTranslator.isAvailable()
+org.apache.tika.language.translate.GoogleTranslatorTest.GoogleTranslatorTest()
 org.apache.tika.language.translate.GoogleTranslatorTest.setUp()
 org.apache.tika.language.translate.GoogleTranslatorTest.testSimpleTranslate()
 org.apache.tika.language.translate.GoogleTranslatorTest.testTranslateGuessLanguage()

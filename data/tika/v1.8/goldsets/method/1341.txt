@@ -1,6 +1,6 @@
+org.apache.tika.parser.pdf.PDFParser.parse(InputStream,ContentHandler,Metadata,ParseContext)
 org.apache.tika.parser.pdf.PDFParserTest.EventCountingHandler.endDocument()
 org.apache.tika.parser.pdf.PDFParserTest.EventCountingHandler.getEndDocument()
-org.apache.tika.parser.pdf.PDFParser.parse(InputStream,ContentHandler,Metadata,ParseContext)
 org.apache.tika.parser.pdf.PDFParserTest.testEmbeddedFilesInChildren()
 org.apache.tika.parser.pdf.PDFParserTest.testInlineConfig()
 org.apache.tika.parser.pdf.PDFParserTest.testSignatureInAcroForm()

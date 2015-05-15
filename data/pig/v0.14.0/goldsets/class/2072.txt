@@ -1,2 +1,2 @@
-org.apache.pig.test.TestProjectStarRangeInUdf
 org.apache.pig.newplan.logical.visitor.TypeCheckingExpVisitor
+org.apache.pig.test.TestProjectStarRangeInUdf

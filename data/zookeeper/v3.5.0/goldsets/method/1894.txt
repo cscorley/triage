@@ -1,5 +1,5 @@
-org.apache.zookeeper.common.HostNameUtils.HostNameUtils()
 org.apache.zookeeper.common.HostNameUtils.getHostString(InetSocketAddress)
+org.apache.zookeeper.common.HostNameUtils.HostNameUtils()
 org.apache.zookeeper.common.HostNameUtilsTest.testGetByAddress()
 org.apache.zookeeper.common.HostNameUtilsTest.testGetByName()
 org.apache.zookeeper.common.HostNameUtilsTest.testHostName()

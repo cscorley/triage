@@ -1,4 +1,6 @@
 org.apache.zookeeper.ClientReconnectTest
+org.apache.zookeeper.server.quorum.Zab1_0Test
+org.apache.zookeeper.server.quorum.Zab1_0Test.NullServerCnxnFactory
 org.apache.zookeeper.test.CnxManagerTest
 org.apache.zookeeper.test.FLEBackwardElectionRoundTest
 org.apache.zookeeper.test.FLELostMessageTest
@@ -8,5 +10,3 @@ org.apache.zookeeper.test.FLERestartTest
 org.apache.zookeeper.test.FLETest
 org.apache.zookeeper.test.JMXEnv
 org.apache.zookeeper.test.NIOConnectionFactoryFdLeakTest
-org.apache.zookeeper.server.quorum.Zab1_0Test.NullServerCnxnFactory
-org.apache.zookeeper.server.quorum.Zab1_0Test

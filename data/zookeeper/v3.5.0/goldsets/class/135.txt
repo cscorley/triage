@@ -1,2 +1,2 @@
-org.apache.zookeeper.util.FatJarMain.Cmd
 org.apache.zookeeper.util.FatJarMain
+org.apache.zookeeper.util.FatJarMain.Cmd

@@ -1,14 +1,15 @@
 org.apache.hadoop.zebra.BaseTestCase
+org.apache.hadoop.zebra.mapred.ToolTestComparator
 org.apache.hadoop.zebra.mapreduce.BasicTableExpr
 org.apache.hadoop.zebra.mapreduce.BasicTableExpr.BasicTableScanner
-org.apache.hadoop.zebra.mapreduce.TableInputFormat.DummyFileInputFormat
 org.apache.hadoop.zebra.mapreduce.RowTableSplit
-org.apache.hadoop.zebra.mapreduce.TableInputFormat.SplitMode
 org.apache.hadoop.zebra.mapreduce.TableExpr
 org.apache.hadoop.zebra.mapreduce.TableInputFormat
-org.apache.hadoop.zebra.pig.TableLoader
+org.apache.hadoop.zebra.mapreduce.TableInputFormat.DummyFileInputFormat
+org.apache.hadoop.zebra.mapreduce.TableInputFormat.SplitMode
 org.apache.hadoop.zebra.mapreduce.TableRecordReader
 org.apache.hadoop.zebra.mapreduce.TableUnionExpr
+org.apache.hadoop.zebra.pig.TableLoader
 org.apache.hadoop.zebra.pig.TestOrderPreserveMultiTableGlob
 org.apache.hadoop.zebra.pig.TestOrderPreserveProjection
 org.apache.hadoop.zebra.pig.TestOrderPreserveSimple
@@ -17,4 +18,3 @@ org.apache.hadoop.zebra.pig.TestOrderPreserveVariableTable
 org.apache.hadoop.zebra.pig.TestSortedTableUnion
 org.apache.hadoop.zebra.pig.TestSortedTableUnionMergeJoin
 org.apache.hadoop.zebra.pig.TestSortedTableUnionSourceTableProj
-org.apache.hadoop.zebra.mapred.ToolTestComparator

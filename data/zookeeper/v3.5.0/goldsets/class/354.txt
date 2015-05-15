@@ -1,3 +1,4 @@
+org.apache.zookeeper.KeeperException
 org.apache.zookeeper.KeeperException.APIErrorException
 org.apache.zookeeper.KeeperException.AuthFailedException
 org.apache.zookeeper.KeeperException.BadArgumentsException
@@ -6,12 +7,11 @@ org.apache.zookeeper.KeeperException.ConnectionLossException
 org.apache.zookeeper.KeeperException.DataInconsistencyException
 org.apache.zookeeper.KeeperException.InvalidACLException
 org.apache.zookeeper.KeeperException.InvalidCallbackException
-org.apache.zookeeper.KeeperException
 org.apache.zookeeper.KeeperException.MarshallingErrorException
 org.apache.zookeeper.KeeperException.NoAuthException
 org.apache.zookeeper.KeeperException.NoChildrenForEphemeralsException
-org.apache.zookeeper.KeeperException.NoNodeException
 org.apache.zookeeper.KeeperException.NodeExistsException
+org.apache.zookeeper.KeeperException.NoNodeException
 org.apache.zookeeper.KeeperException.NotEmptyException
 org.apache.zookeeper.KeeperException.OperationTimeoutException
 org.apache.zookeeper.KeeperException.RuntimeInconsistencyException

@@ -1,3 +1,4 @@
+org.apache.derby.iapi.sql.compile.Optimizer
 org.apache.derby.iapi.store.access.BackingStoreHashtable
 org.apache.derby.impl.sql.compile.CostEstimateImpl
 org.apache.derby.impl.sql.compile.DistinctNode
@@ -9,7 +10,6 @@ org.apache.derby.impl.sql.compile.HashTableNode
 org.apache.derby.impl.sql.compile.IntersectOrExceptNode
 org.apache.derby.impl.sql.compile.JoinNode
 org.apache.derby.impl.sql.compile.MaterializeResultSetNode
-org.apache.derby.iapi.sql.compile.Optimizer
 org.apache.derby.impl.sql.compile.OptimizerImpl
 org.apache.derby.impl.sql.compile.OrderByList
 org.apache.derby.impl.sql.compile.ProjectRestrictNode

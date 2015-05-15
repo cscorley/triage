@@ -1,4 +1,4 @@
+org.apache.mahout.clustering.canopy.TestCanopyCreation
+org.apache.mahout.clustering.spectral.eigencuts.EigencutsSensitivityNode
 org.apache.mahout.common.DummyRecordWriter
 org.apache.mahout.common.DummyRecordWriterTest
-org.apache.mahout.clustering.spectral.eigencuts.EigencutsSensitivityNode
-org.apache.mahout.clustering.canopy.TestCanopyCreation

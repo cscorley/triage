@@ -1,2 +1,2 @@
-org.apache.solr.util.SolrPluginUtils.IdentityRegenerator
 org.apache.solr.util.SolrPluginUtils
+org.apache.solr.util.SolrPluginUtils.IdentityRegenerator

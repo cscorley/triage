@@ -1,2 +1,2 @@
-org.apache.derbyTesting.functionTests.tests.lang.InListMultiProbeTest
 org.apache.derby.impl.sql.execute.MultiProbeTableScanResultSet
+org.apache.derbyTesting.functionTests.tests.lang.InListMultiProbeTest

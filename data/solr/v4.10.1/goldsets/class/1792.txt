@@ -1,2 +1,2 @@
-org.apache.solr.util.TestHarness.LocalRequestFactory
 org.apache.solr.util.TestHarness
+org.apache.solr.util.TestHarness.LocalRequestFactory

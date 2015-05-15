@@ -1,6 +1,6 @@
+org.apache.derby.impl.sql.execute.DistinctScalarAggregateResultSet.openCore()
 org.apache.derbyTesting.functionTests.tests.lang.ResultSetsFromPreparedStatementTest.createDerby4330_join_tables()
 org.apache.derbyTesting.functionTests.tests.lang.ResultSetsFromPreparedStatementTest.createDerby4330_union_tables()
-org.apache.derby.impl.sql.execute.DistinctScalarAggregateResultSet.openCore()
 org.apache.derbyTesting.functionTests.tests.lang.ResultSetsFromPreparedStatementTest.setSchema(String)
 org.apache.derbyTesting.functionTests.tests.lang.ResultSetsFromPreparedStatementTest.setTimeout(long)
 org.apache.derbyTesting.functionTests.tests.lang.ResultSetsFromPreparedStatementTest.tearDown()

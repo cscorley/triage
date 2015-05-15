@@ -1,2 +1,2 @@
-org.apache.openjpa.meta.MetaDataRepository
 org.apache.openjpa.enhance.PCEnhancer
+org.apache.openjpa.meta.MetaDataRepository

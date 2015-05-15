@@ -1,5 +1,5 @@
-org.apache.lucene.store.FSDirectory
 org.apache.lucene.index.FieldsReader
+org.apache.lucene.store.FSDirectory
 org.apache.lucene.store.Lock
 org.apache.lucene.store.LockFactory
 org.apache.lucene.store.NativeFSLock

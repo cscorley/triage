@@ -1,2 +1,2 @@
-org.apache.mahout.cf.taste.impl.model.jdbc.ConnectionPoolDataSource.ConfiguringConnectionFactory
 org.apache.mahout.cf.taste.impl.model.jdbc.ConnectionPoolDataSource
+org.apache.mahout.cf.taste.impl.model.jdbc.ConnectionPoolDataSource.ConfiguringConnectionFactory

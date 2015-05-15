@@ -1,2 +1,2 @@
-org.apache.derbyTesting.junit.NetworkServerTestSetup.setUp()
 org.apache.derbyTesting.functionTests.tests.jdbcapi.ConcurrencyTest.suite()
+org.apache.derbyTesting.junit.NetworkServerTestSetup.setUp()

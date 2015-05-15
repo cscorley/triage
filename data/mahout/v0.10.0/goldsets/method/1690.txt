@@ -1,2 +1,2 @@
-org.apache.mahout.utils.vectors.VectorDumper.VectorDumper()
 org.apache.mahout.utils.vectors.VectorDumper.run(String[])
+org.apache.mahout.utils.vectors.VectorDumper.VectorDumper()

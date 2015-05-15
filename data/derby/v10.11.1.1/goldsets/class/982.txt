@@ -1,3 +1,3 @@
-org.apache.derby.tools.sysinfo
 org.apache.derbyTesting.functionTests.tests.tools.sysinfo_api
 org.apache.derbyTesting.functionTests.tests.tools.sysinfo_api_helper
+org.apache.derby.tools.sysinfo

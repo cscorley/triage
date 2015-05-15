@@ -43,6 +43,8 @@ clean-lsi:
 	find data -name 'LSI*' -exec rm {} \;
 	find data -name '*.lsi*' -exec rm {} \;
 
+clean-results:
+	find data -name '*-ranks.csv.gz' -exec rm {} \;
 
 install: requirements
 	pip install --editable .

@@ -1,5 +1,6 @@
-org.apache.mahout.clustering.syntheticcontrol.kmeans.OutputDriver.OutputDriver()
 org.apache.mahout.clustering.syntheticcontrol.kmeans.OutputDriver.main(String[])
+org.apache.mahout.clustering.syntheticcontrol.kmeans.OutputDriver.OutputDriver()
+org.apache.mahout.clustering.syntheticcontrol.kmeans.OutputDriver.runJob(String,String)
 org.apache.mahout.clustering.syntheticcontrol.kmeans.OutputMapper.map(LongWritable,Text,OutputCollector<Text,Text>,Text,Text,Reporter)
 org.apache.mahout.ga.watchmaker.cd.tool.CDInfosToolTest.nbNonIgnored(Descriptors)
 org.apache.mahout.ga.watchmaker.cd.tool.CDInfosToolTest.randomDataset(FileSystem,Path,Descriptors,Object[][])
@@ -7,5 +8,4 @@ org.apache.mahout.ga.watchmaker.cd.tool.CDInfosToolTest.randomDescriptions(Descr
 org.apache.mahout.ga.watchmaker.cd.tool.CDInfosToolTest.randomDescriptors(int,double,double)
 org.apache.mahout.ga.watchmaker.cd.tool.CDInfosToolTest.randomLine(Descriptors,Object[][])
 org.apache.mahout.ga.watchmaker.cd.tool.CDInfosToolTest.randomLine(Descriptors,Object[][],boolean[][])
-org.apache.mahout.clustering.syntheticcontrol.kmeans.OutputDriver.runJob(String,String)
 org.apache.mahout.ga.watchmaker.cd.tool.CDInfosToolTest.testGatherInfos()

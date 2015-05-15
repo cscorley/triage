@@ -9,6 +9,6 @@ org.apache.pig.parser.PigRecognitionException
 org.apache.pig.parser.PlanGenerationFailureException
 org.apache.pig.parser.QueryParserUtils
 org.apache.pig.parser.SourceLocation
-org.apache.pig.test.TestCollectedGroup
 org.apache.pig.parser.TestQueryLexer
 org.apache.pig.parser.UndefinedAliasException
+org.apache.pig.test.TestCollectedGroup

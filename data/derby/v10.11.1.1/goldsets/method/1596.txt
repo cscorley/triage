@@ -1,5 +1,5 @@
-WwdClientExample.SQLExceptionPrint(SQLException)
 WwdClientExample.errorPrint(Throwable)
-WwdUtils.getWishItem()
 WwdClientExample.main(String[])
+WwdClientExample.SQLExceptionPrint(SQLException)
+WwdUtils.getWishItem()
 WwdUtils.wwdChk4Table(Connection)

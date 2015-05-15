@@ -1,2 +1,2 @@
-org.apache.tika.TypeDetectionBenchmark.main(String[])
 org.apache.tika.TikaDetectionTest.testHttpServerFileExtensions()
+org.apache.tika.TypeDetectionBenchmark.main(String[])

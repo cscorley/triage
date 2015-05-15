@@ -1,2 +1,2 @@
-org.apache.derbyTesting.functionTests.tests.lang.AlterTableTest
 org.apache.derby.impl.jdbc.EmbedPreparedStatement
+org.apache.derbyTesting.functionTests.tests.lang.AlterTableTest

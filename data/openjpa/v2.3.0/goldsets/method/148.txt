@@ -1,2 +1,2 @@
-org.apache.openjpa.meta.AbstractCFMetaDataFactory.Serializer.addAll(MetaDataRepository)
 org.apache.openjpa.meta.AbstractCFMetaDataFactory.parsePersistentTypeNames(ClassLoader)
+org.apache.openjpa.meta.AbstractCFMetaDataFactory.Serializer.addAll(MetaDataRepository)

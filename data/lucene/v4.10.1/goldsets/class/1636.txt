@@ -1,2 +1,2 @@
-org.apache.lucene.util.AttributeSource
 org.apache.lucene.analysis.TokenFilter
+org.apache.lucene.util.AttributeSource

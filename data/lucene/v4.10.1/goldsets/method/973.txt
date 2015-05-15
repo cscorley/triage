@@ -1,6 +1,6 @@
+org.apache.lucene.analysis.cjk.CJKTokenizer.next(Token)
 org.apache.lucene.analysis.cjk.TestCJKTokenizer.checkCJKToken(String,Token[])
 org.apache.lucene.analysis.cjk.TestCJKTokenizer.newToken(String,int,int,int)
-org.apache.lucene.analysis.cjk.CJKTokenizer.next(Token)
 org.apache.lucene.analysis.cjk.TestCJKTokenizer.testC()
 org.apache.lucene.analysis.cjk.TestCJKTokenizer.testJa1()
 org.apache.lucene.analysis.cjk.TestCJKTokenizer.testJa2()

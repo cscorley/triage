@@ -1,2 +1,2 @@
-org.apache.pig.tools.grunt.GruntParser
 org.apache.pig.test.TestGrunt
+org.apache.pig.tools.grunt.GruntParser

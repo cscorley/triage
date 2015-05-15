@@ -1,2 +1,2 @@
-org.apache.solr.handler.component.QueryElevationComponent
 org.apache.solr.core.SolrCore
+org.apache.solr.handler.component.QueryElevationComponent

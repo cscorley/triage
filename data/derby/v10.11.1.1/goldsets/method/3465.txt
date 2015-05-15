@@ -3,6 +3,6 @@ org.apache.derbyTesting.functionTests.tests.derbynet.NSSecurityMechanismTest.ass
 org.apache.derbyTesting.functionTests.tests.derbynet.NSSecurityMechanismTest.assertUSRSSBPWD_with_BUILTIN(String[])
 org.apache.derbyTesting.functionTests.tests.derbynet.NSSecurityMechanismTest.getDataSourceConnectionWithSecMec(String,String,Short)
 org.apache.derbyTesting.functionTests.tests.derbynet.NSSecurityMechanismTest.getJDBCUrl(String)
-org.apache.derbyTesting.functionTests.tests.derbynet.NSSecurityMechanismTest.tearDown.run()
 org.apache.derbyTesting.functionTests.tests.derbynet.NSSecurityMechanismTest.suite()
 org.apache.derbyTesting.functionTests.tests.derbynet.NSSecurityMechanismTest.tearDown()
+org.apache.derbyTesting.functionTests.tests.derbynet.NSSecurityMechanismTest.tearDown.run()

@@ -1,4 +1,4 @@
-org.apache.tika.parser.microsoft.OfficeParser
-org.apache.tika.parser.microsoft.POIFSContainerDetector
-org.apache.tika.parser.microsoft.OfficeParser.POIFSDocumentType
 org.apache.tika.detect.TestContainerAwareDetector
+org.apache.tika.parser.microsoft.OfficeParser
+org.apache.tika.parser.microsoft.OfficeParser.POIFSDocumentType
+org.apache.tika.parser.microsoft.POIFSContainerDetector

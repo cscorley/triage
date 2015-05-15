@@ -3,11 +3,11 @@ org.apache.derbyTesting.functionTests.tests.replicationTests.ClientRunner
 org.apache.derbyTesting.functionTests.tests.replicationTests.DestroySlaveDB
 org.apache.derbyTesting.functionTests.tests.replicationTests.KillMaster
 org.apache.derbyTesting.functionTests.tests.replicationTests.KillSlave
-org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun.Load
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_CleanUp
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Distributed
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Full
+org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun.Load
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local_1
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local_StateTest_part1
@@ -15,6 +15,7 @@ org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Loca
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local_StateTest_part1_2
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local_StateTest_part1_3
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local_StateTest_part2
+org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun.State
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationSuite
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationTestRun
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationTestRun_Verify
@@ -30,7 +31,6 @@ org.apache.derbyTesting.functionTests.tests.replicationTests.ShutdownSlaveServer
 org.apache.derbyTesting.functionTests.tests.replicationTests.ShutdownSlaveServerViaNwSrvCtrl
 org.apache.derbyTesting.functionTests.tests.replicationTests.SimplePerfTest
 org.apache.derbyTesting.functionTests.tests.replicationTests.StandardTests
-org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun.State
 org.apache.derbyTesting.functionTests.tests.replicationTests.TestPostStartedMasterAndSlave_Failover
 org.apache.derbyTesting.functionTests.tests.replicationTests.TestPostStartedMasterAndSlave_StopMaster
 org.apache.derbyTesting.functionTests.tests.replicationTests.TestPostStartedMasterAndSlave_StopSlave

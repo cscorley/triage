@@ -1,2 +1,2 @@
-org.apache.pig.test.TestProjectRange.testRangeOrderByMixWSchema()
 org.apache.pig.newplan.logical.visitor.ProjectStarExpander.visit(LOSort)
+org.apache.pig.test.TestProjectRange.testRangeOrderByMixWSchema()

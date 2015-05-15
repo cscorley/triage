@@ -1,6 +1,6 @@
+org.apache.derby.client.am.Statement.flowExecute(int,String)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.SetQueryTimeoutTest.dropTables(Connection,String)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.SetQueryTimeoutTest.expectException(String,SQLException,String)
-org.apache.derby.client.am.Statement.flowExecute(int,String)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.SetQueryTimeoutTest.go(String[])
 org.apache.derbyTesting.functionTests.tests.jdbcapi.SetQueryTimeoutTest.testInvalidTimeoutValue(Connection)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.SetQueryTimeoutTest.testRememberTimeoutValue(Connection)

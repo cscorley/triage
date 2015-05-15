@@ -5,8 +5,8 @@ org.apache.lucene.index.DocFieldConsumers
 org.apache.lucene.index.DocFieldProcessor
 org.apache.lucene.index.DocFieldProcessorPerThread
 org.apache.lucene.index.DocInverter
-org.apache.lucene.index.DocumentsWriter.DocState
 org.apache.lucene.index.DocumentsWriter
+org.apache.lucene.index.DocumentsWriter.DocState
 org.apache.lucene.index.DocumentsWriter.FlushState
 org.apache.lucene.index.FormatPostingsDocsConsumer
 org.apache.lucene.index.FormatPostingsDocsWriter
@@ -24,6 +24,6 @@ org.apache.lucene.index.NormsWriter
 org.apache.lucene.index.SegmentMerger
 org.apache.lucene.index.SegmentWriteState
 org.apache.lucene.index.StoredFieldsWriter
-org.apache.lucene.index.TermVectorsTermsWriter
 org.apache.lucene.index.TermsHash
 org.apache.lucene.index.TermsHashConsumer
+org.apache.lucene.index.TermVectorsTermsWriter

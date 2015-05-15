@@ -1,2 +1,2 @@
-org.apache.tika.parser.jpeg.JpegParserTest
 org.apache.tika.parser.image.TiffExtractor
+org.apache.tika.parser.jpeg.JpegParserTest

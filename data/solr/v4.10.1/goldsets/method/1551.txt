@@ -2,5 +2,5 @@ org.apache.solr.client.solrj.beans.DocumentObjectBinder.$GenericMethodDeclaratio
 org.apache.solr.client.solrj.beans.DocumentObjectBinder.getBean(Class<T>,T,List<DocField>,DocField,SolrDocument)
 org.apache.solr.client.solrj.beans.DocumentObjectBinder.getBean(Class<T>,T,SolrDocument)
 org.apache.solr.client.solrj.beans.DocumentObjectBinder.getBeans(Class<T>,T,SolrDocumentList)
-org.apache.solr.client.solrj.beans.TestDocumentObjectBinder.testToAndFromSolrDocument()
 org.apache.solr.client.solrj.beans.DocumentObjectBinder.toSolrInputDocument(Object)
+org.apache.solr.client.solrj.beans.TestDocumentObjectBinder.testToAndFromSolrDocument()

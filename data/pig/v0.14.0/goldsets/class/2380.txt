@@ -1,2 +1,2 @@
-org.apache.pig.Main.ExecMode
 org.apache.pig.Main
+org.apache.pig.Main.ExecMode

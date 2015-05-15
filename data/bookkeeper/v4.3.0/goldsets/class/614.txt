@@ -1,8 +1,8 @@
 org.apache.bookkeeper.stats.Counter
 org.apache.bookkeeper.stats.Gauge
+org.apache.bookkeeper.stats.NullStatsLogger
 org.apache.bookkeeper.stats.NullStatsLogger.NullCounter
 org.apache.bookkeeper.stats.NullStatsLogger.NullOpStatsLogger
-org.apache.bookkeeper.stats.NullStatsLogger
 org.apache.bookkeeper.stats.NullStatsProvider
 org.apache.bookkeeper.stats.OpStatsData
 org.apache.bookkeeper.stats.OpStatsLogger

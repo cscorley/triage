@@ -1,5 +1,5 @@
-org.apache.derby.impl.jdbc.EmbedConnection.EmbedConnection(InternalDriver,String,Properties)
 org.apache.derby.impl.jdbc.EmbedConnection.createBoot(Properties)
+org.apache.derby.impl.jdbc.EmbedConnection.EmbedConnection(InternalDriver,String,Properties)
 org.apache.derby.impl.jdbc.EmbedConnection.getReplicationOperation(Properties)
 org.apache.derby.impl.jdbc.EmbedConnection.isDropDatabase(Properties)
 org.apache.derby.impl.jdbc.EmbedConnection.isEncryptionBoot(Properties)

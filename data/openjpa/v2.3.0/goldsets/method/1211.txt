@@ -1,5 +1,5 @@
-org.apache.openjpa.persistence.criteria.FromImpl.$GenericMethodDeclaration$()
 org.apache.openjpa.persistence.criteria.FromImpl.addFetch(Members.Member<?superX,Y>,X,Y,JoinType)
+org.apache.openjpa.persistence.criteria.FromImpl.$GenericMethodDeclaration$()
 org.apache.openjpa.persistence.criteria.FromImpl.get(String)
 org.apache.openjpa.persistence.criteria.TestStringCriteria.testCase()
 org.apache.openjpa.persistence.criteria.TestStringCriteria.testJoins1()

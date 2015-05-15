@@ -4,8 +4,8 @@ org.apache.openjpa.kernel.EDeletedState
 org.apache.openjpa.kernel.EDirtyState
 org.apache.openjpa.kernel.ENonTransState
 org.apache.openjpa.kernel.HollowState
-org.apache.openjpa.kernel.PCState
 org.apache.openjpa.kernel.PCleanState
+org.apache.openjpa.kernel.PCState
 org.apache.openjpa.kernel.PDeletedFlushedState
 org.apache.openjpa.kernel.PDeletedState
 org.apache.openjpa.kernel.PDirtyState

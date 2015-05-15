@@ -1,6 +1,6 @@
-org.apache.derby.impl.jdbc.PositionedStoreStream.PositionedStoreStream(InputStream)
 org.apache.derby.impl.jdbc.PositionedStoreStream.closeStream()
 org.apache.derby.impl.jdbc.PositionedStoreStream.initStream()
+org.apache.derby.impl.jdbc.PositionedStoreStream.PositionedStoreStream(InputStream)
 org.apache.derby.impl.jdbc.PositionedStoreStream.reposition(long)
 org.apache.derby.impl.jdbc.PositionedStoreStream.resetStream()
 org.apache.derbyTesting.functionTests.tests.store.PositionedStoreStreamTest.suite()

@@ -1,2 +1,2 @@
-org.apache.derbyTesting.functionTests.tests.jdbcapi.AutoGenJDBC30Test
 org.apache.derby.impl.sql.execute.InsertResultSet
+org.apache.derbyTesting.functionTests.tests.jdbcapi.AutoGenJDBC30Test

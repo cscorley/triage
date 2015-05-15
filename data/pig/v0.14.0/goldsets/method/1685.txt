@@ -1,5 +1,5 @@
+org.apache.pig.test.TestPigRunner.testCounterName()
 org.apache.pig.tools.pigstats.PigStatsUtil.getMultiInputsCounterName(String)
 org.apache.pig.tools.pigstats.PigStatsUtil.getMultiStoreCounterName(POStore)
 org.apache.pig.tools.pigstats.PigStatsUtil.getShortName(String)
 org.apache.pig.tools.pigstats.PigStatsUtil.getShortName(URI)
-org.apache.pig.test.TestPigRunner.testCounterName()

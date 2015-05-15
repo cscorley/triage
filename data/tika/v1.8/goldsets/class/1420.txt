@@ -1,5 +1,5 @@
-org.apache.tika.sax.CleanPhoneText
 org.apache.tika.example.ContentHandlerExampleTest
 org.apache.tika.example.GrabPhoneNumbersExample
-org.apache.tika.sax.PhoneExtractingContentHandler
 org.apache.tika.example.PhoneExtractingContentHandlerTest
+org.apache.tika.sax.CleanPhoneText
+org.apache.tika.sax.PhoneExtractingContentHandler

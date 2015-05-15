@@ -5,5 +5,5 @@ org.apache.mahout.clustering.topdown.postprocessor.ClusterOutputPostProcessorMap
 org.apache.mahout.clustering.topdown.postprocessor.ClusterOutputPostProcessorReducer
 org.apache.mahout.vectorizer.DictionaryVectorizer
 org.apache.mahout.vectorizer.SparseVectorsFromSequenceFiles
-org.apache.mahout.vectorizer.tfidf.TFIDFPartialVectorReducer
 org.apache.mahout.vectorizer.term.TFPartialVectorReducer
+org.apache.mahout.vectorizer.tfidf.TFIDFPartialVectorReducer

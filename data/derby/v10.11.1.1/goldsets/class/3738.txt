@@ -7,7 +7,7 @@ org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Loca
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local_3_p2
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local_3_p3
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local_3_p4
-org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local_StateTest_part2
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local_showStateChange
+org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local_StateTest_part2
 org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationSuite
 org.apache.derbyTesting.functionTests.tests.replicationTests.Utils

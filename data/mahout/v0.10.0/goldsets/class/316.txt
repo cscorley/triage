@@ -1,9 +1,9 @@
-org.apache.mahout.math.CardinalityException
+org.apache.mahout.classifier.discriminative.LinearTrainer
 org.apache.mahout.common.distance.CosineDistanceMeasure
+org.apache.mahout.common.distance.ManhattanDistanceMeasure
+org.apache.mahout.math.CardinalityException
 org.apache.mahout.math.DenseMatrix
 org.apache.mahout.math.IndexException
-org.apache.mahout.classifier.discriminative.LinearTrainer
-org.apache.mahout.common.distance.ManhattanDistanceMeasure
 org.apache.mahout.math.MatrixTest
 org.apache.mahout.math.MatrixView
 org.apache.mahout.math.SparseColumnMatrix

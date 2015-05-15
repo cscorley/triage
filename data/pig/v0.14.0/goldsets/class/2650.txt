@@ -1,3 +1,4 @@
+org.apache.pig.builtin.mock.Storage
 org.apache.pig.builtin.mock.Storage.Data
 org.apache.pig.builtin.mock.Storage.MockInputFormat
 org.apache.pig.builtin.mock.Storage.MockInputSplit
@@ -5,5 +6,4 @@ org.apache.pig.builtin.mock.Storage.MockOutputCommitter
 org.apache.pig.builtin.mock.Storage.MockOutputFormat
 org.apache.pig.builtin.mock.Storage.MockRecordReader
 org.apache.pig.builtin.mock.Storage.MockRecordWriter
-org.apache.pig.builtin.mock.Storage
 org.apache.pig.builtin.mock.TestMockStorage

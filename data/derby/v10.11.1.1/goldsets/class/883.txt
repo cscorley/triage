@@ -1,5 +1,5 @@
+org.apache.derby.iapi.sql.compile.Visitor
 org.apache.derby.impl.sql.compile.BaseColumnNode
-org.apache.derbyTesting.junit.BaseJDBCTestCase
 org.apache.derby.impl.sql.compile.BinaryListOperatorNode
 org.apache.derby.impl.sql.compile.BinaryOperatorNode
 org.apache.derby.impl.sql.compile.CastNode
@@ -11,13 +11,11 @@ org.apache.derby.impl.sql.compile.CurrentDatetimeOperatorNode
 org.apache.derby.impl.sql.compile.CurrentRowLocationNode
 org.apache.derby.impl.sql.compile.DefaultNode
 org.apache.derby.impl.sql.compile.GroupByColumn
-org.apache.derbyTesting.functionTests.tests.lang.GroupByExpressionTest
 org.apache.derby.impl.sql.compile.GroupByList
 org.apache.derby.impl.sql.compile.GroupByNode
 org.apache.derby.impl.sql.compile.JavaToSQLValueNode
 org.apache.derby.impl.sql.compile.ParameterNode
 org.apache.derby.impl.sql.compile.ResultColumn
-org.apache.derby.shared.common.reference.SQLState
 org.apache.derby.impl.sql.compile.SelectNode
 org.apache.derby.impl.sql.compile.SpecialFunctionNode
 org.apache.derby.impl.sql.compile.SubqueryNode
@@ -27,4 +25,6 @@ org.apache.derby.impl.sql.compile.UnaryOperatorNode
 org.apache.derby.impl.sql.compile.ValueNode
 org.apache.derby.impl.sql.compile.VerifyAggregateExpressionsVisitor
 org.apache.derby.impl.sql.compile.VirtualColumnNode
-org.apache.derby.iapi.sql.compile.Visitor
+org.apache.derby.shared.common.reference.SQLState
+org.apache.derbyTesting.functionTests.tests.lang.GroupByExpressionTest
+org.apache.derbyTesting.junit.BaseJDBCTestCase

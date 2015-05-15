@@ -1,2 +1,2 @@
-org.apache.openjpa.persistence.criteria.CriteriaExpressionBuilder
 org.apache.openjpa.kernel.QueryImpl
+org.apache.openjpa.persistence.criteria.CriteriaExpressionBuilder

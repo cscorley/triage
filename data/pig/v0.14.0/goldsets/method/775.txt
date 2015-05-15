@@ -1,5 +1,5 @@
-org.apache.pig.data.DefaultAbstractBag.compareTo(Object)
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.PORelationToExprProject.getNext(DataBag)
+org.apache.pig.data.DefaultAbstractBag.compareTo(Object)
 org.apache.pig.test.TestDataBag.testDefaultDataBagEquals1()
 org.apache.pig.test.TestDataBag.testDefaultDataBagEquals2()
 org.apache.pig.test.TestDataBag.testNonSpillableDataBagEquals1()

@@ -7,6 +7,6 @@ org.apache.derby.impl.sql.GenericPreparedStatement.executeSubStatement(Activatio
 org.apache.derby.impl.sql.GenericPreparedStatement.executeSubStatement(LanguageConnectionContext,boolean,long)
 org.apache.derby.impl.sql.GenericPreparedStatement.rePrepare(LanguageConnectionContext)
 org.apache.derby.impl.sql.GenericPreparedStatement.rePrepare(LanguageConnectionContext,boolean)
-org.apache.derbyTesting.functionTests.tests.upgradeTests.UpgradeRun.suite(int[],boolean)
 org.apache.derbyTesting.functionTests.tests.upgradeTests.BasicSetup.testDERBY4753()
 org.apache.derbyTesting.functionTests.tests.upgradeTests.BasicSetup.testDERBY6314()
+org.apache.derbyTesting.functionTests.tests.upgradeTests.UpgradeRun.suite(int[],boolean)

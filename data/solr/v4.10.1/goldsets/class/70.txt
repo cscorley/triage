@@ -1,2 +1,2 @@
-org.apache.solr.request.LocalSolrQueryRequest
 org.apache.solr.core.SolrConfig
+org.apache.solr.request.LocalSolrQueryRequest

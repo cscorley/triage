@@ -1,7 +1,7 @@
+org.apache.tika.server.resource.MetadataResource.parseMetadata(InputStream,MultivaluedMap<String,String>,String,String,UriInfo)
 org.apache.tika.server.resource.TikaResource.detectFilename(MultivaluedMap<String,String>,String,String)
 org.apache.tika.server.resource.TikaResource.fillParseContext(ParseContext,MultivaluedMap<String,String>,String,String)
 org.apache.tika.server.resource.TikaResource.fillParseContext(ParseContext,MultivaluedMap<String,String>,String,String,Parser)
-org.apache.tika.server.resource.MetadataResource.parseMetadata(InputStream,MultivaluedMap<String,String>,String,String,UriInfo)
 org.apache.tika.server.resource.TikaResource.produceOutput(InputStream,MultivaluedMap<String,String>,String,String,UriInfo,String)
 org.apache.tika.server.resource.TikaResource.produceText(InputStream,MultivaluedMap<String,String>,String,String,UriInfo)
 org.apache.tika.server.TikaResourceTest.testEmbedded()

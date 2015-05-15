@@ -1,4 +1,4 @@
 org.apache.derby.impl.sql.execute.PrivilegeInfo
 org.apache.derby.impl.sql.execute.RoutinePrivilegeInfo
-org.apache.derby.shared.common.reference.SQLState
 org.apache.derby.impl.sql.execute.TablePrivilegeInfo
+org.apache.derby.shared.common.reference.SQLState

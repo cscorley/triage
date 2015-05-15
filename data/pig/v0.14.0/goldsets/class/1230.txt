@@ -1,2 +1,2 @@
-org.apache.pig.data.NonSpillableDataBag
 org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POJoinPackage
+org.apache.pig.data.NonSpillableDataBag

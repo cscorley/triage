@@ -1,5 +1,5 @@
-org.apache.mahout.math.AbstractMatrix
 org.apache.mahout.classifier.sgd.AbstractOnlineLogisticRegression
+org.apache.mahout.math.AbstractMatrix
 org.apache.mahout.math.DenseMatrix
 org.apache.mahout.math.Matrix
 org.apache.mahout.math.MatrixView

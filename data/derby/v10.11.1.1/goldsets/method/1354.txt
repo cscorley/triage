@@ -1,3 +1,4 @@
+org.apache.derby.client.am.ClobWriter.write(int)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.lobStreams.cleanUp(Connection)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.lobStreams.compareClobReader2CharArray(char[],Reader)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.lobStreams.compareLob2File(InputStream,InputStream)
@@ -13,4 +14,3 @@ org.apache.derbyTesting.functionTests.tests.jdbcapi.lobStreams.testClobCharacter
 org.apache.derbyTesting.functionTests.tests.jdbcapi.lobStreams.testClobCharacterWrite3ParamString(Connection)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.lobStreams.testClobWrite1Param(Connection)
 org.apache.derbyTesting.functionTests.tests.jdbcapi.lobStreams.testClobWrite3Param(Connection)
-org.apache.derby.client.am.ClobWriter.write(int)

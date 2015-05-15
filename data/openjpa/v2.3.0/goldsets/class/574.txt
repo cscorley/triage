@@ -1,2 +1,2 @@
-org.apache.openjpa.jdbc.kernel.BatchingPreparedStatementManagerImpl
 org.apache.openjpa.datacache.DataCacheStoreManager
+org.apache.openjpa.jdbc.kernel.BatchingPreparedStatementManagerImpl

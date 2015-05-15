@@ -1,2 +1,2 @@
-org.apache.derbyTesting.functionTests.tests.multi.StressMultiTest.StressMultiRunnable
 org.apache.derbyTesting.functionTests.tests.multi.StressMultiTest
+org.apache.derbyTesting.functionTests.tests.multi.StressMultiTest.StressMultiRunnable

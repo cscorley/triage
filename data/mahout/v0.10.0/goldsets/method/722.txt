@@ -1,2 +1,2 @@
-org.apache.mahout.cf.taste.hadoop.item.UserVectorSplitterMapper.findSmallestLargeValue(Vector)
 org.apache.mahout.cf.taste.hadoop.item.AggregateAndRecommendReducer.setup(Context)
+org.apache.mahout.cf.taste.hadoop.item.UserVectorSplitterMapper.findSmallestLargeValue(Vector)

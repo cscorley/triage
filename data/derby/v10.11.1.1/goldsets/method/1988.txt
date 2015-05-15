@@ -1,5 +1,3 @@
-org.apache.derbyTesting.functionTests.tests.jdbc4.TestJDBC40Exception.TestJDBC40Exception()
-org.apache.derbyTesting.functionTests.tests.jdbc4.TestJDBC40Exception.TestJDBC40Exception(String)
 org.apache.derbyTesting.functionTests.tests.jdbc4.TestJDBC40Exception.checkConnectionException()
 org.apache.derbyTesting.functionTests.tests.jdbc4.TestJDBC40Exception.checkDataException()
 org.apache.derbyTesting.functionTests.tests.jdbc4.TestJDBC40Exception.checkIntegrityConstraintViolationException()
@@ -18,5 +16,7 @@ org.apache.derbyTesting.functionTests.tests.jdbc4.TestJDBC40Exception.testConnec
 org.apache.derbyTesting.functionTests.tests.jdbc4.TestJDBC40Exception.testDataException()
 org.apache.derbyTesting.functionTests.tests.jdbc4.TestJDBC40Exception.testException()
 org.apache.derbyTesting.functionTests.tests.jdbc4.TestJDBC40Exception.testIntegrityConstraintViolationException()
+org.apache.derbyTesting.functionTests.tests.jdbc4.TestJDBC40Exception.TestJDBC40Exception()
+org.apache.derbyTesting.functionTests.tests.jdbc4.TestJDBC40Exception.TestJDBC40Exception(String)
 org.apache.derbyTesting.functionTests.tests.jdbc4.TestJDBC40Exception.testSyntaxErrorException()
 org.apache.derbyTesting.functionTests.tests.jdbc4.TestJDBC40Exception.testTimeout()

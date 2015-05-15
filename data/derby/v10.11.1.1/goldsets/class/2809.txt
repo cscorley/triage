@@ -1,7 +1,6 @@
 org.apache.derby.impl.sql.compile.AggregateNode
 org.apache.derby.impl.sql.compile.BinaryListOperatorNode
 org.apache.derby.impl.sql.compile.BinaryLogicalOperatorNode
-org.apache.derbyTesting.functionTests.tests.lang.CaseExpressionTest
 org.apache.derby.impl.sql.compile.CastNode
 org.apache.derby.impl.sql.compile.DB2LengthOperatorNode
 org.apache.derby.impl.sql.compile.ExtractOperatorNode
@@ -17,3 +16,4 @@ org.apache.derby.impl.sql.compile.UnaryLogicalOperatorNode
 org.apache.derby.impl.sql.compile.UnaryOperatorNode
 org.apache.derby.impl.sql.compile.ValueNode
 org.apache.derby.impl.sql.compile.ValueNodeList
+org.apache.derbyTesting.functionTests.tests.lang.CaseExpressionTest

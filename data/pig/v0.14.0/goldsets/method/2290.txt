@@ -1,5 +1,5 @@
-org.apache.pig.test.TestBuiltin.checkItemsGT(Iterable<Tuple>,Tuple,int,int)
 org.apache.pig.builtin.TOBAG.exec(Tuple)
+org.apache.pig.test.TestBuiltin.checkItemsGT(Iterable<Tuple>,Tuple,int,int)
 org.apache.pig.test.TestBuiltin.testMiscFunc()
-org.apache.pig.test.TestBuiltin.testTOBAGSupportsTuplesInInput()
 org.apache.pig.test.TestBuiltin.testToBag()
+org.apache.pig.test.TestBuiltin.testTOBAGSupportsTuplesInInput()

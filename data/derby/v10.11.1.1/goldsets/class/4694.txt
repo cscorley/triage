@@ -1,2 +1,2 @@
-org.apache.derbyPreBuild.PropertySetter.JDKRootFileFilter
 org.apache.derbyPreBuild.PropertySetter
+org.apache.derbyPreBuild.PropertySetter.JDKRootFileFilter

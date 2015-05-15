@@ -1,2 +1,2 @@
-org.apache.pig.tools.pigstats.PigStats
 org.apache.pig.test.TestPigStats
+org.apache.pig.tools.pigstats.PigStats

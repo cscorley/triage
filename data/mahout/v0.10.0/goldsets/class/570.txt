@@ -3,6 +3,6 @@ org.apache.mahout.cf.taste.impl.recommender.AllUnknownItemsCandidateItemsStrateg
 org.apache.mahout.cf.taste.impl.recommender.GenericBooleanPrefItemBasedRecommender
 org.apache.mahout.cf.taste.impl.recommender.GenericItemBasedRecommender
 org.apache.mahout.cf.taste.impl.recommender.knn.KnnItemBasedRecommender
-org.apache.mahout.cf.taste.recommender.MostSimilarItemsCandidateItemsStrategy
 org.apache.mahout.cf.taste.impl.recommender.PreferredItemsNeighborhoodCandidateItemsStrategy
 org.apache.mahout.cf.taste.impl.recommender.SamplingCandidateItemsStrategy
+org.apache.mahout.cf.taste.recommender.MostSimilarItemsCandidateItemsStrategy

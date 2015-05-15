@@ -1,2 +1,2 @@
-org.apache.derbyTesting.functionTests.tests.lang.JoinTest
 org.apache.derby.impl.sql.compile.PredicateList
+org.apache.derbyTesting.functionTests.tests.lang.JoinTest

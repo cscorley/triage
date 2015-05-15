@@ -1,2 +1,2 @@
-org.apache.derbyTesting.functionTests.tests.jdbc4.BlobTest
 org.apache.derby.impl.jdbc.UpdatableBlobStream
+org.apache.derbyTesting.functionTests.tests.jdbc4.BlobTest

@@ -1,11 +1,11 @@
+org.apache.derby.impl.sql.catalog.DataDictionaryImpl
 org.apache.derby.impl.sql.compile.AllResultColumn
 org.apache.derby.impl.sql.compile.ColumnReference
 org.apache.derby.impl.sql.compile.CreateViewNode
 org.apache.derby.impl.sql.compile.CurrentOfNode
-org.apache.derby.impl.sql.compile.DMLModStatementNode
-org.apache.derby.impl.sql.catalog.DataDictionaryImpl
 org.apache.derby.impl.sql.compile.DeleteNode
 org.apache.derby.impl.sql.compile.DistinctNode
+org.apache.derby.impl.sql.compile.DMLModStatementNode
 org.apache.derby.impl.sql.compile.FromBaseTable
 org.apache.derby.impl.sql.compile.FromList
 org.apache.derby.impl.sql.compile.FromSubquery

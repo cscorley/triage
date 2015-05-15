@@ -8,13 +8,13 @@ org.apache.mahout.math.function.IntIntDoubleFunction
 org.apache.mahout.math.function.IntIntDoubleProcedure
 org.apache.mahout.math.function.IntIntFunction
 org.apache.mahout.math.function.IntIntIntProcedure
+org.apache.mahout.math.function.ObjectFunction
+org.apache.mahout.math.function.ObjectObjectFunction
+org.apache.mahout.math.function.SquareRootFunction
 org.apache.mahout.math.jet.random.engine.MersenneTwister
 org.apache.mahout.math.jet.random.engine.MersenneTwister64
 org.apache.mahout.math.jet.random.engine.MersenneTwisterTest
-org.apache.mahout.math.function.ObjectFunction
-org.apache.mahout.math.function.ObjectObjectFunction
 org.apache.mahout.math.jet.random.engine.RandomEngine
 org.apache.mahout.math.jet.random.engine.RandomGenerator
 org.apache.mahout.math.jet.random.engine.RandomSeedGenerator
 org.apache.mahout.math.jet.random.engine.RandomSeedTable
-org.apache.mahout.math.function.SquareRootFunction

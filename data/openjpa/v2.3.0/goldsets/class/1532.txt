@@ -1,10 +1,8 @@
+org.apache.openjpa.datacache.AbstractDataCache
+org.apache.openjpa.datacache.DataCacheStoreManager
 org.apache.openjpa.persistence.cache.jpa.AbstractCacheModeTestCase
 org.apache.openjpa.persistence.cache.jpa.AbstractCacheTestCase
-org.apache.openjpa.datacache.AbstractDataCache
-org.apache.openjpa.persistence.PersistenceProductDerivation.ConfigurationProviderImpl
-org.apache.openjpa.datacache.DataCacheStoreManager
 org.apache.openjpa.persistence.cache.jpa.DataCacheTestExtension
-org.apache.openjpa.persistence.PersistenceProductDerivation
 org.apache.openjpa.persistence.cache.jpa.TestCacheModeAll
 org.apache.openjpa.persistence.cache.jpa.TestCacheModeAllDataCacheCustomized
 org.apache.openjpa.persistence.cache.jpa.TestCacheModeAllDataCacheTrue
@@ -19,3 +17,5 @@ org.apache.openjpa.persistence.cache.jpa.TestCacheModeNoneDataCacheTrue
 org.apache.openjpa.persistence.cache.jpa.TestCacheModeUnspecified
 org.apache.openjpa.persistence.cache.jpa.TestCacheModeUnspecifiedDataCacheTrue
 org.apache.openjpa.persistence.cache.jpa.TestPropertyCacheModeUnspecified
+org.apache.openjpa.persistence.PersistenceProductDerivation
+org.apache.openjpa.persistence.PersistenceProductDerivation.ConfigurationProviderImpl

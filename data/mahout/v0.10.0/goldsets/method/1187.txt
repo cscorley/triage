@@ -1,2 +1,2 @@
-org.apache.mahout.text.wikipedia.WikipediaDatasetCreatorMapper.map(LongWritable,Text,Context)
 org.apache.mahout.math.hadoop.similarity.cooccurrence.RowSimilarityJobTest.toyIntegration()
+org.apache.mahout.text.wikipedia.WikipediaDatasetCreatorMapper.map(LongWritable,Text,Context)

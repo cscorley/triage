@@ -1,11 +1,10 @@
-org.apache.openjpa.meta.ClassMetaData
 org.apache.openjpa.kernel.ECleanState
 org.apache.openjpa.kernel.ECopyState
 org.apache.openjpa.kernel.EDirtyState
 org.apache.openjpa.kernel.ENonTransState
 org.apache.openjpa.kernel.HollowState
-org.apache.openjpa.kernel.PCState
 org.apache.openjpa.kernel.PCleanState
+org.apache.openjpa.kernel.PCState
 org.apache.openjpa.kernel.PDeletedState
 org.apache.openjpa.kernel.PDirtyState
 org.apache.openjpa.kernel.PNewFlushedDeletedFlushedState
@@ -19,3 +18,4 @@ org.apache.openjpa.kernel.TCleanState
 org.apache.openjpa.kernel.TDirtyState
 org.apache.openjpa.kernel.TLoadedState
 org.apache.openjpa.kernel.TransientState
+org.apache.openjpa.meta.ClassMetaData

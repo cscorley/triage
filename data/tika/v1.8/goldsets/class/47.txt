@@ -1,2 +1,2 @@
-org.apache.tika.TestParsers
 org.apache.tika.log.TikaLogger
+org.apache.tika.TestParsers

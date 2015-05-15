@@ -1,2 +1,2 @@
-org.apache.zookeeper.test.ClientBase
 org.apache.zookeeper.server.InvalidSnapshotTest
+org.apache.zookeeper.test.ClientBase

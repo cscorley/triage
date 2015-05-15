@@ -1,2 +1,2 @@
-org.apache.zookeeper.server.quorum.flexible.QuorumHierarchical
 org.apache.zookeeper.client.ZooKeeperSaslClient
+org.apache.zookeeper.server.quorum.flexible.QuorumHierarchical

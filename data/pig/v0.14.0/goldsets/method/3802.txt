@@ -1,5 +1,3 @@
-org.apache.pig.test.Util.assertExceptionAndMessage(Class<?>,Exception,String)
-org.apache.pig.test.Util.isHadoop2_0()
 org.apache.pig.test.TestBlackAndWhitelistValidator.setUp()
 org.apache.pig.test.TestBlackAndWhitelistValidator.testBlackAndWhitelist()
 org.apache.pig.test.TestBlackAndWhitelistValidator.testBlacklist()
@@ -7,3 +5,5 @@ org.apache.pig.test.TestBlackAndWhitelistValidator.testBlacklistCmdWithPigServer
 org.apache.pig.test.TestBlackAndWhitelistValidator.testBlacklistWithPigServer()
 org.apache.pig.test.TestBlackAndWhitelistValidator.testValidator()
 org.apache.pig.test.TestBlackAndWhitelistValidator.testWhitelist2()
+org.apache.pig.test.Util.assertExceptionAndMessage(Class<?>,Exception,String)
+org.apache.pig.test.Util.isHadoop2_0()

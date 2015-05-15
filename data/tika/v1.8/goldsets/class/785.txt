@@ -1,2 +1,2 @@
-org.apache.tika.detect.CompositeDetector
 org.apache.tika.cli.TikaCLI
+org.apache.tika.detect.CompositeDetector

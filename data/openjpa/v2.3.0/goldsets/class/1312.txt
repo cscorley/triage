@@ -1,2 +1,2 @@
-org.apache.openjpa.jdbc.sql.SelectImpl.Key
 org.apache.openjpa.jdbc.sql.SelectImpl
+org.apache.openjpa.jdbc.sql.SelectImpl.Key

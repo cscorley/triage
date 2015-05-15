@@ -49,8 +49,10 @@ def error(*args, **kwargs):
 @click.option('--num_topics', default=500)
 @click.option('--lda', is_flag=True)
 @click.option('--lsi', is_flag=True)
-@click.option('--alpha')
+@click.option('--alpha', default='symmetric')
 @click.option('--eta')
+@click.option('--decay', default=0.5)
+@click.option('--offset', default=1.0)
 @click.option('--passes', default=5)
 @click.option('--iterations', default=1000)
 def cli(debug, verbose, name, version, goldset,  *args, **kwargs):
@@ -243,7 +245,7 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, kind, use_level=
             lda_doc_topic = get_topics(lda_model, other_corpus)
 
             lda_ranks = get_rank(lda_query_topic, lda_doc_topic)
-            write_ranks(project, kind.lower(), lda_ranks)
+            write_ranks(project, kind.lower() + '_lda', lda_ranks)
 
         lda_first_rels = get_frms(goldsets, lda_ranks)
 
@@ -338,7 +340,7 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
             docs.append(corpus[i])
 
         if project.lda:
-            lda.update(docs)
+            lda.update(docs, offset=project.offset, decay=project.decay)
         if project.lsi:
             lsi.add_documents(docs)
 

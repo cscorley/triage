@@ -1,5 +1,5 @@
-org.apache.openjpa.kernel.DetachedStateManager.DetachedStateManager(PersistenceCapable,OpenJPAStateManager,BitSet,boolean,boolean)
 org.apache.openjpa.kernel.BrokerImpl.detachAll(OpCallbacks,boolean)
+org.apache.openjpa.kernel.DetachedStateManager.DetachedStateManager(PersistenceCapable,OpenJPAStateManager,BitSet,boolean,boolean)
 org.apache.openjpa.kernel.DetachManager.detachInternal(Object)
 org.apache.openjpa.persistence.simple.TestEntityManagerClear.main(String[])
 org.apache.openjpa.persistence.simple.TestEntityManagerClear.setUp()

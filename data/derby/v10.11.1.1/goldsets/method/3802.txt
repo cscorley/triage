@@ -1,6 +1,6 @@
 org.apache.derbyTesting.functionTests.tests.lang.OptimizerOverridesTest.OptimizerOverridesTest(String)
-org.apache.derbyTesting.functionTests.tests.lang.OptimizerOverridesTest.suite.decorateSQL(Statement)
 org.apache.derbyTesting.functionTests.tests.lang.OptimizerOverridesTest.suite()
+org.apache.derbyTesting.functionTests.tests.lang.OptimizerOverridesTest.suite.decorateSQL(Statement)
 org.apache.derbyTesting.functionTests.tests.lang.OptimizerOverridesTest.testBadFormats()
 org.apache.derbyTesting.functionTests.tests.lang.OptimizerOverridesTest.testBadProperties()
 org.apache.derbyTesting.functionTests.tests.lang.OptimizerOverridesTest.testComparision()
