@@ -80,14 +80,13 @@ def build_goldset(project):
     utils.mkdir(os.path.join(project.full_path, 'goldsets', 'method'))
     utils.mkdir(os.path.join(project.full_path, 'goldsets', 'class'))
 
-    ids = set()
     with open(os.path.join(project.full_path, 'issue2git.csv'), 'w') as f:
         writer = csv.writer(f)
         for cid, links in commits.items():
             for link in links:
                 writer.writerow((link, cid))
-                ids.add(link)
 
+    ids = set(mgoldsets.keys()) | set(cgoldsets.keys())
     bugs = download_jira_bugs(project, ids)
 
     with open(os.path.join(project.full_path, 'ids.txt'), 'w') as f:
@@ -98,14 +97,14 @@ def build_goldset(project):
         with open(os.path.join(project.full_path, 'goldsets', 'method',
                                 str(gid) + '.txt'), 'w') as f:
 
-            for entity in sorted(goldset):
+            for entity in sorted(list(goldset)):
                 f.write(entity.full_name + '\n')
 
     for gid, goldset in cgoldsets.items():
         with open(os.path.join(project.full_path, 'goldsets', 'class',
                                 str(gid) + '.txt'), 'w') as f:
 
-            for entity in sorted(goldset):
+            for entity in sorted(list(goldset)):
                 f.write(entity.full_name + '\n')
 
     with open(os.path.join(project.full_path, 'DONE'), 'w') as f:
