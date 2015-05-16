@@ -71,7 +71,7 @@ def build_developer_goldset(project):
         for gid in bugs:
             f.write(str(gid) + '\n')
 
-    for gid, goldset in cgoldsets.items():
+    for gid, goldset in goldsets.items():
         with open(os.path.join(project.full_path, 'goldsets', 'committer',
                                 str(gid) + '.txt'), 'w') as f:
 
