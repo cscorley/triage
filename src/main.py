@@ -96,10 +96,11 @@ def run_experiment(project):
 
     # create/load document lists
     queries = create_queries(project)
-    goldsets = load_goldsets(project)
+    goldsets = load_goldsets(project, 'committer')
 
     # get corpora
     changeset_corpus = create_corpus(project, repos, ChangesetCorpus, use_level=False)
+    developer_corpus = create_developer_corpus(project, repos, changeset_corpus)
     release_corpus = create_release_corpus(project, repos)
 
     collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
@@ -511,7 +512,7 @@ def get_topics(model, corpus, by_ids=None, full=True):
     return doc_topic
 
 
-def load_goldsets(project):
+def load_goldsets(project, kind):
     logger.info("Loading goldsets for project: %s", str(project))
     with open(os.path.join(project.full_path, 'ids.txt')) as f:
         ids = [x.strip() for x in f.readlines()]
@@ -520,7 +521,7 @@ def load_goldsets(project):
     s = 0
     for id in ids:
         try:
-            with open(os.path.join(project.full_path, 'goldsets', project.level,
+            with open(os.path.join(project.full_path, 'goldsets', kind,
                                     id + '.txt')) as f:
                 golds = frozenset(x.strip() for x in f.readlines())
                 s += len(golds)
@@ -776,6 +777,50 @@ def create_mallet_model(project, corpus, name, use_level=True):
         model = LdaMallet.load(model_fname)
 
     return model
+
+def create_developer_corpus(project, repos, changesets):
+    corpus_fname_base = project.full_path + 'Developer'
+
+    corpus_fname = corpus_fname_base + '.mallet.gz'
+    dict_fname = corpus_fname_base + '.dict.gz'
+    made_one = False
+
+    dev_words = dict()
+    if not os.path.exists(corpus_fname):
+        changesets.metadata = True
+        for doc, meta in changesets:
+            cid, label = meta
+
+            commit = None
+            for repo in repos:
+                if cid in repo:
+                    commit = repo[str(cid)]
+                    break
+
+            if commit:
+                dev = commit.committer
+                dev = dev.replace(" ", "_") # mallet cant have spaces in ids
+                if dev not in dev_words:
+                    dev_words[dev] = list()
+
+                dev_words[dev].extend(doc)
+
+
+        changesets.metadata = False
+        dev_words = [(v, (k, 'dev')) for k, v in dev_words.items()]
+
+        MalletCorpus.serialize(corpus_fname, dev_words, id2word=changesets.id2word,
+                               metadata=True)
+
+        changesets.id2word.save(dict_fname)
+
+    id2word = None
+    if os.path.exists(dict_fname):
+        id2word = Dictionary.load(dict_fname)
+
+    corpus = MalletCorpus(corpus_fname, id2word=id2word)
+
+    return corpus
 
 
 def create_corpus(project, repos, Kind, use_level=True, forced_ref=None):
