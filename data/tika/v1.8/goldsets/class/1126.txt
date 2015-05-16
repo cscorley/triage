@@ -1,0 +1,2 @@
+org.apache.tika.server.TikaResource
+org.apache.tika.server.TikaResourceTest

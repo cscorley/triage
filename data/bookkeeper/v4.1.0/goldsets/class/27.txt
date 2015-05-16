@@ -1,0 +1,3 @@
+org.apache.bookkeeper.client.BookieRecoveryTest
+org.apache.bookkeeper.client.LedgerRecoveryOp
+org.apache.bookkeeper.client.PendingReadOp

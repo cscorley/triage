@@ -1,0 +1,3 @@
+org.apache.solr.schema.OpenExchangeRatesOrgProvider
+org.apache.solr.schema.OpenExchangeRatesOrgProvider.OpenExchangeRates
+org.apache.solr.schema.OpenExchangeRatesOrgProviderTest

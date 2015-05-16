@@ -1,0 +1,1 @@
+git://github.com/hibernate/hibernate-orm.git

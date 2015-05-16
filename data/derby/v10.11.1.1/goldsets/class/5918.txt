@@ -1,0 +1,3 @@
+org.apache.derby.iapi.types.DataTypeDescriptor
+org.apache.derbyTesting.functionTests.tests.lang.BooleanValuesTest
+org.apache.derbyTesting.functionTests.tests.lang.CreateTableFromQueryTest

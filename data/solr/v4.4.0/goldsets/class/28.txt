@@ -1,0 +1,2 @@
+org.apache.solr.cloud.ZkCLI
+org.apache.solr.cloud.ZkCLITest

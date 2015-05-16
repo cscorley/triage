@@ -1,6 +1,7 @@
 .lvimrc
 .DS_Store
 output/
+git_stats/
 
 # sources
 gits/
@@ -10,6 +11,8 @@ data/*/*/src
 .ipynb_checkpoints
 
 # generated data
+*-ranks.csv.gz
+*-ranks.csv
 *.mallet
 *.mallet.gz
 *.dict
@@ -26,7 +29,7 @@ src/grammars/
 
 # custom test dir
 tests/test_data/test_git/
-#
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -37,12 +40,13 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
+.eggs/
+bin/
 build/
 develop-eggs/
 dist/
 downloads/
 eggs/
-.eggs/
 lib/
 lib64/
 parts/
@@ -76,11 +80,17 @@ coverage.xml
 *.mo
 *.pot
 
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
 # Rope
 .ropeproject
 
 # Django stuff:
 *.log
+*.pot
 
 # Sphinx documentation
 docs/_build/
@@ -88,3 +98,14 @@ docs/_build/
 # PyBuilder
 target/
 
+
+# Latex
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.pdf
+
+*.swp

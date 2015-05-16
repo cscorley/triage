@@ -1,11 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-#
-# [The "New BSD" license]
-# Copyright (c) 2014 The Board of Trustees of The University of Alabama
-# All rights reserved.
-#
-# See LICENSE for details.
 
 from __future__ import print_function
 
@@ -33,6 +27,7 @@ from corpora import (ChangesetCorpus, SnapshotCorpus, ReleaseCorpus,
                      TaserSnapshotCorpus, TaserReleaseCorpus,
                      CorpusCombiner, GeneralCorpus)
 from errors import TaserError
+from goldsets import build_goldset
 
 
 def error(*args, **kwargs):
@@ -42,18 +37,26 @@ def error(*args, **kwargs):
 
     sys.exit(1)
 
-
 @click.command()
 @click.option('--verbose', is_flag=True)
 @click.option('--debug', is_flag=True)
 @click.option('--force', is_flag=True)
+@click.option('--temporal', is_flag=True)
+@click.option('--goldset', is_flag=True)
+@click.option('--lda', is_flag=True)
+@click.option('--lsi', is_flag=True)
 @click.option('--name', help="Name of project to run experiment on")
 @click.option('--version', help="Version of project to run experiment on")
-@click.option('--level', help="Granularity level of project to run experiment on")
-def cli(verbose, debug, force, name, version, level):
-    """
-    Changesets for Feature Location
-    """
+@click.option('--level', default="class", help="Granularity level of project to run experiment on")
+@click.option('--num_topics', default=500, type=click.INT)
+@click.option('--chunksize', default=2000, type=click.INT)
+@click.option('--passes', default=5, type=click.INT)
+@click.option('--iterations', default=1000, type=click.INT)
+@click.option('--decay', default=0.5, type=click.FLOAT)
+@click.option('--offset', default=1.0, type=click.FLOAT)
+@click.option('--eta', type=click.FLOAT)
+@click.option('--alpha', default='symmetric')
+def cli(debug, verbose, name, version, goldset,  *args, **kwargs):
     logging.basicConfig(format='%(asctime)s : %(levelname)s : ' +
                         '%(name)s : %(funcName)s : %(message)s')
 
@@ -65,23 +68,27 @@ def cli(verbose, debug, force, name, version, level):
         logging.root.setLevel(level=logging.ERROR)
 
     # load project info
-    projects = load_projects()
+    projects = load_projects(kwargs)
     for project in projects:
         if name:
+            name = name.lower()
+
             if name == project.name:
                 if version and version != project.version:
                     continue
 
-                if level and level != project.level:
-                    continue
-
-                run_experiment(project, force)
+                if goldset:
+                    build_goldset(project)
+                else:
+                    run_experiment(project)
                 sys.exit(0) # done, boom shakalaka
+        elif goldset:
+            build_goldset(project)
         else:
-            run_experiment(project, force)
+            run_experiment(project)
 
 
-def run_experiment(project, force):
+def run_experiment(project):
     logger.info("Running project on %s", str(project))
     print(project)
 
@@ -100,35 +107,94 @@ def run_experiment(project, force):
     # release-based evaluation is #basic 💁
     release_lda, release_lsi = run_basic(project, release_corpus,
                                          release_corpus, queries, goldsets,
-                                         'Release', use_level=True, force=force)
+                                         'Release', use_level=True)
 
     changeset_lda, changeset_lsi = run_basic(project, changeset_corpus,
                                              release_corpus, queries, goldsets,
-                                             'Changeset', force=force)
+                                             'Changeset')
 
-    try:
-        temporal_lda, temporal_lsi = run_temporal(project, repos,
-                                                changeset_corpus, queries,
-                                                goldsets, force=force)
-    except IOError:
-        logger.info("Files needed for temporal evaluation not found. Skipping.")
-    else:
-        do_science('temporal', temporal_lda, changeset_lda, ignore=True)
-        do_science('temporal_lsi', temporal_lsi, changeset_lsi, ignore=True)
+    if project.temporal:
+        try:
+            temporal_lda, temporal_lsi = run_temporal(project, repos,
+                                                    changeset_corpus, queries,
+                                                    goldsets)
+        except IOError:
+            logger.info("Files needed for temporal evaluation not found. Skipping.")
+        else:
+            if project.lda:
+                do_science('temporal_lda', temporal_lda, changeset_lda, ignore=True)
+            if project.lsi:
+                do_science('temporal_lsi', temporal_lsi, changeset_lsi, ignore=True)
 
     # do this last so that the results are printed together
-    do_science('basic', changeset_lda, release_lda)
-    do_science('basic_lsi', changeset_lsi, release_lsi)
+    if project.lda:
+        do_science('basic_lda', changeset_lda, release_lda)
+    if project.lsi:
+        do_science('basic_lsi', changeset_lsi, release_lsi)
 
 def collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus):
+    logger.info("Collecting corpus metdata info")
     changeset_corpus.metadata = True
     release_corpus.metadata = True
-    with smart_open(os.path.join(project.full_path, '-'.join([project.level, 'info.csv'])), 'w') as f:
-        pass
+    queries.metadata = True
+    ids = set(i for i,g in goldsets)
+    try:
+        issue2git, git2issue = load_issue2git(project, ids)
+    except:
+        return
 
-    logger.info("Collecting basic info")
+    path = os.path.join(project.full_path, "general-info.csv")
+    if not os.path.exists(path):
+        with smart_open(path, 'w') as f:
+            writer = csv.writer(f)
+            writer.writerow(["changesets_before_first"])
+            row = list()
+
+            for i, docmeta in enumerate(changeset_corpus):
+                doc, meta = docmeta
+                if meta[0] in git2issue:
+                    row.append(i)
+                    break
+
+            writer.writerow(row)
+
+    path = os.path.join(project.full_path, 'goldset-info.csv')
+    if not os.path.exists(path):
+        with smart_open(path, 'w') as f:
+            writer = csv.writer(f)
+            writer.writerow(["metadata", "total_entities"])
+
+            for gid, goldset in goldsets:
+                row = list()
+                row.append(gid)
+                row.append(len(goldset))
+                writer.writerow(row)
+
+    collect_helper(project, changeset_corpus, 'changeset')
+    collect_helper(project, release_corpus, 'release' + project.level)
+    collect_helper(project, queries, 'queries')
+
     changeset_corpus.metadata = False
     release_corpus.metadata = False
+    queries.metadata = False
+
+def collect_helper(project, corpus, name):
+    logger.info("Helper corpus metdata info of " + name)
+    path = os.path.join(project.full_path, '-'.join([name, 'info.csv']))
+
+    if os.path.exists(path):
+        return
+
+    with smart_open(path, 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(["metadata", "unique_words", "total_words"])
+
+        for doc, meta in corpus:
+            row = list()
+            row.append(meta[0])
+            row.append(len(doc))
+            row.append(sum(freq for word, freq in doc))
+            writer.writerow(row)
 
 def write_ranks(project, prefix, ranks):
     with smart_open(os.path.join(project.full_path, '-'.join([prefix, project.level, str(project.num_topics), 'ranks.csv.gz'])), 'w') as f:
@@ -155,57 +221,67 @@ def read_ranks(project, prefix):
     return ranks
 
 
-def run_basic(project, corpus, other_corpus, queries, goldsets, kind, use_level=False, force=False):
+def run_basic(project, corpus, other_corpus, queries, goldsets, kind, use_level=False):
     """
     This function runs the experiment in one-shot. It does not evaluate the
     changesets over time.
     """
     logger.info("Running basic evaluation on the %s", kind)
-    try:
-        lda_ranks = read_ranks(project, kind.lower())
-        logger.info("Sucessfully read previously written %s LDA ranks", kind)
-        exists = True
-    except IOError:
-        exists = False
+    lda_first_rels = list()
+    if project.lda:
+        try:
+            lda_ranks = read_ranks(project, kind.lower() + '_lda')
+            logger.info("Sucessfully read previously written %s LDA ranks", kind)
+            exists = True
+        except IOError:
+            exists = False
 
-    if force or not exists:
-        lda_model, _ = create_lda_model(project, corpus, corpus.id2word, kind, use_level=use_level, force=force)
-        lda_query_topic = get_topics(lda_model, queries)
-        lda_doc_topic = get_topics(lda_model, other_corpus)
+        if project.force or not exists:
+            lda_model, _ = create_lda_model(project, corpus, corpus.id2word, kind, use_level=use_level)
+            lda_query_topic = get_topics(lda_model, queries)
+            lda_doc_topic = get_topics(lda_model, other_corpus)
 
-        lda_ranks = get_rank(lda_query_topic, lda_doc_topic)
-        write_ranks(project, kind.lower(), lda_ranks)
+            lda_ranks = get_rank(lda_query_topic, lda_doc_topic)
+            write_ranks(project, kind.lower() + '_lda', lda_ranks)
 
-    lda_first_rels = get_frms(goldsets, lda_ranks)
+        lda_first_rels = get_frms(goldsets, lda_ranks)
 
-    try:
-        lsi_ranks = read_ranks(project, kind.lower() + '_lsi')
-        logger.info("Sucessfully read previously written %s LSI ranks", kind)
-        exists = True
-    except IOError:
-        exists = False
+    lsi_first_rels = list()
+    if project.lsi:
+        try:
+            lsi_ranks = read_ranks(project, kind.lower() + '_lsi')
+            logger.info("Sucessfully read previously written %s LSI ranks", kind)
+            exists = True
+        except IOError:
+            exists = False
 
-    if force or not exists:
-        lsi_model, _ = create_lsi_model(project, corpus, corpus.id2word, kind, use_level=use_level, force=force)
-        lsi_query_topic = get_topics(lsi_model, queries)
-        lsi_doc_topic = get_topics(lsi_model, other_corpus)
+        if project.force or not exists:
+            lsi_model, _ = create_lsi_model(project, corpus, corpus.id2word, kind, use_level=use_level)
+            lsi_query_topic = get_topics(lsi_model, queries)
+            lsi_doc_topic = get_topics(lsi_model, other_corpus)
 
-        lsi_ranks = get_rank(lsi_query_topic, lsi_doc_topic)
-        write_ranks(project, kind.lower() + '_lsi', lsi_ranks)
+            lsi_ranks = get_rank(lsi_query_topic, lsi_doc_topic)
+            write_ranks(project, kind.lower() + '_lsi', lsi_ranks)
 
-    lsi_first_rels = get_frms(goldsets, lsi_ranks)
+        lsi_first_rels = get_frms(goldsets, lsi_ranks)
 
     return lda_first_rels, lsi_first_rels
 
-def run_temporal(project, repos, corpus, queries, goldsets, force=False):
+def run_temporal(project, repos, corpus, queries, goldsets):
     logger.info("Running temporal evaluation")
 
+    force = project.force
+    lda_rels = list()
+    lsi_rels = list()
     try:
-        lda_ranks = read_ranks(project, 'temporal')
-        lda_rels = get_frms(goldsets, lda_ranks)
+        if project.lda:
+            lda_ranks = read_ranks(project, 'temporal')
+            lda_rels = get_frms(goldsets, lda_ranks)
 
-        lsi_ranks = read_ranks(project, 'temporal_lsi')
-        lsi_rels = get_frms(goldsets, lsi_ranks)
+        if project.lsi:
+            lsi_ranks = read_ranks(project, 'temporal_lsi')
+            lsi_rels = get_frms(goldsets, lsi_ranks)
+
         logger.info("Sucessfully read previously written Temporal ranks")
     except IOError:
         force = True
@@ -227,11 +303,13 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
 
     logger.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
 
-    lda, lda_fname = create_lda_model(project, None, corpus.id2word,
-                                      'Temporal', use_level=False, force=True)
+    if project.lda:
+        lda, lda_fname = create_lda_model(project, None, corpus.id2word,
+                                        'Temporal', use_level=False, force=True)
 
-    lsi, lsi_fname = create_lsi_model(project, None, corpus.id2word,
-                                      'Temporal', use_level=False, force=True)
+    if project.lsi:
+        lsi, lsi_fname = create_lsi_model(project, None, corpus.id2word,
+                                        'Temporal', use_level=False, force=True)
 
     indices = list()
     lda_ranks = dict()
@@ -258,8 +336,13 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
         for i in xrange(start, end):
             docs.append(corpus[i])
 
-        lda.update(docs, decay=0.99)
-        lsi.add_documents(docs)
+        if project.lda:
+            lda.update(docs,
+                       #chunksize=project.chunksize,
+                       offset=project.offset,
+                       decay=project.decay)
+        if project.lsi:
+            lsi.add_documents(docs)
 
         for qid in git2issue[sha]:
             logger.info('Getting ranks for query id %s', qid)
@@ -270,39 +353,44 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
                 continue
 
             # do LDA magic
-            lda_query_topic = get_topics(lda, queries, by_ids=[qid])
-            lda_doc_topic = get_topics(lda, other_corpus)
-            lda_subranks = get_rank(lda_query_topic, lda_doc_topic)
-            if qid in lda_subranks:
-                if qid not in lda_ranks:
-                    lda_ranks[qid] = list()
+            if project.lda:
+                lda_query_topic = get_topics(lda, queries, by_ids=[qid])
+                lda_doc_topic = get_topics(lda, other_corpus)
+                lda_subranks = get_rank(lda_query_topic, lda_doc_topic)
+                if qid in lda_subranks:
+                    if qid not in lda_ranks:
+                        lda_ranks[qid] = list()
 
-                rank = lda_subranks[qid]
-                lda_ranks[qid].extend(rank)
-            else:
-                logger.info('Couldnt find qid %s', qid)
+                    rank = lda_subranks[qid]
+                    lda_ranks[qid].extend(rank)
+                else:
+                    logger.info('Couldnt find qid %s', qid)
 
             # do LSI magic
-            lsi_query_topic = get_topics(lsi, queries, by_ids=[qid])
-            lsi_doc_topic = get_topics(lsi, other_corpus)
-            lsi_subranks = get_rank(lsi_query_topic, lsi_doc_topic)
-            if qid in lsi_subranks:
-                if qid not in lsi_ranks:
-                    lsi_ranks[qid] = list()
+            if project.lsi:
+                lsi_query_topic = get_topics(lsi, queries, by_ids=[qid])
+                lsi_doc_topic = get_topics(lsi, other_corpus)
+                lsi_subranks = get_rank(lsi_query_topic, lsi_doc_topic)
+                if qid in lsi_subranks:
+                    if qid not in lsi_ranks:
+                        lsi_ranks[qid] = list()
 
-                rank = lsi_subranks[qid]
-                lsi_ranks[qid].extend(rank)
-            else:
-                logger.info('Couldnt find qid %s', qid)
+                    rank = lsi_subranks[qid]
+                    lsi_ranks[qid].extend(rank)
+                else:
+                    logger.info('Couldnt find qid %s', qid)
 
-    lda.save(lda_fname)
-    lsi.save(lsi_fname)
+    lda_rels = list()
+    if project.lda:
+        lda.save(lda_fname)
+        write_ranks(project, 'temporal', lda_ranks)
+        lda_rels = get_frms(goldsets, lda_ranks)
 
-    write_ranks(project, 'temporal', lda_ranks)
-    write_ranks(project, 'temporal_lsi', lsi_ranks)
-
-    lda_rels = get_frms(goldsets, lda_ranks)
-    lsi_rels = get_frms(goldsets, lsi_ranks)
+    lsi_rels = list()
+    if project.lsi:
+        lsi.save(lsi_fname)
+        write_ranks(project, 'temporal_lsi', lsi_ranks)
+        lsi_rels = get_frms(goldsets, lsi_ranks)
 
     return lda_rels, lsi_rels
 
@@ -431,12 +519,15 @@ def load_goldsets(project):
     goldsets = list()
     s = 0
     for id in ids:
-        with open(os.path.join(project.full_path, 'goldsets', project.level,
-                                id + '.txt')) as f:
-            golds = frozenset(x.strip() for x in f.readlines())
-            s += len(golds)
+        try:
+            with open(os.path.join(project.full_path, 'goldsets', project.level,
+                                    id + '.txt')) as f:
+                golds = frozenset(x.strip() for x in f.readlines())
+                s += len(golds)
 
-        goldsets.append((id, golds))
+            goldsets.append((id, golds))
+        except IOError:
+            pass
 
     logger.info("Returning %d goldsets %d", len(goldsets), s)
     return goldsets
@@ -515,17 +606,16 @@ def load_issue2git(project, ids):
     return i2g, g2i
 
 
-def load_projects():
+def load_projects(config):
     projects = list()
     with open("projects.csv", 'r') as f:
         reader = csv.reader(f)
         header = next(reader)
         customs = ['data_path', 'full_path', 'src_path']
-        Project = namedtuple('Project',  ' '.join(header + customs))
+        Project = namedtuple('Project',  ' '.join(header + customs + config.keys()))
         # figure out which column index contains the project name
         name_idx = header.index("name")
         version_idx = header.index("version")
-        level_idx = header.index("level")
 
         # find the project in the csv, adding it's info to config
         for row in reader:
@@ -538,24 +628,7 @@ def load_projects():
             # build the src_path value
             row += (os.path.join('data', row[name_idx], row[version_idx], 'src'),)
 
-            # try to convert string values to numbers
-            for idx, item in enumerate(row):
-                if item:
-                    # try int first, floats will throw an error here
-                    try:
-                        row[idx] = int(item)
-                        continue
-                    except ValueError:
-                        pass
-
-                    # try float second
-                    try:
-                        row[idx] = float(item)
-                    except ValueError:
-                        pass
-                else:
-                    # set all empty fields to None
-                    row[idx] = None
+            row += config.values()
 
             projects.append(Project(*row))
 
@@ -638,7 +711,7 @@ def create_lda_model(project, corpus, id2word, name, use_level=True, force=False
     model_fname += '.lda.gz'
 
 
-    if not os.path.exists(model_fname) or force:
+    if not os.path.exists(model_fname) or project.force or force:
         if corpus:
             update_every=None # run in batch if we have a pre-supplied corpus
         else:
@@ -648,6 +721,7 @@ def create_lda_model(project, corpus, id2word, name, use_level=True, force=False
                          id2word=id2word,
                          alpha=project.alpha,
                          eta=project.eta,
+                         chunksize=project.chunksize,
                          passes=project.passes,
                          num_topics=project.num_topics,
                          iterations=project.iterations,
@@ -669,7 +743,7 @@ def create_lsi_model(project, corpus, id2word, name, use_level=True, force=False
 
     model_fname += '.lsi.gz'
 
-    if not os.path.exists(model_fname) or force:
+    if not os.path.exists(model_fname) or project.force or force:
         model = LsiModel(corpus=corpus,
                          id2word=id2word,
                          num_topics=project.num_topics,

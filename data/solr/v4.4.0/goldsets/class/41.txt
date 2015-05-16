@@ -1,0 +1,3 @@
+org.apache.solr.common.cloud.CompositeIdRouter
+org.apache.solr.common.cloud.HashBasedRouter
+org.apache.solr.update.SolrIndexSplitter

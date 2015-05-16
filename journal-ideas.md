@@ -1,0 +1,38 @@
+- basics
+    - history
+    - LOC
+    - language (all Java)
+    - subversion -> git
+        - ratio of CRs for each
+        - ratio of commits for each
+    - forked repo? (solr/lucene)
+- measurements
+    - MRR (done)
+    - MAP
+    - DCG
+- commit size stats
+    - commit count
+    - ratio of add/remove/context
+    - stats about the snapshot (e.g. LOC)
+- time/freq stats
+    - when does the approach do well?
+    - when does the approach *begin to* do well?
+    - graph of time on x-axis, EM on y-axis
+    - evolution of LOC
+- contributor stats
+    - age
+    - contribution count
+    - ownership of changes (implications for triage)
+         - change count
+- location info
+    - areas of code (package/subpackage/class)
+    - change proneness
+- new evaluation
+    - snapshot historical simulation (gonna take a looooooong time to evaluate)
+    - expand to include Saha-etal ICSME'14 C/C++ dataset (drop taser for srcML)
+    - algo changes
+        - LSI
+        - doc2vec (cant do inference yet -- )
+    - input corpus (all require experiment re-run... 15 combos)
+        - add/remove/context lines?
+        - use commit message?

@@ -1,0 +1,5 @@
+org.apache.derby.iapi.sql.PreparedStatement
+org.apache.derby.impl.sql.compile.ResultColumnList
+org.apache.derby.impl.sql.GenericActivationHolder
+org.apache.derby.impl.sql.GenericPreparedStatement
+org.apache.derby.impl.sql.GenericStatement

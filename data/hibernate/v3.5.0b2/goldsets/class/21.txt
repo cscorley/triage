@@ -1,0 +1,2 @@
+org.hibernate.cfg.annotations.IdBagBinder
+org.hibernate.cfg.Ejb3Column

@@ -1,0 +1,2 @@
+org.apache.mahout.vectorizer.encoders.InteractionValueEncoder
+org.apache.mahout.vectorizer.encoders.InteractionValueEncoderTest

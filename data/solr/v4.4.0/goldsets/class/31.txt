@@ -1,0 +1,2 @@
+org.apache.solr.store.hdfs.HdfsDirectory
+org.apache.solr.store.hdfs.HdfsDirectory.HdfsIndexOutput

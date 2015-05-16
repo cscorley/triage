@@ -1,0 +1,2 @@
+org.apache.solr.schema.ManagedIndexSchema
+org.apache.solr.schema.TestManagedSchema

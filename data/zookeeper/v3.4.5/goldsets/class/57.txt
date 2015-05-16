@@ -1,0 +1,3 @@
+org.apache.zookeeper.server.quorum.QuorumCnxManager
+org.apache.zookeeper.test.CnxManagerTest
+org.apache.zookeeper.test.CnxManagerTest.CnxManagerThread

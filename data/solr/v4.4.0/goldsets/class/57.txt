@@ -1,0 +1,3 @@
+org.apache.solr.core.TestConfig
+org.apache.solr.SolrTestCaseJ4
+org.apache.solr.util.AbstractSolrTestCase

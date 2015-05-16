@@ -1,0 +1,2 @@
+org.apache.solr.util.SimplePostToolTest
+org.apache.solr.util.SimplePostToolTest.MockPageFetcher

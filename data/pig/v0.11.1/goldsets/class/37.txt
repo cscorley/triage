@@ -1,0 +1,3 @@
+org.apache.pig.PigServer
+org.apache.pig.test.TestLogicalPlanBuilder
+org.apache.pig.test.TestPigServer

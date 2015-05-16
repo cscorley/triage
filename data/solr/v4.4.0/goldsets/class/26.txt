@@ -1,0 +1,3 @@
+org.apache.solr.core.ConfigSolr
+org.apache.solr.core.CoreContainer
+org.apache.solr.logging.LogWatcher

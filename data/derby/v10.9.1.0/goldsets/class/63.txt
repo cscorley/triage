@@ -1,0 +1,2 @@
+org.apache.derby.impl.sql.LanguageDbPropertySetter
+org.apache.derbyTesting.functionTests.tests.lang.SQLAuthorizationPropTest

@@ -1,0 +1,2 @@
+org.apache.pig.newplan.logical.relational.LOCross
+org.apache.pig.test.TestEvalPipelineLocal

@@ -1,0 +1,2 @@
+org.argouml.profile.UserDefinedProfile.filterPackages()
+org.argouml.profile.UserDefinedProfile.finishLoading()

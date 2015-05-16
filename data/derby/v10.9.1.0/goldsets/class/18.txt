@@ -1,0 +1,3 @@
+org.apache.derby.impl.sql.compile.ColumnReference
+org.apache.derby.impl.sql.compile.ResultColumn
+org.apache.derbyTesting.functionTests.tests.lang.JoinTest
