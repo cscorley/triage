@@ -29,6 +29,58 @@ from corpora import GitCorpus
 import main
 import utils
 
+def build_developer_goldset(project):
+    if os.path.exists(os.path.join(project.full_path, 'DONE')):
+        return
+
+    print(project)
+    repos = main.load_repos(project)
+
+    # use the gitcorpus cause it'll do all the dulwich setup stuff for us
+    # also i am lazy, so...
+    corpus = GitCorpus(project=project, repo=repos[0], lazy_dict=True)
+    repo = corpus.repo
+
+    goldsets = dict()
+    commits = dict()
+
+    for commit, parent, patch, changes, links in walk_changes(project, corpus):
+        commits[commit.id] = set(links)
+
+        for gid in links:
+            if gid not in goldsets:
+                goldsets[gid] = set()
+
+            goldsets[gid].add(commit.committer)
+
+    if len(goldsets) == 0:
+        return
+
+    utils.mkdir(os.path.join(project.full_path, 'goldsets', 'committer'))
+
+    with open(os.path.join(project.full_path, 'issue2git.csv'), 'w') as f:
+        writer = csv.writer(f)
+        for cid, links in commits.items():
+            for link in links:
+                writer.writerow((link, cid))
+
+    ids = set(goldsets.keys())
+    bugs = download_jira_bugs(project, ids)
+
+    with open(os.path.join(project.full_path, 'ids.txt'), 'w') as f:
+        for gid in bugs:
+            f.write(str(gid) + '\n')
+
+    for gid, goldset in cgoldsets.items():
+        with open(os.path.join(project.full_path, 'goldsets', 'committer',
+                                str(gid) + '.txt'), 'w') as f:
+
+            for entity in sorted(list(goldset)):
+                f.write(entity + '\n')
+
+    with open(os.path.join(project.full_path, 'DONE'), 'w') as f:
+        f.write('yes')
+
 def build_goldset(project):
     if os.path.exists(os.path.join(project.full_path, 'DONE')):
         return
@@ -47,8 +99,8 @@ def build_goldset(project):
 
     for commit, parent, patch, changes, links in walk_changes(project, corpus):
         diffs = wtp.parse_patch(patch)
+        commits[commit.id] = set(links)
         for mremoved, madded, cremoved, cadded in parse_diff_changes(project, repo, changes, diffs):
-            commits[commit.id] = set(links)
 
             for gid in links:
                 if gid not in mgoldsets:
@@ -113,7 +165,9 @@ def build_goldset(project):
 def download_jira_bugs(project, bugs):
     url_base = 'https://issues.apache.org/jira/si/jira.issueviews:issue-xml/%s/%s.xml'
     path = os.path.join(project.full_path, 'queries')
+    xmlpath = os.path.join(project.full_path, 'xml')
     utils.mkdir(path)
+    utils.mkdir(xmlpath)
 
     p = etree.XMLParser()
     hp = etree.HTMLParser()
@@ -125,6 +179,11 @@ def download_jira_bugs(project, bugs):
         fname = project.name.upper() + '-' + bugid
 #        fname = 'HHH-' + bugid
         r = requests.get(url_base % (fname, fname))
+
+        with open(os.path.join(project.full_path, 'xml', str(bugid) + '.xml'),
+                  'w') as f:
+            f.write(r.text)
+
         try:
             tree = etree.parse(StringIO(r.text), p)
         except etree.XMLSyntaxError:
