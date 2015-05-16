@@ -43,18 +43,19 @@ def error(*args, **kwargs):
 @click.option('--force', is_flag=True)
 @click.option('--temporal', is_flag=True)
 @click.option('--goldset', is_flag=True)
+@click.option('--lda', is_flag=True)
+@click.option('--lsi', is_flag=True)
 @click.option('--name', help="Name of project to run experiment on")
 @click.option('--version', help="Version of project to run experiment on")
 @click.option('--level', default="class", help="Granularity level of project to run experiment on")
-@click.option('--num_topics', default=500)
-@click.option('--lda', is_flag=True)
-@click.option('--lsi', is_flag=True)
+@click.option('--num_topics', default=500, type=click.INT)
+@click.option('--chunksize', default=2000, type=click.INT)
+@click.option('--passes', default=5, type=click.INT)
+@click.option('--iterations', default=1000, type=click.INT)
+@click.option('--decay', default=0.5, type=click.FLOAT)
+@click.option('--offset', default=1.0, type=click.FLOAT)
+@click.option('--eta', type=click.FLOAT)
 @click.option('--alpha', default='symmetric')
-@click.option('--eta')
-@click.option('--decay', default=0.5)
-@click.option('--offset', default=1.0)
-@click.option('--passes', default=5)
-@click.option('--iterations', default=1000)
 def cli(debug, verbose, name, version, goldset,  *args, **kwargs):
 
     """
@@ -340,7 +341,10 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
             docs.append(corpus[i])
 
         if project.lda:
-            lda.update(docs, offset=project.offset, decay=project.decay)
+            lda.update(docs,
+                       #chunksize=project.chunksize,
+                       offset=project.offset,
+                       decay=project.decay)
         if project.lsi:
             lsi.add_documents(docs)
 
@@ -630,25 +634,6 @@ def load_projects(config):
 
             row += config.values()
 
-            # try to convert string values to numbers
-            for idx, item in enumerate(row):
-                if item:
-                    # try int first, floats will throw an error here
-                    try:
-                        row[idx] = int(item)
-                        continue
-                    except ValueError:
-                        pass
-
-                    # try float second
-                    try:
-                        row[idx] = float(item)
-                    except ValueError:
-                        pass
-                else:
-                    # set all empty fields to None
-                    row[idx] = None
-
             projects.append(Project(*row))
 
     return projects
@@ -740,6 +725,7 @@ def create_lda_model(project, corpus, id2word, name, use_level=True, force=False
                          id2word=id2word,
                          alpha=project.alpha,
                          eta=project.eta,
+                         chunksize=project.chunksize,
                          passes=project.passes,
                          num_topics=project.num_topics,
                          iterations=project.iterations,
