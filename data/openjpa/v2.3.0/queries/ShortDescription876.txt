@@ -1,0 +1,1 @@
+Better test profiles for proprietary databases (DB2, Oracle) and continuous build

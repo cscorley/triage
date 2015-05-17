@@ -1,0 +1,10 @@
+The zkServer.sh script doesn't check properly to see if a previously started
+server is still running.  If you call start twice, the second invocation
+will over-write the PID file with a process that then fails due to port
+occupancy.
+
+This means that stop will subsequently fail.
+
+Here is a reference that describes how init scripts should normally work:
+
+http://refspecs.freestandards.org/LSB_3.1.0/LSB-Core-generic/LSB-Core-generic/iniscrptact.html

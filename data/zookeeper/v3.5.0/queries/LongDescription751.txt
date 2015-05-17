@@ -1,0 +1,1 @@
+http://hadoop.apache.org/zookeeper/docs/r3.3.0/recipes.html#sc_recoverableSharedLocks uses the heading "recoverable" locks, but the text refers to "revocable".

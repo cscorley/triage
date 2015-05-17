@@ -1,0 +1,1 @@
+derbynet.jar & derbytools.jar incorrectly have a META-INF/services/java.sql.Driver entry

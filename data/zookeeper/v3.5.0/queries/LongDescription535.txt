@@ -1,0 +1,10 @@
+Ant resolves the same dependencies multiple times if multiple targets are run on the command line:
+
+"ant b c", where b and c both depend on a, results in a being executed twice. However if you have a
+target d which depends on both b and c, "ant d" will only result in a being executed once.
+
+say "ant jar compile-test" is run, this will currently fail as ivy-init is run twice, resulting in the taskdef failing.
+
+Rather we need a guard on the ivy-init target itself to ensure it isn't run twice.
+
+ie: put an unless attrib on ivy-init, then set that property in the body of the target

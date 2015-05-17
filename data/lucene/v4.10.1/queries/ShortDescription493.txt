@@ -1,0 +1,1 @@
+Nightly build archives do not contain Java source code.

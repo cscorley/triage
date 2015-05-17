@@ -1,0 +1,7 @@
+There are a number of cross-site scripting vulnerabilities in the Solr admin JSP pages, wherever data is being re-displayed as typed by the user.  
+
+For example, in analysis.jsp:  <textarea class="std" rows="1" cols="70" name="qval"><%= qval %></textarea>
+
+These need to be modified to HTML escape the values rather than directly outputting the exact values. 
+
+The other affected JSP pages: action.jsp and get-file.jsp

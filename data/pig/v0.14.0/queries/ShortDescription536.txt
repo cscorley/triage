@@ -1,0 +1,1 @@
+the shell script 'pig' does not work if PIG_HOME has the word 'hadoop' in it's directory, and pig script is missing in the types branch

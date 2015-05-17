@@ -1,0 +1,3 @@
+"ant test" under python 2.4 is failing due to a small issue in the test code - using a new feature introduced in 2.5.
+
+I have a small patch which addresses this, after which I was able to compile and run the tests successfully under python 2.4.

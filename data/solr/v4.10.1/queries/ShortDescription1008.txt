@@ -1,0 +1,1 @@
+stats.jsp XML escaping

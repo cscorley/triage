@@ -1,0 +1,1 @@
+Add solr's artifact signing scripts into lucene's build.xml/common-build.xml

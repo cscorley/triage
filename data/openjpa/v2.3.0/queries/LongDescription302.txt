@@ -1,0 +1,37 @@
+The documentation (sections 3.5.2.1, 3.12.1.2) doesn't make it clear that the classes to be enhanced need to be on the class path of the PCEnhancer application or Ant task. In an Eclipse environment, I battled for some hours to get the enhancer to work.
+
+In my setup, the following appears to be true:
+
+
+	The application needs a classpath consisting of the OpenJPA libraries as well as the java compilation destination directory for the compiled entity classes. Here's how I ran the program (as an application) under Ant:
+
+
+
+	<target name="enhance2">
+		<java classpathref="JPA_PATH" classpath="build/classes" classname="org.apache.openjpa.enhance.PCEnhancer">
+			<arg line="-d build/classes -p build/classes/META-INF/persistence.xml build/classes/com/smotricz/testjpa/Exit.class"/>
+		</java>
+	</target>
+
+
+	As an Ant task, the taskdef needs the OpenJPA libraries on its classpath, but it does no good to include the compiled classes destination path there. Rather, the openjpa task will accept a nested classpath element, and this classpath must contain both the OpenJPA libraries and the compiled entity classes path. Here's my Ant target for this:
+
+
+
+	<target name="enhance">
+		<taskdef name="openjpac" classname="org.apache.openjpa.ant.PCEnhancerTask" classpathref="JPA_PATH"/>
+		<path id="ENH_PATH">
+			<path refid="JPA_PATH"/>
+			<path refid="CLASSES_PATH"/>
+		</path>
+		<openjpac directory="build/classes">
+			<config propertiesFile="build/classes/META-INF/persistence.xml"/>
+			<fileset dir="build/classes">
+    			    <include name="*/.class"/>
+    		            <exclude name="**/TestJPA.class"/>
+			</fileset>
+			<classpath refid="ENH_PATH"/>
+		</openjpac>
+	</target>
+
+Hopefully augmenting the doc with some of this information will save other users some pain.

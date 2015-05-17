@@ -1,0 +1,1 @@
+Some minor cleanups to classify-wiki.sh.   Added in a 2 class problem: United States and United Kingdom.  

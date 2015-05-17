@@ -1,0 +1,6 @@
+Having:
+        char buf[4096*16];
+Present:
+        buf[sizeof(buf)]=0;
+Must be:
+        buf[sizeof(buf)-1]=0;

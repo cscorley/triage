@@ -1,0 +1,1 @@
+Addition of weblogic.xml required for solr to run under weblogic 10.3

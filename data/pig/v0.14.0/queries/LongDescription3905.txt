@@ -1,0 +1,14 @@
+While building Pig against hadoopversion=23,  attempts to resolve hadoop-core dependency no matter what. The root cause of the bug is the following lines in ivy.xml
+
+    <dependency org="com.sun.jersey" name="jersey-core" rev="${jersey-core.version}"
+      conf="hadoop20->default"/>
+    <dependency org="org.apache.hadoop" name="hadoop-core" rev="${hadoop-core.version}"
+      conf="hadoop20->default"/>
+    <dependency org="org.apache.hadoop" name="hadoop-test" rev="${hadoop-test.version}"
+      conf="hadoop20->default"/>
+
+
+
+hadoop20 configuration is getting evaluated always. Unless a build machine has dirty local .m2 repository, the build will fail.
+
+The bug blocks BIGTOP-1110

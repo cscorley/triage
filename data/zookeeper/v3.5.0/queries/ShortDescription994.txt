@@ -1,0 +1,1 @@
+"eclipse" target in the build script doesnot include libraray required for test classes in the classpath

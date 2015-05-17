@@ -1,0 +1,10 @@
+Rationale for adding an explicit max heap size setting for JVMs spawned by ant when running 'ant junitreport':
+
+1) To avoid running out of memory during runs of 'ant junitreport' on systems where the default max heap size is too small for one or more test suites executed by the junitreport target. For example, on client-class machines using Sun's JVM (version 1.6 or older) the default max heap size is usually 64 MB. The lang._Suite junit test suite currently requires roughly 170 MB.
+This will reduce some unnecessary noise in the developers' regression test results.
+
+2) To have the test suites run with consistent max heap size settings regardless of machine class. By using default values, some machines/JVMs run with 64 MB max heap while others run with 512 MB or more, resulting in memory-related test failures only in some environments. This might complicate debugging.
+
+3) Developers will have a better picture of the memory requirements of a test suite if it should fail with OutOfMemoryError via 'ant junitreport'. Without this change, extra effort (e.g. JVM monitoring) is required to know the exact value of the heap size limit that was exceeded.
+
+A discussion on the derby-dev mailing list provides some more details: http://www.nabble.com/Do-I-need-to-provide-extra-memory-flags-when-using-%22ant-junitreport%22--t4139842.html

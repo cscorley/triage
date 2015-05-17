@@ -1,0 +1,18 @@
+I recently tried to run the lang/xmlBinding.java test and I noticed that the test fails with a Security Exception:
+
+> FAIL: Unexpected exception:
+> ERROR 2200L: XMLPARSE operand is not an XML document; see next exception for details.
+> java.security.AccessControlException: access denied (java.io.FilePermission 
+{user.dir}/personal.dtd read)
+>       at java.security.AccessControlContext.checkPermission(AccessControlContext.java(Compiled Code))
+>       at java.security.AccessController.checkPermission(AccessController.java(Compiled Code))
+>       at java.lang.SecurityManager.checkPermission(SecurityManager.java(Compiled Code))
+>       at java.lang.SecurityManager.checkRead(SecurityManager.java(Compiled Code))
+
+This failure does not show up in the nightlies because the XML tests are not currently run as part of derbyall (see DERBY-563, DERBY-567).
+
+I looked a this a bit and eventually realized that the test itself has all the permission it needs, but Xerces, which Derby uses to parse XML documents, does not.  More specifically, and XML document can include a pointer to a schema document, which Xerces will then try to read.  In order for that to work the Xerces classes would have to have read permission on user.dir, but we can't add that permission to the derby_tests.policy file because the Xerces classes could be in a Xerces jar anywhere on the system, or they could be included the JVM's own jar (ex. IBM 1.4).  And further, when DERBY-567 is fixed the parser that is used could vary from JVM to JVM, so it might not be Xerces but some other parser that needs read permission. 
+
+One workaround would be to grant read FilePermission on {user.dir}
+ to "all" (when I did that the test ran cleanly), but it seems to me like that would defeat the purpose of much of the security manager testing.  So until a better
+option arises, I think the only (or at least, the easiest) option is to just run this specific test with no security manager.

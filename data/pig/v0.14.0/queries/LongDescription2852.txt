@@ -1,0 +1,51 @@
+When I run parallel jobs in local mode, I sometimes/randomly see the following error:
+java.lang.ClassCastException: org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigSplit cannot be cast to org.apache.hadoop.mapred.InputSplit
+    at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:413)
+    at org.apache.hadoop.mapred.MapTask.run(MapTask.java:373)
+    at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:212)
+
+Note the method runOldMapper. Pig sets mapred.mapper.new-api to true in JobControlCompiler.java, so I'm not sure why this can happen (sometimes)
+
+
+Steps to reproduce:
+
+1) Create a 10 million line large file '1.txt'
+fout = open('1.txt', 'w')
+for i in range(1000 * 1000 * 10):
+    fout.write('%s\n' % ('\t'.join(str for x in range(10))))
+fout.close()
+
+2) Create pig source '1.pig'
+
+data = load '1.txt' as (a1:int, a2:int, a3:int, a4:int, a5:int, a6:int, a7:int, a8:int, a9:int, a10:int);
+grouped = group data all;
+stats = foreach grouped generate '$METRIC' as metric, MIN(data.$METRIC) as min_value, MAX(data.$METRIC) as max_value;
+dump stats;
+
+3) Create python controller '1.py'
+
+from org.apache.pig.scripting import Pig
+
+def runMultiple():
+    compiled = Pig.compileFromFile('1.pig')
+    params = [
+{'METRIC' : metric}
+ for metric in ['a3', 'a5', 'a7']]
+    bound = compiled.bind(params)
+    results = bound.run()
+    for result in results:
+        if result.isSuccessful():
+            itr = result.result('stats').iterator()
+            print itr.next().getAll()
+        else:
+            print 'Failed'
+
+if _name_ == "_main_":
+    runMultiple()
+
+4) pig -x local 1.py
+You may need to run it a few times to get the error (it's only in stderr output, not even in pig logs). The occurrence seems to be random (sometimes the parallel jobs can succeed). Maybe caused by multi-threading complexities?
+
+I tried pseudo distributed mode but haven't seen this error in that mode.
+
+This has never happened in non-parallel job execution.

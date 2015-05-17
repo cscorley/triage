@@ -1,0 +1,1 @@
+The basic security policy shown in "Running the Network Server under the security manager", which can be found in demo/templates/server.policy, has a comment that refers to "acme.com", which should be changed to "example.com" to conform to the recommendations of the IETF's RFC 2606, "Reserved Top Level DNS Names" (http://tools.ietf.org/html/rfc2606).

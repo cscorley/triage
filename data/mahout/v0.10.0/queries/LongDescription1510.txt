@@ -1,0 +1,1 @@
+We should prominently state on the website that we reject any future MR algorithm contributions (but still maintain and bugfix what we have so far).

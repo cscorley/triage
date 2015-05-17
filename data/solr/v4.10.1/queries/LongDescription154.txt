@@ -1,0 +1,8 @@
+Solrb's (sol.rb's?) rake file has a package:vendor task that is not generating proper rails plugin structure. Rather than just fix this, I've added a PackageTask to package up a proper Rails plugin directory structure and also build distributable packages. Included are the README, LICENSE.txt, and init.rb generated and destroyed on the fly. Also, I've namespaced the Gem PackageTask and the Rails PackageTask, so the commands:
+
+rake rails:package (and repackage, clobber, clobber_package)
+rake gem:package (and the rest...)
+
+package their files up and dump them into pkg/rails and pkg/gem, respectively. Their clobber tasks will only remove the sub-directory under pkg/, not pkg/ itself.
+
+rake package, rake repackage run both package tasks, while rake clobber and rake clobber_package remove the complete pkg/ directory.

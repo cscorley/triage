@@ -1,0 +1,1 @@
+Automatically update Eclipse .classpath file when new libs are added to the classpath through Ivy

@@ -1,0 +1,50 @@
+See http://dbtg.thresher.com/derby/test/tinderbox_trunk16/jvm1.6/testing/testlog/SunOS-5.10_i86pc-i386/771180-derbyall_diff.txt
+
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbyall/encryptionAll/storemats/storemats/updatelocksJDBC30.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: updatelocksJDBC30 jdk1.6.0_06 storemats:storemats 2009-05-04 11:56:42 ***
+9184a9185
+> APP     |UserTran|ROW     |1   |U   |A           |(2,6)     |GRANT|ACTIVE  
+9194a9196
+> APP     |UserTran|ROW     |1   |U   |A           |(2,6)     |GRANT|ACTIVE  
+9205a9208
+> APP     |UserTran|ROW     |1   |U   |A           |(2,6)     |GRANT|ACTIVE  
+9215a9219
+> APP     |UserTran|ROW     |1   |U   |A           |(2,6)     |GRANT|ACTIVE  
+9224a9229
+> APP     |UserTran|ROW     |1   |U   |A           |(2,6)     |GRANT|ACTIVE  
+Test Failed.
+			End:   updatelocksJDBC30 jdk1.6.0_06 storemats:storemats 2009-05-04 11:57:00 ***
+		
+		
+	
+	
+

@@ -1,0 +1,12 @@
+Example 9.8. Named Seq Sequence:    @SequenceGenerator properties gave me compile errors
+@SequenceGenerator(name="AuthorSeq" sequence="table(Table=AUTO_SEQ, Increment=100)")
+should be
+@SequenceGenerator (name="AuthorSeq", sequenceName="table(Table=AUTO_SEQ, Increment=100)")
+
+4.4.3. OracleDictionary Properties:  
+According to the logs when I set this up to be not set, 
+AutoAssignSequenceName: The global name of the sequence that OpenJPA will assume to hold the value of primary key
+value for rows that use auto-increment. If left unset, OpenJPA will use a the sequence named "SEQ_<table name>".
+should be
+AutoAssignSequenceName: The global name of the sequence that OpenJPA will assume to hold the value of primary key
+value for rows that use auto-increment. If left unset, OpenJPA will use a the sequence named "<table name>_<column name>_SEQ".

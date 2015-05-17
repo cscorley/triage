@@ -1,0 +1,3 @@
+A first version of a XSLT stylesheet for pretty printing the response from the LukeRequestHandler. It uses inline SVG graphics for the histograms if you are on Firefox, Safari or Opera. On IE you get a list for the histograms.
+
+When you put it in /admin you can try it with http://localhost:8080/apache-solr-1.3-dev/admin/luke?stylesheet=../apache-solr-1.3-dev/admin/prettyluke

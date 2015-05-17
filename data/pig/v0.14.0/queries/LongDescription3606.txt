@@ -1,0 +1,10 @@
+When pig CLI is run with -useHCatalog flag against latest hive binaries it complains about the following:
+
+ls: cannot access /usr/lib/hcatalog/share/hcatalog/hcatalog-core-*.jar: No such file or directory
+ls: cannot access /usr/lib/hcatalog/share/hcatalog/hcatalog-*.jar: No such file or directory
+ls: cannot access /usr/lib/hcatalog/share/hcatalog/hcatalog-pig-adapter-*.jar: No such file or directory
+
+
+Basically it searches for hcatalog jars as "hcatalog-
+{core,pig-adapter}-*.jar" whereas in the latest hive 0.13 these jars are prefixed by "hive-" (hive-hcatalog-{core,pig-adapter}
+-*.jar).

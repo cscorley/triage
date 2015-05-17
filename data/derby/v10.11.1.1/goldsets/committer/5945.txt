@@ -1,0 +1,2 @@
+Dag H. Wanvik <dag@apache.org>
+Myrna van Lunteren <myrnavl@apache.org>

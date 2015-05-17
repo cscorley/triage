@@ -1,0 +1,3 @@
+The trunk build is failing when Hudson runs it. The problem seems to be that ivy-init is executed only once, but its definitions (in particular ivy:settings) do not persist, and the failure occurs when we run ivy-retrieve a second time, which requires the definition of ivy:settings.
+
+It seems that the problem occur with ant 1.7.0, but not with 1.7.1, so it could be an ant issue. 

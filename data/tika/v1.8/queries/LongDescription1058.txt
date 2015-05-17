@@ -1,0 +1,7 @@
+Please add this match entry to message/rfc822 mime-type in tika-mimetypes.xml:
+<match value="MIME-Version:" type="string" offset="0"/>
+
+I have found several files starting with this string. One of these file is in test-document tika-parsers project, filename is testRFC822-multipart.
+
+Thanks
+Marco

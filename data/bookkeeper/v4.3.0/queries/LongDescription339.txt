@@ -1,0 +1,1 @@
+let hedwig cpp client support returning message seq id for publish requests. as what we did for BOOKKEEPER-331.

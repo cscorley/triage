@@ -1,0 +1,27 @@
+A query like the following results in an exception on execution:
+
+a = load 'mult.input' as (name, age, gpa);
+b = group a ALL;
+c = foreach b generate group, COUNT(a);
+store c into 'foo';
+d = group a by (name, gpa);
+e = foreach d generate flatten(group), MIN(a.age);
+store e into 'bar';
+
+
+
+Exception on execution:
+09/06/04 16:56:11 INFO mapred.TaskInProgress: Error from attempt_200906041655_0001_r_000000_3: java.lang.ClassCastException: java.lang.String cannot be cast to org.apache.pig.data.Tuple
+    at org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POProject.getNext(POProject.java:312)
+    at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach.processPlan(POForEach.java:254)
+    at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach.getNext(POForEach.java:204)
+    at org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator.processInput(PhysicalOperator.java:231)
+    at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POStore.getNext(POStore.java:117)
+    at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.PODemux.runPipeline(PODemux.java:248)
+    at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.PODemux.getNext(PODemux.java:238)
+    at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapReduce$Reduce.runPipeline(PigMapReduce.java:320)
+    at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapReduce$Reduce.processOnePackageOutput(PigMapReduce.java:288)
+    at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapReduce$Reduce.reduce(PigMapReduce.java:268)
+    at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapReduce$Reduce.reduce(PigMapReduce.java:142)
+    at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:318)
+    at org.apache.hadoop.mapred.TaskTracker$Child.main(TaskTracker.java:2207)

@@ -1,0 +1,1 @@
+Add contrib libs to classpath for javadoc

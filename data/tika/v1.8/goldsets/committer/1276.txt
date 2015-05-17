@@ -1,0 +1,2 @@
+Hong-Thai Nguyen <thaichat04@apache.org>
+Nick Burch <nick@apache.org>

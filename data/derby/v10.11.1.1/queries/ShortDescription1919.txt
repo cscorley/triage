@@ -1,0 +1,1 @@
+Top level index.html page should link to release notes and other items in top-level of a release.

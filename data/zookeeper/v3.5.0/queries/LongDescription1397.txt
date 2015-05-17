@@ -1,0 +1,1 @@
+BookKeeper is now a subproject and its documentation is maintained in the site of the subproject. Consequently, we should remove the links in the zookeeper documentation pages or at least point to the documentation of the subproject site.

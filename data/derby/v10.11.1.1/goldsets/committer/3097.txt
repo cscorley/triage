@@ -1,0 +1,2 @@
+Bryan Pendleton <bpendleton@apache.org>
+Dag H. Wanvik <dag@apache.org>

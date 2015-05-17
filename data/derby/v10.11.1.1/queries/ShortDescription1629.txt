@@ -1,0 +1,1 @@
+Exceptions thrown by code in procedures or triggers are not handled/thrown correctly by Derby

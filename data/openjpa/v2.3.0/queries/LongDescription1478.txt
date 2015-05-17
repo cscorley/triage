@@ -1,0 +1,13 @@
+The Apache Aries project is building an OSGi based application container that includes container JPA integration.
+
+OpenJPA 2.0.0-M3 was available as an OSGi bundle, but is using an old version of the JPA 2.0 API (ValidationMode is in the wrong package), and so throws NoSuchMethodError on calls to createContainerEntityManagerFactory. Unfortunately, the latest build snapshots of 2.0.0 are no longer OSGi bundles, which means that OpenJPA can no longer be used with Aries.
+
+I have two questions:
+
+Why is OpenJPA no longer available as an OSGi bundle?
+
+Will OpenJPA be available as an OSGi bundle in future, or should the Aries project re-package OpenJPA for use in the Aries container?
+
+For use with Aries it would also be ideal if the OpenJPA bundle registered the OpenJPA PersistenceProviderImpl as a service in the OSGi service registry, adding the implementation class name as a service property with the key "javax.persistence.provider".
+
+I would be happy to provide any assistance I can in re-enabling this functionality.

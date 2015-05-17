@@ -1,0 +1,1 @@
+as what we did in BOOKKEEPER-296, it would be better to provide similar script to start/stop hub server.

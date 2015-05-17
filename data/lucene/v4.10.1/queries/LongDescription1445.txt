@@ -1,0 +1,1 @@
+We recently added the junit JAR under "lib" so that we can checkout & run tests, but we fail to include it in the source dist.

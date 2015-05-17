@@ -1,0 +1,6 @@
+This example in the user manual:
+
+Example 9.9.  System Sequence Configuration
+<property name="openjpa.Sequence" value="table(Table=OPENJPASEQ, Increment=100)"/>
+
+gives an exception saying "table" is an incorrect alias.

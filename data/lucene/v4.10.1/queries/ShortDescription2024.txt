@@ -1,0 +1,1 @@
+"ant dist" no longer generates md5's for the top-level artifacts

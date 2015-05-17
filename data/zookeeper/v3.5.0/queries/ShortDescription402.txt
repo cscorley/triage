@@ -1,0 +1,1 @@
+zookeeper c library segfaults on data for a node in zookeeper being null.

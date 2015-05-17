@@ -1,0 +1,1 @@
+For background see http://www.mail-archive.com/java-dev@lucene.apache.org/msg10307.html

@@ -1,0 +1,19 @@
+I saw a hang once when my C++ application called the zookeeper_close() method of the multi-threaded Zookeeper client library.  The stack trace of the hung thread was the following:
+
+
+Thread 8 (Thread 5644):
+#0  0x00007f5d7bb5bbe4 in __lll_lock_wait () from /lib/libpthread.so.0
+#1  0x00007f5d7bb59ad0 in pthread_cond_broadcast@@GLIBC_2.3.2 () from /lib/libpthread.so.0
+#2  0x00007f5d793628f6 in unlock_completion_list (l=0x32b4d68) at .../zookeeper/src/c/src/mt_adaptor.c:66
+#3  0x00007f5d79354d4b in free_completions (zh=0x32b4c80, callCompletion=1, reason=-116) at .../zookeeper/src/c/src/zookeeper.c:1069
+#4  0x00007f5d79355008 in cleanup_bufs (zh=0x32b4c80, callCompletion=1, rc=-116) at .../thirdparty/zookeeper/src/c/src/zookeeper.c:1125
+#5  0x00007f5d79353200 in destroy (zh=0x32b4c80) at .../thirdparty/zookeeper/src/c/src/zookeeper.c:366
+#6  0x00007f5d79358e0e in zookeeper_close (zh=0x32b4c80) at .../zookeeper/src/c/src/zookeeper.c:2326
+#7  0x00007f5d79356d18 in api_epilog (zh=0x32b4c80, rc=0) at .../zookeeper/src/c/src/zookeeper.c:1661
+#8  0x00007f5d79362f2f in adaptor_finish (zh=0x32b4c80) at .../zookeeper/src/c/src/mt_adaptor.c:205
+#9  0x00007f5d79358c8c in zookeeper_close (zh=0x32b4c80) at .../zookeeper/src/c/src/zookeeper.c:2297 
+...
+
+The omitted part of the stack trace is entirely within my application, and contains no other calls to/from the Zookeeper client.  In particular, I am not calling zookeeper_close() from within a completion handler or any of the library's threads.
+
+I haven't been able to reproduce this, and when I encountered this I wasn't capturing logging from the client library, so unfortunately I don't have any more information at this time.  But I will update this JIRA if I see it again.

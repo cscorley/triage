@@ -1,0 +1,1 @@
+Separate NOTICEs and LICENSEs for binary and source packages

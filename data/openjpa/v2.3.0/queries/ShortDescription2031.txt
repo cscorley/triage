@@ -1,0 +1,1 @@
+Unable to import maven projects with m2e version 1.0

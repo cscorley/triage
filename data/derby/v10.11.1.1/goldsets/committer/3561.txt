@@ -1,0 +1,2 @@
+John Herman Embretsen <johnemb@apache.org>
+Knut Anders Hatlen <kahatlen@apache.org>

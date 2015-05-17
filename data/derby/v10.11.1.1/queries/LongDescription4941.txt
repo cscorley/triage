@@ -1,0 +1,12 @@
+$ java -Dderby.ui.locale=de_DE org.apache.derby.tools.dblook
+
+ SYNTAX:
+ java org.apache.derby.tools.dblook -d <Quellen-DB-URL> [OPTIONEN]
+
+        Der Quellen-URL ist hier der vollständige URL mit Verbindungsprotokoll
+        und allen anwendbaren Verbindungsattributen. Verwenden Sie
+        beispielsweise 'jdbc:derby:meineDB' oder
+        'jdbc:derby//localhost:1527/meineDB;user=usr;'. 
+(...)
+
+The network client URL lacks a colon between "jdbc:derby" and "//localhost".

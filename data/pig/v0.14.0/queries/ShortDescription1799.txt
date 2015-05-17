@@ -1,0 +1,1 @@
+Provide deployable maven artifacts for pigunit and pig smoke tests

@@ -1,0 +1,9 @@
+The testRetry test silently exits for me periodically, especially, it seems, on newer hardware.  It also spits out from log messages clutter the test output.
+
+The silent exits turn out to be because SIGPIPE is sometimes delivered during the sleep(1) in createClient(), the second time createClient() is called.  Since SIGPIPE is not being ignored and there is no signal handler, the process exists immediately.  This leaves the test suite in a broken state, with the test ZooKeeper process still running because "zkServer.sh stop" is not run by tearDown().  You have to manually kill the ZK server and retry the tests; sometimes they succeed and sometimes they don't.
+
+I described SIGPIPE handling a little in ZOOKEEPER-320.  The appropriate thing, I think, is for the client application to ignore or handle SIGPIPE.  In this case, that falls to the test processes.  The attached patch fixes the issue for me with testRetry.
+
+The patch uses sigaction() to ignore SIGPIPE in TestClientRetry.cc and, for good measure (although I never saw it actually fail for me), TestClient.cc, since that file also uses sleep() extensively.
+
+I also removed a couple of unused functions and a macro definition from TestClientRetry.cc, just to simply matters, and turned off log output, which makes the testRetry output much, much cleaner (otherwise you get a lot of log output spamming into the nice clean cppunit output .

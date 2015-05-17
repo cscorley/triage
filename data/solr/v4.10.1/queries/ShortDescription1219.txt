@@ -1,0 +1,1 @@
+use setproxy ant task when proxy properties are specified

@@ -1,0 +1,1 @@
+When comparing our README.txt to the one Lucene provides it seems the Lucene one has some essential build information that new Mahout contributors might find useful as well. Added the information (see attached patch). Will commit in 72h if no-one objects.

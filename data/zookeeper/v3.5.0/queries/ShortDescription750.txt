@@ -1,0 +1,1 @@
+move maven artifacts into "dist-maven" subdir of the release (package target)

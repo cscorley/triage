@@ -1,0 +1,1 @@
+building the C library from trunk now has 3.4.0 everywhere which makes it confusing when testing, so lets bump the version. 

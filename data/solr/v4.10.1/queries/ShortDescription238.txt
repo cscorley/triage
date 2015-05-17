@@ -1,0 +1,1 @@
+[Patch] The tutorial on our website is against trunk which causes confusion by user

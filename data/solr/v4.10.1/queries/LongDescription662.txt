@@ -1,0 +1,43 @@
+At present solr-ruby doesn't support the following hl functions:
+
+
+	per-field override
+	
+		hl.snippets
+		hl.fragsize
+		hl.requireFieldMatch
+		hl.simple.pre
+		hl.simple.post
+	
+	
+
+
+
+
+	non-per-field-override
+	
+		hl.alternateField
+		hl.maxAlternateFieldLength
+	
+	
+
+
+
+
+	other hl parameters
+	
+		hl.maxAnalyzedChars (w/ per-field override)
+		hl.usePhraseHighlighter
+		hl.mergeContiguous (w/ per-field override)
+		hl.increment (w/ per-field override)
+		hl.formatter (w/ per-field override)
+		hl.fragmenter (w/ per-field override)
+		hl.regex.slop (w/ per-field override)
+		hl.regex.pattern (w/ per-field override)
+		hl.regex.maxAnalyzedChars (w/ per-field override)
+	
+	
+
+
+
+A patch supports these functions will be shortly.

@@ -1,0 +1,1 @@
+add pig-withouthadoop-h2 to mvn-jar

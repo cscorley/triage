@@ -1,0 +1,3 @@
+A coding example, which could be cut'n'paste by a user, has unbalanced parenthesis.
+
+This fix corrects the documentation, making no changes to functionality, only readability.

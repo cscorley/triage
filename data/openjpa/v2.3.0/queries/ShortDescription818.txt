@@ -1,0 +1,1 @@
+TCK module should use Geronimo JPA 2.0 EA jar

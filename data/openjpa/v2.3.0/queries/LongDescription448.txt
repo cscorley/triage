@@ -1,0 +1,22 @@
+I found two things in the documentation that should be fixed I think.
+
+1.)
+
+3.2.5.47. openjpa.NontransactionalWrite
+
+It says "Default: false".
+
+But the default is 'true'.
+
+See: org.apache.openjpa.persistence.PersistenceProductDerivation:111
+afterSpecificationSet()
+        conf.nontransactionalWrite.setDefault("true");
+        conf.nontransactionalWrite.set(true);
+
+2.)
+
+3.11.1.1. Detach Behavior
+
+It says "You can stop OpenJPA from assuming the transaction will commit by invoking OpenJPAEntityManager.setRollbackOnly prior to detaching your objects."
+
+But OpenJPAEntityManager.setRollbackOnly is deprecated. It should be OpenJPAEntityTransaction.setRollbackOnly.

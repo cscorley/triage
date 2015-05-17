@@ -1,0 +1,1 @@
+Update plugin versions in the POM structure

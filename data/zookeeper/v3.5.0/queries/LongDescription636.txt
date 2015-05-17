@@ -1,0 +1,2 @@
+The information mustn't be overridden.
+The template like «CFLAGS="$CFLAGS -some-option"» should be used.

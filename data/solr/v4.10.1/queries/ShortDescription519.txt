@@ -1,0 +1,1 @@
+schema.jsp includes javascript library with absolute path

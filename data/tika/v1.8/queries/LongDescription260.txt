@@ -1,0 +1,1 @@
+I found one blocker for the 0.4 release: Due to transitive commons-logging dependencies pulled in by POI, the tika-app jar ends up including things like the LogKit library, the Avalon framework and the Servlet API! I'll clean up that mess.

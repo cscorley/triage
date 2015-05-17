@@ -1,0 +1,3 @@
+In zookeeper_interest(), we set zk->fd to -1 without closing it when timeout happens. Instead we should let handle_socket_error_msg() function take care of closing the socket properly.
+
+--Michi

@@ -1,0 +1,1 @@
+Skip working directory initialization in classification 20newsgroups examples script clean task

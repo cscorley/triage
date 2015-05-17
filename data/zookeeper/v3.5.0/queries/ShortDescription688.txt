@@ -1,0 +1,1 @@
+explain session expiration better in the docs & faq

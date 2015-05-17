@@ -1,0 +1,1 @@
+PDFBox 1.1.0 is due out shortly. We should upgrade before releasing Tika 0.7.

@@ -1,0 +1,3 @@
+On Linux with gcc installed in /usr/local and the libs in /usr/local/lib64, test-core-cppunit fails because zktest-st is unable to find the right libstdc++.
+
+build.xml is overriding the environment LD_LIBRARY_PATH instead of appending to it. This should be changed to match the treatment of PATH by appending the desired extra path.

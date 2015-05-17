@@ -1,0 +1,17 @@
+In section 10.2.6. JPQL GROUP BY, HAVING (http://openjpa.apache.org/docs/latest/manual/jpa_langref.html#jpa_langref_group) the last paragraph seems contradictory:
+
+"""
+If there is no GROUP BY clause and the HAVING  clause is used, the result is treated as a single group, and the select list can only consist of aggregate functions. When a query declares a HAVING clause, it must always also declare a GROUP BY clause.
+"""
+
+The first sentences seems to imply that a query may incorporate a HAVING clause without a GROUP BY clause, but the second sentence indicates otherwise.
+
+Looking at section 10.2.12 JPQL BNF (http://openjpa.apache.org/docs/latest/manual/jpa_langref.html#jpa_langref_bnf), it seems as though the BNF contradicts the last sentence:
+
+"""
+select_statement ::= select_clause from_clause [where_clause] [groupby_clause] [having_clause] [orderby_clause]
+"""
+
+otherwise the BNF would be something like this:
+
+select_statement ::= select_clause from_clause [where_clause] [groupby_clause [having_clause]] [orderby_clause]

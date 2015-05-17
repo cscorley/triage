@@ -1,0 +1,1 @@
+cppunit test testipv6 assumes that the machine is ipv6 enabled.

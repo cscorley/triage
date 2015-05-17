@@ -1,0 +1,1 @@
+openjpa-parent pom should not overwrite central repository setting

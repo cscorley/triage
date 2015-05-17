@@ -1,0 +1,1 @@
+iepnegativetests_ES.diff fails with J2ME Foundation 

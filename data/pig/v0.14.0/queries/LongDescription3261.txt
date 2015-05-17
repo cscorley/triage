@@ -1,0 +1,10 @@
+Currently we are doing this wrong:
+
+
+
+if [ "$PIG_CLASSPATH" != "" ]; then
+    CLASSPATH=${CLASSPATH}:${PIG_CLASSPATH}
+
+
+
+This means that anything added to CLASSPATH until that point will never be able to get overridden by a user set environment, which is wrong behavior. Hadoop libs for example are added to CLASSPATH, before this extension is called in bin/pig.

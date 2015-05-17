@@ -1,0 +1,1 @@
+More explicit parallelism adjustments in math-scala DRM apis; elements of automatic parallelism management

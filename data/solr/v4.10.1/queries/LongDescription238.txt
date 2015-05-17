@@ -1,0 +1,2 @@
+The patch will add a note to the tutorial page with the following headsup:
+"This is documentation for the development version (TRUNK). Some instructions may only work if you are working against svn head."

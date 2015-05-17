@@ -1,0 +1,3 @@
+Today it takes ~19 hours to run the full set of e2e tests in mapred mode. The bottleneck here is the client side, and per our observations it can help a lot if the e2e harness would be able to run tests in parallel threads.
+
+We prototyped changes in e2e harness allowing to run tests in a configurable number of threads. Preliminary results show more than 6x reduction in execution time when using a small 3-nodes M/R cluster with modest configuration. Going to share a patch shortly.

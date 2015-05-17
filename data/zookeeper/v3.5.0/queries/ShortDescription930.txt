@@ -1,0 +1,1 @@
+Hedwig c++ client uses a non thread safe logging library

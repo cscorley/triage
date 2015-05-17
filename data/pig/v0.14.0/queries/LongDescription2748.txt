@@ -1,0 +1,10 @@
+
+pig-{version}-core.jar becomes pig-{version}.jar
+pig-{version}.jar becomes pig-{version}-withdependencies.jar
+
+
+- <property name="output.jarfile" value="${build.dir}/${final.name}.jar" />
++ <property name="output.jarfile" value="${build.dir}/${final.name}-withdependencies.jar" />
+- <property name="output.jarfile.core" value="${build.dir}/${final.name}-core.jar" />
++ <property name="output.jarfile.core" value="${build.dir}/${final.name}.jar" />
+

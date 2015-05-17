@@ -1,0 +1,1 @@
+Updated Pig UDF doc to include information about the fieldsToRead function.

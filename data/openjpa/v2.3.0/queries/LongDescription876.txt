@@ -1,0 +1,11 @@
+Currently we use the test-custom and test-custom2 profiles in openjpa-persistence-jdbc/pom.xml to enable testing of a variety of databases. Basically anything that does not have a publicly available JDBC drivers. 
+
+This support works well if you run the build manually, but isn't always perfect when using a continuous build system.
+
+In many continuous build systems you want to have a single build definition which can be run on any number of machines. Ideally each machine could store the database settings in $
+{user.home}
+/.m2/settings.xml. Where this becomes a problem is if a single machine wants to use our test-custom profile in conjuction with another one. For example mvn -Ptest-custom,test-custom-oracle clean install. In order to make this work Maven would have to set variables in test-custom-oracle and then read them in the test-custom profile. Ensuring that the properties are handled in the correct order is cumbersome and doesn't seem to work in recent versions of maven / surefire. 
+
+To resolve the problem I propose creating specific profiles for testing with various proprietary databases. These profiles rely on the user running mvn install:install-file $
+{maven args}
+ to install a copy of the jdbc drivers in a local repository prior to running, but after that one time setup step it's a lot easier to run tests on various databases (manually or on a build system).

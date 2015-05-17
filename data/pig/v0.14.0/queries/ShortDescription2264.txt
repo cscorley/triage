@@ -1,0 +1,1 @@
+Change conf/log4j.properties to conf/log4j.properties.template

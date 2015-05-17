@@ -1,0 +1,1 @@
+compatibilitytest fails after DERBY-2121 change.

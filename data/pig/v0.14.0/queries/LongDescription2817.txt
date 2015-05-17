@@ -1,0 +1,6 @@
+Update the documentation in trunk/src/docs/src/documentation/content/xdocs by looking at the python udfs metions:
+basic.xml
+cont.xml
+pig-index.xml
+start.xml
+udf.xml

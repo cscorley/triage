@@ -1,0 +1,1 @@
+The QuickStart section in java/testing/README.htm lists the java versions that are supported for running Derby tests. JDK6 should be added to this list.

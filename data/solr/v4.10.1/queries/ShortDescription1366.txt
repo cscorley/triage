@@ -1,0 +1,1 @@
+UnsupportedOperationException may be thrown when using custom IndexReader

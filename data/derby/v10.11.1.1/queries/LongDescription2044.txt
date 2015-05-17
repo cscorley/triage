@@ -1,0 +1,12 @@
+The HTML report is a great beginning but it is lacking some information on the summary page. I think this info would be useful.
+
+Date of the run
+Version information for Derby
+JVM version information
+
+Ideally a brief summary at the top-level, maybe a separate page could have the full detail, such as sysinfo output.
+
+Possible could be done using the style sheets rather than modifying the task, my xsl ability was limited to changing the
+heading from "Unit Test" to "Apache Derby Testing" 
+
+Was thinking the junit-init target could generate the correct data and the style sheet incorporate it.

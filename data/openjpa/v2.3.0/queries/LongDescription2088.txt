@@ -1,0 +1,28 @@
+When building openjpa on a clean checkout and after cleaning the local maven repo via
+
+$> rm -rf ~/.m2/repository/org/apache/openjpa/
+
+I get the following Exception
+
+
+[ERROR] Failed to execute goal on project enhance: Could not resolve dependencies for project org.apache.openjpa.tools.openjpa-maven-plugin.testing:enhance:jar:1.0-SNAPSHOT: Could not find artifact org.apache.openjpa:openjpa:jar:2.2.0-SNAPSHOT in local.central (file:////Users/struberg/.m2/repository) -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal on project enhance: Could not resolve dependencies for project org.apache.openjpa.tools.openjpa-maven-plugin.testing:enhance:jar:1.0-SNAPSHOT: Could not find artifact org.apache.openjpa:openjpa:jar:2.2.0-SNAPSHOT in local.central (file:////Users/struberg/.m2/repository)
+        at org.apache.maven.lifecycle.internal.LifecycleDependencyResolver.getDependencies(LifecycleDependencyResolver.java:210)
+        at org.apache.maven.lifecycle.internal.LifecycleDependencyResolver.resolveProjectDependencies(LifecycleDependencyResolver.java:117)
+        at org.apache.maven.lifecycle.internal.MojoExecutor.ensureDependenciesAreResolved(MojoExecutor.java:258)
+
+
+
+This indicates a cycle in our build structure. 
+The openjpa-maven-plugin and all it's ITs should only directly use openjpa-kernel and similar fundamental parts.
+
+It seems that we already have the dependencies defined correctly, as maven perfectly unloops the needed parts already:
+[INFO] OpenJPA Parent POM ................................ SUCCESS [7.846s]
+[INFO] OpenJPA Utilities Library ......................... SUCCESS [12.714s]
+[INFO] OpenJPA Kernel .................................... SUCCESS [9.250s]
+[INFO] OpenJPA JDBC ...................................... SUCCESS [5.160s]
+[INFO] OpenJPA Persistence ............................... SUCCESS [4.125s]
+[INFO] OpenJPA Persistence JDBC .......................... SUCCESS [10:36.519s]
+[INFO] OpenJPA Persistence Locking Tests ................. SUCCESS [23:39.345s]
+[INFO] OpenJPA tools ..................................... SUCCESS [0.198s]
+[INFO] OpenJPA Maven Plugin .............................. FAILURE [20.854s]

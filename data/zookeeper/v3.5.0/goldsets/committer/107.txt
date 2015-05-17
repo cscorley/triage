@@ -1,0 +1,2 @@
+Benjamin Reed <breed@apache.org>
+Camille Fournier <camille@apache.org>

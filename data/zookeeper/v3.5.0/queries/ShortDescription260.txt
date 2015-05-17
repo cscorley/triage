@@ -1,0 +1,1 @@
+document the recommended values for server id's

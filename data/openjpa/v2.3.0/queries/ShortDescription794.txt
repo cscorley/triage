@@ -1,0 +1,1 @@
+issues with closing/opening entity manager (slices) (can't seem to be able to create multiple entityManagers )

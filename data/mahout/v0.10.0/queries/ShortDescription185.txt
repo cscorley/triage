@@ -1,0 +1,1 @@
+Add mahout shell script for easy launching of various algorithms

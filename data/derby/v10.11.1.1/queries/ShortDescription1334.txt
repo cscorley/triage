@@ -1,0 +1,1 @@
+Hang in derbynet/testProtocol.java due to 'access denied (java.io.FilePermission /..../derbyall/derbyall/derbynetmats/DerbyNet/derbynetmats/testProtocol/Server1.trace write)'

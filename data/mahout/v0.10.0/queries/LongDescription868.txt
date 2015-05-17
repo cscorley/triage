@@ -1,0 +1,3 @@
+The build*.sh scripts in examples/bin are a bit weird naming wise.  We should deprecate them and rename them to something more explanatory.
+
+Since we have a fair amount of stuff pointing to the old ones, however, I would suggest we keep them around for a release or two and have them simply call the new one, along with printing out a short message saying they should use the other one next time.

@@ -1,0 +1,1 @@
+Fix leader election recipe documentation

@@ -1,0 +1,1 @@
+All of the source code in the client directory needs to be included in our builds/releases ... solrj certainly needs to be included since the releases contain the compiled  byte code already, but we should include all of the source for all of hte clients (even if we don't distributed "compiled" versions).

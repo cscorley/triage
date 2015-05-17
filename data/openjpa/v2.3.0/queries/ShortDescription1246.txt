@@ -1,0 +1,1 @@
+Add configuration example for Ingres to User manual

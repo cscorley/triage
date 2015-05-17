@@ -1,0 +1,1 @@
+The recommended svn:eol-style configuation at ASF (see http://www.apache.org/dev/svn-eol-style.txt) is a good source of glob patterns for MIME types.

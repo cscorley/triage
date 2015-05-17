@@ -1,0 +1,1 @@
+For build pig with unit tests on windows need added to build path hadoop_home\bin.

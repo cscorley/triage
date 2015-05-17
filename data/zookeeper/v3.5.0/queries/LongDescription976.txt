@@ -1,0 +1,22 @@
+From bug filed on CDH: https://issues.cloudera.org/browse/DISTRO-47 - moving it to this jira to address:
+
+------------------------------------------------------
+Bug filed by "grep.alex" at http://getsatisfaction.com/cloudera/topics/cdh3b3_zookeeper_startup_script_doesnt_use_java_home
+
+On RedHat 5 (using the RPM installer) I was able to install and run all the Hadoop components. The Zookeeper install was fine, but it wouldn't start:
+
+
+[root@aholmes-desktop init.d]# ./hadoop-zookeeper start 
+JMX enabled by default 
+Using config: /etc/zookeeper/zoo.cfg 
+Starting zookeeper ... 
+STARTED 
+[root@aholmes-desktop init.d]# Exception in thread "main" java.lang.NoSuchMethodError: method java.lang.management.ManagementFactory.getPlatformMBeanServer with signature ()Ljavax.management.MBeanServer; was not found. 
+at org.apache.zookeeper.jmx.ManagedUtil.registerLog4jMBeans(ManagedUtil.java:48 
+...
+
+ 
+
+After some digging around I found the cause - the Zookeeper startup script (/usr/lib/zookeeper/bin/zkServer.sh ) uses the java found in the path, whereas the other startup scripts use JAVA_HOME. In my case I had the default RHEL5 1.4 JDK in the path, and the 1.6 JDK RPM's installed under /usr/java, hence the above error, which I'm guessing is a fairly common setup.
+
+In my opinion all the startup scripts should all use the same mechanism to determine where to pick java.

@@ -1,0 +1,12 @@
+The Derby nature sets by default -Dderby.system.home=. (set in plugins/eclipse/org.apache.derby.ui/src/org/apache/derby/ui/properties/DerbyProperties.java and checked in plugins/eclipse/org.apache.derby.ui/src/org/apache/derby/uitl/DerbyServerUtils.java)
+With the default security policy, however, such a setting for ij & NetworkServerControl results in a security error in ij.
+(See stack in thread: http://www.nabble.com/10.3.1.0b-eclipse-plugin---default-security-tf4030218.html)
+
+It's possible this is a bug in itself...
+One work around is to add the following permission to the default policy file:
+permission java.util.PropertyPermission "user.dir", "read";
+
+Another solution is to not set the derby.system.home to anything by default, and if it's not set to anything, not pass on -Dderby.system.home= to the networkserver process (specifying -Dderby.system.home= without a value fails to start networkserver).
+This would mean increasing the version of the plugins. To 1.1.1?
+
+Yet another thing would be to adjust the plugin to handle adjusting the security policy...

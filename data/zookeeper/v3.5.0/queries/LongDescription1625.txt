@@ -1,0 +1,5 @@
+zkServer.sh is currently looking for "clientPort" entry in the static configuration file and uses it to contact the server. 
+
+With ZOOKEEPER-1411 clientPort is part of the dynamic configuration, and may appear in the separate dynamic configuration file. The "clientPort" entry may no longer be in the static config file. 
+
+With the proposed patch zkServer.sh first looks in the old (static) config file, then if clientPort is not there, it figures out the id of the server by looking at myid file, and then using that id finds the client port in the dynamic config file. 

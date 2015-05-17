@@ -1,0 +1,1 @@
+docs incorrectly state max client timeout as 60 seconds (it's based on server ticktime)

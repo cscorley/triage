@@ -1,0 +1,1 @@
+Add LDA (CVB implementation) to the cluster_reuters.sh example script

@@ -1,0 +1,6 @@
+the zookeeper c tests fail on 64 bit machines with gcc 4.1.2 with the following error
+
+ [exec] /workspace/zootestbuild/trunk/src/c/tests/TestClient.cc: In static member function 'static void Zookeeper_simpleSystem::statCompletion(int, const Stat*, const void*)':
+      [exec] /workspace/zootestbuild/trunk/src/c/tests/TestClient.cc:273: error: cast from 'const void*' to 'int' loses precision
+      [exec]/workspace/zootestbuild/trunk/src/c/tests/TestClient.cc: In static member function 'static void Zookeeper_simpleSystem::voidCompletion(int, const void*)':
+      [exec] /workspace/zootestbuild/trunk/src/c/tests/TestClient.cc:291: error: cast from 'const void*' to 'int' loses precision

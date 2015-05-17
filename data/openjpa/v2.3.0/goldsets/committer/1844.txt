@@ -1,0 +1,3 @@
+Donald Woods <dwoods@apache.org>
+Michael Dick <mikedd@apache.org>
+Richard G. Curtis <curtisr7@apache.org>

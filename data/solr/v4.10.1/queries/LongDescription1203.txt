@@ -1,0 +1,1 @@
+a commented out example that points to the commented out example update chain or just as good: a comment above the current update chain example explaining how to attach it to a handler.

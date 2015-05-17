@@ -1,0 +1,1 @@
+Use maven-enforcer-plugin to verify proper Java and Maven levels

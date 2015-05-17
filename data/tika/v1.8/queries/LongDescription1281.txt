@@ -1,0 +1,4 @@
+The following MediaType is not yet supported by Tika (not as a Media Type or an Alias): application/x-xml
+
+
+I am no Media-Type expert, but if someone here at Tika is, then I suggest looking into it and if he sees fit then add it to the Tika Registry.

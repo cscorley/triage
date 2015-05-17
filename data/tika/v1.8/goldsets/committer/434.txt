@@ -1,0 +1,2 @@
+Jukka Zitting <jukka@apache.org>
+Maxim Valyanskiy <maxcom@apache.org>

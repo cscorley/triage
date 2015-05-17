@@ -1,0 +1,32 @@
+Seen when building taste-web in the 0.1 release candidate and in the current Mahout trunk:
+
+
+Downloading:
+http://repo1.maven.org/maven2/org/mortbay/jetty/maven-jetty-plugin/7.0.0.pre5/maven-jetty-plugin-7.0.0.pre5.jar
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] A required plugin was not found: Plugin could not be found - check that the goal name is correct:
+Unable to download the artifact from any repository
+
+
+
+The Jetty plugin has been relocated from maven-jetty-plugin to jetty-maven-plugin.
+
+The following change solves the issue:
+
+
+Index: taste-web/pom.xml
+===================================================================
+--- taste-web/pom.xml	(Revision 760032)
++++ taste-web/pom.xml	(Arbeitskopie)
+@@ -82,7 +82,7 @@
+ 
+       <plugin>
+         <groupId>org.mortbay.jetty</groupId>
+-        <artifactId>maven-jetty-plugin</artifactId>
++        <artifactId>jetty-maven-plugin</artifactId>
+         <configuration>
+           <webApp>${project.build.directory}/${project.artifactId}-${project.version}.war</webApp>
+         </configuration>
+

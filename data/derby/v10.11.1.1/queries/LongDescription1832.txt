@@ -1,0 +1,79 @@
+Seen on Linux and Solaris, with Sun JVM 1.4, 1.5, 1.6 when derbyclient.jar is first in classpath:
+
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbyall/derbynetmats/DerbyNet/derbynetmats/sysinfo.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: sysinfo jdk1.4.2_02 DerbyNet derbynetmats:derbynetmats 2006-09-05 08:44:54 ***
+14a15
+> Unable to analyze class path: access denied (java.util.PropertyPermission java.class.path read)
+17,26d17
+< Current Locale :  [English/United States [en_US]]
+< Found support for locale: [de_DE]
+< Found support for locale: [es]
+< Found support for locale: [fr]
+< Found support for locale: [it]
+< Found support for locale: [ja_JP]
+< Found support for locale: [ko_KR]
+< Found support for locale: [pt_BR]
+< Found support for locale: [zh_CN]
+< Found support for locale: [zh_TW]
+41a33
+> Unable to analyze class path: access denied (java.util.PropertyPermission java.class.path read)
+44,53d35
+< Current Locale :  [English/United States [en_US]]
+< Found support for locale: [de_DE]
+< Found support for locale: [es]
+< Found support for locale: [fr]
+< Found support for locale: [it]
+< Found support for locale: [ja_JP]
+< Found support for locale: [ko_KR]
+< Found support for locale: [pt_BR]
+< Found support for locale: [zh_CN]
+< Found support for locale: [zh_TW]
+69a52
+> Unable to analyze class path: access denied (java.util.PropertyPermission java.class.path read)
+72,81d54
+< Current Locale :  [English/United States [en_US]]
+< Found support for locale: [de_DE]
+< Found support for locale: [es]
+< Found support for locale: [fr]
+< Found support for locale: [it]
+< Found support for locale: [ja_JP]
+< Found support for locale: [ko_KR]
+< Found support for locale: [pt_BR]
+< Found support for locale: [zh_CN]
+< Found support for locale: [zh_TW]
+Test Failed.
+			End:   sysinfo jdk1.4.2_02 DerbyNet derbynetmats:derbynetmats 2006-09-05 08:44:59 ***
+		
+		
+	
+	
+

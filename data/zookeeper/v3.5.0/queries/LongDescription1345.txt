@@ -1,0 +1,20 @@
+I tried looking for an .gitignore file in the ZK sources but I could not find one.
+
+Preferably, we could add one with the following:
+
+
+
+#	.classpath
+#	.eclipse/
+#	.project
+#	.revision/
+#	.settings/
+#	build/
+#	src/c/generated/
+#	src/java/generated/
+#	src/java/lib/ant-eclipse-1.0-jvm1.2.jar
+#	src/java/lib/ivy-2.2.0.jar
+
+
+
+To avoid losing much when doing "git clean -fd" and the likes while cleaning up the working repo dirs during development. This will aid those who use git mirrors for contributions a lot.

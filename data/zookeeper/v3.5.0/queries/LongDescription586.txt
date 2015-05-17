@@ -1,0 +1,1 @@
+the c client fails to compile under cygwin

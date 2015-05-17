@@ -1,0 +1,5 @@
+This problem started out with a discussion on the dev mailing list...
+
+http://n2.nabble.com/JIRA-references-in-documentation-td4058419.html#a4059679
+
+From this discussion, it sounds like our current documentation approach is close, but needs a couple of improvements.  This JIRA can be used to do these doc changes.

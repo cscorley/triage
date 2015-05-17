@@ -1,0 +1,1 @@
+There are several entries are missing in Pig pom file. This create problem for downstream projects. For example: automaton.jar.

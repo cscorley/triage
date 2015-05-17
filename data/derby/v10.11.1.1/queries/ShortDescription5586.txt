@@ -1,0 +1,1 @@
+Remove the fo2html.xsl script from the docs repository and fix the docs and release builds so that they don't build monohtml versions of the Derby manuals.

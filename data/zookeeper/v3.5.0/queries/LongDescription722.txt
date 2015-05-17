@@ -1,0 +1,10 @@
+zkServer.sh output the PID of the zookeeper process with:
+echo -n $! > "$ZOOPIDFILE"
+
+This uses -n which sh's builtin echo does not support. From echo's manpage.
+<snip>
+     Some shells may provide a builtin echo command which is similar or identical to this utility.  Most notably, the builtin echo in sh(1) does not accept
+     the -n option.  Consult the builtin(1) manual page.
+</snip>
+
+This means that echo -n PID > ZOOPIDFILE will mean the contents of ZOOPIDFILE will be "-n PID". This stops zkServer.sh stop from working correctly.

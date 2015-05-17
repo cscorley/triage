@@ -1,0 +1,13 @@
+hashtable_remove appears to call the hash function in consecutive lines. As hash functions are generally cpu intensive, using the hashvalue returned from the first call will result in a performance improvement.
+
+
+void * /* returns value associated with key */
+hashtable_remove(struct hashtable *h, void *k)
+...
+    unsigned int hashvalue, index;
+
+    hashvalue = hash(h,k);
+    index = indexFor(h->tablelength,hash(h,k));
+    pE = &(h->table[index]);
+    e = *pE;
+

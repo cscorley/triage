@@ -1,0 +1,1 @@
+jsch dependency is removed in PIG-3522. We shall remove the license file.

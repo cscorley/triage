@@ -1,0 +1,154 @@
+From the dev mailing list. (http://www.nabble.com/order-of-build-modules-isn%27t-quite-right-tf4416976.html).
+
+In short, we are building the aggregate jar before we have built the 1.5 modules.  Details follow...  BTW, this only seems to apply to the trunk (1.1.0 snapshot).  
+
+============================================================
+
+> Yes, that sounds about right.  This just recently started to happen...
+
+Maybe if we create two profiles, one for 1.4 only and one for 5.0, and
+just enable the appropriate one of them? This would increase
+repetition (we could address that with XML entities, of course), but
+might get things to run right.
+
+	Hide quoted text -
+
+
+
+-Patrick
+
+On 9/10/07, Kevin Sutter <kwsutter@gmail.com> wrote:
+> On 9/10/07, Patrick Linskey <plinskey@gmail.com> wrote:
+> >
+> > > So, I'm not sure what has to change in our pom.xml files to allow one to
+> > > build, package, and install our aggregrate jar on the first try.  Any
+> > maven
+> > > experts that can help with this?
+> >
+> > Sadly, Marc probably knows the most, and he's on top of Mt Kilimanjaro
+> > or thereabouts right now.
+>
+>
+> Yep, and my resident build expert (Mike) is on vacation this week as well..
+> 
+>
+> Might this have started happening with the recent move from how the
+> > dependencies are set up, for the purposes of keeping our mvn
+> > dependencies clean?
+>
+>
+> Yes, that sounds about right.  This just recently started to happen...
+>
+> Kevin
+>
+> -Patrick
+> >
+> > On 9/10/07, Kevin Sutter <kwsutter@gmail.com> wrote:
+> > > Hi,
+> > > I'm the first to admit that I'm not a maven build expert, so I'm not
+> > exactly
+> > > sure what needs to be changed.  But, here's the problem...
+> > >
+> > > If I only want to build the artifacts and install them into my maven
+> > > repository, I issue the following maven command.  (BTW, this only
+> > happens on
+> > > a truly clean environment.  Either just pull the contents from svn or do
+> > a
+> > > separate "mvn clean" first like I demonstrate below.)
+> > >
+> > > > mvn clean
+> > > > mvn install
+> > >
+> > > But, when I do this, I get the following build report.  Although
+> > everything
+> > > builds okay, look at the order of the modules getting built.  We are
+> > > building the aggregrate jar and distribution jars before we build kernel
+> > 1.5,
+> > > jpa, and jpa jdbc.  Thus, the aggregrate jar that we build does not have
+> > all
+> > > of the required contents (because I have a clean environment to start
+> > with).
+> > >
+> > > [INFO]
+> > > ------------------------------------------------------------------------
+> > > [INFO] Reactor Summary:
+> > > [INFO]
+> > > ------------------------------------------------------------------------
+> > > [INFO] OpenJPA ............................................... SUCCESS [
+> > > 1.328s]
+> > > [INFO] OpenJPA Utilities ..................................... SUCCESS [
+> > > 12.265s]
+> > >
+> > > [INFO] OpenJPA Kernel ........................................ SUCCESS [
+> > > 17.703s]
+> > >
+> > > [INFO] OpenJPA JDBC .......................................... SUCCESS [
+> > > 10.063s]
+> > >
+> > > [INFO] OpenJPA XML Store ..................................... SUCCESS [
+> > > 0.969s]
+> > > [INFO] OpenJPA Aggregate Jar ................................. SUCCESS [
+> > > 17.218s]
+> > >
+> > > [INFO] OpenJPA Distribution .................................. SUCCESS [
+> > > 19.860s]
+> > >
+> > > [INFO] OpenJPA Integration Tests ............................. SUCCESS [
+> > > 0.015s]
+> > > [INFO] OpenJPA Examples Integration Tests .................... SUCCESS [
+> > > 0.016s]
+> > > [INFO] OpenJPA JPA TCK Integration Tests ..................... SUCCESS [
+> > > 0.016s]
+> > > [INFO] OpenJPA Kernel 1.5 .................................... SUCCESS [
+> > > 0.718s]
+> > > [INFO] OpenJPA JPA ........................................... SUCCESS [
+> > > 4.719s]
+> > > [INFO] OpenJPA JDBC 1.5 ...................................... SUCCESS [
+> > > 0.625s]
+> > > [INFO] OpenJPA JPA JDBC ...................................... SUCCESS [
+> > > 17.437s]
+> > >
+> > > [INFO] OpenJPA Persistence Examples .......................... SUCCESS [
+> > > 0.547s]
+> > > [INFO]
+> > > ------------------------------------------------------------------------
+> > > [INFO]
+> > > ------------------------------------------------------------------------
+> > >
+> > > I looked at our pom.xml at our root level of trunk and I see the
+> > following
+> > > <module> listing, which maps to the order of the build above:
+> > >
+> > >     <modules>
+> > >         <module>openjpa-lib</module>
+> > >         <module>openjpa-kernel</module>
+> > >         <module>openjpa-jdbc</module>
+> > >         <module>openjpa-xmlstore</module>
+> > >         <module>openjpa-all</module>
+> > >         <module>openjpa-project</module>
+> > >         <module>openjpa-integration</module>
+> > >     </modules>
+> > >
+> > > The rest of our modules are listed under the jdk1.5 profile and don't
+> > get
+> > > built until after these 1.4 modules are built.  If I re-run the exact
+> > same
+> > > invocation (without starting from scratch with the "mvn clean"), then
+> > > everything works since the 1.5 modules are all built and pulled into the
+> > > aggregrate jar.
+> > >
+> > > So, I'm not sure what has to change in our pom.xml files to allow one to
+> > > build, package, and install our aggregrate jar on the first try.  Any
+> > maven
+> > > experts that can help with this?
+> > >
+> > > Thanks,
+> > > Kevin
+> > >
+> >
+> >
+> > –
+> > Patrick Linskey
+> > 202 669 5907
+> >
+>

@@ -1,0 +1,1 @@
+we should have a state transition diagram to help users understand client state transitions. perhaps the edges could indicate what might cause such a  transition? (not sure if that will work). keep in mind for the states that the java/c clients have diff names for constants (not sure how to handle). This should be added to the programmer guide in the appropriate section.

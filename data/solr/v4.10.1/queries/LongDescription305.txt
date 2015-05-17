@@ -1,0 +1,1 @@
+quick little patch to analysis.jsp so people can choose between specifying a field name or a fieldtype name ... may save time when you want to try out a bunch of different analyzer options because you only have to create the field types - not fields that use them.

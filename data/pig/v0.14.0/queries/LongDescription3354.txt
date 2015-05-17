@@ -1,0 +1,9 @@
+This bug is causing people to contribute built-in UDFs that don't properly handle null. 
+
+In the file: src/docs/src/documentation/content/xdocs/udf.xml
+
+9        if (input == null || input.size() == 0)
+
+should be
+
+9        if (input == null || input.size() == 0 || input.get(0) == null)

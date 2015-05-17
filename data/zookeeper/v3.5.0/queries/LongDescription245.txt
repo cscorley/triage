@@ -1,0 +1,4 @@
+Owen O'Malley mentioned:
+---------
+we need to change both the README and quick start to assume you are working with a release instead of a source tarball. Apache releases are the approved way of getting the project. Documentation that assumes they are getting source themselves doesn't reflect that. 
+---------

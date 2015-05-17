@@ -1,0 +1,1 @@
+Nested Foreach with UDF and bincond is broken

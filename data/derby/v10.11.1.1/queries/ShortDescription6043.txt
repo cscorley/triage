@@ -1,0 +1,1 @@
+Make JQL default query mode for 'ant genrelnotes'

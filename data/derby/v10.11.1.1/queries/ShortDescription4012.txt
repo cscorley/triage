@@ -1,0 +1,1 @@
+'largedata/LobLimits.java' fails with "EXPECTED SQL Exception: (XJ001) Java exception: 'A truncation error was encountered trying to shrink CLOB 'XXXX' to length 104857600.: org.apache.derby.iapi.services.io.DerbyIOException'."

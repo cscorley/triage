@@ -1,0 +1,1 @@
+Resolve jdbc4 test failures with wctme5.7_foundation

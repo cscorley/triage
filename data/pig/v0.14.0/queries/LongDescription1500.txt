@@ -1,0 +1,4 @@
+guava jar is available in the maven repository but still its is checked into the pig trunk's lib folder.
+
+I ve checked the availability of guava jar in the maven repository.
+http://mvnrepository.com/artifact/com.google.guava/guava

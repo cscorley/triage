@@ -1,0 +1,1 @@
+bin and autocomplete are missing in src release

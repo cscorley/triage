@@ -1,0 +1,1 @@
+Jetty version should be updated in .eclipse.templates/.classpath, pig-template.xml and pig.pom as well

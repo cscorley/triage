@@ -1,0 +1,1 @@
+forrest build not validated xml of input documents

@@ -1,0 +1,22 @@
+Please remove the references to cloudscape.LOG and cloudcape.LOG from the message files. Following are the list of files I got after doing a search
+
+tools\org\apache\derby\loc\toolsmessages_de_DE.properties(172): IJ_01SeeClouLog=
+{0} : {1} (siehe cloudscape.LOG)
+tools\org\apache\derby\loc\toolsmessages_es.properties(175): IJ_01SeeClouLog={0}
+ : 
+{1} (consulte cloudcape.LOG)
+tools\org\apache\derby\loc\toolsmessages_fr.properties(172): IJ_01SeeClouLog={0} : {1}
+ (voir cloudcape.LOG)
+tools\org\apache\derby\loc\toolsmessages_it.properties(172): IJ_01SeeClouLog=
+{0} : {1} (consultare cloudcape.LOG)
+tools\org\apache\derby\loc\toolsmessages_ja_JP.properties(172): IJ_01SeeClouLog={0}
+ : 
+{1} (cloudcape.LOG \u3092\u53c2\u7167)
+tools\org\apache\derby\loc\toolsmessages_ko_KR.properties(172): IJ_01SeeClouLog={0} : {1}
+ (cloudcape.LOG \ucc38\uc870)
+tools\org\apache\derby\loc\toolsmessages_zh_CN.properties(172): IJ_01SeeClouLog=
+{0} : {1}\uff08\u8bf7\u53c2\u9605 cloudcape.LOG\uff09
+tools\org\apache\derby\loc\toolsmessages_zh_TW.properties(172): IJ_01SeeClouLog={0}
+\uff1a
+{1}
+\uff08\u8acb\u53c3\u95b1 cloudcape.LOG\uff09

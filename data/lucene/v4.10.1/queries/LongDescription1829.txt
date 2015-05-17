@@ -1,0 +1,2 @@
+'ant javacc' in the project root doesn't run javacc in contrib/queryparser
+'ant javacc' in contrib/queryparser does not properly create the Java files. What still needs to be done by hand is (partly!) described in contrib/queryparser/README.javacc. I think this process should be automated. Patch provided.

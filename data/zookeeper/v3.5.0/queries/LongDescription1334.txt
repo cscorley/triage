@@ -1,0 +1,57 @@
+In Zookeeper 3.3.x you use log4j for logging, and the maven dep is
+
+eg from 3.3.4
+
+
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.15</version>
+      <scope>compile</scope>
+    </dependency>
+
+
+
+Now in 3.4.0 or better you changed to use slf4j also/instead. The maven pom.xml now includes:
+
+
+  <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.6.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.6.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.15</version>
+      <scope>compile</scope>
+    </dependency>
+
+
+
+But the META-INF/MANIFEST.MF file in the distribution did not change to reflect this.
+
+The 3.3.4 MANIFEST.MF, import packages
+
+
+Import-Package: javax.management,org.apache.log4j,org.osgi.framework;v
+ ersion="[1.4,2.0)",org.osgi.util.tracker;version="[1.1,2.0)"
+
+
+
+And the 3.4.1 MANIFEST.MF, import packages:
+
+
+Import-Package: javax.management,org.apache.log4j,org.osgi.framework;v
+ ersion="[1.4,2.0)",org.osgi.util.tracker;version="[1.1,2.0)"
+
+
+
+This makes using zookeeper 3.4.x in OSGi environments not possible, as we get NoClassDefFoundException for slf4j classes.

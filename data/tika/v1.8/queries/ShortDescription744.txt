@@ -1,0 +1,1 @@
+Drop support for Java 1.4

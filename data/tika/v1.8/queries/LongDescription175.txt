@@ -1,0 +1,3 @@
+I'd like to use Tika in Apache Jackrabbit, but currently we can't do so because Jackrabbit specifies Java 1.4 as the base platform and using Tika would force an upgrade to Java 5. Jackrabbit like many other projects will eventually upgrade to Java 5, but it would be very nice to be able to use Tika already before that.
+
+We could achieve this by using the Retrotranslator plugin (http://mojo.codehaus.org/retrotranslator-maven-plugin/)  to automatically generate a Java 1.4 -compatible version of the Tika jar. This version could then be used by projects like Apache Jackrabbit.

@@ -1,0 +1,3 @@
+Per the conversation on the dev mailing list:  http://www.nabble.com/error-message-for-native-sql-parameters-tf4641774.html
+
+Updating message to indicate that only positional parameters are valid for native queries.

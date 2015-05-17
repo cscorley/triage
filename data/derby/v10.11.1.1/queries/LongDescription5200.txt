@@ -1,0 +1,1 @@
+if tools/java/junit.jar doesn't exist, automatically install it from the central maven repository (location overrideable in local.properties) when running junit.

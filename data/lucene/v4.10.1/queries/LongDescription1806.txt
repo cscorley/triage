@@ -1,0 +1,1 @@
+Add passing args to JUnit.  (Like Solr and mainly for debugging).  

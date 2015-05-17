@@ -1,0 +1,1 @@
+Documentation of "history" and "clear" commands 

@@ -1,0 +1,1 @@
+zkServer.sh should support an external PIDFILE variable

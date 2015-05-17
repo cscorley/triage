@@ -1,0 +1,1 @@
+conf/log4j.properties is never used unless you specify -4 conf/conf/log4j.properties in the command line. This file serves as a template, name it log4j.properties is confusing. Also we should bundle it in the release.

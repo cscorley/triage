@@ -1,0 +1,16 @@
+After determining all of the addresses in the get_addrs function in the C client, the connection is permuted using the following code:
+
+        setup_random();
+        /* Permute */
+        for(i = 0; i < zh->addrs_count; i++) {
+            struct sockaddr_storage *s1 = zh->addrs + random()%zh->addrs_count;
+            struct sockaddr_storage *s2 = zh->addrs + random()%zh->addrs_count;
+            if (s1 != s2) 
+{
+                struct sockaddr_storage t = *s1;
+                *s1 = *s2;
+                *s2 = t;
+            }
+        }
+
+Not only does this shuffle produce an uneven permutation, but it is half as efficient as the Fisher-Yates shuffle which produces an unbiased one. It seems like it would be a simple fix to increase the randomness and efficiency of the shuffle by switching over to using Fisher-Yates.

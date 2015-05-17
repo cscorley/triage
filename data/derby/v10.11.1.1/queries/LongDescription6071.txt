@@ -1,0 +1,10 @@
+With trunk svn updated to revision 1445458, the javadoc build on windows fails with an error like:
+
+[path_to_trunk]\build.xml:1388: Javadoc failed: java.io.IOException:
+Cannot run program "[path_to_ibm16jvm]\bin\javadoc.exe": CreateProcess
+error=206, The filename or extension is too long.
+
+This is in the testingdocs target.
+It appears a new test causes the javadoc name to be too long for windows javadoc.
+The solution is to add a property, 'useexternalfiles=yes'.
+Other javadoc targets, e.g. derbydocs and demodocs, already have this property.

@@ -1,0 +1,5 @@
+Currently when setting an acl, there is a minimal parse to ensure that its a list of dicts, however if one of the dicts is missing a required key, the subsequent usage doesn't check for it, and will segfault.. for example using an acl of [
+{"schema":id, "id":world, permissions:PERM_ALL}
+] will segfault if used, because the scheme key is missing (its been purposefully typo'd to schema in example). 
+
+I've expanded the check_acl macro to include verifying that all keys are present and added some unit tests against trunk in the attachments.

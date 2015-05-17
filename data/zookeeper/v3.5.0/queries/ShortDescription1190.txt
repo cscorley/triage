@@ -1,0 +1,1 @@
+ant package is not including many of the bin scripts in the package (zkServer.sh for example)

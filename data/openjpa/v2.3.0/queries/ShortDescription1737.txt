@@ -1,0 +1,1 @@
+The openjpa-2.0.0.jar does not have its MANIFEST.MF has the first entry

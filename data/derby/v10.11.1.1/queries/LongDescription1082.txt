@@ -1,0 +1,3 @@
+References to the environment variable JAVA_HOME are not quoted in the Start and Stop scripts for Network Server in the frameworks\bin directory (both the .bat and the .ksh versions).  This causes the script to fail when there is a space in the file path listed.  
+
+It looks like the environment variable DERBY_INSTALL is properly quoted to prevent this.

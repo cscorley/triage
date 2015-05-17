@@ -1,0 +1,1 @@
+Document SUM, MIN, MAX, and AVG functions for BigInteger and BigDecimal

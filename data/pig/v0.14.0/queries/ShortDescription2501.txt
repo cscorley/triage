@@ -1,0 +1,1 @@
+Changes needed to contrib/piggybank/java/build.xml in order to build piggybank.jar with Hadoop 0.23

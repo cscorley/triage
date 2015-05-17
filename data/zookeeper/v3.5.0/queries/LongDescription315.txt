@@ -1,0 +1,7 @@
+we should have forrest docs  for bookkeeper for 
+
+	how to install bookkeeper
+	usage model
+	programming examples for users
+	FAQ
+

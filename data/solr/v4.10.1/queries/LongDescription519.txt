@@ -1,0 +1,1 @@
+The new AJAX based schema browser includes the jquery library with absolute path. When Solr is not deployed as solr.war the browser does work.

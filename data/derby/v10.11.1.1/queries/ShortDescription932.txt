@@ -1,0 +1,1 @@
+Fix the way JDK 1.6 specific files are built

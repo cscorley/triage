@@ -1,0 +1,1 @@
+Typos in user manual and log messages

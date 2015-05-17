@@ -1,0 +1,1 @@
+e2e build.xml still refers to jython 2.5.0 jar even though it's replaced by jython standalone 2.5.2 jar

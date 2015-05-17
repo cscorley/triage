@@ -1,0 +1,1 @@
+emma-single and emma-all don't use the instrumented jars

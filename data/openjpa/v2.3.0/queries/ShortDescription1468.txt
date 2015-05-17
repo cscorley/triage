@@ -1,0 +1,1 @@
+Upgrade build to use final Bean Validation spec API from Geronimo

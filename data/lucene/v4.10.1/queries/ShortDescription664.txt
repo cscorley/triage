@@ -1,0 +1,1 @@
+[PATCH] small fixes to the new scoring.html doc

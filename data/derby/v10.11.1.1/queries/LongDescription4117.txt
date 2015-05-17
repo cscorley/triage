@@ -1,0 +1,23 @@
+This problem was discovered when testing 10.5.1.0-RC1. The dblook shell script fails if the database URL contains characters that have a special meaning to the shell, even if those characters are properly escaped/quoted on the command line. Example:
+
+$ ./bin/dblook -d 'jdbc:derby:jar:(demo/databases/toursdb.jar)toursdb'
+./bin/dblook[29]: eval: syntax error at line 1: `(' unexpected
+
+Connection attributes, like create=true, will be ignored because the semi-colon makes the script execute the setting of the connection attribute as a separate shell command:
+
+$ ./bin/dblook -d 'jdbc:derby:NewDatabase;create=true'                
+– Timestamp: 2009-03-25 09:54:56.169
+– Source database is: NewDatabase
+– Connection URL is: jdbc:derby:NewDatabase
+– appendLogs: false
+
+– Note: At least one unexpected error/warning message was
+– encountered during DDL generation.  See dblook.log
+– to review the message(s).
+
+In dblook.log:
+
+java.sql.SQLException: Database 'NewDatabase' not found.
+        at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+        at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+...

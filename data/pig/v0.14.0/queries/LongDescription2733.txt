@@ -1,0 +1,1 @@
+These values clutter up my git status, and you shouldn't be checking any of them in.

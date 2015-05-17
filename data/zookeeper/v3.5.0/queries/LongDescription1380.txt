@@ -1,0 +1,2 @@
+The doubly linked list of watches is not updated properly if a watch is taken out from the middle of the chain.
+The item after the item which is taken out will receive null pointer for the previous element! This will make the doubly linked list inconsistent and can lead to segfault or infinite loop when the doubly linked list is iterated later.

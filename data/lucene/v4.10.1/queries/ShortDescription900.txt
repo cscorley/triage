@@ -1,0 +1,1 @@
+Enable Java asserts in the Junit tests

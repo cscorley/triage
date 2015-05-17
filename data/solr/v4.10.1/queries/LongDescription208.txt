@@ -1,0 +1,1 @@
+A quick .xsl file for transforming solr queries into RSS feeds. To get the date and time in properly you'll need an XSL 2.0 processor, as in http://wiki.apache.org/solr/XsltResponseWriter .  Tested to work with the example solr distribution in the nightly.

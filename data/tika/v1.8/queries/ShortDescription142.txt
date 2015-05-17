@@ -1,0 +1,1 @@
+Include application/xhtml+xml as valid mime type for XMLParser

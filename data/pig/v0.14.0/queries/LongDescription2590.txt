@@ -1,0 +1,4 @@
+
+	If "ant tar" is run, followed by "ant rpm" then the tar.gz that was generated gets overwritten by an intermediate tar.gz used by the rpm install
+	Running both of them results in  duplicate files in the 2nd one, because both use the same staging directory before packaging.
+

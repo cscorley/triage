@@ -1,0 +1,1 @@
+Missing ASM depending jar in binary zip

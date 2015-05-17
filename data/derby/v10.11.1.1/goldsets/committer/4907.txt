@@ -1,0 +1,2 @@
+Richard N. Hillegas <rhillegas@apache.org>
+Tiago Aurélio Rodrigues Espinha <tiago@apache.org>

@@ -1,0 +1,43 @@
+If derbytesting.jar is in a different directory from the other derby jars, I see the following errors.  SystemPrivilegesPermissionTest seems to have a problem setting the policy and then errors cascade from there.
+
+.........................................
+.....................E...............EEEEEEEEEEEEEEEEEEEEEEEEEEEE
+Time: 3,539.125
+There were 29 errors:
+1) SystemPrivilegesPermissionTestjava.security.AccessControlException: Access denied (java.lang.RuntimePermission setSecurityManager)
+   at java.security.AccessController.checkPermission(AccessController.java:104)
+   at java.lang.SecurityManager.checkPermission(SecurityManager.java:547)
+   at java.lang.System.setSecurityManager(System.java:538)
+   at org.apache.derbyTesting.junit.SecurityManagerSetup$3.run(SecurityManagerSetup.java:381)
+   at java.security.AccessController.doPrivileged(AccessController.java:193)
+   at org.apache.derbyTesting.junit.SecurityManagerSetup.uninstallSecurityManager(SecurityManagerSetup.java:376)
+   at org.apache.derbyTesting.junit.SecurityManagerSetup.tearDown(SecurityManagerSetup.java:114)
+   at junit.extensions.TestSetup$1.protect(TestSetup.java:20)
+   at junit.extensions.TestSetup.run(TestSetup.java:23)
+2) Upgrade Tests from 10.0.2.1java.security.AccessControlException: Access denied (java.util.PropertyPermission java.security.policy read)
+   at java.security.AccessController.checkPermission(AccessController.java:104)
+   at java.lang.SecurityManager.checkPermission(SecurityManager.java:547)
+   at java.lang.SecurityManager.checkPropertyAccess(SecurityManager.java:1300)
+   at java.lang.System.getProperty(System.java:369)
+   at java.lang.System.getProperty(System.java:353)
+   at org.apache.derbyTesting.junit.BaseTestCase$4.run(BaseTestCase.java:258)
+   at java.security.AccessController.doPrivileged(AccessController.java:193)
+   at org.apache.derbyTesting.junit.BaseTestCase.getSystemProperty(BaseTestCase.java:254)
+   at org.apache.derbyTesting.junit.SecurityManagerSetup.installSecurityManager(SecurityManagerSetup.java:153)
+   at org.apache.derbyTesting.junit.SecurityManagerSetup.setUp(SecurityManagerSetup.java:105)
+   at junit.extensions.TestSetup$1.protect(TestSetup.java:18)
+   at junit.extensions.TestSetup.run(TestSetup.java:23)
+3) Upgrade Tests from 10.1.1.0java.security.AccessControlException: Access denied (java.util.PropertyPermission java.security.policy read)
+   at java.security.AccessController.checkPermission(AccessController.java:104)
+   at java.lang.SecurityManager.checkPermission(SecurityManager.java:547)
+   at java.lang.SecurityManager.checkPropertyAccess(SecurityManager.java:1300)
+   at java.lang.System.getProperty(System.java:369)
+   at java.lang.System.getProperty(System.java:353)
+   at org.apache.derbyTesting.junit.BaseTestCase$4.run(BaseTestCase.java:258)
+   at java.security.AccessController.doPrivileged(AccessController.java:193)
+   at org.apache.derbyTesting.junit.BaseTestCase.getSystemProperty(BaseTestCase.java:254)
+   at org.apache.derbyTesting.junit.SecurityManagerSetup.installSecurityManager(SecurityManagerSetup.java:153)
+   at org.apache.derbyTesting.junit.SecurityManagerSetup.setUp(SecurityManagerSetup.java:105)
+   at junit.extensions.TestSetup$1.protect(TestSetup.java:18)
+   at junit.extensions.TestSetup.run(TestSetup.java:23)
+...

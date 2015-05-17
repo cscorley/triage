@@ -1,0 +1,5 @@
+GroupLensDataModel.java tries to read from "src/example/org/apache/mahout/cf/taste/example/grouplens/ratings.dat" whereas the file is included in taste-build.xml from "$
+{grouplens-location}
+/ratings.dat".
+
+The location is hard-coded in GroupLensDataModel.java and would need to be changed to conform to the current code organization.  A better solution would be not to hard-code the path.

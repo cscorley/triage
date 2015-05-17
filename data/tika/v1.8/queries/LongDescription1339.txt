@@ -1,0 +1,1 @@
+Upgrade rome dependency in tika-parsers to 1.0 from current 0.9 dependency. 

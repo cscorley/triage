@@ -1,0 +1,1 @@
+Tez 0.5.1 is released. Pig should use 0.5.1 which fixed the tez unit test hanging issue.

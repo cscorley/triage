@@ -1,0 +1,1 @@
+Increase default BLOB/CLOB length to maximum supported (2G?)

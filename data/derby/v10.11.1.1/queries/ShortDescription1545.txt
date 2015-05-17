@@ -1,0 +1,1 @@
+derbynet/testProtocol.java fails with security manager enabled

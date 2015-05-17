@@ -1,0 +1,33 @@
+More important zookeeper warnings are drown out by the following several times per minute:
+
+2010-01-12 17:39:57,227:22317(0x4147eb90):ZOO_WARN@zookeeper_interest@1335: Exceeded deadline by 13ms
+
+Perhaps this is an issue with the way virtualized systems manage gettimeofday results?
+
+Maybe the current 10ms threshold could be pushed up a bit.  I notice that 95% of the messages are below 50ms.
+
+Is there an obvious configuration change that I can make to fix this?
+
+config file below:
+
+
+	The number of milliseconds of each tick
+tickTime=2000
+	The number of ticks that the initial
+	synchronization phase can take
+initLimit=10
+	The number of ticks that can pass between
+	sending a request and getting an acknowledgement
+syncLimit=5
+	the directory where the snapshot is stored.
+dataDir=/mnt/zookeeper
+	the port at which the clients will connect
+clientPort=2181
+
+
+
+server.1=hbase.1:2888:3888
+server.2=hbase.2:2888:3888
+server.3=hbase.3:2888:3888
+server.4=hbase.4:2888:3888
+server.5=hbase.5:2888:3888

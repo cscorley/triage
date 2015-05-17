@@ -1,0 +1,1 @@
+we need to test the c tests as part of our hudson patch testing process.

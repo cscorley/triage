@@ -1,0 +1,1 @@
+zookeeper_init accepts empty host-port string and returns valid pointer to zhandle_t.

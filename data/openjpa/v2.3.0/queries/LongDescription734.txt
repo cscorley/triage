@@ -1,0 +1,5 @@
+Per conversation on the users mailing list [1] it would be nice to make the connection pool used for unit tests configurable. Some environments are not well suited to handle the current list of defaults. 
+
+[1] http://openjpa.markmail.org/message/uctj54wt733wxtp4?q=milosz 
+or 
+http://n2.nabble.com/Test-suite-slow-on-DB2-td1115993.html

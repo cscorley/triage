@@ -1,0 +1,1 @@
+classify-20newsgroups.sh fails during the seqdirectory step

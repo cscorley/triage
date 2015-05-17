@@ -1,0 +1,1 @@
+During the 4.0.0 I manually put these in the binary tarballs. This is awkward though. It's easier just to have them in the source tree.

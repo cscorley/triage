@@ -1,0 +1,3 @@
+Daniel John Debrunner <djd@apache.org>
+Katherine Marsden <kmarsden@apache.org>
+Samuel Andrew McIntyre <fuzzylogic@apache.org>

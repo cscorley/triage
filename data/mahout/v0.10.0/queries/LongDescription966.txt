@@ -1,0 +1,7 @@
+ After running the post processor the number of points that each cluster contains is not matching the number of points each cluster should contain as stated by clusterdumper.
+
+MSV-287
+{ n=90 c=[0.05195, 0.05675, 0.07151, 0.05713, 0.06946,...}
+MSV-145
+{ n=90 c=[0.93685, 0.93071, 0.93641, 0.94629, 0.94409,..}
+the n mentioned in clusters-n-final against each cluster is different from the number of points actually contained in d directory for each cluster. Any idea why is this happening ...?  

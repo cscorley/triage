@@ -1,0 +1,4 @@
+The Apache Derby Core and Apache Derby UI plug-ins do not contain the appropriate Apache Software Foundation license files in their zip distributions, derby_core_plugin_10.1.3.zip, derby_ui_plugin_1.1.0.zip.
+
+I'm not sure exactly which files are required, LICENSE, COPYRIGHT and NOTICE, but the zip files
+should contain some or all of these files.

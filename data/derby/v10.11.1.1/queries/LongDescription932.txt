@@ -1,0 +1,1 @@
+Currently these files are built using the exec ant task.  This results in odd behavior, such as the fact as the build doesn't end if there's a build failure with one of these targets.  Also, in NetBeans the compile errors are not "clickable".  Fix this to use javac where you specify the compiler executable path.

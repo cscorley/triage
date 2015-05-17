@@ -1,0 +1,1 @@
+Zookeeper c client build should not depend on CPPUNIT

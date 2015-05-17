@@ -1,0 +1,3 @@
+mvn-jar currently creates pig-version.jar and pig-version-h2.jar
+I'm adding pig-version-withouthadoop.jar and pig-version-withouthadoop-h2.jar that are needed to run pig from the command line.
+This will allow a dual-version package.

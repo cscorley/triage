@@ -1,0 +1,1 @@
+Improve documentation in the code, so RDoc is more informative.  Start with the options Hash for queries.

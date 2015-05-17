@@ -1,0 +1,1 @@
+The test should be fixed so that it runs only if ipv6 is enabled and does not run if ipv6 is not enabled.

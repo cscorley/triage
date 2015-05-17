@@ -1,0 +1,1 @@
+create table fails when a constraint defintion follows a column default

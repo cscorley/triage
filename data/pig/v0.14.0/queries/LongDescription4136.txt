@@ -1,0 +1,1 @@
+Since jython.jar and jruby.jar will be in classpath, no need to add again in e2e tests.

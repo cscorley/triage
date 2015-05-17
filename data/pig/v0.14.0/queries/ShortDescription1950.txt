@@ -1,0 +1,1 @@
+e2e test harness needs to be able to compare to previous version of Pig

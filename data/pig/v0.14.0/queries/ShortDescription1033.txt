@@ -1,0 +1,1 @@
+javac warnings: deprecated hadoop APIs

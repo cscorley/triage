@@ -1,0 +1,13 @@
+The core jar in the tarball contains the kitchen sink, it's not the same core jar built by ant jar. This is problematic since other projects that want to depend on the pig core jar just want pig core, but pig-0.8.0-SNAPSHOT-core.jar in the tarball contains a bunch of other stuff (hadoop, com.google, commons, etc) that may conflict with the packages also on a user's classpath.
+
+
+pig1 (trunk)$ jar tvf build/pig-0.8.0-SNAPSHOT-core.jar |grep -v pig|wc -l
+12
+pig1 (trunk)$ tar xvzf build/pig-0.8.0-SNAPSHOT.tar.gz
+...
+pig1 (trunk)$ jar tvf pig-0.8.0-SNAPSHOT/pig-0.8.0-SNAPSHOT-core.jar |grep -v pig|wc -l
+4819
+
+
+
+How about restricting the core jar to just Pig classes?

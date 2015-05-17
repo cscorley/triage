@@ -1,0 +1,12 @@
+The attached does a few things:
+
+1) sorts out the maven parents: now the modules parent to 'maven', and 'maven' parents to the top-level project. 
+2) The release management in the top-level POM is in a profile.
+3) the version of 'maven' is consistent with other version numbers.
+4) the source control URLs are corrected.
+5) a new buildtools module to hold pmd and checkstyle config.
+6) dependencyManagement in the parent, initially just for lucene.
+7) backup to current lucene release. -Dlucene.version is there for those who really want to use 2.9-SNAPSHOT.
+8) a profile, sourcecheck, that turns on checkstyle and pmd. This creates a giant pile of complaints. 
+
+The next step in this process would be to come up with a set of checkstyle and pmd rules consistent with the community's desires.

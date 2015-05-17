@@ -1,0 +1,1 @@
+Parsing of old Word file causes a TikaException

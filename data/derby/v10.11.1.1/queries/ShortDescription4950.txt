@@ -1,0 +1,1 @@
+AccessControlException when running AssertFailureTest from Ant

@@ -1,0 +1,3 @@
+1. Sometimes you might want to run zkServer.sh with different JVMFLAGS than for clients. Make zkServer.sh consult the SERVER_JVMFLAGS variable and, if it exists, add it to the beginning of the existing JVMFLAGS setting.
+
+2. Sometimes you might want to run zkCli.sh with different JVMFLAGS than for servers. Make zkCli.sh consult the CLIENT_JVMFLAGS variable and, if it exists, add it to the beginning of the existing JVMFLAGS setting.

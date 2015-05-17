@@ -1,0 +1,10 @@
+The Derby build drops various artifacts in the source tree. Build artifacts should not muddy subversion controlled directories but should, instead, go into temporary directories created by the the build. 
+
+The following is a (perhaps partial) list of artifacts currently dropped into subversion-controlled space:
+
+Sanity directives
+Generated grammars
+The English error messages
+Data type class sizes
+Toursdb
+Temporary class for verifying compiler level

@@ -1,0 +1,1 @@
+unit test 'org.apache.derbyTesting.unitTests.services.T_Diagnosticable' was failed

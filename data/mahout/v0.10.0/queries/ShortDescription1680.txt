@@ -1,0 +1,1 @@
+Rename project release artifact names to be prefixed with 'apache-mahout-*

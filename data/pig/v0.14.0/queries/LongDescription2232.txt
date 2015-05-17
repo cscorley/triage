@@ -1,0 +1,5 @@
+This is reported by Dexin: http://mail-archives.apache.org/mod_mbox//pig-user/201108.mbox/%3CCAJG3nVGYgbOnRdqnpY2B8ET2X34VSMGq8Bh=SnsAVUvoNUOWEg@mail.gmail.com%3E
+
+%declare CMD 'generate_date';
+
+should use "back ticks".

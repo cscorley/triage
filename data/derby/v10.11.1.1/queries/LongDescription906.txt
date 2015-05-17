@@ -1,0 +1,46 @@
+The following regression test  failed on 1/27 and 1/20, but did not fail on 1/13.
+It looks to be specific to jdk1.3.1_15 - have not seen errors in 1.4 or 1.5 runs.
+
+
+	
+	
+		
+		
+			Start: parameterMapping jdk1.3.1_15 DerbyNetClient derbynetmats:jdbcapi 2006-01-29 06:01:00 ***
+1257 del
+<   getDate= (?????):Invalid data conversion: Parameter instance 32                                                           is invalid for requested conversion to java.sql.Date. JDBC FAIL CHAR(60)
+1258 del
+<   getTime= (?????):Invalid data conversion: Parameter instance 32                                                           is invalid for requested conversion to java.sql.Time. JDBC FAIL CHAR(60)
+1259 del
+<   getTimestamp= (?????):Invalid data conversion: Parameter instance 32                                                           is invalid for requested conversion to java.sql.Timestamp. JDBC FAIL CHAR(60)
+1259a1257,1259
+>   getDate= (?????):Invalid data conversion: Parameter instance 32                                                           is invalid for requested conversion to java.sql.Date. Caused by exception class java.lang.IllegalArgumentException: null JDBC FAIL CHAR(60)
+>   getTime= (?????):Invalid data conversion: Parameter instance 32                                                           is invalid for requested conversion to java.sql.Time. Caused by exception class java.lang.IllegalArgumentException: null JDBC FAIL CHAR(60)
+>   getTimestamp= (?????):Invalid data conversion: Parameter instance 32                                                           is invalid for requested conversion to java.sql.Timestamp. Caused by exception class java.lang.IllegalArgumentException: Timestamp format must be yyyy-mm-dd hh:mm:ss.fffffffff JDBC FAIL CHAR(60)
+1429 del
+<   getDate= (?????):Invalid data conversion: Parameter instance 32 is invalid for requested conversion to java.sql.Date. JDBC FAIL VARCHAR(60)
+1430 del
+<   getTime= (?????):Invalid data conversion: Parameter instance 32 is invalid for requested conversion to java.sql.Time. JDBC FAIL VARCHAR(60)
+1431 del
+<   getTimestamp= (?????):Invalid data conversion: Parameter instance 32 is invalid for requested conversion to java.sql.Timestamp. JDBC FAIL VARCHAR(60)
+1431a1429,1431
+>   getDate= (?????):Invalid data conversion: Parameter instance 32 is invalid for requested conversion to java.sql.Date. Caused by exception class java.lang.IllegalArgumentException: null JDBC FAIL VARCHAR(60)
+>   getTime= (?????):Invalid data conversion: Parameter instance 32 is invalid for requested conversion to java.sql.Time. Caused by exception class java.lang.IllegalArgumentException: null JDBC FAIL VARCHAR(60)
+>   getTimestamp= (?????):Invalid data conversion: Parameter instance 32 is invalid for requested conversion to java.sql.Timestamp. Caused by exception class java.lang.IllegalArgumentException: Timestamp format must be yyyy-mm-dd hh:mm:ss.fffffffff JDBC FAIL VARCHAR(60)
+1601 del
+<   getDate= (?????):Invalid data conversion: Parameter instance 32 is invalid for requested conversion to java.sql.Date. JDBC FAIL LONG VARCHAR
+1602 del
+<   getTime= (?????):Invalid data conversion: Parameter instance 32 is invalid for requested conversion to java.sql.Time. JDBC FAIL LONG VARCHAR
+1603 del
+<   getTimestamp= (?????):Invalid data conversion: Parameter instance 32 is invalid for requested conversion to java.sql.Timestamp. JDBC FAIL LONG VARCHAR
+1603a1601,1603
+>   getDate= (?????):Invalid data conversion: Parameter instance 32 is invalid for requested conversion to java.sql.Date. Caused by exception class java.lang.IllegalArgumentException: null JDBC FAIL LONG VARCHAR
+>   getTime= (?????):Invalid data conversion: Parameter instance 32 is invalid for requested conversion to java.sql.Time. Caused by exception class java.lang.IllegalArgumentException: null JDBC FAIL LONG VARCHAR
+>   getTimestamp= (?????):Invalid data conversion: Parameter instance 32 is invalid for requested conversion to java.sql.Timestamp. Caused by exception class java.lang.IllegalArgumentException: Timestamp format must be yyyy-mm-dd hh:mm:ss.fffffffff JDBC FAIL LONG VARCHAR
+Test Failed.
+			End:   parameterMapping jdk1.3.1_15 DerbyNetClient derbynetmats:jdbcapi 2006-01-29 06:03:35 ***
+		
+		
+	
+	
+

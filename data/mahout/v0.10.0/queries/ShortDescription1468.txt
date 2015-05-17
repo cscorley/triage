@@ -1,0 +1,1 @@
+Creating a new page for StreamingKMeans documentation on mahout website

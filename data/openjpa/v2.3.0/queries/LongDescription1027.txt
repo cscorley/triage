@@ -1,0 +1,1 @@
+Document changes for detach methods that were provided under OPENJPA-885

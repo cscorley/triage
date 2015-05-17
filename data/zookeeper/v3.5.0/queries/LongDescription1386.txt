@@ -1,0 +1,5 @@
+It seems that the current javadoc.link.java value, http://java.sun.com/javase/6/docs/api/, redirects (via HTTP 301) to http://download.oracle.com/javase/6/docs/api/. This redirect does not always work apparently, causing the URL fetch to fail. This causes an additional javadoc warning: 
+
+javadoc: warning - Error fetching URL: http://java.sun.com/javase/6/docs/api/package-list
+
+which can in turn cause Jenkins to give a -1 to an otherwise OK build (see e.g. https://issues.apache.org/jira/browse/ZOOKEEPER-1373?focusedCommentId=13199456&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13199456). 

@@ -1,0 +1,49 @@
+When the mime type of an M4V file is detected using its name only, it returns video/x-m4v.  When it is detected using the InputStream (hence utilising the MagicDetector), it incorrectly returns video/quicktime.
+
+Using the sample M4V file from Apple's knowledge base:
+
+TikaTest.java
+
+public class TikaTest {
+
+	public static void main(String[] args) throws Exception {
+		String userHome = System.getProperty("user.home");
+
+		File file = new File(userHome + "/Desktop/sample_iPod.m4v");
+
+		InputStream is = TikaInputStream.get(file);
+
+		Detector detector = new DefaultDetector(
+			MimeTypes.getDefaultMimeTypes());
+
+		Metadata metadata = new Metadata();
+
+		metadata.set(Metadata.RESOURCE_NAME_KEY, file.getName());
+
+		System.out.println("File + filename: " + detector.detect(is, metadata));
+
+		System.out.println("File only:       " + detector.detect(is, new Metadata()));
+
+		System.out.println("Filename only:   " + detector.detect(null, metadata));
+	}
+
+}
+
+
+
+Renders the output:
+
+
+File + filename: video/quicktime
+File only:       video/quicktime
+Filename only:   video/x-m4v
+
+
+
+Moreover, if the same test is run against an M4A file, the results are even more incorrect:
+
+
+File + filename: video/quicktime
+File only:       video/quicktime
+Filename only:   application/octet-stream
+

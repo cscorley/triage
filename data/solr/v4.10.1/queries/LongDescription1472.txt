@@ -1,0 +1,9 @@
+Currently, the solr pom.xml files reference solr-lucene jar files.  Rather then reference the solr jars, we should reference the real lucene jar files.
+
+Additionally, we need to add a reference to "lucene-memory" so we avoid:
+
+
+java.lang.NoClassDefFoundError: org/apache/lucene/index/memory/MemoryIndex
+	at org.apache.lucene.search.highlight.WeightedSpanTermExtractor.getReaderForField(WeightedSpanTermExtractor.java:313)
+	at org.apache.lucene.search.highlight.WeightedSpanTermExtractor.extractWeightedSpanTerms(WeightedSpanTermExtractor.java:239)
+

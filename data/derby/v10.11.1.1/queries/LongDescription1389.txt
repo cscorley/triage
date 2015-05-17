@@ -1,0 +1,14 @@
+   Copied from the Javadoc for DatabaseMetaData from this location
+
+   http://download.java.net/jdk6/docs/api/java/sql/DatabaseMetaData.html
+
+   IS_AUTOINCREMENT String => Indicates whether this column is auto incremented
+
+
+	YES — if the column is auto incremented
+	NO — if the column is not auto incremented
+	empty string — if it cannot be determined whether the column is auto incremented parameter is unknown
+
+
+
+

@@ -1,0 +1,1 @@
+We need to add new end to end tests for the new Pig macro and import features.

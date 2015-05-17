@@ -1,0 +1,1 @@
+to have a seperate test-patch script for pig patch tests

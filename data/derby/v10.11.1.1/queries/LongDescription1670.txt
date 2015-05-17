@@ -1,0 +1,4 @@
+Just like the other ASF jars included in Derby's svn tree for compilation. (tools/java)
+
+Need to verify that the IP is clear on the contribution, the incubator status page seems to say that, but need to verify
+the initial contribution software grant confirms the licence switch to ALv2

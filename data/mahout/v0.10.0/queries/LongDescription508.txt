@@ -1,0 +1,3 @@
+I noticed that org.apache.mahout.utils.vectors.arff.Driver was missing from the list of classes in driver.classes.props and that there was no props file so I added a patch.
+
+You can now run the driver via mahout arff.vector

@@ -1,0 +1,1 @@
+addauth command does not work in cli_mt/cli_st

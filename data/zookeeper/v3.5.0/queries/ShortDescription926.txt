@@ -1,0 +1,1 @@
+Fork Hadoop common's test-patch.sh and modify for Zookeeper

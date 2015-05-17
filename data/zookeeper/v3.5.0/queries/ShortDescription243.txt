@@ -1,0 +1,1 @@
+add SEQUENCE flag documentation to the programming guide

@@ -1,0 +1,1 @@
+pig deb package depends on sun0java6-jre; which forces uses to install java using deb package and he can use the java from a tar.gz. 

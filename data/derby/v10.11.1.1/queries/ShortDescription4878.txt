@@ -1,0 +1,1 @@
+Silence sanity info message when running "ant -q"

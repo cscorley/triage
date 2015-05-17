@@ -1,0 +1,18 @@
+discussion with user, this should be better documented:
+--------------
+There are basically 2 cases where you can see connectionloss:
+
+1) you call an operation on a session that is no longer alive
+
+2) you are disconnected from a server when there are pending async operations to that server (you made an async request which has not yet completed)
+
+Patrick
+
+Kevin Burton wrote:
+> Can this be thrown when using multiple servers as long as > 1 of them is
+> online?
+> Trying to figure out of I should try some type of reconnect if a single
+> machine fails instead of failing altogether.
+>
+> Kevin
+>

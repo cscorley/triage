@@ -1,0 +1,1 @@
+Add ability to clean ivy cache in build.xml

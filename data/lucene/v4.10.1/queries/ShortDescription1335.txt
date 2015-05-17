@@ -1,0 +1,1 @@
+Correctly handle concurrent calls to addIndexes, optimize, commit

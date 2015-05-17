@@ -1,0 +1,1 @@
+to add standard ant targets required by test-patch.sh script

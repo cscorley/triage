@@ -1,0 +1,16 @@
+The votes to graduate Tika from the Incubator to Lucene have passed.
+
+Here's a list of things we need to do to implement the graduation:
+
+
+	Migrate the mailing lists
+	Update the issue tracker (TIKA is in group Lucene, not Incubator)
+	Migrate the web site to lucene.apache.org/tika
+	Remove incubation disclaimers
+	Move the codebase from incubator/tika to lucene/tika
+	Update the svn authorization and commit notification settings
+	Update the incubation records to reflect graduation
+
+
+
+The purpose of this issue is to track progress on these tasks.

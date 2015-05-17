@@ -1,0 +1,1 @@
+Add locale jars as ClassPath entries in derby.jar

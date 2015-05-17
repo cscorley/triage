@@ -1,0 +1,1 @@
+Hi, there are some duplicated items in tika-mimetypes.xml. Attached patch remove them.

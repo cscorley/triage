@@ -1,0 +1,1 @@
+Update assemblies to include components of launcher script from MAHOUT-301

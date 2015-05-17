@@ -1,0 +1,8 @@
+In the case where no $MAHOUT_JOB is set, and no mahout-examples-.job file is found in the standard locations, the Mahout command script should default to the run locally option.  Instead, when the script is run one received an error that the non-existent file "$MAHOUT_HOME/mahout-examples-.job" cannot be found.
+
+This is the result of two separate bugs in the Mahout command script:
+
+i) There is no existence check in the loop checking for mahout-examples-*.job files in $MAHOUT_HOME
+ii) The execution if/else clause only checks if either $HADOOP_CONF_DIR or $HADOOP_HOME is empty when determining whether to run locally.  It also should check the $MAHOUT_JOB variable, as it is meaningless to run hadoop in this case.
+
+Fixing these two issues allowed me to (almost) run the $MAHOUT_HOME/examples/bin/build-reuters.sh script.

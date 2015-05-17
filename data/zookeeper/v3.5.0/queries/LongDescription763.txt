@@ -1,0 +1,7 @@
+deadlocks occur if we attempt to close a handle while there are any outstanding async requests (aget, acreate, etc). Normally on close both the io thread terminates and the completion thread are terminated and joined, however w\ith outstanding async requests, the completion thread won't be in a joinable state, and we effectively hang when the main thread does the join.
+
+afaics ideal behavior would be on close of a handle, to effectively clear out any remaining callbacks and let the completion thread terminate.
+
+i've tried adding some bookkeeping to within a python client to guard against closing while there is an outstanding async completion request, but its an imperfect solution since even after the python callback is executed there is still a window for deadlock before the completion thread finishes the callback.
+
+a simple example to reproduce the deadlock is attached.

@@ -1,0 +1,1 @@
+Description for SAMPLE operator in documentation is not appropriate.

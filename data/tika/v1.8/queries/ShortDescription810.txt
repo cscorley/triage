@@ -1,0 +1,1 @@
+Upgrade to PDFbox 1.7.0 as available

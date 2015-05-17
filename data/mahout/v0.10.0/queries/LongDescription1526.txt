@@ -1,0 +1,1 @@
+There is a ant file (build.xml) in the examples module with some commands to download a few datasets, but these commands don't seem to be used or documented somewhere. If nobody shouts in the next days, I will remove that file.

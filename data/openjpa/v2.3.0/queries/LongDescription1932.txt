@@ -1,0 +1,1 @@
+This issue can be used for updates to user manual, javadoc, localizers to correct things like spelling or to make editorial changes.

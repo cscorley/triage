@@ -1,0 +1,3 @@
+Chris M. Hostetter <hossman@apache.org>
+Michael McCandless <mikemccand@apache.org>
+Uwe Schindler <uschindler@apache.org>

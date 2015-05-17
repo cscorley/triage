@@ -1,0 +1,152 @@
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbyall/i18nTest/iepnegativetests_ES.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: iepnegativetests_ES jdkJ2ME Foundation Specification v1.1 derbyall:i18nTest 2007-08-03 01:28:49 ***
+54a55,58
+> ij> --export table is null
+> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', null, 'extinout/t1.dat' ,
+>                                  null, null, null) ;
+> ERROR XIE06: Nombre de entidad nulo.
+64a69,72
+> ij> --export query is null 
+> call SYSCS_UTIL.SYSCS_EXPORT_QUERY(null,
+>                                     'extinout/t1.dat' , null, null, null) ;
+> ERROR XIE06: Nombre de entidad nulo.
+70 del
+< ij> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('XXXX', 'T1' , 'extinout/t1.dat' , 
+70a78
+> ij> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('XXXX', 'T1' , 'extinout/t2.dat' , 
+76 del
+< call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t1.dat' , 
+76a84
+> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t2.dat' , 
+79 del
+< ij> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t1.dat' , 
+79a87
+> ij> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t2.dat' , 
+83 del
+< call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t1.dat' , 
+83a91
+> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t2.dat' , 
+87 del
+< call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t1.dat' , 
+87a95
+> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t2.dat' , 
+90 del
+< ij> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t1.dat' , 
+90a98
+> ij> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t2.dat' , 
+95 del
+< call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t1.dat' , 
+95a103
+> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t2.dat' , 
+98 del
+< ij> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t1.dat' , 
+98a106
+> ij> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t2.dat' , 
+104 del
+< call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t1.dat' , 
+104a112
+> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t2.dat' , 
+110 del
+< ij> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t1.dat' , 
+110a118
+> ij> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T1' , 'extinout/t2.dat' , 
+115 del
+< ij> call SYSCS_UTIL.SYSCS_IMPORT_TABLE('IEP', 'T1' , 'extinout/t1.dat' , 
+115a123
+> ij> call SYSCS_UTIL.SYSCS_IMPORT_TABLE('IEP', 'T1' , 'extinout/t2.dat' , 
+131 del
+< call SYSCS_UTIL.SYSCS_IMPORT_TABLE('IEP', 'T1' , 'extin/nodir/t1.dat' , 
+131a139
+> call SYSCS_UTIL.SYSCS_IMPORT_TABLE('IEP', 'T1' , 'extin/nodir/t2.dat' , 
+136 del
+< ERROR XIE04: Archivo de datos no encontrado: extin/nodir/t1.dat
+136a144
+> ERROR XIE04: Archivo de datos no encontrado: extin/nodir/t2.dat
+138 del
+< call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('IEP', 'NOTABLE' , 'extinout/t1.dat' , 
+138a146
+> call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('IEP', 'NOTABLE' , 'extinout/t2.dat' , 
+142 del
+< call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('XXXX', 'T1' , 'extinout/t1.dat' , 
+142a150
+> call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('XXXX', 'T1' , 'extinout/t2.dat' , 
+145 del
+< ij> call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('IEP', 'T1' , 'extinout/t1.dat' , 
+145a153
+> ij> call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('IEP', 'T1' , 'extinout/t2.dat' , 
+154 del
+< call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('IEP', 'T1' , 'extinout/t1.dat' , 
+154a162
+> call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('IEP', 'T1' , 'extinout/t2.dat' , 
+160 del
+< ij> call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('IEP', 'T1' , 'extinout/t1.dat' , 
+160a168
+> ij> call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('IEP', 'T1' , 'extinout/t2.dat' , 
+167 del
+< call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('IEP', 'T1' , 'extinout/t1.dat' , 
+167a175
+> call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('IEP', 'T1' , 'extinout/t2.dat' , 
+288 del
+< ij> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T3' , 'extinout/t3.dat' , 
+288a296
+> ij> call SYSCS_UTIL.SYSCS_EXPORT_TABLE ('IEP', 'T3' , 'extinout/t3_1.dat' , 
+293 del
+<                                  'extinout/t3.dat' , 
+293a301
+>                                  'extinout/t3_1.dat' , 
+297 del
+<                                  'extinout/t3.dat' , 
+297a305
+>                                  'extinout/t3_1.dat' , 
+302 del
+<                                  'extinout/t3.dat' , 
+302a310
+>                                  'extinout/t3_1.dat' , 
+307 del
+<                                  'extinout/t3.dat' , 
+307a315
+>                                  'extinout/t3_1.dat' , 
+313 del
+<                                  'extinout/t3.dat' , 
+313a321
+>                                  'extinout/t3_1.dat' , 
+317 del
+< call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('SYS', 'SYSTABLES' , 'extinout/t3.dat' , 
+317a325
+> call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('SYS', 'SYSTABLES' , 'extinout/t3_1.dat' , 
+Test Failed.
+			End:   iepnegativetests_ES jdkJ2ME Foundation Specification v1.1 derbyall:i18nTest 2007-08-03 01:29:03 ***
+		
+		
+	
+	
+

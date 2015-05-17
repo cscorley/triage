@@ -1,0 +1,1 @@
+Propagate a set of properties to the junit tasks in build.xml

@@ -1,0 +1,1 @@
+derbynet.jar automatically includes derby.jar in its classpath though its manifest.

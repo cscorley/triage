@@ -1,0 +1,1 @@
+log4j.properties can contain properties that may be overridden using system properties. Hadoop's bin/hadoop is doing this already, I will be replicating in ZK's config.

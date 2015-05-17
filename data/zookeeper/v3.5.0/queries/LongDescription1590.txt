@@ -1,0 +1,10 @@
+Here is the related output of jenkins:
+
+
+validate-xdocs:
+     [exec] /home/jenkins/jenkins-slave/workspace/ZooKeeper-trunk/trunk/src/docs/src/documentation/content/xdocs/zookeeperProgrammers.xml:578:5: The element type "para" must be terminated by the matching end-tag "</para>".
+     [exec] 
+     [exec] BUILD FAILED
+     [exec] /home/jenkins/tools/forrest/latest/main/targets/validate.xml:135: Could not validate document /home/jenkins/jenkins-slave/workspace/ZooKeeper-trunk/trunk/src/docs/src/documentation/content/xdocs/zookeeperProgrammers.xml
+     [exec] 
+

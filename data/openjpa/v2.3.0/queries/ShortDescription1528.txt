@@ -1,0 +1,1 @@
+Upgrade to latest MySQL 5.1.12 for junit tests

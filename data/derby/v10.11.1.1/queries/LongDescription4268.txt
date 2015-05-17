@@ -1,0 +1,2 @@
+The word "SECURITY" is NOT described in SQL reserved words section of Derby Reference Manual.
+I think that it should be able to use this word without quotes in SQL statement.

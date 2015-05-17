@@ -1,0 +1,1 @@
+Document all the settings added in BOOKKEEPER-656

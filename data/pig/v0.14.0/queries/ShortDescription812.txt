@@ -1,0 +1,1 @@
+COUNT(*) does not work 

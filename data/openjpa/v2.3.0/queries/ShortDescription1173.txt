@@ -1,0 +1,1 @@
+Update PostgreSQL support for 8.4.x

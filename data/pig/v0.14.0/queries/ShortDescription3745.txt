@@ -1,0 +1,1 @@
+Document auto local mode for pig

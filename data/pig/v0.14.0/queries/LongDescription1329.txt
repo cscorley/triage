@@ -1,0 +1,1 @@
+There's a typo in build.xml that makes the current pig version 0.88888888.0

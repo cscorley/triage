@@ -1,0 +1,1 @@
+contentType is set twice with conflicting values in raw-schema.jsp

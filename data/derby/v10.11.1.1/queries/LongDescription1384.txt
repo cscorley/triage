@@ -1,0 +1,1 @@
+Default BLOB/CLOB length should be the maximum length supported by Derby (2G?)

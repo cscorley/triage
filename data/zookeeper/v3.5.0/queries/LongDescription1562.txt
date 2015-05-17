@@ -1,0 +1,9 @@
+Valgrind is reporting memory leak for zoo_multi operations.
+
+==4056== 2,240 (160 direct, 2,080 indirect) bytes in 1 blocks are definitely lost in loss record 18 of 24
+==4056==    at 0x4A04A28: calloc (vg_replace_malloc.c:467)
+==4056==    by 0x504D822: create_completion_entry (zookeeper.c:2322)
+==4056==    by 0x5052833: zoo_amulti (zookeeper.c:3141)
+==4056==    by 0x5052A8B: zoo_multi (zookeeper.c:3240)
+
+It looks like completion entries for individual operations in multiupdate transaction are not getting freed. My observation is that memory leak size depends on the number of operations in single mutlipupdate transaction

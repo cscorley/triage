@@ -1,0 +1,16 @@
+A translator reported a problem with translating due to a segmentation error
+was-transaction-id-exception: Unable to determine identity of the current \
+	WebSphere managed transaction. Please ensure that your are running the \
+	application from within WebSphere Application Server (version 5.0.2 or \ 
+	newer).
+
+I noticed that this message and two others contain "5.0.2'".  I checked with Jeremy and he was ok with changing the messages to remove the version id and "newer".
+was-transaction-id-exception: Unable to determine identity of the current \
+	WebSphere managed transaction. Please ensure that your are running the \
+	application from within WebSphere Application Server.
+was-reflection-exception: An error occurred reflecting WebSphere proprietary \
+	interfaces. Please ensure that you are running the application from within \
+	WebSphere Application Server.
+was-lookup-error: An error occurred looking up the WebSphere extended JTA \
+	service. Please ensure that you are running the application from within \
+	WebSphere Application Server.

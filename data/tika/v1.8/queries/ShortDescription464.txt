@@ -1,0 +1,1 @@
+Contribute a "get Tika parsing up and running in 5 minutes" quick start guide

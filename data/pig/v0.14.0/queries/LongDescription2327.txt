@@ -1,0 +1,18 @@
+The following chunk of bin/pig 
+
+
+# locate ZooKeeper
+if [ -d "${PIG_HOME}/share/zookeeper" ]; then
+    for f in ${PIG_HOME}/share/zookeeper/zookeeper-*.jar; do
+        CLASSPATH=${CLASSPATH}:$f
+    done
+fi
+
+
+
+makes it impossible for pig to pick up ZK installation area
+unless the content of the binary tarballs gets massaged in a certain
+way.
+
+Would it be possible to have a more generic code in place that
+would, perhaps, pay attention to things like ZOOKEEPER_HOME ?

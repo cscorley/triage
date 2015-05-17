@@ -1,0 +1,1 @@
+Some test cases in TestGrunt.java were commented out in PIG-928. But it seems to have been done by mistake. I re-enabled a few of the working ones as part of changes in PIG-2084. The rest of them should be fixed, or if what they test is no longer valid they should be removed from the test file . 

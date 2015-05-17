@@ -1,0 +1,7 @@
+The patch attached to https://issues.apache.org/jira/browse/ZOOKEEPER-1953 has caused problems for git users when committed from SVN.
+
+The attached patch simply changes the line endings of the offending files from CRLF to LF in the hope that when they are committed to SVN, the LF line endings end up as the canonical representation in the Apache ZooKeeper git repo.
+
+An interpretation of what's happened here is that svn has stored the CRLF line endings and these have been pushed into git by git-svn as described here: http://blog.subgit.com/line-endings-handling-in-svn-git-and-subgit/. Git clients are then confused as the text files have an unexpected representation in the repo.
+
+Experimentally VS is indifferent to line endings – ran dos2unix on the vcxproj and sln files and VS opened and closed the files without modifying them. This page seems to advertise the indifference to line endings and discusses selecting custom options: http://msdn.microsoft.com/en-us/library/dd409797.aspx.

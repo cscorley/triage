@@ -1,0 +1,3 @@
+header files are installed into foo/include/c-client-src/, which doesn't indicate a relationship with zookeeper and doesn't correspond to foo/lib/libzookeeper*
+
+header files should be installed into foo/include/zookeeper/ as this is the common practice.

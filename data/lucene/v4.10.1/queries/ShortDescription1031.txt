@@ -1,0 +1,1 @@
+Fixes a handful of misspellings/mistakes in changes.txt

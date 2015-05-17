@@ -1,0 +1,1 @@
+ignore sigpipe in testRetry to avoid silent immediate failure

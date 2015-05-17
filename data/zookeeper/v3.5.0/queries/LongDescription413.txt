@@ -1,0 +1,4 @@
+1) createClient in testclient.cc (check all tests) is not correctly waiting for syncconnected to the server
+2) there are some instances of while(xxx); in the test code, this could cause problems, really we need to
+have some limit on the number of iterations (other than just the test, which may never return false), also the
+loop should have some sort of sleep(100msec) (whatever time) in order to limit cpu use.

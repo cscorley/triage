@@ -1,0 +1,2 @@
+Michael McCandless <mikemccand@apache.org>
+Uwe Schindler <uschindler@apache.org>

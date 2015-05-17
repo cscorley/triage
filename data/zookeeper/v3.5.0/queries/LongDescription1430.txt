@@ -1,0 +1,12 @@
+Infra is phasing out the current mechanism we use to deploy maven artifacts. We need to move to repository.apache.org (nexus).
+
+In particular we need to ensure the following artifacts get published:
+
+	zookeeper-3.x.y.jar
+	zookeeper-3.x.y-sources.jar
+	zookeeper-3.x.y-tests.jar
+	zookeeper-3.x.y-javadoc.jar
+
+
+
+In 3.4.4/3.4.5 we missed the tests jar which caused headaches for downstream users, such as Hadoop.

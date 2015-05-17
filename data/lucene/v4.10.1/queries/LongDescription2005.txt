@@ -1,0 +1,4 @@
+Add LuSql to the Apache Lucene - Contributions page http://lucene.apache.org/java/2_9_0/contributions.html
+I am the author of LuSql. I can supply any text needed. 
+
+Perhaps a new heading is needed to capture Database/JDBC oriented Lucene tools (there are others out there)?

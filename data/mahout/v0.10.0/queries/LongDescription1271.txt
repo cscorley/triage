@@ -1,0 +1,8 @@
+classify-20newsgroups.sh fails during the seqdirectory step as it fails to overwrite the output folder.
+
+
+
+
+Exception in thread "main" org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory /tmp/mahout-work-jenkins/20news-seq already exists
+
+

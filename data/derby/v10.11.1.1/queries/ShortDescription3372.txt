@@ -1,0 +1,1 @@
+Adjust demos build.xml to avoid re-compiling SimpleApp and SimpleMobileApp

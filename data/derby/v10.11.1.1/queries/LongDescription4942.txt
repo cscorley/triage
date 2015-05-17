@@ -1,0 +1,1 @@
+The README.html file in the (...)/junitTests/compatibility directory describes how to run the compatibility tests using Ant. There is also an alternative way to run the compatibility tests, using JUnit and a properties file that describes exactly which JVMs and Derby versions to test. It would be good to have a description of that way too in README.html.

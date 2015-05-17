@@ -1,0 +1,12 @@
+On occasion it might be useful to determine which host your Zookeeper client is currently connected to, be it for debugging purposes or otherwise. A possible signature for that function:
+
+const char* zoo_get_connected_host(zhandle_t *zh, char *buffer, size_t buffer_size, unsigned short *port);
+
+Clients could use it like below:
+
+  char buffer[33];
+  unsigned short port = 0;
+  if (!zoo_get_connected_host(zh, buffer, sizeof(buffer), &port))
+    return EXIT_FAILURE;
+
+  printf("The connected host is: %s:%d\n", buffer, port);

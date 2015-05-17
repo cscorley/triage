@@ -1,0 +1,1 @@
+bin/pig script does not pick up correct jar libraries

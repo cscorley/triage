@@ -1,0 +1,1 @@
+Solr::Field.new(:text => "& > <").to_xml produces a bunch of libxml warnings and truncates the text.

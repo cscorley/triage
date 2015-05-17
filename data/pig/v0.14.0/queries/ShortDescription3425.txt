@@ -1,0 +1,1 @@
+Hive jdo api jar referenced in pig script throws error 

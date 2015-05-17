@@ -1,0 +1,1 @@
+Lucene is up to 3.3, we should upgrade to that, or we should wait for LUCENE-3151 and move to that.  Either way, we should upgrade Lucene.

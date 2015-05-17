@@ -1,0 +1,6 @@
+Scripts like build-reuters.sh are useful in that they both demonstrate typical usage of Mahout from the command-line but also serve as integration tests. We should add additional scripts that drive the algorithms so new users can quickly run the examples. 
+
+Perhaps these can also be run from hudson as a part of the nightly builds and can serve as integration tests.
+
+As a start towards this goal, provide build-20news-bayes.sh example (in the same vein as build-reuters.sh, that follows https://cwiki.apache.org/MAHOUT/twenty-newsgroups.html
+

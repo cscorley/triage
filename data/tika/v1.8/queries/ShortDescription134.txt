@@ -1,0 +1,1 @@
+mvn package does not produce packages for bin/src

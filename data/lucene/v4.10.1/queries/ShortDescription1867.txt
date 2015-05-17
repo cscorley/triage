@@ -1,0 +1,1 @@
+replace collation/lib/icu4j.jar with a smaller icu jar

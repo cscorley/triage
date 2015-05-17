@@ -1,0 +1,1 @@
+In python bindings, zookeeper.set2() should return a stat dict but instead returns None

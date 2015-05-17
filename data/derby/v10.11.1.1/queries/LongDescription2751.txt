@@ -1,0 +1,10 @@
+1) testLoadJavaClassDirectly(org.apache.derbyTesting.functionTests.tests.lang.DatabaseClassLoadingTest)java.sql.SQLException: Jar file 'MY_JAVA' already exists in Schema 'EMC'.
+2) testLoadJavaClassDirectly2(org.apache.derbyTesting.functionTests.tests.lang.DatabaseClassLoadingTest)java.sql.SQLException: Jar file 'MY_JAVA' already exists in Schema 'EMC'.
+3) testLoadJavaClassDirectly3(org.apache.derbyTesting.functionTests.tests.lang.DatabaseClassLoadingTest)java.sql.SQLException: Jar file 'MY_JAVA' already exists in Schema 'EMC'.
+4) testLoadDerbyClassIndirectly(org.apache.derbyTesting.functionTests.tests.lang.DatabaseClassLoadingTest)java.sql.SQLException: Jar file 'MY_JAVA' already exists in Schema 'EMC'.
+1) testLoadJavaClassIndirectly(org.apache.derbyTesting.functionTests.tests.lang.DatabaseClassLoadingTest)junit.framework.ComparisonFailure: Unexpected SQL state. expected:<[38000]> but was:<[XJ001]>
+
+
+See e.g.
+http://dbtg.thresher.com/derby/test/Daily/jvm1.4/testing/Limited/testSummary-543922.html
+http://dbtg.thresher.com/derby/test/trunk16/jvmAll/testing/Limited/testSummary-543945.html

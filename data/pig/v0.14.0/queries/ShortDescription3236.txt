@@ -1,0 +1,1 @@
+parametrize snapshot and staging repo id 

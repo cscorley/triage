@@ -1,0 +1,1 @@
+It's not clear in the current text that the IBM DB2 JDBC driver binaries are not required to run tests, particularly derbyall.  The wording should be updated to make this more clear.

@@ -1,0 +1,1 @@
+2.1 Locking documentation in "Apache Lucene - Index File Formats" section "6.2 Lock File" out dated

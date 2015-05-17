@@ -1,0 +1,1 @@
+Cleanup previously installed artifacts from CI server local repository

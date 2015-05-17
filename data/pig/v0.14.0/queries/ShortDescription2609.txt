@@ -1,0 +1,1 @@
+e2e harness: make hdfs base path configurable (outside default.conf)

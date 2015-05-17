@@ -1,0 +1,7 @@
+Since the fix for DERBY-4437 (which was backported to the 10.8 branch for 10.8.2.0) the message 2200H has changed to take two parameters, schemaname.sequencename, but the foreign language files only mention 1 parameter, which would be the schemaname.
+
+This issue would be fixed by changing the ''
+{0}'' in the non-English locales to ''{0}
+.
+{1}
+'' (note: retain the double single quotes).

@@ -1,0 +1,1 @@
+As George Stathis poined out in PIG-1596, bin/pig no longer picks up development pig jars. This appears to have been introduced in PIG-1334, as the jar was renamed from dev to SNAPSHOT

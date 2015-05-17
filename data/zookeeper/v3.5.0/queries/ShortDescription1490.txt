@@ -1,0 +1,1 @@
+ If the configured log directory does not exist zookeeper will not start. Better to create the directory and start

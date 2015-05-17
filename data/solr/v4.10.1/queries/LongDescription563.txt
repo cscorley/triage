@@ -1,0 +1,1 @@
+Add a contrib area for Solr and modify existing build.xml to build, package and distribute contrib projects also.

@@ -1,0 +1,1 @@
+Use Ivy to pull dependencies and also generate pom

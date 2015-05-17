@@ -1,0 +1,1 @@
+make warning message more friendly when other persistence provider configured by application

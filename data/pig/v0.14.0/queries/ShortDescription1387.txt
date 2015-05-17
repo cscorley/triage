@@ -1,0 +1,1 @@
+Syntactical Sugar for PIG-1385

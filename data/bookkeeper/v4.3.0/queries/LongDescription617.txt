@@ -1,0 +1,1 @@
+BOOKKEEPER-544 made hedwig generate a tests jar in hedwig-server/target. When hedwig-server/bin/hedwig tries to find the hedwig-server jar in target, it will find the test jar rather than the main jar.

@@ -1,0 +1,1 @@
+Suppress javac warnings related to deprecated hadoop APIs.

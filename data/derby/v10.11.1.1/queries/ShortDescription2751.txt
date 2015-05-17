@@ -1,0 +1,1 @@
+testLoadJavaClassIndirectly & als fails on JVM 1.4 with "Unexpected SQL state. expected:<[38000]> but was:<[XJ001]>", "Jar file 'MY_JAVA' already exists in Schema 'EMC'"

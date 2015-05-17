@@ -1,0 +1,4 @@
+The zkCli.sh script included with zookeeper doesn't quote its parameters
+correctly when passing them on to the java program. 
+
+This causes issues with arguments with spaces and such.

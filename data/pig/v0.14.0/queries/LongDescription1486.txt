@@ -1,0 +1,4 @@
+ .eclipse.templates/.classpath needs to be updated to address following -
+1. There is a new jar that is used by the code - guava-r03.jar
+2. The jar "ANT_HOME/lib/ant.jar" gives an 'unbounded jar' error in eclipse.
+3. Removing the contrib projects from class path as discussed in PIG-1390, until all libs necessary for the contribs are included in classpath.

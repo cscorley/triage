@@ -1,0 +1,9 @@
+Please remove these 2 doc files. They don't belong with the Pig 2.0 documnetation and will cause confusion.
+
+(1) hello.pdf ... located in:
+
+trunk/src/docs/src/documentaiton/content/xdocs
+
+(2) overview.html ... located in:
+
+trunk/docs

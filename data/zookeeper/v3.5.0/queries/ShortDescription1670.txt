@@ -1,0 +1,1 @@
+zookeeper should set a default value for SERVER_JVMFLAGS and CLIENT_JVMFLAGS so that memory usage is controlled

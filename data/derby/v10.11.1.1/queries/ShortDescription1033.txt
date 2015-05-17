@@ -1,0 +1,1 @@
+Provide easy ways to find the documentation starting points from a Derby installation

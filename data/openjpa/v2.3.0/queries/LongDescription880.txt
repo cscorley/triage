@@ -1,0 +1,9 @@
+Update the build to use the maven-remote-resources-plugin to generate the ASF required LICENSE/NOTICE files.
+This will involve:
+1) updating the root pom to setup the maven-remote-resources-plugin
+2) moving the existing LICENSE/NOTICE files from openjpa-project to the source root dir
+3) removing other LICENSE/NOTICE files from the source, as the plugin will generate them
+4) add LICENSE.vm and/or NOTICE.vm files for artifact unique legal requirements (like XSD notices and/or unique copyright statements)
+Afterwards, we'll only have to add/update the LICENSE.vm/NOTICE.vm files for a specific module if we add new code that contains new notices, as the plugin will automatically include the LICENSE/NOTICE text from included dependencies as needed.
+
+This will be an updated patch, based on earlier work done by David Jencks for OPENJPA-772.

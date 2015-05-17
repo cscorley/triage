@@ -1,0 +1,43 @@
+Direct construction of StopWordFilter is not backwards compatible between 1.2 and 1.3.  Here is some test code that throws a null pointer exception in 1.3 but that functions correctly in 1.2.
+
+     TokenizerFactory tokenizer = new WhitespaceTokenizerFactory();
+
+      Map<String, String> args = new HashMap<String, String>();
+      args.put("ignoreCase", "true");
+      args.put("words", "stopwords.txt");
+      StopFilterFactory stopFilter = new StopFilterFactory();
+      stopFilter.init(args);
+
+     args = new HashMap<String, String>();
+     args.put("generateWordParts", "1");
+     args.put("generateNumberParts", "1");
+     args.put("catenateWords", "0");
+     args.put("catenateNumbers", "0");
+     args.put("catenateAll", "0");
+     WordDelimiterFilterFactory wordFilter = new WordDelimiterFilterFactory();
+     wordFilter.init(args);
+
+     TokenFilterFactory[] filters = new TokenFilterFactory[] 
+{stopFilter, wordFilter }
+;
+     TokenizerChain pipeline =TokenizerChain(tokenizer, filters);
+
+     /*** throws a null pointer exception in 1.3: ***/
+    boolean onlyStopWords = pipeline.tokenStream(null, new StringReader(query)).next() == null;
+
+Hoss commented thusly in the solr forums (including a workaround):
+
+The short answer is: right after you call "stopFilter.init(args)" call
+"stopFilter.inform(solrCore.getSolrConfig().getResourceLoader());"
+
+This is an interesting use case that wasn't really considered when we
+switched away from using hte SolrCore singlton and the the
+ResourceLoaderAware interface was added.  we made sure things would still
+work for people who had their own custom Analysis Factories, but some of
+the functionality in existing Factories was moved from the init() method
+to inform() ... which means the classes aren't technically backwards
+compatibly for people doing what you're doing: constructing them directly.
+
+When I have some more time, i'll spin up a thread on solr-dev to discuss
+what we should do about this – n the mean time feel free to file a bug
+that StopFilter isn't backwards compatible.

@@ -1,0 +1,7 @@
+There are various errors in pig's grammar files highlighted by ANTLRWorks.
+In particular, on token MATCHES, ANY and EVAL.
+The first one should be removed, as there is already STR_OP_MATCHES,
+the second one is an imaginary tokens that should be defined in the appropriate section.
+On the third one I am not sure.
+I have been told it is from the old parsers but it is not used anywhere. Is it correct?
+Is it reserved for future uses? Has it anything to do with FUNC_EVAL?

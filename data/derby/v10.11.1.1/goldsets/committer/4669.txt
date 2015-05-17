@@ -1,0 +1,2 @@
+Knut Anders Hatlen <kahatlen@apache.org>
+Kristian Waagan <kristwaa@apache.org>

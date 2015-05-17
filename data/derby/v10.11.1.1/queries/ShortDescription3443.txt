@@ -1,0 +1,1 @@
+With IBM 1.6 derbynet/sysinfo.java, derbynet/sysinfo_withproperties and derbynet/getCurrentProperties  fail with missing line "listing properties"

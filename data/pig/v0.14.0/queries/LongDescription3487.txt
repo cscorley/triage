@@ -1,0 +1,5 @@
+
+
+FATAL ERROR ./test_harness.pl at 150 : Error reading config file </path/pig/test/e2e/pig/testdist/tests/nightly.conf>, <Bad name after pig' at (eval 19) line 3690.>
+BUILD FAILED
+

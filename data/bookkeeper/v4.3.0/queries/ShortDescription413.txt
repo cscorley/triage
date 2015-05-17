@@ -1,0 +1,1 @@
+Hedwig C++ client: Rename RUN_AS_SSL_MODE to SSL_ENABLED

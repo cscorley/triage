@@ -1,0 +1,1 @@
+Pig should bundle with dependencies like avro.jar and json-simple.jar

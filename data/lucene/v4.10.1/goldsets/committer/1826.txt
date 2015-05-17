@@ -1,0 +1,3 @@
+Michael Busch <buschmi@apache.org>
+Robert Muir <rmuir@apache.org>
+Uwe Schindler <uschindler@apache.org>

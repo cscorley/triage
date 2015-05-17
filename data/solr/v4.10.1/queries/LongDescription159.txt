@@ -1,0 +1,1 @@
+Running a Dismax request with a :sort option adds the sort values into the query field instead of the sort field.

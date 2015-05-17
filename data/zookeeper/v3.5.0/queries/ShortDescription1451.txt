@@ -1,0 +1,1 @@
+C API improperly logs getaddrinfo failures on Linux when using glibc

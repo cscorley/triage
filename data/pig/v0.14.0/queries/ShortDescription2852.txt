@@ -1,0 +1,1 @@
+Old Hadoop API being used sometimes when running parellel in local mode

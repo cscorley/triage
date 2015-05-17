@@ -1,0 +1,7 @@
+The JDBC driver for DB2 requires two jars on the classpath, the driver and a license jar. Currently if you want to run OpenJPA unit tests against DB2 (or any JDBC driver that uses multiple jars) you have to manually modify pom.xml and explicitly add in the new dependencies. 
+
+To resolve the problem I created a new profile which allows two jars to be provided as system jars (similar to test-custom). 
+
+While I was working on this I noticed that each database profile has it's own set of configuration properties for the Surefire jUnit test environment and that they weren't always the same. To try and fix that I took the surefire configuration out of the individual profiles and put it in a common place. 
+
+I've run the complete unit test suite against Derby, and done some sniff testing with DB2, MySQL, and HSQLDB all of which looks good. I'm posting the patch in case anyone else has issues with the approach, or wants to verify that it works with other databases (which I might not have access to). 

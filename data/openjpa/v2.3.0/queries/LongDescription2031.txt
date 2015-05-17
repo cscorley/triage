@@ -1,0 +1,10 @@
+Using m2e v1.0, importing maven projects will cause errors such as:
+maven-dependency-plugin(goals "copy-dependencies", "unpack") is not supported by m2e
+Plugin execution not covered by lifecycle configuration:
+
+The reason for these errors is described in the link.
+http://wiki.eclipse.org/M2E_plugin_execution_not_covered#m2e_maven_plugin_coverage_status
+
+A solution to this problem using the method set forth by the wiki is attached. The patch applies to the pom.xml in openjpa-parent.
+
+This should solve any maven related problem. However, there still may be errors in the source of openjpa-kernel and openjpa-openbooks. The first is solved by adding target/generated-sources/javacc to the build path of openjpa-kernel. The second is done in the same way, except with target/generated-metamodel/java to the build path of openjpa-openbooks.

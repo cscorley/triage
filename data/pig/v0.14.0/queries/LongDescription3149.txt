@@ -1,0 +1,1 @@
+PIG-2665 replaced jython-2.5.0.jar with jython-standalone-2.5.2.jar. But e2e build.xml still refers to the former. 

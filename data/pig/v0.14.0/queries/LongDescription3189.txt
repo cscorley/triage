@@ -1,0 +1,3 @@
+ivy/pig.pom in SVN seems to no longer be used.  At build time (ant set-version via ant mvn-deploy) ivy/pig.pom is generated from ivy/pig-template.xml. We should remove ivy/pig.pom from SVN.
+
+It would also be good to decouple building the maven artifacts from publishing them, since those two tasks might be done on different hosts.

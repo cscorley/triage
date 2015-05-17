@@ -1,0 +1,9 @@
+Adding the locale jars (derbyLocale_es.jar, derbyLocale_de_DE.jar etc.) as ClassPath manifest entries in derby.jar would remove the need for users to add them to their class path. Thus the only jars required in the user's classpath  would be:
+
+derbynet.jar - running network server (already brings in derby.jar)
+
+derby.jar - running embedded
+
+This would add to the ease of use for Derby. The manifest entries could be generated based off the list of locales or justr hardcoded in the build target for derby.jar (since they change infrequently).
+
+Since ClassPath entrries are ignored if the jars do no exist, this would do no harm in an environment where none or a subset of the locare jars are shipped.

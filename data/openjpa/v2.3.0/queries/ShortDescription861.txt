@@ -1,0 +1,1 @@
+Update the manual for XML column support for MySQL

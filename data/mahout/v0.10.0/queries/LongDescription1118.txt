@@ -1,0 +1,24 @@
+We are routinely seeing the following failures when running the examples on Jenkins and they are due to old SLF4j bindings on Cassandra and HBase:
+
+
+Training on /tmp/mahout-work-jenkins/20news-bydate/20news-bydate-train/
+hadoop binary is not in PATH,HADOOP_HOME/bin,HADOOP_PREFIX/bin, running locally
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/x1/jenkins/jenkins-slave/workspace/Mahout-Examples-Classify-20News/trunk/examples/target/mahout-examples-0.8-SNAPSHOT-job.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/x1/jenkins/jenkins-slave/workspace/Mahout-Examples-Classify-20News/trunk/examples/target/dependency/slf4j-jcl-1.7.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/x1/jenkins/jenkins-slave/workspace/Mahout-Examples-Classify-20News/trunk/examples/target/dependency/slf4j-log4j12-1.4.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: slf4j-api 1.6.x (or later) is incompatible with this binding.
+SLF4J: Your binding is version 1.5.5 or earlier.
+SLF4J: Upgrade your binding to version 1.6.x.
+Exception in thread "main" java.lang.NoSuchMethodError: org.slf4j.impl.StaticLoggerBinder.getSingleton()Lorg/slf4j/impl/StaticLoggerBinder;
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:128)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:107)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:295)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:269)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:281)
+	at org.apache.mahout.driver.MahoutDriver.<clinit>(MahoutDriver.java:89)
+Could not find the main class: org.apache.mahout.driver.MahoutDriver.  Program will exit.
+Build step 'Execute shell' marked build as failure
+Sending e-mails to: dev@mahout.apache.org ssc.open@googlemail.com p
+

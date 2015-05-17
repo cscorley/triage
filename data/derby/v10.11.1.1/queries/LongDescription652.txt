@@ -1,0 +1,10 @@
+Just a quick scan of the html files  in demo and docs directories of the 10.1.2.0 release candidate show incubator references in the following files.
+
+./demo/demo.html
+./demo/navbar.html
+./docs/html/getstart/cgsinstallingderby.html
+./docs/html/getstart/getstart-single.html
+./docs/html/getstart/gsconrefs.html
+
+Thanks to Naka for pointing this out.
+I did not check the trunk and only checked the html files.  A more comprehensive check by someone used to working in this area would be good.  

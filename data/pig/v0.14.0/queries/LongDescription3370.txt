@@ -1,0 +1,5 @@
+The following are reserved keywords in Pig that are not included in the 11.1 docs (see http://pig.apache.org/docs/r0.11.1/basic.html#reserved-keywords)
+
+cube, dense, rank, returns, rollup, void
+
+Please add to any that I may have overlooked.

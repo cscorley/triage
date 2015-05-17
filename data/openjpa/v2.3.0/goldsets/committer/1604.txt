@@ -1,0 +1,3 @@
+Jeremy Bauer <jrbauer@apache.org>
+Pinaki Poddar <ppoddar@apache.org>
+Richard G. Curtis <curtisr7@apache.org>

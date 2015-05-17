@@ -1,0 +1,1 @@
+The jars released in 3.2.1 will not run on Java 1.5.  With a small build change, it is possible to generate jars that will run on Java 1.5.

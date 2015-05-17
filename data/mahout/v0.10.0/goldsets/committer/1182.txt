@@ -1,0 +1,2 @@
+Sebastian Schelter <ssc@apache.org>
+Ted Dunning <tdunning@apache.org>

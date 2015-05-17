@@ -1,0 +1,3 @@
+Katherine Marsden <kmarsden@apache.org>
+Knut Anders Hatlen <kahatlen@apache.org>
+Myrna van Lunteren <myrnavl@apache.org>

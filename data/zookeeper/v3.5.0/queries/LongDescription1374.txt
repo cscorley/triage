@@ -1,0 +1,10 @@
+The multi-threaded test suite fails to build on ARM architectures:
+
+g++ -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -D_FORTIFY_SOURCE=2 -DUSE_STATIC_LIB -DTHREADED -DZKSERVER_CMD="\"./tests/zkServer.sh\"" -Wall -g -MT zktest_mt-ThreadingUtil.o -MD -MP -MF .deps/zktest_mt-ThreadingUtil.Tpo -c -o zktest_mt-ThreadingUtil.o `test -f 'tests/ThreadingUtil.cc' || echo './'`tests/ThreadingUtil.cc
+/tmp/ccqJWQRC.s: Assembler messages:
+/tmp/ccqJWQRC.s:373: Error: bad instruction `lock xaddl r4,r3,#0'
+/tmp/ccqJWQRC.s:425: Error: bad instruction `lock xchgl r4,r3,#0'
+
+gcc does provide alternative primitives (sync*) which provide better cross platform compatibility; but that does make the assumption that a) gcc is being used or b) the primitives are provided by alternative compilers.
+
+Tracked in Ubuntu here: https://bugs.launchpad.net/ubuntu/+source/zookeeper/+bug/920871

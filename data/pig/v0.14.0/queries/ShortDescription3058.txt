@@ -1,0 +1,1 @@
+Upgrade junit to at least 4.8

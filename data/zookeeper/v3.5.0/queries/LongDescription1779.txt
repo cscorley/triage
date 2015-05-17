@@ -1,0 +1,6 @@
+After running the ReconfigTest I saw a number of the following files in the source root (not in a subdir of the build directory as would be expected)
+
+zoo_replicated1.dynamic
+(saw files zoo_replicated
+{1-9}
+)

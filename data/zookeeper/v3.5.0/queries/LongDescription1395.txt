@@ -1,0 +1,10 @@
+This is basically the same issue as ZOOKEEPER-888 and ZOOKEEPER-740 (the latter is open as I write this, but it was superseded by the fix that went in with 888). The problem still exists after the ZOOKEEPER-888 patch, however; it's just more difficult to trigger:
+
+1) Zookeeper notices connection loss, schedules watcher_dispatch
+2) Zookeeper notices session loss, schedules watcher_dispatch
+3) watcher_dispatch runs for connection loss
+4) pywatcher is freed due to is_unrecoverable being true
+5) watcher_dispatch runs for session loss
+6) PyObject_CallObject attempts to run freed pywatcher with varying bad results
+
+The fix is easy, the dispatcher should act on the state it is given, not the state of the world when it runs. (Patch attached). Reliably triggering the crash is tricky due to the race, but it's not theoretical.

@@ -1,0 +1,1 @@
+Upgrade the maven-surefire-plugin from 2.4 to 2.4.3, as the newer level fixes a logging issue I'm seeing on JDK6, where the first par of a stack trace sometimes gets overwritten by the test output.

@@ -1,0 +1,1 @@
+Opening this issue to track integration items with POI 3.12-beta1.

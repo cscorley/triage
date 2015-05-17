@@ -1,0 +1,1 @@
+Issue on Pig docs ( Testing and Diagnostics )

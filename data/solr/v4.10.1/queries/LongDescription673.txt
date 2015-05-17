@@ -1,0 +1,1 @@
+Modify build file to create javadocs for core, solrj, contrib and "all"

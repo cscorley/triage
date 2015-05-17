@@ -1,0 +1,1 @@
+currently we do nto doucment the recommended values for server id's. we should document that. For some large values of server id's we might get negative session's and also might get duplicate sessions from two servers.

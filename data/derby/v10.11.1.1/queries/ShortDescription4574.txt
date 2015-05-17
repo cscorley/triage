@@ -1,0 +1,1 @@
+derby.jar not a valid R4 OSGi bundle

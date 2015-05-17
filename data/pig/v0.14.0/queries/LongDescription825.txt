@@ -1,0 +1,2 @@
+PIG_HADOOP_VERSION should be set to 18, not 17, as Hadoop 0.18 is now considered default.
+Patch coming.

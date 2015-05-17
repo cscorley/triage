@@ -1,0 +1,3 @@
+Arrays.clear(array, 0, array.length - 1, FREE);
+
+Means that the last entry in the array is not FREE, and hence arrays.clear only sometimes empties the array, and hence only sometimes clears out all of the entries in the map.  Other times, it leaves one element behind. 

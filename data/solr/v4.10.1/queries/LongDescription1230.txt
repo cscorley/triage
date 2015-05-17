@@ -1,0 +1,1 @@
+Currently dataimport.jsp development console only works for a single /dataimport handler mapping. 

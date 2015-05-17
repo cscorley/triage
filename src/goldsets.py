@@ -178,7 +178,8 @@ def download_jira_bugs(project, bugs):
         logger.info("Fetching bugid %s", bugid)
         fname = project.name.upper() + '-' + bugid
 #        fname = 'HHH-' + bugid
-        r = requests.get(url_base % (fname, fname))
+
+        r = try_request(url_base % (fname, fname))
 
         with codecs.open(os.path.join(xmlpath, '%s.xml' % bugid), 'w', 'utf-8') as f:
             f.write(r.text)
@@ -206,6 +207,13 @@ def download_jira_bugs(project, bugs):
         downloaded.add(bugid)
 
     return sorted(map(int, list(downloaded)))
+
+def try_request(url, n=10):
+    try:
+        return requests.get(url)
+    except:
+        n -= 1
+        try_request(url, n)
 
 def parse_diff_changes(project, repo, changes, diffs):
     for diff in diffs:

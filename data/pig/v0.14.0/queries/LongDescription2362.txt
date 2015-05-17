@@ -1,0 +1,38 @@
+Antcall is evil: http://www.build-doctor.com/2008/03/13/antcall-is-evil/
+We'd better use macrodef and let Ant build a clean dependency graph.
+http://ant.apache.org/manual/Tasks/macrodef.html
+
+Right now we do like this:
+
+
+<target name="buildAllJars">
+  <antcall target="buildJar">
+    <param name="build.dir" value="jar-A"/>
+  </antcall>
+  <antcall target="buildJar">
+    <param name="build.dir" value="jar-B"/>
+  </antcall>
+  <antcall target="buildJar">
+    <param name="build.dir" value="jar-C"/>
+  </antcall>
+</target>
+<target name="buildJar">
+  <jar destfile="target/${build.dir}.jar" basedir="${build.dir}/classfiles"/>
+</target>
+
+
+
+But it would be better if we did like this:
+
+
+<target name="buildAllJars">
+  <buildJar build.dir="jar-A"/>
+  <buildJar build.dir="jar-B"/>
+  <buildJar build.dir="jar-C"/>
+</target>
+
+<macrodef name="buildJar">
+  <attribute name="build.dir"/>
+  <jar destfile="target/${build.dir}.jar" basedir="${build.dir}/classfiles"/>
+</macrodef>
+

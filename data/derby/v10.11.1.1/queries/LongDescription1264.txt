@@ -1,0 +1,8 @@
+The test tools/importExportThruIJ.sql fails after the changes for DERBY-658, because the harness now tries to copy the supportfiles testData/importExport/sqlAnywhere1.txt and sqlAnywhere2.txt into local encoding.. This gives the following error:
+
+Exception in thread "main" sun.io.MalformedInputException
+        at sun.io.ByteToCharUTF8.convert(ByteToCharUTF8.java:278)
+
+Note: before, DERBY-658, these 2 files would have to be not run through native2ascii. The test explicitly assumes the contents to be ASCII (that is, the import indicates "ASCII").  My notes indicate that with 10.1.1, this test then passed with ibm14.
+
+Because the copying is done based on extension, these two files need to be renamed.

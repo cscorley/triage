@@ -1,0 +1,2 @@
+Bertrand Delacretaz <bdelacretaz@apache.org>
+Erik Hatcher <ehatcher@apache.org>

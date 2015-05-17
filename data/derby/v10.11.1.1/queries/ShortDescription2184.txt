@@ -1,0 +1,1 @@
+QuickStart section of java/testing/README.htm should contain Sun JDK6 as supported java version for running tests

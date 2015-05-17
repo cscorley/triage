@@ -1,0 +1,1 @@
+NetBeans project file: add XML api to source classpath

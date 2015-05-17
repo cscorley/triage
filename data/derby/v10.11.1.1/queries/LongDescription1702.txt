@@ -1,0 +1,11 @@
+diffs :
+
+< 	Exception SQL Exception: No input parameters.
+27a27
+> 	Exception java.sql.SQLException: No input parameters.
+29 del
+< 	Exception SQL Exception: No input parameters.
+29a29
+
+
+most probaly a master update issues. 

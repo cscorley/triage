@@ -1,0 +1,1 @@
+docs need to be updated for session moved exception and how to handle it

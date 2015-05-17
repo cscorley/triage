@@ -1,0 +1,1 @@
+we need releasenotes versioned docs similar to what hadoop has (see their svn, docs, and "howtorelease" twiki)

@@ -1,0 +1,11 @@
+I have an entity which uses the org.apache.openjpa.persistence.jdbc.Index annotation to specify an index on a field. When running against DB2 on iSeries with the Toolkit for Java JDBC driver, the mapping tool is failing with an internal SQLException when issuing the SQL to create the index.  Here is the exception output:
+
+<openjpa-1.0.1-SNAPSHOT-runknown nonfatal general error> org.apache.openjpa.persistence.PersistenceException: [SQL0204] MYUID in QSYS type *LIB not found. 
+{stmnt 1135625136 CREATE UNIQUE INDEX projid_index ON myschema.ProjectBean (projid)}
+ [code=-204, state=42704]
+
+Investigation determined that the problem is due to not specifying a default library on the JDBC URL (myschema) and using a user login that does not have a matching schema defined.  Neither are a requirement for iSeries.  The JDBC driver chooses the user profile name as the default schema.  Unlike DB2 on LUW, the schema name will not get created by default (or as the result of another CREATE which uses the schema name) on iSeries, resulting in the error above.
+
+Unlike most other annotations, the Index annotation does not allow a schema to be specified.  In addition, the openjpa.jdbc.Schema property does not affect index generation.  Since (at least on iSeries) indexes can be created in a specific schema, the Index annotation should be enhanced to include an attribute which allows specification of the schema name to use when creating the index.
+
+This problem was found when using DB2 on iSeries, but could occur using any database/JDBC driver which behaves similarly.

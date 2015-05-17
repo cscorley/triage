@@ -1,0 +1,1 @@
+Add documentation for and clean up the wikipedia classifier example

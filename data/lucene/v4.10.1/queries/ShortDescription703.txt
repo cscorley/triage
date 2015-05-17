@@ -1,0 +1,1 @@
+Change QueryParser to use ConstantScoreRangeQuery in preference to RangeQuery by default

@@ -1,0 +1,1 @@
+IS_AUTOINCREMENT column should be returned as part of the Database description returned by DatabaseMetaData.getColumns

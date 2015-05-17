@@ -1,0 +1,6 @@
+Commons Compress 1.3 was just released. The release announcement summarizes the main changes:
+
+
+Version 1.3 is adds support for Pack200, read-only support for the Unix dump format and transparent support for Zip64 extensions.  It is the first version to require Java 5.
+
+We should upgrade the dependency in Tika.

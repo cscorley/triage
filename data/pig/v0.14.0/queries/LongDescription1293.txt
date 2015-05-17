@@ -1,0 +1,1 @@
+If PIG_HOME isn't set and pig is in the path, the pig wrapper script can't find its home.  Setting PIG_HOME makes it hard to support multiple versions of pig. 

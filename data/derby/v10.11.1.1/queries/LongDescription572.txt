@@ -1,0 +1,3 @@
+Add support in embedded for Clob.setCharacterStream, Clob.setAsciiStream and Blob.setBinaryStream(). Client supports this api.
+
+see org.apache.derby.impl.jdbc.EmbedClob.java  and EmbedBlob.java

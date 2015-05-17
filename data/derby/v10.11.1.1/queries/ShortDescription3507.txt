@@ -1,0 +1,1 @@
+startNetworkServer and stopNetworkServer don't pass arguments

@@ -1,0 +1,1 @@
+test -e FILENAME is not support on /bin/sh in solaris. This is used in bin/zkEnv.sh. We can substitute test -f FILENAME. Attaching a patch.

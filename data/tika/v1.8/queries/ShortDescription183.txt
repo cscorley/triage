@@ -1,0 +1,1 @@
+Fix Maven plugin versions

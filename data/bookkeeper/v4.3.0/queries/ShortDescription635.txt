@@ -1,0 +1,1 @@
+jenkins build should highlight which lines of the patch cause raw analysis errors

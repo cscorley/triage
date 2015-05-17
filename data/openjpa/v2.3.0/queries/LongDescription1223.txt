@@ -1,0 +1,1 @@
+Per email from Donald Woods, we need some documentation for the new autoOff property contributed for OPENJPA-1163. Opening a JIRA issue so we don't lose track of the work.

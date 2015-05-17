@@ -1,0 +1,15 @@
+I found several GZip mime types (which were supported by our group till we began using Tika) which aren't listed in the Tika registry.
+
+
+Now, I am not sure if they are legit or not, and I think that a Tika member will be able to investigate and decide if they should enter as mime types or aliases to gzip.
+
+These are the types:
+application/x-gunzip
+application/gzipped
+application/gzip-compressed
+gzip/document
+
+
+
+They can be found listed here:
+http://mimeapplication.net/x-gunzip

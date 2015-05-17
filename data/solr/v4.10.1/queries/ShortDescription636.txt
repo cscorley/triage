@@ -1,0 +1,1 @@
+admin page schema link fails for example multicore config

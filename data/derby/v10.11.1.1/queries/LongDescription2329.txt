@@ -1,0 +1,69 @@
+Since tinderbox test on svn 506771 the compativility test has failed in all combinations of
+ serverVM-<X>_serverTrunk_clientVM-<Y>_client<Z>
+
+See e.g.
+  http://dbtg.thresher.com/derby/test/tinderbox_trunk16/jvm1.6/testing/Limited/testSummary-506771.html
+  http://dbtg.thresher.com/derby/test/tinderbox_trunk16/jvm1.6/testing/Limited/testSummary-506972.html
+
+Some cases
+
+VM Version = 1.6
+Could not find org.apache.derby.jdbc.ClientDriver
+Could not find org.apache.derby.jdbc.EmbeddedDriver
+Driver com.ibm.db2.jcc.DB2Driver Version = 2.4
+com.ibm.db2.jcc.c.SqlException: java.net.ConnectException : Error opening socket to server localhost on port 1527 with message : Connection refused
+	at com.ibm.db2.jcc.a.a.<init>(a.java:135)
+	at com.ibm.db2.jcc.a.b.a(b.java:1542)
+	at com.ibm.db2.jcc.c.o.<init>(o.java:795)
+	at com.ibm.db2.jcc.a.b.<init>(b.java:298)
+	at com.ibm.db2.jcc.DB2Driver.connect(DB2Driver.java:162)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.apache.derbyTesting.functionTests.util.DerbyJUnitTest.getConnection(DerbyJUnitTest.java:378)
+	at org.apache.derbyTesting.functionTests.util.DerbyJUnitTest.getConnection(DerbyJUnitTest.java:357)
+	at org.apache.derbyTesting.functionTests.tests.junitTests.compatibility.CompatibilitySuite.findServer(CompatibilitySuite.java:283)
+	at org.apache.derbyTesting.functionTests.tests.junitTests.compatibility.CompatibilitySuite.main(CompatibilitySuite.java:130)
+Exception in thread "main" java.lang.Exception: Error lookup up server info: java.net.ConnectException : Error opening socket to server localhost on port 1527 with message : Connection refused
+	at org.apache.derbyTesting.functionTests.tests.junitTests.compatibility.CompatibilitySuite.findServer(CompatibilitySuite.java:295)
+	at org.apache.derbyTesting.functionTests.tests.junitTests.compatibility.CompatibilitySuite.main(CompatibilitySuite.java:130)
+
+
+
+VM Version = 1.6
+Could not find com.ibm.db2.jcc.DB2Driver
+Could not find org.apache.derby.jdbc.EmbeddedDriver
+Driver org.apache.derby.jdbc.ClientDriver Version = 10.3
+java.sql.SQLTransientConnectionException: java.net.ConnectException : Error connecting to server localhost on port 1527 with message Connection refused.
+	at org.apache.derby.client.am.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source)
+	at org.apache.derby.jdbc.ClientDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.apache.derbyTesting.functionTests.util.DerbyJUnitTest.getConnection(DerbyJUnitTest.java:378)
+	at org.apache.derbyTesting.functionTests.util.DerbyJUnitTest.getConnection(DerbyJUnitTest.java:357)
+	at org.apache.derbyTesting.functionTests.tests.junitTests.compatibility.CompatibilitySuite.findServer(CompatibilitySuite.java:283)
+	at org.apache.derbyTesting.functionTests.tests.junitTests.compatibility.CompatibilitySuite.main(CompatibilitySuite.java:130)
+Caused by: org.apache.derby.client.am.DisconnectException: java.net.ConnectException : Error connecting to server localhost on port 1527 with message Connection refused.
+	at org.apache.derby.client.net.NetAgent.<init>(Unknown Source)
+	at org.apache.derby.client.net.NetConnection.newAgent_(Unknown Source)
+	at org.apache.derby.client.am.Connection.<init>(Unknown Source)
+	at org.apache.derby.client.net.NetConnection.<init>(Unknown Source)
+	at org.apache.derby.client.net.NetConnection40.<init>(Unknown Source)
+	at org.apache.derby.client.net.ClientJDBCObjectFactoryImpl40.newNetConnection(Unknown Source)
+	... 7 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:519)
+	at java.net.Socket.connect(Socket.java:469)
+	at java.net.Socket.<init>(Socket.java:366)
+	at java.net.Socket.<init>(Socket.java:179)
+	at org.apache.derby.client.net.OpenSocketAction.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	... 13 more
+Exception in thread "main" java.lang.Exception: Error lookup up server info: java.net.ConnectException : Error connecting to server localhost on port 1527 with message Connection refused.
+	at org.apache.derbyTesting.functionTests.tests.junitTests.compatibility.CompatibilitySuite.findServer(CompatibilitySuite.java:295)
+	at org.apache.derbyTesting.functionTests.tests.junitTests.compatibility.CompatibilitySuite.main(CompatibilitySuite.java:130)

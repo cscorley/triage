@@ -1,0 +1,1 @@
+Add a .gitignore file with general exclusions and Eclipse project files excluded

@@ -1,0 +1,1 @@
+ij 'show connections' statement does not work in JSR169

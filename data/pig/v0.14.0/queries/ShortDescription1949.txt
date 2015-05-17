@@ -1,0 +1,1 @@
+e2e test harness should use bin/pig rather than calling java directly

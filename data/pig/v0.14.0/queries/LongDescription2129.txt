@@ -1,0 +1,1 @@
+The NOTICE file has not been updated in a bit and is missing a number of notices about jars we include in our distribution.

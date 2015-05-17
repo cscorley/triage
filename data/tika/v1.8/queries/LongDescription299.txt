@@ -1,0 +1,15 @@
+I just sync'd to trunk, ran mvn eclipse:clean eclipse:eclipse, and refreshed my three Tika projects.
+
+tika-app and tika-core were fine, but tika-parsers had 6 errors. Mostly things like:
+
+XMLConstants.NULL_NS_URI cannot be resolved
+
+It looks like the geronimo-stax-api_1.0_spec-1.0.jar contains some of these classes, and is slightly out of date.
+
+Version 1.0.1 of the jar fixes this problem.
+
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-stax-api_1.0_spec</artifactId>
+      <version>1.0.1</version>
+    </dependency>

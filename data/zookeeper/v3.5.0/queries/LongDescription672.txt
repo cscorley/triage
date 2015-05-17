@@ -1,0 +1,1 @@
+some typo nits across the documentation.  relevant forrest.xml files fixed. 

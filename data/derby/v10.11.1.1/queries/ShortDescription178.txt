@@ -1,0 +1,1 @@
+Provide line number information in distribution's class files

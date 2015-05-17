@@ -1,0 +1,1 @@
+Use .gz as the default extension for application/gzip

@@ -1,0 +1,1 @@
+ReverseMappingTool fails for openjpa-examples/reversemapping sample

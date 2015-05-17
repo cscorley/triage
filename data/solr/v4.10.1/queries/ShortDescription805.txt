@@ -1,0 +1,1 @@
+DisMax queries are not being cached in QueryResultCache

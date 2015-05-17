@@ -1,0 +1,1 @@
+The PDFBox community is about to release 1.8.9.  Let's use this issue to track discussions before the release and to track Tika's upgrade to PDFBox 1.8.9

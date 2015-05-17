@@ -1,0 +1,1 @@
+Several Adobe formats are missing from the mimetypes file, such as Premiere (PPJ) and SoundBooth (ASND).

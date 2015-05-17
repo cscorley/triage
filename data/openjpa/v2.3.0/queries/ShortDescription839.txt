@@ -1,0 +1,1 @@
+change pom.xml to publish sources as well.

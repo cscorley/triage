@@ -1,0 +1,1 @@
+In the comments of client C API which associated with creating znode, eg. zoo_acreate, it is said that the initial ACL of the node "if null, the ACL of the parent will be used". However, the it doesn't work. When execute this kind of request at the server side, it raises InvalidACLException. The source code show that, the function fixupACL return false when it get a null ACL. 

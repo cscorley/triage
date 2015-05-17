@@ -1,0 +1,7 @@
+Many users see better performance when setting openjpa.ConnectionRetainMode to always. But they might not be aware of the consequences - the EntityManager must be closed in order to release the connection. 
+
+In the case of application managed entity managers, the application should always close the EntityManager when it's done. But since this may or may not be obvious, it's a good idea to log an info message. 
+
+In the case where the application cannot directly close the EntityManager (e.g. a Container Managed EntityManager), we should log a warning to let users know that each EntityManager may hold on to a connection for a long time. 
+
+Unfortunately we can only detect whether the EMF is container managed, not the EM - but some warning is better than none. 

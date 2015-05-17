@@ -1,0 +1,1 @@
+PIG-2879 and PIG-3163 added new built-in udfs "STARTSWITH" and "ENDSWITH", but documentation is missing.

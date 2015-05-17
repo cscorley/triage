@@ -1,0 +1,1 @@
+The default maximum POST size for Jetty is 200 KB, which might be insufficient when dealing with shards and sorting/faceting (cf. https://issues.apache.org/jira/browse/SOLR-303?focusedCommentId=12614708#action_12614708). The example Jetty configuration should increase the maximum POST size to make this problem less likely to occur.

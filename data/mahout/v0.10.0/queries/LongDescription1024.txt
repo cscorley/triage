@@ -1,0 +1,3 @@
+Reproduce by running cluster_reuters.sh in examples.
+
+Seems like the example relies on lda and lda_topics in the mahout driver. The script needs to be changed to rely on the new implementation only.

@@ -1,0 +1,2 @@
+Halley Pacheco de Oliveira <halleypo@apache.org>
+Samuel Andrew McIntyre <fuzzylogic@apache.org>

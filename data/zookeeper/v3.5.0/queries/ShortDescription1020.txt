@@ -1,0 +1,1 @@
+Implement function in C client to determine which host you're currently connected to.

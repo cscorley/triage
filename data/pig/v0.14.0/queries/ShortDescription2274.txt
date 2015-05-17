@@ -1,0 +1,1 @@
+remove pig deb package dependency on sun-java6-jre

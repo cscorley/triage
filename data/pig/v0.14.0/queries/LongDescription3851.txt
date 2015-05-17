@@ -1,0 +1,1 @@
+jline has released 2.11 which has good i18n support. Please consider to upgrade jline version to 2.11 in Pig.

@@ -1,0 +1,189 @@
+The diff for grantRevokeDDL.sql is big, hence attaching. 
+
+For  lang/grantRevokeDDL2.sql  the diff is as follows:
+
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbyall/derbylang/grantRevokeDDL2.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: grantRevokeDDL2 jdkJ2ME Foundation Specification v1.0 derbyall:derbylang 2006-09-10 11:42:23 ***
+0a1
+> java.lang.reflect.InvocationTargetException: java.lang.NullPointerException
+99 del
+< ERROR: Failed with SQLSTATE 38001
+99a100
+> ERROR: Failed with SQLSTATE XJ001
+119 del
+< ERROR: Failed with SQLSTATE 38002
+119a120
+> ERROR: Failed with SQLSTATE XJ001
+139 del
+< ERROR: Failed with SQLSTATE 38002
+139a140
+> ERROR: Failed with SQLSTATE XJ001
+158 del
+< 1 row inserted/updated/deleted
+158a159,160
+> ERROR: Failed with SQLSTATE 38000
+> ERROR: Failed with SQLSTATE XJ001
+163 del
+< 0 rows selected
+163a165,166
+> 4          |XYZ            
+> 1 row selected
+168a172,182
+> ERROR: Failed with SQLSTATE 28508
+> ij(USER2)> set connection user1;
+> ij(USER1)> create trigger revoke_select_trig AFTER delete on t1 
+> 	for each STATEMENT mode db2sql call revoke_select_proc1();
+> 0 rows inserted/updated/deleted
+> ij(USER1)> – should fail
+> delete from t1 where i = 5;
+> ERROR: Failed with SQLSTATE 38000
+> ERROR: Failed with SQLSTATE XJ001
+> ij(USER1)> – check delete failed
+> select * from t1 where i = 5;
+171,184d184
+< 1          |XYZ            
+< 1 row selected
+< ij(USER2)> set connection user1;
+< ij(USER1)> create trigger revoke_select_trig AFTER delete on t1 
+< 	for each STATEMENT mode db2sql call revoke_select_proc1();
+< 0 rows inserted/updated/deleted
+< ij(USER1)> – should fail
+< delete from t1 where i = 5;
+< ERROR: Failed with SQLSTATE 38000
+< ERROR: Failed with SQLSTATE 38001
+< ij(USER1)> – check delete failed
+< select * from t1 where i = 5;
+< I          |B              
+< ---------------------------
+191a192,202
+> ERROR: Failed with SQLSTATE 28508
+> ij(USER2)> set connection user1;
+> ij(USER1)> create trigger revoke_select_trig AFTER delete on t1 
+> 	for each STATEMENT mode db2sql call revoke_select_proc2();
+> 0 rows inserted/updated/deleted
+> ij(USER1)> – should fail
+> delete from t1 where i = 6;
+> ERROR: Failed with SQLSTATE 38000
+> ERROR: Failed with SQLSTATE XJ001
+> ij(USER1)> – check delete failed
+> select * from t1 where i = 6;
+194,207d204
+< 1          |XYZ            
+< 1 row selected
+< ij(USER2)> set connection user1;
+< ij(USER1)> create trigger revoke_select_trig AFTER delete on t1 
+< 	for each STATEMENT mode db2sql call revoke_select_proc2();
+< 0 rows inserted/updated/deleted
+< ij(USER1)> – should fail
+< delete from t1 where i = 6;
+< ERROR: Failed with SQLSTATE 38000
+< ERROR: Failed with SQLSTATE 38002
+< ij(USER1)> – check delete failed
+< select * from t1 where i = 6;
+< I          |B              
+< ---------------------------
+214a212,222
+> ERROR: Failed with SQLSTATE 28508
+> ij(USER2)> set connection user1;
+> ij(USER1)> create trigger revoke_select_trig AFTER delete on t1 
+> 	for each STATEMENT mode db2sql call revoke_select_proc3();
+> 0 rows inserted/updated/deleted
+> ij(USER1)> – should fail
+> delete from t1 where i = 7;
+> ERROR: Failed with SQLSTATE 38000
+> ERROR: Failed with SQLSTATE XJ001
+> ij(USER1)> – check delete failed
+> select * from t1 where i = 7;
+217,230d224
+< 1          |XYZ            
+< 1 row selected
+< ij(USER2)> set connection user1;
+< ij(USER1)> create trigger revoke_select_trig AFTER delete on t1 
+< 	for each STATEMENT mode db2sql call revoke_select_proc3();
+< 0 rows inserted/updated/deleted
+< ij(USER1)> – should fail
+< delete from t1 where i = 7;
+< ERROR: Failed with SQLSTATE 38000
+< ERROR: Failed with SQLSTATE 38002
+< ij(USER1)> – check delete failed
+< select * from t1 where i = 7;
+< I          |B              
+< ---------------------------
+237a232,242
+> ERROR: Failed with SQLSTATE 28508
+> ij(USER2)> set connection user1;
+> ij(USER1)> create trigger revoke_select_trig AFTER delete on t1 
+> 	for each STATEMENT mode db2sql call revoke_select_proc4();
+> 0 rows inserted/updated/deleted
+> ij(USER1)> – ok
+> delete from t1 where i = 8;
+> ERROR: Failed with SQLSTATE 38000
+> ERROR: Failed with SQLSTATE XJ001
+> ij(USER1)> – check delete 
+> select * from t1 where i = 8;
+240 del
+< 1          |XYZ            
+240a245
+> 8          |XYZ            
+241a247,252
+> ij(USER1)> drop trigger revoke_select_trig;
+> 0 rows inserted/updated/deleted
+> ij(USER1)> set connection user2;
+> ij(USER2)> – should fail
+> select * from user1.t1 where i = 1;
+> ERROR: Failed with SQLSTATE 28508
+243,260d253
+< ij(USER1)> create trigger revoke_select_trig AFTER delete on t1 
+< 	for each STATEMENT mode db2sql call revoke_select_proc4();
+< 0 rows inserted/updated/deleted
+< ij(USER1)> – ok
+< delete from t1 where i = 8;
+< 1 row inserted/updated/deleted
+< ij(USER1)> – check delete 
+< select * from t1 where i = 8;
+< I          |B              
+< ---------------------------
+< 0 rows selected
+< ij(USER1)> drop trigger revoke_select_trig;
+< 0 rows inserted/updated/deleted
+< ij(USER1)> set connection user2;
+< ij(USER2)> – should fail
+< select * from user1.t1 where i = 1;
+< ERROR: Failed with SQLSTATE 28508
+< ij(USER2)> set connection user1;
+Test Failed.
+			End:   grantRevokeDDL2 jdkJ2ME Foundation Specification v1.0 derbyall:derbylang 2006-09-10 11:42:33 ***
+		
+		
+	
+	
+

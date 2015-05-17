@@ -1,0 +1,20 @@
+Step 4 says:
+
+
+Edit the build.xml file in the tutorial directory.
+
+Change this:   <property name="pigjar" value="../pig.jar" />
+To this:       <property name="pigjar" value="../pig-0.9.1-core.jar" />
+
+
+
+
+This should read as:
+
+
+Edit the build.xml file in the tutorial directory.
+
+Change this:   <property name="pigjar" value="../pig.jar" />
+To this:       <property name="pigjar" value="../pig-0.9.1.jar" />
+
+

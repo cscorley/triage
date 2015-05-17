@@ -1,0 +1,25 @@
+We observed a crash while closing our c client.  It was in the do_io() thread that was processing as during the close() call.
+
+#0  queue_buffer (list=0x6bd4f8, b=0x0, add_to_front=0) at src/zookeeper.c:969
+#1  0x000000000046234e in check_events (zh=0x6bd480, events=<value optimized out>) at src/zookeeper.c:1687
+#2  0x0000000000462d74 in zookeeper_process (zh=0x6bd480, events=2) at src/zookeeper.c:1971
+#3  0x0000000000469c34 in do_io (v=0x6bd480) at src/mt_adaptor.c:311
+#4  0x00007ffff7bc59ca in start_thread () from /lib/libpthread.so.0
+#5  0x00007ffff6f706fd in clone () from /lib/libc.so.6
+#6  0x0000000000000000 in ?? ()
+
+We tracked down the sequence of events, and the cause is that input_buffer is being freed from a thread other than the do_io thread that relies on it:
+
+1. do_io() call check_events()
+2. if(events&ZOOKEEPER_READ) branch executes
+3. if (rc > 0) branch executes
+4. if (zh->input_buffer != &zh->primer_buffer) branch executes
+.....in the meantime......
+     5. zookeeper_close() called
+     6. if (inc_ref_counter(zh,0)!=0) branch executes
+     7. cleanup_bufs() is called
+     8. input_buffer is freed at the end
+..... back to check_events().........
+9. queue_events() is called on a NULL buffer.
+
+I believe the patch is to only call free_completions() in zookeeper_close() and not cleanup_bufs().  The original reason cleanup_bufs() was added was to call any outstanding synhcronous completions, so only free_completions (which is guarded) is needed.  I will submit a patch for review with this change.

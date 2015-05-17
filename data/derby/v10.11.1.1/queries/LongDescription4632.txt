@@ -1,0 +1,3 @@
+I propose to delete the old Maven 1 files under 'maven1'. They are no longer used, and Maven 1 has been surpassed by Maven 2.
+
+If nobody objects within a week, I'll delete the directory.

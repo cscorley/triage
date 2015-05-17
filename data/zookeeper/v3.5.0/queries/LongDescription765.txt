@@ -1,0 +1,5 @@
+When adding some zookeeper-based functionality to a python script I had to figure everything out without guidance, which while doable, would have been a lot easier with an example. I extracted a skeleton program structure out with hopes its useful to others (maybe add as an example in the source or wiki?).
+
+This script does an aget() and sets a watch, and hopefully illustrates what's going on, and where to plug in your application code that gets run when the znode changes.
+
+There are probably some bugs, which if we fix now and provide a well-reviewed example hopefully others will not run into the same mistakes.

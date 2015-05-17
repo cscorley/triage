@@ -1,0 +1,26 @@
+Hello, adding the following commented-out dataDir to the zoo.cfg file (keeping the default one provided active):
+
+
+# the directory where the snapshot is stored.
+# dataDir=test123/data
+dataDir=/export/crawlspace/mahadev/zookeeper/server1/data
+
+
+
+and then running sh zkServer.sh stop is showing that the program is incorrectly reading the commented-out dataDir:
+
+
+gmazza@gmazza-work:~/dataExt3/apps/zookeeper-3.3.3/bin$ sh zkServer.sh stop
+JMX enabled by default
+Using config: /media/NewDriveExt3_/apps/zookeeper-3.3.3/bin/../conf/zoo.cfg
+Stopping zookeeper ... 
+error: could not find file test123/data
+/export/crawlspace/mahadev/zookeeper/server1/data/zookeeper_server.pid
+gmazza@gmazza-work:~/dataExt3/apps/zookeeper-3.3.3/bin$ 
+
+
+
+If I change the commented-out line in zoo.cfg to "test123456/data" and run the stop command again I get:
+error: could not find file test123456/data
+
+showing that it's incorrectly doing a run-time read of the commented-out lines.  (Difficult to completely confirm, but this problem  doesn't appear to occur with the start command, only the stop one.)

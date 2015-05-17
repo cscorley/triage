@@ -1,0 +1,23 @@
+Hello, I'm a contributor for the node.js zookeeper module: https://github.com/yfinkelstein/node-zookeeper
+i'm using zk 3.3.3 for the purposes of this issue, but i have validated it fails on 3.3.1 and 3.3.2
+
+i'm having an issue when trying to connect when one of my zookeeper servers is offline.
+if the first server attempted is online, all is good.
+
+if the offline server is attempted first, then the client is never able to connect to any server.
+inside zookeeper.c a connection loss (-4) is received, the socket is closed and buffers are cleaned up, it then attempts the next server in the list, creates a new socket (which gets the same fd as the previously closed socket) and connecting fails, and it continues to fail seemingly forever.
+The nature of this "fail" is not that it gets -4 connection loss errors, but that zookeeper_interest doesn't find anything going on on the socket before the user provided timeout kicks things out. I don't want to have to wait 5 minutes, even if i could make myself.
+
+this is the message that follows the connection loss:
+2011-04-27 23:18:28,355:13485:ZOO_ERROR@handle_socket_error_msg@1530: Socket [127.0.0.1:5020] zk retcode=-7, errno=60(Operation timed out): connection timed out (exceeded timeout by 3ms)
+2011-04-27 23:18:28,355:13485:ZOO_ERROR@yield@213: yield:zookeeper_interest returned error: -7 - operation timeout
+
+While investigating, i decided to comment out close(zh->fd) in handle_error (zookeeper.c#1153)
+now everything works (obviously i'm leaking an fd). Connection the the second host works immediately.
+this is the behavior i'm looking for, though i clearly don't want to leak the fd, so i'm wondering why the fd re-use is causing this issue.
+close() is not returning an error (i checked even though current code assumes success).
+
+i'm on osx 10.6.7
+i tried adding a setsockopt so_linger (though i didn't want that to be a solution), it didn't work.
+
+full debug traces are included in issue here: https://github.com/yfinkelstein/node-zookeeper/issues/6

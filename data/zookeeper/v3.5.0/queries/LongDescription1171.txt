@@ -1,0 +1,1 @@
+I tried testing out zk on java 7 (not yet officially supported) but I ran into a road block due to the build failing. Patch coming next.

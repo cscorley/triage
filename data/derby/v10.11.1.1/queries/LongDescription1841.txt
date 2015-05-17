@@ -1,0 +1,44 @@
+This looks like a master update issue. The canons for j9 vms need to be updated with changes made for DERBY-883. 
+
+Diff:
+
+8 del
+< ij> – group by position
+8a8,9
+> ij> – group by constant. should compile but fail because
+> – it is not a valid grouping expression.
+10 del
+< ERROR 42X01: Syntax error: Encountered "1" at line 2, column 27.
+10a11
+> ERROR 42Y30: The SELECT list of a grouped query contains at least one invalid expression. If a SELECT list has a GROUP BY, the list may only contain valid grouping expressions and valid aggregate expressions.  
+16 del
+< ERROR 42Y36: Column reference 'A' is invalid.  For a SELECT list with a GROUP BY, the list may only contain grouping columns and valid aggregate expressions.  
+16a17
+> ERROR 42Y30: The SELECT list of a grouped query contains at least one invalid expression. If a SELECT list has a GROUP BY, the list may only contain valid grouping expressions and valid aggregate expressions.  
+18 del
+< ERROR 42Y36: Column reference 'A' is invalid.  For a SELECT list with a GROUP BY, the list may only contain grouping columns and valid aggregate expressions.  
+18a19
+> ERROR 42Y30: The SELECT list of a grouped query contains at least one invalid expression. If a SELECT list has a GROUP BY, the list may only contain valid grouping expressions and valid aggregate expressions.  
+20 del
+< ERROR 42Y36: Column reference 'B' is invalid.  For a SELECT list with a GROUP BY, the list may only contain grouping columns and valid aggregate expressions.  
+21 del
+< ij> – columns in group by list must be unique
+22 del
+< select a, b from t1 group by a, a;
+23 del
+< ERROR 42Y19: 'A' appears multiple times in the GROUP BY list. Columns in the GROUP BY list must be unambiguous.
+24 del
+< ij> select a, b from t1 group by a, t1.a;
+25 del
+< ERROR 42Y19: 'A' appears multiple times in the GROUP BY list. Columns in the GROUP BY list must be unambiguous.
+25a21
+> ERROR 42Y30: The SELECT list of a grouped query contains at least one invalid expression. If a SELECT list has a GROUP BY, the list may only contain valid grouping expressions and valid aggregate expressions.  
+34 del
+< ERROR 42Y30: The SELECT list of a grouped query contains at least one invalid expression. If a SELECT list has a GROUP BY, the list may only contain grouping columns and valid aggregate expressions.  
+34a30
+> ERROR 42Y30: The SELECT list of a grouped query contains at least one invalid expression. If a SELECT list has a GROUP BY, the list may only contain valid grouping expressions and valid aggregate expressions.  
+43 del
+< ERROR 42X01: Syntax error: Encountered "?" at line 2, column 27.
+43a39
+> ERROR 42X01: Syntax error: ?.
+Test Failed.

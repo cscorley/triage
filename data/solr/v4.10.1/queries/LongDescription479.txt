@@ -1,0 +1,1 @@
+The ASF has a donated license of Clover test coverage.  Would be useful to have some ANT targets that calculate test coverage.  See Lucene Java's implementation.

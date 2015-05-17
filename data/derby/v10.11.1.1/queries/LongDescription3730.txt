@@ -1,0 +1,4 @@
+The manifest does not have a Bundle Symbolic Name. This causes some tools not to recognize it as an OSGi bundle and some things don't work nicely without the symbolic name.
+Add Bundle-SymbolicName: derby to the manifest.
+
+NOTE: this issue will address issue #1 of the multi-issue bug:   DERBY-1945

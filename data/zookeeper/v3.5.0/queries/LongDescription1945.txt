@@ -1,0 +1,1 @@
+This is the same issue as ZOOKEEPER-1719, where the shebang for etc/init.d/zookeeper is set to /bin/sh, but needs to be fixed for deb packages(in src/packages/deb/init.d/zookeeper)

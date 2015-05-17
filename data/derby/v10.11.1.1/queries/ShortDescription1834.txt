@@ -1,0 +1,1 @@
+Correct message SQL State 01006 to reflect that is being revoked - "user" and update the Ref Manual

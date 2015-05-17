@@ -1,0 +1,55 @@
+(I have sent it to the mailing list on March 26th, but it didn't get through)
+
+As I'm not alone with the build failure, see http://www.nabble.com/error-building-openjpa-tf3478705.html, here goes the issue report.
+
+I've been trying to build OpenJPA source from trunk for a couple of days and no joy so far. Anything missing?
+
+jlaskowski@dev /cygdrive/c/oss/openjpa
+$ svn up
+At revision 522565.
+
+jlaskowski@dev /cygdrive/c/oss/openjpa
+$ svn status
+
+jlaskowski@dev /cygdrive/c/oss/openjpa
+$ mvn clean install
+[INFO] Executing tasks
+    [echo] Revision: 406193:522097
+[INFO] Executed tasks
+[INFO] [antrun:run 
+{execution: delete sun.misc.Perf}
+]
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] [resources:testResources]
+[INFO] Using default encoding to copy filtered resources.
+[INFO] [compiler:testCompile]
+[INFO] Compiling 33 source files to
+c:\oss\openjpa\openjpa-lib\target\test-classes
+[INFO] [surefire:test]
+[INFO] Surefire report directory:
+c:\oss\openjpa\openjpa-lib\target\surefire-reports
+[INFO] Building jar: c:\DOCUME~1\JLASKO~1\LOCALS~1\Temp\surefirebooter30238.jar
+java.lang.NoClassDefFoundError: org/apache/maven/surefire/booter/SurefireBooter
+Exception in thread "main"
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] There are test failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] For more information, run Maven with the -e switch
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 16 seconds
+[INFO] Finished at: Mon Mar 26 19:16:09 CEST 2007
+[INFO] Final Memory: 21M/254M
+[INFO] ------------------------------------------------------------------------
+
+jlaskowski@dev /cygdrive/c/oss/openjpa
+$ mvn -v
+Maven version: 2.0.5
+
+jlaskowski@dev /cygdrive/c/oss/openjpa
+$ java -version
+java version "1.5.0_11"
+Java(TM) 2 Runtime Environment, Standard Edition (build 1.5.0_11-b03)
+Java HotSpot(TM) Client VM (build 1.5.0_11-b03, mixed mode)

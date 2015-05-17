@@ -1,0 +1,1 @@
+Mahout script sets HADOOP_CONF_DIR to $HADOOP_HOME/src/conf instead of $HADOOP_HOME/conf 

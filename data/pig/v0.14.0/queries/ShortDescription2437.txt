@@ -1,0 +1,1 @@
+Use Ivy to get automaton.jar

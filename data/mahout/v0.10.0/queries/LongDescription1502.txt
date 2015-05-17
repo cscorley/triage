@@ -1,0 +1,5 @@
+Current Naive Bayes page is for pre .7 NB implementation:
+
+https://mahout.apache.org/users/classification/bayesian.html
+
+post .7, TF-IDF calculations are preformed outside of NB.

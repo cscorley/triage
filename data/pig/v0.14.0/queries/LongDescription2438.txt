@@ -1,0 +1,7 @@
+Right now we are using this property in build.xml to pick up commons-lang for pig-unit
+
+
+<property name="commons-lang.jarfile" value="commons-lang-2.4.jar" />
+
+
+We should use Ivy (ivy::cachepath for example) to pick the jar to avoid errors when updating the libraries.

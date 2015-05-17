@@ -1,0 +1,1 @@
+After "ant clean", the build artifacts in test/e2e is still there. Need to invoke "ant clean" in test/e2e/pig to clean those up.

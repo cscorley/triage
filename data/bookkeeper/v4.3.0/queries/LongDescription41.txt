@@ -1,0 +1,1 @@
+We should configure maven to generate distribution tarballs. 

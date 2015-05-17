@@ -1,0 +1,83 @@
+I tried running my latency tester against trunk, in so doing I noticed that the C/Python (not sure which yet) client performance has seriously degraded since 3.3.3.
+
+The first run (below) is with released 3.3.3 client against a 3 server ensemble running released 3.3.3 server code. The second run is the exact same environment (same ensemble), however using trunk c/zkpython client.
+
+Notice:
+
+1) in the first run operations are approx 10ms/write, 0.25ms/read - which is pretty much what's expected.
+
+2) however in the second run we are seeing 50ms/operation regardless of read or write.
+
+
+[phunt@c0309 zk-smoketest-3.3.3]$ PYTHONPATH=lib.linux-x86_64-2.6/ LD_LIBRARY_PATH=lib.linux-x86_64-2.6/ python26 ./zk-latencies.py --servers "c0309:2181,c0310:2181,c0311:2181" --znode_size=100 --znode_count=100 --timeout=5000 --synchronous
+Connecting to c0309:2181
+Connected in 16 ms, handle is 0
+Connecting to c0310:2181
+Connected in 16 ms, handle is 1
+Connecting to c0311:2181
+Connected in 15 ms, handle is 2
+Testing latencies on server c0309:2181 using syncronous calls
+created     100 permanent znodes  in    959 ms (9.599378 ms/op 104.173415/sec)
+set         100           znodes  in    933 ms (9.332101 ms/op 107.157002/sec)
+get         100           znodes  in     27 ms (0.270889 ms/op 3691.551589/sec)
+deleted     100 permanent znodes  in    881 ms (8.812950 ms/op 113.469388/sec)
+created     100 ephemeral znodes  in    956 ms (9.564152 ms/op 104.557103/sec)
+watched     100           znodes  in     26 ms (0.264361 ms/op 3782.707587/sec)
+deleted     100 ephemeral znodes  in    881 ms (8.819292 ms/op 113.387792/sec)
+notif       100           watches in    999 ms (9.994299 ms/op 100.057038/sec)
+Testing latencies on server c0310:2181 using syncronous calls
+created     100 permanent znodes  in    964 ms (9.640460 ms/op 103.729490/sec)
+set         100           znodes  in    933 ms (9.332800 ms/op 107.148981/sec)
+get         100           znodes  in     29 ms (0.299308 ms/op 3341.036650/sec)
+deleted     100 permanent znodes  in    886 ms (8.864651 ms/op 112.807603/sec)
+created     100 ephemeral znodes  in    958 ms (9.585140 ms/op 104.328161/sec)
+watched     100           znodes  in     30 ms (0.300801 ms/op 3324.459240/sec)
+deleted     100 ephemeral znodes  in    886 ms (8.865030 ms/op 112.802779/sec)
+notif       100           watches in   1000 ms (10.000212 ms/op 99.997878/sec)
+Testing latencies on server c0311:2181 using syncronous calls
+created     100 permanent znodes  in    958 ms (9.582071 ms/op 104.361569/sec)
+set         100           znodes  in    935 ms (9.359350 ms/op 106.845024/sec)
+get         100           znodes  in     25 ms (0.252700 ms/op 3957.263893/sec)
+deleted     100 permanent znodes  in    891 ms (8.913291 ms/op 112.192013/sec)
+created     100 ephemeral znodes  in    958 ms (9.584489 ms/op 104.335246/sec)
+watched     100           znodes  in     25 ms (0.251091 ms/op 3982.627356/sec)
+deleted     100 ephemeral znodes  in    891 ms (8.915379 ms/op 112.165730/sec)
+notif       100           watches in   1000 ms (10.000508 ms/op 99.994922/sec)
+Latency test complete
+[phunt@c0309 zk-smoketest-3.3.3]$ cd ../zk-smoketest-trunk/
+[phunt@c0309 zk-smoketest-trunk]$ PYTHONPATH=lib.linux-x86_64-2.6/ LD_LIBRARY_PATH=lib.linux-x86_64-2.6/ python26 ./zk-latencies.py --servers "c0309:2181,c0310:2181,c0311:2181" --znode_size=100 --znode_count=100 --timeout=5000 --synchronous
+Connecting to c0309:2181
+Connected in 31 ms, handle is 0
+Connecting to c0310:2181
+Connected in 16 ms, handle is 1
+Connecting to c0311:2181
+Connected in 16 ms, handle is 2
+Testing latencies on server c0309:2181 using syncronous calls
+created     100 permanent znodes  in   5099 ms (50.999281 ms/op 19.608119/sec)
+set         100           znodes  in   5066 ms (50.665429 ms/op 19.737324/sec)
+get         100           znodes  in   4009 ms (40.093150 ms/op 24.941916/sec)
+deleted     100 permanent znodes  in   5040 ms (50.404449 ms/op 19.839519/sec)
+created     100 ephemeral znodes  in   5124 ms (51.249170 ms/op 19.512511/sec)
+watched     100           znodes  in   4051 ms (40.514441 ms/op 24.682557/sec)
+deleted     100 ephemeral znodes  in   5048 ms (50.484939 ms/op 19.807888/sec)
+notif       100           watches in   1000 ms (10.004182 ms/op 99.958199/sec)
+Testing latencies on server c0310:2181 using syncronous calls
+created     100 permanent znodes  in   5115 ms (51.157510 ms/op 19.547472/sec)
+set         100           znodes  in   5056 ms (50.568910 ms/op 19.774996/sec)
+get         100           znodes  in   4099 ms (40.999382 ms/op 24.390612/sec)
+deleted     100 permanent znodes  in   5041 ms (50.418010 ms/op 19.834182/sec)
+created     100 ephemeral znodes  in   5083 ms (50.835850 ms/op 19.671157/sec)
+watched     100           znodes  in   4100 ms (41.003261 ms/op 24.388304/sec)
+deleted     100 ephemeral znodes  in   5058 ms (50.581930 ms/op 19.769906/sec)
+notif       100           watches in   1000 ms (10.005081 ms/op 99.949219/sec)
+Testing latencies on server c0311:2181 using syncronous calls
+created     100 permanent znodes  in   5099 ms (50.992720 ms/op 19.610642/sec)
+set         100           znodes  in   5091 ms (50.916569 ms/op 19.639972/sec)
+get         100           znodes  in   4099 ms (40.996401 ms/op 24.392385/sec)
+deleted     100 permanent znodes  in   5066 ms (50.669601 ms/op 19.735699/sec)
+created     100 ephemeral znodes  in   5124 ms (51.249208 ms/op 19.512496/sec)
+watched     100           znodes  in   4099 ms (40.999141 ms/op 24.390755/sec)
+deleted     100 ephemeral znodes  in   5049 ms (50.498819 ms/op 19.802443/sec)
+notif       100           watches in    999 ms (9.997852 ms/op 100.021486/sec)
+Latency test complete
+

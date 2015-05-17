@@ -1,0 +1,31 @@
+Made the following changes.
+
+
+CONTENT
+
+1. Add info about :: operator (Pig Latin doc)
+
+2. Updated info about DEFINE and Auto-Ship (Pig Latin doc)
+
+3. Updated info about PARALLEL (Pig Latin and Cookbook docs)
+
+3. Updated info about JOIN (inner, outer) (Pig Latin doc)
+
+4. Updated info about SET (Pig Latin doc)
+
+5. Updated info about Modulor operator (Pig Latin doc)
+
+6. Add link from Pig docs to Zebra/Pig doc (Pig User Guide)
+
+7. Updated info about schemas and type casting in Zeba/Pig doc (Zebra  Users and Zebra Pig docs)
+
+8. Removed duplicate topics in Pig User Guide (parallel and performance) - these topics discussed in Pig Cookbook
+
+
+DOC FILES
+
+1. Deletes Pig User Guide; Adds Pig Latin Ref Manual 1
+
+2. Deletes Pig Latin Ref Manual; Adds Pig Latin Ref Manual 2
+
+3. Updates doc  links

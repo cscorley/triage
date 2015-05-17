@@ -1,0 +1,2 @@
+The same issue like in 4194 and version 10.5.1.0. I cannot add apache derby nature to my project.
+"The chosen operation is not currently available"

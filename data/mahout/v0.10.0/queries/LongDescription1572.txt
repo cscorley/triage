@@ -1,0 +1,4 @@
+per Sebastian Schelter:
+.bq a dense matrix is converted into a SparseRowMatrix with dense row vectors by blockify(), after serialization this becomes a dense matrix in sparse format (triggering OOMs)! 
+
+i guess we can look at first row vector and go on to either DenseMatrix or SparseRowMatrix

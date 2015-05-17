@@ -1,0 +1,20 @@
+To reproduce the issue, run:
+
+
+ant test -Dhadoopversion=23 -Dtestcase=TestAccumulator
+
+
+This fails with the following error:
+
+
+Caused by: java.lang.ClassNotFoundException: org.jboss.netty.channel.group.ChannelGroup
+
+
+
+This is a regression from PIG-2844 where netty is commented out from ivy.xml.
+
+I guess that the intention was to exclude netty from the generated pom file, but this breaks unit tests.
+
+I propose that we change the ivy conf of netty from "compile-> master" to "test->master" instead of commenting it out. That would prevent netty from being pulled down at compile time by 3rd party projects that consume the pig pom file.
+
+I am speculating here, so please correct me if I am wrong.

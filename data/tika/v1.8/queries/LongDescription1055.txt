@@ -1,0 +1,19 @@
+I have noticed that some famous programming lanuages get not detected in the tika-mimetypes.xml-file:
+
+
+	Clojure: text/x-clojure
+	CoffeeScript: text/x-coffeescript
+	Go: text/x-go
+	Less: text/x-less
+	OCaml: text/x-ocaml
+	Property files, INI-Files
+	reStructuredText: text/x-rst
+	Scala: text/x-scala
+	Smalltalk: text/x-stsrc
+	Yaml: text/x-yaml
+
+
+
+The mimetypes are taken from the CodeMirror editor.
+
+It would be very helpfull for me, if also these types will get detected.

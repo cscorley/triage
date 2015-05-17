@@ -1,0 +1,1 @@
+Build fails - Hadoop 0.23.1-SNAPSHOT no longer available

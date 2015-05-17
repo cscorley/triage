@@ -1,0 +1,1 @@
+Pig's build.xml does not allow for offline building even when it's been built before. This is because the ivy-download target has not conditional associated with it to turn it off. The Hadoop seems to be adding an unless="offline" to the ivy-download target.

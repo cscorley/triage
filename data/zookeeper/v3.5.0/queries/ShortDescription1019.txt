@@ -1,0 +1,1 @@
+zkfuse doesn't list dependency on boost in README

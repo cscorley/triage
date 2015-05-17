@@ -1,0 +1,1 @@
+Directories such as src/org/apache/pig/backend/local/ and its sub directories are empty and should be removed from the svn repository.

@@ -1,0 +1,4 @@
+Per the discussion here [1] and the favorable response, I'll post a link on the Tika website to the Tika in Action book, here [2].
+
+[1] http://mail-archives.apache.org/mod_mbox/tika-user/201008.mbox/%3CC87C4F74.1A2FE%25Chris.A.Mattmann@jpl.nasa.gov%3E
+[2] http://manning.com/mattmann/

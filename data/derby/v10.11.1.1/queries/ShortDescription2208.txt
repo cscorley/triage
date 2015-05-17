@@ -1,0 +1,1 @@
+setNetworkServerCP scripts need not add derby.jar into the CLASSPATH

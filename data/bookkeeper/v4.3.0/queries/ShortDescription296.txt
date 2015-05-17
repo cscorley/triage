@@ -1,0 +1,1 @@
+It's better provide stop script for bookie

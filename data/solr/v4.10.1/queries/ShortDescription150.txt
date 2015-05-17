@@ -1,0 +1,1 @@
+Add rake task to easily package solrb for use in a Rails app's vendor directory

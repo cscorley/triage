@@ -1,0 +1,20 @@
+6 test cases in TestAlgebraicEvalLocal fail on trunk and release 0.7 across a number of different machines.
+
+Example failure:
+
+Unable to open iterator for alias myid
+org.apache.pig.impl.logicalLayer.FrontendException: ERROR 1066: Unable to open iterator for alias myid
+        at org.apache.pig.PigServer.openIterator(PigServer.java:521)
+        at org.apache.pig.test.TestAlgebraicEvalLocal.testGroupUniqueColumnCount(TestAlgebraicEvalLocal.java:236)
+Caused by: java.io.IOException: Job terminated with anomalous status FAILED
+        at org.apache.pig.PigServer.openIterator(PigServer.java:515)
+
+Probably due to OOMs in the log:
+
+10/06/14 19:38:43 WARN mapred.LocalJobRunner: job_local_0002
+java.lang.OutOfMemoryError: Java heap space
+        at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.<init>(MapTask.java:781)
+        at org.apache.hadoop.mapred.MapTask$NewOutputCollector.<init>(MapTask.java:524)
+        at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:613)
+        at org.apache.hadoop.mapred.MapTask.run(MapTask.java:305)
+        at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:177)

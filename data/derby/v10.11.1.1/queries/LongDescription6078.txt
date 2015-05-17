@@ -1,0 +1,4 @@
+At times it would be very helpful to be able to specify a set of properties to pass on to the JUnit tests when invoking the JUnit tasks in build.xml. Examples are specifying a non-default port to use, to shorten down the run-time of the stress-test,or to specify the location of old release jars (this is already handled explicitly).
+
+There are several alternatives on how to do this - see http://ant.apache.org/manual/Types/propertyset.html for details.
+I suggest we try out the simplest approach first: pass on any system properties set on the command line. It should be very simple to implement. The downside is that a property you specify for the higher-level build script may interfer or be in conflict with the running of the tests.

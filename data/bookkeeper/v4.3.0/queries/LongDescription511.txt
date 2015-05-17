@@ -1,0 +1,1 @@
+Bookie shell prints out a lot of stuff it for zookeeper and bookkeeper and the actually shell messages get lost. This JIRA makes zookeeper and bookkeeper only print ERROR level messages for BookieShell. Other commands stay as they are.

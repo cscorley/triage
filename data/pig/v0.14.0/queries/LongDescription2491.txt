@@ -1,0 +1,6 @@
+On http://pig.apache.org/docs/r0.9.1/start.html#properties, we still got:
+
+
+The hadoop-site.xml file (add the directory that contains the hadoop-site.xml file to the classpath)
+
+Can post a patch. What'd be a fit replacement for that considering Pig and how Hadoop loads Configuration resources, core-site.xml?

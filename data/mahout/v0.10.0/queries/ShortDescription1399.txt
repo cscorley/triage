@@ -1,0 +1,1 @@
+Silence logging noise from Mahout Jobs

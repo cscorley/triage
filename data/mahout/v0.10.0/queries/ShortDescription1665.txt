@@ -1,0 +1,1 @@
+Update hadoop commands in example scripts

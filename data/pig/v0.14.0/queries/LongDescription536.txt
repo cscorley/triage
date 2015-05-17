@@ -1,0 +1,27 @@
+ran into this one today when running from user 'hadoop' whoose home directory is /home/hadoop/
+
+also for some reason this script isn't in the pig-types branch..
+
+
+Index: bin/pig
+===================================================================
+— bin/pig	(revision 711801)
++++ bin/pig	(working copy)
+@@ -124,7 +124,8 @@
+
+	libraries in the lib dir, so don't blindly add them all.    Only add the one
+	that matche PIG_HADOOP_VERSION.
+ for f in $PIG_HOME/lib/*.jar; do
+
+
+	IS_HADOOP=`echo $f | grep hadoop`
++    FILENAME=`basename $f`
++    IS_HADOOP=`echo $FILENAME | grep hadoop`
+     if [ "$
+{IS_HADOOP}
+x" == "x" ]; then
+         CLASSPATH=$
+{CLASSPATH}
+:$f;
+     else 
+

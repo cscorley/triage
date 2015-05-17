@@ -1,0 +1,5 @@
+Pig currently uses junit for all testing.  junit is good for unit tests, but limited for end to end and integration testing.
+
+Building an end to end test in junit is cumbersome (a lot of setup and such to do using MiniCluster).  Given that expected results must be known beforehand and hand crafted they must be kept very small, usually ten or less rows.  This does not lead to realistic testing scenarios.
+
+A test tool is needed that allows the test developer to write a Pig Latin script and specify a source of truth against which to test the results of running this Pig Latin script.  A database or a previous version of Pig can then be used as that source of truth.  This will allow developers to quickly add new tests that return more than trivial results.

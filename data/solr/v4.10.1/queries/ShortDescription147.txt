@@ -1,0 +1,1 @@
+DisMax support for Solrb

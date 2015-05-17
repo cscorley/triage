@@ -1,0 +1,22 @@
+TTF magic is probably not specific enough, because it incorrectly detect MS Money files as TTF files, and then the parsing generates an Exception.
+
+Caused by: ! java.io.IOException: head is mandatory
+! at org.apache.fontbox.ttf.AbstractTTFParser.parseTables(AbstractTTFParser.java:107) 
+
+Here is the magic detection code that I added to custom-mimetypes.xml, and solves it:
+
+
+
+<mime-info>
+	<mime-type type="application/x-msmoney">
+		<glob pattern="*.mny" />
+		<magic priority="60">
+			<match value="0x000100004D534953414D204461746162617365" type="string" offset="0" />
+		</magic>
+	</mime-type>
+
+
+It can replace the existing application/x-msmoney empty mime-type in tika-mimetypes.xml.
+
+magic comes from
+http://filesignatures.net/index.php?search=mny&mode=EXT

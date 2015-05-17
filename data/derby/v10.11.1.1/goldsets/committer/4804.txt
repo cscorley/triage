@@ -1,0 +1,2 @@
+Kristian Waagan <kristwaa@apache.org>
+Myrna van Lunteren <myrnavl@apache.org>

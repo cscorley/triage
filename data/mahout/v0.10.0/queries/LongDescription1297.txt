@@ -1,0 +1,3 @@
+See initial set of in-core R-like operations here http://weatheringthrutechdays.blogspot.com/2013/07/scala-dsl-for-mahout-in-core-linear.html.
+
+A separate DSL for matlab-like syntax is being developed. The differences here are about replacing R-like %*% with * and finding another way to express elementwise * and /.

@@ -1,0 +1,1 @@
+test-cppunit overrides LD_LIBRARY_PATH and fails if gcc is in non-standard location

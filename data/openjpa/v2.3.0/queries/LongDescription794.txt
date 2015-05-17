@@ -1,0 +1,16 @@
+So, for each of my web requests I open an entitymanager at the begining, and close it at the end, something like this:
+
+EntityManager pm = pmf.createEntityManager();
+try 
+{
+ chain.filter(...);
+}
+finally 
+{
+ pm.close();
+}
+
+
+And this works perfectly without slices.  But when I turn on slices, this fails.  The first request works fine, but the second requests complains that the EntityManager has already been closed.  So it seems to be caching the EntityManager from the previous request...  can someone please help me figure out how to fix this??
+
+I'll attach the log.

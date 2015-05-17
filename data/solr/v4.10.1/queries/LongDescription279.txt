@@ -1,0 +1,1 @@
+The system properties can now be pulled out of build.xml due to commit revision 551701

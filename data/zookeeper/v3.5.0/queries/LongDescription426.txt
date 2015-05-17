@@ -1,0 +1,4 @@
+Attached are a some Windows versions of the zookeeper scripts. They aren't as powerful as the .sh ones but they do work for me and can be invoked with any directory as the current dir.
+The biggest trick in the scripts is in the zkEnv.cmd one where it says: 
+  set ZOOCFGDIR=%~dp0%..\conf
+this basically figures out the location of the zkEnv.cmd file and sets the conf directory relative to that.

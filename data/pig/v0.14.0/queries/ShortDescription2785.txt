@@ -1,0 +1,1 @@
+NoClassDefFoundError after upgrading to pig 0.10.0 from 0.9.0

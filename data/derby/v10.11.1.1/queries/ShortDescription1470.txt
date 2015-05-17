@@ -1,0 +1,1 @@
+Correct instructions in demo html file demo\simple\example.html

@@ -1,0 +1,5 @@
+At least the m2eclipse Eclipse plugin is having trouble with the <resource/> entry we use to include the LICENSE, NOTICE, and README files in META-INF of the resulting jar artifact. The problem is $
+{basedir}
+ (i.e. the root of the whole Tika checkout) used as the resource directory, which causes Eclipse to treat the whole Tika checkout as a source directory and prevents nesting of the real src/main/java and other source directories.
+
+We could achieve the same effect (bundling of the META-INF files) for example by separately configuring the copy-resources goal of the maven-resources-plugin.

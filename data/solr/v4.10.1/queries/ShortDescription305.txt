@@ -1,0 +1,1 @@
+ad support to analysis tool for working with type names instead of just field names

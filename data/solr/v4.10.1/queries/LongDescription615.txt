@@ -1,0 +1,1 @@
+Some JSPs import the old and deprecated org.apache.solr.util.XML class while others import the new org.apache.solr.common.util.XML class. This causes import conflicts in some JSPs (e.g. ping.jsp). Since the old class now extends the new one, these conflicts do not have any affect at runtime. The sole purpose of this issue is to help clean up the code base.

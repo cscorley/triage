@@ -1,0 +1,1 @@
+Now that INFRA-2841 is complete, we can start migrating over to the new Apache hosted Nexus repo instance, instead of continuing to use the old SCP to people.a.o method.  Infra has asked projects to start migrating, with the goal to eventually force everyone over, as Nexus uses the LDAP ACLs and can check for signatures before allowing artifacts to be released.

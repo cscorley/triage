@@ -1,0 +1,1 @@
+PIG-2239 made it so that users can set $HADOOP_HOME and direct Pig to a different version of Pig then was wrapped in the Pig release.  The test harness needs to allow testers to set HADOOP_HOME so they can test Pig with various versions of Hadoop.

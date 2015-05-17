@@ -1,0 +1,1 @@
+Maven now supports parallel execution of tests.  We should hook this in to Mahout.

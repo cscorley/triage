@@ -1,0 +1,1 @@
+Support ant typedefs for OpenJPA tasks

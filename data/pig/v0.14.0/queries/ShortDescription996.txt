@@ -1,0 +1,1 @@
+[zebra] Zebra build script does not have findbugs and clover targets.

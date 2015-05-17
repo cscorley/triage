@@ -1,0 +1,29 @@
+I tried to run zookeeper c-client on a machine with IPv6 enabled. When connecting to the IPv6 address a connect(...) gave a "Address family not supported by protocol" error. The reason was, that a few lines earlier, the socket was opened with PF_INET instead of PF_INET6. Changing that the following way:
+
+
+
+           if (zh->addrs[zh->connect_index].sa_family == AF_INET) {
+            	zh->fd = socket(PF_INET, SOCK_STREAM, 0);
+            } else {
+            	zh->fd = socket(PF_INET6, SOCK_STREAM, 0);
+            }
+
+
+
+turned the error message into "Invalid argument". 
+
+When printing out sizeof(struct sockaddr), sizeof(struct sockaddr_in) and sizeof(struct sockaddr_in6) I got sockaddr: 16, sockaddr_in: 16 and sockaddr_in6: 28. 
+
+So in the code calling 
+
+
+
+           connect(zh->fd, &zh->addrs[zh->connect_index], sizeof(struct sockaddr_in));
+
+
+
+the parameter address_len is too small.
+
+Same applies to how IPv6 addresses are handled in the function getaddrs(zhandle_t *zh).
+
+(Big Thanks+kiss to Thilo Fromm for helping me debug this.)

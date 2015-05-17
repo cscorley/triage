@@ -1,0 +1,16 @@
+I was checking the bookkeper jar, and I found that it includes some unnecessary files related to junit, such as:
+
+
+     0 Tue May 12 19:00:14 PDT 2009 tmp/
+     0 Tue May 12 19:00:00 PDT 2009 tmp/test14667.junit.dir/
+     0 Tue May 12 19:00:08 PDT 2009 tmp/test14667.junit.dir/version-2/
+     0 Tue May 12 19:00:10 PDT 2009 tmp/test16109.junit.dir/
+     0 Tue May 12 19:00:16 PDT 2009 tmp/test16109.junit.dir/version-2/
+     0 Tue May 12 19:00:14 PDT 2009 tmp/test16113.junit.dir/
+     0 Tue May 12 19:00:16 PDT 2009 tmp/test16113.junit.dir/version-2/
+  2256 Tue May 12 18:59:08 PDT 2009 logs/TEST-org.apache.bookkeeper.test.BookieClientTest.txt
+167046 Tue May 12 19:00:00 PDT 2009 logs/TEST-org.apache.bookkeeper.test.BookieReadWriteTest.txt
+ 13035 Tue May 12 19:00:08 PDT 2009 logs/TEST-org.apache.bookkeeper.test.CloseTest.txt
+ 25036 Tue May 12 19:00:16 PDT 2009 logs/TEST-org.apache.bookkeeper.test.LedgerRecoveryTest.txt
+   896 Tue May 12 19:00:16 PDT 2009 logs/TEST-org.apache.bookkeeper.test.NIOServerFactoryTest.txt
+

@@ -1,0 +1,1 @@
+openjpa-lib/pom.xml has extraneous code

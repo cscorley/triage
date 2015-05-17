@@ -1,0 +1,1 @@
+Remove references to deprecated and removed algorithms from examples scripts

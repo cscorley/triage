@@ -1,0 +1,71 @@
+The following code produce a situation, where the C Client can not exit properly,
+
+#include "include/zookeeper.h"
+
+void default_zoo_watcher(zhandle_t zzh, int type, int state, const char *path, void context){
+    int zrc = 0;
+    struct String_vector str_vec = 
+{0, NULL};
+    printf("in the default_zoo_watcher\n");
+    zrc = zoo_wget_children(zzh, "/mytest", default_zoo_watcher, NULL, &str_vec);
+    printf("zoo_wget_children, error: %d\n", zrc);
+
+    return;
+}
+
+int main()
+{
+    int zrc = 0;
+    int buff_len = 10; 
+    char buff[10] = "hello";
+    char path[512];
+    struct Stat stat;
+    struct String_vector str_vec = {0, NULL}
+;
+
+    zhandle_t *zh = zookeeper_init("10.81.20.62:2181", NULL, 30000, 0, 0, 0); 
+    zrc = zoo_create(zh, "/mytest", buff, 10, &ZOO_OPEN_ACL_UNSAFE, 0, path, 512);
+    printf("zoo_create, error: %d\n", zrc);
+
+    zrc = zoo_wget_children(zh, "/mytest", default_zoo_watcher, NULL, &str_vec);
+    printf("zoo_wget_children, error: %d\n", zrc);
+
+    zrc = zoo_create(zh, "/mytest/test1", buff, 10, &ZOO_OPEN_ACL_UNSAFE, 0, path, 512);
+    printf("zoo_create, error: %d\n", zrc);
+
+    zrc = zoo_wget_children(zh, "/mytest", default_zoo_watcher, NULL, &str_vec);
+    printf("zoo_wget_children, error: %d\n", zrc);
+
+    zrc = zoo_delete(zh, "/mytest/test1", -1);
+
+    printf("zoo_delete, error: %d\n", zrc);
+    zookeeper_close(zh);
+    return 0;
+}
+
+
+running this code can cause the program hang at zookeeper_close(zh);(line 38). using gdb to attach the process, I found that the main thread is waiting for do_completion thread to finish,
+(gdb) bt
+#0  0x000000302b806ffb in pthread_join () from /lib64/tls/libpthread.so.0
+#1  0x000000000040de3b in adaptor_finish (zh=0x515b60) at src/mt_adaptor.c:219
+#2  0x00000000004060ba in zookeeper_close (zh=0x515b60) at src/zookeeper.c:2100
+#3  0x000000000040220b in main ()
+
+and the thread which handle the zoo_wget_children(in the default_zoo_watcher) is waiting for sc->cond. 
+(gdb) thread 2
+[Switching to thread 2 (Thread 1094719840 (LWP 25093))]#0  0x000000302b8089aa in pthread_cond_wait@@GLIBC_2.3.2 ()
+   from /lib64/tls/libpthread.so.0
+(gdb) bt
+#0  0x000000302b8089aa in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/tls/libpthread.so.0
+#1  0x000000000040d88b in wait_sync_completion (sc=0x5167f0) at src/mt_adaptor.c:82
+#2  0x00000000004082c9 in zoo_wget_children (zh=0x515b60, path=0x40ebc0 "/mytest", watcher=0x401fd8 <default_zoo_watcher>, watcherCtx=Variable "watcherCtx" is not available.)
+    at src/zookeeper.c:2884
+#3  0x0000000000402037 in default_zoo_watcher ()
+#4  0x000000000040d664 in deliverWatchers (zh=0x515b60, type=4, state=3, path=0x515100 "/mytest", list=0x5177d8) at src/zk_hashtable.c:274
+#5  0x0000000000403861 in process_completions (zh=0x515b60) at src/zookeeper.c:1631
+#6  0x000000000040e1b5 in do_completion (v=Variable "v" is not available.) at src/mt_adaptor.c:333
+#7  0x000000302b80610a in start_thread () from /lib64/tls/libpthread.so.0
+#8  0x000000302afc6003 in clone () from /lib64/tls/libc.so.6
+#9  0x0000000000000000 in ?? ()
+
+here, a deadlock presents.

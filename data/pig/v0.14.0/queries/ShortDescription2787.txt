@@ -1,0 +1,1 @@
+change the module name in ivy to lowercase to match the maven repo

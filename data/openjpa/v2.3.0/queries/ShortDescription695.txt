@@ -1,0 +1,1 @@
+Link to latest manuals in OpenJPA website is broken

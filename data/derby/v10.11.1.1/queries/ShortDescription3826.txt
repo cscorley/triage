@@ -1,0 +1,1 @@
+Remove the update-with-jdbc4 script, which is dead code now

@@ -1,0 +1,1 @@
+Contradictory text in manual section 10.2.6. JPQL GROUP BY, HAVING

@@ -1,0 +1,1 @@
+Switch Pig wiki to use confluence

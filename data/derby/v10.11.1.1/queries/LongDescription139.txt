@@ -1,0 +1,2 @@
+While the SQL standard mandates LOCAL as a reserved keyword, most other databases such as Oracle, SQL Server, MySQL and DB2 do not enforce it.
+Derby enforces this and limits application migration to Derby.

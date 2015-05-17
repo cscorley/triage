@@ -1,0 +1,3 @@
+It is useful to input larger Strings for analysis into the Solr admin analysis page, but the GET limitation prevents this.  Thus, analysis.jsp and analysis.xsl should be changed to use POST instead.  It would also be nicer to have a bigger input for the textarea (8+ cols)
+
+Patch to follow.

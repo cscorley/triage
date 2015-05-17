@@ -1,0 +1,1 @@
+If users set hbaseversion to 95, shall we use hbase-hadoop2-compat instead of hbase-hadoop1-compat?

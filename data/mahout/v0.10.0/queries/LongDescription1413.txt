@@ -1,0 +1,3 @@
+It's crucial that we update our algorithms page to reflect the current state of algorithms in Mahout 0.9!!!
+
+https://mahout.apache.org/users/basics/algorithms.html

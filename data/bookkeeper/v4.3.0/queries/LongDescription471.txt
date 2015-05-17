@@ -1,0 +1,1 @@
+We should have jenkins test patches automatically before submission. This JIRA is to set that up.

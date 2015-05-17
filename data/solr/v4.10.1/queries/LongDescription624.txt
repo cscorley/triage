@@ -1,0 +1,3 @@
+This is similar in concept to a change I made several years ago in Solar.   Cronned snapshooters can quickly generate a lot of snaps which will then be unnecessarily distributed to the slaves if there hasn't been any changes in that period.
+
+Adds a "check" argument to make sure there where changes to the index before taking the snap.

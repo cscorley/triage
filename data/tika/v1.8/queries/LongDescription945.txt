@@ -1,0 +1,5 @@
+Per discussions on the dev list:
+
+http://s.apache.org/ApK
+
+Let's upgrade tika-server to Apache CXF 2.6.1 in order to reduce the dependencies.

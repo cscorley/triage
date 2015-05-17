@@ -1,0 +1,19 @@
+Pig fails to compile if you execute: 
+
+    ant -D<associated flags for various components> clean findbugs checkstyle test 
+
+It gets the error:
+
+    [javac] Compiling 153 source files to /export/crawlspace/kryptonite/hadoopqa/workspace/workspace/CCDI-Pig-2.3/pig-2.3.0.0.20.0.2967040009/build/test/classes
+    [javac] /export/crawlspace/kryptonite/hadoopqa/workspace/workspace/CCDI-Pig-2.3/pig-2.3.0.0.20.0.2967040009/test/org/apache/pig/test/PigExecTestCase.java:31: cannot find symbol
+    [javac] symbol  : constructor TestCase()
+    [javac] location: class junit.framework.TestCase
+    [javac] public abstract class PigExecTestCase extends TestCase {
+    [javac]                 ^
+
+
+Once that's done, there's a copy of junit 3.7 cached from ivy that will continue to cause the build to fail.  It will succeed, if you remove it, and then do:
+
+    ant -D<associated flags for various components> clean findbugs test
+
+This proves it's running checkstyle that pulls in junit 3.7

@@ -1,0 +1,1 @@
+Converted the shell script in a platform independent way in python. Should work with version 2.7.x

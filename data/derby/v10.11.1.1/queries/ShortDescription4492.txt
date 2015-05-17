@@ -1,0 +1,1 @@
+Localized help message from derbyrun.jar has wrong encoding

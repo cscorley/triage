@@ -1,0 +1,1 @@
+The scm urls in the poms are wrong. This must be fixed before running the release plugin to make an 0.3 release.

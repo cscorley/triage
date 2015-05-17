@@ -1,0 +1,1 @@
+Add Derby Nature doesn't work wirh Eclipse Kepler 4.3, only with Juno 4.2

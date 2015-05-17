@@ -1,0 +1,6 @@
+The patch for ZOOKEEPER-823 already has netty version 3.2.1.Final while trunk has still 3.1.5.GA. Could you please update the netty version in trunk so that we can rule out the version difference a s a cause for the failures? Note that the most recent version of netty is already 3.2.2, not 3.2.1 as in ZOOKEEPER-823
+
+
+	<dependency org="org.jboss.netty" name="netty" conf="default" rev="3.1.5.GA">
++    <dependency org="org.jboss.netty" name="netty" conf="default" rev="3.2.1.Final">
+

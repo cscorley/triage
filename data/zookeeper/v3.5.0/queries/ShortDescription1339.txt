@@ -1,0 +1,1 @@
+C clien doesn't build with --enable-debug

@@ -1,0 +1,3 @@
+Our Hudson build started failing after the TIKA-263 fix because the tika-core jar would contain no classes.
+
+The problem is that Tika doesn't specify the version of the maven-bundle-plugin. The build works fine if the user has a recent version (2.0.0), but the older version (1.4.3) at the Hudson server was causing this problem.

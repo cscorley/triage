@@ -1,0 +1,1 @@
+I'll attach a patch for the Solr tutorial (http://lucene.apache.org/solr/tutorial.html) to use the java client of SOLR-86 instead of post.sh

@@ -1,0 +1,1 @@
+With ZOOKEEPER-529 checked in, ant test for recipes broke. Its a minor change to the build for including librariries from the new location where jars are downloaded by ivy.

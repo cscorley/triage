@@ -1,0 +1,1 @@
+Solr Flare has inconsistent use of the Apache Software License header in its files. 

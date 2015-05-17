@@ -1,0 +1,1 @@
+Fix Glob_local test failure for Pig E2E Test Framework

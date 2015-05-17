@@ -1,0 +1,2 @@
+This is a requirement for valid jars and it causes some problems for tools that expect the manifest as the first entry.
+Karaf does that in some places so that it can read the manifest from a remote location without having to download the full jar.

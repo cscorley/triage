@@ -1,0 +1,1 @@
+Before submitting to Hadoop, "$" will be interpreted and replaced with something totally unrelated ($ means last command executed). The tests runs fine under Hadoop 1 though.

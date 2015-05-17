@@ -1,0 +1,15 @@
+[javadoc] /.../SOMETHING/trunk/src/java/generated/org/apache/zookeeper/server/quorum/QuorumPacket.java:46: cannot find symbol
+  [javadoc] symbol  : class OutputArchive
+  [javadoc] location: class org.apache.zookeeper.server.quorum.QuorumPacket
+  [javadoc]   public void serialize(OutputArchive a_, String tag) throws java.io.IOException {
+  [javadoc]                         ^
+  [javadoc] /.../SOMETHING/trunk/src/java/generated/org/apache/zookeeper/server/quorum/QuorumPacket.java:63: cannot find symbol
+  [javadoc] symbol  : class InputArchive
+  [javadoc] location: class org.apache.zookeeper.server.quorum.QuorumPacket
+  [javadoc]   public void deserialize(InputArchive a_, String tag) throws java.io.IOException {
+  [javadoc]                           ^
+  [javadoc] Building index for all the packages and classes...
+  [javadoc] Building index for all classes...
+  [javadoc] Generating /.../SOMETHING/trunk/build/docs/api/stylesheet.css...
+  [javadoc] 4 errors
+  [javadoc] 124 warnings

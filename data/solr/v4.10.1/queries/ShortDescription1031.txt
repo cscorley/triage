@@ -1,0 +1,1 @@
+XSS vulnerability in schema.jsp (patch included)

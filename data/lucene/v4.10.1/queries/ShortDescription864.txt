@@ -1,0 +1,1 @@
+contrib/benchmark files need eol-style set

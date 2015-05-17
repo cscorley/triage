@@ -1,0 +1,1 @@
+Remove references to older versions of Lucene in "per-release" documentation

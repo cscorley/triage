@@ -1,0 +1,1 @@
+running ant cppunit tests, a failure still results in BUILD SUCCESSFUL

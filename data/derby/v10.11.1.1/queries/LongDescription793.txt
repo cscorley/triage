@@ -1,0 +1,3 @@
+The content of 'trunk/README' is outdated, with references to the incubator. It should be rewritten to reflect the current situation for Derby.
+
+Thanks to Bryan Pendleton for pointing this out (on derby-dev).

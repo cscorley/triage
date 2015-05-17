@@ -1,0 +1,2 @@
+Michael Dick <mikedd@apache.org>
+Richard G. Curtis <curtisr7@apache.org>

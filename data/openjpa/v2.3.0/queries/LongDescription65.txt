@@ -1,0 +1,5 @@
+The goal of this task is to change the packaging of the OpenJPA zip file so that the individual modules (openjpa-lib, openjpa-kernel, etc) are not included. The class files contained in the modules are already included in openjpa-all-$
+{version}.jar. 
+
+the task will also remove "all" from openjpa-all${version}
+.jar in order to avoid confusion. 

@@ -1,0 +1,1 @@
+A language profile for detecting Persian/Farsi.

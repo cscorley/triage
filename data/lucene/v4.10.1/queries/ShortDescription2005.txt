@@ -1,0 +1,1 @@
+Add LuSql project to "Apache Lucene - Contributions" wiki page

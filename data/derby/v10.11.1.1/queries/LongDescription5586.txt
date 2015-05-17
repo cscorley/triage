@@ -1,0 +1,1 @@
+Due to licensing issues, we should remove this script from the Derby repository and we should no longer use this script to generate monohtml output. The licensing issues are discussed on this derby-dev email thread: http://old.nabble.com/Copyright-clairification-for-fo2html.xsl-in-Derby-software.-to33087407.html#a33087407

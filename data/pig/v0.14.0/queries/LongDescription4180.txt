@@ -1,0 +1,1 @@
+Test harness should use hadoop-0.23.0-streaming.jar to run Native_3 on Hadoop 2. See failure on Windows, not sure why it does not manifest on Linux.

@@ -1,0 +1,1 @@
+Retrotranslator plugin fails if using a 1.0-SNAPSHOT version

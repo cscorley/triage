@@ -1,0 +1,1 @@
+For consistency after LUCENE-1829 which did the same for contrib/queryparser

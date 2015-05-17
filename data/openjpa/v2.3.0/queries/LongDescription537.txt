@@ -1,0 +1,12 @@
+You can not use the openjpa version 1.0.2 in a Maven environment (the same for 1.0.1 and 1.0.0). 
+This version tries to download the artifacts from http://www.ibiblio.org/maven2 (ibiblio doesn't work anymore.)
+
+Please do not overwrite the central repository in a pom. A mirror of central should only be defined in your local settings.xml.
+
+Please remove this from http://svn.apache.org/repos/asf/openjpa/trunk/pom.xml
+
+<repository>
+       <id>central</id>
+        <name>Maven Repository Switchboard</name>
+        <url>http://www.ibiblio.org/maven2</url>
+ </repository>

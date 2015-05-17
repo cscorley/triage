@@ -1,0 +1,26 @@
+java -Ddata=args -Dcommit=no -jar post.jar '<delete><id>SP2514N</id></delete>'
+
+and
+
+java -Ddata=args -jar post.jar '<delete><query>name:DDR</query></delete>'
+
+should have their single quotes replaced with double quotes.  Otherwise, it results in the following error on windows command line:
+
+(sample DOS window FAILS)
+C:\downloads\temp\apache-solr-1.2.0\example\exampledocs>java -Ddata=args -jar post.jar '<delete><query>name:DDR</query></delete>'
+< was unexpected at this time.
+
+(sample DOS window WORKS)
+C:\downloads\temp\apache-solr-1.2.0\example\exampledocs>java -Ddata=args -jar post.jar "<delete><query>name:DDR</query></delete>"
+SimplePostTool: version 1.2
+SimplePostTool: WARNING: Make sure your XML documents are encoded in UTF-8, other encodings are not currently supported
+SimplePostTool: POSTing args to http://localhost:8983/solr/update..
+SimplePostTool: COMMITting Solr index changes..
+
+As demonstrated double quotes works with windows.  I also tested double quotes in cygwin, and it should presumably work for linux/UNIX as well.
+
+I started to do a patch, but I see there are three locations where updates might need to be made and I wasn't sure how PDF files were generated, so here's the list of effected source files:
+
+site/tutorial.html
+site/tutorial.pdf
+src/site/src/documentation/content/xdocs/tutorial.xml

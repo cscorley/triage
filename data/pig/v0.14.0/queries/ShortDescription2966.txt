@@ -1,0 +1,1 @@
+Test failures on CentOS 6 because MALLOC_ARENA_MAX is not set

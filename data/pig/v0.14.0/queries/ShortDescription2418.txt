@@ -1,0 +1,1 @@
+rpm release package does not take PIG_CLASSPATH

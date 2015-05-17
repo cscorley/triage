@@ -1,0 +1,12 @@
+Code sample for UDF has source code for the TOKENIZE function but it is missing a negation compared to the real souce code in the trunk.
+
+if ((o instanceof String)) 
+{
+  throw new IOException("Expected input to be chararray, but  got " + o.getClass().getName());
+}
+
+should be
+
+if (!(o instanceof String)) {
+  throw new IOException("Expected input to be chararray, but  got " + o.getClass().getName());
+}

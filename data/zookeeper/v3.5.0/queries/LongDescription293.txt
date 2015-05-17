@@ -1,0 +1,14 @@
+ZOOKEEPER-255 fixed an issue with zoo_set not providing access to stat structure, however this has broken b/w compatibility with previous releases.
+
+We need to:
+
+1) revert zoo_set to not have stat parameter (keep b/w compat)
+2) add zoo_set2 method with stat param added to the function signature
+3) add a version.h file to src/c/include that provides zoo version detail to clients
+
+ie.
+> #define ZOO_MAJOR_VERSION 3
+> #define ZOO_MINOR_VERSION 1
+> #define ZOO_PATCH_VERSION 0
+
+(a new jira should be added to centralize version numbering, we now have the version number in 3 places in the source)

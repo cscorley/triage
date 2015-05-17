@@ -1,0 +1,34 @@
+Trying to build the 'tar' target fails for me with an OutOfMemoryError from forrest deep in the build process.
+
+The attached patch increases the heap size for the forrest task from 64m to 256m by changing the single line 'forrest.maxmemory=256m' in src/docs/forrest.properties.
+
+Here's the stacktrace, mostly to make the issue more googleable.
+
+
+
+     [exec] * [44/5]    [0/0]     7.135s 0b      basic.pdf
+     [exec] Exception in thread "main" java.lang.OutOfMemoryError: GC overhead limit exceeded
+     [exec] 	at java.lang.AbstractStringBuilder.<init>(AbstractStringBuilder.java:64)
+     [exec] 	at java.lang.StringBuffer.<init>(StringBuffer.java:96)
+     [exec] 	at org.apache.fop.render.pdf.PDFRenderer.renderSpace(PDFRenderer.java:1494)
+    (...snip...)
+     [exec] Java Result: 1
+     [exec]   Copying broken links file to site root.
+     [exec] BUILD FAILED
+     [exec] /usr/local/share/apache-forrest/main/targets/site.xml:224: Error building site.
+     [exec]   - See /Users/flip/ics/data_science_fun_pack/pig/pig/src/docs/build/site/broken-links.xml
+BUILD FAILED
+/Users/flip/ics/data_science_fun_pack/pig/pig/build.xml:633: exec returned: 1
+
+
+
+(Incidentally: after fixing that I also hit an NPE from Ant on a later stage of the javadoc build. That was fixed by moving from ant 1.9.3 to ant 1.9.4):
+
+
+
+/Users/flip/ics/data_science_fun_pack/pig/pig/build.xml:1464: java.lang.NullPointerException
+	at org.apache.tools.ant.taskdefs.Javadoc.postProcessGeneratedJavadocs(Javadoc.java:2450)
+	at org.apache.tools.ant.taskdefs.Javadoc.execute(Javadoc.java:1790)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:292)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+

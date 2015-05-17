@@ -1,0 +1,1 @@
+Modify .gitignore to ignore pig-withouthadoop.jar

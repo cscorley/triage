@@ -1,0 +1,1 @@
+Test configurations currently use dbcp with MaxIdle=0, effectively no connection pool. For Derby this doesn't have much of an effect but with other databases, like DB2, setting MaxIdle=2 can dramatically improve the time taken to run the tests. 

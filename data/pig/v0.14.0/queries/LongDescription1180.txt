@@ -1,0 +1,1 @@
+Piggybank depends on pig.jar to compile. If we build pig using the option "ant jar-withouthadoop", we only get pig-withouthadoop.jar. In this case, piggybank should look for pig-withouthadoop.jar. 

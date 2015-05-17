@@ -1,0 +1,6 @@
+setEmbeddedCP.ksh (and setNetworkClient.ksh) gives the following message if neither DERBY_HOME nor DERBY_INSTALL is set:
+
+  echo "\$DERBY_HOME or \$DERBY_INSTALL not set. Please set one of these variables"
+  echo "to the location of your Derby installation."
+
+but the scripts do not work if only DERBY_HOME is set

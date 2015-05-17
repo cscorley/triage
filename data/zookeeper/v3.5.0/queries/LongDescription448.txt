@@ -1,0 +1,1 @@
+png images are not compatible with forrest generating pdf. We can them to jpg to get them into pdfs.

@@ -1,0 +1,1 @@
+This patch preserves the method profile of Solr::Connection#add and Solr::Request::AddDocument#new, but allows for the passing of an array filled with Hash/Solr::Document objects.

@@ -1,0 +1,8 @@
+the nighthly build has been failing. http://hudson.zones.apache.org/hudson/job/ZooKeeper-trunk/664/. The problem seems to be 
+
+
+BUILD FAILED
+java.lang.NoClassDefFoundError: org/apache/ivy/ant/IvyMakePom$Mapping
+
+Total time: 15 minutes 14 seconds
+

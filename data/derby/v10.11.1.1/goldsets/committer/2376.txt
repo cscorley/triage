@@ -1,0 +1,3 @@
+Bryan Pendleton <bpendleton@apache.org>
+Myrna van Lunteren <myrnavl@apache.org>
+Samuel Andrew McIntyre <fuzzylogic@apache.org>

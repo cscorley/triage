@@ -1,0 +1,1 @@
+Missing negation in UDF doc sample code

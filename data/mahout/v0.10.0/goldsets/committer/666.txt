@@ -1,0 +1,2 @@
+Jacob Alexander Mannix <jmannix@apache.org>
+Sean R. Owen <srowen@apache.org>

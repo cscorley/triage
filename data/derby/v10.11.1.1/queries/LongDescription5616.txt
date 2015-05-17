@@ -1,0 +1,3 @@
+The demo script demo/vtis/sql/demoFileVtis.sql needs to be adjusted:
+
+messages_en.properties is no longer found in source tree, but in the generated tree.

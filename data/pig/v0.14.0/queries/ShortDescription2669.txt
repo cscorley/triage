@@ -1,0 +1,1 @@
+Pig release should include pig-default.properties after rebuild

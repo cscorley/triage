@@ -1,0 +1,1 @@
+ZooKeeper package includes unnecessary jars that are part of the package.

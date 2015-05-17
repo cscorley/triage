@@ -1,0 +1,1 @@
+Duplicate files included in binary assembly when using docbook-plugin

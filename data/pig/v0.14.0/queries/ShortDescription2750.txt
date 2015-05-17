@@ -1,0 +1,1 @@
+add artifacts to the ivy.xml for other jars Pig generates

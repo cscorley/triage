@@ -1,0 +1,9 @@
+A consensus has developed that we should stop building the Eclipse plugins as part of Derby releases. 10.8.2 will be the last release which includes these artifacts. After that, people who depend on these plugins will need to build them themselves and, if possible, find a place to publish the plugins. This topic has been discussed on the following email threads:
+
+http://old.nabble.com/Eclipse-plugins-to31524444.html#a31524444
+
+http://old.nabble.com/draft-of-message-to-derby-user-concerning-the-future-of-the-Eclipse-plugins-to31691740.html#a31691740
+
+http://old.nabble.com/future-of-the-Derby-Eclipse-plugins-to31708734.html#a31708734
+
+This issue tracks tasks needed to accomplish this goal.

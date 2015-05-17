@@ -1,0 +1,7 @@
+Some compilation environments provide implicit inclusion of certain system headers.
+But any way it's not a reason to exploit it in platform-independent projects.
+
+TestHashtable.cc and LibCMocks.h from src/c/tests/ use those functions without including corresponding system headers.
+
+Modern versions of GCC are very strict.
+You cannot build the code like this with the help of GCC version 4.3.

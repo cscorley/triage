@@ -1,0 +1,3 @@
+The Tika source tree or a source release does not contain our dependencies, so the associated LICENSE and NOTICE files do not need to cover them.
+
+However, the Maven build automatically includes the depencencies in the -standalone jar, which thus should contain LICENSE and NOTICE files that do cover the dependencies.

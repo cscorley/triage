@@ -1,0 +1,1 @@
+[patch] embellish build.xml to automatically install junit.jar in the correct directory if it doesn't exist.

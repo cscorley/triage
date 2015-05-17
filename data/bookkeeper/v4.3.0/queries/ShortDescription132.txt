@@ -1,0 +1,1 @@
+Sign artifacts before deploying to maven

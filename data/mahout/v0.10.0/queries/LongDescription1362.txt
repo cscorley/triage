@@ -1,0 +1,1 @@
+Remove examples/bin/build-reuters.sh as its been replaced by cluster-reuters.sh 

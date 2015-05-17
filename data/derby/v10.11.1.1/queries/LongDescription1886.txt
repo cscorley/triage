@@ -1,0 +1,1 @@
+The junit.jar file is not under source control and is distributed under a non-Apache license. However, it appears in our source distributions. We should either remove it from the source distributions or add some verbiage to the NOTICE file.

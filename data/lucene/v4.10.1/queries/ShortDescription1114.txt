@@ -1,0 +1,1 @@
+contrib/Highlighter javadoc example needs to be updated

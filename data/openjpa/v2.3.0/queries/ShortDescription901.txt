@@ -1,0 +1,1 @@
+Use hosted JAI artifacts as the default for the docbook build

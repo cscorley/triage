@@ -1,0 +1,3 @@
+Using java.net is irritating and inconvenient for users. Stop.
+
+The first known problem is uncommons-math; I've arranged publication to central, and I'll fix the poms when I know it's there.

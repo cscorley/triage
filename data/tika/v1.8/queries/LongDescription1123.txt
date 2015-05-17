@@ -1,0 +1,13 @@
+Would it be possible to add the Mime Types of these programming lanuages from the attached custom-mimetypes.xml into the tika-mimetypes.xml-file?
+
+
+	Asciidoc: text/x-asciidoc
+	D: text/x-d
+	HAML: text/x-haml
+	Haxe: text/x-haxe
+	R: text/x-rsrc
+	XQuery: application/xquery
+
+
+
+These mimetypes are also used in other projects like the CodeMirror editor.

@@ -1,0 +1,1 @@
+Solr must declare crypto usage pending SOLR-284

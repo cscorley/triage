@@ -1,0 +1,5 @@
+I have a created a tutorial for setting up the spark shell and implementing a simple linear regression algorithm. I'd love to make this part of the website, could someone give it a review?
+
+https://github.com/sscdotopen/krams/blob/master/linear-regression-cereals.md
+
+PS: If you wanna try out the code, you have to add the patch from MAHOUT-1532 to your sources.

@@ -1,0 +1,47 @@
+The generated Maven pom.xml file contains:
+
+
+
+<dependency>
+  <groupId>log4j</groupId>
+  <artifactId>log4j</artifactId>
+  <version>1.2.15</version>
+  <scope>compile</scope>
+</dependency>
+
+
+
+It would be better to have:
+
+
+
+<dependency>
+  <groupId>log4j</groupId>
+  <artifactId>log4j</artifactId>
+  <version>1.2.15</version>
+  <scope>compile</scope>
+  <exclusions>
+    <exclusion>
+      <groupId>javax.jms</groupId>
+      <artifactId>jms</artifactId>
+    </exclusion>
+    <exclusion>
+      <groupId>com.sun.jdmk</groupId>
+      <artifactId>jmxtools</artifactId>
+    </exclusion>
+    <exclusion>
+      <groupId>com.sun.jmx</groupId>
+      <artifactId>jmxri</artifactId>
+    </exclusion>
+    <exclusion>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+    </exclusion>
+  </exclusions> 
+</dependency>
+
+
+
+This would avoid to people depending on ZooKeeper artifacts the pain to exclude such "broken" dependencies by themselves.
+
+A similar issue is discussed in HADOOP-6629, although I am not clear on how to solve fix it using Ivy.

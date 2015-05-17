@@ -1,0 +1,1 @@
+After discussion in the thread http://db.markmail.org/thread/wdaszpjv53jlkxxb , there seems to be consensus to remove the Maven artifact history section in maven2/README.txt

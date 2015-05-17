@@ -1,0 +1,1 @@
+The full interface needs a filter query text field.

@@ -1,0 +1,5 @@
+See this JIRA/comment for background:
+https://issues.apache.org/jira/browse/ZOOKEEPER-425?focusedCommentId=12859697&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#action_12859697
+
+basically the issue is that OSGi metadata is included in the legacy jar (zookeeper-<version>.jar) but not in the binary only
+jar (zookeeper-<version>-bin.jar) which is eventually deployed to the maven repo.

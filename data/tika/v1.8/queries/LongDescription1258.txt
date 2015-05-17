@@ -1,0 +1,5 @@
+Now tika-parsers depends on edu.ucar:netcdf:4.2-min.
+
+Current netcdf version is 4.2.20 and we can update it in trunk. All tests pass successfully with netcdf updated to 4.2.20 and slf4j-log4j12 to 1.6.1 (since netcdf updated slf4j dependency to 1.6.1).
+
+Patch is attached.

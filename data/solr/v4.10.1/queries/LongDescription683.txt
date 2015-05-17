@@ -1,0 +1,4 @@
+Per this discussion:
+http://www.nabble.com/Distributed-Search-Strategy---Shards-td18882112.html
+
+Solr seems to lock up when running distributed search on three servers, with all three using shards of each other.  Thread dump attached.

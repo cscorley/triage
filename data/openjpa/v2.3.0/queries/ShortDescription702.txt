@@ -1,0 +1,1 @@
+MappingTool fails requires appropriate DESCSTAT parm value on DB2 for z/OS

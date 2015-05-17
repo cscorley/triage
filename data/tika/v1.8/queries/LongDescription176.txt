@@ -1,0 +1,1 @@
+We should have a "Getting Started" guide that describes how to build Tika and how to make Tika available in an application.

@@ -1,0 +1,1 @@
+jdbcapi/resultsetJdbc30.java fails with '{non-}holdable result set was not closed on exception'

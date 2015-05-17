@@ -1,0 +1,4 @@
+The word "No-one" should be changed to "No one" in message 4251E. The current text is:
+
+"No-one can view the 'SYSUSERS'.'PASSWORD' column."
+

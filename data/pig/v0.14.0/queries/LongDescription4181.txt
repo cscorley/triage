@@ -1,0 +1,1 @@
+whoami gives an extra "^M" in tez.conf. Have similar fix in other configs. 

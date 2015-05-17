@@ -1,0 +1,1 @@
+Wrong version numbers for libraries in eclipse template classpath

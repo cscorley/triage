@@ -1,0 +1,1 @@
+Publish pig 0.23 jars to maven

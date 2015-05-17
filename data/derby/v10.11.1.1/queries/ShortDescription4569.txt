@@ -1,0 +1,1 @@
+failures in ij2 test with cdc/foundation (ibm's weme 6.2)

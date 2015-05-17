@@ -1,0 +1,3 @@
+Michael McCandless <mikemccand@apache.org>
+Simon Willnauer <simonw@apache.org>
+Uwe Schindler <uschindler@apache.org>

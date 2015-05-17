@@ -1,0 +1,8 @@
+Checkstyle currently throws a lot of errors for small things like 
+
+private static Logger log 
+if(booleanVar == false) // Required for readability 
+
+This task is created to track 
+how to match the checkstyle to relax certain rules and 
+changes in code for the strict ones

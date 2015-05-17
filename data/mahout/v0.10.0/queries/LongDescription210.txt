@@ -1,0 +1,9 @@
+We should use mvn site:site to generate code reports and publish them online for users to review and developers to easily spot problems.
+
+First version that still needs checks adjusted to our needs is available online at:
+
+http://people.apache.org/~isabel/mahout_site/mahout-core/project-reports.html
+
+Further discussion on-list at
+
+http://www.lucidimagination.com/search/document/a13aa5127b47fda3/publish_code_quality_reports_on_web_site##a13aa5127b47fda3

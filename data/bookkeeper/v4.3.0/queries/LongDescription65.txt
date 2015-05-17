@@ -1,0 +1,4 @@
+bookkeeper-benchmark and hedwig-client depend on netty 3.1.2.GA
+bookkeeper-server depends on netty 3.2.4.Final
+
+These versions are actually incompatible, due to a change to ProtobufDecoder constructor's signature

@@ -1,0 +1,89 @@
+Current commit is 1743c1521679daab600a982be6e537517111130e
+
+
+On trunk, running examples/bin/classify-20newsgroups.sh gives this error:
+
+
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: slf4j-api 1.6.x (or later) is incompatible with this binding.
+SLF4J: Your binding is version 1.5.5 or earlier.
+SLF4J: Upgrade your binding to version 1.6.x.
+Exception in thread "main" java.lang.NoSuchMethodError: org.slf4j.impl.StaticLoggerBinder.getSingleton()Lorg/slf4j/impl/StaticLoggerBinder;
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:128)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:107)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:295)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:269)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:281)
+	at org.apache.mahout.driver.MahoutDriver.<clinit>(MahoutDriver.java:89)
+
+
+
+Marked Blocker since script just plain does not run.
+
+Here is the complete trace from running the script under shell's -x option:
+
+
+@mac bin [trunk] $ sh -x classify-20newsgroups.sh 
++ '[' '' = --help ']'
++ '[' '' = '--?' ']'
++ SCRIPT_PATH=classify-20newsgroups.sh
++ '[' classify-20newsgroups.sh '!=' classify-20newsgroups.sh ']'
+++ pwd
++ START_PATH=/Users/lancenorskog/Documents/open/mahout/examples/bin
++ WORK_DIR=/tmp/mahout-work-lancenorskog
++ algorithm=(cnaivebayes naivebayes sgd clean)
++ '[' -n '' ']'
++ echo 'Please select a number to choose the corresponding task to run'
+Please select a number to choose the corresponding task to run
++ echo '1. cnaivebayes'
+1. cnaivebayes
++ echo '2. naivebayes'
+2. naivebayes
++ echo '3. sgd'
+3. sgd
++ echo '4. clean -- cleans up the work area in /tmp/mahout-work-lancenorskog'
+4. clean -- cleans up the work area in /tmp/mahout-work-lancenorskog
++ read -p 'Enter your choice : ' choice
+Enter your choice : 1
++ echo 'ok. You chose 1 and we'\''ll use cnaivebayes'
+ok. You chose 1 and we'll use cnaivebayes
++ alg=cnaivebayes
++ echo 'creating work directory at /tmp/mahout-work-lancenorskog'
+creating work directory at /tmp/mahout-work-lancenorskog
++ mkdir -p /tmp/mahout-work-lancenorskog
++ '[' '!' -e /tmp/mahout-work-lancenorskog/20news-bayesinput ']'
++ '[' '!' -e /tmp/mahout-work-lancenorskog/20news-bydate ']'
++ cd /Users/lancenorskog/Documents/open/mahout/examples/bin
++ cd ../..
++ set -e
++ '[' xcnaivebayes == xnaivebayes -o xcnaivebayes == xcnaivebayes ']'
++ c=
++ '[' xcnaivebayes == xcnaivebayes ']'
++ c=' -c'
++ set -x
++ echo 'Preparing 20newsgroups data'
+Preparing 20newsgroups data
++ rm -rf /tmp/mahout-work-lancenorskog/20news-all
++ mkdir /tmp/mahout-work-lancenorskog/20news-all
++ cp -R /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/alt.atheism /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/comp.graphics /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/comp.os.ms-windows.misc /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/comp.sys.ibm.pc.hardware /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/comp.sys.mac.hardware /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/comp.windows.x /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/misc.forsale /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/rec.autos /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/rec.motorcycles /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/rec.sport.baseball /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/rec.sport.hockey /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/sci.crypt /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/sci.electronics /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/sci.med /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/sci.space /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/soc.religion.christian /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/talk.politics.guns /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/talk.politics.mideast /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/talk.politics.misc /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-test/talk.religion.misc /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/alt.atheism /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/comp.graphics /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/comp.os.ms-windows.misc /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/comp.sys.ibm.pc.hardware /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/comp.sys.mac.hardware /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/comp.windows.x /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/misc.forsale /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/rec.autos /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/rec.motorcycles /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/rec.sport.baseball /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/rec.sport.hockey /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/sci.crypt /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/sci.electronics /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/sci.med /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/sci.space /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/soc.religion.christian /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/talk.politics.guns /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/talk.politics.mideast /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/talk.politics.misc /tmp/mahout-work-lancenorskog/20news-bydate/20news-bydate-train/talk.religion.misc /tmp/mahout-work-lancenorskog/20news-all
++ echo 'Creating sequence files from 20newsgroups data'
+Creating sequence files from 20newsgroups data
++ ./bin/mahout seqdirectory -i /tmp/mahout-work-lancenorskog/20news-all -o /tmp/mahout-work-lancenorskog/20news-seq
+MAHOUT_LOCAL is set, so we don't add HADOOP_CONF_DIR to classpath.
+hadoop binary is not in PATH,HADOOP_HOME/bin,HADOOP_PREFIX/bin, running locally
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/lancenorskog/Documents/open/mahout/examples/target/mahout-examples-0.8-SNAPSHOT-job.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/lancenorskog/Documents/open/mahout/examples/target/dependency/slf4j-jcl-1.7.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/lancenorskog/Documents/open/mahout/examples/target/dependency/slf4j-log4j12-1.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: slf4j-api 1.6.x (or later) is incompatible with this binding.
+SLF4J: Your binding is version 1.5.5 or earlier.
+SLF4J: Upgrade your binding to version 1.6.x.
+Exception in thread "main" java.lang.NoSuchMethodError: org.slf4j.impl.StaticLoggerBinder.getSingleton()Lorg/slf4j/impl/StaticLoggerBinder;
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:128)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:107)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:295)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:269)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:281)
+	at org.apache.mahout.driver.MahoutDriver.<clinit>(MahoutDriver.java:89)
+

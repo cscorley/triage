@@ -1,0 +1,1 @@
+Findbugs configuration is missing some dependencies
