@@ -180,8 +180,7 @@ def download_jira_bugs(project, bugs):
 #        fname = 'HHH-' + bugid
         r = requests.get(url_base % (fname, fname))
 
-        with open(os.path.join(project.full_path, 'xml', str(bugid) + '.xml'),
-                  'w') as f:
+        with codecs.open(os.path.join(xmlpath, '%s.xml' % bugid), 'w', 'utf-8') as f:
             f.write(r.text)
 
         try:
