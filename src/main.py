@@ -28,6 +28,7 @@ from corpora import (ChangesetCorpus, SnapshotCorpus, ReleaseCorpus,
                      CorpusCombiner, GeneralCorpus)
 from errors import TaserError
 from goldsets import build_developer_goldset
+from ownership import build_ownership
 
 
 def error(*args, **kwargs):
@@ -97,6 +98,9 @@ def run_experiment(project):
     # create/load document lists
     queries = create_queries(project)
     goldsets = load_goldsets(project, 'committer')
+
+    ownership = build_ownership(project, repos)
+    return
 
     # get corpora
     changeset_corpus = create_corpus(project, repos, ChangesetCorpus, use_level=False)
