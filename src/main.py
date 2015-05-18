@@ -48,7 +48,7 @@ def error(*args, **kwargs):
 @click.option('--lsi', is_flag=True)
 @click.option('--name', help="Name of project to run experiment on")
 @click.option('--version', help="Version of project to run experiment on")
-@click.option('--level', default="class", help="Granularity level of project to run experiment on")
+@click.option('--level', default="file", help="Granularity level of project to run experiment on")
 @click.option('--num_topics', default=500, type=click.INT)
 @click.option('--chunksize', default=2000, type=click.INT)
 @click.option('--passes', default=5, type=click.INT)
@@ -100,7 +100,6 @@ def run_experiment(project):
     goldsets = load_goldsets(project, 'committer')
 
     ownership = build_ownership(project, repos)
-    return
 
     # get corpora
     changeset_corpus = create_corpus(project, repos, ChangesetCorpus, use_level=False)
@@ -109,13 +108,12 @@ def run_experiment(project):
 
     collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
 
-    # release-based evaluation is #basic 💁
-    release_lda, release_lsi = run_basic(project, release_corpus,
-                                         release_corpus, queries, goldsets,
-                                         'Release', use_level=True)
+    release_lda, release_lsi = run_ownership(project, release_corpus,
+                                             ownership, queries, goldsets,
+                                             'Release')
 
     changeset_lda, changeset_lsi = run_basic(project, changeset_corpus,
-                                             release_corpus, queries, goldsets,
+                                             developer_corpus, queries, goldsets,
                                              'Changeset')
 
     if project.temporal:
@@ -271,6 +269,78 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, kind, use_level=
         lsi_first_rels = get_frms(goldsets, lsi_ranks)
 
     return lda_first_rels, lsi_first_rels
+
+def run_ownership(project, corpus, ownership, queries, goldsets, kind, use_level=False):
+    logger.info("Running ownership-based evaluation on the %s", kind)
+    lda_first_rels = list()
+    if project.lda:
+        try:
+            lda_owners = read_ranks(project, kind.lower() + '_lda')
+            logger.info("Sucessfully read previously written %s LDA ranks", kind)
+            exists = True
+        except IOError:
+            exists = False
+
+        if project.force or not exists:
+            lda_model, _ = create_lda_model(project, corpus, corpus.id2word, kind, use_level=use_level)
+            lda_query_topic = get_topics(lda_model, queries)
+            lda_doc_topic = get_topics(lda_model, corpus)
+
+            lda_ranks = get_rank(lda_query_topic, lda_doc_topic)
+            lda_owners = rank2owner(lda_ranks, ownership)
+            write_ranks(project, kind.lower() + '_lda', lda_owners)
+
+        lda_first_rels = get_frms(goldsets, lda_owners)
+
+    lsi_first_rels = list()
+    if project.lsi:
+        try:
+            lsi_owners = read_ranks(project, kind.lower() + '_lsi')
+            logger.info("Sucessfully read previously written %s LSI ranks", kind)
+            exists = True
+        except IOError:
+            exists = False
+
+        if project.force or not exists:
+            lsi_model, _ = create_lsi_model(project, corpus, corpus.id2word, kind, use_level=use_level)
+            lsi_query_topic = get_topics(lsi_model, queries)
+            lsi_doc_topic = get_topics(lsi_model, other_corpus)
+
+            lsi_ranks = get_rank(lsi_query_topic, lsi_doc_topic)
+            lsi_owners = rank2owner(lsi_ranks, ownership)
+            write_ranks(project, kind.lower() + '_lsi', lsi_owners)
+
+        lsi_first_rels = get_frms(goldsets, lsi_owners)
+
+    return lda_first_rels, lsi_first_rels
+
+def rank2owner(ranks, ownership):
+    owner_ranks = dict()
+
+    for qid, dist in ranks.items():
+        if qid not in owner_ranks:
+            owner_ranks[qid] = list()
+
+        for distance, meta in dist:
+            d_name, d_repo = meta
+            if d_name not in ownership:
+                continue
+
+            owners = list(reversed(sorted(ownership[d_name].items(), key=lambda x: x[1])))
+            best_score = 0
+            bests = list()
+            for owner, score in owners:
+                if best_score and score < best_score:
+                    break
+
+                best_score = score
+                bests.append((distance, (owner, score)))
+
+            owner_ranks[qid].extend(bests)
+
+    return owner_ranks
+
+
 
 def run_temporal(project, repos, corpus, queries, goldsets):
     logger.info("Running temporal evaluation")
@@ -527,7 +597,7 @@ def load_goldsets(project, kind):
         try:
             with open(os.path.join(project.full_path, 'goldsets', kind,
                                     id + '.txt')) as f:
-                golds = frozenset(x.strip() for x in f.readlines())
+                golds = frozenset(x.strip().replace(" ", "_") for x in f.readlines())
                 s += len(golds)
 
             goldsets.append((id, golds))
