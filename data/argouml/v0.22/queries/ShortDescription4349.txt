@@ -1,1 +1,0 @@
-Activity Diagram not refreshed after deletion of a Action State

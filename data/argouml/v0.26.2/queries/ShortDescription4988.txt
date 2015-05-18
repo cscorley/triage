@@ -1,1 +1,0 @@
-UMLAddDialog modifiers caller's choices list and doesn't keep lists in sorted order

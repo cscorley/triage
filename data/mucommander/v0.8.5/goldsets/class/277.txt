@@ -1,3 +1,0 @@
-com.mucommander.ui.layout.ProportionalSplitPane
-com.mucommander.ui.main.FolderPanel
-com.mucommander.ui.main.table.FileTable

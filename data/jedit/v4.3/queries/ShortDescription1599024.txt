@@ -1,1 +1,0 @@
-Need action to reload buffer with different encoding

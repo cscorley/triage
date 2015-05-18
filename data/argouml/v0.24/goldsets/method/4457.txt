@@ -1,1 +1,0 @@
-org.argouml.uml.DocumentationManager.getDocs(Object,String,String,String,String)

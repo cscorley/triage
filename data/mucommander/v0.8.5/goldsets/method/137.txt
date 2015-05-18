@@ -1,3 +1,0 @@
-com.mucommander.file.util.PathUtils.getPathHashCode(String,String)
-com.mucommander.file.util.PathUtils.pathEquals(String,String,String)
-com.mucommander.file.util.PathUtils.resolveDestination(String,AbstractFile)

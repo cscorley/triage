@@ -1,5 +1,0 @@
-org.argouml.model.mdr.MetaTypesMDRImpl
-org.argouml.uml.ui.behavior.activity_graphs.PropPanelActivityGraph
-org.argouml.uml.ui.behavior.state_machines.PropPanelStateMachine
-org.argouml.uml.ui.behavior.state_machines.UMLStateMachineContextComboBoxModel
-org.argouml.uml.ui.foundation.core.PropPanelModelElement

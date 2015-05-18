@@ -1,1 +1,0 @@
-org.argouml.moduleloader.ModuleLoader2.processJarFile(ClassLoader,File)

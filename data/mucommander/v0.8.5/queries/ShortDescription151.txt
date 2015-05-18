@@ -1,1 +1,0 @@
-Marking files with numeric * leaves first file unmarked

@@ -1,1 +1,0 @@
-viewer freezes indefinitely at 100% cpu for many files

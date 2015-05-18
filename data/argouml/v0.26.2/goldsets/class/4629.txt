@@ -1,3 +1,0 @@
-org.argouml.uml.diagram.ui.FigAssociationClass
-org.argouml.uml.diagram.ui.StylePanelFigAssociationClass
-org.argouml.uml.ui.TabStyle

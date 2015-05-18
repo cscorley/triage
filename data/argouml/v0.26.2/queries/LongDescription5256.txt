@@ -1,2 +1,0 @@
-In a project with diagrams, swich to the diagram centric view. Then, the
-diagrams appear in all profile models, which is pretty weird.

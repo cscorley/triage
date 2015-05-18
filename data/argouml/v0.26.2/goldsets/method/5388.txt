@@ -1,2 +1,0 @@
-org.argouml.language.java.generator.GeneratorJava.generateConstraintEnrichedDocComment(Object,Object)
-org.argouml.language.java.generator.GeneratorJava.isCollection(Object)

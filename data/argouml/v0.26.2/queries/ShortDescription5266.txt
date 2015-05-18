@@ -1,1 +1,0 @@
-DnD to users model part of tree should not work from profile part

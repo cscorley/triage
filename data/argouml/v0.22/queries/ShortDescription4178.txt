@@ -1,1 +1,0 @@
-Allow commentedes to be removed from the proppanel

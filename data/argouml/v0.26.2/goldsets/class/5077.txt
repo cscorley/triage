@@ -1,5 +1,0 @@
-org.argouml.uml.reveng.ImportCommon
-org.argouml.uml.reveng.java.Context
-org.argouml.uml.reveng.java.JavaImport
-org.argouml.uml.reveng.java.OuterClassifierContext
-org.argouml.uml.reveng.java.PackageContext

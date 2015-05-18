@@ -1,3 +1,0 @@
-org.gjt.sp.jedit.gui.AboutDialog.AboutDialog(View)
-org.gjt.sp.jedit.gui.AboutDialog.AboutPanel.drain()
-org.gjt.sp.jedit.gui.AboutDialog.AboutPanel.handleKeyEvent(KeyEvent)

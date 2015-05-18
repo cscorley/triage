@@ -1,2 +1,0 @@
-net.sf.jabref.util.XMPSchemaBibtex.setBibtexEntry(BibtexEntry,BibtexDatabase)
-net.sf.jabref.XmpPrefsTab.storeSettings()

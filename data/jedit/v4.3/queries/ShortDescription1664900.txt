@@ -1,1 +1,0 @@
-Auto-indent breaks if previous line is a single line indent

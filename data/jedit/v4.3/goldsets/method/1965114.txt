@@ -1,2 +1,0 @@
-org.gjt.sp.jedit.browser.VFSDirectoryEntryTable.getSelectedFiles()
-org.gjt.sp.jedit.browser.VFSDirectoryEntryTable.processKeyEvent(KeyEvent)

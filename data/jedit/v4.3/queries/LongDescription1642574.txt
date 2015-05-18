@@ -1,1 +1,0 @@
-This patch makes possible to change number of visible rows in buffer switcher via global options. SVN revision - 8724 

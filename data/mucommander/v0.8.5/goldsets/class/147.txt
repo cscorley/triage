@@ -1,4 +1,0 @@
-com.mucommander.job.CopyJob
-com.mucommander.job.TempCopyJob
-com.mucommander.job.TempExecJob
-com.mucommander.job.TempOpenWithJob

@@ -1,2 +1,0 @@
-com.mucommander.ui.viewer.text.TextEditor
-com.mucommander.ui.viewer.text.TextEditorImpl

@@ -1,5 +1,0 @@
-org.argouml.uml.diagram.activity.ui.FigActionState
-org.argouml.uml.diagram.ui.FigMultiLineTextWithBold
-org.argouml.uml.diagram.ui.FigNameWithAbstract
-org.argouml.uml.diagram.ui.FigNameWithAbstractAndBold
-org.argouml.uml.diagram.ui.FigNodeModelElement

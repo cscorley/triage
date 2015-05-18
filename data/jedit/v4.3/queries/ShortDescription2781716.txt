@@ -1,1 +1,0 @@
-Line numbers in Hypersearch Results are wrongly highlighted

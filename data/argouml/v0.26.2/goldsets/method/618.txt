@@ -1,1 +1,0 @@
-org.argouml.uml.cognitive.critics.InitCognitiveCritics.init()

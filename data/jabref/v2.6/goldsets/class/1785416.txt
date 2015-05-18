@@ -1,3 +1,0 @@
-net.sf.jabref.ExternalTab
-net.sf.jabref.JabRefPreferences
-net.sf.jabref.Util

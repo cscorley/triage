@@ -1,2 +1,0 @@
-org.argouml.uml.diagram.state.ui.UMLStateDiagram
-org.argouml.uml.diagram.ui.FigNodeModelElement

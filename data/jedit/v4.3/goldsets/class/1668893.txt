@@ -1,2 +1,0 @@
-org.gjt.sp.jedit.bufferio.BufferIORequest
-org.gjt.sp.jedit.MiscUtilities

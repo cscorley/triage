@@ -1,1 +1,0 @@
-Encoding detection not working as it should in text viewer/editor

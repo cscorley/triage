@@ -1,3 +1,0 @@
-org.gjt.sp.jedit.textarea.BufferHandler
-org.gjt.sp.jedit.textarea.DisplayManager
-org.gjt.sp.jedit.textarea.TextArea

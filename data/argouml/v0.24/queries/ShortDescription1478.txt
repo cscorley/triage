@@ -1,1 +1,0 @@
-Critic that notices class names beginning with a digit

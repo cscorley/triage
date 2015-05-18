@@ -1,2 +1,0 @@
-org.argouml.model.mdr.ModelManagementHelperMDRImpl.getAllImportedElements(Object)
-org.argouml.uml.ui.behavior.state_machines.PropPanelCallEvent.buildModelList()

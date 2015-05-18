@@ -1,1 +1,0 @@
-Self association invisible after Add to Diagram

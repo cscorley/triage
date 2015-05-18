@@ -1,1 +1,0 @@
-Exception opening project - FigCommentPort class not found

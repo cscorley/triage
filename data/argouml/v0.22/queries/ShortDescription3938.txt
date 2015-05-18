@@ -1,1 +1,0 @@
-Toolbar button backgrounds wrong when using Java 5 L&amp;F

@@ -1,1 +1,0 @@
-Stereotype Proppanel should show field for extendedElements

@@ -1,1 +1,0 @@
-Go to Next/Previous buttons are always downlighted

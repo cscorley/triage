@@ -1,3 +1,0 @@
-org.argouml.persistence.ZargoFilePersister
-org.argouml.uml.diagram.ui.FigNodeAssociation
-org.argouml.uml.diagram.ui.ModeCreateAssociationEnd

@@ -1,1 +1,0 @@
-Reception prop panel missing owner, visibility, query, & scope

@@ -1,1 +1,0 @@
-org.gjt.sp.jedit.gui.InputHandler

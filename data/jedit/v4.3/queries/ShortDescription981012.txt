@@ -1,1 +1,0 @@
-The editor text area is not properly recognizing Indic input

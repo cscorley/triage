@@ -1,1 +1,0 @@
-FSB delete action on directory not working

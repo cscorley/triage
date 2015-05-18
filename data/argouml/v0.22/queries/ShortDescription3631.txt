@@ -1,1 +1,0 @@
-Perspectives settings should be included in settings menu

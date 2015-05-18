@@ -1,1 +1,0 @@
-"Hey,  It seems like the new selection\mark actions affect the shortcuts editor table.  please check this.  Arik"

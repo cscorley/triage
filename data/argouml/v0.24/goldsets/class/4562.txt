@@ -1,2 +1,0 @@
-org.argouml.uml.diagram.ui.FigAssociationEnd
-org.argouml.uml.diagram.ui.FigEdgeModelElement

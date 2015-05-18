@@ -1,3 +1,0 @@
-org.argouml.uml.diagram.collaboration.ui.FigClassifierRole
-org.argouml.uml.diagram.ui.FigNodeModelElement
-org.argouml.uml.diagram.use_case.ui.FigUseCase

@@ -1,1 +1,0 @@
-com.mucommander.auth.Credentials.equals(Object)

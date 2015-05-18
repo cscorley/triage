@@ -1,2 +1,0 @@
-org.argouml.model.mdr.FacadeMDRImpl
-org.argouml.model.mdr.XmiReaderImpl

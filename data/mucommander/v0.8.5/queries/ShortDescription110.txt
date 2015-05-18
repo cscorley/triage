@@ -1,1 +1,0 @@
-muC creates duplicate entries in associations.xml

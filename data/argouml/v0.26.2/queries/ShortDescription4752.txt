@@ -1,1 +1,0 @@
-Module panels not appearing on startup

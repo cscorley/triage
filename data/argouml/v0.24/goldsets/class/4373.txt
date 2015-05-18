@@ -1,3 +1,0 @@
-org.argouml.cognitive.critics.Critic
-org.argouml.cognitive.Designer
-org.argouml.cognitive.ui.TabToDo

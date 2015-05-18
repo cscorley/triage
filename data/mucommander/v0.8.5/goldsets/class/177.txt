@@ -1,2 +1,0 @@
-com.mucommander.ui.action.ActionKeymapWriter.Writer
-com.mucommander.ui.text.KeyStrokeUtils

@@ -1,2 +1,0 @@
-org.argouml.uml.ui.TabSrc
-org.argouml.uml.ui.TabSrc.DefaultPredicate

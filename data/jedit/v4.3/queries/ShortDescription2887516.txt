@@ -1,1 +1,0 @@
-Copy hyper search results to clipboard

@@ -1,1 +1,0 @@
-ParameterDirectionKind not set by default for Parameters

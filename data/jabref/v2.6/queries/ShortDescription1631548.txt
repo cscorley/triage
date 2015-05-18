@@ -1,1 +1,0 @@
-"Open last edited DB at startup" depends on the working dir

@@ -1,1 +1,0 @@
-Deleting last Swimlane leaves hidden FigPool

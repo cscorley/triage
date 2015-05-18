@@ -1,1 +1,0 @@
-Project profile configuration use reflection on raw class name

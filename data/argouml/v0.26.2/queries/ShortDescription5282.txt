@@ -1,1 +1,0 @@
-Allow drawing of bi-directional association from read-only element

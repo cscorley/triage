@@ -1,3 +1,0 @@
-org.argouml.uml.diagram.sequence.ui.ModeContract
-org.argouml.uml.diagram.sequence.ui.ModeExpand
-org.argouml.uml.diagram.sequence.ui.UMLSequenceDiagram

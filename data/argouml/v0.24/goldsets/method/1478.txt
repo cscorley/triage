@@ -1,3 +1,0 @@
-org.argouml.uml.cognitive.critics.CrUnconventionalClassName.computeSuggestion(String)
-org.argouml.uml.cognitive.critics.CrUnconventionalClassName.predicate2(Object,Designer)
-org.argouml.uml.cognitive.critics.TestCrUnconventionalClassName.testComputeSuggestion()

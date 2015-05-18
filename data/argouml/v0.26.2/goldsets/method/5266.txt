@@ -1,3 +1,0 @@
-org.argouml.ui.explorer.DnDExplorerTree.ArgoDropTargetListener.dragOver(DropTargetDragEvent)
-org.argouml.ui.explorer.DnDExplorerTree.ArgoDropTargetListener.drop(DropTargetDropEvent)
-org.argouml.ui.explorer.DnDExplorerTree.isValidDrag(TreePath,Transferable)

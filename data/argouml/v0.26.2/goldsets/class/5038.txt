@@ -1,2 +1,0 @@
-org.argouml.uml.diagram.activity.ui.FigPartition
-org.argouml.uml.diagram.activity.ui.FigPool

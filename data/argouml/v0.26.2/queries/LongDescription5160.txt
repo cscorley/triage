@@ -1,2 +1,0 @@
-When drawing a use-case, and typing the name in the properties panel, every
-character typed causes the height of the oval to increase substantially.

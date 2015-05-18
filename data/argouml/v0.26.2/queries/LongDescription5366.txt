@@ -1,2 +1,0 @@
-When I started testing 0.26b1 I noticed that whenever I save a file I get a
-system beep or sometimes two. Is this intentional?

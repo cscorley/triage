@@ -1,1 +1,0 @@
-com.mucommander.ui.main.table.FileTable.mouseDragged(MouseEvent)

@@ -1,2 +1,0 @@
-org.argouml.cognitive.ui.ToDoByOffender.toDoItemsRemoved(ToDoListEvent)
-org.argouml.cognitive.ui.ToDoByPoster.toDoItemsRemoved(ToDoListEvent)

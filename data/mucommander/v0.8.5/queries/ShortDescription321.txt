@@ -1,1 +1,0 @@
-Single click treated as double click

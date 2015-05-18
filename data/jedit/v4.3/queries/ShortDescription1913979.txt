@@ -1,1 +1,0 @@
-HistoryTextField: array out of bounds when no history

@@ -1,1 +1,0 @@
-Fig popup menu for critic does not show critic text

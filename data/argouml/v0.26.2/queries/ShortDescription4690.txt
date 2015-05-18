@@ -1,1 +1,0 @@
-Project save dialog has wrong default

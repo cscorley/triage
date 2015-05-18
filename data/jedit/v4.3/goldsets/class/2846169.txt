@@ -1,3 +1,0 @@
-org.gjt.sp.jedit.buffer.FoldHandler
-org.gjt.sp.jedit.buffer.IndentFoldHandler
-org.gjt.sp.jedit.buffer.JEditBuffer

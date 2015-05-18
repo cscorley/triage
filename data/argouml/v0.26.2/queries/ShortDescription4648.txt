@@ -1,1 +1,0 @@
-operation modifiers (static, abstract) are not shown in class diagram

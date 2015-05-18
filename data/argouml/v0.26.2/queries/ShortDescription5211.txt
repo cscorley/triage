@@ -1,1 +1,0 @@
-Project fails to load (0.26.alpha2)

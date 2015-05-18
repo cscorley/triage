@@ -1,2 +1,0 @@
-org.argouml.uml.diagram.ui.ArgoFigText.ArgoFigText(int,int,int,int)
-org.argouml.uml.diagram.ui.ArgoFigText.ArgoFigText(int,int,int,int,boolean)

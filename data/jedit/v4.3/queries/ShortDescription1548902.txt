@@ -1,1 +1,0 @@
-4.3pre6: Format paragraph - StringIndexOutOfBoundsException

@@ -1,1 +1,0 @@
-HyperSearch reports incorrect occurrence count

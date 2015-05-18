@@ -1,1 +1,0 @@
-Tree view sometimes causes a deadlock on startup

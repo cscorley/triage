@@ -1,1 +1,0 @@
-DIRTY_CHANGED is not sent after emptying Untitled buffer

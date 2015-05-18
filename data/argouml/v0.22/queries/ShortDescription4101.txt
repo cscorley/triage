@@ -1,1 +1,0 @@
-The button in UMLComboBoxNavigator is initially downlighted

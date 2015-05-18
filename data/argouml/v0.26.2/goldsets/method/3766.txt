@@ -1,3 +1,0 @@
-org.argouml.configuration.ConfigurationProperties.getDefaultPath()
-org.argouml.configuration.ConfigurationProperties.getOldDefaultPath()
-org.argouml.configuration.ConfigurationProperties.loadFile(File)

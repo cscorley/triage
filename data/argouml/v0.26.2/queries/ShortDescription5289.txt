@@ -1,1 +1,0 @@
-Attribute property panel doesn't convert type to its name

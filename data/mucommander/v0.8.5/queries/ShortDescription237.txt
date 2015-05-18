@@ -1,1 +1,0 @@
-Shortcuts editor: use a different color for shortcuts that have been customized

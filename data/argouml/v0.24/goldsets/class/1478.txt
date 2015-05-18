@@ -1,2 +1,0 @@
-org.argouml.uml.cognitive.critics.CrUnconventionalClassName
-org.argouml.uml.cognitive.critics.TestCrUnconventionalClassName

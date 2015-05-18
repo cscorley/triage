@@ -1,1 +1,0 @@
-new package or class shown with funny name in explorer

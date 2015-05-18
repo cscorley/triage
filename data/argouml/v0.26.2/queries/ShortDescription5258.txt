@@ -1,1 +1,0 @@
-2 perspective rules with same name: "Classifier->Collaboration"

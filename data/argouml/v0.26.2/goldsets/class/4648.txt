@@ -1,2 +1,0 @@
-org.argouml.uml.diagram.static_structure.ui.FigFeature
-org.argouml.uml.diagram.static_structure.ui.FigOperation

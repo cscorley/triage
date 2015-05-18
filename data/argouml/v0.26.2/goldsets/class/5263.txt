@@ -1,2 +1,0 @@
-org.argouml.ui.ProjectSettingsTabProfile
-org.argouml.ui.SettingsTabProfile

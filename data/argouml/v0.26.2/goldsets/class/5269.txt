@@ -1,2 +1,0 @@
-org.argouml.uml.ui.UMLList2
-org.argouml.uml.ui.UMLMutableLinkedList

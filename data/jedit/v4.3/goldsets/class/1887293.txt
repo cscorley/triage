@@ -1,3 +1,0 @@
-org.gjt.sp.jedit.search.SearchBar
-org.gjt.sp.jedit.search.SearchBar.KeyHandler
-org.gjt.sp.jedit.View

@@ -1,2 +1,0 @@
-org.argouml.uml.diagram.ui.FigNodeModelElement.keyReleased(KeyEvent)
-org.argouml.uml.diagram.ui.FigNodeModelElement.keyTyped(KeyEvent)

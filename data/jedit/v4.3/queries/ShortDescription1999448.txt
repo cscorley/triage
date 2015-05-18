@@ -1,1 +1,0 @@
-More efficient and general fix for black hole bug

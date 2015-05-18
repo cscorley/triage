@@ -1,1 +1,0 @@
-Move the View-Notation menu-item to the file menu

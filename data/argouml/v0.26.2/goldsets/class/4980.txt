@@ -1,1 +1,0 @@
-org.argouml.uml.diagram.sequence.ui.UMLSequenceDiagram

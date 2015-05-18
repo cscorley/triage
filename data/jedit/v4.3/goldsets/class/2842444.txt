@@ -1,3 +1,0 @@
-org.gjt.sp.jedit.search.HyperSearchRequest
-org.gjt.sp.jedit.search.HyperSearchResults
-org.gjt.sp.jedit.search.HyperSearchResults.ActionHandler

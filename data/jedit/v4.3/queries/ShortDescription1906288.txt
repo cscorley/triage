@@ -1,1 +1,0 @@
-Bug in scrollLine calculation with soft-wrapped lines

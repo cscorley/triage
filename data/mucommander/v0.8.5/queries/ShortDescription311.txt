@@ -1,1 +1,0 @@
-Should the free space indicator be flipped around?

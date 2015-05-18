@@ -1,1 +1,0 @@
-Using MDR's autocommit mode is a performance drain

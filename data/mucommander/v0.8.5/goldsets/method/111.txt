@@ -1,1 +1,0 @@
-com.mucommander.file.impl.rar.provider.de.innosystec.unrar.Archive.readHeaders(InputStream,byte[])

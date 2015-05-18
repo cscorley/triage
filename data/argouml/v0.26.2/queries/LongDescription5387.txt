@@ -1,2 +1,0 @@
-Neither the menu selections nor the keyboard shortcuts for Zoom In and Zoom Out work.
- If you change the zoom using the slider, the Zoom Reset menu option does work correctly.

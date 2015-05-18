@@ -1,2 +1,0 @@
-org.argouml.application.helpers.ApplicationVersion
-org.argouml.cognitive.Critic

@@ -1,1 +1,0 @@
-com.mucommander.file.impl.local.LocalFile.renameTo(AbstractFile)

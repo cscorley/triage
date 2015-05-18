@@ -1,2 +1,0 @@
-org.gjt.sp.jedit.MiscUtilities.canonPath(String)
-org.gjt.sp.jedit.MiscUtilities.isAbsolutePath(String)

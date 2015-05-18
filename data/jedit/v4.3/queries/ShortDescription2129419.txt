@@ -1,1 +1,0 @@
-NPE in EditPane.setBuffer when quitting jEdit

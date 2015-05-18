@@ -1,3 +1,0 @@
-org.argouml.uml.ui.behavior.state_machines.PropPanelCompositeState
-org.argouml.uml.ui.behavior.state_machines.PropPanelPseudostate
-org.argouml.uml.ui.behavior.state_machines.PropPanelSubmachineState

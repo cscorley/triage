@@ -1,3 +1,0 @@
-org.gjt.sp.jedit.menu.ReloadWithEncodingProvider.actionPerformed(ActionEvent)
-org.gjt.sp.jedit.menu.ReloadWithEncodingProvider.updateEveryTime()
-org.gjt.sp.jedit.menu.ReloadWithEncodingProvider.update(JMenu)

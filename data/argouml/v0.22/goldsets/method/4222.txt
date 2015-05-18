@@ -1,2 +1,0 @@
-org.argouml.uml.ui.foundation.core.UMLStructuralFeatureTypeComboBoxModel.buildModelList()
-org.argouml.uml.ui.UMLComboBoxModel2.getName(Object)

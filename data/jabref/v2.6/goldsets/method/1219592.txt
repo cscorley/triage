@@ -1,2 +1,0 @@
-net.sf.jabref.imports.EndnoteImporter.importEntries(InputStream)
-net.sf.jabref.labelPattern.LabelPatternUtil.makeLabel(LabelPattern,BibtexDatabase,BibtexEntry)

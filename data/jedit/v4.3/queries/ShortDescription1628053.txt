@@ -1,1 +1,0 @@
-TextPane Buffer combobox: hovertip showing full path

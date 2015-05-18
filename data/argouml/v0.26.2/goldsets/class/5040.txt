@@ -1,4 +1,0 @@
-org.argouml.kernel.TestProjectWithProfiles
-org.argouml.persistence.ProfileConfigurationFilePersister
-org.argouml.profile.internal.ProfileManagerImpl
-org.argouml.profile.TestProfileManager

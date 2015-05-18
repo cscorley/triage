@@ -1,4 +1,0 @@
-com.mucommander.ui.button.ToolbarMoreButton
-com.mucommander.ui.main.toolbar.ToolBarAttributes
-com.mucommander.ui.main.toolbar.ToolBarIO
-com.mucommander.ui.main.toolbar.ToolBarReader

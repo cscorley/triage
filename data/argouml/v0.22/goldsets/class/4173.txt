@@ -1,3 +1,0 @@
-org.argouml.uml.ui.foundation.extension_mechanisms.PropPanelTagDefinition
-org.argouml.uml.ui.TabTaggedValues
-org.argouml.uml.ui.TabTaggedValuesModel

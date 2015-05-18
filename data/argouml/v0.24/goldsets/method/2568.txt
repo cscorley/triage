@@ -1,3 +1,0 @@
-org.argouml.ui.StylePanelFigNodeModelElement.itemStateChanged(ItemEvent)
-org.argouml.ui.StylePanelFigNodeModelElement.refresh()
-org.argouml.ui.StylePanelFigNodeModelElement.StylePanelFigNodeModelElement()

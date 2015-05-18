@@ -1,3 +1,0 @@
-org.argouml.gefext.ArgoFigInk
-org.argouml.gefext.ArgoFigPoly
-org.argouml.gefext.ArgoFigSpline

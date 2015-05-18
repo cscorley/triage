@@ -1,1 +1,0 @@
-org.argouml.uml.notation.java.ModelElementNameNotationJava

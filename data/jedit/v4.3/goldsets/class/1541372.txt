@@ -1,2 +1,0 @@
-org.gjt.sp.jedit.textarea.Gutter.MouseHandler
-org.gjt.sp.jedit.textarea.JEditTextArea

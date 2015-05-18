@@ -1,1 +1,0 @@
-Detailspane height not preserved

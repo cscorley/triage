@@ -1,1 +1,0 @@
-org.argouml.profile.init.InitProfileSubsystem

@@ -1,1 +1,0 @@
-Improve the Browse Critics dialog UI

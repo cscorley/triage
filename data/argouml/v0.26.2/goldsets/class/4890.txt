@@ -1,3 +1,0 @@
-org.argouml.uml.ui.foundation.core.UMLGeneralizableElementAbstractCheckBox
-org.argouml.uml.ui.foundation.core.UMLGeneralizableElementLeafCheckBox
-org.argouml.uml.ui.foundation.core.UMLGeneralizableElementRootCheckBox

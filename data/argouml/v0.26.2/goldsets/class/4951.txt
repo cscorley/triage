@@ -1,3 +1,0 @@
-org.argouml.persistence.PGMLStackParser
-org.argouml.ui.StylePanelFigText
-org.argouml.uml.diagram.ui.ArgoModeCreateFigText

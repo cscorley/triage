@@ -1,1 +1,0 @@
-NodeInstance residents dont move with parent

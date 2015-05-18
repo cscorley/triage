@@ -1,1 +1,0 @@
-action bar not visible in full screen mode

@@ -1,2 +1,0 @@
-org.argouml.i18n.Translator
-org.argouml.ui.SettingsTabAppearance

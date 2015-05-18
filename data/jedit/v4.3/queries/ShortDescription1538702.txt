@@ -1,1 +1,0 @@
-PluginManager: Dependency plugins are not activated

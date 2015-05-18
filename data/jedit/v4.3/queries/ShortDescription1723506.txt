@@ -1,1 +1,0 @@
-Context menu key not functional on Windows

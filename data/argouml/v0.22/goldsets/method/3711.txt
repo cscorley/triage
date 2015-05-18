@@ -1,5 +1,0 @@
-org.argouml.persistence.XMIParser.readModels(Project,InputSource)
-org.argouml.persistence.XMIParser.readModels(Project,URL)
-org.argouml.ui.SettingsTabPreferences.handleSettingsTabRefresh()
-org.argouml.ui.SettingsTabPreferences.handleSettingsTabSave()
-org.argouml.ui.SettingsTabPreferences.SettingsTabPreferences()

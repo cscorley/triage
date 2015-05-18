@@ -1,1 +1,0 @@
-org.gjt.sp.jedit.textarea.Anchor.preContentRemoved(int,int)

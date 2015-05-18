@@ -1,3 +1,0 @@
-org.argouml.ui.MyLocale.getDefault(Collection<MyLocale>)
-org.argouml.ui.MyLocale.getLocales()
-org.argouml.ui.SettingsTabAppearance.SettingsTabAppearance()

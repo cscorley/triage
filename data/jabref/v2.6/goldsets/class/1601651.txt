@@ -1,3 +1,0 @@
-net.sf.jabref.external.RegExpFileSearch
-net.sf.jabref.Util
-tests.net.sf.jabref.UtilFindFileTest

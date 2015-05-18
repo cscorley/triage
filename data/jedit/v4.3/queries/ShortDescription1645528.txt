@@ -1,1 +1,0 @@
-Perspective saver: option to ignore remote VFS files

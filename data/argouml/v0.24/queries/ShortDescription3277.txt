@@ -1,1 +1,0 @@
-Zoom dosn't work when number pad is used

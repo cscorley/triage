@@ -1,3 +1,0 @@
-org.gjt.sp.jedit.search.HyperSearchFileNode
-org.gjt.sp.jedit.search.HyperSearchResult
-org.gjt.sp.jedit.search.HyperSearchResults

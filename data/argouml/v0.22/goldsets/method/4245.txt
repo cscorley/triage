@@ -1,1 +1,0 @@
-org.argouml.uml.diagram.ui.TabDiagram.setTarget(Object)

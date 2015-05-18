@@ -1,1 +1,0 @@
-After completion column cursor should be kept

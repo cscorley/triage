@@ -1,1 +1,0 @@
-soft wrap, cut and null-pointer exception

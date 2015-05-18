@@ -1,2 +1,0 @@
-net.sf.jabref.imports.BibtexParser
-tests.net.sf.jabref.imports.BibtexParserTest

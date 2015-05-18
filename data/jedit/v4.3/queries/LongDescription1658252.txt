@@ -1,1 +1,0 @@
-Try this define: #define LONG_MULTI_LINE_DEFINE { \ code; \ more code; \ even more code; \ } The brackets don't match. 

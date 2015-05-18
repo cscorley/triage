@@ -1,1 +1,0 @@
-'Network shares' in drive button is not localized

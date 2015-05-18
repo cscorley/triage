@@ -1,3 +1,0 @@
-org.argouml.gefext.ArgoFigInk.ArgoFigInk()
-org.argouml.gefext.ArgoFigPoly.ArgoFigPoly()
-org.argouml.gefext.ArgoFigSpline.ArgoFigSpline()

@@ -1,2 +1,0 @@
-org.argouml.uml.ui.behavior.state_machines.PropPanelCompositeState.setTarget(Object)
-org.argouml.uml.ui.behavior.state_machines.PropPanelSubmachineState.PropPanelSubmachineState()

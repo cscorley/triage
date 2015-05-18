@@ -1,3 +1,0 @@
-org.argouml.application.Main.initializeSubsystems(SimpleTimer,SplashScreen)
-org.argouml.application.Main.initPreinitialize()
-org.argouml.application.Main.performCommands(List<String>)

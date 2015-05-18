@@ -1,3 +1,0 @@
-org.argouml.uml.ui.foundation.core.UMLGeneralizableElementAbstractCheckBox.buildModel()
-org.argouml.uml.ui.foundation.core.UMLGeneralizableElementLeafCheckBox.buildModel()
-org.argouml.uml.ui.foundation.core.UMLGeneralizableElementRootCheckBox.buildModel()

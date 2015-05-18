@@ -1,1 +1,0 @@
-Add sortable Release Date column to Plugin Manager

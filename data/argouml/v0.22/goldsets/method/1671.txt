@@ -1,2 +1,0 @@
-org.argouml.kernel.Project.addSearchPath(String)
-org.argouml.kernel.TestProject.testAddSearchPath()

@@ -1,3 +1,0 @@
-com.mucommander.file.impl.zip.provider.ZipEntry.setTime(long)
-com.mucommander.file.impl.zip.provider.ZipEntry.setTime(long,boolean)
-com.mucommander.file.impl.zip.provider.ZipEntry.ZipEntry(java.util.zip.ZipEntry)

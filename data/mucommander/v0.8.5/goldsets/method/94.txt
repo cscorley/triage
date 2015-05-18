@@ -1,3 +1,0 @@
-com.mucommander.file.DefaultSchemeParser.handleLocalFilePath(String,FileURL)
-com.mucommander.file.DefaultSchemeParser.parse(String,FileURL)
-com.mucommander.file.impl.local.LocalFileURLTest.testLocalPathParsing()

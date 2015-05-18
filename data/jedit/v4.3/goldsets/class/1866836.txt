@@ -1,2 +1,0 @@
-org.gjt.sp.jedit.gui.CompleteWord
-org.gjt.sp.jedit.gui.CompleteWord.Words

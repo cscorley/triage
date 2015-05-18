@@ -1,2 +1,0 @@
-org.gjt.sp.jedit.io.EncodingServer
-org.gjt.sp.jedit.io.XMLEncodingDetector

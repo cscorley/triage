@@ -1,1 +1,0 @@
-Startup hang when extension module fails to load

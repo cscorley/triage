@@ -1,3 +1,0 @@
-org.argouml.uml.ui.behavior.common_behavior.ActionRemoveArgument
-org.argouml.uml.ui.behavior.common_behavior.PropPanelAction
-org.argouml.uml.ui.behavior.common_behavior.UMLActionArgumentListModel

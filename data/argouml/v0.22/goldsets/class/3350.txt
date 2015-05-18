@@ -1,3 +1,0 @@
-org.argouml.uml.diagram.state.ui.FigTransition
-org.argouml.uml.diagram.ui.FigAssociation
-org.argouml.uml.diagram.ui.FigEdgeModelElement

@@ -1,3 +1,0 @@
-org.argouml.ui.ZoomSliderButton
-org.argouml.ui.ZoomSliderButton.MyMouseListener
-org.argouml.ui.ZoomSliderButton.MyPopupMenuListener

@@ -1,2 +1,0 @@
-net.sf.jabref.util.XMPSchemaBibtex
-net.sf.jabref.XmpPrefsTab

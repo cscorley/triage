@@ -1,2 +1,0 @@
-org.gjt.sp.jedit.Buffer
-org.gjt.sp.jedit.options.SaveBackupOptionPane

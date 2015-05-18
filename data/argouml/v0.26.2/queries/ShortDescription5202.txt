@@ -1,1 +1,0 @@
-Property panel should not be available on multi-target selection

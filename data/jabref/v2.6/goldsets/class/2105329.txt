@@ -1,3 +1,0 @@
-net.sf.jabref.external.ExternalFileMenuItem
-net.sf.jabref.external.PushToApplicationButton
-net.sf.jabref.gui.MainTableSelectionListener

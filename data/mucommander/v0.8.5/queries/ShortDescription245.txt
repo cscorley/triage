@@ -1,1 +1,0 @@
-Text editor should not consider Unicode BOMs as an editable character

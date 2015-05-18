@@ -1,3 +1,0 @@
-org.argouml.model.mdr.XmiReferenceProviderImpl
-org.argouml.model.mdr.XmiWriterMDRImpl
-org.argouml.persistence.TestProfileConfigurationFilePersister

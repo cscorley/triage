@@ -1,3 +1,0 @@
-the text tool, from the GEF tools dropdown menu on the right, font is not very
-readable and could be a lot better being something simpler like Ariel. And it is
-in blue for some unknown reason.

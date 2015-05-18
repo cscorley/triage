@@ -1,3 +1,0 @@
-net.sf.jabref.ExternalTab
-net.sf.jabref.PrefsDialog3
-net.sf.jabref.PreviewPrefsTab

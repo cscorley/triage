@@ -1,1 +1,0 @@
-Remove mutable right click actions on non-editable Figs

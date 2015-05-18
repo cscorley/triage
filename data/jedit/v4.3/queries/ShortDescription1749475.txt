@@ -1,1 +1,0 @@
-ShortcutOptionPane: global table, Incremental Search/filter

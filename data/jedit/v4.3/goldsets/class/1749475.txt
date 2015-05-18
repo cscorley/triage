@@ -1,3 +1,0 @@
-org.gjt.sp.jedit.options.ShortcutsOptionPane
-org.gjt.sp.jedit.options.ShortcutsOptionPane.ShortcutsModel
-org.gjt.sp.jedit.options.ShortcutsOptionPane.TableMouseHandler

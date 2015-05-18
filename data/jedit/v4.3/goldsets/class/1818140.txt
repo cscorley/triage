@@ -1,2 +1,0 @@
-org.gjt.sp.jedit.gui.HistoryText
-org.gjt.sp.jedit.gui.ListModelEditor

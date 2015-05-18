@@ -1,3 +1,0 @@
-org.argouml.uml.diagram.state.ui.FigTransition.paintClarifiers(Graphics)
-org.argouml.uml.diagram.ui.FigAssociation.paintClarifiers(Graphics)
-org.argouml.uml.diagram.ui.FigEdgeModelElement.indicateBounds(FigText,Graphics)

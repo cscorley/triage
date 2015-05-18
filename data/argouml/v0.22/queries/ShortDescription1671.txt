@@ -1,1 +1,0 @@
-extra &lt;searchpath&gt; added every time project is saved

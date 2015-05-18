@@ -1,1 +1,0 @@
-Symlinks can't be viewed/edited

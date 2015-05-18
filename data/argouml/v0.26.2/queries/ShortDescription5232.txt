@@ -1,1 +1,0 @@
-Drawing associationClass creates unowned class in the model

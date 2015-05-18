@@ -1,2 +1,0 @@
-org.argouml.uml.ui.behavior.state_machines.ActionAddEventAsDeferrableEvent.ActionAddEventAsDeferrableEvent()
-org.argouml.uml.ui.behavior.state_machines.ActionAddEventAsDeferrableEvent.doIt(Vector)

@@ -1,2 +1,0 @@
-org.argouml.uml.ui.foundation.core.UMLModelElementNamespaceComboBoxModel
-org.argouml.uml.ui.UMLComboBoxModel2

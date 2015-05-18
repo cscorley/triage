@@ -1,3 +1,0 @@
-org.gjt.sp.jedit.browser.VFSBrowser
-org.gjt.sp.jedit.browser.VFSBrowser.ActionHandler
-org.gjt.sp.jedit.browser.VFSFileChooserDialog

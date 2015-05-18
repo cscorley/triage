@@ -1,4 +1,0 @@
-org.argouml.model.mdr.XmiReferenceProviderImpl.getReference(RefObject)
-org.argouml.model.mdr.XmiWriterMDRImpl.write()
-org.argouml.persistence.TestProfileConfigurationFilePersister.setUp()
-org.argouml.persistence.TestProfileConfigurationFilePersister.testWritePreviouslyLoadedProfile()

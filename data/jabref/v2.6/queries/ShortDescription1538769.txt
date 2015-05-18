@@ -1,1 +1,0 @@
-Freezes when exiting Import dialog box by Cancel button

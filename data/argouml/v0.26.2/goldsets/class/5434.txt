@@ -1,3 +1,0 @@
-org.argouml.persistence.DiagramMemberFilePersister
-org.argouml.uml.diagram.ui.FigEdgeModelElement
-org.argouml.uml.diagram.ui.FigNodeModelElement

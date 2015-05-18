@@ -1,1 +1,0 @@
-autoresizing should not be default

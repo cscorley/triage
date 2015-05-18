@@ -1,1 +1,0 @@
-deleting call self action throws InvalidElementException and makes Argo unstable

@@ -1,1 +1,0 @@
-IllegalArgumentException from PropPanel when clicking on CommentEdge (visibility)

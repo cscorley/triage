@@ -1,1 +1,0 @@
-MD5Sum a buffer and file for "file not saved" warning check

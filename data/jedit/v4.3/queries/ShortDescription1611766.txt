@@ -1,1 +1,0 @@
-avoid NPE from getIndentRules()

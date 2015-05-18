@@ -1,2 +1,0 @@
-org.gjt.sp.jedit.GUIUtilities.loadGeometry(Window,String)
-org.gjt.sp.jedit.GUIUtilities.saveGeometry(Window,String)

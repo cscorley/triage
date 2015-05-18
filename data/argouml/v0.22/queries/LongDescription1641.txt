@@ -1,1 +1,0 @@
-useful where you lost/never had a class diagram for a particular package.

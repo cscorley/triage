@@ -1,2 +1,0 @@
-com.mucommander.ui.dialog.file.BatchRenameDialog.BatchRenameDialog(MainFrame,FileSet)
-com.mucommander.ui.dialog.file.BatchRenameDialog.checkForDuplicates()

@@ -1,2 +1,0 @@
-net.sf.jabref.imports.EndnoteImporter
-net.sf.jabref.labelPattern.LabelPatternUtil

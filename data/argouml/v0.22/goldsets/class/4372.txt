@@ -1,2 +1,0 @@
-org.argouml.model.mdr.CoreHelperMDRImpl
-org.argouml.uml.diagram.static_structure.ui.FigEdgeNote

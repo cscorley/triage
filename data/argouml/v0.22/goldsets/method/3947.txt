@@ -1,2 +1,0 @@
-org.argouml.model.mdr.CommonBehaviorFactoryMDRImpl.deleteAction(Object)
-org.argouml.model.mdr.CommonBehaviorFactoryMDRImpl.deleteSignal(Object)

@@ -1,1 +1,0 @@
-ComboBoxModels do not mutate on AWT thread

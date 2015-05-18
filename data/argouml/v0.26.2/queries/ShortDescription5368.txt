@@ -1,1 +1,0 @@
-ConcurrentModificationException on Sequence Diagram load

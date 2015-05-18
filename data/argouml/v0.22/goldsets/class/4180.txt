@@ -1,2 +1,0 @@
-org.argouml.uml.diagram.static_structure.ui.FigPackage
-org.argouml.uml.diagram.ui.FigStereotypesCompartment

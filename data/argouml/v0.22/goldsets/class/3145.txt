@@ -1,2 +1,0 @@
-org.argouml.uml.diagram.ui.RadioAction
-org.argouml.uml.diagram.ui.UMLDiagram

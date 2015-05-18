@@ -1,2 +1,0 @@
-org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram
-org.argouml.uml.ui.ActionDeploymentDiagram

@@ -1,2 +1,0 @@
-net.sf.jabref.external.ExternalFilePanel.downLoadFile(String,FieldEditor,Component)
-net.sf.jabref.gui.FileListEditor.downloadFile()

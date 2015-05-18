@@ -1,2 +1,0 @@
-org.argouml.kernel.ProjectSettings
-org.argouml.ui.ProjectBrowser

@@ -1,3 +1,0 @@
-net.sf.jabref.export.layout.format.DOICheck
-tests.net.sf.jabref.export.layout.format.AllTests
-tests.net.sf.jabref.export.layout.format.DOICheckTest

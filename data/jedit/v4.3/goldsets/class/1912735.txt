@@ -1,3 +1,0 @@
-org.gjt.sp.jedit.gui.statusbar.SelectionLengthWidgetFactory
-org.gjt.sp.jedit.gui.statusbar.SelectionLengthWidgetFactory.SelectionLengthWidget
-org.gjt.sp.jedit.gui.statusbar.SelectionLengthWidgetFactory.SelectionLengthWidget.SelectionLength

@@ -1,2 +1,0 @@
-org.argouml.uml.diagram.static_structure.ClassDiagramGraphModel
-org.argouml.uml.diagram.static_structure.ui.ClassDiagramRenderer

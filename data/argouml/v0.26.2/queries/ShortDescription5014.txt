@@ -1,1 +1,0 @@
-Better indication of default settings vs. project specific settings

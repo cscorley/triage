@@ -1,1 +1,0 @@
-Portions of text missing from PNG export at low resolution

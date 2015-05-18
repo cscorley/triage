@@ -1,2 +1,0 @@
-org.argouml.notation.providers.uml.AttributeNotationUml.parseAttributeFig(Object,Object,String)
-org.argouml.notation.providers.uml.TestAttributeAndOperationNotationUml.testAttributeNewTypeNamespace()

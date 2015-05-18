@@ -1,1 +1,0 @@
-Wrong keyboard focus in Settings dialog after close &amp; reopen

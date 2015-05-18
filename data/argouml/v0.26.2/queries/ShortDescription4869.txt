@@ -1,1 +1,0 @@
-StackOverflowError when configuring perspective

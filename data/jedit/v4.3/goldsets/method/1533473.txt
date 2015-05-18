@@ -1,2 +1,0 @@
-org.gjt.sp.jedit.EditPane.loadCaretInfo()
-org.gjt.sp.jedit.EditPane.saveCaretInfo()

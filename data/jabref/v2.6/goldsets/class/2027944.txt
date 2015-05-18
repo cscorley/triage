@@ -1,3 +1,0 @@
-net.sf.jabref.export.CustomExportList
-net.sf.jabref.export.ExportCustomizationDialog
-net.sf.jabref.export.ExportFormats

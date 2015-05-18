@@ -1,5 +1,0 @@
-org.argouml.model.mdr.CoreHelperMDRImpl
-org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetTagDefinitionType
-org.argouml.uml.ui.foundation.extension_mechanisms.PropPanelTagDefinition
-org.argouml.uml.ui.foundation.extension_mechanisms.UMLMetaClassComboBoxModel
-org.argouml.uml.ui.TabTaggedValues

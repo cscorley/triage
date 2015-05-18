@@ -1,3 +1,0 @@
-org.argouml.kernel.ProjectImpl.postLoad()
-org.argouml.uml.diagram.ui.FigEdgeModelElement.postLoad()
-org.argouml.uml.diagram.ui.FigNodeModelElement.postLoad()

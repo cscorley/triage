@@ -1,5 +1,0 @@
-com.mucommander.Launcher.main(String)
-com.mucommander.Launcher.printStartupMessage(String)
-com.mucommander.Launcher.printUsage()
-com.mucommander.ui.dialog.pref.general.MiscPanel.commit()
-com.mucommander.ui.dialog.pref.general.MiscPanel.MiscPanel(PreferencesDialog)

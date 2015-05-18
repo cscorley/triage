@@ -1,2 +1,0 @@
-org.argouml.uml.generator.GenerationPreferences.GenerationPreferences()
-org.argouml.uml.generator.GenerationPreferences.setOutputDir(String)

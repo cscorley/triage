@@ -1,1 +1,0 @@
-Java version number in About dialog

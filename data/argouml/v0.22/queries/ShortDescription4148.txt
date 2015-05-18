@@ -1,1 +1,0 @@
-Specification missing from Operation property panel

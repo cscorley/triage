@@ -1,2 +1,0 @@
-com.mucommander.ui.viewer.text.TextEditorImpl.loadDocument(InputStream,String)
-com.mucommander.ui.viewer.text.TextEditorImpl.write(OutputStream)

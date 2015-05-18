@@ -1,2 +1,0 @@
-org.gjt.sp.jedit.OptionGroup
-org.gjt.sp.jedit.search.SearchBar

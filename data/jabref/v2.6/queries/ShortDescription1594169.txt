@@ -1,1 +1,0 @@
-Entry editor: navigation between panels

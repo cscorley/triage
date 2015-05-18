@@ -1,2 +1,0 @@
-We have a delete button in the toolbar and menu/ We need to make sure this is
-disabled for non-editable elements

@@ -1,2 +1,0 @@
-com.mucommander.ui.dialog.file.BatchRenameDialog
-com.mucommander.ui.dialog.file.BatchRenameDialog.AbstractToken

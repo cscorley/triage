@@ -1,3 +1,0 @@
-net.sf.jabref.FieldComparator
-net.sf.jabref.Util
-tests.net.sf.jabref.UtilTest

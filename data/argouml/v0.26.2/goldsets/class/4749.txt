@@ -1,2 +1,0 @@
-org.argouml.uml.diagram.static_structure.ui.FigException
-org.argouml.uml.diagram.static_structure.ui.FigSignal

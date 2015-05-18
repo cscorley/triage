@@ -1,2 +1,0 @@
-org.argouml.ui.ProjectBrowser.ProjectBrowser(String,SplashScreen,boolean,JPanel)
-org.argouml.ui.ProjectBrowser.setApplicationIcon()

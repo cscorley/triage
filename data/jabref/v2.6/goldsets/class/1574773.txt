@@ -1,2 +1,0 @@
-net.sf.jabref.Util
-tests.net.sf.jabref.UtilTest

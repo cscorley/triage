@@ -1,1 +1,0 @@
-Files get corrupt when changing the case of their names

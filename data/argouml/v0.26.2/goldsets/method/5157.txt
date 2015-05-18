@@ -1,3 +1,0 @@
-org.argouml.application.events.ArgoEventPump.doAddListener(int,ArgoEventListener)
-org.argouml.application.events.ArgoEventPump.doFireEvent(ArgoEvent)
-org.argouml.application.events.ArgoEventPump.doRemoveListener(int,ArgoEventListener)

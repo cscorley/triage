@@ -1,2 +1,0 @@
-org.argouml.ui.ActionSettings
-org.argouml.ui.SettingsDialog

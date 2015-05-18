@@ -1,1 +1,0 @@
-Project.postLoad() very slow for large projects

@@ -1,1 +1,0 @@
-Selection of default diagram after load
