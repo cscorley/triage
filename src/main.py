@@ -20,7 +20,7 @@ import numpy
 from gensim.corpora import MalletCorpus, Dictionary
 from gensim.models import LdaModel, LsiModel
 from gensim.matutils import sparse2full
-from gensim.utils import smart_open
+from gensim.utils import smart_open, to_unicode, to_utf8
 
 import utils
 from corpora import (ChangesetCorpus, SnapshotCorpus, ReleaseCorpus,
@@ -71,6 +71,8 @@ def cli(debug, verbose, name, version, goldset,  *args, **kwargs):
     # load project info
     projects = load_projects(kwargs)
     for project in projects:
+        if project.name == 'hibernate':
+            continue # skip for now
         if name:
             name = name.lower()
 
@@ -208,7 +210,7 @@ def write_ranks(project, prefix, ranks):
             for idx, rank in enumerate(rl):
                 dist, meta = rank
                 d_name, d_repo = meta
-                writer.writerow([gid, idx+1, dist, d_name])
+                writer.writerow([gid, idx+1, dist, to_utf8(d_name)])
 
 def read_ranks(project, prefix):
     ranks = dict()
@@ -219,7 +221,7 @@ def read_ranks(project, prefix):
             if g_id not in ranks:
                 ranks[g_id] = list()
 
-            ranks[g_id].append( (dist, (d_name, 'x')) )
+            ranks[g_id].append( (dist, (to_unicode(d_name), 'x')) )
 
     return ranks
 
@@ -872,7 +874,7 @@ def create_developer_corpus(project, repos, changesets):
                     break
 
             if commit:
-                dev = commit.committer
+                dev = to_unicode(commit.committer)
                 dev = dev.replace(" ", "_") # mallet cant have spaces in ids
                 if dev not in dev_words:
                     dev_words[dev] = list()
