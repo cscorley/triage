@@ -57,7 +57,7 @@ datasets were automatically extracted from changesets that relate to the
 queries (issue reports).
 
 
-\input{tab_subjects.tex}
+\input{tables/subjects.tex}
 
 
 ArgoUML is a UML diagramming tool^[<http://argouml.tigris.org/>].
