@@ -1,6 +1,0 @@
-Mark reports that bin/mahout doesn't work out of the box from the binary distribution.
-
-11/06/08 21:17:00 INFO mapred.JobClient: Task Id : attempt_201106061352_0066_r_000001_1, Status : FAILED
-Error: java.lang.ClassNotFoundException: org.apache.lucene.analysis.TokenStream
-
-This suggests the script isn't finding the job file, and indeed it is not in the same place in the binary distro as in the source tree. I am guessing this is the issue.

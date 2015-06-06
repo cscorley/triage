@@ -1,1 +1,0 @@
-Simplify StringBuffer use, as they are mutable

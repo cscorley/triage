@@ -1,1 +1,0 @@
-Disable automatic conversion to star imports in NetBeans project

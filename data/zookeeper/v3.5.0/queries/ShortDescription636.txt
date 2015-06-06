@@ -1,1 +1,0 @@
-configure.ac has instructions which override the contents of CFLAGS and CXXFLAGS.

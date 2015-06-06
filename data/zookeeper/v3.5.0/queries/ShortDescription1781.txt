@@ -1,1 +1,0 @@
-ZooKeeper Server fails if snapCount is set to 1 

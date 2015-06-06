@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.quorum.Leader.lead()
-org.apache.zookeeper.server.quorum.Zab1_0Test.testLeaderConversation(LeaderConversation)
-org.apache.zookeeper.server.quorum.Zab1_0Test.testLeaderInElectingFollowers()

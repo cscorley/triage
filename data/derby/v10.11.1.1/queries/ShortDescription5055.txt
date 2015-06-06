@@ -1,1 +1,0 @@
-[patch] add visibility to static method calls

@@ -1,1 +1,0 @@
-PIG-3123 breaks e2e test Jython_Diagnostics_2

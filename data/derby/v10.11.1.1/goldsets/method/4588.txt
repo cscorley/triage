@@ -1,2 +1,0 @@
-org.apache.derby.impl.store.raw.data.BaseDataFileFactory.boot(boolean,Properties)
-org.apache.derby.impl.store.raw.data.BaseDataFileFactory.stop()

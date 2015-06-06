@@ -1,2 +1,0 @@
-org.apache.tika.parser.rtf.TextExtractor
-org.apache.tika.TestParsers

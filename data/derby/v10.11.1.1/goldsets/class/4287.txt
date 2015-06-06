@@ -1,2 +1,0 @@
-org.apache.derby.impl.services.bytecode.BCClass
-org.apache.derby.impl.services.bytecode.GClass

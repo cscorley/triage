@@ -1,3 +1,0 @@
-org.apache.pig.builtin.Distinct
-org.apache.pig.builtin.Distinct.Initial
-org.apache.pig.test.TestBuiltin

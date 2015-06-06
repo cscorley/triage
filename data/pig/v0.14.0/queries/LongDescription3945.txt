@@ -1,5 +1,0 @@
-The piggybank ant script needs to know what hadoopversion to use; but it is described in the main build script with inheritAll false, meaning that none of the main ant task's properties are sent along. 
-
-This matters because the JobHistoryLoader needs to be excluded when building against Hadoop 2.0 (0.23) version branch. Running 'ant piggybank' from the top level was failed for me with errors about org.apache.hadoop.mapred.DefaultJobHistoryParser not found in contrib/piggybank/java/src/main/java/org/apache/pig/piggybank/storage/HadoopJobHistoryLoader.java
-
-This patch leaves the inheritAll flag alone but selectively passes along the hadoopversion property. Alternatively, I can put in a patch that instead flips inheritAll to be true.

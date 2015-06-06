@@ -1,1 +1,0 @@
-iWork Number's have individual sheetnames.  Currently only the first sheet is going extracted.

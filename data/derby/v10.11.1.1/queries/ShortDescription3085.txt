@@ -1,1 +1,0 @@
-Fails to handle BLOB fields with a PreparedStatement with size >32750 bytes

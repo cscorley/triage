@@ -1,1 +1,0 @@
-The top level BUILDING.html page tells users to grab ant version 1.7.0 or higher. I don't know whether that version still works. I have been using version 1.9.2 for a long time. I see no harm in changing the instructions to tell new developers to grab ant version 1.9.2. I think it's a good idea to update these instructions regularly.

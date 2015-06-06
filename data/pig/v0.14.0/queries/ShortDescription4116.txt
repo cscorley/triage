@@ -1,1 +1,0 @@
-Update Pig doc about Hadoop 2 Streaming Python UDF support

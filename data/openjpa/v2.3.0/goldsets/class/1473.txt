@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.kernel.exps.UnaryOp
-org.apache.openjpa.kernel.Filters
-org.apache.openjpa.persistence.jdbc.query.TestAggregateQueryWithNoResult

@@ -1,1 +1,0 @@
-Global case insensitive setting

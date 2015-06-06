@@ -1,1 +1,0 @@
-Filter equality does not work for tuples

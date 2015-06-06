@@ -1,1 +1,0 @@
-LDADriver not being initialised properly

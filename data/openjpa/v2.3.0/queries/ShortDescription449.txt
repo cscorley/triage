@@ -1,1 +1,0 @@
-Under concurrent access, createEntityManager() fails with NPE.

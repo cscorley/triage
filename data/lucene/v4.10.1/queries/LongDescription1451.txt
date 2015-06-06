@@ -1,1 +1,0 @@
-NIOFSDirectory.getDirectory() returns a FSDirectory object

@@ -1,1 +1,0 @@
-Incorrect Javadoc for launchPlan() method

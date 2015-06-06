@@ -1,1 +1,0 @@
-isEmpty should not be early terminating

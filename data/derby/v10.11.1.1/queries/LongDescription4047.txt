@@ -1,2 +1,0 @@
-I noticed the tests store/updatelocks.sql and store/updatelocksJDBC30.sql are not in use.
-They should get evaluated for inclusion in the tests - they should either get included - and preferably converted to junit - or get deleted.

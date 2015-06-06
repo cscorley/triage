@@ -1,2 +1,0 @@
-org.apache.derby.catalog.SystemProcedures.SYSCS_COMPRESS_TABLE(String,String,int)
-org.apache.derbyTesting.functionTests.tests.store.streamingColumn.streamTest10(Connection)

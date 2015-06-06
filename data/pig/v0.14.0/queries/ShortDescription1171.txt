@@ -1,1 +1,0 @@
-Top-N queries produce incorrect results when followed by a cross statement

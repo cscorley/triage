@@ -1,1 +1,0 @@
-ZOOKEEPER-1504 and ZOOKEEPER-1505 introduce changes that should be documented - such as new configuration parameters/defaults, etc... We should also verify that nothing else needs to be changed in the documentation related to these changes.

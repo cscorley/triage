@@ -1,1 +1,0 @@
-SolrJ cannot bind dynamic fields to beans

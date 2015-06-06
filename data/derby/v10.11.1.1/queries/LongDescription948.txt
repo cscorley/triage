@@ -1,3 +1,0 @@
-As described in the JDBC 4 spec sections 16 and 3.1.
-
-This provides support for new ResultSet methods added by JDBC4 and not addressed by other JIRAs: getHoldability() and isClosed().

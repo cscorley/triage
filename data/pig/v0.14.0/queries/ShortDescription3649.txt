@@ -1,1 +1,0 @@
-POPartialAgg incorrectly calculates size reduction when multiple values aggregated

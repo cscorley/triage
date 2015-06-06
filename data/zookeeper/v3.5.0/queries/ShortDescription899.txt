@@ -1,1 +1,0 @@
-Update Netty version in trunk to 3.2.2

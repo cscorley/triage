@@ -1,3 +1,0 @@
-IndexWriter offers a commit(String commitUserData) method.
-IndexReader can commit as well using the flush/close methods and so
-needs an analogous method that accepts commitUserData.

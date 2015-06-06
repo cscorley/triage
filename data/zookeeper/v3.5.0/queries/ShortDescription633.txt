@@ -1,1 +1,0 @@
-Fetch netty using ivy for bookkeeper

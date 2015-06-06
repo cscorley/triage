@@ -1,1 +1,0 @@
-Improve testing of the in-memory back end

@@ -1,1 +1,0 @@
-connectionloss - add more documentation to detail 

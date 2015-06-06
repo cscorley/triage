@@ -1,1 +1,0 @@
-default log4j root logger configuration has neg perf impact with no benefit, change default level to INFO

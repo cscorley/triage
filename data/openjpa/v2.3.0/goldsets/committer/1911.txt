@@ -1,2 +1,0 @@
-Fay Wang <faywang@apache.org>
-Richard G. Curtis <curtisr7@apache.org>

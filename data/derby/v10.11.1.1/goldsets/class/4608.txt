@@ -1,3 +1,0 @@
-org.apache.derby.iapi.types.SQLBinary
-org.apache.derbyTesting.perf.basic.jdbc.BaseLoad100TestSetup
-org.apache.derbyTesting.perf.basic.jdbc.HeapScan

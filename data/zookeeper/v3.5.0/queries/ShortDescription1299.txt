@@ -1,1 +1,0 @@
-Add winconfig.h file to ignore in release audit.

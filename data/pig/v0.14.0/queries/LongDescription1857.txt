@@ -1,1 +1,0 @@
-This goal of this ticket is to generate a set of RPM/debian package which integrate well with RPM sets created by HADOOP-6255.  

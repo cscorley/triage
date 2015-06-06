@@ -1,2 +1,0 @@
-org.apache.hedwig.ServerControlDaemon
-org.apache.hedwig.ServerControlDaemon.ServerControlDaemonHandler

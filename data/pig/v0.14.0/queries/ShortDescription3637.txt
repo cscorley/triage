@@ -1,1 +1,0 @@
-PigCombiner creating log spam

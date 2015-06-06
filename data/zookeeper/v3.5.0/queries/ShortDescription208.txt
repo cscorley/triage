@@ -1,1 +1,0 @@
-Zookeeper C client uses API that are not thread safe, causing crashes when multiple instances are active

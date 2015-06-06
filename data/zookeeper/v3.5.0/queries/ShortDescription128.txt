@@ -1,1 +1,0 @@
-test coverage on async client operations needs to be improved

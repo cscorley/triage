@@ -1,2 +1,0 @@
-org.apache.openjpa.jdbc.ant.SchemaToolTask.setDropTables(boolean)
-org.apache.openjpa.jdbc.ant.SchemaToolTask.setIgnoreErrors(boolean)

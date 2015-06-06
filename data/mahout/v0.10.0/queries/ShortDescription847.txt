@@ -1,1 +1,0 @@
-Improve Euclidean distance similarity calculation

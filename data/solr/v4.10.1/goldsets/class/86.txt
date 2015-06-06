@@ -1,2 +1,0 @@
-org.apache.solr.util.SimplePostTool
-org.apache.solr.util.SimplePostTool.PostException

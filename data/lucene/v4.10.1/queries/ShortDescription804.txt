@@ -1,1 +1,0 @@
-build.xml: result of "dist-src" should support "build-contrib"

@@ -1,1 +1,0 @@
-Static variable makes tests fail

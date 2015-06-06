@@ -1,2 +1,0 @@
-DataTypeDescriptor.isBinaryType() return false for Types.BLOB.
-Surely BLOB is a binary type and so method should return true?

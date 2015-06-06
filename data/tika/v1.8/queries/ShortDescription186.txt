@@ -1,1 +1,0 @@
-Refactor the MS Office property names to MSOffice.java

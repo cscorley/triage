@@ -1,2 +1,0 @@
-Kristian Waagan <kristwaa@apache.org>
-Mamta Satoor <mamta@apache.org>

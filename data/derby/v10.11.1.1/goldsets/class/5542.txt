@@ -1,3 +1,0 @@
-org.apache.derby.impl.services.monitor.BaseMonitor
-org.apache.derby.jdbc.EmbedXAResource
-org.apache.derbyTesting.functionTests.util.corruptio.CorruptDiskStorageFactory

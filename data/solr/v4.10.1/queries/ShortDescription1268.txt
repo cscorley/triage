@@ -1,1 +1,0 @@
-Incorporate Lucene's FastVectorHighlighter

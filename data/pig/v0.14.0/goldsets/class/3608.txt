@@ -1,2 +1,0 @@
-org.apache.pig.builtin.TestAvroStorage
-org.apache.pig.impl.util.avro.AvroMapWrapper

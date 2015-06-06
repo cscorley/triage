@@ -1,1 +1,0 @@
-MimeTypes.forName should avoid method-level synchronization

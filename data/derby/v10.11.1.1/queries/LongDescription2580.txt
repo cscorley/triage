@@ -1,1 +1,0 @@
-THROWASSERT should use the supplied message text.

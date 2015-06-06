@@ -1,3 +1,0 @@
-org.apache.bookkeeper.stats.CodahaleMetricsProvider
-org.apache.bookkeeper.stats.CodahaleOpStatsLogger
-org.apache.bookkeeper.stats.CodahaleStatsLogger

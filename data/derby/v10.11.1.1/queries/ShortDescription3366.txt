@@ -1,1 +1,0 @@
-Various formatting erros in L10N property files

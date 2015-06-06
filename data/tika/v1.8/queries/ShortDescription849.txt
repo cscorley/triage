@@ -1,1 +1,0 @@
-Identify and parse the Apple iBooks format

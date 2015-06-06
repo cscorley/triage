@@ -1,1 +1,0 @@
-Pigmix parser (PigPerformanceLoader) deletes chars during parsing 

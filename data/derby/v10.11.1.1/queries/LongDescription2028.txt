@@ -1,1 +1,0 @@
-To make the information displayed by various JUnit tools more useful/descriptive, all test suites should be named.

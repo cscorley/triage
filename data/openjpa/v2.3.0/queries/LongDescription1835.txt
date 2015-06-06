@@ -1,1 +1,0 @@
-"dummy" needs to be added to invalidColumnWordSet in SybaseDictionary. 

@@ -1,1 +1,0 @@
-DistanceFilter problem with deleted documents

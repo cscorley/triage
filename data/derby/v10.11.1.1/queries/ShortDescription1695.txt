@@ -1,1 +1,0 @@
-testSecMec.java fails with JCC 2.6 and JCC 2.8

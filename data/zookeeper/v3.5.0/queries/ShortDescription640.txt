@@ -1,1 +1,0 @@
-make build.xml more configurable to ease packaging for linux distros

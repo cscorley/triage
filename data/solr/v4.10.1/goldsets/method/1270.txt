@@ -1,3 +1,0 @@
-org.apache.solr.schema.ByteField.init(IndexSchema,Map<String,String>,String,String)
-org.apache.solr.schema.ByteField.write(TextResponseWriter,String,Fieldable)
-org.apache.solr.schema.ByteField.write(XMLWriter,String,Fieldable)

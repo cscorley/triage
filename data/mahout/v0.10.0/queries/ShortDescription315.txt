@@ -1,1 +1,0 @@
-VectorDumper should also do printing to simple {index : value, index : value, ... } output, if no dictionary is specified.

@@ -1,2 +1,0 @@
-Knut Anders Hatlen <kahatlen@apache.org>
-Satheesh E. Bandaram <bandaram@apache.org>

@@ -1,1 +1,0 @@
-Tika CLI application displays metadata on endDocument() event. Some parsers (OOXML for example) fills metadata after text extraction (after endDocument), that data is missed in output.

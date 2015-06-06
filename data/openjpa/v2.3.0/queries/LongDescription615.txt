@@ -1,1 +1,0 @@
-Some  trace info to dump out the initial connection default properties will help in problem determination, especially in JEE environment.

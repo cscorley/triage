@@ -1,1 +1,0 @@
-casting relation to scalar- problem with handling of data from non PigStorage loaders

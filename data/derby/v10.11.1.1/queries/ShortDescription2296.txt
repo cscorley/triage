@@ -1,1 +1,0 @@
-getProperties method deprecated on ClientDataSource

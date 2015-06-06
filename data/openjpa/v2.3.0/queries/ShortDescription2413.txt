@@ -1,1 +1,0 @@
-FetchPlan.clearFetchGroups() does not retain "default" in list of active Fetch Groups.

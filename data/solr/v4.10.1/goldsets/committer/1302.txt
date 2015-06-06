@@ -1,2 +1,0 @@
-Grant Ingersoll <gsingers@apache.org>
-Shalin Shekhar Mangar <shalin@apache.org>

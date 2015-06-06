@@ -1,1 +1,0 @@
-Misplaced p tags in release notes

@@ -1,1 +1,0 @@
-GUI does not support drag and drop in Gnome or KDE

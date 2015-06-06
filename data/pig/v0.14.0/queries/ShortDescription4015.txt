@@ -1,1 +1,0 @@
-Provide a way to disable auto-parallism in tez

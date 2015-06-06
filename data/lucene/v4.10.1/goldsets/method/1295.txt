@@ -1,3 +1,0 @@
-org.apache.lucene.search.similar.MoreLikeThis.retrieveInterestingTerms(int)
-org.apache.lucene.search.similar.MoreLikeThis.retrieveTerms(int)
-org.apache.lucene.search.similar.MoreLikeThis.retrieveTerms(Reader)

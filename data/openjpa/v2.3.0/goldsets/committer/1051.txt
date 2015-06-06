@@ -1,2 +1,0 @@
-David Ezzio <dezzio@apache.org>
-Pinaki Poddar <ppoddar@apache.org>

@@ -1,2 +1,0 @@
-org.apache.lucene.index.Term.equals(Object)
-org.apache.lucene.index.TestTerm.testEquals()

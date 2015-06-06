@@ -1,3 +1,0 @@
-org.apache.pig.test.TestGrunt.testRegisterWithoutQuotes()
-org.apache.pig.test.TestGrunt.testRegisterWithQuotes()
-org.apache.pig.test.TestPigRunner.testRegisterExternalJar()

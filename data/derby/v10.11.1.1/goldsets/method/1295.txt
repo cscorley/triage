@@ -1,6 +1,0 @@
-org.apache.derby.impl.jdbc.EmbedResultSet.movePosition(int,int,String)
-org.apache.derbyTesting.functionTests.tests.jdbcapi.ScrollResultSetTest.ScrollResultSetTest(String)
-org.apache.derbyTesting.functionTests.tests.jdbcapi.ScrollResultSetTest.setUp()
-org.apache.derbyTesting.functionTests.tests.jdbcapi.ScrollResultSetTest.tearDown()
-org.apache.derbyTesting.functionTests.tests.jdbcapi.ScrollResultSetTest.testNextOnLastRowForwardOnly()
-org.apache.derbyTesting.functionTests.tests.jdbcapi.ScrollResultSetTest.testNextOnLastRowScrollable()

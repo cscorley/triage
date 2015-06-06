@@ -1,1 +1,0 @@
-More performance improvements (in response to changes for OPENJPA-138)

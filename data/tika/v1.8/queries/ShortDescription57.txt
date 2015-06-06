@@ -1,1 +1,0 @@
-Rename org.apache.tika.ms to org.apache.tika.parser.ms

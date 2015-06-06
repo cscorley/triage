@@ -1,1 +1,0 @@
-In tika-app 0.7-SNAPSHOT the options -t -h -x don't work. I get no output for text-files or urls. When I use the option -m I get no language or content-encoding.

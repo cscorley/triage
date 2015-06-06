@@ -1,3 +1,0 @@
-org.apache.openjpa.kernel.Broker.getTransactionListeners()
-org.apache.openjpa.kernel.BrokerImpl.getTransactionListenerCallbackMode()
-org.apache.openjpa.kernel.Broker.removeTransactionListener(Object)

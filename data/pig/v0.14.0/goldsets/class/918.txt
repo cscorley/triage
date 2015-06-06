@@ -1,3 +1,0 @@
-org.apache.hadoop.zebra.io.BasicTable
-org.apache.hadoop.zebra.io.BasicTable.Reader
-org.apache.hadoop.zebra.io.BasicTable.Reader.BTScanner

@@ -1,3 +1,0 @@
-org.apache.pig.newplan.logical.expression.UserFuncExpression.isEqual(Operator)
-org.apache.pig.test.TestFilterUDF.testFilterUDFusingDefine()
-org.apache.pig.test.TestFilterUDF.testFilterUDFusingDefine2()

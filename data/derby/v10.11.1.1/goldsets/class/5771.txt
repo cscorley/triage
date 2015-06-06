@@ -1,2 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.derbynet.Utf8CcsidManagerClientTest
-org.apache.derbyTesting.junit.BaseJDBCTestCase

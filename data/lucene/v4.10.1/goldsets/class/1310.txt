@@ -1,2 +1,0 @@
-org.apache.lucene.search.SloppyPhraseScorer
-org.apache.lucene.search.TestSloppyPhraseQuery

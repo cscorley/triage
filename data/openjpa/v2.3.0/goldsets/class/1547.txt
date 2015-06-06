@@ -1,2 +1,0 @@
-org.apache.openjpa.jdbc.kernel.exps.JDBCExpressionFactory
-org.apache.openjpa.persistence.embed.TestEmbeddable

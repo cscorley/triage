@@ -1,1 +1,0 @@
-build.xml failes to retrieve a release number from SVN and the ant target "dist" fails

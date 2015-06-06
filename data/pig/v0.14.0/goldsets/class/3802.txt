@@ -1,2 +1,0 @@
-org.apache.pig.test.TestBlackAndWhitelistValidator
-org.apache.pig.test.Util

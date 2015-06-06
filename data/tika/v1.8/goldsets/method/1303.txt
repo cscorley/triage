@@ -1,3 +1,0 @@
-org.apache.tika.parser.html.HtmlHandler.endElement(String,String,String)
-org.apache.tika.parser.html.HtmlParserTest.testFirstTitleValueisSetToMetadata()
-org.apache.tika.parser.html.HtmlParserTest.testLocator()

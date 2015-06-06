@@ -1,1 +1,0 @@
-Udf deserialization for registered classes fails in local_mode

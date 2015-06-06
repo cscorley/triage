@@ -1,1 +1,0 @@
-OOXMLExtractorFactory can leave files open

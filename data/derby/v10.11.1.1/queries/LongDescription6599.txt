@@ -1,7 +1,0 @@
-
-ij> select * from table (app.def()) t;
-ERROR 42ZB4: 'APP'.DEF' does not identify a table function.
-
-
-
-There's a missing opening quote before the table function name in the error message.

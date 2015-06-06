@@ -1,1 +1,0 @@
-HDFS dep transitively depends on a busted pom

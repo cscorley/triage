@@ -1,1 +1,0 @@
-Register a network port at IANA which will be the default port for Derby Replication. 

@@ -1,1 +1,0 @@
- TEZ-692 simplifies job submission by only keeping TezClient and removing TezSession. Need to update pig code to use TezClient instead of TezSession.

@@ -1,1 +1,0 @@
-Read zk host list in a wrong way in hedwig server

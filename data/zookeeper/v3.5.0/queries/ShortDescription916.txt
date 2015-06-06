@@ -1,1 +1,0 @@
-Problem receiving messages from subscribed channels in c++ client 

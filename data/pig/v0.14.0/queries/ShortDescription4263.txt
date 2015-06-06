@@ -1,1 +1,0 @@
-Move tez local mode unit tests to a separate targe

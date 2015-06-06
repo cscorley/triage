@@ -1,1 +1,0 @@
-Should be able to set job priority through Pig Latin

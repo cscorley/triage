@@ -1,1 +1,0 @@
-integrate cppunit testing as part of hudson patch process.

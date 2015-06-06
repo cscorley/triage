@@ -1,1 +1,0 @@
-Test org.apache.mahout.text.SequenceFilesFromMailArchivesTest fails on windows

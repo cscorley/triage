@@ -1,2 +1,0 @@
-org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingParser.parseTable(ClassMapping,Table)
-org.apache.openjpa.persistence.jdbc.XMLPersistenceMappingParser.startTable(Attributes)

@@ -1,1 +1,0 @@
-Tarball download slows down and occasionally fails CI builds. Hive is now available from maven.

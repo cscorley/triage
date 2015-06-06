@@ -1,1 +1,0 @@
-Adding BallKMeans and StreamingKMeans classes

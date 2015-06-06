@@ -1,1 +1,0 @@
-getTopFeatures, readPoints, etc. are useful outside of the scope of dumping clusters and we should expose them as such.

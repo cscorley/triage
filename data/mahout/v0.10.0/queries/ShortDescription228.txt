@@ -1,1 +1,0 @@
-Need sequential logistic regression implementation using SGD techniques

@@ -1,1 +1,0 @@
-Revisit the parallel ALS matrix factorization

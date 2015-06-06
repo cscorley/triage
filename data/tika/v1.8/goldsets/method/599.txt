@@ -1,2 +1,0 @@
-org.apache.tika.parser.html.HtmlParser.getSupportedTypes(ParseContext)
-org.apache.tika.parser.html.HtmlParser.parse(InputStream,ContentHandler,Metadata,ParseContext)

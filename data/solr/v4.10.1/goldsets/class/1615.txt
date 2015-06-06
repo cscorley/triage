@@ -1,3 +1,0 @@
-org.apache.solr.search.QueryParsing
-org.apache.solr.search.QueryParsing.StrParser
-org.apache.solr.search.TestQueryTypes

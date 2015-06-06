@@ -1,1 +1,0 @@
-zkpython arbitrarily restricts the size of a 'get' to 512 bytes

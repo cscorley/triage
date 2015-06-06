@@ -1,1 +1,0 @@
-Update Geronimo dependency in tika-parsers pom.xml to 1.0.1

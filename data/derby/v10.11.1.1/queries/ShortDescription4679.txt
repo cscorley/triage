@@ -1,1 +1,0 @@
-Several left outer joins causes unstable query with incorrect results

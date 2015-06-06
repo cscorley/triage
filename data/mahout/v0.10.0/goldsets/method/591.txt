@@ -1,3 +1,0 @@
-org.apache.mahout.classifier.sgd.ModelDissector.Category.compareTo(Category)
-org.apache.mahout.classifier.sgd.ModelDissectorTest.testCategoryOrdering()
-org.apache.mahout.classifier.sgd.ModelDissector.Weight.Weight(String,Vector,int)

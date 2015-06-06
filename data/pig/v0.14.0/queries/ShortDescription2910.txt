@@ -1,1 +1,0 @@
-Add function to read schema from outout of Schema.toString()

@@ -1,1 +1,0 @@
-Hung thread after another thread is interrupted

@@ -1,1 +1,0 @@
-Making the instructions more clear in documentation(BUILDING.txt) regarding setting JRE lib path for a Windows system

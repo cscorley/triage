@@ -1,2 +1,0 @@
-org.apache.solr.schema.UUIDField
-org.apache.solr.schema.UUIDFieldTest

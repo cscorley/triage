@@ -1,6 +1,0 @@
-org.apache.lucene.util.BitVector.readDgaps(IndexInput)
-org.apache.lucene.util.BitVector.subset(int,int)
-org.apache.lucene.util.TestBitVector.createSubsetTestVector()
-org.apache.lucene.util.TestBitVector.doCompare(BitVector,BitVector)
-org.apache.lucene.util.TestBitVector.doTestSubset(int,int)
-org.apache.lucene.util.TestBitVector.testSubset()

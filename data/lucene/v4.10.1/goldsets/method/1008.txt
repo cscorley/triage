@@ -1,3 +1,0 @@
-org.apache.lucene.index.DocumentsWriter.ThreadState.writeDocument()
-org.apache.lucene.index.TestIndexWriter.testBadSegment()
-org.apache.lucene.index.TestIndexWriter.testNoTermVectorAfterTermVector()

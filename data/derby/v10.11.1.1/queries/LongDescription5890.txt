@@ -1,1 +1,0 @@
-The ij EXPECT command appears to be an unfinished prototype which has been in the code since at least Cloudscape 3.5 and which was never exposed to users. It does nothing. See this email thread: http://old.nabble.com/ij-EXPECT-command-to34242490.html#a34242490 We should remove this abandoned code.

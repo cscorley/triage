@@ -1,1 +1,0 @@
-setCreateDatabase does not work for EmbeddedXADataSource or EmbeddedConnectionPoolDataSource

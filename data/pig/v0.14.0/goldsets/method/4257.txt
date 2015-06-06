@@ -1,3 +1,0 @@
-org.apache.pig.backend.hadoop.datastorage.ConfigurationUtil.getLocalFSProperties()
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.partitioners.WeightedRangePartitioner.init()
-org.apache.pig.test.TestMapSideCogroup.DummyIndexableLoader.initialize(Configuration)

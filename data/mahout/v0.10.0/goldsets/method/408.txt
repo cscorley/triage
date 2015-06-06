@@ -1,3 +1,0 @@
-org.apache.mahout.classifier.bayes.TrainClassifier.main(String[])
-org.apache.mahout.common.AbstractJob.parseArguments(String[],Option)
-org.apache.mahout.math.hadoop.TransposeJob.run(String[])

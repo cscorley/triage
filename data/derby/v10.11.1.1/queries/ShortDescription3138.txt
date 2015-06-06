@@ -1,1 +1,0 @@
-Optimizer error when vtis are invoked with correlated references to outer query blocks

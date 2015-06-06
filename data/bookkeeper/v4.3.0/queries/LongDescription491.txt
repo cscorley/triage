@@ -1,1 +1,0 @@
-Unless I'm not looking properly into it, I can's see any doc describing the configuration parameters of hedwig-server. 

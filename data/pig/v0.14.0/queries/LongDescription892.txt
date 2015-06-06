@@ -1,1 +1,0 @@
-both COUNT and AVG need to ignore nulls. Also add COUNT_STAR to match COUNT in SQL

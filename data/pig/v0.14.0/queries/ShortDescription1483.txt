@@ -1,1 +1,0 @@
-[piggybank] Add HadoopJobHistoryLoader to the piggybank

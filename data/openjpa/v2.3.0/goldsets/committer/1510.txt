@@ -1,2 +1,0 @@
-Kevin W. Sutter <kwsutter@apache.org>
-Milosz Tylenda <mtylenda@apache.org>

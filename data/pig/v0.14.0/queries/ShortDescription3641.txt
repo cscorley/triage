@@ -1,1 +1,0 @@
-Split "otherwise" producing incorrect output when combined with ColumnPruning

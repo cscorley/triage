@@ -1,3 +1,0 @@
-org.apache.solr.common.util.FileUtils
-org.apache.solr.common.util.FileUtilsTest
-org.apache.solr.core.CoreContainer

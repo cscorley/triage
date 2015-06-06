@@ -1,1 +1,0 @@
-client gives SqlException for test callable.java and parameterMapping.java on zOS

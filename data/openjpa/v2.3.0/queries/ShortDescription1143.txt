@@ -1,1 +1,0 @@
-Synch JPA 2.0 development with evolving JPA 2.0 Spec

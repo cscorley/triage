@@ -1,1 +1,0 @@
-Manifest file doesn't contain OSGi attributes

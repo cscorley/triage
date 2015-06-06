@@ -1,1 +1,0 @@
-The network client changes UDTs into Strings and returns their type as LONGVARBINARY.

@@ -1,1 +1,0 @@
-LoadFunc jar does not ship to backend in MultiQuery case

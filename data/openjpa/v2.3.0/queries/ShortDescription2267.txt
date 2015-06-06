@@ -1,1 +1,0 @@
-native query select with null result causes NullPointerException

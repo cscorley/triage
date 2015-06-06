@@ -1,3 +1,0 @@
-org.apache.mahout.vectorizer.encoders.CachingContinuousValueEncoder
-org.apache.mahout.vectorizer.encoders.CachingEncoderTest
-org.apache.mahout.vectorizer.encoders.CachingStaticWordValueEncoder

@@ -1,3 +1,0 @@
-org.apache.solr.core.RequestHandlers
-org.apache.solr.core.RequestHandlersTest
-org.apache.solr.servlet.SolrDispatchFilter

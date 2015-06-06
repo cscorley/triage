@@ -1,1 +1,0 @@
-Query Syntax page does not make it clear that wildcard searches are not allowed in Phrase Queries

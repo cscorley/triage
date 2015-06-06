@@ -1,7 +1,0 @@
-PIG-3569 and PIG-3580 added support for BigDecimal and BigInteger to SUM, MIN, MAX, and AVG. The documentation needs to be updated. For eg,
-
-
-An expression with data types int, long, float, double, or bytearray cast as double.
-
-
-http://pig.apache.org/docs/r0.12.0/func.html#sum

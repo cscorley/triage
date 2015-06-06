@@ -1,1 +1,0 @@
-Add JPA 2.0 schemas and appropriately validate for version

@@ -1,3 +1,0 @@
-org.apache.pig.piggybank.test.storage.avro.TestAvroStorage.accept(Path)
-org.apache.pig.piggybank.test.storage.TestMultiStorageCompression.runQuery(String,String)
-org.apache.pig.piggybank.test.storage.TestMultiStorageCompression.verifyResults(String,List<String>,String,String)

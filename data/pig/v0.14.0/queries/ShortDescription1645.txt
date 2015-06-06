@@ -1,1 +1,0 @@
-Using both small split combination and temporary file compression on a query of ORDER BY may cause crash

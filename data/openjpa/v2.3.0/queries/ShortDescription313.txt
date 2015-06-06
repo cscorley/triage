@@ -1,1 +1,0 @@
-list of objects returned by query partially correct

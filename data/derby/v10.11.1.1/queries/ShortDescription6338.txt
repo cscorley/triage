@@ -1,1 +1,0 @@
-Remove Profile attribute from jar file manifests

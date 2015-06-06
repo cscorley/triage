@@ -1,1 +1,0 @@
-WikipediaXmlSplitter --> Exception in thread "main" java.lang.NullPointerException

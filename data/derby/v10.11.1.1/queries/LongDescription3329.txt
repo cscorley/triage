@@ -1,1 +1,0 @@
-Enable statement pooling in the client JDBC driver.

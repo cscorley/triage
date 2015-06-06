@@ -1,1 +1,0 @@
-lang/forupdate.sql fails with derbyclient in the 10.1 branch

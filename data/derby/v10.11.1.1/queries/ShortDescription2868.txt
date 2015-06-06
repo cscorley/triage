@@ -1,1 +1,0 @@
-BUILDING.txt doesn't mention junit.jar in list of jars installed in tools/java

@@ -1,1 +1,0 @@
-Tests lang/grantRevokeDDL.sql and lang/grantRevokeDDL2.sql fails on IBM WCTME 5.7 Foundation (jdkJ2ME Foundation Specification v1.0)

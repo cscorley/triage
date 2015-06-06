@@ -1,3 +1,0 @@
-In SOLR-215, we enabled support for more then one SolrCore - but there is no way to use them yet.
-
-We need to make some interface to manage, register, modify avaliable SolrCores

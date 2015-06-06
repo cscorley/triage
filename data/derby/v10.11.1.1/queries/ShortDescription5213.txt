@@ -1,1 +1,0 @@
-Write tests to verify the interaction of TRUNCATE TABLE and online backup

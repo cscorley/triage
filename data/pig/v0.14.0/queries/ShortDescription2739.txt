@@ -1,1 +1,0 @@
-PyList should map to Bag automatically in Jython

@@ -1,1 +1,0 @@
-The dependency jar for h2o is very large: ~68MB.  Pare this down to only include only  necessary runtime classes.

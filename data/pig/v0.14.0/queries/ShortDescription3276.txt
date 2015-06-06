@@ -1,1 +1,0 @@
-change the default value for hcat.bin to hcat instead of /usr/local/hcat/bin/hcat

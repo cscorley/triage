@@ -1,1 +1,0 @@
-Error message is rather unrevealing when creating large databases on FAT32 drives

@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.ZooKeeperServer.processPacket(ServerCnxn,ByteBuffer)
-org.apache.zookeeper.test.AuthTest.testBadAuthNotifiesWatch()
-org.apache.zookeeper.test.AuthTest.testBadAuthThenSendOtherCommands()

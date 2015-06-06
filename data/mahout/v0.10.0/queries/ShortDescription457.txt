@@ -1,1 +1,0 @@
-ItemSimilarityJob and RecommenderJob don't work on Amazon ElasticMapReduce

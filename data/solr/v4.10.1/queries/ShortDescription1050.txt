@@ -1,1 +1,0 @@
-NPE thrown in replication admin page due to unhandled casting of null values

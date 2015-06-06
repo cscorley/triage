@@ -1,1 +1,0 @@
-DB2 lastGeneratedKeyQuery should use new syntax for db2UDBV82OrLater

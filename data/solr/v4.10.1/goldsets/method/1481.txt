@@ -1,2 +1,0 @@
-org.apache.solr.request.PHPSerializedWriter.PHPSerializedWriter(Writer,SolrQueryRequest,SolrQueryResponse,boolean)
-org.apache.solr.request.PHPSerializedWriter.writeResponse()

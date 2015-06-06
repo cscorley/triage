@@ -1,1 +1,0 @@
-move contrib/snowball to contrib/analyzers

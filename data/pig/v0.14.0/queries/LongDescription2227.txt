@@ -1,1 +1,0 @@
-If you do "ant test-e2e" in the top level directory the wrong jars get copied into test/e2e/pig/testdist/lib.  The hadoop example jars belong there, instead jars from the top level lib directory are copied there.

@@ -1,1 +1,0 @@
-NPE when calling isCurrent() on a ParallellReader

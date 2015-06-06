@@ -1,1 +1,0 @@
-ContentHandlerDecorator outputs invalid element

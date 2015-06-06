@@ -1,1 +1,0 @@
-Byte[] and Char[] should be treated as SingularAttributes, not lists by the metamodel generator

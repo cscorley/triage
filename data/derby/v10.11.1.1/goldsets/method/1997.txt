@@ -1,3 +1,0 @@
-WwdClientExample.errorPrint(Throwable)
-WwdClientExample.main(String[])
-WwdClientExample.SQLExceptionPrint(SQLException)

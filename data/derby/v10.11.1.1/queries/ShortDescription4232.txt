@@ -1,1 +1,0 @@
-XAResource.setTransactionTimeout() makes XAResource.start() fail with the client driver

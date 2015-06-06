@@ -1,1 +1,0 @@
-outputSchema modification from scripting UDFs

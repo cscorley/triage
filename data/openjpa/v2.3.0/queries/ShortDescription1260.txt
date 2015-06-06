@@ -1,1 +1,0 @@
-Wrong sequence is generated for custom native sequence generator from getIdGenerator.

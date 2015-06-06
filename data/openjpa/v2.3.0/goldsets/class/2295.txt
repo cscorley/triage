@@ -1,3 +1,0 @@
-org.apache.openjpa.meta.MetaDataRepository
-org.apache.openjpa.persistence.meta.TestMetaDataRepository
-org.apache.openjpa.persistence.XMLPersistenceMetaDataParser

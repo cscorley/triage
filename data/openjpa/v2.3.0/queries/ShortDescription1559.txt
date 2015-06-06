@@ -1,1 +1,0 @@
-DataCacheManager initialization isn't thread safe.

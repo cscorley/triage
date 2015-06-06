@@ -1,1 +1,0 @@
-Publish BookKeeper jars into maven.

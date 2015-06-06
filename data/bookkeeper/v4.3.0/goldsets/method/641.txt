@@ -1,2 +1,0 @@
-org.apache.bookkeeper.proto.BookieServer.DeathWatcher.DeathWatcher(ServerConfiguration)
-org.apache.bookkeeper.proto.BookieServer.DeathWatcher.run()

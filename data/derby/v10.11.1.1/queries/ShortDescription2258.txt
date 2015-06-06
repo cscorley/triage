@@ -1,1 +1,0 @@
-DatabaseMetaData.getTypeInfo() does not list supported Derby SQL types correctly.

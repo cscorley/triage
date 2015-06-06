@@ -1,1 +1,0 @@
-SELECT DISTINCT field FROM TABLE_NAME GROUP BY field,  field2

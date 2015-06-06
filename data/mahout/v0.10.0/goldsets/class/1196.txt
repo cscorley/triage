@@ -1,2 +1,0 @@
-org.apache.mahout.classifier.sgd.LogisticModelParameters
-org.apache.mahout.classifier.sgd.LogisticModelParametersTest

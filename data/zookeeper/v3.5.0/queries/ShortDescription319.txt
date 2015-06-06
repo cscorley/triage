@@ -1,1 +1,0 @@
-add locking around auth info in zhandle_t

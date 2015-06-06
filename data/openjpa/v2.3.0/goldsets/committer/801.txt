@@ -1,2 +1,0 @@
-Donald Woods <dwoods@apache.org>
-Pinaki Poddar <ppoddar@apache.org>

@@ -1,1 +1,0 @@
-The replication log shipper is not notified when a new replication transmitter is instantiated in MC#handleException.

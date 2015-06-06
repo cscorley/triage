@@ -1,1 +1,0 @@
-Beetle6038.java store test fails on Mac OS X

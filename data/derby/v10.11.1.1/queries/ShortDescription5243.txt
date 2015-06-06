@@ -1,1 +1,0 @@
-assert failure in test testRAFReadWriteMultipleThreads: interrupted flag cleared

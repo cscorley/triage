@@ -1,1 +1,0 @@
-Query timeout hint not honored consistently when pessimistic lock is issued to database requires multi-statements locking scheme

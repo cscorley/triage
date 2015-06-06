@@ -1,1 +1,0 @@
-Ship UDF/LoadFunc/StoreFunc dependent jar automatically

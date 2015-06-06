@@ -1,4 +1,0 @@
-Code Cleanup
-Organize imports
-Remove space in blank lines
-make local variables final

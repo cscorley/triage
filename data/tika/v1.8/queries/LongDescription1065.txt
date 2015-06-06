@@ -1,5 +1,0 @@
-The Tika mimetypes list doesn't currently have any SAS related entries. SAS provides a handy list of the file extensions and their types:
-
-http://support.sas.com/documentation/cdl/en/hostwin/63285/HTML/default/viewer.htm#introsasfiles.htm
-
-That page doesn't have the mimetypes, but these can generally be found from googling

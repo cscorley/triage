@@ -1,1 +1,0 @@
-QueryParser produces empty BooleanQueries when all clauses are stop words

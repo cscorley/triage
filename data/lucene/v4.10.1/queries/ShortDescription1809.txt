@@ -1,1 +1,0 @@
-highlight-vs-vector-highlight.alg is unfair

@@ -1,9 +1,0 @@
-Continuation of PIG-812. See PIG-812 for more details.
-
-
-In order for this to be resolved in the right manner the following must added in the http://hadoop.apache.org/pig/docs/r0.2.0/piglatin.html
-
-1) The semantics of * as explained by Olga.
-2) An example of GROUP ALL
-
-Otherwise people will waste their time doing the same (documentation-caused) mistakes again.

@@ -1,1 +1,0 @@
-Mp3 parser does not add duration to metadata if there are no ID3 tags

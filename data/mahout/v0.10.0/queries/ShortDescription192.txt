@@ -1,1 +1,0 @@
-RMSRecommenderEvaluator does not catch NoSuchItemException

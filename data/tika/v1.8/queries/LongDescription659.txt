@@ -1,1 +1,0 @@
-The ODF related tests still call the deprecated parser, not the new one, and are in the wrong package

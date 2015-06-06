@@ -1,1 +1,0 @@
-Refactor PigStatusReporter and PigLogger for non-MR execution engine

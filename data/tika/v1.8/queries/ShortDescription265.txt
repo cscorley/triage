@@ -1,1 +1,0 @@
-Web-Site http://lucene.apache.org/tika/gettingstarted.html does not correspond to current release

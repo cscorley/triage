@@ -1,2 +1,0 @@
-org.apache.derbyTesting.system.mailjdbc.tasks.Backup.Backup(String)
-org.apache.derbyTesting.system.mailjdbc.tasks.Backup.run()

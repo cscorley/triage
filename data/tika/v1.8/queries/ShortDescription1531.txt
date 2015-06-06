@@ -1,1 +1,0 @@
-Upgrade to POI 3.12-beta1 when available

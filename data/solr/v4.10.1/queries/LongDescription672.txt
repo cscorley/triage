@@ -1,1 +1,0 @@
-DataImportHandler was just added to trunk, but unfortunately the java source that makes it up are not included in the nightly build.  

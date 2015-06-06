@@ -1,2 +1,0 @@
-org.apache.pig.builtin.PluckTuple
-org.apache.pig.builtin.TestPluckTuple

@@ -1,1 +1,0 @@
-Distinct aggregates don't work well with territory-based collation

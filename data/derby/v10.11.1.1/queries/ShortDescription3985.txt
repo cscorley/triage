@@ -1,1 +1,0 @@
-Replace BUILDING.txt with a simlified up-to-date BUILDING.html

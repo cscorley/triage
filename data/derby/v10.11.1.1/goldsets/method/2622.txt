@@ -1,2 +1,0 @@
-org.apache.derby.client.am.ClobLocatorInputStream.ClobLocatorInputStream(Connection,Clob)
-org.apache.derby.client.am.ClobLocatorReader.ClobLocatorReader(Connection,Clob)

@@ -1,3 +1,0 @@
-org.apache.bookkeeper.stats.CodahaleMetricsProvider.initIfNecessary()
-org.apache.bookkeeper.stats.CodahaleMetricsProvider.start(Configuration)
-org.apache.bookkeeper.stats.CodahaleMetricsProvider.stop()

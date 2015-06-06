@@ -1,1 +1,0 @@
-Update the version of ant which we tell new developers to use.

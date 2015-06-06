@@ -1,1 +1,0 @@
-Create a website describing the distributed ALS recommender

@@ -1,3 +1,0 @@
-org.apache.derby.client.am.CallableStatement
-org.apache.derby.iapi.types.BigIntegerDecimal
-org.apache.derbyTesting.functionTests.tests.derbynet.callable

@@ -1,1 +1,0 @@
-Mime type detection fails with upper case file extensions such as "PDF".

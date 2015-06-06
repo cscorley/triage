@@ -1,3 +1,0 @@
-org.apache.hadoop.zebra.schema.Schema
-org.apache.hadoop.zebra.types.TestSchemaAnonymousCollection
-org.apache.hadoop.zebra.types.TestSchemaMap

@@ -1,1 +1,0 @@
-@Version-Annotation on Column with unsupported type (e.g. BigDecimal) is silently ignored, but should raise an error

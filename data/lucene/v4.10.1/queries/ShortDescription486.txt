@@ -1,1 +1,0 @@
-Core Test should not have dependencies on the Demo code

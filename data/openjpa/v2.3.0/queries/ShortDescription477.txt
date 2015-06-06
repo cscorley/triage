@@ -1,1 +1,0 @@
-making StoreManager more flexible and extensible.

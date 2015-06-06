@@ -1,3 +1,0 @@
-org.apache.zookeeper.ClientCnxn
-org.apache.zookeeper.ClientCnxn.SendThread
-org.apache.zookeeper.test.ChrootTest

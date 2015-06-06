@@ -1,1 +1,0 @@
-New error messages added in 10.3 have not been localized. Should translate these into as many languages as possible.

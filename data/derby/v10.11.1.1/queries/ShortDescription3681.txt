@@ -1,1 +1,0 @@
-When authenticating a user at connect time, verify that the user provided is not also a defined role name.

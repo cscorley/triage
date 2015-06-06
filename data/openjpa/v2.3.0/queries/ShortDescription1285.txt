@@ -1,1 +1,0 @@
-Dynamic JDBC4 connection wrapper should maintain constructor refernce for faster instantiation

@@ -1,3 +1,0 @@
-org.apache.mahout.classifier.sgd.TrainLogistic
-org.apache.mahout.classifier.sgd.TrainLogistic.InputOpener
-org.apache.mahout.classifier.sgd.TrainLogisticTest

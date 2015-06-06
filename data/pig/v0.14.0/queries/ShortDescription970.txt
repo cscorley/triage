@@ -1,1 +1,0 @@
-Support of HBase 0.20.0

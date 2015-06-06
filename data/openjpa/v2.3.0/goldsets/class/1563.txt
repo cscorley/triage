@@ -1,4 +1,0 @@
-org.apache.openjpa.persistence.datacache.TestClearableScheduler
-org.apache.openjpa.persistence.datacache.TestJPACache
-org.apache.openjpa.persistence.JPAFacadeHelper
-org.apache.openjpa.persistence.util.TestJPAFacadeHelper

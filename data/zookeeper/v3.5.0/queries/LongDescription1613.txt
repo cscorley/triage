@@ -1,1 +1,0 @@
-While fiddling with docbook to solve the broken links of ZOOKEEPER-1488 I noted that all the documentation's copyright notice still has the year 2008 only. I am submitting a patch a fix this.

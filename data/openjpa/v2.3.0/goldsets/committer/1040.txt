@@ -1,2 +1,0 @@
-Donald Woods <dwoods@apache.org>
-Michael Dick <mikedd@apache.org>

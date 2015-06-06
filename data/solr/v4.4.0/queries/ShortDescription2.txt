@@ -1,1 +1,0 @@
-adding multiple docs at the same time does not produce a well formed response

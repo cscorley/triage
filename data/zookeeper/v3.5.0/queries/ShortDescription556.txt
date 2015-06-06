@@ -1,1 +1,0 @@
-Startup messages should account for common error of missing leading slash in config files

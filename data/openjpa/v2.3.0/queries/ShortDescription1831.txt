@@ -1,1 +1,0 @@
-DataSourceFactory manipulates queryTimeout which is already in milliseconds

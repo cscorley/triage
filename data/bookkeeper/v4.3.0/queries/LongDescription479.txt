@@ -1,1 +1,0 @@
-On an absolutely clean branch, mvn apache-rat:check fails. There are two test sources without license. Fix this.

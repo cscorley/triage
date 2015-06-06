@@ -1,3 +1,0 @@
-org.apache.tika.cli.TikaCLI
-org.apache.tika.parser.microsoft.AbstractPOIFSExtractor
-org.apache.tika.parser.microsoft.SummaryExtractor

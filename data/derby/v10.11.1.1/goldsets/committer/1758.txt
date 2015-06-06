@@ -1,4 +1,0 @@
-Army <abrown@apache.org>
-Bryan Pendleton <bpendleton@apache.org>
-Daniel John Debrunner <djd@apache.org>
-Mike Matrigali <mikem@apache.org>

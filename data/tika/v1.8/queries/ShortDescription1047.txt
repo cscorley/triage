@@ -1,1 +1,0 @@
-Provide a JAX-RS to detect only the mediatype

@@ -1,1 +1,0 @@
-The dblook tool should support UDTs and the USAGE privileges granted on them.

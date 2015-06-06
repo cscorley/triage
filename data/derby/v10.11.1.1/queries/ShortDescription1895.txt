@@ -1,1 +1,0 @@
-Convert jdbcapi/blobclob4BLOB.java to Junit

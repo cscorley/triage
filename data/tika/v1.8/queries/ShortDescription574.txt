@@ -1,1 +1,0 @@
-Support for IBM866 (CP866) encoding in TXTParser

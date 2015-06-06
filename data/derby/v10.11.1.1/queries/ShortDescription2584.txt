@@ -1,1 +1,0 @@
-Creating a database with JPOX SchemaTool sometimes gives ArrayIndexOutOfBoundsException when getIndexInfo() is called

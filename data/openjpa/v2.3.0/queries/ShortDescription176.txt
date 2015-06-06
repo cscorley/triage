@@ -1,1 +1,0 @@
-Exception prefixes should be human-readable

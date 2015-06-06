@@ -1,1 +1,0 @@
-parameters for message 2200H - sequence generator does not cycle - is out of sync in non-English messages

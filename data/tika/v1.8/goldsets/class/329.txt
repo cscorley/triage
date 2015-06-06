@@ -1,2 +1,0 @@
-org.apache.tika.parser.epub.EpubContentParser
-org.apache.tika.parser.odf.OpenDocumentContentParser

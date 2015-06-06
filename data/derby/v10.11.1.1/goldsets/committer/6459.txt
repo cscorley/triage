@@ -1,2 +1,0 @@
-Camilla Haase <chaase3@apache.org>
-Knut Anders Hatlen <kahatlen@apache.org>

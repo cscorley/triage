@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.compile.MethodCallNode.getCorrelationTables(JBitSet)
-org.apache.derbyTesting.functionTests.tests.lang.SysDiagVTIMappingTest.testCorrelatedReferences()
-org.apache.derbyTesting.functionTests.tests.lang.SysDiagVTIMappingTest.testOrderBy()

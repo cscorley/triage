@@ -1,1 +1,0 @@
-If you compile the REST contrib module, the tarball will only include the main JAR. It will not bundle the required dependencies or include the minimal working configuration files.

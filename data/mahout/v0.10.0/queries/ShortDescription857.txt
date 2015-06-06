@@ -1,1 +1,0 @@
-Rework 20 NewsGroup shell script example to include SGD Example

@@ -1,1 +1,0 @@
-Network Client allows execution of callable statement when one of the parameters is not set

@@ -1,1 +1,0 @@
-Document and provide samples on how to use commons-dbcp

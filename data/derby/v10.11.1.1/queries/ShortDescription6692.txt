@@ -1,1 +1,0 @@
-Self-deadlock when inserting row with identity column in soft-upgraded database

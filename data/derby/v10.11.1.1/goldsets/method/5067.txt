@@ -1,3 +1,0 @@
-org.apache.derbyTesting.perf.clients.BankAccountFiller.createTables(Connection)
-org.apache.derbyTesting.perf.clients.BankAccountFiller.fillTables(Connection)
-org.apache.derbyTesting.perf.clients.SingleRecordFiller.fill(Connection)

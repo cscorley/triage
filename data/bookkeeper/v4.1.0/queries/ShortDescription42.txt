@@ -1,1 +1,0 @@
-bookkeeper-server readme file is outdated

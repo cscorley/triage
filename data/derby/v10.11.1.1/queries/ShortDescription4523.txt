@@ -1,1 +1,0 @@
-store.AccessTest fails on phoneME

@@ -1,2 +1,0 @@
-org.apache.derby.client.am.PreparedStatement.setObjectX(int,Object,int,int)
-org.apache.derbyTesting.functionTests.tests.derbynet.PrepareStatementTest.testParameterTypes()

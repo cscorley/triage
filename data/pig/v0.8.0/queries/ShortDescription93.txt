@@ -1,1 +1,0 @@
-Impossible to set jobconf parameters

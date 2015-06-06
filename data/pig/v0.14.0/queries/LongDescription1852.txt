@@ -1,1 +1,0 @@
-Pig 0.9 uses ANTLR as default parser. Pig needs to add antlr jar to pig.jar and pig-withouthadoop.jar.

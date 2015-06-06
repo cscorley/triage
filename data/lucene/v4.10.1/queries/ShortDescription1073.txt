@@ -1,1 +1,0 @@
-Add unit test showing how to do a "live backup" of an index

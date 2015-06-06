@@ -1,1 +1,0 @@
-Investigate removing the antiGC thread in embedded Derby

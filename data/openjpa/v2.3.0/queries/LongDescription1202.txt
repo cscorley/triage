@@ -1,1 +1,0 @@
-Update compile dependencies to Geronimo JPA EA6

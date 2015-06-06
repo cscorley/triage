@@ -1,1 +1,0 @@
-TODO pondering about allocation behavior in zkpython may be removed

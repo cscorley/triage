@@ -1,1 +1,0 @@
-NullPointerException in JMXManagementService.unregisterMBean when running jdbcapi._Suite

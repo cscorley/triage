@@ -1,1 +1,0 @@
-support dynamic fields as copyField destination

@@ -1,1 +1,0 @@
-JPQL GROUP BY embeddable is not allowed

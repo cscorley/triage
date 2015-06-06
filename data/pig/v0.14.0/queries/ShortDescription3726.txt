@@ -1,1 +1,0 @@
-Ranking empty records leads to NullPointerException

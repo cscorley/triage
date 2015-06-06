@@ -1,1 +1,0 @@
-TestAvroStorageUtils.testGetConcretePathFromGlob fails on some version of hadoop

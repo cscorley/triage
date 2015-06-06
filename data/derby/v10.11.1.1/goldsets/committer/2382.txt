@@ -1,3 +1,0 @@
-Army <abrown@apache.org>
-Katherine Marsden <kmarsden@apache.org>
-Knut Anders Hatlen <kahatlen@apache.org>

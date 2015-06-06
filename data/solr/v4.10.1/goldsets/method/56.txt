@@ -1,3 +1,0 @@
-org.apache.solr.request.JSONWriter.JSONWriter(Writer,SolrQueryRequest,SolrQueryResponse)
-org.apache.solr.request.JSONWriter.writeKey(String,boolean)
-org.apache.solr.request.JSONWriter.writeResponse()

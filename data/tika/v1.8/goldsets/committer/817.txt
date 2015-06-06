@@ -1,2 +1,0 @@
-Jukka Zitting <jukka@apache.org>
-Tim Allison <tallison@apache.org>

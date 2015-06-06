@@ -1,3 +1,0 @@
-org.apache.mahout.clustering.streaming.tools.ClusterQualitySummarizer
-org.apache.mahout.math.stats.OnlineSummarizer
-org.apache.mahout.math.stats.OnlineSummarizerTest

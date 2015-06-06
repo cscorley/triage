@@ -1,1 +1,0 @@
-WikipediaXmlSplitter spits one chunk per line

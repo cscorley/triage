@@ -1,1 +1,0 @@
-At line 99 in winport.c, use windows API "InitializeCriticalSection" but never call "DeleteCriticalSection"

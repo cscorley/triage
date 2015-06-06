@@ -1,1 +1,0 @@
-Do not hardcode commons-lang version in build.xml

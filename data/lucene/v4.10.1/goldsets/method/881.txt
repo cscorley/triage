@@ -1,3 +1,0 @@
-org.apache.lucene.queryParser.QueryParser.escape(String)
-org.apache.lucene.queryParser.TestQueryParser.testQueryStringEscaping()
-org.apache.lucene.queryParser.TestQueryParser.testTabNewlineCarriageReturn()

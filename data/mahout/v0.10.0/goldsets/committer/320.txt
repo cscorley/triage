@@ -1,2 +1,0 @@
-Robin Anil <robinanil@apache.org>
-Sean R. Owen <srowen@apache.org>

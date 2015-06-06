@@ -1,3 +1,0 @@
-Seems fix for MAHOUT-1043 wasn't good, in pluginExecutionFilter instead of version, versionRange should be used.
-
-Related SO entry: http://stackoverflow.com/a/6701595/381140

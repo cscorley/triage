@@ -1,2 +1,0 @@
-org.apache.derby.tools.SignatureChecker
-org.apache.derby.tools.SignatureChecker.SQLRoutine

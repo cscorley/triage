@@ -1,2 +1,0 @@
-org.apache.lucene.search.Sort
-org.apache.lucene.search.SortField

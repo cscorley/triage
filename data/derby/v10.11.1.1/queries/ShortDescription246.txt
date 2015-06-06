@@ -1,1 +1,0 @@
-XA end() fails with Connection is closed error

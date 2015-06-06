@@ -1,1 +1,0 @@
-Add mime for pre-OLE2 xls file

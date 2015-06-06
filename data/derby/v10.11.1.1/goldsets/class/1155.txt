@@ -1,3 +1,0 @@
-org.apache.derby.jdbc.EmbedXAConnection
-org.apache.derby.jdbc.EmbedXAResource
-org.apache.derby.jdbc.XATransactionState

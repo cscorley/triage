@@ -1,1 +1,0 @@
-bad exceptions when some options aren't in solrconfig.xml

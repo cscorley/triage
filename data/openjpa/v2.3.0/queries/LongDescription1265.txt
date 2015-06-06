@@ -1,2 +1,0 @@
-Provide editing support for Criteria Query.
-The accessor methods on Criteria Query API should return lists that are not 'live'.  

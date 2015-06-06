@@ -1,1 +1,0 @@
-org.apache.jute.compiler.JRecord.genCCode(FileWriter,FileWriter)

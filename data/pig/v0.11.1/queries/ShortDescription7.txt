@@ -1,1 +1,0 @@
-Optimize execution of algebraic functions

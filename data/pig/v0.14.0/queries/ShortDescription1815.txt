@@ -1,1 +1,0 @@
-pig task retains used instances of PhysicalPlan

@@ -1,1 +1,0 @@
-ArrayInputStream.skipBytes() may throw EOFException which is disallowed by java.io.DataInput

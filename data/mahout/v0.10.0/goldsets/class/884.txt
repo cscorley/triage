@@ -1,3 +1,0 @@
-org.apache.mahout.utils.ConcatenateVectorsJob
-org.apache.mahout.utils.ConcatenateVectorsReducer
-org.apache.mahout.utils.TestConcatenateVectorsJob

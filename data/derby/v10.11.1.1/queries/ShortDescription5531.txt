@@ -1,1 +1,0 @@
-Assert failure when inserting NULL into indexed column with territory-based collation

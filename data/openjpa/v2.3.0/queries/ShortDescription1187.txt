@@ -1,1 +1,0 @@
-Output control for generated canonical metamodel source code

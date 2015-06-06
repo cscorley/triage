@@ -1,2 +1,0 @@
-org.apache.openjpa.persistence.datacache.CacheTest
-org.apache.openjpa.persistence.datacache.TestSJVMCache

@@ -1,1 +1,0 @@
-The nesting of callbacks in the bookie recovery mechanism is difficult to follow, and we need to make sure that we have it documented so that others are able to read the code.

@@ -1,1 +1,0 @@
-Native_1 and Native_2 fail while running the benchmark against old version of pig as they don't understand the new "native" keyword. Need to include a verify_pig_script section for them with "mapreduce" keyword instead. 

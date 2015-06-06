@@ -1,1 +1,0 @@
-JUnit for Bi-directional OneToOne with null relationships

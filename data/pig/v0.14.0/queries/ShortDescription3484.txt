@@ -1,1 +1,0 @@
-Make the size of pig.script property configurable

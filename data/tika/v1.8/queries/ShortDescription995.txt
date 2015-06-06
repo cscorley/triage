@@ -1,1 +1,0 @@
-XHTMLContentHandler doesn't pass attributes of body element

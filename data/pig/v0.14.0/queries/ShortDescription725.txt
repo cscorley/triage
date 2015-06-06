@@ -1,1 +1,0 @@
-javadoc: warning - Multiple sources of package comments found for package "org.apache.commons.logging"

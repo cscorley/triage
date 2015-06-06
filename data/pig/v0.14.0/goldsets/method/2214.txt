@@ -1,3 +1,0 @@
-org.apache.pig.data.InternalSortedBag.InternalSortedBag(Comparator<Tuple>,Tuple)
-org.apache.pig.data.InternalSortedBag.InternalSortedBag(int,Comparator<Tuple>,Tuple)
-org.apache.pig.data.InternalSortedBag.InternalSortedBag(int,double,Comparator<Tuple>,Tuple)

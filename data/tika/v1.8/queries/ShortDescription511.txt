@@ -1,1 +1,0 @@
-NPE when POI is configured to prefer event extractors

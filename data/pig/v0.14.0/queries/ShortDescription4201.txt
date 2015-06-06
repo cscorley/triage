@@ -1,1 +1,0 @@
-Native e2e tests fail when run against old version of pig

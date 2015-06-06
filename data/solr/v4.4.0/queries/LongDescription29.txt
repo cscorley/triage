@@ -1,1 +1,0 @@
-The 'cp' command on OS X doesn't support the -l option, so the backup script doesn't work.

@@ -1,1 +1,0 @@
-ParameterMappingTest fails due to ArrayIndexOutOfBoundsException  executing a procedure

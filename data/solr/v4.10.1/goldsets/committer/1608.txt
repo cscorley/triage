@@ -1,2 +1,0 @@
-Shalin Shekhar Mangar <shalin@apache.org>
-Yonik Seeley <yonik@apache.org>

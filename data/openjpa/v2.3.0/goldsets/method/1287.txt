@@ -1,2 +1,0 @@
-org.apache.openjpa.kernel.QueryImpl.isUnique()
-org.apache.openjpa.persistence.criteria.CriteriaExpressionBuilder.getQueryExpressions(ExpressionFactory,CriteriaQueryImpl<?>)

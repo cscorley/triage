@@ -1,1 +1,0 @@
-NPE if you declare a constraint on a generated column and omit the datatype

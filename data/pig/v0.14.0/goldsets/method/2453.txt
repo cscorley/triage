@@ -1,4 +1,0 @@
-org.apache.pig.builtin.JsonMetadata.exists(ElementDescriptor)
-org.apache.pig.builtin.JsonMetadata.findMetaFile(String,String,Configuration)
-org.apache.pig.builtin.JsonMetadata.JsonMetadata()
-org.apache.pig.test.TestPigStorage.testPigStorageSchemaSearch()

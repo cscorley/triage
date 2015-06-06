@@ -1,1 +1,0 @@
-fix handling of min/max session timeout value initialization

@@ -1,1 +1,0 @@
-DatabaseMetaData.getXXXFunctions() methods return incorrect values.

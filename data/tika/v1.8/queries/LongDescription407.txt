@@ -1,5 +1,0 @@
-Per the discussions on the mailing list:
-
-http://mail-archives.apache.org/mod_mbox/lucene-tika-dev/201004.mbox/%3CC7E89009.1042B%25Chris.A.Mattmann@jpl.nasa.gov%3E
-
-This issue is to track the inclusion of NetCDF jars in the Maven central repos. If the NetCDF folks are OK with it and do so, we can then update the tika POM to not declare on any external repos.

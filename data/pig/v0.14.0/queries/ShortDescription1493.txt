@@ -1,1 +1,0 @@
-Column Pruner throw exception "inconsistent pruning"

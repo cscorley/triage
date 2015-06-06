@@ -1,1 +1,0 @@
-Wrong message when using SHOW in ij.

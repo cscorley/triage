@@ -1,1 +1,0 @@
-10.8 client with 10.5 server gives java.lang.ClassCastException: java.lang.Boolean incompatible with java.lang.Short in NetStatementRequest.buildFDODTA with CursorTest.testCursorParam()

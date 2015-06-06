@@ -1,1 +1,0 @@
-fix e2e test float precision related test failures when run with -Dpig.exec.mapPartAgg=true

@@ -1,1 +1,0 @@
-iWork numbers table titles are being ignored by TIKA parser.

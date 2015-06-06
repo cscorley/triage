@@ -1,1 +1,0 @@
-Support standard provider properties in PersistenceProvider class

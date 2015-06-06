@@ -1,3 +1,0 @@
-org.apache.mahout.common.AbstractJob
-org.apache.mahout.math.hadoop.similarity.cooccurrence.RowSimilarityJob
-org.apache.mahout.math.hadoop.similarity.cooccurrence.RowSimilarityJobTest

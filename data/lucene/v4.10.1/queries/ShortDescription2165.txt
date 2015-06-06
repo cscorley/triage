@@ -1,1 +1,0 @@
-SnowballAnalyzer lacks a constructor that takes a Set of Stop Words

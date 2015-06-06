@@ -1,1 +1,0 @@
-Set specification level based upon persistence.xml version

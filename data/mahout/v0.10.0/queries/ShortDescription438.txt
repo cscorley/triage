@@ -1,1 +1,0 @@
-Wrong javadoc at org.apache.mahout.common.AbstractJob.addInputOption() 

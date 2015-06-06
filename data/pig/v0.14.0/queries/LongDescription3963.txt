@@ -1,1 +1,0 @@
-The BagToString documentation was absent. Attached patch demonstrates its use.

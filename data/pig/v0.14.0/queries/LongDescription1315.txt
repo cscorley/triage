@@ -1,1 +1,0 @@
-OrderedLoadFunc interface is used by Pig to do merge join and mapside cogrouping. For Zebra, implementing this interface is necessary to support mapside cogrouping.

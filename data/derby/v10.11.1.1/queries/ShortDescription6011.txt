@@ -1,1 +1,0 @@
-Derby performs very badly (seems to deadlock and timeout) in very simple multi-threaded tests

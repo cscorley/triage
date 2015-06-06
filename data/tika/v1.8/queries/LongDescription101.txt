@@ -1,1 +1,0 @@
-Tika site doesn't have links to archives on the mailing list page and Javadocs would good to have. I have a patch for the pom - but I got carried away, so theres a bit more.

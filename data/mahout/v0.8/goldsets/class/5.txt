@@ -1,2 +1,0 @@
-org.apache.mahout.classifier.naivebayes.test.TestNaiveBayesDriver
-org.apache.mahout.classifier.naivebayes.training.TrainNaiveBayesJob

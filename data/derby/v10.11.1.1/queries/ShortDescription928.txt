@@ -1,1 +1,0 @@
-Add ability to network server to accept connections with a certain security mechanism.

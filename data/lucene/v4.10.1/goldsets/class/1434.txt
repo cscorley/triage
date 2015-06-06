@@ -1,3 +1,0 @@
-org.apache.lucene.util.IndexableBinaryStringTools
-org.apache.lucene.util.IndexableBinaryStringTools.CodingCase
-org.apache.lucene.util.TestIndexableBinaryStringTools

@@ -1,3 +1,0 @@
-org.apache.lucene.search.ParallelMultiSearcher.close()
-org.apache.lucene.search.ParallelMultiSearcher.createDocFrequencyMap(Set<Term>,Term)
-org.apache.lucene.search.ParallelMultiSearcher.search(Weight,Filter,Collector)

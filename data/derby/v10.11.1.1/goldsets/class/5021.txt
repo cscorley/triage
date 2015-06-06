@@ -1,2 +1,0 @@
-org.apache.derby.impl.load.ColumnInfo
-org.apache.derby.impl.tools.dblook.DB_Table

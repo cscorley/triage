@@ -1,1 +1,0 @@
-Wrong exception is thrown when JoinColumn annotation is not incorrectly specified

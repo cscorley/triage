@@ -1,2 +1,0 @@
-org.apache.lucene.index.FieldsReader.LazyField.stringValue()
-org.apache.lucene.index.TestFieldsReader.testLazyFields()

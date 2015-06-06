@@ -1,1 +1,0 @@
-Spurious log error messages when QuorumCnxManager is shutting down

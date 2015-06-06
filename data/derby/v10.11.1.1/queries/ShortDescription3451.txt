@@ -1,1 +1,0 @@
-Remove dependency between StandardException class and org.apache.derby.impl.jdbc classes.

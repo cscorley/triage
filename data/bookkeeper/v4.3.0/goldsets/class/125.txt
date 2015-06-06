@@ -1,4 +1,0 @@
-org.apache.bookkeeper.bookie.BookieLayoutVersionTest
-org.apache.bookkeeper.client.TestFencing
-org.apache.bookkeeper.meta.AbstractZkLedgerManager
-org.apache.bookkeeper.test.BookieJournalRollingTest

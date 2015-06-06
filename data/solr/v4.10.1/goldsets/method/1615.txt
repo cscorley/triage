@@ -1,2 +1,0 @@
-org.apache.solr.search.QueryParsing.StrParser.getQuotedString()
-org.apache.solr.search.TestQueryTypes.testQueryTypes()

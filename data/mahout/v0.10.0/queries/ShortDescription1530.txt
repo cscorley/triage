@@ -1,1 +1,0 @@
-Custom prompt and welcome message for the Spark Shell

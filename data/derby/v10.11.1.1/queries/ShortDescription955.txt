@@ -1,1 +1,0 @@
-Get derbyall on jdk1.6

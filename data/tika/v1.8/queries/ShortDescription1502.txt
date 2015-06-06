@@ -1,1 +1,0 @@
-Mime magic for database file formats

@@ -1,1 +1,0 @@
-Factor out met keys in MimeTypesReader representing XML tag/attr names

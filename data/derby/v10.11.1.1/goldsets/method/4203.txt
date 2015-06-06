@@ -1,3 +1,0 @@
-org.apache.derbyTesting.system.mailjdbc.MailJdbc.main(String[])
-org.apache.derbyTesting.system.mailjdbc.utils.DbTasks.jdbcLoad(String)
-org.apache.derbyTesting.system.mailjdbc.utils.DbTasks.jdbcLoad(String,boolean)

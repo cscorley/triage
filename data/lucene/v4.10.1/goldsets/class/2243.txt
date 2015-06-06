@@ -1,3 +1,0 @@
-org.apache.lucene.search.vectorhighlight.AbstractTestCase
-org.apache.lucene.search.vectorhighlight.FieldQuery
-org.apache.lucene.search.vectorhighlight.FieldQueryTest

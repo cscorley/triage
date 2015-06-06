@@ -1,1 +1,0 @@
-Improve currently implemented variant of the mean shift algorithm in Mahout so that kernels are supported.

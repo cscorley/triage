@@ -1,2 +1,0 @@
-org.apache.derby.impl.sql.execute.TableScanResultSet
-org.apache.derby.impl.sql.execute.ValidateCheckConstraintResultSet

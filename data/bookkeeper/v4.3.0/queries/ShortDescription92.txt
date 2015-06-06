@@ -1,1 +1,0 @@
-using wrong context object in readLastConfirmedComplete callback

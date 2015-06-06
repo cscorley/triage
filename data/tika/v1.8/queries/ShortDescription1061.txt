@@ -1,1 +1,0 @@
-FileMaker Pro 7 files wrongly detected as True Type Font

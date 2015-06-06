@@ -1,1 +1,0 @@
-Patch available to make .classpath entries portable - relative to ECLIPSE_HOME

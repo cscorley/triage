@@ -1,1 +1,0 @@
-User-defined comparison operators don't work in locally executing PIG

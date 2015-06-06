@@ -1,3 +1,0 @@
-org.apache.solr.common.SolrDocument
-org.apache.solr.common.SolrDocumentTest
-org.apache.solr.util.SolrInputDocument

@@ -1,1 +1,0 @@
-SequentialAccessSparseVector function assignment is very slow and other iterator woes

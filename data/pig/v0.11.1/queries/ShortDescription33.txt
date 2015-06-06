@@ -1,1 +1,0 @@
-help in grunt shows single line of help

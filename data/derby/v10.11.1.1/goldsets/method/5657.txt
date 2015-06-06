@@ -1,3 +1,0 @@
-org.apache.derby.impl.jdbc.authentication.AuthenticationServiceBase.badNativeAuthenticationChange()
-org.apache.derby.impl.jdbc.authentication.AuthenticationServiceBase.parsePasswordLifetime(String)
-org.apache.derby.impl.jdbc.authentication.AuthenticationServiceBase.validate(String,Serializable,Dictionary)

@@ -1,1 +1,0 @@
-Bad syncing in entrylogger degrades performance for many concurrent ledgers

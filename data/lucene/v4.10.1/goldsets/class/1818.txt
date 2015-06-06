@@ -1,2 +1,0 @@
-org.apache.lucene.search.QueryWrapperFilter
-org.apache.lucene.search.TestQueryWrapperFilter

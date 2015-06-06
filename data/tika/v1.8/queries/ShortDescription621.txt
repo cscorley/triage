@@ -1,1 +1,0 @@
-RTF parsing fails with Java 7 early access on 64bit platforms

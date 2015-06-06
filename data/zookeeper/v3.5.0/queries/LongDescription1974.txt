@@ -1,5 +1,0 @@
-The winvs2008 build is failing with
-
-unresolved external symbol _imp_ZOO_READONLY_STATE
-
-see: https://builds.apache.org/view/S-Z/view/ZooKeeper/job/ZooKeeper-trunk-WinVS2008/1445/console

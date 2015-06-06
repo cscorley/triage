@@ -1,3 +1,0 @@
-org.apache.pig.parser.LogicalPlanBuilder
-org.apache.pig.parser.TestErrorHandling
-org.apache.pig.parser.TestQueryParser

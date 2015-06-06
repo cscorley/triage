@@ -1,2 +1,0 @@
-org.apache.lucene.index.SegmentTermEnum.clone()
-org.apache.lucene.index.SegmentTermEnum.scanTo(Term)

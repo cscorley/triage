@@ -1,1 +1,0 @@
-Generation clauses which mention user-coded functions may produce different resuls depending on who performs the triggering INSERT/UPDATE

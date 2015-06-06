@@ -1,2 +1,0 @@
-org.apache.hadoop.zebra.pig.SchemaConverter.convertToResourceFieldSchema(ColumnSchema)
-org.apache.hadoop.zebra.schema.ColumnType.ANY.pigDataType()

@@ -1,1 +1,0 @@
-Cache calculated hashCode in OpenJPAId

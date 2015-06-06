@@ -1,1 +1,0 @@
-Add rowSums, rowMeans and diagonal extraction operations to distributed matrices

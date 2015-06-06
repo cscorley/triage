@@ -1,1 +1,0 @@
-CriteriaBuilder.countDistinct() does not return correct result

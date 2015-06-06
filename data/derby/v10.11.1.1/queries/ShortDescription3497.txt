@@ -1,1 +1,0 @@
-OOME at slave during replication

@@ -1,2 +1,0 @@
-org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser
-org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser.MethodComparator

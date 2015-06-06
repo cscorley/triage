@@ -1,3 +1,0 @@
-org.apache.mahout.vectorizer.DictionaryVectorizer
-org.apache.mahout.vectorizer.term.TermCountCombiner
-org.apache.mahout.vectorizer.term.TermCountReducer

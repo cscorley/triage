@@ -1,3 +1,0 @@
-Inconsistent formatting / use of parenthesis / some error checking - all need fixing. 
-
-Also, the documentation in the header file could do with a reformat. 

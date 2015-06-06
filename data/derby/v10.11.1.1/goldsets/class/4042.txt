@@ -1,3 +1,0 @@
-org.apache.derby.impl.load.ExportResultSetForObject
-org.apache.derby.impl.load.Import
-org.apache.derbyTesting.functionTests.tests.tools.ImportExportTest

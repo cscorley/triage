@@ -1,2 +1,0 @@
-org.apache.derby.impl.drda.DDMWriter.writeLDString(String,int)
-org.apache.derby.impl.drda.DDMWriter.writeString(String)

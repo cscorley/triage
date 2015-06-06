@@ -1,1 +1,0 @@
-generate eclipse project via ant target

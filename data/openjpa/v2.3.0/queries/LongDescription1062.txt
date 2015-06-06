@@ -1,1 +1,0 @@
-Use the maven-bundle-plugin to generate the OSGi bundle metadata in the manifest.mf.

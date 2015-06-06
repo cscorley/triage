@@ -1,1 +1,0 @@
-Add code to support request and return of locators over DRDA

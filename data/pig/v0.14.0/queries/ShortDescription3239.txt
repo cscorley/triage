@@ -1,1 +1,0 @@
-Unable to return multiple values from a macro using SPLIT

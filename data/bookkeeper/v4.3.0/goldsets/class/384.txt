@@ -1,2 +1,0 @@
-org.apache.bookkeeper.replication.BookieLedgerIndexTest
-org.apache.bookkeeper.replication.TestReplicationWorker

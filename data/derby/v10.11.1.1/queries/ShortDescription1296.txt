@@ -1,1 +1,0 @@
-Setting property derby.system.bootAll causes an Exception

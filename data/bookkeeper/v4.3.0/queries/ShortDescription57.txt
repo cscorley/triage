@@ -1,1 +1,0 @@
-NullPointException at bookie.zk@EntryLogger

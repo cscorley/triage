@@ -1,1 +1,0 @@
-watchedevent tostring should clearly output the state/type/path

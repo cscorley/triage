@@ -1,3 +1,0 @@
-org.apache.solr.handler.component.DistribFieldFacet
-org.apache.solr.handler.component.FacetComponent
-org.apache.solr.TestDistributedSearch

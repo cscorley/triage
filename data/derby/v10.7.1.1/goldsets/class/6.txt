@@ -1,2 +1,0 @@
-org.apache.derby.client.am.DatabaseMetaData
-org.apache.derbyTesting.functionTests.tests.junitTests.compatibility.JDBCDriverTest

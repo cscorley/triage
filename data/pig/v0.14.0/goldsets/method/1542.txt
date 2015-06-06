@@ -1,2 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapReduce.Reduce.setup(Context)
-org.apache.pig.Main.configureLog4J(Properties,PigContext)

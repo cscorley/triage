@@ -1,1 +1,0 @@
-Compiler warning message dropped for CastLineageSetter and others with no enum kind

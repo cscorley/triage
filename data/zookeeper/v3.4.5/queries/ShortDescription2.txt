@@ -1,1 +1,0 @@
-Synchronization issues in QuorumPeer and FastLeader election

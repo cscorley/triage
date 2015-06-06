@@ -1,1 +1,0 @@
-Noise error message printed when scanning entry log files those have been garbage collected.

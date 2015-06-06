@@ -1,3 +1,0 @@
-org.apache.tika.parser.AutoDetectParserTest
-org.apache.tika.parser.chm.CHM2XHTML
-org.apache.tika.parser.chm.ChmParser

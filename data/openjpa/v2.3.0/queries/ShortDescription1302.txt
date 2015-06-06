@@ -1,1 +1,0 @@
-Ehcache product derivation isn't detected when running in WebSphere

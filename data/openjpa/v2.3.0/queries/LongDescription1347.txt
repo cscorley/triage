@@ -1,2 +1,0 @@
-Upgrade to latest geronimo-validation_1.0_spec, which matches the 1.0.0.GA API.
-Upgrade the openjpa-integration/validation tests to use the 1.0.0.GA API and Hibernate 4.0.0.GA.

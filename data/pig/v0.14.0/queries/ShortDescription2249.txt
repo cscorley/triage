@@ -1,1 +1,0 @@
-Enable pig e2e testing on EC2

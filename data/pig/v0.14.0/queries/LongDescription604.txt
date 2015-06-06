@@ -1,1 +1,0 @@
-Current if we kill the pig job on the client machine, those hadoop jobs already launched still keep running. We have to kill these jobs manually.

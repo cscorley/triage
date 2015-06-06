@@ -1,1 +1,0 @@
-piggybank loaders need to update fieldsToRead function

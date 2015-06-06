@@ -1,1 +1,0 @@
-XPathRecordReader fails on XMLs with nodes mixed with CDATA content

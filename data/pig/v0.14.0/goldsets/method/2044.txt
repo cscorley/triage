@@ -1,3 +1,0 @@
-org.apache.pig.newplan.optimizer.Rule.match(OperatorPlan)
-org.apache.pig.test.TestNewPlanRule.testThreeNodeMatch()
-org.apache.pig.test.TestNewPlanRule.testTwoNodeMatch()

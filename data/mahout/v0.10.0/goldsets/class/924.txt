@@ -1,3 +1,0 @@
-org.apache.mahout.graph.AdjacencyMatrixJob
-org.apache.mahout.graph.AdjacencyMatrixJobTest
-org.apache.mahout.graph.AdjacencyMatrixJob.VectorizeEdgesMapper

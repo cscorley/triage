@@ -1,2 +1,0 @@
-Marc Prud'hommeaux <mprudhom@apache.org>
-Srinivasa Segu <ssegu@apache.org>

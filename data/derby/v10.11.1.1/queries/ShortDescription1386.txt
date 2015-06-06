@@ -1,1 +1,0 @@
-Wrong results with query using LIKE and ESCAPE clause that includes "%", "\", and "_"

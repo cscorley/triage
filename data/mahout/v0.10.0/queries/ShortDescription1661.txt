@@ -1,1 +1,0 @@
-Deprecate Lanczos in the code base

@@ -1,1 +1,0 @@
-Discovered while implementing TIKA-1384.

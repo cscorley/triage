@@ -1,2 +1,0 @@
-org.apache.zookeeper.JLineZNodeCompletor
-org.apache.zookeeper.ZooKeeperMain

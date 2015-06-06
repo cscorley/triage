@@ -1,2 +1,0 @@
-org.apache.tika.fork.ForkParser
-org.apache.tika.io.TikaInputStream

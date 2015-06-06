@@ -1,1 +1,0 @@
-The CriteriaBuilder blocks when multiple threads work on constructing predicate expressions.

@@ -1,2 +1,0 @@
-A lot of the getNext() implementations in PhysicalOperators is copy-pasted, with only the method signatures and casts changing. 
-Shorter code leads to less bugs and is easier to read.

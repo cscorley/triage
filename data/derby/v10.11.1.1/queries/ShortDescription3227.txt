@@ -1,1 +1,0 @@
-Remove final from all getConnection() methods in EmbeddedDataSource

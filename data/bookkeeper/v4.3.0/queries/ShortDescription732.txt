@@ -1,1 +1,0 @@
-Add env variable ENTRY_FORMATTER_CLASS to the bkenv.sh

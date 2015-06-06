@@ -1,3 +1,0 @@
-Solr core moved to using woodstox instead of stax but SolrJ POM still has a dependency to stax. We should replace the dependency to stax with woodstox jar in SolrJ's POM.
-
-This is not a huge problem as we are not distributing stax anymore but is needed for consistency.

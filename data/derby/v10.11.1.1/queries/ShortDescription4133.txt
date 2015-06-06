@@ -1,1 +1,0 @@
-'testTableFunctionInJar' fails w/ 'The class 'DummyVTI' does not exist or is inaccessible...' on jvm1.4

@@ -1,1 +1,0 @@
-Add licenses for 3rd party jars to mahout binary release and remove additional unused dependencies.

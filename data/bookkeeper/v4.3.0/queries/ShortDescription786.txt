@@ -1,1 +1,0 @@
-Fix Findbugs Error In Codahale Stats Provider

@@ -1,1 +1,0 @@
-Leader election recipe originally contributed to ZOOKEEPER-1080.

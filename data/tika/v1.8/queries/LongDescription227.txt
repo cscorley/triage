@@ -1,1 +1,0 @@
-Javadoc on MimeType#getAliases is misleading.

@@ -1,3 +1,0 @@
-Not meaningful message on bean validation valicator configuration:
-
-openjpa.Runtime - Could not create the optional validation provider. Reason returned: "null"

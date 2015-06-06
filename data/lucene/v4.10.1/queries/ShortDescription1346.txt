@@ -1,1 +1,0 @@
-replace Vector with ArrayList in Queries

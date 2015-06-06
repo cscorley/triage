@@ -1,1 +1,0 @@
-Natvie sequence problems uncovered after OPENJPA-1376

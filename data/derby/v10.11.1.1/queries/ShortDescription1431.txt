@@ -1,1 +1,0 @@
-Typo in link to Simple Example from frameworks/readme.html

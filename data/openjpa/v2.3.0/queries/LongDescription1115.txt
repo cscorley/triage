@@ -1,6 +1,0 @@
-Support manual delimiters for the following annotations:
-   EntityResult
-   FieldResult
-   ColumnResult
-
-Support the automatic delimiting of delimiters

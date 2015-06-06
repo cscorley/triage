@@ -1,1 +1,0 @@
-Remove WARN messages for uncacheable finder select statements

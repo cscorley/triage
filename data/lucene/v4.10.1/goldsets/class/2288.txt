@@ -1,2 +1,0 @@
-org.tartarus.snowball.Among
-org.tartarus.snowball.SnowballProgram

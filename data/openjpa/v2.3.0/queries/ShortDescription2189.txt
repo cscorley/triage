@@ -1,1 +1,0 @@
-Update OpenBooks example to build, install, and execute in the WAS Liberty Profile

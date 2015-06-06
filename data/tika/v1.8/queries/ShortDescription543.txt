@@ -1,1 +1,0 @@
-Remove rome 1.0 dependency on java.net repository

@@ -1,1 +1,0 @@
-Metadata (such as title) should not be part of content

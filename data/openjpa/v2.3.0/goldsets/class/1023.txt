@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.enhance.identity.Dependent4
-org.apache.openjpa.persistence.enhance.identity.DependentId4
-org.apache.openjpa.persistence.enhance.identity.Employee4

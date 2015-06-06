@@ -1,1 +1,0 @@
-JDO Projection query with for a complex object with a clob field fails

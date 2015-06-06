@@ -1,1 +1,0 @@
-Throw exception if using datacache / synchronize mappings and specifying datasource name at EM creation.

@@ -1,1 +1,0 @@
-AssertionFailedError in LobStreamsTest and ClobUpdateableReaderTest on WinXP, Win2003

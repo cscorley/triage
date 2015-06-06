@@ -1,1 +1,0 @@
-ASSERT FAILED Scan position already saved with multi-threaded insert/update/delete 

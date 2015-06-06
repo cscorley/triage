@@ -1,2 +1,0 @@
-org.apache.lucene.index.FieldInfo
-org.apache.lucene.index.FieldInfos

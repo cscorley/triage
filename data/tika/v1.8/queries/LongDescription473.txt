@@ -1,1 +1,0 @@
-As discussed earlier on dev@, I'd like to use svnpubsub for publishing updates to the Tika web site. See PDFBOX-623 for how this was done in PDFBox.

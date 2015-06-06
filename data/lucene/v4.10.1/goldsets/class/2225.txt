@@ -1,3 +1,0 @@
-org.apache.lucene.benchmark.byTask.tasks.NearRealtimeReaderTask
-org.apache.lucene.benchmark.byTask.tasks.PerfTask
-org.apache.lucene.benchmark.byTask.tasks.TaskSequence

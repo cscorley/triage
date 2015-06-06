@@ -1,1 +1,0 @@
-Unnecessary waiting within EmbedDatabaseMetaData.getIndexInfo()

@@ -1,2 +1,0 @@
-Ivan Brendan Kelly <ivank@apache.org>
-Sijie Guo <sijie@apache.org>

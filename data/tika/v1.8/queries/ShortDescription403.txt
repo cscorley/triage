@@ -1,1 +1,0 @@
-Refactor log library usage in tika-parsers

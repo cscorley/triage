@@ -1,1 +1,0 @@
-IndexWriter should never pool readers for external segments

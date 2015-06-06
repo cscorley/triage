@@ -1,1 +1,0 @@
-Attempt to reuse streams in client on insert gives protocol exception and inserts wrong data

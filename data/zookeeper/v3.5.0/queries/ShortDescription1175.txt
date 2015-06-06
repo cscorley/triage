@@ -1,1 +1,0 @@
-DataNode references parent node for no reason

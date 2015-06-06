@@ -1,1 +1,0 @@
-org.apache.lucene.queryParser.surround.query.Test03Distance

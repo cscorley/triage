@@ -1,1 +1,0 @@
-org.apache.derby.authentication.UserAuthenticator.authenticateUser(String,String,String,Properties)

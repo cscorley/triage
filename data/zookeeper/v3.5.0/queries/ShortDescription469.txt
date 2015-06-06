@@ -1,1 +1,0 @@
-make sure CPPUNIT_CFLAGS isn't overwritten

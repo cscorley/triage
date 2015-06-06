@@ -1,1 +1,0 @@
-Update CXF dependency in Tika Server to CXF 2.7.7 or CXF 2.7.8

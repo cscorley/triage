@@ -1,1 +1,0 @@
-zkCli.sh is exiting when an Invalid ACL exception is thrown from setACL command through client

@@ -1,1 +1,0 @@
-'DataSourceSerializationTestjunit.framework.AssertionFailedError' on 'extin\ClientConnectionPoolDataSource-10_1_3_1.ser' on Windows.

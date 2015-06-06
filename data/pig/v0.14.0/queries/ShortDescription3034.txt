@@ -1,1 +1,0 @@
-Remove Penny code from Pig repository

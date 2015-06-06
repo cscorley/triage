@@ -1,1 +1,0 @@
-Show spill count on the pig console at the end of the job

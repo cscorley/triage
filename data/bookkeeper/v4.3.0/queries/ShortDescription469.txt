@@ -1,1 +1,0 @@
-Remove System.out.println from TestLedgerManager

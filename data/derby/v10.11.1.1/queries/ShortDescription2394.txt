@@ -1,1 +1,0 @@
-Improve the Readme file with more information on Query.list

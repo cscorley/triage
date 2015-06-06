@@ -1,1 +1,0 @@
-Slave is unable to replicate when server acts as repeater (as both master and slave)

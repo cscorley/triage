@@ -1,3 +1,0 @@
-org.apache.lucene.search.FilteredDocIdSet
-org.apache.lucene.search.FilteredDocIdSetIterator
-org.apache.lucene.search.TestDocIdSet

@@ -1,1 +1,0 @@
-FieldInfo omitTerms bug

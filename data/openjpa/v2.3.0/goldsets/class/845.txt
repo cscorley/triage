@@ -1,2 +1,0 @@
-org.apache.openjpa.jdbc.kernel.exps.PCPath
-org.apache.openjpa.slice.TestQuery

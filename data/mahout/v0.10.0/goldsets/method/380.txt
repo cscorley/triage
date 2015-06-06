@@ -1,3 +1,0 @@
-org.apache.mahout.cf.taste.impl.model.jdbc.AbstractBooleanPrefJDBCDataModel.AbstractBooleanPrefJDBCDataModel(DataSource,String,String,String,String,String,String,String,String,String,String,String,String,String,String,String,String)
-org.apache.mahout.cf.taste.impl.model.jdbc.AbstractBooleanPrefJDBCDataModel.AbstractBooleanPrefJDBCDataModel(DataSource,String,String,String,String,String,String,String,String,String,String,String,String,String,String,String,String,String,String)
-org.apache.mahout.cf.taste.impl.model.jdbc.MySQLBooleanPrefJDBCDataModel.MySQLBooleanPrefJDBCDataModel(DataSource,String,String,String)

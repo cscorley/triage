@@ -1,1 +1,0 @@
-Auto local mode mistakenly converts large jobs to local mode when using with Hive tables

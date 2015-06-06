@@ -1,1 +1,0 @@
-Implement the PersistenceProviderResolver interface and PersistenceProviderResolverHolder classes in the JPA2 API Spec over in Geronimo.

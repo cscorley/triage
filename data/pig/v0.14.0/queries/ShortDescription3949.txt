@@ -1,1 +1,0 @@
-HiveColumnarStorage compile failure with Hive 0.14.0

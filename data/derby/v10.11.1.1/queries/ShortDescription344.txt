@@ -1,1 +1,0 @@
-NPE while performing a 'select distinct ' on a database in softupgrademode with 10.1

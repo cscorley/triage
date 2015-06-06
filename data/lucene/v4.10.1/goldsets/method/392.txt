@@ -1,3 +1,0 @@
-org.apache.lucene.document.Field.binaryValue()
-org.apache.lucene.document.Field.readerValue()
-org.apache.lucene.document.Field.stringValue()

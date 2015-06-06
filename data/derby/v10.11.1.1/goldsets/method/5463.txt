@@ -1,3 +1,0 @@
-org.apache.derbyPreBuild.ReleaseProperties.execute()
-org.apache.derbyPreBuild.ReleaseProperties.finishWriting(FileWriter,PrintWriter)
-org.apache.derbyPreBuild.ReleaseProperties.readDRDAMaintID(File)

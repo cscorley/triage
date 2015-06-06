@@ -1,2 +1,0 @@
-org.apache.lucene.index.FieldNormModifier
-org.apache.lucene.index.TestFieldNormModifier

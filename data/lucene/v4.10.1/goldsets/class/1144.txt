@@ -1,3 +1,0 @@
-org.apache.lucene.index.DocumentsWriter
-org.apache.lucene.index.DocumentsWriter.ByteBlockPool
-org.apache.lucene.index.DocumentsWriter.CharBlockPool

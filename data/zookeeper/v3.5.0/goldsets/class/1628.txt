@@ -1,2 +1,0 @@
-org.apache.zookeeper.common.PathUtils
-org.apache.zookeeper.common.PathUtilsTest

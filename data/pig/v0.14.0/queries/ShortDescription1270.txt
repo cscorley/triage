@@ -1,1 +1,0 @@
-Push limit into loader

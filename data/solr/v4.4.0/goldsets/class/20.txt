@@ -1,4 +1,0 @@
-org.apache.solr.cloud.DeleteShardTest
-org.apache.solr.cloud.Overseer
-org.apache.solr.cloud.OverseerCollectionProcessor
-org.apache.solr.handler.admin.CollectionsHandler

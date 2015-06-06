@@ -1,1 +1,0 @@
-when comparing zxids for leader election, the current epoch of the peer needs to be taken into account.

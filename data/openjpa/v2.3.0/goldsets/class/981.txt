@@ -1,4 +1,0 @@
-org.apache.openjpa.slice.DistributedBrokerImpl
-org.apache.openjpa.slice.ReplicatedChild
-org.apache.openjpa.slice.ReplicatedParent
-org.apache.openjpa.slice.TestReplication

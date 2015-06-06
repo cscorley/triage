@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.compile.OrderByColumn.bindOrderByColumn(ResultSetNode,OrderByList)
-org.apache.derby.impl.sql.compile.OrderByColumn.columnMatchFound(ResultSetNode,ColumnReference)
-org.apache.derby.impl.sql.compile.OrderByColumn.expressionMatch(ResultSetNode)

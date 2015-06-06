@@ -1,1 +1,0 @@
-The code generators should support an optional output directory

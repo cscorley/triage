@@ -1,3 +1,0 @@
-org.apache.zookeeper.recipes.queue.DistributedQueue
-org.apache.zookeeper.recipes.queue.DistributedQueue.LatchChildWatcher
-org.apache.zookeeper.recipes.queue.DistributedQueueTest

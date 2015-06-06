@@ -1,1 +1,0 @@
-When run across the network, dblook produces unusable DDL for VARCHAR FOR BIT DATA columns.

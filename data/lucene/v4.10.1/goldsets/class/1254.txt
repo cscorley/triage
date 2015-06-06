@@ -1,2 +1,0 @@
-org.apache.lucene.index.LogMergePolicy
-org.apache.lucene.index.TestAddIndexesNoOptimize

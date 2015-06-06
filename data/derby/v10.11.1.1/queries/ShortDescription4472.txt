@@ -1,1 +1,0 @@
-[patch] non short circuit op, could cause eof problems

@@ -1,1 +1,0 @@
-PIG Join fails while doing a filter on joined data

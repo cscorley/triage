@@ -1,1 +1,0 @@
-MultithreadedSharingMapper fails on Hadoop 2

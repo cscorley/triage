@@ -1,1 +1,0 @@
-JPQL extension: scalar functions in SELECT

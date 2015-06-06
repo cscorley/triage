@@ -1,1 +1,0 @@
-Better integration of Mahout matrix capabilities with Colt Matrix additions

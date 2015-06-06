@@ -1,7 +1,0 @@
-org.apache.derby.client.net.NetCursor
-org.apache.derby.impl.drda.DRDAConnThread
-org.apache.derby.impl.drda.DRDAResultSet
-org.apache.derby.impl.drda.EXTDTAInputStream
-org.apache.derby.impl.jdbc.EmbedCallableStatement
-org.apache.derby.impl.sql.compile.CreateAliasNode
-org.apache.derbyTesting.functionTests.tests.jdbcapi.ParameterMappingTest

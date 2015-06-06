@@ -1,1 +1,0 @@
-The expected exception is not captured. The same test with MR mode pass.

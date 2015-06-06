@@ -1,1 +1,0 @@
-The C Client cause core dump when receive error data from Zookeeper Server

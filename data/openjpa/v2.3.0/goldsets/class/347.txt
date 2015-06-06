@@ -1,3 +1,0 @@
-org.apache.openjpa.meta.FieldMetaData
-org.apache.openjpa.persistence.relations.BidiChild
-org.apache.openjpa.persistence.relations.BidiParent

@@ -1,1 +1,0 @@
-cannot run BayesFileFormatter from the command line

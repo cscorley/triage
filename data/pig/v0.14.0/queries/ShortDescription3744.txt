@@ -1,1 +1,0 @@
-SequenceFileLoader does not support BytesWritable

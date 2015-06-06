@@ -1,4 +1,0 @@
-OS: Windows 64-bit
-JRE: IKVM 7.0.4258
-
-IKVM 7.0.4258 does not support ManagementFactory.getPlatformMBeanServer(); It will throw a java.lang.Error.

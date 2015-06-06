@@ -1,1 +1,0 @@
- Zebra still uses pig-0.6.0-dev-core.jar in build-contrib.xml. It should be changed to pig-0.7.0-dev-core.jar on APACHE trunk only.

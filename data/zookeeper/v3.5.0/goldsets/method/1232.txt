@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.util.Profiler.$GenericMethodDeclaration$()
-org.apache.zookeeper.server.util.Profiler.Operation.execute()
-org.apache.zookeeper.server.util.Profiler.profile(Operation<T>,T,long,String)

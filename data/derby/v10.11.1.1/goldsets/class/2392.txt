@@ -1,3 +1,0 @@
-org.apache.derbyTesting.system.optimizer.query.GenericQuery
-org.apache.derbyTesting.system.optimizer.RunOptimizerTest
-org.apache.derbyTesting.system.optimizer.utils.DataUtils

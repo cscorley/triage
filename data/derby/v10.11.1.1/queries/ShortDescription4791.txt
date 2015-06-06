@@ -1,1 +1,0 @@
-LIKE operator optimizations and concatenation

@@ -1,1 +1,0 @@
-Thread local TableDescriptor#referencedColumnMap is not removed from app threads when Derby is shut down

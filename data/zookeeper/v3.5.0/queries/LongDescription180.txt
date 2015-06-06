@@ -1,1 +1,0 @@
-The admin doc needs some sections so contributors can add the new topics: designing, provisioning, etc. 

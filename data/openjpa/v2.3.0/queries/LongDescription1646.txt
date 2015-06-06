@@ -1,1 +1,0 @@
-OPENJPA-1559 reduced the timing window but the problem still exists.

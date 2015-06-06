@@ -1,1 +1,0 @@
-The Clock cache manager is only used on platforms lower than Java 5. Since trunk only supports Java 6 and higher, it is not used any more and can be removed.

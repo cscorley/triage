@@ -1,1 +1,0 @@
-difference between Embedded vs DerbyNetClient in format of return from timestamp(cast(? as varchar(32)))

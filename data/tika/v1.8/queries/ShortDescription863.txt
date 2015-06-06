@@ -1,1 +1,0 @@
-MailContentHandler should not create AutoDetectParser on each call

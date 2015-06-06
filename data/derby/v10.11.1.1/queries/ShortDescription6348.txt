@@ -1,1 +1,0 @@
-NPE or assert failure in recursive trigger

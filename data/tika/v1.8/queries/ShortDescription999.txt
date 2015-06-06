@@ -1,1 +1,0 @@
-RTF Parser doesn't extract page/word/character count metadata

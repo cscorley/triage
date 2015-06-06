@@ -1,1 +1,0 @@
-Just like binary distribution couldn't be unpacked (see MAHOUT-1229), mahout-distribution-0.8-src.tar.gz also cannot be unpacked (mahout executable cannot be unpacked to bin directory, bin directory permissions are not set). Zip distribution src archive can be unpacked.

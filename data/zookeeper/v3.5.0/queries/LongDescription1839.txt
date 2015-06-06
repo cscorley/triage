@@ -1,1 +1,0 @@
-Deadlock found during NettyServerCnxn closure. Please see the attached threaddump.

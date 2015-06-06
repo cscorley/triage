@@ -1,1 +1,0 @@
-Case expression allows NULL in all parts of <result>

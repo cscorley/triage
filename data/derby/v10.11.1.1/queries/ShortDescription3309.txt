@@ -1,1 +1,0 @@
-Minor cleanups in ClientPooledConnection40 and ClientPooledConnection

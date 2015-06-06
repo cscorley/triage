@@ -1,1 +1,0 @@
-crash on zookeeper_close() when using auth with empty cert

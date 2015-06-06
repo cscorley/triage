@@ -1,3 +1,0 @@
-org.apache.zookeeper.test.FLEBackwardElectionRoundTest.testBackwardElectionRound()
-org.apache.zookeeper.test.FLELostMessageTest.testLostMessage()
-org.apache.zookeeper.test.FLETestUtils.LEThread.run()

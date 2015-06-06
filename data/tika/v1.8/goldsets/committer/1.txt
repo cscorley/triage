@@ -1,2 +1,0 @@
-David Meikle <dmeikle@apache.org>
-Jukka Zitting <jukka@apache.org>

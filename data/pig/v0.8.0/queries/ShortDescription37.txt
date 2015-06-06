@@ -1,1 +1,0 @@
-FindBugs: Possible null pointer dereference of esp in PigCombine.reduce

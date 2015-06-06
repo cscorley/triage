@@ -1,1 +1,0 @@
-add MR2 options to MAHOUT_OPTS in bin/mahout

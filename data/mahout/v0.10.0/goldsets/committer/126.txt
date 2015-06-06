@@ -1,2 +1,0 @@
-Abdel Hakim Deneche <adeneche@apache.org>
-Grant Ingersoll <gsingers@apache.org>

@@ -1,1 +1,0 @@
-JVMInfo is duplicated in derbyclient.jar

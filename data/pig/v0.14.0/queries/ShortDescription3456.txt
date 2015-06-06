@@ -1,1 +1,0 @@
-Reduce threadlocal conf access in backend for each record

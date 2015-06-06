@@ -1,3 +1,0 @@
-PIG-3478 fixed Python UDF in Hadoop 2, but the Pig doc still says-
-
-Python UDFs are an experimental feature. It does not work with Hadoop 2.

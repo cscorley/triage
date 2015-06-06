@@ -1,1 +1,0 @@
-Exception thrown when a test example has the label not present in training examples

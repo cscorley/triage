@@ -1,1 +1,0 @@
-Drop some of the Release Artifact File Types

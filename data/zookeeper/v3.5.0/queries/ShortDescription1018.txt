@@ -1,1 +1,0 @@
-The connection permutation in get_addrs uses a weak and inefficient shuffle

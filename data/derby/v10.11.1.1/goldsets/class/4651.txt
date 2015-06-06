@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.compile.FromVTI
-org.apache.derbyTesting.functionTests.tests.lang.IntegerArrayVTI
-org.apache.derbyTesting.functionTests.tests.lang.RestrictedVTITest

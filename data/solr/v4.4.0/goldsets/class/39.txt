@@ -1,3 +1,0 @@
-org.apache.solr.servlet.SolrRequestParsers
-org.apache.solr.servlet.SolrRequestParsers.ByteArrayOutputStream2
-org.apache.solr.servlet.SolrRequestParserTest

@@ -1,1 +1,0 @@
-It would be useful for backporting reports and other Jira analysis reports to have the apacheVanillaReport access more of the item fields.  Some missing are assignee, version, fix version, resolution, 

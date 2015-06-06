@@ -1,1 +1,0 @@
-It is incovenient to handle onError in each EntityProcessor. Move it to EntityprocessorWrapper

@@ -1,1 +1,0 @@
-c client should install includes into INCDIR/zookeeper, not INCDIR/c-client-src

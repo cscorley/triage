@@ -1,2 +1,0 @@
-org.apache.openjpa.persistence.conf.TestKodoConfiguration
-org.apache.openjpa.persistence.conf.TestOpenJPAConfiguration

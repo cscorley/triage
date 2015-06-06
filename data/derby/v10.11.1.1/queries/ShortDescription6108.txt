@@ -1,1 +1,0 @@
-suites.All no longer runs with weme 6.2 

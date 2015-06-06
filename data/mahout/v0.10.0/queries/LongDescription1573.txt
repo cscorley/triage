@@ -1,5 +1,0 @@
-(1) add minSplit parameter pass-thru to drmFromHDFS to be able to explicitly increase parallelism. 
-
-(2) add parrallelism readjustment parameter to a checkpoint() call. This implies shuffle-less coalesce() translation to the data set before it is requested to be cached (if specified).
-
-Going forward, we probably should try and figure how we can automate it,  at least a little bit. For example, the simplest automatic adjustment might include re-adjust parallelims on load to simply fit cluster size (95% or 180% of cluster size, for example), with some rule-of-thumb safeguards here, e.g. we cannot exceed a factor of say 8 (or whatever we configure) in splitting each original hdfs split. We should be able to get a reasonable parallelism performance out of the box on simple heuristics like that.

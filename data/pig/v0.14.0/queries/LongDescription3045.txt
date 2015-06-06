@@ -1,2 +1,0 @@
-PIG-2782 fixed a number of tests where the parameters passed to the verification sort was incorrect.
-However, there are still problems with the patch in PIG-2782 where it introduced new errors while checking. E.g. the pig script sorts on column one and two, but the verification only checks that output is sorted on column one.

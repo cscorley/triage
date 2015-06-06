@@ -1,2 +1,0 @@
-org.apache.derby.impl.load.ColumnInfo
-org.apache.derbyTesting.functionTests.tests.tools.ImportExportTest

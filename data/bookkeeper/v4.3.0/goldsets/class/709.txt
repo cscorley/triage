@@ -1,3 +1,0 @@
-org.apache.bookkeeper.client.SlowBookieTest
-org.apache.bookkeeper.proto.BookieServer
-org.apache.bookkeeper.test.BookKeeperClusterTestCase

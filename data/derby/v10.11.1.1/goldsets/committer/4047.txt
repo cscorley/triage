@@ -1,2 +1,0 @@
-Mike Matrigali <mikem@apache.org>
-Myrna van Lunteren <myrnavl@apache.org>

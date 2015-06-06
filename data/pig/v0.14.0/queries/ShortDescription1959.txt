@@ -1,1 +1,0 @@
-Penny: a framework for workflow instrumentation

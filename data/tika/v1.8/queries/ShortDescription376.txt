@@ -1,1 +1,0 @@
-Typo in parse-rtf spec in tika-config.xml

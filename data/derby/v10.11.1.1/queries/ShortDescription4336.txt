@@ -1,1 +1,0 @@
-Remove Blob and Clob interface methods from the list of unsupported methods in UnsupportedVetter

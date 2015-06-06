@@ -1,3 +1,0 @@
-org.apache.tika.cli.TikaCLI.FileEmbeddedDocumentExtractor.parseEmbedded(InputStream,ContentHandler,Metadata,boolean)
-org.apache.tika.cli.TikaCLITest.testMultiValuedMetadata()
-org.apache.tika.cli.TikaCLITest.testZipWithSubdirs()

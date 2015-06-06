@@ -1,1 +1,0 @@
-failure when composite ID has another composite ID as a field 

@@ -1,1 +1,0 @@
-pigsmoke artifact uses classes from pigunit for real cluster testing. However, in the deployment phase the artifact comes out without the classes added. It happens because of the execution order of targets during deployment.

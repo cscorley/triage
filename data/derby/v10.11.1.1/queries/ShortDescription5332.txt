@@ -1,1 +1,0 @@
-Convert tools/ij3.sql  to junit

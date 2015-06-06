@@ -1,2 +1,0 @@
-org.apache.lucene.index.TermEnum.close()
-org.apache.lucene.index.TermEnum.skipTo(Term)

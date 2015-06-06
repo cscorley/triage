@@ -1,1 +1,0 @@
-Self-hosted documentation for the JAX-RS Server

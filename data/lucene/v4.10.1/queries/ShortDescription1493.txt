@@ -1,1 +1,0 @@
-Enable setting hits queue size in Search*Task in contrib/benchmark

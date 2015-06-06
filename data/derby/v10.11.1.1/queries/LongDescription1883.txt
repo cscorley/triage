@@ -1,3 +1,0 @@
-i18n/urlLocale.sql, i18n/messageLocale.sql and i18n/iepnegativetests_ES.sql fail on Linux when running Sun J2SE 1.4.2 and derbyclient.jar is the first element of the classpath. See http://www.multinet.no/~solberg/public/Apache/10.2.1.3_RC/jvm1.4/testlog/linN-1/441574-derbyall_diff.txt. The problem is not seen on Solaris or FreeBSD, or when running with 1.5/1.6 JVM.
-
-When derbyclient.jar is moved to a position after derby.jar in the classpath, the tests run successfully.

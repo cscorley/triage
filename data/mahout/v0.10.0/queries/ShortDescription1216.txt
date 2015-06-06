@@ -1,1 +1,0 @@
-Add locality sensitive hashing and a LocalitySensitiveHash searcher

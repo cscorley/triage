@@ -1,1 +1,0 @@
-The NetCDF dependency introduced in 0.8 is causing some trouble in downstream projects. Instead of containing just NetCDF classes, the jar includes also stuff from various other sources, including slf4j, jdom and various Apache Commons libraries. This can easily mess up the classpath of a downstream project.

@@ -1,1 +1,0 @@
-mailjdbc test in networkserver configuration does not perform compress correctly if server is started in a different directory

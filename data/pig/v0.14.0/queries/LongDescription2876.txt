@@ -1,1 +1,0 @@
-In some cases on some environments, our version of xerces has errors with Hadoop. Bumping the version and adding Xalan fixes this.

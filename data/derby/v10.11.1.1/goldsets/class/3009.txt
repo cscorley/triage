@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.execute.AlterTableConstantAction
-org.apache.derbyTesting.functionTests.tests.memory.Derby3009Test
-org.apache.derbyTesting.functionTests.tests.memory._Suite

@@ -1,5 +1,0 @@
-{@link org.apache.mahout.math.VarLongWritable}
-/
-{@link org.apache.hadoop.io.Text}
-should be
-{@link org.apache.hadoop.io.LongWritable}/{@link org.apache.hadoop.io.Text}

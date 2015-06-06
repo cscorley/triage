@@ -1,2 +1,0 @@
-Currently in hedwig cpp client, there is only one thread running io service.
-Actually, we can have an io_service pool, each io_service is processed by a separated thread. Each socket connection would be bound to an io_service to process it i/o operations.

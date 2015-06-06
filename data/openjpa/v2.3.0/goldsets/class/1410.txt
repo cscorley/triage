@@ -1,2 +1,0 @@
-org.apache.openjpa.enhance.InstrumentationFactory
-org.apache.openjpa.persistence.PersistenceProviderImpl

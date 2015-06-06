@@ -1,2 +1,0 @@
-pdfbox just released new 1.8.3 version
-http://www.apache.org/dist/pdfbox/1.8.3/RELEASE-NOTES.txt

@@ -1,1 +1,0 @@
-snapcleaner fails on osx for -D

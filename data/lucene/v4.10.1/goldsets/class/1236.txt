@@ -1,2 +1,0 @@
-org.apache.lucene.analysis.ngram.EdgeNGramTokenFilter
-org.apache.lucene.analysis.ngram.EdgeNGramTokenizer

@@ -1,1 +1,0 @@
-mvn was complaining about missing <inceptionYear> in tika-parent/pom.xml and having to guess it was this year; trivial patch forthcoming

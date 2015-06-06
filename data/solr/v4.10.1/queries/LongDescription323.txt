@@ -1,8 +1,0 @@
-$ find . name lucene-analyzers*.jar
-./client/ruby/solr-ruby/solr/lib/lucene-analyzers-2.2-dev.jar
-./lib/lucene-analyzers-2.2.0.jar
-
-If there is no damage to SolRuby users, simply remove lucene-analyzers-2.2-dev.jar from trunk.
-
-motivation:
-http://www.mail-archive.com/solr-user@lucene.apache.org/msg05110.html

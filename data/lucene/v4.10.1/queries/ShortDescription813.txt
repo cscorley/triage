@@ -1,1 +1,0 @@
-leading wildcard's don't work with trailing wildcard

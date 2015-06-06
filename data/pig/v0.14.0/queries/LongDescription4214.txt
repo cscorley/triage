@@ -1,1 +1,0 @@
-TestMRJobStats is broken by PIG-4050. We shall fix it.

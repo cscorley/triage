@@ -1,2 +1,0 @@
-org.apache.tika.parser.ocr.TesseractOCRParser.hasTesseract(TesseractOCRConfig)
-org.apache.tika.parser.ocr.TesseractOCRParser.parse(Image,ContentHandler,Metadata,ParseContext)

@@ -1,1 +1,0 @@
-improve logging in leader election lookForLeader method when address resolution fails

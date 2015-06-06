@@ -1,2 +1,0 @@
-org.apache.bookkeeper.bookie.BookieShell
-org.apache.bookkeeper.bookie.BookieShell.ListBookiesCmd

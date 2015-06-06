@@ -1,1 +1,0 @@
-Clone proxStream lazily in SegmentTermPositions

@@ -1,1 +1,0 @@
-Sybase by default silently truncates a string which is longer than the column length without raising an exception 

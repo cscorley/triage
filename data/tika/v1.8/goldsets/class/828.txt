@@ -1,2 +1,0 @@
-org.apache.tika.io.TaggedInputStream
-org.apache.tika.io.TaggedInputStreamTest

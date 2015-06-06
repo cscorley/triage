@@ -1,4 +1,0 @@
-org.apache.jute.compiler.CGenerator
-org.apache.jute.compiler.CppGenerator
-org.apache.jute.compiler.JRecord
-org.apache.zookeeper.version.util.VerGen

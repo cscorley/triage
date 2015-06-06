@@ -1,3 +1,0 @@
-org.apache.lucene.search.CachingWrapperFilter.bits(IndexReader)
-org.apache.lucene.search.CachingWrapperFilter.getDocIdSet(IndexReader)
-org.apache.lucene.search.TestCachingWrapperFilter.testCachingWorks()

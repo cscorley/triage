@@ -1,8 +1,0 @@
-Currently, Each algorithm has a different point of entry. At its too complicated to understand and launch each one.  A mahout shell script needs to be made in the bin directory which does something like the following
-
-mahout classify -algorithm bayes [OPTIONS]
-mahout cluster -algorithm canopy  [OPTIONS]
-mahout fpm -algorithm pfpgrowth [OPTIONS]
-mahout taste -algorithm slopeone [OPTIONS] 
-mahout misc -algorithm createVectorsFromText [OPTIONS]
-mahout examples WikipediaExample

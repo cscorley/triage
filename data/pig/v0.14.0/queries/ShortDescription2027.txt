@@ -1,1 +1,0 @@
-NPE if Pig don't have permission for log file

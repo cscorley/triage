@@ -1,1 +1,0 @@
-NullPointerException on CREATE TABLE when generated column depends on another generated column

@@ -1,4 +1,0 @@
-org.apache.openjpa.jdbc.kernel.JDBCStoreManager
-org.apache.openjpa.persistence.relations.InheritanceHierarchyAbstract
-org.apache.openjpa.persistence.relations.InheritanceHierarchyConcrete
-org.apache.openjpa.persistence.relations.TestJoinedInheritanceHierarchy

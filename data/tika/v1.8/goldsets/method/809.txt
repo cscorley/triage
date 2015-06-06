@@ -1,2 +1,0 @@
-org.apache.tika.gui.TikaGUI.ImageSavingParser.ImageSavingParser(Parser)
-org.apache.tika.gui.TikaGUI.ImageSavingParser.requestSave(String)

@@ -1,1 +1,0 @@
-Connection reset when using security mechanism=EUSRIDPWD results in protocol error.

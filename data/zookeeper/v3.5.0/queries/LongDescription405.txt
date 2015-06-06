@@ -1,1 +1,0 @@
-The java client shell does not handle null return data and throws out null pointer exception.

@@ -1,2 +1,0 @@
-Piggybank can't be built from trunk because the download-hive-deps task fails.
-This is caused by a missing lib/ directory in contrib/piggybank/java/

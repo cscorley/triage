@@ -1,1 +1,0 @@
-EhCacheProvider should allow a configuration file to be specified

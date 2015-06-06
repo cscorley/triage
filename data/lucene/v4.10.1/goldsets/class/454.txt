@@ -1,2 +1,0 @@
-org.apache.lucene.index.SegmentMergeInfo
-org.apache.lucene.index.SegmentMerger

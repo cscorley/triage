@@ -1,1 +1,0 @@
-Logical simplifier throws a NPE

@@ -1,5 +1,0 @@
-The free_auth_info() function calls deallocate_Buffer(&auth->auth) on every element in the auth list; that function frees any memory pointed to by auth->auth.buff if that field is non-NULL.
-
-In zoo_add_auth(), when certLen is zero (or cert is NULL), auth.buff is set to 0, but then not assigned to authinfo->auth when auth.buff is NULL.  The result is uninitialized data in auth->auth.buff in free_auth_info(), and potential crashes.
-
-The attached patch adds a test which attempts to duplicate this error; it works for me but may not always on all systems as it depends on the uninitialized data being non-zero; there's not really a simple way I can see to trigger this in the current test framework.  The patch also fixes the problem, I believe.

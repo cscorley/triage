@@ -1,2 +1,0 @@
-org.apache.solr.handler.component.QueryElevationComponent
-org.apache.solr.handler.component.QueryElevationComponentTest

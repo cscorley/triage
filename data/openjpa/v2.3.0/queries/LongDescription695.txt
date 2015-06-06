@@ -1,4 +1,0 @@
-Link to latest manuals [2] in OpenJPA website [1] is broken.
-
-[1] http://openjpa.apache.org/documentation.html
-[2] http://openjpa.apache.org/docs/latest/manual/index.html

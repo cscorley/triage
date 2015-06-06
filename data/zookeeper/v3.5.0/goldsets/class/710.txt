@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.FinalRequestProcessor
-org.apache.zookeeper.test.QuorumTest
-org.apache.zookeeper.test.QuorumTest.DiscoWatcher

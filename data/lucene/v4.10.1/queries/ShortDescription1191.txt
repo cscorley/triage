@@ -1,1 +1,0 @@
-If IndexWriter hits OutOfMemoryError it should not commit

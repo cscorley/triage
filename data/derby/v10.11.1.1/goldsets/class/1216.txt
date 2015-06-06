@@ -1,2 +1,0 @@
-org.apache.derby.impl.tools.ij.Main
-org.apache.derby.impl.tools.ij.util

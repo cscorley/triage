@@ -1,6 +1,0 @@
-the zkCleanup.sh script is buggy in two ways:
-
-1) it doesn't actually pass through the snapshot count, so it doesn't work
-2) it assumes that there is only dataDir, it doesn't support dataLogDir
-
-And it can use cleanup, so that it doesn't blindly call eval from the config file..

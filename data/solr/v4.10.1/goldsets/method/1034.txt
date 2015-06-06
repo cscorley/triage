@@ -1,1 +1,0 @@
-org.apache.solr.client.solrj.util.ClientUtils.escapeQueryChars(String)

@@ -1,1 +1,0 @@
-TermAttribute.termLength() optimization

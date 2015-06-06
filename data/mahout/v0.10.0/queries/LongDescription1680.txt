@@ -1,1 +1,0 @@
-The artifacts generated now read as 'mahout-distribution-', need to change the build configuration to rename the artifacts as 'apache-mahout-distribution-'

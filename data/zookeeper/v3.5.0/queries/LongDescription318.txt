@@ -1,9 +1,0 @@
-From a review of zk_hashtable.c it appears to me that all functions which manipulate the hashtables are called from the IO thread, and therefore any need for locking is obviated.
-
-If I'm wrong about that, then I think at a minimum collect_keys() should acquire a lock in the same manner as collect_session_watchers().  Both iterate over hashtable contents (in the latter case using copy_table()).
-
-However, from what I can see, the only function (besides the init/destroy functions used when creating a zhandle_t) called from the completion thread is deliverWatchers(), which simply iterates over a "delivery" list created from the hashtables by collectWatchers().  The activateWatcher() function contains comments which describe it being called by the completion thread, but in fact it is called by the IO thread in zookeeper_process().
-
-I believe all calls to collectWatchers(), activateWatcher(), and collect_keys() are made by the IO thread in zookeeper_interest(), zookeeper_process(), check_events(), send_set_watches(), and handle_error().  Note that queue_session_event() is aliased as PROCESS_SESSION_EVENT, but appears only in handle_error() and check_events().
-
-Also note that handle_error() is called only in zookeeper_process() and handle_socket_error_msg(), which is used only by the IO thread, so far as I can see.

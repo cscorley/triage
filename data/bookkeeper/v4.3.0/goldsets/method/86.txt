@@ -1,3 +1,0 @@
-org.apache.bookkeeper.benchmark.TestClient.closeHandle()
-org.apache.bookkeeper.benchmark.TestClient.main(String[])
-org.apache.bookkeeper.benchmark.TestClient.removeEntryId(Integer)

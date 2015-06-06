@@ -1,3 +1,0 @@
-The DynamicEnhancerAgent is not really needed for normal Maven builds of OpenJPA (we're using build time enhancement anyway). Disabling it should lead to better performance (slight gain) and hopefully help with the PermGen errors seen with Linux (Sun JVM). 
-
-In addtiion some JVMs (IBM SDK for Java 6) do not support (or do not fully support) the Attach API. 

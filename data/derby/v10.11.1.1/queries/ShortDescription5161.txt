@@ -1,1 +1,0 @@
-Cannot rollback after syntax error in internal statement

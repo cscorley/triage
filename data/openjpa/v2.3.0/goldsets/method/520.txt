@@ -1,3 +1,0 @@
-org.apache.openjpa.event.JMSRemoteCommitProvider.endConfiguration()
-org.apache.openjpa.event.JMSRemoteCommitProvider.getMessageListener()
-org.apache.openjpa.event.JMSRemoteCommitProvider.getMessageListener.onMessage(Message)

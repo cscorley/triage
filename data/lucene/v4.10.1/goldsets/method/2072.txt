@@ -1,2 +1,0 @@
-org.apache.lucene.search.regex.TestJakartaRegexpCapabilities.testGetPrefix()
-org.apache.lucene.search.regex.TestJakartaRegexpCapabilities.testShakyPrefix()

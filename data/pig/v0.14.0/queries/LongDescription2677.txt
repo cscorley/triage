@@ -1,1 +1,0 @@
-In addition to generating the detailed clover result pages, it is convenient to be able to generate a one page pdf summary.  We should add a Pig target to do this.

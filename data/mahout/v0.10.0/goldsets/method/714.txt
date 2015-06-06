@@ -1,2 +1,0 @@
-org.apache.mahout.vectorizer.collocations.llr.CollocDriver.CollocDriver()
-org.apache.mahout.vectorizer.collocations.llr.CollocDriver.main(String[])

@@ -1,3 +1,0 @@
-See TIKA-309 for related discussion, but there seems to be further errors in RDF mime detection, on the OWL file located here:
-
-http://www.w3.org/2002/07/owl#

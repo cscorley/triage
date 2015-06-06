@@ -1,2 +1,0 @@
-The utilities contained in the org.apache.zookeeper.common package are not part of the exported packages in an OSGi environment, thus making them not available to other bundles using ZooKeeper.
-Propose to add the org.apache.zookeeper.common package to the Export-Package MANIFEST header.

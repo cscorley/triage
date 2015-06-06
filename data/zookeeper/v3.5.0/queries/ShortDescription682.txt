@@ -1,1 +1,0 @@
-Event is not processed when the watcher is set to watch "/" if chrooted

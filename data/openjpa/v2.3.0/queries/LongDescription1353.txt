@@ -1,1 +1,0 @@
-Need the standard license, notice and copyrights like we include in the jar and zip files added to the docs, since it can be viewed on-line without downloading a distro.

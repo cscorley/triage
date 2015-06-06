@@ -1,1 +1,0 @@
-Create test case binary and source jars to be included in each module.

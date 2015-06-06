@@ -1,1 +1,0 @@
-org.apache.tika.parser.pdf.PDFParser.parse(InputStream,ContentHandler,Metadata,ParseContext)

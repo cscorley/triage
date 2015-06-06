@@ -1,3 +1,0 @@
-org.apache.pig.test.TestMultiQueryBasic
-org.apache.pig.test.TestShortcuts
-org.apache.pig.tools.grunt.GruntParser

@@ -1,1 +1,0 @@
-Index creation fails when default schema does not exist

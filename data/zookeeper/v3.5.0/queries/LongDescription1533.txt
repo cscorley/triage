@@ -1,1 +1,0 @@
-Small doc fix in the JavaExample doc.

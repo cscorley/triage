@@ -1,1 +1,0 @@
-MiniCluster should delete hadoop-site.xml on shutDown

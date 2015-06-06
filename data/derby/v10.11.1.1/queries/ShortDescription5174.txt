@@ -1,1 +1,0 @@
-Failure in UpdateStatisticsTest after DERBY-5153

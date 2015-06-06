@@ -1,1 +1,0 @@
-Skewed join fails when pig.skewedjoin.reduce.memusage is not configured

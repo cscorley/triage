@@ -1,1 +1,0 @@
-getChildren can fail for large numbers of children

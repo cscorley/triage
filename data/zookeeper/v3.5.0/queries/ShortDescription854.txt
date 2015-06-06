@@ -1,1 +1,0 @@
-BookKeeper does not compile due to changes in the ZooKeeper code

@@ -1,1 +1,0 @@
-Change remaining contrib streams/filters to use new TokenStream API

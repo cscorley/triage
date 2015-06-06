@@ -1,2 +1,0 @@
-org.apache.tika.server.TikaWelcome
-org.apache.tika.server.TikaWelcomeTest

@@ -1,3 +1,0 @@
-org.apache.bookkeeper.conf.ClientConfiguration.getZkServers()
-org.apache.bookkeeper.test.ConfigurationTest.testConfigurationOverwrite()
-org.apache.bookkeeper.test.ConfigurationTest.testGetZkServers()

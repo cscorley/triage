@@ -1,1 +1,0 @@
-iWork number table titles not being parsed

@@ -1,1 +1,0 @@
-upgrade maven poms to reference lucene 2.9 artifacts rather than solr-lucene artifacts

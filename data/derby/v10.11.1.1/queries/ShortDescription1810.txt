@@ -1,1 +1,0 @@
-derbynet/testProperties fails when timeout for successful ping is low.

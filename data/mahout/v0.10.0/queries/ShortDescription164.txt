@@ -1,1 +1,0 @@
-"Potpourri": a collection of small possible bugs and improvements

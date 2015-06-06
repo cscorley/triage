@@ -1,6 +1,0 @@
-Per discussion here:
-http://www.lucidimagination.com/search/document/6082249e667f2a1b/problem_with_our_jar_publishing
-
-Assembly job files using the assembly plugin/descriptor instead of an ant taks and the build helper plugin. This results in job files being named {-job.jar} instead of 
-{.job}
-, but that seems to be necessary to prevent nexus from overwriting the main jar artifacts with the jar files. 

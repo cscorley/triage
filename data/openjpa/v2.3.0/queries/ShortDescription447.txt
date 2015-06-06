@@ -1,1 +1,0 @@
-Query pagination broken for non-DB2 databases

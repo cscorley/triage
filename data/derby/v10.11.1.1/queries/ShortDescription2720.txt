@@ -1,1 +1,0 @@
-remove dead code associated with unsupported National Char implementation

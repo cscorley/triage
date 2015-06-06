@@ -1,3 +1,0 @@
-org.apache.tika.parser.pkg.PackageExtractor.unpack(ArchiveInputStream,XHTMLContentHandler)
-org.apache.tika.parser.pkg.ZipParserTest.testEmbedded()
-org.apache.tika.parser.pkg.ZipParserTest.testUnsupportedZipCompressionMethod()

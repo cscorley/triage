@@ -1,2 +1,0 @@
-org.apache.pig.builtin.TOP.exec(Tuple)
-org.apache.pig.test.TestBuiltin.testMiscFunc()

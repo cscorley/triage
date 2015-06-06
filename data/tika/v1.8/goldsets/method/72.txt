@@ -1,4 +1,0 @@
-org.apache.tika.mime.Patterns.getPatterns()
-org.apache.tika.mime.Patterns.matches(String)
-org.apache.tika.parser.AutoDetectParser.getMimeType(InputStream,Metadata)
-org.apache.tika.parser.AutoDetectParserTest.assertAutoDetect(String,String,String)

@@ -1,1 +1,0 @@
-PIG-3926 added ROUND_TO built-in udf. We should document it in the Pig manual.

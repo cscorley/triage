@@ -1,1 +1,0 @@
-[PATCH] Generate javadocs and source indexes for every module

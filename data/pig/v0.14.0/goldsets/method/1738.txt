@@ -1,2 +1,0 @@
-org.apache.pig.newplan.logical.expression.UserFuncExpression.getFieldSchema()
-org.apache.pig.newplan.logical.expression.UserFuncExpression.UserFuncExpression(OperatorPlan,FuncSpec)

@@ -1,3 +1,0 @@
-org.apache.openjpa.enhance.AsmAdaptor
-org.apache.openjpa.enhance.AsmAdaptor.BCClassWriter
-org.apache.openjpa.enhance.PCClassFileTransformer

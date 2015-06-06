@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.memory.BlobMemTest.BlobMemTest(String)
-org.apache.derbyTesting.functionTests.tests.memory.BlobMemTest.tearDown()
-org.apache.derbyTesting.functionTests.tests.memory.ClobMemTest.ClobMemTest(String)

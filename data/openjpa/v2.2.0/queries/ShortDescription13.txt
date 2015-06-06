@@ -1,1 +1,0 @@
-GenerationType.IDENTITY problem with MS SQL Server

@@ -1,1 +1,0 @@
-secure-processing not supported by some JAXP implementations and causes mime type detection to fail

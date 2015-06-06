@@ -1,2 +1,0 @@
-org.apache.derby.impl.drda.DDMWriter.isContinuationChar(byte)
-org.apache.derby.impl.drda.DDMWriter.writeLDString(String,int)

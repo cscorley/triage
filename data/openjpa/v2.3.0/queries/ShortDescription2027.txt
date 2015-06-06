@@ -1,1 +1,0 @@
-Metamodel genereated at runtime expects ListAttribute for all arrays - not just PersistentCollections. 

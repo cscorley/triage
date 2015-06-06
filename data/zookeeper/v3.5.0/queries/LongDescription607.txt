@@ -1,1 +1,0 @@
-fix the overview section in the bookkeeper documentation to introduce the programmer/admin to bookkeeper before giving the details.

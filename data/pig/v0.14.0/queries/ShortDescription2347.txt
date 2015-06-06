@@ -1,1 +1,0 @@
-Fix Pig Unit tests for hadoop 23

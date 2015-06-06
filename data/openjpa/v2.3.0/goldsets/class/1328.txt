@@ -1,3 +1,0 @@
-org.apache.openjpa.datacache.AbstractDataCache
-org.apache.openjpa.meta.ClassMetaData
-org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser

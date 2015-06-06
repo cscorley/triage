@@ -1,1 +1,0 @@
-new facet params: facet.sort, facet.mincount, facet.offset

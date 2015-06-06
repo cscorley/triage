@@ -1,4 +1,0 @@
-org.apache.mahout.cf.taste.impl.similarity.AbstractSimilarity
-org.apache.mahout.cf.taste.impl.similarity.EuclideanDistanceSimilarity
-org.apache.mahout.cf.taste.impl.similarity.PearsonCorrelationSimilarity
-org.apache.mahout.cf.taste.impl.similarity.UncenteredCosineSimilarity

@@ -1,1 +1,0 @@
-Add ability to compactly specify a complete query plan in an optimizer override.

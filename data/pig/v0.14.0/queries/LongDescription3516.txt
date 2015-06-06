@@ -1,1 +1,0 @@
-joda-time is missing from pig-template.xml. Downstream projects such as HCatalog/Oozie are impacted.

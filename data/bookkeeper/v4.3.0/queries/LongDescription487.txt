@@ -1,1 +1,0 @@
-Add existed hub server settings to the configuration template file (conf/hw_server.conf) as what we did in BookKeeper.

@@ -1,3 +1,0 @@
-org.apache.lucene.analysis.cn.SmartChineseAnalyzer
-org.apache.lucene.analysis.cn.SmartChineseAnalyzer.SavedStreams
-org.apache.lucene.analysis.cn.TestSmartChineseAnalyzer

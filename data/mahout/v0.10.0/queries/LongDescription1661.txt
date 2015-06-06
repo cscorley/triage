@@ -1,1 +1,0 @@
-Lanczos has long been deprecated from the code base but the code doesn't reflect that.  

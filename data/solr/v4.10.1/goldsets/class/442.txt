@@ -1,2 +1,0 @@
-org.apache.solr.search.function.FileFloatSource
-org.apache.solr.search.function.TestFunctionQuery

@@ -1,1 +1,0 @@
-Convert store/streamingColumn to JUnit

@@ -1,1 +1,0 @@
-Dropping columns casues auto_increment field to be lost

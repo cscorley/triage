@@ -1,1 +1,0 @@
-NetworkServerControlApiTest fails with java.security.AccessControlException if not run as first test

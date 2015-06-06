@@ -1,1 +1,0 @@
-Port TestHBaseStorage to tez local mode

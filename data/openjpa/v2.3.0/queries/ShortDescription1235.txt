@@ -1,1 +1,0 @@
-Support for optional name property on UniqueConstraint annotation and XML

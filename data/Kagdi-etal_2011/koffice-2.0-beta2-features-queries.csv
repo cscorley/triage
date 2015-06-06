@@ -1,7 +1,0 @@
-FEATURE ID,QUERY (Short Description of FEATURE)
-832876,rudimental authentication support to test out pion net authentication features
-835741,refactoring presenter view feature enabling the presenter without opening a new view
-846840,page master styles header and footers in a document multiple page layout per document
-847576,add support for input device angle rotation 4d mouse and tilt tablet pens are supported
-868014,new feature kwpage setpagenumber which just updates the cache of page numbers
-881241,lens distortion using oldrawdata and counter to simulate old behavior of deform brush

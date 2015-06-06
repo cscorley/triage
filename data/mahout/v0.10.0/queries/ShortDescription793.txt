@@ -1,1 +1,0 @@
-Move MurmurHash to math

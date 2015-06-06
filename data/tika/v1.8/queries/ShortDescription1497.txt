@@ -1,1 +1,0 @@
-tika-server cannot output JSON

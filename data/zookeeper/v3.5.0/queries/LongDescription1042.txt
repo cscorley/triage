@@ -1,1 +1,0 @@
-Bookkeeper and hedwig both need access to zookeeper test classes. This JIRA is to provide that.

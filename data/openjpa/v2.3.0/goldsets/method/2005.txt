@@ -1,2 +1,0 @@
-org.apache.openjpa.jdbc.sql.PostgresDictionary.buildNames(String)
-org.apache.openjpa.jdbc.sql.PostgresDictionary.isOwnedSequence(DBIdentifier,DBIdentifier,Connection)

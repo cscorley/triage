@@ -1,1 +1,0 @@
-Verify that we don't raise SQLFeatureNotSupportedException for mandatory methods

@@ -1,2 +1,0 @@
-Daniel John Debrunner <djd@apache.org>
-Richard N. Hillegas <rhillegas@apache.org>

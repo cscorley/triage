@@ -1,1 +1,0 @@
-LOBStreamControl.truncate() doesn't delete temporary files

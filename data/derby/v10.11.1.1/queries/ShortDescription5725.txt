@@ -1,1 +1,0 @@
-ErrorStreamTest doesn't call super.tearDown()

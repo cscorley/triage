@@ -1,3 +1,0 @@
-org.apache.derby.iapi.sql.dictionary.TableDescriptor.getQualifiedName()
-org.apache.derby.iapi.sql.dictionary.TableDescriptor.quoteProtectName(String)
-org.apache.derby.iapi.sql.dictionary.TableDescriptor.quoteStringIfNecessary(String)

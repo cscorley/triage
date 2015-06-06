@@ -1,3 +1,0 @@
-org.apache.lucene.benchmark.quality.trec.QueryDriver.main(String[])
-org.apache.lucene.benchmark.quality.utils.SimpleQQParser.parse(QualityQuery)
-org.apache.lucene.benchmark.quality.utils.SimpleQQParser.SimpleQQParser(String,String)

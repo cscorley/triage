@@ -1,1 +1,0 @@
-ms (milliseconds) function to use dates in function queries

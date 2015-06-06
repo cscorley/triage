@@ -1,1 +1,0 @@
-SQLServer reserved words may not be used as identifiers

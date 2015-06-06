@@ -1,1 +1,0 @@
-Move JDBC implementation notes into the published javadoc

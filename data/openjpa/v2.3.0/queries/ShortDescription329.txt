@@ -1,1 +1,0 @@
-Generic interface may cause the openjpa Reflection code to pickup the wrong getter method

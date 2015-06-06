@@ -1,1 +1,0 @@
-JMXEnv uses System.err instead of logging

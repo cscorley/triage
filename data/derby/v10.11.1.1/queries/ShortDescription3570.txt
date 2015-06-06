@@ -1,1 +1,0 @@
-Implement DETERMINISTIC keyword for procedures and functions

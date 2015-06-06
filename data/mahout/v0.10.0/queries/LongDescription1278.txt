@@ -1,7 +1,0 @@
-We should update dependency on Apache parent pom (currently we depend on version 9, while 13 is already released).
-
-With the upgrade we should make the most of inherited settings and plugin versions from Apache parent pom, so we override only what is necessary, to make Mahout POMs smaller and easier to maintain.
-
-Hopefully by the time this issue gets worked on, maven-remote-resources-plugin with MRRESOURCES-53 fix will be released (since we're affected by it - test jars are being resolved from remote repository instead from the current build / rector repository), and updated Apache parent pom released.
-
-Implementation note: Mahout parent module and mahout-buildtools module both use Apache parent pom as parent, so both need to be updated. mahout-buildtools module had to be separate from the mahout parent pom (not inheriting it), so that buildtools module can be referenced as dependency of various source quality check plugins.

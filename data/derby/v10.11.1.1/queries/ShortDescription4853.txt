@@ -1,1 +1,0 @@
-log derby.properties location and derby.log location to derby.log

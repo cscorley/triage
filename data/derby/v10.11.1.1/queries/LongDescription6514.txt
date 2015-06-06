@@ -1,1 +1,0 @@
-Another script based test I converted into JUnit.

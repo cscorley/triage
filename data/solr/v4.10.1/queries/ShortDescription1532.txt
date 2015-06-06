@@ -1,1 +1,0 @@
-allow StreamingUpdateSolrServer to use a provided HttpClient

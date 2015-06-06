@@ -1,1 +1,0 @@
-Make BooleanWeight and DisjunctionMaxWeight protected

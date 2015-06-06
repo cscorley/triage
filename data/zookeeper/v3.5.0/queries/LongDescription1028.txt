@@ -1,1 +1,0 @@
-There is a small bug in the python bindings, specifically with the zookeeper.set2() call. This method should return a stat dictionary, but actually returns None. The fix is a one-character change to zookeeper.c such that the return value is '&stat' rather than 'stat'.

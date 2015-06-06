@@ -1,1 +1,0 @@
-org.apache.derbyTesting.perf.clients.Runner.main(String[])

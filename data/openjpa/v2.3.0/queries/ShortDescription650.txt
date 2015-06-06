@@ -1,1 +1,0 @@
-Document openjpa.RuntimeUnenhancedClasses=unsupported/warn configuration property

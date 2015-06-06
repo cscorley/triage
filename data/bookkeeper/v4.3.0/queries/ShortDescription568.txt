@@ -1,1 +1,0 @@
-NPE during GC with HierarchicalLedgerManager

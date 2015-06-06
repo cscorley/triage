@@ -1,1 +1,0 @@
-This Github PR has been around for a while: convert the README file into markdown. Seems like a good contribution. At some point we can remove the text version of the README but for now I'll leave both.

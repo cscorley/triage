@@ -1,1 +1,0 @@
-testTimeAndDateWithCalendar (jdbcapi.CallableTest) fails intermittently with AssertionFailedError: hour expected: differs from actual.

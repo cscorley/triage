@@ -1,3 +1,0 @@
-org.apache.derby.impl.drda.ClientThread.run()
-org.apache.derby.impl.drda.DDMReader.fill(int)
-org.apache.derby.impl.drda.DRDASocketTimeoutException.DRDASocketTimeoutException(DRDAConnThread)

@@ -1,1 +1,0 @@
-ditch the use of org.apache:apache at the parent POM

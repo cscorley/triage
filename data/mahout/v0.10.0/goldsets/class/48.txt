@@ -1,2 +1,0 @@
-org.apache.mahout.clustering.kmeans.KMeansDriver
-org.apache.mahout.clustering.meanshift.MeanShiftCanopyJob

@@ -1,1 +1,0 @@
-AccessControlException when exiting junit.swingui.TestRunner

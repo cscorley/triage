@@ -1,3 +1,0 @@
-Leader.lead() creates a new thread that can never terminate (short of restarting vm)
-
-naked notifyall in lead() method - what is the condition variable? Best if set inside the sync block

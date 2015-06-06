@@ -1,1 +1,0 @@
-AsynchronousLogShipper#workToDo is blocked while the log shipper sends a log chunk

@@ -1,3 +1,0 @@
-org.apache.mahout.vectorizer.HighDFWordsPruner
-org.apache.mahout.vectorizer.pruner.WordsPrunerReducer
-org.apache.mahout.vectorizer.SparseVectorsFromSequenceFiles

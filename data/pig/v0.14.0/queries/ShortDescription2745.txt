@@ -1,1 +1,0 @@
-Pig e2e test RubyUDFs fails in MR mode when running from tarball

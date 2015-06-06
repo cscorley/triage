@@ -1,1 +1,0 @@
-HCatalog would like to get our unit tests be able to run against 0.23 part of it would require pulling the pig 0.23 dependency from maven.

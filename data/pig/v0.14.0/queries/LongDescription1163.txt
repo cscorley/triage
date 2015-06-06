@@ -1,9 +1,0 @@
-Pig/Zebra 0.6.0 release - Doc Updates
-
-Updates for the Zebra 0.6.0 docs.
-
-(1) First patch - please apply the first patch now (zebra-6-update-1.patch)
-
-(2) Second patch - depending on feeback, we may have a second patch to apply Jan 4 or Jan 5
-
-Thanks/C

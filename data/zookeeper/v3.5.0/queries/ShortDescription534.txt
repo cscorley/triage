@@ -1,1 +1,0 @@
-The test target in contib/bookkeeper does not depend on jar target.

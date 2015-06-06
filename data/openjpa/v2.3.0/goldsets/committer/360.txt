@@ -1,2 +1,0 @@
-Catalina Wei <fancy@apache.org>
-Kevin W. Sutter <kwsutter@apache.org>

@@ -1,1 +1,0 @@
-Incorrect Cardinality and Case in IPTC Metadata Definition

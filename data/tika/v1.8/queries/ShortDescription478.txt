@@ -1,1 +1,0 @@
-HtmlParser can emit <head> elements inside of <body> block

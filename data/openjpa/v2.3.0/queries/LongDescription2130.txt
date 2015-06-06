@@ -1,1 +1,0 @@
-In order to properly test Java 7 suport, we need to compile the test cass/entity target to 1.7 while openjpa code base should still compile with 1.6 class version.

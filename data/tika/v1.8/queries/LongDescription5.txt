@@ -1,1 +1,0 @@
-I will begin the porting of the metadata framework from Nuch over to Tika. I will hopefully complete this sometime in the next week.

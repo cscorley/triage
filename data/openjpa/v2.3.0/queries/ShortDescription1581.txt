@@ -1,1 +1,0 @@
-getCache() should throw IllegalStateException if the EMF has been closed. 

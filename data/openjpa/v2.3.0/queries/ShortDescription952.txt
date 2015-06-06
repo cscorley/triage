@@ -1,1 +1,0 @@
-Utilize Sun JDK's Attach API to dynamically load the OpenJPA enhancer agent

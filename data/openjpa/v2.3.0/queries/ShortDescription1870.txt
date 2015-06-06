@@ -1,1 +1,0 @@
-Blob types override column definition from @Column annotation with MySQL

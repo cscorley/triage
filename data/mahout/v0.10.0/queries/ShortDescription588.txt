@@ -1,1 +1,0 @@
-Benchmark Mahout's clustering performance on EC2 and publish the results

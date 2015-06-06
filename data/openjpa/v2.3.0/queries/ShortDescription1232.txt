@@ -1,1 +1,0 @@
-Keys in an EmbeddedCollection are returned as PCData objects when DataCache is enabled

@@ -1,2 +1,0 @@
-Alan Gates <gates@apache.org>
-Olga Natkovich <olga@apache.org>

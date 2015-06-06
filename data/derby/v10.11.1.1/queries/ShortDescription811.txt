@@ -1,1 +1,0 @@
-Creating trace files in derbytclient fails when running with a SecurityManager

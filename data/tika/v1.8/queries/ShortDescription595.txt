@@ -1,1 +1,0 @@
-HtmlHandler does not support multivalue metadata

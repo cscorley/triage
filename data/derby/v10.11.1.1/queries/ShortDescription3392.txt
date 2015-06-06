@@ -1,1 +1,0 @@
-Performing failover on a database not being replicated should give a more meaningful error message.

@@ -1,1 +1,0 @@
-ant release needs to accommodate for different ant executables on different systems

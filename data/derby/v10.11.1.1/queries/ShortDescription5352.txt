@@ -1,1 +1,0 @@
-Derby table functions stored in a jar file inside the database which implement VTICosting or RestrictedVTI fail with ClassNotFoundException

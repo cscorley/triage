@@ -1,1 +1,0 @@
-It would be great if Tika could extract content from Adobe InDesign documents.

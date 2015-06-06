@@ -1,1 +1,0 @@
-getSchemaFromString throws away the name of the tuple that is in a bag

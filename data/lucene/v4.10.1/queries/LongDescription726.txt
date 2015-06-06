@@ -1,3 +1,0 @@
-The classes DocumentWriter, FieldsWriter, and ParallelReader use the deprecated method Document.fields(). This simple patch changes these three classes to use Document.getFields() instead.
-
-All unit tests pass.

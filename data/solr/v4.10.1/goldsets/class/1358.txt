@@ -1,2 +1,0 @@
-org.apache.solr.handler.dataimport.TestTikaEntityProcessor
-org.apache.solr.handler.dataimport.TikaEntityProcessor

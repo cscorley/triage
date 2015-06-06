@@ -1,7 +1,0 @@
-suites.All no longer runs cleanly for me when I run with just classes.
-It still runs fine with jars.
-We accepted this behavior at some point, but it is frustrating when you want to 'quickly' run tests while still working on some details.
-
-One of the tests that failed for me was lang.DatabaseClassLoadingTest (complaining about one of the databases not found), another was lang.LuceneSupportPermsTest.
-If a test cannot run cleanly with classes, it should get skipped (preferably both in the test itself and from the _Suite in which it is included).
-I also think some of the network server tests complain if derbynet.jar is not found - I cannot off-hand remember if this causes the test to fail.

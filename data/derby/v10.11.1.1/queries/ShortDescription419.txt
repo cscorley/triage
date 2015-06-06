@@ -1,1 +1,0 @@
-Support direct execution of derbynet.jar using the -jar option of the VM.

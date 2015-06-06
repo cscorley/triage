@@ -1,2 +1,0 @@
-org.apache.mahout.utils.clustering.AbstractClusterWriter
-org.apache.mahout.utils.clustering.AbstractClusterWriter.TermIndexWeight

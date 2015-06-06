@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.util.BaseJDBCTestCase.assertEquals(Blob,Blob)
-org.apache.derbyTesting.functionTests.util.BaseJDBCTestCase.assertEquals(Clob,Clob)
-org.apache.derbyTesting.functionTests.util.BaseJDBCTestCase.usingDerbyNet()

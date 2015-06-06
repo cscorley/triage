@@ -1,1 +1,0 @@
-ClientDataSource should not require serverName/portNumber to  be set

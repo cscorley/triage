@@ -1,1 +1,0 @@
-columnNames field of @Index annotation is ignored

@@ -1,2 +1,0 @@
-org.apache.pig.builtin.SUBSTRING
-org.apache.pig.test.TestStringUDFs

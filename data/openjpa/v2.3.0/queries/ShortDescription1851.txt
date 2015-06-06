@@ -1,1 +1,0 @@
-RESTful access to Persistence Unit runtime 

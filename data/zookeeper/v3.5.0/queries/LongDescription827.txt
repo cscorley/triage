@@ -1,1 +1,0 @@
-Implement read-only mode functionality (in accordance with http://wiki.apache.org/hadoop/ZooKeeper/GSoCReadOnlyMode) in C client library

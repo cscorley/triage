@@ -1,1 +1,0 @@
-Type support has regressed in OpenJPA 2.0

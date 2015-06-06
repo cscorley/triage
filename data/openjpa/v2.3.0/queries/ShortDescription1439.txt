@@ -1,1 +1,0 @@
-Metamodel instantiation fails on InputStream properties

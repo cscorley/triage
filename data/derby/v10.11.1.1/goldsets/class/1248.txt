@@ -1,3 +1,0 @@
-org.apache.derby.impl.store.raw.data.BasePage
-org.apache.derby.impl.store.raw.log.LogToFile
-org.apache.derby.impl.store.raw.RawStore

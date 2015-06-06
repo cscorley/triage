@@ -1,3 +1,0 @@
-org.apache.solr.uima.processor.UIMAUpdateRequestProcessor
-org.apache.solr.uima.processor.UIMAUpdateRequestProcessorFactory
-org.apache.solr.uima.processor.UIMAUpdateRequestProcessorTest

@@ -1,3 +1,0 @@
-org.apache.mahout.cf.taste.impl.recommender.SamplingCandidateItemsStrategy.computeMaxFrom(int,int)
-org.apache.mahout.cf.taste.impl.recommender.SamplingCandidateItemsStrategy.SamplingCandidateItemsStrategy(int,int)
-org.apache.mahout.cf.taste.impl.recommender.SamplingCandidateItemsStrategy.SamplingCandidateItemsStrategy(int,int,int,int,int)

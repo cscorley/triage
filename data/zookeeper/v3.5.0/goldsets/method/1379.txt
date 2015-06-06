@@ -1,3 +1,0 @@
-org.apache.zookeeper.ZooKeeperMain.processZKCmd(MyCommandOptions)
-org.apache.zookeeper.ZooKeeperTest.testCliCommandsNotEchoingUsage()
-org.apache.zookeeper.ZooKeeperTest.testDeleteWithInvalidVersionNo()

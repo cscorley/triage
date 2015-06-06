@@ -1,2 +1,0 @@
-org.apache.lucene.document.Document
-org.apache.lucene.index.TestFieldsReader

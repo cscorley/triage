@@ -1,8 +1,0 @@
-org.apache.tika.io.EndianUtils
-org.apache.tika.io.EndianUtilsTest
-org.apache.tika.io.FilenameUtilsTest
-org.apache.tika.metadata.Photoshop
-org.apache.tika.parser.image.BPGParser
-org.apache.tika.parser.image.BPGParserTest
-org.apache.tika.parser.image.ImageMetadataExtractor
-org.apache.tika.parser.image.PSDParser

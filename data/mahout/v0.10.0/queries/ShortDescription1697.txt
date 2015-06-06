@@ -1,1 +1,0 @@
-Math-scala and spark module docs are packaged under wrong path in bin distribution archive

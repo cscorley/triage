@@ -1,1 +1,0 @@
-For the 3.0 release there was a bug in the ZKMock code that prevented some tests from working. This patch fixes the bug and reenables the tests.

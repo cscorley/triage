@@ -1,1 +1,0 @@
-very ugly warning when compiling load_gen.c

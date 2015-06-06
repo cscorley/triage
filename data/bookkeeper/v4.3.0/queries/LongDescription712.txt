@@ -1,3 +1,0 @@
-Currently bookkeeper script is running using the default 'java' from the PATH.
-
-But it should check JAVA_HOME and use JAVA_HOME/bin/java

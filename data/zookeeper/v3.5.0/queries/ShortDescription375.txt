@@ -1,1 +1,0 @@
-zoo_add_auth only retains most recent auth on re-sync

@@ -1,1 +1,0 @@
-ReReadMetadataCb is not executed in the thread responsible for that ledger

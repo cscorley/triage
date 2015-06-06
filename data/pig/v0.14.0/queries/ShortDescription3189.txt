@@ -1,1 +1,0 @@
-Remove ivy/pig.pom and improve build mvn targets

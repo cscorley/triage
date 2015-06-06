@@ -1,1 +1,0 @@
-Optimization rule PushUpFilter causes filter to be pushed up out joins

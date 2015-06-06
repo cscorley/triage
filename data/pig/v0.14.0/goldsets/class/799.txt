@@ -1,3 +1,0 @@
-org.apache.pig.test.TestCounters
-org.apache.pig.test.TestLoad
-org.apache.pig.test.TestTypeChecking

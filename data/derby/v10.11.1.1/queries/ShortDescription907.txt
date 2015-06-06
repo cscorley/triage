@@ -1,1 +1,0 @@
-regression test failure in RecoveryAfterBackup on wssd5.6 ibm jvm (j2me)

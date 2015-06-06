@@ -1,1 +1,0 @@
-As described in the JDBC 4 spec, sections 21 and 3.1.

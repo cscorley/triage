@@ -1,1 +1,0 @@
-Predicate pushdown to support removing filters from pig plan

@@ -1,1 +1,0 @@
-Wrong result for simple join when index is created

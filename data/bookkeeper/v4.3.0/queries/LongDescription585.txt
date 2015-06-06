@@ -1,1 +1,0 @@
-The auditor logs very noisily when it tries to check a ledger which has been deleted. Ledgers being deleted is very normal, so this shouldn't log noisily.

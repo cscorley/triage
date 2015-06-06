@@ -1,1 +1,0 @@
-ZooKeeper startup script doesn't use JAVA_HOME

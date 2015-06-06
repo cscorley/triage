@@ -1,2 +1,0 @@
-Doron Cohen <doronc@apache.org>
-Michael McCandless <mikemccand@apache.org>

@@ -1,1 +1,0 @@
-add non-order by cases to the BlobClob4BlobTest

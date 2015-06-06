@@ -1,1 +1,0 @@
-ParameterMetaDataJdbc30 fails for weme6.1, which prevents rest of suites.All from completing.

@@ -1,1 +1,0 @@
-SolrEventListener should extend NamedListInitializedPlugin

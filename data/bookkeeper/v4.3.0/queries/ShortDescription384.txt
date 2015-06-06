@@ -1,1 +1,0 @@
-Clean up LedgerManagerFactory and LedgerManager usage in tests

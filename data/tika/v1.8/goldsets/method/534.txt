@@ -1,3 +1,0 @@
-org.apache.tika.parser.image.ImageMetadataExtractor.CopyUnknownFieldsHandler.handle(Directory,Metadata)
-org.apache.tika.parser.jpeg.JpegParserTest.testJPEGoddTagComponent()
-org.apache.tika.parser.jpeg.JpegParserTest.testJPEGTitleAndDescriptionXnviewmp()

@@ -1,7 +1,0 @@
-While working on Tez skewed join, I found two problems with the skewed join documentation-
-
-	The following is misleading because skewed join also works with left, right, and full outer joins.
-
-Skewed join works with two-table inner join. 
-	In two-way join, the 1st table must be the skewed one because Pig samples on that. But this is not mentioned anywhere.
-

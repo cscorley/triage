@@ -1,1 +1,0 @@
-consumeMap() fails with EmptyStackException

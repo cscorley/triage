@@ -1,1 +1,0 @@
-Visitor that collects query parameters ignores having clause.

@@ -1,1 +1,0 @@
-Change Collation test to run DatabaseMetaDataTest, BatchUpdateTest,GroupByExpressionTest, and UpdateableResultSetTest for only one locale

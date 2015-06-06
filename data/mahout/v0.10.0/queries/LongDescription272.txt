@@ -1,1 +1,0 @@
-The binary release produced by MAHOUT-215 includes some 3rd party jars that require licenses and other 3rd party jars (xpp3 + xstream) that are not required at all (eclipse core, a transitive dependency of hadoop, jfreechart a transitive dependency of watchmaker-swing).

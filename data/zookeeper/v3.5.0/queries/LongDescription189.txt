@@ -1,1 +1,0 @@
-It's possible to build the documentation without validating the XML of the source document. 

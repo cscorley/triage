@@ -1,1 +1,0 @@
-Incorrect list of compatible JRE versions in client trace #2

@@ -1,1 +1,0 @@
-Reset optimizer timeout for subqueries on a per-round basis to allow consideration of plans that use pushed predicates.

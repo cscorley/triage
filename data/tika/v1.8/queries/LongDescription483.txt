@@ -1,1 +1,0 @@
-Our current type detection code returns text/plain for an empty document. A more better return type would be application/octet-stream, to give higher level detectors like filename suffix hints more flexibility.

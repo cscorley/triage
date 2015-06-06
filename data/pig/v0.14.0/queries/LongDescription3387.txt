@@ -1,3 +1,0 @@
-In the test code "TestBuiltin.java", I found a miss spelling.
-
-A local variable "inpuStrExtra" is declared in testStringFuncs method, but I think it may be a miss spelling for "inputStrExtra" ( last 't' of "input" is omitted ).

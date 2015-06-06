@@ -1,2 +1,0 @@
-org.apache.tika.example.TranslatorExample
-org.apache.tika.example.TranslatorExampleTest

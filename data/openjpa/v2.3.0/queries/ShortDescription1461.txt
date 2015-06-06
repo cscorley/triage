@@ -1,1 +1,0 @@
-Incorrect Oracle CREATE TABLE DDL for XML column

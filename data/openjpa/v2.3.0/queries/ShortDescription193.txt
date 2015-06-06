@@ -1,1 +1,0 @@
-Create a flag that automatically runs the JPA TCK from maven

@@ -1,1 +1,0 @@
-There should be a page on our web site that lists all the document formats supported by Tika and describes what parts of the document contents are extracted and how. This would make it easier for people to understand the capabilities (and restrictions) of Tika.

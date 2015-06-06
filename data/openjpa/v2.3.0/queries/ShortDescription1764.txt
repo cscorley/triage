@@ -1,1 +1,0 @@
-Automatically enable connection pooling in unmanaged environments

@@ -1,1 +1,0 @@
-Recursively embedded entities generate an extra and reduntant SQL call to the database.

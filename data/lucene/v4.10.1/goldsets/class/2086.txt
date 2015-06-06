@@ -1,3 +1,0 @@
-org.apache.lucene.index.BufferedDeletes
-org.apache.lucene.index.BufferedDeletes.Num
-org.apache.lucene.index.DocumentsWriter

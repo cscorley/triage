@@ -1,1 +1,0 @@
-Unique DB identifiers for servers and clients

@@ -1,1 +1,0 @@
-large snapshots can cause continuous quorum failure

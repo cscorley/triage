@@ -1,6 +1,0 @@
-org.apache.zookeeper.ClientCnxn.SendThread.logStartConnect(InetSocketAddress)
-org.apache.zookeeper.ClientCnxn.SendThread.startConnect()
-org.apache.zookeeper.client.ZooKeeperSaslClient.getConfigStatus()
-org.apache.zookeeper.client.ZooKeeperSaslClient.getSaslState()
-org.apache.zookeeper.client.ZooKeeperSaslClient.isComplete()
-org.apache.zookeeper.client.ZooKeeperSaslClient.ZooKeeperSaslClient(String)

@@ -1,2 +1,0 @@
-org.apache.openjpa.datacache.AbstractQueryCache
-org.apache.openjpa.persistence.querycache.TestQueryCache

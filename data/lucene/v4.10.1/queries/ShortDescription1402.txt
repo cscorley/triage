@@ -1,1 +1,0 @@
-CheckIndex API changed without backwards compaitibility

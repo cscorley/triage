@@ -1,3 +1,0 @@
-org.apache.pig.backend.hadoop.hbase.HBaseStorage
-org.apache.pig.backend.hadoop.hbase.HBaseStorage.ColumnInfo
-org.apache.pig.backend.hadoop.hbase.TestHBaseStorageFiltering

@@ -1,1 +1,0 @@
-Convenient usage of RowSimilarityJob and ItemSimilarityJob

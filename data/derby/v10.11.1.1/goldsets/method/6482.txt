@@ -1,2 +1,0 @@
-org.apache.derbyDemo.vtis.example.ApacheServerLogVTI.apacheNaturalLogFile(String)
-org.apache.derbyDemo.vtis.example.DerbyJiraReportVTI.apacheNaturalJiraReport(String)

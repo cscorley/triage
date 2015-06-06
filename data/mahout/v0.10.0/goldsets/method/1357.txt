@@ -1,3 +1,0 @@
-org.apache.mahout.vectorizer.encoders.InteractionValueEncoder.addInteractionToVector(byte[],byte[],double,Vector)
-org.apache.mahout.vectorizer.encoders.InteractionValueEncoderTest.testAddToVectorWithTextValueEncoder()
-org.apache.mahout.vectorizer.encoders.InteractionValueEncoderTest.testTraceDictionary()

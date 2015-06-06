@@ -1,1 +1,0 @@
-build fails if compile.classpath is set to the same value as jsr169compile.classpath

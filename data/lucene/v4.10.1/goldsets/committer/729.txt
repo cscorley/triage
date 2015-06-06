@@ -1,1 +1,0 @@
-Yonik Seeley <yonik@apache.org>

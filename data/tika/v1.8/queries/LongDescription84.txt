@@ -1,1 +1,0 @@
-The MimeTypes class should have a utility method for detecting the MIME type from a given InputStream.

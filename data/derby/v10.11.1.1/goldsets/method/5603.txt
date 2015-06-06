@@ -1,2 +1,0 @@
-org.apache.derby.impl.jdbc.EmbedConnection.clearLOBMapping()
-org.apache.derby.impl.jdbc.EmbedConnection.getlobHMObj()

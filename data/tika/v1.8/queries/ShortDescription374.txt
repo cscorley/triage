@@ -1,1 +1,0 @@
-AutoDetectParser not thread-safe?

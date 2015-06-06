@@ -1,1 +1,0 @@
-Count used and neglected elements in MaybePruneRowsMapper

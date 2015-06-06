@@ -1,1 +1,0 @@
-Performance related enhancements to Solrj

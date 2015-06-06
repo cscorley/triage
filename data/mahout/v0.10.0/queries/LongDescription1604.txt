@@ -1,5 +1,0 @@
-Using CooccurrenceAnalysis.cooccurrence create a driver that reads a text DRM or two and produces LLR similarity/cross-similarity matrices.
-
-This will produce the same results as ItemSimilarity but take a Drm as input instead of individual cells.
-
-The first version will only support LLR, other similarity measures will need to be in separate Jiras

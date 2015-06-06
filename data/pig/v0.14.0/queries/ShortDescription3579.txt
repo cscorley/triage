@@ -1,1 +1,0 @@
-pig.script's deserialized version does not maintain line numbers

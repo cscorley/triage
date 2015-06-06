@@ -1,1 +1,0 @@
-Property file lucenevector.props doesn't get loaded when running 'mahout lucene.vector'

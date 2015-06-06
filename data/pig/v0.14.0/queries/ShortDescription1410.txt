@@ -1,1 +1,0 @@
-Make PigServer can handle files with parameters

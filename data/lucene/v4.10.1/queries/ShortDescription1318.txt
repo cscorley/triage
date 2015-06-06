@@ -1,1 +1,0 @@
-InstantiatedIndexReader.norms called from MultiReader bug

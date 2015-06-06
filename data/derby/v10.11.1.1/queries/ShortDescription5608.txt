@@ -1,1 +1,0 @@
-BaseTestCase.readProcessOutput should read getInputStream()  and getErrorStream() in separate threads

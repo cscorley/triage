@@ -1,3 +1,0 @@
-would be great if "pig -version" told me what version.
-
-also, the text prior to "USAGE: ..." could also print the version.

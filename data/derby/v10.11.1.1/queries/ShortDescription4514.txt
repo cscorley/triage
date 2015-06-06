@@ -1,1 +1,0 @@
-j2ME test failures relating to runtimeStatisticsParser

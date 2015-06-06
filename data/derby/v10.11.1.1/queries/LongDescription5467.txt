@@ -1,4 +1,0 @@
-The ending year in the copyright notice used in the API documentation hasn't been updated. Currently the year 2007 or 2008 is being used.
-Manually modifying the copyright notice is trivial, but has to be done once a year. It may be possible to automate this (i.e. use current year, or the year of the last change in the code repository?).
-
-Out of curiosity, should the year be updated even if no changes have been made? (somewhat relevant if we decide to automate the update)

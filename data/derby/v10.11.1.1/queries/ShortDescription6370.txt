@@ -1,1 +1,0 @@
-dblook doesn't schema-qualify identifiers in trigger actions

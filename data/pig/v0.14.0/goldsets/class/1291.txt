@@ -1,4 +1,0 @@
-org.apache.hadoop.zebra.mapreduce.TableInputFormat
-org.apache.hadoop.zebra.mapreduce.TableRecordReader
-org.apache.hadoop.zebra.pig.TestBasicTableSourceTableIndex
-org.apache.hadoop.zebra.pig.TestSortedTableUnion

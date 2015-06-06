@@ -1,2 +1,0 @@
-org.apache.lucene.index.StoredFieldsWriter
-org.apache.lucene.index.TermVectorsTermsWriter

@@ -1,4 +1,0 @@
-At least two issues:
-
-1. MAHOUT-992 messed up the Distributed Cache stuff somehow
-2. The ExtractReuters data is not being moved to HDFS.

@@ -1,1 +1,0 @@
-Blob.getBinaryStream(long,long) is off by one for the pos+len check

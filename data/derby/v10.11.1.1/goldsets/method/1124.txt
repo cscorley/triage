@@ -1,2 +1,0 @@
-org.apache.derby.impl.jdbc.EmbedDatabaseMetaData.getPreparedQuery(String)
-org.apache.derby.impl.jdbc.EmbedDatabaseMetaData.getQueryFromDescription(String)

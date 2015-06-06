@@ -1,2 +1,0 @@
-org.apache.derby.iapi.types.SQLTimestamp
-org.apache.derby.impl.sql.compile.TernaryOperatorNode

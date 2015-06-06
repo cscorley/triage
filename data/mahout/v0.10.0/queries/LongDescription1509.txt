@@ -1,3 +1,0 @@
-From https://mahout.apache.org/users/basics/quickstart.html the "Dos and Don'ts" link under "Recommendations" goes to nowhere (URL typo - "ecommender") https://mahout.apache.org/users/recommender/ecommender-first-timer-faq.html 
-
-Can't remember who's running point on the URL updates or I'd [at] them...

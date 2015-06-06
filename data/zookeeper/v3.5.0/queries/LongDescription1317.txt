@@ -1,2 +1,0 @@
-zookeeper_init does not check the return value of strdup(index_chroot).
-When it returns NULL, it causes segfault when it try to strlen(zh->chroot).

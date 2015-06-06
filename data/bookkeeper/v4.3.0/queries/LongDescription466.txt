@@ -1,1 +1,0 @@
-This causes issues if the zookeeper port, is very high, as the minSessionTimeout is 2*tickTime by default. 

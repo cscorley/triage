@@ -1,3 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POFRJoin
-org.apache.pig.data.TestSchemaTuple
-org.apache.pig.newplan.logical.relational.LogToPhyTranslationVisitor

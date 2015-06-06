@@ -1,1 +1,0 @@
-Simple parser for .flv videos to extract embedded metadata.

@@ -1,1 +1,0 @@
-[patch] new String("") or new String() is pointless, and just allocates memory needlessly - removed

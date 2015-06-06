@@ -1,1 +1,0 @@
-Memory leak on server when using "SET ROLE" command

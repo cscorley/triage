@@ -1,1 +1,0 @@
-There should be a generic parser class that delegates parsing calls to underlying component parsers based on the incoming document type metadata.

@@ -1,1 +1,0 @@
-Change stress.multi to dump thread stacks before killing off testers with jdk 1.5 and higher

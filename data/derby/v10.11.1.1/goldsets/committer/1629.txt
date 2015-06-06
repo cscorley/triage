@@ -1,2 +1,0 @@
-David Van Couvering <davidvc@apache.org>
-Mike Matrigali <mikem@apache.org>

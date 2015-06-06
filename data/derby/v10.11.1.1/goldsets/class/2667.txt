@@ -1,3 +1,0 @@
-org.apache.derbyTesting.junit.BaseTestCase
-org.apache.derbyTesting.junit.TestConfiguration
-org.apache.derbyTesting.unitTests.junit.FormatableBitSetTest

@@ -1,1 +1,0 @@
-Support TNEF (winmail.dat) via POI

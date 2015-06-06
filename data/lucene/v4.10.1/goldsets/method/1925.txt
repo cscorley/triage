@@ -1,3 +1,0 @@
-org.apache.lucene.search.IndexSearcher.IndexSearcher(IndexReader)
-org.apache.lucene.search.IndexSearcher.IndexSearcher(IndexReader,boolean)
-org.apache.lucene.search.IndexSearcher.IndexSearcher(IndexReader,IndexReader[],int[])

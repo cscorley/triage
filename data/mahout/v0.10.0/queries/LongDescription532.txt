@@ -1,1 +1,0 @@
-I suspect that some of Sean's problems with pushing a release have to do with the staleness of the versions of various critical plugins, such as the maven release plugin. Under this JIRA, I propose to move everything up to current released versions. As a side-benefit, parallel builds under maven 3 should become possible.

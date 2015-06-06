@@ -1,2 +1,0 @@
-org.apache.derby.drda.NetworkServerControl.getCodeSourcePrefix(NetworkServerControlImpl)
-org.apache.derby.drda.NetworkServerControl.installSecurityManager(NetworkServerControlImpl)

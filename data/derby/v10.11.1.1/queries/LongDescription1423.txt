@@ -1,4 +1,0 @@
-The set CLASSPATH example in ...trunk/java/testing/README.htm specifies an absolute path for the jar file  jakarta-oro-2.0.8.jar.  All other jars in the example are identified by the environment variable $jardir.  To be consistent and help us folks that cutNpaste commands update the file entry:
-/local/derby/tools/java/jakarta-oro-2.0.8.jar
-with:   $jardir/jakarta-oro-2.0.8.jar
-in the example

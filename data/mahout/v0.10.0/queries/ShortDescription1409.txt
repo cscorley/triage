@@ -1,1 +1,0 @@
-MatrixVectorView has index check error

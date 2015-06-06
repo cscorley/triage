@@ -1,1 +1,0 @@
-Implement layer B streaming for new methods defined in JDBC4.0

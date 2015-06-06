@@ -1,1 +1,0 @@
-Checkstyle pulls in junit3.7 which causes the build of test code to fail.

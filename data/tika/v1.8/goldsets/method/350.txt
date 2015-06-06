@@ -1,3 +1,0 @@
-org.apache.tika.parser.html.HtmlParser.getEncoding(InputStream,Metadata)
-org.apache.tika.parser.html.HtmlParserTest.testHttpEquivCharsetFunkyAttributes()
-org.apache.tika.parser.html.HtmlParserTest.testUsingFunkyCharsetInContentTypeHeader()

@@ -1,1 +1,0 @@
-CoreAdminhandler should not need a core

@@ -1,2 +1,0 @@
-org.apache.mahout.common.AbstractJob
-org.apache.mahout.common.commandline.DefaultOptionCreator

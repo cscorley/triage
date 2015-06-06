@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.lang.NativeAuthProcs.resetPasswordTests(Connection,Connection)
-org.apache.derbyTesting.functionTests.tests.lang.NativeAuthProcs.vetModifyPassword(Connection,Connection,long)
-org.apache.derbyTesting.functionTests.tests.lang.NativeAuthProcs.vetResetPassword(Connection,Connection,long,boolean)

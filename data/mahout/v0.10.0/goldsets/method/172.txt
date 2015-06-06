@@ -1,2 +1,0 @@
-org.apache.mahout.clustering.lda.LDADriver.createState(Configuration)
-org.apache.mahout.clustering.lda.LDADriver.findLL(String,Configuration)

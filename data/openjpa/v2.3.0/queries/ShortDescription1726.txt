@@ -1,1 +1,0 @@
-Clean up OpenJPA test case failures for PostgreSQL

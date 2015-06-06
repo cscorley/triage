@@ -1,1 +1,0 @@
-ij should accept a --help option to print command line syntax for reference and friendliness.

@@ -1,1 +1,0 @@
-Pig does not work with ViewFileSystem

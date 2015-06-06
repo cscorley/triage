@@ -1,1 +1,0 @@
-Pig does not support ORDER ... BY group alias

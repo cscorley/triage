@@ -1,3 +1,0 @@
-org.apache.zookeeper.test.AsyncOps
-org.apache.zookeeper.test.AsyncOps.Children2CB
-org.apache.zookeeper.test.AsyncOps.ChildrenCB

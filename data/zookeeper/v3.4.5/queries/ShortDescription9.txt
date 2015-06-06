@@ -1,1 +1,0 @@
-Set socket linger longer for commands

@@ -1,3 +1,0 @@
-In ivy/ivysettings.xml, checkmodified="true" is used for the apache-snapshots resolver. When using checkmodified="true", you also need changingPattern=".*SNAPSHOT" (in this case - it's Ivy, so theoretically that could be anything, but since the modified jars here would all be Maven-produced, they'll all have versions ending in "SNAPSHOT") or they won't actually be checked.
-
-In addition, it'd be nice to have checkmodified="true" and changingPattern=".*SNAPSHOT" on the "fs" resolver, so that you can build against locally built SNAPSHOTs of dependencies.

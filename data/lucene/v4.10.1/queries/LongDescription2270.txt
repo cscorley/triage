@@ -1,1 +1,0 @@
-Queries consisting of only zero boosts result in incorrect results.

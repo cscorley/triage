@@ -1,1 +1,0 @@
-Enhance the map() function to take in a default value

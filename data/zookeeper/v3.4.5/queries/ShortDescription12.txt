@@ -1,1 +1,0 @@
-getChildren doesn't return a list of paths

@@ -1,1 +1,0 @@
-Fix for small syntax omission in TermQuery documentation

@@ -1,1 +1,0 @@
-JDK problems with defineClass and enum class types

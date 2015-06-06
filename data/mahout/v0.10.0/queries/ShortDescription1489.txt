@@ -1,1 +1,0 @@
-Interactive Scala & Spark Bindings Shell & Script processor

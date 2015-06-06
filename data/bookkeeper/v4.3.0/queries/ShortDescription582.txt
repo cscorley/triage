@@ -1,1 +1,0 @@
-Make bookie and client use protobuf for requests (non-wire part)

@@ -1,2 +1,0 @@
-org.apache.pig.piggybank.evaluation.datetime.convert.CustomFormatToISO
-org.apache.pig.piggybank.test.evaluation.datetime.convert.TestConvertDateTime

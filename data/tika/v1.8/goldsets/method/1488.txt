@@ -1,3 +1,0 @@
-org.apache.tika.cli.TikaCLITest.testJsonRecursiveMetadataParserDefault()
-org.apache.tika.cli.TikaCLITest.testJsonRecursiveMetadataParserMetadataOnly()
-org.apache.tika.parser.pdf.PDFParser.extractMetadata(PDDocument,Metadata)

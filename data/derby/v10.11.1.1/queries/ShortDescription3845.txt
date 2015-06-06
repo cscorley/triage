@@ -1,1 +1,0 @@
-Problems running  org.apache.derbyTesting.system.optimizer.RunOptimizerTest

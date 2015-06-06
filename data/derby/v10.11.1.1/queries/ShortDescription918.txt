@@ -1,1 +1,0 @@
-introduce a new test type to run junit tests from the current harness

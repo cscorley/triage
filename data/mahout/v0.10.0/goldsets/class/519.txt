@@ -1,2 +1,0 @@
-org.apache.mahout.clustering.spectral.eigencuts.EigencutsDriver
-org.apache.mahout.clustering.spectral.kmeans.SpectralKMeansDriver

@@ -1,1 +1,0 @@
-Create a template for Release Notes for inclusion in our release distributions.

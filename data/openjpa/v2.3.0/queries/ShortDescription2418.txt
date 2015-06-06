@@ -1,1 +1,0 @@
-Cannot build 2.2.x due to NullPointerException in maven-checkstyle-plugin

@@ -1,1 +1,0 @@
-When create a znode, a NULL ACL parameter cannot be accepted

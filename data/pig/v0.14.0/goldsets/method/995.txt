@@ -1,3 +1,0 @@
-org.apache.pig.impl.logicalLayer.optimizer.LogicalOptimizer.optimize()
-org.apache.pig.test.TestLogicalOptimizer.testErrOpLimitOptimizer()
-org.apache.pig.test.TestLogicalOptimizer.testOPLimit11Optimizer()

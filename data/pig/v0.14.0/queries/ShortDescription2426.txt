@@ -1,1 +1,0 @@
-ProgressableReporter.progress(String msg) is an empty function

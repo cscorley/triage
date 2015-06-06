@@ -1,2 +1,0 @@
-The "eclipse" target in the zoo-keeper build script doesn't include the accessive.jar present in the folder /src/java/libtest in the .classpath file. But the accessive.jar is being referenced from a couple of test classes.
-However, the build is successful 

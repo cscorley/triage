@@ -1,2 +1,0 @@
-Olga Natkovich <olga@apache.org>
-Pradeep Kamath <pradeepkth@apache.org>

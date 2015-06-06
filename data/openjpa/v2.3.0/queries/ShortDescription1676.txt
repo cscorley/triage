@@ -1,1 +1,0 @@
-PCClassFileTransformer.transform causing NPE when class name is null

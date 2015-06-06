@@ -1,2 +1,0 @@
-org.apache.openjpa.kernel.BrokerImpl.setStateManager(Object,StateManagerImpl,int)
-org.apache.openjpa.persistence.query.TestSimple.testSimple()

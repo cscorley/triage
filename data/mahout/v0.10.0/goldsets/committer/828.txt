@@ -1,2 +1,0 @@
-Sean R. Owen <srowen@apache.org>
-Ted Dunning <tdunning@apache.org>

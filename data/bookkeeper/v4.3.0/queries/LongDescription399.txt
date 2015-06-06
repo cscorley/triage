@@ -1,1 +1,0 @@
-since we support ack quorum in BOOKKEEPER-208, it would be better to let hub server could configure it.

@@ -1,1 +1,0 @@
-Entity name is ignored when specified in the orm.xml file

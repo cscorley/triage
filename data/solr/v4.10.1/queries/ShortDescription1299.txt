@@ -1,1 +1,0 @@
-In distributed search cannot search on any schema field in ascending order (descending is OK)

@@ -1,1 +1,0 @@
-CLI: sort output of ls command

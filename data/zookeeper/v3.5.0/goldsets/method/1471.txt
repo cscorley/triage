@@ -1,4 +1,0 @@
-org.apache.jute.compiler.JRecord.genCppCode(FileWriter,FileWriter)
-org.apache.jute.compiler.JRecord.genCppDecl(String)
-org.apache.jute.compiler.JRecord.genJavaReadMethod(String,String)
-org.apache.jute.compiler.JRecord.getSignature()

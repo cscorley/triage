@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.suites.All
-org.apache.derbyTesting.functionTests.suites.AllPackages
-org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local_StateTest_part1_1

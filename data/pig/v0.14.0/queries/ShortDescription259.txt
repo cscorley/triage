@@ -1,1 +1,0 @@
-allow store to overwrite existing directroy

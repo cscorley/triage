@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.sql.MySQLDictionary.connectedConfiguration(Connection)
-org.apache.openjpa.jdbc.sql.MySQLDictionary.decorate(Connection)
-org.apache.openjpa.jdbc.sql.MySQLDictionary.getMajorMinorVersions(String)

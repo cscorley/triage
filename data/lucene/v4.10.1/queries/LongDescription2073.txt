@@ -1,7 +1,0 @@
-I think this needs to go in something of a permenant spot - this isn't a one time release type issues - its going to present over multiple release.
-
-
-If there is nothing we can do here, then we just have to do the best we can -
-such as a prominent notice alerting that if you transition JVM's between building and searching the index and you are using or doing X, things will break.
-
-We should put this in a spot that is always pretty visible - perhaps even a new readme file titlted something like IndexBackwardCompatibility or something, to which we can add other tips and gotchyas as they come up. Or MaintainingIndicesAcrossVersions, or FancyWhateverGetsYourAttentionAboutUpgradingStuff. Or a permanent entry/sticky entry at the top of Changes.

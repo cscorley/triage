@@ -1,1 +1,0 @@
-[patch] quiet the ant build with 1.8.1+

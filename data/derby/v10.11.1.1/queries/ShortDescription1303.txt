@@ -1,1 +1,0 @@
-The test of derbynet/SuicideOfStreaming.java is failed when programs are build as Insane.

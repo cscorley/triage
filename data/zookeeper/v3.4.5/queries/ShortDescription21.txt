@@ -1,1 +1,0 @@
-Improve zk ctor/watcher (state transition) docs

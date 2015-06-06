@@ -1,3 +1,0 @@
-org.apache.openjpa.ee.AutomaticManagedRuntime
-org.apache.openjpa.ee.RegistryManagedRuntime
-org.apache.openjpa.ee.RegistryManagedRuntime.TransactionManagerRegistryFacade

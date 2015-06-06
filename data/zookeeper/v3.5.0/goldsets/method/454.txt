@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.SessionTrackerImpl.checkSession(long,Object)
-org.apache.zookeeper.server.SessionTrackerImpl.setOwner(long,Object)

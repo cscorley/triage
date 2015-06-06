@@ -1,3 +1,0 @@
-The source distribution is missing the top-level bin and maven directories, as well as BUILDING.txt, README, index.html, and published-api-overview.html. Also, the tools directory is missing release/build.xml.
-
-In addition, tools/testing/derby contains a complete set of the Derby 10.1 jars, these should be removed from the -src distribution.

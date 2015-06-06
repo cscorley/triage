@@ -1,4 +1,0 @@
-This is a known issue and the performance of LocalitySensitiveHashSearch needs to be further investigated.
-Currently, the one "benchmark" that does this, SearchQualityTest is too variable to be informative.
-
-So, I'm removing LSHSearcher from SearchQualityTest.

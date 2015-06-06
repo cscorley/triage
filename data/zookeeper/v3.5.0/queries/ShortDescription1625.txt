@@ -1,1 +1,0 @@
-zkServer.sh is looking for clientPort in config file, but it may no longer be there with ZK-1411

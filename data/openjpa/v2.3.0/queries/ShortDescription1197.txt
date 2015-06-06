@@ -1,1 +1,0 @@
-NativeQueries fail with MySQL 

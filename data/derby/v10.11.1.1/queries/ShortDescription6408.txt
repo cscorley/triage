@@ -1,1 +1,0 @@
-EXISTS returns NULL instead of FALSE

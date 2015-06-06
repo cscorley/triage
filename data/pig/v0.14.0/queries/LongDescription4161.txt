@@ -1,1 +1,0 @@
-Similar to PIG-4027, we need to check modified Hive snapshot (until Hive 0.14.0 released).

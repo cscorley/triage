@@ -1,1 +1,0 @@
-org.apache.solr.analysis.TestBufferedTokenStream.AB_AAB_Stream.process(Token)

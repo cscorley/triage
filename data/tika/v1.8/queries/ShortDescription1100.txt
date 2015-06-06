@@ -1,1 +1,0 @@
-cannot extract text in text-box for Excel 2007 file(.xlsx, .xlsm)

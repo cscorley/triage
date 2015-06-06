@@ -1,2 +1,0 @@
-org.apache.derby.jdbc.InternalDriver.getMinorVersion()
-org.apache.derby.jdbc.InternalDriver.jdbcCompliant()

@@ -1,1 +1,0 @@
-Hadoop 2.x does not like the `hadoop fs` command; change that to `hadoop dfs` to retain backwards compat with v1.

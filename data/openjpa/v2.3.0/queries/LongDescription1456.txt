@@ -1,1 +1,0 @@
-A small performance/scalability improvement by switching most StringBuffer usage (which uses synchronization) with StringBuilder.

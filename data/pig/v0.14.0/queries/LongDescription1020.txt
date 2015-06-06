@@ -1,1 +1,0 @@
-Provide an ant target to build pig.jar without all hadoop related libraries. User will provide external hadoop jars in classpath before invoking pig.

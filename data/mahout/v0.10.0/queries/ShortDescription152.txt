@@ -1,1 +1,0 @@
-SquaredEuclideanDistanceMeasure distance method has a bug in comparing sizes

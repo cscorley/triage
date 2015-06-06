@@ -1,1 +1,0 @@
-Remove heavy documentation objects from the binary distribution 

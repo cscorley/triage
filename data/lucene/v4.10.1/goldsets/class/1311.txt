@@ -1,4 +1,0 @@
-org.apache.lucene.index.DirectoryIndexReader
-org.apache.lucene.index.IndexCommit
-org.apache.lucene.index.IndexReader
-org.apache.lucene.index.TestDeletionPolicy

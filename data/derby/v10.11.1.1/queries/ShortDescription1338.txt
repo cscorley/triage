@@ -1,1 +1,0 @@
-Client tests DerbyNetNewServer and NSinSameVM fail with NoClassDefFoundError: DRDAProtocolExceptionInfo when run from classes dir

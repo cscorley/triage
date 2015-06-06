@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.EntityManagerFactoryImpl
-org.apache.openjpa.persistence.OpenJPAPersistenceUtil
-org.apache.openjpa.persistence.validation.TraversableResolverImpl

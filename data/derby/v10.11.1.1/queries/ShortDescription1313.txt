@@ -1,1 +1,0 @@
-SUR: Use DRDA's extended diagnostic to send ROW_UPDATED and ROW_DELETED warnings.

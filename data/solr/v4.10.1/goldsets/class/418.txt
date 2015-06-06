@@ -1,6 +1,0 @@
-org.apache.solr.handler.component.ElevationComparatorSource
-org.apache.solr.handler.component.QueryElevationComponent
-org.apache.solr.handler.component.QueryElevationComponent.ElevationObj
-org.apache.solr.handler.component.QueryElevationComponentTest
-org.apache.solr.search.function.FileFloatSource
-org.apache.solr.util.VersionedFile

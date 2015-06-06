@@ -1,4 +1,0 @@
-org.apache.derby.catalog.types.UDTAliasInfo
-org.apache.derby.impl.tools.dblook.DB_Alias
-org.apache.derby.impl.tools.dblook.DB_GrantRevoke
-org.apache.derby.tools.dblook

@@ -1,3 +1,0 @@
-org.apache.openjpa.datacache.QueryKey
-org.apache.openjpa.persistence.criteria.TestRemoteQueryCacheCriteriaQuery
-org.apache.openjpa.persistence.datacache.SerializingConcurrentQueryCache

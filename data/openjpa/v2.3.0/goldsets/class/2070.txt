@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.criteria.BlogUser_
-org.apache.openjpa.persistence.criteria.TestByteArray
-org.apache.openjpa.persistence.meta.MetamodelImpl

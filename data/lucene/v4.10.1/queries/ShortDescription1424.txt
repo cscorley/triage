@@ -1,1 +1,0 @@
-Change all multi-term querys so that they extend MultiTermQuery and allow for a constant score mode

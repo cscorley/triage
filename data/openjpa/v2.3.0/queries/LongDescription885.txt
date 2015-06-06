@@ -1,1 +1,0 @@
-Support the 2.0 new  EntityManager clear() methods. Also support the new CascadeType.CLEAR.

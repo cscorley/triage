@@ -1,1 +1,0 @@
-System property mapred.output.compress, but pig-cluster-hadoop-site.xml doesn't

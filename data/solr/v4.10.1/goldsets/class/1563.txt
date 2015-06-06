@@ -1,2 +1,0 @@
-org.apache.solr.handler.admin.LukeRequestHandler
-org.apache.solr.handler.admin.LukeRequestHandlerTest

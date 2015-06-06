@@ -1,3 +1,0 @@
-org.apache.lucene.analysis.KeywordTokenizer.next(Token)
-org.apache.lucene.analysis.TestKeywordAnalyzer.testMutipleDocument()
-org.apache.lucene.analysis.TestKeywordAnalyzer.testOffsets()

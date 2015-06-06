@@ -1,1 +1,0 @@
-Enable Java 7 testing by allowing test cases to compile targeting to 1.7  

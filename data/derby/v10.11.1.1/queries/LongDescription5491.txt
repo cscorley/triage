@@ -1,2 +1,0 @@
-new String("::") is pointless, use "::"
-same with new String() vs ""

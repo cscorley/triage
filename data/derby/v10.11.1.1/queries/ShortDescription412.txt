@@ -1,1 +1,0 @@
-Connection toString should show type information and  the meaning of the identifier that it prints

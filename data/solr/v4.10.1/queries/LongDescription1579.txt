@@ -1,5 +1,0 @@
-The fix to SOLR-1008 was wrong.  It used chardata escaping for a value that is an attribute value.
-
-I.e. instead of XML.escapeCharData it should call XML.escapeAttributeValue.
-
-Otherwise, any query used as a key in the filter cache whose printed representation contains a double-quote character causes invalid XML to be generated.

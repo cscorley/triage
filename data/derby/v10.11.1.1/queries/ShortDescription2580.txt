@@ -1,1 +1,0 @@
-SanityManager.THROWASSERT(String,Throwable) ignores message argument

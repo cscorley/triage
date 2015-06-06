@@ -1,1 +1,0 @@
-NPE exception in PerChannelBookieClient

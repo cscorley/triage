@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.meta.Members
-org.apache.openjpa.persistence.meta.Members.SingularAttributeImpl
-org.apache.openjpa.persistence.meta.TestMetamodel

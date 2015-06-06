@@ -1,1 +1,0 @@
-Propose moving openjpa-persistence-jdbc/src/test/java/org/apache/openjpa/persistence/test/* base testcase classes to a openjpa-testsupport JAR which can be shared between o-p-j, openjpa-slice and new ones being added to openjpa-integration for bean validation and eventually OSGi.

@@ -1,3 +1,0 @@
-Donate the scripts used to produce the Derby test results now published at 
-http://www.multinet.no/~solberg/public/Apache/index.html
-to the community in the hope that  this can be useful also for others 

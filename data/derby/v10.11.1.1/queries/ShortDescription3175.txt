@@ -1,1 +1,0 @@
-NullPointerException on INSERT after ALTER TABLE ... DROP COLUMN

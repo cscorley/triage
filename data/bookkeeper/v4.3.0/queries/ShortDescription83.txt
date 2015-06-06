@@ -1,1 +1,0 @@
-Added versioning and flags to the bookie protocol

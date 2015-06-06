@@ -1,1 +1,0 @@
-setEmbeddedCP should not exit on error

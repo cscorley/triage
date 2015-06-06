@@ -1,1 +1,0 @@
-JobControlCompiler should only do reducer estimation when the job has a reduce phase

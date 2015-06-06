@@ -1,2 +1,0 @@
-Albert Lee <allee8285@apache.org>
-Craig Russell <clr@apache.org>

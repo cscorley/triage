@@ -1,1 +1,0 @@
-Update openjpa-integration/tck/pom.xml to allow for testing against the JPA 1.0b and 2.0 TCKs.

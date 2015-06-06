@@ -1,3 +1,0 @@
-org.apache.mahout.Version.main(String[])
-org.apache.mahout.Version.version()
-org.apache.mahout.Version.versionFromResource()

@@ -1,1 +1,0 @@
-Reported by Vasil Vangelovski on user@. Lines of the form "userID,itemID," are valid but cause an IllegalArgumentException when used with FileDataModel.

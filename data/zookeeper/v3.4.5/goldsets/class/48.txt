@@ -1,2 +1,0 @@
-org.apache.zookeeper.test.FLETest
-org.apache.zookeeper.test.FLETest.TestVote

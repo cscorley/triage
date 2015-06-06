@@ -1,2 +1,0 @@
-org.apache.zookeeper.test.SaslAuthFailTest
-org.apache.zookeeper.test.SaslAuthTest

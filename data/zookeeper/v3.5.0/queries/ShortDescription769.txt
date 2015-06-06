@@ -1,1 +1,0 @@
-Leader can treat observers as quorum members

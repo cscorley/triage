@@ -1,3 +1,0 @@
-org.apache.tika.example.TranslatorExample.microsoftTranslateToFrench(String)
-org.apache.tika.example.TranslatorExampleTest.setUp()
-org.apache.tika.example.TranslatorExampleTest.testMicrosoftTranslateToFrench()

@@ -1,1 +1,0 @@
-Clear PDFont's resources after each file to prevent memory leak

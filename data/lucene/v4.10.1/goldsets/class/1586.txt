@@ -1,3 +1,0 @@
-org.apache.lucene.index.IndexReader
-org.apache.lucene.index.SegmentReader
-org.apache.lucene.index.TestIndexReader

@@ -1,1 +1,0 @@
-DataImportHandler tests leave dataimport.properties after finish

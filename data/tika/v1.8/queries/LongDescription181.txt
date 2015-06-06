@@ -1,3 +1,0 @@
-Maven seems to treat the latest available 1.0-SNAPSHOT version of the Retrotranslator plugin as more recent than the latest proper release 1.0-alpha-4. This is however not the case (it seems like the last published snapshot is from early 2007), and the Tika build will fail if you happen to have that snapshot version in your repository.
-
-We can fix that by explicitly specifying the version 1.0-alpha-4 of the plugin.

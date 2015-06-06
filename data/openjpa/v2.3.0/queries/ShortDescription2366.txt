@@ -1,1 +1,0 @@
-provide option to exclude schema name from generated @Table annotation for generated entities

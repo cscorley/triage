@@ -1,6 +1,0 @@
-Some unit test in regards to i18n. I didn't create a separate i18n.rb cos it is nothing but testing new "characters". Please let me know if you would like to have it as a separate file.. I also added some functional test i.e. i18n_full_cycle_test. 
-
-This is my first patch  I am sure I have made mistake so please do come back with things that you would like me to change!
-
-Regards
-

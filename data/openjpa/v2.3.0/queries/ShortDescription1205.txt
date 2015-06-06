@@ -1,1 +1,0 @@
-Cannot retrieve Map<PersistenceCapable, PersistenceCapable> fields when DataCache is on

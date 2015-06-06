@@ -1,3 +1,0 @@
-Installing Net::ZooKeeper from cpan or the zookeeper distribution tarballs will always fail due to not finding c-client header files.  In conjunction with ZOOKEEPER-1033 update perl bindings to look for c-client header files in INCDIR/zookeeper/
-
-a.k.a. make installs of Net::ZooKeeper via cpan/cpanm/whatever just work, assuming you've already got the zookeeper c client installed.

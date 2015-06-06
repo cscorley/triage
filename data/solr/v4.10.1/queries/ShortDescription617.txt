@@ -1,1 +1,0 @@
-Allow configurable deletion policy

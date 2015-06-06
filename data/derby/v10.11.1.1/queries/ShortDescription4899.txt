@@ -1,1 +1,0 @@
-Refactor access to primary structures in AlterTableConstantAction

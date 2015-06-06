@@ -1,1 +1,0 @@
-Pig.compileFromFile in embedded python fails when pig script starts with a comment

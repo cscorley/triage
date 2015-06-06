@@ -1,2 +1,0 @@
-org.apache.solr.analysis.EdgeNGramFilterFactory
-org.apache.solr.analysis.NGramFilterFactory

@@ -1,1 +1,0 @@
-Add subset method to BitVector

@@ -1,2 +1,0 @@
-Catalina Wei <fancy@apache.org>
-Fay Wang <faywang@apache.org>

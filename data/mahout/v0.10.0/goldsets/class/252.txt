@@ -1,2 +1,0 @@
-org.apache.mahout.math.map.AbstractMap
-org.apache.mahout.math.set.AbstractSet

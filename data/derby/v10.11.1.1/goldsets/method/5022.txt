@@ -1,2 +1,0 @@
-org.apache.derby.iapi.services.io.FormatableBitSet.equals(FormatableBitSet)
-org.apache.derby.iapi.services.io.FormatableBitSet.equals(Object)

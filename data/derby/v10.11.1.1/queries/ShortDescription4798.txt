@@ -1,1 +1,0 @@
-NPE in nested outer join

@@ -1,1 +1,0 @@
-Vertex Location Hint api update after TEZ-1041

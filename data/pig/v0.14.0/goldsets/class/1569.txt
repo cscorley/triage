@@ -1,3 +1,0 @@
-org.apache.pig.Main
-org.apache.pig.test.TestPigRunner
-org.apache.pig.tools.pigstats.ScriptState

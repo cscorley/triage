@@ -1,3 +1,0 @@
-org.apache.tika.detect.ContainerAwareDetector
-org.apache.tika.detect.TestContainerAwareDetector
-org.apache.tika.detect.ZipContainerDetector

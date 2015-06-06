@@ -1,1 +1,0 @@
-Update the release process to use maven plugins

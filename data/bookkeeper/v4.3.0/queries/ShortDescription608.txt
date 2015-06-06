@@ -1,1 +1,0 @@
-Make SyncThread a reusable component

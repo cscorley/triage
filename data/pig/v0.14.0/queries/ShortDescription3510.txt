@@ -1,1 +1,0 @@
-New filter extractor fails with more than one filter statement

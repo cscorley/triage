@@ -1,3 +1,0 @@
-org.apache.tika.TestParsers.getFileResource(String)
-org.apache.tika.TestParsers.getResourceAsFile(String)
-org.apache.tika.TestParsers.getResourceAsStream(String)

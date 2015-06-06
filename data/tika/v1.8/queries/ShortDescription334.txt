@@ -1,1 +1,0 @@
-HtmlParser should use CharsetDetector whenever no charset is specified via meta http-equiv tag

@@ -1,1 +1,0 @@
-OutOfMemory runs in container environment in a long stress run

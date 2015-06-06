@@ -1,1 +1,0 @@
-writeSQLCAGRP() should use byte[] constants instead of Strings where feasible

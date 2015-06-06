@@ -1,1 +1,0 @@
-Zookeeper systest is missing Junit Classes 

@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.perf.StartupExistingDBTest
-org.apache.derbyTesting.functionTests.tests.perf.StartupNewDBTest
-org.apache.derbyTesting.functionTests.util.JarUtil

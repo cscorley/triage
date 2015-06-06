@@ -1,1 +1,0 @@
-Implement not implemented methods Blob.getBinaryStream(long pos, long length) and Clob. getCharacterStream(long pos, long length) in the Network Client

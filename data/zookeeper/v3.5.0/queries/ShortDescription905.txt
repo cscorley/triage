@@ -1,1 +1,0 @@
-enhance zkServer.sh for easier zookeeper automation-izing

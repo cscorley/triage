@@ -1,1 +1,0 @@
-Specifying an incorrect optimizer property (constraint=null) gives NullPointerException

@@ -1,1 +1,0 @@
-Make JUnit tests run the fixtures in a deterministic order.

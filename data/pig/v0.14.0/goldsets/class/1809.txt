@@ -1,2 +1,0 @@
-org.apache.pig.builtin.TOMAP
-org.apache.pig.test.TestBuiltin

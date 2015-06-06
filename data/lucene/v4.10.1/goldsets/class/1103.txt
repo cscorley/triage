@@ -1,3 +1,0 @@
-org.apache.lucene.wikipedia.analysis.WikipediaTokenizer
-org.apache.lucene.wikipedia.analysis.WikipediaTokenizerImpl
-org.apache.lucene.wikipedia.analysis.WikipediaTokenizerTest

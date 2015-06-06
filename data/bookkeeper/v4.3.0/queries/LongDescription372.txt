@@ -1,1 +1,0 @@
-Created a patch to check service name in start/stop script mentioned in BOOKKEEPER-296.

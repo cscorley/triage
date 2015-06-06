@@ -1,3 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapReduce
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapReduce.Reduce
-org.apache.pig.Main

@@ -1,1 +1,0 @@
-org.apache.derbyTesting.functionTests.suites.All is extremely CPU intensive since ~svn 507489

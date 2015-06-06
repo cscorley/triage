@@ -1,1 +1,0 @@
-Add guava to the notice file for binary packages.

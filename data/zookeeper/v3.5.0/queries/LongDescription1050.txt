@@ -1,7 +1,0 @@
-
-	zooInspector-dev.sh uses DOS line endings.  Dash at least chokes on this.
-	zooInspector.sh has an errant ; in the classpath.
-
-
-
-Also there really isn't a reason to hard code the zookeeper version needed in lib. Just use a glob.

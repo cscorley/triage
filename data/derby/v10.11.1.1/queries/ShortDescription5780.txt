@@ -1,1 +1,0 @@
-identity column performance has degredated

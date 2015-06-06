@@ -1,2 +1,0 @@
-See ZOOKEEPER-152, the docs should be updated to reflect that AuthFLE is no longer supported. It would be a good idea to take
-this opportunity to review the election docs in general and make sure they are up to date.

@@ -1,1 +1,0 @@
-junit test jdbcapi/_Suite fails with wctme5.7_foundation (j9 -jcl:foun) with NoClassDefFoundError: javax.sql.PooledConnection

@@ -1,1 +1,0 @@
-Allow functions to return BOOLEAN values

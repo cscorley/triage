@@ -1,1 +1,0 @@
-Enable controlling of PDFBOX's setSuppressDuplicateOverlappingText from PDFParser

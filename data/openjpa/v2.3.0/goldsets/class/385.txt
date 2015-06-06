@@ -1,2 +1,0 @@
-org.apache.openjpa.lib.meta.ClassAnnotationMetaDataFilter
-org.apache.openjpa.persistence.PersistenceMetaDataFactory

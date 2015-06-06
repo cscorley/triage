@@ -1,1 +1,0 @@
-AssertFailure when selecting rows from a table with CHARACTER and VARCHAR columns

@@ -1,1 +1,0 @@
-Streaming should provide conf settings in the environment

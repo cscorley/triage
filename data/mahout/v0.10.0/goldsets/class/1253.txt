@@ -1,3 +1,0 @@
-org.apache.mahout.clustering.streaming.tools.ClusterQualitySummarizer
-org.apache.mahout.clustering.streaming.tools.IOUtils
-org.apache.mahout.clustering.streaming.tools.ResplitSequenceFiles

@@ -1,2 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.lang.CurrentSchemaTest
-org.apache.derbyTesting.functionTests.tests.lang._Suite

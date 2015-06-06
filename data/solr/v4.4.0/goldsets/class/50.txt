@@ -1,2 +1,0 @@
-org.apache.solr.spelling.SpellCheckCollator
-org.apache.solr.spelling.WordBreakSolrSpellCheckerTest

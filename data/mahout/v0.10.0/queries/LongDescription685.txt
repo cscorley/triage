@@ -1,3 +1,0 @@
-This is a bit of an omnibus to keep track of sorting out release problems.
-
-The first one is that the release profile suppresses tests, so the test jar doesn't get built, so the build fails.

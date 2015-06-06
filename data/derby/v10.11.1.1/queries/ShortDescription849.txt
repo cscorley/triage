@@ -1,1 +1,0 @@
-Internationalize Reply to Typdef in org.apache.derby.client.net

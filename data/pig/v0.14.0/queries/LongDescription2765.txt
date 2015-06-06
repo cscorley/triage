@@ -1,1 +1,0 @@
-Implement RollupDimensions UDF which performs aggregation from most detailed level of dimensions to the most general level (grand total) in hierarchical order. Provide support for ROLLUP clause in CUBE operator. 

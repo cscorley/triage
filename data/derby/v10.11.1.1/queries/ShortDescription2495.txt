@@ -1,1 +1,0 @@
-Create framework for calling locator related stored procedures from client

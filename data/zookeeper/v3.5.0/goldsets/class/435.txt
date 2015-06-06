@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.auth.DigestAuthenticationProvider
-org.apache.zookeeper.test.AuthTest

@@ -1,3 +1,0 @@
-org.apache.pig.parser.PigMacro
-org.apache.pig.parser.QueryParserDriver
-org.apache.pig.test.TestMacroExpansion

@@ -1,2 +1,0 @@
-David Meikle <dmeikle@apache.org>
-Hong-Thai Nguyen <thaichat04@apache.org>

@@ -1,1 +1,0 @@
-Uncontrolled number of threads in bookkeeper

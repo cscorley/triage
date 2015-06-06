@@ -1,1 +1,0 @@
-Failures in sysinfo and sysinfo_withproperties induced by classpath wiring

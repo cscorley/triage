@@ -1,1 +1,0 @@
-TestGrunt still has some commands that depend on cygwin, Namely rm -rf.  This should be rd /S on Windows.  It needs a hook and variable abstraction for os commands like this.

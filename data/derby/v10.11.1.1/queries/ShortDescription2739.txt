@@ -1,1 +1,0 @@
-Use DOM interfaces to implement XML operators

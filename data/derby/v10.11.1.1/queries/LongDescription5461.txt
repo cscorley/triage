@@ -1,4 +1,0 @@
-On my windows system, ant release results in a release.properties file with inconsistent line endings. While that may be a problem in itself, what's a bigger issue is that the build process attempts to issue svn commit, and when that fails, goes on merrily, resulting in a build with a revision number with 'M' because there uncommitted changes in the tree.
-
-There could be other issues resulting in a failed svn commit.
-This could be improved if the build process would halt on failure and e.g. prompt for 'a(bort) /c(continue)'. This pause would give the release manager a chance to evaluate in another window/shell what's wrong with svn commit and possibly resolve manually (including manual svn commit) and continue, or start over.

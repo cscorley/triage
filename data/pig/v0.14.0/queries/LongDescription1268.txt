@@ -1,1 +1,0 @@
-Currently Pig checkins don't run any Zebra test to make sure that Zebra is not broken. To make this happen, Zebra build needs a test target that only run pig-related tests. With this, Pig committers need to do "ant pig" for Zebra as part of the before-checkin sanity check. Ideally, this target should be triggered as part of Hudson.

@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.kernel.PessimisticLockManager
-org.apache.openjpa.jdbc.sql.SelectImpl
-org.apache.openjpa.kernel.VersionLockManager

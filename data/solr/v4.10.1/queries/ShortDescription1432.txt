@@ -1,1 +1,0 @@
-FunctionQueries aren't correctly weighted

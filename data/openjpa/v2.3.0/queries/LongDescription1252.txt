@@ -1,1 +1,0 @@
-Add a Derby Network Server test profile, allow Derby version to be changed on the cmdline, and cleanup some formatting/comments.

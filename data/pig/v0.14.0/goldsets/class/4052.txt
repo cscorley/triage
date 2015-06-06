@@ -1,3 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.TestJobControlSleep
-org.apache.pig.test.TestInvokerSpeed
-org.apache.pig.test.TestInvokerSpeed.Log

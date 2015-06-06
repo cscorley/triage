@@ -1,1 +1,0 @@
-This issue is creates for converting jdbcapi/statementJdbc20.java to JUnit.

@@ -1,1 +1,0 @@
-To easily deploy Tika and especially the Tika parsers, it would be convenient to have an almost complete bundle consisting of Tika Core, Tika Parsers as well as the most important parser dependencies. Any remaining dependencies not included with the bundle should be declared as optional import to not fail bundle resolution if one or the other (or all) import(s) is missing.

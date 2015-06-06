@@ -1,1 +1,0 @@
-zkpython: invalid data in GetData for empty node

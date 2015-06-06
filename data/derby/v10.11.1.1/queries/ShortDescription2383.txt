@@ -1,1 +1,0 @@
-ReuseFactory should use the constants in java.lang.Boolean

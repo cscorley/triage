@@ -1,5 +1,0 @@
-org.apache.openjpa.conf.Compatibility.getOverrideContextClassloader()
-org.apache.openjpa.conf.Compatibility.setCheckDatabaseForCascadePersistToDetachedEntity(boolean)
-org.apache.openjpa.conf.Compatibility.setOverrideContextClassloader(boolean)
-org.apache.openjpa.lib.meta.XMLMetaDataParser.parseNewResource(Reader,String)
-org.apache.openjpa.persistence.XMLPersistenceMetaDataParser.setRepository(MetaDataRepository)

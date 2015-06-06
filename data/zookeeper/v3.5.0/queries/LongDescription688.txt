@@ -1,7 +1,0 @@
-We are not clear enough (and the diagram we do have seems misleading) on when session expirations are generated. In particular the fact that you only get expirations when the client is connected to the cluster, not when disconnected.
-
-we need to detail:
-
-1) when do you get expiration
-2) what is the sequence of events that the watcher sees, from disco state, to getting the expiration (say the expiration happens when the client is disco, what do you see in the watcher while you are getting reconnected)
-3) we need to give some examples of how to test this. We should be explicit that "pulling the network cable" on the client will not show expiration since the cliient will not be reconnected.

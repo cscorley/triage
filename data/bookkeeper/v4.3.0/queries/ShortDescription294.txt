@@ -1,1 +1,0 @@
-Not able to start the bookkeeper before the ZK session timeout.

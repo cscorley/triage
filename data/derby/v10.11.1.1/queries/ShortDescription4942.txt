@@ -1,1 +1,0 @@
-Describe how to run compatibility tests from JUnit in README

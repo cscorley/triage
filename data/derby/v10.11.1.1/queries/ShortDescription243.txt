@@ -1,1 +1,0 @@
-connection toString should uniquely identify the connection

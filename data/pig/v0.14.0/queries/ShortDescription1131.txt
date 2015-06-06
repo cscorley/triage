@@ -1,1 +1,0 @@
-Pig simple join does not work when it contains empty lines

@@ -1,1 +1,0 @@
-It would be nice to have some n-gram-capable tokenizers in contrib/analyzers.  Patch coming shortly.

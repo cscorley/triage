@@ -1,2 +1,0 @@
-org.apache.solr.client.solrj.embedded.TestSolrProperties
-org.apache.solr.handler.admin.CoreAdminHandler

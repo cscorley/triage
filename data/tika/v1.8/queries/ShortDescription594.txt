@@ -1,1 +1,0 @@
-Upgrade Tika to pdfbox 1.6.0

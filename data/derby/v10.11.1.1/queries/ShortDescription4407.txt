@@ -1,1 +1,0 @@
-StringIndexOutOfBoundsException in ij when result has no columns

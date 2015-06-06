@@ -1,3 +1,0 @@
-org.apache.tika.parser.microsoft.WordExtractor.handleCharacterRun(CharacterRun,boolean,XHTMLContentHandler)
-org.apache.tika.parser.microsoft.WordExtractor.handlePictureCharacterRun(CharacterRun,Picture,PicturesSource,XHTMLContentHandler)
-org.apache.tika.parser.microsoft.WordExtractor.isRendered(CharacterRun)

@@ -1,1 +1,0 @@
-OpenOffice parser: master footer text isn't extracted

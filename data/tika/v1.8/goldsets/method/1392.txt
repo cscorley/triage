@@ -1,3 +1,0 @@
-org.apache.tika.example.LanguageIdentifierExample.identifyLanguage(String)
-org.apache.tika.example.LanguageIdentifierExampleTest.setUp()
-org.apache.tika.example.LanguageIdentifierExampleTest.testIdentifyLanguage()

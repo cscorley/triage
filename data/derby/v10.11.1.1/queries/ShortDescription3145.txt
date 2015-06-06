@@ -1,1 +1,0 @@
-ComparisonFailure in synonym(org.apache.derbyTesting.functionTests.tests.lang.LangScripts)

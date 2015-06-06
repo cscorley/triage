@@ -1,1 +1,0 @@
-getWrappedSplit is incorrectly returning the first split instead of the current split.

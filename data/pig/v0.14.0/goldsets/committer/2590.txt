@@ -1,2 +1,0 @@
-Jianyong Dai <daijy@apache.org>
-Thejas Madhavan Nair <thejas@apache.org>

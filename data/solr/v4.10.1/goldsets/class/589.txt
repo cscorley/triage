@@ -1,3 +1,0 @@
-org.apache.solr.search.DismaxQParser
-org.apache.solr.util.SolrPluginUtils
-org.apache.solr.util.SolrPluginUtilsTest

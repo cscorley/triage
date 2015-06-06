@@ -1,6 +1,0 @@
-org.apache.lucene.index.DirectoryReader.termDocs()
-org.apache.lucene.index.DirectoryReader.termDocs(Term)
-org.apache.lucene.index.DirectoryReader.termPositions()
-org.apache.lucene.index.DirectoryReader.terms()
-org.apache.lucene.index.DirectoryReader.terms(Term)
-org.apache.lucene.search.regex.TestRegexQuery.testMatchAll()

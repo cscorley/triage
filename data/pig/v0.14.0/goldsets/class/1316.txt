@@ -1,4 +1,0 @@
-org.apache.pig.builtin.TextLoader
-org.apache.pig.bzip2r.Bzip2TextInputFormat
-org.apache.pig.test.TestBuiltin
-org.apache.pig.test.TestBZip

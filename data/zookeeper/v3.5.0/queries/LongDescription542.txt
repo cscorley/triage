@@ -1,7 +1,0 @@
-Due to a mismatch between zookeeper_interest() and zookeeper_process(), when the zookeeper server is unresponsive the client can spin when reconnecting to the server.
-
-In particular, zookeeper_interest() adds ZOOKEEPER_WRITE whenever there is data to be sent, but flush_send_queue() only writes the data if the state is ZOO_CONNECTED_STATE.  When in ZOO_ASSOCIATING_STATE, this results in spinning.
-
-This probably doesn't affect production, but I had a runaway process in a development deployment that caused performance issues on the node.  This is easy to reproduce in a single node environment by doing a kill -STOP on the server and waiting for the session timeout.
-
-Patch to be added.

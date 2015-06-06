@@ -1,4 +1,0 @@
-org.apache.openjpa.lib.conf.ConfigurationImpl
-org.apache.openjpa.persistence.generationtype.CustomSeq
-org.apache.openjpa.persistence.generationtype.GeneratedValues
-org.apache.openjpa.persistence.generationtype.TestGeneratedValues

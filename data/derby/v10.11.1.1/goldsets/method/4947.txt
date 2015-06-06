@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.depend.BasicDependencyManager.clearProviderDependency(UUID,Dependency)
-org.apache.derby.impl.sql.depend.BasicDependencyManager.coreInvalidateFor(Provider,int,LanguageConnectionContext)
-org.apache.derby.impl.sql.depend.BasicDependencyManager.getDependents(Provider)

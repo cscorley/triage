@@ -1,1 +1,0 @@
-Add ability for WordDelimiterFilter to ignore case changes 

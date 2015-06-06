@@ -1,2 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLimit
-org.apache.pig.test.TestLimitVariable

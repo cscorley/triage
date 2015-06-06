@@ -1,1 +1,0 @@
-Verify that we raise SQLException when calling methods on closed java.sql objects

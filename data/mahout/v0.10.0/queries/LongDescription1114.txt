@@ -1,1 +1,0 @@
-Cloning a Centroid returns a WeightedVector.

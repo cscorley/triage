@@ -1,1 +1,0 @@
-Support instance level distribution policy for named cache partitions

@@ -1,1 +1,0 @@
-Ivy resolvers in pig don't have consistent chaining and don't have a kitchen sink option for novices

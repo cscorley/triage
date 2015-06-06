@@ -1,3 +1,0 @@
-Andreas Korneliussen <andreask@apache.org>
-David Van Couvering <davidvc@apache.org>
-Samuel Andrew McIntyre <fuzzylogic@apache.org>

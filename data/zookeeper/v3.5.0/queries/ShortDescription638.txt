@@ -1,1 +1,0 @@
-upgrade ivy to 2.1.0 final from 2.1.0 release candidate

@@ -1,1 +1,0 @@
-Handle databaseProductVersion string from newer jcc driver for DB2 ISeries

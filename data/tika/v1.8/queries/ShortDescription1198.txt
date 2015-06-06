@@ -1,1 +1,0 @@
-Consider optionally utilizing CXF JAX-RS Attachment support

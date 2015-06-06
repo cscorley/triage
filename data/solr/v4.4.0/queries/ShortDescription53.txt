@@ -1,1 +1,0 @@
-Allow symbolic links and rsync over ssh in snap scripts

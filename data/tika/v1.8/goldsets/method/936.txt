@@ -1,3 +1,0 @@
-org.apache.tika.parser.pkg.RarParser.parse(InputStream,ContentHandler,Metadata,ParseContext)
-org.apache.tika.parser.pkg.ZipParserTest.testCustomEncoding()
-org.apache.tika.parser.pkg.ZipParserTest.testPlaceholders()

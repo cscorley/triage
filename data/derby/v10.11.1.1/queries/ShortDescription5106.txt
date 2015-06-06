@@ -1,1 +1,0 @@
-Lacking cleanup in CheckConstraintTest.testJira4282()

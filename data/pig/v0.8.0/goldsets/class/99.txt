@@ -1,2 +1,0 @@
-org.apache.pig.test.TestBZip
-org.apache.tools.bzip2r.CBZip2InputStream

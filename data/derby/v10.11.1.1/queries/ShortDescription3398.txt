@@ -1,1 +1,0 @@
-Support min/max values for Java types float/double in real/double columns

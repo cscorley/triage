@@ -1,1 +1,0 @@
-Rename build*.sh examples to be more indicative of what they actually do, i.e. classify-20newsgroups.sh

@@ -1,6 +1,0 @@
-Daniel John Debrunner <djd@apache.org>
-David Van Couvering <davidvc@apache.org>
-Jean T. Anderson <jta@apache.org>
-Myrna van Lunteren <myrnavl@apache.org>
-Richard N. Hillegas <rhillegas@apache.org>
-Samuel Andrew McIntyre <fuzzylogic@apache.org>

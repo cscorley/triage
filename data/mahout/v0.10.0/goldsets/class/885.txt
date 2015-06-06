@@ -1,3 +1,0 @@
-org.apache.mahout.common.Parameters
-org.apache.mahout.fpm.pfpgrowth.FPGrowthDriver
-org.apache.mahout.fpm.pfpgrowth.PFPGrowth

@@ -1,1 +1,0 @@
-Pigmix run script has compilation error

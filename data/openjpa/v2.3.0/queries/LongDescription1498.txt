@@ -1,1 +1,0 @@
-A few minor issues were found with some of the localizer.properties files which may make them hard to parse by some translation tools. These are generally minor things like single quotes ('should be '') and trailing whitespace. 

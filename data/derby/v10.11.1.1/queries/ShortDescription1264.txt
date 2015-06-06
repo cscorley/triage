@@ -1,1 +1,0 @@
-importExportThruIJ.sql supportfiles sqlAnywhere* need to be copied in fixed encoding

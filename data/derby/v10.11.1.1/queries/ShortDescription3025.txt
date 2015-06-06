@@ -1,1 +1,0 @@
-NPE when connecting to database with securityMechanism=8

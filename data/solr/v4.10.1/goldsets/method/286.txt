@@ -1,2 +1,0 @@
-org.apache.solr.common.util.ContentStreamBase.StringStream.getStream()
-org.apache.solr.common.util.ContentStreamBase.StringStream.StringStream(String)

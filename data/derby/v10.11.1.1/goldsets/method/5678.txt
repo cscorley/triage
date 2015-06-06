@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.i18n.LocalizedDisplayScriptTest.getSuite()
-org.apache.derbyTesting.functionTests.tests.i18n.LocalizedDisplayScriptTest.LocalizedDisplayScriptTest(String)
-org.apache.derbyTesting.functionTests.tests.i18n.LocalizedDisplayScriptTest.suite()

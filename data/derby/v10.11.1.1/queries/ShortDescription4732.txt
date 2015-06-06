@@ -1,1 +1,0 @@
-Release system resources in CanonTestCase thoroughly

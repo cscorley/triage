@@ -1,1 +1,0 @@
-Derby does not follow the SQL Standard when trying to map SQL routines to Java methods.

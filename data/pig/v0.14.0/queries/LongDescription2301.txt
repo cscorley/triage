@@ -1,5 +1,0 @@
-There are several more cleanup need to go into 0.9.1:
-1. Cleanup bin/pig
-2. Use "HADOOP_PREFIX" in addition to "HADOOP_HOME" to avoid deprecate warning
-3. ant default target should build both "pig.jar" and "pig-withouthadoop.jar"
-4. add jython.jar into classpath in develop setup

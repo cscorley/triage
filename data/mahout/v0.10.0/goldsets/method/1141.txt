@@ -1,1 +1,0 @@
-org.apache.mahout.clustering.lda.cvb.InMemoryCollapsedVariationalBayes0.main2(String[],Configuration)

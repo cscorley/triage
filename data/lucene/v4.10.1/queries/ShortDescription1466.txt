@@ -1,1 +1,0 @@
-CharFilter - normalize characters before tokenizer

@@ -1,1 +1,0 @@
-ForkParser is unfriendly to code that prints things to its output

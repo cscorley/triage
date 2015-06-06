@@ -1,1 +1,0 @@
-Remove all graph algorithms with the exception of PageRank

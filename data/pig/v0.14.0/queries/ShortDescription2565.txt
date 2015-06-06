@@ -1,1 +1,0 @@
-Support IMPORT for macros stored in S3 Buckets

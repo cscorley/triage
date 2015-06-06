@@ -1,3 +1,0 @@
-org.apache.lucene.benchmark.byTask.feeds.EnwikiQueryMaker.createQueries(List,Analyzer)
-org.apache.lucene.benchmark.byTask.feeds.EnwikiQueryMaker.getPrebuiltQueries(String)
-org.apache.lucene.benchmark.byTask.feeds.EnwikiQueryMaker.prepareQueries()

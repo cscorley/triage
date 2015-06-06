@@ -1,2 +1,0 @@
-org.apache.mahout.math.SingularValueDecomposition
-org.apache.mahout.math.TestSingularValueDecomposition

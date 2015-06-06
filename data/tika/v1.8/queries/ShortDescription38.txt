@@ -1,1 +1,0 @@
-TXTParser appends a space to the text found in the file.

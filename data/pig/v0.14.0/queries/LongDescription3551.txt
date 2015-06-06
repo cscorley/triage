@@ -1,1 +1,0 @@
-The notes on the map constructor under "Type Construction Operators" read "Use to construct a bag..." instead of "Use to construct a map.."

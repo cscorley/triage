@@ -1,1 +1,0 @@
-The emma-instrumentation target instruments all the product jars, except derbyrun.jar. It should instrument them all.

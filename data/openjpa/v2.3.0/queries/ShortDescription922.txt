@@ -1,1 +1,0 @@
-setByteArrayInputStream being used in stead of setBytes

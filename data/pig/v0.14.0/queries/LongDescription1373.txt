@@ -1,1 +1,0 @@
-Our build process constructs a jdiff between APIs for different versions.  But we don't post the results of that to the website when we deploy the docs.  We should, in order to help users understand changes across versions of pig.

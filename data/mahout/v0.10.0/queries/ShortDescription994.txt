@@ -1,1 +1,0 @@
-mahout script shouldn't rely on HADOOP_HOME since that was deprecated in all major Hadoop branches

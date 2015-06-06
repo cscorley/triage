@@ -1,1 +1,0 @@
-Convert jdbc4/TestConnectionMethods.java to JUnit

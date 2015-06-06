@@ -1,1 +1,0 @@
-[PATCH] fix NPE when running scripts stored on hdfs://

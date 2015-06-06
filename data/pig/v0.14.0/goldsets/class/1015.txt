@@ -1,2 +1,0 @@
-org.apache.pig.piggybank.evaluation.util.apachelogparser.DateExtractor
-org.apache.pig.piggybank.test.evaluation.util.apachelogparser.TestDateExtractor

@@ -1,1 +1,0 @@
-Surefire 2.4 compilation issues

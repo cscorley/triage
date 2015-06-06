@@ -1,1 +1,0 @@
-Example from book no longer works - prepare20newsgroups broken with Lucene upgrade

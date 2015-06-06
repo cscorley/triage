@@ -1,1 +1,0 @@
-DataTypeDescriptor.isBinaryType() return false for Types.BLOB

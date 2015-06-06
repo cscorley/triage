@@ -1,1 +1,0 @@
-LOSort isEqual method

@@ -1,3 +1,0 @@
-Fay Wang <faywang@apache.org>
-Jeremy Bauer <jrbauer@apache.org>
-Milosz Tylenda <mtylenda@apache.org>

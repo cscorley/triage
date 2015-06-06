@@ -1,1 +1,0 @@
-Internationalize messages in SectionManager to XaException in org.apache.derby.client.am

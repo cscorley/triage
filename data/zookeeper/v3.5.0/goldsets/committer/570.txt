@@ -1,2 +1,0 @@
-Benjamin Reed <breed@apache.org>
-Patrick D. Hunt <phunt@apache.org>

@@ -1,5 +1,0 @@
-There are inconsistent links to "cont.html#Parameter-Sub" throughout the documentation. For some "Parameter-Sub" is all lowercase, some have it with the case shown here. 
-
-At least for Chrome, this results in a broken link, where the browser won't scroll to the correct section in the page.
-
-The attached patch updates all to use the "Parameter-Sub" casing.

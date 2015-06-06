@@ -1,4 +1,0 @@
-org.apache.mahout.cf.taste.impl.similarity.precompute.MultithreadedBatchItemSimilarities
-org.apache.mahout.cf.taste.impl.similarity.precompute.MultithreadedBatchItemSimilarities.Output
-org.apache.mahout.cf.taste.impl.similarity.precompute.MultithreadedBatchItemSimilarities.SimilarItemsWorker
-org.apache.mahout.cf.taste.impl.similarity.precompute.MultithreadedBatchItemSimilaritiesTest

@@ -1,1 +1,0 @@
-Pig tests do not appear to have a logger attached

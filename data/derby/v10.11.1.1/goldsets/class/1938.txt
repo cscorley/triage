@@ -1,3 +1,0 @@
-org.apache.derby.client.am.PreparedStatement
-org.apache.derby.impl.jdbc.EmbedPreparedStatement
-org.apache.derbyTesting.functionTests.tests.jdbcapi.ParameterMappingTest

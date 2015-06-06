@@ -1,1 +1,0 @@
-Refactor TopItems to use Lucene's PriorityQueue and remove excessive sorting

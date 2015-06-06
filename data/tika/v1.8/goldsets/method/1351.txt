@@ -1,3 +1,0 @@
-org.apache.tika.parser.AutoDetectParser.parse(InputStream,ContentHandler,Metadata,ParseContext)
-org.apache.tika.parser.pdf.PDFParserTest.testPdfParsing()
-org.apache.tika.parser.pdf.PDFParserTest.testPdfParsingMetadataOnly()

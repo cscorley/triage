@@ -1,1 +1,0 @@
-Add Streaming K-Means clustering algorithm to examples/bin/cluster-reuters.sh

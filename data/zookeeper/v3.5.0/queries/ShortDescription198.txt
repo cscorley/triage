@@ -1,1 +1,0 @@
-apache license header missing from FollowerSyncRequest.java

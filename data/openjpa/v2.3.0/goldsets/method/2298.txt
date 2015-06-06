@@ -1,3 +1,0 @@
-org.apache.openjpa.enhance.PCEnhancer.addCopyKeyFieldsToObjectIdMethod(boolean)
-org.apache.openjpa.enhance.PCEnhancer.addNewInstanceMethod(boolean)
-org.apache.openjpa.enhance.PCEnhancer.addNewObjectIdInstanceMethod(boolean)

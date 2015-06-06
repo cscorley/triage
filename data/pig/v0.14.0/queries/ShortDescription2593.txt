@@ -1,1 +1,0 @@
-Filter by a boolean value does not work

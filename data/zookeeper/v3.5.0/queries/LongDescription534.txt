@@ -1,1 +1,0 @@
-The test target in contib/bookkeeper does not depend on jar target. So the ant test target gives compilation errors if the main is not compiled which can be prevented if it depends on jar. It can then check if main has been compiled or not and throw out a reasonable error.

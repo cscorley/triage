@@ -1,1 +1,0 @@
-Support Derby on J2ME/CDC/Foundation 1.1

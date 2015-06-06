@@ -1,1 +1,0 @@
-Inconsistency in JDBC autogen APIs between Connection.prepareStatement(...) and Statement.execute(...)

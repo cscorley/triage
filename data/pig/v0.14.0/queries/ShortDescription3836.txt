@@ -1,1 +1,0 @@
-Pig signature has has guava version dependency

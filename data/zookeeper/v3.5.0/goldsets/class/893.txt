@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.quorum.QuorumCnxManager
-org.apache.zookeeper.server.quorum.QuorumCnxManager.RecvWorker
-org.apache.zookeeper.test.CnxManagerTest

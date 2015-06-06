@@ -1,1 +1,0 @@
-Enable TestGroupConstParallel, TestJobSubmission, TestMergeJoin, TestNativeMapReduce, TestPigProgressReporting.

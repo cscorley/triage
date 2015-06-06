@@ -1,1 +1,0 @@
-In contrast, ResultSet#updateBigDecimal on a FLOAT or DOUBLE column gives the expected error on underflow. Cf. the attached repro program MissingUnderflowCheck.

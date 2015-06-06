@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.EntityManagerImpl.equals(Object)
-org.apache.openjpa.persistence.EntityManagerImpl.hashCode()
-org.apache.openjpa.persistence.EntityManagerImpl.processArgument(int,Object,OpenJPAStateManager)

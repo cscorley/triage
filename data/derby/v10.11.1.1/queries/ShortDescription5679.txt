@@ -1,1 +1,0 @@
-Rolling back a transaction leads to an inconsistent state

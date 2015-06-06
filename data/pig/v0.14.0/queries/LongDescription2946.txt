@@ -1,1 +1,0 @@
-After adding these two commands "history" and "clear" to the Pig Grunt Shell, this is a basic user documentation.

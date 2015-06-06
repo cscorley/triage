@@ -1,1 +1,0 @@
-Change sysinfo to print to error log (derby.log) on boot of derby  if derby.stream.error.logSeverityLevel=0

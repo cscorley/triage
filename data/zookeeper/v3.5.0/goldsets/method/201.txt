@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.persistence.FileSnap.deserialize(DataTree,Map<Long,Integer>,Long,Integer,InputArchive)
-org.apache.zookeeper.server.persistence.FileTxnLog.FileTxnIterator.createInputArchive(File)
-org.apache.zookeeper.server.persistence.FileTxnLog.FileTxnIterator.inStreamCreated(InputArchive,FileInputStream)

@@ -1,3 +1,0 @@
-org.apache.pig.test.TestBuiltin.getInputType(String)
-org.apache.pig.test.TestBuiltin.setUp()
-org.apache.pig.test.TestBuiltin.testURIwithCurlyBrace()

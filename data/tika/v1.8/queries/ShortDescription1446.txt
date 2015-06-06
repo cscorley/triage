@@ -1,1 +1,0 @@
-CHM parser : wrong decompression of aligned blocks

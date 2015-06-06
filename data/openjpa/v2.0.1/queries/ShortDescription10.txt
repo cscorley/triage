@@ -1,1 +1,0 @@
-persistence unit name should be default diagnostic context for standard OpenJPA log impl

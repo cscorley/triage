@@ -1,1 +1,0 @@
-Generate the txt and blobs dynamically . So that the size of the jar file will get reduced. And no need of a seperate resource.jar file

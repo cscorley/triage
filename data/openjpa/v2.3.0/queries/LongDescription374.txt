@@ -1,3 +1,0 @@
-$ mvn package -Dtest=false
-attempts to enhance all the known Entity classes.
-It should not. 

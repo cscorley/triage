@@ -1,1 +1,0 @@
-Custom sequences specified via @SequenceGenerator must have parentheses at the end of the class name

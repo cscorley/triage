@@ -1,9 +1,0 @@
-Error message for 42Y32 refers com.ibm.db2j.aggregates.Aggregator is as next.
-
-> 42Y32 Aggregator class '<className>' for aggregate '<aggregateName>' on 
-> type <type> does not implement com.ibm.db2j.aggregates.Aggregator. 
-
-Reading org.apache.derby.impl.sql.compile.AggregateNode#checkAggregatorClassName, however, the current fully qualified name for the class is org.apache.derby.iapi.sql.execute.ExecAggregator.
-
-Same problem exists in reference manual also.
-http://db.apache.org/derby/docs/dev/ref/rrefexcept71493.html

@@ -1,2 +1,0 @@
-Catalina Wei <fancy@apache.org>
-Jeremy Bauer <jrbauer@apache.org>

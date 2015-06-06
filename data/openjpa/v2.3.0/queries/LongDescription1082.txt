@@ -1,1 +1,0 @@
-Support providing non-Default Bean Validation target groups via persistence.xml or createEMF properties Map

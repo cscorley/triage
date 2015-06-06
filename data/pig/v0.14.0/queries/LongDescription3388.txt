@@ -1,1 +1,0 @@
-Currently,scan operation with rowfilter has support for gt,lt,gte,etc. However no support for the regular expression.

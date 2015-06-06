@@ -1,1 +1,0 @@
-minor typos in ZooKeeper Programmer's Guide web page

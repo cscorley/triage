@@ -1,1 +1,0 @@
-ComparisonFailure in JUnit tests(lang.LangScripts) caused by 'WHERE' when 'where' expected.

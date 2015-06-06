@@ -1,3 +1,0 @@
-org.apache.pig.impl.io.InterStorage
-org.apache.pig.impl.io.TFileStorage
-org.apache.pig.test.TestTmpFileCompression

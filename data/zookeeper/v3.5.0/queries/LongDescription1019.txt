@@ -1,1 +1,0 @@
-The README.txt under contrib/fuse doesn't list boost under Development build libraries<

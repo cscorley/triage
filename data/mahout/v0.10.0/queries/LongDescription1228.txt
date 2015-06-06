@@ -1,1 +1,0 @@
-.gitignore unnecessarily has duplicate entries for ignoring eclipse IDE specific files and directories, as well as Maven build output directory. For distribution module Maven build output directory is not ignored.

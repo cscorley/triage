@@ -1,2 +1,0 @@
-org.apache.lucene.document.Field
-org.apache.lucene.document.TestDocument

@@ -1,5 +1,0 @@
-Currently Hedwig CPP client doesn't support SSL. 
-
-Example for boost::asio using SSL:
-
-http://www.boost.org/doc/libs/1_46_1/doc/html/boost_asio/example/ssl/client.cpp

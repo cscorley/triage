@@ -1,1 +1,0 @@
-Pig docs still mention hadoop-site.xml

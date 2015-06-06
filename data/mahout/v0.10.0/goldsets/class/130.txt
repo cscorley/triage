@@ -1,3 +1,0 @@
-org.apache.mahout.matrix.AbstractVector
-org.apache.mahout.matrix.Vector
-org.apache.mahout.matrix.VectorTest

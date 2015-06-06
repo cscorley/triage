@@ -1,1 +1,0 @@
-Javadoc for WatchedEvent not being generated

@@ -1,3 +1,0 @@
-With the sequence flag, ZooKeeper automatically appends a sequence number that is greater that any one previously appended to a child of "/election".
-
-greater that above should be greater than

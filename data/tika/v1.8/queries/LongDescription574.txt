@@ -1,2 +1,0 @@
-There's no recognizer for CP866 (DOS russian encoding) in tika yet.
-

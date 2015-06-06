@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.compile.GrantNode
-org.apache.derby.impl.sql.compile.PrivilegeNode
-org.apache.derby.impl.sql.compile.RevokeNode

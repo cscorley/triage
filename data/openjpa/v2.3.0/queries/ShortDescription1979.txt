@@ -1,1 +1,0 @@
-Regression for non-standard joins with constant column values 

@@ -1,1 +1,0 @@
-zk jmx code is calling printStackTrace when creating bean name (should not be)

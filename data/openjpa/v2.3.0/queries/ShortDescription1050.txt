@@ -1,1 +1,0 @@
-Use generic types and remove casts wherever applicable

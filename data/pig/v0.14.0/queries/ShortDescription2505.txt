@@ -1,1 +1,0 @@
-AvroStorage won't read any file not ending in .avro

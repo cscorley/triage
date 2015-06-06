@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.sql.SQLBuffer
-org.apache.openjpa.persistence.jdbc.sqlcache.OrderJPA
-org.apache.openjpa.persistence.jdbc.sqlcache.TestPreparedQueryCache

@@ -1,4 +1,0 @@
-There's small errors in "Getting Started". The attached patches fix the issue on trunk and branch-0.10.
-
-1.  "Use the FILTER operator to move all records" ->  "Use the FILTER operator to remove all records"
-2.  "hour, count00, count12" -> "ngram, count00, count12"

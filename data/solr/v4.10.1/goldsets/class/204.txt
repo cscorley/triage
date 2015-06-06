@@ -1,3 +1,0 @@
-org.apache.solr.search.QueryParsing
-org.apache.solr.servlet.SolrDispatchFilter
-org.apache.solr.servlet.SolrRequestParsers

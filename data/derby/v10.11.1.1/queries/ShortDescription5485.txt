@@ -1,1 +1,0 @@
-Simplify PropertySetter so that it is less brittle and easier to maintain.

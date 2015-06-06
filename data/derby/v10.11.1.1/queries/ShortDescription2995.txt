@@ -1,1 +1,0 @@
-convert lang/renameIndex.sql to JUnit

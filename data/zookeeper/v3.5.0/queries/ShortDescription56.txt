@@ -1,1 +1,0 @@
-Add clover support to build.xml

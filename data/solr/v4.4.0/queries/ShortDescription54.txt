@@ -1,1 +1,0 @@
-Invalid XML response returned when adding a  document with a field not declared in solrconfig.xml

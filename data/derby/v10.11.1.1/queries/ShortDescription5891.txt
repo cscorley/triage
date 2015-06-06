@@ -1,1 +1,0 @@
-The French translations of a couple engine messages need to have their single-quotes escaped.

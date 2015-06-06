@@ -1,1 +1,0 @@
-Removed Ease of Development API

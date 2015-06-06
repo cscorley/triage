@@ -1,1 +1,0 @@
-Add ZooKeeper version information to zkpython

@@ -1,1 +1,0 @@
-Getting NPE when trying to set derby.language.logStatementText property to true inside a junit suite.

@@ -1,1 +1,0 @@
-Released Maven artifacts need to be signed just like any other artifact.  

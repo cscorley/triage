@@ -1,1 +1,0 @@
-Move www.apache.org/openjpa/ns/orm to openjpa.apache.org/ns/orm

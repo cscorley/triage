@@ -1,4 +1,0 @@
-org.apache.derby.impl.load.Import
-org.apache.derby.impl.load.ImportAbstract
-org.apache.derbyTesting.functionTests.tests.tools.ImportExportProcedureTest
-org.apache.derbyTesting.junit.SupportFilesSetup

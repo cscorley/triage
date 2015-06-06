@@ -1,1 +1,0 @@
-JoinColumn annotation not allowed in conjunction with *ToMany annotation

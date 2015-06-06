@@ -1,1 +1,0 @@
-NPE in CBayesThetaNormalizerReducer when using HBase

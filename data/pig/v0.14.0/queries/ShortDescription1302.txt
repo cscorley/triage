@@ -1,1 +1,0 @@
-Include zebra's "pigtest" ant target as a part of pig's ant test target

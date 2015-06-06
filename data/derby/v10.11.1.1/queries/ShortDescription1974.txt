@@ -1,1 +1,0 @@
-Junit tests that require SQL authorization mode should use a different database to the default one.

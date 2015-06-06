@@ -1,2 +1,0 @@
-Koji Sekiguchi <koji@apache.org>
-Ryan McKinley <ryan@apache.org>

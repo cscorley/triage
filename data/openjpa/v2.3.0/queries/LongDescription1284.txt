@@ -1,3 +1,0 @@
-Discovered the Sun license header is not in the included persistence_1_0.xsd and orm_1_0.xsd files as provided by Sun at -
-http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd
-http://java.sun.com/xml/ns/persistence/orm_1_0.xsd

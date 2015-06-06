@@ -1,3 +1,0 @@
-org.apache.derby.impl.store.access.btree.BranchControlRow
-org.apache.derby.impl.store.access.btree.BTreeController
-org.apache.derby.impl.store.access.btree.LeafControlRow

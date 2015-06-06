@@ -1,3 +1,0 @@
-This is just another maintenance patch that addresses some of the nuisance warnings in checkstyle.
-
-I won't post a patch but rather will commit directly.

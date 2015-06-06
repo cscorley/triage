@@ -1,4 +1,0 @@
-Address several issues in e2e tests:
-1. Adding the capacity to test Pig installed by rpm (also involves configurable piggybank.jar)
-2. Remove hadoop23.res since it is no longer needed
-3. Remove hadoop2 specific error message "UdfException_[1-4]" since they are fixed by PIG-3360

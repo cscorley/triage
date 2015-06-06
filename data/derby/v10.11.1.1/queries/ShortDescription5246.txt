@@ -1,1 +1,0 @@
-Simplify bytecode generation for concatenation operator

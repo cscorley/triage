@@ -1,1 +1,0 @@
-Wrong syntax in identifier chain returned by SynonymAliasInfo.toString()

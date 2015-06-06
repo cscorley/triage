@@ -1,4 +1,0 @@
-Donald's fix to use the ianal plugin revealed a problem in the javadoc plugin. The javadoc plugin does not include elements from the 
-<resources> tags in pom.xml. The normal jar plugin and source plugin do include these resources.
-
-As a result we have no legal files in the javadoc jar and we're failing the ianal check. Quick browsing of the javadoc plugin mailing lists suggest a few workarounds for this problem which I'll test during the 1.2.1 release. After the release I'll migrate the changes to the other affected branches. 

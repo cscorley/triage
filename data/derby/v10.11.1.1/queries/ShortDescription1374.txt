@@ -1,1 +1,0 @@
-compatibility test fails with 'PROTOCOL Data Stream Syntax Error'

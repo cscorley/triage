@@ -1,1 +1,0 @@
-List of jar files in tools/java incorrect in BUILDING.txt

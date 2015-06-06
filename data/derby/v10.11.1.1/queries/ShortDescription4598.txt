@@ -1,1 +1,0 @@
-Print class loader used to boot and shutdown derby in derby.log 

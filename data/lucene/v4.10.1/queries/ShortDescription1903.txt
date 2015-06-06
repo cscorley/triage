@@ -1,1 +1,0 @@
-Incorrect ShingleFilter behavior when outputUnigrams == false

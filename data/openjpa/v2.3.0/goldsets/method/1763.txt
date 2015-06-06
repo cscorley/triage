@@ -1,3 +1,0 @@
-org.apache.openjpa.datacache.DataCacheManagerImpl.initialize(OpenJPAConfiguration,ObjectValue,ObjectValue)
-org.apache.openjpa.persistence.datacache.TestDataCacheBehavesIdentical.setUp()
-org.apache.openjpa.persistence.PersistenceProductDerivation.ConfigurationProviderImpl.setInto(Configuration)

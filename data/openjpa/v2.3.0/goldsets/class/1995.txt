@@ -1,3 +1,0 @@
-org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder
-org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder.ParsedJPQL
-org.apache.openjpa.persistence.jpql.functions.TestSetParameter

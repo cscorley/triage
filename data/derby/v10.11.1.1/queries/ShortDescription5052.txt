@@ -1,1 +1,0 @@
-[patch] Bad name collision causes non functional method

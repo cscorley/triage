@@ -1,7 +1,0 @@
-Pig Properties documentation reverses the precedence order with respect to the various options available.
-
-Currently it says: 
-"The following precedence order is supported: pig.properties > -D Pig property > -P properties file > set command. This means that if the same property is provided using the -D command line option as well as the -P command line option and a properties file, the value of the property in the properties file will take precedence."
-
-The precedence order is actually the other way around:
-pig.properties < -D Pig property < -P properties file < set command

@@ -1,3 +1,0 @@
-org.apache.openjpa.enhance.PCEnhancer
-org.apache.openjpa.persistence.detach.serializable.SerializableDetachedStateManager
-org.apache.openjpa.persistence.detach.serializable.TestSerializableDetachedStateManager

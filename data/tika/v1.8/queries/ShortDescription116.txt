@@ -1,1 +1,0 @@
-Streaming parser for OpenDocument files

@@ -1,2 +1,0 @@
-org.apache.pig.scripting.jython.JythonFunction
-org.apache.pig.test.TestScriptingLanguagePython

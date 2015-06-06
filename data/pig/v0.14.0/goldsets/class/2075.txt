@@ -1,3 +1,0 @@
-org.apache.pig.test.TestNewPlanPushUpFilter
-org.apache.pig.test.TestNewPlanPushUpFilter.MyFilterFunc
-org.apache.pig.test.TestNewPlanPushUpFilter.MyPlanOptimizer

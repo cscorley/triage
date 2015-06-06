@@ -1,1 +1,0 @@
-Bookkeeper API changes for initial Bookkeeper release

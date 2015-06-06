@@ -1,1 +1,0 @@
-Pig.jar doesn't work with hadoop-2.0.x

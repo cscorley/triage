@@ -1,1 +1,0 @@
-forupdate.sql , holdCursorIJ.sql ..etc are failing when run with 10.1 client againest trunk

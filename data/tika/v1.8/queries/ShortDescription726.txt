@@ -1,1 +1,0 @@
-Provide a way to distinguish generic parse error and parse error due to unknown/wrong decryption key

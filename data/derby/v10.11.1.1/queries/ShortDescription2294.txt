@@ -1,1 +1,0 @@
-Missing sql script: '/org/apache/derbyTesting/functionTests/tests/lang/altertableDropColumn.sql'

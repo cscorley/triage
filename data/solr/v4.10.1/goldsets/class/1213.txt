@@ -1,2 +1,0 @@
-org.apache.solr.core.CoreDescriptor
-org.apache.solr.core.SolrResourceLoader

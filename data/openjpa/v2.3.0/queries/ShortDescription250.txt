@@ -1,1 +1,0 @@
-Reduce synchronization bottlenecks in data cache, metadata repository, and lifecycle event manager

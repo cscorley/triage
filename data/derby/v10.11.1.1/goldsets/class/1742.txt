@@ -1,2 +1,0 @@
-org.apache.derby.impl.sql.catalog.SYSALIASESRowFactory
-org.apache.derby.impl.sql.catalog.SystemColumnImpl

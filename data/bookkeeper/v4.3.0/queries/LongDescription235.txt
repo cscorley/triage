@@ -1,1 +1,0 @@
-EntryLogger flush syncs on the wrong object, which really hurts performance.

@@ -1,1 +1,0 @@
-CheckpointSource.MIN#compareTo does exactly the opposite of what it should

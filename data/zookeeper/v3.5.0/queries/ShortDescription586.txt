@@ -1,1 +1,0 @@
-c client does not compile under cygwin

@@ -1,2 +1,0 @@
-org.apache.derby.iapi.store.raw.PageKey
-org.apache.derby.impl.store.raw.data.RecordId

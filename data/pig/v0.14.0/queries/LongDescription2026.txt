@@ -1,1 +1,0 @@
-e2e tests under test/e2e/pig/udfs/java should have their own entry as a source dir in eclipse .classpath

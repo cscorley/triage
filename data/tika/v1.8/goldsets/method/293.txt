@@ -1,1 +1,0 @@
-org.apache.tika.parser.microsoft.ooxml.XWPFWordExtractorDecorator.buildXHTML(XHTMLContentHandler)

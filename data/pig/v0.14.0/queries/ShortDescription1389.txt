@@ -1,1 +1,0 @@
-Implement Pig counter to track number of rows for each input files 

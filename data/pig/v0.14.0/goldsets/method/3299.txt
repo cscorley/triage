@@ -1,3 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler.getJob(MROperPlan,MapReduceOper,Configuration,PigContext)
-org.apache.pig.test.TestStore.testEmptyPartFileCreation()
-org.apache.pig.test.TestStore.testSuccessFileCreation2()

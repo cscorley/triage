@@ -1,1 +1,0 @@
-Silence deprecation warnings for JDBC 4 stubs

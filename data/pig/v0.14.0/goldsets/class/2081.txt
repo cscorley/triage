@@ -1,2 +1,0 @@
-org.apache.pig.parser.DryRunGruntParser
-org.apache.pig.test.TestMacroExpansion

@@ -1,1 +1,0 @@
-OOME in XAMemTest.testDerby4137_TransactionTimeoutSpecifiedNotExceeded

@@ -1,1 +1,0 @@
-precommit tests only check toplevel rat file, not the one for submodules.

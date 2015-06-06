@@ -1,1 +1,0 @@
-scm urls are wrong in the poms

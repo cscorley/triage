@@ -1,1 +1,0 @@
-tika command line can't extract metadata for OOXML files

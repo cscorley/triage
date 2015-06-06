@@ -1,1 +1,0 @@
-to fix src/c/tests/zkServer.sh script to add clover in classpath

@@ -1,3 +1,0 @@
-org.apache.solr.common.util.XML
-org.apache.solr.handler.AnalysisRequestHandler
-org.apache.solr.handler.AnalysisRequestHandlerTest

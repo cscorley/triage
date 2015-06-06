@@ -1,1 +1,0 @@
-org.apache.solr.handler.dataimport.DateFormatTransformer.transformRow(Map<String,Object>,String,Object,Context)

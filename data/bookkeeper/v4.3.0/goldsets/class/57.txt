@@ -1,2 +1,0 @@
-org.apache.bookkeeper.bookie.EntryLogger
-org.apache.bookkeeper.bookie.EntryLogger.GarbageCollectorThread

@@ -1,1 +1,0 @@
-We have introduced several new features after PIG-2300. Need additional document for 0.10.

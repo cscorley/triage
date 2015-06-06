@@ -1,1 +1,0 @@
-Right now we assert immediately, so the bookie thread has no chance to die. We should only assert after giving it a chance.

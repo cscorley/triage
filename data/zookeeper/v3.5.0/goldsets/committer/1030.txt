@@ -1,2 +1,0 @@
-Mahadev Konar <mahadev@apache.org>
-Patrick D. Hunt <phunt@apache.org>

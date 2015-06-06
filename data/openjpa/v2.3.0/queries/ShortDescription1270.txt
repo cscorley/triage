@@ -1,1 +1,0 @@
-Assert that relationships defined in a mapped superclass must be unidirectional

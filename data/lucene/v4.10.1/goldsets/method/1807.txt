@@ -1,2 +1,0 @@
-org.apache.lucene.analysis.PerFieldAnalyzerWrapper.PerFieldAnalyzerWrapper(Analyzer)
-org.apache.lucene.analysis.PerFieldAnalyzerWrapper.PerFieldAnalyzerWrapper(Analyzer,Map)

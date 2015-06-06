@@ -1,1 +1,0 @@
-Invalid ASCII character (65533) when retriving MP3 metadata

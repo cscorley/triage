@@ -1,1 +1,0 @@
-Wildcard query with no wildcard characters in the term throws StringIndexOutOfBounds exception

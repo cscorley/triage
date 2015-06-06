@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.quorum.QuorumPeerConfig.checkValidity()
-org.apache.zookeeper.server.util.DynamicConfigBCTest.dynamicConfigBackwardCompatibilityTest()

@@ -1,1 +1,0 @@
-Upgrade metadata-extractor to version 2.7.2

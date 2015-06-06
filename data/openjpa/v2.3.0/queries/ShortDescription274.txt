@@ -1,1 +1,0 @@
-JPQL queries cannot access version fields, including bulk updates

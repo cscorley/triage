@@ -1,2 +1,0 @@
-org.apache.tika.parser.gdal.GDALParser
-org.apache.tika.parser.gdal.TestGDALParser

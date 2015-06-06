@@ -1,2 +1,0 @@
-org.apache.lucene.index.FilterIndexReader
-org.apache.lucene.index.TestFilterIndexReader

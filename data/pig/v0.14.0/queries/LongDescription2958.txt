@@ -1,1 +1,0 @@
-This causes false failures in TestPigRunner, but also makes debugging somewhat more difficult than it has to be.

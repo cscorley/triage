@@ -1,1 +1,0 @@
-Deadlock: IndexWriter.addIndexes(IndexReader[])

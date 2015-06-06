@@ -1,6 +1,0 @@
-org.apache.openjpa.enhance.PCEnhancer
-org.apache.openjpa.kernel.AttachManager
-org.apache.openjpa.kernel.VersionAttachStrategy
-org.apache.openjpa.persistence.detachment.TestAttachConstructedCopy
-org.apache.openjpa.persistence.simple.Person
-org.apache.openjpa.persistence.simple.TestEntityManagerMerge

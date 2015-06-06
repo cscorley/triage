@@ -1,1 +1,0 @@
-Better distinction between IOException and TikaException

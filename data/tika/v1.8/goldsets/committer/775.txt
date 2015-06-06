@@ -1,2 +1,0 @@
-Jukka Zitting <jukka@apache.org>
-Ray Gauss II <rgauss@apache.org>

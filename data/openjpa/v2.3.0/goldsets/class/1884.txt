@@ -1,3 +1,0 @@
-org.apache.openjpa.datacache.DataCacheStoreManager
-org.apache.openjpa.persistence.cache.jpa.TestMultiEMFCacheModes
-org.apache.openjpa.persistence.EntityManagerImpl

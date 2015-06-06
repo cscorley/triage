@@ -1,1 +1,0 @@
-org.apache.mahout.classifier.baytes.MultipleOutputFormat not working as intended with Hadoop 0.20?

@@ -1,1 +1,0 @@
-Have LDADriver determine numWords from input vectors

@@ -1,1 +1,0 @@
-PerChannelBookieClient race during channel disconnect

@@ -1,4 +1,0 @@
-org.apache.mahout.clustering.classify.ClusterClassificationConfigKeys
-org.apache.mahout.clustering.classify.ClusterClassificationDriver
-org.apache.mahout.clustering.classify.ClusterClassificationDriverTest
-org.apache.mahout.clustering.classify.ClusterClassificationMapper

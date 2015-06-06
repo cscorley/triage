@@ -1,1 +1,0 @@
-jdk 1.6 client driver omits SQLStates and chained exceptions in error messages

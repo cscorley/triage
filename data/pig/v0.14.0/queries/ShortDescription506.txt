@@ -1,1 +1,0 @@
-Does pig need a NATIVE keyword?

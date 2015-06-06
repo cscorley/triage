@@ -1,1 +1,0 @@
-JDBC.assertFullResultSet should handle byte arrays

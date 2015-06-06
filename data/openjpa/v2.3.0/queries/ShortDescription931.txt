@@ -1,1 +1,0 @@
-Support derived identity (spec 2.4.1.2 Ex 5(a), 6 (a))

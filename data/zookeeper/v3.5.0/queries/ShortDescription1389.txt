@@ -1,1 +1,0 @@
-it would be nice if start-foreground used exec $JAVA in order to get rid of the intermediate shell process

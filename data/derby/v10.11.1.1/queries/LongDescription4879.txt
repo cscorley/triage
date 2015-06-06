@@ -1,3 +1,0 @@
-When building with "ant -q", I see this warning when JavaCC processes ij.jj:
-
-     [java] Warning: Lookahead adequacy checking not being performed since option LOOKAHEAD is more than 1.  Set option FORCE_LA_CHECK to true to force checking.

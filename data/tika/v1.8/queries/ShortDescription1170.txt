@@ -1,1 +1,0 @@
-Insufficiently specific magic for binary image/cgm files

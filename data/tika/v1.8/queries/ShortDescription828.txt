@@ -1,1 +1,0 @@
-TaggedIOException can be passed non Serializable objects

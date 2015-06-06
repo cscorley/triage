@@ -1,1 +1,0 @@
-ORderBy with @ElementJoinColumn and EmbeddedId uses wrong columns in SQL

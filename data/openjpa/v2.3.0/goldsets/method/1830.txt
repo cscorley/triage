@@ -1,3 +1,0 @@
-org.apache.openjpa.lib.conf.ConfigurationImpl.fromProperties(Map)
-org.apache.openjpa.lib.conf.ConfigurationImpl.toProperties(boolean)
-org.apache.openjpa.persistence.simple.TestSerializedFactory.setUp()

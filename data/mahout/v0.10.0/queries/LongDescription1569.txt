@@ -1,7 +1,0 @@
-Create a design for CLI drivers, including an option parser, base MahoutDriver for Spark, that uses a text file I/O mechanism MAHOUT-1568
-
-A version of the proposal is implemented and running for ItemSimilarity on Spark. MAHOUT-1541
-
-A proposal is running with ItemSimilarity on Spark and is documented on the github wiki here: https://github.com/pferrel/harness/wiki
-
-Comments are appreciated

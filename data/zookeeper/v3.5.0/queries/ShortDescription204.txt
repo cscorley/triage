@@ -1,1 +1,0 @@
-SetWatches needs to be the first message after auth messages to the server

@@ -1,1 +1,0 @@
-DatabaseMetaData.getTypeInfo() SEARCHABLE column returns incorrect information for types that cannot be searched.

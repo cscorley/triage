@@ -1,1 +1,0 @@
-org.apache.openjpa.jdbc.meta.MappingInfo.mergeColumn(MetaDataContext,String,Column,boolean,Column,Table,boolean,boolean)

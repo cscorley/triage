@@ -1,2 +1,0 @@
-org.apache.tika.parser.envi.EnviHeaderParser
-org.apache.tika.parser.envi.EnviHeaderParserTest

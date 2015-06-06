@@ -1,1 +1,0 @@
-Cleaning/restructuring up Zookeeper server code

@@ -1,1 +1,0 @@
-NullPointerException if log4j.properties is Used

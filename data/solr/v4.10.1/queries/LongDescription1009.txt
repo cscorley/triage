@@ -1,3 +1,0 @@
-Duplicate column names result in the same value getting copied multiple times
-
-http://markmail.org/thread/mguseggrldkddcut

@@ -1,3 +1,0 @@
-org.apache.mahout.math.hadoop.similarity.cooccurrence.RowSimilarityJobTest
-org.apache.mahout.text.wikipedia.WikipediaDatasetCreatorMapper
-org.apache.mahout.text.wikipedia.WikipediaMapper

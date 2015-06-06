@@ -1,1 +1,0 @@
-intermittent JMX test failures due to not verifying QuorumPeer shutdown 

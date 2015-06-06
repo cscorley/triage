@@ -1,2 +1,0 @@
-org.apache.mahout.cf.taste.impl.model.jdbc.AbstractBooleanPrefJDBCDataModel
-org.apache.mahout.cf.taste.impl.model.jdbc.MySQLBooleanPrefJDBCDataModel

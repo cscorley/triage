@@ -1,2 +1,0 @@
-org.apache.tika.filetypedetector.TikaFileTypeDetector
-org.apache.tika.filetypedetector.TikaFileTypeDetectorTest

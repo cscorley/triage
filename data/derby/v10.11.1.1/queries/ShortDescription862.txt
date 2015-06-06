@@ -1,1 +1,0 @@
-Clean up the big pile of javadoc warnings for the derbydocs target and make derbydocs run under jdk1.6

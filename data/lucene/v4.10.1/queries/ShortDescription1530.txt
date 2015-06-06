@@ -1,1 +1,0 @@
-Support inclusive/exclusive for TrieRangeQuery/-Filter, remove default trie variant setters/getters

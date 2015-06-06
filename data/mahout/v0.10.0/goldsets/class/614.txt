@@ -1,2 +1,0 @@
-org.apache.mahout.classifier.bayes.MultipleOutputFormat
-org.apache.mahout.classifier.bayes.MultipleTextOutputFormat

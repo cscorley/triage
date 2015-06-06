@@ -1,1 +1,0 @@
-The lastest (aka nightly) downloads do not include a md5sum for verifying the download was successful. 

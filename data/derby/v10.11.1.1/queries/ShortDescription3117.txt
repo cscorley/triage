@@ -1,1 +1,0 @@
-Adjust master build script to require the Java 5 compiler to build Derby

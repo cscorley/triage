@@ -1,1 +1,0 @@
-derbylang/ConcurrentImplicitCreateSchema.java fails intermittently with a lock timeout

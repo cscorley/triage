@@ -1,1 +1,0 @@
-Need a better algorithm to find DBDictionary classname in DBDictionaryFactory

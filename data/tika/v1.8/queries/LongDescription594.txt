@@ -1,4 +1,0 @@
-Secured PDFs cause Tika to throw exceptions. Upgrading to pdfbox 1.4.0 (latest release) allows these PDFs to be parsed correctly.
-
-[update: PDFBox 1.5.0 is available]
-[update: PDFBox 1.6.0 is available]

@@ -1,2 +1,0 @@
-Assignment is used instead of comparison:
-if (dbname.length() == 0 || (encryptDB = true && encryptpassword == null)) {

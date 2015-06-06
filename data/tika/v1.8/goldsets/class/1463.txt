@@ -1,3 +1,0 @@
-org.apache.tika.parser.external.ExternalParser
-org.apache.tika.parser.ocr.TesseractOCRParser
-org.apache.tika.parser.ocr.TesseractOCRParserTest

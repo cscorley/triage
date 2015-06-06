@@ -1,1 +1,0 @@
-DataImportHandler does not catch and log Errors

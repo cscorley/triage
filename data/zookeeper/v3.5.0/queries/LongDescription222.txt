@@ -1,7 +1,0 @@
-Noticed this issue during a debugging session – it's difficult to read/compare the timestamps from the c client.
-
-The C client timestamp should be formatted with the same format as the JAVA log timestamps.
-
-Note: java uses ISO8601 timestamp formatting by default.
-
-Perhaps we should just bit the bullet and move to log4c? Consider this option when addressing this issue.

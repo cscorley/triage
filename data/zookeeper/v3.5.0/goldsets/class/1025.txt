@@ -1,3 +1,0 @@
-org.apache.zookeeper.ZooKeeperMain
-org.apache.zookeeper.ZooKeeperMain.MyCommandOptions
-org.apache.zookeeper.ZooKeeperTest

@@ -1,2 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POMergeJoin
-org.apache.pig.test.TestMergeJoin

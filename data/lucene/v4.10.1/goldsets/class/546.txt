@@ -1,3 +1,0 @@
-org.apache.lucene.store.RAMDirectory
-org.apache.lucene.store.RAMInputStream
-org.apache.lucene.store.RAMOutputStream

@@ -1,2 +1,0 @@
-org.apache.derby.impl.sql.execute.NoRowsResultSetImpl
-org.apache.derbyTesting.functionTests.tests.lang.ResultSetsFromPreparedStatementTest

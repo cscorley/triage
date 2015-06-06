@@ -1,1 +1,0 @@
-chroot not transparent in zoo_create()

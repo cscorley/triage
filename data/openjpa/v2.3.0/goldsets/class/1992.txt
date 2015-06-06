@@ -1,6 +1,0 @@
-org.apache.openjpa.kernel.ExpressionStoreQuery
-org.apache.openjpa.kernel.ExpressionStoreQuery.AbstractExpressionExecutor
-org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder
-org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder.ParsedJPQL
-org.apache.openjpa.kernel.jpql.JPQLParser
-org.apache.openjpa.persistence.jpql.functions.TestSetParameter

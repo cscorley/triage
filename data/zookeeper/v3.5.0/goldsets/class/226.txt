@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.DataNode
-org.apache.zookeeper.test.NullDataTest

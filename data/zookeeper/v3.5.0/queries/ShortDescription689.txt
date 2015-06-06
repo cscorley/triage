@@ -1,1 +1,0 @@
-release build broken - ivysettings.xml not copied during "package"

@@ -1,1 +1,0 @@
-pig UDF is lacking XMLLoader. Plan to add the XMLLoader

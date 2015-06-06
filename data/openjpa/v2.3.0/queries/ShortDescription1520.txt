@@ -1,1 +1,0 @@
-Move trunk (2.0.x) to require Java 6 to build (but target 1.5 runtime)

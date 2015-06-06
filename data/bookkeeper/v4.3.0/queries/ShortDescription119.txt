@@ -1,1 +1,0 @@
-Keys in configuration have inconsistent style

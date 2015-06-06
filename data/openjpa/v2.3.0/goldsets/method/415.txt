@@ -1,3 +1,0 @@
-org.apache.openjpa.lib.rop.AbstractResultList.assertOpen()
-org.apache.openjpa.lib.rop.AbstractResultList.finalize()
-org.apache.openjpa.lib.rop.AbstractResultList.subList(int,int)

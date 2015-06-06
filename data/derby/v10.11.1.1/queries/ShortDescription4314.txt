@@ -1,1 +1,0 @@
-With derby client setTransactionIsolation executes and commits even if isolation has not changed 

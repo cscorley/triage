@@ -1,1 +1,0 @@
-Derby returns incorrect values for "LENGTH" column of DatabaseMetaData.getProcedureColumns() result set.

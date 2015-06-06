@@ -1,4 +1,0 @@
-org.apache.derby.impl.drda.NetworkServerControlImpl.blockingStart(PrintWriter)
-org.apache.derby.impl.drda.NetworkServerControlImpl.executeWork(String)
-org.apache.derby.impl.drda.NetworkServerControlImpl.getFormattedTimestamp()
-org.apache.derby.impl.drda.NetworkServerControlImpl.getNetProductVersionHolder()

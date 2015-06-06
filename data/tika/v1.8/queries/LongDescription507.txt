@@ -1,1 +1,0 @@
-The FontBox library used by PDFBox supports various kinds of font information files. These files don't typically contain much useful textual data, but they do have interesting metadata that should be made available also through Tika.

@@ -1,3 +1,0 @@
-org.apache.lucene.store.RAMFile
-org.apache.lucene.store.RAMInputStream
-org.apache.lucene.store.RAMOutputStream

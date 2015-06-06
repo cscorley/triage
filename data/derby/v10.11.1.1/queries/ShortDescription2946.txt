@@ -1,1 +1,0 @@
-In soft upgrade mode, the metadata queries do not get compiled in SYS schema. This will cause problems in future releases of Derby.

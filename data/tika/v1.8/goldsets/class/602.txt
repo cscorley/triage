@@ -1,1 +1,0 @@
-org.apache.tika.parser.txt.CharsetRecog_UTF8

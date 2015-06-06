@@ -1,3 +1,0 @@
-
-REC 	Exception is caught when Exception is not thrown in org.apache.zookeeper.server.quorum.QuorumPeer$ResponderThread.run()
-

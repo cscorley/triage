@@ -1,2 +1,0 @@
-Gianmarco De Francisci Morales <gdfm@apache.org>
-Jianyong Dai <daijy@apache.org>

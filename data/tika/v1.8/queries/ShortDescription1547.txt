@@ -1,1 +1,0 @@
-Use POST for tika-server form resources

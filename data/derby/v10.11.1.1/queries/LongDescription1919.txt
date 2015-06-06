@@ -1,3 +1,0 @@
-It would be very useful for index.html to have a section that provided a link to the RELEASE-NOTES.html file.
-
-Links to the NOTICE and LICENSE file might be useful additions

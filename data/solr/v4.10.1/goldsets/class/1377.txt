@@ -1,6 +1,0 @@
-org.apache.solr.analysis.HTMLStripStandardTokenizerFactory
-org.apache.solr.analysis.HTMLStripWhitespaceTokenizerFactory
-org.apache.solr.analysis.PatternTokenizerFactory
-org.apache.solr.analysis.TokenizerFactory
-org.apache.solr.analysis.TrieTokenizerFactory
-org.apache.solr.BasicFunctionalityTest

@@ -1,1 +1,0 @@
-Syntax error when running build-reuters.sh script

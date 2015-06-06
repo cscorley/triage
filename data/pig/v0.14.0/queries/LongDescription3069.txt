@@ -1,6 +1,0 @@
-Modifications to Pig E2E harness and tests for cross compatibility with Windows.
-
-*Remove fully qualified path from tools (perl, cat, etc.)
-*Change quoting and escaping of commands for cross compatibility. 
-*Explicitly execute perl scripts with perl as Windows doesn't support shebang(#!)
-*Use perl APIs in place of incompatible commands (mkdir -p to make_path)

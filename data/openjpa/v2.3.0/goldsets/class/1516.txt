@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.kernel.JDBCStoreManager
-org.apache.openjpa.jdbc.kernel.JDBCStoreManager.RefCountConnection
-org.apache.openjpa.persistence.EntityManagerImpl

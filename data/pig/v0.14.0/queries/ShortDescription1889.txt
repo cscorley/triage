@@ -1,1 +1,0 @@
-bin/pig should pick up HBase configuration from HBASE_CONF_DIR

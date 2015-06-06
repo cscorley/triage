@@ -1,1 +1,0 @@
-Safe parsing of droste.zip

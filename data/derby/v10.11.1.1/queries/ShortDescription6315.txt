@@ -1,1 +1,0 @@
-Improve test coverage of org.apache.derby.impl.io.InputStreamFile

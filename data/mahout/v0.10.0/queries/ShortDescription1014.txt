@@ -1,1 +1,0 @@
-Recreate Newsgroups example using naivebayes package

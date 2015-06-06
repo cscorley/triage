@@ -1,1 +1,0 @@
-Display embedded images in the GUI Formatted Text pane where they occur in the document

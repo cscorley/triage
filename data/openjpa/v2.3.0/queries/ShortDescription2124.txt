@@ -1,1 +1,0 @@
-Use of XMLValueHandler results in a NullPointerException when classloader does not provide package support

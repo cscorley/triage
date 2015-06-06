@@ -1,3 +1,0 @@
-org.apache.lucene.search.regex.JakartaRegexpCapabilities
-org.apache.lucene.search.regex.JavaUtilRegexCapabilities
-org.apache.lucene.search.regex.TestRegexQuery

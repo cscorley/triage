@@ -1,1 +1,0 @@
-The ConstantScore family of queries does not work with highlighting

@@ -1,1 +1,0 @@
-ReadOnlyBookieTest hangs on shutdown

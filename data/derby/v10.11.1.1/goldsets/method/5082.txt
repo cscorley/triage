@@ -1,2 +1,0 @@
-org.apache.derby.impl.services.daemon.IndexStatisticsDaemonImpl.run()
-org.apache.derby.impl.services.daemon.IndexStatisticsDaemonImpl.stop()

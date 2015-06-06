@@ -1,1 +1,0 @@
-Upgrade Lucene version used to the latest release.

@@ -1,1 +1,0 @@
-Class cast exception thrown in STRSPLIT even after casting properly

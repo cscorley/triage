@@ -1,1 +1,0 @@
-Sybase reserved words may not be used as column names

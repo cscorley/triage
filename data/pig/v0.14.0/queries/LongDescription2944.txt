@@ -1,1 +1,0 @@
-ivysettings.xml does not let you override .m2/repository. This will be useful for people who wants to use a localrepository, thats outside of ~/.m2/repository

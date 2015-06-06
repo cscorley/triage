@@ -1,3 +1,0 @@
-The core parser classes (AudoDetectParser, etc.) are located in both the tika-parser and the tika-core jar files. This causes warnings when using shade to create an uber-jar for a project.
-
-(None of the tika-parser subpackages (asm, audio, etc.) are duplicated - just the top-level parser classes.)

@@ -1,3 +1,0 @@
-bin/mahout assumes that conf is in $MAHOUT_HOME/src/conf if MAHOUT_CONF_DIR isn't set.  In the packaged version of Mahout, however, it is in $MAHOUT_HOME/conf.
-
-This is easy to handle with a couple of if's.  Patch incoming.

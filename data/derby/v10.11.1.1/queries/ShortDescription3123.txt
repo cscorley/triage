@@ -1,1 +1,0 @@
-Style sheet (CSS) references in demo HTML files are incorrect

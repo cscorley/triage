@@ -1,1 +1,0 @@
-Leak in client if ResultSet not closed

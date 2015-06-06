@@ -1,3 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer.visitMROp(MapReduceOper)
-org.apache.pig.test.TestMultiQueryCompiler.testMultiQueryDoNotMergeMRwithDifferentPartitioners()
-org.apache.pig.test.TestMultiQueryCompiler.testMultiQueryWithCustomPartitioner()

@@ -1,1 +1,0 @@
-Tika CLI --detect returns incorrect content-type for files with altered extensions

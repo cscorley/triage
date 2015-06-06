@@ -1,1 +1,0 @@
-org.apache.solr.client.solrj.response.QueryResponse.extractFacetInfo(NamedList<Object>,Object)

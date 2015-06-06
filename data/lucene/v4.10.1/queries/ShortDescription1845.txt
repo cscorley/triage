@@ -1,1 +1,0 @@
-if the build fails to download JARs for contrib/db, just skip its tests

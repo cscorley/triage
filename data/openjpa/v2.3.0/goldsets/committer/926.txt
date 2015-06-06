@@ -1,2 +1,0 @@
-Jeremy Bauer <jrbauer@apache.org>
-Pinaki Poddar <ppoddar@apache.org>

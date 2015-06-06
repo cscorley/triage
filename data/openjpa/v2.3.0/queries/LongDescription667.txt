@@ -1,1 +1,0 @@
-The URLs for configuration properties in documentation do not link to corresponding method in JavaDoc but only to the class comment section.     

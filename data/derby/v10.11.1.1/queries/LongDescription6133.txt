@@ -1,7 +1,0 @@
-code does 
-
-if (! (columns[0] instanceof Storable))
-
-instead of 
-
-if (! (columns[i] instanceof Storable))

@@ -1,2 +1,0 @@
-org.apache.mahout.math.map.HashFunctions
-org.apache.mahout.math.TestRandomAccessSparseVector

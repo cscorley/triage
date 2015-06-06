@@ -1,1 +1,0 @@
-Just small fixes of format and spelling in LedgerMetadata, LedgerHandle, and BookieRecoveryTest.

@@ -1,1 +1,0 @@
-Pig Streaming functional spec proposal

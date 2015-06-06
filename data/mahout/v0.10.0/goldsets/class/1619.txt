@@ -1,2 +1,0 @@
-org.apache.mahout.vectorizer.collocations.llr.CollocMapper
-org.apache.mahout.vectorizer.HighDFWordsPruner

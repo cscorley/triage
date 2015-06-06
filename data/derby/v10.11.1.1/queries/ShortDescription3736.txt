@@ -1,1 +1,0 @@
-Revoking a column level privilege from a user, a prepared statement relying on that privilege can still be executed 

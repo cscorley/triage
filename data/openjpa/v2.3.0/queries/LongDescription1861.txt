@@ -1,4 +1,0 @@
-Apache Maven 3.0 has been released and we have some build failures when using it, like -
-openjpa-lib - multiple versions of Ant being used in the builds.  Fix is to upgrade some old ant-1.6.5.jar usage to match the 1.7.1 used by the maven-antrun-plugin and set an exclusion on one dependency that is pulling in ant-1.5
-openjpa-all - shade plugin trying to jar up the target/classes directory when it shouldn't.  Fix is to remove the maven-jar-plugin usage from the openjpa-all/pom.xml
-Also, will be upgrading all the other maven plugins to the latest levels, as some newer releases include Maven 3.0 fixes or additional settings.  Will verify the builds still work with Maven 2.2.1 and 3.0.

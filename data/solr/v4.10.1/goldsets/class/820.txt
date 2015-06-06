@@ -1,2 +1,0 @@
-org.apache.solr.handler.ReplicationHandler
-org.apache.solr.handler.TestReplicationHandler

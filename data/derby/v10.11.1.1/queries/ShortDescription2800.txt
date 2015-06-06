@@ -1,1 +1,0 @@
-Implement Clob.truncate for embedded driver

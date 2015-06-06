@@ -1,1 +1,0 @@
-ERROR 2100 (hdfs://localhost/tmp/temp175740929/tmp-1126214010 does not exist) and ERROR 2999: (Unexpected internal error. null) when using Multi-Query optimization

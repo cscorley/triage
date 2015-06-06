@@ -1,1 +1,0 @@
-db-derby-10.11.1.0-bin.zip contains the VTI demo classes both in source form and as compiled class files under the demo/programs/vtis subdirectory. db-derby-10.11.1.0-bin.tar.gz only contains the source files.

@@ -1,1 +1,0 @@
-Recover the ledger fragments of a bookie once it crashes.

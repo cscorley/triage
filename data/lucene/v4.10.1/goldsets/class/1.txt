@@ -1,2 +1,0 @@
-org.apache.lucene.index.memory.MemoryIndex
-org.apache.lucene.index.memory.MemoryIndex.MemoryIndexReader

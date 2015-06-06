@@ -1,1 +1,0 @@
-ConcurrentModificationException in RackawareEnsemblePlacementPolicy when a bookie is removed from available list

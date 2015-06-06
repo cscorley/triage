@@ -1,1 +1,0 @@
-Tika reports the content type of AR archives as "text/plain"

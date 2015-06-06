@@ -1,1 +1,0 @@
-Need special case to handle creating a new SequentialAccessSparseVector from a large (> 1M dims) random/hashed vector

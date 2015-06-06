@@ -1,1 +1,0 @@
-Per-component LICENSE and NOTICE files

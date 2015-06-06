@@ -1,1 +1,0 @@
-Provide JDBC4 SQLException subclasses support in network driver

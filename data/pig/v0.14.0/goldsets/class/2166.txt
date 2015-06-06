@@ -1,3 +1,0 @@
-org.apache.pig.builtin.BagToString
-org.apache.pig.builtin.BagToTuple
-org.apache.pig.test.TestBuiltInBagToTupleOrString

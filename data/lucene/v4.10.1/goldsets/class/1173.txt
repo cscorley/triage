@@ -1,3 +1,0 @@
-org.apache.lucene.index.FieldsReader
-org.apache.lucene.index.TestStressIndexing2
-org.apache.lucene.index.TestStressIndexing2.IndexingThread

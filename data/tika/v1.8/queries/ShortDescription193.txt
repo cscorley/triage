@@ -1,1 +1,0 @@
-PDFParser adds mime-type twice

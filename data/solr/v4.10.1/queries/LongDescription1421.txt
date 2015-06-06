@@ -1,1 +1,0 @@
-The VariableResolver with the datasource instance is stale so in delta-import fails

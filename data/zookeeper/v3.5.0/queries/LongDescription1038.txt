@@ -1,1 +1,0 @@
-need to do an svn move of the hedwig and bookkeeper code to the bookkeeper subversion

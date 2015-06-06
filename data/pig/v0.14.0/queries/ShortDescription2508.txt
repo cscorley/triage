@@ -1,1 +1,0 @@
-PIG can unpredictably ignore deprecated Hadoop config options

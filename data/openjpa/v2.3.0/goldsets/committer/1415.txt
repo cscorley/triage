@@ -1,2 +1,0 @@
-Albert Lee <allee8285@apache.org>
-Richard G. Curtis <curtisr7@apache.org>

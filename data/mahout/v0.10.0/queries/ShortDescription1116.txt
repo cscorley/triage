@@ -1,1 +1,0 @@
-WeightedVectors do not implement equals()

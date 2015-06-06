@@ -1,1 +1,0 @@
-AsyncHammerTest is broken, callbacks need to validate rc parameter

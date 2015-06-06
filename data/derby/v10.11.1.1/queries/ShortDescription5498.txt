@@ -1,1 +1,0 @@
-ClosedByInterruptException in AuthenticationTest

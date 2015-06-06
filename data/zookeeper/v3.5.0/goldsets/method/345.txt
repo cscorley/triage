@@ -1,3 +1,0 @@
-org.apache.zookeeper.ZooKeeperMain.populateCommandMap()
-org.apache.zookeeper.ZooKeeperMain.processZKCmd(MyCommandOptions)
-org.apache.zookeeper.ZooKeeperMain.usage()

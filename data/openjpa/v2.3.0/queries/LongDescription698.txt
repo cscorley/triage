@@ -1,1 +1,0 @@
-Native SQLs that manifest as JDBC CallableStatement (as opposed to PreparedStatements) are not logged.

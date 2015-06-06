@@ -1,1 +1,0 @@
-Group All followed by CROSS with default parallelism produces wrong results

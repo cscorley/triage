@@ -1,1 +1,0 @@
-Pig tests fail if ${user.home}/pigtest/conf does not already exist

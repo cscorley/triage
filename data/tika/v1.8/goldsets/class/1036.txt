@@ -1,4 +1,0 @@
-org.apache.tika.parser.pkg.AbstractPkgTest
-org.apache.tika.parser.pkg.PackageParser
-org.apache.tika.parser.pkg.ZipParserTest
-org.apache.tika.parser.pkg.ZipParserTest.GatherRelIDsDocumentExtractor

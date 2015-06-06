@@ -1,5 +1,0 @@
-zkEnv.sh expects ZOOCFGDIR env variable set. If not it looks for the conf dir in the ZOOKEEPER_PREFIX dir or in /etc/zookeeper. It would be great if we can support --config option where at run time you could specify a different config directory. We do the same thing in hadoop.
-
-With this you should be able to do
-
-/usr/sbin/zkServer.sh --config /some/conf/dir start|stop

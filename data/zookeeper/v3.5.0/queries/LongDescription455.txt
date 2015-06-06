@@ -1,1 +1,0 @@
-the zookeeper c client crashes with chroot specified in the string. This does not fail on 2.6 but on ubuntu where the malloced memory is nto initialized to \0.

@@ -1,1 +1,0 @@
-Unnecessary condition check in FastLeaderElection

@@ -1,1 +1,0 @@
-Metadata parser for basic audio types

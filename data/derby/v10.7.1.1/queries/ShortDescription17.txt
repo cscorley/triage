@@ -1,1 +1,0 @@
-Network Server Needs to generate CRRTKN on ACCRDB if client does not send it

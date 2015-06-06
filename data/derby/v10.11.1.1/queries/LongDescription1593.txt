@@ -1,1 +1,0 @@
-Maybe have a top-level folder test at the same level of lib and move derbyTesting.jar there.

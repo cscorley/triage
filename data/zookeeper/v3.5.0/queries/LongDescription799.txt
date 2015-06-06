@@ -1,1 +1,0 @@
-Tools and Recipes for Monitoring ZooKeeper using Cacti, Nagios or Ganglia. 

@@ -1,1 +1,0 @@
-Log list of running jobs along with progress

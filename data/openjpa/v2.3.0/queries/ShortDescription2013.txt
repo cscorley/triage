@@ -1,1 +1,0 @@
-columnDefinition for TEXT types ends up in wrong sql statement

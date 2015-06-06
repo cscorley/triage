@@ -1,1 +1,0 @@
-Expensive cursor name lookup in network server

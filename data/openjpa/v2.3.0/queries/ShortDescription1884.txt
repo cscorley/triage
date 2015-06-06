@@ -1,1 +1,0 @@
-CacheStoreMode.REFRESH is not recognized for entity manager refresh operation

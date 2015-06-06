@@ -1,1 +1,0 @@
-Select range doesn't work on Oracle JDBC driver

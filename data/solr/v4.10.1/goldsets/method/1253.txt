@@ -1,2 +1,0 @@
-org.apache.solr.SolrInfoMBeanTest.getClassesForPackage(String)
-org.apache.solr.SolrInfoMBeanTest.testCallMBeanInfo()

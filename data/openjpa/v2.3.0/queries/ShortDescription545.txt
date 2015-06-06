@@ -1,1 +1,0 @@
-Replace UUID implementation with JDK 5 alternatives

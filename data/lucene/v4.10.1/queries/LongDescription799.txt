@@ -1,1 +1,0 @@
-lazy compressed text fields is a case that was neglected during lazy field implementation.  TestCase and patch provided.

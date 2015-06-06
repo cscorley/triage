@@ -1,3 +1,0 @@
-org.apache.tika.parser.microsoft.AbstractPOIFSExtractor
-org.apache.tika.parser.microsoft.POIFSContainerDetector
-org.apache.tika.parser.microsoft.WordParserTest

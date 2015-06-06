@@ -1,1 +1,0 @@
-logical error with term counting in org.apache.mahout.vectorizer.DictionaryVectorizer

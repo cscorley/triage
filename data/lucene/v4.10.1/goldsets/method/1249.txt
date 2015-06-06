@@ -1,3 +1,0 @@
-org.apache.lucene.index.SegmentReader.getTermVectorsReader()
-org.apache.lucene.index.TermVectorsReader.clone()
-org.apache.lucene.index.TermVectorsReader.readTermVector(String,long,TermVectorMapper)

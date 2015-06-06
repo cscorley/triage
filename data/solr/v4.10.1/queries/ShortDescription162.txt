@@ -1,1 +1,0 @@
-lucene index browser / admin helpers (Luke)

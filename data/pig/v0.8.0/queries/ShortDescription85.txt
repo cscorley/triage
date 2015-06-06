@@ -1,1 +1,0 @@
-Unable to specify CTRL-A as a delimiter for the PigStorage function

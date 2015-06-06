@@ -1,3 +1,0 @@
-org.apache.bookkeeper.client.LedgerCloseTest
-org.apache.bookkeeper.client.LedgerHandle
-org.apache.bookkeeper.client.PendingAddOp

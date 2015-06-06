@@ -1,3 +1,0 @@
-org.apache.lucene.document.Field
-org.apache.lucene.index.FieldInfos
-org.apache.lucene.index.FieldsReader

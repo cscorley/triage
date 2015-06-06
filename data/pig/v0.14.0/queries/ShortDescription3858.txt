@@ -1,1 +1,0 @@
-PigLogger/PigStatusReporter is not set for fetch tasks

@@ -1,1 +1,0 @@
-NPE for co-group with group-by column having complex schema and different load functions for each input

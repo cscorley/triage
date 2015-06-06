@@ -1,1 +1,0 @@
-Pig 0.9 error message not useful as compared to 0.8

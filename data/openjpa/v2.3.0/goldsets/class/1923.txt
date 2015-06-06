@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.kernel.exps.Param
-org.apache.openjpa.persistence.jdbc.sqlcache.TestInExpressionParamaterBinding
-org.apache.openjpa.persistence.jdbc.sqlcache.TestPreparedQueryCache

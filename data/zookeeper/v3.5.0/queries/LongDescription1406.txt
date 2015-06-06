@@ -1,9 +1,0 @@
-The included init.d script for dpkg creation doesn't restart.
-
-It exits with the following error:
-
-
-# /etc/init.d/zookeeper restart
-/etc/init.d/zookeeper: 127: check_privsep_dir: not found
-
-Also the actual zkServer.sh line in restart has a path of .../bin/ rather than .../sbin/

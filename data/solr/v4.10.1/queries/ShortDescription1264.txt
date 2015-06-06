@@ -1,1 +1,0 @@
-if master slave is out of sync w/ master replication is not successful

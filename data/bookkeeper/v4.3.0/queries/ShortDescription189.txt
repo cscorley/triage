@@ -1,1 +1,0 @@
-AbstractZkLedgerManager doesn't disregard cookies

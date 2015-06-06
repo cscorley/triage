@@ -1,1 +1,0 @@
-Support for DRDA Strong User ID and Password Substitute Authentication (USRSSBPWD) scheme

@@ -1,1 +1,0 @@
-Convert testing of derby error stream to JUnit

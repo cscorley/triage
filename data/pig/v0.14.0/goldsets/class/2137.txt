@@ -1,3 +1,0 @@
-org.apache.pig.newplan.logical.rules.PushUpFilter
-org.apache.pig.newplan.logical.rules.PushUpFilter.PushUpFilterTransformer
-org.apache.pig.test.TestNewPlanFilterRule

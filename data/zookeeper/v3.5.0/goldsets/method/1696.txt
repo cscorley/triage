@@ -1,3 +1,0 @@
-org.apache.zookeeper.client.ZooKeeperSaslClient.clientTunneledAuthenticationInProgress()
-org.apache.zookeeper.client.ZooKeeperSaslClient.getLoginContext()
-org.apache.zookeeper.client.ZooKeeperSaslClient.ZooKeeperSaslClient(String)

@@ -1,1 +1,0 @@
-The HtmlParser ignores <menu> tags, resulting in invalid XHTML

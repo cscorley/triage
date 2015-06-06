@@ -1,3 +1,0 @@
-(marking for 0.5 until we decide it's fixed or not actually a problem)
-
-As discussed on the mailing list, there's some apparent issue with packaging the "job" jar files with dependent jars within the lib/ directory. Changing the config to repackage everything into one jar can fix this. Patch attached for discussion.

@@ -1,3 +1,0 @@
-org.apache.lucene.document.Document.fields()
-org.apache.lucene.document.Document.fields.hasMoreElements()
-org.apache.lucene.document.Document.fields.nextElement()

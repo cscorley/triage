@@ -1,1 +1,0 @@
-support distinct JVMFLAGS for zookeeper server in zkServer.sh and zookeeper client in zkCli.sh

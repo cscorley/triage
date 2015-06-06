@@ -1,3 +1,0 @@
-org.apache.zookeeper.test.SaslAuthFailNotifyTest
-org.apache.zookeeper.test.SaslAuthFailNotifyTest.MyWatcher
-org.apache.zookeeper.test.SaslAuthFailTest

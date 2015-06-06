@@ -1,1 +1,0 @@
-EJBQL grammar needs to be updated to relfect JPA specification

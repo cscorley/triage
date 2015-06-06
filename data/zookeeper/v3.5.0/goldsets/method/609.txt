@@ -1,2 +1,0 @@
-org.apache.zookeeper.test.ObserverTest.process(WatchedEvent)
-org.apache.zookeeper.test.ObserverTest.testObserver()

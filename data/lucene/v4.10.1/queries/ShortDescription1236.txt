@@ -1,1 +1,0 @@
-EdgeNGram* documentation improvement

@@ -1,3 +1,0 @@
-org.hibernate.ejb.test.PackagedEntityManagerTest
-org.hibernate.ejb.test.pack.overridenpar.Bug
-org.hibernate.ejb.test.pack.spacepar.Bug

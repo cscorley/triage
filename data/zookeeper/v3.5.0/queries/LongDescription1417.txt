@@ -1,1 +1,0 @@
-In ZOOKEEPER-1412 it was identified that the c and java clients handle updating the last zxid seen a bit differently. ZOOKEEPER-1412 fixed a bug associated with this, however there are still some differences that should be investigated.

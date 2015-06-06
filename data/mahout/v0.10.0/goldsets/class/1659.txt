@@ -1,3 +1,0 @@
-org.apache.mahout.clustering.display.DisplayClustering
-org.apache.mahout.clustering.display.DisplaySpectralKMeans
-org.apache.mahout.clustering.spectral.kmeans.SpectralKMeansDriver

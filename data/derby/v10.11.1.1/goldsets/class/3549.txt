@@ -1,2 +1,0 @@
-org.apache.derby.impl.jdbc.EmbedConnection
-org.apache.derbyTesting.functionTests.tests.replicationTests.ReplicationRun_Local_StateTest_part1

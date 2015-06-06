@@ -1,2 +1,0 @@
-org.apache.tika.parser.AutoDetectParserTest
-org.apache.tika.TikaDetectionTest

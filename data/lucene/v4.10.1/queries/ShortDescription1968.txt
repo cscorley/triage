@@ -1,1 +1,0 @@
-Remove deprecated methods in PriorityQueue

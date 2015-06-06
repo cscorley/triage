@@ -1,1 +1,0 @@
-Bundle-SymbolicName: needed in Derby manifest for OSGi 4 environment

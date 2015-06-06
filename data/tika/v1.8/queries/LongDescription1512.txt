@@ -1,1 +1,0 @@
-WordParser fail on some word files. A negative value is sent to substring

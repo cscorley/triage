@@ -1,1 +1,0 @@
-The ZooKeeper java client main loop crashes on KeeperExceptions.  They should be handled when possible.

@@ -1,1 +1,0 @@
-Sorted string columns are sorted in a case sensitive way

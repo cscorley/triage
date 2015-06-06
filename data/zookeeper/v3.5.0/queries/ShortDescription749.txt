@@ -1,1 +1,0 @@
-OSGi metadata not included in binary only jar

@@ -1,3 +1,0 @@
-org.apache.derby.jdbc.ClientBaseDataSource
-org.apache.derbyTesting.functionTests.tests.jdbcapi.cdsXid
-org.apache.derbyTesting.functionTests.tests.jdbcapi.J2EEDataSourceTest

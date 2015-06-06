@@ -1,1 +1,0 @@
-Sucessive replicated joins do not generate Map Reduce plan and fails due to OOM

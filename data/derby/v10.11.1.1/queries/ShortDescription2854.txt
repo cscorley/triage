@@ -1,1 +1,0 @@
-Convert jdbc4/TestResultSetMethods.java to JUnit

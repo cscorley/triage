@@ -1,1 +1,0 @@
-The Ivy resolvers in Pig are split into default, external, and internal – and they are all actually distinct.  There isn't a resolver that rolls over all three, and fallbacks aren't in place.  Ideally, these resolver should chain right through with the default following a best practice fallback for novices.

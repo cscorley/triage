@@ -1,1 +1,0 @@
-improvements to the mailjdbc test

@@ -1,1 +1,0 @@
-Incorrect sample provided for REGEX_EXTRACT

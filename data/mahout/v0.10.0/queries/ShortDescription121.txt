@@ -1,1 +1,0 @@
-Speed up distance calculations for sparse vectors

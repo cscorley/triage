@@ -1,3 +1,0 @@
-org.apache.hedwig.server.netty.WriteRecordingChannel.compareTo(Channel)
-org.apache.hedwig.server.netty.WriteRecordingChannel.getAttachment()
-org.apache.hedwig.server.netty.WriteRecordingChannel.setAttachment(Object)

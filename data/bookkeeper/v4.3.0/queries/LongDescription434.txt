@@ -1,3 +1,0 @@
-1) default host might a VIP like name, we could delay resolving default host until necessary. so we could leverage the round-robin mechanism behind default server.
-
-2) we should not fail the process (throwing exception) when the default server isn't reachable temporary. we could fail the request at that time.

@@ -1,1 +1,0 @@
-ASSERT failure/IndexOutOfBoundsException with correlated subquery for UPDATE ... SET ... WHERE CURRENT OF ... statement.

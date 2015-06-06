@@ -1,1 +1,0 @@
-Integrate Ivy into the build. Generate Pom and signed jars to allow zk jars to be officially deployed to a maven repo.

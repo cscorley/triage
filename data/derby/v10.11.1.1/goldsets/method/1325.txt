@@ -1,2 +1,0 @@
-org.apache.derby.jdbc.EmbedXAResource.start(Xid,int)
-org.apache.derbyTesting.functionTests.tests.jdbcapi.checkDataSource.testSetIsolationWithStatement(Statement,XAResource,Connection)

@@ -1,2 +1,0 @@
-There exists difference of type compatibility between  Embedded and NetworkServer/NetworkClient.
-This issue tries to resolve it.

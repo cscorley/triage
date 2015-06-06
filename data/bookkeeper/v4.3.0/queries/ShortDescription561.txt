@@ -1,1 +1,0 @@
-Findbugs reports errors with openjdk

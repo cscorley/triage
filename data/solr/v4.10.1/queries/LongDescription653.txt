@@ -1,1 +1,0 @@
-The solrj API should not expose the 'overwrite' option.  Using it will most likely cause errors.

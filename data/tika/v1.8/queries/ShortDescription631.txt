@@ -1,1 +1,0 @@
-Improve handling of Outlook emails which contain html, and those with non-unicode text bodies

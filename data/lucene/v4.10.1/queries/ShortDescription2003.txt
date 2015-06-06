@@ -1,1 +1,0 @@
-Highlighter has problems when you use StandardAnalyzer with LUCENE_29 or simplier StopFilter with stopWordsPosIncr mode switched on

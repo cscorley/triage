@@ -1,1 +1,0 @@
-Improve type preservation for currentDate/Time  expression in queries

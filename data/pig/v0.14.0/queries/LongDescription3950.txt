@@ -1,5 +1,0 @@
-The file src/org/apache/pig/newplan/PColFilterExtractor.java is empty. It looks like its soul but not its earthly vessel left in 6b162e4b01b1a624fc59f93a160b37791df45026, PIG-3590
-
-The empty file forces reassembly of the jar on every build even if nothing material had changed. Is there a reason for this file to exist as empty? If so, it should instead have a '/* (placeholder) */' line or something.
-
-Trivial patch attached.

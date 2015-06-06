@@ -1,1 +1,0 @@
-mapreduce split causes ClassNotFound exception

@@ -1,1 +1,0 @@
-The zookeeperProgrammers.xml, which is the Programmer's Guide, needs new sections for each of the new topics that the JIRA talks about. For now they can be empty.

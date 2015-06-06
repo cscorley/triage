@@ -1,1 +1,0 @@
-ant test target re-compiles cppunit code every time

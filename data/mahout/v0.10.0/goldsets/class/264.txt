@@ -1,2 +1,0 @@
-org.apache.mahout.math.Arrays
-org.apache.mahout.math.Sorting

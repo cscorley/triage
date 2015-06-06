@@ -1,1 +1,0 @@
-Spectral clustering still has the option of using either SSVD or the Lanczos solver for dimensionality reduction. Remove the latter entirely.

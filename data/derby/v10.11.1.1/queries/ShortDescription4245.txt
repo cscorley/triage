@@ -1,1 +1,0 @@
-Sorting a table containing a CLOB fails after upgrade to 10.5

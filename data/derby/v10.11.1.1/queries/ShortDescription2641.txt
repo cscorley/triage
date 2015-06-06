@@ -1,1 +1,0 @@
-Convert lang/staleplans.sql to JUnit

@@ -1,1 +1,0 @@
-'trunk/README' should be rewritten to reflect graduation from incubation

@@ -1,3 +1,0 @@
-runpigmix.pl script has the following line which does not check against divide by zero. This could fail the launch script unexpectedly. 
-
-my $multiplier = $pig_times/$mr_times;

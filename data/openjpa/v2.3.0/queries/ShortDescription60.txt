@@ -1,1 +1,0 @@
-Specifying the wrong persistence implementation in persistence.xml leads to misleading error message

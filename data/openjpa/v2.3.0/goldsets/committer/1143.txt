@@ -1,4 +1,0 @@
-Donald Woods <dwoods@apache.org>
-Fay Wang <faywang@apache.org>
-Michael Dick <mikedd@apache.org>
-Pinaki Poddar <ppoddar@apache.org>

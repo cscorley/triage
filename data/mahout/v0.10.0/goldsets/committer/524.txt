@@ -1,2 +1,0 @@
-Jeff Eastman <jeastman@apache.org>
-Sean R. Owen <srowen@apache.org>

@@ -1,1 +1,0 @@
-Create Demo code, showing how to create and use table functions.

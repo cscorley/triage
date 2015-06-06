@@ -1,1 +1,0 @@
-RandomSeedGenerator doesnt estimate cluster centers when input path is a directory

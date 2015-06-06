@@ -1,5 +1,0 @@
-The piggybank build.xml still refers to 
-
-${src.dir}/{filtering,grouping,comparison}
-
-, which no longer exist in the repo. This is a trivial patch to remove those lines from the build script

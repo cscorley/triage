@@ -1,1 +1,0 @@
-We need to enable users to test Pig on actual Hadoop clusters.  We can use Whirr to allow users to easily spin up instances on EC2 and run the end-to-end tests.

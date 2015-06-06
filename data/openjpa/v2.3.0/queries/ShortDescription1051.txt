@@ -1,1 +1,0 @@
-[patch] Mappingtool doesn't check name conflicts if MappingDefaultsImpl is called with multiple columns.

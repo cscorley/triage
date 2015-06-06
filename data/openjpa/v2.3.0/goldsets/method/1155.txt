@@ -1,2 +1,0 @@
-org.apache.openjpa.kernel.BrokerImpl.attach(Object,boolean,OpCallbacks)
-org.apache.openjpa.kernel.BrokerImpl.detachAllInternal(OpCallbacks)

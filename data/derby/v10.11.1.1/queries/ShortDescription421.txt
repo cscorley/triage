@@ -1,1 +1,0 @@
-starting an XA transaction resets the isolation level set with SET CURRENT ISOLATION

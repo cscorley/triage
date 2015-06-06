@@ -1,1 +1,0 @@
-NsSample sample program refered to in documentation is missing

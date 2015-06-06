@@ -1,1 +1,0 @@
-There are several places in Pig site still use "Copyright © 2007". Should be "Copyright © 2011-2012". Thanks Lefty Leverenz point it out.

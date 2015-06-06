@@ -1,3 +1,0 @@
-SimpleApp.go(String[])
-SimpleApp.main(String[])
-SimpleApp.parseArguments(String[])

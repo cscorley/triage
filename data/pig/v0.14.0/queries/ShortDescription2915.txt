@@ -1,1 +1,0 @@
-Builtin TOP udf is sensitive to null input bags

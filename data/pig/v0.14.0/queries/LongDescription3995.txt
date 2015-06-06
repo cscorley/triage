@@ -1,1 +1,0 @@
-After merging tez branch, ant test -Dhadoopversion=20 fails due to tez unit tests. They should only run when -Dhadoopversion=23.

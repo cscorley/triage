@@ -1,3 +1,0 @@
-org.apache.tika.io.LookaheadInputStream
-org.apache.tika.io.LookaheadInputStreamTest
-org.apache.tika.parser.CryptoParser

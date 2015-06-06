@@ -1,1 +1,0 @@
-Ledger storage can log an exception if GC happens concurrently.

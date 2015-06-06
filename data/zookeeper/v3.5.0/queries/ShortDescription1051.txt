@@ -1,1 +1,0 @@
-SIGPIPE in Zookeeper 0.3.* when send'ing after cluster disconnection

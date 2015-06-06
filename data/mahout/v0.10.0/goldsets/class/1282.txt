@@ -1,3 +1,0 @@
-org.apache.mahout.math.DiagonalMatrix
-org.apache.mahout.math.DiagonalMatrixTest
-org.apache.mahout.math.MatrixTimesOps

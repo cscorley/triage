@@ -1,1 +1,0 @@
-Typo of time data type in SQLServerdictionary for MSSQL 2008

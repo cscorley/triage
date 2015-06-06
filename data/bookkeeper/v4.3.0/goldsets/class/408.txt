@@ -1,3 +1,0 @@
-org.apache.bookkeeper.test.BookieReadWriteTest
-org.apache.bookkeeper.test.BookieReadWriteTest.SyncObj
-org.apache.bookkeeper.test.BookieReadWriteTest.ThrottleTestCallback

@@ -1,1 +1,0 @@
-Incorrect classify-20newsgroups.sh file description

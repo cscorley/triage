@@ -1,2 +1,0 @@
-David Van Couvering <davidvc@apache.org>
-Knut Anders Hatlen <kahatlen@apache.org>

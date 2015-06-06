@@ -1,1 +1,0 @@
-ColumnMapKeyPrune bug with distinct operator

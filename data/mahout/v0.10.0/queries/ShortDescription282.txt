@@ -1,1 +1,0 @@
-Remove assembly from core, re-add commons-cli 1.x (no longer exluced from hadoop dependency)

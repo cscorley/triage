@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.admin.Commands
-org.apache.zookeeper.server.admin.Commands.MonitorCommand

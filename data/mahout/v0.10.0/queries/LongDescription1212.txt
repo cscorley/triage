@@ -1,6 +1,0 @@
-Looking at the classify-20newsgroups.sh file it says:
-
-#To run:  change into the mahout directory and type:
-#examples/bin/build-20news.sh
-
-I think it was not updated to say classify-20newsgroups.sh instead of build-20news.sh when the MAHOUT-857 changes were made.

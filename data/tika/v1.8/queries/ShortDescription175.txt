@@ -1,1 +1,0 @@
-Retrotranslate Tika for use in Java 1.4 environments

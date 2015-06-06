@@ -1,1 +1,0 @@
-Null subexpression in bincond nullifies outer tuple (or bag)

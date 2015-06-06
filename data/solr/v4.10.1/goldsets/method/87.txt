@@ -1,3 +1,0 @@
-org.apache.solr.util.StrUtils.splitSmart(String,String,boolean)
-org.apache.solr.util.StrUtils.splitWS(String,boolean)
-org.apache.solr.util.TestUtils.testSplitEscaping()

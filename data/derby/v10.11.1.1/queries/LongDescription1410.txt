@@ -1,1 +1,0 @@
-This SQL State is used by the class impl.store.raw.data.StoredPage in three different places, but there is no message for "XSDAN.S".  Uncovered by the i18n/MessageBundleTest recently checked in.  The MessageBundleTest master file shows this is as having no matching message.

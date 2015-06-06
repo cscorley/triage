@@ -1,1 +1,0 @@
-NullPointException when releasing topic

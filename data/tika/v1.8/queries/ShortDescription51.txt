@@ -1,1 +1,0 @@
-Leftover temp files after running Tika tests

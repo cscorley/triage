@@ -1,2 +1,0 @@
-org.apache.solr.client.solrj.util.ClientUtils
-org.apache.solr.client.solrj.util.ClientUtils.ThreadLocalDateFormat

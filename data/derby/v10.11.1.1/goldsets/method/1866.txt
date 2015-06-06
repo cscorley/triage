@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.compile.OptimizerImpl.getMaxMemoryPerTable()
-org.apache.derby.impl.sql.compile.OptimizerImpl.prepForNextRound()
-org.apache.derby.impl.sql.compile.OptimizerImpl.pushPredicates(Optimizable,JBitSet)

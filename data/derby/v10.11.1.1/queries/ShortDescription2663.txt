@@ -1,1 +1,0 @@
-derbyall/derbytools/ij2 fails in derbyall run in the J2ME environment

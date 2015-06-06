@@ -1,1 +1,0 @@
-When the sampled relation is too small or empty then skewed join fails.

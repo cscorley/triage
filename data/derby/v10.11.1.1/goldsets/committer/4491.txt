@@ -1,3 +1,0 @@
-Bryan Pendleton <bpendleton@apache.org>
-Kristian Waagan <kristwaa@apache.org>
-Richard N. Hillegas <rhillegas@apache.org>

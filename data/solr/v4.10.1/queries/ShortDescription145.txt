@@ -1,1 +1,0 @@
-RequestHandler's dropping exceptions since SOLR-104

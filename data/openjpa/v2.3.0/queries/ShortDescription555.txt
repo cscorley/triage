@@ -1,1 +1,0 @@
-MappingTool got NullPointerException in DB2Dictionary.isDB2ZOSV8xOrLater()

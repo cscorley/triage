@@ -1,2 +1,0 @@
-org.apache.openjpa.jdbc.kernel.PessimisticLockManager
-org.apache.openjpa.kernel.StateManagerImpl

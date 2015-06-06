@@ -1,3 +1,0 @@
-There are 5 failures and 1 abort after PIG-3463.
-
-Aniket Mokashi, do you know if HBaseStorage suppose to work in auto local mode?

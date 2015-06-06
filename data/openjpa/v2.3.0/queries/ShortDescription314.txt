@@ -1,1 +1,0 @@
-Unenhanced complex id in MappedSuperclass causes NPE

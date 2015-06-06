@@ -1,1 +1,0 @@
-AllocPage.createPage() doesn't initialize minimumRecordSize correctly

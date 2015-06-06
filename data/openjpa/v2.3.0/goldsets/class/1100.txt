@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.meta.MappingRepository
-org.apache.openjpa.jira1100.TestBadVersionField
-org.apache.openjpa.jira1100.TestBadVersionField.Data

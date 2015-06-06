@@ -1,2 +1,0 @@
-org.apache.derby.iapi.types.SqlXmlUtil.compileXQExpr(String,String)
-org.apache.derby.iapi.types.SqlXmlUtil.evaluate(Document)

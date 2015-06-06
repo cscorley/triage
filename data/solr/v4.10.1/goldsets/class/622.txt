@@ -1,3 +1,0 @@
-org.apache.solr.handler.component.SpellCheckComponent
-org.apache.solr.handler.component.SpellCheckComponent.SpellCheckerListener
-org.apache.solr.handler.component.SpellCheckComponentTest

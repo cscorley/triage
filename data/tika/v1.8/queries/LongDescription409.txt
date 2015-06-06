@@ -1,6 +1,0 @@
-As reported by Timo Boehme on tika-dev@:
-
-After building tika 0.7 using maven I found that library
-poi-ooxml-schemas-3.6.jar was not included in tika-bundle leading to
-IOException with root cause ClassNotFoundException while processing
-OOXML files.

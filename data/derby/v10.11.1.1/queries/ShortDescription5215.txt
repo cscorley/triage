@@ -1,1 +1,0 @@
-Localize messages introduced or changed in 10.7 and 10.8

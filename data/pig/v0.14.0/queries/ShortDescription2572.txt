@@ -1,1 +1,0 @@
-e2e harness deploy fails when using pig that does not bundle hadoop

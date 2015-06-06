@@ -1,2 +1,0 @@
-org.apache.derby.client.am.ExceptionFormatter
-org.apache.derby.client.am.Sqlca

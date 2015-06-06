@@ -1,2 +1,0 @@
-org.apache.derbyTesting.junit.BaseTestCase.assertExecJavaCmdAsExpected(String[],String[],int)
-org.apache.derbyTesting.junit.BaseTestCase.execJavaCmd(String[])

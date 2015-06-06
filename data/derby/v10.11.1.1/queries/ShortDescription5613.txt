@@ -1,1 +1,0 @@
-Queries with group by column not included in the column list for JOIN(INNER or OUTER) with NATURAL or USING does not fail

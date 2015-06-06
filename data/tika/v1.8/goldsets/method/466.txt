@@ -1,5 +1,0 @@
-org.apache.tika.parser.feed.FeedParser.getSupportedTypes(ParseContext)
-org.apache.tika.parser.feed.FeedParser.parse(InputStream,ContentHandler,Metadata)
-org.apache.tika.parser.feed.FeedParser.parse(InputStream,ContentHandler,Metadata,ParseContext)
-org.apache.tika.parser.feed.FeedParser.stripTags(SyndContent)
-org.apache.tika.parser.feed.FeedParserTest.testXMLParser()

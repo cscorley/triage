@@ -1,1 +1,0 @@
-Convert derbynet/maxthreads.java test into a JUnit testcase.

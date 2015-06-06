@@ -1,1 +1,0 @@
-Ant build continues even if the parser classes fail to be generated.

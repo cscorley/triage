@@ -1,3 +1,0 @@
-org.apache.derbyTesting.junit.BaseTestCase.execJavaCmd(String[],File)
-org.apache.derbyTesting.junit.BaseTestCase.getEmmaOutFile()
-org.apache.derbyTesting.junit.BaseTestCase.runsWithEmma()

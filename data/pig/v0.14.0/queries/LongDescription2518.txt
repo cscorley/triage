@@ -1,1 +1,0 @@
-Saw folks doing that for Hive. Pig need it as well.

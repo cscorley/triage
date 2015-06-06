@@ -1,1 +1,0 @@
-DataImportHandler: dataimporter.functions.escapeSql() does not escape backslash character

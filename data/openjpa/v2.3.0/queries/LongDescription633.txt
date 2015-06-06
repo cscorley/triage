@@ -1,5 +1,0 @@
-The release process for OpenJPA is currently quite long and involves a lot of manual steps. When we first entered the incubator this was required, however there are a lot of new plugins for Maven which may make all our lives easier. 
-
-Ideally our release instructions would look more like Geronimo's : http://cwiki.apache.org/GMOxPMGT/geronimo-release-process.html which takes advantage of the maven release plugin and gpg plugins. 
-
-Resolving this completely may take some time. In the meantime the old release process will work and can be used if we need to cut a new release. 

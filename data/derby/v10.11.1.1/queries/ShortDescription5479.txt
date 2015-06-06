@@ -1,1 +1,0 @@
-Don't run MessageVetter unless messages have changed

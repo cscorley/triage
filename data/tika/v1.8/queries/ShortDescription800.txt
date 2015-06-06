@@ -1,1 +1,0 @@
-mark/reset not supported from POIFSContainerDetector

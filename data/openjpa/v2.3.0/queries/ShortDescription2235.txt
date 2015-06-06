@@ -1,1 +1,0 @@
-"READ_UNCOMMITTED" setting for the fetch plan isolation level is ignored in DB2Dictionary

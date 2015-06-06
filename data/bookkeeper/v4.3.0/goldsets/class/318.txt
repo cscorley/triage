@@ -1,2 +1,0 @@
-org.apache.bookkeeper.proto.BookkeeperInternalCallbacks
-org.apache.bookkeeper.proto.BookkeeperInternalCallbacks.MultiCallback

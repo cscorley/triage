@@ -1,3 +1,0 @@
-org.apache.pig.parser.TestAstValidator.tesNegative3()
-org.apache.pig.parser.TestAstValidator.testMultilineFunctionArgument()
-org.apache.pig.parser.TestLogicalPlanGenerator.testNegative3()

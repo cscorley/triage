@@ -1,1 +1,0 @@
-We have worked with tika extraction. In 0.8 jsp file contents extracted well.. But in 0.9 the same files are not extracted well. Pls give the solution

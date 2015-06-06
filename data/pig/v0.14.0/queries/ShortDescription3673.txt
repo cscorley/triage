@@ -1,1 +1,0 @@
-Divide by zero error in runpigmix.pl script

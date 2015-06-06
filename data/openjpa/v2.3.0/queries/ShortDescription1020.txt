@@ -1,1 +1,0 @@
-eager fetching of PersistentCollection of a primitive type fails

@@ -1,3 +1,0 @@
-org.apache.tika.mime.MimeTypes.forName(String)
-org.apache.tika.parser.external.ExternalParsersFactory.attachExternalParsers(List<ExternalParser>,ExternalParser,TikaConfig)
-org.apache.tika.parser.external.ExternalParsersFactory.attachExternalParsers(TikaConfig)

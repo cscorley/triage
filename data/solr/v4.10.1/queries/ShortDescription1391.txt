@@ -1,1 +1,0 @@
-The XPath field in the XPathEntityResolver should use the resolver to replace possible tokens

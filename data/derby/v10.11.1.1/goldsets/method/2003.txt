@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.jdbcapi.BlobClob4BlobTest.derbynetExclude(String)
-org.apache.derbyTesting.functionTests.tests.jdbcapi.BlobClob4BlobTest.suite()
-org.apache.derbyTesting.junit.DatabasePropertyTestSetup.setLockTimeouts(Test,int,int)

@@ -1,1 +1,0 @@
-org.apache.mahout.common.AbstractJob.addInputOption() has a wrong javadoc comment that seems to have been copied from addOutputOption()

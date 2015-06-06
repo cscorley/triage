@@ -1,1 +1,0 @@
-select from view with "upper" and "in" list throws a ClassCastException

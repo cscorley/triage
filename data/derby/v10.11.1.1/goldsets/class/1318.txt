@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.jdbcapi.DataSourceSerializationTest
-org.apache.derbyTesting.functionTests.tests.jdbcapi._Suite
-SerializeDataSources

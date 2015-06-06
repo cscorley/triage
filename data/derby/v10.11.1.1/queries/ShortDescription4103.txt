@@ -1,1 +1,0 @@
-Allow unlimited growth for in-memory conglomerates

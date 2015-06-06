@@ -1,1 +1,0 @@
-It would be great if the Tika CLI could output metadata also in the XMP format.

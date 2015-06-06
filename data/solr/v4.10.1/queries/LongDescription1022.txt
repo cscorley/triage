@@ -1,5 +1,0 @@
-We are actually using the suggested "ignored" field in the schema.  I have found, however, that Solr still throws a error 400 if I send in an unmatched multi-valued field.
-
-It seems that if I set this ignored field to be multiValued than a document with unrecognized single or multiple value fields is sucessfully indexed.
-
-Attached patch alters this suggested item in the schema.

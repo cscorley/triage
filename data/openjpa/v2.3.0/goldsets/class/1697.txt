@@ -1,4 +1,0 @@
-org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingParser
-org.apache.openjpa.persistence.jdbc.mapping.Authority
-org.apache.openjpa.persistence.jdbc.mapping.Authority.AuthorityValues
-org.apache.openjpa.persistence.jdbc.mapping.TestEnumXmlTypeMapping

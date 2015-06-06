@@ -1,1 +1,0 @@
-winvs2008 jenkins job failing with "unresolved external symbol"

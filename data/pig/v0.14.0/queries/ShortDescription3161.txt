@@ -1,1 +1,0 @@
-Update reserved keywords in Pig docs

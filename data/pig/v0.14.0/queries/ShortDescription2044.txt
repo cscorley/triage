@@ -1,1 +1,0 @@
-Patten match bug in org.apache.pig.newplan.optimizer.Rule

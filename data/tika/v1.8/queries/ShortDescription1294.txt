@@ -1,1 +1,0 @@
-Add ability to turn off extraction of PDXObjectImages (TIKA-1268) from PDFs

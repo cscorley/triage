@@ -1,2 +1,0 @@
-org.apache.tika.parser.mail.RFC822Parser.parse(InputStream,ContentHandler,Metadata,ParseContext)
-org.apache.tika.parser.mail.RFC822ParserTest.testLongHeader()

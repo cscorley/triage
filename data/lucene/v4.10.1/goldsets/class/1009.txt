@@ -1,3 +1,0 @@
-org.apache.lucene.index.IndexFileNames
-org.apache.lucene.index.IndexWriter
-org.apache.lucene.index.SegmentInfo

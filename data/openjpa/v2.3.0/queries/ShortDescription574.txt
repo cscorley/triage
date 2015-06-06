@@ -1,1 +1,0 @@
-Cached object in DataCache not evicted due to StatementBatching not reporting OptimisticException 

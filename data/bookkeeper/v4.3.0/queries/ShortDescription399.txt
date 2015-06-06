@@ -1,1 +1,0 @@
-Let hub server configure write quorum and ack quorum.

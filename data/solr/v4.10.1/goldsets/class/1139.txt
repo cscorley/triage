@@ -1,6 +1,0 @@
-org.apache.solr.client.solrj.response.QueryResponse
-org.apache.solr.client.solrj.response.TermsResponse
-org.apache.solr.client.solrj.response.TermsResponse.Term
-org.apache.solr.client.solrj.response.TermsResponseTest
-org.apache.solr.client.solrj.SolrQuery
-org.apache.solr.client.solrj.SolrQueryTest

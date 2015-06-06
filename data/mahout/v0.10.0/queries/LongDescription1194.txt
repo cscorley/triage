@@ -1,1 +1,0 @@
-It seems that current build have hard coded java target for JDK6. I think that it would be useful to parametrise that, so that it can be easily overridden on the command line.

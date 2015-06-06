@@ -1,1 +1,0 @@
-VectorWritable's bug with VectorView of sparse vectors

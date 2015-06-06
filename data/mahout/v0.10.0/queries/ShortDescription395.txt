@@ -1,1 +1,0 @@
-Using KMeansDriver leaves open files and can lead to FileNotFoundException - "too many open files" error

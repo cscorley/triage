@@ -1,1 +1,0 @@
-varargs functions do not get passed the arguments in Python embedding

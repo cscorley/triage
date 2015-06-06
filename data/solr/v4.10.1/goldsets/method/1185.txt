@@ -1,2 +1,0 @@
-org.apache.solr.servlet.SolrDispatchFilter.doFilter(ServletRequest,ServletResponse,FilterChain)
-org.apache.solr.servlet.SolrDispatchFilter.SolrDispatchFilter()

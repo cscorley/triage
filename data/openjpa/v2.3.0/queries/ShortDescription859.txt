@@ -1,1 +1,0 @@
-OpenJPA requires all persistent fields to be specified on an XML defined entity

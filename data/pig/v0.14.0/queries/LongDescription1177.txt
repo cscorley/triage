@@ -1,6 +1,0 @@
-Pig 0.6 - Zebra docs
-
-Updates for Zebra docs
->  Zebra/Pig - added glob support (new feature)
-> Zebra/MapReduce - moved Zebra M/R APIs to this file (from reference file)
-> Zebra Reference - rewrote storage specification section

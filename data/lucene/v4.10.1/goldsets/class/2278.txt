@@ -1,3 +1,0 @@
-org.apache.lucene.search.vectorhighlight.AbstractTestCase
-org.apache.lucene.search.vectorhighlight.BaseFragmentsBuilder
-org.apache.lucene.search.vectorhighlight.SimpleFragmentsBuilderTest

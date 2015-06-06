@@ -1,1 +1,0 @@
-Extract embedded images in PPT

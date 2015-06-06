@@ -1,2 +1,0 @@
-org.apache.derby.PackagePrivateTestSuite.PackagePrivateTestSuite(String)
-org.apache.derby.PackagePrivateTestSuite.suite()

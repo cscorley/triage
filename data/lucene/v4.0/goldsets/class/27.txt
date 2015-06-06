@@ -1,2 +1,0 @@
-org.apache.lucene.util.TestMaxFailuresRule
-org.apache.lucene.util.TestMaxFailuresRule.Nested

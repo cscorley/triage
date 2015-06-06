@@ -1,1 +1,0 @@
-The description of the Maven artifact for the Derby net servet should state that the servlet is for demonstration purposes only, and that it is not intended for production use.

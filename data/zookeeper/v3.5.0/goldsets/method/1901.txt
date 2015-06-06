@@ -1,2 +1,0 @@
-org.apache.zookeeper.test.AsyncOps.Children2CB.processResult(int,String,Object,List<String>,String,Stat)
-org.apache.zookeeper.test.AsyncOps.ChildrenCB.processResult(int,String,Object,List<String>,String)

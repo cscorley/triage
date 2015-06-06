@@ -1,1 +1,0 @@
-Logical Optimizer: Merge cascading foreach

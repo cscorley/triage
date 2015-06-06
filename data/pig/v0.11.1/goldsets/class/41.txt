@@ -1,2 +1,0 @@
-org.apache.pig.piggybank.storage.HiveColumnarLoader
-org.apache.pig.piggybank.test.storage.TestHiveColumnarLoader

@@ -1,1 +1,0 @@
-Sequence generator makes CREATE TRIGGER fail with internal error

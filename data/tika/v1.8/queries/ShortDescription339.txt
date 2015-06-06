@@ -1,1 +1,0 @@
-HtmlParser & TXTParser should not use language returned by CharsetDetector if language hint has been provided

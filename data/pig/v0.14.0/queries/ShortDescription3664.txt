@@ -1,1 +1,0 @@
-Piggy Bank XPath UDF can't be called

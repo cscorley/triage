@@ -1,2 +1,0 @@
-org.apache.hadoop.zebra.types.ZebraTupleFactory.getZebraTupleFactoryInstance()
-org.apache.hadoop.zebra.types.ZebraTupleFactory.isFixedSize()

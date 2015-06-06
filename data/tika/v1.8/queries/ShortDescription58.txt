@@ -1,1 +1,0 @@
-Replace jtidy html parser with nekohtml based parser

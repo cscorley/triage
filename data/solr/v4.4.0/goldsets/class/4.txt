@@ -1,2 +1,0 @@
-org.apache.solr.client.solrj.embedded.JettySolrRunner
-org.apache.solr.SolrJettyTestBase

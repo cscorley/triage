@@ -1,2 +1,0 @@
-Donald Woods <dwoods@apache.org>
-Milosz Tylenda <mtylenda@apache.org>

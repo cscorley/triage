@@ -1,1 +1,0 @@
-[zebra] end to end test and stress test

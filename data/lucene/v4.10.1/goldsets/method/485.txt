@@ -1,3 +1,0 @@
-org.apache.lucene.index.IndexWriter.addIndexes(IndexReader[])
-org.apache.lucene.index.IndexWriter.addIndexes.run.doBody()
-org.apache.lucene.index.IndexWriter.mergeSegments(int,int)

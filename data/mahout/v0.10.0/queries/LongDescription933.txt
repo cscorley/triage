@@ -1,1 +1,0 @@
-Right now, ClusterIterator consumes vectors only from in-memory and sequential hdfs. A mapreduce version to consume vectors needs to be implemented.

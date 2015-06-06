@@ -1,1 +1,0 @@
-PIG-2672 adds user level jar cache to avoid copying from client to hdfs for jars that are reused. We should document how to use this feature in pig.

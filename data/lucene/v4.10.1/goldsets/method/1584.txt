@@ -1,2 +1,0 @@
-org.apache.lucene.index.IndexWriter.merge(MergePolicy.OneMerge)
-org.apache.lucene.index.IndexWriter.mergeSuccess(MergePolicy.OneMerge)

@@ -1,1 +1,0 @@
-Derby does not resolve functions bound to methods with varargs.

@@ -1,1 +1,0 @@
-More accessibility fixes needed for demo pages

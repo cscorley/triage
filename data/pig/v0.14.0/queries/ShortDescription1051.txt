@@ -1,1 +1,0 @@
-FINFBUGS: NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE: Possible null pointer dereference due to return value of called method

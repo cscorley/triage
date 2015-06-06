@@ -1,2 +1,0 @@
-Lily Wei <lilywei@apache.org>
-Richard N. Hillegas <rhillegas@apache.org>

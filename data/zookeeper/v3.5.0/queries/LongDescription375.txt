@@ -1,3 +1,0 @@
-zoo_add_auth doesn't maintain a list of auths - it only stores the most recent auth send to the server. As a result on re-sync to the cluster it will lose (not reregister) any auths prior to the most recent.
-
-This code should maintain a list of auths similar to the java code. Be sure to free the memory in close.

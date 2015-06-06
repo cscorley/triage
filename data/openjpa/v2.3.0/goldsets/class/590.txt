@@ -1,3 +1,0 @@
-org.apache.openjpa.kernel.exps.QueryExpressions
-org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder
-org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder.JPQLNode

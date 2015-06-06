@@ -1,2 +1,0 @@
-org.apache.lucene.search.BoostingQuery.BoostingQuery(Query,Query,float)
-org.apache.lucene.search.BoostingQuery.rewrite(IndexReader)

@@ -1,1 +1,0 @@
-Ignore HTML style and script content

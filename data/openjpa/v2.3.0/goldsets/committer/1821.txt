@@ -1,2 +1,0 @@
-Milosz Tylenda <mtylenda@apache.org>
-Pinaki Poddar <ppoddar@apache.org>

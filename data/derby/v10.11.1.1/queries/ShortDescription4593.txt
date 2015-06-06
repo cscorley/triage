@@ -1,1 +1,0 @@
-Track tasks needed to release Derby 10.6.1

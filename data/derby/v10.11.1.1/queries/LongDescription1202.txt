@@ -1,1 +1,0 @@
-This SQLState is used by impl.store.raw.data.StoredPage in three locations, but there is no associated message for this id in messages.properties.

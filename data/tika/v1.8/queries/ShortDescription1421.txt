@@ -1,1 +1,0 @@
-Tika-Parsers tests fail on CentOS6 if tesseract isn't installed

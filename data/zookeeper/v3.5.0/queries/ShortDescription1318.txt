@@ -1,1 +1,0 @@
-In Python binding, get_children (and get and exists, and probably others) with expired session doesn't raise exception properly

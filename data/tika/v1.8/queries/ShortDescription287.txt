@@ -1,1 +1,0 @@
-HtmlParser should resolve relative paths in <a href="xxx"> elements

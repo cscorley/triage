@@ -1,3 +1,0 @@
-org.apache.lucene.index.DirectoryReader
-org.apache.lucene.index.MultiReader
-org.apache.lucene.search.regex.TestRegexQuery

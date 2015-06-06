@@ -1,1 +1,0 @@
-Support clear methods on EntityManager, including new CascadeType.CLEAR 

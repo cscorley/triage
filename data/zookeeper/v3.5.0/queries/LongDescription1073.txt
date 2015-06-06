@@ -1,1 +1,0 @@
-ZOOKEEPER-1030 updated the generated docs, not the source docs. I'll submit a patch to address in the src.

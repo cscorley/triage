@@ -1,2 +1,0 @@
-org.apache.openjpa.meta.FetchGroup
-org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser

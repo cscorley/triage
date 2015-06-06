@@ -1,3 +1,0 @@
-org.apache.solr.core.DummyValueSourceParser
-org.apache.solr.core.SOLR749Test
-org.apache.solr.core.SolrCore

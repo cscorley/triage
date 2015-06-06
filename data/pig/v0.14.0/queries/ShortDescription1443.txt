@@ -1,1 +1,0 @@
-DefaultTuple underestimate the memory footprint for string

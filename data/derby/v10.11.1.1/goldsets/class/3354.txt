@@ -1,3 +1,0 @@
-org.apache.derby.impl.jdbc.EmbedBlob
-org.apache.derby.impl.jdbc.EmbedClob
-org.apache.derby.impl.jdbc.EmbedConnection

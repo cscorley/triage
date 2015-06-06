@@ -1,2 +1,0 @@
-org.apache.mahout.math.MatrixTest
-org.apache.mahout.math.MatrixView

@@ -1,1 +1,0 @@
-Assert failure or ClassCastException in EmbedBlob when retrieving BLOB >= 32K

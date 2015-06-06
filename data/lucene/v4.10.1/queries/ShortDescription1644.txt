@@ -1,1 +1,0 @@
-Enable MultiTermQuery's constant score mode to also use BooleanQuery under the hood

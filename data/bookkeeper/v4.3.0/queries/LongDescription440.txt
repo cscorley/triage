@@ -1,1 +1,0 @@
-Using conditional write/delete will make operating metadata more safely. It is also a requirement for metadata migration.

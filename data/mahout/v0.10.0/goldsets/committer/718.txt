@@ -1,2 +1,0 @@
-Sean R. Owen <srowen@apache.org>
-Sebastian Schelter <ssc@apache.org>

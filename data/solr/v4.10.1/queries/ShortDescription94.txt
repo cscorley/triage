@@ -1,1 +1,0 @@
-added solr startup/shutdown to test task

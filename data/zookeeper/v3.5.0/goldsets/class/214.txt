@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.NIOServerCnxn
-org.apache.zookeeper.server.ServerCnxn
-org.apache.zookeeper.server.ServerStats

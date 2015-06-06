@@ -1,1 +1,0 @@
-Remove deprecated code for generating CHANGES.html

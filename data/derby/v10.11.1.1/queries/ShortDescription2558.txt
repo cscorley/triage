@@ -1,1 +1,0 @@
-client trhows ArrayIndexOutOfBounds exception instead of parameter out of range 

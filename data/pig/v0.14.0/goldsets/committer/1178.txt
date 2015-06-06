@@ -1,2 +1,0 @@
-Alan Gates <gates@apache.org>
-Jianyong Dai <daijy@apache.org>

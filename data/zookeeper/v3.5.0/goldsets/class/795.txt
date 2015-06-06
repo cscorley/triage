@@ -1,5 +1,0 @@
-org.apache.zookeeper.ClientCnxn
-org.apache.zookeeper.ClientCnxn.EventThread
-org.apache.zookeeper.ClientCnxn.SendThread
-org.apache.zookeeper.ClientCnxn.WatcherSetEventPair
-org.apache.zookeeper.test.SessionTest

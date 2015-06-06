@@ -1,3 +1,0 @@
-org.apache.tika.parser.Parser.getContents()
-org.apache.tika.parser.Parser.getStrContent()
-org.apache.tika.TestParsers.setUp()

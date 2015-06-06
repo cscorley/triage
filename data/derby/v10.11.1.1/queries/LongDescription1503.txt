@@ -1,1 +1,0 @@
-Currently, StatementEventsTest only tests that statement events work with prepared statements. It should also test callable statements.

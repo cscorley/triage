@@ -1,1 +1,0 @@
-PDFBox 1.0.0 is being released today. The release has some nice performance improvements for text extraction, so we'll want to upgrade ASAP.

@@ -1,1 +1,0 @@
-Create a format command for Hedwig to cleanup metadata for a clean setup. similar as BOOKKEEPER-300.

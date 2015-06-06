@@ -1,2 +1,0 @@
-org.apache.openjpa.kernel.StateManagerImpl
-org.apache.openjpa.persistence.lifecycle.TestPessimisticPNonTransToPDirty

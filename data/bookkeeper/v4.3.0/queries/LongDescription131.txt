@@ -1,3 +1,0 @@
-The zookeeper test jar in maven has changed name since development. Whats more, the new name is incompatible with maven <type>test-jar</type>.
-
-This must be fixed before releasing.

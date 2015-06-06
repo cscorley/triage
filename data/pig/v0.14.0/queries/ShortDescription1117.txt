@@ -1,1 +1,0 @@
-Pig reading hive columnar rc tables

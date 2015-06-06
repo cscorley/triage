@@ -1,2 +1,0 @@
-org.apache.bookkeeper.bookie.LedgerCacheImpl
-org.apache.bookkeeper.test.ReadOnlyBookieTest

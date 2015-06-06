@@ -1,1 +1,0 @@
-Add application/ms-tnef as alias to application/vnd.ms-tnef

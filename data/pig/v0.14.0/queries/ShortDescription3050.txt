@@ -1,1 +1,0 @@
-Fix FindBugs multithreading warnings

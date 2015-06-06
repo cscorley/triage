@@ -1,1 +1,0 @@
-TableFunctionTest keeps reference to connection after completion

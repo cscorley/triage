@@ -1,3 +1,0 @@
-Ali Mosavian contributed this patch from Github to provide text/xml to tika-server:
-
-https://github.com/apache/tika/pull/3.patch

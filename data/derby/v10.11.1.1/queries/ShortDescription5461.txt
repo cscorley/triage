@@ -1,1 +1,0 @@
-ant release should not continue automatically if svn commit fails

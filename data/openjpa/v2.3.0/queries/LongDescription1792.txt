@@ -1,1 +1,0 @@
-There were no -1 votes on the discussion thread to drop JDK5 support from trunk (2.1) so I'll move ahead with it.

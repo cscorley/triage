@@ -1,3 +1,0 @@
-org.apache.solr.handler.component.FieldFacetStats
-org.apache.solr.handler.component.StatsComponentTest
-org.apache.solr.request.UnInvertedField

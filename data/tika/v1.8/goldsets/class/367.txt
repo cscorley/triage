@@ -1,2 +1,0 @@
-org.apache.tika.mime.MimeType
-org.apache.tika.mime.MimeType.RootXML

@@ -1,1 +1,0 @@
-provide better interface to support both mode, like java client.

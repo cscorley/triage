@@ -1,2 +1,0 @@
-org.apache.zookeeper.graph.Log4JSource.init()
-org.apache.zookeeper.server.quorum.QuorumPeerConfig.parseProperties(Properties)

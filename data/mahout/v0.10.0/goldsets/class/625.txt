@@ -1,3 +1,0 @@
-org.apache.mahout.fpm.pfpgrowth.fpgrowth.FPGrowth
-org.apache.mahout.fpm.pfpgrowth.FPGrowthRetailDataTest
-org.apache.mahout.fpm.pfpgrowth.PFPGrowthRetailDataTest

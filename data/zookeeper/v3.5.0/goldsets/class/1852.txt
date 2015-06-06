@@ -1,2 +1,0 @@
-org.apache.zookeeper.test.ClientBase
-org.apache.zookeeper.test.TruncateTest

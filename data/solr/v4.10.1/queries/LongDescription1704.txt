@@ -1,1 +1,0 @@
-Clustering already ships the google collections jar. We can add it to the core and all components can benefit from it.

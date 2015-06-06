@@ -1,2 +1,0 @@
-org.apache.zookeeper.test.MultiTransactionTest
-org.apache.zookeeper.test.MultiTransactionTest.HasTriggeredWatcher

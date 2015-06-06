@@ -1,2 +1,0 @@
-org.apache.derbyTesting.functionTests.harness.GenerateReport.CalculatePassFailStats()
-org.apache.derbyTesting.functionTests.harness.GenerateReport.CountLines(String)

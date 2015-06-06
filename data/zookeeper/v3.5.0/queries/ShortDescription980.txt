@@ -1,1 +1,0 @@
-allow configuration parameters for log4j.properties

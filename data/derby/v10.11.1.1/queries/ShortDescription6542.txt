@@ -1,1 +1,0 @@
-Improve the concurrency of identity columns by using SYS.SYSSEQUENCES

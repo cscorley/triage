@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.SyncRequestProcessor
-org.apache.zookeeper.test.DBSizeTest

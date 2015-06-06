@@ -1,3 +1,0 @@
-org.apache.pig.test.TestParamSubPreproc
-org.apache.pig.tools.parameters.ParameterSubstitutionPreprocessor
-org.apache.pig.tools.parameters.PreprocessorContext

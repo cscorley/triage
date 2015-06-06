@@ -1,7 +1,0 @@
-The STATUS file is stale:
-
-1) Votes taken since February aren't mentioned.
-
-2) The development trunk is labelled as 10.2
-
-3) The committer list is stale.

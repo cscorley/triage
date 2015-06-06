@@ -1,1 +1,0 @@
-The default delimiter character for BagToString is not '-' as listed in the docs but actually '_'

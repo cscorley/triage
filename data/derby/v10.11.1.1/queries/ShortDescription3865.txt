@@ -1,1 +1,0 @@
-NPE in testSemantics(.....lang.RolesTest) on JavaME / CVM

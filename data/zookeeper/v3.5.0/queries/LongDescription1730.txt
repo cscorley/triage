@@ -1,1 +1,0 @@
-As part of making ZooKeeper clients more test friendly, it would be useful to easily simulate a session loss event

@@ -1,1 +1,0 @@
-Incorrect mime-type for .pptm, .ppsm and .ppsx in OOXMLParser

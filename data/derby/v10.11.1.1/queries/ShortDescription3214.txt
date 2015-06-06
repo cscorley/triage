@@ -1,1 +1,0 @@
-Optimizer can see negative cost estimates when pulling Optimizables from the join order.

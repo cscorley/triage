@@ -1,2 +1,0 @@
-org.apache.mahout.utils.clustering.ClusterDumper
-org.apache.mahout.utils.clustering.ClusterDumper.TermIndexWeight

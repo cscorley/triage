@@ -1,2 +1,0 @@
-Chris Mattmann <mattmann@apache.org>
-Nick Burch <nick@apache.org>

@@ -1,3 +1,0 @@
-The html page in the Eclipse Derby plugin help system, resources.html, points to the incubator site for the online documentation.
-
-It needs to be updated to point to db.apache.org.

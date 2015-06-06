@@ -1,1 +1,0 @@
-0.12.1 release can't be build for Hadoop2

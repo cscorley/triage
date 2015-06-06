@@ -1,1 +1,0 @@
-iWork Charts not being parsed in all products (Pages, Numbers, Keynote)

@@ -1,1 +1,0 @@
-Register jar does not goes to classpath in some cases

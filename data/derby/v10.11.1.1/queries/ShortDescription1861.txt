@@ -1,1 +1,0 @@
-Column ordering ASSERT when combining column references and expressions in same ORDER BY

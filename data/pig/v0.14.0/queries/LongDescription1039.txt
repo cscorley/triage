@@ -1,5 +1,0 @@
-Pig 0.5 doc updates (to be applied to Trunk and branch-0.5)
-
-1. updates to tutorial
-2. updates to pig latin reference manual
-3. updated doc tab to 0.5.0

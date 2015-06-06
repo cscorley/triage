@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.SnapshotFormatter
-org.apache.zookeeper.test.InvalidSnapshotTest

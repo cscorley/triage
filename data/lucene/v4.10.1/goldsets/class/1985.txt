@@ -1,2 +1,0 @@
-org.apache.lucene.search.DisjunctionMaxQuery
-org.apache.lucene.search.DisjunctionMaxQuery.DisjunctionMaxWeight

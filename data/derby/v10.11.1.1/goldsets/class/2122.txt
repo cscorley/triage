@@ -1,2 +1,0 @@
-org.apache.derby.iapi.store.raw.ContainerLock
-org.apache.derby.iapi.store.raw.RowLock

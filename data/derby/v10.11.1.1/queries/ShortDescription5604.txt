@@ -1,1 +1,0 @@
-[patch] access static constants with static references

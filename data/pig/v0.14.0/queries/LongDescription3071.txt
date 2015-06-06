@@ -1,3 +1,0 @@
-Due to changes in hcatalog 0.5 packaging we need to update the hcatalog jar name and the path to the hbase storage handler jar. We also need to add the pig storage adapter to the class path
-
-pig script should be updated to work with either version.

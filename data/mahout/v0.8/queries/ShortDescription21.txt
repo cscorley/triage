@@ -1,1 +1,0 @@
-Need reference implementation of Evolutionary Programming

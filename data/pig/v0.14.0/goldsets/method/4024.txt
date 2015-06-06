@@ -1,3 +1,0 @@
-org.apache.pig.impl.streaming.TestPigStreamingUDF.testDeserialize__map()
-org.apache.pig.impl.streaming.TestPigStreamingUDF.testSerialize__complex_map()
-org.apache.pig.impl.streaming.TestPigStreamingUDF.testSerialize__map()

@@ -1,2 +1,0 @@
-org.apache.lucene.search.payloads.MaxPayloadFunction
-org.apache.lucene.search.payloads.MinPayloadFunction

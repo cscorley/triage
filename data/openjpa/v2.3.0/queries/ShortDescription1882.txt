@@ -1,1 +1,0 @@
-NPE in DataCacheStoreManager when all types aren't cached

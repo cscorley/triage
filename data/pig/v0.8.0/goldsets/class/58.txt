@@ -1,2 +1,0 @@
-org.apache.pig.EvalFunc
-org.apache.pig.test.TestEvalPipeline2

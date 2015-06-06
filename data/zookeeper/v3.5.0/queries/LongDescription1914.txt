@@ -1,3 +1,0 @@
-https://builds.apache.org/job/PreCommit-ZOOKEEPER-Build/2051/console
-
-     [exec]      [exec] /home/jenkins/jenkins-slave/workspace/PreCommit-ZOOKEEPER-Build/trunk/src/c/tests/TestWatchers.cc:667: Assertion: assertion failed [Expression: ensureCondition( deliveryTracker.deliveryCounterEquals(2),1000)<1000]

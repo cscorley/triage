@@ -1,1 +1,0 @@
-CnxManagerTest failed on hudson

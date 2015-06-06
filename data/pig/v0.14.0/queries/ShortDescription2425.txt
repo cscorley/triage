@@ -1,1 +1,0 @@
-Aggregate Warning does not work as expected on Embedding Pig in Java 0.9.1

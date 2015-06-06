@@ -1,1 +1,0 @@
-Zookeeper currently uses the test-patch.sh script from the Hadoop nightly dir.  This is now out of date.  I propose we just copy the updated one in Hadoop common and then modify for ZK.  This will also help as ZK moves out of Hadoop to it's own TLP.  

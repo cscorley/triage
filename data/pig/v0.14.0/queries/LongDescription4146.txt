@@ -1,1 +1,0 @@
-Currently we need to run "ant test" twice (with different test.exec.type setting) to do Pig QE. It is desired to have a target which can do both.

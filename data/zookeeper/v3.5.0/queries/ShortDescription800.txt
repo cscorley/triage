@@ -1,1 +1,0 @@
-zoo_add_auth returns ZOK if zookeeper handle is in ZOO_CLOSED_STATE

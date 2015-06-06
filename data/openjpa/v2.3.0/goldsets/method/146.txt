@@ -1,3 +1,0 @@
-org.apache.openjpa.meta.ValueMetaDataImpl.copy(ValueMetaData)
-org.apache.openjpa.meta.ValueMetaDataImpl.getCascadeDelete()
-org.apache.openjpa.meta.ValueMetaDataImpl.resolveDeclaredType(Class)

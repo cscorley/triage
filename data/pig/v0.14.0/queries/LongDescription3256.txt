@@ -1,7 +1,0 @@
-When we review the legal documents with Microsoft for Windows work, here is the recommend from lawyer:
-
-Jython 2.5.2 redistributes an external LGPL component (JNA) in a manner that puts Jython out of compliance with the LGPL. As such dependent components like Pig are also arguably out of compliance with the LGPL.
-
-It appears that this has been quietly found and fixed by the Jython guys, as version 2.5.3 does not include the JNA component. However the status of 2.5.2 with respect to the LGPL and Apache legal is still unclear.
-
-The easiest way to remediate this whole problem is to simply move Pig to Jython 2.5.3 and remove the question.

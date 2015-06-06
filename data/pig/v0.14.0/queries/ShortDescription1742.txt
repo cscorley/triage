@@ -1,1 +1,0 @@
-org.apache.pig.newplan.optimizer.Rule.java does not work with plan patterns where leaves/sinks are not siblings

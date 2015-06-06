@@ -1,1 +1,0 @@
-disk space of garbage collected entry logger files isn't reclaimed util process quit 

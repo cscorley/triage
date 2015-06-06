@@ -1,1 +1,0 @@
-VTI demo classes missing in the 10.11.1.0 tar.gz bundle

@@ -1,1 +1,0 @@
-The JUnit code already supports most of this, can probably build off that.

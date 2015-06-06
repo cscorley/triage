@@ -1,4 +1,0 @@
-Document Criteria API.
-Refer to JPA 2.0 Spec directly for most parts.
-Mention OpenJPA specific extensions.
-Provide some examples.

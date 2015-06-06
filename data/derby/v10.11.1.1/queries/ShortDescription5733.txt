@@ -1,1 +1,0 @@
-Source file for OrderByAndSortAvoidance contains characters not available in the C locale

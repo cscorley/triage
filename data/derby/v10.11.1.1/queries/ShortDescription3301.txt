@@ -1,1 +1,0 @@
-Incorrect result from query with nested EXIST

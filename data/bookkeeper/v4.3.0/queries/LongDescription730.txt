@@ -1,1 +1,0 @@
-Shade plugin doesn't generate pom file with apache license header.

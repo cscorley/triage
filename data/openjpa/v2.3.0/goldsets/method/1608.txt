@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.sql.InformixDictionary.decorate(Connection)
-org.apache.openjpa.jdbc.sql.InformixDictionary.execute(String,Connection)
-org.apache.openjpa.jdbc.sql.InformixDictionary.execute(String,Connection,boolean)

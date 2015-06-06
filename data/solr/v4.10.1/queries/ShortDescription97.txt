@@ -1,1 +1,0 @@
-Rakefile now supports functional and unit tests

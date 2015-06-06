@@ -1,1 +1,0 @@
-org.apache.derby.iapi.sql.dictionary.DDUtils.validateDeleteConnection(DataDictionary,TableDescriptor,TableDescriptor,int,Hashtable<String,Integer>,String,Integer,Hashtable<String,Integer>,String,Integer,boolean,String,boolean,StringBuffer,String,boolean,int)

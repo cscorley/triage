@@ -1,2 +1,0 @@
-It's possible to make Forrest work with JDK6 by disabling sitemap validation
-in the forrest.properties file. See FOR-984 and PIG-1508 for more details.

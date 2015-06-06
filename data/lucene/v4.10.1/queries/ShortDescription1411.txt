@@ -1,1 +1,0 @@
-Enable IndexWriter to open an arbitrary commit point

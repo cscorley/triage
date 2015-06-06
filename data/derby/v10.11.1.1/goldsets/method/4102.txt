@@ -1,3 +1,0 @@
-org.apache.derby.impl.jdbc.EmbedBlob.EmbedBlob(DataValueDescriptor,EmbedConnection)
-org.apache.derbyTesting.functionTests.tests.jdbcapi.BLOBTest.testBlobCastInValuesClause()
-org.apache.derbyTesting.functionTests.tests.jdbcapi.BLOBTest.testUpdateBlobWithPositionedUpdate(ResultSet,int,int)

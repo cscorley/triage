@@ -1,1 +1,0 @@
-Publish code quality reports through maven

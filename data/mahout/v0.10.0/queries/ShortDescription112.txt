@@ -1,1 +1,0 @@
-Maven jetty plugin has been relocated

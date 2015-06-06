@@ -1,3 +1,0 @@
-org.apache.pig.data.DefaultAbstractBag
-org.apache.pig.data.DefaultTuple
-org.apache.pig.test.TestTuple

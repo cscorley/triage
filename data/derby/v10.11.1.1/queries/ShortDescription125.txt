@@ -1,1 +1,0 @@
-Network Server can send DSS greater than 32K to client, which breaks DRDA protocol.

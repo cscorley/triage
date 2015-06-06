@@ -1,1 +1,0 @@
-FieldCacheSanityChecker called directly by FieldCache.get*

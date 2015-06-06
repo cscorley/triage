@@ -1,1 +1,0 @@
-As the summary says, we should sign artifacts before deploying for release.

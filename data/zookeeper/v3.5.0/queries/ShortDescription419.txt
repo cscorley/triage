@@ -1,1 +1,0 @@
-Reference counting bug in Python bindings causes abort errors

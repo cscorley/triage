@@ -1,1 +1,0 @@
-Make Token.DEFAULT_TYPE public

@@ -1,3 +1,0 @@
-Create /foo using the REST proxy fails.
-
-Also upgrade to the latest Jersey/Grizzly while we are at it (fixes for func/security)

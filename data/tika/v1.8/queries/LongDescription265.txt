@@ -1,2 +1,0 @@
-The getting started web site does not correctly describe the information how to define Maven dependencies for working with Tika 0.4, based on the new module structure.
-

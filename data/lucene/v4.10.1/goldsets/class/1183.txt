@@ -1,2 +1,0 @@
-org.apache.lucene.search.FuzzyTermEnum
-org.apache.lucene.search.spell.TRStringDistance

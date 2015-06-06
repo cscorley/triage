@@ -1,1 +1,0 @@
-ZK client hangs when using a function not available on the server.

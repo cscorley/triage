@@ -1,2 +1,0 @@
-org.apache.pig.newplan.logical.rules.InputOutputFileValidator.InputOutputFileVisitor.visit(LOStore)
-org.apache.pig.parser.TestErrorHandling.tesNegative7()

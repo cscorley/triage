@@ -1,1 +1,0 @@
-Create new tests for bean caching mode

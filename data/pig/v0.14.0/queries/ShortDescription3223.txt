@@ -1,1 +1,0 @@
-AvroStorage does not handle comma separated input paths

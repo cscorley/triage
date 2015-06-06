@@ -1,1 +1,0 @@
-Tool configuration does not support EMF anchors

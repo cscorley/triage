@@ -1,1 +1,0 @@
-UriUtil used by reducer estimator should support viewfs

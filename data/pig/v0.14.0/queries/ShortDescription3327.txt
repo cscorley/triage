@@ -1,1 +1,0 @@
-Pig hits OOM when fetching task Reports

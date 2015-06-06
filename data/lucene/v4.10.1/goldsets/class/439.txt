@@ -1,3 +1,0 @@
-org.apache.lucene.search.CachingWrapperFilter
-org.apache.lucene.search.QueryFilter
-org.apache.lucene.search.RangeFilter

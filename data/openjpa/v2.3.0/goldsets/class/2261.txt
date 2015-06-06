@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.querycache.QCEntity
-org.apache.openjpa.persistence.querycache.TestQuerySQLCache
-org.apache.openjpa.persistence.QueryImpl

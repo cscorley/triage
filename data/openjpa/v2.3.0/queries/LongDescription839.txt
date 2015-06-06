@@ -1,1 +1,0 @@
-just adding the following plugin to the pom.xml, it will push out sources to the Maven Repository as well.  IDEs can use these sources to help users visualize what is going on, if they need to..

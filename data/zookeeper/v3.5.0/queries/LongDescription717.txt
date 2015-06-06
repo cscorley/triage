@@ -1,1 +1,0 @@
-it would be nice to be able to list the preferred containers to assign tasks to when using instance containers. right now assignments are made in hashmap order which is more or less psuedo-random.

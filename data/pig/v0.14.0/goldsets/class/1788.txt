@@ -1,2 +1,0 @@
-org.apache.pig.parser.InvalidScalarProjectionException
-org.apache.pig.test.TestScalarAliases

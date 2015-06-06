@@ -1,1 +1,0 @@
-Tighten permissions of DB files to owner with >= JDK7

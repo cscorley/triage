@@ -1,6 +1,0 @@
-org.apache.pig.piggybank.evaluation.string.INDEXOF
-org.apache.pig.piggybank.evaluation.string.LASTINDEXOF
-org.apache.pig.piggybank.evaluation.string.LOWER
-org.apache.pig.piggybank.evaluation.string.REPLACE
-org.apache.pig.piggybank.evaluation.string.SUBSTRING
-org.apache.pig.piggybank.test.evaluation.TestEvalString

@@ -1,1 +1,0 @@
-Deleting docs of all returned Hits during search causes ArrayIndexOutOfBoundsException

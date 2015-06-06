@@ -1,3 +1,0 @@
-org.apache.pig.test.Util.loadFlatTuple(Tuple,int[])
-org.apache.pig.test.Util.loadTuple(Tuple,String[][])
-org.apache.pig.test.Util.removeColon(String)

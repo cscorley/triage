@@ -1,5 +1,0 @@
-Terminal clutters up after exiting spark shell (as terminal settings are changed within spark repl).
-
-Save and restore system terminal settings to avoid clutter.
-
-Also minor fix of prompt styling

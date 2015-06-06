@@ -1,1 +1,0 @@
-ZooInspector reconnection always fails if first connection fails

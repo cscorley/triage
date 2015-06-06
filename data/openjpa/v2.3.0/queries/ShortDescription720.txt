@@ -1,1 +1,0 @@
-The pushdown sql for version columns in primary and secondary tables has unpredictable ordering in the select and from clause

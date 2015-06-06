@@ -1,1 +1,0 @@
-remove relative paths assumptions from benchmark code

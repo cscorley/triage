@@ -1,1 +1,0 @@
-fix formatting of C API in ACL section of programmer guide

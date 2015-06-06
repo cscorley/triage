@@ -1,1 +1,0 @@
-Now that PIG-2764 has been integrated into trunk, we need to support biginteger/bigdecimal in Groovy UDFs.

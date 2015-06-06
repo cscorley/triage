@@ -1,3 +1,0 @@
-org.apache.mahout.clustering.cdbw.TestCDbwEvaluator
-org.apache.mahout.clustering.evaluation.RepresentativePointsDriver
-org.apache.mahout.clustering.TestClusterEvaluator

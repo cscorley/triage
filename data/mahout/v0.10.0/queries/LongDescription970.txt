@@ -1,4 +1,0 @@
-Right now, one cannot change the version of Apache Hadoop on which Apache Mahout depend without editing the pom.xml.
-This ticket is about making this possible.
-
-This would help ensuring Apache Mahout work well with more recent versions of Apache Hadoop without disruption.

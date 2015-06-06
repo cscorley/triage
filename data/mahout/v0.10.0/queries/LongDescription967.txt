@@ -1,1 +1,0 @@
-I've noticed the above class is not mentioned in driver.classes.props so I've created a patch for this, in case it was not left out intentionally.

@@ -1,1 +1,0 @@
-When attempting to instantiate Solr::Response::InsertRequestTypeHere, Solr::Response::Base.make_response rescues all exceptions. If an existing Solr::Response class has an error on instantiation, an "unknown request type" error is raised, which is misleading.

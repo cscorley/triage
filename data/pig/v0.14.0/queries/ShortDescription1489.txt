@@ -1,1 +1,0 @@
- Pig MapReduceLauncher does not use jars in register statement 

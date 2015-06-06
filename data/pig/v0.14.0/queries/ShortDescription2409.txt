@@ -1,1 +1,0 @@
-Pig show wrong tracking URL for hadoop 2

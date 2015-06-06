@@ -1,1 +1,0 @@
-Need an M/R job for converting sequence file containing VectorWritable to MeanShiftCanopy before the MeanShift M/R 

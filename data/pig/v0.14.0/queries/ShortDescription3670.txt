@@ -1,1 +1,0 @@
-Fix assert in Pig script

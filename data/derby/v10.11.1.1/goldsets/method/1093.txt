@@ -1,2 +1,0 @@
-org.apache.derby.impl.jdbc.EmbedDatabaseMetaData.getProceduresForODBC(String,String,String)
-org.apache.derby.impl.jdbc.EmbedDatabaseMetaData.getProcedures(String,String,String)

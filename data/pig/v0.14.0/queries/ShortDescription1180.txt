@@ -1,1 +1,0 @@
-Piggybank should compile even if we only have "pig-withouthadoop.jar" but no "pig.jar" in the pig home directory

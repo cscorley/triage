@@ -1,1 +1,0 @@
-the zookeeper c client library seg faults on data being null for a zoo node. 

@@ -1,1 +1,0 @@
-Improve tracing/logging of runtime exceptions raised in the istat thread

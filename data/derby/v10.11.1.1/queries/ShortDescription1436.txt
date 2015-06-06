@@ -1,1 +1,0 @@
-setEmbeddedCP.ksh and setNetworkCleitn.ksh does not work or gives wrong error message

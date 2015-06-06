@@ -1,9 +1,0 @@
-The 0.2 release of mahout does not include pre-built jars for the various mahout modules. An end user must be able to build the jars using maven or figure out how to retrieve them from the maven repository, which can be easy or difficult depending on the build tool being used. It would be convenient to provide binary jars in future mahout releases.
-
-One approach for doing this is described "Maven: the Definitive Guide", available on the web here: http://www.sonatype.com/books/maven-book/reference/assemblies-set-dist-assemblies.html
-
-The problem with the current project structure is described succinctly in the second paragraph of this page. The dependencies are structured in such a way so that the top-level mahout project is always built before core, utils, examples, etc, so that it is not a simple matter of adding or modifying the assembly of this project to include the child artifacts.
-
-Following the approach described in the resource above, a new module would be created below the top-level mahout project whose sole purpose is to bundle the distributions. This module would depend on all other projects that would be included in the distribution and thus be build only after all of the other modules are built. This assembly would wrap together both the sources and binary artifacts for each of the modules included in the release.
-
-Additionally, the release profile can be removed from the top level pom and the artifacts produced by the project assembly descriptor would no longer be needed.

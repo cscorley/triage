@@ -1,2 +1,0 @@
-Konstantin Gribov <grossws@apache.org>
-Tim Allison <tallison@apache.org>

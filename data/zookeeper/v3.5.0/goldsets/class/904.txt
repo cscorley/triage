@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.PrepRequestProcessor
-org.apache.zookeeper.test.AuthTest

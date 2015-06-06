@@ -1,5 +1,0 @@
-I was looking through the c-client code and noticed a situation where a counter can be incorrectly incremented and a small memory leak can occur.
-
-In zookeeper.c : add_completion(), if close_requested is true, then the completion will not be queued.  But at the end, outstanding_sync is still incremented and free() never called on the newly allocated completion_list_t.  
-
-I will submit for review a diff that I believe corrects this issue.

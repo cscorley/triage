@@ -1,3 +1,0 @@
-bookkeeper-daemon.sh will not remove the pid file one successfull stop.
-
-This may result in startup failure, if the same PID is used by some other process at that time.

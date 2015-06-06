@@ -1,3 +1,0 @@
-org.apache.tika.parser.html.HtmlParser.getBodyHandler.startElement(String,String,String,Attributes)
-org.apache.tika.parser.html.HtmlParser.getBodyHandler(XHTMLContentHandler)
-org.apache.tika.parser.html.HtmlParserTest.testParseAscii()

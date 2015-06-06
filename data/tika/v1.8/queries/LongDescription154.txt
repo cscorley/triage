@@ -1,9 +1,0 @@
-Antoni Mylka noted on the mailing list:
-
-    Many binary formats begin with magic byte sequences composed of ASCII characters, e.g.
-    zipfiles begin with PK
-    pdfs begin with %PDF-
-    chms help files begin with ITSF
-    etc.
-
-Tika should do a better job of detecting such cases.

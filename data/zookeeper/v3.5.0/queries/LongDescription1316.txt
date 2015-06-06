@@ -1,1 +1,0 @@
-zookeeper_init does not free strdup'ed memory when chroot is just '/'.

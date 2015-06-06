@@ -1,2 +1,0 @@
-org.apache.bookkeeper.bookie.BookieJournalTest
-org.apache.bookkeeper.bookie.FileInfo

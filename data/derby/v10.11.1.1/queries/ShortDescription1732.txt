@@ -1,1 +1,0 @@
-The language and store systems treat a JVM error such as OutOfMemoryError differently leading to the raw store protocol violation errors

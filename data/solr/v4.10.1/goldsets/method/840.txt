@@ -1,2 +1,0 @@
-org.apache.solr.request.BinaryResponseWriter.Resolver.getDoc(Document)
-org.apache.solr.request.BinaryResponseWriter.write(OutputStream,SolrQueryRequest,SolrQueryResponse)

@@ -1,2 +1,0 @@
-Andreas Korneliussen <andreask@apache.org>
-Tomohito Nakayama <tmnk@apache.org>

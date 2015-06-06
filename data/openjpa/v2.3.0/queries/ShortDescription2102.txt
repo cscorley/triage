@@ -1,1 +1,0 @@
-URLs which contains spaces are not properly handled by OpenJPA.

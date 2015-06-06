@@ -1,2 +1,0 @@
-Jianyong Dai <daijy@apache.org>
-Xuefu Zhang <xuefu@apache.org>

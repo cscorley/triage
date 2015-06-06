@@ -1,1 +1,0 @@
-A bug which close output stream while serialization.

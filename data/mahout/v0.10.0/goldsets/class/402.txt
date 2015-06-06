@@ -1,2 +1,0 @@
-org.apache.mahout.math.NamedVector
-org.apache.mahout.utils.vectors.VectorHelper

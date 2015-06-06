@@ -1,1 +1,0 @@
-LoadFunc signature is not correct in LoadFunc.getSchema sometimes

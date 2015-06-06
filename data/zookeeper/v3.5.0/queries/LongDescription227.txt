@@ -1,1 +1,0 @@
-Recent gcc compilers issue warnings when function declarations for functions with no arguments don't specific "void".  The attached patch fixes one such warning for create_buffer_oarchive() in recordio.h.

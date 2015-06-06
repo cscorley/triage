@@ -1,1 +1,0 @@
-remove custom encoding support in Greek/Russian Analyzers

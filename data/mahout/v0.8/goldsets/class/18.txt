@@ -1,4 +1,0 @@
-org.apache.mahout.clustering.streaming.cluster.BallKMeansTest
-org.apache.mahout.clustering.streaming.cluster.DataUtils
-org.apache.mahout.clustering.streaming.cluster.StreamingKMeansTest
-org.apache.mahout.clustering.streaming.mapreduce.StreamingKMeansTestMR

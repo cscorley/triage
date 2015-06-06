@@ -1,3 +1,0 @@
-org.apache.mahout.classifier.ConfusionMatrixTest
-org.apache.mahout.h2obindings.H2OHdfs
-org.apache.mahout.h2obindings.H2OHelper

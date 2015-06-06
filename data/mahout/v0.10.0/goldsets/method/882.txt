@@ -1,3 +1,0 @@
-org.apache.mahout.cf.taste.impl.recommender.GenericUserBasedRecommenderTest.testMostSimilar()
-org.apache.mahout.cf.taste.impl.recommender.SimilarUser.compareTo(SimilarUser)
-org.apache.mahout.cf.taste.impl.recommender.TopItems.getTopUsers(int,LongPrimitiveIterator,IDRescorer,Estimator<Long>,Long)

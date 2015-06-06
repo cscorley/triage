@@ -1,1 +1,0 @@
-The index file creation is delayed until absolutely necessary after BOOKKEEPER-137. but we don't delay the creation of parent directories of index file, it would hurt performance.

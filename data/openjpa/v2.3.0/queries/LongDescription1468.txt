@@ -1,1 +1,0 @@
-Need a released geronimo-validation_1.0_spec-1.0.jar so we can remove the existing build dependency on a 1.0-SNAPSHOT artifact.

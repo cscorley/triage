@@ -1,1 +1,0 @@
-Move lang/reopenScan.sql to LangScripts

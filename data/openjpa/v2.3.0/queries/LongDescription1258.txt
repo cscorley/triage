@@ -1,7 +1,0 @@
-When application configures other persistence provider rather than openjpa, there will be a warning message printed out:
-WARNING: Found unrecognized persistence provider "org.eclipse.persistence.jpa.PersistenceProvider" in place of OpenJPA provider.  This provider's properties will not be used.
-
-It is legal that other persistence provider be configured. The message doesn't look friendly and might be confusing.
-
-I change the message like:
-INFO: Found persistence provider "org.eclipse.persistence.jpa.PersistenceProvider". OpenJPA will not be used.

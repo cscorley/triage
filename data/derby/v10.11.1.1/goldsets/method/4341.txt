@@ -1,3 +1,0 @@
-org.apache.derbyBuild.MessageBundleTest.execute()
-org.apache.derbyBuild.MessageBundleTest.main(String[])
-org.apache.derbyBuild.MessageBundleTest.MessageBundleTest()

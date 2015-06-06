@@ -1,2 +1,0 @@
-A. Abram White <awhite@apache.org>
-Pinaki Poddar <ppoddar@apache.org>

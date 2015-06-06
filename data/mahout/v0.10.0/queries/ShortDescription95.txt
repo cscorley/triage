@@ -1,1 +1,0 @@
-UserSimilarity-based NearestNNeighborhood

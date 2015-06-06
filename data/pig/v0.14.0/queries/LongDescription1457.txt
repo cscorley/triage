@@ -1,1 +1,0 @@
-After PIG-1302, even we want to run an individual test using -Dtestcase=xxxx, pig will still invoke complete zebra test. We shall pass -Dtestcase to zebra pigtest to suppress running unwantted test.

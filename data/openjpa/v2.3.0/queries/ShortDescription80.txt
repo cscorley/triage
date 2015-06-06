@@ -1,1 +1,0 @@
-Bad Escaping for LIKE in MySQL

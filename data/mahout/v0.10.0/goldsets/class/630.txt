@@ -1,3 +1,0 @@
-org.apache.mahout.cf.taste.impl.common.WeightedRunningAverage
-org.apache.mahout.cf.taste.impl.common.WeightedRunningAverageAndStdDev
-org.apache.mahout.cf.taste.impl.common.WeightedRunningAverageTest

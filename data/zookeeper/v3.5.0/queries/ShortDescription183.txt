@@ -1,1 +1,0 @@
-Array subscript is above array bounds in od_completion(), src/cli.c.

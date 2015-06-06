@@ -1,3 +1,0 @@
-org.apache.solr.handler.dataimport.TemplateTransformer.getVars(String)
-org.apache.solr.handler.dataimport.TemplateTransformer.transformRow(Map<String,Object>,String,Object,Context)
-org.apache.solr.handler.dataimport.TestTemplateTransformer.testTransformRow()

@@ -1,1 +1,0 @@
-Allow conditions in case statement

@@ -1,1 +1,0 @@
-pig -useHCatalog fails using pig command line interface on HDInsight

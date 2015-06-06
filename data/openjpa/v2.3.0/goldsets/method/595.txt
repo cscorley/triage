@@ -1,3 +1,0 @@
-org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder.getPathOrConstant(JPQLNode)
-org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder.JPQLNode.jjtOpen()
-org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder.JPQLNode.JPQLNode(JPQL,int)

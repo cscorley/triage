@@ -1,1 +1,0 @@
-The documentation says the configuration value for "auditorPeriodicCheckInterval" should be in seconds, but in fact the scheduler schedules it using milliseconds. This mean its running far too often.

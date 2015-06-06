@@ -1,2 +1,0 @@
-org.apache.pig.newplan.optimizer.Rule
-org.apache.pig.test.TestNewPlanRule

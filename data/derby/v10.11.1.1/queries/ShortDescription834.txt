@@ -1,1 +1,0 @@
-i18n/urlLocale.sql test fails on Windows XP

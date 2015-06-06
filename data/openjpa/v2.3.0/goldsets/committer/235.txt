@@ -1,4 +1,0 @@
-Catalina Wei <fancy@apache.org>
-Craig Russell <clr@apache.org>
-Marc Prud'hommeaux <mprudhom@apache.org>
-Patrick Linskey <pcl@apache.org>

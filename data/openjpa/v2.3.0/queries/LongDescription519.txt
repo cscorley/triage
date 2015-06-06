@@ -1,3 +1,0 @@
-I am still getting the Surefire error first reported on dev mailing list (http://www.nabble.com/Compilation-errors-on-trunk-td15324856i20.html).
-
-According to the last posting by Rahul, this is a known problem with the Maven Surefire plugin and it should be resolved in 2.4.2...  In the mean time, I will hard code the dependency on version 2.4 in our pom.xml files.  This Issue can then be used to clean it up again once we get 2.4.2 with the resolution.

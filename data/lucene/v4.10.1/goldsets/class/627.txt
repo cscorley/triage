@@ -1,3 +1,0 @@
-org.apache.lucene.search.highlight.Highlighter
-org.apache.lucene.search.highlight.HighlighterTest
-org.apache.lucene.search.highlight.TokenGroup

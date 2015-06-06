@@ -1,1 +1,0 @@
-Intermittent failure in LangProcedureTest: cannot drop table because of open ResultSet

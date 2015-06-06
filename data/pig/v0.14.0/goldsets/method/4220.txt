@@ -1,3 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapReduceCounter.PigMapCounter.collect(Context,Tuple)
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapReduceCounter.PigMapCounter.setup(Context)
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapReduceCounter.PigReduceCounter.incrementCounter(Long)

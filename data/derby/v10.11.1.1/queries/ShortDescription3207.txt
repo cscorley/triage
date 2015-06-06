@@ -1,1 +1,0 @@
-The bin scripts should be able to run when DERBY_HOME is not set

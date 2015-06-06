@@ -1,2 +1,0 @@
-org.apache.bookkeeper.bookie.CheckpointSource
-org.apache.bookkeeper.bookie.CheckpointSource.Checkpoint

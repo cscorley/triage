@@ -1,1 +1,0 @@
-Criteria Query fails with empty context statck

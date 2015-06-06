@@ -1,3 +1,0 @@
-Just a small issue, the doc says that "Setting this to 0 or omitting it entirely removes the limit on concurrent connections.", but we ran without this setting, and saw: WARN  [NIOServerCxn.Factory:2181:NIOServerCnxn$Factory@226] - Too many connections from /10.76.251.190 - max is 10
-
-Bug in doc possibly?

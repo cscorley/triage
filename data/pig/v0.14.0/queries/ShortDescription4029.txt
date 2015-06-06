@@ -1,1 +1,0 @@
-TestMRCompiler is broken after PIG-3874

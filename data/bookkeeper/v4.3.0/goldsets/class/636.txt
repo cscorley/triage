@@ -1,3 +1,0 @@
-org.apache.bookkeeper.bookie.Journal
-org.apache.bookkeeper.bookie.JournalChannel
-org.apache.bookkeeper.util.MathUtils

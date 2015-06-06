@@ -1,1 +1,0 @@
-Adding contrib javadoc to main Pig javadoc

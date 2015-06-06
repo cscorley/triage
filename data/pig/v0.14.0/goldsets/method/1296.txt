@@ -1,1 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.partitioners.SkewedPartitioner.getPartition(PigNullableWritable,Writable,int)

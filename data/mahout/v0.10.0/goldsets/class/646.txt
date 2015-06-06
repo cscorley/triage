@@ -1,4 +1,0 @@
-org.apache.mahout.classifier.bayes.MultipleOutputFormat
-org.apache.mahout.classifier.bayes.MultipleTextOutputFormat
-org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorDriver
-org.apache.mahout.classifier.bayes.WikipediaDatasetCreatorOutputFormat

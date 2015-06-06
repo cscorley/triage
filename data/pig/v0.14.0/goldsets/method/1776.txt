@@ -1,6 +1,0 @@
-org.apache.pig.newplan.logical.relational.LOLoad.resetUid()
-org.apache.pig.newplan.logical.relational.LOLoad.toString()
-org.apache.pig.PigServer.Graph.clone()
-org.apache.pig.test.TestUDFContext.setUp()
-org.apache.pig.test.TestUDFContext.testUDFContext()
-org.apache.pig.test.TestUDFContext.testUDFContextReset()

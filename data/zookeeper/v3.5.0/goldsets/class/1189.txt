@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.persistence.Util
-org.apache.zookeeper.server.ZooKeeperServerTest

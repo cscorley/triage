@@ -1,3 +1,0 @@
-zookeeper.server.NIOServerCnxn and zookeeper.server.NettyServerCnxn imports com.sun.management.UnixOperatingSystemMXBean . This OperatingSystemMXBean class is not implemented by IBM or open java. 
-
-In my case, I need IBM Java so I can run zookeeper in Power ppc64 servers.

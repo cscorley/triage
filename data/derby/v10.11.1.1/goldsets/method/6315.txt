@@ -1,3 +1,0 @@
-org.apache.derby.impl.io.InputStreamFile.length()
-org.apache.derby.impl.io.InputStreamFile.mkdirs()
-org.apache.derby.impl.io.JarDBFile.getEntry()

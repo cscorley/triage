@@ -1,1 +1,0 @@
-3.4.x observer causes NPE on 3.5.0 (trunk) participants

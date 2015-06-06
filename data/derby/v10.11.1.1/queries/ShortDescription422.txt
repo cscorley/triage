@@ -1,1 +1,0 @@
-Create a new sample database for use in examples in the manuals

@@ -1,3 +1,0 @@
-org.apache.zookeeper.jmx.ManagedUtil
-org.apache.zookeeper.jmx.MBeanRegistry
-org.apache.zookeeper.test.JMXEnv

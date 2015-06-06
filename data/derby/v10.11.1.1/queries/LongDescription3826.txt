@@ -1,1 +1,0 @@
-The update-with-jdbc4 script was added in 10.2 to help people build a preliminary version of our JDBC4 support. For licensing reasons, that support was not built into the initial 10.2 distributions. For more information on this issue, please see DERBY-1846. The JDBC4 support has been compiled into our distributions since 10.2.2.0. This script is no longer needed.

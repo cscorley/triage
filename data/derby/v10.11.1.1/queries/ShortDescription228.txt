@@ -1,1 +1,0 @@
-need some OSGI related changes to MANIFEST.MF

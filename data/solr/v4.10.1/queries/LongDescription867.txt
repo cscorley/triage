@@ -1,1 +1,0 @@
-The utility function: EmbeddedSolrServer#getParsedResponse should be moved to a utiltiy class.

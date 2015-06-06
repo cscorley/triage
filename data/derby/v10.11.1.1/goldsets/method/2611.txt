@@ -1,2 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.upgradeTests.Changes10_3.testCompilationSchema()
-org.apache.derbyTesting.functionTests.tests.upgradeTests.Changes10_3.testNegValueSupportedLogRecord()

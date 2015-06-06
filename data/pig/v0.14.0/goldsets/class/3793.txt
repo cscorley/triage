@@ -1,2 +1,0 @@
-org.apache.pig.newplan.logical.relational.LogicalPlanData
-org.apache.pig.test.TestLogicalPlanBuilder

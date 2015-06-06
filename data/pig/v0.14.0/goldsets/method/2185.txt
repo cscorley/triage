@@ -1,3 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POProject.getNext(Tuple)
-org.apache.pig.test.TestEvalPipeline2.testProjectEmptyBag()
-org.apache.pig.test.TestEvalPipeline2.testUnionOnSchemaUidGeneration()

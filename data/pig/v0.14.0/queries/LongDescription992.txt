@@ -1,1 +1,0 @@
-The hope is to facilitate future sharing of the Schema codes between different modules and/or products. 

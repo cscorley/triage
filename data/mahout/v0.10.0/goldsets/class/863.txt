@@ -1,3 +1,0 @@
-org.apache.mahout.clustering.display.DisplayMinHash
-org.apache.mahout.clustering.display.DisplayMinHash.PlotType
-org.apache.mahout.math.MurmurHash3Test

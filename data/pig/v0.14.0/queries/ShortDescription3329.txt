@@ -1,1 +1,0 @@
-RANK operator failed when working with SPLIT 

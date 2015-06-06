@@ -1,3 +1,0 @@
-Dag H. Wanvik <dag@apache.org>
-Knut Anders Hatlen <kahatlen@apache.org>
-Richard N. Hillegas <rhillegas@apache.org>

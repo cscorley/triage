@@ -1,1 +1,0 @@
-Executing native queries with Firebird

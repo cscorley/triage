@@ -1,1 +1,0 @@
-ServerPropertiesTest.testToggleLogConnections fails because of unexpected output

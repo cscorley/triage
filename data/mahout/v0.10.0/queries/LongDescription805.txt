@@ -1,2 +1,0 @@
-When the HADOOP_CONF_DIR is not set, the Mahout scripts sets this environment variable to $HADOOP_HOME/src/conf
-instead of $HADOOP_HOME/conf, which is the default location for Hadoop configuration.

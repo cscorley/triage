@@ -1,3 +1,0 @@
-org.apache.solr.update.processor.FieldMutatingUpdateProcessorTest
-org.apache.solr.update.processor.UniqFieldsUpdateProcessorFactory
-org.apache.solr.update.processor.UniqFieldsUpdateProcessorFactory.UniqFieldsUpdateProcessor

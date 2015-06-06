@@ -1,2 +1,0 @@
-org.apache.pig.builtin.IsEmpty
-org.apache.pig.test.TestAccumulator

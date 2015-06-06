@@ -1,1 +1,0 @@
-Plan exporter tool produces broken output if query contains less-than operator

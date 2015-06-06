@@ -1,1 +1,0 @@
-Junit 4.5 is back-compatible with the current 3.x, and allows using the new @annotation scheme. Since the compiler level is set to 1.6, this seems harmless, and I for one would rather write tests in the new pattern.

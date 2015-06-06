@@ -1,1 +1,0 @@
-regression test failure in testDerbyJarAttributeAlpha - Security Exception

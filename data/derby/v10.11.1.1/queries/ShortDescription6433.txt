@@ -1,1 +1,0 @@
-INSERT/UPDATE incorrectly require user to have privilege to run generation expressions.

@@ -1,2 +1,0 @@
-org.apache.solr.common.params.SolrParams.getFieldInt(String,String)
-org.apache.solr.common.params.SolrParams.getInt(String,int)

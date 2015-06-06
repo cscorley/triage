@@ -1,1 +1,0 @@
-restoreIntrFlagIfSeen may throw ShutdownException causing confusing console stack trace at server shutdown

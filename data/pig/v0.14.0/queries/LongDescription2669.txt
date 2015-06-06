@@ -1,1 +1,0 @@
-Pig release does not contain conf/pig-default.properties, it bundles pig-default.properties into pig.jar/pig-withouthadoop.jar. However, if user rebuild pig, the new jar does not contain this file.

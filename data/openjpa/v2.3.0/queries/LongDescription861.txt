@@ -1,1 +1,0 @@
-The manual should mention XML column mapping can be used with MySQL.

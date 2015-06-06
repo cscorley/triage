@@ -1,1 +1,0 @@
-In Pig UDF manual, LoadPushDown.pushProjection(), add a clarification that requiredFieldRequest is read only, cannot be changed by LoadFunc

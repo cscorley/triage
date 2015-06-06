@@ -1,1 +1,0 @@
-MultiReader.numDocs incorrect after undeleteAll

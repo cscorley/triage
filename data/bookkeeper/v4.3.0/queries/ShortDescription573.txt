@@ -1,1 +1,0 @@
-Script to start a bookkeeper cluster

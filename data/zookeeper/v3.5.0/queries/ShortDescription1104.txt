@@ -1,1 +1,0 @@
-CLONE - In QuorumTest, use the same "for ( .. try { break } catch { } )" pattern in testFollowersStartAfterLeaders as in testSessionMove.

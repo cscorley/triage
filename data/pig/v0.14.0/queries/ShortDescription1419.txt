@@ -1,1 +1,0 @@
-Remove "user.name" from JobConf

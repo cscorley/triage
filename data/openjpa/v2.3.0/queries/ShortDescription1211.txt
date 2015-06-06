@@ -1,1 +1,0 @@
-Enable string navigation in a From expression.

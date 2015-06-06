@@ -1,1 +1,0 @@
-Client DataSource should not require user property to be set

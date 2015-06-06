@@ -1,1 +1,0 @@
-For existing databases JDBC metadata queries do not get updated properly  between maintenance versions.

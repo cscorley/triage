@@ -1,3 +1,0 @@
-org.apache.derbyTesting.junit.BaseJDBCTestCase.addStatement(Statement)
-org.apache.derbyTesting.junit.BaseJDBCTestCase.closeStatement(Statement)
-org.apache.derbyTesting.junit.BaseJDBCTestCase.getDatabaseProperty(String)

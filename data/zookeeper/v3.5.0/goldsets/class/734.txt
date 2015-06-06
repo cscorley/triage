@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.quorum.QuorumPeerTestBase
-org.apache.zookeeper.server.ZooKeeperServerMainTest
-org.apache.zookeeper.server.ZooKeeperServerMainTest.MainThread

@@ -1,1 +1,0 @@
-Simple patch to exclude the .git directory, along with Eclipse working directory files and patch files from the Rat check so that it can be run in a developer environment with those impurities present.

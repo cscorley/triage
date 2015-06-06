@@ -1,3 +1,0 @@
-org.apache.solr.core.CoreDescriptor.getCoreContainer()
-org.apache.solr.core.CoreDescriptor.getCoreProperties()
-org.apache.solr.core.CoreDescriptor.setCoreProperties(Properties)

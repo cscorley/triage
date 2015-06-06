@@ -1,1 +1,0 @@
-A missing slash in the XML secondary table field mapping example. 

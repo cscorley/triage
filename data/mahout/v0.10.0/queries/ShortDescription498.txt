@@ -1,1 +1,0 @@
-Need improvements to feature hashed vectorization for speed and flexibility

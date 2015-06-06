@@ -1,6 +1,0 @@
-org.apache.solr.core.SolrCore
-org.apache.solr.search.function.NvlValueSourceParser
-org.apache.solr.search.FunctionQParser
-org.apache.solr.search.FunctionQParser.VSParser
-org.apache.solr.search.function.TestFunctionQuery
-org.apache.solr.search.ValueSourceParser

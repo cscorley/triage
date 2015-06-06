@@ -1,1 +1,0 @@
-PIG_HADOOP_VERSION should be 18

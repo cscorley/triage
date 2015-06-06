@@ -1,1 +1,0 @@
-Change the names of the jar produced in the build folder to match maven conventions

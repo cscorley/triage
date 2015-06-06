@@ -1,2 +1,0 @@
-Catalina Wei <fancy@apache.org>
-Marc Prud'hommeaux <mprudhom@apache.org>

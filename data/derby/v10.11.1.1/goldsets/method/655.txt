@@ -1,2 +1,0 @@
-org.apache.derby.impl.sql.execute.CreateIndexConstantAction.executeConstantAction(Activation)
-org.apache.derbyTesting.functionTests.tests.jdbcapi.metadata_test.runTest()

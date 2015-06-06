@@ -1,1 +1,0 @@
-Currently the zookeeper seems to be exporting symbols not in the api. An example of this seems to be the symbol hash, which interferes with me using memcached and zookeeper in the same program.

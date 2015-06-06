@@ -1,1 +1,0 @@
-on disk full during close, FSIndexOutput fails to close descriptor

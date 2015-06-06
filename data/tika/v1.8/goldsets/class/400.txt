@@ -1,4 +1,0 @@
-org.apache.tika.metadata.ClimateForcast
-org.apache.tika.metadata.Metadata
-org.apache.tika.parser.netcdf.NetCDFParser
-org.apache.tika.parser.netcdf.NetCDFParserTest

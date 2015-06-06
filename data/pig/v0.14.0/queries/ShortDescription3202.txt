@@ -1,1 +1,0 @@
-CUBE operator not documented in user docs

@@ -1,1 +1,0 @@
-JDBC client driver statement cache

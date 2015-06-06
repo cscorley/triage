@@ -1,1 +1,0 @@
-NPE in PooledConnction event notification handling if a null listener is added

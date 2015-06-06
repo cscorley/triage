@@ -1,3 +1,0 @@
-org.apache.solr.ConvertedLegacyTest.testABunchOfConvertedStuff()
-org.apache.solr.handler.component.QueryComponent.prepare(ResponseBuilder)
-org.apache.solr.handler.StandardRequestHandlerTest.testSorting()

@@ -1,1 +1,0 @@
-Patch to set IndexWriter.defaultInfoStream from solr.xml

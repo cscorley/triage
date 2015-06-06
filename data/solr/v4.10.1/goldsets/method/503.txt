@@ -1,3 +1,0 @@
-org.apache.solr.client.solrj.embedded.JettyWebappTest.setUp()
-org.apache.solr.client.solrj.embedded.JettyWebappTest.tearDown()
-org.apache.solr.client.solrj.embedded.JettyWebappTest.testJSP()

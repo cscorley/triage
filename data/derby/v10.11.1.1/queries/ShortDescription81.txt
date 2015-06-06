@@ -1,1 +1,0 @@
-Datetime datatypes should allow arithmetic operations on them.

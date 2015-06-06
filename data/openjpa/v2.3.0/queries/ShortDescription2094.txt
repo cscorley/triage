@@ -1,1 +1,0 @@
-Metadata processing needs to support jar:file URLs that address Jar directories

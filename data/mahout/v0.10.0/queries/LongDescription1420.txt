@@ -1,1 +1,0 @@
-Write a new example that builds a solr-recommender based on Pat's code at https://github.com/pferrel/solr-recommender and which has the glue scripts needed to pipe all the way from start(raw data) to finish(running web service and UI page).

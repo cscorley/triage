@@ -1,3 +1,0 @@
-org.apache.derby.impl.store.raw.log.LogToFile.checkJvmSyncError(StorageFile)
-org.apache.derby.impl.store.raw.log.LogToFile.getLogDirPath(StorageFile)
-org.apache.derby.impl.store.raw.log.LogToFile.openLogFileInWriteMode(StorageFile)

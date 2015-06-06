@@ -1,2 +1,0 @@
-org.apache.pig.test.TestEmptyInputDir
-org.apache.pig.test.Util

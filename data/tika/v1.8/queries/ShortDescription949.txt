@@ -1,1 +1,0 @@
-Mimetype magic needed for mapping formats such as XMind Pro and MindMapper

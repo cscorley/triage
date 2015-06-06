@@ -1,2 +1,0 @@
-org.apache.derby.client.am.Connection.closeResourcesX()
-org.apache.derby.client.am.Connection.getTransactionIsolationX()

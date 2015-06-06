@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.execute.DeleteResultSet.cleanUp()
-org.apache.derby.impl.sql.execute.DeleteResultSet.fireAfterTriggers()
-org.apache.derby.impl.sql.execute.DeleteResultSet.fireBeforeTriggers()

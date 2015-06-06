@@ -1,1 +1,0 @@
-Replication: stopSlave does not close serversocket when master has crashed.

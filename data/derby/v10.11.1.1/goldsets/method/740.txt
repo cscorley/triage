@@ -1,2 +1,0 @@
-org.apache.derby.impl.services.bytecode.BCMethod.cast(String)
-org.apache.derby.impl.services.bytecode.BCMethod.upCast(String)

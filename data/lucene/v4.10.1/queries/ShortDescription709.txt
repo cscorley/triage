@@ -1,1 +1,0 @@
-[PATCH] Enable application-level management of IndexWriter.ramDirectory size

@@ -1,2 +1,0 @@
-There is a race condition in zoopkeeper client library wherein if the application calls zookeeper_close() and zoo_anysynchronouscall simultaneously, sometimes the zoo_sync api call gets hung waiting for a notification whcih will never come.
-We might want to create another bugfix release for this.

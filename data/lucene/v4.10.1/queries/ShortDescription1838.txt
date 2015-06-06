@@ -1,1 +1,0 @@
-BoostingNearQuery must implement clone - now it clones to a NearSpanQuery - cloning is required for Span container classes

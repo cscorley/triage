@@ -1,2 +1,0 @@
-These writeEncryptedScalarStream and writePlainScalarStream methods will be modified very much.
-To prepare DERBY-1471, I make these methods private.

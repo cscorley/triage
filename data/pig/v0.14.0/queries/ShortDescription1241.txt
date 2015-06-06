@@ -1,1 +1,0 @@
-Accumulator is turned on when a map is used with a non-accumulative UDF

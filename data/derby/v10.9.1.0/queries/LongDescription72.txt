@@ -1,1 +1,0 @@
-The copyright comment added to properties files still contains an IBM copyright notice and identifies IBM as the vendor

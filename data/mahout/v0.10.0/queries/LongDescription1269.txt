@@ -1,1 +1,0 @@
-Cleanup deprecated Lucene 3.x API calls from lucene2seq utility from UnstoredFieldsDocument.java and MultipleFieldsDocument.java

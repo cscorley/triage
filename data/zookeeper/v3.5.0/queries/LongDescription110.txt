@@ -1,5 +1,0 @@
-The current build.xml ant script uses svnant to obtain the latest revision number from the repo, however svnant is not compatible with subversion 1.5 (http://subversion.tigris.org/svn_1.5_releasenotes.html), and so the build fails with working copies checked out by this version.  The build fails with "this version of subversion is too old, please get a newer version..."  This will become more apparent as svn 1.5 trickles out; I'm using a brand new dev environment with both subclipse 1.4 and svn 1.5 client, so I got bit rather quickly.
-
-Those with svn 1.5 can get the code from the trunk, but cannot do an ant build.
-
-svnant hasn't been updated in more than a year and appears to be dead, so it may no longer be a viable tool for the ant build.

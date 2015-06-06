@@ -1,1 +1,0 @@
-Tests should always be compiled with line number information.

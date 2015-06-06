@@ -1,3 +1,0 @@
-org.apache.derby.client.am.SignedBinary
-org.apache.derby.client.net.NetStatementRequest
-org.apache.derby.client.net.Request

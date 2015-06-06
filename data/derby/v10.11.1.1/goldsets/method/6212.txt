@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.compile.CallStatementNode.bindStatement()
-org.apache.derbyTesting.functionTests.tests.lang.LangProcedureTest.LangProcedureTest(String)
-org.apache.derbyTesting.functionTests.tests.lang.LangProcedureTest.testCreateRoutineErrors()

@@ -1,3 +1,0 @@
-org.apache.pig.PigServer
-org.apache.pig.test.TestPigServer
-org.apache.pig.test.Util

@@ -1,1 +1,0 @@
-Skip getting extend exception text when running on DB2

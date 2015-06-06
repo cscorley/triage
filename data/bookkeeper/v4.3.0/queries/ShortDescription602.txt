@@ -1,1 +1,0 @@
-we should have request timeouts rather than channel timeout in PerChannelBookieClient

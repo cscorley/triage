@@ -1,1 +1,0 @@
-TikaEntityProcessor needs a DataSource which returns a Stream instead of a Reader.

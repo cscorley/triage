@@ -1,1 +1,0 @@
-We should add a solve() function to the Scala DSL with helps with solving Ax = b for in-core matrices and vectors.

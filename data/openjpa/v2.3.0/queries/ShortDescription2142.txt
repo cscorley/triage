@@ -1,1 +1,0 @@
-Merge of a new object does not handle Entity Id field

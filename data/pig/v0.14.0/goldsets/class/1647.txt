@@ -1,3 +1,0 @@
-org.apache.pig.newplan.logical.rules.DNFPlanGenerator
-org.apache.pig.test.TestFilterSimplification
-org.apache.pig.test.TestFilterSimplification.MyPlanOptimizer

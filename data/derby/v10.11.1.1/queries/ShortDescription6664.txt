@@ -1,1 +1,0 @@
-Schema 'null' does not exist when trigger inserts into table with deferred foreign key

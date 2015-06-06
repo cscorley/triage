@@ -1,1 +1,0 @@
-TestTimeLimitedCollector  shuold not fail if the testing machine happens to be slow

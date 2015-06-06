@@ -1,1 +1,0 @@
-AddForEach optimization doesn't set the alias of the added foreach

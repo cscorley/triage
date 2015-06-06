@@ -1,1 +1,0 @@
-DRDAConnThread::doneData should use statically allocated SQLException objects

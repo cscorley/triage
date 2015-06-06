@@ -1,3 +1,0 @@
-org.apache.derby.client.net.NetCallableStatement.resetNetCallableStatement(NetAgent,NetConnection,String,int,int,int)
-org.apache.derby.client.net.NetCallableStatement.resetNetCallableStatement(NetAgent,NetConnection,String,Section)
-org.apache.derby.client.net.NetCallableStatement.resetNetCallableStatement(NetAgent,NetConnection,String,Section,ColumnMetaData,ColumnMetaData)

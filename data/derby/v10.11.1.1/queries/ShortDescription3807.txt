@@ -1,1 +1,0 @@
-traces of removed ij functionality of ij.unicodeEscape should be removed

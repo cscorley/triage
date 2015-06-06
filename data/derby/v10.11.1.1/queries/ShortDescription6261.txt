@@ -1,1 +1,0 @@
-test getCurConnJdbc20.sql is no longer useful and can be removed

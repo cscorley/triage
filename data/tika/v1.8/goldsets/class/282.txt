@@ -1,2 +1,0 @@
-org.apache.tika.parser.rtf.RTFParser
-org.apache.tika.parser.rtf.RTFParser.NoReclaimStyleContext

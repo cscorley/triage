@@ -1,1 +1,0 @@
-Check in the demo used by the Java in the Database session at Apachecon 2006

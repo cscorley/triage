@@ -1,2 +1,0 @@
-Katherine Marsden <kmarsden@apache.org>
-Oystein Grovlen <oysteing@apache.org>

@@ -1,1 +1,0 @@
-It's commented out currently. We require it to reference local files for tests with shell commands.

@@ -1,1 +1,0 @@
-IllegalArgumentException from AbstractJDBCDataModel constructor which is extended by AbstractBooleanPrefJDBCDataModel

@@ -1,5 +1,0 @@
-BOOKIE_EXTRA_OPTS are added twice to JVM Opts.
-
-It will not create problem for usual options like -Xmx, -Xms, etc.
-
-But for Debug options (-Xdebug) we can specify only once. In this case it will create problems.

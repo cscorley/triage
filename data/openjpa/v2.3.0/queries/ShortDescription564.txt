@@ -1,1 +1,0 @@
-Set correct DBDictionary properties for MySQL based on MySQL version

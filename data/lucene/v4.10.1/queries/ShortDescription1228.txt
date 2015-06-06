@@ -1,1 +1,0 @@
-IndexWriter.commit()  does not update the index version

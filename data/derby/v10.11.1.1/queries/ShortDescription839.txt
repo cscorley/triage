@@ -1,1 +1,0 @@
-Internationalize messages CallableStatement40 to Cursor.java in org.apache.derby.client.am

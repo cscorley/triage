@@ -1,1 +1,0 @@
-new peer goes in LEADING state even if ensemble is online

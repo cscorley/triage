@@ -1,1 +1,0 @@
-org.apache.openjpa.persistence.PersistenceProductDerivation.load(ConfigurationProviderImpl,String,String,Map,ClassLoader,boolean)

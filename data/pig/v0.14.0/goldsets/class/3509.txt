@@ -1,4 +1,0 @@
-org.apache.pig.builtin.TOP
-org.apache.pig.builtin.TOP.Final
-org.apache.pig.builtin.TOP.Initial
-org.apache.pig.builtin.TOP.Intermed

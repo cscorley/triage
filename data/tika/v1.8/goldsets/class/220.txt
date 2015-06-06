@@ -1,3 +1,0 @@
-org.apache.tika.TestParsers
-org.apache.tika.utils.ParseUtils
-org.apache.tika.utils.Utils

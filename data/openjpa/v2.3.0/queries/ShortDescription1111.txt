@@ -1,1 +1,0 @@
-Validation mode of callback should cause a PersistenceException when no provider is available

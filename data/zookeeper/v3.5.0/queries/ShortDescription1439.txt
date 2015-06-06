@@ -1,1 +1,0 @@
-c sdk: core in log_env for lack of checking the output argument *pwp* of getpwuid_r

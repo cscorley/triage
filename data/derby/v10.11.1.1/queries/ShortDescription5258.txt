@@ -1,1 +1,0 @@
-btree post commit releases latch before committing/aborting purges, possibly allowing other operation on page

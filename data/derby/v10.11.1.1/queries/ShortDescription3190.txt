@@ -1,1 +1,0 @@
-New simple demo suitable for supported Java ME platforms

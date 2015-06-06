@@ -1,1 +1,0 @@
-Minkowski and Chebyshev DistanceMeasure

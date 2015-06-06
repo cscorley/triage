@@ -1,1 +1,0 @@
-Make Wikipedia example set maker easier to mod

@@ -1,1 +1,0 @@
-Fix Performance Warnings found by Findbugs 2.0.3

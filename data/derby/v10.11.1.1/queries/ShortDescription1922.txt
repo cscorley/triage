@@ -1,1 +1,0 @@
-readme.html under frameworks does not mention about Derby client and some minor typos in example.html

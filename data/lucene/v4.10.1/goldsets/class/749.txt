@@ -1,2 +1,0 @@
-org.apache.lucene.misc.ChainedFilter
-org.apache.lucene.misc.ChainedFilterTest

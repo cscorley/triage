@@ -1,2 +1,0 @@
-Camille Fournier <camille@apache.org>
-Mahadev Konar <mahadev@apache.org>

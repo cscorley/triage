@@ -1,1 +1,0 @@
-Minor patches to client/net/(Reply|Request).java to use System.arrayCopy and java.util.Arrays

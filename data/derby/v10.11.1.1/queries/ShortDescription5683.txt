@@ -1,1 +1,0 @@
-BaseJDBCTestCase.getDatabaseProperty() should close resources before returning

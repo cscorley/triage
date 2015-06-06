@@ -1,1 +1,0 @@
-zookeeper.c:prepend_string func can dereference null ptr

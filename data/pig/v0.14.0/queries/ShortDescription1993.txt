@@ -1,1 +1,0 @@
-PigStorageSchema throw NPE with ColumnPruning

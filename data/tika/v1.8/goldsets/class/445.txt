@@ -1,2 +1,0 @@
-org.apache.tika.metadata.Geographic
-org.apache.tika.metadata.Metadata

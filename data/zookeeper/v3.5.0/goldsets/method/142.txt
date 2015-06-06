@@ -1,2 +1,0 @@
-org.apache.zookeeper.ZooKeeper.create(String,byte,List<ACL>,ACL,CreateMode)
-org.apache.zookeeper.ZooKeeper.setData(String,byte,int,StatCallback,Object)

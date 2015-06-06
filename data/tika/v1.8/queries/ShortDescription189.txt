@@ -1,1 +1,0 @@
-Text extraction from Excel files juxtaposes cells

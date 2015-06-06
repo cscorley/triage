@@ -1,1 +1,0 @@
-These got missed with BOOKKEEPER-41. It's basically a maven assembly file, and making bookkeeper and hedwig scripts executable. Also, for the servers, make log4j and the slf4j log4j adapter, real dependencies, so logging can be enabled.

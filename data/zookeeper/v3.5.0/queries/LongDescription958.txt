@@ -1,1 +1,0 @@
-Currently the hedwig cpp client will automatically send a consume message to the server when the calling client indicated that it has received the message. If the client wants to queue the messages and not acknowledge them to the server immediately, they need to block, which means interfering with any other running callbacks. 

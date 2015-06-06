@@ -1,1 +1,0 @@
-NPE in MetaDataRepository when preloading is enabled under heavy stress.

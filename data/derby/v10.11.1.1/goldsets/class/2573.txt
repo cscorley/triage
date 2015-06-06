@@ -1,4 +1,0 @@
-org.apache.derby.iapi.services.info.ProductVersionHolder
-org.apache.derbyPreBuild.PropertyPrompt
-org.apache.derbyPreBuild.ReleaseProperties
-org.apache.derbyPreBuild.ReleaseProperties.VersionID

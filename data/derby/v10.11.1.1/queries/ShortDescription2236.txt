@@ -1,1 +1,0 @@
-Three tests from i18nTest fails on SLES with jdk1.4.2 when derbyrun.jar comes before derby.jar in the classpath

@@ -1,2 +1,0 @@
-org.apache.solr.handler.dataimport.ContextImpl
-org.apache.solr.handler.dataimport.ScriptTransformer

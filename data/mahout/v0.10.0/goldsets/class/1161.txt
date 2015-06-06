@@ -1,2 +1,0 @@
-org.apache.mahout.common.lucene.AnalyzerUtils
-org.apache.mahout.common.lucene.AnalyzerUtilsTest

@@ -1,1 +1,0 @@
-Some intermittent negative e2e tests fail on hadoop 2

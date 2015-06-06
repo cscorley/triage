@@ -1,3 +1,0 @@
-org.apache.lucene.xmlparser.builders.BoostingTermBuilder
-org.apache.lucene.xmlparser.CoreParser
-org.apache.lucene.xmlparser.TestParser

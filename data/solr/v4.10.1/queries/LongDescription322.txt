@@ -1,1 +1,0 @@
-Currently the "search" button doesn't work if Javascript is disabled and the user won't get an error message either. This patch makes the button work without Javascript.

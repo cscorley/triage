@@ -1,1 +1,0 @@
-Set correct collation type and derivation on DataTypeDescriptor(DTD).

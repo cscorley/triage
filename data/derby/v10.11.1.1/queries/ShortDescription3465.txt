@@ -1,1 +1,0 @@
-'testNetworkServerSecurityMechanism' fails with 'junit.framework.AssertionFailedError: did not expect an sqlexception'.

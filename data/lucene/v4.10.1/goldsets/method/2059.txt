@@ -1,3 +1,0 @@
-org.apache.lucene.benchmark.byTask.feeds.TrecContentSource.getDateFormatInfo()
-org.apache.lucene.benchmark.byTask.feeds.TrecContentSource.getNextDocData(DocData)
-org.apache.lucene.benchmark.byTask.feeds.TrecContentSource.setConfig(Config)

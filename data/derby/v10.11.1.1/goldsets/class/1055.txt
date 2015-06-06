@@ -1,2 +1,0 @@
-org.apache.derby.client.am.EncryptionManager
-org.apache.derbyTesting.functionTests.tests.derbynet.testSecMec

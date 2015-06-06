@@ -1,1 +1,0 @@
-Initial version of the documentation, migrated from source forge.  Reorganizing, expanding.  Initial goal is to port Source Forge documentation into Forrest. 

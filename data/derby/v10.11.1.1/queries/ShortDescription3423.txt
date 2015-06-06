@@ -1,1 +1,0 @@
-providesQueryObjectGenerator() should be removed from the DatabaseMetaData implementations

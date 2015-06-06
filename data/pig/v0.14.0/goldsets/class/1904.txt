@@ -1,2 +1,0 @@
-org.apache.pig.parser.LogicalPlanBuilder
-org.apache.pig.test.TestSplit

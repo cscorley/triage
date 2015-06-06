@@ -1,1 +1,0 @@
-LangScript.floattypes gets REAL instead of expected DOUBLE

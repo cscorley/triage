@@ -1,1 +1,0 @@
-An empty directory was left there during conversion from yahoo to apache. I am planning to just remove it unless I hear otherwise.

@@ -1,1 +1,0 @@
-Client setCharacterStream closes its Reader argument stream in finalizer

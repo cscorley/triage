@@ -1,7 +1,0 @@
-Henry, can you take a look at this, am I doing it right?
-
-calling 
-        zookeeper.async(self.handle, path)
-causes python to segfault.
-
-see: http://github.com/phunt/zk-smoketest/blob/master/zk-smoketest.py

@@ -1,1 +1,0 @@
-remove synchronization from lazy loaded handlers

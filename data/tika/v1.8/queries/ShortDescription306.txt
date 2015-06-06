@@ -1,1 +1,0 @@
-patch: OOXMLParserTest uses OpenOfficeParser

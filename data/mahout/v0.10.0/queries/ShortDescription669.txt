@@ -1,1 +1,0 @@
-Scripts should specify bash instead of /bin/sh

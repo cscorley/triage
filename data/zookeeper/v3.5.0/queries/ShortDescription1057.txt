@@ -1,1 +1,0 @@
-zookeeper c-client, connection to offline server fails to successfully fallback to second zk host

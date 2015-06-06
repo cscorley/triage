@@ -1,1 +1,0 @@
-Cache TransactionSynchronizationRegistry per EMF (vs JVM)

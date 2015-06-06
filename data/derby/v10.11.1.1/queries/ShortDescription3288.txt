@@ -1,1 +1,0 @@
-wrong query result in presence of a unique index

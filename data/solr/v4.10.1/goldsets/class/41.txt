@@ -1,3 +1,0 @@
-org.apache.solr.analysis.HyphenatedWordsFilter
-org.apache.solr.analysis.HyphenatedWordsFilterFactory
-org.apache.solr.analysis.TestHyphenatedWordsFilter

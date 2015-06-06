@@ -1,2 +1,0 @@
-Daniel John Debrunner <djd@apache.org>
-Samuel Andrew McIntyre <fuzzylogic@apache.org>

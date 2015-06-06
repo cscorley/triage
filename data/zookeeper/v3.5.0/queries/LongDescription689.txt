@@ -1,1 +1,0 @@
-ivysettings.xml was added in 3.3.0 but it is not copied into the release artifact via ant "package" target of build.xml

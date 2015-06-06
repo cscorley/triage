@@ -1,1 +1,0 @@
-Do not recognize Connection* properties in persistence.xml in appl server container

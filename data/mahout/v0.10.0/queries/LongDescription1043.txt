@@ -1,1 +1,0 @@
-See this and this and this for examples on various issues developers have when trying to import and build Apache Mahout using eclipse and m2e plugin. Build scripts in sources seem to favour Apache Ant and maven-eclipse-plugin, while Apache Maven 3 and m2e are more popular build tool choices nowadays.

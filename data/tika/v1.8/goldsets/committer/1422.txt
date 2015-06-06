@@ -1,3 +1,0 @@
-Chris Mattmann <mattmann@apache.org>
-Hong-Thai Nguyen <thaichat04@apache.org>
-Tyler Palsulich <tpalsulich@apache.org>

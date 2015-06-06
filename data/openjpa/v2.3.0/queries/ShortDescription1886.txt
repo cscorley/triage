@@ -1,1 +1,0 @@
-Query trace may contain sensitive information and should not be logged by default.

@@ -1,1 +1,0 @@
-Common properties in hibernate.cfg.xml as attribute of <session-factory>

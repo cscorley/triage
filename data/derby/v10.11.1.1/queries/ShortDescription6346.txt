@@ -1,1 +1,0 @@
-NPE in left join whose inner table has a generated column

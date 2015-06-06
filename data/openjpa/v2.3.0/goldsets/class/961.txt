@@ -1,2 +1,0 @@
-org.apache.openjpa.meta.FieldMetaData
-org.apache.openjpa.persistence.embed.TestEmbeddable

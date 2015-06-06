@@ -1,1 +1,0 @@
-code uses non shortcircuiting & --> patch switches to &&

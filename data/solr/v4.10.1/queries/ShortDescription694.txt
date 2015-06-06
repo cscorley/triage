@@ -1,1 +1,0 @@
-Use SpellingQueryConverter as default if there is no queryconverter defined

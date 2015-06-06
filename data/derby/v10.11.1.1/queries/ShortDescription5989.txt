@@ -1,1 +1,0 @@
-Stop producing byte code for non-existent qualifiers

@@ -1,3 +1,0 @@
-org.apache.pig.piggybank.storage.MultiStorage
-org.apache.pig.piggybank.storage.MultiStorage.MultiStorageOutputFormat
-org.apache.pig.piggybank.test.storage.TestMultiStorageCompression

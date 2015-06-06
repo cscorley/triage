@@ -1,2 +1,0 @@
-org.apache.tika.parser.external.ExternalParser.extractMetadata(InputStream,Metadata)
-org.apache.tika.parser.external.ExternalParser.extractMetadata.start.run()

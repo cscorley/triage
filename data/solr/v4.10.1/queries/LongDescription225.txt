@@ -1,4 +1,0 @@
-Highlighting should support a pluggable architecture similar to what is seen with RequestHandlers, Fields, FieldTypes, etc
-'
-For more background:
-http://www.nabble.com/Custom-fragmenter-tf3681588.html#a10289335

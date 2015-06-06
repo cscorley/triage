@@ -1,3 +1,0 @@
-org.apache.solr.search.BitDocSet
-org.apache.solr.search.HashDocSet
-org.apache.solr.search.TestDocSet

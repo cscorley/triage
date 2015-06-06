@@ -1,1 +1,0 @@
-Use of XML values in the action statement of a trigger throw exceptions.

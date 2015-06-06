@@ -1,1 +1,0 @@
-Document automatic update and creation of index cardinality statistics (istat)

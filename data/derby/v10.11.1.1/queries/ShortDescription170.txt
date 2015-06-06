@@ -1,1 +1,0 @@
-Inserting large string value into non-existent table causes communication link failure over Network Server.

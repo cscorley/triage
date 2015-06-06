@@ -1,1 +1,0 @@
-Move test code from CompressedNumber to a unit test

@@ -1,2 +1,0 @@
-org.apache.derby.impl.sql.compile.QueryTreeNode.getRowEstimate()
-org.apache.derby.impl.sql.compile.QueryTreeNode.isPrivilegeCollectionRequired()

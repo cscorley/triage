@@ -1,1 +1,0 @@
-Connection.setTypeMap throws unimplemented exception with empty map

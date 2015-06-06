@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.NettyServerCnxnFactory
-org.apache.zookeeper.server.NIOServerCnxnFactory
-org.apache.zookeeper.server.quorum.QuorumPeerConfig

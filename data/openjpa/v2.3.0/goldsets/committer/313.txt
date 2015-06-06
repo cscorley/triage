@@ -1,2 +1,0 @@
-David J. Wisneski <wisneskid@apache.org>
-Kevin W. Sutter <kwsutter@apache.org>

@@ -1,2 +1,0 @@
-Knut Anders Hatlen <kahatlen@apache.org>
-Samuel Andrew McIntyre <fuzzylogic@apache.org>

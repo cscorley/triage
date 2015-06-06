@@ -1,1 +1,0 @@
-Nick Burch <nick@apache.org>

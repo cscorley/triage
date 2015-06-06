@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser
-org.apache.openjpa.persistence.query.SimpleEntity2
-org.apache.openjpa.persistence.query.TestDupNamedQuery

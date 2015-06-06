@@ -1,1 +1,0 @@
-Make StreamingUDF work for Hadoop 2

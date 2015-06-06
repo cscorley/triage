@@ -1,3 +1,0 @@
-org.apache.pig.impl.builtin.TestStreamingUDF.oneTimeSetup()
-org.apache.pig.impl.builtin.TestStreamingUDF.oneTimeTearDown()
-org.apache.pig.impl.builtin.TestStreamingUDF.setUp()

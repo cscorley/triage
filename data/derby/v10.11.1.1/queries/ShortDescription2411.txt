@@ -1,1 +1,0 @@
-convert scrollCursors2.java  to junit

@@ -1,4 +1,0 @@
-org.apache.lucene.index.BufferedDeletesStream
-org.apache.lucene.index.IndexWriter
-org.apache.lucene.index.IndexWriter.ReaderPool
-org.apache.lucene.index.TestIndexWriter

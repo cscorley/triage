@@ -1,1 +1,0 @@
-EntityManagerFactory is not thread-safe

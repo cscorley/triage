@@ -1,1 +1,0 @@
-OutOfMemoryError happens when jdbcapi/_Suite.junit was executed as DerbyNetClient (in jvm1.4.2)

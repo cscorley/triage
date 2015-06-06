@@ -1,2 +1,0 @@
-org.apache.lucene.analysis.snowball.TestSnowballVocab.assertCorrectOutput(String,String)
-org.apache.lucene.analysis.snowball.TestSnowballVocab.testStemmers()

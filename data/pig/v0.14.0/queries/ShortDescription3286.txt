@@ -1,1 +1,0 @@
-TestPigContext.testImportList fails in trunk

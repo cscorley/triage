@@ -1,1 +1,0 @@
-The LDA output does not include the topic-probability distribution per document (p(z|d)). It outputs only the topics and corresponding words.

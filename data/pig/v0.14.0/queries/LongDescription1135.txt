@@ -1,1 +1,0 @@
-skewed join returns negative reducer index

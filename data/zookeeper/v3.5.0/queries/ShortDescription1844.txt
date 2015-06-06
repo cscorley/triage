@@ -1,1 +1,0 @@
-TruncateTest fails on windows

@@ -1,1 +1,0 @@
-Unnecessary if statement can be removed from BaseActivation.getColumnFromNow

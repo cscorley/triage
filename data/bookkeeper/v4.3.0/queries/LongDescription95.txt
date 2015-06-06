@@ -1,1 +1,0 @@
-we can extends/reuses zookeeper JMX until to monitor and manage bookie server

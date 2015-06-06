@@ -1,7 +1,0 @@
-Hi,
-I am using Tika to detect content also from archives. But because the raw input stream is a CipherInputStream I ran into https://issues.apache.org/jira/browse/COMPRESS-277
-which compress kindly solved for me.
-To be able to use Tika without patching my stack, I would like to see an upgrade of commons compress to 1.8.1 as soon as it is out.
-This may, or may not be in 1.6 timeframe.
-
-Thanks!

@@ -1,1 +1,0 @@
-Statistics about number of read/write requests and hit ratio will facilitate usage of DataCache.

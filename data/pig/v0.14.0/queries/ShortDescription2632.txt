@@ -1,1 +1,0 @@
-Create a SchemaTuple which generates efficient Tuples via code gen

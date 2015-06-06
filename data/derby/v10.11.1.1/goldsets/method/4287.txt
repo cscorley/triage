@@ -1,3 +1,0 @@
-org.apache.derby.impl.services.bytecode.BCClass.getClassBytecode()
-org.apache.derby.impl.services.bytecode.BCClass.getClassBytecode.run()
-org.apache.derby.impl.services.bytecode.GClass.writeClassFile(String,boolean,Throwable)

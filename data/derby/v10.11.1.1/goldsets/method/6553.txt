@@ -1,2 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.lang.SequenceGeneratorTest.assertNextValue(Connection,String,String,int)
-org.apache.derbyTesting.functionTests.tests.lang.SequenceGeneratorTest.test_14_6553()

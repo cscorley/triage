@@ -1,1 +1,0 @@
-NPE when passing in url instead of database name to EmbeddedXADataSource

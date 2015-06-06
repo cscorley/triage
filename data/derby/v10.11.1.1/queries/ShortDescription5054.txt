@@ -1,1 +1,0 @@
-[patch] better npe handling in exceptional case

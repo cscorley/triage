@@ -1,1 +1,0 @@
-LIKE handles strings with control characters incorrectly.

@@ -1,2 +1,0 @@
-org.apache.openjpa.jdbc.kernel.SQLStoreQuery.substituteParams(String,List<Integer>,Integer)
-org.apache.openjpa.jdbc.kernel.TestSQLStoreParamsSubstitution.testParamSubstitute()

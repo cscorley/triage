@@ -1,1 +1,0 @@
-The scripts under the /bin of the distribution does not have the executable permission

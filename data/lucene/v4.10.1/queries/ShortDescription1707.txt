@@ -1,1 +1,0 @@
-Don't use ensureOpen() excessively in IndexReader and IndexWriter

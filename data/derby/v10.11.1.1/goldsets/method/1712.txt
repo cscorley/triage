@@ -1,3 +1,0 @@
-org.apache.derbyTesting.junit.NetworkServerTestSetup.NetworkServerTestSetup(Test)
-org.apache.derbyTesting.junit.NetworkServerTestSetup.setUp()
-org.apache.derbyTesting.junit.NetworkServerTestSetup.tearDown()

@@ -1,4 +1,0 @@
-When the c unit tests are run sometimes the server doesn't shutdown at the end of the test, this causes subsequent tests (hudson esp) to fail.
-
-1) we should try harder to make the server shut down at the end of the test, I suspect this is related to test failing/cleanup
-2) before the tests are run we should see if the old server is still running and try to shut it down

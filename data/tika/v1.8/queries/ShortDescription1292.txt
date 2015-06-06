@@ -1,1 +1,0 @@
-Inconsistent priorities in bundled tika-mimetypes.xml

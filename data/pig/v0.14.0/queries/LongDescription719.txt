@@ -1,5 +1,0 @@
-This pig script should work:
-
-STORE (LOAD 'inputfile') INTO 'outputfile';
-
-but it does not.

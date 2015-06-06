@@ -1,1 +1,0 @@
-Create Version.NEW and Version.ANY static instances of Version so that were not passing around nulls

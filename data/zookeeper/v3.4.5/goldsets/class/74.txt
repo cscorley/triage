@@ -1,4 +1,0 @@
-org.apache.zookeeper.server.ZooKeeperServer
-org.apache.zookeeper.server.ZooKeeperServerMain
-org.apache.zookeeper.server.ZooKeeperServerMainTest
-org.apache.zookeeper.server.ZooKeeperServerMainTest.MainThread

@@ -1,3 +1,0 @@
-org.apache.openjpa.datacache.AbstractDataCache
-org.apache.openjpa.datacache.DataCacheManagerImpl
-org.apache.openjpa.persistence.datacache.TestCacheExclusions

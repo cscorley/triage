@@ -1,1 +1,0 @@
-dynamic configuration file renaming fails on Windows

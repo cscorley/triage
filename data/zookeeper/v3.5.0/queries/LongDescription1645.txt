@@ -1,1 +1,0 @@
-The ZooKeeper bundle relies on three packages it currently does not declare in the Import-Package MANIFEST header: javax.security.auth.callback , javax.security.auth.login and javax.security.sasl . By adding these the ZooKeeper jar will be a valid OSGi bundle.

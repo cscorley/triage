@@ -1,1 +1,0 @@
-add more information to the XACT_PROTOCOL_VIOLATION returned from store.

@@ -1,1 +1,0 @@
-Improve persistAll to avoid redundant checked on each instance 

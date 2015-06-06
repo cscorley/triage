@@ -1,1 +1,0 @@
-Cleanup code in the monitor to clarify the relationship between StorageFactory and PersistentService

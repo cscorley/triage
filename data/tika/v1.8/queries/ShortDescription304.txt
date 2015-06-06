@@ -1,1 +1,0 @@
-HtmlParser could be easier to subclass

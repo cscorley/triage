@@ -1,4 +1,0 @@
-support query syntax of  followings in path expressions :
-1.  Key(identifier)
-2.  Value(identifier)
-3.  Entry(identifier)

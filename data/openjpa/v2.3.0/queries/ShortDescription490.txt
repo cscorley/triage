@@ -1,1 +1,0 @@
-JPQL extension: aggregates in ORDER BY

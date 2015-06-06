@@ -1,1 +1,0 @@
-As discussed quite a while ago on the mailing list, it would make sense to separate the Tika web site from the normal release cycle so that we can more easily handle multiple different versions of documentation and other non-release information.

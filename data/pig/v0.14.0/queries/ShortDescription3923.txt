@@ -1,1 +1,0 @@
-Gitignore file should ignore all generated artifacts

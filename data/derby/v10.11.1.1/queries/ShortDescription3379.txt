@@ -1,1 +1,0 @@
-"No Current connection" on PooledConnection.getConnection() if pooled connection is reused during connectionClosed processing

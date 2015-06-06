@@ -1,3 +1,0 @@
-org.apache.pig.builtin.CubeDimensions
-org.apache.pig.parser.LogicalPlanBuilder
-org.apache.pig.test.TestCubeOperator

@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.execute.AlterTableConstantAction.compareWithPrevKey(int,boolean)
-org.apache.derby.impl.sql.execute.AlterTableConstantAction.initializeRowBuffers(ExecIndexRow)
-org.apache.derby.impl.sql.execute.AlterTableConstantAction.updateStatistics()

@@ -1,1 +1,0 @@
-AbstractSubscriptionManager#AcquireOp read subscriptions every time even it already owned the topic

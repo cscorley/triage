@@ -1,1 +1,0 @@
-DRDAStatement and DRDAConnThread swallow IOExceptions

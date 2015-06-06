@@ -1,1 +1,0 @@
-Describe shouldn't trigger execution in batch mode

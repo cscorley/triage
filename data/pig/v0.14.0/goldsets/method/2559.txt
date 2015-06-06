@@ -1,3 +1,0 @@
-org.apache.pig.scripting.jython.JythonScriptEngine.Interpreter.execfile(InputStream,String,PigContext)
-org.apache.pig.test.TestScriptLanguage.testIllustrateInScript()
-org.apache.pig.test.TestScriptLanguage.testPyShouldNotFailScriptIfExitCodeIs0()

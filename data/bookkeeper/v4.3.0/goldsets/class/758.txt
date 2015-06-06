@@ -1,4 +1,0 @@
-org.apache.bookkeeper.client.BookKeeperClientStats
-org.apache.bookkeeper.client.LedgerHandle
-org.apache.bookkeeper.client.TestTryReadLastConfirmed
-org.apache.bookkeeper.client.TryReadLastConfirmedOp

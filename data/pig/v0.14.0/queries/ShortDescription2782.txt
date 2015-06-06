@@ -1,1 +1,0 @@
-Specifying sorting field(s) at nightly.conf

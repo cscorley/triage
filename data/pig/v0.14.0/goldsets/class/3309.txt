@@ -1,2 +1,0 @@
-org.apache.pig.test.TestJsonLoaderStorage
-org.apache.pig.test.utils.TestHelper

@@ -1,1 +1,0 @@
-JDBC 4 EoD with default QueryObjectGenerator  fails with SecurityManager

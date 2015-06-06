@@ -1,8 +1,0 @@
-The current upgrade test Upgrade_10_1_10_2 tests upgrade from 10.1 to 10.2. This test should continue to run in 10.2 branch. It is failing in the new trunk (10.3) because the test internally checks the versions. To resolve this failure, we should remove this test from running in new trunk and then create new upgrade tests to test new upgrade scenarios: 
-
-	10.1 to 10.3
-	10.2 to 10.3
-
-
-
-Upgrade test uses the UpgradeTester class which contains the test for various upgrade scenarios. To test any old/new release upgrade combination, we can create a new test which uses this class and pass in the old and new versions to the class. Any new upgrade scenarios for new features can be added to UpgradeTester (e.g, test for 10.2 feature grant/revoke was added to UpgradeTester).

@@ -1,1 +1,0 @@
-Improve error information reported when encountering "ERROR XSDB3: Container information cannot change once written: was 103, now 80"

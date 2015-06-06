@@ -1,1 +1,0 @@
-HDF4/5 Tika Parser

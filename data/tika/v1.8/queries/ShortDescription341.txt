@@ -1,1 +1,0 @@
-Use charset in CONTENT_TYPE metadata when detecting the character encoding

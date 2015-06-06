@@ -1,3 +1,0 @@
-Create a SolrRequest for SolrJ that can add content streams to Solr for indexing.
-
-Patch shortly.

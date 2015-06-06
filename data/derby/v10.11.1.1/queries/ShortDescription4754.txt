@@ -1,1 +1,0 @@
-SQLClob.getObject() should always return a java.sql.Clob

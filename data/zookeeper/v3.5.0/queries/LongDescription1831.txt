@@ -1,1 +1,0 @@
-This JIRA is for documenting the details of removing the watches

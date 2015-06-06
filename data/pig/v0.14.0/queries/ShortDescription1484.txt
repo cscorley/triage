@@ -1,1 +1,0 @@
-BinStorage should support comma seperated path

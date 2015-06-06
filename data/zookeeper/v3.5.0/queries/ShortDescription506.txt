@@ -1,1 +1,0 @@
-QuorumBase should use default leader election

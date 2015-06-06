@@ -1,3 +1,0 @@
-org.apache.pig.builtin.Assert
-org.apache.pig.newplan.logical.optimizer.LogicalPlanOptimizer
-org.apache.pig.test.TestAssert

@@ -1,1 +1,0 @@
-bookkeeper doesn't work correctly on OpenLedgerNoRecovery

@@ -1,1 +1,0 @@
-Refactor Canopy Clustering into a separate post process with outlier pruning

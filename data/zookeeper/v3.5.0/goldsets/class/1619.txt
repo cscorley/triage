@@ -1,3 +1,0 @@
-org.apache.zookeeper.client.ConnectStringParser
-org.apache.zookeeper.common.StringUtils
-org.apache.zookeeper.test.StringUtilTest

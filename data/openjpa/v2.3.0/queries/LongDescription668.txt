@@ -1,8 +1,0 @@
-Just attempted to run trunk's test bucket with the IBM JDK and found two testcase failures:
-
-TestUniqueConstraintWithXMLDescriptor.testMapping
-TestEnhancementWithMultiplePUs.testEnhancementOfAllPUsWithinAResource 
-
-It looks like these problems are due to "incorrect" orm.xml.  I have fixed these locally and will check them in shortly.
-
-This comes back to the fact that the validation aspect of the xml parser for the Sun JDK is turned off by default (due to an old problem).  But, the validation is left on with the IBM JDK parser.  That's how we are able to detect the problem.  This is documented in openjpa-513.

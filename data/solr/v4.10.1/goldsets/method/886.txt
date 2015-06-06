@@ -1,6 +1,0 @@
-org.apache.solr.handler.dataimport.DataImporter.doDeltaImport(SolrWriter,RequestParams,Map<String,String>,String,String)
-org.apache.solr.handler.dataimport.DataImporter.doFullImport(SolrWriter,RequestParams,Map<String,String>,String,String)
-org.apache.solr.handler.dataimport.DocBuilder.commit()
-org.apache.solr.handler.dataimport.DocBuilder.execute(String)
-org.apache.solr.handler.dataimport.DocBuilder.rollback()
-org.apache.solr.handler.dataimport.SolrWriter.commit(boolean)

@@ -1,1 +1,0 @@
-Fix copyright notices and other IBM/Cloudscape references in java/demo/*

@@ -1,1 +1,0 @@
-Revoking a privilege from an SQL Object should invalidate statements dependent on that object

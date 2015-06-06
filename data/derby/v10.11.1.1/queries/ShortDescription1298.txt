@@ -1,1 +1,0 @@
-Tracing client data source gives NPE if all data source properties are not set

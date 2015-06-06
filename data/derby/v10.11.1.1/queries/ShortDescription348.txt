@@ -1,1 +1,0 @@
-example.html file for the SimpleApp does not describe the arguments accepted by the program

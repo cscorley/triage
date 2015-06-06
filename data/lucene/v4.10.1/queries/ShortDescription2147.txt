@@ -1,1 +1,0 @@
-Improve Spatial Utility like classes

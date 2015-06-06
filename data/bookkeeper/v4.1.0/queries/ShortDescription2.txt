@@ -1,1 +1,0 @@
-bookkeeper does not put enough meta-data in to do recovery properly

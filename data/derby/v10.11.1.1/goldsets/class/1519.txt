@@ -1,5 +1,0 @@
-org.apache.derby.client.am.Clob
-org.apache.derby.client.am.ClobOutputStream
-org.apache.derby.client.am.Cursor
-org.apache.derby.client.am.PreparedStatement
-org.apache.derby.client.am.ResultSet

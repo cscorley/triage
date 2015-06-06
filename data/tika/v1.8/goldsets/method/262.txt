@@ -1,3 +1,0 @@
-org.apache.tika.parser.microsoft.OfficeParser.parse(DocumentEntry,Metadata)
-org.apache.tika.parser.microsoft.OfficeParser.parse(InputStream,ContentHandler,Metadata)
-org.apache.tika.parser.microsoft.OfficeParser.parseSummaryEntryIfExists(POIFSFileSystem,String,Metadata)

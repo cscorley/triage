@@ -1,2 +1,0 @@
-org.apache.derby.iapi.jdbc.DRDAServerStarter
-org.apache.derby.impl.services.bytecode.d_BCValidate

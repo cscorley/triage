@@ -1,1 +1,0 @@
-Make Cluster dumper read DictionaryVectorizer Dictionary format

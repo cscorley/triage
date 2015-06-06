@@ -1,2 +1,0 @@
-org.apache.solr.common.util.ContentStreamBase
-org.apache.solr.common.util.ContentStreamBase.StringStream

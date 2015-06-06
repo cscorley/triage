@@ -1,3 +1,0 @@
-deprecate NoSyncConnected in KeeperState - it's not used anywhere in the codebase.
-
-what about "Unknown"? that seems to be unused as well, deprecate it as well?

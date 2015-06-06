@@ -1,8 +1,0 @@
-Build fails with:
-
-
-[artifact:deploy] Invalid reference: 'pigunit'
-
-
-
-Patch on the way.

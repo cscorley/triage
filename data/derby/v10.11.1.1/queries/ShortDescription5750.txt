@@ -1,1 +1,0 @@
-Sending an empty string as table name to compress table procedure or empty string as index name to update statistics procedure makes the parser throw an exception.

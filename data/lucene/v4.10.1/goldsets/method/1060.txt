@@ -1,1 +1,0 @@
-org.apache.lucene.index.TermVectorsReader.readTermVector(String,long,TermVectorMapper)

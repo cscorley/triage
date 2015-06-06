@@ -1,3 +1,0 @@
-org.apache.derbyBuild.splitmessages
-org.apache.derby.client.am.ResultSet
-org.apache.derby.shared.common.reference.SQLState

@@ -1,2 +1,0 @@
-org.apache.solr.core.SolrResourceLoader.findClass(String,String)
-org.apache.solr.core.SolrResourceLoader.getLines(String,Charset)

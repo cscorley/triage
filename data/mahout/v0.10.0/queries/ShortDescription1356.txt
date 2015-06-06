@@ -1,1 +1,0 @@
-Ensure unit tests fail fast when writing outside mvn target directory

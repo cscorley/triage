@@ -1,3 +1,0 @@
-org.apache.pig.newplan.logical.expression.ProjectExpression.getFieldSchema()
-org.apache.pig.test.TestEvalPipelineLocal.testCastSchemaShare()
-org.apache.pig.test.TestEvalPipelineLocal.testDanglingNodeWrongSchema()

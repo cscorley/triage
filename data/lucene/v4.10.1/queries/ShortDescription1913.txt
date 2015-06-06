@@ -1,1 +1,0 @@
-FastVectorHighlighter: AIOOBE occurs if one PhraseQuery is contained by another PhraseQuery

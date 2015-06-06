@@ -1,1 +1,0 @@
-WeightedRunningAverage does not initialize correctly.

@@ -1,1 +1,0 @@
-Lazy fetch of embedded attributes does not work properly

@@ -1,1 +1,0 @@
-Descriminator as a table and static (class) fields

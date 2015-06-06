@@ -1,9 +1,0 @@
-zookeeper 3.3.3 (and 3.3.1) fails to build on Debian and Ubuntu systems with gcc >= 4.6.1:
-
-/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated  -Wall -Werror  -g -O2 -D_GNU_SOURCE -MT zookeeper.lo -MD -MP -MF .deps/zookeeper.Tpo -c -o zookeeper.lo `test -f 'src/zookeeper.c' || echo './'`src/zookeeper.c
-libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -Wall -Werror -g -O2 -D_GNU_SOURCE -MT zookeeper.lo -MD -MP -MF .deps/zookeeper.Tpo -c src/zookeeper.c  -fPIC -DPIC -o .libs/zookeeper.o
-src/zookeeper.c: In function 'getaddrs':
-src/zookeeper.c:455:13: error: variable 'port' set but not used [-Werror=unused-but-set-variable]
-cc1: all warnings being treated as errors
-
-See http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=625441 for more information.

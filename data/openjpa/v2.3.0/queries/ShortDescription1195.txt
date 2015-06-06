@@ -1,1 +1,0 @@
-Allow datastore function as query expression

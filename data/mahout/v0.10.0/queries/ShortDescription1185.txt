@@ -1,1 +1,0 @@
-MemoryDiffStorage.class has a bug for slope one algorithm which could cause incorrect recommendation results

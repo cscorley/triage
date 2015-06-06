@@ -1,1 +1,0 @@
-Add stat information to GetChildrenResponse

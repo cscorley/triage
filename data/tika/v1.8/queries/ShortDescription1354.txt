@@ -1,1 +1,0 @@
-ForkParser doesn't work in OSGI container

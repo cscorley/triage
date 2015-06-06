@@ -1,3 +1,0 @@
-org.apache.derby.iapi.util.InterruptStatus.throwIf(LanguageConnectionContext)
-org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(Throwable)
-org.apache.derby.impl.services.locks.ConcurrentLockSet.lockObject(CompatibilitySpace,Lockable,Object,int)

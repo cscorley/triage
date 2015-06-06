@@ -1,2 +1,0 @@
-org.apache.derby.impl.tools.sysinfo.Main.getFileWhichLoadedClass(Class)
-org.apache.derby.impl.tools.sysinfo.Main.getFileWhichLoadedClass.run()

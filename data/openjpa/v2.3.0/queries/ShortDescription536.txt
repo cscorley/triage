@@ -1,1 +1,0 @@
-getMetaData() causes OutOfMemoryError under some cases

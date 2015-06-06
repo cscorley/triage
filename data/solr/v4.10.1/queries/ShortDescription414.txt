@@ -1,1 +1,0 @@
-Coherent plugin initialization strategy

@@ -1,1 +1,0 @@
-Improve usability of Derby's client/server security by implementing ANSI Roles

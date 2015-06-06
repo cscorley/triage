@@ -1,5 +1,0 @@
-The primary changes are :
-
-a) Support modified protocol changes (optional body).
-b) Return the published message's seq-id in the response.
-c) Minor bugfix to Array indexing in bucket which was triggered in a testcase.

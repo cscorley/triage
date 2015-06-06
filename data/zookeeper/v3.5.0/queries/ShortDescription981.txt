@@ -1,1 +1,0 @@
-Hang in zookeeper_close() in the multi-threaded C client

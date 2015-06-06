@@ -1,1 +1,0 @@
-Pig CookBook documentation "Take Advantage of Join Optimization" additions:Merge and Skewed Join

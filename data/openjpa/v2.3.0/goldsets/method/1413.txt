@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.kernel.exps.CompareEqualExpression.appendTo(Select,ExpContext,ExpState,SQLBuffer)
-org.apache.openjpa.jdbc.kernel.exps.CompareEqualExpression.selectColumns(Select,ExpContext,ExpState,boolean)
-org.apache.openjpa.persistence.jpql.expressions.TestJPQLScalarExpressions.testGeneralCaseExpressions()

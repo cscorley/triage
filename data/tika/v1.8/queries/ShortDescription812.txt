@@ -1,1 +1,0 @@
-Improve the detection of Works Spreadsheet 7.0 files

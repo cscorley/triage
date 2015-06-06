@@ -1,7 +1,0 @@
-This patch includes modifications to support both functional and unit tests split out into separate directories like RoR. The test server activation was converted from two independent functions into a singleton class with start() and stop() methods.
-
-The functional tests have been wrapped with a ensure clause so that the solr test server will always be shut down--even if an exception was tossed during testing.
-
-By default the solr test server will not log startup messages to STDERR, however if it's desirable to see these you can:
-
-   rake SOLR_CONSOLE=true

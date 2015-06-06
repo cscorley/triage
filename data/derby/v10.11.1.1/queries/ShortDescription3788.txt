@@ -1,1 +1,0 @@
-Provide a zero-admin way of updating the statisitcs of an index

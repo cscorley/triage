@@ -1,1 +1,0 @@
-lang/procedureInTrigger.sql fails with wctme5.7 foundation with CNFE  java.sql.DriverManager and other exceptions.

@@ -1,1 +1,0 @@
-Move java.sql.Wrapper implementations to base classes in embedded driver

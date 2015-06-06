@@ -1,1 +1,0 @@
-Need utilities to create schemas for bags and tuples

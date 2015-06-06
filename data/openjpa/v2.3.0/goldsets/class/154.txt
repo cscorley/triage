@@ -1,2 +1,0 @@
-org.apache.openjpa.kernel.SavepointFieldManager
-org.apache.openjpa.kernel.StateManagerImpl

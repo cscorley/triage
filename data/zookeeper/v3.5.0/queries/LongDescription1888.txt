@@ -1,3 +1,0 @@
-This appears to be a bug in ZkCli.cmd as it does not try to locate java using the JAVA_HOME environment variable. 
-
-Will post the patch soon.

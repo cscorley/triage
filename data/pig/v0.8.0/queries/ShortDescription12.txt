@@ -1,1 +1,0 @@
-Please add timestamps to pig map/reduce progress messages

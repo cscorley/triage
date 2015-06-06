@@ -1,1 +1,0 @@
-To make debugging easier using the derby distribution provided for download, it would be nice to have line numbering information included in the classes. With javac, that would be providing the option "-g" in the compiler's commandline.

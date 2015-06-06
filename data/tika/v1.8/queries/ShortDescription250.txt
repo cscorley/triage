@@ -1,1 +1,0 @@
-XLS parser does not extract empty sheet names

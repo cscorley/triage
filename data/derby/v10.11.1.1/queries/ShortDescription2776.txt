@@ -1,1 +1,0 @@
-Internally generated CAST nodes should not use the collation of the current compilation schema. Instead they should use collation of target type passed to it.

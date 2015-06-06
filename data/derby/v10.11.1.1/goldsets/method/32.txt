@@ -1,2 +1,0 @@
-org.apache.derby.impl.store.raw.data.BaseDataFileFactory.privGetJBMSLockOnDB()
-org.apache.derby.impl.store.raw.data.BaseDataFileFactory.privReleaseJBMSLockOnDB()

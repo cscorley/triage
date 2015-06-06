@@ -1,1 +1,0 @@
-add tostring support for watcher event, and enums for event type/state

@@ -1,1 +1,0 @@
-Leader.waitForEpochAck() checks waitingForNewEpoch instead of checking electionFinished

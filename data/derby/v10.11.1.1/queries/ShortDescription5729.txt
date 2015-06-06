@@ -1,1 +1,0 @@
-Replication tests keep references to connections after completion

@@ -1,1 +1,0 @@
-The idea is to perform integration testing of entire re-replication module : Auditor-RW processes

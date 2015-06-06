@@ -1,2 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.jdbcapi.resultsetStream.dumpSQLExceptions(SQLException)
-org.apache.derbyTesting.functionTests.tests.jdbcapi.resultsetStream.main(String[])

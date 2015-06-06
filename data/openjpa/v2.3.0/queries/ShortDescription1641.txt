@@ -1,1 +1,0 @@
-SybaseDictionary should try both JDBC column names and Sybase specific column names

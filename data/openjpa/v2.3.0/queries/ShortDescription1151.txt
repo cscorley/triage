@@ -1,1 +1,0 @@
-Cache the current-time timestamp in AbstractQueryCache.onTypesChanged()

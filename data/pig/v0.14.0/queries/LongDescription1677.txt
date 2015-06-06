@@ -1,1 +1,0 @@
-With pig becoming the TLP, we need to modify the pig artifacts directory path to org/apache/pig from org/apache/hadoop/pig in the maven respository.

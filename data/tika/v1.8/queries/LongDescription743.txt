@@ -1,1 +1,0 @@
-Apache parent POM version 10 was released a few months ago. It upgrades various plugin versions and makes the useAgent option of the GPG plugin configurable.

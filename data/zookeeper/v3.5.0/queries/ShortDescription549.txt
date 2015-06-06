@@ -1,1 +1,0 @@
-Refactor Followers and related classes into a Peer->Follower hierarchy in preparation for Observers

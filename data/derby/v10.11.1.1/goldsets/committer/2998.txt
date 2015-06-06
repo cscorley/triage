@@ -1,3 +1,0 @@
-Army <abrown@apache.org>
-Dyre Tjeldvoll <dyre@apache.org>
-Knut Anders Hatlen <kahatlen@apache.org>

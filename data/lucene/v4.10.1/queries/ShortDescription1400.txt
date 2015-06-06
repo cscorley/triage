@@ -1,1 +1,0 @@
-Add Apache RAT (Release Audit Tool) target to build.xml

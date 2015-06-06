@@ -1,2 +1,0 @@
-Mahadev Konar <mahadev@apache.org>
-Michi Mutsuzaki <michim@apache.org>

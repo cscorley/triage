@@ -1,1 +1,0 @@
-Add tests for error codes for severe exceptions

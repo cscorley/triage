@@ -1,1 +1,0 @@
-Possible segfault in zookeeper_init

@@ -1,1 +1,0 @@
-modify setCharacterStreamInternal to take a long for the length, and perform the > max int check in the method

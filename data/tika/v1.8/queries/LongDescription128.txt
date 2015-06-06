@@ -1,3 +1,0 @@
-The current HTML parser just sanitizes the input HTML and passes it forward with no structural changes.
-
-Unfortunately this is incompatible with the other Tika parsers that produce XHTML output, and so IMHO we should be outputting XHTML also from the HTML parser.

@@ -1,1 +1,0 @@
-As reported in http://mail-archives.apache.org/mod_mbox/tika-user/201207.mbox/ajax/%3C1342645464678-7572828.post%40n2.nabble.com%3E - Tika lacks a mimetype entry for NITF (National Imagery Transmission Format)

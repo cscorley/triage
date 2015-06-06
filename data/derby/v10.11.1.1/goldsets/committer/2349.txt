@@ -1,2 +1,0 @@
-Dag H. Wanvik <dag@apache.org>
-Daniel John Debrunner <djd@apache.org>

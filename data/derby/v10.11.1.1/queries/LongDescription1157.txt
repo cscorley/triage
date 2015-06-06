@@ -1,1 +1,0 @@
-BaseJDBCTestCase should be extended with methods that create DataSource, ConnectionPoolDataSource and XADataSource objects.

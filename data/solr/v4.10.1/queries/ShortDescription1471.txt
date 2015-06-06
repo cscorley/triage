@@ -1,1 +1,0 @@
-StatsComponent does not calculate number missing for facets

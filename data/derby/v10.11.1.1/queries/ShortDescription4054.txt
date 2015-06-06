@@ -1,1 +1,0 @@
-Multithreaded clob update with exclusive table locking causes table growth that is not reclaimed

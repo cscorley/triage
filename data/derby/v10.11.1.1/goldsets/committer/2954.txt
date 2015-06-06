@@ -1,2 +1,0 @@
-Knut Anders Hatlen <kahatlen@apache.org>
-Oystein Grovlen <oysteing@apache.org>

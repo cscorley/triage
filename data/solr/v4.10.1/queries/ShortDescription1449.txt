@@ -1,1 +1,0 @@
-solrconfig.xml syntax to add classpath elements from outside of instanceDir

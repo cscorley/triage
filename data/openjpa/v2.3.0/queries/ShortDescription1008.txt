@@ -1,1 +1,0 @@
-Generate meta-model for JPA 2.0

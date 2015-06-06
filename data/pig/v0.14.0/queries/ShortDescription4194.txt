@@ -1,1 +1,0 @@
-ReadToEndLoader does not call setConf on pigSplit in initializeReader

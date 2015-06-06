@@ -1,1 +1,0 @@
-create a reconnectable zookkeeper client wrapper to handle session expire event.

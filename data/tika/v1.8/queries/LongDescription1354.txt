@@ -1,1 +1,0 @@
-I can't find way to run ForkParser in OSGI container.

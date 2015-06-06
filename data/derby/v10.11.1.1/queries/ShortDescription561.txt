@@ -1,1 +1,0 @@
-embedded driver jdbcCompliant() method should return true

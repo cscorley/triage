@@ -1,1 +1,0 @@
-java/testing/README.htm needs to be updated with information on JUnit tests

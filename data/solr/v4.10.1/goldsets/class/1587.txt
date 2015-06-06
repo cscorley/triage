@@ -1,3 +1,0 @@
-org.apache.solr.client.solrj.embedded.JettyWebappTest
-org.apache.solr.handler.component.QueryComponent
-org.apache.solr.TestDistributedSearch

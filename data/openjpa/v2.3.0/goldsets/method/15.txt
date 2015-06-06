@@ -1,2 +1,0 @@
-org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder.addJoin(JPQLNode,boolean,Expression)
-org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder.getCandidateMetaData(JPQLNode)

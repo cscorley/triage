@@ -1,1 +1,0 @@
-OpenJPA 2.0: Update OpenJPA documentation with new persistence schemas

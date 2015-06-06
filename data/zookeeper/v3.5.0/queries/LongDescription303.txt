@@ -1,8 +1,0 @@
-Macs don't support the -f option in readlink
-
-
-$ bin/zkServer.sh start
-JMX enabled by default
-readlink: illegal option -- f
-usage: readlink [-n] [file ...]
-

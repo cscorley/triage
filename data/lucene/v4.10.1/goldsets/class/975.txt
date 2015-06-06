@@ -1,3 +1,0 @@
-org.apache.lucene.index.PositionBasedTermVectorMapper
-org.apache.lucene.index.PositionBasedTermVectorMapper.TVPositionInfo
-org.apache.lucene.index.TestPositionBasedTermVectorMapper

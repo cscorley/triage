@@ -1,1 +1,0 @@
-Error in the XML equivalent in the "secondary table field mapping" example

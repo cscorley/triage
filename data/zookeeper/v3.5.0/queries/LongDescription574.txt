@@ -1,7 +1,0 @@
-I believe it's 100k, not 10k
-
------------------------
-snapCount
-(Java system property: zookeeper.snapCount)
-
-Clients can submit requests faster than ZooKeeper can process them, especially if there are a lot of clients. To prevent ZooKeeper from running out of memory due to queued requests, ZooKeeper will throttle clients so that there is no more than globalOutstandingLimit outstanding requests in the system. The default limit is 1,000.ZooKeeper logs transactions to a transaction log. After snapCount transactions are written to a log file a snapshot is started and a new transaction log file is started. The default snapCount is 10,000.

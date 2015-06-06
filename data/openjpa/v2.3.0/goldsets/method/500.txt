@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.EntityManagerImpl.getConnectionRetainMode()
-org.apache.openjpa.persistence.EntityManagerImpl.isManaged()
-org.apache.openjpa.persistence.EntityManagerImpl.isTransactionManaged()

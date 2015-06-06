@@ -1,1 +1,0 @@
-New protobufs generates findbugs errors

@@ -1,1 +1,0 @@
-tools/derbyrunjartest.java doesn't use jvmflags

@@ -1,1 +1,0 @@
-'Table/View 'T1' already exists in Schema 'APP'' in lang.DropTableTest on phoneME/cvm

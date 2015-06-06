@@ -1,1 +1,0 @@
-Mark commons-logging as provided in the build to remove transient maven dependency

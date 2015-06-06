@@ -1,2 +1,0 @@
-org.apache.lucene.queryParser.ext.ExtendableQueryParser
-org.apache.lucene.queryParser.ext.ExtensionQuery

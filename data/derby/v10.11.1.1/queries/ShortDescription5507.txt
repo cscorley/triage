@@ -1,1 +1,0 @@
-Orderly shutdown fails if you are using BUILTIN authentication and turn on derby.database.propertiesOnly

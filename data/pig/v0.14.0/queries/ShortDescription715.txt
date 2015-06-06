@@ -1,1 +1,0 @@
-Remove 2 doc files: hello.pdf and overview.html

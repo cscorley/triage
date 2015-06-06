@@ -1,1 +1,0 @@
-Test of derby fails because difference in encoding of eol make sizes of test data files different between platforms.

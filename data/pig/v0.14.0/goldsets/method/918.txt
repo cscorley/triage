@@ -1,2 +1,0 @@
-org.apache.hadoop.zebra.io.BasicTable.Reader.BTScanner.atEnd()
-org.apache.hadoop.zebra.io.BasicTable.Reader.BTScanner.getKey(BytesWritable)

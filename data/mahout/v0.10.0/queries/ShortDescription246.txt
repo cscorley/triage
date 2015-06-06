@@ -1,1 +1,0 @@
-upgrade to new lucene TokenStream API to cleanup deprecation warnings

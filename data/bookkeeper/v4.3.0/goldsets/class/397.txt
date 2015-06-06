@@ -1,3 +1,0 @@
-org.apache.hedwig.server.netty.PubSubServer
-org.apache.hedwig.server.netty.TestPubSubServer
-org.apache.hedwig.server.regions.HedwigHubClientFactory

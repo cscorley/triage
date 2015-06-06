@@ -1,3 +1,0 @@
-org.apache.mahout.matrix.SparseVector
-org.apache.mahout.matrix.SquareRootFunction
-org.apache.mahout.matrix.VectorTest

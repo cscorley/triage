@@ -1,1 +1,0 @@
-error message for missing query id var needs improvement

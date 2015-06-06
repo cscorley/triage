@@ -1,1 +1,0 @@
-Basic parser for old Excel files (eg Excel 4)

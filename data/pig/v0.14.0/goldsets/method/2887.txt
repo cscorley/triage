@@ -1,3 +1,0 @@
-org.apache.pig.test.TestMacroExpansion.noSemiColonTest()
-org.apache.pig.test.TestMacroExpansion.test1()
-org.apache.pig.test.TestMacroExpansion.testNegativeNumber()

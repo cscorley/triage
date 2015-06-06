@@ -1,3 +1,0 @@
-Pig 090 documentation 
-
-Will include multiple patches as documentation is released with Pig  090 milestones (M1, M2, M3, ... )

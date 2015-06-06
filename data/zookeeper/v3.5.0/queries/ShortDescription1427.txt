@@ -1,1 +1,0 @@
-Writing to local files is done non-atomically

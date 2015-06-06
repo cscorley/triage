@@ -1,2 +1,0 @@
-org.apache.tika.utils.ParseUtils.getParsersFromZip(InputStream,TikaConfig)
-org.apache.tika.utils.Utils.unzip(InputStream)

@@ -1,1 +1,0 @@
-File handle is leaked when a Slave replication is shutdown with failover=true

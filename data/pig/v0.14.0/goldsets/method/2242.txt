@@ -1,3 +1,0 @@
-org.apache.pig.builtin.TOKENIZE.exec(Tuple)
-org.apache.pig.builtin.TOKENIZE.getArgToFuncMapping()
-org.apache.pig.test.TestBuiltin.testTOKENIZE()

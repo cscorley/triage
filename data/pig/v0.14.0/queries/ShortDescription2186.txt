@@ -1,1 +1,0 @@
-PigStorage new warnings about missing schema file can be confusing

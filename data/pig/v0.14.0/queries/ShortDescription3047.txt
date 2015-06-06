@@ -1,1 +1,0 @@
-Check the size of a relation before adding it to distributed cache in Replicated join

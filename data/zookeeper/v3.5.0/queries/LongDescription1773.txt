@@ -1,9 +1,0 @@
-The docs refer to an old version of jline
-
-
-src/docs/src/documentation/content/xdocs/zookeeperAdmin.xml
-227:              <para><computeroutput>$ java -cp zookeeper.jar:lib/slf4j-api-1.6.1.jar:lib/slf4j-log4j12-1.6.1.jar:lib/log4j-1.2.15.jar:conf:src/java/lib/jline-0.9.94.jar \
-
-src/docs/src/documentation/content/xdocs/zookeeperQuotas.xml
-46:	<para><computeroutput>$java -cp zookeeper.jar:src/java/lib/log4j-1.2.15.jar/conf:src/java/lib/jline-0.9.94.jar \
-

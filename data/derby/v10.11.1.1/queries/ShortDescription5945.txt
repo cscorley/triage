@@ -1,1 +1,0 @@
-Inappropriate error message when calling a procedure as a function (as if it had a return value)

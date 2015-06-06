@@ -1,1 +1,0 @@
-CreateNewLog may overwrite lastLogId with smaller value 

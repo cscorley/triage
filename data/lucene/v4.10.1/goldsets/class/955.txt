@@ -1,2 +1,0 @@
-org.apache.lucene.index.SegmentTermPositions
-org.apache.lucene.index.TestLazyProxSkipping

@@ -1,3 +1,0 @@
-org.apache.mahout.clustering.evaluation.RepresentativePointsDriver
-org.apache.mahout.utils.clustering.ClusterDumper
-org.apache.mahout.utils.clustering.ClusterDumper.OUTPUT_FORMAT

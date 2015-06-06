@@ -1,1 +1,0 @@
-snappuller fails if login shell on master server is zsh

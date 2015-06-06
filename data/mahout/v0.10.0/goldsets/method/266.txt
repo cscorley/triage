@@ -1,3 +1,0 @@
-org.apache.mahout.math.AIOOBInSortingTest.convert(long[][])
-org.apache.mahout.math.AIOOBInSortingTest.testAIOOB()
-org.apache.mahout.math.Sorting.quickSort0(int,int,IntComparator,Swapper)

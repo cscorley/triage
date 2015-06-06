@@ -1,6 +1,0 @@
-org.apache.lucene.search.FieldSortedHitQueue
-org.apache.lucene.search.FuzzyQuery
-org.apache.lucene.search.TopDocCollector
-org.apache.lucene.search.TopFieldDocCollector
-org.apache.lucene.util.PriorityQueue
-org.apache.lucene.util.TestPriorityQueue

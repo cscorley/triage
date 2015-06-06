@@ -1,1 +1,0 @@
-SimpleApp (demo) does not work in a client setting

@@ -1,3 +1,0 @@
-org.apache.openjpa.enhance.InstrumentationFactory
-org.apache.openjpa.lib.util.J2DoPrivHelper
-org.apache.openjpa.lib.util.JavaVendors

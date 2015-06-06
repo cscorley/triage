@@ -1,1 +1,0 @@
-JPQL constructor query close the <SELECT DISTINCT> feature? 

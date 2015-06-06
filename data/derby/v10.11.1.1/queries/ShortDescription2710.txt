@@ -1,1 +1,0 @@
-disable dynamic like optimization for collated databases

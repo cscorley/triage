@@ -1,2 +1,0 @@
-org.apache.solr.handler.MoreLikeThisHandler
-org.apache.solr.handler.MoreLikeThisHandler.MoreLikeThisHelper

@@ -1,1 +1,0 @@
-QueryParser.getFieldQuery(String,String) doesn't set default slop on MultiPhraseQuery

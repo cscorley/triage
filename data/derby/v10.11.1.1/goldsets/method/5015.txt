@@ -1,2 +1,0 @@
-org.apache.derby.client.am.ResultSet.resetRowsetSqlca()
-org.apache.derby.client.am.ResultSet.resetUpdatedColumns()

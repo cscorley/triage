@@ -1,1 +1,0 @@
-The MatrixVectorView has a > where it should have a >= in a test for index out of bounds.

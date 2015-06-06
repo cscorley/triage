@@ -1,1 +1,0 @@
-ContainerAwareDetector doesn't support truncated POI files

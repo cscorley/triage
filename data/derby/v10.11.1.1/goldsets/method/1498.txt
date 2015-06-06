@@ -1,1 +1,0 @@
-org.apache.derby.impl.drda.DRDAConnThread.readAndSetExtParam(int,DRDAStatement,int,int)

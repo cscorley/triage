@@ -1,1 +1,0 @@
-Make PIG_HOME configurable

@@ -1,1 +1,0 @@
--418 sqlexception using DB2 and EJB QL with SQRT or MOD

@@ -1,1 +1,0 @@
-Provide documentation and one or more samples on how to use commons-dbcp with OpenJPA to improve performance.

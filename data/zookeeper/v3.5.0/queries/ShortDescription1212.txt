@@ -1,1 +1,0 @@
-zkServer.sh stop action is not conformat with LSB para 20.2 Init Script Actions

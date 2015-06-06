@@ -1,1 +1,0 @@
-[zebra] Zebra build.xml still uses 0.6 version

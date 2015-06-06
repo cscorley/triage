@@ -1,1 +1,0 @@
-OrderBy annotation applied to an element collection of basic type doesn't require property or field name 

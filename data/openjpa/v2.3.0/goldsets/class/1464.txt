@@ -1,4 +1,0 @@
-org.apache.openjpa.jdbc.kernel.PreparedQueryImpl
-org.apache.openjpa.persistence.jdbc.sqlcache.Employee
-org.apache.openjpa.persistence.jdbc.sqlcache.Employee.Category
-org.apache.openjpa.persistence.jdbc.sqlcache.TestPreparedQueryCache

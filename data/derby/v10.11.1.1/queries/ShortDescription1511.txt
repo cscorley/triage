@@ -1,1 +1,0 @@
-SELECT clause without a WHERE, causes an Exception when extracting a Blob from a database

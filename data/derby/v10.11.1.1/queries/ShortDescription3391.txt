@@ -1,1 +1,0 @@
-CompilerContext contains old logic to restore the entry isolation level of the connection after compilation

@@ -1,1 +1,0 @@
-Schema name is incorrectly included in length of Sequence name.

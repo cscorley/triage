@@ -1,1 +1,0 @@
-AvroStorage can't read schema on amazon s3 in elastic mapreduce

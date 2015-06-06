@@ -1,1 +1,0 @@
-Pig should use "bin/hadoop jar pig-withouthadoop.jar" in bin/pig instead of forming java command itself  

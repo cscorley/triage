@@ -1,1 +1,0 @@
-[Patch] add support for AxCrypt file type detection

@@ -1,1 +1,0 @@
-Streaming KMeans fails when executed in Sequential Mode

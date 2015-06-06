@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.persistence.FileTxnLog
-org.apache.zookeeper.server.persistence.FileTxnLog.FileTxnIterator

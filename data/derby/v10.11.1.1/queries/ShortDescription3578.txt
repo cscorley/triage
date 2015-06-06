@@ -1,1 +1,0 @@
-DrdaStreamOutBufferSize attribute of NetworkServerMBean should be of type int instead of String

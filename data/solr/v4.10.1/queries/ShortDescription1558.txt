@@ -1,1 +1,0 @@
-QueryElevationComponent should fail to init if uniqueKey field isn't string

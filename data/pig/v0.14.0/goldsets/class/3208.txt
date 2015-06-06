@@ -1,2 +1,0 @@
-org.apache.hadoop.zebra.tfile.Compression
-org.apache.hadoop.zebra.tfile.Compression.Algorithm

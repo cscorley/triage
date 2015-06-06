@@ -1,1 +1,0 @@
-Log truncation truncating log too much - can cause data loss

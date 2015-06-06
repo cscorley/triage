@@ -1,1 +1,0 @@
-For better readability  - converting the Iterable<T> to  for ( A  a : container ) constructs that is more intuitive to read. 

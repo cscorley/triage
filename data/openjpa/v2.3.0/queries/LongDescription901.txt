@@ -1,2 +1,0 @@
-Discovered that Atlassian has the JAI 1.1.3 artifacts hosted on their m2proxy repo at - https://m2proxy.atlassian.com/repository/public/
-By including their repo and changing the default groupId for the artifacts, we can eliminate a manual step of having to download/install the JAI artifacts.

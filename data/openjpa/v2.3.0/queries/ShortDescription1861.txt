@@ -1,1 +1,0 @@
-Update maven plugins used in builds to support Maven 3.0

@@ -1,1 +1,0 @@
-IndexWriter.close(false) does not actually stop background merge threads

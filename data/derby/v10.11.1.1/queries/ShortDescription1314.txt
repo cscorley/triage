@@ -1,1 +1,0 @@
-Differences between client and embedded when invoking stored procedures using Statement.executeUpdate()

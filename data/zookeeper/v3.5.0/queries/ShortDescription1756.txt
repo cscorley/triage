@@ -1,1 +1,0 @@
-zookeeper_interest() in C client can return a timeval of 0

@@ -1,3 +1,0 @@
-org.apache.solr.client.solrj.SolrQuery.getFacetSort()
-org.apache.solr.client.solrj.SolrQueryTest.testFacetSort()
-org.apache.solr.client.solrj.SolrQueryTest.testSolrQueryMethods()

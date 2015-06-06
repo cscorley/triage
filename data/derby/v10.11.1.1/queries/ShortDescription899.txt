@@ -1,1 +1,0 @@
-Cannot rollback to savepoint when using ClientXADataSource

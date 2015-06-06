@@ -1,2 +1,0 @@
-org.apache.solr.handler.dataimport.TestURLDataSource
-org.apache.solr.handler.dataimport.URLDataSource

@@ -1,1 +1,0 @@
-Need to ship jruby.jar in the release

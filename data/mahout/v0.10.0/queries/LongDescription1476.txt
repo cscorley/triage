@@ -1,3 +1,0 @@
-The website on Hidden Markov Models needs clean up. We need to go through the text, remove dead links and check whether the information is still consistent with the current code.
-
-https://mahout.apache.org/users/stuff/hidden-markov-models.html

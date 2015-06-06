@@ -1,1 +1,0 @@
-Convert distinct.sql to JUnit

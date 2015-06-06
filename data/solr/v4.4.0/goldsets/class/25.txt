@@ -1,2 +1,0 @@
-org.apache.solr.handler.dataimport.SolrEntityProcessor
-org.apache.solr.handler.dataimport.TestSolrEntityProcessorEndToEnd

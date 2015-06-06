@@ -1,2 +1,0 @@
-Catalina Wei <fancy@apache.org>
-Pinaki Poddar <ppoddar@apache.org>

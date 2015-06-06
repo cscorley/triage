@@ -1,2 +1,0 @@
-org.apache.tika.mime.MimeDetectionTest.testDetection()
-org.apache.tika.TikaDetectionTest.testHttpServerFileExtensions()

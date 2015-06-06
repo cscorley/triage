@@ -1,1 +1,0 @@
-Make prefixLength accessible to PrefixTermEnum subclasses

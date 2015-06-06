@@ -1,1 +1,0 @@
-Consistent, namespaced definitions for office file related metadata

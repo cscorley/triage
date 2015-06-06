@@ -1,1 +1,0 @@
-deprecate term and getTerm in MultiTermQuery

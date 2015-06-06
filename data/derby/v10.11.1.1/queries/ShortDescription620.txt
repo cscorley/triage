@@ -1,1 +1,0 @@
-BUILDING.txt section 3.2(1): Instructions for finding user home directory are not reliable

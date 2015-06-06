@@ -1,1 +1,0 @@
-store.ServicePropertiesFileTest fails on z/OS

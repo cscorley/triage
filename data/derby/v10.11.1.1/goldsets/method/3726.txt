@@ -1,2 +1,0 @@
-org.apache.derby.impl.store.raw.data.FileContainer.getEmbryonicPage(DataInput)
-org.apache.derby.impl.store.raw.data.RAFContainer.writeRAFHeader(StorageRandomAccessFile,boolean,boolean)

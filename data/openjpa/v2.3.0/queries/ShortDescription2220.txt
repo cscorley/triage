@@ -1,1 +1,0 @@
-Persistent field fetching statistic tool

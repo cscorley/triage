@@ -1,1 +1,0 @@
-When deploying the pig e2e harness to run with our internal pig package (which does not bundle hadoop), the deploy target fails after generating the data and creating the out directory on HDFS. This is because HADOOP_HOME is not set when running pig (harness.hadoop.home ignored).

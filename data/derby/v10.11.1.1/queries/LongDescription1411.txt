@@ -1,1 +1,0 @@
-It's actually used in a test, and not to throw an exception, so it's not a big deal, but it would be nice to remove this SQLState.

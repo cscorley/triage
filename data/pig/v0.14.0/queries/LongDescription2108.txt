@@ -1,1 +1,0 @@
-Sometimes a test needs to be ignored until it or the related JIRA can be fixed.  If we add an 'ignore' key to the test definition than developers can define this when they know a test should not be run.

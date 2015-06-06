@@ -1,1 +1,0 @@
-register SolrRequestHandlers at runtime / lazy loading

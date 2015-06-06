@@ -1,2 +1,0 @@
-org.apache.derby.iapi.types.SQLDecimal.getString()
-org.apache.derby.iapi.types.SQLDecimal.getWholeDigits(BigDecimal)

@@ -1,2 +1,0 @@
-org.apache.derby.client.am.Agent
-org.apache.derby.client.am.PreparedStatement

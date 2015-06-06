@@ -1,1 +1,0 @@
-Strange use case for Join which produces different results in local and map reduce mode

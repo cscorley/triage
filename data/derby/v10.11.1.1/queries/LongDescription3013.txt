@@ -1,8 +1,0 @@
-Presently, Derby accepts WITH DEFAULT USER, but although CURRENT_USER
-and SESSION_USER are otherwise used in Derby (see
-http://db.apache.org/derby/docs/dev/ref/rrefsqlj42476.html), they can
-not presently be used in the column definition. Only USER is allowed.
-
-ISO/IEC 9075-2:2003, section 11.5 <default clause> specifies that all
-of the above can be used.
-

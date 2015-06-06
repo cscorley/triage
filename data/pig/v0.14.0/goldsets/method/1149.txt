@@ -1,6 +1,0 @@
-org.apache.pig.impl.builtin.SampleLoader.SampleLoader(String)
-org.apache.pig.impl.builtin.SampleLoader.setNumSamples(int)
-org.apache.pig.test.TestPoissonSampleLoader.createFiles()
-org.apache.pig.test.TestPoissonSampleLoader.testComputeSamples()
-org.apache.pig.test.TestPoissonSampleLoader.testInstantiation()
-org.apache.pig.test.TestPoissonSampleLoader.TestPoissonSampleLoader()

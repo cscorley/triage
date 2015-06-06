@@ -1,5 +1,0 @@
-ant test in zkpython is failing. I think this is due to mahadev's changes to remove unnecessary exports from the client lib.
-
-     [exec] ImportError: /home/phunt/dev/workspace/gitzk/build/contrib/zkpython/lib.linux-x86_64-2.6/zookeeper.so: undefined symbol: deallocate_String_vector
-
-Mahadev can you take a look?

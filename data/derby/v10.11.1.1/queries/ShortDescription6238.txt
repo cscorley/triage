@@ -1,1 +1,0 @@
-Lock timeout in GrantRevokeTest.testGrantRollbackAndCommit

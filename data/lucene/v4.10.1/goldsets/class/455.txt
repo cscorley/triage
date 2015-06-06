@@ -1,2 +1,0 @@
-org.apache.lucene.index.FieldsReader
-org.apache.lucene.index.TestFieldsReader

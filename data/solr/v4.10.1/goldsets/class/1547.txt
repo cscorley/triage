@@ -1,2 +1,0 @@
-org.apache.solr.handler.dataimport.TemplateTransformer
-org.apache.solr.handler.dataimport.TestTemplateTransformer

@@ -1,1 +1,0 @@
-DummyRecordWriter's bug with reused Writables

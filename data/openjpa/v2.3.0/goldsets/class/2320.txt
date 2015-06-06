@@ -1,2 +1,0 @@
-org.apache.openjpa.persistence.criteria.CriteriaBuilderImpl
-org.apache.openjpa.persistence.criteria.PredicateImpl

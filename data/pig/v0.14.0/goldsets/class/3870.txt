@@ -1,3 +1,0 @@
-org.apache.pig.builtin.STRSPLITTOBAG
-org.apache.pig.test.TestBuiltin
-org.apache.pig.test.TestStringUDFs

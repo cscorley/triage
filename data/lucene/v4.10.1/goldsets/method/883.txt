@@ -1,2 +1,0 @@
-org.apache.lucene.search.spell.SpellChecker.getMin(int)
-org.apache.lucene.search.spell.SpellChecker.indexDictionary(Dictionary)

@@ -1,1 +1,0 @@
-Sequence generation in a JTA environment should not require non-JTA datasource

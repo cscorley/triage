@@ -1,3 +1,0 @@
-org.apache.solr.handler.dataimport.ClobTransformer
-org.apache.solr.handler.dataimport.FieldReaderDataSource
-org.apache.solr.handler.dataimport.TestClobTransformer

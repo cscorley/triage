@@ -1,1 +1,0 @@
-Parsing for OGV file results in java.lang.ClassCastException

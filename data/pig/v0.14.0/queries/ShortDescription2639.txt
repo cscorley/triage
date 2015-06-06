@@ -1,1 +1,0 @@
-Utils.getSchemaFromString should automatically give name to all types, but fails on boolean

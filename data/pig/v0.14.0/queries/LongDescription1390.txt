@@ -1,1 +1,0 @@
-Currently, after checking out from svn repository, there is no provision to auto-generate eclipse-related classpath and files , which could help in import into eclipse directly.

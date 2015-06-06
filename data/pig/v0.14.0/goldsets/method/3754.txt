@@ -1,2 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.InputSizeReducerEstimator.getTotalInputFileSize(Configuration,List<POLoad>,POLoad,Job)
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.TestInputSizeReducerEstimator.testGetInputSizeFromFs()

@@ -1,1 +1,0 @@
-Refactor Dirichlet Clustering into a separate post process with outlier pruning

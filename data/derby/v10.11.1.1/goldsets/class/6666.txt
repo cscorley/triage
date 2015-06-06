@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.execute.DeferredConstraintsMemory
-org.apache.derby.impl.sql.execute.DeferredConstraintsMemory.CheckInfo
-org.apache.derbyTesting.functionTests.tests.lang.ConstraintCharacteristicsTest

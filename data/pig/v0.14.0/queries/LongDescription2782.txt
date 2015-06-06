@@ -1,3 +1,0 @@
-After running the Checkin tests, it fails because one of the parameters passed to the sort is incorrect (instead of +1 -2, on POSIX is -k2,2). 
-
-According to this http://ss64.com/bash/sort.html, it was on an old notation.

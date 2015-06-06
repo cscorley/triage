@@ -1,3 +1,0 @@
-org.apache.pig.test.TestMRJobStats
-org.apache.pig.tools.pigstats.mapreduce.MRJobStats
-org.apache.pig.tools.pigstats.mapreduce.MRJobStats.TaskStat

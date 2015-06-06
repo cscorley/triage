@@ -1,2 +1,0 @@
-org.apache.derby.iapi.types.SqlXmlUtil.loadSerializer()
-org.apache.derby.iapi.util.StringUtil.ensureIndent(String,int)

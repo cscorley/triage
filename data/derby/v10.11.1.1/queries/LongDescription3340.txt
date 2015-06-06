@@ -1,3 +1,0 @@
-The project.xml file for Netbeans 6.0 is missing a "debug" target. 
-
-Whenever 'svn revert' is executed, the debug target needs to be added again to run the NB debugger.

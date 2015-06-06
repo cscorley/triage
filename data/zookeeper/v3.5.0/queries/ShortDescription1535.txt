@@ -1,1 +1,0 @@
-ZK Shell/Cli re-executes last command on exit

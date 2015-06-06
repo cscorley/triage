@@ -1,1 +1,0 @@
-Error message  X0X07  has incorrect property name, db2j.database.classpath instead of derby.database.classpath

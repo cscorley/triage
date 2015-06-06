@@ -1,3 +1,0 @@
-http://mahout.apache.org/users/basics/quickstart.html
-
-Fix a few broken links, remove Naive Bayes Wikipedia reference

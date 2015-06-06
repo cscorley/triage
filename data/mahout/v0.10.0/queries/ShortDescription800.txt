@@ -1,1 +1,0 @@
-bin/mahout attempts cluster mode  if HADOOP_CONF_DIR is set plausibly (and hence appended to classpath), even with MAHOUT_LOCAL set and no HADOOP_HOME

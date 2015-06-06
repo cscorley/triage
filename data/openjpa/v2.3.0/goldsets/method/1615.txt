@@ -1,4 +1,0 @@
-org.apache.openjpa.persistence.criteria.TestTypesafeCriteria.testBigDecimalConversion()
-org.apache.openjpa.persistence.criteria.TestTypesafeCriteria.testFunctionWithFunctionArgumentInOrderBy()
-org.apache.openjpa.persistence.criteria.TestTypesafeCriteria.testFunctionWithTwoArgument()
-org.apache.openjpa.persistence.criteria.TestTypesafeCriteria.testLiteralInProjection()

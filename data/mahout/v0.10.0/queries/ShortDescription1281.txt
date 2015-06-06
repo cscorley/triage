@@ -1,1 +1,0 @@
-Wean distributed SSVD from apache-math dependency.

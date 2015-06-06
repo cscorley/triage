@@ -1,3 +1,0 @@
-org.apache.derby.iapi.error.StandardException
-org.apache.derby.impl.jdbc.EmbedSQLException
-org.apache.derbyTesting.functionTests.tests.lang.closed

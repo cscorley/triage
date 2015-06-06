@@ -1,1 +1,0 @@
-latch self deadlock when running inplace compress

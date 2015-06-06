@@ -1,1 +1,0 @@
-Confusing Javadoc in Searchable.java

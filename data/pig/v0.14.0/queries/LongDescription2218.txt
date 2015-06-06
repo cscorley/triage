@@ -1,1 +1,0 @@
-Currently the end-to-end tests are only accessible from test/e2e/pig.  It should be possible to do "ant test-e2e" at the top level.  This will allow easier integration with Jenkins.

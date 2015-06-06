@@ -1,1 +1,0 @@
-Lots of error trying to spawn a JVM in the SecureServerTest and Replication tests when running on the preview JDK 7 on Mac OS X

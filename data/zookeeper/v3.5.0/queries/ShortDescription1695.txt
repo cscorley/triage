@@ -1,1 +1,0 @@
-Inconsistent error code and type for new errors introduced by dynamic reconfiguration  

@@ -1,1 +1,0 @@
-Map reduce version of cluster classification gives every vector a weight of 1.0 while sequential version uses pdf

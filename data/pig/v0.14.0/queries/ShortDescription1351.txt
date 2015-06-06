@@ -1,1 +1,0 @@
-[Zebra] No type check when we write to the basic table

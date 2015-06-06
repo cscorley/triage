@@ -1,3 +1,0 @@
-org.apache.derby.jdbc.EmbeddedDataSource40.EmbeddedDataSource40()
-org.apache.derby.jdbc.EmbeddedDataSource.addBeanProperties(Object,Reference)
-org.apache.derby.jdbc.EmbeddedDataSource.getReference()

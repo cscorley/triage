@@ -1,3 +1,0 @@
-org.apache.bookkeeper.proto.BookieServer.processPacket(ByteBuffer,Cnxn)
-org.apache.bookkeeper.test.LedgerRecoveryTest.testEmptyLedgerRecovery()
-org.apache.bookkeeper.test.LedgerRecoveryTest.testLedgerRecoveryWithWrongPassword()

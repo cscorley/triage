@@ -1,1 +1,0 @@
-Add stable filenames for extracted embedded files from Office binaries

@@ -1,1 +1,0 @@
-Default DataBagIterator.hasNext() should be idempotent in all cases

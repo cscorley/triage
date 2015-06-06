@@ -1,3 +1,0 @@
-org.apache.derbyPreBuild.PropertySetter
-org.apache.derbyPreBuild.PropertySetter.DirContainsStringFilter
-org.apache.derbyPreBuild.PropertySetter.JarFilter

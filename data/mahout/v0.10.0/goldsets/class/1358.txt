@@ -1,3 +1,0 @@
-org.apache.mahout.clustering.streaming.mapreduce.StreamingKMeansDriver
-org.apache.mahout.clustering.streaming.mapreduce.StreamingKMeansMapper
-org.apache.mahout.clustering.streaming.mapreduce.StreamingKMeansThread

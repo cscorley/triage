@@ -1,2 +1,0 @@
-org.apache.derby.impl.jdbc.EmbedCallableStatement
-org.apache.derbyTesting.functionTests.tests.jdbcapi.CallableTest

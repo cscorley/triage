@@ -1,3 +1,0 @@
-org.apache.solr.handler.dataimport.DataConfig
-org.apache.solr.handler.dataimport.DataConfig.Entity
-org.apache.solr.handler.dataimport.DataImporter

@@ -1,2 +1,0 @@
-Army <abrown@apache.org>
-Dyre Tjeldvoll <dyre@apache.org>

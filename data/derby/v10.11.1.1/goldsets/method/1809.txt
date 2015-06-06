@@ -1,2 +1,0 @@
-org.apache.derby.iapi.sql.dictionary.AliasDescriptor.getSpecificName()
-org.apache.derby.iapi.sql.dictionary.AliasDescriptor.isPersistent()

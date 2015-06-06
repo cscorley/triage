@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.execute.ScrollInsensitiveResultSet.isDeleted()
-org.apache.derby.impl.sql.execute.ScrollInsensitiveResultSet.isForUpdate()
-org.apache.derby.impl.sql.execute.ScrollInsensitiveResultSet.isUpdated()

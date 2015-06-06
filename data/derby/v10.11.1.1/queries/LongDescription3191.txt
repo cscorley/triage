@@ -1,2 +1,0 @@
-Derby roles introduce a new system catalog (SYSROLES). When a database
-is hard upgraded, this catalog needs to be added.

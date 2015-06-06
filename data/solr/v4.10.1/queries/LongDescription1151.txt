@@ -1,1 +1,0 @@
-In this issue:  http://issues.apache.org/jira/browse/SOLR-538  a maxLength property was added to the copyField directive.  However, this is not documented in the example schema to make the feature known to users.

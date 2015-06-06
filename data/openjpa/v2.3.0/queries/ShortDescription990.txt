@@ -1,1 +1,0 @@
-setHint should return IllegalArgumentException for invalid query/lock timeout values

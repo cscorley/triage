@@ -1,6 +1,0 @@
-Replace manual precondition checking with the Precondition class. This will affect the following classes: 
-FileDataModel
-MemoryDiffStorage
-SlopeOneRecommender
-FileDiffStorage
-AbstractJDBCDiffStorage

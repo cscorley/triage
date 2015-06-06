@@ -1,1 +1,0 @@
-org.apache.mahout.clustering.kmeans.RandomSeedGenerator.buildRandom(Configuration,Path,Path,int,DistanceMeasure)

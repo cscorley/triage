@@ -1,1 +1,0 @@
-Allow the MailJdbc system test to run under junit.

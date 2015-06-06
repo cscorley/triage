@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.DataTree.processTxn(TxnHeader,Record)
-org.apache.zookeeper.server.PrepRequestProcessor.pRequest(Request)

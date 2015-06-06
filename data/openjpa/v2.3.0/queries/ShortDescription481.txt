@@ -1,1 +1,0 @@
-Queries against managed interfaces do not work in "mixed interface" configuration

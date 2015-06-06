@@ -1,1 +1,0 @@
-updateObject with null as argument causes network driver to fail with NullPointerException

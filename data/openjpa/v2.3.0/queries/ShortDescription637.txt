@@ -1,1 +1,0 @@
-Significant performance degradation when data cache is enabled

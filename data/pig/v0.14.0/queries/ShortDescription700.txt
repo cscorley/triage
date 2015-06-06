@@ -1,1 +1,0 @@
-To automate the pig patch test process

@@ -1,2 +1,0 @@
-org.apache.tika.cli.TikaCLI.getContentHandler()
-org.apache.tika.cli.TikaCLI.getContentHandler.endDocument()

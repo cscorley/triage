@@ -1,3 +1,0 @@
-org.apache.bookkeeper.bookie.BookieJournalTest
-org.apache.bookkeeper.meta.FlatLedgerManager
-org.apache.bookkeeper.meta.HierarchicalLedgerManager

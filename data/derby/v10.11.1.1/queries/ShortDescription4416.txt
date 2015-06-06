@@ -1,1 +1,0 @@
-Handle comparison of two constants as a boolean constant

@@ -1,1 +1,0 @@
-Update to JPA Spec Version EA7 (dated 08-19-2009)

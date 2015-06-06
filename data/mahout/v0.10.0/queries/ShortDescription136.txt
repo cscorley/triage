@@ -1,1 +1,0 @@
-Change Canopy MR Implementation to use Vector Writable

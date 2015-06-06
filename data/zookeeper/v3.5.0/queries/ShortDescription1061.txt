@@ -1,1 +1,0 @@
-Zookeeper stop fails if start called twice

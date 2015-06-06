@@ -1,1 +1,0 @@
-Rename mahout-matrix to mahout-math

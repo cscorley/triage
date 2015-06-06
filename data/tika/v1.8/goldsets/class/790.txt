@@ -1,3 +1,0 @@
-org.apache.tika.parser.microsoft.OfficeParser
-org.apache.tika.parser.microsoft.OfficeParser.POIFSDocumentType
-org.apache.tika.parser.microsoft.POIFSContainerDetector

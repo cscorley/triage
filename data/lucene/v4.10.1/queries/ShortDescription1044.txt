@@ -1,1 +1,0 @@
-Behavior on hard power shutdown

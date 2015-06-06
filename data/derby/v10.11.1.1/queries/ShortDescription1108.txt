@@ -1,1 +1,0 @@
-The test jdbcapi/setTransactionIsolation.java fails with ibm jvm1.5

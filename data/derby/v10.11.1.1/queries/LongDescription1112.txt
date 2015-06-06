@@ -1,4 +1,0 @@
-TemporaryRowHolderResultSet is breaking the contract of
-getActivation() by returning null in insane builds and raising an
-exception in sane builds. There is no comment saying why it does not
-honour its contract. This might be a bug.

@@ -1,1 +1,0 @@
-Grunt help is missing sh command

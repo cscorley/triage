@@ -1,1 +1,0 @@
-Ledger size in bytes

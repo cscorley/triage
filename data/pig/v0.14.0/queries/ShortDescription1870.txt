@@ -1,1 +1,0 @@
-HBaseStorage doesn't project correctly

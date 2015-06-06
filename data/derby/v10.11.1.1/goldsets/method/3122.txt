@@ -1,3 +1,0 @@
-org.apache.derby.client.am.Clob.Clob(Agent,boolean)
-org.apache.derby.client.am.Clob.finalize()
-org.apache.derby.client.am.Clob.free()

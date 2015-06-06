@@ -1,1 +1,0 @@
-Change the _exception variblae in the PreparedStatementManagerImpl from private to protected

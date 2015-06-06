@@ -1,1 +1,0 @@
-Create a script that allows users to easily update their Derby jars with the JDBC4 classes.

@@ -1,1 +1,0 @@
-Full outer join fails while doing a filter on joined data

@@ -1,3 +1,0 @@
-org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder
-org.apache.openjpa.persistence.query.TestDistinctQueries
-org.apache.openjpa.persistence.query.TestDistinctQueries.Holder

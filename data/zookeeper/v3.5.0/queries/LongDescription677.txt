@@ -1,1 +1,0 @@
-The c client doesn't handle ipv6 numeric addresses as they are colon : delmited. After splitting the host/port on : we look for the port as the second entry in the array rather than the last entry in the array.

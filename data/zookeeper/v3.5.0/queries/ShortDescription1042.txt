@@ -1,1 +1,0 @@
-Generate zookeeper test jar for maven installation

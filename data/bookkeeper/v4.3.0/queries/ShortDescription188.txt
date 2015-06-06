@@ -1,1 +1,0 @@
-Garbage collection code is in the wrong place

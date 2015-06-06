@@ -1,1 +1,0 @@
-zkpython's tests don't do a good enough job of exercising the ACL code paths. A few new tests that confirm that setACL and friends are working correctly are needed. 

@@ -1,1 +1,0 @@
-support new xbean asm4 shade

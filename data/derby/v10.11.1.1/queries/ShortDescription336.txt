@@ -1,1 +1,0 @@
-The wrong overload of StandardException::newException() is used in some cases

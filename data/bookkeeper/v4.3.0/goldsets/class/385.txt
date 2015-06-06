@@ -1,4 +1,0 @@
-org.apache.bookkeeper.client.BookKeeperAdmin
-org.apache.bookkeeper.client.BookKeeperAdmin.ResultCallBack
-org.apache.bookkeeper.client.TestLedgerFragmentReplication
-org.apache.bookkeeper.replication.ReplicationWorker

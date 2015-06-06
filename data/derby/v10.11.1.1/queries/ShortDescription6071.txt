@@ -1,1 +1,0 @@
-trunk javadoc build fails with Javadoc failed: java.io.IOException: Cannot run program \bin\javadoc.exe": CreateProcess error=206, The filename or extension is too long.

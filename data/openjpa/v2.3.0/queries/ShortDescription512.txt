@@ -1,1 +1,0 @@
-Maven build fails if -Dmaven.test.skip=true

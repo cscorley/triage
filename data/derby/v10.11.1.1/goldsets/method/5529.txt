@@ -1,1 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.jdbcapi.XATransactionTest.testForgetExceptionDerby1016NOTA()

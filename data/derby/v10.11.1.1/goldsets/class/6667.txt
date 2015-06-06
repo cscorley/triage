@@ -1,1 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.tools.Test_6661

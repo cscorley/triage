@@ -1,3 +1,0 @@
-org.apache.mahout.classifier.bayes.TestClassifier.classifyParallel(BayesParameters)
-org.apache.mahout.classifier.bayes.TestClassifier.classifySequential(BayesParameters)
-org.apache.mahout.classifier.bayes.TestClassifier.main(String[])

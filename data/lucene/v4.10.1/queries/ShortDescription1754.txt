@@ -1,1 +1,0 @@
-Get rid of NonMatchingScorer from BooleanScorer2

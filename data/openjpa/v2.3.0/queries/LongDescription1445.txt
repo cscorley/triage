@@ -1,1 +1,0 @@
-@ExternalValues should support enums

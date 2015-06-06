@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.execute.CreateTableConstantAction.executeConstantAction(Activation)
-org.apache.derbyTesting.functionTests.tests.lang.RenameTableTest.testRenameInvalidation_derby_4479()
-org.apache.derbyTesting.functionTests.tests.lang.RenameTableTest.testRenameWithCheckConstraintsOnIt()

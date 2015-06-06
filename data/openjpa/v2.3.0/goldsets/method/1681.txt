@@ -1,4 +1,0 @@
-org.apache.openjpa.example.gallery.constraint.ImageConstraint.groups()
-org.apache.openjpa.example.gallery.constraint.ImageConstraint.message()
-org.apache.openjpa.example.gallery.constraint.ImageConstraint.payload()
-org.apache.openjpa.example.gallery.constraint.ImageConstraint.value()

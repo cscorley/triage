@@ -1,1 +1,0 @@
-org.apache.derby.impl.store.access.btree.BTreeCostController.getScanCost(int,long,int,boolean,FormatableBitSet,DataValueDescriptor[],DataValueDescriptor[],int,DataValueDescriptor[],int,boolean,int,StoreCostResult)

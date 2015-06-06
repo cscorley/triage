@@ -1,3 +1,0 @@
-Minor updates to the openjpa-integration pom files to contain the proper artifact-id.  This will help with the automatic creation of projects via the m2 (maven2) eclipse plugin.  Discussed on Dev forum [1]...  This change is in preparation for another integration set of tests for the L2 cache.
-
-[1]  http://n2.nabble.com/openjpa-integration-td3365002.html#a3365002

@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.jpql.expressions.TestJPQLScalarExpressions.setUp()
-org.apache.openjpa.persistence.jpql.expressions.TestJPQLScalarExpressions.testCoalesceExpressions()
-org.apache.openjpa.persistence.jpql.expressions.TestJPQLScalarExpressions.testMathAndAggregate()

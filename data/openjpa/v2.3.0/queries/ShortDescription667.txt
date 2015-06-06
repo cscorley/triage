@@ -1,1 +1,0 @@
-Documentaion on configuration properties should link to corresponding JavaDoc method description

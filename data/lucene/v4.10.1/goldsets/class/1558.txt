@@ -1,2 +1,0 @@
-org.apache.lucene.index.IndexReader
-org.apache.lucene.search.IndexSearcher

@@ -1,1 +1,0 @@
-Combiner not used when group elements referred to in tuple notation instead of flatten.

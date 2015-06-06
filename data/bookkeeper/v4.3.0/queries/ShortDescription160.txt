@@ -1,1 +1,0 @@
-bookie server needs to do compaction over entry log files to reclaim disk space

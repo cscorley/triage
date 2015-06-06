@@ -1,1 +1,0 @@
-Override mechanism for modules.properties works backwards

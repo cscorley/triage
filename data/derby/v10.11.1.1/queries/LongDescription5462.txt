@@ -1,1 +1,0 @@
-The ant release target will call ant to build the classes, jars, and docs. However, the ant executable is different when running this on a windows OS vs. Unix. So the target should either figure out the correct name of the executable, or prompt for it.

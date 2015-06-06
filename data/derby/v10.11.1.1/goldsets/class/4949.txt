@@ -1,2 +1,0 @@
-org.apache.derby.client.am.ColumnTypeConversionException
-org.apache.derby.client.am.Cursor

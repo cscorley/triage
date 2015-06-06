@@ -1,1 +1,0 @@
-[Zebra] Zebra does not support concurrent deletions of column groups now.

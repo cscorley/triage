@@ -1,1 +1,0 @@
-Provide Programmatic Access to CheckIndex

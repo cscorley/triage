@@ -1,1 +1,0 @@
-Cannot compile Tika with Java 7 (ImageMetadataExtractor.java)

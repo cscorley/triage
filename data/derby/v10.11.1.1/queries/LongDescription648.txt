@@ -1,5 +1,0 @@
-'show connections' statement throws the following exception when run in CDC/FP with JSR169: "JAVA ERROR: java.lang.NoSuchMethodError: java/sql/DatabaseMetaData.getURL()Ljava/lang/String;"
-
-This is because java/sql/DatabaseMetaData.getURL() method is not available in JSR169. In JSR169, DataSource has to be used to get a connection and this does not use a URL. So this method is not available.
-
-Currently, 'show connections' displays connection names along with the URLs used to get the connections. When DataSource is used to get connection (ij.dataSource property is set), I plan to change this to display only connection names. With this change, around 7 tests can be enabled to run in CDC/FP.

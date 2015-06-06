@@ -1,1 +1,0 @@
-Improve the outputed XHTML by HSLFExtractor

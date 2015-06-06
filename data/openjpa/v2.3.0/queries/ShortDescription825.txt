@@ -1,1 +1,0 @@
-slices: hangs with multithreaded true

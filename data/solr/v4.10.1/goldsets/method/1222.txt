@@ -1,3 +1,0 @@
-org.apache.solr.client.solrj.request.UpdateRequest.deleteById(List<String>,String)
-org.apache.solr.client.solrj.SolrServer.deleteById(String)
-org.apache.solr.client.solrj.SolrServer.deleteByQuery(String)

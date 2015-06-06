@@ -1,8 +1,0 @@
-RAT (http://code.google.com/p/arat/) points out the following files without a proper license header:
-
-    src/main/java/org/apache/tika/metadata/package.html
-    src/main/resources/tika-config.xml
-    src/site/SITE-README.txt
-    src/test/resources/log4j/log4j.properties
-
-Note that RAT also flags some of our test documents, but AFAIK they don't need license headers.

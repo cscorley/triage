@@ -1,1 +1,0 @@
-NPE when recovering ledger with no hint 

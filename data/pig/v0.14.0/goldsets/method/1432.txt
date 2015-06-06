@@ -1,2 +1,0 @@
-org.apache.hadoop.zebra.pig.comparator.KeyGenerator.KeyGenerator(ComparatorExpr)
-org.apache.hadoop.zebra.pig.comparator.LeafGenerator.LeafGenerator(LeafExpr,int,int,boolean)

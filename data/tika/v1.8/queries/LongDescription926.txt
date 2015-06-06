@@ -1,1 +1,0 @@
-The property value setter methods for int, double, and Date types should call the underlying set method with a Property key rather than String.

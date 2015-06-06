@@ -1,7 +1,0 @@
-It looks like the pig shell script in v0.11 exports PIG_HOME without first checking to see if it already exists.
-
-from line 78 in <path>/bin/pig:
-# the root of the Pig installation
-export PIG_HOME=`dirname "$this"`/..
-
-The supplied patch checks to see if the env has already been set prior to setting.

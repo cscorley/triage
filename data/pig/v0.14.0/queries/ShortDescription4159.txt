@@ -1,1 +1,0 @@
-TestGroupConstParallelTez and TestJobSubmissionTez should be excluded in Hadoop 20 unit tests

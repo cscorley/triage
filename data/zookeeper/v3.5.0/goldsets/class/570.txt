@@ -1,2 +1,0 @@
-org.apache.zookeeper.test.AsyncHammerTest
-org.apache.zookeeper.test.AsyncHammerTest.HammerThread

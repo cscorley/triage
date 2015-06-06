@@ -1,2 +1,0 @@
-org.apache.tika.language.translate.CachedTranslator
-org.apache.tika.language.translate.CachedTranslatorTest

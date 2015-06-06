@@ -1,1 +1,0 @@
-derbynet/ShutDownDBWhenNSShutsDownTest.junit fails on Solaris sparc

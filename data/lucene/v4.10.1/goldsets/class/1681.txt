@@ -1,3 +1,0 @@
-org.apache.lucene.search.function.DocValues
-org.apache.lucene.search.function.TestDocValues
-org.apache.lucene.search.function.TestDocValues.DocValuesTestImpl

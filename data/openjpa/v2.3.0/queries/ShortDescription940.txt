@@ -1,1 +1,0 @@
-Using table-generator in XML descriptor results in ClassCastException

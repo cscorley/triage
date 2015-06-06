@@ -1,2 +1,0 @@
-org.apache.pig.newplan.logical.optimizer.TestImplicitSplitOnTuple
-org.apache.pig.newplan.logical.relational.LOSplitOutput

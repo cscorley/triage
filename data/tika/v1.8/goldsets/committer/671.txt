@@ -1,2 +1,0 @@
-Maxim Valyanskiy <maxcom@apache.org>
-Nick Burch <nick@apache.org>

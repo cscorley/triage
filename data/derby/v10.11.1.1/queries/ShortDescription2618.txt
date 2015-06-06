@@ -1,1 +1,0 @@
-EmbedClob.setAsciiStream does not handle non-ascii characters correctly

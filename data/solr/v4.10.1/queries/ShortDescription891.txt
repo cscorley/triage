@@ -1,1 +1,0 @@
-A Clobtransformer to read strings from Clob

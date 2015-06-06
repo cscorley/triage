@@ -1,1 +1,0 @@
-Allow SingleTupleBag to be serialized

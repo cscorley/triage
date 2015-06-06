@@ -1,1 +1,0 @@
-Make ij's SHOW and DESCRIBE commands more db agnostic

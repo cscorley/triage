@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.quorum.FollowerRequestProcessor.run()
-org.apache.zookeeper.test.QuorumTest.testMultiToFollower()
-org.apache.zookeeper.test.QuorumTest.testNoLogBeforeLeaderEstablishment()

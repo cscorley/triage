@@ -1,1 +1,0 @@
-ClassNotFoundException when running suites.All without derbynet.jar

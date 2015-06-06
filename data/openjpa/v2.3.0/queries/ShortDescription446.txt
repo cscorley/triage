@@ -1,1 +1,0 @@
-Problem when setting String fields of detached objects

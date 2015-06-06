@@ -1,1 +1,0 @@
-Optimizer performance slowdown from 10.1 to 10.2

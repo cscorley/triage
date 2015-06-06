@@ -1,1 +1,0 @@
-If large clob is updated after Reader. the reader continues to point to old data

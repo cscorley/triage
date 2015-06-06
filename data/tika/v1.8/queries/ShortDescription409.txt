@@ -1,1 +1,0 @@
-Missing poi-ooxml-schemas-3.6.jar in tika-bundle

@@ -1,3 +1,0 @@
-Donald Woods <dwoods@apache.org>
-Fay Wang <faywang@apache.org>
-Tim McConnell <mcconne@apache.org>

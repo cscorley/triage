@@ -1,1 +1,0 @@
-if clean is run twice in a row (ie already clean, then run clean) an error is generated.

@@ -1,3 +1,0 @@
-After adding configuration to Bookkeeper, localbookie doesn't start because it fails to find /tmp/bk-txn.
-
-The problem is that the configuration uses addProperty where it should use setProperty.

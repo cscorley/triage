@@ -1,1 +1,0 @@
-Refactoring: Use Maps.newHashMap() and Lists.newArrayList() from Guava globally

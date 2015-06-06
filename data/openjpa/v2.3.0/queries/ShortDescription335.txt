@@ -1,1 +1,0 @@
-Logic in getters for entities with property access causes the PCEnhancer to hang

@@ -1,1 +1,0 @@
-Provide dictionary support for SolidDB

@@ -1,2 +1,0 @@
-org.apache.lucene.index.MultiReader
-org.apache.lucene.index.TestMultiReader

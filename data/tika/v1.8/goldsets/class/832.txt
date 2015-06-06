@@ -1,3 +1,0 @@
-org.apache.tika.fork.ForkClient
-org.apache.tika.fork.ForkServer
-org.apache.tika.parser.fork.ForkParserIntegrationTest

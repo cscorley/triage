@@ -1,1 +1,0 @@
-The HDF5 data files sometimes come with file extension *.h5. Add to tika-mimetypes.xml under tika-core package to support this type of hdf5 files.

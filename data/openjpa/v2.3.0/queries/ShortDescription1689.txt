@@ -1,1 +1,0 @@
-The mapping tool does not remove user created sequences on PostgreSQL

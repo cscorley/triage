@@ -1,5 +1,0 @@
-Very small cleanup patch. 
-
-The assembly from core is no longer needed with the addition of the release artifacts that get built in MAHOUT-215, removing it because it slows down the build.
-
-commons-cli 1.1 shouldn't be excluded from hadoop because it is needed by hadoop's GenericOptionsParser.

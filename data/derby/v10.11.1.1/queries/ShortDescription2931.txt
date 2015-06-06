@@ -1,1 +1,0 @@
-jdbcapi/ConcurrencyTest not able to drop table in soft upgrade mode

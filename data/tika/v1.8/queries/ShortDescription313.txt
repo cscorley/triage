@@ -1,1 +1,0 @@
-patch: ODF improvements for svg:desc, presentation notes

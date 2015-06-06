@@ -1,3 +1,0 @@
-org.apache.mahout.math.MatrixVectorView.getNumNondefaultElements()
-org.apache.mahout.math.MatrixVectorView.matrixLike(int,int)
-org.apache.mahout.math.MatrixVectorViewTest.testColumnView()

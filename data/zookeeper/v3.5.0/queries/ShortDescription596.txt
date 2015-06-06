@@ -1,1 +1,0 @@
-The last logged zxid calculated by zookeeper servers could cause problems in leader election if data gets corrupted.

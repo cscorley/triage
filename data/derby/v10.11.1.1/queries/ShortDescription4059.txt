@@ -1,1 +1,0 @@
-If space reclamation cannot obtain container lock it will not retry getting the lock

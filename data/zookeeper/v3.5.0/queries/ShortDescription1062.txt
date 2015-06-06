@@ -1,1 +1,0 @@
-Net-ZooKeeper: Net::ZooKeeper consumes 100% cpu on wait

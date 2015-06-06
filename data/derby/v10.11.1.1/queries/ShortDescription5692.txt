@@ -1,1 +1,0 @@
-intermittent test failure in storetests/st_derby715.java

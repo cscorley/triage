@@ -1,1 +1,0 @@
-Simplify JPQL SUBSTRING clauses involving literal index and position data

@@ -1,1 +1,0 @@
-Log exception trace in QuorumCnxManager.SendWorker

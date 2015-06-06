@@ -1,1 +1,0 @@
-Need test case to demonstrate simple use of SGD

@@ -1,5 +1,0 @@
-org.apache.mahout.classifier.ClassifierResult
-org.apache.mahout.classifier.ResultAnalyzer
-org.apache.mahout.classifier.sgd.NewsgroupHelper
-org.apache.mahout.classifier.sgd.TestNewsGroups
-org.apache.mahout.classifier.sgd.TrainNewsGroups

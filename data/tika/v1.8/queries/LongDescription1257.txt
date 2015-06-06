@@ -1,1 +1,0 @@
-Control characters present mostly in table of index and un-visualizable. We should filter out them.

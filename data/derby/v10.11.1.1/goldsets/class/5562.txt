@@ -1,2 +1,0 @@
-org.apache.derby.jdbc.XATransactionState
-org.apache.derbyTesting.functionTests.tests.jdbcapi.XATransactionTest

@@ -1,4 +1,0 @@
-The ui plugin gets built, in eclipse after import of the source project with plugin-development, using this build.properties file, however, the build gives a warning (in addition to warnings about use of deprecated functions and a few unused local variables) that the install_plugin.html file cannot be found.
-No install_plugin.html was ever contributed, and this entry has been in the build.properties file from the first.
-
-As such an html file, presumably explaining how to install, would be only found after the install, I suggest to remove the reference and silence the warning.

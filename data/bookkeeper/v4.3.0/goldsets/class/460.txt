@@ -1,3 +1,0 @@
-org.apache.bookkeeper.bookie.CompactionTest
-org.apache.bookkeeper.test.LedgerDeleteTest
-org.apache.bookkeeper.util.TestUtils

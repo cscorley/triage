@@ -1,1 +1,0 @@
-Change derby.tests.trace to print the class as well as fixture name

@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.lockmgr.TestPessimisticLocks.testQueryOrderByAfterFindWithPessimisticLocks()
-org.apache.openjpa.persistence.lockmgr.TestPessimisticLocks.testRepeatedQueryWithPessimisticLocks()
-org.apache.openjpa.persistence.QueryImpl.preExecute(Map)

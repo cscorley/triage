@@ -1,1 +1,0 @@
-The proposed piggybank contribution adds a SequenceFileLoader to the piggybank.

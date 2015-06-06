@@ -1,1 +1,0 @@
-temporary lob file should be cleaned when the transaction or connection is no longer valid.

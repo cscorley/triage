@@ -1,1 +1,0 @@
-add doc without uniqueKey field causes NPE

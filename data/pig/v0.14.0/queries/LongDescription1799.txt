@@ -1,1 +1,0 @@
-Having maven artifacts for pigunit framework and smoke test will help to separate execution of smoke tests against a physical cluster from a source tree (ant build),

@@ -1,2 +1,0 @@
-Albert Lee <allee8285@apache.org>
-Kevin W. Sutter <kwsutter@apache.org>

@@ -1,1 +1,0 @@
-Intermediate reducer parallelism in Tez should be higher

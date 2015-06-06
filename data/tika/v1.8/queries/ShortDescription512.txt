@@ -1,1 +1,0 @@
-Print the supported Metadata models and their associated met keys in tika-app

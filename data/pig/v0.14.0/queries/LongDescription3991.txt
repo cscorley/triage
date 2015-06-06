@@ -1,1 +1,0 @@
-To reproduce, run ant clean test -Dtestcase=TestErrorHandling. It fails with an assertion failure.

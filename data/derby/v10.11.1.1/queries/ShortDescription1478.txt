@@ -1,1 +1,0 @@
-Add built in language based ordering and like processing to Derby

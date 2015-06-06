@@ -1,1 +1,0 @@
-VectorHelper.topEntries() throws a NPE when number of NonZero elements in vector < maxEntries

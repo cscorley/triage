@@ -1,1 +1,0 @@
- NPE when illustrating a relation with HCatLoader

@@ -1,1 +1,0 @@
-Need better documentation on Pig/HBase integration

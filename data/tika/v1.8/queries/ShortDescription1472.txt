@@ -1,1 +1,0 @@
-Warning on Tika Server startup - Failed to load class "org.slf4j.impl.StaticLoggerBinder"

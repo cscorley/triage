@@ -1,1 +1,0 @@
-Validation-mode element support added to persistence.xml and to createEMF properties Map

@@ -1,2 +1,0 @@
-Flavio Paiva Junqueira <fpj@apache.org>
-Sijie Guo <sijie@apache.org>

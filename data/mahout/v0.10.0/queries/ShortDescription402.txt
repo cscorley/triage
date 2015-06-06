@@ -1,1 +1,0 @@
-NamedVectors are not readily identifiable in vectordumper output

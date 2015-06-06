@@ -1,5 +1,0 @@
-If we list a dependency in the dependencyManagement section of the tika-parent pom.xml, we can then include that dependency in a child module without specifying a version.
-
-For example, I updated the junit dependencies yesterday: https://github.com/apache/tika/commit/2fec4c61267ed2c465e7411d50fbf7e9841523d5
-
-By using dependencyManagement, we can update the dependency version for all modules at once, rather than have different versions in different modules, like it was for junit.

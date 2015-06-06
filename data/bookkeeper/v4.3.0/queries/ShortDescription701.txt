@@ -1,1 +1,0 @@
-Improve exception handling of Bookkeeper threads

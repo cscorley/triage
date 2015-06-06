@@ -1,3 +1,0 @@
-A performance run shows improved scalability when using the java.util.concurrent.ConcurrentHashMap in org.apache.openjpa.jdbc.meta.ClassMapping.
-
-This issue is a child of OPENJPA-1118.

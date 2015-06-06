@@ -1,1 +1,0 @@
-Use a single result BooleanDataValue for a boolean expression in class generation

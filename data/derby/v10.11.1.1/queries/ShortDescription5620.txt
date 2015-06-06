@@ -1,1 +1,0 @@
-Replace illegal characters from test name when creating the failure folder

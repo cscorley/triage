@@ -1,2 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.store.Derby151Test.baseSuite(String)
-org.apache.derbyTesting.functionTests.tests.store.Derby151Test.d151()

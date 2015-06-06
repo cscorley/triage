@@ -1,4 +1,0 @@
-Tika contains MS parsing code that from textmining.org and was originally written by Ryan Ackley. The original code is available under ALv2, but we need to include the following attribution notice in NOTICE.txt:
-
-This software contains code written by Ryan Ackley.
-Please go to http://www.textmining.org for the latest version.

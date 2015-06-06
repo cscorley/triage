@@ -1,1 +1,0 @@
-Loading databases from jars in the classpath is broken, databases cannot be found.

@@ -1,1 +1,0 @@
-BUILTIN should say passwords are hashed not encrypted

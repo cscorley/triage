@@ -1,1 +1,0 @@
-Nested sort by * throw exception

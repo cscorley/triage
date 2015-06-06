@@ -1,1 +1,0 @@
-Fetch optimization should be disabled if plan contains no limit

@@ -1,1 +1,0 @@
-The ruby output type produces incorrect output for numeric types without a value

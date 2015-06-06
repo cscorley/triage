@@ -1,1 +1,0 @@
-Extra JOIN on eager bi-directional relationship

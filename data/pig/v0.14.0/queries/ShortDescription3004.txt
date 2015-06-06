@@ -1,1 +1,0 @@
-Improve exceptions messages when a RuntimeException is raised in Physical Operators 

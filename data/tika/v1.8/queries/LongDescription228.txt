@@ -1,1 +1,0 @@
-The attached patch adds OSGi metadata to Tika Core. Of course, it will take some more effort to make the whole of Tika OSGi-compatible (parser plugins etc), but at this time I only need the MIME detection. Rather than repacking the JAR myself, I hope this will be seen as a useful first step.

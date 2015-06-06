@@ -1,1 +1,0 @@
-Running the Hadoop script through bin/mahout to set up classpath

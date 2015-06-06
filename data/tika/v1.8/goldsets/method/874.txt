@@ -1,3 +1,0 @@
-org.apache.tika.mime.TestMimeTypes.testArchiveDetection()
-org.apache.tika.mime.TestMimeTypes.testFitsDetection()
-org.apache.tika.mime.TestMimeTypes.testJpegDetection()

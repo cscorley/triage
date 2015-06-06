@@ -1,3 +1,0 @@
-When "clientPortAddress" is used in the config file (zoo.cfg), zkServer.sh's status command runs a grep command that matches both "clientPort" and "clientPortAddress".  This creates an extra argument for FourLetterWordMain, which fails, so the status command incorrectly indicates that it couldn't connect to the server.
-
-Also, "localhost" is hardcoded as the target host for FourLetterWordMain.  The "clientPortAddress" should be used if it is provided in the config file.

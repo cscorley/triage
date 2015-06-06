@@ -1,1 +1,0 @@
-jdbcapi/SetQueryTimeoutTest.java fails on IBM  wctme 5.7

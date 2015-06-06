@@ -1,3 +1,0 @@
-org.apache.openjpa.lib.util.TemporaryClassLoader.isAnnotation(byte[])
-org.apache.openjpa.lib.util.TemporaryClassLoader.isEnum(byte[])
-org.apache.openjpa.lib.util.TemporaryClassLoader.loadClass(String,boolean)

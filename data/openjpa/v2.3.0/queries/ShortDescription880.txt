@@ -1,1 +1,0 @@
-Use maven-remote-resources-plugin to generate required legal files

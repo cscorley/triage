@@ -1,1 +1,0 @@
-IndexReader.isCurrent fails when using two IndexReaders

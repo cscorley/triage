@@ -1,2 +1,0 @@
-org.apache.mahout.classifier.AbstractVectorClassifier
-org.apache.mahout.classifier.naivebayes.AbstractNaiveBayesClassifier

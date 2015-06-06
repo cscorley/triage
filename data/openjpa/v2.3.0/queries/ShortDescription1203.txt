@@ -1,1 +1,0 @@
-JPA2 - createEMF should return null for unhandled PUs

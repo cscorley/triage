@@ -1,1 +1,0 @@
-Small bug in WeightedRunningAverage; add WeightedRunningAverageAndStdDev

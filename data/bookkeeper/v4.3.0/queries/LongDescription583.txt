@@ -1,3 +1,0 @@
-Read from a ReadOnlyBookie fails is the Bookie is restarted after writing a ledger.
-
-i.e. fileInfo for the ledger to be read is not present in the fileInfoCache

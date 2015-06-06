@@ -1,1 +1,0 @@
-SpanNotQuery.hashCode ignores exclude

@@ -1,3 +1,0 @@
-org.apache.tika.parser.iwork.IWorkPackageParser.parse(InputStream,ContentHandler,Metadata,ParseContext)
-org.apache.tika.parser.iwork.IWorkParserTest.setUp()
-org.apache.tika.parser.iwork.IWorkParserTest.testStreamNotClosed()

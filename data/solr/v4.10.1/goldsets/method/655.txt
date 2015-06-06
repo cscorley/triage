@@ -1,3 +1,0 @@
-org.apache.solr.client.solrj.util.ClientUtils.toContentStreams(String,String)
-org.apache.solr.client.solrj.util.ClientUtils.toSolrDocument(SolrInputDocument)
-org.apache.solr.client.solrj.util.ClientUtils.toSolrInputDocument(SolrDocument)

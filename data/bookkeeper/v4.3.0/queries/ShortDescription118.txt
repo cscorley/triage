@@ -1,1 +1,0 @@
-Hedwig client doesn't kill and remove old subscription channel after redirection.

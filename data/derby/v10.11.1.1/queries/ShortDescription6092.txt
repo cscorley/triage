@@ -1,1 +1,0 @@
-testPositionAgressive(org.apache.derbyTesting.functionTests.tests.jdbcapi.BlobClob4BlobTest)j fails with : 'The handle is invalid.: java.io.IOException'.

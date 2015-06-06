@@ -1,2 +1,0 @@
-Oyvind Bakksjo <bakksjo@apache.org>
-Satheesh E. Bandaram <bandaram@apache.org>

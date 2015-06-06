@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.quorum.FastLeaderElection.lookForLeader()
-org.apache.zookeeper.server.quorum.FollowerRequestProcessor.run()
-org.apache.zookeeper.server.quorum.QuorumPeer.createElectionAlgorithm(int)

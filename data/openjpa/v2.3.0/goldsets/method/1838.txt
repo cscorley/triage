@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.sql.SybaseDictionary.getAddForeignKeySQL(ForeignKey)
-org.apache.openjpa.jdbc.sql.SybaseDictionary.getCreateTableSQL(Table)
-org.apache.openjpa.jdbc.sql.SybaseDictionary.setBigInteger(PreparedStatement,int,BigInteger,Column)

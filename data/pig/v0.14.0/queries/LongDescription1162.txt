@@ -1,3 +1,0 @@
-Pig 0.6.0 - UDF doc
-
-Small corrections.

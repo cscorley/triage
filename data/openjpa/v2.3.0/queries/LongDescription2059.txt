@@ -1,1 +1,0 @@
-The localized message file needed for package org.apache.openjpa.persistence.util is missing. This mainly supports the 7-8 messages referenced by SourceCode.java

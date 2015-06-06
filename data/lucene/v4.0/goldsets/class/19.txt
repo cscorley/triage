@@ -1,3 +1,0 @@
-org.apache.lucene.search.vectorhighlight.BaseFragListBuilder
-org.apache.lucene.search.vectorhighlight.FieldPhraseList
-org.apache.lucene.search.vectorhighlight.SimpleFragListBuilderTest

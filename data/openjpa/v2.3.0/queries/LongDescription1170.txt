@@ -1,3 +1,0 @@
-We are currently using the CR1 level of the API (geronimo-validation_1.0_spec-1.0-EA-SNAPSHOT) but a CR2 level (geronimo-validation_1.0_spec-1.0-EA2-SNAPSHOT) is now available.
-
-Note:  The agimatec-validation 0.9.1-SNAPSHOT implementation we are using for openjpa-integration/validation tests still uses the CR1 level, so it will need to be upgraded first (or switch to the validation-ri-4.0.0.Beta1, which will require the TraversableResolver code to be implemented first.)

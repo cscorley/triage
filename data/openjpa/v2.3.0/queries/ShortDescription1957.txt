@@ -1,1 +1,0 @@
-XML overriding column names for ArrayList attributes causes exception.

@@ -1,1 +1,0 @@
-Cleaning up the examples for clustering on the website

@@ -1,3 +1,0 @@
-lowercase suppl. characters correctly. 
-
-this only fixes the filter, the LowerCaseTokenizer is part of a more complex issue (CharTokenizer)

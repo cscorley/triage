@@ -1,4 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler
-org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POStore
-org.apache.pig.test.TestPigRunner
-org.apache.pig.tools.pigstats.PigStatsUtil

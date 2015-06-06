@@ -1,1 +1,0 @@
-Fencing doesn't work when restarting bookies.

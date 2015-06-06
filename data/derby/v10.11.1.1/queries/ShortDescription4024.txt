@@ -1,1 +1,0 @@
-Replace felix.jar file with the felix sources

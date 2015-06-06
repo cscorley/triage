@@ -1,3 +1,0 @@
-This is the parent task for OpenJPA iteration 9. The iteration 9 development period is from July 6th - July 31st. Features to be completed during this iteration must be assigned as a subtask to this task. The JPA 2.0 Roadmap [1] will contain iteration 9 features and tracking information.
-
-[1] http://cwiki.apache.org/confluence/display/openjpa/JPA+2.0+Roadmap

@@ -1,1 +1,0 @@
-Add log4j.properties in conf/ for bin packages

@@ -1,3 +1,0 @@
-org.apache.derby.impl.store.raw.data.BasePage
-org.apache.derby.shared.common.reference.SQLState
-org.apache.derbyTesting.unitTests.store.T_Util

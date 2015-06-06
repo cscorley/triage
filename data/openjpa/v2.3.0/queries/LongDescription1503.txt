@@ -1,1 +1,0 @@
-metamodel classloading does not use AccessController.

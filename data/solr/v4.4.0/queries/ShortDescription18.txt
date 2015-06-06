@@ -1,1 +1,0 @@
-log more details for update commands

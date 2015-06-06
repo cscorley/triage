@@ -1,3 +1,0 @@
-org.apache.derby.impl.db.DatabaseContextImpl
-org.apache.derby.impl.services.daemon.IndexStatisticsDaemonImpl
-org.apache.derby.impl.sql.catalog.DataDictionaryImpl

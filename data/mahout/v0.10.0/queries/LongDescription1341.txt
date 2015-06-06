@@ -1,3 +1,0 @@
-When running examples/bin/classify-20newsgroups.sh and choosing clean option, working directory gets initialized first (so 20newsgroups dataset gets downloaded if not already in the working directory) just to have working directory deleted. So cleaning already clean working directory will take unnecessarily long.
-
-For clean task we should skip working directory initialization and just clean things up.

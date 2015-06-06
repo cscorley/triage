@@ -1,1 +1,0 @@
-pig does not bring in joda-time as dependency in its pig-template.xml

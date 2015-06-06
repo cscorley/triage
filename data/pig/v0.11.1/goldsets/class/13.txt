@@ -1,2 +1,0 @@
-org.apache.pig.builtin.TOP
-org.apache.pig.piggybank.evaluation.util.Top

@@ -1,3 +1,0 @@
-org.apache.hadoop.zebra.pig.TestBasicUnion
-org.apache.hadoop.zebra.pig.TestOrderPreserveMultiTable
-org.apache.hadoop.zebra.pig.TestUnionMixedTypes

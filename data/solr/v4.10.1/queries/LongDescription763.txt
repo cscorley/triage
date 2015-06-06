@@ -1,3 +1,0 @@
-Patch so that ShingleFilterFactory can deserialise the coterminalPositionIncrement property.
-
-[Edit] – FilterFactory for Lucene's PositionFilter

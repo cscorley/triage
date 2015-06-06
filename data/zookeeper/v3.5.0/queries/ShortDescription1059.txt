@@ -1,1 +1,0 @@
-stat command isses on non-existing node causes NPE 

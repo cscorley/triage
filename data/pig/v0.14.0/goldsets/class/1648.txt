@@ -1,2 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigSplit
-org.apache.pig.test.TestSplitCombine

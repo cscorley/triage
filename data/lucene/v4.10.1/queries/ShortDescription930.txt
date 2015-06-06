@@ -1,1 +1,0 @@
-fail build if contrib tests fail to compile

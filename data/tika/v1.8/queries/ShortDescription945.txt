@@ -1,1 +1,0 @@
-Upgrade tika-server to CXF 2.6.1 

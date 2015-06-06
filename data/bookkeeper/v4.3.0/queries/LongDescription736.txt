@@ -1,1 +1,0 @@
-Idea of this JIRA is to provide jmx interfaces to get the statistics of the auto recovery activities.

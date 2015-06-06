@@ -1,1 +1,0 @@
-NPE when trying to invoke FieldMetada.getOrders() when a PersistenCollection field is being loaded.

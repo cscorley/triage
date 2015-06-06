@@ -1,1 +1,0 @@
-VirtualRandomAccessFile.close() is not idempotent

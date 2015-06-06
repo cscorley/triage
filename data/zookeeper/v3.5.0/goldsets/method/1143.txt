@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.quorum.QuorumCnxManager.RecvWorker.RecvWorker(Socket,Long,SendWorker)
-org.apache.zookeeper.server.quorum.QuorumCnxManager.SendWorker.SendWorker(Socket,Long)

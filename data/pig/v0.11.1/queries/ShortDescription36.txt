@@ -1,1 +1,0 @@
-FindBugs: Method ignores results of InputStream.skip()

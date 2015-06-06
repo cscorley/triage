@@ -1,1 +1,0 @@
-org.apache.pig.test.Util.isHadoop2_0()

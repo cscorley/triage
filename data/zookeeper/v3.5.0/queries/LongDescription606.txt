@@ -1,1 +1,0 @@
-the scripts in bin fail under cygwin due to spaces not handled properly

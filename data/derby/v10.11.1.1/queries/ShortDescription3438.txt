@@ -1,1 +1,0 @@
-Allow SQL query text to be null in StatementKey

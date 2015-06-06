@@ -1,1 +1,0 @@
-Local temporary paths are not always valid HDFS path names.

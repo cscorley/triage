@@ -1,1 +1,0 @@
-The -ca option should be removed from ij and from the ij command usage line

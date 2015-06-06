@@ -1,2 +1,0 @@
-Adam Warski <adam@warski.org>
-Steve Ebersole <steve@hibernate.org>

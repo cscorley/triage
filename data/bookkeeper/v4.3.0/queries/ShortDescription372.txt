@@ -1,1 +1,0 @@
-Check service name in bookie start/stop script.

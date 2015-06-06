@@ -1,1 +1,0 @@
-LedgerMetadata should serialized using protobufs

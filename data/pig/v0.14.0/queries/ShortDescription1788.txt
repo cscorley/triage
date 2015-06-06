@@ -1,1 +1,0 @@
-relation-as-scalar error messages should indicate the field being used as scalar

@@ -1,1 +1,0 @@
-Pig is unable to handle counters for glob paths ?

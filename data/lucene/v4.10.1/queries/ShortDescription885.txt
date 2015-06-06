@@ -1,1 +1,0 @@
-clean up build files so contrib tests are run more easily

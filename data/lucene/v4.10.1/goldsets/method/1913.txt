@@ -1,2 +1,0 @@
-org.apache.lucene.search.vectorhighlight.FieldQuery.checkOverlap(Collection<Query>,Query,Term[],Term[],int,float)
-org.apache.lucene.search.vectorhighlight.FieldQueryTest.testExpand()

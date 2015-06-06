@@ -1,2 +1,0 @@
-org.apache.pig.builtin.Utf8StorageConverter.consumeMap(PushbackInputStream,ResourceFieldSchema)
-org.apache.pig.test.TestConversions.testBytesToComplexTypeMisc()

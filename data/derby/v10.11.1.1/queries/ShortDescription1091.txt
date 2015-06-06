@@ -1,1 +1,0 @@
-Test harness does not pass jvm flags properly if there are more than 1 property in jvm flags

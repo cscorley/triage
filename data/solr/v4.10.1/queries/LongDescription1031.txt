@@ -1,5 +1,0 @@
-If javascript is embedded in any of the fields, it is possible for that javascript to be executed when viewing the schema.
-
-The javascript will appear in the "Top Terms" part of the UI.
-
-I have created a simple patch to prevent this problem from occurring.

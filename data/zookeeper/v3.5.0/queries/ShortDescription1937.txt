@@ -1,1 +1,0 @@
-init script needs fixing for ZOOKEEPER-1719

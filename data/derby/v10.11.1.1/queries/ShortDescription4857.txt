@@ -1,1 +1,0 @@
-Utilize the SOAP API to fetch JIRA issue list for release notes generation

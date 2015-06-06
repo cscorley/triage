@@ -1,1 +1,0 @@
-Document peculiar behavior of TestHarness.LocalRequestFactory

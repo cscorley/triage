@@ -1,1 +1,0 @@
-Specifying a non-existant slaveHost for startSlave seemingly succeeds in starting slave mode.

@@ -1,2 +1,0 @@
-org.apache.pig.Main
-org.apache.pig.tools.parameters.ParameterSubstitutionPreprocessor

@@ -1,7 +1,0 @@
-Fix two memory leaks revealed by running:
-
-
-valgrind --leak-check=full ./.libs/cli_st 127.0.0.1:2182
-create /foo
-quit
-

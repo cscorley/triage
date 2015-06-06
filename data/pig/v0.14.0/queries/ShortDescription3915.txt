@@ -1,1 +1,0 @@
-MapReduce queries in Pigmix outputs different results than Pig's

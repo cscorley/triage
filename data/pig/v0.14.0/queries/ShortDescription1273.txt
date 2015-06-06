@@ -1,1 +1,0 @@
-Skewed join throws error 

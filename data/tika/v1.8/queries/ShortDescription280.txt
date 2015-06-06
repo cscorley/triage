@@ -1,1 +1,0 @@
-Fix NOTICE files to match consensus from legal team

@@ -1,1 +1,0 @@
-adding a new distance metric to the 0.5 branch

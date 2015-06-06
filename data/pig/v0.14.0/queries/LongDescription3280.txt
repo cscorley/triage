@@ -1,3 +1,0 @@
-PIG-3268 and PIG-3269 added CASE expression and IN operator to Pig. We need documentation for them.
-
-In addition, PIG-3122 introduced a whitelist to minimize reserved keywords. As of now, CUBE, RANK, IN, WHEN, THEN, ELSE, and END are added to the whitelist. So we need to update reserved keywords table in the manual as well.

@@ -1,1 +1,0 @@
-The XHTML output of HSLFExtractor parser is not pure XHTML, it only inserts the full text into a P[aragraph] tag (including non-html carriage returns).  This behavior comes from the poor capabilities that the POI PowerPointExtractor offers.

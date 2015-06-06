@@ -1,1 +1,0 @@
-Build a mechanics to test JTA transaction semantics within JSE 

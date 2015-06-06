@@ -1,3 +1,0 @@
-org.apache.pig.parser.TestQueryParser
-org.apache.pig.test.TestMacroExpansion
-org.apache.pig.test.TestNullConstant

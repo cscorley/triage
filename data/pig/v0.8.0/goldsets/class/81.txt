@@ -1,3 +1,0 @@
-org.apache.pig.newplan.logical.relational.LOLoad
-org.apache.pig.PigServer
-org.apache.pig.test.TestUDFContext

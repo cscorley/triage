@@ -1,1 +1,0 @@
-Accumulators should be able to early-terminate

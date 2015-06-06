@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.sql.DB2Dictionary.DB2Dictionary()
-org.apache.openjpa.jdbc.sql.DB2Dictionary.getOptimizeClause(Select)
-org.apache.openjpa.jdbc.sql.DB2Dictionary.newStoreException(String,SQLException[],Object)

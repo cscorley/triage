@@ -1,1 +1,0 @@
-Add hashCode and equals to NamedList

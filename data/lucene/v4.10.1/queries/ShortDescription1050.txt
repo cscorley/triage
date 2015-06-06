@@ -1,1 +1,0 @@
-SimpleFSLockFactory ignores error on deleting the lock file

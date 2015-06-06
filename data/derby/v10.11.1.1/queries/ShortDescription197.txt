@@ -1,1 +1,0 @@
-Add tip for Windows users in BUILDING.txt file regarding file paths in the ant.properties file

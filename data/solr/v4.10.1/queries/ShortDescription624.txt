@@ -1,1 +1,0 @@
-patch: Don't take snapshot if there are no differences

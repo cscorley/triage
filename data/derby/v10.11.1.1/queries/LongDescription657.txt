@@ -1,1 +1,0 @@
-Script files in the frameworks directory of the -bin distribution should have the executable bit set so they can be run on Unix platforms without the need to fix the scripts' permissions. Text files should have line endings dependant on the type of archive: CRLF for .zips, LF for .tar.gz. This distinction should be noted on the download page for the release.

@@ -1,6 +1,0 @@
-org.apache.solr.handler.component.QueryElevationComponent
-org.apache.solr.handler.component.TermsComponent
-org.apache.solr.request.JSONWriter
-org.apache.solr.search.function.FileFloatSource
-org.apache.solr.util.HighFrequencyDictionary
-org.apache.solr.util.HighFrequencyDictionary.HighFrequencyIterator

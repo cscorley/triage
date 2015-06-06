@@ -1,1 +1,0 @@
-Document use of user level jar cache

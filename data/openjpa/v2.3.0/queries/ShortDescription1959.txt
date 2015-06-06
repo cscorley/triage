@@ -1,1 +1,0 @@
-RuntimeExceptionTranslator should be transient in DelegatingQuery

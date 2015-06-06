@@ -1,1 +1,0 @@
-org.apache.bookkeeper.proto.BookkeeperInternalCallbacks.MultiCallback.processResult(int,String,Object)

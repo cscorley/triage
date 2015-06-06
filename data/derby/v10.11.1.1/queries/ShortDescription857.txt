@@ -1,1 +1,0 @@
-LDAP user authentication fails under a security manager

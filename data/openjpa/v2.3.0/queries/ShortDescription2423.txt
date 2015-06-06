@@ -1,1 +1,0 @@
-Isolation level is not working properly on DB2 for JPQL queries with nested sub-queries.

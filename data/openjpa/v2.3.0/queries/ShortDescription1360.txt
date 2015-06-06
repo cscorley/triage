@@ -1,1 +1,0 @@
-ReverseMappingTool omits nullable, length, etc. when ClassMapping.setEmbedded(true) is called

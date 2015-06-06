@@ -1,1 +1,0 @@
-DataMap API is very restricted and needs to open up

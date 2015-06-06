@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.sql.DBDictionary
-org.apache.openjpa.persistence.jdbc.TestTimestampPKDeletion
-org.apache.openjpa.persistence.simple.EntityWithTimestampPK

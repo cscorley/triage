@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.persistence.FileTxnLog
-org.apache.zookeeper.server.quorum.Observer
-org.apache.zookeeper.test.TruncateTest

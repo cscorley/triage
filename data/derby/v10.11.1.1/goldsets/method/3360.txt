@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.compile.StaticMethodCallNode.generateExpression(ExpressionClassBuilder,MethodBuilder)
-org.apache.derbyTesting.functionTests.tests.lang.RoutineTest.testFunctionResultDataTypeValidation()
-org.apache.derbyTesting.functionTests.tests.lang.RoutineTest.testFunctionReturnsNullOnNullInput()

@@ -1,2 +1,0 @@
-Michael Dick <mikedd@apache.org>
-Patrick Linskey <pcl@apache.org>

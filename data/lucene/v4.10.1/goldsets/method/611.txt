@@ -1,3 +1,0 @@
-org.apache.lucene.search.TestConstantScoreRangeQuery.assertEquals(String,float,float)
-org.apache.lucene.search.TestConstantScoreRangeQuery.assertEquals(String,int,int)
-org.apache.lucene.search.TestConstantScoreRangeQuery.setUp()

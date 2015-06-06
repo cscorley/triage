@@ -1,2 +1,0 @@
-org.apache.derby.shared.common.info.JVMInfo.derbyVMLevel()
-org.apache.derby.shared.common.info.JVMInfo.vmCheck(String,String)

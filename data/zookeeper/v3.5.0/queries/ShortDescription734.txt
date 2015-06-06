@@ -1,1 +1,0 @@
-QuorumPeerTestBase.java and ZooKeeperServerMainTest.java do not handle windows path correctly

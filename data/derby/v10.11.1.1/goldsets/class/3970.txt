@@ -1,3 +1,0 @@
-org.apache.derby.impl.jdbc.EmbedBlob
-org.apache.derby.impl.jdbc.PositionedStoreStream
-org.apache.derby.impl.jdbc.StoreStreamClob

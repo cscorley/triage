@@ -1,3 +1,0 @@
-Albert Lee <allee8285@apache.org>
-Donald Woods <dwoods@apache.org>
-Pinaki Poddar <ppoddar@apache.org>

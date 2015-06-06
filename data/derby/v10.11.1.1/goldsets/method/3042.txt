@@ -1,2 +1,0 @@
-org.apache.derby.impl.drda.NetworkServerControlImpl.setUpSocket()
-org.apache.derby.impl.drda.NetworkServerControlImpl.setUpSocket.run()

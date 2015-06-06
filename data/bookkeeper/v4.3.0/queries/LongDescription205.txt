@@ -1,1 +1,0 @@
-implement a MetaStore based ledger manager for bookkeeper client.

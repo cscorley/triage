@@ -1,1 +1,0 @@
-[zebra] make Zebra's pig test cases run on real cluster

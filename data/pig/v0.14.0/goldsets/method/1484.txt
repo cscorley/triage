@@ -1,3 +1,0 @@
-org.apache.pig.builtin.BinStorage.getSchema(String,Job)
-org.apache.pig.test.TestEvalPipeline2.testBinStorageCommaSeperatedPath()
-org.apache.pig.test.TestEvalPipeline2.testDescribeNestedAlias()

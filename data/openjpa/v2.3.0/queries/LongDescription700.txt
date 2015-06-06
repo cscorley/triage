@@ -1,3 +1,0 @@
-DB2 UDB version 8.2 or later supports newer systax for lastGeneratedkeyQuery:
-
-SELECT IDENTITY_VAL_LOCAL() FROM  SYSIBM.SYSDUMMY1

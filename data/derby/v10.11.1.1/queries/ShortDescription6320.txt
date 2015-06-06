@@ -1,1 +1,0 @@
-Log a page dump to derby.log if ERROR nospc: nospc.U  is returned to the user

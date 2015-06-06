@@ -1,3 +1,0 @@
-org.apache.tika.server.TikaServerCli
-org.apache.tika.server.TikaVersion
-org.apache.tika.server.TikaVersionTest

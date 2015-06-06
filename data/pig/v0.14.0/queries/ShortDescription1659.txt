@@ -1,1 +1,0 @@
-sortinfo is not set for store if there is a filter after ORDER BY

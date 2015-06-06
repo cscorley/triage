@@ -1,7 +1,0 @@
-nserverdemo.NsSample
-org.apache.derbyDemo.scores.data.Database
-SimpleApp
-SimpleNetworkClientSample
-SimpleNetworkServerSample
-WwdClientExample
-WwdEmbedded

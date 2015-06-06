@@ -1,2 +1,0 @@
-Army <abrown@apache.org>
-Kristian Waagan <kristwaa@apache.org>

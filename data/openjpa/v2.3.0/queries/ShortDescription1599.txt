@@ -1,1 +1,0 @@
-Cache mode properties passes in to em.find and lock methods are not transient

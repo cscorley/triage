@@ -1,2 +1,0 @@
-org.apache.lucene.collation.ICUCollationKeyAnalyzer
-org.apache.lucene.collation.ICUCollationKeyFilter

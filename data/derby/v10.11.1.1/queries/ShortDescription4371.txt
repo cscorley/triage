@@ -1,1 +1,0 @@
-Non-selected columns for SELECT DISTINCT allowed in ORDER BY clause if ordered by expression

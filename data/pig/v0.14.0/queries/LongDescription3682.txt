@@ -1,1 +1,0 @@
-ant target 'mvn-inst' does not install pig-h2.jar into local .m2, where as deploy does.

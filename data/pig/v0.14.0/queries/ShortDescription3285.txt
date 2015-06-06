@@ -1,1 +1,0 @@
-Jobs using HBaseStorage fail to ship dependency jars

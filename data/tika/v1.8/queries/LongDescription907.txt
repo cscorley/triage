@@ -1,1 +1,0 @@
-Comments added to a Pages document are not extracted. This also applies to documents annotated on iWork.com.

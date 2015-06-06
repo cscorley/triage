@@ -1,1 +1,0 @@
-In ij GETCURRENTROWNUMBER directly writeits result  to output

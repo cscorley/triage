@@ -1,1 +1,0 @@
-Client driver: ResultSet.beforeFirst() gives protocol error on scrollable, updatable result sets that are downgraded to read-only

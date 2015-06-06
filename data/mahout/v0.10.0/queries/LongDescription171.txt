@@ -1,7 +1,0 @@
-Opening a JIRA task to collect what has to be done for moving over to using apache version 5 parent pom (see also http://markmail.org/thread/ld26m3xxzoztqsk6 ).
-
-
-	Link Apache parent pom into our pom.
-	Update hudson to build via maven ( ? ).
-	File subtask at INFRA-1896 to include mahout in repository.apache.org
-

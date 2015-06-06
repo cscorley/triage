@@ -1,1 +1,0 @@
-Kmeans example with space delimited data

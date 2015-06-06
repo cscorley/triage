@@ -1,4 +1,0 @@
-BinStorage does not take comma seperated path. The following script fail:
-
-a = load '1.bin,2.bin' using BinStorage();
-dump a;

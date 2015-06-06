@@ -1,1 +1,0 @@
-FrenchAnalyzer's tokenStream method does not honour the contract of Analyzer

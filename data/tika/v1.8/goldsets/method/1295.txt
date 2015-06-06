@@ -1,4 +1,0 @@
-org.apache.tika.parser.pdf.PDFParser.extractMultilingualItems(Metadata,Property,String,XMPSchema)
-org.apache.tika.parser.pdf.PDFParserTest.testMultipleAuthors()
-org.apache.tika.parser.pdf.PDFParserTest.testMultipleTitles()
-org.apache.tika.parser.pdf.PDFParserTest.testVersions()

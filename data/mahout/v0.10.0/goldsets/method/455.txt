@@ -1,3 +1,0 @@
-org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood.NearestNUserNeighborhood(int,double,UserSimilarity,DataModel)
-org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood.NearestNUserNeighborhood(int,double,UserSimilarity,DataModel,double)
-org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood.NearestNUserNeighborhood(int,UserSimilarity,DataModel)

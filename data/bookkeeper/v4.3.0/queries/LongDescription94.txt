@@ -1,1 +1,0 @@
-As comment in BOOKKEEPER-93 , double callbacks happen even it success callback receiving enough valid responses.

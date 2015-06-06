@@ -1,2 +1,0 @@
-Bryan Pendleton <bpendleton@apache.org>
-Katherine Marsden <kmarsden@apache.org>

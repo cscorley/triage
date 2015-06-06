@@ -1,2 +1,0 @@
-org.apache.bookkeeper.bookie.InterleavedLedgerStorage.flush()
-org.apache.bookkeeper.bookie.InterleavedLedgerStorage.isFlushRequired()

@@ -1,1 +1,0 @@
-Currently exits with 0, which is bad, won't be restarted if daemontools is watching

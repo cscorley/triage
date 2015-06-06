@@ -1,1 +1,0 @@
-Solrj bug when using facet.missing

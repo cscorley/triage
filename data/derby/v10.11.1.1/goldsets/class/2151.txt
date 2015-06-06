@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.lang.OrderByAndSortAvoidance
-org.apache.derbyTesting.functionTests.util.SQLToJUnit
-org.apache.derbyTesting.junit.RuntimeStatisticsParser

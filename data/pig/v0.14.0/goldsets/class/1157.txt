@@ -1,2 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer
-org.apache.pig.test.TestMultiQuery

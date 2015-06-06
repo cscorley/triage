@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.quorum.FastLeaderElection
-org.apache.zookeeper.test.FLELostMessageTest
-org.apache.zookeeper.test.FLELostMessageTest.LEThread

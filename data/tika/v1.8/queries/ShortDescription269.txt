@@ -1,1 +1,0 @@
-Ease of use -facade for Tika

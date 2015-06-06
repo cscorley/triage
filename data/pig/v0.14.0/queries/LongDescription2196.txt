@@ -1,1 +1,0 @@
-Test harness is designed to be independent of Pig, but currently it makes those assumptions.

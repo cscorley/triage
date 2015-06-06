@@ -1,3 +1,0 @@
-The Zookeeper C client library uses gethostbyname and strtok, both of which are not safe to use from multiple threads.
-
-The problem is resolved by using getaddrinfo and strtok_r in place of the older API.

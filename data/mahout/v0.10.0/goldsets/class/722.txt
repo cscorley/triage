@@ -1,2 +1,0 @@
-org.apache.mahout.cf.taste.hadoop.item.AggregateAndRecommendReducer
-org.apache.mahout.cf.taste.hadoop.item.UserVectorSplitterMapper

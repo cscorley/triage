@@ -1,3 +1,0 @@
-org.apache.tika.parser.microsoft.ooxml.OOXMLParserTest.testExcel()
-org.apache.tika.parser.microsoft.ooxml.OOXMLParserTest.testPowerPoint()
-org.apache.tika.parser.microsoft.ooxml.OOXMLParserTest.testWord()

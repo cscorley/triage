@@ -1,3 +1,0 @@
-org.apache.mahout.cf.taste.impl.model.PlusAnonymousConcurrentUserDataModel
-org.apache.mahout.cf.taste.impl.model.PlusAnonymousConcurrentUserDataModelTest
-org.apache.mahout.cf.taste.impl.model.PlusAnonymousUserDataModel

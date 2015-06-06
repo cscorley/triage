@@ -1,1 +1,0 @@
-Retrying after interrupts in store pops a bug in derbyall/storeall/storeunit/T_RawStoreFactory in some cases

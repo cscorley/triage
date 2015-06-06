@@ -1,2 +1,0 @@
-org.apache.openjpa.kernel.FetchConfigurationImpl
-org.apache.openjpa.persistence.kernel.TestDynamicFetchPlan

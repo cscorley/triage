@@ -1,1 +1,0 @@
-Remove zip files from zip archive and remove "-all" from openjpa-all-${version}.jar

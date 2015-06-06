@@ -1,1 +1,0 @@
-PigTest.assertOutput doesn't allow non-default delimiter

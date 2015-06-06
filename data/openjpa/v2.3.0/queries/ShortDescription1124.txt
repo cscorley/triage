@@ -1,1 +1,0 @@
-TestDateQueries and TestQueryTimeout are locale dependent

@@ -1,1 +1,0 @@
-Update openjpa-integration-daytrader to perform user tasks

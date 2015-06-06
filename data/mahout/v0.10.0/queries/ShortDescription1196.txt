@@ -1,1 +1,0 @@
-LogisticModelParameters uses csv.getTargetCategories() even if csv is not used.

@@ -1,3 +1,0 @@
-org.apache.derby.iapi.sql.dictionary.AliasDescriptor.getQualifiedName()
-org.apache.derby.iapi.sql.dictionary.TupleDescriptor.isPersistent()
-org.apache.derby.iapi.sql.dictionary.TupleDescriptor.quoteProtectName(String)

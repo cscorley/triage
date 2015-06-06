@@ -1,1 +1,0 @@
-Build failures with 64bit Sun JDK6 on Linux due to PermGen space

@@ -1,1 +1,0 @@
-Implement new JDBC4 methods for creating empty LOBs in the embedded client

@@ -1,1 +1,0 @@
-PostRemove not invoked after database record was deleted

@@ -1,2 +1,0 @@
-org.apache.pig.newplan.logical.visitor.ProjectStarExpander
-org.apache.pig.test.TestProjectRange

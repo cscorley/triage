@@ -1,1 +1,0 @@
-log all exceptions not caught by ZK threads

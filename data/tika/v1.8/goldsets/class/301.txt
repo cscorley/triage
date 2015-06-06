@@ -1,3 +1,0 @@
-org.apache.tika.parser.opendocument.ODFParserTest
-org.apache.tika.parser.opendocument.OpenOfficeContentParser
-org.apache.tika.parser.opendocument.OpenOfficeParser

@@ -1,1 +1,0 @@
-UDFContext.getUDFContext usage of ThreadLocal pattern is not typical

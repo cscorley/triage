@@ -1,1 +1,0 @@
-Remove am.Connection.reset(LogWriter,ClientBaseDataSource,boolean) and called methods

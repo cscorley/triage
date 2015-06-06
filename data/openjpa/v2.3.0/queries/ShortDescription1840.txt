@@ -1,1 +1,0 @@
-QueryTimeoutException not thrown with Sybase

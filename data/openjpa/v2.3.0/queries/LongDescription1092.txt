@@ -1,5 +1,0 @@
-Currently TestEJBQueryInterface is excluded.
-
-To enable it, just a little change is needed: invoking em.flush() after every em.persist().
-
-The test case wants to get the result depends on the order of the creation of the entity instance. but we (as well as most other JPA implementations) don't care about the creation order of java instances because the insertion happens when the transaction is committed or flush is invoked. So adding "em.flush()" after "em.persist()" will resolve the problem.

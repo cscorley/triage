@@ -1,1 +1,0 @@
-Pig end-to-end tests should test local mode as well as mr mode

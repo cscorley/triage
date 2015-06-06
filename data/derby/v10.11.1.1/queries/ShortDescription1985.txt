@@ -1,1 +1,0 @@
-Use Calendar.setTimeInMillis(long) instead of Calendar.setTime(Date) for performance.

@@ -1,1 +1,0 @@
-the fatjar is missing libraries

@@ -1,2 +1,0 @@
-org.apache.lucene.index.IndexReader.getCurrentVersion(Directory)
-org.apache.lucene.index.IndexReader.isCurrent()

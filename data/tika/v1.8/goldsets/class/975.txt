@@ -1,3 +1,0 @@
-org.apache.tika.sax.LinkBuilder
-org.apache.tika.sax.LinkContentHandler
-org.apache.tika.sax.LinkContentHandlerTest

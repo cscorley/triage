@@ -1,1 +1,0 @@
-Provide LRU option for L2 data cache

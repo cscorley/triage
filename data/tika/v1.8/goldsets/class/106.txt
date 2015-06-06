@@ -1,3 +1,0 @@
-org.apache.tika.parser.ParserPostProcessor
-org.apache.tika.utils.RegexUtils
-org.apache.tika.utils.RegexUtilsTest

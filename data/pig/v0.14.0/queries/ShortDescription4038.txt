@@ -1,1 +1,0 @@
-SPRINTF should return NULL on any NULL input

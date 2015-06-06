@@ -1,2 +1,0 @@
-org.apache.openjpa.persistence.relations.TestBulkUpdatesAndEmbeddedFields.setUp()
-org.apache.openjpa.persistence.relations.TestBulkUpdatesAndEmbeddedFields.testBulkUpdateOfEmbeddedField()

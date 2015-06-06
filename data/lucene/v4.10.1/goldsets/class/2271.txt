@@ -1,3 +1,0 @@
-org.apache.lucene.search.TopScoreDocCollector
-org.apache.lucene.search.TopScoreDocCollector.InOrderTopScoreDocCollector
-org.apache.lucene.search.TopScoreDocCollector.OutOfOrderTopScoreDocCollector

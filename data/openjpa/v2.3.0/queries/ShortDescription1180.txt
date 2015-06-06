@@ -1,1 +1,0 @@
-Query Parameter processing in JPA 2.0

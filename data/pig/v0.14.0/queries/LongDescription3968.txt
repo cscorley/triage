@@ -1,1 +1,0 @@
-The consequence is any change made to OperatorPlan.java may change the serialization string of the physical plan, and cause TestMRCompiler.testMergeJoin fail.

@@ -1,1 +1,0 @@
-Lock not being released properly, possibly related to occurence of lock escalation

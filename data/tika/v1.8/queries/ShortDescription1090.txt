@@ -1,1 +1,0 @@
-Improve Java Documentation for Apache Tika Metadata

@@ -1,3 +1,0 @@
-org.apache.solr.search.SolrIndexReader
-org.apache.solr.search.SolrIndexSearcher
-org.apache.solr.search.TestIndexSearcher

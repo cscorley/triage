@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.compile.UpdateNode
-org.apache.derby.impl.sql.compile.WindowResultSetNode
-org.apache.derbyTesting.functionTests.tests.lang.OLAPTest

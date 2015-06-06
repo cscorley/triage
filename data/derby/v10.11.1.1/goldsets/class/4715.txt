@@ -1,2 +1,0 @@
-org.apache.derby.iapi.services.i18n.MessageService
-org.apache.derby.impl.store.raw.data.BaseDataFileFactory

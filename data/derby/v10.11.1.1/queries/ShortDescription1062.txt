@@ -1,1 +1,0 @@
-Change the internal implemetation of SYSCS_INPLACE_COMPRESS_TABLE to share existing alter table

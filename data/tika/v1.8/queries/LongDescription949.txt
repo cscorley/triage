@@ -1,1 +1,0 @@
-As originally reported against Alfresco in ALF-14716, Tika is missing mimetype entries for XMind Pro and MindMapper, which both use zip-based file formats. Entries for these should ideally be added to Tika

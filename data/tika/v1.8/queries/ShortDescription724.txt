@@ -1,1 +1,0 @@
-PDF text sometimes has extra space between letters

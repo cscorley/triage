@@ -1,1 +1,0 @@
-HighDFWordsPrunerTest is failing silently

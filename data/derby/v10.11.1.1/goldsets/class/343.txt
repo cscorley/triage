@@ -1,4 +1,0 @@
-org.apache.derby.impl.drda.CodePoint
-org.apache.derby.impl.drda.DRDAConnThread
-org.apache.derby.impl.drda.DRDAResultSet
-org.apache.derby.impl.drda.DRDAStatement

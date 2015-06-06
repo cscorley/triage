@@ -1,1 +1,0 @@
-commit configure scripts (autotools) to svn for c projects and include in release

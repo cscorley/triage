@@ -1,1 +1,0 @@
-Remove Types.BIT/Types.BOOLEAN switch in JVMInfo

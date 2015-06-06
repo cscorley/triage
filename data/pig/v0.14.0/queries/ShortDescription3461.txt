@@ -1,1 +1,0 @@
-Rewrite PartitionFilterOptimizer to make it work for all the cases

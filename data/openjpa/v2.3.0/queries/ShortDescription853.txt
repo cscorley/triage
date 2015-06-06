@@ -1,1 +1,0 @@
-Informix cursor not open problem if synchronizeMapping set true

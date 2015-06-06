@@ -1,1 +1,0 @@
-build.xml's tar task should use longfile="gnu"

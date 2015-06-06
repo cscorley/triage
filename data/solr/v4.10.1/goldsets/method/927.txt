@@ -1,3 +1,0 @@
-org.apache.solr.core.RequestHandlers.LazyRequestHandlerWrapper.getHandlerClass()
-org.apache.solr.core.RequestHandlers.LazyRequestHandlerWrapper.getWrappedHandler()
-org.apache.solr.core.RequestHandlers.LazyRequestHandlerWrapper.handleRequest(SolrQueryRequest,SolrQueryResponse)

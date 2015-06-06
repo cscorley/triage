@@ -1,2 +1,0 @@
-org.apache.solr.handler.admin.LukeRequestHandler.getIndexInfo(IndexReader,boolean)
-org.apache.solr.handler.admin.LukeRequestHandler.getTopTerms(IndexReader,Set<String>,String,int,Set<String>,String)

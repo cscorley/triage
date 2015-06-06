@@ -1,1 +1,0 @@
-addrvec_next() fails to set next parameter if addrvec_hasnext() returns false

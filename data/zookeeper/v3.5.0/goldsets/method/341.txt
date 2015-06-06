@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.quorum.QuorumPeerConfig.getInitLimit()
-org.apache.zookeeper.server.quorum.QuorumPeerConfig.getTickTime()
-org.apache.zookeeper.server.quorum.QuorumPeerConfig.isStandaloneServer()

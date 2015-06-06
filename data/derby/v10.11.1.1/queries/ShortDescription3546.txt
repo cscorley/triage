@@ -1,1 +1,0 @@
-Failed to get database schemas of a JAR database

@@ -1,1 +1,0 @@
-Cache class object used to create plugin values

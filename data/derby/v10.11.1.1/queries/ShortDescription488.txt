@@ -1,1 +1,0 @@
-DatabaseMetaData.getColumns() fails on iSeries JDK 1.4 with verfier error on generated class.

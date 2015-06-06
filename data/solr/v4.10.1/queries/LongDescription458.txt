@@ -1,1 +1,0 @@
-It would be nice if NamedList would expose it's own hashCode and equals methods. Exposing the hashCode and equals of the contained ArrayList (nvPairs) should suffice

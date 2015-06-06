@@ -1,2 +1,0 @@
-org.apache.pig.test.TestParamSubPreproc.testComplexVals()
-org.apache.pig.test.TestParamSubPreproc.testNoVars()

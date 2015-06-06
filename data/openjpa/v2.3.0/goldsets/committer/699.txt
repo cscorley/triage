@@ -1,2 +1,0 @@
-A. Abram White <awhite@apache.org>
-Donald Woods <dwoods@apache.org>

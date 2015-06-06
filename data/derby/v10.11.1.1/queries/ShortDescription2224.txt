@@ -1,1 +1,0 @@
-Test harness should support J2ME 1.1

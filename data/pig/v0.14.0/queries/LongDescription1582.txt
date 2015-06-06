@@ -1,1 +1,0 @@
-to upgrade the commons-logging version for pig from 1.0.3 to 1.1.1

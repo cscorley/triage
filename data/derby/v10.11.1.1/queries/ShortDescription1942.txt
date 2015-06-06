@@ -1,1 +1,0 @@
-There exists difference between behavior of  setNull(Types.TIME) and setTiime(null).

@@ -1,2 +1,0 @@
-org.apache.tika.parser.xml.AbstractMetadataHandler
-org.apache.tika.parser.xml.DcXMLParserTest

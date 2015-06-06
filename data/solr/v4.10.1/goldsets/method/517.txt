@@ -1,2 +1,0 @@
-org.apache.solr.highlight.HighlighterTest.testCustomSimpleFormatterHighlight()
-org.apache.solr.highlight.HighlighterTest.testFieldMatch()

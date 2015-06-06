@@ -1,1 +1,0 @@
-It would be useful if OpenJPA could support Map<String,String>, Collection<String>, Map<UserDefinedType,OtherUserDefinedType> etc. more fluently.

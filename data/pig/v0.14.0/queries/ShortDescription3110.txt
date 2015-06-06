@@ -1,1 +1,0 @@
-pig corrupts chararrays with trailing whitespace when converting them to long

@@ -1,2 +1,0 @@
-org.apache.openjpa.jdbc.kernel.PreparedStatementManagerImpl.logSQLWarnings(PreparedStatement)
-org.apache.openjpa.jdbc.kernel.PreparedStatementManagerImpl.logSQLWarnings(Statement)

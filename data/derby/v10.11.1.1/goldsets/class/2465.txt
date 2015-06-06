@@ -1,4 +1,0 @@
-org.apache.derby.impl.load.ImportAbstract
-org.apache.derby.impl.load.ImportClob
-org.apache.derby.impl.load.ImportLobFile
-org.apache.derby.impl.load.ImportReadData

@@ -1,3 +1,0 @@
-org.apache.derby.iapi.services.property.PropertyUtil.getServicePropertyList()
-org.apache.derby.iapi.services.property.PropertyUtil.isDBOnly(Properties)
-org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(TransactionController)

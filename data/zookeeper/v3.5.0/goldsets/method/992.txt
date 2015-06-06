@@ -1,3 +1,0 @@
-org.apache.jute.compiler.JRecord.genCCode(FileWriter,FileWriter)
-org.apache.jute.compiler.JRecord.genDeserialize(FileWriter,JType,String,String)
-org.apache.jute.compiler.JRecord.genSerialize(FileWriter,JType,String,String)

@@ -1,2 +1,0 @@
-org.apache.derby.impl.jdbc.ClobUpdatableReader
-org.apache.derby.impl.jdbc.UpdatableBlobStream

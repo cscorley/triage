@@ -1,1 +1,0 @@
-some traces of the host auth scheme left

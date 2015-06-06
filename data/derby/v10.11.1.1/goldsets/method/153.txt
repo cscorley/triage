@@ -1,3 +1,0 @@
-org.apache.derbyBuild.eclipse.DerbyEclipsePlugin.createTmpFiles()
-org.apache.derbyBuild.eclipse.DerbyEclipsePlugin.getProps()
-org.apache.derbyBuild.eclipse.DerbyEclipsePlugin.main(String[])

@@ -1,3 +1,0 @@
-Confirm no trouble happens when database , of which active connection exists with , was shut down.
-
-This test is made for compensating for ignoring error message found in DERBY-273.

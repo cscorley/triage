@@ -1,3 +1,0 @@
-org.apache.tika.parser.pdf.PDF2XHTML.endPage(PDPage)
-org.apache.tika.parser.pdf.PDF2XHTML.extractImages(PDResources)
-org.apache.tika.parser.pdf.PDF2XHTML.getEmbeddedDocumentExtractor()

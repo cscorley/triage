@@ -1,1 +1,0 @@
-Ant build repeats ivy-buildJar several times

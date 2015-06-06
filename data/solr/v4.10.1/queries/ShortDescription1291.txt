@@ -1,1 +1,0 @@
-implement Trie.toInternal/toExternal and friends

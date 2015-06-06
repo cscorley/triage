@@ -1,1 +1,0 @@
-Memory leak in zk_hashtable.c:do_insert_watcher_object()

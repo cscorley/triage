@@ -1,4 +1,0 @@
-org.apache.pig.test.TestLoad.checkLoadPath(String,String)
-org.apache.pig.test.TestLoad.checkLoadPath(String,String,boolean)
-org.apache.pig.test.TestLoad.setUp()
-org.apache.pig.test.TestLoad.tearDown()

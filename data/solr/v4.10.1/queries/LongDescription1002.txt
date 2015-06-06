@@ -1,1 +1,0 @@
-update solr to take advantage of LUCENE-1089

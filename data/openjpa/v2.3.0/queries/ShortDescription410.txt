@@ -1,1 +1,0 @@
-Change "connecting to dictionary" message from Info to Trace

@@ -1,1 +1,0 @@
-get rid of "java[77427:1a03] Unable to load realm info from SCDynamicStore" log lines when running pig tests

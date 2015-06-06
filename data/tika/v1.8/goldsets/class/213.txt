@@ -1,3 +1,0 @@
-org.apache.tika.cli.TikaCLI
-org.apache.tika.cli.TikaCLI.NoDocumentJSONMetHandler
-org.apache.tika.cli.TikaCLI.NoDocumentMetHandler

@@ -1,2 +1,0 @@
-Henry Robinson <henry@apache.org>
-Patrick D. Hunt <phunt@apache.org>

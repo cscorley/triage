@@ -1,1 +1,0 @@
-Close method in LedgerInputStream doesn't do anything

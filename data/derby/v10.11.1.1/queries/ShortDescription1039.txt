@@ -1,1 +1,0 @@
-Database creation should fail if specified log device path already exists

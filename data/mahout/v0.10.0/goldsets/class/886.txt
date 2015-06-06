@@ -1,2 +1,0 @@
-org.apache.mahout.fpm.pfpgrowth.fpgrowth.FPGrowth
-org.apache.mahout.fpm.pfpgrowth.fpgrowth.FPTree

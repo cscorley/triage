@@ -1,1 +1,0 @@
-GenericSorting.java has one function left in it. Let's move that to Sorting.java and delete the class.

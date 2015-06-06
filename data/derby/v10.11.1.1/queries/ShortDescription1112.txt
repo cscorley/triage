@@ -1,1 +1,0 @@
-TemporaryRowHolderResultSet is breaking the contract of getActivation

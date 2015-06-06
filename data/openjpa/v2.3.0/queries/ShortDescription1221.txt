@@ -1,1 +1,0 @@
-Change openjpa-integration module pom's to reflect proper artifact-id

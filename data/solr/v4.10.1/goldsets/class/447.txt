@@ -1,2 +1,0 @@
-org.apache.solr.handler.admin.AdminHandlers
-org.apache.solr.handler.admin.AdminHandlers.StandardHandler

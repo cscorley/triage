@@ -1,1 +1,0 @@
-Type discriminator for polymorphic queries limited to Single Table inheritance

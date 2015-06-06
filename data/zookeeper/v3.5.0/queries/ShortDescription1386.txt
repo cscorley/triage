@@ -1,1 +1,0 @@
-avoid flaky URL redirection in "ant javadoc" : replace "http://java.sun.com/javase/6/docs/api/" with "http://download.oracle.com/javase/6/docs/api/" 

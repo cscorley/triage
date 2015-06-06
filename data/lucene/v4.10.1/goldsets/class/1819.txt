@@ -1,2 +1,0 @@
-org.apache.lucene.search.MatchAllDocsQuery
-org.apache.lucene.search.TestMatchAllDocsQuery

@@ -1,2 +1,0 @@
-Rename UpdateableBlobStream to UpdatableBlobStream.
-Also rename the corresponding test, and all classes affected by the rename.

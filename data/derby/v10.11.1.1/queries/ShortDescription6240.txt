@@ -1,1 +1,0 @@
-Remove Clock cache manager from trunk

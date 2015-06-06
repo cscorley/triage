@@ -1,8 +1,0 @@
-Sometimes it's helpful to start up ant test with a debug port enabled. Let's add a flag debugPort=[port] to allow this. For example:
-
-
-ant test -DdebugPort=5000 -Dtestcase=TestFoo
-
-
-
-would run the test case and wait for a debugger client to connect to port 5000 before continuing.

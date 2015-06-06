@@ -1,1 +1,0 @@
-EncryptionKeyTest sometimes keeps reference to connection

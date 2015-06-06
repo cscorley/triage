@@ -1,2 +1,0 @@
-org.apache.openjpa.persistence.external.EntityA
-org.apache.openjpa.persistence.external.TestExternalValues

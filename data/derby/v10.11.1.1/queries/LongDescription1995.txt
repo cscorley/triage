@@ -1,1 +1,0 @@
-Add scripts and JUnit abiliity to run them to create the base tables, constraints and indexes.

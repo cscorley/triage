@@ -1,2 +1,0 @@
-Jianyong Dai <daijy@apache.org>
-Pradeep Kamath <pradeepkth@apache.org>

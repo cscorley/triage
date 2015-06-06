@@ -1,1 +1,0 @@
-Accommodate  length delimited DRDA strings where character  length does not equal byte length

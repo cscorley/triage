@@ -1,1 +1,0 @@
-Removed duplicated code from getTopTerms and getTopFeatures in AbstractClusterWriter 

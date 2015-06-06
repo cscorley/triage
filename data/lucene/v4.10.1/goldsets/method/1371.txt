@@ -1,2 +1,0 @@
-org.apache.lucene.search.Searcher.search(Query,Filter,int)
-org.apache.lucene.search.Searcher.search(Query,int)

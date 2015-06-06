@@ -1,1 +1,0 @@
-OpenJPA 1.1.0-SNAPSHOT attempts to mutate unmodifiable map in Glassfish

@@ -1,1 +1,0 @@
-Comment in template security policy incorrectly says that JMX is not enabled by default

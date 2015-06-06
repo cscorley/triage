@@ -1,3 +1,0 @@
-org.apache.derby.client.am.SqlException
-org.apache.derby.iapi.error.StandardException
-org.apache.derbyTesting.functionTests.tests.derbynet.SqlExceptionTest

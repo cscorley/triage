@@ -1,3 +1,0 @@
-org.apache.openjpa.conf.OpenJPAConfigurationImpl
-org.apache.openjpa.jdbc.writebehind.TestWriteBehindConfiguration
-org.apache.openjpa.writebehind.WriteBehindCallbackManager

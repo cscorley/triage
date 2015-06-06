@@ -1,1 +1,0 @@
-org.apache.pig.pigunit.pig.PigServer does not initialize set default log level of pigContext

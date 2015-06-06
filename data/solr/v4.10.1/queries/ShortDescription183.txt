@@ -1,1 +1,0 @@
-add getRequiredParameter() to SolrParams

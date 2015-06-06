@@ -1,1 +1,0 @@
-provide checking tool to flag possible errors in message translations

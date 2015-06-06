@@ -1,4 +1,0 @@
-In "the zookeeper project" section of
-http://hadoop.apache.org/zookeeper/docs/current/zookeeperOver.html
-
-we should remove the hod reference (doesn't use zk) and also update the second paragraph, perhaps remove? Since we are already on the apache zk page.

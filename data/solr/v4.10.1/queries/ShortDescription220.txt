@@ -1,1 +1,0 @@
-Solr returns "HTTP status code=1" in some case

@@ -1,1 +1,0 @@
-The C client supports creation of ephemeral and sequential nodes. For feature parity, so should the Java CLI. 

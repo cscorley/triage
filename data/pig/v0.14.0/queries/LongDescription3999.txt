@@ -1,1 +1,0 @@
-PIG-3388 added the -regex option to HBaseStorage, this should be documented

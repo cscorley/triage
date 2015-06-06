@@ -1,1 +1,0 @@
-Add Option WikipediaToSequenceFile to remove Category Labels from Documents

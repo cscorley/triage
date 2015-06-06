@@ -1,1 +1,0 @@
-"Office" interface should be renamed "MSOffice".

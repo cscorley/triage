@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.embed.Item2
-org.apache.openjpa.persistence.embed.TestEmbeddable
-org.apache.openjpa.persistence.jdbc.AnnotationPersistenceMappingParser

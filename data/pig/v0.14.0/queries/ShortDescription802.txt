@@ -1,1 +1,0 @@
-PERFORMANCE: not creating bags for ORDER BY

@@ -1,1 +1,0 @@
-Make build-asf-email.sh HDFS aware

@@ -1,1 +1,0 @@
-Make LuceneSegment* tests work with both Hadoop 1 and 2

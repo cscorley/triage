@@ -1,1 +1,0 @@
-Reduce usage of String.intern(), performance is terrible

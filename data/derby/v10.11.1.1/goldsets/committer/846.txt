@@ -1,2 +1,0 @@
-David Van Couvering <davidvc@apache.org>
-Richard N. Hillegas <rhillegas@apache.org>

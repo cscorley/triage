@@ -1,5 +1,0 @@
-Luke (http://www.getopt.org/luke/) is a great tool to help debug understand what is happening in lucene.  
-
-Although luke has a nice webstart app, since solr uses various snapshot builds of lucene, it is sometimes difficult to keep the versions consistent.  
-
-I propose we add an ant task that will download and run luke with the proper jars/classpath.

@@ -1,1 +1,0 @@
-Support for FB2 (fiction book document) format

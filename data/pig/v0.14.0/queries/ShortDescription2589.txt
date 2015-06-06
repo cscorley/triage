@@ -1,1 +1,0 @@
-Additional e2e test for 0.10 new features

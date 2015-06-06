@@ -1,1 +1,0 @@
-CREATE TABLE AS SELECT doesn't work on tables with BOOLEAN columns

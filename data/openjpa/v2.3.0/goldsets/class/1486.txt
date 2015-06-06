@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.kernel.JDBCStoreManager
-org.apache.openjpa.persistence.embed.EntityA_Embed
-org.apache.openjpa.persistence.embed.TestEmbeddable

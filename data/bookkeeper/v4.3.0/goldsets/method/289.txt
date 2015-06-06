@@ -1,3 +1,0 @@
-org.apache.bookkeeper.benchmark.BenchThroughputLatency.main(String[])
-org.apache.bookkeeper.benchmark.TestBenchmark.testReadThroughputLatency()
-org.apache.bookkeeper.benchmark.TestBenchmark.testThroughputLatency()

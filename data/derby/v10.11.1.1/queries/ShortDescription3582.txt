@@ -1,1 +1,0 @@
-IndexOutOfBoundsError in ClockPolicy.moveHand

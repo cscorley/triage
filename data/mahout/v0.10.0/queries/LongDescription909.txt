@@ -1,1 +1,0 @@
-For shell scripts like asf-email-examples, make it so that one can pass in the answers on the command line.  This will facilitate automatically testing these.

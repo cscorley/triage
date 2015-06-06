@@ -1,1 +1,0 @@
-Closing a logical connection must close all associated logical statements

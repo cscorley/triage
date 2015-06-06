@@ -1,3 +1,0 @@
-org.apache.bookkeeper.meta.ZkLedgerUnderreplicationManager
-org.apache.bookkeeper.replication.TestLedgerUnderreplicationManager
-org.apache.bookkeeper.replication.TestReplicationWorker

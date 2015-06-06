@@ -1,1 +1,0 @@
-constrain field faceting to a prefix

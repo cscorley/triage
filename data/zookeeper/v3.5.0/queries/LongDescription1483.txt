@@ -1,8 +1,0 @@
-The leader election recipe documentation suggest that to avoid the herd effect a client process volunteering for leadership via child znode [i] under the leader election path [/leader] must only watch the the SMALLEST znode [j] from a different client process such that [j < i]. 
-
-This will NOT avoid the herd effect as many clients will end up watching the same znode[j] where j is the next-in-sequence number greater than the number of the current leader.
-
-Specifically in Step 3 of the Election procedure here http://zookeeper.apache.org/doc/trunk/recipes.html#sc_leaderElection
-
-This "where j is the SMALLEST sequence number" should be changed to this
-"where j is the LARGEST sequence number"

@@ -1,1 +1,0 @@
-Ability to tell if a ledger is closed or not

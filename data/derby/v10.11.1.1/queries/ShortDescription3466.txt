@@ -1,1 +1,0 @@
-Investigate ability to run multiple Derby systems in same JVM with different sets of MBeans.

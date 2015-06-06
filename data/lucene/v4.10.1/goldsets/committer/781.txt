@@ -1,2 +1,0 @@
-Daniel Naber <dnaber@apache.org>
-Michael Busch <buschmi@apache.org>

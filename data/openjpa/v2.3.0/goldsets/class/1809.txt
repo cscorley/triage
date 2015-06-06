@@ -1,4 +1,0 @@
-org.apache.openjpa.jdbc.kernel.JDBCStoreManager
-org.apache.openjpa.persistence.lockmgr.TestPessimisticLocks
-org.apache.openjpa.persistence.lockmgr.TestPessimisticLocks.RefreshWithLock
-org.apache.openjpa.persistence.lockmgr.VersionEntity

@@ -1,3 +1,0 @@
-org.apache.pig.newplan.logical.expression.BinCondExpression.getFieldSchema()
-org.apache.pig.test.TestEvalPipeline2.testBinCondSchema()
-org.apache.pig.test.TestEvalPipeline2.testDuplicateReferenceInnerPlan()

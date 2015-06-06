@@ -1,1 +1,0 @@
-Make it possible for table functions to return BOOLEAN columns

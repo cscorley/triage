@@ -1,1 +1,0 @@
-BTreeController.comparePreviousRecord() may fail to release latch on left-most leaf

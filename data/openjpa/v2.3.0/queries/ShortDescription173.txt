@@ -1,1 +1,0 @@
-JOIN in subselect generates bad SQL

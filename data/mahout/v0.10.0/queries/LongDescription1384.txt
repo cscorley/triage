@@ -1,1 +1,0 @@
-Executing the MR version of Naive Bayes/CNB of classify_20newgroups.sh fails.  This is because the example files are not copied to HDFS for the MR version (like what's presently being done in cluster-reuters.sh).

@@ -1,6 +1,0 @@
-Now that the Derby source code has been modernized on trunk, there are less red squiggles seen in the NetBeans project view: the old mix of Java source level versions in different parts of Derby made the IDE confused. 
-
-There are still a few remaining red warning flags to be seen: one is in classes that reference the XML api. 
-Adding "$
-{project.dir}
-/tools/java/xml-apis.jar" to the project file's source classpath will get rid of those warnings.

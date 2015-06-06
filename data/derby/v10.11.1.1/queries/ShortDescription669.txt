@@ -1,1 +1,0 @@
-testing/README.htm should make it clear that the DB2 driver and associated tests are optional

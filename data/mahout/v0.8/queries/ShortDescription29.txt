@@ -1,1 +1,0 @@
-Gibb's sampling implementation

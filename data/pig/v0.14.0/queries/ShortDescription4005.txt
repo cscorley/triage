@@ -1,1 +1,0 @@
-depend on hbase-hadoop2-compat rather than hbase-hadoop1-compat when hbaseversion is 95

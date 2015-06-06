@@ -1,1 +1,0 @@
-An upcoming release of jdk1.6 will move isPoolable() and setPoolable() from PreparedStatement to Statement. We should conform.

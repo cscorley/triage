@@ -1,3 +1,0 @@
-org.apache.lucene.index.ParallelReader
-org.apache.lucene.index.ParallelReader.ParallelTermEnum
-org.apache.lucene.index.TestParallelTermEnum

@@ -1,1 +1,0 @@
-zkpython fails tests under python 2.4

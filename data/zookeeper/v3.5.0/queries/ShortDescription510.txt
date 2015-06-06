@@ -1,1 +1,0 @@
-zkpython lumps all exceptions as IOError, needs specialized exceptions for KeeperException types

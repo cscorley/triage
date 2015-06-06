@@ -1,1 +1,0 @@
-Include commons-dbcp in our binary distributions as the preferred connection pooling implementation.

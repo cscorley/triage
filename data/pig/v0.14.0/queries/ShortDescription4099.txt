@@ -1,1 +1,0 @@
-"ant copypom" failed with "could not find file $PIG_HOME/ivy/pig.pom to copy"

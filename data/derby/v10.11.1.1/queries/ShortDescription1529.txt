@@ -1,1 +1,0 @@
-The Eclipse plug-in distributions (UI and Core zip files) do not contain the Apache license, copyright or notice files

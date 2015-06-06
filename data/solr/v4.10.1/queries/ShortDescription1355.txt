@@ -1,1 +1,0 @@
-add an enable value in master/slave configuration

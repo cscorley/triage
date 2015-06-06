@@ -1,1 +1,0 @@
-org.apache.openjpa.persistence.EntityManagerImpl.setProperty(String,Object)

@@ -1,1 +1,0 @@
-PerChannelBookieClient doesn't use ClientConfiguration

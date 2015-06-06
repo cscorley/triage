@@ -1,1 +1,0 @@
-Obscure error messages when using SSL in various combinations

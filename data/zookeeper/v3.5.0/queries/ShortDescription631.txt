@@ -1,1 +1,0 @@
-zkpython's C code could do with a style clean-up

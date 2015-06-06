@@ -1,7 +1,0 @@
-Catchup patch for some annoying issues I've notices with patch test scripts.
-
-
-	SCM cleanup happens after dir creation (effectively undoing it)
-	patch link is displayed wrong
-	posts empty message to jira if patch is not in patch available state
-

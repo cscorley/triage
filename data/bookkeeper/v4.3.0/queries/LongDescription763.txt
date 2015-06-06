@@ -1,3 +1,0 @@
-Search for [ERROR] in https://builds.apache.org/job/bookkeeper-trunk-precommit-build/641/consoleText
-
-The problem is that maven isn't able to resolve the sibling modules if they are not installed in a repo it has access to.

@@ -1,1 +1,0 @@
-failure in jdbcapi.StatementJdbc20Test:testCompletionClosure_jdbc4_1 with j9 (j2ME/CDC) 

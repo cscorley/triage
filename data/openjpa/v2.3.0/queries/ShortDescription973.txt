@@ -1,1 +1,0 @@
-Allow DB2 JCC driver to work with Informix database

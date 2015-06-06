@@ -1,2 +1,0 @@
-org.apache.pig.scripting.jython.JythonFunction.exec(Tuple)
-org.apache.pig.test.TestScriptingLanguagePython.varargTest()

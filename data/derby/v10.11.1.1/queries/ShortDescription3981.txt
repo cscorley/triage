@@ -1,1 +1,0 @@
-Improve distribution of hash codes in SQLBinary and SQLChar

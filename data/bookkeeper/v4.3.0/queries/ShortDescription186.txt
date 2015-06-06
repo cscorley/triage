@@ -1,1 +1,0 @@
-Bookkeeper throttling - permits is not released when read has failed from all replicas

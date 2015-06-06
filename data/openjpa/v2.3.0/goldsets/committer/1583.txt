@@ -1,3 +1,0 @@
-Albert Lee <allee8285@apache.org>
-Jeremy Bauer <jrbauer@apache.org>
-Pinaki Poddar <ppoddar@apache.org>

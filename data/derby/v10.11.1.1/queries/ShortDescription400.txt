@@ -1,1 +1,0 @@
-Network client message strings not internationalized

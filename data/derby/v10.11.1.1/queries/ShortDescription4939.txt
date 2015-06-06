@@ -1,1 +1,0 @@
-Enable istat daemon and tests

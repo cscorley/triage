@@ -1,3 +1,0 @@
-org.apache.solr.core.CoreContainer
-org.apache.solr.core.CoreContainer.Initializer
-org.apache.solr.core.CoreDescriptor

@@ -1,1 +1,0 @@
-Email parser gets into trouble on malformed html in enron corpus

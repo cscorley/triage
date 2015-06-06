@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.ZKDatabase.clear()
-org.apache.zookeeper.server.ZKDatabase.getCommittedLog()
-org.apache.zookeeper.server.ZKDatabase.getminCommittedLog()

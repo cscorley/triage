@@ -1,1 +1,0 @@
-Derby does not report warnings raised by table functions

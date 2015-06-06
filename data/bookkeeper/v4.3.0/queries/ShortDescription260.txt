@@ -1,1 +1,0 @@
-Define constant for -1 (invalid entry id)

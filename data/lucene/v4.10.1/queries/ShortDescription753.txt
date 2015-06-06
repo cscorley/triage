@@ -1,1 +1,0 @@
-Use NIO positional read to avoid synchronization in FSIndexInput

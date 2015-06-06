@@ -1,8 +1,0 @@
-Please update the master files to resolve the ibm15 failures: The follwing failures need the master update
-
-derbyall/derbynetclientmats/derbynetmats.fail:derbynet/checkSecMgr.java
-derbyall/derbynetmats/derbynetmats.fail:derbynet/checkSecMgr.java
-derbyall/derbynetmats/derbynetmats.fail:jdbcapi/LOBTest.java
-derbyall/derbynetmats/derbynetmats.fail:jdbcapi/parameterMapping.java
-derbyall/derbyall.fail:lang/dcl.sql
-derbyall/derbyall.fail:tools/ijConnName.sql

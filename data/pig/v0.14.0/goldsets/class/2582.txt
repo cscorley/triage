@@ -1,3 +1,0 @@
-org.apache.pig.ResourceStatistics
-org.apache.pig.ResourceStatistics.ResourceFieldStatistics
-org.apache.pig.test.PigStorageWithStatistics

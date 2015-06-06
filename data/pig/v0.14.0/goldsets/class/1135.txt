@@ -1,6 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.partitioners.SkewedPartitioner
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapReduce
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapReduce.MapWithPartitionIndex
-org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POPartitionRearrange
-org.apache.pig.impl.io.NullablePartitionWritable
-org.apache.pig.test.TestSkewedJoin

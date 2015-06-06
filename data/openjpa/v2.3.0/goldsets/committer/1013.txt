@@ -1,2 +1,0 @@
-Fay Wang <faywang@apache.org>
-Pinaki Poddar <ppoddar@apache.org>

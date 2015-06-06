@@ -1,7 +1,0 @@
-Giri, can you take a look at this:
-
-1) looks like autoreconf is always run, which means that a re-configure/re-make is run each time the tests are run using ant
-
-2) tabs were introduced to the build when cppunit changes were made, please only use spaces (would be great if you could fix this too – hard to read in my editor)
-
-Thanks!

@@ -1,1 +1,0 @@
-Permission/privlege names in exceptions should be in upper case as keywords, not lower case.

@@ -1,1 +1,0 @@
-undesirable dataDir default in example config

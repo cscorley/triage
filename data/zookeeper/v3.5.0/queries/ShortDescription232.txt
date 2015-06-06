@@ -1,1 +1,0 @@
-testablezookeeper file is missing apache licence headers.

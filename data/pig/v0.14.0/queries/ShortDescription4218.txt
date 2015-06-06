@@ -1,1 +1,0 @@
-Pig OrcStorage fail to load a map with null key

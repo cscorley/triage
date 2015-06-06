@@ -1,1 +1,0 @@
-Findbugs warning in QuorumPeer.ResponderThread.run()

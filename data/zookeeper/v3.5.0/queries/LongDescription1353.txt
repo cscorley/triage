@@ -1,9 +1,0 @@
-When the c client test suite, zktest-mt, is run, it fails with this:
-
-tests/TestZookeeperInit.cc:233: Assertion: equality assertion failed [Expected: 2, Actual  : 22]
-
-This was also reported in 3.3.1 here:
-
-http://www.mail-archive.com/zookeeper-dev@hadoop.apache.org/msg08914.html
-
-The C client tests are making some assumptions that are not valid. getaddrinfo may have, at one time, returned ENOENT instead of EINVAL for the host given in the test. The assertion should simply be that EINVAL | ENOENT are given, so that builds on platforms which return ENOENT for this are not broken.

@@ -1,2 +1,0 @@
-org.apache.solr.common.params.ModifiableSolrParams
-org.apache.solr.common.params.ModifiableSolrParamsTest

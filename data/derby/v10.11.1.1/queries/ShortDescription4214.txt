@@ -1,1 +1,0 @@
-Inconsistent metadata for CLOBGETSUBSTRING, depending on your upgrade trajectory

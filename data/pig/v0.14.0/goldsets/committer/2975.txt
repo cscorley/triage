@@ -1,2 +1,0 @@
-Gianmarco De Francisci Morales <gdfm@apache.org>
-Jonathan Coveney <jcoveney@apache.org>

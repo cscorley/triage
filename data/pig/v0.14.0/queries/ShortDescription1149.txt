@@ -1,1 +1,0 @@
-Allow instantiation of SampleLoaders with parametrized LoadFuncs

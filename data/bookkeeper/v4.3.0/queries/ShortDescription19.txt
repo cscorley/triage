@@ -1,1 +1,0 @@
-BookKeeper doesn't support more than 2Gig of memory

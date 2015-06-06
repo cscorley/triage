@@ -1,6 +1,0 @@
-
-"BookKeeper project contains:" section missing the following projects info.
-
-	bookkeeper-stats (Stats API for bookkeeper)
-	hedwig-client-jms (Hedwig client jms)
-

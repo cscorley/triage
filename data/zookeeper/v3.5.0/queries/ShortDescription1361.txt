@@ -1,1 +1,0 @@
-Leader.lead iterates over 'learners' set without proper synchronisation

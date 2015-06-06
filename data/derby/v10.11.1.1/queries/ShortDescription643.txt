@@ -1,1 +1,0 @@
-Eclipse Derby doc plug-in: Resources page points to the incubator site instead of db.apache.org

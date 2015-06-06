@@ -1,5 +1,0 @@
-org.apache.openjpa.enhance.PCEnhancer.addSetMethod(int,FieldMetaData)
-org.apache.openjpa.persistence.inheritance.serializable.Person.getId()
-org.apache.openjpa.persistence.inheritance.serializable.Person.getVersion()
-org.apache.openjpa.persistence.inheritance.serializable.Person.setLastName(String)
-org.apache.openjpa.persistence.inheritance.serializable.Person.setVersion(int)

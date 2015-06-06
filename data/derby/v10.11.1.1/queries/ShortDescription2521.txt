@@ -1,1 +1,0 @@
-Building derby outputs (from ant) various information messages that are marked as warning severity.

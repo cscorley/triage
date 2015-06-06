@@ -1,3 +1,0 @@
-When making the source distribution files using `ant dist-src`, the apache-solr-dataimporthandler-src-$
-{version}
-.jar which is created by Ant contains no *.java files.

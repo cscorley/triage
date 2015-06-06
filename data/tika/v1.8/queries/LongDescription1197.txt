@@ -1,8 +1,0 @@
-Server modules depends on CXF 2.6.1 which is a very old version. Many fixes, improvements and new features have been introduced into CXF 2.7.x and 3.0.0-SNAPSHOT.
-
-Proposal: update the server to CXF 2.7.7 or possibly CXF 2.7.8 due shortly.
-CXF 2.7.x implements JAX-RS 2.0 m10 and supports 1.1 applications.
-
-We can move to CXF 3.0.0 (RC is due very shortly) which implements JAX-RS 2.0 completely.
-
-I can look at creating a patch after CXF 2.7.8 is released 

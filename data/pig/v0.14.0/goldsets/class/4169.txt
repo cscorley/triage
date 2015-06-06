@@ -1,3 +1,0 @@
-org.apache.pig.newplan.logical.rules.ConstantCalculator
-org.apache.pig.newplan.logical.rules.ConstantCalculator.ConstantCalculatorTransformer
-org.apache.pig.newplan.logical.rules.ConstantCalculator.ConstantCalculatorTransformer.ConstantCalculatorExpressionVisitor

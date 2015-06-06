@@ -1,1 +1,0 @@
-ReconfigTest littering the source root with test files

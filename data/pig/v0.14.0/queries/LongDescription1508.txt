@@ -1,3 +1,0 @@
-FOR-984 covers the very inconvenient fact that Forrest 0.8 does not work with Java 1.6
-The same ticket also suggests a workaround: disabling sitemap and stylesheet validation
-by setting the forrest.validate.sitemap and forrest.validate.stylesheets properties to false.

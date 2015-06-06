@@ -1,1 +1,0 @@
-Windows: fetch_and_add not 64bit-compatible, may not be correct

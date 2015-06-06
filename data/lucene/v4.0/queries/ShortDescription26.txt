@@ -1,1 +1,0 @@
-Wildcard query only accepts 1 or more characters for prefixes (not 0 or more)

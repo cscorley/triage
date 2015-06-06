@@ -1,2 +1,0 @@
-Michael Busch <buschmi@apache.org>
-Yonik Seeley <yonik@apache.org>

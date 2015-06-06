@@ -1,2 +1,0 @@
-Army <abrown@apache.org>
-Dag H. Wanvik <dag@apache.org>

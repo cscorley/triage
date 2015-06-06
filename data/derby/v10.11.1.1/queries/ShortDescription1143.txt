@@ -1,1 +1,0 @@
-derbynet/prepStmt.java fails with JCC2.6

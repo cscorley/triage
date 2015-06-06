@@ -1,1 +1,0 @@
-super digest is not actually acting as a full superuser

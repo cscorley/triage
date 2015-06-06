@@ -1,1 +1,0 @@
-Recipes tests are slightly outdated: they do not compile against JUnit 4.8

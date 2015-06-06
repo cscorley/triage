@@ -1,1 +1,0 @@
-TestRegisteredJarVisibility.testRegisteredJarVisibility fails with hadoop-2.0.x

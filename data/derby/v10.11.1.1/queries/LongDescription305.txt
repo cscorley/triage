@@ -1,5 +1,0 @@
-Jeff has submitted a patch that documents the SQL States and associated error messages, but in the process modified the English text.  Now the documentation and messages are out of synch.  Rather than adjust the docs to have the old "bad" English, this subtask will adjust the message text to match the "good" English in the documentation.
-
-If I find any more adjustments are needed, I will note them, and the documentation may need to go through another revision to make sure they match.
-
-One thought for a future feature: create a script that generates the documentation directly from the message files, or that generates the documentation and messages from an independent (XML) source file, so this is not an ongoing exercise...

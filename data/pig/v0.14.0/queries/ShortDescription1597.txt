@@ -1,1 +1,0 @@
-Development snapshot jar no longer picked up by bin/pig

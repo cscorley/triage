@@ -1,1 +1,0 @@
-Add org.apache.zookeeper.common to exported packages in OSGi MANIFEST headers

@@ -1,3 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigTextOutputFormat
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigTextOutputFormat.PigLineRecordWriter
-org.apache.pig.builtin.PigStorage

@@ -1,1 +1,0 @@
-Fix write limit bug in BasicContentHandlerFactory for BodyContentHandler

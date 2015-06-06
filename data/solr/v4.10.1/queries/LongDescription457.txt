@@ -1,2 +1,0 @@
-Provide a multi threaded implementation of CommonsHttpSolrServer
-For usage with distributed searching in solr-303

@@ -1,2 +1,0 @@
-org.apache.derby.impl.sql.compile.ColumnDefinitionNode.init(Object,Object,Object,Object)
-org.apache.derby.impl.sql.compile.ModifyColumnNode.bindAndValidateDefault(DataDictionary,TableDescriptor)

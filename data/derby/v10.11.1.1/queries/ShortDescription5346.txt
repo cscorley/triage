@@ -1,1 +1,0 @@
-ij3Test fails on phoneME

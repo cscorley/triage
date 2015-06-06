@@ -1,1 +1,0 @@
-Allow to change java target version during the build

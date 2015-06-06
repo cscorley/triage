@@ -1,1 +1,0 @@
-CharsetDetector.setDeclaredEncoding has no effect

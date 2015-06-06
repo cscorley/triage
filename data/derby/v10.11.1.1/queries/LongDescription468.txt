@@ -1,8 +1,0 @@
-Derby currently treats COUNT as a reserved word. This prevents having COUNT as a table name or a column name as shown below. It would be good to move COUNT from reserved word to a non-reserved word list. Having COUNT as a reserved word also causes problems while porting applications to Derby.
-
-ij> create table count(i int);
-ERROR 42X01: Syntax error: Encountered "count" at line 1, column 14.
-ij> create table ts(count int);
-ERROR 42X01: Syntax error: Encountered "count" at line 1, column 17.
-
-Note that SQL standard says COUNT is a reserved word, but Derby treats several of these reserved words as non-reserved words already. (CLOB for example)

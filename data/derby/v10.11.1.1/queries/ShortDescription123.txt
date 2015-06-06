@@ -1,1 +1,0 @@
-Derby incorrectly rounds double values down during insert into NUMERIC

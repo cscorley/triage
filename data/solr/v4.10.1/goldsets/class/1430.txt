@@ -1,2 +1,0 @@
-org.apache.solr.util.AbstractSolrTestCase
-org.apache.solr.util.TestHarness

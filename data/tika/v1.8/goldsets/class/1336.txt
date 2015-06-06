@@ -1,3 +1,0 @@
-org.apache.tika.server.DetectorResource
-org.apache.tika.server.DetectorResourceTest
-org.apache.tika.server.TikaServerCli

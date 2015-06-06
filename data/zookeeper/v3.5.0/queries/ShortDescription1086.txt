@@ -1,1 +1,0 @@
-zookeeper test jar has non mavenised dependency.

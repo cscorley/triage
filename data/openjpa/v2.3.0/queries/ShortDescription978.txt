@@ -1,1 +1,0 @@
-Allow third argument of JPQL SUBSTRING function to be optional

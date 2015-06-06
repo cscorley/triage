@@ -1,1 +1,0 @@
-When parsing a schema, pig drops tuple inside of Bag if it contains only one field

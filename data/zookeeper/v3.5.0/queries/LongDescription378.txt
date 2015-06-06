@@ -1,3 +1,0 @@
-As per the conversation in ZOOKEEPER-364, I submitted a Software Grant Agreement to the ASF last week for Net::ZooKeeper by fax and surface mail; it might take a few more days for it to show up in the private grants.txt file, I believe.
-
-I also created a Net::ZooKeeper package, version 0.33, with licenses and a NOTICE file as required by the ASF for any ASF project.  It is attached to this issue and also available at http://people.apache.org/~chrisd/projects/net_zookeeper/.

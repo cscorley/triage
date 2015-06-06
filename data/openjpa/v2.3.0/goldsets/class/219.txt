@@ -1,3 +1,0 @@
-org.apache.openjpa.enhance.PCEnhancer
-org.apache.openjpa.enhance.Reflection
-org.apache.openjpa.meta.ClassMetaData

@@ -1,1 +1,0 @@
-Test  jdbcapi/SURTest_ij.sql fails on  IBM WCTME 5.7 Foundation (jdkJ2ME Foundation Specification v1.0)

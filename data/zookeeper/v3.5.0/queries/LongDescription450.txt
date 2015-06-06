@@ -1,1 +1,0 @@
-The session move patch broke ephemeral cleanup during session expiration. tragically, we didn't have test coverage to detect the bug.

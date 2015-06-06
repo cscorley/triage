@@ -1,1 +1,0 @@
-Allow JUnit test build with IBM Java

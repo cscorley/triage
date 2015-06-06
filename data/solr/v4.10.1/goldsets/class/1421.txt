@@ -1,2 +1,0 @@
-org.apache.solr.handler.dataimport.EntityProcessorWrapper
-org.apache.solr.handler.dataimport.FieldReaderDataSource

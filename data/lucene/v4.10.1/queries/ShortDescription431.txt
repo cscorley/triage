@@ -1,1 +1,0 @@
-RAMInputStream and RAMOutputStream without further buffering

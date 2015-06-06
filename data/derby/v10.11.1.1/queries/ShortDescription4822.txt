@@ -1,1 +1,0 @@
-DropSchemaConstantAction: could reuse the current connection provided by the available activation object

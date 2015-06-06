@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.auth.SASLAuthenticationProvider
-org.apache.zookeeper.test.SaslAuthDesignatedClientTest

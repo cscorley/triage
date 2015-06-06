@@ -1,1 +1,0 @@
-State field mapped to XML column has incorrect value when loaded from database

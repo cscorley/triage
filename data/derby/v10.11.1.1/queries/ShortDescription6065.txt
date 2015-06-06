@@ -1,1 +1,0 @@
-LockTable API link in the documentation is broken

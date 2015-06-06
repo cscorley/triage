@@ -1,1 +1,0 @@
-Possible thread hazard in IndexWriter.close(false)

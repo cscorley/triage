@@ -1,1 +1,0 @@
-This JIRA collects localizations of messages created/changed by 10.5.1.

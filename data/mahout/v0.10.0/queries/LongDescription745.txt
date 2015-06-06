@@ -1,1 +1,0 @@
-When one does not set the HADOOP_CONF_DIR, it is set to HADOOP_HOME/src/conf (usually the config files are in the $HADOOP_HOME/conf directory).  But even then the location is not passed correctly to the hadoop script as we either need to export this setting or give it explicitly to the hadoop command.  Here is a patch for the latter.

@@ -1,3 +1,0 @@
-org.apache.openjpa.kernel.DetachedStateManager
-org.apache.openjpa.kernel.VersionAttachStrategy
-org.apache.openjpa.persistence.embed.TestEmbeddable

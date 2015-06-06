@@ -1,2 +1,0 @@
-Albert Lee <allee8285@apache.org>
-Patrick Linskey <pcl@apache.org>

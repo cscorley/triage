@@ -1,1 +1,0 @@
-Failures in derbyall in trunk seen after revision 421960

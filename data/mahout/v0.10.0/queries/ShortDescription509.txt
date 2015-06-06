@@ -1,1 +1,0 @@
-Options in Bayes TrainClassifier and TestClassifier

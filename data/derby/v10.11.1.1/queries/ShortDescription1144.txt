@@ -1,1 +1,0 @@
-With client PooledConnection.getConnection() does not reset holdability and isolation state properly

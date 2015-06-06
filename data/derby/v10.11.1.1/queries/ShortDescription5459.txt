@@ -1,1 +1,0 @@
-Result set metadata are out of sync on client after underlying table is altered

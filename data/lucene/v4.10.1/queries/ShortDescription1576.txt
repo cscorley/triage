@@ -1,1 +1,0 @@
-Brazilian Analyzer doesn't remove stopwords when uppercase is given

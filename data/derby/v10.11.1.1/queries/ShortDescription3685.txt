@@ -1,1 +1,0 @@
-weme 6.1 Base connection pooling suitejunit.framework.AssertionFailedError: java.lang.NullPointerException

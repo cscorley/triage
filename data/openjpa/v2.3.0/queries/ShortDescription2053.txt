@@ -1,1 +1,0 @@
-OpenJPA service is not properly registered for tracking by OSGi persistence tracker

@@ -1,1 +1,0 @@
-FieldsReader does not regard offset and position flags

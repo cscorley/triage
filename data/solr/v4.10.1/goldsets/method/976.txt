@@ -1,1 +1,0 @@
-org.apache.solr.handler.XMLLoader.processDelete(UpdateRequestProcessor,XMLStreamReader)

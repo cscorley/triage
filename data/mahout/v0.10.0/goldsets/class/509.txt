@@ -1,2 +1,0 @@
-org.apache.mahout.classifier.bayes.TestClassifier
-org.apache.mahout.classifier.bayes.TrainClassifier

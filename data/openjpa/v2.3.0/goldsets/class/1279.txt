@@ -1,4 +1,0 @@
-org.apache.openjpa.datacache.DataCacheStoreManager
-org.apache.openjpa.persistence.cache.jpa.AbstractCacheModeTestCase
-org.apache.openjpa.persistence.cache.jpa.TestCacheModeEmpty
-org.apache.openjpa.persistence.cache.jpa.TestCacheModeUnspecified

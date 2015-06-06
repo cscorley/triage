@@ -1,1 +1,0 @@
-Convert compatibility/testScript.xml to JUnit

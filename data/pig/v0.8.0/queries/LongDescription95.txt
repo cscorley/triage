@@ -1,1 +1,0 @@
-As discussed remove all System.exit statments and throw an exception.

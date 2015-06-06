@@ -1,3 +1,0 @@
-org.apache.tika.detect.XmlRootExtractor
-org.apache.tika.mime.MimeDetectionTest
-org.apache.tika.mime.MimeTypes

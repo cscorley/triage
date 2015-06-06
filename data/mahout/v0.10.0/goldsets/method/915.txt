@@ -1,1 +1,0 @@
-org.apache.mahout.math.hadoop.decomposer.EigenVerificationJob.saveCleanEigens(Configuration,Collection<Map.Entry<MatrixSlice,EigenStatus>>,Map.Entry<MatrixSlice,EigenStatus>,MatrixSlice,EigenStatus)

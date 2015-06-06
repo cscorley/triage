@@ -1,3 +1,0 @@
-org.apache.openjpa.meta.FieldMetaData.copy(FieldMetaData)
-org.apache.openjpa.persistence.embed.TestEmbeddable.queryEntityA_Embed_Coll_Embed()
-org.apache.openjpa.persistence.embed.TestEmbeddable.queryEntityA_Embed_Coll_Integer()

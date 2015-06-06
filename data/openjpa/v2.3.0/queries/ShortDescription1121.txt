@@ -1,1 +1,0 @@
-Enums cause a ClassNotFoundException in the MappingTool

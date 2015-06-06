@@ -1,1 +1,0 @@
-derby.language.statementCacheSize is ignored when it is set as a database property.

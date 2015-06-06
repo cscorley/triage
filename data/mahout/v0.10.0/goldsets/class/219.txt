@@ -1,3 +1,0 @@
-org.apache.mahout.matrix.GenericSortingTest
-org.apache.mahout.matrix.GenericSortingTest.SomethingToSort
-org.apache.mahout.matrix.GenericSortingTest.SomethingToSortStable

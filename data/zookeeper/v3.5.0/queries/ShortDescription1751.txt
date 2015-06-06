@@ -1,1 +1,0 @@
-ClientCnxn#run could miss the second ping or connection get dropped before a ping

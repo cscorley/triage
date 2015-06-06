@@ -1,2 +1,0 @@
-Jacob Alexander Mannix <jmannix@apache.org>
-Ted Dunning <tdunning@apache.org>

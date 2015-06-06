@@ -1,1 +1,0 @@
-Piggybank's Over UDF returns an output schema with named fields

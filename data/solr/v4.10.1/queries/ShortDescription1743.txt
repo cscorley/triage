@@ -1,1 +1,0 @@
-error reporting is rendering "404 missing core name in path" for all type of errors

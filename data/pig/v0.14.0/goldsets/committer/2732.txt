@@ -1,2 +1,0 @@
-Jianyong Dai <daijy@apache.org>
-Jonathan Coveney <jcoveney@apache.org>

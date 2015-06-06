@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.quorum.FollowerZooKeeperServer
-org.apache.zookeeper.server.quorum.LearnerZooKeeperServer
-org.apache.zookeeper.server.quorum.ObserverZooKeeperServer

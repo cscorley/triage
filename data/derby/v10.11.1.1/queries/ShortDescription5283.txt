@@ -1,1 +1,0 @@
-Crash / process termination during SYSCS_DISABLE_LOG_ARCHIVE_MODE can leave service.properties broken

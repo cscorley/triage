@@ -1,2 +1,0 @@
-org.apache.hadoop.zebra.io.TestProjectionOnFullMap
-org.apache.hadoop.zebra.types.Partition

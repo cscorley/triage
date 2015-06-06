@@ -1,1 +1,0 @@
-Update documentation to indicate that MS SQL Server 2005 does not support native sequences. 

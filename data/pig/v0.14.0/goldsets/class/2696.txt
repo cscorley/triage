@@ -1,2 +1,0 @@
-org.apache.pig.test.TestJobStats
-org.apache.pig.tools.pigstats.JobStats

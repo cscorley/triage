@@ -1,1 +1,0 @@
-Please provide javadoc & source jars for lucene-core.  Also, please provide the rest of lucene (the jars inside of "contrib" in the download bundle) if possible.

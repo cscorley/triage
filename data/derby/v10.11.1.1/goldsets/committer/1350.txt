@@ -1,2 +1,0 @@
-David Van Couvering <davidvc@apache.org>
-Halley Pacheco de Oliveira <halleypo@apache.org>

@@ -1,1 +1,0 @@
-Stale data retrieved when using new collation=TERRITORY_BASED:PRIMARY feature

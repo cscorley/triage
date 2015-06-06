@@ -1,1 +1,0 @@
-org.apache.lucene.search.payloads.BoostingTermQuery.BoostingTermWeight.scorer(IndexReader)

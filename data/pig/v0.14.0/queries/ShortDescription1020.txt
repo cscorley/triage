@@ -1,1 +1,0 @@
-Include an ant target to build pig.jar without hadoop libraries

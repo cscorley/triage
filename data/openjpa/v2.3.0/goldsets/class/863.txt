@@ -1,2 +1,0 @@
-org.apache.openjpa.kernel.AttachManager
-org.apache.openjpa.persistence.detachment.TestCascadeMerge

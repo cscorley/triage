@@ -1,1 +1,0 @@
-The Sonar report at http://sonar.zitting.name/project/index/3338 highlights a number of code quality issues that we could fix with fairly little effort and risk.

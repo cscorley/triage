@@ -1,3 +1,0 @@
-org.apache.derby.impl.load.Export.doExport()
-org.apache.derby.impl.load.LoadError.errorWritingData()
-org.apache.derby.impl.load.LoadError.errorWritingData(IOException)

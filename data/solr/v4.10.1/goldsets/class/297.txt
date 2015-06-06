@@ -1,2 +1,0 @@
-org.apache.solr.common.params.RequiredSolrParams
-org.apache.solr.common.params.SolrParamTest

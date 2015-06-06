@@ -1,3 +1,0 @@
-org.apache.lucene.search.Sort.equals(Object)
-org.apache.lucene.search.Sort.hashCode()
-org.apache.lucene.search.Sort.toString()

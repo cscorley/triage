@@ -1,1 +1,0 @@
-org.apache.derby.impl.sql.execute.SortResultSet

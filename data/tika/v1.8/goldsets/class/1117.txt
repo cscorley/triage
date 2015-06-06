@@ -1,2 +1,0 @@
-org.apache.tika.parser.iwork.IWorkPackageParser
-org.apache.tika.parser.iwork.IWorkParserTest

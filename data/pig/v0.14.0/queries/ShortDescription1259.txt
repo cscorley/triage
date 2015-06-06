@@ -1,1 +1,0 @@
-ResourceFieldSchema.setSchema should not allow a bag field without a Tuple as its only sub field  (the tuple itself can have a schema with > 1 subfields)

@@ -1,4 +1,0 @@
-org.apache.derbyPreBuild.PropertySetter
-org.apache.derbyPreBuild.PropertySetter.JDKInfo
-org.apache.derbyPreBuild.PropertySetter.JDKRootFileFilter
-org.apache.derbyPreBuild.PropertySetter.JDKVersion

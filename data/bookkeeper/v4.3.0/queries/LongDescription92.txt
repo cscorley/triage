@@ -1,1 +1,0 @@
-should context in ReadLastConfirmedOp not the context passed from bookieClient.readEntry.

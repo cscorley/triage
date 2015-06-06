@@ -1,2 +1,0 @@
-org.apache.openjpa.enhance.PCEnhancerAgent.registerClassLoadEnhancer.getClassLoader(Class,ClassLoader)
-org.apache.openjpa.enhance.PCEnhancerAgent.registerClassLoadEnhancer(Instrumentation,Options)

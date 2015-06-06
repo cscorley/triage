@@ -1,2 +1,0 @@
-org.apache.mahout.math.AIOOBInSortingTest
-org.apache.mahout.math.Sorting

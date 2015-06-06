@@ -1,1 +1,0 @@
-Legacy Numeric Field types need to be more consistent in their input/output error checking & documentation

@@ -1,2 +1,0 @@
-org.apache.lucene.benchmark.byTask.feeds.SimpleDocMaker
-org.apache.lucene.search.function.FunctionTestSetup

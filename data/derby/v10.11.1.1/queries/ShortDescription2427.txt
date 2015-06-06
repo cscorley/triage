@@ -1,1 +1,0 @@
-jdbcapi/BlobStoredProcedureTest and jdbcapi/ClobStoredProcedureTest fail with weme6.1

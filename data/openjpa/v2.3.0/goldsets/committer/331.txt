@@ -1,2 +1,0 @@
-Craig Russell <clr@apache.org>
-Patrick Linskey <pcl@apache.org>

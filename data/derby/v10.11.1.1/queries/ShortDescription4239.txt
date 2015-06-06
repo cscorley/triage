@@ -1,1 +1,0 @@
-Possible corruption if SYSCS_UTIL.SYSCS_INPLACE_COMPRESS_TABLE is called during checkpoint 

@@ -1,4 +1,0 @@
-The maven artifacts are currently (3.3.0) put into the toplevel of the release. This causes confusion
-amonst new users (ie "which jar do I use?"). Also the naming of the bin jar is wrong for maven (to put
-onto the maven repo it must be named without the -bin) which adds extra burden for the release
-manager. Putting into a subdir fixes this and makes it explicit what's being deployed to maven repo.

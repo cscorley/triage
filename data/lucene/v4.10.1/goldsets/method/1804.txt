@@ -1,3 +1,0 @@
-org.apache.lucene.analysis.Tokenizer.close()
-org.apache.lucene.analysis.Tokenizer.Tokenizer(AttributeFactory,CharStream)
-org.apache.lucene.analysis.Tokenizer.Tokenizer(AttributeSource)

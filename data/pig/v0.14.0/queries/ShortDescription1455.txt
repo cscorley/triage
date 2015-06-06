@@ -1,1 +1,0 @@
-[zebra] "test-unit"  is needed as an ant target to unit test Zebra

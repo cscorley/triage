@@ -1,1 +1,0 @@
-Confluence gives us more functionality and more permission control features. We plan to migrate our wiki to confluence. I migrated part of our wiki to https://cwiki.apache.org/confluence/display/PIG. I also put a link to the old wiki on that site. Attached patch change links on Pig main site.

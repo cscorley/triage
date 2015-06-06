@@ -1,1 +1,0 @@
-Stop dropping build artifacts in the subversion-controlled source tree

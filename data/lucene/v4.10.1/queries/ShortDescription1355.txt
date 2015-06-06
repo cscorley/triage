@@ -1,1 +1,0 @@
-Using the WeightedTerms option in the Highlighter can cause fragments to be supressed for indexes with deletes

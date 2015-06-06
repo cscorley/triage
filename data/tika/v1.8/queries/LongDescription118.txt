@@ -1,1 +1,0 @@
-See http://markmail.org/message/jduwmahz7nfcrzw6 , we need to take care of some US export regulations paperworks before shipping the binary package created in TIKA-115.

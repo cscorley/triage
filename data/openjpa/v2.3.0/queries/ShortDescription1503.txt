@@ -1,1 +1,0 @@
-Metamodel class loading fails with security manager

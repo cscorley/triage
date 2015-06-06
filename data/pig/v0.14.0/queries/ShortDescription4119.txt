@@ -1,1 +1,0 @@
-Add message at end of each testcase with timestamp in Pig system tests

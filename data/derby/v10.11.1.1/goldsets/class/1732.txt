@@ -1,2 +1,0 @@
-org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext
-org.apache.derby.impl.sql.conn.GenericStatementContext

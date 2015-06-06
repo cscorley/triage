@@ -1,1 +1,0 @@
-Include Bean Validation API and Implementation in openjpa-all and binary distribution

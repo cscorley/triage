@@ -1,1 +1,0 @@
-After ZOOKEEPER-1194 readyToStart is no longer used.

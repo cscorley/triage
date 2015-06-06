@@ -1,3 +1,0 @@
-Andrei, I just realized that src/contrib/monitoring files are missing apache license headers.  Please add them (in particular any script files like python, see similar files in svn for examples - in some cases like README it's not strictly necessary.) 
-
-You can run the RAT tool to verify (see build.xml or http://incubator.apache.org/rat/)

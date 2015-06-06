@@ -1,1 +1,0 @@
-Need Compatibility setting for new OPENJPA-1097 Proxies and DetachedStateField behavior

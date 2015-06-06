@@ -1,3 +1,0 @@
-org.apache.openjpa.kernel.BrokerImpl
-org.apache.openjpa.kernel.BrokerImpl.StateManagerId
-org.apache.openjpa.kernel.StateManagerImpl

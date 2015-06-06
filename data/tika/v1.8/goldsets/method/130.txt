@@ -1,5 +1,0 @@
-org.apache.tika.sax.xpath.SubtreeMatcher.descend(String,String)
-org.apache.tika.sax.xpath.SubtreeMatcher.matchesAttribute(String,String)
-org.apache.tika.sax.xpath.SubtreeMatcher.matchesElement()
-org.apache.tika.sax.xpath.SubtreeMatcher.matchesText()
-org.apache.tika.sax.xpath.SubtreeMatcher.SubtreeMatcher(Matcher)

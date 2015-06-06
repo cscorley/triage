@@ -1,1 +1,0 @@
-Server SQLException error codes are not returned to client

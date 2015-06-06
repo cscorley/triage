@@ -1,1 +1,0 @@
-Small refactoring to broaden the use of Google Guava

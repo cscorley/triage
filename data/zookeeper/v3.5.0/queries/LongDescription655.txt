@@ -1,1 +1,0 @@
-Some of the 'StringBuffer' references that do not escape the scope of the method can be better typed as StringBuilder  as concurrency is not needed in that case. 

@@ -1,1 +1,0 @@
-the cardinality of the rows was used for creating SParseVectors e.g. in cases where a vector had no non-zero elements

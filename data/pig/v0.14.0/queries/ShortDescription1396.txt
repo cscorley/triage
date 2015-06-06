@@ -1,1 +1,0 @@
-eclipse-files target in build.xml fails to generate necessary classes in src-gen

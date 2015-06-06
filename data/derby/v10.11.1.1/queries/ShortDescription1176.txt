@@ -1,1 +1,0 @@
-Stored prepared statements in the SYSIBM schema are not updated on upgrade

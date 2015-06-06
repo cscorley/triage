@@ -1,1 +1,0 @@
-ClassNotFoundException for custom DBDictionary used by EJB

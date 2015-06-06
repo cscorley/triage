@@ -1,1 +1,0 @@
-Make test jdbcapi/batchUpdate run in client/server framework

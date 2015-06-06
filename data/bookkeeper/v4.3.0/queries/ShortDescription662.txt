@@ -1,1 +1,0 @@
-Major GC should kick in immediately if remaining space reaches a warning threshold

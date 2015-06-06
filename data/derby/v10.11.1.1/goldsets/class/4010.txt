@@ -1,2 +1,0 @@
-org.apache.derby.iapi.error.PassThroughException
-org.apache.derby.iapi.services.context.ContextManager

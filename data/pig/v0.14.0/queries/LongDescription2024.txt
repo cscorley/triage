@@ -1,2 +1,0 @@
-The jars listed in .eclipse.templates/.classpath are outdated.
-Importing the project in eclipse after using ant eclipse-files generates build path errors.

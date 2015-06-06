@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.compile.DMLModStatementNode.acceptChildren(Visitor)
-org.apache.derby.impl.sql.compile.DMLModStatementNode.normalizeSynonymColumns(ResultColumnList,TableName)
-org.apache.derby.impl.sql.compile.InsertNode.getAffectedIndexes(TableDescriptor)

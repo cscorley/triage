@@ -1,3 +1,0 @@
-org.apache.derby.impl.store.raw.data.OverflowInputStream
-org.apache.derby.shared.common.reference.MessageId
-org.apache.derbyTesting.functionTests.tests.jdbcapi.BLOBTest

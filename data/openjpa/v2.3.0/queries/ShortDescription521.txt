@@ -1,1 +1,0 @@
-Collection ordering doesn''t work if the cache is enabled

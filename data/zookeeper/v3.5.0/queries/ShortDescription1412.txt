@@ -1,1 +1,0 @@
-java client watches inconsistently triggered on reconnect

@@ -1,1 +1,0 @@
-Provide a way for users to determine the value of a Derby property

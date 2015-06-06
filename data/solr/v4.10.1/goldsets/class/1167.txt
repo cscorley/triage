@@ -1,3 +1,0 @@
-org.apache.solr.core.Config
-org.apache.solr.core.TestXIncludeConfig
-org.apache.solr.handler.dataimport.DataImporter

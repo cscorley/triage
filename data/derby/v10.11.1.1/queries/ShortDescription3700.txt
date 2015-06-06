@@ -1,1 +1,0 @@
-Get rid of tools/java/empty.jar

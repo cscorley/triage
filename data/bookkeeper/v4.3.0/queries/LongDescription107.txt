@@ -1,1 +1,0 @@
-should use freeaddrinfo to free struct addrinfo, instead of using free directly.

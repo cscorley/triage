@@ -1,1 +1,0 @@
-Separation of Tika Core Properties From Metadata Processing

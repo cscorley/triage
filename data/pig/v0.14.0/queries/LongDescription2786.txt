@@ -1,8 +1,0 @@
-The current bin/pig script suffers from a couple of issues as far as integration with HBase is concerned:
-
-	it only detects ZK/HBase jars under a PIG_HOME/share/.. layout
-	it doesn't detect HBase dependencies
-
-
-
-The proposal here would be to ask HBase itself for its classpath

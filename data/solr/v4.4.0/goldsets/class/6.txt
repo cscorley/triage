@@ -1,2 +1,0 @@
-org.apache.solr.client.solrj.impl.CloudSolrServer
-org.apache.solr.client.solrj.impl.CloudSolrServerTest

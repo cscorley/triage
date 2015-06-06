@@ -1,1 +1,0 @@
-'SQLBinary.readFromStream' can enter endless loop

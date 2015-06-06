@@ -1,3 +1,0 @@
-org.apache.pig.ResourceSchema
-org.apache.pig.ResourceSchema.ResourceFieldSchema
-org.apache.pig.test.TestResourceSchema

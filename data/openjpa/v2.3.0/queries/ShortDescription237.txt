@@ -1,1 +1,0 @@
-Value.setAliases does not copy alias strings

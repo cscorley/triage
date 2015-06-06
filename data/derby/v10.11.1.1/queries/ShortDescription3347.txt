@@ -1,1 +1,0 @@
-ERROR XSDB3: Container information cannot change once written

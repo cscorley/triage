@@ -1,1 +1,0 @@
-Fix test failure for ant 1.8.x

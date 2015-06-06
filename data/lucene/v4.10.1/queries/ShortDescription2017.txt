@@ -1,1 +1,0 @@
-CloseableThreadLocal is now obsolete

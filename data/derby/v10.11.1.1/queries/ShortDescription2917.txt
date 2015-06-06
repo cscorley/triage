@@ -1,1 +1,0 @@
-Refactor DataTypeDescriptor and TypeDescriptor to result in cleaner code.

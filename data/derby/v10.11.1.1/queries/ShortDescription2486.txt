@@ -1,1 +1,0 @@
-Control a sort just through SortController and remove concept of a long sort identifier

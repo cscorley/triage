@@ -1,1 +1,0 @@
-Add tests to test error codes for disconnect exceptions and other severe errors for client and embedded drivers.

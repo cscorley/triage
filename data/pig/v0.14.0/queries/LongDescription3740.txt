@@ -1,1 +1,0 @@
-We should document PIG-3642 in the performance and efficiency section of Pig manual.

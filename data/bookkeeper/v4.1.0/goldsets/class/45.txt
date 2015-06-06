@@ -1,3 +1,0 @@
-org.apache.bookkeeper.bookie.Bookie
-org.apache.bookkeeper.bookie.BookieJournalTest
-org.apache.bookkeeper.proto.BookieServer

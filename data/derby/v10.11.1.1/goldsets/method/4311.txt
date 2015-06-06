@@ -1,3 +1,0 @@
-org.apache.derbyTesting.junit.BaseJDBCTestCase.assertErrorCode(int,SQLException)
-org.apache.derbyTesting.junit.BaseJDBCTestCase.assertErrorCode(String,int,SQLException)
-org.apache.derbyTesting.junit.BaseJDBCTestCase.assertSQLState(String,SQLException)

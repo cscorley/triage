@@ -1,3 +1,0 @@
-org.apache.pig.newplan.logical.rules.MergeForEach
-org.apache.pig.newplan.logical.rules.MergeForEach.MergeForEachTransformer
-org.apache.pig.piggybank.test.evaluation.string.TestLookupInFiles

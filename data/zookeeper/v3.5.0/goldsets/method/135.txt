@@ -1,3 +1,0 @@
-org.apache.zookeeper.util.FatJarMain.Cmd.Cmd(String,String,String)
-org.apache.zookeeper.util.FatJarMain.doHelp()
-org.apache.zookeeper.util.FatJarMain.main(String[])

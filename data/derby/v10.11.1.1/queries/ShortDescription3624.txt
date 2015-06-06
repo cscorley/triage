@@ -1,1 +1,0 @@
-testfailure in storetests/st_derby715 with ibm 1.5 on iseries machine; one deadlock message missing

@@ -1,1 +1,0 @@
- Set correct collation type and derivation for result from user defined functions' that return character string type.

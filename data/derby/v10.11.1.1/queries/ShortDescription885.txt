@@ -1,1 +1,0 @@
-Test harness aborts with exception when running nist test suite in J2ME

@@ -1,3 +1,0 @@
-org.apache.solr.servlet.SolrServlet.doGet(HttpServletRequest,HttpServletResponse)
-org.apache.solr.servlet.SolrServlet.doPost(HttpServletRequest,HttpServletResponse)
-org.apache.solr.servlet.SolrServlet.init()

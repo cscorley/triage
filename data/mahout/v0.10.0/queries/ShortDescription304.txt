@@ -1,1 +1,0 @@
-MeanShift doesn't read from VectorWritable

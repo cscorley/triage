@@ -1,3 +1,0 @@
-org.apache.mahout.clustering.iterator.TestClusterClassifier
-org.apache.mahout.common.distance.CosineDistanceMeasure
-org.apache.mahout.common.distance.CosineDistanceMeasureTest

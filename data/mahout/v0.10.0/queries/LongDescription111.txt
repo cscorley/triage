@@ -1,1 +1,0 @@
-The tests are really verbose to std out.  Have them direct their output to a file and only report pass/fail on std out.  This should be a simple setting on the test plugin.

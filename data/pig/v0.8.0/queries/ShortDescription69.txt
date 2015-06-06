@@ -1,1 +1,0 @@
-NullPointerException in setJobtrackerLocation() in PigContext.java:68

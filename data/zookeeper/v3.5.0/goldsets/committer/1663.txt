@@ -1,2 +1,0 @@
-Camille Fournier <camille@apache.org>
-Flavio Paiva Junqueira <fpj@apache.org>

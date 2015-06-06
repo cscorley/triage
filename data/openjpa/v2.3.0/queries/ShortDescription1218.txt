@@ -1,1 +1,0 @@
-Cache.evict(Clazz) should remove subclasses as well

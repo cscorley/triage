@@ -1,1 +1,0 @@
-Clean up classify-wiki.sh and add in a binary classification problem  

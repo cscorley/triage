@@ -1,1 +1,0 @@
-Make Forrest work with JDK6

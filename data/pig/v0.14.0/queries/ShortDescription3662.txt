@@ -1,1 +1,0 @@
-Static loadcaster in BinStorage can cause exception

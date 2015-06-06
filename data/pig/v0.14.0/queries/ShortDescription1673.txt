@@ -1,1 +1,0 @@
-query with consecutive union-onschema statement errors out

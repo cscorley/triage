@@ -1,1 +1,0 @@
-Probable solution is to remove the instructions about using jikes in the BUILDING.txt unless anyone objects.

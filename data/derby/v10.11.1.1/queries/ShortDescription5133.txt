@@ -1,1 +1,0 @@
-nightly test failure in derbyall/storeall/storemore/SpaceTable

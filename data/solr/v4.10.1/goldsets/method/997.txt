@@ -1,2 +1,0 @@
-org.apache.solr.handler.TestReplicationHandler.testIndexAndConfigAliasReplication()
-org.apache.solr.handler.TestReplicationHandler.testIndexAndConfigReplication()

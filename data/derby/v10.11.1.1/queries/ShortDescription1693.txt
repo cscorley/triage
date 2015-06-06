@@ -1,1 +1,0 @@
-Out of Memory Error with derby.language.logStatementText=true

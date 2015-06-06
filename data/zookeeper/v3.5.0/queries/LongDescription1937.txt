@@ -1,8 +1,0 @@
-ZOOKEEPER-1719 changed the interpreter to bash for zkCli.sh, zkServer.sh and zkEnv.sh, but did not change src/packages/deb/init.d/zookeeper 
-
-This causes the following failure using /bin/sh
-
-[...] root@hostname:~# service zookeeper stop
-/etc/init.d/zookeeper: 81: /usr/libexec/zkEnv.sh: Syntax error: "(" unexpected (expecting "fi")
-
-Simple fix, change the shebang to #!/bin/bash - tested and works fine.

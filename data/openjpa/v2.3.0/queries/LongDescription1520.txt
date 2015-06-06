@@ -1,7 +1,0 @@
-http://n2.nabble.com/DISCUSS-Drop-build-support-for-Java-5-td2539470.html#a2540533
-
-We've had the discussion about dropping Java 5 support (build and runtime) from trunk.  The above referenced string of notes indicates a favorable response.  Before we do an official 2.0.0 release, we should make this change.
-
-Besides the build aspects, I believe we still have some Java 5 runtime implications in our runtime as well – some reflection processing due to the jdbc4 support.  We should clean that up as well.
-
-I've talked to Donald about this and he's game to start this process, but please contribute ideas and testing as you see fit.  Thanks.

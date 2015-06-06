@@ -1,1 +1,0 @@
-EmbedBlob.setPosition is highly ineffective for streams

@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.SessionTrackerImpl
-org.apache.zookeeper.server.SessionTrackerTest
-org.apache.zookeeper.server.SessionTrackerTest.FirstProcessor

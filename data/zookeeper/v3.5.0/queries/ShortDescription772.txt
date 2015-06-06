@@ -1,1 +1,0 @@
-zkpython segfaults when watcher from async get children is invoked.

@@ -1,1 +1,0 @@
-This provides the PHP client for adding information to Solr.

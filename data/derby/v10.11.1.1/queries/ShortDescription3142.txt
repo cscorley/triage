@@ -1,1 +1,0 @@
-sysinfo ignores derby.ui.locale

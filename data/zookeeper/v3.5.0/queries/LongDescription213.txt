@@ -1,3 +1,0 @@
-see
-http://hadoop.apache.org/zookeeper/docs/current/zookeeperProgrammers.html#Zookeeper+C+client+API
-and compare with src/c/zookeeper.h

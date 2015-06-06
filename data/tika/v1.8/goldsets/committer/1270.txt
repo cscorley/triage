@@ -1,2 +1,0 @@
-Nick Burch <nick@apache.org =  nick = Nick Burch nick@apache.org@apache.org>
-Nick Burch <nick@apache.org>

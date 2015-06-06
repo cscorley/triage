@@ -1,1 +1,0 @@
-LuceneIterable doesn't preserve the vector as a namedvector after normalization

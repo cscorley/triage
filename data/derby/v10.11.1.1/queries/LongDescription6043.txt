@@ -1,3 +1,0 @@
-The ant target genrelnotes (from tools/release/build.xml) should use JQL querying mode by default, such that you don't have to specify jira.filter.id when invoking it.
-
-It will still be possible to specify jira.filter.id to instruct the tool to use an existing JIRA filter if that is required for some reason.

@@ -1,1 +1,0 @@
-Remove unused code that allow identifiers to be lower-cased.

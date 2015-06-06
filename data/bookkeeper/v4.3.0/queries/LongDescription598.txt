@@ -1,8 +1,0 @@
-0. cd hedwig-client/src/main/cpp
-1. autoreconf -fi
-2. ./configure
-3. make
-
-(3) fails with subscriberimpl.cpp:150:48: error: no match for 'operator==' in '(Hedwig::StatusCode)407u == (const std::type_info)(*(exception.std::exception::_vptr.exception + -8u))'
-
-The static const RESUBSCRIBE_EXCEPTION is conflicting with an enum from hedwig-client/src/main/cpp/inc/hedwig/protocol.h (line 153 RESUBSCRIBE_EXCEPTION = 407).

@@ -1,1 +1,0 @@
-The MS Office parsers currently extract and output document content as a single string. We should support structured text at least down to page and paragraph (not sure how accurate) level.

@@ -1,2 +1,0 @@
-PIG launcher script (bin/pig) joins all the user arguments in one string. This leads to confusion when the arguments contain spaces.
-i.e. 'bin/pig -p sub="i > 2"' is should not same as 'bin/pig -p "sub" "i" ">" "2"', but it is.

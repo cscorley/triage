@@ -1,3 +1,0 @@
-org.apache.lucene.index.IndexWriter
-org.apache.lucene.index.TestConcurrentMergeScheduler
-org.apache.lucene.store.MockRAMDirectory

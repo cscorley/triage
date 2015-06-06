@@ -1,1 +1,0 @@
-Logging configuration is difficult for running tests

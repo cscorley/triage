@@ -1,4 +1,0 @@
-org.apache.openjpa.conf.ProductDerivations
-org.apache.openjpa.enhance.PCEnhancer
-org.apache.openjpa.kernel.QueryLanguages
-org.apache.openjpa.meta.MetaDataRepository

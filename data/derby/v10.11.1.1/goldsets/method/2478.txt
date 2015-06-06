@@ -1,2 +1,0 @@
-org.apache.derbyTesting.junit.SQLUtilities.executeAndGetRuntimeStatistics(Connection,String)
-org.apache.derbyTesting.junit.SQLUtilities.getRuntimeStatisticsParser(Statement)

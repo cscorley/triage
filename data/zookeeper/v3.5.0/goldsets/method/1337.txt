@@ -1,2 +1,0 @@
-org.apache.zookeeper.test.MultiTransactionTest.testNoWatchesTriggeredForFailedMultiRequest()
-org.apache.zookeeper.test.MultiTransactionTest.testTransactionBuilder()

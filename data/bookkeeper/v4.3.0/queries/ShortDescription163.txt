@@ -1,1 +1,0 @@
-Prevent incorrect NoSuchLedgerException for readLastConfirmed.

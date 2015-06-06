@@ -1,3 +1,0 @@
-org.apache.zookeeper.VerGenTest
-org.apache.zookeeper.version.util.VerGen
-org.apache.zookeeper.version.util.VerGen.Version

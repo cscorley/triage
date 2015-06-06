@@ -1,2 +1,0 @@
-org.apache.pig.newplan.logical.expression.BinCondExpression
-org.apache.pig.test.TestEvalPipeline2

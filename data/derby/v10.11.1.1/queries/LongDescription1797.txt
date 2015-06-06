@@ -1,1 +1,0 @@
-Might also set a good example and remind people to use AUTOCOMMIT OFF when executing similar scripts.

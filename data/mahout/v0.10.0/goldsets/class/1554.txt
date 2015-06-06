@@ -1,3 +1,0 @@
-org.apache.mahout.classifier.ConfusionMatrix
-org.apache.mahout.classifier.ConfusionMatrixTest
-org.apache.mahout.classifier.ResultAnalyzer

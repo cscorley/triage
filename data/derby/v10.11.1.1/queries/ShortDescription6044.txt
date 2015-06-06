@@ -1,1 +1,0 @@
-Fix poor word breaking in table on download page(s)

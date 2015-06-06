@@ -1,1 +1,0 @@
-The implementation of FormatableBitSet could be streamlined. Dead code can be removed and the implementation of some methods can be simplified.

@@ -1,3 +1,0 @@
-org.apache.solr.BasicFunctionalityTest
-org.apache.solr.request.SimpleFacets
-org.apache.solr.request.SolrParams

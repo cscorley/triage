@@ -1,1 +1,0 @@
-Internationalize NetSqldta to OpenSocketAction in org.apache.derby.client.net

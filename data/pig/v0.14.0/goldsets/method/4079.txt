@@ -1,3 +1,0 @@
-org.apache.pig.parser.LogicalPlanBuilder.setParallel(LogicalRelationalOperator,Integer)
-org.apache.pig.test.TestLogicalPlanBuilder.testQuery18()
-org.apache.pig.test.TestMultiQuery.testMultiQueryJiraPig1169()

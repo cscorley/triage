@@ -1,2 +1,0 @@
-org.apache.derby.client.am.CallableLocatorProcedures
-org.apache.derbyTesting.functionTests.tests.jdbcapi.BlobClob4BlobTest

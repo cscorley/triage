@@ -1,1 +1,0 @@
-PigStats.get() and ScriptState.get() shouldn't return MR-specific objects 

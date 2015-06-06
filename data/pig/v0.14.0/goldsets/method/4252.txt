@@ -1,3 +1,0 @@
-org.apache.pig.impl.util.JarManager.addStream(JarOutputStream,String,InputStream,Map<String,String>,String,String)
-org.apache.pig.impl.util.JarManager.addStream(JarOutputStream,String,InputStream,Map<String,String>,String,String,long)
-org.apache.pig.impl.util.JarManager.createPigScriptUDFJar(OutputStream,PigContext,HashMap<String,String>,String,String)

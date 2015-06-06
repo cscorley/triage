@@ -1,3 +1,0 @@
-org.apache.zookeeper.inspector.gui.nodeviewer.NodeViewerData
-org.apache.zookeeper.inspector.manager.ZooInspectorManagerImpl
-org.apache.zookeeper.inspector.ZooInspector

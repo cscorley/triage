@@ -1,2 +1,0 @@
-org.apache.mahout.cf.taste.impl.model.jdbc.ConnectionPoolDataSource.getParentLogger()
-org.apache.mahout.cf.taste.impl.model.jdbc.ConnectionPoolDataSource.isWrapperFor(Class<?>)

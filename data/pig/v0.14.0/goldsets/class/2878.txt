@@ -1,2 +1,0 @@
-org.apache.pig.builtin.EqualsIgnoreCase
-org.apache.pig.test.TestStringUDFs

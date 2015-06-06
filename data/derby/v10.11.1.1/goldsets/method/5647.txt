@@ -1,2 +1,0 @@
-org.apache.derby.impl.jdbc.authentication.NativeAuthenticationServiceImpl.authenticateLocally(String,String,String)
-org.apache.derbyTesting.functionTests.tests.lang.NativeAuthenticationServiceTest.passwordExpiring(boolean,String,String)

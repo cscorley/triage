@@ -1,3 +1,0 @@
-org.apache.solr.handler.dataimport.DocBuilder.getVariableResolver(DataImporter)
-org.apache.solr.handler.dataimport.TestDocBuilder2.testContext()
-org.apache.solr.handler.dataimport.TestDocBuilder2.testRequestParamsAsVariable()

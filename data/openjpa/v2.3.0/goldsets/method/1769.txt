@@ -1,3 +1,0 @@
-org.apache.openjpa.kernel.BrokerImpl.getObjectId(Object)
-org.apache.openjpa.kernel.TestBroker.setUp()
-org.apache.openjpa.kernel.TestBroker.testGetObjectId()

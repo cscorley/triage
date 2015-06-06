@@ -1,2 +1,0 @@
-org.apache.derbyTesting.junit.DataSourceConnector.shutDatabase()
-org.apache.derbyTesting.junit.DataSourceConnector.shutEngine()

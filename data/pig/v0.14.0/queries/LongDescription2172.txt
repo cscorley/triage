@@ -1,1 +1,0 @@
-Some tests fail using ant 1.8.x. But in ant 1.7.x, these tests work.

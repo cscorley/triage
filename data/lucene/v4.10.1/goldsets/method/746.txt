@@ -1,1 +1,0 @@
-org.apache.lucene.queryParser.analyzing.AnalyzingQueryParser.getPrefixQuery(String,String)

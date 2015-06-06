@@ -1,1 +1,0 @@
-left nav of docs/index.html in dist artifacts links to hudson for javadocs

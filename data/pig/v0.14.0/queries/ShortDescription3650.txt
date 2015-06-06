@@ -1,1 +1,0 @@
-Fix for PIG-3100 breaks column pruning

@@ -1,1 +1,0 @@
-org.apache.solr.search.QueryParsing.toString(Query,IndexSchema,Appendable,int)

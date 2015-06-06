@@ -1,1 +1,0 @@
-getEpochToPropose should check if lastAcceptedEpoch is greater or equal than epoch

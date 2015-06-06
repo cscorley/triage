@@ -1,2 +1,0 @@
-org.apache.solr.handler.dataimport.EntityProcessorBase
-org.apache.solr.handler.dataimport.TestCachedSqlEntityProcessor

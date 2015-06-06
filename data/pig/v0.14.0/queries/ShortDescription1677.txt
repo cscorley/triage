@@ -1,1 +1,0 @@
-modify the repository path of pig artifacts to org/apache/pig in stead or org/apache/hadoop/pig

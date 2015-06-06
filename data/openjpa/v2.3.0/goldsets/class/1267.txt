@@ -1,2 +1,0 @@
-org.apache.openjpa.kernel.Filters
-org.apache.openjpa.persistence.criteria.TestDateStringConversion

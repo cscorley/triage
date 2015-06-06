@@ -1,1 +1,0 @@
-The POI scratchpad component contains a text extractor for Visio files. We should use that in the MS Office parser.

@@ -1,1 +1,0 @@
-Create "completion" message for the Enhancement processing

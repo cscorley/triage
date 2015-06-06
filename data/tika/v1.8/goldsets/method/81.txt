@@ -1,3 +1,0 @@
-org.apache.tika.mime.MimeUtils.getRepository()
-org.apache.tika.mime.MimeUtils.MimeUtils()
-org.apache.tika.mime.MimeUtils.MimeUtils(String)

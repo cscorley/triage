@@ -1,1 +1,0 @@
-Criteria query to generate 'optimize for 1 row' for DB2 if selection is an aggregate function

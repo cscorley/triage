@@ -1,1 +1,0 @@
-Cleanup some message text

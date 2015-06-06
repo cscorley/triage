@@ -1,1 +1,0 @@
-Create useful startup scripts for bookkeeper and hedwig

@@ -1,1 +1,0 @@
-ComparisonFailure in 'testSysinfo(org.apache.derbyTesting.functionTests.tests.derbynet.SysinfoTest)' on Derby 10.5 / Linux

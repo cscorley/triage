@@ -1,1 +1,0 @@
-ReverseMappingTool and SchemaTool failing for Sybase

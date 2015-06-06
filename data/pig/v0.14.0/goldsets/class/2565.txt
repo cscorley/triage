@@ -1,2 +1,0 @@
-org.apache.pig.parser.QueryParserDriver
-org.apache.pig.test.TestPigServer

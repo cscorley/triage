@@ -1,1 +1,0 @@
-Make EmbedBlob.length use skip instead of read

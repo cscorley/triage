@@ -1,2 +1,0 @@
-org.apache.lucene.search.similar.MoreLikeThis
-org.apache.lucene.search.similar.TestMoreLikeThis

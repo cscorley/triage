@@ -1,1 +1,0 @@
-XSDA3 error in concateTests in lang.LangHarnessJavaTest caused by bug in SYSCS_UTIL.SYSCS_INPLACE_COMPRESS_TABLE()

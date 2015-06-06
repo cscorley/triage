@@ -1,3 +1,0 @@
-org.apache.derby.iapi.util.DoubleProperties.addAllNames(Properties,HashSet)
-org.apache.derby.iapi.util.DoubleProperties.getProperty(String,String)
-org.apache.derby.iapi.util.DoubleProperties.propertyNames()

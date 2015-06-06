@@ -1,1 +1,0 @@
-SqlException while fetching message results in recursive calls between SqlException.getSQLException and Sqlca.getJDBCMessage

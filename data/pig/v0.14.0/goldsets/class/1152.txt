@@ -1,3 +1,0 @@
-org.apache.pig.parser.QueryParserDriver
-org.apache.pig.parser.TestLogicalPlanGenerator
-org.apache.pig.test.TestDataBagAccess

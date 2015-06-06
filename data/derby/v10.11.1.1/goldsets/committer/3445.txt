@@ -1,2 +1,0 @@
-Daniel John Debrunner <djd@apache.org>
-Dyre Tjeldvoll <dyre@apache.org>

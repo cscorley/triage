@@ -1,1 +1,0 @@
-Remove old constructors for SqlException and DisconnectException and clean up any remaining users of the old constructors

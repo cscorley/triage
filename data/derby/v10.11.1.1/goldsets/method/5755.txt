@@ -1,1 +1,0 @@
-org.apache.derby.impl.sql.catalog.DataDictionaryImpl.getRoutineList(String,String,char)

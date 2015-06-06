@@ -1,3 +1,0 @@
-org.apache.solr.common.util.FileUtils.resolvePath(File,String)
-org.apache.solr.common.util.FileUtilsTest.testResolve()
-org.apache.solr.core.CoreContainer.load(String,File)

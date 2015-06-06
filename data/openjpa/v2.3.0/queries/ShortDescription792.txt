@@ -1,1 +1,0 @@
-An entity persist may fail when @MappedSupercalss is specified. 

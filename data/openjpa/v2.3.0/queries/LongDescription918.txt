@@ -1,1 +1,0 @@
-Stored procedures with output parameters are not being handled properly.  Patch will be attached shortly with test cases.

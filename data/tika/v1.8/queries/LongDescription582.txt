@@ -1,1 +1,0 @@
-I am attaching Lithuanian language profile, which allows Tika to support Lithuanian language identification.

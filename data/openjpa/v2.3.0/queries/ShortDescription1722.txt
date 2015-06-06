@@ -1,1 +1,0 @@
-Problem serializing DistinctResultList when EntityManager is closed

@@ -1,3 +1,0 @@
-org.apache.lucene.search.spell.SpellChecker.setAccuracy(float)
-org.apache.lucene.search.spell.SpellChecker.setSpellIndex(Directory)
-org.apache.lucene.search.spell.SpellChecker.suggestSimilar(String,int)

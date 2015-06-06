@@ -1,1 +1,0 @@
-slices does can not work with sequences properly (no adding objects?)

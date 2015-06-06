@@ -1,3 +1,0 @@
-org.apache.pig.parser.TestLogicalPlanGenerator.test17()
-org.apache.pig.parser.TestLogicalPlanGenerator.test18()
-org.apache.pig.parser.TestLogicalPlanGenerator.testFilter()

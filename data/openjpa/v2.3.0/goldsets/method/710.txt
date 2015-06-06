@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.meta.strats.StoreCollectionFieldStrategy.getJoinForeignKey()
-org.apache.openjpa.jdbc.meta.strats.StoreCollectionFieldStrategy.requiresOrderBy()
-org.apache.openjpa.jdbc.meta.strats.StoreCollectionFieldStrategy.selectEager(Select,ClassMapping,OpenJPAStateManager,JDBCStore,JDBCFetchConfiguration,int,boolean,boolean)

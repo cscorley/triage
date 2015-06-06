@@ -1,1 +1,0 @@
-Unable to create dynamic fields with custom DataImportHandler transformer

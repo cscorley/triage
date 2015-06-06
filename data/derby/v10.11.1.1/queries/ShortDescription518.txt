@@ -1,1 +1,0 @@
-Data type mismatch error for boolean to DECIMAL conversion in J2ME

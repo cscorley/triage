@@ -1,1 +1,0 @@
-Give a more useful error message when join specification is missing

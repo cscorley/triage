@@ -1,3 +1,0 @@
-org.apache.openjpa.kernel.jpql.JPQLExpressionBuilder
-org.apache.openjpa.lib.util.OrderedMap
-org.apache.openjpa.persistence.jdbc.query.TestQueryParameterBinding

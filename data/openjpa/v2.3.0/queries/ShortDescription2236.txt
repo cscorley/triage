@@ -1,1 +1,0 @@
-Trace of connection info can cause class transform/enhancement to fail

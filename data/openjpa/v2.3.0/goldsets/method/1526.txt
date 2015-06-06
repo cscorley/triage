@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.jdbc.query.TestNativeQueryProcedures.testNoReturnMultiParamProcedure()
-org.apache.openjpa.persistence.jdbc.query.TestNativeQueryProcedures.testNoReturnNoParamProcedure()
-org.apache.openjpa.persistence.jdbc.query.TestNativeQueryProcedures.testOneReturnNoParamProcedure()

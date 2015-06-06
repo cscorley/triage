@@ -1,1 +1,0 @@
-OpenJPA does not work with native queries in a distributed (Slice) environment

@@ -1,1 +1,0 @@
-XPLAIN feature does not work and gives ERROR XCL16: ResultSet not open

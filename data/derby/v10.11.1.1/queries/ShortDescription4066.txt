@@ -1,1 +1,0 @@
-Allow functions/procedures to take Blob/Clob arguments

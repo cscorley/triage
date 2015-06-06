@@ -1,1 +1,0 @@
-Deprecate StandardBenchmarker and "old" benchmarker code in favor of the Task based approach

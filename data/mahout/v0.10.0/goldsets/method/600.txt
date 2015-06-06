@@ -1,3 +1,0 @@
-org.apache.mahout.math.Vector.normalize(double)
-org.apache.mahout.math.VectorTest.assertVectorEquals(Vector,Vector,double)
-org.apache.mahout.math.VectorTest.testLogNormalize()

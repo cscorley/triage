@@ -1,2 +1,0 @@
-org.apache.derby.client.am.DateTime.timestampToDateBytes(byte[],int,java.sql.Timestamp)
-org.apache.derby.client.am.DateTime.timestampToTimeBytes(byte[],int,java.sql.Timestamp)

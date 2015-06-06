@@ -1,1 +1,0 @@
-Improve diagnostic information for failed  derby JUnit tests

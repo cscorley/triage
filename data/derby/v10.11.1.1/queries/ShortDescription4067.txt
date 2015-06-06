@@ -1,1 +1,0 @@
-ClientConnectionPoolDataSource.getPooledConnection and ClientXADataSource.getXAConnection ignore connection attributes

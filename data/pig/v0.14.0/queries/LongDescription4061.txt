@@ -1,1 +1,0 @@
-PIG-3478 fixed Streaming UDF in MR2. We should get it working in Tez.

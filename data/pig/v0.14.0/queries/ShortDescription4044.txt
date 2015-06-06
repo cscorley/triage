@@ -1,1 +1,0 @@
-Pig should use avro-mapred-hadoop2.jar instead of avro-mapred.jar when compile with hadoop 2

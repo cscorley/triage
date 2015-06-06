@@ -1,3 +1,0 @@
-org.apache.mahout.math.hadoop.similarity.TestVectorDistanceSimilarityJob
-org.apache.mahout.math.hadoop.similarity.VectorDistanceMapper
-org.apache.mahout.math.hadoop.similarity.VectorDistanceSimilarityJob

@@ -1,1 +1,0 @@
-TOKENIZE throws exception on null data

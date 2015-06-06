@@ -1,1 +1,0 @@
-Compatibility tests fail to delete database directory

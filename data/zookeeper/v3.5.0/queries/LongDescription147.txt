@@ -1,3 +1,0 @@
-The docs had lots of comments to myself marked [tbd..]. I scrubbed these out. I still have a list I will work from, but the [tbd]s are probably sensible to anyone else. For a few cases where it's obvious what a tbd is asking, I left in in, just in case someone else wants to take a crack at fixing them, knows the answer, etc. 
-
-The estimate below refers to how many full days I think it would take to get all the tbd's answered and put back into the document. 

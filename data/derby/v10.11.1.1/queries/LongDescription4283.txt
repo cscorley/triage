@@ -1,2 +1,0 @@
-setEmbeddedCP should use 'return' instead of 'exit' if DERBY_HOME was not set.
-Because this script will be sourced from a shell, use of exit will terminate the calling shell.

@@ -1,1 +1,0 @@
-XMLPersistenceMappingParser should initialize _discType to STRING to avoid a potential NPE. I'll provide an example shortly. 

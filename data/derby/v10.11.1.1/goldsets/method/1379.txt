@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.harness.RunList.isClientExclusionKeyword(String)
-org.apache.derbyTesting.functionTests.harness.RunList.runSuites(Vector)
-org.apache.derbyTesting.functionTests.harness.RunList.unloadEmbeddedDriver()

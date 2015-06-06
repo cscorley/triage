@@ -1,2 +1,0 @@
-org.apache.derby.impl.store.raw.log.LogToFile.boot(boolean,Properties)
-org.apache.derby.impl.store.raw.log.LogToFile.recover(DataFactory,TransactionFactory)

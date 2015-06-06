@@ -1,3 +1,0 @@
-org.apache.openjpa.enhance.TestSimpleUnenhancedQuery.setUp()
-org.apache.openjpa.enhance.TestSimpleUnenhancedQuery.testExtentQuery()
-org.apache.openjpa.kernel.StateManagerImpl.saveFields(boolean)

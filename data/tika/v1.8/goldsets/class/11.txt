@@ -1,2 +1,0 @@
-org.apache.tika.metadata.TestMetadata
-org.apache.tika.metadata.TestSpellCheckedMetadata

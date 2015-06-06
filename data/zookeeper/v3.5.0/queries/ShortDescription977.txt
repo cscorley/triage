@@ -1,1 +1,0 @@
-passing null for path_buffer in zoo_create

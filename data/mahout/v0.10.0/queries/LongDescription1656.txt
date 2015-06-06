@@ -1,1 +1,0 @@
-Poms still reference 1.0-SNAPSHOT but now should reference 0.10.0-SNAPSHOT. This needs to be done as a precursor for 0.10.0 release.

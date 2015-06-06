@@ -1,1 +1,0 @@
-The ScriptState.getAlias(MapReduceOper mro) and ScriptState.getFeature(MapReduceOper mro) methods are useful in implementations of PigProgressNotificationListener. I'd like to make them public.

@@ -1,1 +1,0 @@
-RowSimilarityJob should be able to infer the number of columns from the input matrix if not specified 

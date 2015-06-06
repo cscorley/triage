@@ -1,6 +1,0 @@
-When I run "ant -q all" (with the patches for DERBY-4876 and DERBY-4877), I now only see these two messages:
-
-     [echo] building generated sanity info
-     [java] Warning: Lookahead adequacy checking not being performed since option LOOKAHEAD is more than 1.  Set option FORCE_LA_CHECK to true to force checking.
-
-The message about generating sanity info hardly looks worth printing when running ant in quiet mode, so I suggest that we change its reporting level from warning (default) to info. This will make the message show up when running ant in default mode, and suppress it when running in quiet mode.

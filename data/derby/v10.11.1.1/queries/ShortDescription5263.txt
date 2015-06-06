@@ -1,1 +1,0 @@
-xmlTestTriggerWithXMLOperators(org.apache.derbyTesting.functionTests.tests.upgradeTests.BasicSetup) fails with java.lang.NoSuchMethodError

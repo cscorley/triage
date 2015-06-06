@@ -1,1 +1,0 @@
-FileTxnSnapLog.restore does not call listener

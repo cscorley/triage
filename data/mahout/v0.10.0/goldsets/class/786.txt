@@ -1,2 +1,0 @@
-org.apache.mahout.math.hadoop.stochasticsvd.BBtJob
-org.apache.mahout.math.hadoop.stochasticsvd.BBtJob.BBtMapper

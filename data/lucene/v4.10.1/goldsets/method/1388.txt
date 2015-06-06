@@ -1,3 +1,0 @@
-org.apache.lucene.index.TestCloseableThreadLocal.testInitValue()
-org.apache.lucene.util.CloseableThreadLocal.get()
-org.apache.lucene.util.CloseableThreadLocal.initialValue()

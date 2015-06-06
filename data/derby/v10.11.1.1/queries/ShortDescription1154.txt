@@ -1,1 +1,0 @@
-derbynet/testSecMec.java fails with Sun JDK 1.3

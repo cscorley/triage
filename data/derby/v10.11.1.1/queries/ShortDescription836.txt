@@ -1,1 +1,0 @@
-ResultSetMetaData.getColumnDisplaySize sometimes returns wrong values for DECIMAL columns

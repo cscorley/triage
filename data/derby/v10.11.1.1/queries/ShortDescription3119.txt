@@ -1,1 +1,0 @@
-Derby does not resolve functions to methods with Integer return type.

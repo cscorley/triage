@@ -1,1 +1,0 @@
-Just as the title says.  When using extract.only, we should also include the Metadata in the response

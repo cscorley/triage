@@ -1,1 +1,0 @@
-SchemaTool performs no function if no pu is found.

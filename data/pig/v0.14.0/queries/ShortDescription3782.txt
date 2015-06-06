@@ -1,1 +1,0 @@
-PushDownForEachFlatten + ColumnMapKeyPrune with user defined schema failing due to incorrect UID assignment

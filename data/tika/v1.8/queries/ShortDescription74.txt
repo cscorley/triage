@@ -1,1 +1,0 @@
-Test Resources should be loaded by the class loader (e.g. getResourceAsStream()).

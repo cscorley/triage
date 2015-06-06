@@ -1,2 +1,0 @@
-org.apache.openjpa.kernel.DetachManager
-org.apache.openjpa.kernel.DetachManager.DetachFieldManager

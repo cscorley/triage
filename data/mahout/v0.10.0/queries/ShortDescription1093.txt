@@ -1,1 +1,0 @@
-CrossFoldLearner trains in all folds if trackign key is negative

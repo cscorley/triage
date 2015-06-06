@@ -1,1 +1,0 @@
-Pig end-to-end tests should be accessible from top level build.xml

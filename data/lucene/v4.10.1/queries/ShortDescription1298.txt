@@ -1,1 +1,0 @@
-MoreLikeThis ignores custom similarity

@@ -1,3 +1,0 @@
-org.apache.pig.impl.util.StringUtils
-org.apache.pig.test.TestGrunt
-org.apache.pig.tools.grunt.GruntParser

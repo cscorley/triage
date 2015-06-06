@@ -1,1 +1,0 @@
-doxygen comment for state argument of watcher_fn typedef and implementation differ ("...one of the *_STATE constants, otherwise -1")

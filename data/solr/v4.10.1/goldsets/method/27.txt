@@ -1,2 +1,0 @@
-org.apache.solr.analysis.SnowballPorterFilterFactory.create(TokenStream)
-org.apache.solr.analysis.SnowballPorterFilterFactory.init(Map<String,String>,String,String)

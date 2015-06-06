@@ -1,1 +1,0 @@
-org.apache.solr.client.solrj.impl.XMLResponseParser.readNamedList(XMLStreamReader)

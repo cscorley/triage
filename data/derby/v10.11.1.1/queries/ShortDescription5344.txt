@@ -1,1 +1,0 @@
-updateClob2 test in LobLimitsTest gets OutOfMemoryError on updateRow with embedded

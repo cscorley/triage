@@ -1,1 +1,0 @@
-Wrong PersistentAttributeType returned for @Embedded types

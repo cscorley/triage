@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.harness.j9_foundation.appendOtherFlags(StringBuffer)
-org.apache.derbyTesting.functionTests.harness.j9_foundation.getDintro()
-org.apache.derbyTesting.functionTests.harness.j9_foundation.setSecurityProps()

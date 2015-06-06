@@ -1,3 +1,0 @@
-org.apache.tika.parser.microsoft.OfficeParser.addTextIfAny(XHTMLContentHandler,String,String)
-org.apache.tika.parser.microsoft.OfficeParser.parse(InputStream,ContentHandler,Metadata)
-org.apache.tika.parser.microsoft.OfficeParser.set(Metadata,String,long)

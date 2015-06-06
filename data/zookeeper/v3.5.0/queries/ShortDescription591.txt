@@ -1,1 +1,0 @@
-The C Client cannot exit properly in some situation

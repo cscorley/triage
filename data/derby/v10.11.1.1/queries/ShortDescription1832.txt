@@ -1,1 +1,0 @@
-sysinfo test fails with "access denied (java.util.PropertyPermission java.class.path read)" when derbyclient.jar is first in classpath

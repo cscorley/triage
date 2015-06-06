@@ -1,1 +1,0 @@
-support use of JMX to manage log4j configuration at runtime

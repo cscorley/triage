@@ -1,3 +1,0 @@
-Still see references to old clustering algorithms like Minhash, Dirichlet in asf-email-examples.sh and cluster-syntheticcontrol.sh.
-
-Also remove build-asf-email.sh and build-cluster-syntheticcontrol.sh from examples/bin.

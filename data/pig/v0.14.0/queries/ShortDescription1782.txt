@@ -1,1 +1,0 @@
-Add ability to load data by column family in HBaseStorage

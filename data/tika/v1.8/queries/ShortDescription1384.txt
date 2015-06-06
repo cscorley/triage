@@ -1,1 +1,0 @@
-Use tika-parent dependency management for common dependencies

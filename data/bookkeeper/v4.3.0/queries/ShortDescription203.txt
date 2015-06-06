@@ -1,1 +1,0 @@
-improve ledger manager interface to remove zookeeper dependency on metadata operations.

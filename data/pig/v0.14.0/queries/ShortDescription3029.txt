@@ -1,1 +1,0 @@
-TestTypeCheckingValidatorNewLP has some path reference issues for cross-platform execution

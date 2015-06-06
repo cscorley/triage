@@ -1,1 +1,0 @@
-Older compilers may complain that rc may be used without initialization in send_auth_info(), if -Wall is specified.  The fix is a simple initialization.

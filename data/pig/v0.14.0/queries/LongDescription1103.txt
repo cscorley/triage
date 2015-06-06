@@ -1,1 +1,0 @@
-Due to the changes to the local mode, many tests are now taking longer. Need to make sure that test-commit still finishes within 10 minutes.

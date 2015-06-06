@@ -1,1 +1,0 @@
-Remove unused methods getSocketAndInputOutputStreams and checkAlternateServerHasEqualOrHigherProductLevel in NetConnection

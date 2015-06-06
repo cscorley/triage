@@ -1,1 +1,0 @@
-would like an alternative location for ant.properties

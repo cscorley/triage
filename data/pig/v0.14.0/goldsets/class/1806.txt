@@ -1,4 +1,0 @@
-org.apache.pig.scripting.jython.JythonScriptEngine
-org.apache.pig.scripting.Pig
-org.apache.pig.scripting.ScriptEngine
-org.apache.pig.test.TestScriptLanguage

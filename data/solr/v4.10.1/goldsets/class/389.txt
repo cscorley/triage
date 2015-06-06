@@ -1,2 +1,0 @@
-org.apache.solr.handler.RequestHandlerBase
-org.apache.solr.handler.RequestHandlerBase.U

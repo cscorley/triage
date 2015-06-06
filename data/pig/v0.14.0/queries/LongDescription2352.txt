@@ -1,1 +1,0 @@
-If you run the new Bloom tests by themselves they pass.  If you run them after running the Accumulator tests they fail.  The accumulator tests set the java parameters, including turning off the combiner.  These properties are then kept set for the Bloom tests, which causes them to fail.

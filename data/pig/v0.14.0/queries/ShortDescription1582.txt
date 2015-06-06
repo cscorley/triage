@@ -1,1 +1,0 @@
-upgrade commons-logging version with ivy

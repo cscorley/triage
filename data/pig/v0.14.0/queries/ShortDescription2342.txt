@@ -1,1 +1,0 @@
-Pig tutorial documentation needs to update about building tutorial

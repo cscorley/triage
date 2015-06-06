@@ -1,1 +1,0 @@
-org.apache.derby.catalog.SystemProcedures.SYSCS_BULK_INSERT(String,String,String,String)

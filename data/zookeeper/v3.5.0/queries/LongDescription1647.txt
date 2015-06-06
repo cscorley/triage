@@ -1,1 +1,0 @@
-Two recent changes related to the OSGi headers Import-Package and Export-Package (ZOOKEEPER-1334 and ZOOKEEPER-1645) were only applied to the JAR created in ant target jar, leaving the JAR created in target bin-jar (to be uploaded to Maven central) with the old (incorrect) OSGi headers.

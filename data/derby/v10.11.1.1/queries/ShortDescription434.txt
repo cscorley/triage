@@ -1,1 +1,0 @@
-add jdbcapi/xaMorph.sql jdbcapi/xaJNDI  jdbcapi/xaAnotherTest.sql to client xa testing.

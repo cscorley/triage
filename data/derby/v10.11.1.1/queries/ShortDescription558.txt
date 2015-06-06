@@ -1,1 +1,0 @@
-Optimizer hangs with query that uses more than 6 tables and does subquery flattening.

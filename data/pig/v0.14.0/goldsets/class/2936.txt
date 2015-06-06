@@ -1,3 +1,0 @@
-org.apache.pig.data.utils.SedesHelper
-org.apache.pig.test.TestBinInterSedes
-org.apache.pig.test.TestTuple

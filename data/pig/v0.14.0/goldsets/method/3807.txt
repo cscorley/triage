@@ -1,3 +1,0 @@
-org.apache.pig.newplan.logical.relational.LOForEach.getSchema()
-org.apache.pig.test.TestEvalPipelineLocal.testDanglingNodeWrongSchema()
-org.apache.pig.test.TestEvalPipelineLocal.testFlattenTwice()

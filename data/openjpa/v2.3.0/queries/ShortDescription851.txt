@@ -1,1 +1,0 @@
-Support for enhanced map collection (and corresponding annotations)

@@ -1,7 +1,0 @@
-The tika-mimetypes.xml file presents an orthographic error at line n. 4591:
-<glob pattenr="*.awk"/>
-
-I'm new of Apache community and I hope that my little, maybe unuseful, contribution is correct.
-
-Best regards,
-Giuseppe

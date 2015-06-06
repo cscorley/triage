@@ -1,3 +1,0 @@
-org.apache.pig.builtin.PigStorage.PigStorage()
-org.apache.pig.builtin.PigStorage.PigStorage(String,String)
-org.apache.pig.builtin.PigStorage.populateValidOptions()

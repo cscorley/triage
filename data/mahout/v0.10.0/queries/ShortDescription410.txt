@@ -1,1 +1,0 @@
-NPE when calling hasPreferenceValues or getPreferenceValues on newly created FileDataModel  

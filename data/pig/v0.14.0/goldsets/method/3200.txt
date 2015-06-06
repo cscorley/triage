@@ -1,3 +1,0 @@
-org.apache.pig.test.MiniCluster.MiniCluster()
-org.apache.pig.test.MiniCluster.setupMiniDfsAndMrClusters()
-org.apache.pig.test.MiniCluster.shutdownMiniMrClusters()

@@ -1,1 +1,0 @@
-Reduce lock timeout in SavepointJdbc30Test

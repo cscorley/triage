@@ -1,3 +1,0 @@
-jdbcapi/BlobClob4BlobTest.java should cleanup when detecting failures ['fail("FAIL - ....");'].
-When failures occur, as when doing compatibility testing for Blob/Clob locator support, failures will occur. 
-Missing cleanup makes following tests to fail.

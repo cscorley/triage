@@ -1,1 +1,0 @@
- NPE is thrown in date time functions when a null value is passed. 

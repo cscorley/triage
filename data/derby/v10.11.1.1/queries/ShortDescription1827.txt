@@ -1,1 +1,0 @@
-DatabasePropertyTestSetup.tearDown method gives exception when resetting properties

@@ -1,1 +1,0 @@
-VertexManagerEvent.getUserPayload returns ReadOnlyBuffer after TEZ-1449

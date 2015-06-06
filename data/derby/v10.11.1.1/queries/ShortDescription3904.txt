@@ -1,1 +1,0 @@
-NPE on left join with aggregate

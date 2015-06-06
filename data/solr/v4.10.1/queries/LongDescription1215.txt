@@ -1,3 +1,0 @@
-the sample solr.xml has attributes wrapped in double quotes. But when it is persisted back , it is wrapped in single duote. 
-
-for consistency let us persist it in double quotes.

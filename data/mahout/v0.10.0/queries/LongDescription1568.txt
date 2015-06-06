@@ -1,7 +1,0 @@
-Implement mechanisms to read and write data from/to flexible stores. These will support tuples streams and drms but with extensions that allow keeping user defined values for IDs. The mechanism in some sense can replace Sequence Files for import/export and will make the operation much easier for the user. In many cases directly consuming their input files.
-
-Start with text delimited files for input/output in the Spark version of ItemSimilarity
-
-A proposal is running with ItemSimilarity on Spark and is documented on the github wiki here: https://github.com/pferrel/harness/wiki
-
-Comments are appreciated

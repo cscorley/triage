@@ -1,7 +1,0 @@
-I can't believe that this was a bug that was existent.. but essentially once I got slices fixed up (see many preceding bugs), it all seems to work fine, except for I can't persist new objects.  Essentially the DistributedResultSet is very very buggy, and not implemented properly, so TableJDBCSeq can't do it's job properly ( since it's using the DistributedConnection/PreparedStatement/RestulSet ).
-
-I just wanted to file the bug to get the word out.. but I basically have to re-write the whole class, So I guess I'll be submitting a patch tomorrow.
-
-The first bug is that it will drop out the first row from every ResultSet (one per db).  It does this because as ResultSets are added, it calls "first", but then most people (and TableJDBCSeq), assume that it's "beforeFirst", so they call "next" expecting it to move to "first".  So in TableJDBCSeq, it goes beyond the first row, returning null.. and TableJDBCSeq thinks that the query actually returned an empty RestultSet and tries to act accordingly...
-
-and as you review DistributedResultSet, you see lots and lots of bad logic, missing code, etc.  It's a pretty hacked together implementation of a "Distributed ResultSet".... need a proper version..

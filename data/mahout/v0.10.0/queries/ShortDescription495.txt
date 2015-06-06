@@ -1,1 +1,0 @@
-Undeprecate Normal and Exponential distributions

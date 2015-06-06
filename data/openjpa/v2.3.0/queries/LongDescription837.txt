@@ -1,1 +1,0 @@
-Update the OpenJPA documentation to include the most current persistence and orm schemas.  The existing DTD definition for the persistence file should be updated with the new schema.  The schemas need to be formatted for docbook and new elements and attributes will need to be documented as appropriate.

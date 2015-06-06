@@ -1,1 +1,0 @@
-dataimport.jsp hardcoded to /dataimport handler

@@ -1,1 +1,0 @@
-Syntax error when reference to transition variable has whitespace around it

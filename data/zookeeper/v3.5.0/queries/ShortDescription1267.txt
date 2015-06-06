@@ -1,1 +1,0 @@
-closeSession flag in finalRequestProcessor is superfluous

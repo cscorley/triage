@@ -1,1 +1,0 @@
-log4j and slf4j-log4j jars have changed versions.

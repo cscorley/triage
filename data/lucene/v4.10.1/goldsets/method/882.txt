@@ -1,1 +1,0 @@
-org.apache.lucene.search.spell.SpellChecker.addGram(String,Document,int,int)

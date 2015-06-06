@@ -1,1 +1,0 @@
-Derby tests for the existance of BigDecimal methods toPlainString and bdPrecison but does not check if they were found before using them.

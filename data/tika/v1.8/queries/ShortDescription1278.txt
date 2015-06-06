@@ -1,1 +1,0 @@
-Expose PDF Avg Char and Spacing Tolerance Config Params

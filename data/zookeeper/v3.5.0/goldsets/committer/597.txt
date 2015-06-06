@@ -1,2 +1,0 @@
-Benjamin Reed <breed@apache.org>
-Mahadev Konar <mahadev@apache.org>

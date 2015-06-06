@@ -1,1 +1,0 @@
-Use javax.xml.xpath interfaces for XPath support

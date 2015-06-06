@@ -1,1 +1,0 @@
-Jython UDFs fail to convert Maps of Integer values back to Pig types

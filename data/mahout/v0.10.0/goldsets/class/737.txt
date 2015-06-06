@@ -1,3 +1,0 @@
-org.apache.mahout.cf.taste.impl.recommender.svd.ImplicitLinearRegressionFactorizer
-org.apache.mahout.cf.taste.impl.recommender.svd.ImplicitLinearRegressionFactorizer.FeatureVectorCallable
-org.apache.mahout.cf.taste.impl.recommender.svd.ImplicitLinearRegressionFactorizer.StatsCallable

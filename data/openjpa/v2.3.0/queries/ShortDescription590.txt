@@ -1,1 +1,0 @@
-The push-down sql for JPQL has unpredictable ordering in the set clause for update statement

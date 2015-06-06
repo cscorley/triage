@@ -1,6 +1,0 @@
-org.apache.bookkeeper.replication.AuditorPeriodicCheckTest.AuditorPeriodicCheckTest()
-org.apache.bookkeeper.replication.AuditorPeriodicCheckTest.testEntryLogCorruption()
-org.apache.bookkeeper.replication.AuditorPeriodicCheckTest.testIndexCorruption()
-org.apache.bookkeeper.replication.AuditorPeriodicCheckTest.testPeriodicCheckWhenDisabled()
-org.apache.bookkeeper.replication.Auditor.start()
-org.apache.bookkeeper.replication.Auditor.start.run()

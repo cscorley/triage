@@ -1,1 +1,0 @@
-NPE in hedwig client when enable DEBUG

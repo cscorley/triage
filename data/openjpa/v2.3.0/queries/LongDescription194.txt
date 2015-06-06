@@ -1,1 +1,0 @@
-The aggregate jar that is built with OpenJPA is currently named "openjpa-all-0.9.7-VERSION.jar". It would be nice to change this to be just "openjpa-0.9.7-VERSION.jar".

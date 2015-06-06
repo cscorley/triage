@@ -1,1 +1,0 @@
-Make AvroStorage sync interval take default from io.file.buffer.size 

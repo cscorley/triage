@@ -1,1 +1,0 @@
-Move all client messages to messages.properties

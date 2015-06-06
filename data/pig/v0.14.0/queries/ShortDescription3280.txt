@@ -1,1 +1,0 @@
-Document IN operator and CASE expression

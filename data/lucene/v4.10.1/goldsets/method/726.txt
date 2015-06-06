@@ -1,3 +1,0 @@
-org.apache.lucene.index.DocumentWriter.invertDocument(Document)
-org.apache.lucene.index.FieldsWriter.addDocument(Document)
-org.apache.lucene.index.ParallelReader.document(int,FieldSelector)

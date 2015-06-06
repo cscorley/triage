@@ -1,1 +1,0 @@
-Failed tests should save the database off to the fail directory

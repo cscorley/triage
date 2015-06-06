@@ -1,2 +1,0 @@
-org.apache.solr.analysis.EdgeNGramFilterFactory.create(TokenStream)
-org.apache.solr.analysis.EdgeNGramFilterFactory.init(Map<String,String>,String,String)

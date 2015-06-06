@@ -1,1 +1,0 @@
-Allow other string distance measures in spellchecker

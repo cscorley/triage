@@ -1,1 +1,0 @@
-add configurable throttling to the number of snapshots concurrently sent by a leader

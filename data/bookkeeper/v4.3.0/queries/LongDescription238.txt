@@ -1,1 +1,0 @@
-Add log4j for bin packages to make it easier for users to turn on logging.

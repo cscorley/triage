@@ -1,7 +1,0 @@
-Right now, the property "derby.junit.classpath" is empty by default. There should be an ant target which sets the correct classpath to run all tests after an initial checkout and "ant all".
-
-The current situation is very confusing to beginners and people who try to build Derby for the first time. For example, when running the tests, I got this exception:
-
-java.lang.ClassNotFoundException: org.apache.derbyTesting.junit.EnvTest
-
-but that class was there, the file was there, everything was correct. Googling for the error didn't turn anything up, either. It took me a while to believe that build.xml just wouldn't try to setup a classpath for the tests.

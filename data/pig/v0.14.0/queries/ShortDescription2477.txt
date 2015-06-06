@@ -1,1 +1,0 @@
-TestBuiltin testLFText/testSFPig failing against 23 due to invalid test setup -- InvalidInputException

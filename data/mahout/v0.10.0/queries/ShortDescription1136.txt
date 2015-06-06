@@ -1,1 +1,0 @@
-Cannot import project into eclipse with m2e 1.2

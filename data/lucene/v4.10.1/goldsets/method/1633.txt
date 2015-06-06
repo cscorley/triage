@@ -1,3 +1,0 @@
-org.apache.lucene.search.SpanQueryFilter.equals(Object)
-org.apache.lucene.search.SpanQueryFilter.getQuery()
-org.apache.lucene.search.SpanQueryFilter.toString()

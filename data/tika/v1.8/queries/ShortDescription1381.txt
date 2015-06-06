@@ -1,1 +1,0 @@
-Add Lingo24Translate implementation of Translate API

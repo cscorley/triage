@@ -1,3 +1,0 @@
-org.apache.pig.tools.pigstats.ScriptState.getCommandLine()
-org.apache.pig.tools.pigstats.ScriptState.getScript()
-org.apache.pig.tools.pigstats.ScriptState.setCommandLine(String)

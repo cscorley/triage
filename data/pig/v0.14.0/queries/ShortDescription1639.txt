@@ -1,1 +1,0 @@
-New logical plan: PushUpFilter should not push before group/cogroup if filter condition contains UDF

@@ -1,2 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POPreCombinerLocalRearrange.getNext(Tuple)
-org.apache.pig.test.TestLocalRearrange.testMultiQueryJiraPig1194()

@@ -1,1 +1,0 @@
-Infinite loop in StreamFileContainer.writeColumn

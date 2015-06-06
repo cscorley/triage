@@ -1,3 +1,0 @@
-org.apache.derby.client.am.ResultSet
-org.apache.derby.client.net.NetCursor
-org.apache.derbyTesting.functionTests.tests.jdbcapi.blobclob4BLOB

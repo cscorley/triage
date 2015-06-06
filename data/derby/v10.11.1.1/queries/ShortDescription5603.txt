@@ -1,1 +1,0 @@
-EmbedConnection.clearLOBMapping() incorrectly clears lobFiles causing a ConcurrentModificationException

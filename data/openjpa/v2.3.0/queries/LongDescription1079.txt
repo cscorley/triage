@@ -1,2 +1,0 @@
-Slice uses a distributed JDBC connection which was not available to the client.
-Relax that restriction. 

@@ -1,1 +1,0 @@
-Two bookies could start at the same time to access bookie data.

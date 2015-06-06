@@ -1,1 +1,0 @@
-Hudson builds do not have the SVN revision because svnversion is not available

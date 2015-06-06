@@ -1,3 +1,0 @@
-org.apache.solr.common.params.ShardParams
-org.apache.solr.handler.component.QueryComponent
-org.apache.solr.handler.component.ResponseBuilder

@@ -1,6 +1,0 @@
-Builds for 0.23 currently fail. 0.23.1-SNAPSHOT no longer available, 0.23.2-SNAPSHOT is:
-
-https://repository.apache.org/content/groups/snapshots-group/org/apache/hadoop/hadoop-hdfs/0.23.1-SNAPSHOT/
-https://repository.apache.org/content/groups/snapshots-group/org/apache/hadoop/hadoop-hdfs/0.23.2-SNAPSHOT/
-
-We should switch to 0.23.1 release.

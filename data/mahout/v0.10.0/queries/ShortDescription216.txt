@@ -1,1 +1,0 @@
-Improve the results of MAHOUT-145 by uniformly distributing the classes in the partitioned data

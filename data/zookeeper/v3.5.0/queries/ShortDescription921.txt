@@ -1,1 +1,0 @@
-zkPython incorrectly checks for existence of required ACL elements

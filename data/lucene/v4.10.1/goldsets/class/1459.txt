@@ -1,2 +1,0 @@
-org.apache.lucene.search.CachingWrapperFilter
-org.apache.lucene.search.TestCachingWrapperFilter

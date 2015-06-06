@@ -1,1 +1,0 @@
-cluster-reuters.sh executes seqdirectory with MAHOUT_LOCAL=true

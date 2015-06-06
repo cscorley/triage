@@ -1,3 +1,0 @@
-org.apache.pig.impl.streaming.ExecutableManager
-org.apache.pig.impl.streaming.TestExecutableManager
-org.apache.pig.PigConfiguration

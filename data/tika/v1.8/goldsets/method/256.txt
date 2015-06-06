@@ -1,1 +1,0 @@
-org.apache.tika.parser.microsoft.OfficeParser.parse(InputStream,ContentHandler,Metadata,Map<String,Object>,String,Object)

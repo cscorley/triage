@@ -1,5 +1,0 @@
-org.apache.openjpa.persistence.access.Ingredient
-org.apache.openjpa.persistence.access.MenuItem
-org.apache.openjpa.persistence.access.Quantity
-org.apache.openjpa.persistence.access.TestExplicitAccess
-org.apache.openjpa.persistence.PersistenceMetaDataDefaults

@@ -1,1 +1,0 @@
-test lang.UpdatableResultSetTest.testUpdateXXXWithAllDatatypes fails with wctme5.7 (j9) foundation

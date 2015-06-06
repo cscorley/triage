@@ -1,1 +1,0 @@
-Derby 10.7 DatabaseMetaData.getTypeInfo() should not return BOOLEAN for a soft upgraded database

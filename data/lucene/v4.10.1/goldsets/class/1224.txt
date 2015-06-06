@@ -1,2 +1,0 @@
-org.apache.lucene.search.FuzzyQuery
-org.apache.lucene.search.TestFuzzyQuery

@@ -1,1 +1,0 @@
-Exclude all Maven's target directories from distribution archives

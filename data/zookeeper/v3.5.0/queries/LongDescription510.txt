@@ -1,3 +1,0 @@
-The current zkpython bindings always throw "IOError("text")" exceptions, even for ZK specific exceptions such as NODEEXISTS. This makes it difficult (error prone) to handle exceptions in python code. You can't easily pickup a connection loss vs a node exists for example. Of course you could match the error string, but this seems like a bad idea imo.
-
-We need to add specific exception types to the python binding that map directly to KeeperException/java types. It would also be useful to include the information provided by the KeeperException (like path in some cases), etc... as part of the error thrown to the python code. Would probably be a good idea to stay as close to java api as possible wrt mapping the errors.

@@ -1,1 +1,0 @@
-ARFF parser does not support 'integer' and 'real' attribute types

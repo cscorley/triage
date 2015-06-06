@@ -1,1 +1,0 @@
-Improve Hadoop version detection logic for Pig unit test

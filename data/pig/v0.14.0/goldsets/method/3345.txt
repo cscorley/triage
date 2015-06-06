@@ -1,3 +1,0 @@
-org.apache.pig.builtin.GetDay.exec(Tuple)
-org.apache.pig.test.TestBuiltin.testConversionBetweenDateTimeAndString()
-org.apache.pig.test.TestBuiltin.testGetDateTimeField()

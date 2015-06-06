@@ -1,3 +1,0 @@
-The documentation that is bundled with the Derby releases does not include the three .css stylesheets that are copied into the out/<manual-name> directory by the Ant task that builds the HTML files. These need to be included in the docs/html/<manual-name> directories for the releases.
-
-I believe this problem has existed from the beginning – it certainly goes back several releases. 

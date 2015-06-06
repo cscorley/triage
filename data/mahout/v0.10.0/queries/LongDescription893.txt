@@ -1,6 +1,0 @@
-I tried to run the Recommender example in Mahout in Action Book.
-
-        DataModel model = new FileDataModel(new File("intro.csv"));
-        UserSimilarity similarity = new PearsonCorrelationSimilarity(model);
-
-The dependencies from google collections and guava are clashing while execution. Its picking some wrong class like Preconditions and few others which is giving error on runtime. I fixed that by excluding google-collections. The patch is attached which helped me fix this problem.

@@ -1,1 +1,0 @@
-We have noticed that if the smaller data in replicated join has many files, this puts  unneeded burden on the name node. pre-aggregating the files can improve the situation

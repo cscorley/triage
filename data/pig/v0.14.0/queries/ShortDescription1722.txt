@@ -1,1 +1,0 @@
-PiggyBank AllLoader - Load multiple file formats in one load statement

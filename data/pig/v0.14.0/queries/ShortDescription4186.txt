@@ -1,1 +1,0 @@
-Fix e2e run against new build of pig and some enhancements

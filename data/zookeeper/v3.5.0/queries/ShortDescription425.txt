@@ -1,1 +1,0 @@
-Add OSGi metadata to zookeeper.jar

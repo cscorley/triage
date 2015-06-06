@@ -1,1 +1,0 @@
-Allow test to specify target database platform

@@ -1,2 +1,0 @@
-org.apache.solr.handler.AnalysisRequestHandlerBase
-org.apache.solr.handler.FieldAnalysisRequestHandlerTest

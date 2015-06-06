@@ -1,1 +1,0 @@
-Create row templates outside of the generated code

@@ -1,1 +1,0 @@
-Bugs in contrib/snowball/.../SnowballProgram.java -> Kraaij-Pohlmann gives Index-OOB Exception

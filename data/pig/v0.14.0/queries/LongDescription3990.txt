@@ -1,1 +1,0 @@
-To reproduce, run ant docs. It fails with errors.

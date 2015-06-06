@@ -1,3 +1,0 @@
-Added GData-Server to the sandbox part of the website – xdocs/sandbox/
-
-Build of website is fine.

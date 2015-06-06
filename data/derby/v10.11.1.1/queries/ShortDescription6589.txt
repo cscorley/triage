@@ -1,1 +1,0 @@
-Wire the new Security Guide into the top level index.html page and into the release publication machinery.

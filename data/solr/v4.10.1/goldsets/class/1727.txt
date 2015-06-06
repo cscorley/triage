@@ -1,3 +1,0 @@
-org.apache.solr.core.SolrCore
-org.apache.solr.core.SolrEventListener
-org.apache.solr.update.UpdateHandler

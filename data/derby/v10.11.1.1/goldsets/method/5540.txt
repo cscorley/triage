@@ -1,2 +1,0 @@
-org.apache.derbyTesting.junit.BaseJDBCTestCase.assertSQLExceptionEquals(SQLException,SQLException)
-org.apache.derbyTesting.junit.BaseJDBCTestCase.assertSQLState(String,String,SQLException)

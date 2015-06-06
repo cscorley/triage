@@ -1,1 +1,0 @@
-Avoidable synchronization bottleneck in MatchAlldocsQuery$MatchAllScorer

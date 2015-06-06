@@ -1,1 +1,0 @@
-DBStorage does not compile after the datetime patch was committed. The joda datetime was passed as argument to java.sql.PreparedStatement.setDate() instead of java.sql.Date .

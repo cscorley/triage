@@ -1,1 +1,0 @@
-NPE (or sane: ASSERT failure) with ROW_NUMBER in some subqueries

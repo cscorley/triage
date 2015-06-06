@@ -1,1 +1,0 @@
-The CLI commands "delete" and "rmr" are confusing. Can we have "delete" + "deleteall" instead?

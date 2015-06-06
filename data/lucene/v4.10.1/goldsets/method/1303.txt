@@ -1,3 +1,0 @@
-org.apache.lucene.search.payloads.BoostingTermQuery.BoostingTermWeight.BoostingSpanScorer.explain(int)
-org.apache.lucene.search.payloads.TestBoostingTermQuery.setUp()
-org.apache.lucene.search.payloads.TestBoostingTermQuery.testNoPayload()

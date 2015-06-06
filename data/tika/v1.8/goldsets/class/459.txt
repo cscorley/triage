@@ -1,3 +1,0 @@
-org.apache.tika.parser.html.HtmlParser
-org.apache.tika.utils.CharsetUtils
-org.apache.tika.utils.CharsetUtilsTest

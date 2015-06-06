@@ -1,1 +1,0 @@
-Add automatic cleanup of connections opened with openDefaultConnection()

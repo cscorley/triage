@@ -1,2 +1,0 @@
-org.apache.solr.handler.dataimport.RegexTransformer
-org.apache.solr.handler.dataimport.TestRegexTransformer

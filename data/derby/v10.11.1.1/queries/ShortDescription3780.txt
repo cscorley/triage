@@ -1,1 +1,0 @@
-Run junit tests with -Dfile.encoding="UTF-16" to expose encoding issues and analyze failures

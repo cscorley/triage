@@ -1,1 +1,0 @@
-JVMVRFY012 when using openjpa together with hyperjaxb3

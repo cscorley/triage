@@ -1,5 +1,0 @@
-When running examples/bin/build-reuters.sh from the root of the checked out mahout source tree I get the following syntax error:
-
-examples/bin/build-reuters.sh: 28: Syntax error: "(" unexpected (expecting "fi")
-
-This is because the script uses array initialization syntax supported by the bash shell, algorithm=( kmeans lda ), but it's shebang line uses the bourne shell: #!/bin/sh

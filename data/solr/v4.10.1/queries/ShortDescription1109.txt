@@ -1,1 +1,0 @@
-PhoneticFilterFactory doesn't handle maxCodeLength param

@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.OpenJPAQuery
-org.apache.openjpa.persistence.QueryImpl
-org.apache.openjpa.persistence.QueryResultCacheImpl

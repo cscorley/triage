@@ -1,1 +1,0 @@
-make DIH JdbcDataSource easily extensible

@@ -1,1 +1,0 @@
-It should be possible to run unit tests right after "ant all"

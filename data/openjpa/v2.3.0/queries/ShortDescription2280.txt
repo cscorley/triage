@@ -1,1 +1,0 @@
-MappingTool ignores column precision / scale for some databases

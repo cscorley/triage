@@ -1,1 +1,0 @@
-dblook script fails when URL contains special characters

@@ -1,3 +1,0 @@
-JPA2 spec section 9.2 states - "If a provider does not qualify as the provider for the named persistence unit, it must return null when createEntityManagerFactory is invoked on it."
-But OpenJPA is throwing exceptions for all failure cases...
-For now, we'll keep the 1.x behavior, but may need to revisit this when we start running the JPA2 TCK.

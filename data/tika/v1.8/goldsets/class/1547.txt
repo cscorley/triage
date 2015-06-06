@@ -1,4 +1,0 @@
-org.apache.tika.server.MetadataResource
-org.apache.tika.server.RecursiveMetadataResource
-org.apache.tika.server.TikaResource
-org.apache.tika.server.TikaResourceTest

@@ -1,2 +1,0 @@
-org.apache.bookkeeper.meta.AbstractZkLedgerManager
-org.apache.bookkeeper.meta.HierarchicalLedgerManager

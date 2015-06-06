@@ -1,1 +1,0 @@
-The patch of jira 127 changed the format of server configuration files, but it didn't change the documentation. 

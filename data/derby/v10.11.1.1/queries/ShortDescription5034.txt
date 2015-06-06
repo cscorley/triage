@@ -1,1 +1,0 @@
-[patch] bad field masking makes non functional rowsInput evaluation

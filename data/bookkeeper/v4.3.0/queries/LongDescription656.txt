@@ -1,3 +1,0 @@
-this is the master ticket to merge the bookie performance improvement made in twitter branch.
-
-it would generate the patches component by component (e.g. journal, ledger cache, entry logger)

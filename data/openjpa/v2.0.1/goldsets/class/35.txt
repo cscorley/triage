@@ -1,3 +1,0 @@
-org.apache.openjpa.conf.Compatibility
-org.apache.openjpa.lib.meta.XMLMetaDataParser
-org.apache.openjpa.persistence.XMLPersistenceMetaDataParser

@@ -1,1 +1,0 @@
-Tika should be able to parse ooxml templates (.dotx, *.xltx, *.potx) and macro-enabled files (.docm, *.dotm, *.xlsm, *.xltm, *.pptm, *.ppsm, ...)

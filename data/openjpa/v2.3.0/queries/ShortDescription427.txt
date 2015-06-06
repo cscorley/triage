@@ -1,1 +1,0 @@
-PostgresDictionary should set "63" as "maxAutoAssignNameLength".

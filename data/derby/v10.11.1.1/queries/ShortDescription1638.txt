@@ -1,1 +1,0 @@
-JUnit TestConfiguration class uses engine code to determine JDBC level.

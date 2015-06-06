@@ -1,7 +1,0 @@
-Feedback from Doug Cutting on 3.0.0 documentation:
-
-
-	The "Zookeeper Documentation" tab should contain the version number.
-	"Informal Documentation" might better be named "Other Documentation".
-	The "Other Info" page should be removed, since it contains nothing.
-

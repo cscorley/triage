@@ -1,1 +1,0 @@
-Rank column is assigned different uids everytime when schema is reset

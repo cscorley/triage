@@ -1,9 +1,0 @@
-I was looking at udf.html
-And I found that SVN repository address was not right.
-I think that it is better to correct an address. (maybe udf.xml , too)
-
-[before]
-svn co http://svn.apache.org/repos/asf/hadoop/pig/trunk
-
-[after]
-svn co http://svn.apache.org/repos/asf/pig/trunk

@@ -1,1 +1,0 @@
-Highlighter does not work with HTML content that's passed through HTMLStrip*Tokenizer

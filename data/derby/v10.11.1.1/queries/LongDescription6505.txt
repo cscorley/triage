@@ -1,1 +1,0 @@
-The iapi.services.io.FileUtil class contains many methods that are no longer in use. We should remove those methods.

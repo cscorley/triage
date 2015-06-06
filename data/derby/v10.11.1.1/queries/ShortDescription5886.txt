@@ -1,1 +1,0 @@
-FILE_CANNOT_REMOVE_FILE exception prints garbage.

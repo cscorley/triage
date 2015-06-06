@@ -1,1 +1,0 @@
-org.apache.derby.impl.store.raw.xact.RowLocking2.lockContainer(Transaction,ContainerHandle,boolean,boolean)

@@ -1,1 +1,0 @@
-Adding LoadFunc and StoreFunc for ORC.

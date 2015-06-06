@@ -1,1 +1,0 @@
-Many permission related test failures on Java 8 compact2

@@ -1,2 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.derbynet.csPrepStmt
-org.apache.derbyTesting.functionTests.tests.derbynet.prepStmt

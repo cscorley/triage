@@ -1,1 +1,0 @@
-Multinomial<T> throws ConcurrentModificationException when iterating and setting probabilities

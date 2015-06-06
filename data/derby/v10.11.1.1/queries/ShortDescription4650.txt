@@ -1,1 +1,0 @@
-Predicates in HAVING clause should be pushed down to restricted VTIs

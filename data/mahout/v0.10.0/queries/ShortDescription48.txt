@@ -1,1 +1,0 @@
-isConverged() and converge flag OK?

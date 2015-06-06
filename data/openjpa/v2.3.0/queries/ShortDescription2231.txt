@@ -1,1 +1,0 @@
-jest  TokenReplacedStream use Reader instead of Inputstream

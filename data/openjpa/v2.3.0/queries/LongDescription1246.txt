@@ -1,3 +1,0 @@
-An initial pass at documentation for Ingres Database was added under OPENJPA-948 but some parts of the manual need work. 
-
-Specifically we need an example connectionURL and driver name, a better name for the driver itself (see the table in the manual), and any known issues should be enumerated.

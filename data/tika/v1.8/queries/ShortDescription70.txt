@@ -1,1 +1,0 @@
-Better MIME information for Open Document format

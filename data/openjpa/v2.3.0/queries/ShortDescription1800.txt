@@ -1,1 +1,0 @@
-Duplicate column created for sybase

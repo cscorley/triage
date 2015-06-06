@@ -1,3 +1,0 @@
-Kevin W. Sutter <kwsutter@apache.org>
-Marc Prud'hommeaux <mprudhom@apache.org>
-Michael Dick <mikedd@apache.org>

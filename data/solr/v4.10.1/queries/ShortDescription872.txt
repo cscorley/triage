@@ -1,1 +1,0 @@
-better error message for missing copyField destination 

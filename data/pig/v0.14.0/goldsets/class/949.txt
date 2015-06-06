@@ -1,3 +1,0 @@
-org.apache.hadoop.zebra.io.TestNonDefaultWholeMapSplit
-org.apache.hadoop.zebra.types.Partition
-org.apache.hadoop.zebra.types.Partition.PartitionInfo

@@ -1,1 +1,0 @@
-Images are missing in PDF versions of the manuals - affects at least 1.2.0 and the latest. 1.0.0 does have the images.

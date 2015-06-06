@@ -1,1 +1,0 @@
-Bug on FetchType.EAGER when QuerySQLCache is turned on

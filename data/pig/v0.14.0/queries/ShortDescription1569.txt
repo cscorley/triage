@@ -1,1 +1,0 @@
-java properties not honored in case of properties such as stop.on.failure

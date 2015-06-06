@@ -1,1 +1,0 @@
-significant regression in client (c/python) performance

@@ -1,3 +1,0 @@
-org.apache.zookeeper.client.ZooKeeperSaslClient.createSaslClient(String,String)
-org.apache.zookeeper.server.ZooKeeperSaslServer.createSaslServer(Login)
-org.apache.zookeeper.server.ZooKeeperSaslServer.createSaslServer.run()

@@ -1,2 +1,0 @@
-org.apache.derby.impl.tools.ij.util.startJBMS(String,String,Properties)
-org.apache.derby.jdbc.EmbeddedSimpleDataSource.EmbeddedSimpleDataSource()

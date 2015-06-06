@@ -1,1 +1,0 @@
-centralize version numbering in the source/build

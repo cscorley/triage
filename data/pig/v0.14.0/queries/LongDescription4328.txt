@@ -1,1 +1,0 @@
-Hive 0.14.0 artifacts are available. We shall switch to use the released version.

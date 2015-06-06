@@ -1,1 +1,0 @@
-derby fails supporting holdable scrollable resultset: ERROR XSCB8: The btree conglomerate 1,141,037,436,752 is closed.

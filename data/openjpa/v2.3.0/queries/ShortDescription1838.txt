@@ -1,1 +1,0 @@
-Sybase can create Foriegn Keys

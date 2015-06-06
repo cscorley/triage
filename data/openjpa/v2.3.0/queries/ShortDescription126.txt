@@ -1,1 +1,0 @@
-EntityManagers cannot be serialized

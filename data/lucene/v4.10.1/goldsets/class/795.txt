@@ -1,3 +1,0 @@
-org.apache.lucene.store.Directory
-org.apache.lucene.store.FSDirectory
-org.apache.lucene.store.RAMDirectory

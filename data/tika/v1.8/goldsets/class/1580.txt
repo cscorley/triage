@@ -1,3 +1,0 @@
-org.apache.tika.parser.isatab.ISArchiveParser
-org.apache.tika.parser.isatab.ISArchiveParserTest
-org.apache.tika.parser.isatab.ISATabUtils

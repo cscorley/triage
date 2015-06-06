@@ -1,4 +1,0 @@
-org.apache.tika.exception.CauseIOException
-org.apache.tika.exception.CauseIOExceptionTest
-org.apache.tika.parser.pdf.PDF2XHTML
-org.apache.tika.sax.AppendableAdaptor

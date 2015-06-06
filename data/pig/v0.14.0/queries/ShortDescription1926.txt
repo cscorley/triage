@@ -1,1 +1,0 @@
-Sample/Limit should take scalar

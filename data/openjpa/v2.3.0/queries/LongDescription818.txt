@@ -1,6 +1,0 @@
-The pom.xml file for the TCK module doesn't use the updated JPA 2.0 EA spec from Geronimo so the TCK fails when we require one of the new classes (ie QueryBuilder).
-
-Switching the pom to use Geronimo's implementation resolves the missing classes issue, but we fail the method signature test - this likely won't be updated until a new TCK is released. 
-
-I'm not an expert but I believe the signature test (and only the signature test) may be skipped by specifying -Djpatck.pkg.dir=com/sun/ts/tests/ejb30/ 
-as a command line argument when running the TCK through maven. Until we get an updated TCK or someone with direct access to the TCK finds a better way to exclude the sig test I suggest anyone interested in running the TCK use the argument above. 

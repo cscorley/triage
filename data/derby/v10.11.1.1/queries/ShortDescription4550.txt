@@ -1,1 +1,0 @@
-Using ij to copy data from one DB to an other

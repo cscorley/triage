@@ -1,6 +1,0 @@
-org.apache.openjpa.lib.conf.TestValue.SimpleValue.getInternalString()
-org.apache.openjpa.lib.conf.TestValue.SimpleValue.getValueType()
-org.apache.openjpa.lib.conf.TestValue.SimpleValue.setInternalObject(Object)
-org.apache.openjpa.lib.conf.TestValue.SimpleValue.setInternalString(String)
-org.apache.openjpa.lib.conf.TestValue.testSetAliasesByValue()
-org.apache.openjpa.lib.conf.Value.setAliases(String[])

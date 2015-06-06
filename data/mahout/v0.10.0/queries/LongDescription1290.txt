@@ -1,5 +1,0 @@
-When running jetty:run under mahout-integration, seeing a ClassNotFoundException:
- org.apache.mahout.cf.taste.*example.grouplens.*GroupLensRecommender.
-
-The problem is happening because the webapp
-folder wasn't moved to the examples dir and the Jetty dependency wasn't added asa Maven plugin when the GroupLens example moved to the examples submodule. 

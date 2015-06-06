@@ -1,3 +1,0 @@
-org.apache.openjpa.kernel.BrokerImpl
-org.apache.openjpa.kernel.BrokerImpl.ManagedCache
-org.apache.openjpa.kernel.BrokerImpl.TransactionalCache

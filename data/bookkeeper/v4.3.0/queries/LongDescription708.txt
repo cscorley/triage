@@ -1,3 +1,0 @@
-as offline discussion, we need to shade protobuf library for BKJM as hadoop uses protobuf 2.5.
-
-this is planned on version 4.2.3 and 4.3.0.

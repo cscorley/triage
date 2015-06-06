@@ -1,1 +1,0 @@
-Assert failure in jdbcapi.InvalidLDAPServerAuthenticationTest.testInvalidLDAPServerConnectionError

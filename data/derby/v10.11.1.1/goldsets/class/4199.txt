@@ -1,2 +1,0 @@
-org.apache.derbyTesting.functionTests.util.PrivilegedFileOpsForTests
-org.apache.derbyTesting.junit.BaseTestCase

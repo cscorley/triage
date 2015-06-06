@@ -1,1 +1,0 @@
-Require new permissions in o.a.d.security.SystemPermission to allow control to Derby's JMX management and to ensure information is not leaked through JMX

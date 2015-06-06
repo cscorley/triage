@@ -1,5 +1,0 @@
-org.apache.zookeeper.server.SessionTrackerImpl.getSessionTimeout(long)
-org.apache.zookeeper.server.SessionTrackerImpl.logTraceTouchClosingSession(long,int)
-org.apache.zookeeper.server.SessionTrackerImpl.logTraceTouchInvalidSession(long,int)
-org.apache.zookeeper.server.SessionTrackerImpl.logTraceTouchSession(long,int,String)
-org.apache.zookeeper.server.SessionTrackerImpl.updateSessionExpiry(SessionImpl,int)

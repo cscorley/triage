@@ -1,2 +1,0 @@
-org.apache.solr.handler.component.QueryComponent.createMainQuery(ResponseBuilder)
-org.apache.solr.handler.component.QueryComponent.prepare(ResponseBuilder)

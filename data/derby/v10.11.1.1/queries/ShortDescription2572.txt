@@ -1,1 +1,0 @@
-Write a master script which creates a release branch.

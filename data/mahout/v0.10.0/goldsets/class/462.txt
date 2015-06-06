@@ -1,3 +1,0 @@
-org.apache.mahout.cf.taste.hadoop.item.RecommenderJob
-org.apache.mahout.math.hadoop.similarity.vector.AbstractDistributedVectorSimilarity
-org.apache.mahout.math.hadoop.similarity.vector.DistributedCooccurrenceVectorSimilarity

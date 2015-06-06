@@ -1,1 +1,0 @@
-org.apache.lucene.search.ExtendedFieldCache.DoubleParser.parseDouble(String)

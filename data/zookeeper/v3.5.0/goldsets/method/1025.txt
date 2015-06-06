@@ -1,3 +1,0 @@
-org.apache.zookeeper.ZooKeeperMain.MyCommandOptions.parseCommand(String)
-org.apache.zookeeper.ZooKeeperTest.testParseWithExtraSpaces()
-org.apache.zookeeper.ZooKeeperTest.testStatWhenPathDoesNotExist()

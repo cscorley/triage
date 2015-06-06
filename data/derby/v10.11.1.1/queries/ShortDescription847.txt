@@ -1,1 +1,0 @@
-Internationalize NetIndoubtTransaction to NetSqlca in org.apache.derby.client.net

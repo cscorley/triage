@@ -1,1 +1,0 @@
- A Derby source release must include the documentation source files

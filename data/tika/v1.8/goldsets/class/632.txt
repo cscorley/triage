@@ -1,4 +1,0 @@
-org.apache.tika.parser.microsoft.OutlookExtractor
-org.apache.tika.parser.microsoft.OutlookParserTest
-org.apache.tika.parser.rtf.RTFParserTest
-org.apache.tika.parser.rtf.TextExtractor

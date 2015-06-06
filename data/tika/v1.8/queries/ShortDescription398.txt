@@ -1,1 +1,0 @@
-TestParsers fails when classpathh contains special characters like spaces

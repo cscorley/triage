@@ -1,1 +1,0 @@
-On line 1957, zookeeper_process() returns without cleaning up the "ia" buffer that was previously allocated.  I don't know how often this code path is taken, but I thought it was worth reporting.  I will attach a simple patch shortly.

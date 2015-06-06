@@ -1,3 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.regex.CompiledAutomaton.CompiledAutomaton(String)
-org.apache.pig.test.TestPORegexp.testOrdering()
-org.apache.pig.test.TestPORegexp.testRegexDetermination()

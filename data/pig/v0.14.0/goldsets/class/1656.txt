@@ -1,2 +1,0 @@
-org.apache.pig.builtin.TOBAG
-org.apache.pig.test.TestBuiltin

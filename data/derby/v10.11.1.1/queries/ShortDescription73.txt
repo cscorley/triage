@@ -1,1 +1,0 @@
-Ability to compile under JDK1.5

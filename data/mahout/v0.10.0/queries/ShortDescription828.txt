@@ -1,1 +1,0 @@
-bin/mahout should only print classpath on request, not all the time

@@ -1,1 +1,0 @@
-Added a junitreport to the test target, to allow the generation of HTML test results.

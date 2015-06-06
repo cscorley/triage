@@ -1,3 +1,0 @@
-org.apache.solr.schema.StrField
-org.apache.solr.search.SolrIndexReader
-org.apache.solr.search.TestIndexSearcher

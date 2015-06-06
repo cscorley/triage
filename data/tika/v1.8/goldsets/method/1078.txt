@@ -1,7 +1,0 @@
-org.apache.tika.cli.TikaCLI.FileEmbeddedDocumentExtractor.parseEmbedded(InputStream,ContentHandler,Metadata,boolean)
-org.apache.tika.io.FilenameUtils.normalize(String)
-org.apache.tika.io.FilenameUtilsTest.normalizeNothingTodo()
-org.apache.tika.io.FilenameUtilsTest.normalizeWithNotPrintableChars()
-org.apache.tika.io.FilenameUtilsTest.normalizeWithNull()
-org.apache.tika.io.FilenameUtilsTest.normalizeWithReservedChar()
-org.apache.tika.io.FilenameUtilsTest.normalizeWithReservedChars()

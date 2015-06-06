@@ -1,1 +1,0 @@
-JpegParserTest fails for some locales

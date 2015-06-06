@@ -1,1 +1,0 @@
-Inheritance using Join Strategy may fail in cross join JPQL

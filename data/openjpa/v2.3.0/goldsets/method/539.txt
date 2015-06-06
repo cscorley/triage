@@ -1,2 +1,0 @@
-org.apache.openjpa.jdbc.meta.strats.HandlerHandlerMapTableFieldStrategy.map(boolean)
-org.apache.openjpa.persistence.relations.HandlerToHandlerMapInstance.getMap()

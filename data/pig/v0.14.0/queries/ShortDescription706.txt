@@ -1,1 +1,0 @@
-Implement ant target to use findbugs on PIG

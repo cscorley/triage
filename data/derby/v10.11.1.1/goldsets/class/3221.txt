@@ -1,2 +1,0 @@
-org.apache.derby.impl.sql.execute.TemporaryRowHolderImpl
-org.apache.derby.impl.sql.execute.TemporaryRowHolderResultSet

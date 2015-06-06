@@ -1,1 +1,0 @@
-convert SolrInputDocument to Document and Document to SolrDocument

@@ -1,1 +1,0 @@
-rectify confusing "Replication" and "Distribution" links on solr admin screen

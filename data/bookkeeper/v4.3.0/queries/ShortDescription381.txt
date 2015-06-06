@@ -1,1 +1,0 @@
-ReadLastConfirmedOp's Logger class name is wrong

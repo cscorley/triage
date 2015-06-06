@@ -1,3 +1,0 @@
-org.apache.lucene.search.FuzzyQuery
-org.apache.lucene.search.FuzzyQuery.ScoreTerm
-org.apache.lucene.search.FuzzyQuery.ScoreTermQueue

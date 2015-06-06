@@ -1,7 +1,0 @@
-org.apache.openjpa.meta.A
-org.apache.openjpa.meta.AbstractThing
-org.apache.openjpa.meta.B
-org.apache.openjpa.meta.C
-org.apache.openjpa.meta.C.Identity
-org.apache.openjpa.meta.InheritanceComparator
-org.apache.openjpa.meta.TestMetaDataInheritanceComparator

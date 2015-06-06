@@ -1,3 +1,0 @@
-org.apache.lucene.store.NativeFSLock
-org.apache.lucene.store.NativeFSLockFactory
-org.apache.lucene.store.TestLockFactory

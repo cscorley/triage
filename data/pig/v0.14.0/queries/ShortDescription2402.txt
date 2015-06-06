@@ -1,1 +1,0 @@
-inIllustrator condition in PigMapReduce is wrong for hadoop 23

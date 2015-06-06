@@ -1,1 +1,0 @@
-Derby fails inserting a join into a table with a generated column

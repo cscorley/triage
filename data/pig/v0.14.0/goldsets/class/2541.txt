@@ -1,3 +1,0 @@
-org.apache.pig.builtin.PigStorage
-org.apache.pig.impl.util.Utils
-org.apache.pig.test.TestPigStorage

@@ -1,3 +1,0 @@
-org.apache.tika.mime.MimeDetectionTest.testAutosetSupertype()
-org.apache.tika.mime.MimeDetectionTest.testDetection()
-org.apache.tika.mime.MimeDetectionTest.testStream(String,String,InputStream)

@@ -1,1 +1,0 @@
-Using merge JOIN from a HBaseStorage produces an error

@@ -1,1 +1,0 @@
-shouldClaim flag isn't cleared when resubscribing in multiplex java client. so it would continue claiming topic ownership in one hub, which is bad for load balancing.

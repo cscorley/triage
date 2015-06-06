@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.catalog.TabInfoImpl
-org.apache.derby.impl.sql.execute.InsertResultSet
-org.apache.derby.impl.store.access.btree.ControlRow

@@ -1,2 +1,0 @@
-org.apache.bookkeeper.benchmark.BenchThroughputLatency
-org.apache.bookkeeper.benchmark.TestBenchmark

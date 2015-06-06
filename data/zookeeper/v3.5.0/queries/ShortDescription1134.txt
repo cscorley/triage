@@ -1,1 +1,0 @@
-ClientCnxnSocket string comparison using == rather than equals

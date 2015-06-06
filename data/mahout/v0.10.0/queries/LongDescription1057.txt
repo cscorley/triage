@@ -1,1 +1,0 @@
-Our users might want to create customized strategies to provide candidate items for recommenders. These should also be refreshable to enable caching.

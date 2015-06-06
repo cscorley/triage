@@ -1,1 +1,0 @@
-Wrong Usage of Scalar which is null causes high namenode operation 

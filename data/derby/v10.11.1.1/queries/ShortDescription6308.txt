@@ -1,1 +1,0 @@
-joinStrategy optimizer override is ignored if you don't also specify joinOrder

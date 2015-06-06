@@ -1,1 +1,0 @@
-Need to add a web site to the openjpa project

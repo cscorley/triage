@@ -1,1 +1,0 @@
-PluginInfo should load plugins w/o class attribute also

@@ -1,1 +1,0 @@
-The attached PPT is a valid file but crashes Tika. It contains embedded Visio data, which may be the cause for the issue.

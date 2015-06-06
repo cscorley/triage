@@ -1,1 +1,0 @@
-Embedded files not extracted properly from PDF

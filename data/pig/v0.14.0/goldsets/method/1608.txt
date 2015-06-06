@@ -1,2 +1,0 @@
-org.apache.pig.test.TestPigServer.testPigProperties()
-org.apache.pig.test.TestPigServer.testPigTempDir()

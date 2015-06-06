@@ -1,2 +1,0 @@
-org.apache.hedwig.client.netty.HedwigSubscriber.asyncSubUnsub(ByteString,ByteString,Callback<Void>,Void,Object,OperationType,SubscriptionOptions)
-org.apache.hedwig.client.netty.HedwigSubscriber.subUnsub(ByteString,ByteString,OperationType,SubscriptionOptions)

@@ -1,2 +1,0 @@
-Koji Sekiguchi <koji@apache.org>
-Yonik Seeley <yonik@apache.org>

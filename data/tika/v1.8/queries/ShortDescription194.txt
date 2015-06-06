@@ -1,1 +1,0 @@
-Support java regular expressions in glob pattern spec for mime repo

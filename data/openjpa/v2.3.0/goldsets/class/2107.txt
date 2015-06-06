@@ -1,2 +1,0 @@
-org.apache.openjpa.kernel.BrokerImpl
-org.apache.openjpa.persistence.query.TestSimple

@@ -1,1 +1,0 @@
-Embedded pig in python; invoking sys.exit(0) causes script failure

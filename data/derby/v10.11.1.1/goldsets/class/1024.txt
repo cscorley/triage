@@ -1,3 +1,0 @@
-org.apache.derby.client.net.NetXAConnection
-org.apache.derby.client.net.NetXAConnectionReply
-org.apache.derby.client.net.NetXAResource

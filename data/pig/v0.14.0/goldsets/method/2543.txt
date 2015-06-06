@@ -1,2 +1,0 @@
-org.apache.pig.tools.grunt.GruntParser.processShCommand(String[])
-org.apache.pig.tools.pigstats.SimplePigStats.isSuccessful()

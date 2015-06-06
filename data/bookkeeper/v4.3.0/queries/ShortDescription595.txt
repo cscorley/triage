@@ -1,1 +1,0 @@
-Crash of inprocess autorecovery daemon should not take down the bookie

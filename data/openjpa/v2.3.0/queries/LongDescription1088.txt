@@ -1,4 +1,0 @@
-Three problems discovered with the examples:
-1) the openjpa-examples build was trying to use both the openjpa.jar and openjpa-all.jar files in the binary distribution
-2) the examples directory in the binary.zip didn't have a README for the examples
-3) the openjpa-integration/examples/pom.xml was not looking in the right location for the binary.zip file to extract

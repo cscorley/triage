@@ -1,6 +1,0 @@
-attached is the patch created from
-http://svn.apache.org/repos/asf/pig/branches/branch-0.11/
-
-two conf files are modified:
-  nightly.conf
-  turing_jython.conf

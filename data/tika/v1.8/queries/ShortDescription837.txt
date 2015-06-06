@@ -1,1 +1,0 @@
-Make inner classes static for performance reasons

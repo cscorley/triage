@@ -1,1 +1,0 @@
-Jython UDF does not handle boolean output

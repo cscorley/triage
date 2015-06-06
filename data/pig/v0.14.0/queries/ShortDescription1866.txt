@@ -1,1 +1,0 @@
-Dereference a bag within a tuple does not work

@@ -1,1 +1,0 @@
-Synchronizing logging output stream causes deadlock when used some JDK LogManger derivative 

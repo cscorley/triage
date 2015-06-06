@@ -1,1 +1,0 @@
-DatabaseMetaData .locatorsUpdateCopy() should return true

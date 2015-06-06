@@ -1,9 +1,0 @@
-The demo/programs files have some more accessibility problems – a couple that I missed for DERBY-5180, and a few more that were harder to fix than the items in that issue. These are the files that need fixing. 
-
-demo/programs/navbar.html – needs <HTML lang="en">
-demo/programs/demo.html – needs <HTML lang="en">
-demo/programs/simple/example.html (table)
-demo/programs/simplemobile/readme.html (blockquote for formatting)
-demo/programs/nserverdemo/simpleserversample.html (font element)
-demo/programs/toursdb/toursdb_readme.html (tables, lists used for formatting)
-demo/programs/workingwithderby/readme.html (blockquote for formatting)

@@ -1,5 +1,0 @@
-The derby.jar has all the bundle metadata you would expect for it to be an OSGi bundle, except for the Bundle-ManifestVersion header. As a result it is not a valid R4 bundle, but will be treated as an R3 bundle.
-
-Looking at the metadata provided it looks as if the bundle should be an R4 bundle. Adding the following will make it a proper R4 bundle.
-
-Bundle-ManifestVersion: 2

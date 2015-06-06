@@ -1,1 +1,0 @@
-NPE in packager when union + group-by followed by replicated join in Tez

@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.sequence.GeneratedIdObject
-org.apache.openjpa.persistence.sequence.TestSequenceGenerationOnMT
-org.apache.openjpa.persistence.sequence.TestSequenceGenerationOnMT.Loader

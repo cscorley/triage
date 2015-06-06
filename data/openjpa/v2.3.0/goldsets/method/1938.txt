@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.sql.SQLServerDictionary.appendXmlComparison2(SQLBuffer,String,FilterValue,FilterValue)
-org.apache.openjpa.jdbc.sql.SQLServerDictionary.appendXmlValue(SQLBuffer,FilterValue)
-org.apache.openjpa.jdbc.sql.SQLServerDictionary.connectedConfiguration(Connection)

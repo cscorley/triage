@@ -1,1 +1,0 @@
-Clob.truncate(0) throws exception

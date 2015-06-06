@@ -1,1 +1,0 @@
-Incorrect SegmentInfo.delCount when IndexReader.flush() is used

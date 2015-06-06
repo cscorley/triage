@@ -1,1 +1,0 @@
-Put notice and license file for distributed binaries in SVN

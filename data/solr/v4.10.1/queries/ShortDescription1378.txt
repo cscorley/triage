@@ -1,1 +1,0 @@
-Add reference to Packt's Solr book.

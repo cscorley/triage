@@ -1,1 +1,0 @@
-TikaCLI always uses System.in for input

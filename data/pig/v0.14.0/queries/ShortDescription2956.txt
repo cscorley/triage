@@ -1,1 +1,0 @@
-Invalid cache specification for some streaming statement

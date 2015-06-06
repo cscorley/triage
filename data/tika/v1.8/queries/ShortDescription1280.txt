@@ -1,1 +1,0 @@
-GZip now has an official mimetype

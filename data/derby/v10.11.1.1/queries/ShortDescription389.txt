@@ -1,1 +1,0 @@
-With Network Server Database hangs after some time with many connections executing prepareStatement()

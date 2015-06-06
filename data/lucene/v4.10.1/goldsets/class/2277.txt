@@ -1,2 +1,0 @@
-org.apache.lucene.queryParser.core.nodes.QueryNodeImpl
-org.apache.lucene.queryParser.core.nodes.TestQueryNode

@@ -1,1 +1,0 @@
-Eight new n-gram language profiles added: Belarusian, Catalan, Esperanto, Galician, Romanian, Slovak, Slovenian, and Ukrainian. 

@@ -1,2 +1,0 @@
-org.apache.tika.mime.MimeTypesReaderTest.testExcelMatches()
-org.apache.tika.mime.MimeTypesReaderTest.testReadComment()

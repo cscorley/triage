@@ -1,6 +1,0 @@
-     [exec] Zookeeper_simpleSystem::testAsyncWatcherAutoReset : assertion
-     [exec] 
-     [exec] /grid/0/gs/gridre/hudson/workspace/zootestbuild/trunk/src/c/tests/TestClient.cc:499: Assertion: assertion failed [Expression: ctx.waitForDisconnected(zk)]
-     [exec] Failures !!!
-     [exec] Run: 32   Failure total: 1   Failures: 1   Errors: 0
-     [exec] make: *** [run-check] Error 1

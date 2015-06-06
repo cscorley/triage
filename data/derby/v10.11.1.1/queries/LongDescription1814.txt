@@ -1,2 +1,0 @@
-Currently compiling in insane modes means that the tests do not have line number information, this makes investigating test failures harder.
-While there is a footprint benefit to having the "product" jars compiled without  line numbers, I don't think we care about the size of derbytesting.jar.

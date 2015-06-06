@@ -1,1 +1,0 @@
-Separate writeScalarStream to methods which handle either encrypted or plain streams.

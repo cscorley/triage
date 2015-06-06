@@ -1,2 +1,0 @@
-org.apache.mahout.classifier.sgd.OnlineLogisticRegression
-org.apache.mahout.classifier.sgd.OnlineLogisticRegressionTest

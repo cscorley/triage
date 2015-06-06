@@ -1,3 +1,0 @@
-org.apache.lucene.analysis.StopAnalyzer.StopAnalyzer(Version,Set<?>)
-org.apache.lucene.analysis.StopFilter.StopFilter(boolean,TokenStream,Set<?>,boolean)
-org.apache.lucene.analysis.TokenStream.TokenStream(AttributeFactory)

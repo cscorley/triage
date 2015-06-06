@@ -1,3 +1,0 @@
-org.apache.pig.builtin.TOP
-org.apache.pig.data.DataType
-org.apache.pig.test.TestNull

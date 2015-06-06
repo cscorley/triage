@@ -1,1 +1,0 @@
-Document system schemas including SYSIBM

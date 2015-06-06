@@ -1,1 +1,0 @@
-Enable code sharing between Derby client and engine

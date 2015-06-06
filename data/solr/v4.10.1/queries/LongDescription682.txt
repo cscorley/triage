@@ -1,1 +1,0 @@
-FreeBSD is just like Solaris and Darwin (well, in a manner of speaking)

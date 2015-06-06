@@ -1,3 +1,0 @@
-org.apache.mahout.ga.watchmaker.cd.DataLineTest.testSet()
-org.apache.mahout.ga.watchmaker.cd.FileInfosDatasetTest.testRanges()
-org.apache.mahout.ga.watchmaker.cd.hadoop.CDMahoutEvaluatorTest.testEvaluate()

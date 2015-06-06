@@ -1,1 +1,0 @@
-ManagedRuntime does not work for OSGi

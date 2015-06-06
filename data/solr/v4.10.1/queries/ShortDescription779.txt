@@ -1,1 +1,0 @@
-SolrQuery#setHighlightRequireFieldMatch() should be renamed to SolrQuery#getHighlightRequireFieldMatch().

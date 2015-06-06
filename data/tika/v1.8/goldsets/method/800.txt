@@ -1,1 +1,0 @@
-org.apache.tika.parser.pkg.PackageExtractor.unpack(ArchiveInputStream,XHTMLContentHandler)

@@ -1,3 +1,0 @@
-org.apache.bookkeeper.bookie.BookieShutdownTest
-org.apache.bookkeeper.bookie.BookieShutdownTest.LedgerEntryAddCallback
-org.apache.bookkeeper.bookie.BookieShutdownTest.SyncObj

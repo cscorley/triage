@@ -1,1 +1,0 @@
-Jute generates invalid C++ code

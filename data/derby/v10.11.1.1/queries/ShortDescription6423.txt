@@ -1,1 +1,0 @@
-The expression syntax in CASE's THEN clause doesn't accept boolean value expression

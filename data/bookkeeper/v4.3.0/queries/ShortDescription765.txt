@@ -1,1 +1,0 @@
-bookkeeper script should fall back to java in path if JAVA_HOME is not set

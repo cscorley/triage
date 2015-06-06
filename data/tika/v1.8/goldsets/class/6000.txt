@@ -1,3 +1,0 @@
-org.apache.tika.parser.odf.OpenDocumentContentParser
-org.apache.tika.parser.odf.OpenDocumentContentParser.OpenDocumentElementMappingContentHandler
-org.apache.tika.parser.odf.OpenDocumentParserTest

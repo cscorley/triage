@@ -1,1 +1,0 @@
-Include a Derby Network Server test profile

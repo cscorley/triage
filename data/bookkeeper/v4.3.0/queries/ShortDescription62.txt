@@ -1,1 +1,0 @@
-Bookie can not start when encountering corrupted records

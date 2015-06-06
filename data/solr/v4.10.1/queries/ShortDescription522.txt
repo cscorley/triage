@@ -1,1 +1,0 @@
-analysis.jsp doesn't show payloads created/modified by tokenizers and tokenfilters

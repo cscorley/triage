@@ -1,2 +1,0 @@
-org.apache.solr.analysis.PhoneticFilter
-org.apache.solr.analysis.TestPhoneticFilter

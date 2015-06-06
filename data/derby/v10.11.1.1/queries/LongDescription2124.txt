@@ -1,7 +1,0 @@
-The error message XJ045 begins as follows, according to the Derby Reference Manual:
-
-Invalid or (currently) unsupported isolation level, '<levelName>', passed to Connection.setTransactionIsolationLevel().
-
-The actual name of the method is Connection.setTransactionIsolation().
-
-The file that contains the error messages needs to be corrected.

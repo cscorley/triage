@@ -1,2 +1,0 @@
-Alan Gates <gates@apache.org>
-Santhosh Muthur Srinivasan <sms@apache.org>

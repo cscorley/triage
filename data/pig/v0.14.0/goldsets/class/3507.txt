@@ -1,3 +1,0 @@
-org.apache.pig.Main
-org.apache.pig.newplan.logical.rules.InputOutputFileValidator
-org.apache.pig.newplan.logical.rules.InputOutputFileValidator.InputOutputFileVisitor

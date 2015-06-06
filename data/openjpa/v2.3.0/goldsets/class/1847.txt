@@ -1,4 +1,0 @@
-org.apache.openjpa.jdbc.schema.SchemaGenerator
-org.apache.openjpa.jdbc.schema.SchemaGenerator.Event
-org.apache.openjpa.persistence.jdbc.kernel.BaseJDBCTest
-org.apache.openjpa.persistence.jdbc.schema.TestSchemaGenerator

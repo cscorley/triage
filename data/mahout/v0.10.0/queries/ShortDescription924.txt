@@ -1,1 +1,0 @@
-Allow creation of symmetric adjacency matrices

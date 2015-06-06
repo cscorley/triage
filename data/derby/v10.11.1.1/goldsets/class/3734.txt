@@ -1,2 +1,0 @@
-org.apache.derby.iapi.store.raw.RawStoreFactory
-org.apache.derby.impl.store.raw.data.BaseDataFileFactory

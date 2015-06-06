@@ -1,1 +1,0 @@
-PigNullableWritable toString method throws NPE on null value

@@ -1,1 +1,0 @@
-Example script not updated for new analysis path from SOLR-1099

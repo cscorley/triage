@@ -1,3 +1,0 @@
-org.apache.pig.impl.io.TFileRecordReader.getProgress()
-org.apache.pig.test.TestTmpFileCompression.testTFileRecordReader()
-org.apache.pig.test.TestTmpFileCompression.testTFileRecordWriterReaderAndProgress()

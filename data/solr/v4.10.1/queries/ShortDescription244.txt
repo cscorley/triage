@@ -1,1 +1,0 @@
-ModifiableSolrParams -- (perhaps) modify MultiMapSolrParams

@@ -1,1 +1,0 @@
-OpenDocumentMetaParser should use common metadata keys for document statistics

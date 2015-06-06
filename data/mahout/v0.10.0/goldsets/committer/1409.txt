@@ -1,2 +1,0 @@
-Ted Dunning <tdunning@apache.org>
-smarthi <smarthi@unknown>

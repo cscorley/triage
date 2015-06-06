@@ -1,1 +1,0 @@
-InMemoryCollapsedVariationalBayes0 should ignore _SUCCESS files when reading in the tf-vectors

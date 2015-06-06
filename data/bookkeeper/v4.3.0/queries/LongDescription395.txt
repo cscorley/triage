@@ -1,7 +1,0 @@
-hadoop-hdfs-0.23.1 depends on commons-daemon-1.0.3, which has a corrupted pom. Without running artifactory in a loosey-goosey less restrictive mode, it will refuse to cache that particular dep:
-
-HTTP/1.1 409 The target deployment path 'commons-daemon/commons-daemon/1.0.3/commons-daemon-1.0.3.pom' does not match the POM's expected path prefix 'org/apache/commons/commons-daemon/1.0.3'. Please verify your POM content for correctness and make sure the source path is a valid Maven repository root path.
-
-
-
-Since the bookkeeper-benchmark only uses the HDFS Filesystem and config intefaces, commons-daemon is unnecessary, and can be excluded.

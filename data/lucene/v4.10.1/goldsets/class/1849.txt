@@ -1,2 +1,0 @@
-org.apache.lucene.search.FilteredQuery
-org.apache.lucene.search.TestFilteredQuery

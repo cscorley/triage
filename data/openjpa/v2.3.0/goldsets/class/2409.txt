@@ -1,4 +1,0 @@
-org.apache.openjpa.tools.maven.AbstractOpenJpaEnhancerMojo
-org.apache.openjpa.tools.maven.AbstractOpenJpaMojo
-org.apache.openjpa.tools.maven.OpenJpaSchemaMojo
-org.apache.openjpa.tools.maven.OpenJpaSqlMojo

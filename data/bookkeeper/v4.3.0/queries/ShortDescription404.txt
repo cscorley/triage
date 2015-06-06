@@ -1,1 +1,0 @@
-Deprecate non-SubscriptionOptions Subscriber Apis

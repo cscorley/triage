@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.ExtentImpl.closeAll()
-org.apache.openjpa.persistence.ExtentImpl.equals(Object)
-org.apache.openjpa.persistence.ExtentImpl.hashCode()

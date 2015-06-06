@@ -1,2 +1,0 @@
-org.apache.pig.piggybank.storage.PigStorageSchema
-org.apache.pig.piggybank.test.TestPigStorageSchema

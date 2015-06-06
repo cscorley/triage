@@ -1,1 +1,0 @@
-PigServer.registerScript() wraps exception incorrectly on parsing errors

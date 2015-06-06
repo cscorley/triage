@@ -1,1 +1,0 @@
-The zookeeper jar includes the java source files

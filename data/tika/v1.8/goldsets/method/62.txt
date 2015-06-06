@@ -1,2 +1,0 @@
-org.apache.tika.TestParsers.setUp()
-org.apache.tika.TestParsers.testPDFExtraction()

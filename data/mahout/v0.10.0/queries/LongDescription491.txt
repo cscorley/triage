@@ -1,1 +1,0 @@
-The problem is that OnlineAuc doesn't allow injection of a PRNG.

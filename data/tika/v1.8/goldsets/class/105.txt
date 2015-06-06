@@ -1,3 +1,0 @@
-org.apache.tika.parser.microsoft.ExcelEventParser
-org.apache.tika.parser.microsoft.ExcelEventParser.TikaHSSFListener
-org.apache.tika.parser.microsoft.ExcelParser

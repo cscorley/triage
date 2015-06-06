@@ -1,1 +1,0 @@
-JdbcDataSource : getARow() : Do not hardcode default type ..

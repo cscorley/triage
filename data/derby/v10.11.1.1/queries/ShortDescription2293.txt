@@ -1,1 +1,0 @@
-convert batchUpdate.java to junit

@@ -1,1 +1,0 @@
-We should document how ops engineer should design their ZooKeeper deployments.  

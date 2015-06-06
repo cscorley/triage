@@ -1,1 +1,0 @@
-PurgeTxnLog may delete data logs during roll

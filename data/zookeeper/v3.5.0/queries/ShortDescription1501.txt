@@ -1,1 +1,0 @@
-Nagios plugin always returns OK when it cannot connect to zookeeper

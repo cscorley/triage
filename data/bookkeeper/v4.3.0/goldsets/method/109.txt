@@ -1,2 +1,0 @@
-org.apache.bookkeeper.bookie.Bookie.SyncThread.run()
-org.apache.bookkeeper.bookie.Bookie.SyncThread.run.accept(long)

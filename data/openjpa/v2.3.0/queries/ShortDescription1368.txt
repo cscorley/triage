@@ -1,1 +1,0 @@
-Upgrade to HSQLDB 1.8.0.10 and in-memory db for unit tests

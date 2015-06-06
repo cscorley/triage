@@ -1,2 +1,0 @@
-org.apache.solr.handler.ExtractingRequestHandlerTest
-org.apache.solr.handler.extraction.ExtractingDocumentLoader

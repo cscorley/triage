@@ -1,1 +1,0 @@
-hedwig c++ tester script assumes sh is bash

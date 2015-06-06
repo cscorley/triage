@@ -1,3 +1,0 @@
-This happened when I called zoo_add_auth() immediately after zookeeper_init(). It took me a while to figure out that authentication actually failed since zoo_add_auth() returned ZOK. It should return ZINVALIDSTATE instead. 
-
---Michi

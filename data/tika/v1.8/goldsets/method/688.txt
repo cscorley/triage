@@ -1,3 +1,0 @@
-org.apache.tika.detect.TextDetector.detect(InputStream,Metadata)
-org.apache.tika.detect.TextDetectorTest.testDetectText()
-org.apache.tika.mime.MimeTypes.getMimeType(byte[])

@@ -1,5 +1,0 @@
-org.apache.solr.handler.dataimport.AbstractDataImportHandlerTest
-org.apache.solr.handler.dataimport.Context
-org.apache.solr.handler.dataimport.ContextImpl
-org.apache.solr.handler.dataimport.DocBuilder
-org.apache.solr.handler.dataimport.DocBuilder.Statistics

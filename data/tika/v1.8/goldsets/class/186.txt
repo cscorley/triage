@@ -1,2 +1,0 @@
-org.apache.tika.metadata.MSOffice
-org.apache.tika.parser.microsoft.OfficeParser

@@ -1,1 +1,0 @@
-Use new Offset/Limit/ROWNUM features in DB2 family of databases for range queries

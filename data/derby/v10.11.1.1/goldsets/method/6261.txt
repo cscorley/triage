@@ -1,1 +1,0 @@
-org.apache.derbyTesting.functionTests.util.Jdbc20Test.newToJdbc20Method()

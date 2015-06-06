@@ -1,1 +1,0 @@
-JDBC driver on rs.getFloat() gives LossOfPrecisionConversionException for float fields containing Float.MAX_VALUE

@@ -1,3 +1,0 @@
-Bryan Pendleton <bpendleton@apache.org>
-Mamta Satoor <mamta@apache.org>
-Samuel Andrew McIntyre <fuzzylogic@apache.org>

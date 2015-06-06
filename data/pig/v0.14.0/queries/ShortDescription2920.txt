@@ -1,1 +1,0 @@
-e2e tests override PERL5LIB environment variable

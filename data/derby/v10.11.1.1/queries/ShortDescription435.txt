@@ -1,1 +1,0 @@
-jdbcapi/checkDataSource.java and  jdbapi/checkDataSource30.java to tests should be changed or extended to test client DataSources

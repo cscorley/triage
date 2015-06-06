@@ -1,1 +1,0 @@
-Once pig specifes using local mode and tez framework, it will pass local parameter to tez and enable tez to use local mode.

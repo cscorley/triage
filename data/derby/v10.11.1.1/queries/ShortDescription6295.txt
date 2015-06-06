@@ -1,1 +1,0 @@
-Allow tests to show detailed error when spawning new process fails

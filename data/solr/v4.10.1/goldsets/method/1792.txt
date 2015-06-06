@@ -1,2 +1,0 @@
-org.apache.solr.util.TestHarness.LocalRequestFactory.LocalRequestFactory()
-org.apache.solr.util.TestHarness.LocalRequestFactory.makeRequest(String)

@@ -1,1 +1,0 @@
-SysinfoTest  version output filtering is fragile with new java versions

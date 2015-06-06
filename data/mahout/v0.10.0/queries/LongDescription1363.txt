@@ -1,5 +1,0 @@
-It has occurred to me that in my commit of mahout-scala stuff, i haven't rebased packages onto o.a.m... as has been discussed. 
-
-it also has occurred to me that putting that stuff into o.a.m.math in this case may create unwelcome interference between java and scala stuff. 
-
-So I am moving scala math DSL stuff into 0.a.m.math.scalabindings package. It is awfully awkward compared to just "mahout.math" scala style package it bears now, but i guess modern IDE tools make it no problem to import. 

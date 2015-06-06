@@ -1,3 +1,0 @@
-org.apache.lucene.search.ConstantScoreQuery
-org.apache.lucene.search.ConstantScoreQuery.ConstantWeight
-org.apache.lucene.search.MatchAllDocsQuery

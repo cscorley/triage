@@ -1,2 +1,0 @@
-org.apache.lucene.search.BooleanQuery
-org.apache.lucene.search.TestWildcard

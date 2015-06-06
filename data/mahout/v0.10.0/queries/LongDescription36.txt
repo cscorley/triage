@@ -1,2 +1,0 @@
-Optionally allows passing weights to distance measure implementations.
-

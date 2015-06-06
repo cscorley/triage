@@ -1,4 +1,0 @@
-org.apache.tika.cli.TikaCLI.main(String[])
-org.apache.tika.cli.TikaCLI.process(String)
-org.apache.tika.cli.TikaCLI.TikaCLI()
-org.apache.tika.cli.TikaCLI.usage()

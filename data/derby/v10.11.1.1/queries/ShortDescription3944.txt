@@ -1,1 +1,0 @@
-CHECK constraints involving user-coded functions may return different results depending on who performs the triggering INSERT/UPDATE

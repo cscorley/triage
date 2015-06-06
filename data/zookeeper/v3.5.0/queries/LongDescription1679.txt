@@ -1,3 +1,0 @@
-Visual studio still doesn't support c99.
-
---Michi

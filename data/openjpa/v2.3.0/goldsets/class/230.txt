@@ -1,5 +1,0 @@
-org.apache.openjpa.event.TCPRemoteCommitProvider
-org.apache.openjpa.event.TCPRemoteCommitProvider.BroadcastQueue
-org.apache.openjpa.event.TCPRemoteCommitProvider.BroadcastWorkerThread
-org.apache.openjpa.event.TCPRemoteCommitProvider.TCPPortListener
-org.apache.openjpa.event.TCPRemoteCommitProvider.TCPPortListener.ReceiveSocketHandler

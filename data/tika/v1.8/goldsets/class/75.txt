@@ -1,2 +1,0 @@
-org.apache.tika.mime.MimeUtils
-org.apache.tika.mime.TestMimeUtils

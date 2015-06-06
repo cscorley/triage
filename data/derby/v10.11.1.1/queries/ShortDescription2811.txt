@@ -1,1 +1,0 @@
-Specifying -h 0.0.0.0 with default security manager bars clients from connecting from any host

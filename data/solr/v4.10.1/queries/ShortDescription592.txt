@@ -1,1 +1,0 @@
-Handler components should use parameter constants instead of hardcoded strings

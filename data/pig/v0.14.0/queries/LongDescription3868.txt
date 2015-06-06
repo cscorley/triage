@@ -1,2 +1,0 @@
-On windows Iterator_1 test failed, because python automatically write windows end line character and then compares with unix end line character.
-For fix this need open fine as binary file.

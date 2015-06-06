@@ -1,1 +1,0 @@
-Unexpected RuntimeException from org.apache.tika.parser.mail.RFC822Parser@40bb2bc3

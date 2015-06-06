@@ -1,1 +1,0 @@
-A way to efficiently load simple formatted text files, including CSV files.

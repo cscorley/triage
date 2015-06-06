@@ -1,1 +1,0 @@
-This will obliterate tons of classpath issues and hadoop versions, paths problem that has fraught bin/pig and Pig in general.

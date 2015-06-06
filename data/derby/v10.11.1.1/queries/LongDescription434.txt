@@ -1,3 +1,0 @@
-jdbcapi/xaMorph.sql jdbcapi/xaJNDI , and jdbcapi/xaAnotherTest.sql  should be added to derbynetclientmats client xa testing.   
-
-

@@ -1,1 +1,0 @@
-SysInfo does not print the right information when Derby is not loaded through the classpath.

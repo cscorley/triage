@@ -1,1 +1,0 @@
-Provide MapReduce job for creating Encoded Vectors from sequence files

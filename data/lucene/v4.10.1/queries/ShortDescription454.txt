@@ -1,1 +1,0 @@
-lazily create SegmentMergeInfo.docMap

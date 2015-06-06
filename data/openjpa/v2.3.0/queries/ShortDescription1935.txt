@@ -1,1 +1,0 @@
-Informix lock exceptions are not mapped properly by OpenJPA

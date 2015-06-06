@@ -1,1 +1,0 @@
-Support running message filter on java client-side.

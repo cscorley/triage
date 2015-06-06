@@ -1,1 +1,0 @@
-Update localizer.properties files for easier translation

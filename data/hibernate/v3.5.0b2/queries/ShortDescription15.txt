@@ -1,1 +1,0 @@
-More control over session caching

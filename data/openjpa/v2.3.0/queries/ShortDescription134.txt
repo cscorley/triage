@@ -1,1 +1,0 @@
-Extra unneeded SQL joins for OneToMany relationship with fetch type EAGER

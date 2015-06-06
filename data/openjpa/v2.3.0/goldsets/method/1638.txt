@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.lockmgr.TestNamedQueryLockMode.testForUpdateClauseAbsentInQueryWithFetchPlanNoneLockMode()
-org.apache.openjpa.persistence.lockmgr.TestNamedQueryLockMode.testForUpdateClausePresentInQueryWithDefault()
-org.apache.openjpa.persistence.lockmgr.TestNamedQueryLockMode.testNamedQueryWithLockModeMustExecuteInTransaction()

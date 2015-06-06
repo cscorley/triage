@@ -1,1 +1,0 @@
-Deprecate "create" method in FSDirectory.getDirectory in favor of IndexWriter's "create"

@@ -1,1 +1,0 @@
-Code paths for db restore do not use doPrivileged-calls, causing SecurityException

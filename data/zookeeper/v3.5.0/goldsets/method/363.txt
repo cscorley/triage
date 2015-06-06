@@ -1,3 +1,0 @@
-org.apache.bookkeeper.client.LedgerRecoveryMonitor.recover(byte[])
-org.apache.bookkeeper.test.LedgerRecoveryTest.testEmptyLedgerRecovery()
-org.apache.bookkeeper.test.LedgerRecoveryTest.testLedgerRecovery()

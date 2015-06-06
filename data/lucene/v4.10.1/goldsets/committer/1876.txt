@@ -1,2 +1,0 @@
-Chris M. Hostetter <hossman@apache.org>
-Robert Muir <rmuir@apache.org>

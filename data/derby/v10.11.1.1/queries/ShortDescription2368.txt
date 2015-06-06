@@ -1,1 +1,0 @@
-Modify compatibility/testScript.xml to not run embedded/jvm1.3 case any more - not valid after r509863

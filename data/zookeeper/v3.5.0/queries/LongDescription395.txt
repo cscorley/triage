@@ -1,1 +1,0 @@
-ZooKeeper doesn't have Python bindings. Having them would be useful, and would complement the extant Perl bindings. 

@@ -1,1 +1,0 @@
-MSWord parser does not extract footnotes and comments

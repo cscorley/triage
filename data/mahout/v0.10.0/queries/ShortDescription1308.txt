@@ -1,1 +1,0 @@
-Cannot extend CandidateItemsStrategy due to restricted visibility

@@ -1,1 +1,0 @@
-Using an instance lock to protect static shared data in EmbedPooledConnection

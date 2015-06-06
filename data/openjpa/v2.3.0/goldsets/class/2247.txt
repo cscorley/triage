@@ -1,4 +1,0 @@
-org.apache.openjpa.jdbc.meta.MappingRepository
-org.apache.openjpa.meta.Parent
-org.apache.openjpa.meta.PChildBi
-org.apache.openjpa.meta.TestSecondaryTable

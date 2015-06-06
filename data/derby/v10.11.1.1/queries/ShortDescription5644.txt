@@ -1,1 +1,0 @@
-Typo in error message for NATIVE authentication

@@ -1,1 +1,0 @@
-TestBookKeeperPersistenceManager failed on latest trunk

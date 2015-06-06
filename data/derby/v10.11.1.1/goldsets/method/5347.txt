@@ -1,2 +1,0 @@
-org.apache.derby.impl.drda.ClientThread.acceptClientWithRetry()
-org.apache.derby.impl.drda.ClientThread.run()

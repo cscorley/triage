@@ -1,1 +1,0 @@
-Last modification time of a bookkeeper ledger

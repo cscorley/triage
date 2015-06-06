@@ -1,2 +1,0 @@
-org.apache.pig.newplan.logical.relational.LogicalSchema
-org.apache.pig.test.TestEvalPipeline2

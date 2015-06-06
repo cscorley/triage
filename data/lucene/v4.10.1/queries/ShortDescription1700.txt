@@ -1,1 +1,0 @@
-LogMergePolicy.findMergesToExpungeDeletes need to get deletes from the SegmentReader

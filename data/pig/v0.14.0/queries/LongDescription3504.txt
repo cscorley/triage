@@ -1,8 +1,0 @@
-The test case fails with the following error:
-
-
-./test_harness.pl::TestDriverPig::compareScript INFO Checking test stderr for regular expression <No plan for X to describe>
-./test_harness.pl::TestDriverPig::compareScript INFO Check failed: regex match of <No plan for X to describe> expected in stderr: ./out/pigtest/cheolsoop/cheolsoop-1381090887-cmdline.conf-Describe_cmdline/Describe_cmdline_12.out/stderr
-INFO: TestDriver::runTestGroup() at 706:Test Describe_cmdline_12 FAILED at 1381091044
-Results so far,    PASSED: 10   FAILED: 1    SKIPPED: 0    ABORTED: 0    FAILED DEPENDENCY: 0    [cmdline.conf-Describe_cmdline]
-

@@ -1,1 +1,0 @@
-Provide message localizations for 10.5

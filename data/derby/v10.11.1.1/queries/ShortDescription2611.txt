@@ -1,1 +1,0 @@
-upgrade test incorrectly tries to test in place compress in 10.0 release.

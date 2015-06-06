@@ -1,1 +1,0 @@
-Embedded and client data sources throw different exception when a connection attribute is badly formatted

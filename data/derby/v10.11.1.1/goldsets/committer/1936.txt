@@ -1,2 +1,0 @@
-Bryan Pendleton <bpendleton@apache.org>
-David Van Couvering <davidvc@apache.org>

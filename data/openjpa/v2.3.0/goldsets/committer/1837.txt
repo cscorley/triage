@@ -1,3 +1,0 @@
-Albert Lee <allee8285@apache.org>
-Fay Wang <faywang@apache.org>
-Milosz Tylenda <mtylenda@apache.org>

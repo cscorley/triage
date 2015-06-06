@@ -1,1 +1,0 @@
-A deadlock issue happens when DirtyListener is used

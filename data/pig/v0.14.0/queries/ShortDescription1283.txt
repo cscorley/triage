@@ -1,1 +1,0 @@
-COUNT on null bag causes failure

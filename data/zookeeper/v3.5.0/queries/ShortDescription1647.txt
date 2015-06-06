@@ -1,1 +1,0 @@
-OSGi package import/export changes not applied to bin-jar

@@ -1,1 +1,0 @@
-error in EvalFunc ctor when implementing Algebraic UDF whose return type is parameterized

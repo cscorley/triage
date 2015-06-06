@@ -1,1 +1,0 @@
-TestPruneColumn unit test - SimpleEchoStreamingCommand perl inline script needs simplification

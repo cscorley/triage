@@ -1,1 +1,0 @@
-ClassResolution_1, Native_1_Local, Native_2_Local, Native_3_Local, Jython_Macro_1_local and NegForeach_8 are some of the failing e2e tests that need to be fixed. 

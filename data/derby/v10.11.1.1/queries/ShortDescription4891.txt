@@ -1,1 +1,0 @@
-Enable testing of boolean type in ParameterMappingTest

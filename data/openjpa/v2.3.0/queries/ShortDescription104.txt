@@ -1,1 +1,0 @@
-OpenJPA does not detach instances on rollback()

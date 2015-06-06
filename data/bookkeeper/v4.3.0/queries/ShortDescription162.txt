@@ -1,1 +1,0 @@
-LedgerHandle.readLastConfirmed does not work

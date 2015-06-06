@@ -1,1 +1,0 @@
-Client driver silently truncates strings that exceed 32KB

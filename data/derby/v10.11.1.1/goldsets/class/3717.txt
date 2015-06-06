@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.derbynet.getCurrentProperties
-org.apache.derbyTesting.functionTests.tests.derbynet.GetCurrentPropertiesTest
-org.apache.derbyTesting.functionTests.tests.derbynet._Suite

@@ -1,1 +1,0 @@
-remove references to IBM jcc driver from sysinfo 

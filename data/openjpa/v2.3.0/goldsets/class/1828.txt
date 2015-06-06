@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.kernel.exps.Param
-org.apache.openjpa.persistence.criteria.TestTypesafeCriteria
-org.apache.openjpa.persistence.jdbc.sqlcache.TestPreparedQueryCache

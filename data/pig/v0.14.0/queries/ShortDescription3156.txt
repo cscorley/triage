@@ -1,1 +1,0 @@
-TestSchemaTuple fails in trunk

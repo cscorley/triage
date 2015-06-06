@@ -1,3 +1,0 @@
-org.apache.derby.impl.services.bytecode.CodeChunk
-org.apache.derby.shared.common.i18n.MessageUtil
-org.apache.derby.shared.common.info.JVMInfo

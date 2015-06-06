@@ -1,1 +1,0 @@
-Formalize use of old Derby distributions in tests

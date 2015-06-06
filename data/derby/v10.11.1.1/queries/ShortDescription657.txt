@@ -1,1 +1,0 @@
-Release archives should have executable bits set for scripts and text files should have proper line endings.

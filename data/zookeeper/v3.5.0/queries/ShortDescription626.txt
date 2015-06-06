@@ -1,1 +1,0 @@
-ensure the c/java cli's print xid/sessionid/etc... in hex

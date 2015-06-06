@@ -1,2 +1,0 @@
-org.apache.solr.handler.dataimport.DataConfig.Entity.Entity(Element)
-org.apache.solr.handler.dataimport.DataImporter.loadDataConfig(String)

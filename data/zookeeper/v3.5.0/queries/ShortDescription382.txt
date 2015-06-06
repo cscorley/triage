@@ -1,1 +1,0 @@
-zookeeper cpp tests fails on 64 bit machines with gcc 4.1.2

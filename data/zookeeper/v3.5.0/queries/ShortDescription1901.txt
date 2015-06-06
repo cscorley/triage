@@ -1,1 +1,0 @@
-[JDK8] Sort children for comparison in AsyncOps tests

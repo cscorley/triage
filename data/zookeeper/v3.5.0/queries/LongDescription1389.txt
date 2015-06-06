@@ -1,1 +1,0 @@
-A log of daemon management tools expect a process itself to be running as a child instead of a grand-child. It would be nice if we had an option for that in zkServer.sh

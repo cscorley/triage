@@ -1,1 +1,0 @@
-We need to write detailed release notes that detail how c and java client API users as well as zk server administrators migrate from 2.x to 3.x zookeeper release.

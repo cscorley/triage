@@ -1,1 +1,0 @@
-Data inconsistency when the node(s) with the highest zxid is not present at the time of leader election

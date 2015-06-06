@@ -1,1 +1,0 @@
-Add tests of generated columns when sql authorization is turned on

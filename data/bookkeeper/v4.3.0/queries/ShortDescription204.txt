@@ -1,1 +1,0 @@
-Provide a MetaStore interface, and a mock implementation.

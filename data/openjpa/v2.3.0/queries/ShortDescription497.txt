@@ -1,1 +1,0 @@
-Incorect handling of temporal parameters in queries

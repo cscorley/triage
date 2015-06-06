@@ -1,2 +1,0 @@
-org.apache.zookeeper.client.ZooKeeperSaslClient
-org.apache.zookeeper.server.ZooKeeperSaslServer

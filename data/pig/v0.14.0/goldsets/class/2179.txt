@@ -1,2 +1,0 @@
-org.apache.pig.builtin.JsonMetadata
-org.apache.pig.test.TestLoad

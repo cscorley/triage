@@ -1,1 +1,0 @@
-Tika fails to extract text from PDF annotations

@@ -1,2 +1,0 @@
-org.apache.derby.impl.drda.DRDAProtocolException
-org.apache.derby.impl.drda.NetworkServerControlImpl

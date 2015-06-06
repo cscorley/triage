@@ -1,1 +1,0 @@
-Metadata.formatDate causes blocking in concurrent use

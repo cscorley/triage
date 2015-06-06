@@ -1,3 +1,0 @@
-org.apache.lucene.queryParser.surround.query.SpanNearClauseFactory.makeSpanNearClause()
-org.apache.lucene.queryParser.surround.query.SpanNearClauseFactory.makeSpanNearClause.compare(Object,Object)
-org.apache.lucene.queryParser.surround.query.SpanNearClauseFactory.makeSpanNearClause.equals(Object)

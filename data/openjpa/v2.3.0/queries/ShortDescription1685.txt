@@ -1,1 +1,0 @@
-Comma delimited validation groups defined in persistence.xml do not handle whitespace

@@ -1,1 +1,0 @@
-The documentation suggests that a user needs to manually register a bookie, which is not right.

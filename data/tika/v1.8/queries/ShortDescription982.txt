@@ -1,1 +1,0 @@
-RTF document embedded into Word (.doc) document is extracted as .unknown

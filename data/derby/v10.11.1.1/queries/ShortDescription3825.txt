@@ -1,1 +1,0 @@
-StoreStreamClob.getReader(charPos) performs poorly

@@ -1,3 +1,0 @@
-org.apache.mahout.clustering.syntheticcontrol.kmeans.Job.main(String[])
-org.apache.mahout.clustering.syntheticcontrol.kmeans.Job.run(Configuration,Path,Path,DistanceMeasure,int,double,int)
-org.apache.mahout.clustering.syntheticcontrol.kmeans.Job.run(String[])

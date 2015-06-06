@@ -1,1 +1,0 @@
-The "CALL %~dp0derby_common.bat %*" command in the .bat files in the bin/ directory are unquoted. So, if the path the scripts live in contains a space, running them will either result in CALL failing or producing an undesired effect.

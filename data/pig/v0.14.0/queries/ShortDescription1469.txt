@@ -1,1 +1,0 @@
-DefaultDataBag assumes ArrayList as default List type

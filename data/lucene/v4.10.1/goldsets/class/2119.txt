@@ -1,2 +1,0 @@
-org.apache.lucene.search.IndexSearcher
-org.apache.lucene.util.PriorityQueue

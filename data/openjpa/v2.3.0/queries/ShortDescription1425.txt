@@ -1,1 +1,0 @@
-Literal value in projection can not be parameterized for all databases

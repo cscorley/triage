@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.jdbcapi.ParameterMappingTest.helperTestDerby6214(int,int)
-org.apache.derbyTesting.functionTests.tests.jdbcapi.ParameterMappingTest.setUp()
-org.apache.derbyTesting.functionTests.tests.jdbcapi.ParameterMappingTest.testDerby6214()

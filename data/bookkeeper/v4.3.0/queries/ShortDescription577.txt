@@ -1,1 +1,0 @@
-BookieFailureTest uses sync/wait()/notify() incorrectly

@@ -1,1 +1,0 @@
-replicateLedgerFragment should throw Exceptions in error conditions

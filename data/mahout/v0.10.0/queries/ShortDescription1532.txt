@@ -1,1 +1,0 @@
-Add solve() function to the Scala DSL 

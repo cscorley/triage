@@ -1,1 +1,0 @@
-The tar, deb and rpm artifacts should contain piggybank but they don't when built via ant unless piggybank is built separately.

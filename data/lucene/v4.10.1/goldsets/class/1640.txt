@@ -1,2 +1,0 @@
-org.apache.lucene.store.MockRAMDirectory
-org.apache.lucene.store.MockRAMInputStream

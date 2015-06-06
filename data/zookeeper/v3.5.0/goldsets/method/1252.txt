@@ -1,2 +1,0 @@
-org.apache.zookeeper.test.AsyncTest.restart()
-org.apache.zookeeper.test.AsyncTest.setUp()

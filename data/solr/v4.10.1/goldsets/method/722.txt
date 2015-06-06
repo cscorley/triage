@@ -1,2 +1,0 @@
-org.apache.solr.client.solrj.MultiCoreExampleTestBase.testMultiCore()
-org.apache.solr.core.CoreContainer.reload(String)

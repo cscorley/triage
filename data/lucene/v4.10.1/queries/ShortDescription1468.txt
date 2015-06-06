@@ -1,1 +1,0 @@
-FSDirectory.list() is inconsistent

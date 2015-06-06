@@ -1,1 +1,0 @@
-Cleaning up clustering documentation on mahout website 

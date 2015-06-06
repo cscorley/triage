@@ -1,1 +1,0 @@
-Zebra store function should allow '::' in column names in output schema

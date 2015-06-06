@@ -1,2 +1,0 @@
-pig use ivy for dependency management. But still it uses hadoop20.jar from the lib folder. 
-Now that we have the hadoop-0.20.2 artifacts available in the maven repo, pig should leverage ivy for resolving/retrieving hadoop artifacts.

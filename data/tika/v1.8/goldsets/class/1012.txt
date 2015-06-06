@@ -1,5 +1,0 @@
-org.apache.tika.mime.MimeType
-org.apache.tika.mime.MimeTypesReader
-org.apache.tika.mime.MimeTypesReaderMetKeys
-org.apache.tika.mime.MimeTypesReaderTest
-org.apache.tika.mime.MimeTypeTest

@@ -1,1 +1,0 @@
-More performance improvements for OpenJPA (lib and kernel)

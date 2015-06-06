@@ -1,1 +1,0 @@
-Add a pig.cmd for Pig to run under Windows

@@ -1,1 +1,0 @@
-SQLChar.copyState() doesn't copy localeFinder

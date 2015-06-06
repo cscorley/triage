@@ -1,1 +1,0 @@
-Quoted names with embedded period mishandled in from list

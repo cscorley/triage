@@ -1,1 +1,0 @@
-Define interfaces for OpenJPA specific extension to Criteria Query API

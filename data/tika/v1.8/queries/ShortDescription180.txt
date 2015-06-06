@@ -1,1 +1,0 @@
-XHTMLContentHandler unable to extract text from MSWord file

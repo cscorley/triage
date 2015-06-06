@@ -1,1 +1,0 @@
-C Client might not cleanup correctly during close

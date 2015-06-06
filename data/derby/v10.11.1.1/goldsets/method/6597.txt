@@ -1,1 +1,0 @@
-org.apache.derby.optional.lucene.LuceneSupport.createOrRecreateIndex(Connection,String,String,String,String,boolean,String)

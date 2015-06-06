@@ -1,2 +1,0 @@
-org.apache.lucene.ant.IndexTask
-org.apache.lucene.ant.IndexTaskTest

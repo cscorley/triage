@@ -1,1 +1,0 @@
-memory leak in HostAddress of hedwig c++ client

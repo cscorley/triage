@@ -1,1 +1,0 @@
-This isssue is to track upgrading the PDFbox dependency to 1.7.0 Final once it's available, and the daily build before then

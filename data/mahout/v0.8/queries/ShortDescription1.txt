@@ -1,1 +1,0 @@
-Mahout site doesn't link to mailing list archives.

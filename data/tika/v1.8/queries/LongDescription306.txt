@@ -1,1 +1,0 @@
-Very small correction, the OOXMLParserText.java uses OpenOfficeParserTest to load the test files (it does work just fine actually, probably copy/paste issue)

@@ -1,1 +1,0 @@
-Add .gitignore file which ignores eclipse artifacts, target directory and various log files

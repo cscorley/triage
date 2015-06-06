@@ -1,2 +1,0 @@
-org.apache.mahout.driver.MahoutDriver
-org.apache.mahout.driver.MahoutDriverTest

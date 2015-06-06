@@ -1,1 +1,0 @@
-Treat Oracle XMLType columns as XML

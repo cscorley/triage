@@ -1,1 +1,0 @@
-The schema parser fails on schemas of COLLECTION columns like c:collection(int).

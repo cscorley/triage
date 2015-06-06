@@ -1,1 +1,0 @@
-ZooKeeper test utility sets the port number as the tickTime

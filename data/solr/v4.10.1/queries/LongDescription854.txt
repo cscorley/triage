@@ -1,1 +1,0 @@
-Working in eclipse, I find it really convenient for debugging/testing to have a 'run-example' target in the build file. Anyone else?

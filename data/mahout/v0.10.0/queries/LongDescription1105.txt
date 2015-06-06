@@ -1,1 +1,0 @@
-AbstractNaiveBayesClassifier.classifyFull(Vector,Vector) is not using provided result vector to store the result of classification.

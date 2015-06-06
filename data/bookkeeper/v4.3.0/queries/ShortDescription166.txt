@@ -1,1 +1,0 @@
-Bookie will not recover its journal if the length prefix of an entry is truncated

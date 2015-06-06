@@ -1,1 +1,0 @@
-problems with read only mode, intermittent test failures and ERRORs in the log

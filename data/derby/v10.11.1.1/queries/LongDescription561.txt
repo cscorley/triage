@@ -1,1 +1,0 @@
-The embedded driver returns false for the java.sql.Driver.jdbcCompliant() method. It should return true.

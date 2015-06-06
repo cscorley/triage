@@ -1,3 +1,0 @@
-org.apache.mahout.clustering.spectral.eigencuts.EigencutsDriver.run(Configuration,Path,Path,int,double,double,double)
-org.apache.mahout.clustering.spectral.eigencuts.EigencutsDriver.run(Configuration,Path,Path,int,int,double,double,double)
-org.apache.mahout.clustering.spectral.eigencuts.EigencutsDriver.run(String[])

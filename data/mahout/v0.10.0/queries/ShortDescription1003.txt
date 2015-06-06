@@ -1,1 +1,0 @@
-Vectordumper --help output breaks on --seqFile line 

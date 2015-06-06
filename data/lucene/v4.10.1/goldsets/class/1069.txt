@@ -1,3 +1,0 @@
-org.apache.lucene.index.CheckIndex
-org.apache.lucene.index.CheckIndex.MySegmentTermDocs
-org.apache.lucene.index.TestCheckIndex

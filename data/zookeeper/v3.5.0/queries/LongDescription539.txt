@@ -1,1 +1,0 @@
-Enable eclipse project generation via ant target.

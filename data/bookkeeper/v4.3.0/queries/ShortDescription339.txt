@@ -1,1 +1,0 @@
-Let hedwig cpp client support returning message seq id for publish requests.

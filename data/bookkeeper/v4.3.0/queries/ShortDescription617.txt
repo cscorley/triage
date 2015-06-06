@@ -1,1 +1,0 @@
-BOOKKEEPER-544 breaks hedwig-server/bin/hedwig script

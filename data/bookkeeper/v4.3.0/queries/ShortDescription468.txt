@@ -1,1 +1,0 @@
-Remove <echo> from protobuf generation in hedwig

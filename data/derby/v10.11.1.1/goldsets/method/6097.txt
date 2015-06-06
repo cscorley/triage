@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.management._Suite.suite()
-org.apache.derbyTesting.junit.JDBC.vmSupportsJMX()
-org.apache.derbyTesting.junit.JDBC.vmSupportsJNDI()

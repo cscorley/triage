@@ -1,6 +1,0 @@
-org.apache.solr.client.solrj.MultiCoreExampleTestBase
-org.apache.solr.common.params.CoreAdminParams
-org.apache.solr.common.params.CoreAdminParams.CoreAdminAction
-org.apache.solr.core.CoreContainer
-org.apache.solr.core.CoreContainer.Initializer
-org.apache.solr.handler.admin.CoreAdminHandler

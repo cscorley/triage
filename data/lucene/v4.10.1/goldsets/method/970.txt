@@ -1,3 +1,0 @@
-org.apache.lucene.index.FilterIndexReader.isCurrent()
-org.apache.lucene.index.FilterIndexReader.isOptimized()
-org.apache.lucene.index.TestFilterIndexReader.testFilterIndexReader()

@@ -1,1 +1,0 @@
-junitTests cannot be run with J2ME

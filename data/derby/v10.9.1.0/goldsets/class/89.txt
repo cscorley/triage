@@ -1,6 +1,0 @@
-org.apache.derby.client.am.ClobLocatorInputStream
-org.apache.derby.client.am.ClobLocatorReader
-org.apache.derby.client.am.PreparedStatement
-org.apache.derby.client.net.EncodedInputStream
-org.apache.derby.client.net.Utf8CcsidManager
-org.apache.derby.iapi.services.info.JVMInfo

@@ -1,1 +1,0 @@
-zkpython run_tests.sh is missing #!

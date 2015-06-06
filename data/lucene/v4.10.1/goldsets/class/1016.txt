@@ -1,3 +1,0 @@
-org.apache.lucene.index.TermVectorAccessor
-org.apache.lucene.index.TermVectorAccessor.TermVectorMapperDecorator
-org.apache.lucene.index.TestTermVectorAccessor

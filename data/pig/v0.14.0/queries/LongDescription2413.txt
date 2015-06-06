@@ -1,1 +1,0 @@
-Current e2e test is comparing different version of Pig using the same cluster. We would like to comparing against different cluster as well.

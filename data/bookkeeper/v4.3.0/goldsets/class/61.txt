@@ -1,4 +1,0 @@
-org.apache.bookkeeper.bookie.BufferedChannel
-org.apache.bookkeeper.proto.NIOServerFactory
-org.apache.bookkeeper.proto.NIOServerFactory.Cnxn
-org.apache.bookkeeper.proto.PerChannelBookieClient

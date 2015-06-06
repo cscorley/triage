@@ -1,3 +1,0 @@
-org.apache.derbyBuild.MessageBuilder.getArgs(Element)
-org.apache.derbyBuild.MessageBuilder.getOptionalSubElements(Element,String)
-org.apache.derbyBuild.MessageBuilder.processMessage(PrintWriter,XMLWriter,Element)

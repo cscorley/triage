@@ -1,3 +1,0 @@
-org.apache.hedwig.server.subscriptions.AbstractSubscriptionManager
-org.apache.hedwig.server.subscriptions.AbstractSubscriptionManager.ReleaseOp
-org.apache.hedwig.server.subscriptions.InMemorySubscriptionManager

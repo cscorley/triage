@@ -1,3 +1,0 @@
-org.apache.bookkeeper.benchmark.BenchBookie
-org.apache.bookkeeper.benchmark.BenchBookie.ThroughputCallback
-org.apache.bookkeeper.benchmark.TestBenchmark

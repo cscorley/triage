@@ -1,2 +1,0 @@
-Some minor changes needed for supporting database generated version.
-DB2 v9.5 or DB2z v9 supports database generated version.

@@ -1,1 +1,0 @@
-[zebra] A few minor bugs as described in the Description section

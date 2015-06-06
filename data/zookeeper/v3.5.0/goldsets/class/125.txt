@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.quorum.AuthFastLeaderElection
-org.apache.zookeeper.server.quorum.AuthFastLeaderElection.ElectionResult
-org.apache.zookeeper.server.quorum.FastLeaderElection

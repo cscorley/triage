@@ -1,1 +1,0 @@
-Document issues involved in building your index with one jdk version and then searching/updating with another

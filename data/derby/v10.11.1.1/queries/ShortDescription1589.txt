@@ -1,1 +1,0 @@
-CREATE TABLE throws NullPointerException in Derby SQL Standard Authorization after DROPs and REVOKES

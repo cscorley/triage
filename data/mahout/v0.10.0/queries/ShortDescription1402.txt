@@ -1,1 +1,0 @@
-Zero clusters using streaming k-means option in cluster-reuters.sh

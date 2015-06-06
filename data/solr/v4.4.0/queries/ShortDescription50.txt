@@ -1,1 +1,0 @@
-SolrUpdate - PHP update client for Solr

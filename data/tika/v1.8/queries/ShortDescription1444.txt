@@ -1,1 +1,0 @@
-Detection for VirtualPC VHD files

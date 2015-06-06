@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.compile.ColumnDefinitionNode.defaultTypeIsDB2Valid(TypeId,DataTypeDescriptor,TypeId,ValueNode,String)
-org.apache.derby.impl.sql.compile.ColumnDefinitionNode.defaultTypeIsValid(TypeId,DataTypeDescriptor,TypeId,ValueNode,String)
-org.apache.derby.impl.sql.compile.ColumnDefinitionNode.validateDefault(DataDictionary,TableDescriptor)

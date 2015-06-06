@@ -1,2 +1,0 @@
-org.apache.openjpa.persistence.criteria.FromImpl
-org.apache.openjpa.persistence.criteria.TestStringCriteria

@@ -1,1 +1,0 @@
-in maven compile plugin enable optimize=true flag

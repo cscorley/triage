@@ -1,1 +1,0 @@
-SQLSTATE 38000 (NullPointerException) at inner self join and value(x1, x2...)

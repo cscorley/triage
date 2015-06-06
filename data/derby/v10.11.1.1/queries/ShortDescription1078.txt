@@ -1,1 +1,0 @@
-Be able to build Derby when JAVA_HOME is set 1.6

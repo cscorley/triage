@@ -1,1 +1,0 @@
-In the trainlogistic example the JSON model file which is created is missing commas and making it unusable with runLogistic.

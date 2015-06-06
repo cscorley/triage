@@ -1,1 +1,0 @@
-JDBC 4.2 setObject() and updateObject() methods throw NPE when type is null

@@ -1,1 +1,0 @@
-Excessive Info message on locking row in optimistic transaction

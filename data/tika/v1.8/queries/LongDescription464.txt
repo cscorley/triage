@@ -1,1 +1,0 @@
-Write a guide in APT format describing the process to create and incorporate a new Tika Parser.

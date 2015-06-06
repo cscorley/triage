@@ -1,1 +1,0 @@
-The documentation source is part of the Derby project should it needs to be included in any source release archive.

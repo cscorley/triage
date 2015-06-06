@@ -1,1 +1,0 @@
-Some of the keys are CamelCase, some are with underscores. I think we should standardize on CamelCase.

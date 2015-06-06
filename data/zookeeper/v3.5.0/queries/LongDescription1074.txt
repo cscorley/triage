@@ -1,5 +1,0 @@
-zkServer.sh is missing nohup and "sleep 1" when starting the background daemon.
-
-This is fine normally, however when running the server remotely via ssh this causes the process to not run successfully (it starts but immediately exits).
-
-I'll be submitting a patch for this shortly.

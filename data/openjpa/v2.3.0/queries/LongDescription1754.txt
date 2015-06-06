@@ -1,1 +1,0 @@
-Include Geronimo Bean Validation Spec API and Apache Bean Validation implementation in openjpa-all and binary distribution to complete the out-of-box JPA 2.0 feature set.

@@ -1,1 +1,0 @@
-Make 'docs' target (forrest) work with Java 1.6

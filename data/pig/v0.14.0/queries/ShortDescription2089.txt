@@ -1,1 +1,0 @@
-Javadoc for ResourceFieldSchema.getSchema() is wrong

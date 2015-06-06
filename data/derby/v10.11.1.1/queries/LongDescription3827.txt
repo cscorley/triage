@@ -1,1 +1,0 @@
-Several source files are missing license headers. I will attach a list of files which need headers.

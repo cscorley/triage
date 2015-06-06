@@ -1,1 +1,0 @@
-pom.xml to support maven2

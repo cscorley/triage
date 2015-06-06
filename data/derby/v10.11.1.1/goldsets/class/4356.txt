@@ -1,2 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.management.ManagementMBeanTest
-org.apache.derbyTesting.functionTests.tests.management.ManagementMBeanTest.StatsTuple

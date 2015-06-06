@@ -1,1 +1,0 @@
-StackOverflowError when performing multiple subquery in collection field with eager fetch

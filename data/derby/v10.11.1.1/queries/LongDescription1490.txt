@@ -1,5 +1,0 @@
-Provide a way to rename a column in an existing table. Possible syntax could be:
-
-  ALTER TABLE tablename RENAME COLUMN oldcolumn TO newcolumn;
-
-Feature should properly handle the possibility that the column is currently used in constraints, views, indexes, triggers, etc.

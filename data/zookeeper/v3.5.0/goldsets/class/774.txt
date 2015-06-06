@@ -1,3 +1,0 @@
-org.apache.zookeeper.recipes.lock.WriteLockTest
-org.apache.zookeeper.recipes.lock.ZNodeNameTest
-org.apache.zookeeper.recipes.queue.DistributedQueueTest

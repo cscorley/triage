@@ -1,1 +1,0 @@
-Clean up duplicated code in Physical Operators

@@ -1,2 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.LimitAdjuster
-org.apache.pig.test.TestJsonLoaderStorage

@@ -1,1 +1,0 @@
-Move downsampling code into RowSimilarityJob

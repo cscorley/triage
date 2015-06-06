@@ -1,1 +1,0 @@
-Encoding based language estimate wrong for UTF-8 plaintext

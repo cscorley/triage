@@ -1,1 +1,0 @@
-SOLR currently does not support caching for (Query, FacetFieldList)

@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.GeneratorImpl.allocate(int)
-org.apache.openjpa.persistence.GeneratorImpl.equals(Object)
-org.apache.openjpa.persistence.GeneratorImpl.hashCode()

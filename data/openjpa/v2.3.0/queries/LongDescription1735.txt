@@ -1,2 +1,0 @@
-openjpa-lib includes a dependency on commons-logging, even though the default LogFactory does not use it.
-This makes Maven consumers of OpenJPA include a <exclusion> for commons-logging in their pom.xml, when this should not be required.

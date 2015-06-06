@@ -1,1 +1,0 @@
-Convert jdbc4/TestDbMetaData.java to JUnit

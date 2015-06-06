@@ -1,3 +1,0 @@
-The zookeeper_process() function incorrectly calls the c.acl_result member of the completion_list_t structure when handling the completion from a synchronous zoo_get_acl() request.  The c.acl_result member is set to SYNCHRONOUS_MARKER, which is a null pointer.
-
-The attached patch removes this call.

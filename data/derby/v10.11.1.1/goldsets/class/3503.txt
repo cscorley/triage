@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.harness.MultiTest
-org.apache.derbyTesting.functionTests.util.TestUtil
-org.apache.derbyTesting.functionTests.util.ThreadDump

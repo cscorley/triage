@@ -1,1 +1,0 @@
-matches clause problem with chars that have special meaning in dk.brics - #, @ ..

@@ -1,1 +1,0 @@
-EmbedSQLWarning should be renamed SQLWarningFactory and return java.sql.SQLWarning objects and not a Derby specific implementation.

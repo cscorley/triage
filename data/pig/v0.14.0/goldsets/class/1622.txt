@@ -1,3 +1,0 @@
-org.apache.pig.test.TestPigRunner
-org.apache.pig.test.TestStreaming
-org.apache.pig.test.TestStreaming.PigStreamDump

@@ -1,1 +1,0 @@
-ASSERT FAILED calling setTransactionIsolation checking isolation_ == level   on  pooled connection

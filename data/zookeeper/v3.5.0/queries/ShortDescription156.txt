@@ -1,1 +1,0 @@
-update programmer guide with acl details from old wiki page

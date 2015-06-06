@@ -1,3 +1,0 @@
-org.apache.openjpa.lib.util.Localizer
-org.apache.openjpa.lib.util.Localizer.Message
-org.apache.openjpa.lib.util.TestLocalizer

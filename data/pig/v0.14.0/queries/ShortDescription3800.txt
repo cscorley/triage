@@ -1,1 +1,0 @@
-Documentation for Pig whitelist and blacklist features

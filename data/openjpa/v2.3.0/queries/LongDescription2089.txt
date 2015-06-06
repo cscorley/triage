@@ -1,2 +1,0 @@
-We currently use bval-0.2-incubating. 
-We should upgrde to 0.3-incubating

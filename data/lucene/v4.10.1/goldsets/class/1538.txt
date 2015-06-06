@@ -1,2 +1,0 @@
-org.apache.lucene.search.function.ValueSourceQuery
-org.apache.lucene.search.function.ValueSourceQuery.ValueSourceScorer

@@ -1,1 +1,0 @@
-Investigate if request for update statistics can be skipped for certain kind of indexes, one instance may be unique indexes based on one column.

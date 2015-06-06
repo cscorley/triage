@@ -1,1 +1,0 @@
-Ant file in examples

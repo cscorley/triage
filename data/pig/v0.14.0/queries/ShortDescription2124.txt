@@ -1,1 +1,0 @@
-Script never ending when joining from the same source

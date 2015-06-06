@@ -1,3 +1,0 @@
-org.apache.solr.response.XMLWriter.writeMap(String,Map)
-org.apache.solr.response.XMLWriter.writeMap(String,Map<Object,Object>,Object,Object)
-org.apache.solr.response.XMLWriter.writeNamedList(String,NamedList)

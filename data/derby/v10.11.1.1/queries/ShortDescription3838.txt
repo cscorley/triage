@@ -1,1 +1,0 @@
-Convert derbynet/DerbyNetAutoStart to JUnit

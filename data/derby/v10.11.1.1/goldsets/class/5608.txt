@@ -1,2 +1,0 @@
-org.apache.derbyTesting.junit.BaseTestCase
-org.apache.derbyTesting.junit.SpawnedProcess

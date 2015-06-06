@@ -1,2 +1,0 @@
-org.apache.tika.server.UnpackerResource
-org.apache.tika.server.UnpackerResourceTest

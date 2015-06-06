@@ -1,1 +1,0 @@
-avoid compile warning in send_auth_info()

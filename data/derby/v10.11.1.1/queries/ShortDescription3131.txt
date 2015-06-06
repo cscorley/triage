@@ -1,1 +1,0 @@
-Background cleaner has no daemon service after database creation

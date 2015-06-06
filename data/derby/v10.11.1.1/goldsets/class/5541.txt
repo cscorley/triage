@@ -1,2 +1,0 @@
-org.apache.derby.impl.io.DirFile4
-org.apache.derby.impl.io.DirStorageFactory4

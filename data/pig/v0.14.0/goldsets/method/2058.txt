@@ -1,3 +1,0 @@
-org.apache.pig.test.TestMacroExpansion.negativeTest8()
-org.apache.pig.test.TestMacroExpansion.negativeTest9()
-org.apache.pig.test.TestMacroExpansion.recursiveMacrosTest()

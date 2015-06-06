@@ -1,2 +1,0 @@
-org.apache.lucene.index.TermVectorsWriter
-org.apache.lucene.index.TestIndexWriter

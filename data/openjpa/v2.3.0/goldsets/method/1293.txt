@@ -1,2 +1,0 @@
-org.apache.openjpa.persistence.query.GroupingTestCase.testVariableGroup()
-org.apache.openjpa.persistence.query.GroupingTestCase.testVariableHaving()

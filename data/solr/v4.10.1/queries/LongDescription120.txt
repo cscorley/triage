@@ -1,1 +1,0 @@
-Here's a patch which adds support for persistent HTTP connections.

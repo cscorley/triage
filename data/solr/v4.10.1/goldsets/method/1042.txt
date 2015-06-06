@@ -1,3 +1,0 @@
-org.apache.solr.handler.dataimport.VariableResolverImpl.removeNamespace(String)
-org.apache.solr.handler.dataimport.VariableResolverImpl.replaceTokens(String)
-org.apache.solr.handler.dataimport.VariableResolverImpl.VariableResolverImpl()

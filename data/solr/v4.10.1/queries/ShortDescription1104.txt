@@ -1,1 +1,0 @@
-Histogram puts high values in incorrect buckets due to rounding errors

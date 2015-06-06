@@ -1,1 +1,0 @@
-write a test that checks that optional packages are in place and clearly exposes when this is not the case

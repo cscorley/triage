@@ -1,1 +1,0 @@
-Change functional tests to use casts for System table queries to avoid conversion errors when run with TERRITORY_BASED collation

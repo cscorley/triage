@@ -1,1 +1,0 @@
-SpellChecker.clearIndex calls unlock inappropriately

@@ -1,3 +1,0 @@
-As per some email to the dev list, I plan to streamline and simplify the maven structure, by eliminating the 'maven' directory and letting the top-level POM be the parent, moving release packaging to a separate distribution directory.
-
-I do not plan to post patches here.

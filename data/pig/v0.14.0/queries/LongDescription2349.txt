@@ -1,4 +1,0 @@
-The ivy-buildjar step is repeated 3 times in one build.
-I think we can use an <uptodate> task to avoid checking the libs every time, speeding up the build and reducing screen spam.
-
-Thoughts?

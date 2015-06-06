@@ -1,3 +1,0 @@
-Need to update the programmer guide with the acl details form the old wiki page.
-
-http://zookeeper.wiki.sourceforge.net/ZooKeeperACLs

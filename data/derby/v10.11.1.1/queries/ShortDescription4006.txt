@@ -1,1 +1,0 @@
-ALTER COLUMN ... WITH DEFAULT NULL does not change the default

@@ -1,1 +1,0 @@
-Log improvement - add shutdown/exit log message for the bookie services

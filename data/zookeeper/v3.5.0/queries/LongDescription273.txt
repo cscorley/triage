@@ -1,5 +1,0 @@
-One should be able to build Zookeeper C client libs on a machine without CPPUNIT installation.
-
-A simple fix is to remove from configure.ac the following line:
-M_PATH_CPPUNIT(1.10.2)
-

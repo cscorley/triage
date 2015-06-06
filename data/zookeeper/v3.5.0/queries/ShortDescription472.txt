@@ -1,1 +1,0 @@
-Making DataNode not instantiate a HashMap when the node is ephmeral

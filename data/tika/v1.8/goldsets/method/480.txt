@@ -1,3 +1,0 @@
-org.apache.tika.parser.html.BoilerpipeContentHandler.endDocument()
-org.apache.tika.parser.html.HtmlParserTest.testBoilerplateDelegation()
-org.apache.tika.parser.html.HtmlParserTest.testFBrokenrameset()

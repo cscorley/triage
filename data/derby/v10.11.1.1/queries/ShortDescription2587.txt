@@ -1,1 +1,0 @@
-Connection.createClob() and Connection.createBlob() need to return locator support enabled LOB objects in the NetworkClient

@@ -1,2 +1,0 @@
-org.apache.derby.impl.sql.compile.ModifyColumnNode
-org.apache.derby.shared.common.reference.SQLState

@@ -1,1 +1,0 @@
-org.apache.tika.parser.epub.EpubContentParser.parse(InputStream,ContentHandler,Metadata,ParseContext)

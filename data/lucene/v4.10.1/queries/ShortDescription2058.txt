@@ -1,1 +1,0 @@
-benchmark pkg: specify trec_eval submission output from the command line

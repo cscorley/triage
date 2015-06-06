@@ -1,2 +1,0 @@
-Dag H. Wanvik <dag@apache.org>
-Mike Matrigali <mikem@apache.org>

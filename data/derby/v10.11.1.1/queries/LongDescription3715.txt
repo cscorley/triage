@@ -1,7 +1,0 @@
-Section "4.12 Some test harness properties" refers to "lang/streamingColumn.java" which is non existent.
-
-jvmflags - sets specific jvm properties for each jvm instantiated by the test harness, for instance for setting initial and maximum heap size (note that setting only initial size or only max size may cause incompatibilities with heap settings picked up from harness property files or from the command line), or other properties that need to be passed on to the jvm, separated by '^'. This property can be set on the commandline for either RunTest or RunSuite, or in one of the properties files used by the tests. The property jvmflags when passed on at the command line supercedes the properties set in a suite's propertyfile, and those supercede jvmflags properties set in a subsuite's or test's propertyfile, because the 'highest' level properties are passed to the jvm last. Setting this property for a test that runs with useprocess=false cannot have any effect. Example:
-java -Djvmflags=-Xms32M^-Xmx128M org.apache.derbyTesting.functionTests.RunTest lang/streamingColumn.java
-
-streamingColumn.java is in store, not lang, and furthermore it is being replaced by its JUnit conversion, StreamingColumn.java.
-Suggest putting a different test for the example here.

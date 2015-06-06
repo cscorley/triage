@@ -1,1 +1,0 @@
-Make SysinfoCPCheckTest pass in non-English locale

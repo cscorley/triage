@@ -1,3 +1,0 @@
-org.apache.pig.newplan.logical.rules.PushDownForEachFlatten.PushDownForEachFlattenTransformer.check(OperatorPlan)
-org.apache.pig.test.TestNewPlanPushDownForeachFlatten.testNonDeterministicUdf()
-org.apache.pig.test.TestNewPlanPushDownForeachFlatten.testOuterJoin()

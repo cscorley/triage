@@ -1,1 +1,0 @@
-ZooKeeper client may write operation packets before receiving successful response to connection request, can cause TCP RST

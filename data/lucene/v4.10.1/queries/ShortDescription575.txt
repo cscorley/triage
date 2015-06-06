@@ -1,1 +1,0 @@
-SpellChecker min score is increased by time

@@ -1,2 +1,0 @@
-Trivial patch that extends the ant target <dist-all> to calculate
-the MD5 checksums for the dist files.

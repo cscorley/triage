@@ -1,3 +1,0 @@
-Koji Sekiguchi <koji@apache.org>
-Noble Paul <noble@apache.org>
-Yonik Seeley <yonik@apache.org>

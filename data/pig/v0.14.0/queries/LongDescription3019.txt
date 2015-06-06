@@ -1,1 +1,0 @@
-Current Pig releases contain jar files.  We need a source only release distribution to be in compliance with Apache release rules.  We need to add a src-release target to build.xml that will build a source only release artifact.

@@ -1,1 +1,0 @@
-Simplify StandardTokenizer JFlex grammar

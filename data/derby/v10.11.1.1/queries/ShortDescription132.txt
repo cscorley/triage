@@ -1,1 +1,0 @@
-in place table/index compress which returns space to OS

@@ -1,1 +1,0 @@
-NPE when no metadata is defined for a persistent class

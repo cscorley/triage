@@ -1,1 +1,0 @@
-AvroStorage UDF in PiggyBank fails to STORE a bag of single-field tuples as Avro arrays

@@ -1,5 +1,0 @@
-org.apache.derby.impl.services.reflect.DatabaseClasses
-org.apache.derby.impl.services.reflect.GCInstanceFactory
-org.apache.derby.impl.services.reflect.ReflectClassesJava2
-org.apache.derby.impl.services.reflect.ReflectGeneratedClass
-org.apache.derby.impl.services.reflect.ReflectLoaderJava2

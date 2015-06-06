@@ -1,4 +1,0 @@
-org.apache.bookkeeper.jmx.BKMBeanRegistry
-org.apache.hedwig.server.jmx.HedwigJMXService
-org.apache.hedwig.server.jmx.HedwigMBeanInfo
-org.apache.hedwig.server.jmx.HedwigMBeanRegistry

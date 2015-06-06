@@ -1,2 +1,0 @@
-org.apache.mahout.classifier.evaluation.Auc
-org.apache.mahout.classifier.evaluation.AucTest

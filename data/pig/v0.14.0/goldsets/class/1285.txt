@@ -1,3 +1,0 @@
-org.apache.pig.data.SingleTupleBag
-org.apache.pig.data.SingleTupleBag.TBIterator
-org.apache.pig.test.TestDataBag

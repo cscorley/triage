@@ -1,1 +1,0 @@
-The test case of TestThrottlingDelivery#testServerSideThrottle failed sometimes

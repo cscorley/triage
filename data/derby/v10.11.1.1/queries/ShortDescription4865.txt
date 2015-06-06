@@ -1,1 +1,0 @@
-Remove Maven artifact history section from maven2/README.txt

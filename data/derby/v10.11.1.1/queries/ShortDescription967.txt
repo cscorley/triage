@@ -1,1 +1,0 @@
-lang/autoincrement.sql intermittently fails on SunOS-5.10_i86

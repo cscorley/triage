@@ -1,1 +1,0 @@
-Indeterministic behavior in local mode due to static variable PigMapReduce.sJobConf

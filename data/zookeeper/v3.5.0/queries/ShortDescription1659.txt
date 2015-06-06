@@ -1,1 +1,0 @@
-Add JMX support for dynamic reconfiguration

@@ -1,3 +1,0 @@
-org.apache.tika.mime.MimeDetectionTest.testAutosetSupertype()
-org.apache.tika.mime.MimeDetectionTest.testByteOrderMark()
-org.apache.tika.mime.MimeDetectionTest.testDetection()

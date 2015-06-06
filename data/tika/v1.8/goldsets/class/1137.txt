@@ -1,2 +1,0 @@
-org.apache.tika.parser.fork.ForkParserIntegrationTest
-org.apache.tika.parser.fork.ForkParserIntegrationTest.WontBeSerializedError

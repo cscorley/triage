@@ -1,1 +1,0 @@
-Improve BaseTokenStreamTestCase to uses a fake attribute to check if clearAttributes() was called correctly - found bugs in contrib/analyzers

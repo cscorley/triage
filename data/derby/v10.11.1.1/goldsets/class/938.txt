@@ -1,3 +1,0 @@
-org.apache.derby.iapi.services.context.ContextManager
-org.apache.derby.iapi.services.context.ContextManager.CtxStack
-org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext

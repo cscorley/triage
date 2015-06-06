@@ -1,3 +1,0 @@
-org.apache.pig.piggybank.evaluation.math.ACOS.compute(Double)
-org.apache.pig.piggybank.evaluation.math.Base.outputSchema(Schema)
-org.apache.pig.piggybank.evaluation.string.LcFirst.exec(Tuple)

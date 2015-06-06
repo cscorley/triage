@@ -1,1 +1,0 @@
-Document jacob's leader election on the wiki recipes page

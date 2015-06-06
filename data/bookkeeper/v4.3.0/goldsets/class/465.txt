@@ -1,2 +1,0 @@
-org.apache.bookkeeper.bookie.CreateNewLogTest
-org.apache.bookkeeper.bookie.EntryLogger

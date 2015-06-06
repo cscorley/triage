@@ -1,1 +1,0 @@
-DisplaySpectralKMeans example fails

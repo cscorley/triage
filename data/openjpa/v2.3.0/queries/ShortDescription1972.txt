@@ -1,1 +1,0 @@
-DB2 V9.7 changed the default behavior concerning blocking behavior with isolation levels greater then read uncommitted

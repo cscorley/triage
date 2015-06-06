@@ -1,3 +1,0 @@
-org.apache.pig.data.InternalCachedBag
-org.apache.pig.data.InternalDistinctBag
-org.apache.pig.data.InternalSortedBag

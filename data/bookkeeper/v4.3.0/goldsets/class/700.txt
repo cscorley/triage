@@ -1,3 +1,0 @@
-org.apache.bookkeeper.bookie.CompactionTest
-org.apache.bookkeeper.bookie.GarbageCollectorThread
-org.apache.bookkeeper.bookie.GarbageCollectorThread.CompactionScannerFactory

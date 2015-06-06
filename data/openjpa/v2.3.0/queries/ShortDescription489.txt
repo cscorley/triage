@@ -1,1 +1,0 @@
-DB2Dictionary casts string data to VARCHAR(1000) regardless of data length

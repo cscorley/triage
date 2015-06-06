@@ -1,1 +1,0 @@
-Finish client info api for JDBC4. Compliance task.

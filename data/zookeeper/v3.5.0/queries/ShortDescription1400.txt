@@ -1,1 +1,0 @@
-Allow logging via callback instead of raw FILE pointer

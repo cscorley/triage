@@ -1,1 +1,0 @@
-Add windows automated builds (CI) for zookeeper c client bindings

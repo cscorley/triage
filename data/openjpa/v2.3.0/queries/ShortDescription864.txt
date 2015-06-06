@@ -1,1 +1,0 @@
-Subquery problems with SYNTAX_DATABASE (Oracle)

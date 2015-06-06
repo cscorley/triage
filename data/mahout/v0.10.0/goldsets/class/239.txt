@@ -1,3 +1,0 @@
-org.apache.mahout.math.map.AbstractMap
-org.apache.mahout.math.map.HashFunctions
-org.apache.mahout.math.map.PrimeFinder

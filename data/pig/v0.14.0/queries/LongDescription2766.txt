@@ -1,1 +1,0 @@
-Currently to use hcat from pig (via HCatLoader/HCatStorer) user need to register bunch of jars and set couple of configuration. For a novice user, it is non-trivial to find all the relevant jars and config params. We should have better integration between Pig & HCat by pre-configuring Pig to load all these jars and configs.

@@ -1,1 +1,0 @@
-derbyclient.jar is not a complete OSGi bundle

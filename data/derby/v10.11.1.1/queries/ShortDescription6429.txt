@@ -1,1 +1,0 @@
-Privilege checks for UPDATE statements are wrong.

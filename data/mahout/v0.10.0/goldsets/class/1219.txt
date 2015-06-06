@@ -1,2 +1,0 @@
-org.apache.mahout.clustering.streaming.cluster.StreamingKMeansTest
-org.apache.mahout.math.neighborhood.SearchQualityTest

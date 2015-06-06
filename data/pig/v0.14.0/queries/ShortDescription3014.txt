@@ -1,1 +1,0 @@
-CurrentTime() UDF has undesirable characteristics

@@ -1,1 +1,0 @@
-Provide UDF with input schema

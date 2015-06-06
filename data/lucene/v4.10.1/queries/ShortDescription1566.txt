@@ -1,1 +1,0 @@
-Large Lucene index can hit false OOM due to Sun JRE issue

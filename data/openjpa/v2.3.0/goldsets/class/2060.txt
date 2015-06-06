@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.util.SourceCode
-org.apache.openjpa.persistence.util.SourceCode.ClassName
-org.apache.openjpa.persistence.util.SourceCode.Import

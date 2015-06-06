@@ -1,1 +1,0 @@
-findContainingJar fails when there's a + in the path

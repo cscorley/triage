@@ -1,1 +1,0 @@
-Change DateTools to not create a Calendar in every call to dateToString or timeToString

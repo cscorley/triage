@@ -1,5 +1,0 @@
-Pig Setup guide ...
-
-Change this:  http://svn.apache.org/repos/asf/hadoop/pig/trunk. 
-
-To this:   http://svn.apache.org/repos/asf/pig/trunk. 

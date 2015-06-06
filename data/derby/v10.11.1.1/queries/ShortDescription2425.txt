@@ -1,1 +1,0 @@
-ResultSetMetaData.getColumnDisplaySize() returns a negative value for BLOB columns for client 

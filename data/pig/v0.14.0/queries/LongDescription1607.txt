@@ -1,1 +1,0 @@
-At this moment, javadoc is part of the source.jar but pig should have separate javadoc.jar in the maven repository.

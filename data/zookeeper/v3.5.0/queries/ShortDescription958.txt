@@ -1,1 +1,0 @@
-Flag to turn off autoconsume in hedwig c++ client

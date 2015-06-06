@@ -1,1 +1,0 @@
-org.apache.derby.impl.jdbc.EmbedDatabaseMetaData.getFunctionColumns(String,String,String,String)

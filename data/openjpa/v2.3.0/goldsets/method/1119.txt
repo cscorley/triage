@@ -1,3 +1,0 @@
-org.apache.openjpa.enhance.InstrumentationFactory.getAgentJar(Log)
-org.apache.openjpa.enhance.InstrumentationFactory.loadVMClass(File,Log)
-org.apache.openjpa.enhance.InstrumentationFactory.validateAgentJarManifest(File,Log,String)

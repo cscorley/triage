@@ -1,1 +1,0 @@
-Type checker failed to catch invalid type comparison

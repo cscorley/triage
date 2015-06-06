@@ -1,1 +1,0 @@
-run classify-20newsgroups.sh failed cause by /tmp/mahout-work-jpan/20news-all does not exists in hdfs.

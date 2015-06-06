@@ -1,3 +1,0 @@
-org.apache.mahout.clustering.canopy.TestCanopyCreation
-org.apache.mahout.utils.Point
-org.apache.mahout.utils.TestPoint

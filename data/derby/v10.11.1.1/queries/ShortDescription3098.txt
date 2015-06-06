@@ -1,1 +1,0 @@
-LOB locks are not released after free().

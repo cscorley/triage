@@ -1,2 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.jdbcapi.SavepointJdbc30Test.getEmbeddedSuite(String)
-org.apache.derbyTesting.functionTests.tests.jdbcapi.SavepointJdbc30Test.setUp()

@@ -1,1 +1,0 @@
-Identity column not filled consecutively with "insert ... select distinct"

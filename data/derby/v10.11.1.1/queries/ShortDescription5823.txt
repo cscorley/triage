@@ -1,1 +1,0 @@
-Multi-row insert fails on table without generated keys with RETURN_GENERATED_KEYS

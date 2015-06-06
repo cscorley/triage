@@ -1,2 +1,0 @@
-Michael McCandless <mikemccand@apache.org>
-Ryan McKinley <ryan@apache.org>

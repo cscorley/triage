@@ -1,5 +1,0 @@
-This file adds drop-in support for the ruby-libxml2, which is a wrapper for the libxml2 library, which is an order of magnitude or so faster than REXML.
-
-This depends on my SOLR-121 patch for multi-document adds, since the behavior of Solr::Request::AddDocument#to_s is different.
-
-Requiring this makes some tests fail, but for trivial reasons: some tests are directly tied to REXML, others fail due to interelement whitespace added by libxml2 (which you can't disable via the Ruby interface). Functionally, it's identical, and passes all functional tests.

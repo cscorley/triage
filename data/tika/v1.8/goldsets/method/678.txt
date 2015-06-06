@@ -1,3 +1,0 @@
-org.apache.tika.parser.mail.RFC822ParserTest.getStream(String)
-org.apache.tika.parser.mail.RFC822ParserTest.testLongHeader()
-org.apache.tika.parser.mail.RFC822ParserTest.testSomeMissingHeaders()

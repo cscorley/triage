@@ -1,1 +1,0 @@
-JDBC date/timestamp literals in JPQL

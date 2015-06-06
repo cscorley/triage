@@ -1,1 +1,0 @@
-Some sites return "application/vnd.wap.xhtml+xml" when they think that they're getting a request from a WAP-enabled device.

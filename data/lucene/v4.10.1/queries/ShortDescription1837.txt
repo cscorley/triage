@@ -1,1 +1,0 @@
-Remove Searcher from Weight#explain

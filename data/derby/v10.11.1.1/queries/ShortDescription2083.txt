@@ -1,1 +1,0 @@
-Shutting down a database loaded from a jar leaves an open file reference to the jar file containing the database.

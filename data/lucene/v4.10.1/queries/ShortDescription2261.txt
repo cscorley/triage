@@ -1,1 +1,0 @@
-configurable MultiTermQuery TopTermsScoringBooleanRewrite pq size

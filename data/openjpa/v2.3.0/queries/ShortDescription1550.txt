@@ -1,1 +1,0 @@
-When batchLimit=-1 or >1 and an exception is caused, the params and failedObject are missing from the resultant exception.

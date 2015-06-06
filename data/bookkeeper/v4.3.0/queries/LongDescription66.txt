@@ -1,8 +1,0 @@
-On some linux boxes that run a dual IPv6-IPv4 network stack, with IPv6 enabled (e.g. debian-based), there is an issue with some java programs, preventing network connections.
-
-This results in "org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /ledgers" in BookieZKExpireTest test (for instance) but is actually due to a previous "java.net.NoRouteToHostException: Network is
-unreachable" issue.
-
-I could reproduce this on a debian 6 for instance, and the issue is similar another one detailed in a Hadoop ticket: https://issues.apache.org/jira/browse/HADOOP-6056
-
-We should make sure IPv4 is used for builds so that one can build bookkeeper out of the box, without configuration changes to the OS.

@@ -1,2 +1,0 @@
-Bernt Johnsen <bernt@apache.org>
-David Van Couvering <davidvc@apache.org>

@@ -1,1 +1,0 @@
-Logging channel exceptions in PerChannelBookieClient

@@ -1,2 +1,0 @@
-org.apache.derby.impl.services.monitor.BaseMonitor
-org.apache.derby.impl.services.monitor.FileMonitor

@@ -1,1 +1,0 @@
-Cannot set default value for BIGINT

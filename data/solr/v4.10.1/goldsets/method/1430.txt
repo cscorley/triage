@@ -1,3 +1,0 @@
-org.apache.solr.util.AbstractSolrTestCase.commit(String)
-org.apache.solr.util.AbstractSolrTestCase.optimize(String)
-org.apache.solr.util.TestHarness.simpleTag(String,String)

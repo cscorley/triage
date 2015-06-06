@@ -1,1 +1,0 @@
-SYSCS_UPDATE_STATISTICS takes unnecessary table lock

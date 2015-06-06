@@ -1,1 +1,0 @@
-Now that TIKA-850 is in, we need a way to pass a password into tika-app.jar so that we can parse encrypted docs from commandline or GUI.

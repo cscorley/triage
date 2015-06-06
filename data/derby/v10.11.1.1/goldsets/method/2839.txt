@@ -1,1 +1,0 @@
-WwdClientExample.main(String[])

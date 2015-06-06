@@ -1,3 +1,0 @@
-org.apache.openjpa.kernel.Filters
-org.apache.openjpa.persistence.jdbc.query.domain.TimeEntity
-org.apache.openjpa.persistence.jdbc.query.TestTemporalTypeQueryParameterBinding

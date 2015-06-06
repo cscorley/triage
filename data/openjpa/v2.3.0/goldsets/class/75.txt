@@ -1,2 +1,0 @@
-org.apache.openjpa.kernel.exps.AbstractExpressionBuilder
-org.apache.openjpa.meta.ClassMetaData

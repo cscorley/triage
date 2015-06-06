@@ -1,1 +1,0 @@
-JUnit tests for DERBY-475 and DERBY-592, Built-in and JDBC escape functions

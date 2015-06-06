@@ -1,1 +1,0 @@
-Make PigStorage.readField() protected

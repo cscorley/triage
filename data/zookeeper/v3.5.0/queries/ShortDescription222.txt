@@ -1,1 +1,0 @@
-print C client log message timestamp in human readable form

@@ -1,6 +1,0 @@
-< EXPECTED SQL Exception: (XJ001) Java exception: 'Input stream did not have exact amount of data as the requested length.: java.io.IOException'.
-47a47
-> EXPECTED SQL Exception: (XJ001) Java exception: 'Input stream did not have exact amount of data as the requested length.: org.apache.derby.iapi.services.io.DerbyIOException'.
-+ more
-
-See http://www.multinet.no/~solberg/public/Apache/LargeData/testlog/SunOS-5.10_i86pc-i386/448277-largeData_diff.txt

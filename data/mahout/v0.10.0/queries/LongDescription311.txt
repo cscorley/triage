@@ -1,1 +1,0 @@
-Update the release assemblies to include an executable bin/mahout script and the contents of the conf directory.

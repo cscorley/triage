@@ -1,1 +1,0 @@
-Option to change RecommenderJob output format

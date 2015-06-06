@@ -1,1 +1,0 @@
-Fix error messages in properties files to match text in documentation

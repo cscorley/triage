@@ -1,1 +1,0 @@
-testGetBytes under BlobClob4BlobTest failed on Zos  with encoding issue

@@ -1,2 +1,0 @@
-org.apache.mahout.cf.taste.impl.model.file.FileDataModel
-org.apache.mahout.cf.taste.impl.model.file.FileDataModelTest

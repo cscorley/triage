@@ -1,1 +1,0 @@
-A more recent version of findbugs (2.0.3) added some checks - one is for internationalization issues. We should fix these, but for the time being we'll ignore them. (I'll also create a separate jira to address this in future)

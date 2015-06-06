@@ -1,1 +1,0 @@
-assert failure in MessageUtil, because exception thrown with too many parameters when handling OutOfMemoryError

@@ -1,1 +1,0 @@
-Optimizer plan consideration doesn't account for infinite cost estimates and can therefore choose plans requiring excessive memory.

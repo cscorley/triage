@@ -1,1 +1,0 @@
-handle failure better in build.xml:test

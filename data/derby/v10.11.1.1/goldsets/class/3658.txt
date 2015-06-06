@@ -1,3 +1,0 @@
-org.apache.derby.client.am.Connection
-org.apache.derby.client.am.Cursor
-org.apache.derby.client.am.LOBStateTracker

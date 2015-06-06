@@ -1,2 +1,0 @@
-org.apache.openjpa.persistence.jdbc.query.domain.Magazine
-org.apache.openjpa.persistence.jdbc.query.TestMultipleEntityProjection

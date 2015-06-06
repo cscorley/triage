@@ -1,1 +1,0 @@
-Better parameter validation on StoreCache.pinAll() method

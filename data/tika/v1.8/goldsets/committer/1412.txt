@@ -1,3 +1,0 @@
-David Meikle <dmeikle@apache.org>
-Hong-Thai Nguyen <thaichat04@apache.org>
-Nick Burch <nick@apache.org>

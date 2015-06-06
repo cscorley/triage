@@ -1,1 +1,0 @@
-Bayes Classifier should use Vector as input

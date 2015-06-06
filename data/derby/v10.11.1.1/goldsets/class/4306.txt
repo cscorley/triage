@@ -1,2 +1,0 @@
-org.apache.derby.impl.drda.NetworkServerControlImpl
-org.apache.derby.impl.services.jmx.JMXManagementService

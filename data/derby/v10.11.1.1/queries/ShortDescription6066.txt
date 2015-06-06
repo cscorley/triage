@@ -1,1 +1,0 @@
-Client should use a prepared statement rather than regular statement for Connection.getTransactionIsolation

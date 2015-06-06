@@ -1,1 +1,0 @@
-Simplify code that handles LOB files

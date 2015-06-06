@@ -1,1 +1,0 @@
-Tika relies on X11

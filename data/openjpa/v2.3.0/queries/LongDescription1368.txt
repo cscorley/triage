@@ -1,2 +1,0 @@
-Upgrade to HSQLDB 1.8.0.10, which is the latest release on the maven repos.
-Switch to in-memory db mode, from stand-alone db server mode for easier unit testing.

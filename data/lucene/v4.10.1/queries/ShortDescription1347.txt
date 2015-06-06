@@ -1,1 +1,0 @@
-IndexWriter.rollback can hang if a previous call hit an exception

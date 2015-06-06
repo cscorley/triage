@@ -1,2 +1,0 @@
-Alan Gates <gates@apache.org>
-Dmitriy V. Ryaboy <dvryaboy@apache.org>

@@ -1,1 +1,0 @@
-RecommenderJob is ignoring the command line value for threshold parameter.  The attached small patch fixes the issue.

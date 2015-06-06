@@ -1,1 +1,0 @@
-Skip compatibility testing of old servers on compact profile 2

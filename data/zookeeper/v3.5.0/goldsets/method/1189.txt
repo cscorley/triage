@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.persistence.Util.isValidSnapshot(File)
-org.apache.zookeeper.server.ZooKeeperServerTest.testForceSyncDefaultDisabled()
-org.apache.zookeeper.server.ZooKeeperServerTest.testInvalidSnapshot()

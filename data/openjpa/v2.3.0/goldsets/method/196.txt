@@ -1,1 +1,0 @@
-org.apache.openjpa.kernel.QueryImpl.assertParameters(StoreQuery,StoreQuery.Executor,Object[])

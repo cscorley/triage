@@ -1,1 +1,0 @@
-Logical simplifier does not simplify away constants under AND and OR; after simplificaion the ordering of operands of AND and OR may get changed

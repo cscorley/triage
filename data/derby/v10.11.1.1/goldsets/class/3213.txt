@@ -1,2 +1,0 @@
-org.apache.derby.iapi.types.SQLChar
-org.apache.derby.iapi.types.StringDataValue

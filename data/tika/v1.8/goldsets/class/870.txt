@@ -1,3 +1,0 @@
-org.apache.tika.parser.rtf.RTFParserTest
-org.apache.tika.sax.WriteOutContentHandler
-org.apache.tika.Tika

@@ -1,2 +1,0 @@
-org.apache.pig.builtin.JsonStorage
-org.apache.pig.test.TestJsonLoaderStorage

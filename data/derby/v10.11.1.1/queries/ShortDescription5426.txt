@@ -1,1 +1,0 @@
-Improve the error raised by too much contention on a sequence/identity.

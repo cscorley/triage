@@ -1,1 +1,0 @@
-NPE in SELECT involving subselects and windows functions

@@ -1,1 +1,0 @@
-Embedded documents in RTF are not extracted

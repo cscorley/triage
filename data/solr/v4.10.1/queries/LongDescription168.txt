@@ -1,7 +1,0 @@
-If two or more tokens are in a position column, and there is a larger position column somewhere else, the empty space won't be filled in correctly, resulting in tokens displayed in the wrong positions.
-
-simple example:
-a=>b,c
-q=>x,y,z
-
-then analyze "a q" and the first column will contain "b","c","z"

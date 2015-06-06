@@ -1,1 +1,0 @@
-'relation as scalar' does not work with complex types 

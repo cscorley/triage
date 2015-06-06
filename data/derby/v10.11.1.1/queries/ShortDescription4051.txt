@@ -1,1 +1,0 @@
-The javadoc for SpaceTable refers to an alias that doesn't seem to work

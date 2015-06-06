@@ -1,3 +1,0 @@
-org.apache.tika.parser.AutoDetectParserTest.assertAutoDetect(TestParams)
-org.apache.tika.parser.AutoDetectParserTest.testVorbisFlac()
-org.apache.tika.parser.AutoDetectParserTest.testZipBombPrevention()

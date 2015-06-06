@@ -1,3 +1,0 @@
-org.apache.openjpa.meta.AbstractCFMetaDataFactory.decode(String)
-org.apache.openjpa.meta.AbstractCFMetaDataFactory.parsePersistentTypeNames(ClassLoader)
-org.apache.openjpa.meta.AbstractCFMetaDataFactory.scan(MetaDataIterator,ClassArgParser,Set,boolean,Object)

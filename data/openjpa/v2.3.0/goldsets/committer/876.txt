@@ -1,2 +1,0 @@
-Jeremy Bauer <jrbauer@apache.org>
-Michael Dick <mikedd@apache.org>

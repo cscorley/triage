@@ -1,1 +1,0 @@
-Send AuthFailed event to client if SASL authentication fails

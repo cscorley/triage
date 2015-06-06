@@ -1,1 +1,0 @@
-Searcher's getDocListAndSet methods do not accept flags, can cause NPE when writing output

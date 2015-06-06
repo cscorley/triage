@@ -1,1 +1,0 @@
-Maybe rename Field.omitTf, and strengthen the javadocs

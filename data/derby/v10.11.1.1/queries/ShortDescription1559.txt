@@ -1,1 +1,0 @@
-when receiving a single EXTDTA object representing a BLOB, the server do not need to read it into memory before inserting it into the DB

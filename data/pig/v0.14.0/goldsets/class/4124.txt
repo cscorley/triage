@@ -1,3 +1,0 @@
-org.apache.pig.impl.builtin.StreamingUDF
-org.apache.pig.PigConfiguration
-org.apache.pig.scripting.streaming.python.PythonScriptEngine

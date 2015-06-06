@@ -1,1 +1,0 @@
-BufferedPositionedInputStream drastically reduces read performance because it doesn't override read([], o, l) in InputStream

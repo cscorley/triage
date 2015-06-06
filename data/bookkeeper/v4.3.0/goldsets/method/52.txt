@@ -1,2 +1,0 @@
-org.apache.hedwig.client.handlers.SubscribeResponseHandler.handleSubscribeMessage(PubSubResponse)
-org.apache.hedwig.client.handlers.SubscribeResponseHandler.setMessageHandler(MessageHandler)

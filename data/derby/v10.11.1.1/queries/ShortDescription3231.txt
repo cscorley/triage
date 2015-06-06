@@ -1,1 +1,0 @@
-Sorting on COUNT with OR and GROUP BY delivers wrong results.

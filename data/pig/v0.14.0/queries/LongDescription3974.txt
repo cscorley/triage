@@ -1,6 +1,0 @@
-When test-e2e-deploy target is called to generate data for e2e tests, Pig fails to execute fs -mkdir /user/pig/tests/data and returns with the following error:
-
-Failed to generate data for testing: <Failed running /home/my/pig/trunk/test/e2e/pig/../../../bin/pig -e fs -mkdir /user/pig/tests/data>
-This issue only happens if the parent directory /user/pig/tests doesn't exist. In this case org.apache.hadoop.fs.shell.Mkdir.processNonexistentPath() throws a PathNotFoundException in the background.
-
-I suspect, that the full parent directories should be created along the path. LocalDeployer.pm uses mkdir -p, but ExistingClusterDeployer.pm doesn't which leads to this issue.

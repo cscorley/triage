@@ -1,1 +1,0 @@
-zookeeper_init leaks memory if chroot is just '/'

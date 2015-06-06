@@ -1,1 +1,0 @@
-Implement Statement.setQueryTimeout in the Client Driver

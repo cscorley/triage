@@ -1,2 +1,0 @@
-org.apache.tika.detect.TestContainerAwareDetector.testDetectOLE2()
-org.apache.tika.parser.microsoft.POIFSContainerDetector.detect(InputStream,Metadata)

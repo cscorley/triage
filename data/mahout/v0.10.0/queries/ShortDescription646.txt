@@ -1,1 +1,0 @@
-Cannot run Wikipedia example on Amazon Elastic MapReduce (EMR)

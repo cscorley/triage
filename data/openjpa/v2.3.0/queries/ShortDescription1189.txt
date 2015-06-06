@@ -1,1 +1,0 @@
-Column names do not contain delimiters when obtained from DatabaseMetaData

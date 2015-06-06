@@ -1,1 +1,0 @@
-"java.io.IOException: Cannot initialize Cluster" in local mode with hadoopversion=23 dependencies

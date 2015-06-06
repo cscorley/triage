@@ -1,1 +1,0 @@
-Bad link in java doc for  LogLikelihoodSimilarity

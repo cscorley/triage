@@ -1,1 +1,0 @@
-Refactoring Lucene collectors (HitCollector and extensions)

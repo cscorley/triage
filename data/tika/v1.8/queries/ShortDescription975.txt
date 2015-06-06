@@ -1,1 +1,0 @@
-LinkBuilder to optionally collapse anchor whitespace

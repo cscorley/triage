@@ -1,1 +1,0 @@
-Implement "point in time" searching without relying on filesystem semantics

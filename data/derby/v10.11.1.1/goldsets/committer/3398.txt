@@ -1,3 +1,0 @@
-Dag H. Wanvik <dag@apache.org>
-Kristian Waagan <kristwaa@apache.org>
-Myrna van Lunteren <myrnavl@apache.org>

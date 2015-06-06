@@ -1,1 +1,0 @@
-The Field ctors that take byte[] shouldn't take Store, since it must be YES

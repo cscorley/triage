@@ -1,1 +1,0 @@
-It would be good to use builder pattern for Cookie, rather than modifying the fields in place.

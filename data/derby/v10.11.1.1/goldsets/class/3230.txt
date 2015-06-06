@@ -1,2 +1,0 @@
-org.apache.derby.client.net.NetCursor
-org.apache.derbyTesting.functionTests.tests.derbynet.PrepareStatementTest

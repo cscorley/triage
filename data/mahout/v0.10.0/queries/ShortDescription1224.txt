@@ -1,1 +1,0 @@
-Add the option of running a StreamingKMeans pass in the Reducer before BallKMeans

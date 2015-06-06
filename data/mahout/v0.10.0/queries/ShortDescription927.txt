@@ -1,1 +1,0 @@
-FPG saves a mapping from from feature to mining group, when this can be calculated on the fly

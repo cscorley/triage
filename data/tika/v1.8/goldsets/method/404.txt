@@ -1,3 +1,0 @@
-org.apache.tika.mime.MediaType.MediaType(String,String,Map<String,String>,String,String)
-org.apache.tika.mime.MimeTypes.forName(String)
-org.apache.tika.mime.MimeTypes.getMimeType(String)

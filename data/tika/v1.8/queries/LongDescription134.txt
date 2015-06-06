@@ -1,1 +1,0 @@
-During a mvn package it does not produce -bin.tar.gz, bin.zip, src.tar.gz, src.zip files.

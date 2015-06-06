@@ -1,4 +1,0 @@
-org.apache.mahout.classifier.sgd.OnlineBaseTest
-org.apache.mahout.classifier.sgd.OnlineLogisticRegressionTest
-org.apache.mahout.classifier.sgd.PassiveAggressive
-org.apache.mahout.classifier.sgd.PassiveAggressiveTest

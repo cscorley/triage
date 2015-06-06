@@ -1,2 +1,0 @@
-Daniel Naber <dnaber@apache.org>
-Grant Ingersoll <gsingers@apache.org>

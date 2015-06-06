@@ -1,1 +1,0 @@
-SolrCore.execute should wrap log message construction in "if (log.isInfoEnabled())"

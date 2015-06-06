@@ -1,1 +1,0 @@
-Update media type registry to the latest httpd mime type database

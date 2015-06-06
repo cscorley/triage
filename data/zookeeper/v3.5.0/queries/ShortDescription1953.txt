@@ -1,1 +1,0 @@
-Add solution and project files to enable build with current Visual Studio editions (VS 2012/2013) - 32-bit and 64-bit.

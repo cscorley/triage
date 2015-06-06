@@ -1,1 +1,0 @@
-After PIG-2482, e2e test fail if hcat binary is not in standard location. We need to make it configurable in e2e test.

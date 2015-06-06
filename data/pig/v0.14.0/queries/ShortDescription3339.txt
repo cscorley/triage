@@ -1,1 +1,0 @@
-Move pattern compilation in ToDate as a static variable

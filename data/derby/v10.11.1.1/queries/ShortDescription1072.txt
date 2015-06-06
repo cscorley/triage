@@ -1,1 +1,0 @@
-Misleading/wrong error message while dropping a view

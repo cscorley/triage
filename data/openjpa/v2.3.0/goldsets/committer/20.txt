@@ -1,2 +1,0 @@
-Michael Dick <mikedd@apache.org>
-Pinaki Poddar <ppoddar@apache.org>

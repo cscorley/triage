@@ -1,1 +1,0 @@
-'The class 'org.apache.derby.diag.EnabledRoles' does not exist or is inaccessible.' in new roles tests (DERBY-3886)

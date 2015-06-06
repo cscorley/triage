@@ -1,1 +1,0 @@
-org.apache.derby.iapi.tools.i18n.LocalizedResource.getLocalizedString(ResultSet,ResultSetMetaData,int)

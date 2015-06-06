@@ -1,2 +1,0 @@
-org.apache.mahout.classifier.sgd.LogisticModelParameters.loadFrom(Reader)
-org.apache.mahout.classifier.sgd.LogisticModelParameters.saveTo(Writer)

@@ -1,1 +1,0 @@
-IndexWriter.updateDocument is no longer atomic

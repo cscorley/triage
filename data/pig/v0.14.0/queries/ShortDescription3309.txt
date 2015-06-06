@@ -1,1 +1,0 @@
-TestJsonLoaderStorage fails with IBM JDK 6/7

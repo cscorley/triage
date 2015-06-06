@@ -1,1 +1,0 @@
-testEarlyLeaderAbandonment failing on solaris - clients not retrying connection

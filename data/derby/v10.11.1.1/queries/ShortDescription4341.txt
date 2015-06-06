@@ -1,1 +1,0 @@
-Building with ant all with a different CLASSPATH defined causes the build to fail

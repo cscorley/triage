@@ -1,1 +1,0 @@
-Clean up param interface.  Leave deprecated options in deprecated classes

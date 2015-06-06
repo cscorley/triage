@@ -1,2 +1,0 @@
-Andrew Musselman <akm@apache.org>
-Suneel Marthi <suneel.marthi@gmail.com>

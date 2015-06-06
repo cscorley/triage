@@ -1,1 +1,0 @@
-Support projection of element collection from a JPQL query

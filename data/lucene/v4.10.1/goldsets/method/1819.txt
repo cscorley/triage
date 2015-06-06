@@ -1,2 +1,0 @@
-org.apache.lucene.search.MatchAllDocsQuery.toString(String)
-org.apache.lucene.search.TestMatchAllDocsQuery.testQuery()

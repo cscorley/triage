@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.quorum.Leader
-org.apache.zookeeper.test.ClientBase
-org.apache.zookeeper.test.ObserverLETest

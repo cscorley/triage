@@ -1,3 +1,0 @@
-org.apache.lucene.benchmark.byTask.PerfRunData
-org.apache.lucene.benchmark.byTask.tasks.NewAnalyzerTask
-org.apache.lucene.benchmark.byTask.utils.Format

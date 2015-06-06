@@ -1,1 +1,0 @@
-derbylang/procedureInTrigger: not able to create trigger due to an open ResultSet

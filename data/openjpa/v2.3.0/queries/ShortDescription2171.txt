@@ -1,1 +1,0 @@
-asm should be optional

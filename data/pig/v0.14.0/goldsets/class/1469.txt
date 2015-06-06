@@ -1,2 +1,0 @@
-org.apache.pig.data.DefaultDataBag
-org.apache.pig.data.DefaultDataBag.DefaultDataBagIterator

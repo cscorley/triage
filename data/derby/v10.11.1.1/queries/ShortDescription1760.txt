@@ -1,1 +1,0 @@
-remote server testing with 10.2 snapshot showed 8 failures

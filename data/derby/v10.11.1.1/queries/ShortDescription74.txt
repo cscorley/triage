@@ -1,1 +1,0 @@
-SQLDecimal.getWholeDigits returns invalid result on JDK1.5.0

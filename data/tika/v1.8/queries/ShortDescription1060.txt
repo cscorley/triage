@@ -1,1 +1,0 @@
-Degrade gracefully when juniversalchardet not present

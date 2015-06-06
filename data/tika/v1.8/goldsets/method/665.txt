@@ -1,3 +1,0 @@
-org.apache.tika.parser.microsoft.ExcelExtractor.TikaHSSFListener.internalProcessRecord(Record)
-org.apache.tika.parser.microsoft.ExcelExtractor.TikaHSSFListener.processExtraText()
-org.apache.tika.parser.microsoft.LinkedCell.LinkedCell(Cell,String)

@@ -1,1 +1,0 @@
-DWGParser (and some others) not used by AutoDetectParser

@@ -1,2 +1,0 @@
-org.apache.zookeeper.ZooKeeperMain.getPermFromString(String)
-org.apache.zookeeper.ZooKeeperMain.printStat(Stat)

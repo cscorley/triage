@@ -1,2 +1,0 @@
-org.apache.derby.impl.store.raw.data.AllocPage.ReadContainerInfo(byte[],byte[])
-org.apache.derbyTesting.functionTests.tests.lang.ErrorCodeTest.test_errorcode()

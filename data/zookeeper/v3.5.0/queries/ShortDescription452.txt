@@ -1,1 +1,0 @@
-zookeeper performance graph should have percentage of reads rather than percentage of writes -  zkperfRW-3.2.jpg

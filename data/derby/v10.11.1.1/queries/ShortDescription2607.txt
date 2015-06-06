@@ -1,1 +1,0 @@
-DatabaseMetaData is not consistent about throwing SqlException when tablename=null

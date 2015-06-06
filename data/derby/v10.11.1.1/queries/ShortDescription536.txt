@@ -1,1 +1,0 @@
-The current build.properties for the Derby Help Plug-in for Eclipse does not work for creating a deployable plug-in

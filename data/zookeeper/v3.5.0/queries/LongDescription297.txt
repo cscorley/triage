@@ -1,9 +1,0 @@
-There are now three locations in the source repository that store the version number of the code:
-
-1) build.xml
-2) configure.ac
-3) zookeeper_version.h
-
-these all have to be managed when releasing/branching/etc... would be better if there were just one place - at the very least the configure.ac should be used to generate the version for zookeeper_version.h. 
-
-Can we do a better job (ie less) at this?

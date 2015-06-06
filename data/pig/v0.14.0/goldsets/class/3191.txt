@@ -1,2 +1,0 @@
-org.apache.pig.piggybank.storage.MultiStorage
-org.apache.pig.piggybank.storage.MultiStorage.MultiStorageOutputFormat

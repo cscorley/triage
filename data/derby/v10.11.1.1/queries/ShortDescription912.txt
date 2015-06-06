@@ -1,1 +1,0 @@
-OutOfMemory error on continuous execution of SQL statement

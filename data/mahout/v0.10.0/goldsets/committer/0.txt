@@ -1,7 +1,0 @@
-Benson Margulies <bimargulies@apache.org>
-Grant Ingersoll <gsingers@apache.org>
-Sean R. Owen <srowen@apache.org>
-Shannon Quinn <squinn@apache.org>
-Suneel Marthi <suneel.marthi@gmail.com>
-pranjan <pranjan@unknown>
-smarthi <smarthi@unknown>

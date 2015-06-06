@@ -1,2 +1,0 @@
-org.apache.mahout.utils.vectors.VectorDumper.main(String[])
-org.apache.mahout.utils.vectors.VectorHelper.vectorToString(Vector,String[])

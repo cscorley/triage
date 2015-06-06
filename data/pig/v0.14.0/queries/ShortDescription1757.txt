@@ -1,1 +1,0 @@
-After split combination, the number of maps may vary slightly

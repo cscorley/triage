@@ -1,3 +1,0 @@
-org.apache.lucene.search.IndexSearcher
-org.apache.lucene.search.TestFilteredSearch
-org.apache.lucene.search.TestFilteredSearch.SimpleDocIdSetFilter

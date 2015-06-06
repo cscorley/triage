@@ -1,1 +1,0 @@
-Set default number of reducers for S3N filesystem

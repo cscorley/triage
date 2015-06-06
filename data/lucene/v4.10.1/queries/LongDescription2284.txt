@@ -1,1 +1,0 @@
-MatchAllDocsQueryNode.toString() returns "<matchAllDocs field='' term=''>", which is inavlid XML should read "<matchAllDocs field='' term='' />.

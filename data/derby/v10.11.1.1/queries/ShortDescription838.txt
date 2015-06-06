@@ -1,1 +1,0 @@
-Create internationalization framework for network client

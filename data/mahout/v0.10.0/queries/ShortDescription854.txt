@@ -1,1 +1,0 @@
-Add MinHash to build-reuters.sh example

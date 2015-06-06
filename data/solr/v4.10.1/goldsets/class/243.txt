@@ -1,6 +1,0 @@
-org.apache.solr.core.AlternateIndexReaderTest
-org.apache.solr.core.AlternateIndexReaderTest.TestIndexReaderFactory
-org.apache.solr.core.IndexReaderFactory
-org.apache.solr.core.SolrCore
-org.apache.solr.core.StandardIndexReaderFactory
-org.apache.solr.search.SolrIndexSearcher

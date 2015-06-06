@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.ManagedUtil.registerLog4jMBeans()
-org.apache.zookeeper.server.ManagedZooKeeperServerMain.main(String[])
-org.apache.zookeeper.server.quorum.ManagedQuorumPeerMain.main.create(NIOServerCnxn.Factory)

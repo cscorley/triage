@@ -1,1 +1,0 @@
-Client doesn't handle double quotes in savepoint names

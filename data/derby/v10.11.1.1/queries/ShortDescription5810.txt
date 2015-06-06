@@ -1,1 +1,0 @@
-Include emma.jar on classpath when running compatibility test with instrumented jars

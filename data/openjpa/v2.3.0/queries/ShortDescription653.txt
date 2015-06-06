@@ -1,1 +1,0 @@
-Concurrency issue with query cache enabled

@@ -1,2 +1,0 @@
-org.apache.derby.drda.NetworkServerControl.needsSecurityManager(NetworkServerControlImpl,int)
-org.apache.derby.drda.NetworkServerControl.packagingLooksGood()

@@ -1,2 +1,0 @@
-org.apache.derby.impl.tools.sysinfo.Main
-org.apache.derbyTesting.functionTests.tests.derbynet.SysinfoTest

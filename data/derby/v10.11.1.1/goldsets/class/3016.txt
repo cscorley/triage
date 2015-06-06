@@ -1,2 +1,0 @@
-org.apache.derby.impl.services.replication.slave.ReplicationLogScan
-org.apache.derby.shared.common.reference.SQLState

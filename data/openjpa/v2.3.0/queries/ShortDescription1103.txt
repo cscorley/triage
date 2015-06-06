@@ -1,1 +1,0 @@
-Remove early-access disclaimer from the NOTICE files once the spec is released

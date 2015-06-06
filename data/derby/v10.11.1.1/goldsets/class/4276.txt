@@ -1,3 +1,0 @@
-nserverdemo.NsSample
-SimpleApp
-SimpleNetworkClientSample

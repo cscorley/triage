@@ -1,1 +1,0 @@
-Determine and implement a proper procedure for resetting a prepared statement for reuse in a statement pool

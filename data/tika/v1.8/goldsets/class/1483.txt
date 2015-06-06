@@ -1,2 +1,0 @@
-org.apache.tika.parser.strings.Latin1StringsParser
-org.apache.tika.parser.strings.Latin1StringsParserTest

@@ -1,3 +1,0 @@
-org.apache.bookkeeper.replication.ReplicationException
-org.apache.bookkeeper.replication.ReplicationException.CompatibilityException
-org.apache.bookkeeper.replication.ReplicationException.UnavailableException

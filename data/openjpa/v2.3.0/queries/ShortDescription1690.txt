@@ -1,1 +1,0 @@
-DistinctResultList is not Serializable

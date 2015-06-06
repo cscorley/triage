@@ -1,1 +1,0 @@
-Improve projecthelp for the top level Derby build script

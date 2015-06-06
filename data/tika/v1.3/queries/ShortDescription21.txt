@@ -1,1 +1,0 @@
-LiusConfig supports multiple config files, but parser config list is static.

@@ -1,6 +1,0 @@
-Example 3.1.  Interaction of Interfaces Outside Container
-
-// get an EntityManager from the factory
-EntityManager em = factory.createEntityManager(PersistenceContextType.EXTENDED);
-
-There is no method that takes a PersistenceContextType as a parameter.

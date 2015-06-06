@@ -1,3 +1,0 @@
-org.apache.solr.handler.component.QueryComponent
-org.apache.solr.search.MissingLastOrdComparator
-org.apache.solr.TestDistributedSearch

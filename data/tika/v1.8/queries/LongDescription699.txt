@@ -1,3 +1,0 @@
-As we get closer to 1.x we should add tooling like the Maven Clirr plugin [1] to guard against accidental backwards-incompatible API changes.
-
-[1] http://mojo.codehaus.org/clirr-maven-plugin/

@@ -1,1 +1,0 @@
-In "if p is the lowest process node in L, wait on highest process node in P", "P" should be "L".

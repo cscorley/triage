@@ -1,1 +1,0 @@
-In the current file messages_pt_BR.properties the commands "start" and "shutdown" are translated, but once they are commands they should not be translated. Also the word host wasn't translated, and it appears in many lines. Others modifications were done for compatibility with the translated manuals.

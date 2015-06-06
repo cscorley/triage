@@ -1,1 +1,0 @@
-The tika build uses an ancient version of the gpg plugin, and probably some other fossils as well.  It would be good to update before the next release.

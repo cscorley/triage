@@ -1,1 +1,0 @@
-Compare character datatypes with different collation ordering.

@@ -1,1 +1,0 @@
-HiveColumnarLoader Partitioning Support

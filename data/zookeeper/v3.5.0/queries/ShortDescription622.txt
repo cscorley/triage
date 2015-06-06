@@ -1,1 +1,0 @@
-Test for pending watches in send_set_watches should be moved

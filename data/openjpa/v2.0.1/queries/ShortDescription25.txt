@@ -1,1 +1,0 @@
-Incorrect SQL generated for queries involving more than one AbstractSchemaNames, generated SQL FROM clause is missing 'Table alias'

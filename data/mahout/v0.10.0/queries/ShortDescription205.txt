@@ -1,1 +1,0 @@
-Pull Writable (and anything else hadoop dependent) out of the matrix module

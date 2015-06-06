@@ -1,1 +1,0 @@
-Automatic request retries on connect failover

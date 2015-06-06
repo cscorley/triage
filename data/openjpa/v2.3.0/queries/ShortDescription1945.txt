@@ -1,1 +1,0 @@
-Improve aspects of the OpenBooks sample

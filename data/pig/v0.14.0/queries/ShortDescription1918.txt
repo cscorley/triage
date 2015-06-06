@@ -1,1 +1,0 @@
-Line number should be give for logical plan failures

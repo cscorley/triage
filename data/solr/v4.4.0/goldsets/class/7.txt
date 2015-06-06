@@ -1,2 +1,0 @@
-org.apache.solr.common.cloud.CompositeIdRouter
-org.apache.solr.common.cloud.DocRouter

@@ -1,3 +1,0 @@
-org.apache.mahout.clustering.topdown.postprocessor.ClusterOutputPostProcessorDriver.ClusterOutputPostProcessorDriver()
-org.apache.mahout.clustering.topdown.postprocessor.ClusterOutputPostProcessorDriver.main(String[])
-org.apache.mahout.clustering.topdown.postprocessor.ClusterOutputPostProcessorDriver.run(String[])

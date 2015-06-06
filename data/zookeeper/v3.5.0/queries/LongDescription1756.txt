@@ -1,1 +1,0 @@
-If the client is connected to a zookeeper server that has hung while there is an outstanding request, zookeeper_interest() can return a timeval of 0 because send_to will be negative.

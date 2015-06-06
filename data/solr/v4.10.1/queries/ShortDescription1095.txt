@@ -1,1 +1,0 @@
-StopFilterFactory should not use HashSet

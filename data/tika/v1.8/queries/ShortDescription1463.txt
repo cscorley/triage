@@ -1,1 +1,0 @@
-TesseractOCRParser does not work in Windows

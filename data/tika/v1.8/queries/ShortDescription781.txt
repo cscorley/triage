@@ -1,1 +1,0 @@
-RTF parser should ignore most control words in ignore groups

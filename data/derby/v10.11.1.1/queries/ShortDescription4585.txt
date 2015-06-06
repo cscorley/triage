@@ -1,1 +1,0 @@
-IndexChanger.doDelete throws NullPointerException

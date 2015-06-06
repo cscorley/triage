@@ -1,3 +1,0 @@
-org.apache.mahout.classifier.sgd.bankmarketing.BankMarketingClassificationMain
-org.apache.mahout.classifier.sgd.bankmarketing.TelephoneCall
-org.apache.mahout.classifier.sgd.bankmarketing.TelephoneCallParser

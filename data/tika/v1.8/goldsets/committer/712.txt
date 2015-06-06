@@ -1,3 +1,0 @@
-Michael McCandless <mikemccand@apache.org>
-Nick Burch <nick@apache.org>
-Tim Allison <tallison@apache.org>

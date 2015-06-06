@@ -1,2 +1,0 @@
-org.apache.solr.BasicFunctionalityTest
-org.apache.solr.handler.RequestHandlerBase

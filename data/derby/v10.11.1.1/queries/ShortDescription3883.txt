@@ -1,1 +1,0 @@
-LOBStreamControl.replaceBytes() leaves temporary files open

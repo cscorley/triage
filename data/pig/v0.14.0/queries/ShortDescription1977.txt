@@ -1,1 +1,0 @@
-"Stream closed" error while reading Pig temp files (results of intermediate jobs)

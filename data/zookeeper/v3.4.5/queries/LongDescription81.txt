@@ -1,1 +1,0 @@
-It would be nice if the jmx module compiled and ran on java 5 too.

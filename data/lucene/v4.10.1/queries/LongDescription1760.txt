@@ -1,5 +1,0 @@
-
-	Change or remove experimental warnings of new TokenStream API
-	Improve javadocs for deprecated Token constructors
-	javadocs for TeeSinkTokenStream.SinkFilter
-

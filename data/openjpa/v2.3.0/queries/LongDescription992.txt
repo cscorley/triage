@@ -1,3 +1,0 @@
-TestException.testThrowsEntityExistsException() failed when run against DB2 due to incorrect exception being thrown from OpenJPA. The test is expecting EntityExistsException but instead a RolledbackException with nested PersistenceException is thrown.
-
-Albert Lee.

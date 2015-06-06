@@ -1,3 +1,0 @@
-org.apache.openjpa.integration.validation.TestValidationGroups
-org.apache.openjpa.kernel.AttachStrategy
-org.apache.openjpa.kernel.BrokerImpl

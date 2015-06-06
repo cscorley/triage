@@ -1,1 +1,0 @@
-Access to Lucene's TermEnum capabilities

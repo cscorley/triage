@@ -1,1 +1,0 @@
-Clients get SESSION MOVED exception when switching from follower to a leader.

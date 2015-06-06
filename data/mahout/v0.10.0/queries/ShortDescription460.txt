@@ -1,1 +1,0 @@
-Add "maxPreferencesPerItemConsidered" option to o.a.m.cf.taste.hadoop.similarity.item.ItemSimilarityJob

@@ -1,1 +1,0 @@
-Wrong sort elimination when using permuted join order

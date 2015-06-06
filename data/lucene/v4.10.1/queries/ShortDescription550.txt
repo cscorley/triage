@@ -1,1 +1,0 @@
-InstantiatedIndex - faster but memory consuming index

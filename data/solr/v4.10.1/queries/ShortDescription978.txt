@@ -1,1 +1,0 @@
-Old files are not removed from slaves after replication

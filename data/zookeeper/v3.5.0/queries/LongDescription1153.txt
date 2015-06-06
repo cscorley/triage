@@ -1,1 +1,0 @@
-I propose we mark these as deprecated in 3.4.0 and remove them in the following release.

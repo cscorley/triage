@@ -1,3 +1,0 @@
-org.apache.pig.piggybank.storage.avro.AvroStorageUtils.containsRecursiveRecord(Schema,Set<String>,String)
-org.apache.pig.piggybank.test.storage.avro.TestAvroStorageUtils.canIdentifyNonRecursiveRecords()
-org.apache.pig.piggybank.test.storage.avro.TestAvroStorageUtils.canIdentifyRecursiveRecords()

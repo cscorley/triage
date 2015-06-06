@@ -1,3 +1,0 @@
-org.apache.zookeeper.ClientCnxnSocketNIO
-org.apache.zookeeper.ClientReconnectTest
-org.apache.zookeeper.ClientReconnectTest.MockCnxn

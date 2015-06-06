@@ -1,8 +1,0 @@
-The java/drda/org/apache/derby/drda/template.policy and java/drda/org/apache/derby/drda/server.policy files both include the following line, which I understand is no longer needed:
-
-  permission java.util.PropertyPermission "derby.storage.jvmInstanceId", 
-      "write"; 
-
-It should be removed from both.
-
-Possibly the template.policy file, which is used as the JDK demos/db/templates/server.policy file, should have some further changes to reflect current recommendations.

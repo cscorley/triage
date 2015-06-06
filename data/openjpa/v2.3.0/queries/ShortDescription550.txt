@@ -1,1 +1,0 @@
-Incorrect example code factory.createEntityManager(PersistenceContextType.EXTENDED)

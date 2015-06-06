@@ -1,1 +1,0 @@
-Skewed join creates 3 map reduce jobs

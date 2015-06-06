@@ -1,1 +1,0 @@
-org.apache.solr.handler.dataimport.DataConfig.Entity.Entity(Element)

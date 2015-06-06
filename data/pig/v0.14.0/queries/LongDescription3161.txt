@@ -1,2 +1,0 @@
-I noticed that the reserved keywords in the doc is out of date. The new keywords such as RANK, BIGINTEGER, and BIGDECIMAL are missing in
-src/docs/src/documentation/content/xdocs/basic.xml.

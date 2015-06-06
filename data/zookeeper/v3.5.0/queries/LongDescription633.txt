@@ -1,3 +1,0 @@
-The patch of ZOOKEEPER-507 requires netty and to compile we now have to manually add the netty jar to 
-{project root}
-/src/java/lib. GIven that we bookkeeper already fetches junit and log4j using ivy, we could also do it for netty. However, we need to configure it to fetch from a different repository.

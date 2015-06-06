@@ -1,2 +1,0 @@
-org.apache.tika.parser.crypto.Pkcs7Parser.getSupportedTypes(ParseContext)
-org.apache.tika.parser.crypto.Pkcs7Parser.parse(InputStream,ContentHandler,Metadata,ParseContext)

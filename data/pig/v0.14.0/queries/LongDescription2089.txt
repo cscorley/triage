@@ -1,1 +1,0 @@
-Javadoc says: "Only fields of type tuple should have a schema". Actually bag, map(starting from 0.9) also can have schema.

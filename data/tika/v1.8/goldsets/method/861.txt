@@ -1,4 +1,0 @@
-org.apache.tika.parser.pdf.PDF2XHTML.endPage(PDPage)
-org.apache.tika.parser.pdf.PDFParserTest.testDisableAutoSpace()
-org.apache.tika.parser.pdf.PDFParserTest.testLinks()
-org.apache.tika.parser.pdf.PDFParserTest.testPageNumber()

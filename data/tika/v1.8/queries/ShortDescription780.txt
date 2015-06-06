@@ -1,1 +1,0 @@
-Optimize loading of the media type registry

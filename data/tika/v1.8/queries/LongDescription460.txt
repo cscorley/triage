@@ -1,1 +1,0 @@
-The A elements should be processed before any other safe element, otherwise it never happens

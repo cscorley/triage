@@ -1,3 +1,0 @@
-org.apache.lucene.search.spell.SpellChecker
-org.apache.lucene.store.SimpleFSLock
-org.apache.lucene.store.TestLockFactory

@@ -1,1 +1,0 @@
-ArrayIndexOutOfBoundsException at MergeSort.compare

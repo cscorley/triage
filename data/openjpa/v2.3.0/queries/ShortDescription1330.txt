@@ -1,1 +1,0 @@
-Support uni-/bi-directional Many-To-One mapping using Join Table Strategy

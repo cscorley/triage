@@ -1,1 +1,0 @@
-Context#FULL_DUMP, DELTA_DUMP, FIND_DELTA as an enum 

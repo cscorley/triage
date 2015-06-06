@@ -1,1 +1,0 @@
-[PATCH] Clear ThreadLocal instances in close()

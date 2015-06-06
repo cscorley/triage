@@ -1,1 +1,0 @@
-Tez local mode is still not stable enough. We see some tests hang intermittently (TestBigTypeSort). As we plan to migrate more local mode tests to tez, we don't want to destabilize our main unit tests. I would propose to move tez local mode unit tests to a separate target. We would merge them once tez local mode become stable.

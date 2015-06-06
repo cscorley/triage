@@ -1,1 +1,0 @@
-Junit test failures (mostly Criteria and Lockmgr) with HSQLDB

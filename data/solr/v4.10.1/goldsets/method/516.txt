@@ -1,2 +1,0 @@
-org.apache.solr.highlight.DefaultSolrHighlighter.doHighlighting(DocList,Query,SolrQueryRequest,String[])
-org.apache.solr.highlight.HighlighterTest.testAlternateSummary()

@@ -1,6 +1,0 @@
-We currently don't include configure scripts, just the .ac file itself. This means that users are required
-to run "autoreconf; ./configure" rather than just configure.
-
-We should commit the configure script(s) to svn (hadoop core does this btw) for our autotools based projects (currently c client api and zkfuse).
-
-Also these should be included in the build.

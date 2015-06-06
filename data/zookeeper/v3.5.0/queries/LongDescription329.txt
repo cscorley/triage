@@ -1,1 +1,0 @@
-the docs mention that zk supports pluggable auth schemes but doesn't detail the API/examples. We should add this to the docs.

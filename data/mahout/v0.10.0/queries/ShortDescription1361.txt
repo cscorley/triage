@@ -1,1 +1,0 @@
-Online algorithm for computing accurate Quantiles using 1-D clustering

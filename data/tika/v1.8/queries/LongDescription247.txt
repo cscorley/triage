@@ -1,1 +1,0 @@
-The parser for MS Office documents (.doc) does not add the language and category properties to the metadata

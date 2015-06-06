@@ -1,1 +1,0 @@
-Pig ships with very few evalFuncs for working with strings. This jira is for adding a few more.

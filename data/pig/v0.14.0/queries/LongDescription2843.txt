@@ -1,3 +1,0 @@
-There's a small typo in start.html (missing a space). The attached patch fixes the issue.
-
-This same typo is in start.pdf as well, but I'm unsure how to update that file. If someone can point me to directions I'll gladly add that to the patch.

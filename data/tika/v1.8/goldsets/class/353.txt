@@ -1,3 +1,0 @@
-org.apache.tika.parser.microsoft.ooxml.OOXMLExtractorFactory
-org.apache.tika.parser.microsoft.ooxml.OOXMLParser
-org.apache.tika.parser.microsoft.ooxml.XSSFExcelExtractorDecorator

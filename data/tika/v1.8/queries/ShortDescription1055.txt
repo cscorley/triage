@@ -1,1 +1,0 @@
-Add mimetypes for famous programming languages

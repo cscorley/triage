@@ -1,3 +1,0 @@
-org.apache.pig.newplan.logical.rules.ColumnPruneHelper.ColumnDependencyVisitor.visit(LOCogroup)
-org.apache.pig.test.TestPruneColumn.testAliasInRequiredFieldList()
-org.apache.pig.test.TestPruneColumn.testCogroup10()

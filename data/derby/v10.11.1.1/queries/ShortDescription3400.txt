@@ -1,1 +1,0 @@
-testgetTypeInfo Fails with ibm16 while running the UpgradeTests

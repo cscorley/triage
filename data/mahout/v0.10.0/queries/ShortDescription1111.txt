@@ -1,1 +1,0 @@
-Logging bindings not working in current trunk as of github 2012-November-9 18:41

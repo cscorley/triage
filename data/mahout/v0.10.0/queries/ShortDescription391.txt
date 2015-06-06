@@ -1,1 +1,0 @@
-Make vector more space efficient with variable-length encoding, et al

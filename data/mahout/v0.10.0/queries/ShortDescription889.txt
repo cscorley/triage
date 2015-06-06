@@ -1,1 +1,0 @@
-size() returns wrong value (10) on freshly instantiated ObjectArrayList.

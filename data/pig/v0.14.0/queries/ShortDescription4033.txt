@@ -1,1 +1,0 @@
-Fix MergeSparseJoin e2e tests on tez

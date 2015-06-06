@@ -1,3 +1,0 @@
-Remove unnecessary actions from MinHashMapper:
-
-It does a unnecessary string comparison per non-zero element of each input vector and it unnecessarily clones the input vector for each keyGroup

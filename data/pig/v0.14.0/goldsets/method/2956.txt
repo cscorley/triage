@@ -1,3 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler.toURI(Path)
-org.apache.pig.test.TestJobSubmission.testReducerNumEstimationForOrderBy()
-org.apache.pig.test.TestJobSubmission.testToUri()

@@ -1,1 +1,0 @@
-PERFORMANCE: optimize some of the code in DefaultTuple

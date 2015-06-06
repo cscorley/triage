@@ -1,2 +1,0 @@
-org.apache.tika.parser.html.HtmlParser.getTitleHandler(Metadata)
-org.apache.tika.parser.html.HtmlParser.parse(InputStream,ContentHandler,Metadata)

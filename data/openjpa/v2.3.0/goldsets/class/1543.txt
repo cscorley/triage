@@ -1,3 +1,0 @@
-org.apache.openjpa.jdbc.kernel.PreparedQueryCacheImpl
-org.apache.openjpa.jdbc.kernel.PreparedQueryCacheImpl.ExclusionPattern
-org.apache.openjpa.jdbc.kernel.PreparedQueryImpl

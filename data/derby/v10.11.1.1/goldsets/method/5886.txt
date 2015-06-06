@@ -1,2 +1,0 @@
-org.apache.derby.impl.store.raw.data.EncryptOrDecryptData.removeOldVersionOfContainers()
-org.apache.derby.impl.store.raw.data.RAFContainer.run()

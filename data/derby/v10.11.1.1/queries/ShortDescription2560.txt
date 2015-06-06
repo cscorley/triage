@@ -1,1 +1,0 @@
-Missing asserts in ProcedureInTriggerTest

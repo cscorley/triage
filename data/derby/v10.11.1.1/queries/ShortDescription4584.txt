@@ -1,1 +1,0 @@
-Unable to connect to network server if client thread name has Japanese characters

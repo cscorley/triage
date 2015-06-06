@@ -1,2 +1,0 @@
-Richard N. Hillegas <rhillegas@apache.org>
-Samuel Andrew McIntyre <fuzzylogic@apache.org>

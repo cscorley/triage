@@ -1,3 +1,0 @@
-org.hibernate.engine.jdbc.JdbcSupportLoader
-org.hibernate.util.SerializationHelper
-org.hibernate.util.SerializationHelper.CustomObjectInputStream

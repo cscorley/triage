@@ -1,2 +1,0 @@
-Daniel John Debrunner <djd@apache.org>
-Knut Anders Hatlen <kahatlen@apache.org>

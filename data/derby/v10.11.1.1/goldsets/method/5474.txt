@@ -1,2 +1,0 @@
-org.apache.derbyBuild.splitmessages.initClientMessageIds()
-org.apache.derbyBuild.splitmessages.main(String[])

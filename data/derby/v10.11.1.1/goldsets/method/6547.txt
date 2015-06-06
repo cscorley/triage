@@ -1,1 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.upgradeTests.BasicSetup.testDERBY5120NumRowsInSydependsForTrigger()

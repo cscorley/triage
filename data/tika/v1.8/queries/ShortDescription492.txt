@@ -1,1 +1,0 @@
-Add language identification support for North Sami, Lule Sami and South Sami

@@ -1,1 +1,0 @@
-We have LogFormatter but not SnapshotFormatter. I've added this, patch momentarily.

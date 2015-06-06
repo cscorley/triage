@@ -1,3 +1,0 @@
-org.apache.tika.gui.TikaGUI
-org.apache.tika.parser.html.BoilerpipeContentHandler
-org.apache.tika.parser.html.HtmlParserTest

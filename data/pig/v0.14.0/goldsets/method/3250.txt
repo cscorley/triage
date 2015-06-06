@@ -1,3 +1,0 @@
-org.apache.pig.test.TestMacroExpansion.mapreduceTest()
-org.apache.pig.test.TestMacroExpansion.splitOtherwiseTest()
-org.apache.pig.test.TestMacroExpansion.splitTest()

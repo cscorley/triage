@@ -1,1 +1,0 @@
-Make the name of the columns in schema optional

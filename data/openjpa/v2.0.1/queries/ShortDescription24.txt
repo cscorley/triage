@@ -1,1 +1,0 @@
-Allow OpenJPA to be extensible

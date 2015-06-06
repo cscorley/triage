@@ -1,1 +1,0 @@
-This JIRA tracks release management activities for 10.4.2.

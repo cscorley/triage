@@ -1,1 +1,0 @@
-As soon as ZOOKEEPER-5 gets checked in we will need forrest docs for upgrade feature - how to rollback etc. etc.. 

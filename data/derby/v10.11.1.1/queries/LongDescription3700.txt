@@ -1,1 +1,0 @@
-empty.jar is used to prevent the Java compiler from putting the default Java runtime libraries in the boot classpath. An empty directory would also work, so we could remove the jar file from the source repository and instead let the build scripts create an empty directory for us.

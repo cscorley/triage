@@ -1,6 +1,0 @@
-The following statement fails with syntax error.
-
-ij> create table t (a int not null, b int default 0, unique (a));
-ERROR 42X01: Syntax error: Encountered "0" at line 1, column 47.
-
-And it will work if I remove either default 0 or unique(a).

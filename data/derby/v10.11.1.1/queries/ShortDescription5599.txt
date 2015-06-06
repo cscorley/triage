@@ -1,1 +1,0 @@
-readlocks.sql fails with extra locks.

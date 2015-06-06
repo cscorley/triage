@@ -1,1 +1,0 @@
-Document language based ordering which will be implemented by code related sub-tasks of DERBY-1478.

@@ -1,1 +1,0 @@
-This is a patch that fixes a TODO from the python zookeeper extension, it makes zookeeper.is_unrecoverable return True or False and not an integer. 

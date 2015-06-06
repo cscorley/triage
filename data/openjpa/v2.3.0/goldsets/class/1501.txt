@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.identity.StringIdEntity
-org.apache.openjpa.persistence.identity.TestStringId
-org.apache.openjpa.util.StringId

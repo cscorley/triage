@@ -1,1 +1,0 @@
-add IndexWriter.removeUnferencedFiles, so apps can more immediately delete index files when readers are closed

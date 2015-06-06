@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.meta.AnnotationProcessor6
-org.apache.openjpa.persistence.util.SourceCode
-org.apache.openjpa.persistence.util.SourceCode.Comment

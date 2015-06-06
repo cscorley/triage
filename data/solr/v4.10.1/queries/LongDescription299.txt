@@ -1,3 +1,0 @@
-backticks are often the wrong thing to do (they return a "debugging" representation of a variable).
-
-This may be superceded by the new python client, but should be fixed in the mean time.

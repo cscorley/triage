@@ -1,1 +1,0 @@
-Generate SQL92 JOIN syntax for Oracle 9 or later releases

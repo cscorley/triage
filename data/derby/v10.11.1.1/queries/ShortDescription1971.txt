@@ -1,1 +1,0 @@
-Make TestConfiguration set descriptive names for TestSuite objects it instantiates

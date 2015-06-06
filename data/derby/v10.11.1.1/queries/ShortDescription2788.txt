@@ -1,1 +1,0 @@
-Authentication tests fails with 'org.apache.derby.jdbc.EmbeddedDriver is not registered with the JDBC driver manager'

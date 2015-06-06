@@ -1,1 +1,0 @@
-SQLChar.getLength returns wrong length for some data values

@@ -1,3 +1,0 @@
-Abdel Hakim Deneche <adeneche@apache.org>
-Grant Ingersoll <gsingers@apache.org>
-Isabel Drost <isabel@apache.org>

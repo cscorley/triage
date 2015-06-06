@@ -1,2 +1,0 @@
-lucli.LuceneMethods
-lucli.Lucli

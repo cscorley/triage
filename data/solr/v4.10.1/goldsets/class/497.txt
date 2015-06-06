@@ -1,3 +1,0 @@
-org.apache.solr.client.solrj.response.FacetField
-org.apache.solr.client.solrj.response.QueryResponse
-org.apache.solr.client.solrj.response.QueryResponseTest

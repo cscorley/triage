@@ -1,1 +1,0 @@
-Update mahout for work with hadoop 2.X, targeting this for Mahout 1.0.

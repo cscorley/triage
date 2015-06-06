@@ -1,1 +1,0 @@
-Investigate why Derby 10.5.1.1 is not available in the maven2 repositories

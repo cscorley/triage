@@ -1,1 +1,0 @@
-PCEnhancer ant task requires openjpa jars to be on the system classpath or passed into ant with '-lib'

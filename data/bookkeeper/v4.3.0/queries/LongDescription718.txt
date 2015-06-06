@@ -1,6 +1,0 @@
-See:
-https://builds.apache.org/job/bookkeeper-trunk/505/
-& 
-https://builds.apache.org/job/bookkeeper-trunk/509
-
-Relevant errors attached.

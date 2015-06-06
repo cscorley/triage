@@ -1,3 +1,0 @@
-org.apache.solr.client.solrj.embedded.EmbeddedSolrServer
-org.apache.solr.request.BinaryResponseWriter
-org.apache.solr.request.BinaryResponseWriter.Resolver

@@ -1,1 +1,0 @@
-Dont throw exception if partition filters  cannot be pushed up. 

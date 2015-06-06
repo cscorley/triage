@@ -1,1 +1,0 @@
-Mutable public static variables

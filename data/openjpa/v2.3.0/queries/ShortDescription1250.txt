@@ -1,1 +1,0 @@
-@ElementCollection with eagar fetch of a List<String> collection is causing a ClassCastException on a em.find(entity).

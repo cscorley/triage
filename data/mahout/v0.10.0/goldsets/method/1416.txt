@@ -1,2 +1,0 @@
-org.apache.mahout.classifier.df.DecisionForest.read(DataInput)
-org.apache.mahout.classifier.df.DecisionForest.readFields(DataInput)

@@ -1,1 +1,0 @@
-Add debug target to Netbeans 6.0 project file

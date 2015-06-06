@@ -1,1 +1,0 @@
-Calling em.refresh(...) causes a WARNING message to be logged

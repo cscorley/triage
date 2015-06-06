@@ -1,1 +1,0 @@
-Need a way for Pig to take an alternative property file

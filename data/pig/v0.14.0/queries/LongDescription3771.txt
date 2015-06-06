@@ -1,1 +1,0 @@
-  The amount of list status calls it makes in setLocation if combined with wildcards can really slow down the namenode. 

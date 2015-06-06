@@ -1,3 +1,0 @@
-org.apache.tika.detect.TextDetector
-org.apache.tika.detect.TextStatistics
-org.apache.tika.parser.AutoDetectParserTest

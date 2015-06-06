@@ -1,1 +1,0 @@
-snapshooter does not work under solaris 

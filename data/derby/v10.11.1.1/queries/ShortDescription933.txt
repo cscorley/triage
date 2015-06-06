@@ -1,1 +1,0 @@
-jdbcapi/Stream.java fails on jdk13 with network client

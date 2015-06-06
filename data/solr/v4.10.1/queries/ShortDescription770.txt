@@ -1,1 +1,0 @@
-Change StAX implementation in Solr

@@ -1,3 +1,0 @@
-org.apache.mahout.cf.taste.impl.similarity.jdbc.AbstractJDBCItemSimilarity
-org.apache.mahout.cf.taste.similarity.ItemSimilarity
-org.apache.mahout.cf.taste.similarity.UserSimilarity

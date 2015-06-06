@@ -1,3 +1,0 @@
-org.apache.zookeeper.server.PrepRequestProcessor.checkACL(ZooKeeperServer,List<ACL>,ACL,int,List<Id>,Id)
-org.apache.zookeeper.test.AuthTest.testSuper()
-org.apache.zookeeper.test.AuthTest.testSuperACL()

@@ -1,3 +1,0 @@
-org.apache.openjpa.kernel.BrokerImpl
-org.apache.openjpa.kernel.DetachManagerLite
-org.apache.openjpa.kernel.StateManagerImpl

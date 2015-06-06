@@ -1,1 +1,0 @@
-bookkeeper-daemon.sh will not remove the pid file on successful stop

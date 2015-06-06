@@ -1,3 +1,0 @@
-org.apache.derby.impl.sql.execute.VTIResultSet.cast(DataTypeDescriptor,DataValueDescriptor)
-org.apache.derby.impl.sql.execute.VTIResultSet.castDecimal(DataTypeDescriptor,DataValueDescriptor)
-org.apache.derby.impl.sql.execute.VTIResultSet.castLongvarbinary(DataTypeDescriptor,DataValueDescriptor)

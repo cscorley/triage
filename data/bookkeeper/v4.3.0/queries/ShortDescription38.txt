@@ -1,1 +1,0 @@
-Bookie Server doesn't exit when its zookeeper session is expired. So the process is hang there.

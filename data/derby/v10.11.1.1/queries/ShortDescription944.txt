@@ -1,1 +1,0 @@
-Code ROWID methods for JDBC4 support

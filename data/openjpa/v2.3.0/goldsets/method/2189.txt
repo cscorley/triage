@@ -1,2 +1,0 @@
-openbook.domain.Range.Range(N,N)
-openbook.domain.Range.Range(Object,Object)

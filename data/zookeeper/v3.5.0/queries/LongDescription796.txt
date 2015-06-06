@@ -1,1 +1,0 @@
-So currently the pid file has to be tied to the datadirectory when starting zkServer.sh. It would be good to be able to break them up.

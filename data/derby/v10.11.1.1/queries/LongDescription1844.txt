@@ -1,6 +1,0 @@
-Test fails with JCC versions 2.4, 2.6 and 2.8. 
-
-Sample diff:
-< FAIL: Caught exception java.lang.NegativeArraySizeException
-592a592
-> FAIL: Caught exception java.lang.NegativeArraySizeException: 

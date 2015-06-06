@@ -1,3 +1,0 @@
-org.apache.derbyTesting.junit.Derby.hasClient()
-org.apache.derbyTesting.junit.Derby.hasCorrectJar(String,String)
-org.apache.derbyTesting.junit.SecurityManagerSetup.determineClasspath()

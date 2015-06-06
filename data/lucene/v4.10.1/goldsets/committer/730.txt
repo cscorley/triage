@@ -1,3 +1,0 @@
-Doron Cohen <doronc@apache.org>
-Michael Busch <buschmi@apache.org>
-Otis Gospodnetic <otis@apache.org>

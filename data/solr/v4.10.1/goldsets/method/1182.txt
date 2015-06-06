@@ -1,2 +1,0 @@
-org.apache.solr.search.function.OrdFieldSource.equals(Object)
-org.apache.solr.search.function.OrdFieldSource.getValues(IndexReader)

@@ -1,3 +1,0 @@
-org.apache.solr.BasicFunctionalityTest.testIgnoredFields()
-org.apache.solr.BasicFunctionalityTest.testSomeStuff()
-org.apache.solr.update.SolrIndexWriter.init(String,IndexSchema,SolrIndexConfig)

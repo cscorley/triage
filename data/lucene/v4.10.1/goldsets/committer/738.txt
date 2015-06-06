@@ -1,2 +1,0 @@
-Michael McCandless <mikemccand@apache.org>
-Yonik Seeley <yonik@apache.org>

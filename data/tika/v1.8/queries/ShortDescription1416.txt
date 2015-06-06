@@ -1,1 +1,0 @@
-Refactor Translator Exception Handling

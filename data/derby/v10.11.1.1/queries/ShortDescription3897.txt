@@ -1,1 +1,0 @@
-SQLSessionContext not correctly initialized in some non-method call nested contexts

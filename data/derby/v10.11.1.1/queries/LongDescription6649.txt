@@ -1,4 +1,0 @@
-The server.policy and template.policy files grant the following meaningless permissions in every block related to sysinfo:
-
-  permission java.io.FilePermission "java.runtime.version", "read";
-  permission java.io.FilePermission "java.fullversion", "read";

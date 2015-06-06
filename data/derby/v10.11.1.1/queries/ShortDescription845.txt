@@ -1,1 +1,0 @@
-Internationalize CcsidManager to FdocaSimpleArray in org.apache.derby.client.net

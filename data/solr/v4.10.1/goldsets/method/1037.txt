@@ -1,1 +1,0 @@
-org.apache.solr.handler.dataimport.DocBuilder.addFieldToDoc(Object,String,float,boolean,SolrInputDocument)

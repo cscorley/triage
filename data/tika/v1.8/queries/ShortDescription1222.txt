@@ -1,1 +1,0 @@
-Tika does not extract attachments from RFC822 files

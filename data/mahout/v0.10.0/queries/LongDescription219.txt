@@ -1,1 +1,0 @@
-Just to check expectations, here is a patch with just one unit test. 

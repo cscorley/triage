@@ -1,1 +1,0 @@
-There is a typo in the document zookeeperStarted., see http://zookeeper.apache.org/doc/trunk/zookeeperStarted.html, in the section *Connecting to ZooKeeper, where the help output createpath which should be create path.

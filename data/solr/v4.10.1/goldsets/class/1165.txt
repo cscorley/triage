@@ -1,3 +1,0 @@
-org.apache.solr.search.SolrIndexSearcher
-org.apache.solr.search.SolrIndexSearcher.QueryCommand
-org.apache.solr.search.TestSearchPerf

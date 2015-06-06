@@ -1,1 +1,0 @@
-OpenJPA performs differently with orm.xml and annotations

@@ -1,2 +1,0 @@
-org.apache.solr.analysis.CapitalizationFilterFactory
-org.apache.solr.analysis.TestCapitalizationFilter

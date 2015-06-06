@@ -1,1 +1,0 @@
-running soft upgrade of a 10.0 database vs. 10.3 software gives test error in testGetTablesModify  concerning XML type

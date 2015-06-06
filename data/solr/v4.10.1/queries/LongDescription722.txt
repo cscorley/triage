@@ -1,2 +1,0 @@
-CoreContainer.reload does only make the SolrCore name point to the reloaded core.
-Since loading (creating) a core creates all aliases for that core, reload should do the same.

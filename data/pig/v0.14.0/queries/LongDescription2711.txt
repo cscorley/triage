@@ -1,1 +1,0 @@
-It will be helpful to be able to store the benchmark results that are computed with "old pig" and reuse in subsequent runs. 

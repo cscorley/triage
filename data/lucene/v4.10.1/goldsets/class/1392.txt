@@ -1,3 +1,0 @@
-org.apache.lucene.document.Document
-org.apache.lucene.search.payloads.PayloadSpanUtil
-org.apache.lucene.search.TopDocCollector

@@ -1,2 +1,0 @@
-org.apache.openjpa.conf.OpenJPAConfigurationImpl
-org.apache.openjpa.persistence.PersistenceProviderImpl

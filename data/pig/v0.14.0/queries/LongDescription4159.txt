@@ -1,1 +1,0 @@
-These tests are Tez-specific, so should not run in Hadoop 20.

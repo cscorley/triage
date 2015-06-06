@@ -1,1 +1,0 @@
-outputSchema of a UDF allows two usages when describing a Tuple schema

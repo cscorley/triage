@@ -1,1 +1,0 @@
-DatabaseMetaData.getTablePrivileges fails in soft upgrade mode

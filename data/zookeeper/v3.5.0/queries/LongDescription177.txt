@@ -1,2 +1,0 @@
-I don't know if this should be part of the logging section in the zookeeper admin guide (see JIRA ZOOKEEPER-166 )
-but, per Patrick, "related to security, ack, yea another doc, is the documentation of the JMX support that zk has"

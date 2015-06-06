@@ -1,1 +1,0 @@
-Assertion failed in AutomaticIndexStatisticsMultiTest.testMTSelectWithDDL (expected:<0> but was:<1>)

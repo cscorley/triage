@@ -1,1 +1,0 @@
-[patch] use string buffers when building strings in loops

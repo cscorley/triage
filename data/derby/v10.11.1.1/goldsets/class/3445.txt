@@ -1,3 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.derbynet.SecureServerTest
-org.apache.derbyTesting.functionTests.tests.tools.SysinfoLocaleTest
-org.apache.derbyTesting.junit.SecurityManagerSetup

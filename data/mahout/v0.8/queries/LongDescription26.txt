@@ -1,1 +1,0 @@
-Some bugfixes to matrix multiplication and implementation of recursive determinant calculation using Laplace theorem

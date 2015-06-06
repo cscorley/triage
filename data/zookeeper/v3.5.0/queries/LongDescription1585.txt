@@ -1,1 +1,0 @@
-make dist from trunk is failing because of a wrong reference to src/zookeeper_log.h (which exists in include/). 

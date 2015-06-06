@@ -1,3 +1,0 @@
-Karl-Johan Wettin <kalle@apache.org>
-Robert Muir <rmuir@apache.org>
-Uwe Schindler <uschindler@apache.org>

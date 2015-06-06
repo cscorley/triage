@@ -1,1 +1,0 @@
-The path to the protobuf spec is wrong in lib/Makefile.am. 

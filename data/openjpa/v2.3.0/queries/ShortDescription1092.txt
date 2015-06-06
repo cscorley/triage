@@ -1,1 +1,0 @@
-enable test case for jpql

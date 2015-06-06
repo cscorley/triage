@@ -1,1 +1,0 @@
-NPE when udf has project-star argument and input schema is null

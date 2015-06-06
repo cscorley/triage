@@ -1,2 +1,0 @@
-org.apache.derbyDemo.vtis.example.ApacheServerLogVTI
-org.apache.derbyDemo.vtis.example.DerbyJiraReportVTI

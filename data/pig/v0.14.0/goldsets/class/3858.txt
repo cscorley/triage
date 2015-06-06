@@ -1,3 +1,0 @@
-org.apache.pig.backend.hadoop.executionengine.fetch.FetchContext
-org.apache.pig.backend.hadoop.executionengine.fetch.FetchLauncher
-org.apache.pig.tools.pigstats.PigStatusReporter

@@ -1,4 +1,0 @@
-org.apache.openjpa.persistence.criteria.Expressions
-org.apache.openjpa.persistence.criteria.Expressions.Count
-org.apache.openjpa.persistence.criteria.Expressions.Size
-org.apache.openjpa.persistence.criteria.TestTypesafeCriteria

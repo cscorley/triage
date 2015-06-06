@@ -1,1 +1,0 @@
-XPathRecordReader does a bunch of String concat using +

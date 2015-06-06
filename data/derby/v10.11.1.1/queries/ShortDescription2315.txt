@@ -1,1 +1,0 @@
-compatibility/testScript.xml should include 10.2.2 in the server/client combinations

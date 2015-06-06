@@ -1,1 +1,0 @@
-POProject.getNext(DataBag) does not handle null

@@ -1,3 +1,0 @@
-org.apache.pig.builtin.STRSPLIT.exec(Tuple)
-org.apache.pig.builtin.STRSPLIT.getArgToFuncMapping()
-org.apache.pig.builtin.STRSPLIT.outputSchema(Schema)

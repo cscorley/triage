@@ -1,1 +1,0 @@
-Drop JDK5 support starting with OpenJPA 2.1

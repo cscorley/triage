@@ -1,2 +1,0 @@
-org.apache.derby.impl.sql.compile.ResultColumnList.getOrderByColumn(String,TableName)
-org.apache.derby.impl.sql.compile.ResultColumnList.getOrderByColumn(String,TableName,int)

@@ -1,2 +1,0 @@
-org.apache.derbyTesting.functionTests.tests.compatibility._Suite.suffersFromDerby5889()
-org.apache.derbyTesting.functionTests.tests.compatibility._Suite.suite()

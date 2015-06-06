@@ -1,1 +1,0 @@
-"Table/View 'MAX_SCAN' does not exist" in org.apache.derbyTesting.functionTests.tests.store.IndexSplitDeadlockTest

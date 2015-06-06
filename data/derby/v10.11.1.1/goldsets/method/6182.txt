@@ -1,3 +1,0 @@
-org.apache.derby.iapi.error.StandardException.getArguments()
-org.apache.derby.iapi.services.io.ArrayUtil.copy(Object[])
-org.apache.derby.iapi.services.io.ArrayUtil.copy(String[])

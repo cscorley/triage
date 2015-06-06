@@ -1,1 +1,0 @@
-Consistent log severity level guards and statements

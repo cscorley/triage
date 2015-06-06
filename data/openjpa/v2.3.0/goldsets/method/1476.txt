@@ -1,3 +1,0 @@
-org.apache.openjpa.conf.OpenJPAConfigurationImpl.OpenJPAConfigurationImpl(boolean,boolean)
-org.apache.openjpa.persistence.cache.jpa.AbstractCacheTestCase.createEntityManagerFactory(String)
-org.apache.openjpa.persistence.datacache.TestBulkJPQLAndDataCache.setUp()

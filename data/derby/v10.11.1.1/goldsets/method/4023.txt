@@ -1,2 +1,0 @@
-org.apache.derby.impl.jdbc.TemporaryClob.copyClobContent(InternalClob,long)
-org.apache.derby.impl.jdbc.TemporaryClob.TemporaryClob(String,ConnectionChild)

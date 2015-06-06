@@ -1,2 +1,0 @@
-org.apache.pig.builtin.AvroStorage
-org.apache.pig.builtin.TestAvroStorage

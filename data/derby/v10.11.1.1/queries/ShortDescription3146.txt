@@ -1,1 +1,0 @@
-Adjust length restriction on user identifiers (authorization ids) to same as other identifiers

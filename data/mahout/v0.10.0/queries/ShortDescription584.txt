@@ -1,1 +1,0 @@
-MahoutDriver throws NPE if driver.classes.props is not on the classpath

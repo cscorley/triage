@@ -1,1 +1,0 @@
-quorumVerifier is null when creating a QuorumPeerConfig from parsing a Properties object

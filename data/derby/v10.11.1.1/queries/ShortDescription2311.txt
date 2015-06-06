@@ -1,1 +1,0 @@
- Generate the txt and blobs required for the system tests dynamically 

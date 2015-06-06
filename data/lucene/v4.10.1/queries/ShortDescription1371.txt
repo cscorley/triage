@@ -1,1 +1,0 @@
-Add Searcher.search(Query, int)

@@ -1,2 +1,0 @@
-org.apache.zookeeper.test.WatcherTest.MyWatcher.process(WatchedEvent)
-org.apache.zookeeper.test.WatcherTest.setUp()

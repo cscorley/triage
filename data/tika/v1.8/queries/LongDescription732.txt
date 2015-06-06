@@ -1,1 +1,0 @@
-As noted by Konstantin Gribov on dev@, the POI version we use expects Commons Codec 1.5 while Tika is still using 1.4. Best to upgrade.

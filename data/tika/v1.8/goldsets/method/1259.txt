@@ -1,4 +1,0 @@
-org.apache.tika.parser.AutoDetectParserTest.testOggFlacAudio()
-org.apache.tika.parser.AutoDetectParserTest.testVorbisFlac()
-org.apache.tika.parser.AutoDetectParserTest.testZipBombPrevention()
-org.apache.tika.TikaDetectionTest.testHttpServerFileExtensions()

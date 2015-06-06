@@ -1,1 +1,0 @@
-Tika fails to detect ISO9660 disk images

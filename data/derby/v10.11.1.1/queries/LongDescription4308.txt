@@ -1,1 +1,0 @@
-This issue is for tracking various release tasks for the 10.5.2 release.

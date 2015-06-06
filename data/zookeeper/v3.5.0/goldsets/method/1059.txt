@@ -1,3 +1,0 @@
-org.apache.zookeeper.ZooKeeperMain.processZKCmd(MyCommandOptions)
-org.apache.zookeeper.ZooKeeperTest.testDeleteRecursiveAsync()
-org.apache.zookeeper.ZooKeeperTest.testStatWhenPathDoesNotExist()

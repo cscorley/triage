@@ -1,2 +1,0 @@
-Bernt Johnsen <bernt@apache.org>
-Richard N. Hillegas <rhillegas@apache.org>

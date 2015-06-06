@@ -1,1 +1,0 @@
-only openjpa-examples/src is getting included in the examples subdir in the binary assembly 

@@ -1,1 +1,0 @@
-PigServer.shutdown remove the tez resource folder

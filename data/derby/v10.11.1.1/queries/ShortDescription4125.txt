@@ -1,1 +1,0 @@
-The in-memory storage back end doesn't work on Windows

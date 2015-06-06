@@ -1,1 +1,0 @@
-Successive writes to a java.sql.Blob.setBinaryStream(long) seem to reset the file pointer

@@ -1,1 +1,0 @@
-ClassNotFoundExceptions in an OSGi environment

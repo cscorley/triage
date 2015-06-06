@@ -1,5 +1,0 @@
-mapping.BuildSchemaPC
-mapping.BuildUTF8SchemaPC
-org.apache.openjpa.jdbc.ant.MappingToolTask
-org.apache.openjpa.jdbc.meta.MappingTool
-org.apache.openjpa.lib.util.Files

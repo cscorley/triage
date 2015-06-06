@@ -1,2 +1,0 @@
-org.apache.openjpa.lib.util.TestUUIDGenerator
-org.apache.openjpa.lib.util.UUIDGenerator

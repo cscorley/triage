@@ -1,1 +1,0 @@
-SynchronizeMappings does not manipulate indexes

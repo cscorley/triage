@@ -1,6 +1,0 @@
-org.apache.solr.schema.ExternalFileField
-org.apache.solr.search.function.FileFloatSource
-org.apache.solr.search.function.FileFloatSource.Cache
-org.apache.solr.search.function.FileFloatSource.CreationPlaceholder
-org.apache.solr.search.function.FileFloatSource.Entry
-org.apache.solr.search.function.TestFunctionQuery

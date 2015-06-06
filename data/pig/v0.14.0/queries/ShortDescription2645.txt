@@ -1,1 +1,0 @@
-PigSplit does not handle the case where SerializationFactory returns null

@@ -1,1 +1,0 @@
-GenericUserBasedRecommender.recommend causes connection leak when called for user with no preferences

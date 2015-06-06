@@ -1,1 +1,0 @@
-Remove stale and potentially unused code Request.writeEncryptedScalarStream

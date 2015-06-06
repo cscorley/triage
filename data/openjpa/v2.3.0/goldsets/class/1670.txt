@@ -1,2 +1,0 @@
-org.apache.openjpa.enhance.PCRegistry
-org.apache.openjpa.persistence.meta.TestMetaDataRepository

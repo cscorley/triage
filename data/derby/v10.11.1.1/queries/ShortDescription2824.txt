@@ -1,1 +1,0 @@
-Improve error reporting, fix whitespace/formatting issues and replace tabs in UTF8Reader

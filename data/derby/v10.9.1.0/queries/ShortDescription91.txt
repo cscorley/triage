@@ -1,1 +1,0 @@
-XA .sql tests fail with jar files

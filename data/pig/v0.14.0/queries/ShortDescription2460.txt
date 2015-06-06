@@ -1,1 +1,0 @@
-Use guava 11 instead of r06

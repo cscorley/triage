@@ -1,3 +1,0 @@
-org.apache.bookkeeper.proto.BookieClient
-org.apache.bookkeeper.proto.PerChannelBookieClient
-org.apache.bookkeeper.proto.PerChannelBookieClient.ConnectionState

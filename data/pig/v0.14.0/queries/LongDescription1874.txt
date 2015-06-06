@@ -1,3 +1,0 @@
-This means that PigServers should work if one creates separate PigServer instances for each thread (PigServers are not synchronized). 
-
-

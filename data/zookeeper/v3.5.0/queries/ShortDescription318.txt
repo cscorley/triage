@@ -1,1 +1,0 @@
-remove locking in zk_hashtable.c or add locking in collect_keys()

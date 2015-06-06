@@ -1,5 +1,0 @@
-I was trying to build the zookeeper RPM (basically, `ant rpm -Dskip.contrib=1`), using build scripts that were recently merged from the work on the ZOOKEEPER-999 issue.
-
-The final stage, i.e. running rpmbuild failed. From what I understand it mixed BUILD and BUILDROOT subdirectories in /tmp/zookeeper_package_build_tkadlubo/, leaving BUILDROOT empty, and placing everything in BUILD.
-
-The full build log is at http://pastebin.com/0ZvUAKJt (Caution: I cut out long file listings from running tar -xvvf).

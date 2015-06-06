@@ -1,1 +1,0 @@
-Add Point Sampling, Color coding to ClusterDumper

@@ -1,2 +1,0 @@
-org.apache.zookeeper.server.quorum.ReadOnlyRequestProcessor
-org.apache.zookeeper.test.ReadOnlyModeTest

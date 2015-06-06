@@ -1,1 +1,0 @@
-nightly regression test failure in newly added junit test TriggerGeneralTest

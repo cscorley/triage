@@ -1,1 +1,0 @@
-Jetty Server changes broke ibm6 support

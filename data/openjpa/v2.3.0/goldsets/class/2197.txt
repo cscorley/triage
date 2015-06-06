@@ -1,3 +1,0 @@
-org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser
-org.apache.openjpa.persistence.AnnotationPersistenceMetaDataParser.MethodComparator
-org.apache.openjpa.persistence.callbacks.ListenerImpl

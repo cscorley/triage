@@ -1,1 +1,0 @@
-Weird <scope> associated to vorbis-java-core tests in vorbis-java-tika

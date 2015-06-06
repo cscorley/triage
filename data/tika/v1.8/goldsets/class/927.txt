@@ -1,6 +1,0 @@
-org.apache.tika.metadata.Metadata
-org.apache.tika.metadata.Property
-org.apache.tika.metadata.Property.PropertyType
-org.apache.tika.metadata.PropertyTypeException
-org.apache.tika.metadata.Property.ValueType
-org.apache.tika.metadata.TestMetadata

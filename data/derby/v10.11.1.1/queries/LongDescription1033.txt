@@ -1,7 +1,0 @@
-Another ease of use issue with the docs in a release is that there is
-not obvious starting point, say an index.html at the top level. The docs
- directories are a pain in the html mode, the docs folder has html/<book
-name>. Looking at ref I'm faced with 313 .html files, most with
-confusing names. The starting point is not obvious, index.html is hidden
-somewhere in there, but it's a pain to find. I wonder if all of the html
-files except the starting point could be in a sub-folder?

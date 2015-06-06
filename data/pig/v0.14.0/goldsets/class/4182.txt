@@ -1,3 +1,0 @@
-org.apache.pig.impl.PigContext
-org.apache.pig.scripting.jython.JythonScriptEngine
-org.apache.pig.scripting.jython.JythonScriptEngine.Interpreter

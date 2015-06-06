@@ -1,3 +1,0 @@
-org.apache.pig.impl.io.FileLocalizer.relativeRoot(PigContext)
-org.apache.pig.test.TestPigServer.testPigProperties()
-org.apache.pig.test.TestPigServer.testPigTempDir()

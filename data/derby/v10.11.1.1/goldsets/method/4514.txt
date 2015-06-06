@@ -1,2 +1,0 @@
-org.apache.derbyTesting.junit.RuntimeStatisticsParser.getStartPosition()
-org.apache.derbyTesting.junit.RuntimeStatisticsParser.getStopPosition()

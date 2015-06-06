@@ -1,1 +1,0 @@
-We are running into issues with latest Hadoop 0.23.2 builds that have changed behavior of fs -copyFromLocal to no longer create target path silently if it does not exist. Using instead pig copyFromLocal works same across Hadoop versions.

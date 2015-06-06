@@ -1,1 +1,0 @@
-Test BookieRecoveryTest fails on trunk.

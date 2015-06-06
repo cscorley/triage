@@ -1,2 +1,0 @@
-Cheolsoo Park <cheolsoo@apache.org>
-Richard Ding <rding@apache.org>

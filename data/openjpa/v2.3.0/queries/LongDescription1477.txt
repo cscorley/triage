@@ -1,1 +1,0 @@
-Query.setParameter fails intermittently on multi-threaded environment.

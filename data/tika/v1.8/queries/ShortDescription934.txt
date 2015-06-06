@@ -1,1 +1,0 @@
-Tika in server mode stops responding and reports NPE over and over in logs

@@ -1,1 +1,0 @@
-LedgerHandle.deleteLedger() should be idempotent

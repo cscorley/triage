@@ -1,1 +1,0 @@
-The section of the file java/testing/README.htm explains how to setup an environment for running Derby tests.  It fails to include derbyrun.jar which in required to successfully pass the tools/derbyrunjartest.

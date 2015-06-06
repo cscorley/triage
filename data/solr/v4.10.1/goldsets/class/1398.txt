@@ -1,2 +1,0 @@
-org.apache.solr.analysis.PatternTokenizerFactory
-org.apache.solr.analysis.TestPatternTokenizerFactory

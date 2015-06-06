@@ -1,1 +1,0 @@
-Support JPA 2.0 Cache Interface

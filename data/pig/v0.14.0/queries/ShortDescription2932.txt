@@ -1,1 +1,0 @@
-Setting high default_parallel causes IOException in local mode

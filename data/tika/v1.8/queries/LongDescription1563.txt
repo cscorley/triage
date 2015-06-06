@@ -1,8 +1,0 @@
-This ticket is in reference to the following code:
-
-MimeType mimeType = config.getMimeRepository().forName("application/gzip"); 
-String extension = mimeType.getExtension();
-
-The string extension will be ".tgz". While it is possible to get .gz or other common extensions with mimeType.getExtensions(), it would be nice if the default was .gz. Every .tgz is an application/gzip, but every application/gzip is not a .tgz. 
-
-Note that although the code above uses the static mime type application/gzip, it is more likely that real-world code is performing mime type detection on specific files and looking up the returned type in the mime registry. Returning .gz for a gzipped tarball isn't wrong, but is less specific than its real type. However, returning .tgz for gzipped text is incorrect.

@@ -1,2 +1,0 @@
-org.apache.bookkeeper.client.LedgerChecker
-org.apache.bookkeeper.client.TestLedgerChecker

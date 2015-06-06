@@ -1,1 +1,0 @@
- Provide mechanism to detect r-o bookie by the bookie clients

@@ -1,3 +1,0 @@
-WwdClientExample
-WwdEmbedded
-WwdUtils

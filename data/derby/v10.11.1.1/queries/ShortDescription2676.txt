@@ -1,1 +1,0 @@
-Class name "com.ibm.db2j.aggregates.Aggregator" refered in error message is no longer correct

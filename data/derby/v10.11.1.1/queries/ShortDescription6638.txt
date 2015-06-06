@@ -1,1 +1,0 @@
-Remove unnecessary use of reflection in SignatureChecker

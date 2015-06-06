@@ -1,2 +1,0 @@
-org.apache.derby.impl.services.replication.master.MasterController
-org.apache.derby.impl.services.replication.net.ReplicationMessageTransmit

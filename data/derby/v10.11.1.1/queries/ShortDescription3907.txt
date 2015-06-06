@@ -1,1 +1,0 @@
-Save useful length information for Clobs in store

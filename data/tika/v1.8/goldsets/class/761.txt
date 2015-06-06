@@ -1,3 +1,0 @@
-org.apache.tika.cli.TikaCLI
-org.apache.tika.Tika
-org.apache.tika.TikaIT

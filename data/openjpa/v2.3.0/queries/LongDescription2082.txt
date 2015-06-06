@@ -1,7 +1,0 @@
-I use openJPA integrate spring.How can I use org.springframework.transaction.jta.JtaTransactionManager to manage the openJPA's  transaction? 
-I configurate two dataSource in spring, and I want to manage them consistently. How can I do it ? Could anyone help me? 
-
-
-Thanks very much.
-
-    Kevin.

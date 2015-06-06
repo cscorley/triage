@@ -1,1 +1,0 @@
-We should include a KEYS file that contains the keys used to sign Tika releases.

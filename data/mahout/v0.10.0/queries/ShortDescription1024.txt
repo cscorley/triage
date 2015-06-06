@@ -1,1 +1,0 @@
-cluster_reuters.sh still relies on old (now removed) lda implementation

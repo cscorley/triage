@@ -1,4 +1,0 @@
-Daniel John Debrunner <djd@apache.org>
-Knut Anders Hatlen <kahatlen@apache.org>
-Kristian Waagan <kristwaa@apache.org>
-Richard N. Hillegas <rhillegas@apache.org>

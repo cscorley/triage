@@ -1,1 +1,0 @@
-Writable for labeled vectors for supervised learning algorithms

@@ -1,1 +1,0 @@
-JDBC optimizations: setReadOnly, setMaxRows

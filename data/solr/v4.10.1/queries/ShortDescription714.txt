@@ -1,1 +1,0 @@
-CoreContainer.Load does not handle correctly multiple aliases

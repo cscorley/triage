@@ -1,1 +1,0 @@
-Thread-safe version of PlusAnonymousUserDataModel with multiple concurrent users

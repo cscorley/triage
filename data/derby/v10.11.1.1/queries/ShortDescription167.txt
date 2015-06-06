@@ -1,1 +1,0 @@
-Inserting values in an identity column

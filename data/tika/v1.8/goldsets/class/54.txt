@@ -1,5 +1,0 @@
-org.apache.tika.parser.microsoft.OfficeParser
-org.apache.tika.parser.microsoft.OutlookExtractor
-org.apache.tika.parser.microsoft.OutlookMessageParser
-org.apache.tika.parser.microsoft.OutlookParserTest
-org.apache.tika.TestParsers

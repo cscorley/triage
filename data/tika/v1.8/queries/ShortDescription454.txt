@@ -1,1 +1,0 @@
-Illegal Charset Name crashes HTMLParser

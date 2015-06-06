@@ -1,1 +1,0 @@
-stack trace not clear when there is a SQL error

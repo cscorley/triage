@@ -1,1 +1,0 @@
-Add replicationTests.ReplicationSuite to junit-core ant target

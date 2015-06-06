@@ -1,1 +1,0 @@
-XATransactionTest: Table/View 'DERBY1016' already exists

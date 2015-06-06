@@ -1,1 +1,0 @@
-More document for Pig 0.12 new features

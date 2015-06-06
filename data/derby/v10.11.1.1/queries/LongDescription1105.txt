@@ -1,1 +1,0 @@
-due to change in exception type in embedded driver there are several failures in derbyall under jdk1.6. The out file ot the test case should be changed in such a way that it works on jdk1.6 and older jdk's without fails

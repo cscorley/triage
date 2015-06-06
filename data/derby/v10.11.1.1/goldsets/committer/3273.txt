@@ -1,2 +1,0 @@
-Katherine Marsden <kmarsden@apache.org>
-Samuel Andrew McIntyre <fuzzylogic@apache.org>

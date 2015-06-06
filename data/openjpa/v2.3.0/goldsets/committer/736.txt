@@ -1,2 +1,0 @@
-Fay Wang <faywang@apache.org>
-Milosz Tylenda <mtylenda@apache.org>

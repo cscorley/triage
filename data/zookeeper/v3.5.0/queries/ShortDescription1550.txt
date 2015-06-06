@@ -1,1 +1,0 @@
-ZooKeeperSaslClient does not finish anonymous login on OpenJDK

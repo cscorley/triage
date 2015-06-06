@@ -1,1 +1,0 @@
-Intermittent failures in CompressTableTest and TruncateTableTest

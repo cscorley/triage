@@ -1,1 +1,0 @@
-Use POI API for text extraction from XSLF shape

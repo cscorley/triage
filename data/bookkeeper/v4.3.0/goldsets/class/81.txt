@@ -1,3 +1,0 @@
-org.apache.bookkeeper.bookie.BufferedChannel
-org.apache.bookkeeper.bookie.EntryLogger
-org.apache.bookkeeper.bookie.EntryLogger.GarbageCollectorThread

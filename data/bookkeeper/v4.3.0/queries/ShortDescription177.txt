@@ -1,1 +1,0 @@
-Index file is lost or some index pages aren't flushed.

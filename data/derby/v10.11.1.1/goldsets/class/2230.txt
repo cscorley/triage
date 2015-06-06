@@ -1,2 +1,0 @@
-org.apache.derby.impl.services.bytecode.Conditional
-org.apache.derbyTesting.functionTests.tests.lang.GroupByExpressionTest

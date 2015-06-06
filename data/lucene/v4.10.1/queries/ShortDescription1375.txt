@@ -1,1 +1,0 @@
-add IndexCommit.getTimestamp method

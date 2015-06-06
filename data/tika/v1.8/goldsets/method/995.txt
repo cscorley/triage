@@ -1,2 +1,0 @@
-org.apache.tika.sax.XHTMLContentHandlerTest.testAttributesOnBody()
-org.apache.tika.sax.XHTMLContentHandlerTest.testWhitespaceWithMenus()

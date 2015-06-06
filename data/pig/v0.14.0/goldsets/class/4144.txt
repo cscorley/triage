@@ -1,4 +1,0 @@
-org.apache.pig.pigunit.MiniClusterRunner
-org.apache.pig.pigunit.PigTest
-org.apache.pig.test.pigunit.pig.TestGruntParser
-org.apache.pig.test.pigunit.TestPigTest

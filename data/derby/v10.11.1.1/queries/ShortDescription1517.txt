@@ -1,1 +1,0 @@
-Derby Network Client to handle list of SECMEC(s) returned by existing/released DRDA Derby Network Servers

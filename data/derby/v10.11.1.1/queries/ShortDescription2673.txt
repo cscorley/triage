@@ -1,1 +1,0 @@
-If derby.system.home does not exist Derby should only attempt to create that specific folder, not any missing parents (ie. use File.mkdir(), not File.mkdirs())

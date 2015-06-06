@@ -1,1 +1,0 @@
-On IBM 1.7 TestDurabilityProperty fails with  FAIL -- derby.system.durability=test mode seems to be broken.
