@@ -47,6 +47,50 @@ def get_refs(repo):
 
     return ref2commit
 
+def load_goldset(project):
+    goldset = dict()
+    with smart_open(os.path.join(project.data_path, 'changes-%s.log.gz' % project.level)) as f:
+        c = 0
+        for commit, changes in commit_parser(f):
+            goldset[commit.id] = (commit, changes)
+
+    return goldset
+
+def commit_parser(f):
+    commit = None
+    text = list()
+    changes = list()
+
+    while True:
+        line = next(f).strip().split(None, 1)
+        if commit is None and line and line[0] == 'commit':
+            commit = line
+            text = list()
+            text.append(' '.join(commit) + '\n')
+
+        if commit:
+            line = next(f)
+            while True:
+                ls = line.split()
+                if ls and ls[0] in ['M', 'D', 'A']:
+                    break
+
+                text.append(line)
+                line = next(f)
+
+            changes = list()
+            line = line.strip().split(None, 1)
+            while line:
+                changes.append(line)
+                line = next(f).strip().split(None, 1)
+
+            yield (dulwich.objects.ShaFile.from_raw_string(1, # 1 is 'Commit'
+                                                          ''.join(text),
+                                                          sha=commit[1]),
+                   changes)
+            commit = None
+
+
 def build_goldset(project):
     if os.path.exists(os.path.join(project.data_path, 'DONE')):
         return
@@ -163,8 +207,12 @@ def write_log(f, commit, changes):
     raw_lines = commit.as_raw_string().splitlines()
 
     # tab the message like git
+    tab = False
     for line in raw_lines:
-        if line:
+        if not tab and not line:
+            tab = True
+
+        if tab and line:
             f.write('    ')
             f.write(to_utf8(line))
 
