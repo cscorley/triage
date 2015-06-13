@@ -2,13 +2,10 @@
     - `repos.txt`: list of git URLs for cloning
     - `issues.xml.gz`: compressed xml downloaded from issue tracker
     - ! `git.tar.xz`: compressed `.git/` of the repository used
-    - `git2issue.csv`: contains a `(sha,ref,issue)` mapping for the entire history
+    - `issue2git.csv`: contains a `(issue,sha)` mapping for the entire history
 
-                sha: commit sha
-                tag: closest tag or head from which the commit is reachable.
-                     this is meant to represent which version the commit
-                     belongs to.
                 issue: issue id extracted from the commit message
+                sha: commit sha
 
     - `queries/`
         - `short/`
@@ -21,6 +18,7 @@
       or `<level>=method`, then the output will have the parsed entity names
       instead of file paths.
     - `<version>/`
+        - `ids.txt`: a list of issue ids fixed in this version
         - ! `...`: any files generated. models, corpora, and results.
 
 

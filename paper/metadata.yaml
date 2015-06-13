@@ -5,26 +5,40 @@ biblio-style: IEEEtranN-nourl # custom BST to ignore URLs in papers.bib
 classoption:
     - conference
 
-title: "Modeling Changeset Topics for Automating Change Request Triage"
+title: "An Activity-based Approach for Developer Identification" 
 
 author:
     - name: Christopher S. Corley
       affiliation: The University of Alabama
       location: Tuscaloosa, AL, USA
       email: cscorley@ua.edu
+    - name: Nicholas A. Kraft
+      affiliation: ABB Corporate Research
+      location: Raleigh, NC, USA
+      email: nicholas.a.kraft@us.abb.com
 
 keyword:
     - developer identification
-    - triaging
+    - triage 
     - change requests
     - topic modeling
     - mining software repositories
     - changesets
-
+ 
 abstract: |
-    Cool stuff
+    Developer identification is a prerequisite for assigning developers to tasks
+    (e.g., bug reports, feature requests, or code reviews). Many state-of-the
+    art developer identification techniques (DITs) recommend expert developers
+    by relying on feature location techniques (FLTs) to locate software entities
+    related to a task and mine ownership information about those related
+    entities.  In this paper, we explore a topic-modeling-based DIT in which the
+    model is built incrementally from source code history and recommends
+    a ranked list of developers based on their activity (i.e., words they
+    change). Using an activity-based approach, we can recommend developers
+    directly from the topic model without needing to mine additional information
+    like a location-based approach.
+
+
 
 # don't delete this line, bud
 ...
-
-

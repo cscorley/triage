@@ -27,7 +27,7 @@ from corpora import (ChangesetCorpus, SnapshotCorpus, ReleaseCorpus,
                      TaserSnapshotCorpus, TaserReleaseCorpus,
                      CorpusCombiner, GeneralCorpus)
 from errors import TaserError
-from goldsets import build_developer_goldset
+from goldsets import build_goldset
 from ownership import build_ownership
 
 
@@ -81,12 +81,12 @@ def cli(debug, verbose, name, version, goldset,  *args, **kwargs):
                     continue
 
                 if goldset:
-                    build_developer_goldset(project)
+                    build_goldset(project)
                 else:
                     run_experiment(project)
                 sys.exit(0) # done, boom shakalaka
         elif goldset:
-            build_developer_goldset(project)
+            build_goldset(project)
         else:
             run_experiment(project)
 
