@@ -212,8 +212,10 @@ def write_log(f, commit, changes):
         if not tab and not line:
             tab = True
 
-        if tab and line:
+        if tab:
             f.write('    ')
+
+        if line:
             f.write(to_utf8(line))
 
         f.write('\n')
