@@ -27,7 +27,7 @@ from corpora import (ChangesetCorpus, SnapshotCorpus, ReleaseCorpus,
                      TaserSnapshotCorpus, TaserReleaseCorpus,
                      CorpusCombiner, GeneralCorpus)
 from errors import TaserError
-from goldsets import build_goldset
+from goldsets import build_goldset, load_goldset
 from ownership import build_ownership
 
 
@@ -71,8 +71,6 @@ def cli(debug, verbose, name, version, goldset,  *args, **kwargs):
     # load project info
     projects = load_projects(kwargs)
     for project in projects:
-        if project.name == 'hibernate':
-            continue # skip for now
         if name:
             name = name.lower()
 
@@ -99,7 +97,8 @@ def run_experiment(project):
 
     # create/load document lists
     queries = create_queries(project)
-    goldsets = load_goldsets(project, 'committer')
+    goldsets = create_goldsets(project)
+    issue2git = load_issue2git(project)
 
     ownership = build_ownership(project, repos)
 
@@ -110,13 +109,13 @@ def run_experiment(project):
 
     collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
 
-    release_lda, release_lsi = run_ownership(project, release_corpus,
-                                             ownership, queries, goldsets,
-                                             'Release')
+    ownership_results = run_ownership(project, release_corpus,
+                                      ownership, queries, goldsets,
+                                      'Release')
 
-    changeset_lda, changeset_lsi = run_basic(project, changeset_corpus,
-                                             developer_corpus, queries, goldsets,
-                                             'Changeset')
+    changeset_results = run_basic(project, changeset_corpus,
+                                  developer_corpus, queries, goldsets,
+                                  'Changeset')
 
     if project.temporal:
         try:
@@ -133,16 +132,17 @@ def run_experiment(project):
 
     # do this last so that the results are printed together
     if project.lda:
-        do_science('basic_lda', changeset_lda, release_lda)
+        do_science('basic_lda', changeset_results['lda'], ownership_results['lda'])
+
     if project.lsi:
-        do_science('basic_lsi', changeset_lsi, release_lsi)
+        do_science('basic_lsi', changeset_results['lsi'], ownership_results['lsi'])
 
 def collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus):
     logger.info("Collecting corpus metdata info")
     changeset_corpus.metadata = True
     release_corpus.metadata = True
     queries.metadata = True
-    ids = set(i for i,g in goldsets)
+    ids = load_ids()
     try:
         issue2git, git2issue = load_issue2git(project, ids)
     except:
@@ -169,15 +169,15 @@ def collect_info(project, repos, queries, goldsets, changeset_corpus, release_co
             writer = csv.writer(f)
             writer.writerow(["metadata", "total_entities"])
 
-            for gid, goldset in goldsets:
+            for gid, goldset in goldsets.items():
                 row = list()
                 row.append(gid)
                 row.append(len(goldset))
                 writer.writerow(row)
 
     collect_helper(project, changeset_corpus, 'changeset')
-    collect_helper(project, release_corpus, 'release' + project.level)
-    collect_helper(project, queries, 'queries')
+    collect_helper(project, release_corpus, 'release' + project.collect)
+    level_helper(project, queries, 'queries')
 
     changeset_corpus.metadata = False
     release_corpus.metadata = False
@@ -232,7 +232,7 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, kind, use_level=
     changesets over time.
     """
     logger.info("Running basic evaluation on the %s", kind)
-    lda_first_rels = list()
+    results = dict()
     if project.lda:
         try:
             lda_ranks = read_ranks(project, kind.lower() + '_lda')
@@ -250,8 +250,8 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, kind, use_level=
             write_ranks(project, kind.lower() + '_lda', lda_ranks)
 
         lda_first_rels = get_frms(goldsets, lda_ranks)
+        results['lda'] = lda_first_rels
 
-    lsi_first_rels = list()
     if project.lsi:
         try:
             lsi_ranks = read_ranks(project, kind.lower() + '_lsi')
@@ -269,12 +269,13 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, kind, use_level=
             write_ranks(project, kind.lower() + '_lsi', lsi_ranks)
 
         lsi_first_rels = get_frms(goldsets, lsi_ranks)
+        results['lsi'] = lsi_first_rels
 
-    return lda_first_rels, lsi_first_rels
+    return results
 
 def run_ownership(project, corpus, ownership, queries, goldsets, kind, use_level=False):
     logger.info("Running ownership-based evaluation on the %s", kind)
-    lda_first_rels = list()
+    results = dict()
     if project.lda:
         try:
             lda_owners = read_ranks(project, kind.lower() + '_lda')
@@ -293,8 +294,8 @@ def run_ownership(project, corpus, ownership, queries, goldsets, kind, use_level
             write_ranks(project, kind.lower() + '_lda', lda_owners)
 
         lda_first_rels = get_frms(goldsets, lda_owners)
+        results['lda'] = lda_first_rels
 
-    lsi_first_rels = list()
     if project.lsi:
         try:
             lsi_owners = read_ranks(project, kind.lower() + '_lsi')
@@ -313,8 +314,9 @@ def run_ownership(project, corpus, ownership, queries, goldsets, kind, use_level
             write_ranks(project, kind.lower() + '_lsi', lsi_owners)
 
         lsi_first_rels = get_frms(goldsets, lsi_owners)
+        results['lsi'] = lsi_first_rels
 
-    return lda_first_rels, lsi_first_rels
+    return results
 
 def rank2owner(ranks, ownership):
     owner_ranks = dict()
@@ -375,7 +377,7 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
     it reaches a commit linked with an issue/query. Will not work on all
     projects.
     """
-    ids = set(i for i,g in goldsets)
+    ids = load_ids()
     issue2git, git2issue = load_issue2git(project, ids)
 
     logger.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
@@ -516,7 +518,7 @@ def get_frms(goldsets, ranks):
                 len(goldsets), len(ranks))
     frms = list()
 
-    for g_id, goldset in goldsets:
+    for g_id, goldset in goldsets.items():
         if g_id not in ranks:
             logger.info('Could not find ranks for goldset id %s', g_id)
         else:
@@ -587,31 +589,38 @@ def get_topics(model, corpus, by_ids=None, full=True):
 
     return doc_topic
 
-
-def load_goldsets(project, kind):
-    logger.info("Loading goldsets for project: %s", str(project))
+def load_ids(project):
     with open(os.path.join(project.full_path, 'ids.txt')) as f:
         ids = [x.strip() for x in f.readlines()]
 
-    goldsets = list()
-    s = 0
-    for id in ids:
-        try:
-            with open(os.path.join(project.full_path, 'goldsets', kind,
-                                    id + '.txt')) as f:
-                golds = frozenset(x.strip().replace(" ", "_") for x in f.readlines())
-                s += len(golds)
+    return ids
 
-            goldsets.append((id, golds))
-        except IOError:
-            pass
 
-    logger.info("Returning %d goldsets %d", len(goldsets), s)
+def create_goldsets(project):
+    logger.info("Loading goldsets for project: %s", str(project))
+    ids = load_ids(project)
+    issue2git = load_issue2git(project, ids)
+
+    commit_golds = load_goldset(project) # lol naming
+
+    goldsets = dict()
+    for id_ in ids:
+        if id_ in issue2git:
+            sha = issue2git[id_]
+            if sha in commit_golds:
+                commit, changes = commit_golds[sha]
+                if id_ not in goldsets:
+                    goldsets[id_] = list()
+
+                # goldsets[id_].extend([item for kind, item in changes])
+                goldsets[id_].append(commit.committer)
+
+    logger.info("Returning %d goldsets", len(goldsets))
     return goldsets
 
 
 def load_issue2git(project, ids):
-    dest_fn = os.path.join(project.full_path, 'issue2git.csv')
+    dest_fn = os.path.join(project.data_path, 'issue2git.csv')
     if os.path.exists(dest_fn):
         write_out = False
         i2g = dict()
@@ -656,7 +665,7 @@ def load_issue2git(project, ids):
 
     # Make sure we have a commit for all issues
     keys = set(i2g.keys())
-    ignore = ids - keys
+    ignore = set(ids) - keys
     if len(ignore):
         logger.info("Ignoring evaluation for the following issues:\n\t%s",
                     '\n\t'.join(ignore))
