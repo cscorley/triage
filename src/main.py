@@ -98,7 +98,8 @@ def run_experiment(project):
     # create/load document lists
     queries = create_queries(project)
     goldsets = create_goldsets(project)
-    issue2git = load_issue2git(project)
+    ids = load_ids(project)
+    issue2git, git2issue = load_issue2git(project, ids)
 
     ownership = build_ownership(project, repos)
 
@@ -142,7 +143,7 @@ def collect_info(project, repos, queries, goldsets, changeset_corpus, release_co
     changeset_corpus.metadata = True
     release_corpus.metadata = True
     queries.metadata = True
-    ids = load_ids()
+    ids = load_ids(project)
     try:
         issue2git, git2issue = load_issue2git(project, ids)
     except:
@@ -176,8 +177,8 @@ def collect_info(project, repos, queries, goldsets, changeset_corpus, release_co
                 writer.writerow(row)
 
     collect_helper(project, changeset_corpus, 'changeset')
-    collect_helper(project, release_corpus, 'release' + project.collect)
-    level_helper(project, queries, 'queries')
+    collect_helper(project, release_corpus, 'release' + project.level)
+    collect_helper(project, queries, 'queries')
 
     changeset_corpus.metadata = False
     release_corpus.metadata = False
@@ -519,6 +520,7 @@ def get_frms(goldsets, ranks):
     frms = list()
 
     for g_id, goldset in goldsets.items():
+        logger.debug("gid %s goldset %s", g_id, goldset)
         if g_id not in ranks:
             logger.info('Could not find ranks for goldset id %s', g_id)
         else:
@@ -527,6 +529,7 @@ def get_frms(goldsets, ranks):
             for idx, rank in enumerate(ranks[g_id]):
                 dist, meta = rank
                 d_name, d_repo = meta
+                logger.debug(meta)
                 if d_name in goldset:
                     subfrms.append((idx+1, int(g_id), d_name))
                     break
@@ -599,35 +602,43 @@ def load_ids(project):
 def create_goldsets(project):
     logger.info("Loading goldsets for project: %s", str(project))
     ids = load_ids(project)
-    issue2git = load_issue2git(project, ids)
+    issue2git, git2issue = load_issue2git(project, ids)
 
     commit_golds = load_goldset(project) # lol naming
 
     goldsets = dict()
     for id_ in ids:
         if id_ in issue2git:
-            sha = issue2git[id_]
-            if sha in commit_golds:
-                commit, changes = commit_golds[sha]
-                if id_ not in goldsets:
-                    goldsets[id_] = list()
+            shas = issue2git[id_]
+            for sha in shas:
+                if sha in commit_golds:
+                    commit, changes = commit_golds[sha]
+                    if id_ not in goldsets:
+                        goldsets[id_] = set()
 
-                # goldsets[id_].extend([item for kind, item in changes])
-                goldsets[id_].append(commit.committer)
+                    # goldsets[id_].extend([item for kind, item in changes])
+                    # need to underscore because gensim corpus funtime
+                    committer = to_unicode(commit.committer.replace(" ", "_"))
+                    goldsets[id_].add(committer)
+
 
     logger.info("Returning %d goldsets", len(goldsets))
     return goldsets
 
 
 def load_issue2git(project, ids):
+    logger.info("Loading issue2git.csv")
     dest_fn = os.path.join(project.data_path, 'issue2git.csv')
     if os.path.exists(dest_fn):
         write_out = False
         i2g = dict()
         with open(dest_fn) as f:
             r = csv.reader(f)
-            for row in r:
-                i2g[row[0]] = row[1:]
+            for issue, repo, sha in r:
+                if issue not in i2g:
+                    i2g[issue] = list()
+                i2g[issue].append(sha)
+
     else:
         write_out = True
 
@@ -663,17 +674,14 @@ def load_issue2git(project, ids):
                 else:
                     logger.info('Could not find git sha for SVN revision number %s', svn)
 
+    logger.info("Loaded issue2git with %d entries", len(i2g))
+
     # Make sure we have a commit for all issues
     keys = set(i2g.keys())
     ignore = set(ids) - keys
     if len(ignore):
         logger.info("Ignoring evaluation for the following issues:\n\t%s",
                     '\n\t'.join(ignore))
-
-    # clean up issue2git
-    for issue in i2g.keys():
-        if issue in ignore or issue not in ids:
-            i2g.pop(issue)
 
     # build reverse mapping
     g2i = dict()
@@ -688,6 +696,8 @@ def load_issue2git(project, ids):
             w = csv.writer(f)
             for issue, gits in i2g.items():
                 w.writerow([issue] + gits)
+
+    logger.info("Returning issue2git with len %d and git2issue with len %d", len(i2g), len(g2i))
 
     return i2g, g2i
 

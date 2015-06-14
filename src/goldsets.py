@@ -14,6 +14,7 @@ import csv
 import errno
 import os
 import os.path
+import time
 
 from smart_open import smart_open
 from gensim.utils import to_unicode, to_utf8
@@ -212,7 +213,7 @@ def write_log(f, commit, changes):
         if not tab and not line:
             tab = True
 
-        if tab:
+        if tab and line:
             f.write('    ')
 
         if line:
@@ -289,8 +290,8 @@ def try_request(url, n=10):
     try:
         return requests.get(url)
     except:
-        n -= 1
-        try_request(url, n)
+        time.sleep(600 / n)
+        try_request(url, n-1)
 
 def parse_changes(repo, changes):
     for change in changes:
