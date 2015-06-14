@@ -754,17 +754,16 @@ def create_queries(project):
         pp = GeneralCorpus(lazy_dict=True)
         id2word = Dictionary()
 
-        with open(os.path.join(project.full_path, 'ids.txt')) as f:
-            ids = [x.strip() for x in f.readlines()]
+        ids = load_ids(project)
 
         queries = list()
         for id in ids:
-            with open(os.path.join(project.full_path, 'queries',
-                                    'ShortDescription' + id + '.txt')) as f:
+            with open(os.path.join(project.data_path, 'queries',
+                                    'short', '%s.txt' % id)) as f:
                 short = f.read()
 
-            with open(os.path.join(project.full_path, 'queries',
-                                    'LongDescription' + id + '.txt')) as f:
+            with open(os.path.join(project.data_path, 'queries',
+                                    'long', '%s.txt' % id)) as f:
                 long = f.read()
 
             text = ' '.join([short, long])
