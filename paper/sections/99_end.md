@@ -5,3 +5,5 @@ thanks everyone
 -->
 
 # References
+
+\small

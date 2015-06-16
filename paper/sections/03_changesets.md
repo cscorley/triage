@@ -1,6 +1,15 @@
 # Modeling Changeset Topics
 
+\begin{figure*}
+\centering
+\includegraphics[width=0.9\textwidth]{figures/changeset-triage.pdf}
+\caption{Developer identification using changesets}
+\label{fig:changeset-triage}
+\end{figure*}
+
+<!--
 ![Developer identification using changesets\label{fig:changeset-triage}](changeset-triage.pdf)
+-->
 
 The changeset approach requires two types of document extraction: one for the
 every changeset in the source code history and a developer profile of the words
