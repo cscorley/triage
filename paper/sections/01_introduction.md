@@ -5,7 +5,7 @@ identifies a list of developers that are most apt to complete a change request
 and assigning one or more of those developers to the task
 [@McDonald-Ackerman_1998]. @Begel-etal_2010 show that developers need help
 finding expertise within their organization *more than they need help finding
-source code elements*. 
+source code elements*.
 
 Software features are functionalities defined by requirements and are
 accessible to developers and users. Software change is continual, because

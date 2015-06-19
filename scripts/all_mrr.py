@@ -9,7 +9,7 @@ import sys
 import scipy.stats
 
 def ap(project, t):
-    goldsets = src.main.load_goldsets(project)
+    goldsets = src.main.create_goldsets(project)
     ranks = src.main.read_ranks(project, t)
     frms = src.main.get_frms(goldsets, ranks)
     c = project.name+project.version
@@ -57,7 +57,7 @@ HEADER="""\\begin{table}[t]
 \\renewcommand{\\arraystretch}{1.3}
 \\footnotesize
 \\centering"""
-INNER_HEADER="""\\caption{{\\bf %s}: MRR and $p$-values of %s-level %s}
+INNER_HEADER="""\\caption{{\\bf %s}: MRR and $p$-values}
 \\begin{tabular}{l|ll|ll}
 \\toprule
 Subject System & %s & %s & $p$-value  \\\\
@@ -65,23 +65,22 @@ Subject System & %s & %s & $p$-value  \\\\
 INNER_FOOTER= "\\bottomrule\n\\end{tabular}\n\\label{table:%s:%s:%s}"
 FOOTER="\\end{table}"
 
-projects = src.main.load_projects()
-rq2_projects = ['argouml', 'jabref', 'jedit', 'mucommander']
+projects = src.main.load_projects({"level": "file", "num_topics": 500})
+ex = ["solr", "lucene"]
 
 for kind in ['lda']: # 'lsi']:
     alldict = dict()
     with open('paper/tables/rq1_%s.tex' % kind, 'w') as f:
         print(HEADER, file=f)
         for level in ['class', 'method']:
-            rname = 'release' # + kind
-            cname = 'changeset' # + kind
+            rname = 'release_' + kind
+            cname = 'changeset_' + kind
             alldict[rname] = list()
             alldict[cname] = list()
-            print(INNER_HEADER % ('RQ1', level, 'Batch', 'Snapshot', 'Changeset'), file=f)
+            print(INNER_HEADER % ('RQ1', 'Snapshot', 'Changeset'), file=f)
             for project in projects:
-                if project.level != level:
+                if project.name in ex:
                     continue
-
                 desc = ' '.join([project.printable_name, project.version])
 
                 a = ap(project, rname)
@@ -98,35 +97,3 @@ for kind in ['lda']: # 'lsi']:
 
         print(FOOTER, file=f)
 
-    alldict = dict()
-    with open('paper/tables/rq2_%s.tex' % kind, 'w') as f:
-        print(HEADER, file=f)
-        for level in ['class', 'method']:
-            rname = 'changeset' # + kind
-            cname = 'temporal' #+ kind
-            alldict[rname] = list()
-            alldict[cname] = list()
-            print(INNER_HEADER % ('RQ2', level, 'Temporal', 'Batch', 'Temporal'), file=f)
-            for project in projects:
-                if project.level != level:
-                    continue
-                if project.name not in rq2_projects:
-                    continue
-
-                desc = ' '.join([project.printable_name, project.version])
-
-                a = ap(project, rname)
-                try:
-                    b = ap(project, cname)
-                except IOError:
-                    continue # some projects don't have temporal junk
-
-                alldict[rname] += a
-                alldict[cname] += b
-
-                print_em(desc, a, b, ignore=True, file=f)
-
-            print('\\midrule', file=f)
-            print_em("All", alldict[rname], alldict[cname], ignore=True, file=f)
-            print(INNER_FOOTER % ('rq2', level, kind), file=f)
-        print(FOOTER, file=f)

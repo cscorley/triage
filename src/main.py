@@ -479,14 +479,16 @@ def merge_first_rels(a, b, ignore=False):
     first_rels = dict()
 
     for num, query_id, doc_meta in a:
-        qid = int(query_id)
+        #qid = int(query_id)
+        qid = query_id
         if qid not in first_rels:
             first_rels[qid] = [num]
         else:
             logger.info('duplicate qid found: %s', query_id)
 
     for num, query_id, doc_meta in b:
-        qid = int(query_id)
+        #qid = int(query_id)
+        qid = query_id
         if qid not in first_rels and not ignore:
             logger.info('qid not found: %s', qid)
             first_rels[qid] = [0]
