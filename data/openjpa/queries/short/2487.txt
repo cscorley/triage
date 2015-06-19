@@ -1,0 +1,1 @@
+upgrade openjpa to asm5 to support java 8

@@ -1,0 +1,1 @@
+Long text matching email local-part rule in UAX29URLEmailTokenizer causes extremely slow tokenization

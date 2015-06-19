@@ -1,0 +1,1 @@
+Use MockAnalyzers in lucene/facet tests

@@ -1,0 +1,9 @@
+One more test failure while running with Java 8.  Since Java 8 introduced some new methods on the Map interface, this is probably related.  We are getting a VerifyError related to the keySet signature:
+
+Tests in error:
+testConcurrentMap001(org.apache.openjpa.persistence.relations.TestConcurrentMap)
+
+    <error message="(class: org/apache/openjpa/util/java$util$concurrent$ConcurrentHashMap$4$proxy, method: keySet signature: ()Ljava/util/concurrent/ConcurrentHashMap$KeySetView Wrong return type in function" type="java.lang.VerifyError">java.lang.VerifyError: (class: org/apache/openjpa/util/java$util$concurrent$ConcurrentHashMap$4$proxy, method: keySet signature: ()Ljava/util/concurrent/ConcurrentHashMap$KeySetView Wrong return type in function
+        at java.lang.Class.forName0(Native Method)
+        at java.lang.Class.forName(Class.java:340)
+        at org.apache.openjpa.util.GeneratedClasses.loadBCClass(GeneratedClasses.java:68)

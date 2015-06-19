@@ -1,0 +1,1 @@
+Running mvn -Pdocbook-plugin clean install results in duplicate entries in apache-openjpa-1.0.3-binary.zip for everything in ../manual/img/* and .../manual/css/* . 

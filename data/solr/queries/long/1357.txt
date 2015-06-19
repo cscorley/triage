@@ -1,0 +1,36 @@
+Adding data via SolrInputDocument is normally done by calling the addField method with a field name, field value and an optional boost.  In case of dynamic fields, if field names are known upfront, then caller of this method just passes in the right name and it automatically works.
+
+This does not go well with users who use @interface Field annotations for automatic binding. 
+As of SOLR-1129, users can annotate Map<String, String> propertyName with @Field ("field_*") kind of annotations to bind dynamic field data to. SolrInputDocument should exhibit the same behavior.  The field value currently supported are - primitive, array, collection or an instance of Iterable. It can also take Map as values. If the field, for which addField method is called, is of dynamicField type (which can be derived from the field name), then the keys of the Map, passed as value, should be used to "compose" the correct field name.
+
+This should be supported
+
+
+//This code sample should populate the dynamic fields "brands_Nokia" and "brands_Samsung"
+public class MyBean{
+  @Field("brands_*)
+  Map<String, Integer> brands;
+  
+  ...
+}
+Map<String, String> brands= new HashMap<String, String>();
+brands.put("Nokia", 1000);
+brands.put("Samsung", 100);
+
+MyBean myBean = new MyBean();
+myBean.setBrands(brands);
+solrServer.addBean(myBean);
+
+
+
+We can think of supporting this too ...
+
+
+//This code sample should populate the dynamic fields "brands_Nokia" and "brands_Samsung"
+Map<String, String> brands= new HashMap<String, String>();
+brands.put("Nokia", 1000);
+brands.put("Samsung", 100);
+
+SolrInputDocument doc = new SolrInputDocument();
+doc.addField("brands_*", brands);
+

@@ -1,0 +1,5 @@
+This is largely for SOLR-3843, but other smaller reasons as well.
+
+I thought things had gotten to the point where this would be easy - but it's not so easy because of our real time get support over core reloads it looks.
+
+That needs to use the old writer - it opens the first searcher after the reload with the old writer - if we then reopen the writer we close that - and a further reopen of the searcher ends up failing due to a closed writer.

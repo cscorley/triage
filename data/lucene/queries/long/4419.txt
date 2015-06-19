@@ -1,0 +1,3 @@
+RecursivePrefixTreeFilter was modified in ~July 2011 to support spatial filtering of non-point indexed shapes.  It seems to work when playing with the capability but it isn't tested.  It really needs to be as this is a major feature.
+
+I imagine an approach in which some randomly generated rectangles are indexed and then a randomly generated rectangle is queried.  The right answer can be calculated brute-force and then compared with the filter.  In order to deal with shape imprecision, the randomly generated shapes could be generated to fit a course grid (e.g. round everything to a 1 degree interval).

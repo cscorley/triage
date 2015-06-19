@@ -1,0 +1,39 @@
+With the trunk build, running SolrCloud, if I issue a PERSIST CoreAdmin command,
+the solr.xml gets overwritten with only the last core, repeated as many times
+as there are cores.
+
+It used to work fine with a trunk build from a couple of months ago, so it looks like
+something broke solr.xml persistence. 
+
+It appears to have been introduced by SOLR-2331:
+CoreContainer#persistFile creates the map for core attributes (coreAttribs) outside 
+of the loop that iterates over cores. Therefore, all cores reuse the same map of attributes
+and hence only the values from the last core are preserved and used for all cores in the list.
+
+I'm running SolrCloud, using:
+-Dbootstrap_confdir=/opt/solr/solr/conf -Dcollection.configName=hcpconf -DzkRun
+
+I'm starting Solr with four cores listed in solr.xml:
+
+<solr persistent="true">
+  <cores adminPath="/admin/cores" defaultCoreName="master1">
+    <core name="master1" instanceDir="master1" shard="shard1" collection="hcpconf" />
+    <core name="master2" instanceDir="master2" shard="shard2" collection="hcpconf" />
+    <core name="slave1" instanceDir="slave1" shard="shard1" collection="hcpconf" />
+    <core name="slave2" instanceDir="slave2" shard="shard2" collection="hcpconf" />
+  </cores>
+</solr>
+
+I then issue a PERSIST request:
+http://localhost:8983/solr/admin/cores?action=PERSIST
+
+And the solr.xml turns into:
+
+<solr persistent="true">
+  <cores defaultCoreName="master1" adminPath="/admin/cores" zkClientTimeout="10000" hostPort="8983" hostContext="solr">
+    <core shard="shard2" instanceDir="slave2/" name="slave2" collection="hcpconf"/>
+    <core shard="shard2" instanceDir="slave2/" name="slave2" collection="hcpconf"/>
+    <core shard="shard2" instanceDir="slave2/" name="slave2" collection="hcpconf"/>
+    <core shard="shard2" instanceDir="slave2/" name="slave2" collection="hcpconf"/>
+  </cores>
+</solr>

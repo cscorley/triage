@@ -1,0 +1,1 @@
+If CoreContainer fails to register a created core, it should close it.

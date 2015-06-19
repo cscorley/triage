@@ -1,0 +1,4 @@
+This class remembers which thread used which DWPT, but it never clears
+this "affinity".  It really should clear it on flush, this way if the
+number of threads doing indexing has changed we only use as many DWPTs
+as there are incoming threads.

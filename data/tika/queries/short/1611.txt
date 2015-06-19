@@ -1,0 +1,1 @@
+Allow RecursiveParserWrapper to catch exceptions from embedded documents

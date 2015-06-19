@@ -1,0 +1,34 @@
+I have two entities defined, nested in each other..
+
+<entity name="article" query="select category, subcategory from articles">
+   <entity name="other" query="select other from othertable where category='$
+{dataimporter.functions.escapeSql(article.category)}
+'
+              AND subcategory='$
+{dataimporter.functions.escapeSql(article.subcategory)}
+'">  
+   </entity>
+</entity>
+
+Now, when I run that it bombs on any article where subcategory = '' (it's a NOT NULL column so empty string is there)  If i do where subcategory!='' in the article query it works fine (aside from not pulling in all of the articles).
+
+org.apache.solr.handler.dataimport.DataImportHandlerException: java.lang.NullPointerException
+        at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:424)
+        at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:383)
+        at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:242)
+        at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:180)
+        at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:331)
+        at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:389)
+        at org.apache.solr.handler.dataimport.DataImporter$1.run(DataImporter.java:370)
+Caused by: java.lang.NullPointerException
+        at org.apache.solr.handler.dataimport.EvaluatorBag$1.evaluate(EvaluatorBag.java:75)
+        at org.apache.solr.handler.dataimport.EvaluatorBag$5.get(EvaluatorBag.java:216)
+        at org.apache.solr.handler.dataimport.EvaluatorBag$5.get(EvaluatorBag.java:204)
+        at org.apache.solr.handler.dataimport.VariableResolverImpl.resolve(VariableResolverImpl.java:107)
+        at org.apache.solr.handler.dataimport.TemplateString.fillTokens(TemplateString.java:81)
+        at org.apache.solr.handler.dataimport.TemplateString.replaceTokens(TemplateString.java:75)
+        at org.apache.solr.handler.dataimport.VariableResolverImpl.replaceTokens(VariableResolverImpl.java:87)
+        at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextRow(SqlEntityProcessor.java:71)
+        at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:237)
+        at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:357)
+        ... 6 more

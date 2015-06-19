@@ -1,0 +1,8 @@
+While looking at SOLR-2530,
+
+Seems like in the 'use filter cache' case of SimpleFacets we:
+1. convert the bytes from utf8-utf16
+2. create a string from the utf16
+3. create a Term object from the string
+
+doesn't seem like any of this is necessary, as the Term is unused...

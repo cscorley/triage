@@ -1,0 +1,3 @@
+SparkPlan, which was added in PIG-4374, creates a new SparkOperator for every shuffle boundary (denoted by presence of POGlobalRearrange in the corresponding physical plan).  This is unnecessary for Spark engine since it relies on Spark to do the shuffle (using groupBy(), reduceByKey() and CoGroupRDD) and does not need to explicitly identify "map" and "reduce" operations.
+
+It is also cleaner if a single SparkOperator represents a single complete Spark job.

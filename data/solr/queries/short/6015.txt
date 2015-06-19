@@ -1,0 +1,1 @@
+managed synonyms don't gracefully handle lowercasing

@@ -1,0 +1,1 @@
+Order by string, descending order works with PIG-3527. We shall add e2e tests.

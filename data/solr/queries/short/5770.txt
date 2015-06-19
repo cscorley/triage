@@ -1,0 +1,1 @@
+All attempts to match a SolrCore with it's state in clusterstate.json should be done with the NodeName rather than the baseUrl.

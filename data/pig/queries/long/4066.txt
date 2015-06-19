@@ -1,0 +1,12 @@
+This patch aims at addressing the current limitation of the ROLLUP operator in PIG: most of the work is done in the Map phase of the underlying MapReduce job to generate all possible intermediate keys that the reducer use to aggregate and produce the ROLLUP output. Based on our previous work: “Duy-Hung Phan, Matteo Dell’Amico, Pietro Michiardi: On the design space of MapReduce ROLLUP aggregates” (http://www.eurecom.fr/en/publication/4212/download/rs-publi-4212_2.pdf), we show that the design space for a ROLLUP implementation allows for a different approach (in-reducer grouping, IRG), in which less work is done in the Map phase and the grouping is done in the Reduce phase. This patch presents the most efficient implementation we designed (Hybrid IRG), which allows defining a parameter to balance between parallelism (in the reducers) and communication cost.
+This patch contains the following features:
+1. The new ROLLUP approach: IRG, Hybrid IRG.
+2. The PIVOT clause in CUBE operators.
+3. Test cases.
+The new syntax to use our ROLLUP approach:
+alias = CUBE rel BY 
+{ CUBE col_ref | ROLLUP col_ref [PIVOT pivot_value]} [, { CUBE col_ref | ROLLUP col_ref [PIVOT pivot_value]}
+...]
+In case there is multiple ROLLUP operator in one CUBE clause, the last ROLLUP operator will be executed with our approach (IRG, Hybrid IRG) while the remaining ROLLUP ahead will be executed with the default approach.
+We have already made some experiments for comparison between our ROLLUP implementation and the current ROLLUP. More information can be found at here: http://hxquangnhat.github.io/PIG-ROLLUP-H2IRG/
+Patch can be reviewed at here: https://reviews.apache.org/r/23804/

@@ -1,0 +1,1 @@
+We don't have test cases for this method and it looks broken with both Lucene40TermVectorsFormat and CompressiongTermVectorsFormat.

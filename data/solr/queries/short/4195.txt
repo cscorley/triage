@@ -1,0 +1,1 @@
+Further restrict security policy of tests to disallow writing to files outside the test's work dir (e.g. disallow writing to build/test-files)

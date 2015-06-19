@@ -1,0 +1,30 @@
+This was caused by a bug in the fix for PIG-4432.
+
+To reproduce:
+
+map_complex.txt
+
+[a#(foo),b#(bar)]
+
+
+
+testValueListComplex.pig
+
+a = load 'map_complex.txt' as (map[(chararray)]);
+b = foreach a generate VALUELIST($0);
+describe b;
+
+
+
+Expected:
+
+
+b: {{((val_0: chararray))}}
+
+
+
+Actual:
+
+
+b: {{(val_0: chararray)}}
+

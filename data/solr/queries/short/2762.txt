@@ -1,0 +1,1 @@
+FSTLookup returns one less suggestion than it should when onlyMorePopular=true

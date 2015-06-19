@@ -1,0 +1,1 @@
+FunctionQParser has some simplistic assumptions about what types of field names it will deal with, in particular it can't deal with field names containing whitespaces.

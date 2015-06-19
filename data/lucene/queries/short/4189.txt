@@ -1,0 +1,1 @@
+Test output should include timestamps (start/end for each test/ suite).

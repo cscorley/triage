@@ -1,0 +1,7 @@
+While porting code to 4.2 I noticed that AssociationIntSumFacetsAggregator implements rollupValues by using the floatArray() rather than the int[]. This is probably a copy-paste mistake from AssociationFloatSum, but it got me thinking how come tests do not fail? After reviewing the tests I realized why don't fail – associations should not work with OrdinalPolicy.NO_PARENTS. They do not rollupValues, but aggregate the exact ordinals' values that they meet. I.e. if you added Movie/Genre/Horror with confidence level 0.65, it applies to just that category, and not the parents. If you want to apply it to the parents, you need to add Movie/Genre with that confidence level (or different one) as well.
+
+I am not sure though what's the best approach to handle it. Should rollupValues throw UOE or have a no-op impl? On one hand, you really shouldn't be calling that method, meaning you cannot assume that if you index association values with NO_PARENTS, then their parents will be aggregated.
+
+On the other hand, someone might want to index the full hierarchy for counting too, using different aggregators for different requests. In that case, the OrdinalPolicy of that CP might be NO_PARENTS, and FacetsAccumulator will call rollupValues. So having a no-op method impl is quieter.
+
+I think I'll leave a no-op impl?

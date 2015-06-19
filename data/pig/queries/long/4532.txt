@@ -1,0 +1,7 @@
+The Pig documentation about AvroStorage (http://pig.apache.org/docs/r0.14.0/func.html#AvroStorage) contains a typo. It says:
+
+Avrostorage(['schema|record name'], ['options'])
+
+where it should be
+
+AvroStorage(['schema|record name'], ['options'])

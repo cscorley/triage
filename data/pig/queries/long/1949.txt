@@ -1,0 +1,1 @@
+Currently TestDriverPig.pm uses java directly to invoke Pig.  It should use the bash shell script bin/pig instead.

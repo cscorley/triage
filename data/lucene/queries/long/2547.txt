@@ -1,0 +1,9 @@
+dicIf you already have a Integer/Long/Double etc. numericField.setLongValue(long) causes an unnecessary auto-unbox.
+actually, since internal to setLongValue there is:
+
+
+fieldsData = Long.valueOf(value);
+
+
+then, there is an explicit box anyway, so this makes setLongValue(Long) with an auto-box of long roughly the same as setLongValue(long), but better if you started with a Long.
+Long being replaceable with Integer, Float, Double etc.

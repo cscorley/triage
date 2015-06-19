@@ -1,0 +1,11 @@
+Hi folks, 
+
+I think that UIMAUpdateRequestProcessor should have a parameter to avoid duplicate values on the updated field. 
+
+A typical use case is:
+
+If you are using DictionaryAnnotator and there is a term that matches more than once it will be added two times in the mapped field. I think that we should add a parameter to avoid inserting duplicates as we are not preserving information on the position of the annotation. 
+
+What do you think about it? I've already implemented this for branch 3x I'm writing some tests and I will submit a patch.
+
+Regards

@@ -1,0 +1,1 @@
+remove HtmlEncoder from example solrconfig.xml (or set it to default=false)

@@ -1,0 +1,5 @@
+When specifying the cloud options (-DzkRun -DnumShards=n) in solr startup parameters, solr search does not consider any PostFilters.
+For example, I have implemented a PostFilter and wrapped that in my QParserPlugin sub class. Then in the solr query I am using fq to apply post filtering by specifying fq=
+{!pf1}
+ where pf1 is the name of my QParserPlugin. This all works well in solr and not in solr cloud. 
+I debugged and figured out that org.apache.solr.search.Grouping.execute() method is called by the non cloud instance. This considers pf.PostFilter which is the collection of all PostFilters whereas org.apache.solr.search.grouping.CommandHandler.execute() which is called by the solr cloud instance ignores the pf.PostFilter.

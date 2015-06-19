@@ -1,0 +1,1 @@
+Enhance CoreAdmin STATUS command to return index size

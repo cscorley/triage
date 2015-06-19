@@ -1,0 +1,3 @@
+Spin off from here: http://www.gossamer-threads.com/lists/lucene/java-dev/112311.
+
+I will attach a patch shortly that addresses the issue on trunk.

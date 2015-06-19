@@ -1,0 +1,1 @@
+If no Passages are found for a doc, PostingsHighlighter should return first n sentences?

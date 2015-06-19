@@ -1,0 +1,1 @@
+zkpython can segfault when statting a deleted node

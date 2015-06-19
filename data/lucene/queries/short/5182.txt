@@ -1,0 +1,1 @@
+FVH can end in very very long running recursion on phrase highlight

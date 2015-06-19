@@ -1,0 +1,3 @@
+The error messages thrown by CoreContainer when there is a problem loading solrconfig.xml refer to the wrong path (leaves out "conf/").
+
+This is missleading users (who may not notice the root cause) into thinking they need to move their solrconfig.xml from collection_name/conf/solrconfig.xml to collection_name/solrconfig.xml at which point they still get the same error message because solr still can't find the file in the conf dir

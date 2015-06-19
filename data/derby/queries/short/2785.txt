@@ -1,0 +1,1 @@
+ij "describe" built in command cannot describe a table named "run"

@@ -1,0 +1,1 @@
+Pig version in pig.pom is incorrect in branch-0.11

@@ -1,0 +1,1 @@
+PostingsHighlighter should use a interface of PassageFormatter instead of a class

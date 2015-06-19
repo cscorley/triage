@@ -1,0 +1,1 @@
+move uimaConfig to under the uima's update processor in solrconfig.xml

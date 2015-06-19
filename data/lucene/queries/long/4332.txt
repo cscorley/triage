@@ -1,0 +1,1 @@
+As discussed briefly on the mailing list, this patch is an attempt to integrate the PiTest mutation coverage tool into the lucene build

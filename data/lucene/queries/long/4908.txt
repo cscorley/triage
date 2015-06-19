@@ -1,0 +1,103 @@
+Fails 100% for me on trunk, whether or not I give the seed below, but appears to be trunk only - the test passes on branch_4x:
+
+ant test  -Dtestcase=SortingAtomicReaderTest -Dtests.seed=FDBC5417F9F1EC45 -Dtests.slow=true -Dtests.locale=ja_JP -Dtests.timezone=Africa/Juba -Dtests.file.encoding=UTF-8
+
+
+common.test:
+[junit4:pickseed] Seed property 'tests.seed' already defined: FDBC5417F9F1EC45
+[junit4:junit4] <JUnit4> says cześć! Master seed: FDBC5417F9F1EC45
+[junit4:junit4] Executing 1 suite with 1 JVM.
+[junit4:junit4] 
+[junit4:junit4] Started J0 PID(82211@smb.local).
+[junit4:junit4] Suite: org.apache.lucene.index.sorter.SortingAtomicReaderTest
+[junit4:junit4]   1> CheckReader failed
+[junit4:junit4]   1>     test: field norms.........OK [3 fields]
+[junit4:junit4]   1>     test: terms, freq, prox...ERROR: java.lang.ArrayIndexOutOfBoundsException: -1
+[junit4:junit4]   1> java.lang.ArrayIndexOutOfBoundsException: -1
+[junit4:junit4]   1> 	at org.apache.lucene.index.sorter.SortingAtomicReader$SortingDocsAndPositionsEnum.docID(SortingAtomicReader.java:562)
+[junit4:junit4]   1> 	at org.apache.lucene.search.DocIdSetIterator.slowAdvance(DocIdSetIterator.java:99)
+[junit4:junit4]   1> 	at org.apache.lucene.index.sorter.SortingAtomicReader$SortingDocsAndPositionsEnum.advance(SortingAtomicReader.java:557)
+[junit4:junit4]   1> 	at org.apache.lucene.index.CheckIndex.checkFields(CheckIndex.java:942)
+[junit4:junit4]   1> 	at org.apache.lucene.index.CheckIndex.testPostings(CheckIndex.java:1200)
+[junit4:junit4]   1> 	at org.apache.lucene.index.CheckIndex.testPostings(CheckIndex.java:1177)
+[junit4:junit4]   1> 	at org.apache.lucene.util._TestUtil.checkReader(_TestUtil.java:243)
+[junit4:junit4]   1> 	at org.apache.lucene.util._TestUtil.checkReader(_TestUtil.java:234)
+[junit4:junit4]   1> 	at org.apache.lucene.index.sorter.SortingAtomicReaderTest.beforeClassSortingAtomicReaderTest(SortingAtomicReaderTest.java:77)
+[junit4:junit4]   1> 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[junit4:junit4]   1> 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+[junit4:junit4]   1> 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[junit4:junit4]   1> 	at java.lang.reflect.Method.invoke(Method.java:601)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.RandomizedRunner.invoke(RandomizedRunner.java:1559)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.RandomizedRunner.access$600(RandomizedRunner.java:79)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.RandomizedRunner$4.evaluate(RandomizedRunner.java:677)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.RandomizedRunner$5.evaluate(RandomizedRunner.java:693)
+[junit4:junit4]   1> 	at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:46)
+[junit4:junit4]   1> 	at org.apache.lucene.util.TestRuleStoreClassName$1.evaluate(TestRuleStoreClassName.java:42)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+[junit4:junit4]   1> 	at org.apache.lucene.util.TestRuleAssertionsRequired$1.evaluate(TestRuleAssertionsRequired.java:43)
+[junit4:junit4]   1> 	at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+[junit4:junit4]   1> 	at org.apache.lucene.util.TestRuleIgnoreAfterMaxFailures$1.evaluate(TestRuleIgnoreAfterMaxFailures.java:70)
+[junit4:junit4]   1> 	at org.apache.lucene.util.TestRuleIgnoreTestSuites$1.evaluate(TestRuleIgnoreTestSuites.java:55)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.ThreadLeakControl$StatementRunner.run(ThreadLeakControl.java:358)
+[junit4:junit4]   1> 	at java.lang.Thread.run(Thread.java:722)
+[junit4:junit4]   1>     test: stored fields.......OK [21 total field count; avg 1 fields per doc]
+[junit4:junit4]   1>     test: term vectors........ERROR [-1]
+[junit4:junit4]   1> java.lang.ArrayIndexOutOfBoundsException: -1
+[junit4:junit4]   1> 	at org.apache.lucene.index.sorter.SortingAtomicReader$SortingDocsAndPositionsEnum.docID(SortingAtomicReader.java:562)
+[junit4:junit4]   1> 	at org.apache.lucene.search.DocIdSetIterator.slowAdvance(DocIdSetIterator.java:99)
+[junit4:junit4]   1> 	at org.apache.lucene.index.sorter.SortingAtomicReader$SortingDocsAndPositionsEnum.advance(SortingAtomicReader.java:557)
+[junit4:junit4]   1> 	at org.apache.lucene.index.CheckIndex.testTermVectors(CheckIndex.java:1564)
+[junit4:junit4]   1> 	at org.apache.lucene.util._TestUtil.checkReader(_TestUtil.java:245)
+[junit4:junit4]   1> 	at org.apache.lucene.util._TestUtil.checkReader(_TestUtil.java:234)
+[junit4:junit4]   1> 	at org.apache.lucene.index.sorter.SortingAtomicReaderTest.beforeClassSortingAtomicReaderTest(SortingAtomicReaderTest.java:77)
+[junit4:junit4]   1> 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[junit4:junit4]   1> 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+[junit4:junit4]   1> 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[junit4:junit4]   1> 	at java.lang.reflect.Method.invoke(Method.java:601)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.RandomizedRunner.invoke(RandomizedRunner.java:1559)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.RandomizedRunner.access$600(RandomizedRunner.java:79)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.RandomizedRunner$4.evaluate(RandomizedRunner.java:677)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.RandomizedRunner$5.evaluate(RandomizedRunner.java:693)
+[junit4:junit4]   1> 	at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:46)
+[junit4:junit4]   1> 	at org.apache.lucene.util.TestRuleStoreClassName$1.evaluate(TestRuleStoreClassName.java:42)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+[junit4:junit4]   1> 	at org.apache.lucene.util.TestRuleAssertionsRequired$1.evaluate(TestRuleAssertionsRequired.java:43)
+[junit4:junit4]   1> 	at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+[junit4:junit4]   1> 	at org.apache.lucene.util.TestRuleIgnoreAfterMaxFailures$1.evaluate(TestRuleIgnoreAfterMaxFailures.java:70)
+[junit4:junit4]   1> 	at org.apache.lucene.util.TestRuleIgnoreTestSuites$1.evaluate(TestRuleIgnoreTestSuites.java:55)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+[junit4:junit4]   1> 	at com.carrotsearch.randomizedtesting.ThreadLeakControl$StatementRunner.run(ThreadLeakControl.java:358)
+[junit4:junit4]   1> 	at java.lang.Thread.run(Thread.java:722)
+[junit4:junit4]   1>     test: docvalues...........OK [0 total doc count; 4 docvalues fields]
+[junit4:junit4]   1> 
+[junit4:junit4]   2> NOTE: test params are: codec=Lucene42: {id=PostingsFormat(name=TestBloomFilteredLucene41Postings), positions=PostingsFormat(name=Memory doPackFST= true), norm=MockVariableIntBlock(baseBlockSize=104), docs=PostingsFormat(name=TestBloomFilteredLucene41Postings), term_vectors=PostingsFormat(name=TestBloomFilteredLucene41Postings)}, docValues:{binary=DocValuesFormat(name=CheapBastard), numeric=DocValuesFormat(name=CheapBastard), sorted=DocValuesFormat(name=CheapBastard), sorted_set=DocValuesFormat(name=Lucene42)}, sim=DefaultSimilarity, locale=ja_JP, timezone=Africa/Juba
+[junit4:junit4]   2> NOTE: Mac OS X 10.8.3 x86_64/Oracle Corporation 1.7.0_13 (64-bit)/cpus=8,threads=1,free=87000136,total=117702656
+[junit4:junit4]   2> NOTE: All tests run in this JVM: [SortingAtomicReaderTest]
+[junit4:junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=SortingAtomicReaderTest -Dtests.seed=FDBC5417F9F1EC45 -Dtests.slow=true -Dtests.locale=ja_JP -Dtests.timezone=Africa/Juba -Dtests.file.encoding=UTF-8
+[junit4:junit4] ERROR   0.00s | SortingAtomicReaderTest (suite) <<<
+[junit4:junit4]    > Throwable #1: java.lang.RuntimeException: CheckReader failed
+[junit4:junit4]    > 	at __randomizedtesting.SeedInfo.seed([FDBC5417F9F1EC45]:0)
+[junit4:junit4]    > 	at org.apache.lucene.util._TestUtil.checkReader(_TestUtil.java:255)
+[junit4:junit4]    > 	at org.apache.lucene.util._TestUtil.checkReader(_TestUtil.java:234)
+[junit4:junit4]    > 	at org.apache.lucene.index.sorter.SortingAtomicReaderTest.beforeClassSortingAtomicReaderTest(SortingAtomicReaderTest.java:77)
+[junit4:junit4]    > 	at java.lang.Thread.run(Thread.java:722)
+[junit4:junit4] Completed in 1.12s, 0 tests, 1 error <<< FAILURES!
+[junit4:junit4] 
+[junit4:junit4] 
+[junit4:junit4] Tests with failures:
+[junit4:junit4]   - org.apache.lucene.index.sorter.SortingAtomicReaderTest (suite)
+[junit4:junit4] 
+[junit4:junit4] 
+[junit4:junit4] JVM J0:     0.63 ..     2.33 =     1.70s
+[junit4:junit4] Execution time total: 2.33 sec.
+[junit4:junit4] Tests summary: 1 suite, 0 tests, 1 suite-level error
+
+BUILD FAILED
+

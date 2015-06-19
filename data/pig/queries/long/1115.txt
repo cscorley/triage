@@ -1,0 +1,1 @@
+Temp files created by zebra during table creation are not cleaned where there is any task failure, which results in waste of disk space.

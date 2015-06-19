@@ -1,0 +1,1 @@
+Upon removing the last core of a shard, the shard is not removed from the cluster state.

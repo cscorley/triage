@@ -1,0 +1,3 @@
+The values of RandomSortField get cached in the FieldCache. When using many RandomSortFields over time, this leads to running out of memory.
+
+This may be one of the cases already covered in SOLR-1111 but I'm not sure.

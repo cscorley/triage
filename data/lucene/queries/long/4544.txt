@@ -1,0 +1,42 @@
+from dev list:
+
+¨i suspect that this code is broken. Lines 331 - 343 in org.apache.lucene.index.ConcurrentMergeScheduler.merge(IndexWriter)
+
+mergeThreadCount() are currently active merges, they can be at most maxThreadCount, maxMergeCount is number of queued merges defaulted with maxThreadCount+2 and it can never be lower then maxThreadCount, which means that condition in while can never become true.
+
+      synchronized(this) {
+        long startStallTime = 0;
+        while (mergeThreadCount() >= 1+maxMergeCount) {
+          startStallTime = System.currentTimeMillis();
+          if (verbose()) 
+{
+            message("    too many merges; stalling...");
+          }
+          try 
+{
+            wait();
+          }
+ catch (InterruptedException ie) 
+{
+            throw new ThreadInterruptedException(ie);
+          }
+        } 
+
+While confusing, I think the code is actually nearly correct... but I
+would love to find some simplifications of CMS's logic (it's really
+hairy).
+
+It turns out mergeThreadCount() is allowed to go higher than
+maxThreadCount; when this happens, Lucene pauses
+mergeThreadCount()-maxThreadCount of those merge threads, and resumes
+them once threads finish (see updateMergeThreads).  Ie, CMS will
+accept up to maxMergeCount merges (and launch threads for them), but
+will only allow maxThreadCount of those threads to be running at once.
+
+So what that while loop is doing is preventing more than
+maxMergeCount+1 threads from starting, and then pausing the incoming
+thread to slow down the rate of segment creation (since merging cannot
+keep up).
+
+But ... I think the 1+ is wrong ... it seems like it should just be
+mergeThreadCount() >= maxMergeCount().

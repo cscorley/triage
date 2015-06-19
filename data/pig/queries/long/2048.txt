@@ -1,0 +1,1 @@
+Currently the pig jar does not bundle zookeeper in the same fashion as hbase, guava etc. This means that it is unable to run the HBaseStorage on recent versions of HBase. Attached is a patch that fixes this 

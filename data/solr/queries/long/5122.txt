@@ -1,0 +1,14 @@
+As part of SOLR-4952 SpellCheckCollatorTest started using RandomMergePolicy, and this (aparently) led to a failure in testEstimatedHitCounts.
+
+As far as i can tell: the test assumes that specific values would be returned as the estimated "hits" for a colleation, and it appears that the change in MergePolicy however resulted in different segments with different term stats, causing the estimation code to produce different values then what is expected.
+
+I made a quick attempt to improve the test to:
+
+	expect explicit exact values only when spellcheck.collateMaxCollectDocs is set such that the "estimate' should actually be exact (ie: collateMaxCollectDocs  == 0 or collateMaxCollectDocs greater then the num docs in the index
+	randomize the values used for collateMaxCollectDocs and confirm that the estimates are never more then the num docs in the index
+
+
+
+This lead to an odd "ArithmeticException: / by zero" error in the test, which seems to suggest that there is a genuine bug in the code for estimating the hits that only gets tickled in certain mergepolicy/segment/collateMaxCollectDocs combinations.
+
+Update: This appears to be a general problem with collecting docs out of order and the estimation of hits – i believe even if there is no divide by zero error, the estimates are largely meaningless since the docs are collected out of order.

@@ -1,0 +1,1 @@
+Remove oal.util.MapBackedSet (Java 6 offsers Collections.newSetFromMap())

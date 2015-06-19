@@ -1,0 +1,21 @@
+Sometimes I see the following failure in lang/grantRevokeDDL.sql. I have seen this on linux under jdk 1.4 and 1.5.
+
+560 del
+< ERROR 28508: User 'MAMTA3' does not have select permission on column 'C111' of table 'MAMTA2'.'V22'.
+560a560
+> ERROR 28508: User 'MAMTA3' does not have select permission on column 'C111' of table 'MAMTA2'.'V21'.
+Test Failed.
+
+	
+	
+		
+		
+			End:   grantRevokeDDL jdk1.4.2_08 2006-07-11 13:38:51 ***
+		
+		
+	
+	
+
+
+
+It would appear that when two permissions are inadequate, it's not clear which one will fail the statement.

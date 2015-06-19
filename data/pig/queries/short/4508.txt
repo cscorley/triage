@@ -1,0 +1,1 @@
+[Pig on Tez] PigProcessor check for commit only on MROutput

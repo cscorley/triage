@@ -1,0 +1,1 @@
+After DAG is submitted to the cluster, we should return job status to the client. TezStats is a subclass of PigStats that encapsulates this information.

@@ -1,0 +1,7 @@
+I've noticed several threads on the users list where we keep getting questions about the runtime dependencies needed for OpenJPA and would like to use this JIRA to:
+
+1) rename the current trunk/openjpa-all directory to trunk/openjpa to properly match the OpenJPA aggregate artifact name of openjpa-$
+{version}.jar used today.
+
+2) create a new /trunk/openjpa-all/pom.xml which creates a OpenJPA + depends aggregate artifact openjpa-all-${version}
+.jar, which users can grab if they want all of the runtime dependencies (OpenJPA, Commons, Geronimo Specs and Serp).  This would not include any Derby, ANT, Postgresql or IBM dependencies.

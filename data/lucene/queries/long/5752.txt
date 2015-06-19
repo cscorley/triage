@@ -1,0 +1,22 @@
+This effort started with the patch on LUCENE-4556, to create a "light
+weight" replacement for the current object-heavy Automaton class
+(which creates separate State and Transition objects).
+
+I took that initial patch much further, and cutover most places in
+Lucene that use Automaton to LightAutomaton.  Tests pass.
+
+The core idea of LightAutomaton is all states are ints, and you build
+up the automaton under the restriction that you add all outgoing
+transitions one state at a time.  This worked well for most
+operations, but for some (e.g. UTF32ToUTF8!!) it was harder, so I also
+added a separate builder to add transitions in any order and then in
+the end they are sorted and added to the real automaton.
+
+If this is successful I think we should just replace the current
+Automaton with LightAutomaton; right now they both exist in my current
+patch...
+
+This is very much a work in progress, and I'm not sure the
+restrictions the API imposes are "reasonable" (some algos got uglier).
+But I think it's at least worth exploring/iterating... I'll make a branch and
+commit my current state.

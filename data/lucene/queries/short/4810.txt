@@ -1,0 +1,1 @@
+Positions are incremented for each ngram in EdgeNGramTokenFilter

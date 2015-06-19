@@ -1,0 +1,5 @@
+Some web application servers (e.g., IBM WebSphere application server) do not have a default welcome file list.  The Solr servlet and related JSPs currently depend upon a default welcome file list.  Adding a welcome-file-list entry to web.xml will rectify this problem in a compatible way:
+
+<welcome-file-list>
+  <welcome-file>index.jsp</welcome-file>
+</welcome-file-list>

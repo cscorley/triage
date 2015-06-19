@@ -1,0 +1,20 @@
+The reference manual topic on the DECLARE GLOBAL TEMPORARY TABLE statement says: "Temporary tables cannot be referenced in a triggeredSQLStatement or in a WHEN clause"
+
+Still, a CREATE TRIGGER statement succeeds if the triggered SQL statement is a MERGE statement that references a temporary table:
+
+
+ij> connect 'jdbc:derby:memory:db;create=true';
+ij> declare global temporary table temp (x int) not logged;
+0 rows inserted/updated/deleted
+ij> create table t1(x int);
+0 rows inserted/updated/deleted
+ij> create trigger tr after insert on t1 insert into session.temp values 1;
+ERROR XCL51: The requested function can not reference tables in SESSION schema.
+ij> create trigger tr after insert on t1 merge into session.temp using t1 on session.temp.x=t1.x when matched then delete;
+0 rows inserted/updated/deleted
+ij> insert into t1 values 1,2,3;
+3 rows inserted/updated/deleted
+
+
+
+The second CREATE TRIGGER statement above should have failed the same way as the first.

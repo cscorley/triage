@@ -1,0 +1,1 @@
+The output XML has the Time Taken attribute spelled as "Time Taken " (notice the trailing space). 

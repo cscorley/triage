@@ -1,0 +1,45 @@
+If multiple entity subclasses extends a entity base class using InheritanceType.SINGLE_TABLE, with mx1 relation from base class to itself, a ClassCastException may occur when the mx1 collection is not empty due to a problem in discriminating the proper entity subclass type.
+
+Caused by: java.lang.ClassCastException: problem.domain.InputItemRecord
+	at problem.domain.InputBatchHeaderRecord.pcReplaceField(InputBatchHeaderRecord.java)
+	at org.apache.openjpa.kernel.StateManagerImpl.replaceField(StateManagerImpl.java:3041)
+	at org.apache.openjpa.kernel.StateManagerImpl.storeObjectField(StateManagerImpl.java:2473)
+	at org.apache.openjpa.kernel.StateManagerImpl.storeObject(StateManagerImpl.java:2463)
+	at org.apache.openjpa.jdbc.meta.strats.RelationFieldStrategy.loadEagerJoin(RelationFieldStrategy.java:541)
+	at org.apache.openjpa.jdbc.meta.FieldMapping.loadEagerJoin(FieldMapping.java:807)
+	at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.load(JDBCStoreManager.java:1052)
+	at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.load(JDBCStoreManager.java:1012)
+	at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.initializeState(JDBCStoreManager.java:378)
+	at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.initialize(JDBCStoreManager.java:278)
+	at org.apache.openjpa.kernel.DelegatingStoreManager.initialize(DelegatingStoreManager.java:111)
+	at org.apache.openjpa.kernel.ROPStoreManager.initialize(ROPStoreManager.java:57)
+	at org.apache.openjpa.kernel.BrokerImpl.initialize(BrokerImpl.java:913)
+	at org.apache.openjpa.kernel.BrokerImpl.find(BrokerImpl.java:871)
+	... 38 more
+
+For example:
+
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "DISCRIMATOR", discriminatorType = DiscriminatorType.INTEGER)
+@DiscriminatorValue("99")
+public class NachaInputRecord {
+
+    @Id
+    public long identifier;
+
+    @ManyToOne(cascade = CascadeType.MERGE,fetch=FetchType.EAGER)
+    @ForeignKey
+    @JoinColumn(name = "PARENT_ID")
+    private NachaInputRecord parent;
+....
+
+@Entity
+@DiscriminatorValue("6")
+public class InputItemRecord extends NachaInputRecord {
+.....
+
+@Entity
+@DiscriminatorValue("8")
+public class InputBatchControlRecord extends NachaInputRecord {
+.....

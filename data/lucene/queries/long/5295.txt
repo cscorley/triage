@@ -1,0 +1,1 @@
+Similar motivation as LUCENE-5209 and same implementation.

@@ -1,0 +1,1 @@
+Update to SLF4J 1.7.6.

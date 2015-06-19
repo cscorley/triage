@@ -1,0 +1,1 @@
+small SentinelIntSet can cause infinite loop on resize

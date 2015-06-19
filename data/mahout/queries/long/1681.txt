@@ -1,0 +1,1 @@
+Rename module - 'mahout-math-scala' to 'mahout-samsara'

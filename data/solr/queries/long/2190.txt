@@ -1,0 +1,5 @@
+A user reported the problem:
+
+http://www.lucidimagination.com/search/document/3345551fe53af291/importing_slashdot_data
+
+I hit same issue today. The cause of the problem is xpath in rss-data-config.xml doesn't match RSS feed. It seems rss-data-config.xml expects RSS 0.9, but http://rss.slashdot.org/Slashdot/slashdot returns RSS 1.0 today.

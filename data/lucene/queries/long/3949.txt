@@ -1,0 +1,3 @@
+Our current License headers in all .java files are (for a reason I don't know) in Javadocs format. Means, when you have a class without javadocs, the License header is used as Javadocs.
+
+I reviewed lots of other Apache projects, most of them use the correct /* header, but some (including Lucene+Solr) the Javadocs one. We should change this.

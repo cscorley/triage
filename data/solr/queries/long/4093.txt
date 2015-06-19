@@ -1,0 +1,17 @@
+Instead of
+
+
+_query_:"{!geodist d=10 p=20.5,30.2}"
+
+
+one could directly use
+
+
+{!geodist d=10 p=20.5,30.2}
+ 
+
+
+references: http://wiki.apache.org/solr/LocalParams
+
+
+First raised as LUCENE-4271, but moved to this Solr issue due to concerns about Solr specific features in Lucene.

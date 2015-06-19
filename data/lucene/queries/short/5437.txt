@@ -1,0 +1,1 @@
+ASCIIFoldingFilter that emits both unfolded and folded tokens

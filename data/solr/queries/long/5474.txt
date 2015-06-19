@@ -1,0 +1,12 @@
+In this mode SolrJ would not watch any ZK node
+
+It fetches the state  on demand and cache the most recently used n collections in memory.
+
+SolrJ would not listen to any ZK node. When a request comes for a collection ‘xcoll’
+it would first check if such a collection exists
+If yes it first looks up the details in the local cache for that collection
+If not found in cache , it fetches the node /collections/xcoll/state.json and caches the information
+Any query/update will be sent with extra query param specifying the collection name , version (example _stateVer=xcoll:34) . A node would throw an error (INVALID_NODE) if it does not have the right version
+If SolrJ gets INVALID_NODE error it would invalidate the cache and fetch fresh state information for that collection (and caches it again)
+
+If there is a connection timeout, SolrJ assumes the node is down and re-fetch the state for the collection and try again

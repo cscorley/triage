@@ -1,0 +1,59 @@
+100% reproducible for me:
+solr$ ant test  -Dtestcase=ScriptEngineTest
+
+
+[junit4:junit4] <JUnit4> says hi! Master seed: E62CC5FBAC2CEFA4
+[junit4:junit4] Executing 1 suite with 1 JVM.
+[junit4:junit4] 
+[junit4:junit4] Suite: org.apache.solr.update.processor.ScriptEngineTest
+[junit4:junit4] OK      0.17s | ScriptEngineTest.testPut
+[junit4:junit4] OK      0.02s | ScriptEngineTest.testEvalReader
+[junit4:junit4] IGNOR/A 0.10s | ScriptEngineTest.testJRuby
+[junit4:junit4]    > Assumption #1: got: <[null]>, expected: each not null
+[junit4:junit4] OK      0.01s | ScriptEngineTest.testEvalText
+[junit4:junit4] OK      0.01s | ScriptEngineTest.testGetEngineByExtension
+[junit4:junit4] OK      0.01s | ScriptEngineTest.testGetEngineByName
+[junit4:junit4]   2> -9 T9 ccr.ThreadLeakControl.checkThreadLeaks WARNING Will linger awaiting termination of 2 leaked thread(s).
+[junit4:junit4]   2> 20163 T9 ccr.ThreadLeakControl.checkThreadLeaks SEVERE 1 thread leaked from SUITE scope at org.apache.solr.update.processor.ScriptEngineTest: 
+[junit4:junit4]   2> 	   1) Thread[id=11, name=AppKit Thread, state=RUNNABLE, group=main]
+[junit4:junit4]   2> 	        at (empty stack)
+[junit4:junit4]   2> 20164 T9 ccr.ThreadLeakControl.tryToInterruptAll Starting to interrupt leaked threads:
+[junit4:junit4]   2> 	   1) Thread[id=11, name=AppKit Thread, state=RUNNABLE, group=main]
+[junit4:junit4]   2> 23172 T9 ccr.ThreadLeakControl.tryToInterruptAll SEVERE There are still zombie threads that couldn't be terminated:
+[junit4:junit4]   2> 	   1) Thread[id=11, name=AppKit Thread, state=RUNNABLE, group=main]
+[junit4:junit4]   2> 	        at (empty stack)
+[junit4:junit4]   2> NOTE: test params are: codec=SimpleText, sim=RandomSimilarityProvider(queryNorm=true,coord=yes): {}, locale=es_PR, timezone=America/Edmonton
+[junit4:junit4]   2> NOTE: Mac OS X 10.8.1 x86_64/Oracle Corporation 1.7.0_07 (64-bit)/cpus=4,threads=1,free=65764312,total=85065728
+[junit4:junit4]   2> NOTE: All tests run in this JVM: [ScriptEngineTest]
+[junit4:junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=ScriptEngineTest -Dtests.seed=E62CC5FBAC2CEFA4 -Dtests.slow=true -Dtests.locale=es_PR -Dtests.timezone=America/Edmonton -Dtests.file.encoding=UTF-8
+[junit4:junit4] ERROR   0.00s | ScriptEngineTest (suite) <<<
+[junit4:junit4]    > Throwable #1: java.lang.AssertionError: System properties invariant violated.
+[junit4:junit4]    > New keys:
+[junit4:junit4]    >   sun.awt.enableExtraMouseButtons=true
+[junit4:junit4]    >   sun.font.fontmanager=sun.font.CFontManager
+[junit4:junit4]    > 
+[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:66)
+[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleAssertionsRequired$1.evaluate(TestRuleAssertionsRequired.java:43)
+[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleIgnoreAfterMaxFailures$1.evaluate(TestRuleIgnoreAfterMaxFailures.java:70)
+[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleIgnoreTestSuites$1.evaluate(TestRuleIgnoreTestSuites.java:55)
+[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.ThreadLeakControl$StatementRunner.run(ThreadLeakControl.java:358)
+[junit4:junit4]    > 	at java.lang.Thread.run(Thread.java:722)
+[junit4:junit4]    > Throwable #2: com.carrotsearch.randomizedtesting.ThreadLeakError: 1 thread leaked from SUITE scope at org.apache.solr.update.processor.ScriptEngineTest: 
+[junit4:junit4]    >    1) Thread[id=11, name=AppKit Thread, state=RUNNABLE, group=main]
+[junit4:junit4]    >         at (empty stack)
+[junit4:junit4]    > 	at __randomizedtesting.SeedInfo.seed([E62CC5FBAC2CEFA4]:0)
+[junit4:junit4]    > Throwable #3: com.carrotsearch.randomizedtesting.ThreadLeakError: There are still zombie threads that couldn't be terminated:
+[junit4:junit4]    >    1) Thread[id=11, name=AppKit Thread, state=RUNNABLE, group=main]
+[junit4:junit4]    >         at (empty stack)
+[junit4:junit4]    > 	at __randomizedtesting.SeedInfo.seed([E62CC5FBAC2CEFA4]:0)
+[junit4:junit4] Completed in 24.29s, 6 tests, 1 failure, 2 errors, 1 skipped <<< FAILURES!
+[junit4:junit4] 
+[junit4:junit4] JVM J0:     1.38 ..    26.54 =    25.16s
+[junit4:junit4] Execution time total: 26 seconds
+[junit4:junit4] Tests summary: 1 suite, 6 tests, 3 suite-level errors, 1 ignored (1 assumption)
+

@@ -1,0 +1,1 @@
+sort-order of facet-counts depends on facet.mincount

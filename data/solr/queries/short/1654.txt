@@ -1,0 +1,1 @@
+Add TikaEntityProcessor example to the DIHExample

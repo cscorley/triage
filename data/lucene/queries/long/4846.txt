@@ -1,0 +1,4 @@
+Today it always loads from stored fields (searcher.doc), but it's sometimes
+useful to customize this, eg if your app separately already loads stored
+fields then it can avoid double-loading them.  Or if your app has some other
+place to pull the values from ...

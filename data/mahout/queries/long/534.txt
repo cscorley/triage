@@ -1,0 +1,3 @@
+org.apache:apache:7, used as a parent, does define distribution management to point to the Apache Nexus. That's about 5 lines. The rest of it is composed of someone's opinion as to appropriate versions and default for the many projects of, really, the apache maven project. In particular, their configuration of the release plugin is not what we want.
+
+To get 0.4 done I add a -P!apache-release to the release plugin (actually, any setting of <arguments> would have done it), but I propose post-0.4 to just remove the parent spec from our toplevel and put the distribution management in there by hand.

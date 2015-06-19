@@ -1,0 +1,1 @@
+If we have replicateAfter startup, the files in the commit point are never deleted.

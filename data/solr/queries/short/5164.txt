@@ -1,0 +1,1 @@
+In some cases, creating collections via the Collections API due to core being created in the wrong directory

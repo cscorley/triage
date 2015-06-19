@@ -1,0 +1,1 @@
+Suggester should return alpha-sorted results when onlyMorePopular=false

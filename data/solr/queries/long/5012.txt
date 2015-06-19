@@ -1,0 +1,3 @@
+Currently, this is very slow (it pulls bitsets and then intersects them after the fact).
+
+If you have no filterCache, it should be treated as if you specified cache=false implicitly and intersected with the query.

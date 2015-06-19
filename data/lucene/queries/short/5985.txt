@@ -1,0 +1,1 @@
+Populate MIGRATE.txt with useful information for upgrade to Lucene 5.0

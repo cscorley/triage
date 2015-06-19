@@ -1,0 +1,31 @@
+Since CompositeIdRouter is the default router, it has to be able to deal with any ID string without throwing an exception.
+
+The following test (added to TestHashPartitioner) currently fails:
+
+
+
+  public void testNonConformingCompositeId() throws Exception {
+    DocRouter router = DocRouter.getDocRouter(CompositeIdRouter.NAME);
+    DocCollection coll = createCollection(4, router);
+    Slice targetSlice = coll.getRouter().getTargetSlice("A!B!C!D", null, null, coll);
+    assertNotNull(targetSlice);
+  }
+
+
+
+with the following output: 
+
+
+   [junit4] Suite: org.apache.solr.cloud.TestHashPartitioner
+   [junit4]   2> log4j:WARN No such property [conversionPattern] in org.apache.solr.util.SolrLogLayout.
+   [junit4]   2> Creating dataDir: /Users/sarowe/svn/lucene/dev/trunk/solr/build/solr-core/test/J0/./temp/solr.cloud.TestHashPartitioner-19514036FB5C5E56-001/init-core-data-001
+   [junit4]   2> 1233 T11 oas.SolrTestCaseJ4.buildSSLConfig Randomized ssl (false) and clientAuth (false)
+   [junit4]   2> 1296 T11 oas.SolrTestCaseJ4.setUp ###Starting testNonConformingCompositeId
+   [junit4]    > Throwable #1: java.lang.ArrayIndexOutOfBoundsException: 2
+   [junit4]    > 	at __randomizedtesting.SeedInfo.seed([19514036FB5C5E56:3A131EC016F531A4]:0)
+   [junit4]    > 	at org.apache.solr.common.cloud.CompositeIdRouter$KeyParser.getHash(CompositeIdRouter.java:296)
+   [junit4]    > 	at org.apache.solr.common.cloud.CompositeIdRouter.sliceHash(CompositeIdRouter.java:58)
+   [junit4]    > 	at org.apache.solr.common.cloud.HashBasedRouter.getTargetSlice(HashBasedRouter.java:33)
+   [junit4]    > 	at org.apache.solr.cloud.TestHashPartitioner.testNonConformingCompositeId(TestHashPartitioner.java:205)
+   [junit4]    > 	at java.lang.Thread.run(Thread.java:745)
+

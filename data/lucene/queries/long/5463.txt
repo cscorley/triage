@@ -1,0 +1,1 @@
+We have had a few issues with RamUsageEstimator recently so I think we should consider making the sizeOf(Object) and humanSizeOf(Object) methods forbidden under src/java (however still allowed for tests as it is handy to check the size computations which are done "manually"). However, sizeOf(byte[]), shallowSizeOf(Class), etc. remain useful so I think we should keep them allowed.

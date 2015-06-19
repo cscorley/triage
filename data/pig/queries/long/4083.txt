@@ -1,0 +1,2 @@
+TestAccumuloPigCluster always failed with timeout error.
+Tried with sun jdk 6 and sun jdk 7.

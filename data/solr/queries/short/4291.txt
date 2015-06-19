@@ -1,0 +1,1 @@
+The Overseer should try and continue working on it's work queue for most exceptions.

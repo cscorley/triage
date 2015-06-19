@@ -1,0 +1,5 @@
+This test currently checks the "display version" of lucene which is set by the ant build.xml variable.
+
+But its been problematic in the past: and I'm sure its annoying for people running from things like IDEs.
+
+I think LUCENE-4428 is a more straightforward way of checking that the version is set correctly, it verifies the actual JAR metadata.

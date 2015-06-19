@@ -1,0 +1,1 @@
+Solr's prepareCommit doesn't set any commitData, and then when a commit is done, it's too late.

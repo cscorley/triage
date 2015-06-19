@@ -1,0 +1,6 @@
+Scalar found where operator expected at ./bin/runpigmix.pl line 86, near ") 
+   $multiplier"
+(Missing operator before $multiplier?)
+syntax error at ./bin/runpigmix.pl line 86, near ") 
+   $multiplier "
+Execution of ./bin/runpigmix.pl aborted due to compilation errors.

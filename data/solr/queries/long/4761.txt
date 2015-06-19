@@ -1,0 +1,3 @@
+This is pretty expert, but can be useful in some cases. 
+
+We can also provide a simple minimalist implementation that just ensures datastructures are primed so the first queries aren't e.g. causing norms to be read from disk etc.

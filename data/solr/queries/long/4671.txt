@@ -1,0 +1,6 @@
+We just discover that we can't have alias for CSV Formating 
+http://127.0.0.1:8983/solr/collection1/select?q=*%3A*&fl=score%2C+idprod%3Aid&wt=csv&indent=true
+using this schema 
+https://issues.apache.org/jira/secure/attachment/12576952/schema.xml
+for the standard core collection 
+=> result as attachment 

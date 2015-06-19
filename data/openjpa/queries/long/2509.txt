@@ -1,0 +1,1 @@
+A WebSphere user just pointed out that the OpenJPA documentation is referencing an archaic JPA 2.0 annotation.  The @MappedById annotation was renamed to @MapsId in a later revision of the JPA 2.0 specification (before it went final).  We'll use this JIRA to correct our documentation.

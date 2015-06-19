@@ -1,0 +1,1 @@
+Exception when FacetsCollector is used with ScoreFacetRequest

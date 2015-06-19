@@ -1,0 +1,1 @@
+Today it requires ReferenceManager<IndexSearcher> but it doesn't rely on that at all (it just forwards that IndexSearcher to the subclass's lookup method).

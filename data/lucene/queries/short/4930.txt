@@ -1,0 +1,1 @@
+Lucene's use of WeakHashMap at index time prevents full use of cores on some multi-core machines, due to contention

@@ -1,0 +1,1 @@
+StemmerOverrideFilter should not copy the stem override dictionary in it's ctor.

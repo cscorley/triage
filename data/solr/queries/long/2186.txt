@@ -1,0 +1,1 @@
+The multi-threaded option for the DataImportHandler throws an exception and the entire operation fails. This is true even if only 1 thread is configured via threads='1'

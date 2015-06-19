@@ -1,0 +1,4 @@
+ALTER TABLE .. ADD COLUMN cannot be used to add an identity column. There is code to handle identity columns, but it is disabled in the parser. See this thread on derby-user:
+http://mail-archives.apache.org/mod_mbox/db-derby-user/200708.mbox/%3C46C5DAA9.8080507@sbcglobal.net%3E
+
+The code was disabled for DB2 compatibility. Since DB2 compatibility is not a goal for Derby, we should see if we could re-enable it.

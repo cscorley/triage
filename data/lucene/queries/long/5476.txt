@@ -1,0 +1,5 @@
+With LUCENE-5339 facet sampling disappeared. 
+
+When trying to display facet counts on large datasets (>10M documents) counting facets is rather expensive, as all the hits are collected and processed. 
+
+Sampling greatly reduced this and thus provided a nice speedup. Could it be brought back?

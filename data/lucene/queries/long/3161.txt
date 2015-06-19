@@ -1,0 +1,3 @@
+as Doron mentioned in his review: At compiling there are various warning printed, I think it would be more assuring for downloaders if the build runs without warning. These warnings are not a stopper.
+
+we could conditionalize these warnings so that they don't "display" when compiling from actual releases, but I have to wonder if we should hide these... being open source I think we should display all our warts, maybe some contributor sees these warnings and decides they want to submit a patch to fix some of them.

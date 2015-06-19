@@ -1,0 +1,1 @@
+Remove old lucene.apache.org/solr/who page

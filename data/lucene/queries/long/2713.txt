@@ -1,0 +1,6 @@
+This test takes a few minutes to run if it gets simpletext codec.
+On hudson, it took 15 minutes!
+
+I added an assumeFalse(simpleText) as a temporary workaround, but we should see if there is 
+somethign we can improve so we can remove this hack.
+

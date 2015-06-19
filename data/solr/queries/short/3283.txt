@@ -1,0 +1,1 @@
+PingRequestHandler should have qt be optional

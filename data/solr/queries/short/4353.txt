@@ -1,0 +1,1 @@
+rename solr/example/contexts/solr.xml to reduce "solr.xml" confusion

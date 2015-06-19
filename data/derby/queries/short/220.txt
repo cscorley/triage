@@ -1,0 +1,1 @@
+Javadoc build should include a timestamp and/or the svn revision number in a visible location.

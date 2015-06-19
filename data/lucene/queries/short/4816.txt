@@ -1,0 +1,1 @@
+PassageFormatter in PostingsHighlighter trunk the message returned

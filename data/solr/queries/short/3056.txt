@@ -1,0 +1,1 @@
+Introduce Japanese field type in schema.xml

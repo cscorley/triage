@@ -1,0 +1,9 @@
+Right now, if you look at the configuration for these two apache jenkins jobs...
+
+
+	https://builds.apache.org/job/Lucene-Artifacts-4.x/
+	https://builds.apache.org/job/Solr-Artifacts-4.x/
+
+
+
+..you can see that even though they are building off of the 4.x branch, and even though the 4.x branch says the next version is 4.4, the artifacts from these jobs are labeled as if they will be 4.1 releases.

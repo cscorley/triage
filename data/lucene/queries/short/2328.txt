@@ -1,0 +1,1 @@
+IndexWriter.synced  field accumulates data leading to a Memory Leak

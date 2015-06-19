@@ -1,0 +1,2 @@
+I suppose it make sense to apply https://svn.apache.org/viewvc/lucene/dev/trunk/solr/core/src/test-files/solr/collection1/conf/solrconfig.xml?r1=1513290&r2=1513289&pathrev=1513290 and https://svn.apache.org/viewvc/lucene/dev/trunk/solr/core/src/test-files/solr/collection1/conf/schema.xml?r1=1513290&r2=1513289&pathrev=1513290 to example's config too provide out-of-the-box block join experience. 
+WDYT?

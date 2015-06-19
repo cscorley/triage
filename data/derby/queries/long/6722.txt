@@ -1,0 +1,1 @@
+If a statement raises an error and then a subsequent error occurs during statement cleanup, the original error is lost. This is discussed in this email thread:http://apache-database.10148.n7.nabble.com/NPE-from-InternalTriggerExecutionContext-cleanup-td141789.html

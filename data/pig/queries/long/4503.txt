@@ -1,0 +1,14 @@
+   When there are multiple levels of union, with the last union having both store and an output (group by,join, etc) following it then there is a NPE in 
+
+
+
+if (succ.isVertexGroup()
+                        && succ.getVertexGroupInfo().getOutput()
+                                .equals(succOp.getOperatorKey().toString())) {
+                    succOpVertexGroup = succ;
+                    break;
+                }
+
+
+
+It should check for getOutput() != null as it now has a store vertexgroup

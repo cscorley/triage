@@ -1,0 +1,1 @@
+TaxonomyReader.refresh() is broken, replace its logic with reopen(), following IR.reopen pattern

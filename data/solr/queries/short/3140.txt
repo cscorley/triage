@@ -1,0 +1,1 @@
+Make omitNorms default for all numeric field types

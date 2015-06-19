@@ -1,0 +1,6 @@
+As per Apache infra's request Maven artifacts should be deployed to repository.apache.org.
+Derby is currently deploying to people.apache.org, for which Maven deployment will be disabled in Jan 2013.
+
+Additionally, the Derby POMs should refer to the ASF top-level POM as the parent. There are several advantages to doing this, see [1] for details.
+
+[1] http://www.apache.org/dev/publishing-maven-artifacts.html#inherit-parent

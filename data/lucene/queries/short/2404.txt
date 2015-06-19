@@ -1,0 +1,1 @@
+Improve speed of ThaiWordFilter by CharacterIterator, factor out LowerCasing and also fix some bugs (empty tokens stop iteration)

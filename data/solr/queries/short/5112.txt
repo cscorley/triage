@@ -1,0 +1,1 @@
+Show full message in Admin UI Logging View

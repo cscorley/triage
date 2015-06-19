@@ -1,0 +1,1 @@
+Pig Documentation contains typo for AvroStorage

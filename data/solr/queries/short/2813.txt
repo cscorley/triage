@@ -1,0 +1,1 @@
+TrieTokenizerFactory should catch NumberFormatException, return 400 (not 500)

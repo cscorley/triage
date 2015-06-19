@@ -1,0 +1,17 @@
+The scripts under bin should be able to run without requiring the users to set DERBY_HOME explicitly. The script derby_common.sh, which is sourced by all the scripts under bin, contains code to detect DERBY_HOME based on the value of $0, but since the scripts need to know DERBY_HOME in order to source derby_common.sh, they still fail when DERBY_HOME is not set.
+
+When I removed this part of bin/ij
+
+-------
+
+if [ -z "$DERBY_HOME" ] ; then
+  echo "Error: DERBY_HOME is not set. Please set the DERBY_HOME environment variable"
+  echo "to the location of your Derby installation."
+  exit 1
+fi
+
+. $DERBY_HOME/bin/derby_common.sh
+
+-------
+
+and in-lined the code in derby_common.sh in its place, I was able to run ij successfully by typing the command './bin/ij' without setting DERBY_HOME first.

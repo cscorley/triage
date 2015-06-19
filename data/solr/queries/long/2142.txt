@@ -1,0 +1,42 @@
+Reported second hand, here's the crash:
+
+{'responseHeader'=>{'status'=>0,'QTime'=>3,'params'=>{'facet.field'=>'dc.subject','wt'=>'ruby','rows'=>'0'}},'response'=>
+{'numFound'=>3183,'start'=>0,'maxScore'=>1.0,'docs'=>[]}
+,'facet_counts'=>{'facet_queries'=>{},'exception'=>['Exception during facet.field of dc.subject
+java.lang.NullPointerException
+at java.lang.System.arraycopy(Native Method)
+at org.apache.lucene.util.PagedBytes.copy(PagedBytes.java:247)
+at org.apache.solr.request.TermIndex$1.setTerm(UnInvertedField.java:1171)
+at org.apache.solr.request.NumberedTermsEnum.<init>(UnInvertedField.java:962)
+at org.apache.solr.request.TermIndex$1.<init>(UnInvertedField.java:1158)
+at org.apache.solr.request.TermIndex.getEnumerator(UnInvertedField.java:1158)
+at org.apache.solr.request.UnInvertedField.uninvert(UnInvertedField.java:204)
+at org.apache.solr.request.UnInvertedField.<init>(UnInvertedField.java:188)
+at org.apache.solr.request.UnInvertedField.getUnInvertedField(UnInvertedField.java:913)
+at org.apache.solr.request.SimpleFacets.getTermCounts(SimpleFacets.java:298)
+at org.apache.solr.request.SimpleFacets.getFacetFieldCounts(SimpleFacets.java:354)
+at org.apache.solr.request.SimpleFacets.getFacetCounts(SimpleFacets.java:190)
+at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:72)
+at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:210)
+at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:131)
+at org.apache.solr.core.SolrCore.execute(SolrCore.java:1324)
+at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:337)
+at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:240)
+at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1089)
+at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:365)
+at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:712)
+at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:405)
+at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:211)
+at org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:139)
+at org.mortbay.jetty.Server.handle(Server.java:285)
+at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:502)
+at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:821)
+at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:513)
+at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:208)
+at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:378)
+at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:226)
+at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:442)
+'],'facet_fields'=>{},'facet_dates'=>{},'facet_ranges'=>{}}}

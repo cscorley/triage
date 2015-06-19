@@ -1,0 +1,8 @@
+Based on discussions in TIKA-340 I have improved the Bundle plugin configuration as follows:
+
+
+	Tika Parsers and TIka Core are now embedded
+         -> solution is to use a new configuration element <_exportcontents>, which just exports
+	xmlbeans is now also embedded
+         -> solution is to explicitly import org.w3c.dom, thus ignoring the embedded package
+

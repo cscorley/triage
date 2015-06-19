@@ -1,0 +1,1 @@
+softCommit option for HttpSolrServer commit method

@@ -1,0 +1,3 @@
+When compiling the codecs with Java 8 update 20 (coming soon), we fail: The constructors initialize a final closeable field inside a try block, which makes the field possibly undefined in the finally block.
+
+Previous Java versions somehow did not detect this bug, but it is a real one. Final fields must be initialized before they are used. Earlier compilers did not detect this bug, but I think it is not buggy, because IOUtils can handle null.

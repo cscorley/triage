@@ -1,0 +1,1 @@
+All Analysis Consumers should use reusableTokenStream

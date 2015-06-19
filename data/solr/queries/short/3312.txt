@@ -1,0 +1,1 @@
+Allows Solr Admin GUI to display schema and solrconfig files that aren't named "schema.xml" or "solrconfig.xml"

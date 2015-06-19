@@ -1,0 +1,1 @@
+There is a setter method for defaultCollection but there is not a getter method for it. In some circumstances one may want to retrieve defaultCollection.

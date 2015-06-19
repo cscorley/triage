@@ -1,0 +1,1 @@
+Spellchecker or JSONTestUtil has a bug with Java 8 (or possibly Java 7u6+) - randomly failing spellchecker test

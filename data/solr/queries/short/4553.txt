@@ -1,0 +1,1 @@
+Bug in finding remote node when proxying update request in a cluster with more than one collection.

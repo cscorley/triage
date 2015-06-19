@@ -1,0 +1,9 @@
+The test derbynet/testProperties.java fails with 10.1 client /10.2 server with following diff:
+
+(< Shutdown successful.
+    6a6
+     > Apache Derby Network Server - 10.2.0.0 alpha shutdown at xxxxxxFILTERED-TIMESTAMPxxxxxGMT
+     11 del
+) 
+
+This diff is caused by checkin for DERBY-515, which changes the shutdown message. Solution is to not print the shutdown message to the test output file. We just need to wait for successful server shutdown by checking that there are no exceptions.

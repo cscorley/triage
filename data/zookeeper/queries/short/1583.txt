@@ -1,0 +1,1 @@
+Document maxClientCnxns in conf/zoo_sample.cfg

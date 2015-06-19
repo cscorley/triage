@@ -1,0 +1,1 @@
+There really is no reason why we need so many release artifacts for the distribution.  We run on *NIX machines.  Zip and Gzip are standard tools, let's save a few bits, along with Release Manager upload times, and drop the BZ2 format.

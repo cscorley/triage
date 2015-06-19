@@ -1,0 +1,12 @@
+offshoot of LUCENE-3930, where shawn reported...
+
+
+I can't get either branch_3x or trunk to build now, on a system that used to build branch_3x without complaint.  It
+says that ivy is not available, even after doing "ant ivy-bootstrap" to download ivy into the home directory.
+Specifically I am trying to build solrj from trunk, but I can't even get "ant" in the root directory of the checkout
+to work.  I'm on CentOS 6 with oracle jdk7 built using the city-fan.org SRPMs.  Ant (1.7.1) and junit are installed
+from package repositories.  Building a checkout of lucene_solr_3_5 on the same machine works fine.
+
+The root cause is that ant's global configs can be setup to ignore the users personal lib dir.  suggested work arround is to run "ant --noconfig" but we should also try to give the user feedback in our failure about exactly what classpath ant is currently using (because apparently $
+{java.class.path}
+ is not actually it)

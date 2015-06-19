@@ -1,0 +1,1 @@
+enhance Pig launcher script wrt. HBase/HCat integration

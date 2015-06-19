@@ -1,0 +1,9 @@
+We have some TokenFilters which are only broken with specific options. This includes:
+
+
+	TrimFilter when updateOffsets=true
+	StopFilter, JapanesePartOfSpeechStopFilter, KeepWordFilter, LengthFilter, TypeTokenFilter when enablePositionIncrements=false
+
+
+
+I think we should deprecate these behaviors in 4.4 and remove them in trunk.

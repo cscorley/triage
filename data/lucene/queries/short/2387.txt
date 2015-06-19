@@ -1,0 +1,1 @@
+IndexWriter retains references to Readers used in Fields (memory leak)

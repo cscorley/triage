@@ -1,0 +1,42 @@
+http://repo2.maven.org/maven2/org/apache/hadoop/zookeeper/3.3.0/zookeeper-3.3.0.pom 
+
+The pom contains log4j dependency as itself. 
+
+  <dependency> 
+      <groupId>log4j</groupId> 
+      <artifactId>log4j</artifactId> 
+      <version>1.2.15</version> 
+      <scope>compile</scope> 
+    </dependency> 
+
+This is broken without an exclusion list, since the pending dependencies of javax.mail. etc. are not necessary for the most part. 
+
+Please fix this along with 3.3.1 and republish new dependencies , since at its current state , it is usable by some projects (to host in central , say). 
+
+Correct dependency for log4j: 
+
+
+<dependency> 
+      <groupId>log4j</groupId> 
+      <artifactId>log4j</artifactId> 
+      <version>1.2.15</version> 
+      <scope>compile</scope> 
+      <exclusions> 
+        <exclusion> 
+          <groupId>javax.mail</groupId> 
+          <artifactId>mail</artifactId> 
+        </exclusion> 
+        <exclusion> 
+          <groupId>javax.jms</groupId> 
+          <artifactId>jms</artifactId> 
+        </exclusion> 
+        <exclusion> 
+          <groupId>com.sun.jdmk</groupId> 
+          <artifactId>jmxtools</artifactId> 
+        </exclusion> 
+        <exclusion> 
+          <groupId>com.sun.jmx</groupId> 
+          <artifactId>jmxri</artifactId> 
+        </exclusion> 
+      </exclusions> 
+    </dependency> 

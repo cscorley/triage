@@ -1,0 +1,1 @@
+Introduce useWhiteList introduced in Lucene TypeTokenFilter (see LUCENE-3744) inside the related Solr factory.

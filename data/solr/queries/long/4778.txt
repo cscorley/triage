@@ -1,0 +1,1 @@
+CoreContainer.load is a bit scary.  We can simplify it a bit by moving the LogWatcher initialization code into LogWatcher itself, which is where is belongs really.

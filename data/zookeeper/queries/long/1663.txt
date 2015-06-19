@@ -1,0 +1,1 @@
+The shell scripts (bin/zk*.sh) don't work when there are spaces in the zookeeper or java paths.

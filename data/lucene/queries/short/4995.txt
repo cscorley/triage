@@ -1,0 +1,1 @@
+Remove the strong reference of CompressingStoredFieldsReader on the decompression buffer

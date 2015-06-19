@@ -1,0 +1,1 @@
+OOM or exceptions during checkpoint make IndexWriter have a bad day

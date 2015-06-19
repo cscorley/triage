@@ -1,0 +1,10 @@
+From Steven Rowe in SOLR-2540:
+
+
+Both the trunk and the branch_3x Jenkins Maven builds failed last night because the Maven configuration for the solr/contrib/extraction/ module does not depend on solr-core test code, and you just introduced a new solr-core test class BufferingRequestProcessor, as well as test code in Solr Cell that uses this class.
+
+(BTW, none of the other Solr modules depend on Solr test code in the Maven configuration.)
+
+Apparently the Ant build system still includes solr-core test classes in the test classpath of the other Solr modules. I think this should be fixed; Solr's test-framework makes this dependency obsolete.
+
+In the short term, though, can we move the new BufferingRequestProcessor class from solr/core/src/test to solr/test-framework/src/java/? That way, the Maven stuff will work again without having to jump through hoops like publishing a solr-core test jar and making other modules have a test dependency on it (that's the way it worked pre-test-framework).

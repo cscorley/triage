@@ -1,0 +1,3 @@
+Lucene has the ability to do block joins, we should add it to Solr.
+
+NOTE: this issue mistakenly got listed in the 4.4 section of CHANGES.txt, but is first available in Solr 4.5.

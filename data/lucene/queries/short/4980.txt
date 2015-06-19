@@ -1,0 +1,1 @@
+Can't use DrillSideways with both RangeFacetRequest and non-RangeFacetRequest

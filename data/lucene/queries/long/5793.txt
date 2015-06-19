@@ -1,0 +1,1 @@
+would be nice to have equals and hashCode to FieldType, so one can easily check if they are the same, and for example, reuse existing default implementations of it.

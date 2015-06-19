@@ -1,0 +1,1 @@
+Pluggable Ranking Collectors and Merge Strategies

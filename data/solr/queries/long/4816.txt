@@ -1,0 +1,29 @@
+This issue adds the following enhancements to CloudSolrServer's update logic:
+
+1) Document routing: Updates are routed directly to the correct shard leader eliminating document routing at the server.
+
+2) Optional parallel update execution: Updates for each shard are executed in a separate thread so parallel indexing can occur across the cluster.
+
+
+These enhancements should allow for near linear scalability on indexing throughput.
+
+Usage:
+
+CloudSolrServer cloudClient = new CloudSolrServer(zkAddress);
+cloudClient.setParallelUpdates(true); 
+SolrInputDocument doc1 = new SolrInputDocument();
+doc1.addField(id, "0");
+doc1.addField("a_t", "hello1");
+SolrInputDocument doc2 = new SolrInputDocument();
+doc2.addField(id, "2");
+doc2.addField("a_t", "hello2");
+
+UpdateRequest request = new UpdateRequest();
+request.add(doc1);
+request.add(doc2);
+request.setAction(AbstractUpdateRequest.ACTION.OPTIMIZE, false, false);
+
+NamedList response = cloudClient.request(request); // Returns a backwards compatible condensed response.
+
+//To get more detailed response down cast to RouteResponse:
+CloudSolrServer.RouteResponse rr = (CloudSolrServer.RouteResponse)response;

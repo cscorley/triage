@@ -1,0 +1,17 @@
+This class of exception should not be used for run-of-the-mill networking kinds of issues.  SolrServerException or some variety of IOException should be thrown instead.  Here's the trace:
+
+
+
+java.lang.RuntimeException: java.util.concurrent.TimeoutException: Could not connect to ZooKeeper localhost:2181 within 60000 ms
+	at org.apache.solr.common.cloud.SolrZkClient.<init>(SolrZkClient.java:130)
+	at org.apache.solr.common.cloud.SolrZkClient.<init>(SolrZkClient.java:88)
+	at org.apache.solr.common.cloud.ZkStateReader.<init>(ZkStateReader.java:148)
+	at org.apache.solr.client.solrj.impl.CloudSolrServer.connect(CloudSolrServer.java:147)
+	at org.apache.solr.client.solrj.impl.CloudSolrServer.request(CloudSolrServer.java:173)
+	at org.apache.manifoldcf.agents.output.solr.HttpPoster$SolrPing.process(HttpPoster.java:1315)
+	at org.apache.manifoldcf.agents.output.solr.HttpPoster$StatusThread.run(HttpPoster.java:1208)
+Caused by: java.util.concurrent.TimeoutException: Could not connect to ZooKeeper localhost:2181 within 60000 ms
+	at org.apache.solr.common.cloud.ConnectionManager.waitForConnected(ConnectionManager.java:173)
+	at org.apache.solr.common.cloud.SolrZkClient.<init>(SolrZkClient.java:127)
+	... 6 more
+

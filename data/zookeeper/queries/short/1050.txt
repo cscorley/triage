@@ -1,0 +1,1 @@
+zooinspector shell scripts do not work

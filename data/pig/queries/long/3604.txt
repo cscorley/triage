@@ -1,0 +1,6 @@
+I propose we implement replicated join as follows-
+
+	Vertex 1: Loads replicated table and broadcasts it to vertex 2.
+	Vertex 2: Loads fragmented table and join it with broadcasted input from vertex 1.
+	New POPackage for vertex 2 that can consume a broadcast input and a file input needs to be implemented.
+

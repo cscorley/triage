@@ -1,0 +1,1 @@
+Generated documentation should link to the default codec's index format documentation, rather than being hard coded in lucene/site/xsl/index.xsl

@@ -1,0 +1,1 @@
+SOLR-3177 added support to StatsComponent for using the "ex" local param to exclude tagged filters, but these exclusions have apparently never been correct for multivalued fields

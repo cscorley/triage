@@ -1,0 +1,7 @@
+If zkServer.sh is run remotely using ssh as follows ssh will "hang" - i.e. not complete/return once the server is started. This is even though zkServer.sh starts the java vm in the background.
+
+$ ssh <host> "zkServer.sh start"
+
+this is due to the following issue:
+
+http://www.slac.stanford.edu/comp/unix/ssh_faq.html#logoff_hangs

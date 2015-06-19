@@ -1,0 +1,1 @@
+For the same reasons outlined in SOLR-2339, Solr FieldTypes that return FieldCached backed ValueSources should explicitly check for situations where knows the FieldCache is meaningless.

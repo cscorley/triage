@@ -1,0 +1,1 @@
+This is particularly useful when creating the backcompat indexes, since it is a pain to figure out which codec you need to specify to avoid being randomized.  Something like -Dtests.codec=default could simply bypass the randomization of the codec.

@@ -1,0 +1,1 @@
+ping request handler should force distrib=false default

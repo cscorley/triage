@@ -1,0 +1,1 @@
+See SOLR-5693 and our HDFS support - for something like HDFS to work with NRT, we need an ability for near realtime readers to hold references to their files to prevent deletes.

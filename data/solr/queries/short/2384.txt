@@ -1,0 +1,1 @@
+Velocity: Add a "toggle all fields" link

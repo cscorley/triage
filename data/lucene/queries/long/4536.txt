@@ -1,0 +1,1 @@
+PackedInts are more and more used to save/restore small arrays, but given that they are long-aligned, up to 63 bits are wasted per array. We should try to make PackedInts storage byte-aligned so that only 7 bits are wasted in the worst case.

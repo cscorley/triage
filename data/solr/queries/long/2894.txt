@@ -1,0 +1,1 @@
+Following up on SOLR-792, pivot faceting currently only supports undistributed mode.  Distributed pivot faceting needs to be implemented.

@@ -1,0 +1,1 @@
+fail the build on outdated .sha1 files

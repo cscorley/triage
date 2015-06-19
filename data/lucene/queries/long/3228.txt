@@ -1,0 +1,7 @@
+Currently, we fail on all javadocs warnings.
+
+However, you get a warning if it cannot download the package-list from sun.com
+So I think we should allow you optionally set a sysprop using linkoffline.
+Then we would get much less hudson "fake failures"
+
+I feel like Mike opened an issue for this already but I cannot find it.

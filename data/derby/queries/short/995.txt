@@ -1,0 +1,1 @@
+jdbcapi/nullSQLText.java fails in J2ME in 10.1 branch

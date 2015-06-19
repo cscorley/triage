@@ -1,0 +1,17 @@
+4 Windows unit test failures.  All timeouts.  Errors occur at tip of branch and have for several days.
+
+    [junit] Running org.apache.pig.test.TestAlgebraicEval
+    [junit] Tests run: 1, Failures: 0, Errors: 1, Time elapsed: 0 sec
+    [junit] Test org.apache.pig.test.TestAlgebraicEval FAILED (timeout)
+
+    [junit] Running org.apache.pig.test.TestEvalPipeline
+    [junit] Tests run: 1, Failures: 0, Errors: 1, Time elapsed: 0 sec
+    [junit] Test org.apache.pig.test.TestEvalPipeline FAILED (timeout)
+
+    [junit] Running org.apache.pig.test.TestHBaseStorage
+    [junit] Tests run: 1, Failures: 0, Errors: 1, Time elapsed: 0 sec
+    [junit] Test org.apache.pig.test.TestHBaseStorage FAILED (timeout)
+
+    [junit] Running org.apache.pig.test.TestMapReduce
+    [junit] Tests run: 1, Failures: 0, Errors: 1, Time elapsed: 0 sec
+    [junit] Test org.apache.pig.test.TestMapReduce FAILED (timeout)

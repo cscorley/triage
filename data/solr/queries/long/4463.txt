@@ -1,0 +1,1 @@
+Seems to work sometimes, perhaps because of races, but when we moved this ref counting to the SolrCore to work around some other issues, the ref counting across reloads was messed up since the ref count is tracked on the SolrCore.

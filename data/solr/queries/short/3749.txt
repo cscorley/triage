@@ -1,0 +1,1 @@
+Default syncLevel cannot be configured by solrconfig.xml for updateLog(transaction log)

@@ -1,0 +1,1 @@
+When mixing adds and deletes, it appears there is a corner case where peersync can bring back a deleted update.

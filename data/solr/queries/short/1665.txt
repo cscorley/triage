@@ -1,0 +1,1 @@
+Add &debugTimings param so that timings for components can be retrieved without having to do explains(), as in &debugQuery

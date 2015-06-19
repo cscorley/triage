@@ -1,0 +1,30 @@
+I recently added the 10.11.1.1 jars to a local svn directory to prevent continuous access of the apache repository. 
+These jars are found using -DderbyTesting.oldReleasePath.
+This did not result in any troubles with the trunk or 10.11 branch.
+However, it did result in 31 failures with the 10.10 branch.
+
+The failure output (see e.g.: http://people.apache.org/~myrnavl/derby_test_results/v10_10/windows/testlog/ibm17/1624694-suites.All_diff.txt) look like this:
+
+1) combination(client 10.11.1.1 <> server 10.11.1.1)(org.apache.derbyTesting.functionTests.tests.compatibility.ClientCompatibilityRunControl)junit.framework.AssertionFailedError: client VM failed: :Spawned combination(client 10.11.1.1 <> server 10.11.1.1) exitCode=1
+STDERR:
+Class not found "org.apache.derbyTesting.functionTests.tests.compatibility.ClientCompatibilitySuite"
+
+	at org.apache.derbyTesting.functionTests.tests.compatibility.ClientCompatibilityRunControl.testClient(ClientCompatibilityRunControl.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:94)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55)
+	at org.apache.derbyTesting.junit.BaseTestCase.runBare(BaseTestCase.java:118)
+	at org.apache.derbyTesting.junit.BaseJDBCTestCase.runBareOverridable(BaseJDBCTestCase.java:442)
+	at org.apache.derbyTesting.junit.BaseJDBCTestCase.runBare(BaseJDBCTestCase.java:459)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at org.apache.derbyTesting.junit.BaseTestSetup.run(BaseTestSetup.java:57)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+
+(some failures also complain about a missing database, but I assume that's a result of the above type of failure).

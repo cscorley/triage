@@ -1,0 +1,5 @@
+A simple copy/paste error in https://github.com/apache/lucene-solr/blob/33d22db31e63482a1b1aad0cf90c4030bc359ffe/solr/core/src/java/org/apache/solr/handler/admin/CollectionsHandler.java#L265
+
+Line 265 should say OverseerCollectionProcessor.DELETEALIAS
+
+As far as I can see the bug only affects logging.

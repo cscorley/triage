@@ -1,0 +1,1 @@
+Par example, I want to copy files pertaining to a certain commit, and not everything there is in a Directory.

@@ -1,0 +1,1 @@
+Fix tez branch compilation with Hadoop 1.0

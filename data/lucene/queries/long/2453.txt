@@ -1,0 +1,5 @@
+Currently, the buffered index input class allows sub-classes and users thereof to specify a size for the input buffer, which by default is 1024 bytes. In practice, this option is leveraged by the simple file and compound segment index input sub-classes. 
+
+By the same token, it would be nice if the buffered index output class could open up it's buffer size for users to configure. In particular, this would allow sub-classes thereof to align the output buffer size, which by default is 16348 bytes, to that of the underlying directory's data unit. For example, a network-based directory might want to buffer data in multiples of it's maximum transmission unit. To use an existing use-case, the file system-based directory could potentially choose to align it's output buffer size to the operating system's file block size.
+
+The proposed change to the buffered index output class involves defining a one-arg constructor that takes a user-defined buffer size, and a default constructor that uses the currently defined buffer size.

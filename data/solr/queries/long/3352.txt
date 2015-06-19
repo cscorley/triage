@@ -1,0 +1,1 @@
+...and pf3 for query with 3 terms. Today q=foo bar does not generate a bigram, but q=foo bar baz generates two bigrams.

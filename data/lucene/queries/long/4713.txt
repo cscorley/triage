@@ -1,0 +1,20 @@
+NOTE: This issue has been renamed from:
+"Replace calls to Thread#getContextClassLoader with the ClassLoader of the current class"
+because the revised patch provides a clean fallback path.
+
+
+I am not sure whether it is a design decision or if we can indeed consider this a bug:
+
+In core and analysis-common some classes provide on-demand class loading using SPI. In NamedSPILoader, SPIClassIterator, ClasspathResourceLoader and AnalysisSPILoader there are constructors that use the Thread's context ClassLoader by default whenever no particular other ClassLoader was specified.
+
+Unfortunately this does not work as expected when the Thread's ClassLoader can't see the required classes that are instantiated downstream with the help of Class.forName (e.g., Codecs, Analyzers, etc.).
+
+That's what happened to us here. We currently experiment with running Lucene 2.9 and 4.x in one JVM, both being separated by custom ClassLoaders, each seeing only the corresponding Lucene version and the upstream classpath.
+
+While NamedSPILoader and company get successfully loaded by our custom ClassLoader, their instantiation fails because our Thread's Context-ClassLoader cannot find the additionally required classes.
+
+We could probably work-around this by using Thread#setContextClassLoader at construction time (and quickly reverting back afterwards), but I have the impression this might just hide the actual problem and cause further trouble when lazy-loading classes later on, and potentially from another Thread.
+
+Removing the call to Thread#getContextClassLoader would also align with the behavior of AttributeSource.DEFAULT_ATTRIBUTE_FACTORY, which in fact uses Attribute#getClass().getClassLoader() instead.
+
+A simple patch is attached. All tests pass.

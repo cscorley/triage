@@ -1,0 +1,1 @@
+Almost all Solr tests no longer cleanup their temp dirs on Windows

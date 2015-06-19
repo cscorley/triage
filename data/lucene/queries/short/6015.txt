@@ -1,0 +1,1 @@
+Revisit DocIdSetBuilder's heuristic to switch to FixedBitSet

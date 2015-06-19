@@ -1,0 +1,1 @@
+Fix small perf issues with String/TermOrdValComparator

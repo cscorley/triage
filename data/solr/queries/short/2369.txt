@@ -1,0 +1,1 @@
+Zookeeper depends on log4j, thus also SolrCloud does

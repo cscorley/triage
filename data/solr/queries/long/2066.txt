@@ -1,0 +1,1 @@
+Support distributed field collapsing / search grouping.

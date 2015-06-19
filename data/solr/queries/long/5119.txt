@@ -1,0 +1,57 @@
+After adding fields with the Schema API the schema cannot be shown on the Admin UI anymore and reloading the Collection/Core throws an NullPointerException. The schema itself seems to work.
+
+
+Steps to reproduce:
+
+1. enable managed schema in example/solr/collection1/conf/solrconfig.xml
+
+2. upload that config
+
+sh example/cloud-scripts/zkcli.sh -z localhost:8575 -cmd upconfig -d example/solr/collection1/conf/ -n myconfig
+
+
+3. create a new collection 
+
+curl "http://localhost:8983/solr/admin/collections?action=CREATE&name=mycollection&numShards=1&replicationFactor=1&collection.configName=myconfig"
+
+
+4. add some fields
+
+curl http://localhost:8983/solr/mycollection/schema/fields -X POST -H 'Content-type:application/json' --data-binary '[
+{
+  "name": "my_field",
+  "type": "string",
+  "stored": true,
+  "indexed": true
+},
+{
+  "name": "my_field2",
+  "type": "string",
+  "stored": true,
+  "indexed": true
+}
+]'
+
+
+5. Problem 1: http://localhost:8983/solr/#/mycollection_shard1_replica1/schema
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+<lst name="responseHeader"><int name="status">404</int><int name="QTime">2</int></lst><lst name="error"><str name="msg">Can not find: /configs/myconfig/null</str><int name="code">404</int></lst>
+</response>
+
+
+
+6. Problem 2: http://localhost:8983/solr/admin/collections?action=RELOAD&name=mycollection
+
+
+
+<response>
+<lst name="responseHeader"><int name="status">0</int><int name="QTime">845</int></lst><lst name="failure"><str name="10.147.252.2:8983_solr">org.apache.solr.client.solrj.impl.HttpSolrServer$RemoteSolrException:Server at http://10.147.252.2:8983/solr returned non ok status:500, message:Server Error</str></lst>
+</response>
+
+
+
+7. when restarting Solr, both 5 and 6 work 

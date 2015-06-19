@@ -1,0 +1,1 @@
+Highlighter: Integration of LUCENE-4133 (Part of LUCENE-3440)

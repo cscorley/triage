@@ -1,0 +1,10 @@
+I did a SANE build against a newly created client on trunk and go no errors.
+I then did an ant refreshjardriftcheck, and it generated a change to 
+sane.derbyTesting.jar.lastcontents to be checked in, it is included at end of description.
+
+There seems to be 2 problems here:
+1) sane.derbyTesting.jar.lastcontents checked in version is likely out of date and needs to be updated.
+2) The build should notice it is out of date and fail.
+
+I was led to this as I am working on a change that did add files to derby.jar
+but was confused that it was generating changes for derbyTesting.jar in my own development client.  This is why I tried it on a clean client and ran refresh even though build was clean.

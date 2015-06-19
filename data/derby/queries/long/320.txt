@@ -1,0 +1,50 @@
+When running derbyall, DerbyNetClient/lang/updatableResultSet fails
+the following way:
+
+
+	
+	
+		
+		
+			Start: updatableResultSet jdk1.4.2_02 DerbyNetClient 2005-05-26 23:12:55 ***
+Initialize for framework: DerbyNetClient
+java -ms16777216 -mx33554432 -Dderby.system.home=/export/home/tmp/Derby/test/Der byNetClient/updatableResultSet -Djava.security.manager -Djava.security.policy=/e
++xport/home/tmp/Derby/test/nwsvr.policy -Dcsinfo.codebase=/export/home/tmp/Derby/ trunk/jars/sane -Dcsinfo.serverhost=localhost -Dcsinfo.trustedhost=localhost org
++.apache.derby.drda.NetworkServerControl start
+Attempt to shutdown framework: DerbyNetClient
+310 del
+< Got expected exception Cursor 'SQL_CURLH000C52' is not on a row.
+310a310
+> Got expected exception Cursor 'SQL_CURLH000C51' is not on a row.
+317 del
+<       SQL_CURLH000C55
+317a317
+>       SQL_CURLH000C54
+Test Failed.
+			End:   updatableResultSet jdk1.4.2_02 DerbyNetClient 2005-05-26 23:13:22 ***
+		
+		
+	
+	
+
+
+
+(Same error with 1.5 and 1.3)
+
+I'm running with Linux 2.6.11. What I find strange, is that when I
+inspect the test failures in
+http://www.multinet.no/~solberg/public/Apache/Derby/Limited/testSummary-178249.html
+I see that the same test fails in the same way on all platforms,
+with the exception of the test run on a Linux 2.4.19 and jdk1.4.2_08
+
+
+>>>>>>>>>>>> Myrna van Lunteren wrote (2005-05-26 14:36:59):
+> Without looking at the test or any recent changes, I'm giving this as my 2 
+> cents:
+>  If that cursorname is generated, and if a generated cursorname does not 
+> need to be identical in the same scenario on all system/jvm combinations, 
+> then the name should get out of the output.
+> i.e. either in the test it should not print the cursor names, or, if that is 
+> not feasible, it should get masked by adding appropriate lines to 
+> updatableResultSet_sed.properties.
+>  Myrna

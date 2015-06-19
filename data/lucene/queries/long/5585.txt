@@ -1,0 +1,1 @@
+I basically have a copied version of the fsync code from Lucene which was obviously buggy. I wonder if we can expose this function as a static util on FSDirectory?

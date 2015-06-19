@@ -1,0 +1,2 @@
+Add support for CommonTermsQuery to all highlighter impls. 
+This might add a dependency (query-jar) to the highlighter so we might think about adding it to core?

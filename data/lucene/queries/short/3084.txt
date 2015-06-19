@@ -1,0 +1,1 @@
+MergePolicy.OneMerge.segments should be List<SegmentInfo> not SegmentInfos, Remove Vector<SI> subclassing from SegmentInfos & more refactoring

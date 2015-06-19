@@ -1,0 +1,1 @@
+Failed to invoke pcGetIDOwningClass method on embeddable entity with ID annotation

@@ -1,0 +1,9 @@
+To support algebraic UDFs and others, combiner is required. To start with, I am proposing the following initial implementation-
+
+	In Tez, combiner runs as part of ShuffledMergedInput in edges, so multiple combine plans (one per edge) need to be registered in a destination vertex. Each vertex is mapped to a TezOperator in Tez plan, so an array of combine plans will be stored in the TezOperator that maps to a destination vertex.
+	To register combine plans in a TezOperator, we will run a CombinerOptimizer on the Tez plan after TezCompiler generates it but before TezDagBuilder converts it into DAG.
+	Finally, TezDagBuilder will insert combine plans into the payload of ShuffledMergedInput while constructing a destination vertex.
+
+
+
+This initial implementation will allow us to run algebraic UDFs. In the future, we can implement more optimizations for limit, order-by, etc on top of this.

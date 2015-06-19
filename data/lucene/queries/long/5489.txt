@@ -1,0 +1,7 @@
+When costly scoring factors are used during searching, a common
+approach is to do a cheaper / basic query first, collect the top few
+hundred hits, and then rescore those hits using the more costly
+query.
+
+It's not clear/simple to do this with Lucene today; I think we should
+make it easier.

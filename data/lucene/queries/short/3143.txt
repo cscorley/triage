@@ -1,0 +1,1 @@
+SegmentMerger should assert .del and .s* files are not passed to createCompoundFile

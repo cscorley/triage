@@ -1,0 +1,3 @@
+AvroMapWrapper does not convert value objects in it's inner map to Pig types when queried. This could lead to problems when the value object is a complex Avro type. 
+
+Attaching a preliminary patch. Please let me know if this is not the best way to fix it.

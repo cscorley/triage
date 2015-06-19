@@ -1,0 +1,1 @@
+imrove testing of indexConfig parsing

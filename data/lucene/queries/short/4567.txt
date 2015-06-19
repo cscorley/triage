@@ -1,0 +1,1 @@
+WFSTCompletionLookup.lookup() NPE when empty fst

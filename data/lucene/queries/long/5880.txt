@@ -1,0 +1,1 @@
+as reported by jenkins in http://jenkins.thetaphi.de/job/Lucene-Solr-4.x-Linux/10866/  DocToDoubleVectorUtils.toSparseLocalFreqDoubleArray could cause NegativeArraySizeException

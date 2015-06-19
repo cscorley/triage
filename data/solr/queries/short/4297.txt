@@ -1,0 +1,1 @@
+Atomic update including set null=true throws uniqueKey error depending on order

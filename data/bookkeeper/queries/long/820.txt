@@ -1,0 +1,1 @@
+It would be useful to print out fi.isFenced() in BookieShell.

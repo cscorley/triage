@@ -1,0 +1,1 @@
+Move JDK-1.0-style hidden classes into inner classes of SolrRequestParsers (to prevent uptodate javac bugs)

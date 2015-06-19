@@ -1,0 +1,1 @@
+StopFillCacheException is defined twice and the one is actually thrown is private and not catchable

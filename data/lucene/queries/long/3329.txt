@@ -1,0 +1,3 @@
+No released version of the lucene-test-framework jar is affected.
+
+This bug was introduced by SOLR-2452.  In the m2-deploy macro in lucene/common-build.xml, the names of jar files to deploy were previously drawn from the supplied POM, but since Solr's non-Maven jars don't follow the Maven naming scheme (apache- is prepended), the jar file name now defaults to ${final.name}.jar.  Since lucene-test-framework artifacts are built by the base lucene module, ${final.name} is lucene-core-${version}, so when ant generate-maven-artifacts goes to copy the lucene-test-framework binary jar, it grabs the lucene-core binary jar instead.

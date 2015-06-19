@@ -1,0 +1,1 @@
+Add glob patterns from the ASF svn:eol-style documentation

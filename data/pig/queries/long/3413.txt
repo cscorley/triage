@@ -1,0 +1,33 @@
+The following pig script: 
+b = load 'bad.input' using JsonLoader('a0: chararray');
+dump b;
+
+runs well for the input:
+{"a": "good"}
+
+and fails the whole job for the following input (mallformed json)
+{"a", bad}
+
+
+I was expecting that it will just skip the line and go further.
+
+Getting this error:
+org.codehaus.jackson.JsonParseException: Unexpected character ('g' (code 103)): was expecting comma to separate OBJECT entries
+ at [Source: java.io.ByteArrayInputStream@4610c772; line: 1, column: 4100]
+	at org.codehaus.jackson.JsonParser._constructError(JsonParser.java:1433)
+	at org.codehaus.jackson.impl.JsonParserMinimalBase._reportError(JsonParserMinimalBase.java:521)
+	at org.codehaus.jackson.impl.JsonParserMinimalBase._reportUnexpectedChar(JsonParserMinimalBase.java:442)
+	at org.codehaus.jackson.impl.Utf8StreamParser.nextToken(Utf8StreamParser.java:482)
+	at org.apache.pig.builtin.JsonLoader.readField(JsonLoader.java:173)
+	at org.apache.pig.builtin.JsonLoader.getNext(JsonLoader.java:157)
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigRecordReader.nextKeyValue(PigRecordReader.java:211)
+	at org.apache.hadoop.mapred.MapTask$NewTrackingRecordReader.nextKeyValue(MapTask.java:540)
+	at org.apache.hadoop.mapreduce.MapContext.nextKeyValue(MapContext.java:67)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:143)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:771)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:375)
+	at org.apache.hadoop.mapred.Child$4.run(Child.java:255)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1132)
+	at org.apache.hadoop.mapred.Child.main(Child.java:249)

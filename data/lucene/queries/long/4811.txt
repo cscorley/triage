@@ -1,0 +1,3 @@
+I think it's confusing because it implies the field will be stored as well as added to doc values ...
+
+I also noticed StorableFieldType is unused.

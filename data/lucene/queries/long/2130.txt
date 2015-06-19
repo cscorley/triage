@@ -1,0 +1,9 @@
+This issue is likely not to go anywhere, but I thought we might explore it. The only idea I have come up with is fairly ugly, and unless something better comes up, this is not likely to happen.
+
+But if we could rewrite constant score multi-term queries per segment, MTQ's with auto (when the heuristic doesnt cut over to constant filter), or constant boolean rewrite could enum terms against a single segment and then apply a boolean query against each segment with just the terms that are known to be in that segment. This also allows you to avoid DirectoryReaders MultiTermEnum and its PQ. (See Roberts comment below).
+
+No biggie, not likely, but what the heck.
+
+So the ugly way to do it is to add a property to query's and weights - lateCnstRewrite or something, that defaults to false. MTQ would return true if its in a constant score mode. On the top level rewrite, if this is detected, an empty ConstantScoreQuery is made, and its Weight is turned to lateCnstRewrite and it keeps a ref to the original MTQ query. It also gets its boost set to the MTQ's boost. Then when we are searching per segment, if the Weight is lateCnstRewrite, we grab the orig query and actually do the rewrite against the subreader and grab the actual constantscore weight. It works I think - but its a little ugly.
+
+Not sure its worth the baggage for the win - but perhaps the objective can be met in another way.

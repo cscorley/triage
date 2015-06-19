@@ -1,0 +1,1 @@
+CoreContainer should be able to load multiple SolrCore's in parallel rather than just serially.

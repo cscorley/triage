@@ -1,0 +1,8 @@
+The following documentation gives a picture that the columns are indexed from 1 but is actually indexed from 0.
+
+http://pig.apache.org/docs/r0.8.1/piglatin_ref2.html#TOP
+
+Specifically on the sample code snippet
+result = TOP(10, 2, C); // and retain top 10 occurrences of 'second' in first
+
+'second' is the second column, in that case we need to have the TOP function as TOP(10, 1, C) instead of TOP(10, 2, C)

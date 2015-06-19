@@ -1,0 +1,1 @@
+This causes the request to fail - which is fine - but ideally it would keep retrying until it found the new leader - at least for a few more seconds than 1.

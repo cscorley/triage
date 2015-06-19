@@ -1,0 +1,1 @@
+Getting Started: change "source directory" to "base directory" or similar

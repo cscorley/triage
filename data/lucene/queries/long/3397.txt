@@ -1,0 +1,3 @@
+Many TokenStreams created in tests are not reusable.  Some do some really messy things which prevent their reuse so we may have to change the tests themselves.
+
+We'll target back porting this to 3x.

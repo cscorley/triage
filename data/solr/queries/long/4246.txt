@@ -1,0 +1,1 @@
+Updates that were forwarded from one solr node to another are not logged on the receiving side when complete, making debugging more difficult than it should be.

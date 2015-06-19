@@ -1,0 +1,1 @@
+We need a guide to show people how to create a replicated log out of ledgers, as ledgers on their own aren't enough.

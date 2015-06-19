@@ -1,0 +1,1 @@
+Move org.apache.lucene.messages to QueryParser module in Lucene trunk (maybe also in 3.x)

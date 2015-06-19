@@ -1,0 +1,1 @@
+Use ONE_TO_ONE edge and IdentityInOut in skewed join intermediate vertex

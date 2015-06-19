@@ -1,0 +1,9 @@
+This is a regression of PIG-4257.
+
+Pig accidentally overwrites fs.defaultFS in JobConf during the replicated join at runtime. This can cause various side effects because udfs and store/load funcs might depend on the value of fs.defaultFS at runtime.
+
+Here is an example. I have a store func that does 2-phase commit to S3. Each reducer writes output to local disk first and copies them to the final destination on S3 during the task commit phase. Once it's done copying, reducer writes a commit log to a hdfs location. During the job commit phase, AM reads all the commit logs and update Hive metastore accordingly.
+
+This store func stopped working in 0.14 when there is a replicate join in the reduce phase. It is because fs.defaultFS is overwritten to local FS from HDFS by replicated join at runtime.
+
+The root cause is that PIG-4257 changed ConfigurationUtil.getLocalFSProperties() to return a reference to JobConf instead of a copy object.

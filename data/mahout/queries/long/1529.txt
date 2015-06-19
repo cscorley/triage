@@ -1,0 +1,13 @@
+We have a few situations when algorithm-facing API has Spark dependencies creeping in. 
+
+In particular, we know of the following cases:
+(1) checkpoint() accepts Spark constant StorageLevel directly;
+(2) certain things in CheckpointedDRM;
+(3) drmParallelize etc. routines in the "drm" and "sparkbindings" package.
+
+(5) drmBroadcast returns a Spark-specific Broadcast object
+
+(6) Stratosphere/Flink conceptual api changes.
+
+Current tracker: PR #1 https://github.com/apache/mahout/pull/1 - closed, need new PR for remaining things once ready.
+Pull requests are welcome.

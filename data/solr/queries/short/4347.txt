@@ -1,0 +1,1 @@
+Insure that newly-created cores via Admin handler are persisted in solr.xml

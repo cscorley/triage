@@ -1,0 +1,19 @@
+When running with the IBM JCC driver to a DB2 on z/OS system the mapping tool may fail with the stack trace below if the DB2 DESCSTAT subsystem parameter is not set to 'YES'.  This parameter controls whether column names are returned in a JDBC metadata query.  Specifically, the mapping tool uses the JDBC-spec defined column names to query column metadata and that query will fail if DESCSTAT is set to 'NO'.  By default DB2 on z/OS version 8 and later set the DESCSTAT parameter to 'YES'.  However, if it gets set to 'NO' , explicitly or possibly via a DB migration, the mapping tool will fail.
+
+org.apache.openjpa.persistence.PersistenceException: [ibm]
+ [db2][jcc][10150][10300] Invalid parameter: Unknown column name TABLE_SCHEM.
+ 	at org.apache.openjpa.jdbc.meta.MappingTool.record(MappingTool.java:553)
+ 	at org.apache.openjpa.jdbc.meta.MappingTool.record(MappingTool.java:453)
+ 	at org.apache.openjpa.jdbc.kernel.JDBCBrokerFactory.synchronizeMappings(JDBCBrokerF
+actory.java:159)
+ 	at org.apache.openjpa.jdbc.kernel.JDBCBrokerFactory.newBrokerImpl(JDBCBrokerFactory
+.java:119)
+ 	at org.apache.openjpa.kernel.AbstractBrokerFactory.newBroker(AbstractBrokerFactory.
+java:189)
+ 	at org.apache.openjpa.kernel.DelegatingBrokerFactory.newBroker(DelegatingBrokerFact
+ory.java:142)
+ 	at org.apache.openjpa.persistence.EntityManagerFactoryImpl.createEntityManager(Enti
+tyManagerFactoryImpl.java:192)
+ 	at  ...
+
+I will post a patch shortly that includes a documentation update for the DB2 known issues section of the doc.

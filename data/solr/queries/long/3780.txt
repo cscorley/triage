@@ -1,0 +1,23 @@
+branch_4x and to a lesser extent trunk Maven builds on ASF Jenkins regularly fail with these errors:
+
+
+ERROR: [doc=one] unknown field 'meta:creation-date'
+
+Stack Trace:
+org.apache.solr.common.SolrException: ERROR: [doc=one] unknown field 'meta:creation-date'
+	at __randomizedtesting.SeedInfo.seed([564B8C2811E551FC:388DF7271220FAA9]:0)
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:306)
+
+
+
+
+ERROR: [doc=1000] multiple values encountered for non multiValued field val_i: [10, 20]
+
+Stack Trace:
+org.apache.solr.common.SolrException: ERROR: [doc=1000] multiple values encountered for non multiValued field val_i: [10, 20]
+	at __randomizedtesting.SeedInfo.seed([41D9D56849179839:C03F5B703E48F805]:0)
+	at org.apache.solr.client.solrj.impl.HttpSolrServer.request(HttpSolrServer.java:402)
+
+
+
+I can't reproduce these errors locally.

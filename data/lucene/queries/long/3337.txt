@@ -1,0 +1,1 @@
+This causes the build to be slow, we can avoid it in lots of cases (e.g. ant test)

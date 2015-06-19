@@ -1,0 +1,1 @@
+If you run Tika with a Java security manager that blocks execution of external processes, ExternalParser.check throws SecurityException, but I think it should just return false?

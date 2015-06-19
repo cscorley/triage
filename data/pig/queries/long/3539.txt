@@ -1,0 +1,6 @@
+There could be several scenario Pig want to submit multiple DAG:
+1. a blocking operator in grunt
+2. a blocking operator in script (exec, fs)
+3. break a DAG into two for possible inner DAG optimization
+
+Pig should use TezSession so that we can reuse AM. TezSession should be a thread local variable. For those who use Pig Java API, they will use the same AM within a thread, but different AM in another thread.

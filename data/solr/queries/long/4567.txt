@@ -1,0 +1,21 @@
+Alexandre Rafalovitch reported on the solr-user mailing list http://markmail.org/message/sqhzxaet55wztldq that a copyField directive that worked under Solr 4.1 has stopped working under Solr 4.2:
+
+
+
+<field name="addr_from" type="email" indexed="true" stored="true" required="true" />
+<field name="addr_to" type="email" multiValued="true" indexed="true" stored="true" required="true" />
+<copyField source="addr_*" dest="text" />
+
+
+
+I'm 99% sure that matching multiple explicit fields is not the problem, but rather the issue is that I committed changes under SOLR-4503 to handle additional previously unhandled changes, but I didn't consider this case, and so introduced the regression.  The table on SOLR-3798 that attempted to describe all possible combinations of copyField directives does not include this case.
+
+UPDATE: Workaround: instead of using a single copyField directive matching multiple explicit source fields, like the above example, use multiple copyField directives, each giving an explicit field name.  So the above example using this workaround would be:
+
+
+
+<field name="addr_from" type="email" indexed="true" stored="true" required="true" />
+<field name="addr_to" type="email" multiValued="true" indexed="true" stored="true" required="true" />
+<copyField source="addr_from" dest="text" />
+<copyField source="addr_to" dest="text" />
+

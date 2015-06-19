@@ -1,0 +1,1 @@
+We want to be aggressive in dir removal where it makes sense - like in this case. I've added some additional testing to ensure this.

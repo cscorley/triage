@@ -1,0 +1,2 @@
+See comments for details.
+In particular, the original patch "benchmark-geo.patch" is fairly different than LUCENE-2844.patch

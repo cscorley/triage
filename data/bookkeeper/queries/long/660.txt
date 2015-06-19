@@ -1,0 +1,11 @@
+When a client drops a connection, the server throws an exception. It should only log at info level and close the socket.
+
+
+
+    if (k.isReadable()) {
+        int rc = sock.read(incomingBuffer);
+        if (rc < 0) {
+            throw new IOException("Read error");
+        }
+        if (incomingBuffer.remaining() == 0) {
+

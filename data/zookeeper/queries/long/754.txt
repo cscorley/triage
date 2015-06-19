@@ -1,0 +1,1 @@
+When testing the debian package of zookeeper with the standard tool "lintian", it fills my screen with complains about the misspelling of "succesfully" in several places of the zkpython contrib. Please be so kind to correct this, when you touch the code the next time. Thanks!

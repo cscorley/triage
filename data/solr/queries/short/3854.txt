@@ -1,0 +1,1 @@
+SolrCloud does not work with https

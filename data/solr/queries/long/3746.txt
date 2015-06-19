@@ -1,0 +1,11 @@
+Per irc conversation with yonik, it's not clear if updateLog works correctly in all situations if there is no _version_ field in the schema...
+
+
+	it's certainly not tested
+	SOLR-3432 makes it clear there are at least some problematic sitautions
+
+
+
+For these reasons, updateLog initialization should fail fast with a clear error if there is no _version_ field in the schema.
+
+(we can always relax this restriction later if people write the code/tests for it)

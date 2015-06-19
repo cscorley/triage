@@ -1,0 +1,1 @@
+example-DIH uses non-existing column for mapping (case-sensitive)

@@ -1,0 +1,1 @@
+ForceWriteThread::run() leaks “logFile.close()” when interrupt comes

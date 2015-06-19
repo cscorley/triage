@@ -1,0 +1,1 @@
+TestPhraseQuery.testRandomPhrases takes minutes to run with SimpleText

@@ -1,0 +1,1 @@
+A default Schema defined in a PU default (<persistence-unit-defaults>) in an orm.xml file is not being honored.

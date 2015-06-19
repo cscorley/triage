@@ -1,0 +1,1 @@
+Tika Server should expose the Tika Translate API. This will allow for easy use in downstream clients such as Tika-Python

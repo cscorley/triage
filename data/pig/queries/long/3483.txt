@@ -1,0 +1,1 @@
+PIG-3367 added a new keyword ASSERT, so we need to document it.

@@ -1,0 +1,1 @@
+tests for verifying that assertions are enabled do nothing since they ignore AssertionError

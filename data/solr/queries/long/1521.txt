@@ -1,0 +1,3 @@
+As noted in email, there is a tenuous connection between the main example and the clustering example in that they both use the same dataDir, so their schema files have to be kept in sync or the example will break...
+
+http://www.nabble.com/clustering-schema-td25982682.html

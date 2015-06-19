@@ -1,0 +1,1 @@
+Out of Memory resulting in heapdump and javacore in test derbynetclientmats (and derbynetmats) stress.multi with 10.1 with IBM 1.5 JVM after upgrade to SR11 FP1 (from SR10)

@@ -1,0 +1,1 @@
+Lucene Demo module should not ship with servlet-api.jar file

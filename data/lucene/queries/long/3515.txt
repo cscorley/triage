@@ -1,0 +1,1 @@
+Opening an issue to pursue the possible slowdown Marc Sturlese uncovered.

@@ -1,0 +1,1 @@
+Update/clean up Maven POMs and documentation

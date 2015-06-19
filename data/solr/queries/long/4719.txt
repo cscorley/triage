@@ -1,0 +1,5 @@
+I didn't really notice that we're still using wt=xml as default on the Query-Screen .. i suggest we change that to wt=json .. it's 2013 =)
+
+Syntax-Highlight would still work, even if one tries the example-configuration where the content-type is overwritten with text/plain, since it's based on the selection on the left side 
+
+Any objections?

@@ -1,0 +1,1 @@
+Other jar files may need to be granted permission to read derby.ui.* properties

@@ -1,0 +1,12 @@
+I tried to compile 3.3.3 or the current 3.3 branch head, in both cases using ant 1.8.2 fails, however 1.7.0 is successful
+
+here's the error:
+
+Testsuite: org.apache.zookeeper.VerGenTest
+Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 0.009 sec
+
+Testcase: warning took 0.001 sec
+	FAILED
+Class org.apache.zookeeper.VerGenTest has no public constructor TestCase(String name) or TestCase()
+junit.framework.AssertionFailedError: Class org.apache.zookeeper.VerGenTest has no public constructor TestCase(String name) or TestCase()
+

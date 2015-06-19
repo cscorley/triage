@@ -1,0 +1,1 @@
+Document about Auto replication service in BK

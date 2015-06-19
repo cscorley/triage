@@ -1,0 +1,1 @@
+remove "apache lucene version" from solr changes.txt "Versions of major components"

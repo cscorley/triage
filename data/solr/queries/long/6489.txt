@@ -1,0 +1,5 @@
+After upgrade tp Apache TIKA 1.6 (SOLR-6488), solr-morphlines-cell tests fail with scripting error messages.
+
+Due to missing understanding, caused by the crazy configuration file format and inability to figure out the test setup, I have to give up and hope that somebody else can take care. In addition, on my own machines, all of Hadoop does not work at all, so I cannot debug (Windows).
+
+The whole Morphlines setup is not really good, because Solr core depends on another TIKA version than the included morphlines libraries. This is not a good situation for Solr, because we should be able to upgrade to any version of our core components and not depend on external libraries that itsself depend on Solr in older versions!

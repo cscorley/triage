@@ -1,0 +1,1 @@
+NullPointerException accessing a field of an invalid bag from a nested foreach

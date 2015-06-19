@@ -1,0 +1,3 @@
+I'm working in the automatic description of geospatial resources, and I think that might be interesting to incorporate new parser/s to Tika in order to manage and describe some geo-formats. These geo-formats include files, services and databases.
+
+If anyone is interested in this issue or want to collaborate do not hesitate to contact me. Any help is welcome.

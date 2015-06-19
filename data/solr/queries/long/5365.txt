@@ -1,0 +1,38 @@
+When a WMZ file is sent to solr on resource /update/extract, the following exception is thrown by solr:
+
+ERROR - 2013-10-17 18:13:48.902; org.apache.solr.common.SolrException; null:java.lang.RuntimeException: java.lang.NoSuchMethodError: org.apache.commons.compress.compressors.CompressorStreamFactory.setDecompressConcatenated(Z)V
+    at org.apache.solr.servlet.SolrDispatchFilter.sendError(SolrDispatchFilter.java:673)
+    at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:383)
+    at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:158)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+    at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+    at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1023)
+    at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+    at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:1852)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+    at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NoSuchMethodError: org.apache.commons.compress.compressors.CompressorStreamFactory.setDecompressConcatenated(Z)V
+    at org.apache.tika.parser.pkg.CompressorParser.parse(CompressorParser.java:102)
+    at org.apache.tika.parser.CompositeParser.parse(CompositeParser.java:242)
+    at org.apache.tika.parser.CompositeParser.parse(CompositeParser.java:242)
+    at org.apache.tika.parser.AutoDetectParser.parse(AutoDetectParser.java:120)
+    at org.apache.solr.handler.extraction.ExtractingDocumentLoader.load(ExtractingDocumentLoader.java:219)
+    at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:74)
+    at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:135)
+    at org.apache.solr.core.RequestHandlers$LazyRequestHandlerWrapper.handleRequest(RequestHandlers.java:241)
+    at org.apache.solr.core.SolrCore.execute(SolrCore.java:1904)
+    at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:659)
+    at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:362)
+    ... 16 more
+
+According to Koji Sekiguchi, Tika 1.4, the version bundled with solr, should use common-compress-1.5, but version 1.4.1 is present in solr/contrib/extraction/lib/ directory.
+
+During our testing, the ignoreTikaException flag was set to true.

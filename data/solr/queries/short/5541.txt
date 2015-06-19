@@ -1,0 +1,1 @@
+Allow QueryElevationComponent to accept elevateIds and excludeIds as http parameters

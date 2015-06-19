@@ -1,0 +1,11 @@
+The default log4j.properties has:
+
+log4j.rootLogger=DEBUG, CONSOLE
+
+where the console appender is only outputting INFO level and above.
+
+This is resulting in a large number of debug logs being generated, which are all filtered out by the console appender (by default there are no other appenders used)
+
+We need to change the default rootLogger to INFO level, which will resolve this issue.
+
+Users are free to change this of course – most likely they would only do this when debugging an issue, and would not want to run in DEBUG in production (again, they are free to choose).

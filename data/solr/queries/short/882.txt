@@ -1,0 +1,1 @@
+HTMLStripReader improvement - padding corrected for hexadecimal entities, option not to emit padding at all added

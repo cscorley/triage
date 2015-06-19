@@ -1,0 +1,9 @@
+As discussed on e-mail thread "Sharing SolrCloud collection configs w/overrides" (http://search-lucene.com/m/MUWXu1DIsqY1&subj=Sharing+SolrCloud+collection+configs+w+overrides), Erick brought up a neat solution using HTTP params at create-time for the Collection API.
+
+Essentially, this request is for a functionality that allows the setting of variables (core.properties) on Collections API CREATE command.
+
+Erick's idea:
+
+"Maybe it's as simple as allowing more params for creation like
+collection.coreName where each param of the form collection.blah=blort
+gets an entry in the properties file blah=blort?..."

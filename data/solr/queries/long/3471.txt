@@ -1,0 +1,10 @@
+The following tests are failing on Windows quite often:
+
+
+	SoftAutoCommitTest (all tests): There seem to be wrong assumes - I dont like the test "testing" how fast something is (there are slow machines or machines with <= 2 cores)
+	TestSolrDeletionPolicy1.testCommitAge() - also maybe timing issue. Otherwise I think the custom Solr DeletionPolicy is not respecting the fact that Windows cannot delete open files
+	TestRealTimeGet.testStressRecovery(): See also SOLR-3461 for more discussion
+
+
+
+I annotate the tests with an assume disabling Windows until this is fixed.

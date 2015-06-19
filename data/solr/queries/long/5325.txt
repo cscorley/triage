@@ -1,0 +1,3 @@
+The problem we saw was that when the solr overseer leader experienced temporary zk connectivity problems it stopped processing overseer queue events.
+
+This first happened when quorum within the external zk ensemble was lost due to too many zookeepers being stopped (similar to SOLR-5199). The second time it happened when there was a sufficient number of zookeepers but they were holding zookeeper leadership elections and thus refused connections (the elections were taking several seconds, we were using the default zookeeper.cnxTimeout=5s value and it was hit for one ensemble member).

@@ -1,0 +1,1 @@
+admin pages currently attempt to resolve the hostname of the local server on every request – if reverse DNS isn't setup, this can cause the admin pages to stall for several seconds waiting for the DNS to timeout.

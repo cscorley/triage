@@ -1,0 +1,1 @@
+testclientij (NetIjTest) failed on Zos with derby10.3 

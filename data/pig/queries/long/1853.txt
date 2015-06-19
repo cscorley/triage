@@ -1,0 +1,1 @@
+Currently Pig trunk uses a all-in-one antlr jar which is checked in the svn repository. 

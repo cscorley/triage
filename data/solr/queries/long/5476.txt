@@ -1,0 +1,18 @@
+In a very large cluster the Overseer is likely to be overloaded.If the same node is a serving a few other shards it can lead to OverSeer getting slowed down due to GC pauses , or simply too much of work  . If the cluster is really large , it is possible to dedicate high end h/w for OverSeers
+
+It works as a new collection admin command
+
+command=addrole&role=overseer&node=192.168.1.5:8983_solr
+
+This results in the creation of a entry in the /roles.json in ZK which would look like the following
+
+
+
+{
+"overseer" : ["192.168.1.5:8983_solr"]
+}
+
+
+If a node is designated for overseer it gets preference over others when overseer election takes place. If no designated servers are available another random node would become the Overseer.
+
+Later on, if one of the designated nodes are brought up ,it would take over the Overseer role from the current Overseer to become the Overseer of the system

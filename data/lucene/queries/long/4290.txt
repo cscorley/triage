@@ -1,0 +1,5 @@
+We added IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS so you can efficiently compress character offsets in the postings list, but nothing yet makes use of this.
+
+Here is a simple highlighter that uses them: it doesn't have many tests or fancy features, but I think its ok for the sandbox/ (maybe with a couple more tests)
+
+Additionally I didnt do any benchmarking.

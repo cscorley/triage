@@ -1,0 +1,1 @@
+Like LimitTokenCountFilter, except it's the token position that's limited rather than the token count.

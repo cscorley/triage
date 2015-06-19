@@ -1,0 +1,1 @@
+testPortChange changes all ports and role of the server and thus causes existing clients to disconnect, while this wouldn't happen if only the client port changes. Need to fix it to only change client port and not all the other parameters and make sure that the clients don't disconnect, while new clients shouldn't be able to connect to the old port.

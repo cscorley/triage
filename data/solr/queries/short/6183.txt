@@ -1,0 +1,1 @@
+Add spatial BBoxField using BBoxSpatialStrategy

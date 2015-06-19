@@ -1,0 +1,1 @@
+Update SYSTEM_REQUIREMENTS.txt and update Java-7-known-to-work version numbers before release of Lucene/Solr 4.8

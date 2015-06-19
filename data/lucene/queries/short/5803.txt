@@ -1,0 +1,1 @@
+Add another AnalyzerWrapper class that does not have its own cache, so delegate-only wrappers don't create thread local resources several times

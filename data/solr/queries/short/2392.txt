@@ -1,0 +1,1 @@
+Add a dummy-compile task using jspc task (imported from jetty's jasper) to check that all webapps's JSP files at least compile

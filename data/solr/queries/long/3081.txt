@@ -1,0 +1,1 @@
+We changed this default in general, but it seems warming queries still need to default to distrib=false.

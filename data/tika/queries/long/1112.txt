@@ -1,0 +1,51 @@
+When parsing any OGV file (e.g., Typing_example.ogv), log will output something like the following:
+
+
+
+Warning - invalid checksum on page 2 of stream 155f (5471)
+Warning - invalid checksum on page 3 of stream 155f (5471)
+Warning - invalid checksum on page 4 of stream 155f (5471)
+Warning - invalid checksum on page 5 of stream 155f (5471)
+Warning - invalid checksum on page 6 of stream 155f (5471)
+Warning - invalid checksum on page 7 of stream 155f (5471)
+...
+Warning - invalid checksum on page 3071 of stream 155f (5471)
+Warning - invalid checksum on page 3072 of stream 155f (5471)
+Warning - invalid checksum on page 3073 of stream 155f (5471)
+Warning - invalid checksum on page 3074 of stream 155f (5471)
+Exception in thread "main" java.io.IOException: Asked to read 4228 bytes from 0 but hit EoF at 2884
+	at org.gagravarr.ogg.IOUtils.readFully(IOUtils.java:39)
+	at org.gagravarr.ogg.IOUtils.readFully(IOUtils.java:31)
+	at org.gagravarr.ogg.OggPage.<init>(OggPage.java:82)
+	at org.gagravarr.ogg.OggPacketReader.getNextPacket(OggPacketReader.java:116)
+	at org.gagravarr.tika.OggDetector.detect(OggDetector.java:79)
+	at org.apache.tika.detect.CompositeDetector.detect(CompositeDetector.java:61)
+	at org.apache.tika.parser.AutoDetectParser.parse(AutoDetectParser.java:113)
+	at com.test.OGVTest.main(OGVTest.java:31)
+
+
+
+My test code was the following:
+
+
+
+
+	void parse(String fileName) throws Exception {
+		InputStream inputStream = new FileInputStream(fileName);
+		
+		Metadata metadata = new Metadata();
+		
+		Parser parser = new AutoDetectParser();
+		
+		ParseContext parserContext = new ParseContext();
+
+		parserContext.set(Parser.class, parser);
+
+		ContentHandler contentHandler = new WriteOutContentHandler(
+			new DummyWriter());
+
+		parser.parse(inputStream, contentHandler, metadata, parserContext);
+		
+		System.out.println(metadata);
+	}
+

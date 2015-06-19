@@ -1,0 +1,1 @@
+Some Solr tests depend on order of test methods in source file, but Java 7 seems to no longer ensure that

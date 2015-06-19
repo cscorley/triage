@@ -1,0 +1,1 @@
+Explore facets aggregation during documents collection

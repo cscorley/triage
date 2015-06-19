@@ -1,0 +1,1 @@
+Move contribs/modules away from QueryParser dependency

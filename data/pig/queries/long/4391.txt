@@ -1,0 +1,4 @@
+
+	TestPigStatsTez fails when MR tests are run using ant test
+	TestPigStatsMR.testBytesWritten_JIRA_1027()  fails because MR in local mode does not get counters. Test was actually wrong before PIG-4366 checking the size of a non-existent file which was always 0 and was passing as counter value was also 0. But PIG-4366 corrected the testcase and it passes in Tez but fails in MR.
+

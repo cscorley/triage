@@ -1,0 +1,6 @@
+As part of the fix for DERBY-3745, Derby silently swallows security exceptions and leaks class loaders. This can give rise to denial-of-service attacks. At a minimum, Derby should report the swallowed exceptions so that the security policy can be corrected and the application can be hardened against this attack. The swallowing occurs at these locations:
+
+
+org.apache.derby.impl.services.timer.SingletonTimerFactory run Catch java.lang.SecurityException 0 line 175
+org.apache.derby.impl.services.timer.SingletonTimerFactory run Catch java.lang.SecurityException 1 line 158
+

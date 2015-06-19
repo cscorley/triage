@@ -1,0 +1,1 @@
+Fix IndexWriter working together with EmptyTokenizer and EmptyTokenStream (without CharTermAttribute), fix BaseTokenStreamTestCase

@@ -1,0 +1,1 @@
+For entity fields missing @Transient annotations, let us know the classes they are in.

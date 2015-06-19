@@ -1,0 +1,1 @@
+SynFilter doesn't set offsets for outputs that hang off the end of the input tokens

@@ -1,0 +1,10 @@
+Implement a subclass of Lookup based on finite state automata/ transducers (Lucene FST package). This issue is for implementing a relatively basic prefix matcher, we will handle infixes and other types of input matches gradually. Impl. phases:
+
+
+	write a DFA based suggester effectively identical to ternary tree based solution right now,
+	baseline benchmark against tern. tree (memory consumption, rebuilding speed, indexing speed; reuse Andrzej's benchmark code)
+	modify DFA to encode term weights directly in the automaton (optimize for onlyMostPopular case)
+	benchmark again
+	benchmark again
+	modify the tutorial on the wiki http://wiki.apache.org/solr/Suggester
+

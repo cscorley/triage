@@ -1,0 +1,6 @@
+I t would be good to be able to run tests on older branches that don't have the JDBC 4.1 implementations with JDK 1.7.
+
+I think this means at least backporting the following patch to disable signature checking with JDK 1.7
+https://issues.apache.org/jira/secure/attachment/12459586/disable-tests.diff
+
+i am not sure what else.

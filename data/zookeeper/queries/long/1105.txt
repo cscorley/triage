@@ -1,0 +1,16 @@
+in zookeeper_close function,  do adaptor_finish before send CLOSE_OP request to server
+so the CLOSE_OP request can not be sent to server
+
+in server zookeeper.log have many
+2011-06-22 00:23:02,323 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@634] - EndOfStreamException: Unable to read additional data from client sessionid 0x1305970d66d2224, likely client has closed socket
+2011-06-22 00:23:02,324 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@1435] - Closed socket connection for client /10.250.8.123:60257 which had sessionid 0x1305970d66d2224
+2011-06-22 00:23:02,325 - ERROR [CommitProcessor:1:NIOServerCnxn@445] - Unexpected Exception:
+java.nio.channels.CancelledKeyException
+        at sun.nio.ch.SelectionKeyImpl.ensureValid(SelectionKeyImpl.java:55)
+        at sun.nio.ch.SelectionKeyImpl.interestOps(SelectionKeyImpl.java:59)
+        at org.apache.zookeeper.server.NIOServerCnxn.sendBuffer(NIOServerCnxn.java:418)
+        at org.apache.zookeeper.server.NIOServerCnxn.sendResponse(NIOServerCnxn.java:1509)
+        at org.apache.zookeeper.server.FinalRequestProcessor.processRequest(FinalRequestProcessor.java:367)
+        at org.apache.zookeeper.server.quorum.CommitProcessor.run(CommitProcessor.java:73)
+
+and java client not have this problem

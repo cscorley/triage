@@ -1,0 +1,56 @@
+The openjpa-examples/reversemapping sample works on 1.3.x, but fails on trunk.
+
+Output from 1.3.x -
+2228  none  INFO   [main] openjpa.Tool - ReverseMappingTool : generating classes.
+2228  none  INFO   [main] openjpa.MetaData - Customized name found for class "reversemapping.Airlines": will rename as "reversemapping.Airline".
+2355  none  INFO   [main] openjpa.MetaData - Customized name found for class "reversemapping.Cities": will rename as "reversemapping.City".
+2356  none  INFO   [main] openjpa.MetaData - Customized name found for class "reversemapping.Countries": will rename as "reversemapping.Country".
+2357  none  INFO   [main] openjpa.MetaData - Customized name found for class "reversemapping.Flightavailability": will rename as "reversemapping.Availability".
+2358  none  INFO   [main] openjpa.MetaData - Customized name found for class "reversemapping.Flights": will rename as "reversemapping.Flight".
+2382  none  INFO   [main] openjpa.MetaData - Customized name found for field "citys" in type "reversemapping.Country": will rename as "reversemapping.Country".
+2390  none  INFO   [main] openjpa.MetaData - Customized name found for field "availabilitys" in type "reversemapping.Flight": will rename as "reversemapping.Flight".
+2392  none  INFO   [main] openjpa.MetaData - Customized name found for field "airline" in type "reversemapping.Airline": will rename as "reversemapping.Airline".
+2392  none  INFO   [main] openjpa.MetaData - Customized name found for field "airlineFull" in type "reversemapping.Airline": will rename as "reversemapping.Airline".
+2393  none  INFO   [main] openjpa.MetaData - Customized name found for field "departTime" in type "reversemapping.Flight": will rename as "reversemapping.Flight".
+2393  none  INFO   [main] openjpa.MetaData - Customized name found for field "arriveTime" in type "reversemapping.Flight": will rename as "reversemapping.Flight".
+2393  none  WARN   [main] openjpa.MetaData - Column "FLIGHTS.MEAL" is type CHAR(1), but OpenJPA cannot reverse map it into a Java char because OpenJPA is currently configured to store Java chars into numeric database columns.  To configure OpenJPA to store Java chars into CHAR(1) columns, set the following property:
+openjpa.jdbc.DBDictionary: StoreCharsAsNumbers=false
+2399  none  INFO   [main] openjpa.MetaData - Table "APP.FLIGHTS_HISTORY" could not be reverse mapped.  This means that the table does not have a primary key (primary keys are required to establish unique identifiers for all persistent objects) and does not match a known pattern for a table used for cross-reference or value collections.
+2399  none  INFO   [main] openjpa.MetaData - Table "APP.MAPS" could not be reverse mapped.  This means that the table does not have a primary key (primary keys are required to establish unique identifiers for all persistent objects) and does not match a known pattern for a table used for cross-reference or value collections.
+2404  none  INFO   [main] openjpa.Tool - Writing generated class source code.
+2404  none  INFO   [main] openjpa.MetaData - Writing java code for generated type "reversemapping.Airline".
+2408  none  INFO   [main] openjpa.MetaData - Writing java code for generated type "reversemapping.Availability".
+2418  none  INFO   [main] openjpa.Enhance - Generating an application id for type "class reversemapping.Availability".
+2421  none  INFO   [main] openjpa.MetaData - Writing java code for generated type "reversemapping.City".
+2422  none  INFO   [main] openjpa.MetaData - Writing java code for generated type "reversemapping.Country".
+2423  none  INFO   [main] openjpa.MetaData - Writing java code for generated type "reversemapping.Flight".
+2423  none  INFO   [main] openjpa.Enhance - Generating an application id for type "class reversemapping.Flight".
+2424  none  INFO   [main] openjpa.Tool - Writing generated metadata.
+2440  none  INFO   [main] openjpa.MetaData - Writing to file "orm.xml".
+2571  none  INFO   [main] openjpa.MetaData - Writing class "reversemapping.Airline".
+2579  none  INFO   [main] openjpa.MetaData - Writing class "reversemapping.Availability".
+2582  none  INFO   [main] openjpa.MetaData - Writing class "reversemapping.City".
+2583  none  INFO   [main] openjpa.MetaData - Writing class "reversemapping.Country".
+2585  none  INFO   [main] openjpa.MetaData - Writing class "reversemapping.Flight".
+
+
+Failing output from trunk -
+2272  none  INFO   [main] openjpa.Tool - ReverseMappingTool : generating classes.
+2273  none  INFO   [main] openjpa.MetaData - Customized name found for class "reversemapping.Airlines": will rename as "reversemapping.Airline".
+2497  none  INFO   [main] openjpa.MetaData - Customized name found for field "airline" in type "reversemapping.Airline": will rename as "reversemapping.Airline".
+2513  none  INFO   [main] openjpa.MetaData - Customized name found for field "airlineFull" in type "reversemapping.Airline": will rename as "reversemapping.Airline".
+2517  none  WARN   [main] openjpa.MetaData - Column "AIRLINES.MEAL" is type CHAR(1), but OpenJPA cannot reverse map it into a Java char because OpenJPA is currently configured to store Java chars into numeric database columns.  To configure OpenJPA to store Java chars into CHAR(1) columns, set the following property:
+openjpa.jdbc.DBDictionary: StoreCharsAsNumbers=false
+2522  none  INFO   [main] openjpa.MetaData - Table "SYS.AIRLINES" could not be reverse mapped.  This means that the table does not have a primary key (primary keys are required to establish unique identifiers for all persistent objects) and does not match a known pattern for a table used for cross-reference or value collections.
+2522  none  INFO   [main] openjpa.MetaData - Table "SYSIBM.AIRLINES" could not be reverse mapped.  This means that the table does not have a primary key (primary keys are required to establish unique identifiers for all persistent objects) and does not match a known pattern for a table used for cross-reference or value collections.
+2526  none  INFO   [main] openjpa.Tool - Writing generated class source code.
+2526  none  INFO   [main] openjpa.MetaData - Writing java code for generated type "reversemapping.Airline".
+2531  none  INFO   [main] openjpa.Tool - Writing generated metadata.
+2550  none  INFO   [main] openjpa.MetaData - Writing to file "orm.xml".
+2567  none  INFO   [main] openjpa.MetaData - Writing class "reversemapping.Airline".
+/Users/drwoods/openjpa/trunk/openjpa-integration/examples/target/examples/apache-openjpa-2.0.0-SNAPSHOT/examples/reversemapping/Main.java:52: cannot find symbol
+symbol  : class Availability
+location: class reversemapping.Main
+        List<Availability> schedule = (List<Availability>)
+             ^
+. . .

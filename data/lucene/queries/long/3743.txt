@@ -1,0 +1,1 @@
+As in single-threaded tests, LuceneTestCase should not trigger test failures for AssumptionViolatedException's when they occur in multi-threaded tests.

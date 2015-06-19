@@ -1,0 +1,1 @@
+CloudSolrServer should choose URLs that match _route_

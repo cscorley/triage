@@ -1,0 +1,1 @@
+Null is not equal in terms of join. Need to change comparator to do that. e2e Join_9, Join_10, Join_11 are manifests for this issue.

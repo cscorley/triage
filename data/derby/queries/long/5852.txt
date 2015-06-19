@@ -1,0 +1,76 @@
+With Derby 10.6 and higher, dblook fails if derby.jar is not in the classpath because of  DERBY-4688. It cannot execute the queries against the system catalogs that have UDT's.   Users can work around this issue by adding derby.jar to the classpath before running dblook.
+
+This could be fixed in dblook by  casting UDT fields in its queries to long varchar, per the release note attached to DERBY-4688.
+
+
+To reproduce.
+Start network server 
+java org.apache.derby.drda.NetworkServerControl start
+
+In another window set classpath to contain only derbyclient.jar and derbytools.jar but not derby.jar
+
+e.g. 
+export CLASSPATH=".;C:/cygwin/svn2/trunk/jars/sane/derbyclient.jar;C:/cygwin/svn2/trunk/jars/sane/derbytools.jar"
+
+Create a database with ij
+java org.apache.derby.tools.ij
+
+ij version 10.10
+ij> connect 'jdbc:derby://localhost:1527/wombat;create=true';
+ij> create table mytab (i int);
+0 rows inserted/updated/deleted
+ij> insert into mytab values(1);
+1 row inserted/updated/deleted
+ij> exit;
+
+run dblook
+
+java org.apache.derby.tools.dblook -d 'jdbc:derby://localhost:1527/wombat'
+
+
+The output is:
+– Timestamp: 2012-07-10 11:08:36.829
+– Source database is: wombat
+– Connection URL is: jdbc:derby://localhost:1527/wombat
+– appendLogs: false
+
+– ----------------------------------------------
+– DDL Statements for tables
+– ----------------------------------------------
+
+CREATE TABLE "APP"."MYTAB" (-- Note: At least one unexpected error/warning message was
+– encountered during DDL generation.  See dblook.log
+– to review the message(s).
+
+The dblook.log contains
+~/repro/dblookclient $cat dblook.log
+java.sql.SQLException: Error marshalling or unmarshalling a user defined type: org.apache.derby.catalog.types.TypeDescri
+ptorImpl
+        at org.apache.derby.client.am.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:108)
+        at org.apache.derby.client.am.SqlException.getSQLException(SqlException.java:364)
+        at org.apache.derby.client.am.ResultSet.getString(ResultSet.java:1079)
+        at org.apache.derby.impl.tools.dblook.DB_Table.createColumn(DB_Table.java:151)
+        at org.apache.derby.impl.tools.dblook.DB_Table.doTables(DB_Table.java:104)
+        at org.apache.derby.tools.dblook.go(dblook.java:538)
+        at org.apache.derby.tools.dblook.<init>(dblook.java:142)
+        at org.apache.derby.tools.dblook.main(dblook.java:97)
+Caused by: org.apache.derby.client.am.SqlException: Error marshalling or unmarshalling a user defined type: org.apache.d
+erby.catalog.types.TypeDescriptorImpl
+        at org.apache.derby.client.am.SqlException.<init>(SqlException.java:167)
+        at org.apache.derby.client.am.SqlException.<init>(SqlException.java:231)
+        at org.apache.derby.client.am.Cursor.get_UDT(Cursor.java:651)
+        at org.apache.derby.client.am.Cursor.getString(Cursor.java:1059)
+        at org.apache.derby.client.am.ResultSet.getString(ResultSet.java:1069)
+        ... 5 more
+Caused by: java.lang.ClassNotFoundException: org.apache.derby.catalog.types.TypeDescriptorImpl
+        at java.lang.Class.forName(Class.java:174)
+        at java.io.ObjectInputStream.resolveClass(ObjectInputStream.java:636)
+        at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1607)
+        at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1528)
+        at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1764)
+        at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1361)
+        at java.io.ObjectInputStream.readObject(ObjectInputStream.java:383)
+        at org.apache.derby.client.am.Cursor.get_UDT(Cursor.java:647)
+        ... 7 more
+– **--> DEBUG: Error marshalling or unmarshalling a user defined type: org.apache.derby.catalog.types.TypeDescriptorImp
+l

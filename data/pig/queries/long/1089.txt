@@ -1,0 +1,8 @@
+Pig 0.6.0 documentation:
+> Ability to use Hadoop dfs commands from Pig
+> Replicated left outer join
+> Skewed outer join
+> Map-side group
+> Accumulate Interface for UDFs
+> Improved Memory Mgt
+> Integration with Zebra

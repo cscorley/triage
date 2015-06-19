@@ -1,0 +1,1 @@
+recognize hunspell FULLSTRIP option in affix file

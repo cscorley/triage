@@ -1,0 +1,3 @@
+Nightly build hit this: http://builds.flonkings.com/job/Lucene-trunk-Linux-Java7-64-test-only/91095
+
+And I'm able to repro at least once after beasting w/ the right JVM (1.7.0_55) and G1GC.

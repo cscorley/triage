@@ -1,0 +1,5 @@
+My plan consists in making CompressionMode an abstract class instead of an enum and having different codec names per CompressionMode. I think this has two main benefits:
+
+	it makes Lucene41StoredFieldsFormat cleaner (no need to write a CompressionMode id),
+	it allows for custom CompressionModes.
+

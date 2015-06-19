@@ -1,0 +1,1 @@
+Replace spatial contrib module with LSP's spatial-lucene module

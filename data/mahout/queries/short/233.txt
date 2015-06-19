@@ -1,0 +1,1 @@
+Modifying Mahout Check style to match our current coding style

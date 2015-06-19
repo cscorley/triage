@@ -1,0 +1,1 @@
+Cloud test harness can cause index files to be deleted before IndexWriter is closed

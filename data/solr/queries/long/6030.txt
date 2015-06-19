@@ -1,0 +1,1 @@
+Most of this cases were addressed in SOLR-5734, but looks like LRUCache wasn't. 

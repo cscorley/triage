@@ -1,0 +1,1 @@
+reproducible failures from TestFunctionQuery.testTotalTermFreq: totaltermfreq() returns -1

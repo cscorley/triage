@@ -1,0 +1,23 @@
+I realized that the pom.xml in mahout/examples is referencing the old repository url.
+
+Currently it is
+ <scm>
+    <connection>scm:svn:https://svn.apache.org/repos/asf/lucene/mahout/trunk/examples</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/lucene/mahout/trunk/examples </developerConnection>
+    <url>https://svn.apache.org/repos/asf/lucene/mahout/mahout-examples</url>
+  </scm>
+
+and I guess it should be changed to
+ <scm>
+    <connection>scm:svn:https://svn.apache.org/repos/asf/mahout/trunk/examples</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/mahout/trunk/examples </developerConnection>
+    <url>https://svn.apache.org/repos/asf/mahout/mahout-examples</url>
+  </scm>
+
+I saw similar references in 
+mahout/utils/pom.xml
+mahout/taste-web/pom.xml
+mahout/math/pom.xml
+mahout/core/pom.xml
+mahout/buildtools/pom.xml
+Tried searching in http://www.lucidimagination.com/search/ to see if there were previous discussion about this and couldnt find any.

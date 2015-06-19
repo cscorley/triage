@@ -1,0 +1,1 @@
+Pull modifying the Solr config documents out of Solr 4.x

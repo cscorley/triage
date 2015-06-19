@@ -1,0 +1,10 @@
+Upgrade option should be removed from zkServer.sh usage from trunk code
+
+Currently upgrade option is available in zkServer.sh usage , while upgrade feature is already been removed from trunk.
+
+
+#:~/March_1/zookeeper/bin> ./zkServer.sh upgrade
+ZooKeeper JMX enabled by default
+Using config: /home/REX/March_1/zookeeper/bin/../conf/zoo.cfg
+Usage: ./zkServer.sh [--config <conf-dir>] {start|start-foreground|stop|restart|status|upgrade|print-cmd}
+

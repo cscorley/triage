@@ -1,0 +1,18 @@
+This is a refactor of the SpatialPrefixTree spatial API, in preparation for more SPT implementations on the near horizon.  These are fairly internal APIs; SpatialExample.java didn't have to change, nor the Solr adapters, and I doubt ES would have to either.
+
+API changes:
+
+	SpatialPrefixTree & Cell had a fairly significant make-over. The existing implementations for Geohash & Quad have been made to subclass LegacyPrefixTree & LegacyCell shim's, and otherwise had very few changes (performance should be the same).  Cell is now an interface.
+	New CellIterator which is an Iterator<Cell>. Includes 3 implementations.
+	PrefixTreeStrategy.simplifyIndexedCells was renamed to pruneLeafyBranches and moved to RPT and made toggle'able with a setter. It's going to be removed in the future but for the time being it remains a useful optimization.
+	RPT's pointsOnly & multiOverlappingIndexedShapes options now have setters.
+
+
+
+Future:
+
+	The AbstractVisitingPrefixTreeFilter (used by RPT's Intersects, Within, Disjoint) really should be refactored to use the new CellIterator API as it will reduce the amount of code and should make the code easier to follow since it would be based on a well-knon design-pattern (an iterator).
+
+
+
+I wish I had done this as a series of commits on a GitHub branch; ah well.

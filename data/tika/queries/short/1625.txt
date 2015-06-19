@@ -1,0 +1,1 @@
+Add support to Tika Server for parsing remote file URLs and for providing language detection

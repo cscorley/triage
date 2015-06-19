@@ -1,0 +1,1 @@
+Extend the current StandardQueryParser on contrib so it supports boolean precedence

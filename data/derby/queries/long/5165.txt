@@ -1,0 +1,8 @@
+Steps to reproduce:
+
+1-perform update with XA, using, say Xid xid1
+2-prepare xid1 with XA but do NOT commit
+3-restart Derby DB
+4-the updates of step 1 will be visible
+
+When xid1 is rolled back after step 3 then the updates are gone. So my conclusion is that the transaction is not committed yet, but the updates are visible after prepare. This is a violation of the XA semantics.

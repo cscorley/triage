@@ -1,0 +1,3 @@
+Update Pig docs for 0.3.0 release
+> Getting Started 
+> Pig Latin

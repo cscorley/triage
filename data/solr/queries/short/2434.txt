@@ -1,0 +1,1 @@
+Rip out "ant init-forrest-entities" and the specversion variables from the tutorial.xml

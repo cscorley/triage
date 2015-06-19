@@ -1,0 +1,1 @@
+The build-20news-bayes.sh script doesn't work when downloading the content for the first time.  The issue is that it changes the directory to the temp directory and then later tries to do "cd ../.." to get back to MAHOUT_HOME, but that doesn't work if it changes to the /tmp directory.

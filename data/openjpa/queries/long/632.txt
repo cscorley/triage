@@ -1,0 +1,3 @@
+Marc caught this problem a few months ago and fixed it in trunk. I've discovered that the problem exists in 1.0.x as well and I'm porting the fix. 
+
+I believe we already have sufficient test coverage - but we need to run the regression bucket more regularly on licensed databases (ie Oracle, DB2).

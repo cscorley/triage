@@ -1,0 +1,10 @@
+Solr 4.10.0 logs the following warning upon startup:
+
+
+WARN  - 2014-09-09 17:49:11.455; org.apache.solr.core.RequestHandlers; Multiple requestHandler registered to the same name: /update ignoring: org.apache.solr.handler.UpdateRequestHandler
+
+
+
+I've just started the Solr example with bin/solr start to get this warning in example/logs/solr.log
+
+I don't know if this indicates a real problem but it seems everything works fine despite the warning.

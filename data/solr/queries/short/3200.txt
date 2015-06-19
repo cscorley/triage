@@ -1,0 +1,1 @@
+When using SignatureUpdateProcessor with "all fields" configuration, it will assume only the fields present on the very first document only, ignoring any optional fields in subsequent documents in the signature generation.

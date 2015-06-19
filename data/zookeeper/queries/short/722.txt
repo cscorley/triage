@@ -1,0 +1,1 @@
+zkServer.sh uses sh's builtin echo on BSD, behaves incorrectly.

@@ -1,0 +1,1 @@
+An exchange rate provider for CurrencyField using the freely available feed from http://openexchangerates.org/

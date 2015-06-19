@@ -1,0 +1,1 @@
+Create Solr FilterFactory for Lucene StandardTokenizer with  UAX#29 support

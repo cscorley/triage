@@ -1,0 +1,9 @@
+These are bugs in the tests added in PIG-4432/PIG-4445.
+
+TestBuiltin.testValueSetOutputSchemaComplexType and TestBuiltin.testValueListOutputSchemaComplexType create bag schemas like this:
+
+
+Schema bagSchema = Schema.generateNestedSchema(DataType.BAG, DataType.CHARARRAY);
+
+
+This is incorrect because the inner schema for bags should always be a TUPLE.

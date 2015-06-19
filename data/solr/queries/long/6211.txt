@@ -1,0 +1,7 @@
+In SOLR-3140, omitNorms=true was made the default for all primitive fields. But this is not the case for TrieDateField - if the fieldType config for a TrieDateField has no omitNorms set, the fields will have norms.
+
+It definitely looks like it was intended for TrieDateField to default to omitNorms=true, because in the example schema.xml, omitNorms=true was removed from tdate.
+
+I think TrieDateField.init() just needs to call super.init() to fix this. Right now it is initializing its wrapped field, but not itself.
+
+There were some changes around this in trunk in SOLR-5936, but I haven't tested to see if it's fixed there. It might have covered this bug up even further, as there is now a test in PrimitiveFieldTypeTest for this, but it uses the overridden TrieDateField.hasProperty() method, which is not the way that SchemaField actually accesses the field type properties.

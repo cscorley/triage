@@ -1,0 +1,1 @@
+test -e not available on solaris /bin/sh

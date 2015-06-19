@@ -1,0 +1,1 @@
+Some basic clean up and validation for Solr::Request::Standard

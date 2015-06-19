@@ -1,0 +1,1 @@
+A SolrCore cannot decide to be the leader just because the cluster state says no other SolrCore's are active.

@@ -1,0 +1,1 @@
+[zebra] throws an exception if a descending "order by" by pig tries to to create such a table

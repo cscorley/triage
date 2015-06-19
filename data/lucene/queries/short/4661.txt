@@ -1,0 +1,1 @@
+Reduce default maxMerge/ThreadCount for ConcurrentMergeScheduler

@@ -1,0 +1,1 @@
+Allow the license checker to optionally avoid check sum comparisons on SNAPSHOT dependencies.

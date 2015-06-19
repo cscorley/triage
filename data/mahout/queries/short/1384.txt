@@ -1,0 +1,1 @@
+Executing the MR version of Naive Bayes/CNB of classify_20newgroups.sh fails in seqdirectory step.

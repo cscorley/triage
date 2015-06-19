@@ -1,0 +1,3 @@
+I've looked into this a little in the past, but had not come to a conclusion. It really bugs me because it doubles my test run time from 3 minutes to 6 minutes when it happens.
+
+I've been looking into it today and I think I've tracked the problem down to mostly test bugs. One real bug around distrib commit ordering was also uncovered.

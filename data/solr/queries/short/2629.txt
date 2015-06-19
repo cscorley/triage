@@ -1,0 +1,1 @@
+warning about org.apache.solr.request.SolrQueryResponse is deprecated

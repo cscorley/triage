@@ -1,0 +1,1 @@
+Lucene is not fsync'ing files on commit

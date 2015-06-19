@@ -1,0 +1,9 @@
+
+	start the example
+	load the admin ui, click on core admin
+	click on "Add Core"
+	fill the form out with giberish and submit.
+
+
+
+The form stays on the screen w/o any feedback that an error occurred

@@ -1,0 +1,1 @@
+add suggester that uses shortest path/wFST instead of buckets

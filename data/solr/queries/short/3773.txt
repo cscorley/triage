@@ -1,0 +1,1 @@
+Hash based on the external String id rather than the indexed representation for distributed updates.

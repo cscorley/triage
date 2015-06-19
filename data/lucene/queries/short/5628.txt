@@ -1,0 +1,1 @@
+SpecialOperations.getFiniteStrings should not recurse

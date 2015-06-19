@@ -1,0 +1,1 @@
+nuke the solr-jsonic maven packaging

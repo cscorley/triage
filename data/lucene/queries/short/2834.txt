@@ -1,0 +1,1 @@
+don't spawn thread statically in FSDirectory on Mac OS X

@@ -1,0 +1,1 @@
+OPENJPA-952 added the Agent-Class attribute to the manifest.mf file for the openjpa binary, but the change was missed for openjpa-all. The openjpa-all pom.xml needs to have org.apache.openjpa.enhance.InstrumentationFactory defined as an AgentClass.

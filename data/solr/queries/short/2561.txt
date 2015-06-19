@@ -1,0 +1,1 @@
+SimpleXML notice is a copy of mahout-math notice

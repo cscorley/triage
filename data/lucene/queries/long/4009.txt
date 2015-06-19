@@ -1,0 +1,10 @@
+LUCENE-1049 introduced a enhanced implementation of the toString() method in the BooleanFilter clause.
+This was an improvement, however I'm still seeing a lot Lucene filter classes not overriding the toString method resulting in a toString returning the classname and the hashcode of the object. 
+This can be useful sometimes, but it's totally not useful in my case.
+I want to see the properties set in the filters so I know which Lucene query was created.
+
+Now:
+BooleanFilter(+BooleanFilter(BooleanFilter(+org.apache.lucene.search.TermsFilter@ea81ba60 +org.apache.lucene.search.TermsFilter@26ea3cbc) BooleanFilter(+org.apache.lucene.search.TermsFilter@df621f09 +org.apache.lucene.search.TermsFilter@2f712446)))
+
+Wanted behavior:
+BooleanFilter(+BooleanFilter(BooleanFilter(+inStock:Y +barCode:12345678) BooleanFilter(+isHeavy:N +isDamaged:Y)))

@@ -1,0 +1,9 @@
+I tried to convert the avro schema of a map of arrays of records into the proper pig schema and got always empty map schemas in pig.
+
+The reason is that the AvroStorageSchemaConversionUtilities does only assume records or primitive types as content of the map. However, a map of arrays, or a map of map, could have a schema itself and requires recursive calling to derive the full schema.
+
+I wrote a unit test to test for maps of arrays of records which fails with every pig release since the AvroStorage was rewritten (I think this was in 0.12), and there have been no changes since then in the trunk. 
+
+Further the attached patch contains the (rather simple) fix that makes the schema conversion utils succeed.
+
+Would appreciate further comments and if this can be included upstream.

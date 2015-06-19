@@ -1,0 +1,1 @@
+The current name is cumbersome, and annoying to change whenever we add something to the iterator (in this case payloads).  Since we are breaking it anyway in 4.6, I think we should take the opportunity to find a better name.

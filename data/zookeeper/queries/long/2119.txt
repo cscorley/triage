@@ -1,0 +1,1 @@
+ZOOKEEPER-2069 adds Netty client option.  We need to add docs on how to use it.

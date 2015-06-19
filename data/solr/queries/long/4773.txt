@@ -1,0 +1,3 @@
+Doing a fresh checkout of 4.x (trunk to to I think) and firing up the example fails because we can't find solrconfig. The construction of the instanceDir in SolrCoreDiscoverer constructs a path with an extra solr (e.g. solr/solr/core).
+
+I'll attach a patch shortly.

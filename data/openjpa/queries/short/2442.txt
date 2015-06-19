@@ -1,0 +1,1 @@
+java.lang.VerifyError in TestProxyManager when loading a dynamically created custom proxy class on Oracle Java 8

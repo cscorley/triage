@@ -1,0 +1,39 @@
+There is a race condition between when a ledger is delete and an eviction from
+LedgerCache occur.
+
+The resulting exception is:
+
+
+
+14:06:24.754 [SyncThread] ERROR org.apache.bookkeeper.bookie.Bookie  -
+Exception in SyncThread
+java.lang.NullPointerException: null
+        at
+org.apache.bookkeeper.bookie.LedgerCacheImpl.evictFileInfoIfNecessary(LedgerCacheImpl.java:809)
+~[bookkeeper-server-4.2.1.15.jar:4.2.2-SNAPSHOT]
+        at
+org.apache.bookkeeper.bookie.LedgerCacheImpl.getFileInfo(LedgerCacheImpl.java:267)
+~[bookkeeper-server-4.2.1.15.jar:4.2.2-SNAPSHOT]
+        at
+org.apache.bookkeeper.bookie.LedgerCacheImpl.flushLedger(LedgerCacheImpl.java:425)
+~[bookkeeper-server-4.2.1.15.jar:4.2.2-SNAPSHOT]
+        at
+org.apache.bookkeeper.bookie.LedgerCacheImpl.flushLedger(LedgerCacheImpl.java:382)
+~[bookkeeper-server-4.2.1.15.jar:4.2.2-SNAPSHOT]
+        at
+org.apache.bookkeeper.bookie.InterleavedLedgerStorage.flush(InterleavedLedgerStorage.java:167)
+~[bookkeeper-server-4.2.1.15.jar:4.2.2-SNAPSHOT]
+        at org.apache.bookkeeper.bookie.Bookie$SyncThread.run(Bookie.java:330)
+~[bookkeeper-server-4.2.1.15.jar:4.2.2-SNAPSHOT]
+14:06:24.755 [SyncThread] INFO  org.apache.bookkeeper.bookie.Bookie  -
+Triggering shutdown of Bookie-3181 with exitCode 5
+14:06:24.768 [BookieShutdownTrigger] INFO  org.apache.bookkeeper.bookie.Bookie 
+- Shutting down Bookie-3181 with exitCode 5
+14:06:24.769 [BookieJournal-3181] WARN  org.apache.bookkeeper.bookie.Journal -
+Journal exits when shutting down
+
+
+
+The problem is that the openLedger list is a normal LinkedList and sometimes is
+modified while synchronizing on fileInfoCache, other times on openLedgers, and
+in other places it is accessed without synchronizing.

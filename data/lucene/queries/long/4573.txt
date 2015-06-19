@@ -1,0 +1,5 @@
+I want to have SpatialExample.java depict how to get the distance.  
+
+I also observed that SpatialExample.java isn't tested, despite it being a Junit test.  The reason is its name doesn't begin or end in "Test".  As a small hack, a test method can be added elsewhere to call it.
+
+Patch to follow...

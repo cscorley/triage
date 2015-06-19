@@ -1,0 +1,31 @@
+When running facet tests with IBM J9 1.7.0, most of the tests fail with bizarre exceptions from CategoryPath (AIIOBE mostly). I tried to add few asserts to CategoryPath, but they didn't help to reveal the bug.
+
+Today I ran a single test TestAssociationExample (randomly picked) w/ -Dtests.iters=1000 and it failed too on the same error. If run w/ -Xint, it doesn't fail.
+
+In the end, Gilad and I discovered that when CategoryPath(String... components) constructor is used, which inside does this.components = components, the bug is triggered. At some point, probably after JIT kicks in, the array's length is 0'ed !!!
+
+We've added the following workaround to CategoryPath:
+
+
+
+// TODO: revisit when IBM releases Java 7 newer than SR3 (with a fix)
+// to validate, run e.g. TestAssociationExample with -Dtests.iters=1000
+private static final boolean IS_J9_JAVA7 = Constants.JRE_IS_MINIMUM_JAVA7 && Constants.JVM_VENDOR.contains("IBM");
+
+...
+
+public CategoryPath(final String... components) {
+  assert components.length > 0 : "use CategoryPath.EMPTY to create an empty path";
+  if (IS_J9_JAVA7) {
+    // On IBM J9 Java 1.7.0, if we do 'this.components = components', then
+    // at some point its length becomes 0 ... quite unexpectedly. If JIT is
+    // disabled, it doesn't happen. This bypasses the bug by copying the 
+    // array (note, Arrays.copyOf did not help either!).
+    this.components = new String[components.length];
+    System.arraycopy(components, 0, this.components, 0, components.length);
+  } else {
+    this.components = components;
+  }
+  length = components.length;
+}
+

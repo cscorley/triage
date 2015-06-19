@@ -1,0 +1,7 @@
+The Derby build exposes several clean targets which appear to exist because the build used to drop artifacts into the subversion-controlled source tree and perhaps because dependency checking is spotty. Most of the value of these targets can be achieved by deleting the new generated directory. The following sequence of patches was proposed on DERBY-3986:
+
+1) remove cleanparsers, cleancatalog, cleantoursb
+
+2) remove cleangenerated and cleanstate
+
+3) make clean and clobber synonyms

@@ -1,0 +1,1 @@
+analyze impact of poodle security alert on Derby client - server ssl support

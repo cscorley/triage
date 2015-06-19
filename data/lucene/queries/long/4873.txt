@@ -1,0 +1,22 @@
+I think this bug is some extreme corner case...
+
+This test currently only uses up to 9 terms. By increasing it to 26 and blasting the test, I was able to uncover a bug.
+
+Here's the seed: ant test  -Dtestcase=TestMinShouldMatch2 -Dtests.method=testNextAllTerms -Dtests.seed=E0334C37E6E190D8 -Dtests.slow=true -Dtests.locale=pl_PL -Dtests.timezone=Asia/Thimphu -Dtests.file.encoding=US-ASCII
+
+Here's the patch to make the test use 26 terms.
+
+Index: lucene/core/src/test/org/apache/lucene/search/TestMinShouldMatch2.java
+===================================================================
+--- lucene/core/src/test/org/apache/lucene/search/TestMinShouldMatch2.java	(revision 1459937)
++++ lucene/core/src/test/org/apache/lucene/search/TestMinShouldMatch2.java	(working copy)
+@@ -56,7 +56,7 @@
+   static final String alwaysTerms[] = { "a" };
+   static final String commonTerms[] = { "b", "c", "d" };
+   static final String mediumTerms[] = { "e", "f", "g" };
+-  static final String rareTerms[]   = { "h", "i", "j" };
++  static final String rareTerms[]   = { "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+   
+   @Override
+   public void setUp() throws Exception {
+

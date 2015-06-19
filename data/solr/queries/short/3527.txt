@@ -1,0 +1,1 @@
+SolrCmdDistributor drops some of the important commit attributes (maxOptimizeSegments, softCommit, expungeDeletes) when sending a commit to replicas.

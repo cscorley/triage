@@ -1,0 +1,48 @@
+The following failure was seen with Oracle's Java 8:
+
+1) testNetworkServerSecurityMechanism(org.apache.derbyTesting.functionTests.tests.derbynet.NSSecurityMechanismTest)junit.framework.AssertionFailedError: The expected SQL state must be five characters long
+	at org.apache.derbyTesting.junit.BaseJDBCTestCase.assertSQLState(BaseJDBCTestCase.java:876)
+	at org.apache.derbyTesting.junit.BaseJDBCTestCase.assertSQLState(BaseJDBCTestCase.java:943)
+	at org.apache.derbyTesting.functionTests.tests.derbynet.NSSecurityMechanismTest.assertConnectionUsingDriverManager(NSSecurityMechanismTest.java:589)
+	at org.apache.derbyTesting.functionTests.tests.derbynet.NSSecurityMechanismTest.assertConnectionsUsingDriverManager(NSSecurityMechanismTest.java:438)
+	at org.apache.derbyTesting.functionTests.tests.derbynet.NSSecurityMechanismTest.testNetworkServerSecurityMechanism(NSSecurityMechanismTest.java:292)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.apache.derbyTesting.junit.BaseTestCase.runBare(BaseTestCase.java:120)
+	at org.apache.derbyTesting.junit.BaseJDBCTestCase.runBareOverridable(BaseJDBCTestCase.java:443)
+	at org.apache.derbyTesting.junit.BaseJDBCTestCase.runBare(BaseJDBCTestCase.java:460)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at org.apache.derbyTesting.junit.BaseTestSetup.run(BaseTestSetup.java:58)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+Caused by: java.sql.SQLException: Java exception: 'Unexpected CryptoAPI failure generating seed: java.lang.InternalError'.
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source)
+	at org.apache.derby.jdbc.ClientDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:270)
+	at org.apache.derbyTesting.functionTests.tests.derbynet.NSSecurityMechanismTest.assertConnectionUsingDriverManager(NSSecurityMechanismTest.java:542)
+	... 37 more
+Caused by: ERROR XJ001: Java exception: 'Unexpected CryptoAPI failure generating seed: java.lang.InternalError'.
+	at org.apache.derby.client.net.NetConnection.flowConnect(Unknown Source)
+	at org.apache.derby.client.net.NetConnection.<init>(Unknown Source)
+	at org.apache.derby.client.net.ClientJDBCObjectFactoryImpl.newNetConnection(Unknown Source)
+	... 41 more
+Caused by: java.lang.InternalError: Unexpected CryptoAPI failure generating seed
+	at sun.security.provider.NativeSeedGenerator.getSeedBytes(NativeSeedGenerator.java:62)
+	at sun.security.provider.SeedGenerator.generateSeed(SeedGenerator.java:144)
+	at sun.security.provider.SecureRandom.engineGenerateSeed(SecureRandom.java:128)
+	at java.security.SecureRandom.generateSeed(SecureRandom.java:522)
+	at org.apache.derby.client.am.EncryptionManager.generateSeed(Unknown Source)
+	at org.apache.derby.client.net.NetConnection.initializeClientSeed(Unknown Source)
+	at org.apache.derby.client.net.NetConnection.flowUSRSSBPWDconnect(Unknown Source)
+	... 44 more
+
+This has happened only on trunk (e.g. built at revision level 1649991), but then I'm only running jdk 1.8 testing on trunk, and only on a windows machine.
+The nightly testing at Oracle or on Apache machines has never shown this problem.
+I run multiple jvms on the same machine, and I have only seen this failure when the Oracle 1.8 jvm was the last one to get started.
+This does mean it starts with -Dderby.tests.basePort=3500.

@@ -1,0 +1,1 @@
+There is a duplicate snappy.version entries in libraries.properties, and values are different. Pig ends up pull the wrong version of snappy-java.

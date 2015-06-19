@@ -1,0 +1,1 @@
+Remove redundant jars packaged into pig-withouthadoop.jar for hadoop 2

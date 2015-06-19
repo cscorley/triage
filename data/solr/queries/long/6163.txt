@@ -1,0 +1,13 @@
+Hey,
+
+I was playing with the ManagedSynonymFilterFactory to create a synonym list with the API. But I have difficulties when my keys contains special characters (or spaces) to delete them...
+
+I added a key ééé that matches with some other words. It's saved in the synonym file as ééé.
+
+When I try to delete it, I do:
+
+curl -X DELETE "http://localhost/solr/mycore/schema/analysis/synonyms/english/ééé"
+
+error message: %C3%A9%C3%A9%C3%A9%C2%B5 not found in /schema/analysis/synonyms/english
+
+A wild guess from me is that %C3%A9 isn't decoded back to ééé. And that's why he can't find the keyword?

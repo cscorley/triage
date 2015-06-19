@@ -1,0 +1,1 @@
+Simple tool... you give it the RC URL, and it loads all artifacts from there and does basic smoke testing of them (verifies sigs/digests match; unpacks; runs "ant test", runs Lucene's demo, etc.).

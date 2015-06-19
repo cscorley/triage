@@ -1,0 +1,1 @@
+The server documentation states that the configuration parameter for binding to a specific ip address is clientPortBindAddress.  The code believes the parameter is clientPortAddress.  The documentation for 3.3.X versions needs changed to reflect the correct parameter .  This parameter was added in ZOOKEEPER-635.

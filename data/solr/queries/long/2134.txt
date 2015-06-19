@@ -1,0 +1,1 @@
+With the changes in LUCENE-2649, the FieldCache also returns if the bit is valid or not.  This is enough to support sortMissingLast=true with Trie* fields.  Then we can get rid of the Sortable* fields

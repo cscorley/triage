@@ -1,0 +1,36 @@
+We had a cluster of 3 peers (running 3.4.3) fail after we took down 1 peer briefly for maintenance.  A second peer became unresponsive and the leader lost quorum.  Thread dumps on the second peer showed two threads consistently stuck in these states:
+
+
+"QuorumPeer[myid=0]/0.0.0.0:2181" prio=10 tid=0x00002aaab8d20800 nid=0x598a runnable [0x000000004335d000]
+   java.lang.Thread.State: RUNNABLE
+        at java.util.HashMap.put(HashMap.java:405)
+        at org.apache.zookeeper.server.ServerCnxnFactory.registerConnection(ServerCnxnFactory.java:131)
+        at org.apache.zookeeper.server.ZooKeeperServer.finishSessionInit(ZooKeeperServer.java:572)
+        at org.apache.zookeeper.server.quorum.Learner.revalidate(Learner.java:444)
+        at org.apache.zookeeper.server.quorum.Follower.processPacket(Follower.java:133)
+        at org.apache.zookeeper.server.quorum.Follower.followLeader(Follower.java:86)
+        at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:740)
+
+
+"NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181" daemon prio=10 tid=0x00002aaab84b0800 nid=0x5986 runnable [0x0000000040878000]
+   java.lang.Thread.State: RUNNABLE
+        at java.util.HashMap.removeEntryForKey(HashMap.java:614)
+        at java.util.HashMap.remove(HashMap.java:581)
+        at org.apache.zookeeper.server.ServerCnxnFactory.unregisterConnection(ServerCnxnFactory.java:120)
+        at org.apache.zookeeper.server.NIOServerCnxn.close(NIOServerCnxn.java:971)
+        - locked <0x000000078d8a51f0> (a java.util.HashSet)
+        at org.apache.zookeeper.server.NIOServerCnxnFactory.closeSessionWithoutWakeup(NIOServerCnxnFactory.java:307)
+        at org.apache.zookeeper.server.NIOServerCnxnFactory.closeSession(NIOServerCnxnFactory.java:294)
+        - locked <0x000000078d82c750> (a org.apache.zookeeper.server.NIOServerCnxnFactory)
+        at org.apache.zookeeper.server.ZooKeeperServer.processConnectRequest(ZooKeeperServer.java:834)
+        at org.apache.zookeeper.server.NIOServerCnxn.readConnectRequest(NIOServerCnxn.java:410)
+        at org.apache.zookeeper.server.NIOServerCnxn.readPayload(NIOServerCnxn.java:200)
+        at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:236)
+        at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:224)
+        at java.lang.Thread.run(Thread.java:662)
+
+
+
+It shows both threads concurrently modifying ServerCnxnFactory.connectionBeans which is a java.util.HashMap.
+
+This cluster was serving thousands of clients, which seems to make this condition more likely as it appears to occur when one client connects and another disconnects at about the same time.

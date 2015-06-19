@@ -1,0 +1,3 @@
+previously this was 3 hashes (prefixes, words, suffixes) and it tried to split the words in various ways and do lookups. This was changed to FST, but the algorithm wasn't adjusted to use it properly (e.g. single pass, terminate when it reaches a "dead end").
+
+this makes for slower indexing when using this stemmer...

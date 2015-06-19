@@ -1,0 +1,1 @@
+Incorrect jar paths in .classpath template for eclipse

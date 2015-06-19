@@ -1,0 +1,1 @@
+A distributed MoreLikeThis query that works perfectly on 4.2.1 is failing on 4.4.0.  The original query returns a NullPointerException.  The Solr log shows that the shard queries are throwing EarlyTerminatingCollectorException.  Full details to follow in the comments.

@@ -1,0 +1,1 @@
+Some libraries have not been updated in the .eclipse-templates/.classpath file

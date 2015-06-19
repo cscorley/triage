@@ -1,0 +1,1 @@
+Update Apache TIKA 1.5's Apache POI dependency to 3.10.1

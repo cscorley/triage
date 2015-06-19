@@ -1,0 +1,1 @@
+When SolrJ/SolrCloud can't talk to Zookeeper, it throws a RuntimeException

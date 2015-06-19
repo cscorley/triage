@@ -1,0 +1,1 @@
+Script for updating docs on website from master branch

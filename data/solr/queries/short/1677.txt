@@ -1,0 +1,1 @@
+Add support for o.a.lucene.util.Version for BaseTokenizerFactory and BaseTokenFilterFactory

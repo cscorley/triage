@@ -1,0 +1,9 @@
+I had a small bug in use of DefaultSolrParams in my code because I didn't check for non-existent defaults.  I noticed through the Solr codebase that is code pattern is very common:
+
+
+    if( defaults != null ) {
+      params = new DefaultSolrParams( params, defaults );
+    }
+
+
+Instead, I refactored this logic into a new SolrParams.combine(p,d) method and made it so that nobody refers to DefaultSolrParams.  I did similarly for AppendedSolrParams.

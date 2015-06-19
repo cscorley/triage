@@ -1,0 +1,1 @@
+QueryElevationComponent does not work when unique key is of type 'sint'

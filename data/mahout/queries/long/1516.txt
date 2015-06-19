@@ -1,0 +1,17 @@
++ echo 'Copying 20newsgroups data to HDFS'
+Copying 20newsgroups data to HDFS
++ set +e
++ /home/jpan/Software/hadoop-2.2.0/bin/hadoop dfs -rmr /tmp/mahout-work-jpan/20news-all
+DEPRECATED: Use of this script to execute hdfs command is deprecated.
+Instead use the hdfs command for it.
+
+rmr: DEPRECATED: Please use 'rm -r' instead.
+14/04/17 10:26:25 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+rmr: `/tmp/mahout-work-jpan/20news-all': No such file or directory
++ set -e
++ /home/jpan/Software/hadoop-2.2.0/bin/hadoop dfs -put /tmp/mahout-work-jpan/20news-all /tmp/mahout-work-jpan/20news-all
+DEPRECATED: Use of this script to execute hdfs command is deprecated.
+Instead use the hdfs command for it.
+
+14/04/17 10:26:26 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+put: `/tmp/mahout-work-jpan/20news-all': No such file or directory

@@ -1,0 +1,1 @@
+The current Pig documentation contains several code samples that wrap strings as 'string', using the Unicode code points for left single quote (U+2018) and right single quote (U+2019).  This is not valid syntax in a Pig script.  This can cause confusion for new users who are trying to get started by copy-pasting code samples from documentation.

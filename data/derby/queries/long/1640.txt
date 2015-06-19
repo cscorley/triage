@@ -1,0 +1,21 @@
+I am seeing the following diff in XATest, in a clean subversion client running under DerbyNetClient framework on jdk14 on either Linux or cygwin/xp:
+
+52a53
+> (1 |PREPARED |false |APP |UserTransaction
+54d54
+< (1 |PREPARED |false |APP |UserTransaction
+Test Failed.
+
+	
+	
+		
+		
+			End:   XATest jdk1.4.2_08 DerbyNetClient 2006-08-03 13:06:22 ***
+		
+		
+	
+	
+
+
+
+Looks like an ordering instability.

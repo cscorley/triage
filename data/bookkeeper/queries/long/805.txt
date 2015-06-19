@@ -1,0 +1,44 @@
+How to reproduce this bug
+1) Set configurations in conf/bk_server.conf to use twitter-ostrich-provider.
+
+statsProviderClass=org.apache.bookkeeper.stats.twitter.ostrich.OstrichProvider
+statsExport=true
+
+
+
+2) Copy twitter-ostrich-provider-4.3.0.jar and required library jars to lib directory.
+
+(library jars)
+ostrich_2.9.2-9.1.3.jar
+scala-json_2.9.2-3.0.1.jar
+scala-library-2.9.2.jar
+util-app_2.9.2-6.3.7.jar
+util-core_2.9.2-6.3.7.jar
+util-eval_2.9.2-6.3.7.jar
+util-jvm_2.9.2-6.3.7.jar
+util-logging_2.9.2-6.3.7.jar
+
+
+
+3) Start a bookie server. Then, the server doesn't start and server log shows NullPointException.
+
+2014-11-25 17:30:27,796 - ERROR [main:BookieServer@396] - Exception running bookie server :
+java.lang.NullPointerException
+    at com.twitter.ostrich.stats.StatsListener.<init>(StatsListener.scala:90)
+    at com.twitter.ostrich.stats.LatchedStatsListener.<init>(StatsListener.scala:144)
+    at com.twitter.ostrich.stats.StatsListener$$anonfun$apply$4.apply(StatsListener.scala:68)
+    at com.twitter.ostrich.stats.StatsListener$$anonfun$apply$4.apply(StatsListener.scala:68)
+    at com.twitter.ostrich.stats.StatsListener$$anonfun$getOrRegister$1.apply(StatsListener.scala:40)
+    at com.twitter.ostrich.stats.StatsListener$$anonfun$getOrRegister$1.apply(StatsListener.scala:39)
+    at scala.Option.getOrElse(Option.scala:108)
+    at com.twitter.ostrich.stats.StatsListener$.getOrRegister(StatsListener.scala:39)
+    at com.twitter.ostrich.stats.StatsListener$.apply(StatsListener.scala:67)
+    at com.twitter.ostrich.admin.AdminServiceFactory$$anonfun$configureStatsListeners$1.apply(AdminServiceFactory.scala:81)
+    at com.twitter.ostrich.admin.AdminServiceFactory$$anonfun$configureStatsListeners$1.apply(AdminServiceFactory.scala:81)
+    at scala.collection.LinearSeqOptimized$class.foreach(LinearSeqOptimized.scala:59)
+    at scala.collection.immutable.List.foreach(List.scala:76)
+    at com.twitter.ostrich.admin.AdminServiceFactory.configureStatsListeners(AdminServiceFactory.scala:81)
+    at com.twitter.ostrich.admin.AdminServiceFactory.apply(AdminServiceFactory.scala:61)
+    at org.apache.bookkeeper.stats.twitter.ostrich.OstrichProvider.start(OstrichProvider.java:57)
+    at org.apache.bookkeeper.proto.BookieServer.main(BookieServer.java:375)
+

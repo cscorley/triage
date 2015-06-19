@@ -1,0 +1,8 @@
+I backported DERBY-6053 into 10.9 yesterday with revision 1451023. I ran the junit tests on my 10.9 client with IBM 1.7 jdk before the checkin and they ran fine. But, the Sun's nightly runs after the checkin shows junit tests passed with ia32_jdk5 and ia32_jdk6 but failed with amd64_jdk7(http://download.java.net/javadesktop/derby/javadb-5573355-report/). 
+
+The failures with amd64_jdk7 can be found at http://download.java.net/javadesktop/derby/javadb-5573355-report/javadb-5573355-3601031-details.html There are 50 tests that failed and they are all from org.apache.derbyTesting.functionTests.tests.management and the exception all seem to be with connection timeout issue 
+java.rmi.ConnectException: Connection refused to host: 10.163.184.120;
+nested exception is:
+        java.net.ConnectException: Connection timed out
+
+I am wondering if this could be a machine issue. I am planning on doing a dummy commit into 10.9 so the tests will fire again on Sun's machine(it looks like 10.9 test runs happen only when there is a checkin on that codeline) to see how the tests go with amd64_jdk7.

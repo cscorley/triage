@@ -1,0 +1,1 @@
+Modify ReverseMappingTool to write generated classes to a map

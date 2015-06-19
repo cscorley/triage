@@ -1,0 +1,15 @@
+We just upgraded from Solr 1.4 to 3.2. For the most part the upgrade went fine, however we discovered that sorting on field names with dashes in them is no longer working properly. For example, the following query used to work:
+
+http://[our solr server]/select/?q=computer&sort=static-need-binary+asc
+
+and now it gives this error:
+
+    HTTP Status 400 - undefined field static
+
+    type Status report
+
+    message undefined field static
+
+    description The request sent by the client was syntactically incorrect (undefined field static).
+
+It appears the parser for sorting has been changed so that it now tokenizes differently, and assumes field names cannot have dashes in them. However, field names clearly can have dashes in them. The exact same query which worked fine for us in 1.4 is now breaking in 3.2. Changing the sort field to use a field name that doesn't have a dash in it works just fine.

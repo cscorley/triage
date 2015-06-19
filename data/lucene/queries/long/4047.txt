@@ -1,0 +1,3 @@
+functionally split large blocks of code that do logically different things, organize and order them into rules. Use RandomizedRunner facilities for ensuring scope resources (Directory, temporary folders) are properly disposed of. Use RandomizedRunner facilities for reporting reproduce message.
+
+I have a working branch for this at github. Polishing off the rough edges.

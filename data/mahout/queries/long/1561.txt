@@ -1,0 +1,1 @@
+cluster-syntheticcontrol.sh is not running locally with MAHOUT_LOCAL set.  Patch adds a check for MAHOUT_LOCAL.

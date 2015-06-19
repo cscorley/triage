@@ -1,0 +1,1 @@
+ant test  -Dtestcase=TestPackedInts -Dtests.method=testBulkSet -Dtests.seed=ABDA58FE51EFA72B -Dtests.locale=lt -Dtests.timezone=Europe/Athens -Dargs="-Dfile.encoding=UTF-8"

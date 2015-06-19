@@ -1,0 +1,5 @@
+Stuff like: http://jenkins.sd-datasolutions.de/job/Lucene-Solr-trunk-Linux/3066/
+
+This doesn't happen on other JVM configurations.
+
+So either something isnt coded to java spec, or J9 has a jvm bug.

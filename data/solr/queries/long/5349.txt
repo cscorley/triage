@@ -1,0 +1,7 @@
+The CloudSolrServer makes the following call:
+
+            ZkStateReader zk = new ZkStateReader(zkHost, zkConnectTimeout, zkClientTimeout);
+
+However, the ZkStateReader constructor is defined like this
+
+  public ZkStateReader(String zkServerAddress, int zkClientTimeout, int zkClientConnectTimeout) throws InterruptedException, TimeoutException, IOException {

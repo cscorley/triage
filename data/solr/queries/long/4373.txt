@@ -1,0 +1,19 @@
+Having lib directives in the solrconfig.xml files of multiple cores can cause problems when using multi-threaded core initialization – which is the default starting with Solr 4.1.
+
+The problem manifests itself as init errors in the logs related to not being able to find classes located in plugin jars, even though earlier log messages indicated that those jars had been added to the classpath.
+
+One work around is to set coreLoadThreads="1" in your solr.xml file – forcing single threaded core initialization.  For example...
+
+
+
+<?xml version="1.0" encoding="utf-8" ?>
+<solr coreLoadThreads="1">
+  <cores adminPath="/admin/cores">
+    <core name="core1" instanceDir="core1" />
+    <core name="core2" instanceDir="core2" />
+  </cores>
+</solr>
+
+
+
+(Similar problems may occur if multiple cores are initialized concurrently using the /admin/cores handler)

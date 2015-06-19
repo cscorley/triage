@@ -1,0 +1,1 @@
+Better support for hadoop dependencies of multiple versions 

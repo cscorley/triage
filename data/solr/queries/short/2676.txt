@@ -1,0 +1,1 @@
+Add a welcome-file-list with a welcome-file index.jsp to web.xml in Solr servlet war.

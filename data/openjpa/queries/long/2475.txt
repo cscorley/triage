@@ -1,0 +1,33 @@
+Take the following two entities:
+
+@Entity
+public class DepartmentTest{	
+    @Id
+    private String primaryKey;
+
+    @OrderBy("name")
+    @OneToMany(mappedBy = "departmentTest")
+     private Set<PersonTest> persons = new HashSet<PersonTest>();
+...........
+
+@Entity
+public class PersonTest  {
+	@Id
+	private String primaryKey;
+
+	@ManyToOne
+        @ForeignKey
+	private DepartmentTest departmentTest;
+
+        private String name;
+.....
+
+With these entities, take this JPQL:
+
+"SELECT DISTINCT dept FROM DepartmentTest dept LEFT JOIN FETCH dept.persons";
+
+Depending on the data in the database (the order is important, see the provided test), this query can return a results set where some of the 'persons' are missing.
+
+Thanks,
+
+Heath Thomann

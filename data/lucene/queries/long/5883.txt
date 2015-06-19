@@ -1,0 +1,3 @@
+Since LUCENE-5711, MergePolicy is no longer wired to an IndexWriter instance. Therefore it can be moved to be a live setting on IndexWriter, which will allow apps to plug-in an MP on a live IW instance, without closing/reopening the writer. See for example LUCENE-5526 - instead of adding MP to forceMerge, apps could change the MP before calling forceMerge, with e.g. an UpgradeIndexMergePolicy.
+
+I think we can also make MergeScheduler a live setting, though I currently don't see the benefits of doing that, so I'd rather not touch it now.

@@ -1,0 +1,1 @@
+You don't know if the request was successful or not and so its better to error to the user than retry, especially because forwards to a shard leader can be retried internally.

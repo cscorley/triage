@@ -1,0 +1,1 @@
+dpkg init scripts don't restart - missing check_priv_sep_dir

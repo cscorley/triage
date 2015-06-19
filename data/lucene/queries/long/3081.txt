@@ -1,0 +1,1 @@
+There should be documentation we can point people to when they ask how to use Maven with Lucene and Solr.

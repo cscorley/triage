@@ -1,0 +1,240 @@
+Steps to reproduce:
+
+1) Download apache-solr-4.0.0-ALPHA
+2) cd example;  java -jar start.jar
+3) cd exampledocs;  ./post.sh *.xml
+4) Use statsComponent to get the stats info for field 'popularity' based on facet 'cat'.  And the 'count' for 'electronics' is 3
+http://localhost:8983/solr/collection1/select?q=cat:electronics&wt=json&rows=0&stats=true&stats.field=popularity&stats.facet=cat
+
+{
+
+stats_fields: 
+
+{
+
+popularity: 
+{
+
+min: 0,
+max: 10,
+count: 14,
+missing: 0,
+sum: 75,
+sumOfSquares: 503,
+mean: 5.357142857142857,
+stddev: 2.7902892835178013,
+facets: 
+
+{
+
+cat: 
+{
+
+music: 
+
+{
+
+min: 10,
+
+max: 10,
+
+count: 1,
+
+missing: 0,
+
+sum: 10,
+
+sumOfSquares: 100,
+
+mean: 10,
+
+stddev: 0
+}
+,
+
+monitor: 
+{
+
+min: 6,
+max: 6,
+count: 2,
+missing: 0,
+sum: 12,
+sumOfSquares: 72,
+mean: 6,
+stddev: 0
+}
+,
+hard drive: 
+
+{
+
+min: 6,
+
+max: 6,
+
+count: 2,
+
+missing: 0,
+
+sum: 12,
+
+sumOfSquares: 72,
+
+mean: 6,
+
+stddev: 0
+}
+,
+
+scanner: 
+{
+
+min: 6,
+max: 6,
+count: 1,
+missing: 0,
+sum: 6,
+sumOfSquares: 36,
+mean: 6,
+stddev: 0
+}
+,
+memory: 
+
+{
+
+min: 0,
+
+max: 7,
+
+count: 3,
+
+missing: 0,
+
+sum: 12,
+
+sumOfSquares: 74,
+
+mean: 4,
+
+stddev: 3.605551275463989
+}
+,
+
+graphics card: 
+{
+
+min: 7,
+max: 7,
+count: 2,
+missing: 0,
+sum: 14,
+sumOfSquares: 98,
+mean: 7,
+stddev: 0
+}
+,
+electronics: 
+
+{
+
+min: 1,
+
+max: 7,
+
+count: 3,
+
+missing: 0,
+
+sum: 9,
+
+sumOfSquares: 51,
+
+mean: 3,
+
+stddev: 3.4641016151377544
+}
+}
+}
+}
+}
+}
+5)  Facet on 'cat' and the count is 14.  http://localhost:8983/solr/collection1/select?q=cat:electronics&wt=json&rows=0&facet=true&facet.field=cat
+
+{
+
+cat: 
+
+[
+
+"electronics",
+
+14,
+
+"memory",
+
+3,
+
+"connector",
+
+2,
+
+"graphics card",
+
+2,
+
+"hard drive",
+
+2,
+
+"monitor",
+
+2,
+
+"camera",
+
+1,
+
+"copier",
+
+1,
+
+"multifunction printer",
+
+1,
+
+"music",
+
+1,
+
+"printer",
+
+1,
+
+"scanner",
+
+1,
+
+"currency",
+
+0,
+
+"search",
+
+0,
+
+"software",
+
+0
+]
+}
+,
+
+
+
+
+So from StatsComponent the count for 'electronics' cat is 3, while FacetComponent report 14 'electronics'. Is this a bug?
+
+Following is the field definition for 'cat'. 
+<field name="cat" type="string" indexed="true" stored="true" multiValued="true"/>

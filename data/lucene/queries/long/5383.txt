@@ -1,0 +1,17 @@
+If someone submits a pull request, i think we should put it in changes.txt in some way similar to the jira issues:
+
+e.g. for a JIRA issue we do:
+
+* LUCENE-XXXX: Add FooBar.  (Joe Contributor via John Committer)
+
+
+
+changes2html recognizes and expands these to jira issue links.
+
+so I think we should be able to do something like:
+
+* pull request #xxx: Add FooBar. (Joe Contributor via John Committer)
+
+
+
+and have it link to the request, too.

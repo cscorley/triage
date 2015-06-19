@@ -1,0 +1,1 @@
+DebugComponent throws NPE when used with grouping

@@ -1,0 +1,32 @@
+quoth rmuir on the mailing list...
+
+
+We've been working on this for the lucene side (3.6 was the first
+release where every package had docs, 4.0 will be the first where
+every class had docs, and we are now working towards
+methods/fields/ctors/enums).
+I think this would be valuable for solr too (especially solrj as a start).
+
+Besides users, its really useful to developers as well. Of course we
+all think our code is self-documenting, but its not always the case. a
+few extra seconds can save someone a ton of time trying to figure out
+your code.
+Additionally at least in my IDE, when things are done as javadoc
+comments then they are more easily accessible than code comments. I'm
+sure its the case for some other development environments too.
+
+Filling in these package.html's to at least have a one sentence
+description would be a really good start. It lets someone know where
+to go at the high-level.
+
+If I was brand new to solr and wanted to write a java app that uses
+solrj, i wouldn't have a clue where to start
+(https://builds.apache.org/job/Solr-Artifacts-4.x/javadoc/solr-solrj/index.html).
+12 sentences could go a really long way.
+
+And for all new code, I hope we can all try harder for more complete
+javadocs. when you are working on something and its fresh in your head
+its a lot easier to do this than for someone else to come back around
+and figure it out.
+
+I'm going to try and make it a priority for me to fill in package level docs as we look towards 4.1

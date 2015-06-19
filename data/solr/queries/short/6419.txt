@@ -1,0 +1,1 @@
+The ChaosMonkey tests should use fewers jetty instances on non nightly runs.

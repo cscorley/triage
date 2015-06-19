@@ -1,0 +1,1 @@
+Users who download Solr 3.1 or 4.0 should be able to recompile the source - at the present moment, this is not possible with nightly builds because of assumptions about compiling (and compiling against) .../modules and ../lucene – even though the jars are included in the "lucene-libs" directory.

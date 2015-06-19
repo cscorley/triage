@@ -1,0 +1,1 @@
+FrenchLightStemmer performs abusive compression of (arbitrary) repeated characters in long tokens

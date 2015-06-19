@@ -1,0 +1,1 @@
+Improve out of the box support for running Solr on hdfs with SolrCloud.

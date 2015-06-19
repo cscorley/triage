@@ -1,0 +1,1 @@
+SimilarityBase.computeNorm is inconsistent with TFIDFSimilarity

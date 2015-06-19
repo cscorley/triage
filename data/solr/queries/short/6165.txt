@@ -1,0 +1,1 @@
+DataImportHandler writes BigInteger and BigDecimal as-is which causes errors in SolrCloud replication

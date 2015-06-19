@@ -1,0 +1,1 @@
+Facet count not working when tagging & excluding filters for range facets with group.facet true

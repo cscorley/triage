@@ -1,0 +1,3 @@
+Somebody left some echo statements in the zkCleanup.sh which prevents the java commands from actually running.
+
+Patch coming forthwith.

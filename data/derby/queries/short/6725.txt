@@ -1,0 +1,1 @@
+Add a system function which returns the name of the database.

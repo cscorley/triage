@@ -1,0 +1,1 @@
+update ant eclipse-files target to include new jar and remove contrib dirs from build path

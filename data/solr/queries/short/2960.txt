@@ -1,0 +1,1 @@
+XPathEntityProcessor does not clear nulls from empty multi-valued fields

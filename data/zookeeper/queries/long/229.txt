@@ -1,0 +1,9 @@
+It's not very obvious in the docs that the operator of the zk server is responsible for managing the files in the datadir:
+
+http://hadoop.apache.org/zookeeper/docs/r3.0.0/zookeeperAdmin.html#File+Management
+
+specifically removing the old snaps/transactionallogs
+
+we need to make this more obvious, perhaps call it out in the quickstart (note pointing to this document)
+
+Perhaps we should include example script and cron as well (docs)

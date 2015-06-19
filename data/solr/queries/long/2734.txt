@@ -1,0 +1,25 @@
+After upgrading to solr 3.3.0 from 1.4.0, I noticed that I couldn't get the MoreLikeThisHandler to return debugging data. I tried the debug parameters  debugQuery and debug, but all I got was:
+ <bool name="debug">true</bool>
+
+I took a look at the code for the MoreLikeThisHandler, and noted in the debbuging part that the handler is adding the variable dbg to the response (line 211):
+ rsp.add("debug", dbg);
+
+Such variable is created at line 197:
+boolean dbg = req.getParams().getBool(CommonParams.DEBUG_QUERY, false);
+
+I suppose the correct variable to add to the response would be dbgInfo:
+NamedList<Object> dbgInfo = SolrPluginUtils.doStandardDebug(req, q, mlt.getRawMLTQuery(), mltDocs.docList);
+        if (null != dbgInfo) {
+          if (null != filters) {
+            dbgInfo.add("filter_queries",req.getParams().getParams(CommonParams.FQ));
+            List<String> fqs = new ArrayList<String>(filters.size());
+            for (Query fq : filters) 
+Unknown macro: {
+              fqs.add(QueryParsing.toString(fq, req.getSchema()));
+            } 
+            dbgInfo.add("parsed_filter_queries",fqs);
+          }
+
+Summarizing, i believe line 211 should be changed to:
+
+rsp.add("debug", dbgInfo);

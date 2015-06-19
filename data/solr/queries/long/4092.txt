@@ -1,0 +1,9 @@
+Checkout of branch_4x on 2012/11/18 at about 19:00 UTC.
+
+[junit4:junit4] FAILURE 0.21s | TestConfig.testDefaults31 <<<
+[junit4:junit4]    > Throwable #1: java.lang.AssertionError: default ramBufferSizeMB should be 16
+[junit4:junit4]    >    at __randomizedtesting.SeedInfo.seed([25295D05EC822830:3C3BA9C90D30C561]:0)
+[junit4:junit4]    >    at org.junit.Assert.fail(Assert.java:93)
+[junit4:junit4]    >    at org.junit.Assert.assertTrue(Assert.java:43)
+[junit4:junit4]    >    at org.apache.solr.core.TestConfig.testDefaults31(TestConfig.java:152)
+<snip>

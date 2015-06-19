@@ -1,0 +1,1 @@
+Deprecate non-Trie-based numeric (and date) field types in 4.x and remove them from 5.0

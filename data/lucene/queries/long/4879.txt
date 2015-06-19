@@ -1,0 +1,3 @@
+We could filter stack traces similar to what ANT's JUnit task does. It'd remove some of the noise and make them shorter. I don't think the lack of stack filtering is particularly annoying and it's always to have an explicit view of what and where happened but since Robert requested this I'll add it.
+
+We can always make it a (yet another) test.* option 

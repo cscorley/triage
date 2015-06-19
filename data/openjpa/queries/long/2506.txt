@@ -1,0 +1,1 @@
+While doing some internal testing, it was discovered that the javax.persistence.Cache.contains(Class, Object) method doesn't work for a number of id types. The implementation depends on JPAFacade helper to convert user provided [Class, Object] into a proper OpenJPAId, but it doesn't work in all cases. 

@@ -1,0 +1,17 @@
+Norms can eat up a lot of RAM, since by default its 8 bits per field per document. We rely upon users to omit them to not blow up RAM, but its a constant trap.
+
+Previously in 4.2, I tried to compress these by default, but it was too slow. My mistakes were:
+
+	allowing slow bits per value like bpv=5 that are implemented with expensive operations.
+	trying to wedge norms into the generalized docvalues numeric case
+	not handling "simple" degraded cases like "constant norm" the same norm value for every document.
+
+
+
+Instead, we can just have a separate norms format that is very careful about what it does, since we understand in general the patterns in the data:
+
+	uses CONSTANT compression (just writes the single value to metadata) when all values are the same.
+	only compresses to bitsPerValue = 1,2,4 (this also happens often, for very short text fields like person names and other stuff in structured data)
+	otherwise, if you would need 5,6,7,8 bits per value, we just continue to do what we do today, encode as byte[]. Maybe we can improve this later, but this ensures we don't have a performance impact.
+
+

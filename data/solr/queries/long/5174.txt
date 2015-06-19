@@ -1,0 +1,1 @@
+If wt=json is used and the document does contain HTML-Tags (like f.e. <br> the tags are not escaped - that means the browser interprets it as linebreak, which does lead to invalid json.

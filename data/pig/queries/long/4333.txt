@@ -1,0 +1,3 @@
+   With parallel test execution, it stalls at the end as BigData tests take more time to execute. In mapred mode it takes more than 1 hour
+
+Marking for 0.14.1 even though non-critical as speedier verification of build is very helpful.

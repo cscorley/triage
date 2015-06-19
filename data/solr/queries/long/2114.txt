@@ -1,0 +1,1 @@
+There is some incorrect logic when it comes to dealing with MultiValueSource and conversion to radians.  See http://localhost:8983/solr/core1/select?q=_val_:%22hsin%286371.009,%20geolocation,%20vector%28-37.82,%20145.287%29,%20true%29%22 (or a similar query)

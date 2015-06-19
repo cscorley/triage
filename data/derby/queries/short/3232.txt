@@ -1,0 +1,1 @@
+Top-level index.html in releases incorrectly indicates support for JDBC 2.1 in 10.3 releases

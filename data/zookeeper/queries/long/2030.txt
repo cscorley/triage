@@ -1,0 +1,1 @@
+a relative path doesn't seem like a good idea since it will work only if we start the server from the same directory as we did previously.

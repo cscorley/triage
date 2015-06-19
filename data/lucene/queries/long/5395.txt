@@ -1,0 +1,7 @@
+Spatial4j 0.4 should be released the week of January 13th; a snapshot is published.  A longer version of the delta from 0.4 is in CHANGES.md
+
+A couple notable new features are:
+
+	Built-in WKT parser without relying on JTS.  The older shape string format is deprecated.
+	A binary shape codec for reading & writing the shapes to a byte-stream in a reasonably compact manner.
+

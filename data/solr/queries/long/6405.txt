@@ -1,0 +1,1 @@
+The current design requires that we are sure we retry on connection loss until session expiration.

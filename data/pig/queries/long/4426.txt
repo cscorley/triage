@@ -1,0 +1,5 @@
+After PIG-4392, started seeing TestRank3.testRankWithSplitInMap (and some others) failing with 
+
+
+Comparing actual and expected results.  expected:<[(1,1,2), (1,1,2), (1,3,1), (2,1,2), (3,1,2), (3,2,3), (3,2,4), (4,2,3), (5,2,4), (5,3,1)]> but was:<[(1,1,2), (1,1,2), (3,2,3), (3,2,4), (5,3,1)]>
+

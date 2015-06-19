@@ -1,0 +1,1 @@
+CompressingTermVectors termsEnum should probably not support seek-by-ord

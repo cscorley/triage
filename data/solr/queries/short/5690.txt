@@ -1,0 +1,1 @@
+Null pointerException in AbstractStatsValues.accumulate

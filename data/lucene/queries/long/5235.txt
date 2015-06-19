@@ -1,0 +1,1 @@
+We added these best effort checks, but it would be much better if we somehow gave a clear exception... this comes up often

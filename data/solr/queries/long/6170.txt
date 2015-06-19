@@ -1,0 +1,1 @@
+We have a bunch of duplicated logic in CoreContainer startup, CoreAdminHandler core creation and core tests that always calls the same three methods, 'preRegisterInZk', 'create' and 'register'.  These should really all be in one API call.

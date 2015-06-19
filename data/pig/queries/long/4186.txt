@@ -1,0 +1,5 @@
+  Some recent changes in trunk has broken the ability to run against a new packaged version of pig. Running against source code is fine. Also making few enhancements like 
+
+	making piggybank jar path really configurable,
+	adding a script that we used to parse the e2e result log and output in junit xml format for jenkins job.
+

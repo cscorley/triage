@@ -1,0 +1,1 @@
+This seems a bit wasteful for one, but also, under heavy load, with lots of cores on a node, I've seen this xpath parsing randomly fail with weird nullpointer exceptions. Perhaps depends on the xml parser you end up using. Anyway, it's easy to work around and avoid the parsing everytime solrdispatchfilter is hit by just doing it up front once.

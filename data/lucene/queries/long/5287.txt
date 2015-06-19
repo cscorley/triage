@@ -1,0 +1,3 @@
+I noticed while working on LUCENE-5266 there is no guarantee every bpv is tested, since the acceptable overhead is always random.  It would be good to first ensure all bpvs work, and then have random acceptable overhead.
+
+There was also a simple issue with the order of expected/actual for the direct packed reader loop. 

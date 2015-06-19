@@ -1,0 +1,1 @@
+IndexWriterConfig live settings

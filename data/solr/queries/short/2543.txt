@@ -1,0 +1,1 @@
+Backport the trunk's version of SolrTestCaseJ4 to 3x branch.

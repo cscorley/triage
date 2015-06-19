@@ -1,0 +1,14 @@
+DatabaseMetaData.usesLocalFiles() returns true for in-memory databases. And it also returns true for DatabaseMetaData.usesLocalFilePerTable(). The following script shows this:
+
+
+connect 'jdbc:derby:memory:db;create=true';
+
+call syscs_util.syscs_register_tool( 'databaseMetaData', true );
+
+values usesLocalFiles();
+
+values usesLocalFilePerTable();
+
+
+
+I think that these methods should return false because an in-memory database does not store tables in files.

@@ -1,0 +1,1 @@
+parameterMapping test in DerbyAll nightly regression under DerbyNetClient, specific to jdk1.3.1

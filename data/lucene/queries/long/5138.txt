@@ -1,0 +1,4 @@
+Currently we have many java files with executable attribute, 
+while some scripts that generate source files are missing this.
+
+Maybe we should clean this up?

@@ -1,0 +1,1 @@
+I found that the tests BasicDistributedZk2Test and BasicDistributedZkTest are creating multiple HttpSolrServer objects to which they don't call the shutdown method after using them.

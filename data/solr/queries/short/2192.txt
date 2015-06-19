@@ -1,0 +1,1 @@
+StreamingUpdateSolrServer not thread safe

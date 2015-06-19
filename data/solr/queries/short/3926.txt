@@ -1,0 +1,1 @@
+solrj should support better way of finding active sorts

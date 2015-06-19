@@ -1,0 +1,1 @@
+BlockJoinQuery doesn't implement boost

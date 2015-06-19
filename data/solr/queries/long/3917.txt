@@ -1,0 +1,1 @@
+SOLR-3734 introduced a partial state for fields, which are referenced f.e. within a copyfield, but are not explicit declared in the schema – checking not correctly for the state, the schema browser throws an error for dynamic fields and types

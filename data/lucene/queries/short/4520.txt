@@ -1,0 +1,1 @@
+ValueSource.getSortField shouldn't throw IOException

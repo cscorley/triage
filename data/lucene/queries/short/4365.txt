@@ -1,0 +1,1 @@
+The Maven build can't directly handle complex inter-module dependencies involving the test-framework modules

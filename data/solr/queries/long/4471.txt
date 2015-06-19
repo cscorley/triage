@@ -1,0 +1,19 @@
+Scenario: master/slave replication, master delta index runs every 10 minutes, slave poll interval is 10 sec.
+
+There was an issue SOLR-4413 - slave reads index from wrong directory, so slave is full copy index from master every time, which is fixed after applying this patch from 4413 (see script below).
+
+Now on replication the slave downloads only updated files, but slave is create a new segement file and also a new version of index (generation is identical with master). On next polling the slave is download the full index again, because the new version slave is force a full copy.
+
+Problem is the new version of index on the slave after first replication.
+
+
+mkdir work
+cd work
+svn co http://svn.apache.org/repos/asf/lucene/dev/branches/lucene_solr_4_1/
+cd lucene_solr_4_1
+patch -p0 < ../../patches/SOLR-4413.patch
+cd solr
+ant dist
+
+
+

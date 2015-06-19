@@ -1,0 +1,1 @@
+Static scope test components should be consistent between tests (and test iterations)

@@ -1,0 +1,1 @@
+Fix processAdd method in DistributedUpdateProcessor

@@ -1,0 +1,1 @@
+SOLR does not start up when no cores are defined

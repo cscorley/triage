@@ -1,0 +1,1 @@
+When we svn-export for release, the index.html at the top level expects Changes.html in the docs, which is generated, so we should create it.

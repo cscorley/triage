@@ -1,0 +1,1 @@
+When there are two objects in OneToMany relation and when One sets Many and vice versa the filed Many.one became null. It seems to be related with code added in this issue https://issues.apache.org/jira/browse/OPENJPA-2006. To reproduce: https://github.com/dogenkigen/OpenJPA-bug

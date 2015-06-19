@@ -1,0 +1,1 @@
+CoreAdminRequest.mergeIndexes can not merge mutilple cores.

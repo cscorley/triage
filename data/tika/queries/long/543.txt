@@ -1,0 +1,7 @@
+The feeds parser (see TIKA-466) has a dependency on Rome 1.0, as added to the tika-parser pom.xml with revision 964885.
+
+This does not exist in the Maven central repository (that's only versions up to 0.9).
+
+It worked previously due to java.net's maven repo being in the pom.xml, which was there for boilerpipe.
+
+That repository was removed (as part of TIKA-462), so now the build fails if you don't already have rome 1.0 in your local Maven repo.

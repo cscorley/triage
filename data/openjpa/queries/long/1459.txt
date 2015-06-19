@@ -1,0 +1,18 @@
+Per Kevin's comment in the OpenJPA 1.2.2 release vote [1] our binary distribution contains a large amount of documentation files (roughly 90% of the archive is docs). Kevin posed the question of whether other Apache projects include docs in their distributions.
+
+So I took a random (and small) sampling : 
+
+
+	HTTPServer only delivers binaries for Windows as a .msi file - I'm not sure whether the docs are included there or not.
+	Ant 1.8.0-RC1 includes documentation in the binary distribution.
+	Derby 10.5.3.0 includes documentation in the binary distribution
+	OpenEJB 3.1.2 does not include documentation in the binary distribution
+
+
+
+The results don't show a clear trend (maybe a larger sample size would reveal one), but it looks like we have leeway here to include or omit documentation in our releases. 
+
+Also FWIW OpenEJB and Derby's binary distributions are roughly the same size as OpenJPA 1.2.2 (around 18MB), Ant is a bit smaller (around 7 MB). 
+
+Removing all docs would put the size around 5.8 MB, removing just the javadoc (the larger portion of documentation) puts the size around 11 MB. 
+[1]  http://markmail.org/message/gqlt25vpdgba3glq

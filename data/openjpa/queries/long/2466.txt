@@ -1,0 +1,3 @@
+A user from the mailing list[1] reported that they would like to be able to easily get the results from the ReverseMappingTool provided as a string rather than written to the file system.
+
+[1] http://openjpa.markmail.org/thread/3ye23vmkkaqx7sqc

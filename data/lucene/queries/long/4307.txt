@@ -1,0 +1,7 @@
+IR/IS.getTopReaderContext is supposed to read as "get the ReaderContext, with this reader treated as the top". 
+
+But every time I look at it, it reads as "get context of the top-level reader". 
+
+This makes sense for IndexSearcher, but is confusing for IndexReader.
+
+I think it should simply be IR.getContext() for IndexReader.

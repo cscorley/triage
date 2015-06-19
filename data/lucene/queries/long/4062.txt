@@ -1,0 +1,86 @@
+In order to save space, Lucene has two main PackedInts.Mutable implentations, one that is very fast and is based on a byte/short/integer/long array (Direct*) and another one which packs bits in a memory-efficient manner (Packed*).
+
+The packed implementation tends to be much slower than the direct one, which discourages some Lucene components to use it. On the other hand, if you store 21 bits integers in a Direct32, this is a space loss of (32-21)/32=35%.
+
+If you accept to trade some space for speed, you could store 3 of these 21 bits integers in a long, resulting in an overhead of 1/3 bit per value. One advantage of this approach is that you never need to read more than one block to read or write a value, so this can be significantly faster than Packed32 and Packed64 which always need to read/write two blocks in order to avoid costly branches.
+
+I ran some tests, and for 10000000 21 bits values, this implementation takes less than 2% more space and has 44% faster writes and 30% faster reads. The 12 bits version (5 values per block) has the same performance improvement and a 6% memory overhead compared to the packed implementation.
+
+In order to select the best implementation for a given integer size, I wrote the PackedInts.getMutable(valueCount, bitsPerValue, acceptableOverheadPerValue) method. This method select the fastest implementation that has less than acceptableOverheadPerValue wasted bits per value. For example, if you accept an overhead of 20% (acceptableOverheadPerValue = 0.2f * bitsPerValue), which is pretty reasonable, here is what implementations would be selected:
+
+
+	1: Packed64SingleBlock1
+	2: Packed64SingleBlock2
+	3: Packed64SingleBlock3
+	4: Packed64SingleBlock4
+	5: Packed64SingleBlock5
+	6: Packed64SingleBlock6
+	7: Direct8
+	8: Direct8
+	9: Packed64SingleBlock9
+	10: Packed64SingleBlock10
+	11: Packed64SingleBlock12
+	12: Packed64SingleBlock12
+	13: Packed64
+	14: Direct16
+	15: Direct16
+	16: Direct16
+	17: Packed64
+	18: Packed64SingleBlock21
+	19: Packed64SingleBlock21
+	20: Packed64SingleBlock21
+	21: Packed64SingleBlock21
+	22: Packed64
+	23: Packed64
+	24: Packed64
+	25: Packed64
+	26: Packed64
+	27: Direct32
+	28: Direct32
+	29: Direct32
+	30: Direct32
+	31: Direct32
+	32: Direct32
+	33: Packed64
+	34: Packed64
+	35: Packed64
+	36: Packed64
+	37: Packed64
+	38: Packed64
+	39: Packed64
+	40: Packed64
+	41: Packed64
+	42: Packed64
+	43: Packed64
+	44: Packed64
+	45: Packed64
+	46: Packed64
+	47: Packed64
+	48: Packed64
+	49: Packed64
+	50: Packed64
+	51: Packed64
+	52: Packed64
+	53: Packed64
+	54: Direct64
+	55: Direct64
+	56: Direct64
+	57: Direct64
+	58: Direct64
+	59: Direct64
+	60: Direct64
+	61: Direct64
+	62: Direct64
+
+
+
+Under 32 bits per value, only 13, 17 and 22-26 bits per value would still choose the slower Packed64 implementation. Allowing a 50% overhead would prevent the packed implementation to be selected for bits per value under 32. Allowing an overhead of 32 bits per value would make sure that a Direct* implementation is always selected.
+
+Next steps would be to:
+
+	make lucene components use this getMutable method and let users decide what trade-off better suits them,
+	write a Packed32SingleBlock implementation if necessary (I didn't do it because I have no 32-bits computer to test the performance improvements).
+
+
+
+I think this would allow more fine-grained control over the speed/space trade-off, what do you think?

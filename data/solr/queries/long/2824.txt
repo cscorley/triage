@@ -1,0 +1,55 @@
+I have two cores with 2 different schema's
+now I want to join between the 2 cores. where I filter on a field from one core that doesn't exist in the other core.
+core1: 
+{childIds, name, id}
+, core2:
+{id, type, specials}
+
+I have the following query
+/core1/select?q=:&fq=
+{!join from=id to=childIds fromIndex=core2}
+specials:1&fl=id,name
+I get this exception [1]
+
+Looking at the debugger I see that
+    at org.apache.solr.search.JoinQParserPlugin$1.parse(JoinQParserPlugin.java:60)
+the parse is called  for the filterquery on the main core (core1). Not the core of the 'fromIndex' (core2) 
+
+
+[1]
+SEVERE: org.apache.solr.common.SolrException: undefined field specials
+        at org.apache.solr.schema.IndexSchema.getDynamicFieldType(IndexSchema.java:1028)
+        at org.apache.solr.schema.IndexSchema$SolrQueryAnalyzer.getWrappedAnalyzer(IndexSchema.java:335)
+        at org.apache.lucene.analysis.AnalyzerWrapper.createComponents(AnalyzerWrapper.java:71)
+        at org.apache.lucene.analysis.Analyzer.tokenStream(Analyzer.java:83)
+        at org.apache.lucene.queryparser.classic.QueryParserBase.newFieldQuery(QueryParserBase.java:476)
+        at org.apache.lucene.queryparser.classic.QueryParserBase.getFieldQuery(QueryParserBase.java:464)
+        at org.apache.solr.search.SolrQueryParser.getFieldQuery(SolrQueryParser.java:134)
+        at org.apache.lucene.queryparser.classic.QueryParserBase.handleBareTokenQuery(QueryParserBase.java:1052)
+        at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:358)
+        at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+        at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:181)
+        at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+        at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:118)
+        at org.apache.solr.search.LuceneQParser.parse(LuceneQParserPlugin.java:74)
+        at org.apache.solr.search.QParser.getQuery(QParser.java:143)
+        at org.apache.solr.search.JoinQParserPlugin$1.parse(JoinQParserPlugin.java:60)
+        at org.apache.solr.search.QParser.getQuery(QParser.java:143)
+        at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:138)
+        at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:180)
+        at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:129)
+        at org.apache.solr.core.SolrCore.execute(SolrCore.java:1452)
+        at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:353)
+        at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:248)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+        at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+        at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+        at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+        at java.lang.Thread.run(Thread.java:662)

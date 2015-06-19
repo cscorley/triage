@@ -1,0 +1,1 @@
+Faster but more RAM/Disk consuming DocValuesFormat for facets

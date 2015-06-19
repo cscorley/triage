@@ -1,0 +1,1 @@
+TextLoader should be updated to match changes to PigStorage

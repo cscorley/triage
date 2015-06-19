@@ -1,0 +1,1 @@
+Make zookeeper.is_unrecoverable return True or False and not an integer

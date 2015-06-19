@@ -1,0 +1,1 @@
+Option to disable execution of ALTER SEQUENCE...INCREMENT BY statement for sequences.

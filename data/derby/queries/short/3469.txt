@@ -1,0 +1,1 @@
+Clob.length() doesn't detect a closed underlying connection in a consistent way

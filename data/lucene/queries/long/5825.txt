@@ -1,0 +1,1 @@
+The algorithm file for benchmarking should allow PostingsFormat to be configurable.

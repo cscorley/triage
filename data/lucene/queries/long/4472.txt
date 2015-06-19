@@ -1,0 +1,1 @@
+Currently we always call maybeMerge if a segment was flushed after updateDocument. Some apps and in particular ElasticSearch uses some hacky workarounds to disable that ie for merge throttling. It should be easier to enable this kind of behavior. 

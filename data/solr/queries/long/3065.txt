@@ -1,0 +1,3 @@
+Currently the overseer updates clusterstate.json on almost every change - one change at a time. This is not efficient when there are a lot of changes happening in short period of time (for example when a number of hosts are started at once).
+
+It would be better if changes were published on timely manner instead.

@@ -1,0 +1,13 @@
+Today this uses the default implementation, e.g. for readInt(pos):
+
+
+
+@Override
+public int readInt(long pos) throws IOException {
+  slice.seek(pos);
+  return slice.readInt();
+}
+
+
+
+But this causes the bounds to be checked twice. Just like we did for MMap, we can provide a faster implementation that only checks once: yields ~30% speedup.

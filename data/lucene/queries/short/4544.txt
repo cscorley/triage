@@ -1,0 +1,1 @@
+possible bug in ConcurrentMergeScheduler.merge(IndexWriter) 

@@ -1,0 +1,3 @@
+by adding a line in the build.xml we allow users to easily customize the build
+
+ <import file="./build-site.xml" optional="true"/>

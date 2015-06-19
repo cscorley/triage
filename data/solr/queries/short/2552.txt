@@ -1,0 +1,1 @@
+AbstractSolrTestCase should also assert that all opened SolrIndexSearchers are closed

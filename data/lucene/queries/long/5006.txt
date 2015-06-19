@@ -1,0 +1,3 @@
+The concurrency in IW/DW/BD is terrifying: there are many locks involved, not just intrinsic locks but IW also has fullFlushLock, commitLock, and there are no clear rules about lock order to avoid deadlocks like LUCENE-5002.
+
+We have to somehow simplify this, and define the allowed concurrent behavior eg when an app calls deleteAll while other threads are indexing.

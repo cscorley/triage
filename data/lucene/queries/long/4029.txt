@@ -1,0 +1,5 @@
+https://builds.apache.org/job/Lucene-trunk/1917/consoleText
+
+it uses linedocs so you need the special file.
+
+ant test -Dtestcase=TestNorms -Dtests.method=testNormsNotPresent -Dtests.seed=DD43C1EE3741DA4F -ests.locale=en_CA -Dtests.timezone=Australia/Brisbane -Dtests.multiplier=3 -Dtests.nightly=true -Dargs="-Dfile.encoding=ISO8859-1"

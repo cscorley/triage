@@ -1,0 +1,1 @@
+intermittent test failure in test case testNetworkServerSecurityMechanism in NSSecurityMechanismTest with Oracle Java 1.8

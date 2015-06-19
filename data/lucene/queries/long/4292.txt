@@ -1,0 +1,177 @@
+
+
+build	06-Aug-2012 19:45:55	[junit4:junit4] FAILURE 1.44s | TestPerfTasksLogic.testBGSearchTaskThreads
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > Throwable #1: java.lang.AssertionError
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at __randomizedtesting.SeedInfo.seed([73A6DA79EDD783F8:AE931FA55514525A]:0)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.junit.Assert.fail(Assert.java:92)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.junit.Assert.assertTrue(Assert.java:43)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.junit.Assert.assertTrue(Assert.java:54)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.apache.lucene.benchmark.byTask.TestPerfTasksLogic.testBGSearchTaskThreads(TestPerfTasksLogic.java:159)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at java.lang.reflect.Method.invoke(Method.java:597)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.RandomizedRunner.invoke(RandomizedRunner.java:1559)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.RandomizedRunner.access$600(RandomizedRunner.java:79)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.RandomizedRunner$6.evaluate(RandomizedRunner.java:737)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.RandomizedRunner$7.evaluate(RandomizedRunner.java:773)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.RandomizedRunner$8.evaluate(RandomizedRunner.java:787)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleSetupTeardownChained$1.evaluate(TestRuleSetupTeardownChained.java:50)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleFieldCacheSanity$1.evaluate(TestRuleFieldCacheSanity.java:32)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:45)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleThreadAndTestName$1.evaluate(TestRuleThreadAndTestName.java:48)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleIgnoreAfterMaxFailures$1.evaluate(TestRuleIgnoreAfterMaxFailures.java:70)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.ThreadLeakControl$StatementRunner.run(ThreadLeakControl.java:345)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.ThreadLeakControl.forkTimeoutingTask(ThreadLeakControl.java:769)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.ThreadLeakControl$3.evaluate(ThreadLeakControl.java:429)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.RandomizedRunner.runSingleTest(RandomizedRunner.java:746)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.RandomizedRunner$3.evaluate(RandomizedRunner.java:648)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.RandomizedRunner$4.evaluate(RandomizedRunner.java:682)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.RandomizedRunner$5.evaluate(RandomizedRunner.java:693)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:45)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleStoreClassName$1.evaluate(TestRuleStoreClassName.java:38)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleAssertionsRequired$1.evaluate(TestRuleAssertionsRequired.java:40)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleIgnoreAfterMaxFailures$1.evaluate(TestRuleIgnoreAfterMaxFailures.java:70)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at org.apache.lucene.util.TestRuleIgnoreTestSuites$1.evaluate(TestRuleIgnoreTestSuites.java:55)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.ThreadLeakControl$StatementRunner.run(ThreadLeakControl.java:345)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 	at java.lang.Thread.run(Thread.java:662)
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> Report Sum By Prefix (X) (1 about 1 out of 1012)
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Operation     round   runCnt   recsPerRun        rec/s  elapsedSec    avgUsedMem    avgTotalMem
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> XSearch_2_Par     0        1            0         0.00        0.00    15,377,688    179,961,856
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=TestPerfTasksLogic -Dtests.method=testBGSearchTaskThreads -Dtests.seed=73A6DA79EDD783F8 -Dtests.slow=true -Dtests.locale=iw_IL -Dtests.timezone=Europe/San_Marino -Dtests.file.encoding=UTF-8
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   2>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.36s | TestPerfTasksLogic.testDisableCounting
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Rounds
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> Report Sum By (any) Name (4 about 4 out of 5)
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Operation       round   runCnt   recsPerRun        rec/s  elapsedSec    avgUsedMem    avgTotalMem
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Rounds              0        1           20       256.41        0.08     5,550,800    180,027,392
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> CreateIndex -  -  - 0 -  -   1 -  -  -  - 0 -  -  - 0.00 -  -   0.00 -   2,530,536 -  180,027,392
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> AddDocs_Exhaust     0        1           20     1,333.33        0.01     2,530,536    180,027,392
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> CloseIndex -  -  -  0 -  -   1 -  -  -  - 0 -  -  - 0.00 -  -   0.00 -   5,550,800 -  180,027,392
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Rounds
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> Report Sum By (any) Name (4 about 4 out of 5)
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Operation       round   runCnt   recsPerRun        rec/s  elapsedSec    avgUsedMem    avgTotalMem
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Rounds              0        1           22       282.05        0.08     5,988,616    180,027,392
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> CreateIndex -  -  - 0 -  -   1 -  -  -  - 1 -   1,000.00 -  -   0.00 -   2,965,432 -  180,027,392
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> AddDocs_Exhaust     0        1           20    20,000.00        0.00     2,965,432    180,027,392
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> CloseIndex -  -  -  0 -  -   1 -  -  -  - 1 -  -   66.67 -  -   0.01 -   5,988,616 -  180,027,392
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.75s | TestPerfTasksLogic.testLocale
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Locale to: null
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> --> Round 0-->1
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Locale to: root locale
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> --> Round 0-->1
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Locale to: de
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> --> Round 0-->1
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Locale to: en_US
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> --> Round 0-->1
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Locale to: no_NO_NY
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> --> Round 0-->1
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.28s | TestPerfTasksLogic.testMergeScheduler
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.20s | TestPerfTasksLogic.testReadTokens
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.20s | TestPerfTasksLogic.testExhaustContentSource
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.48s | TestPerfTasksLogic.testParallelDocMaker
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.97s | TestPerfTasksLogic.testHighlighting
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.86s | TestPerfTasksLogic.testCollator
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Locale to: root locale
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Analyzer to: org.apache.lucene.collation.CollationKeyAnalyzer()
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> --> Round 0-->1
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Locale to: de
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Analyzer to: org.apache.lucene.collation.CollationKeyAnalyzer(de)
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> --> Round 0-->1
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Locale to: en_US
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Analyzer to: org.apache.lucene.collation.CollationKeyAnalyzer(en_US)
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> --> Round 0-->1
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Locale to: no_NO_NY
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Analyzer to: org.apache.lucene.collation.CollationKeyAnalyzer(no_NO_NY)
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> --> Round 0-->1
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.50s | TestPerfTasksLogic.testIndexWriterSettings
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> --> Round 0-->1:   compound:true-->false  doc.term.vector:false-->true
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> --> Round 1-->2:   compound:false-->true  doc.term.vector:true-->false
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> 
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.53s | TestPerfTasksLogic.testHighlightingNoTvNoStore
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>    0.25 sec --> TEST-TestPerfTasksLogic.testHighlightingNoTvNoStore-seed#[73A6DA79EDD783F8] added      1000 docs
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.52s | TestPerfTasksLogic.testShingleAnalyzer
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Analyzer to: ShingleAnalyzerWrapper, wrapping ShingleFilter over org.apache.lucene.analysis.standard.StandardAnalyzer
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Analyzer to: ShingleAnalyzerWrapper, wrapping ShingleFilter over org.apache.lucene.analysis.standard.StandardAnalyzer
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Analyzer to: ShingleAnalyzerWrapper, wrapping ShingleFilter over org.apache.lucene.analysis.core.WhitespaceAnalyzer
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> Changed Analyzer to: ShingleAnalyzerWrapper, wrapping ShingleFilter over org.apache.lucene.analysis.core.WhitespaceAnalyzer
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.33s | TestPerfTasksLogic.testExhaustedLooped
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Rounds_2
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.73s | TestPerfTasksLogic.testHighlightingTV
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>    0.20 sec --> TEST-TestPerfTasksLogic.testHighlightingTV-seed#[73A6DA79EDD783F8] added      1000 docs
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.55s | TestPerfTasksLogic.testDocMakerThreadSafety
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.36s | TestPerfTasksLogic.testForceMerge
+build	06-Aug-2012 19:45:55	[junit4:junit4] OK      0.70s | TestPerfTasksLogic.testTimedSearchTask
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1> ------------> starting task: Seq
+build	06-Aug-2012 19:45:55	[junit4:junit4]   1>
+build	06-Aug-2012 19:45:55	[junit4:junit4]    > (@AfterClass output)
+build	06-Aug-2012 19:45:55	[junit4:junit4]   2> NOTE: test params are: codec=Lucene40: {body=Lucene40(minBlockSize=90 maxBlockSize=264), docdate=Lucene40(minBlockSize=90 maxBlockSize=264), docdatenum=PostingsFormat(name=Memory doPackFST= true), docname=PostingsFormat(name=MockRandom), sort_field=PostingsFormat(name=Memory doPackFST= false), country=Lucene40(minBlockSize=90 maxBlockSize=264), docid=PostingsFormat(name=MockRandom), $facets=PostingsFormat(name=Memory doPackFST= true), random_string=PostingsFormat(name=Memory doPackFST= false), $full_path$=PostingsFormat(name=MockRandom), doctitle=PostingsFormat(name=Memory doPackFST= true), doctimesecnum=Lucene40(minBlockSize=90 maxBlockSize=264), $payloads$=PostingsFormat(name=MockRandom)}, sim=RandomSimilarityProvider(queryNorm=true,coord=true): {}, locale=iw_IL, timezone=Europe/San_Marino
+build	06-Aug-2012 19:45:55	[junit4:junit4]   2> NOTE: Windows 7 6.1 amd64/Sun Microsystems Inc. 1.6.0_33 (64-bit)/cpus=2,threads=1,free=65982616,total=180551680
+build	06-Aug-2012 19:45:55	[junit4:junit4]   2> NOTE: All tests run in this JVM: [StreamUtilsTest, TestHtmlParser, TestPerfTasksParse, PerfTaskTest, AltPackageTaskTest, TestPerfTasksLogic]
+build	06-Aug-2012 19:45:55	[junit4:junit4]   2> 
+build	06-Aug-2012 19:45:55	[junit4:junit4] Completed in 16.22s, 23 tests, 1 failure <<< FAILURES!
+

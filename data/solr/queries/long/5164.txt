@@ -1,0 +1,1 @@
+When you try to create a collection in SolrCloud, the instanceDir that gets created has an extra "solr" in it which messes up the pathing for all the <lib> directives in solrconfig.xml as they're all relative.

@@ -1,0 +1,1 @@
+Packed ints: move .getArray into Reader API

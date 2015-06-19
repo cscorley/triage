@@ -1,0 +1,1 @@
+Report -Dtests.method properly when Repeat annotation is used (strip augmentations)

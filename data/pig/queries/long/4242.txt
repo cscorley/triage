@@ -1,0 +1,22 @@
+XMLLoader finds the first matching position for the required tag, but applies this offset for all following lines as well until the closing tag. This causes content losses for indented xml formats with multiline contents such as the wikipedia xml dump:
+
+— example input —
+
+
+    <page>Look, 
+not a thing is missing.</page>
+
+
+
+— current ouput —
+
+
+<page>Look, a thing is missing.</page>
+
+
+
+— expected ouput —
+
+
+<page>Look, not a thing is missing.</page>
+

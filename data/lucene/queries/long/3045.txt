@@ -1,0 +1,3 @@
+QueryNodeImpl.containsTag(String key): tag keys are  supposed to be case insensitive, however QueryNodeImpl.containsTag method is considering the case when looking up for tag.
+
+*Bug found by Karsten Fissmer

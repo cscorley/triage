@@ -1,0 +1,1 @@
+Include Derby logo in the PDF and HTML Book manuals

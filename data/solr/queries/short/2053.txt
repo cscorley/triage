@@ -1,0 +1,1 @@
+Add support for specifying Spelling SuggestWord Comparator to Lucene spell checkers for SpellCheckComponent

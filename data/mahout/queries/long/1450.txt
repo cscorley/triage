@@ -1,0 +1,121 @@
+In canopy clustering, the strategy for parallelization seems to have some dead links. Need to clean them and replace with new links (if there are any). Here is the link:
+
+http://mahout.apache.org/users/clustering/canopy-clustering.html
+
+Here are some details of the dead links for kmeans clustering page:
+
+On the k-Means clustering - basics page, 
+
+first line of the Quickstart part of the documentation, the hyperlink "Here"
+
+http://mahout.apache.org/users/clustering/k-means-clustering%5Equickstart-kmeans.sh.html
+
+first sentence of Strategy for parallelization part of documentation, the hyperlink "Cluster computing and MapReduce", second second sentence the hyperlink "here" and last sentence the hyperlink "http://www2.chass.ncsu.edu/garson/PA765/cluster.htm" are dead.
+
+http://code.google.com/edu/content/submissions/mapreduce-minilecture/listing.html
+
+http://code.google.com/edu/content/submissions/mapreduce-minilecture/lec4-clustering.ppt
+
+http://www2.chass.ncsu.edu/garson/PA765/cluster.htm
+
+Under the page: http://mahout.apache.org/users/clustering/visualizing-sample-clusters.html
+
+in the second sentence of Pre-prep part of this page, the hyperlink "setup mahout" is dead.
+
+http://mahout.apache.org/users/clustering/users/basics/quickstart.html
+
+
+The existing documentation is too ambiguous and I recommend to make the following changes so the new users can use it as tutorial.
+
+The Quickstart should be replaced with the following:
+
+Get the data from:
+wget http://www.daviddlewis.com/resources/testcollections/reuters21578/reuters21578.tar.gz
+
+Place it within the example folder from mahout home director:
+mahout-0.7/examples/reuters
+mkdir reuters
+cd reuters
+mkdir reuters-out
+mv reuters21578.tar.gz reuters-out
+cd reuters-out
+tar -xzvf reuters21578.tar.gz
+cd ..
+
+Mahout specific Commands
+
+#1 run the org.apache.lucene.benchmark .utils.ExtractReuters class
+$
+{MAHOUT_HOME}
+/bin/mahout
+org.apache.lucene.benchmark.utils.ExtractReuters reuters-out
+reuters-text
+
+#2 copy the file to your HDFS
+bin/hadoop fs -copyFromLocal
+/home/bigdata/mahout-distribution-0.7/examples/reuters-text
+hdfs://localhost:54310/user/bigdata/
+
+#3 generate sequence-file
+mahout seqdirectory -i hdfs://localhost:54310/user/bigdata/reuters-text
+-o hdfs://localhost:54310/user/bigdata/reuters-seqfiles -c UTF-8 -chunk 5
+-chunk → specifying the number of data blocks
+UTF-8 → specifying the appropriate input format
+
+#4 Check the generated sequence-file
+mahout-0.7$ ./bin/mahout seqdumper -i
+/your-hdfs-path-to/reuters-seqfiles/chunk-0 | less
+
+#5 From sequence-file generate vector file
+mahout seq2sparse -i
+hdfs://localhost:54310/user/bigdata/reuters-seqfiles -o
+hdfs://localhost:54310/user/bigdata/reuters-vectors -ow
+-ow → overwrite
+
+#6 take a look at it should have 7 items by using this command
+bin/hadoop fs -ls
+reuters-vectors/df-count
+reuters-vectors/dictionary.file-0
+reuters-vectors/frequency.file-0
+reuters-vectors/tf-vectors
+reuters-vectors/tfidf-vectors
+reuters-vectors/tokenized-documents
+reuters-vectors/wordcount
+bin/hadoop fs -ls reuters-vectors
+
+#7 check the vector: reuters-vectors/tf-vectors/part-r-00000
+mahout-0.7$ hadoop fs -ls reuters-vectors/tf-vectors
+
+#8 Run canopy clustering to get optimal initial centroids for k-means
+mahout canopy -i
+hdfs://localhost:54310/user/bigdata/reuters-vectors/tf-vectors -o
+hdfs://localhost:54310/user/bigdata/reuters-canopy-centroids -dm
+org.apache.mahout.common.distance.CosineDistanceMeasure -t1 1500 -t2 2000
+
+-dm → specifying the distance measure to be used while clustering (here it is cosine distance measure)
+
+#9 Run k-means clustering algorithm
+mahout kmeans -i
+hdfs://localhost:54310/user/bigdata/reuters-vectors/tfidf-vectors -c
+hdfs://localhost:54310/user/bigdata/reuters-canopy-centroids -o
+hdfs://localhost:54310/user/bigdata/reuters-kmeans-clusters -cd 0.1 -ow
+-x 20 -k 10
+
+-i → input
+-o → output
+-c → initial centroids for k-means (not defining this parameter will
+trigger k-means to generate random initial centroids)
+-cd → convergence delta parameter
+-ow → overwrite
+-x → specifying number of k-means iterations
+-k → specifying number of clusters
+
+#10 Export k-means output using Cluster Dumper tool
+mahout clusterdump dt sequencefile -d hdfs://localhost:54310/user/bigdata/reuters-vectors/dictionary.file*
+i hdfs://localhost:54310/user/bigdata/reuters-kmeans-clusters/clusters-8
+final -o clusters.txt -b 15
+
+-dt → dictionary type
+-b → specifying length of each word
+
+Mahout 0.7 version did have some problems using the DisplayKmeans module which should ideally display the clusters in a 2d graph. But it gave me the same output for different input datasets. I was using dataset of recent news items that was crawled from various websites.

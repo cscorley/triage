@@ -1,0 +1,26 @@
+Several times now, Uwe's jenkins has encountered a "walk already seen ..." assertion failure from DistribCursorPagingTest that I've been unable to fathom, let alone reproduce (although sarowe was able to trigger a similar, non-reproducible seed, failure on his machine)
+
+Using this as a tracking issue to try and make sense of it.
+
+Summary of things noticed so far:
+
+	So far only seen on http://jenkins.thetaphi.de & sarowe's mac
+	So far seen on MacOSX and Linux
+	So far seen on branch 4x and trunk
+	So far seen on Java6, Java7, and Java8
+	fails occured in first block of randomized testing:
+	
+		we've indexed a small number of randomized docs
+		we're explicitly looping over every field and sorting in both directions
+	
+	
+	fails were sorting on one of the "*_dv_last" or "*_dv_first" fields (docValues=true, either sortMissingLast=true OR sortMissingFirst=true)
+	
+		for desc sorts, sort on same field asc has worked fine just before this (fields are in arbitrary order, but "asc" always tried before "desc")
+		sorting on some other random fields has sometimes been tried before this and worked
+	
+	
+
+
+
+(specifics of each failure seen in the wild recorded in comments)

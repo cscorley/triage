@@ -1,0 +1,17 @@
+CategoryDocumentBuilder is used to add facet fields to a document. Today the usage is not so straightforward, and I'd like to simplify it. First, to improve usage but also to make cutover to DocValues easier.
+
+This clsas does two operations: (1) adds drill-down terms and (2) creates the fulltree payload. Today, since it does it all on terms, there's a hairy TokenStream which does both these operations in one go. For simplicity, I'd like to break this into two steps:
+
+
+	Write a TokenStream which adds the drill-down terms
+	
+		For no associations, terms should be indexed w/ DOCS_ONLY (see LUCENE-4623).
+		With associations, drill-down terms have payload too.
+		So EnhancementsDocumentBuilder should be able to extend this stream.
+	
+	
+	Write some API which can be used to build the fulltree payload (i.e. populate a byte[]). Currently that byte[] will be written to a payload and later to DV.
+
+
+
+Hopefully, I'd like to have FacetsDocumentBuilder (maybe just FacetsBuilder?) which only handles things with no associations, and EnhancementsDocBuilder which extends whatever is needed to add associations. 

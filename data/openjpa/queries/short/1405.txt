@@ -1,0 +1,1 @@
+Add refresh method that accepts properties to entity manager

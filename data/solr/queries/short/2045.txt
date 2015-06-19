@@ -1,0 +1,1 @@
+DIH doesn't release jdbc connections in conjunction with DB2 

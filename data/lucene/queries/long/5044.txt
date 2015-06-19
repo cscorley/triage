@@ -1,0 +1,15 @@
+The problem appears in version 4.3.0 and in revision 1490286.  I
+attached a one-line patch that fixes it.
+
+In method "AllGroupHeadsCollectorTest.arrayContains", the loop over
+"actual" should break immediately after "found" is set to "true".  All
+the iterations after "found" is set to "true" do not perform any
+useful work, at best they just set "found" again to "true".
+
+Method "processWord" in class "CapitalizationFilter" has a similar
+loop (over "prefix"), and this loop breaks immediately after "match"
+is set to "false", just like in the proposed patch.  Other methods
+(e.g., "Step.apply", "JapaneseTokenizer.computePenalty",
+"CompressingStoredFieldsWriter.saveInts", "FieldQuery.checkOverlap")
+also have similar loops with similar breaks, just like in the proposed
+patch.

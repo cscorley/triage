@@ -1,0 +1,7 @@
+We have a large amount of classes in the source code, its nice that we have checkJavaDocs.py to ensure packages and classes have some human-level description.
+
+But I think we need it for methods etc too. (it is also part of our contribution/style guidelines: http://wiki.apache.org/lucene-java/HowToContribute#Making_Changes)
+
+The reason is that like classes and packages, once we can enforce this in the build, people will quickly add forgotten documentation soon after their commit when its fresh in their mind.
+
+Otherwise, its likely to never happen.

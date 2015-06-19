@@ -1,0 +1,1 @@
+Otherwise there is a race where a shard can complete recovery against the old leader and publish as active, while missing the sync stage with the leader - resulting in possible lost updates and shard inconsistency.

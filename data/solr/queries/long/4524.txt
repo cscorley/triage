@@ -1,0 +1,12 @@
+If some fields start with '#' and we try to put it in fl param, this field and all next fields are not in response document
+
+With query:
+
+  q=:&fl=score,#id,myOtherField
+
+Document response is like:
+
+   SolrDocument
+{score=3.809621}
+
+this bug is similar to SOLR-2719 and SOLR-4374

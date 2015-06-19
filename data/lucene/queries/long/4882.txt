@@ -1,0 +1,7 @@
+When I wanted to count root categories, I used to pass "new CategoryPath(new String[0])" to a CountFacetRequest.
+
+Since upgrading lucene from 4.1 to 4.2, that threw ArrayIndexOfOutBoundsException, so I passed CategoryPath.EMPTY to a CountFacetRequest instead, and this time I got NullPointerException.
+
+It all originates from FacetsAccumulator.java:185
+
+Does someone conspire to prevent others from counting root categories?

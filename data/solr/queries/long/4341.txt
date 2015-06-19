@@ -1,0 +1,5 @@
+The Plugin/Stats-Page contains long Values (f.e. for readerDir) like:
+
+org.apache.lucene.store.NRTCachingDirectory:NRTCachingDirectory(​org.apache.lucene.store.NIOFSDirectory@​/opt/solr/trunk/solr/example/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@​43730e; maxCacheMB=48.0 maxMergeSizeMB=4.0)
+
+until now, the string only gets splitted by the @-Character. The attached Patch changes this, now using @ as well as (

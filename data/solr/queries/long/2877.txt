@@ -1,0 +1,5 @@
+org.apache.solr.common.SolrInputDocument has only single default constructor.
+Since it's a LinkedHashMap, it's initialised with default initialCapacity=16 and loadFactor=0.75.
+That produces bad performance in situations when your document contains 10000+ different fields.
+
+org.apache.solr.common.SolrInputDocument class needs to have a constructor that allows to specify initialCapacity and loadFactor arguments.

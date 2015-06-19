@@ -1,0 +1,1 @@
+RegexReplaceProcessorFactory should support pattern capture group substitution in replacement string

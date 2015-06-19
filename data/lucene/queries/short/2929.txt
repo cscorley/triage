@@ -1,0 +1,1 @@
+all postings enums must explicitly declare what they need up-front.

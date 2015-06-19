@@ -1,0 +1,31 @@
+Implement TezCompiler that compiles physical plan into tez plan. To begin with, we can implement the initial version that works for basic queries as follows:
+
+	Load-Filter-Store
+
+
+a = load 'file:///tmp/input' as (x:int, y:int);
+b = filter a by x > 0;
+c = foreach b generate y;
+store c into 'file:///tmp/output';
+
+
+	Load-Filter-GroupBy-Store
+
+
+a = load 'file:///tmp/input' as (x:int, y:int);
+b = group a by x;
+c = foreach b generate group, a;
+store c into 'file:///tmp/output';
+
+
+	Load1-Load2-Join-Store
+
+
+a = load 'file:///tmp/input1' as (x:int, y:int);
+b = load 'file:///tmp/input2' as (x:int, z:int);
+c = join a by x, b by x;
+d = foreach c generate a::x as x, y, z;
+store d into 'file:///tmp/output';
+
+
+

@@ -1,0 +1,5 @@
+As noted by grant on the email list, asking TermVectorComponent for things like termVectors, positions, and offsets can't produce meaningful results unless the field in question has the corrisponding schema option set to true – but the behavior of TVC when they not true is confusing to users. 
+
+We should make TVC return a meaningful error if it's asked to return  a certain type of info for field that it can't deal with - something making it clear what properties of hte schema need to be changed to make it work...
+
+http://old.nabble.com/Re%3A-TermVectorComponent-%3A-Required---Optional-Parameters-p26181454.html

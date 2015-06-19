@@ -1,0 +1,1 @@
+UDFContext is not initialized in executors when running on Spark cluster

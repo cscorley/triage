@@ -1,0 +1,1 @@
+Fix some missing/assert codec checks to throw CorruptIndexException

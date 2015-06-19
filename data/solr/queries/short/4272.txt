@@ -1,0 +1,1 @@
+Documentation for CountFieldValuesUpdateProcessorFactory is missing solr.RunUpdateProcessorFactory in the example

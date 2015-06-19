@@ -1,0 +1,3 @@
+testDocListConversion() is not testing what it's suppossed to test. Because added test documents are not committed.
+
+http://search-lucene.com/m/uwh9l2SHH4e

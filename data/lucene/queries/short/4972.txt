@@ -1,0 +1,1 @@
+DirectoryTaxonomyWriter makes a commit even if no changes were made

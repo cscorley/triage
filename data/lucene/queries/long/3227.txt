@@ -1,0 +1,1 @@
+I missed adding support for the new Rewriteable SortField type to toString().

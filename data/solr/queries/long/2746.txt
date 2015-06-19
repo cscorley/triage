@@ -1,0 +1,9 @@
+UIMA Addons 2.3.1 has been released so the -SNAPSHOT dependencies can be migrated to it.
+The following contrib/uima libs need to be switched:
+
+	AlchemyAPIAnnotator
+	OpenCalaisAnnotator
+	WhitespaceTokenizer
+	HmmTagger
+see here for an example: http://search.maven.org/#browse%7C-636683439
+

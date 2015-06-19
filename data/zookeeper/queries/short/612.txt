@@ -1,0 +1,1 @@
+Make Zookeeper C client can be compiled by gcc of early version

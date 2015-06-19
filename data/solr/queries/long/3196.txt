@@ -1,0 +1,1 @@
+For timeAllowed=true requests, the response contains a partialResults header that indicates when a search was terminated early due to running out of time.  This header is being discarded by the collator.  Patch to follow.  

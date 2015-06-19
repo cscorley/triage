@@ -1,0 +1,3 @@
+The tests.luceneMatchVersion constants in each Solr contrib's POM haven't been kept up-to-date, and in any case don't need to be maintained per-Solr-contrib - they should all use the same value.
+
+Setting tests.luceneMatchVersion to LUCENE_CURRENT for all Solr testing under Maven fixes the problem and makes post-release maintenance a non-issue.

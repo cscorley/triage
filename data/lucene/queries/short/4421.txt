@@ -1,0 +1,1 @@
+TermsFilter should use TermsEnum.seekExact not seekCeil

@@ -1,0 +1,1 @@
+Change SolrException cstrs that take Throwable to default to alreadyLogged=false

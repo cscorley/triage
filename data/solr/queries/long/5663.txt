@@ -1,0 +1,3 @@
+mavroprovato mentioned on IRC that the example-DIH configuration wouldn't import values for the cat field.
+
+looking at the configuration .. the query and the mapping are use the name in different cases (lower vs. upper) which does not work.

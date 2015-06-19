@@ -1,0 +1,6 @@
+As follow up on SOLR-3982, the Auto-Refresh Option could be extended:
+
+The current workflow could be describe as this:
+If you click on "Execute", the full- or delta-import is started. afterwards a status update is triggered automatically. if the status is 'busy' and you check the auto-refresh option, it will schedule another status up in 2 seconds.
+
+Having said that, what isn't catched at the moment is a "External Import-Trigger". The UI does not detected that, one has to trigger the Status Update at least once manually to join that "status-circle" which is described in the workflow.

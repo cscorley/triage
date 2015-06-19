@@ -1,0 +1,37 @@
+Solr (specifically SolrDispatchFilter.doFilter() but there might be other places) handle generic java.lang.Throwable errors but that "hides" OutOfMemoryError scenarios.
+
+IndexWriter does this too but that has a specific exclusion for OOM scenarios and handles them explicitly (stops committing and just logs to the transaction log).
+
+
+
+Example Stack trace:
+2013-06-26 19:31:33,801 [qtp632640515-62] ERROR
+solr.servlet.SolrDispatchFilter Q:22 -
+null:java.lang.RuntimeException: java.lang.OutOfMemoryError: Java heap
+space
+at org.apache.solr.servlet.SolrDispatchFilter.sendError(SolrDispatchFilter.java:670)
+at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:380)
+at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:155)
+at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1423)
+at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:450)
+at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:138)
+at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:564)
+at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:213)
+at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1083)
+at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:379)
+at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:175)
+at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1017)
+at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:136)
+at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:258)
+at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:109)
+at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+at org.eclipse.jetty.server.Server.handle(Server.java:445)
+at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:260)
+at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:225)
+at org.eclipse.jetty.io.AbstractConnection$ReadCallback.run(AbstractConnection.java:358)
+at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:596)
+at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:527)
+at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+

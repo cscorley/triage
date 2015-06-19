@@ -1,0 +1,5 @@
+This patch addresses some bad links in the admin gui when using the replication screen (perhaps only in multicore??).
+
+http://img.skitch.com/20090207-n98x9d53jycghg5icshd9xubn7.jpg
+
+http://img.skitch.com/20090207-k3bxesdrwixc4sa2iaimax7hks.jpg

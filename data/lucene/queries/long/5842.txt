@@ -1,0 +1,13 @@
+For small files (e.g. where we read in all the bytes anyway), we currently validate the checksum on reader init. 
+
+But for larger files like .doc/.frq/.pos/.dvd/.fdt/.tvd we currently do nothing at all on init, as it would be too expensive.
+
+We should at least do this:
+
+
+// NOTE: data file is too costly to verify checksum against all the bytes on 
+// open, but for now we at least verify proper structure of the checksum 
+// footer: which looks for FOOTER_MAGIC + algorithmID. This is cheap 
+// and can detect some forms of corruption such as file truncation.
+CodecUtil.retrieveChecksum(data);
+

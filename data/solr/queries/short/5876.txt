@@ -1,0 +1,1 @@
+CollectionAdminRequest#createCollection(String name, String shards,  Integer repl, Integer maxShards,  String conf, String routerField, SolrServer server) appears to call itself.

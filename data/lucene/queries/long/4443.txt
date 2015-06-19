@@ -1,0 +1,5 @@
+Seems to me lastStartOffset is unnecessary, when we skip to a document, it implicitly is 0: see BlockPostingsWriter.startDoc.
+
+(Unless I'm missing something, all tests pass with "Block" if i remove it)
+
+Separately we should really think about lastPayloadByteUpto, is this worth it? instead when we actually skip, we could sum the payloadLengthBuffer from 0..curPosBufferUpto as we are going to decode that block anyway?

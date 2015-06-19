@@ -1,0 +1,1 @@
+add help/usage to the c shell cli.c

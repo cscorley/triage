@@ -1,0 +1,1 @@
+make LBHttpSolrServer zombie checks non-distrib and non-scoring

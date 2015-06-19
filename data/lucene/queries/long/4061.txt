@@ -1,0 +1,5 @@
+DirTaxoWriter synchronizes in too many places. For instance addCategory() is fully synchronized, while only a small part of it needs to be.
+
+Additionally, getCacheMemoryUsage looks bogus - it depends on the type of the TaxoWriterCache. No code uses it, so I'd like to remove it – whoever is interested can query the specific cache impl it has. Currently, only Cl2oTaxoWriterCache supports it.
+
+If the changes will be simple, I'll port them to 3.6.1 as well.

@@ -1,0 +1,1 @@
+DirectSpellChecker throws NPE if field doesn't exist

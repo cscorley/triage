@@ -1,0 +1,1 @@
+The OpenExchangeRatesOrgProvider never reloads the rates after the initial load, no matter what refreshInterval is set.

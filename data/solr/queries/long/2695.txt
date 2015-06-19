@@ -1,0 +1,20 @@
+ant test -Dtestcase=TestThreaded -Dtestmethod=testCompositePk_FullImport -Dtests.seed=-1937805576288697697:-9126472343809792878 sometimes hits this:
+
+
+
+    [junit] 3-aug-2011 15:11:57 org.apache.solr.handler.dataimport.DocBuilder doFullDump
+    [junit] SEVERE: error in import
+    [junit] java.lang.ArrayIndexOutOfBoundsException: 1
+    [junit] 	at java.util.ArrayList.add(ArrayList.java:352)
+    [junit] 	at org.apache.solr.handler.dataimport.DocBuilder$EntityRunner.runAThread(DocBuilder.java:523)
+    [junit] 	at org.apache.solr.handler.dataimport.DocBuilder$EntityRunner.access$000(DocBuilder.java:396)
+    [junit] 	at org.apache.solr.handler.dataimport.DocBuilder$EntityRunner$1.run(DocBuilder.java:449)
+    [junit] 	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+    [junit] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+    [junit] 	at java.lang.Thread.run(Thread.java:619)
+    [junit] 3-aug-2011 15:11:57 org.apache.solr.SolrTestCaseJ4 assertQ
+
+
+
+
+I think it's a thread safety bug in the debug code (an ArrayList is add'd w/o sync) only if reqParams.debug.

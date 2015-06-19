@@ -1,0 +1,1 @@
+When multiquery merge splittee into splitter, it does not set inputKey of FRJoin right. Note it only affects FRJoin, for POPackage/POValueInputTez/POIdentityInOutTez, TezDagBuilder will reset the inputKey and make it right. This cause e2e failure such as MultiQuery_14.

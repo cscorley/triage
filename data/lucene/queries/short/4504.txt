@@ -1,0 +1,1 @@
+Empty results from IndexSearcher.searchAfter() when sorting by FunctionValues

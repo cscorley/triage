@@ -1,0 +1,1 @@
+optimize numDocs(Query,DocSet) when filterCache is null

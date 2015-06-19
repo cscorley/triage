@@ -1,0 +1,1 @@
+From the first vertex (left table load) to the intermediate vertex that does the partitioning of the keys based on the SkewedPartitionerTez, use ONE_TO_ONE Tez edge and unsorted output and input instead of using a shuffle edge. Also replace the POPackage->POForEach->POLocalRearrange in intermediate vertex with POIdentityInOutTez.

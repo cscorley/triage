@@ -1,0 +1,1 @@
+Currently once the pom.xml's are in place, its hard to get them out.  Having them can be a little trappy when you're trying to debug the bug.  We should facilitate their removal during clean.

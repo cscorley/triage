@@ -1,0 +1,9 @@
+If you try to use the strdist function on a field which is missing in some docs, you'll get a NullPointerException
+
+A workarround in some contexts can be to wrap the strdist function in an "if" that checks exists(fieldname) and returns some suitable default if it's not found.
+
+
+
+THIS:           if(exists(field_name_s),strdist("literal",field_name_s,edit),0)
+INSTEAD OF:     strdist("literal",field_name_s,edit)
+

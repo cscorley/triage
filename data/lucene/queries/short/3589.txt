@@ -1,0 +1,1 @@
+BytesRef copy short missed the length setting

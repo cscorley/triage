@@ -1,0 +1,1 @@
+ReversibleLoadStoreFunc interface should be removed to enable different load and store implementation classes to be used in a reversible manner

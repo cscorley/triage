@@ -1,0 +1,3 @@
+Tez provides way to cache objects with Vertex scope. We can use it to 
+  1) caching the replication join map constructed instead of reading from multiple broadcast inputs from one or more vertex and reconstructing it
+  2) Cache the map in WeightedRangePartitioner. Thought the quantilefile is only one brodcast input from one vertex still it would be faster to use the local cache.

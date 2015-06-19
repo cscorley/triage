@@ -1,0 +1,3 @@
+It seems to me that there are two bugs in the ShardHandlerFactoryCreation that cancel each other and it seems to be working with the old style solr.xml, but not with the "new style". ConfigSolrOldXml seems to be expecting the shardHandlerFactory with the xpath:
+solr/shardHandlerFactory/@class
+Instead of solr/cores/shardHandlerFactory/@class as it used to be. This is never caught because in the CoreContainer the ShardHandlerFactory is initialized using "configSolr.getConfig().getNode("solr/cores/shardHandlerFactory", false);" instead of "configSolr.get(CfgProp.SOLR_SHARDHANDLERFACTORY_CLASS, null);" or something like that. However, if you use the "new style" xml, the CoreContainer will still try to initialize the factory like that, and won't find the  SHF. 

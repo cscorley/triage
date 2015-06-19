@@ -1,0 +1,33 @@
+When building zookeeper in Visual Studio in debug mode, the client can connect to the server without error. When building in release mode, I get a continuous error message:
+
+
+2014-06-02 11:25:20,070:7144(0xc84):ZOO_INFO@zookeeper_init_internal@1008: Initiating client connection, host=192.168.39.43:5181 sessionTimeout=30000 watcher=10049C90 sessionId=0 sessionPasswd=<null> context=001FC0F0 flags=0
+2014-06-02 11:25:20,072:7144(0xc84):ZOO_DEBUG@start_threads@221: starting threads...
+2014-06-02 11:25:20,072:7144(0x1ea0):ZOO_DEBUG@do_completion@460: started completion thread
+2014-06-02 11:25:20,072:7144(0x1e08):ZOO_DEBUG@do_io@403: started IO thread
+2014-06-02 11:25:20,072:7144(0x1e08):ZOO_DEBUG@get_next_server_in_reconfig@1148: [OLD] count=0 capacity=0 next=0 hasnext=0
+2014-06-02 11:25:20,072:7144(0x1e08):ZOO_DEBUG@get_next_server_in_reconfig@1151: [NEW] count=1 capacity=16 next=0 hasnext=1
+2014-06-02 11:25:20,072:7144(0x1e08):ZOO_DEBUG@get_next_server_in_reconfig@1160: Using next from NEW=192.168.39.43:5181
+2014-06-02 11:25:20,072:7144(0x1e08):ZOO_DEBUG@zookeeper_interest@1992: [zk] connect()
+
+2014-06-02 11:25:20,158:7144(0x1e08):ZOO_ERROR@handle_socket_error_msg@1847: Socket [192.168.39.43:5181] zk retcode=-4, errno=10035(Unknown error): failed to send a handshake packet: Unknown error
+2014-06-02 11:25:20,158:7144(0x1e08):ZOO_DEBUG@handle_error@1595: Previous connection=[192.168.39.43:5181] delay=0
+2014-06-02 11:25:20,158:7144(0x1e08):ZOO_DEBUG@get_next_server_in_reconfig@1148: [OLD] count=0 capacity=0 next=0 hasnext=0
+2014-06-02 11:25:20,158:7144(0x1e08):ZOO_DEBUG@get_next_server_in_reconfig@1151: [NEW] count=1 capacity=16 next=0 hasnext=1
+2014-06-02 11:25:20,158:7144(0x1e08):ZOO_DEBUG@get_next_server_in_reconfig@1160: Using next from NEW=192.168.39.43:5181
+2014-06-02 11:25:20,158:7144(0x1e08):ZOO_DEBUG@zookeeper_interest@1992: [zk] connect()
+
+2014-06-02 11:25:20,159:7144(0x1e08):ZOO_ERROR@handle_socket_error_msg@1847: Socket [192.168.39.43:5181] zk retcode=-4, errno=10035(Unknown error): failed to send a handshake packet: Unknown error
+2014-06-02 11:25:20,159:7144(0x1e08):ZOO_DEBUG@handle_error@1595: Previous connection=[192.168.39.43:5181] delay=0
+2014-06-02 11:25:20,159:7144(0x1e08):ZOO_DEBUG@get_next_server_in_reconfig@1148: [OLD] count=0 capacity=0 next=0 hasnext=0
+2014-06-02 11:25:20,159:7144(0x1e08):ZOO_DEBUG@get_next_server_in_reconfig@1151: [NEW] count=1 capacity=16 next=0 hasnext=1
+2014-06-02 11:25:20,159:7144(0x1e08):ZOO_DEBUG@get_next_server_in_reconfig@1160: Using next from NEW=192.168.39.43:5181
+2014-06-02 11:25:20,159:7144(0x1e08):ZOO_DEBUG@zookeeper_interest@1992: [zk] connect()
+
+2014-06-02 11:25:20,159:7144(0x1e08):ZOO_ERROR@handle_socket_error_msg@1847: Socket [192.168.39.43:5181] zk retcode=-4, errno=10035(Unknown error): failed to send a handshake packet: Unknown error
+2014-06-02 11:25:20,159:7144(0x1e08):ZOO_DEBUG@handle_error@1595: Previous connection=[192.168.39.43:5181] delay=0
+2014-06-02 11:25:20,159:7144(0x1e08):ZOO_DEBUG@get_next_server_in_reconfig@1148: [OLD] count=0 capacity=0 next=0 hasnext=0
+2014-06-02 11:25:20,159:7144(0x1e08):ZOO_DEBUG@get_next_server_in_reconfig@1151: [NEW] count=1 capacity=16 next=0 hasnext=1
+2014-06-02 11:25:20,159:7144(0x1e08):ZOO_DEBUG@get_next_server_in_reconfig@1160: Using next from NEW=192.168.39.43:5181
+2014-06-02 11:25:20,159:7144(0x1e08):ZOO_DEBUG@zookeeper_interest@1992: [zk] connect()
+

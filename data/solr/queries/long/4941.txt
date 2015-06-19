@@ -1,0 +1,1 @@
+Spin off of SOLR-4934.  We should updated tests to ensure that the various ways of specifying useCompoundFile as well as the expected default are working properly after LUCENE-5038

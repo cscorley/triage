@@ -1,0 +1,1 @@
+Call processEvents before IndexWriter is closed

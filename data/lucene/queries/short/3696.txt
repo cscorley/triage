@@ -1,0 +1,1 @@
+building a kuromoji dictionary is very slow and eventually fails if you use java 5

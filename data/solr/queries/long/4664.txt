@@ -1,0 +1,1 @@
+Currently they just use a watcher, so if you create the zkstatereader after updating aliases, it won't see them, unless another update happens. This might be done most often with CloudSolrServer.

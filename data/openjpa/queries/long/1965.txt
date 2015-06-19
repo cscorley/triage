@@ -1,0 +1,42 @@
+This is a problem that was reported by Marc Logemann on the users mailing list. Details from the email exchange:
+
+....
+So i see a lot of metamodel classes got generated but during this process i got this:
+
+   [javac] An annotation processor threw an uncaught exception.
+   [javac] Consult the following stack trace for details.
+   [javac] java.lang.ClassCastException: com.sun.tools.javac.code.Symbol$PackageSymbol cannot be cast to javax.lang.model.element.TypeElement
+   [javac]     at org.apache.openjpa.persistence.meta.AnnotationProcessor6.process(AnnotationProcessor6.java:207)
+   [javac]     at com.sun.tools.javac.processing.JavacProcessingEnvironment.callProcessor(JavacProcessingEnvironment.java:625)
+   [javac]     at com.sun.tools.javac.processing.JavacProcessingEnvironment.discoverAndRunProcs(JavacProcessingEnvironment.java:554)
+   [javac]     at com.sun.tools.javac.processing.JavacProcessingEnvironment.doProcessing(JavacProcessingEnvironment.java:699)
+   [javac]     at com.sun.tools.javac.main.JavaCompiler.processAnnotations(JavaCompiler.java:981)
+   [javac]     at com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:727)
+   [javac]     at com.sun.tools.javac.main.Main.compile(Main.java:353)
+   [javac]     at com.sun.tools.javac.main.Main.compile(Main.java:279)
+   [javac]     at com.sun.tools.javac.main.Main.compile(Main.java:270)
+   [javac]     at com.sun.tools.javac.Main.compile(Main.java:69)
+   [javac]     at com.sun.tools.javac.Main.main(Main.java:54)
+....
+
+
+Details on how to recreate :
+....
+Hi,
+
+this is nearly impossible because its not an Entity which makes the problem here. Its a package. I have no idea how to unit test that. Perhaps you can try creating
+a simple package with JAXB generated classes in it and try to reproduce:
+
+1) create a very simple XSD file
+2) run the JAXB compiler via ANT (then you should have some classes in myweirdpackage)
+
+   <target name="JAXBCompiling" description="Compile main source tree java files">
+       <taskdef name="xjc" classname="com.sun.tools.xjc.XJC2Task" classpathref="toolingclasspath"/>
+
+       <xjc schema="my.xsd" destdir="$
+{src.dir}
+"  package="domain.myweirdpackage"/>
+ </target>
+
+3) put at least one Entity in domain package (parent of myweirdpackage)
+4) run the MetaModel compiling step

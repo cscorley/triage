@@ -1,0 +1,5 @@
+We should bring back the old aliasing feature, but for SolrCloud and with the ability to alias one collection to many.
+
+The old alias feature was of more limited use and had some problems, so we dropped it, but I think we can do this in a more useful way with SolrCloud, and at a level were it's not invasive to the CoreContainer.
+
+Initially, the search side will allowing mapping a single alias to multiple collections, but the index side will only support mapping a single alias to a single collection.

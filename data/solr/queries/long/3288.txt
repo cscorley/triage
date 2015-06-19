@@ -1,0 +1,10 @@
+Prior to the 4.0 release, audit the tutorial & example dirs and verify...
+
+
+	command line output looks reasonable
+	analysis examples/discussion matches field types used
+	links to admin UI are correct for new UI.
+	example/README.txt makes sense
+	example/solr/README.txt makes sense (refer to multicore's, collection1, solr.xml etc...)
+	example/solr/collection1/README.txt should probably exist and have good info on what a typical instanceDir looks like.
+

@@ -1,0 +1,1 @@
+The UpdateShardHandler configures it's own PoolingClientConnectionManager which doesn't use the system default scheme registry factory which interrogates the javax.net.ssl.* system properties to wire up the https scheme into HttpClient. To ease configuration the system default registry should be used.

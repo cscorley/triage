@@ -1,0 +1,199 @@
+.The reproduction attached to DERBY-5234, DbCompressErrorTester  shows the error below.  1335570 and 1335677 were committed to trunk and ported to 10.8 branch at subversion revision 1337258 and fix this issue. Unfortunately it did not fix the issue the reporting user was experiencing, so DERBY-5234 was closed CannotReproduce. Creating this issue to make sure the fixed issue is tracked separately as fixed.
+
+java DbCompressErrorTester
+Loading database driver
+iterations=333300
+
+inserted: 33330/333300
+inserted: 66660/333300
+inserted: 99990/333300
+inserted: 133320/333300
+inserted: 166650/333300
+inserted: 199980/333300
+inserted: 233310/333300
+inserted: 266640/333300
+inserted: 299970/333300
+Delete  - done
+333300 rows deleted
+Compress inplace  - done
+inserted: 33330/333300
+inserted: 66660/333300
+inserted: 99990/333300
+inserted: 133320/333300
+inserted: 166650/333300
+inserted: 199980/333300
+inserted: 233310/333300
+inserted: 266640/333300
+inserted: 299970/333300
+Inserted data:  326943
+Deleted data:  0
+java.sql.SQLException: Page Page(10219,Container(0, 1136)) could not be read from disk.
+        at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:95)
+        at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
+        at org.apache.derby.impl.jdbc.Util.seeNextException(Util.java:278)
+        at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(TransactionResourceImpl.java:403)
+        at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(TransactionResourceImpl.java:348)
+        at org.apache.derby.impl.jdbc.EmbedConnection.handleException(EmbedConnection.java:2284)
+        at org.apache.derby.impl.jdbc.ConnectionChild.handleException(ConnectionChild.java:82)
+        at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1333)
+        at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeStatement(EmbedPreparedStatement.java:1692)
+        at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeUpdate(EmbedPreparedStatement.java:309)
+        at DbCompressErrorTester.insertData(DbCompressErrorTester.java:162)
+        at DbCompressErrorTester.test(DbCompressErrorTester.java:116)
+        at DbCompressErrorTester.main(DbCompressErrorTester.java:38)
+Caused by: java.sql.SQLException: Page Page(10219,Container(0, 1136)) could not be read from disk.
+        at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:45)
+        at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:11
+9)
+        at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:70)
+        ... 12 more
+Caused by: java.sql.SQLException: Java exception: 'Reached end of file while attempting to read a whole page.: java.io.E
+OFException'.
+        at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:45)
+        at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:11
+9)
+        at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:70)
+        at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
+        at org.apache.derby.impl.jdbc.Util.javaException(Util.java:299)
+        at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(TransactionResourceImpl.java:408)
+        ... 10 more
+Caused by: java.io.EOFException: Reached end of file while attempting to read a whole page.
+        at org.apache.derby.impl.store.raw.data.RAFContainer4.readFull(RAFContainer4.java:484)
+        at org.apache.derby.impl.store.raw.data.RAFContainer4.readPage0(RAFContainer4.java:244)
+        at org.apache.derby.impl.store.raw.data.RAFContainer4.readPage(RAFContainer4.java:214)
+        at org.apache.derby.impl.store.raw.data.CachedPage.readPage(CachedPage.java:671)
+        at org.apache.derby.impl.store.raw.data.CachedPage.setIdentity(CachedPage.java:190)
+        at org.apache.derby.impl.services.cache.ConcurrentCache.find(ConcurrentCache.java:295)
+        at org.apache.derby.impl.store.raw.data.FileContainer.initPage(FileContainer.java:2342)
+        at org.apache.derby.impl.store.raw.data.FileContainer.newPage(FileContainer.java:1825)
+        at org.apache.derby.impl.store.raw.data.BaseContainer.addPage(BaseContainer.java:314)
+        at org.apache.derby.impl.store.raw.data.BaseContainerHandle.addPage(BaseContainerHandle.java:183)
+        at org.apache.derby.impl.store.access.heap.HeapController.doInsert(HeapController.java:302)
+        at org.apache.derby.impl.store.access.heap.HeapController.insert(HeapController.java:575)
+        at org.apache.derby.impl.sql.execute.RowChangerImpl.insertRow(RowChangerImpl.java:457)
+        at org.apache.derby.impl.sql.execute.InsertResultSet.normalInsertCore(InsertResultSet.java:1028)
+        at org.apache.derby.impl.sql.execute.InsertResultSet.open(InsertResultSet.java:505)
+        at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:436)
+        at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:317)
+        at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1241)
+        ... 5 more
+~/repro/derby-5234 $
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+the only way a replica can removed is by unloading the core .There is no way to remove a replica that is down . So, the clusterstate will have unreferenced nodes if a few nodes go down over time
+
+We need a cluster admin command to clean that up
+
+e.g: 
+/admin/collections?action=DELETEREPLICA&collection=coll1&shard=shard1&replica=core_node3
+
+
+The system would first see if the replica is active. If yes , a core UNLOAD command is fired , which would take care of deleting the replica from the clusterstate as well
+
+if the state is inactive, then the core or node may be down , in that case the entry is removed from cluster state  

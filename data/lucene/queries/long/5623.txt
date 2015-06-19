@@ -1,0 +1,20 @@
+
+ant test  -Dtestcase=TestEarlyTermination -Dtests.method=testEarlyTermination -Dtests.seed=23B2828CD7A1C1BC -Dtests.slow=true -Dtests.locale=en_AU -Dtests.timezone=Europe/Tirane -Dtests.file.encoding=UTF-8
+
+
+
+results in this:
+
+
+   [junit4]    > Throwable #1: java.lang.AssertionError: expected:<95> but was:<65>
+   [junit4]    > 	at __randomizedtesting.SeedInfo.seed([23B2828CD7A1C1BC:EC25C3D3EFCD51BF]:0)
+   [junit4]    > 	at org.apache.lucene.index.sorter.TestEarlyTermination.assertTopDocsEquals(TestEarlyTermination.java:183)
+   [junit4]    > 	at org.apache.lucene.index.sorter.TestEarlyTermination.testEarlyTermination(TestEarlyTermination.java:128)
+   [junit4]    > 	at java.lang.Thread.run(Thread.java:724)
+   [junit4]   2> NOTE: test params are: codec=Lucene46: {s=Pulsing41(freqCutoff=16 minBlockSize=9 maxBlockSize=65)}, docValues:{ndv2=DocValuesFormat(name=Asserting), ndv1=DocValuesFormat(name=Disk)}, sim=DefaultSimilarity, locale=en_AU, timezone=Europe/Tirane
+   [junit4]   2> NOTE: Linux 3.5.0-47-generic amd64/Oracle Corporation 1.7.0_25 (64-bit)/cpus=8,threads=1,free=206930744,total=247463936
+   [junit4]   2> NOTE: All tests run in this JVM: [TestEarlyTermination]
+
+
+
+I haven't looked into it.

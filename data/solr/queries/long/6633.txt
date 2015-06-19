@@ -1,0 +1,24 @@
+it is a common requirement to store the entire JSON as a field in Solr. 
+
+we can have a extra param srcField=field_name to specify the field name
+
+the /update/json/docs is only useful when all the json fields are predefined or in schemaless mode.
+
+The better option would be to store the content in a store only field and index the data in another field in other modes
+
+the relevant section in solrconfig.xml
+
+
+ <initParams path="/update/json/docs">
+    <lst name="defaults">
+      <!--this ensures that the entire json doc will be stored verbatim into one field-->
+      <str name="srcField">_src</str>
+      <!--This means a the uniqueKeyField will be extracted from the fields and
+       all fields go into the 'df' field. In this config df is already configured to be 'text'
+        -->
+      <str name="mapUniqueKeyOnly">true</str>
+       <str name="df">text</str>
+    </lst>
+
+  </initParams>
+

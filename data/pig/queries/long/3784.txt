@@ -1,0 +1,1 @@
+We need to port all the mini cluster tests to Tez so that they can run either in MR or Tez mode depending on the exectype specified by the user in the command line.

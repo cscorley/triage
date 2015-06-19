@@ -1,0 +1,1 @@
+Sorting by function fails when using result grouping

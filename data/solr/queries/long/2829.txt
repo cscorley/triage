@@ -1,0 +1,85 @@
+I don't know how generic this is, whether it's just a
+problem with fqs when combined with spatial or whether
+it has wider applicability , but here's what I know so far.
+
+Marc Tinnemeyer in a post titled:
+
+"Regarding geodist and multiple location fields"
+outlines this. I checked this on 3.4 and trunk and it's
+weird in both cases.
+
+HOLD THE PRESSES:
+After looking at this a bit more, it looks like a caching
+issue, NOT a geodist issue. When I bounce Solr
+between changing the sfield from "home" to "work",
+it seems to work as expected.
+
+Hmmmm, very strange. If I comment out BOTH
+the filterCache and queryResultCache then it works
+fine. Switching from "home" to "work" in the query
+finds/fails to find the document.
+But commenting out only one of those caches
+doesn't fix the problem.
+
+on trunk I used this query; just flipping "home" to "work" and back:
+http://localhost:8983/solr/select?q=id:1&fq=
+{!geofilt sfield=home
+pt=52.67,7.30 d=5}
+
+
+The info below is what I used to test.
+
+From Marc's posts:
+
+<field name="home" type="location" indexed="true" stored="true"/>
+<field name="work" type="location" indexed="true" stored="true"/>
+<field name="elsewhere" type="location" indexed="true" stored="true"/>
+
+At first I thought so too. Here is a simple document.
+
+<add>
+      <doc>
+              <field name="id">1</field>
+              <field name="name">first</field>
+              <field name="work">48.60,11.61</field>
+              <field name="home">52.67,7.30</field>
+      </doc>
+</add>
+
+and here is the result that shouldn't be:
+
+<response>
+...
+<str name="q">:</str>
+<str name="fq">
+{!geofilt sfield=work pt=52.67,7.30 d=5}
+</str>
+...
+</lst>
+</lst>
+<result name="response" numFound="1" start="0">
+<doc>
+<str name="home">52.67,7.30</str>
+<str name="id">1</str>
+<str name="name">first</str>
+<str name="work">48.60,11.61</str>
+</doc>
+</result>
+</response>
+
+***Yonik's comment*****
+
+It's going to be a bug in an equals() implementation somewhere in the query.
+The top level equals will be SpatialDistanceQuery.equals() (from
+LatLonField.java)
+
+On trunk, I already see a bug introduced when the new lucene field
+cache stuff was done.
+DoubleValueSource now just inherits it's equals method from
+NumericFieldCacheSource... and that equals() method only tests if the
+CachedArrayCreator.getClass() is the same!  That's definitely wrong.
+
+I don't know why 3x would also have this behavior (unless there's more
+than one bug!)
+Anyway, first step is to modify the spatial tests to catch the bug...
+from there it should be pretty easy to debug.

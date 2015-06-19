@@ -1,0 +1,1 @@
+NIOFSDirectory, SimpleFSDirectory (others?) don't properly handle valid file and FileChannel read conditions

@@ -1,0 +1,5 @@
+Today its only usable really by stored fields/term vectors, has hardcoded logic in SegmentMerger specific to certain impls, etc.
+
+It would be better if this was generalized to terms/postings/norms/docvalues as well.
+
+Bulk merge is boring, the real idea is to allow codecs to do more: e.g. with this patch they could do streaming checksum validation, or prevent the loading of "latent" norms, or other things we cannot do today.

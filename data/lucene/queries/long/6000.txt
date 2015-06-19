@@ -1,0 +1,1 @@
+This interface existed for backcompat, so that each impl had at least some common minimal interface, and could be used by StandardTokenizer.  However, in LUCENE-5999 backcompat for standard tokenizer was implemented using separate named classes.  We should remove this interface, as it no longer serves a purpose.

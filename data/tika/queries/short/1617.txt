@@ -1,0 +1,1 @@
+Change OSGi Detection test to use OSGi Service

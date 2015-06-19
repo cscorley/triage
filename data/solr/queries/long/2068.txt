@@ -1,0 +1,1 @@
+Create specialized implementations for collapsing by an indexed string field.

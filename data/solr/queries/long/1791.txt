@@ -1,0 +1,2 @@
+If you start the multicore example and go to the admin page, the core names will be messed up (objects instead of names).
+This worked in 1.4

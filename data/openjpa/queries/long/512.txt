@@ -1,0 +1,3 @@
+Per Rahul Thakur's email to the dev mailing list the build fails if the maven.test.skip property is set to true. None of the source files in src/test/java are compiled when this flag is set, causing the PCEnhancer to fail, and the subsequent build to fail. 
+
+Running mvn -Dtest=false clean test will still compile the testcases, but won't run any of the tests. This property can be used as a workaround for the problem. 

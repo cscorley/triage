@@ -1,0 +1,31 @@
+As reported by a user, if you use the PingRequestHandler, and the corrisponding helthcheck file doesn't exist (and expected situation when a server is out of rotation) Solr is logging a SEVERE error...
+
+
+SEVERE: org.apache.solr.common.SolrException: Service disabled
+	at org.apache.solr.handler.PingRequestHandler.handleRequestBody(PingRequestHandler.java:48)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:131)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:1324)
+	at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:337)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:240)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1157)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:388)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:418)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:923)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:547)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:228)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+
+
+
+This is in spite of hte fact that PingRequestHandler explicitly sets the "alreadyLogged" boolean to true in the SolrException constructor.
+

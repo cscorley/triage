@@ -1,0 +1,18 @@
+Linux@hghoulaslx406:/> $ZOOKEEPER_HOME/bin/zkCli.sh create /test "test"
+Created /test1
+Linux@hghoulaslx406:/> echo $?
+0
+Linux@hghoulaslx406:/> $ZOOKEEPER_HOME/bin/zkCli.sh create /test "test"
+Node already exists: /test1
+Linux@hghoulaslx406:/> echo $?
+0
+Linux@hghoulaslx406:/> $ZOOKEEPER_HOME/bin/zkCli.sh delete /test
+Linux@hghoulaslx406:/> echo $?
+0
+Linux@hghoulaslx406:/> $ZOOKEEPER_HOME/bin/zkCli.sh delete /test
+Node does not exist: /test1
+Linux@hghoulaslx406:/> echo $?
+0
+
+
+Here for failed command it should return exit code 1

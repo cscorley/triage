@@ -1,0 +1,3 @@
+I don't like wrapping everything in the InitializationException, or that inform() gets a resourceloader (whose methods throw IOExceptions), but every analysis factory that implements this then needs to wrap the IOExceptions as something else.
+
+I think its way more intuitive to use IllegalArgumentException in init(args), and change inform() to throw IOException.

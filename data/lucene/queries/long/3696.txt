@@ -1,0 +1,46 @@
+Note: This only affects you if you use java 5 on 3.x, and it only affects you if you want to download/rebuild the dictionary. 
+the analyzer itself works fine on 3.x with java 5.
+
+With java 6, building a kuromoji dictionary is quite fast:
+
+     [java] building tokeninfo dict...
+     [java]   parse...
+     [java]   sort...
+     [java]   encode...
+     [java]   53645 nodes, 253185 arcs, 1954817 bytes...   done
+     [java] done
+     [java] building unknown word dict...done
+     [java] building connection costs...done
+
+BUILD SUCCESSFUL
+Total time: 6 seconds
+
+
+
+However, if you use java 5, it takes forever and eventually runs out of memory in the CSV parsing phase.
+So we might need to optimize the CSV parser (like precompile its patterns).
+
+
+     [java] building tokeninfo dict...
+     [java]   parse...
+     [java] Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+     [java] 	at java.util.regex.Pattern.newSlice(Pattern.java:2909)
+     [java] 	at java.util.regex.Pattern.atom(Pattern.java:1898)
+     [java] 	at java.util.regex.Pattern.sequence(Pattern.java:1794)
+     [java] 	at java.util.regex.Pattern.expr(Pattern.java:1687)
+     [java] 	at java.util.regex.Pattern.compile(Pattern.java:1397)
+     [java] 	at java.util.regex.Pattern.<init>(Pattern.java:1124)
+     [java] 	at java.util.regex.Pattern.compile(Pattern.java:817)
+     [java] 	at java.lang.String.replaceAll(String.java:2000)
+     [java] 	at org.apache.lucene.analysis.kuromoji.util.CSVUtil.unQuoteUnEscape(CSVUtil.java:84)
+     [java] 	at org.apache.lucene.analysis.kuromoji.util.CSVUtil.parse(CSVUtil.java:55)
+     [java] 	at org.apache.lucene.analysis.kuromoji.util.TokenInfoDictionaryBuilder.buildDictionary(TokenInfoDictionaryBuilder.java:96)
+     [java] 	at org.apache.lucene.analysis.kuromoji.util.TokenInfoDictionaryBuilder.build(TokenInfoDictionaryBuilder.java:76)
+     [java] 	at org.apache.lucene.analysis.kuromoji.util.DictionaryBuilder.build(DictionaryBuilder.java:37)
+     [java] 	at org.apache.lucene.analysis.kuromoji.util.DictionaryBuilder.main(DictionaryBuilder.java:82)
+
+BUILD FAILED
+/home/rmuir/workspace/lucene-branch3x2/lucene/contrib/analyzers/kuromoji/build.xml:75: Java returned: 1
+
+Total time: 2 minutes 4 seconds
+

@@ -1,0 +1,1 @@
+Create a Codec to work with streaming and append-only filesystems

@@ -1,0 +1,1 @@
+SolrJ's httpclient and httpcore dependency versions should not be synchronized - instead, the httpcore version to use should be drawn from the httpclient POM

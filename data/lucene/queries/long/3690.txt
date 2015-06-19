@@ -1,0 +1,1 @@
+A JFlex-based HTMLStripCharFilter replacement would be more performant and easier to understand and maintain.

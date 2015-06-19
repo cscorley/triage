@@ -1,0 +1,7 @@
+Followup from LUCENE-5377:
+
+the root cause of all the hair there is because SI.files (set of files used by the segment), must be rewritten in addIndexes because its invalidated by the change of segment name.
+
+alternatively we could just not store this stuff, and strip the segment names. This is how CFS deals with this issue already.
+
+I think we can do this in a backwards compatible way too: for old codecs, the readers could be changed to simply strip internally (e.g. ignore the "extra" information they wrote) ?

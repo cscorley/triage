@@ -1,0 +1,3 @@
+As reported to me by Alexey Serba, if you choose to pass a commit=true param with an update request, too many commits are asked for on each node.
+
+The problem is that it causes a local commit which triggers commits on the other nodes, and it also forwards on the commit=true param causing further commits.

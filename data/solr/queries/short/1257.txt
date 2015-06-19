@@ -1,0 +1,1 @@
+action.jsp and logging.jsp do not compile, related code no longer needed

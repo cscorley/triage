@@ -1,0 +1,1 @@
+As part of some work I'm doing, I put together a CSV Response Writer. It currently takes all the docs resultant from a query and then outputs their metadata in simple CSV format. The use of a delimeter is configurable (by default if there are multiple values for a particular field they are separated with a | symbol).

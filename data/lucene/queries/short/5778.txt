@@ -1,0 +1,1 @@
+Support hunspell morphological description fields

@@ -1,0 +1,1 @@
+I was setting up a new 4.x environment but forgot to put a custom Analyzer in the classpath.  Unfortunately AbstractPluginLoader didn't log the exception and it took a long time for me to figure out why "No cores were created".  

@@ -1,0 +1,16 @@
+Facets packages have a weird structure IMO. I think that we should organize the packages by feature, and not by functionality (index/search). For example:
+
+
+	o.a.l.facet.index – core facets indexing
+	o.a.l.facet.search – core facets search
+	o.a.l.facet.params – all facets params (indexing and search)
+	o.a.l.facet.associations – all associations code (we can break to sub-index/search packages if needed)
+	o.a.l.facet.partitions – all partitions related code
+	o.a.l.facet.sampling – all sampling related code
+	o.a.l.facet.util – consolidate all utils under that, even those that are currently under o.a.l.util
+	o.a.l.facet.encoding – move all encoders under it (from o.a.l.util)
+	o.a.l.facet.taxonomy – all taxonomy related stuff.
+
+
+
+The motivation – if I want to handle all associations related code, it should be very easy to locate it.

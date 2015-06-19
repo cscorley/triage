@@ -1,0 +1,1 @@
+Fix charset problems in XML loading in HyphenationCompoundWordTokenFilter (also Solr's loader from schema)

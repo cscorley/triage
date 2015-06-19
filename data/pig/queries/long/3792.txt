@@ -1,0 +1,1 @@
+If POStream is after POValueInputTez (one splittee is merged into splitter which contains POStream), POStream will continue pull records even seeing a STATUS_EOP. Currently POValueInputTez does not handle this case (will throw exception)

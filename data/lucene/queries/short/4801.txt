@@ -1,0 +1,1 @@
+Documentation is incorrect for org.apache.lucene.misc.SweetSpotSimilarity

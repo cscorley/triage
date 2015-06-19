@@ -1,0 +1,1 @@
+A boolean is not converted correct when using the hint 'UseLiteralInSQL'.

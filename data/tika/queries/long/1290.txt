@@ -1,0 +1,3 @@
+PDFBOX 1.8.5 has been released: http://pdfbox.apache.org/downloads.html#recent
+
+We can update to this version, and eventually test & fix also TIKA-1231

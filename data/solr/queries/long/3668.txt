@@ -1,0 +1,30 @@
+I'm trying to run the following direct call via the WebGUI:
+http://localhost:9090/solr/issues/dataimport?command=full-import&importfile=/absolute/path/to/file.xml
+
+The above direct call produces this log output:
+24.07.2012 15:18:40 org.apache.solr.handler.dataimport.XPathEntityProcessor initQuery
+WARNUNG: Failed for url : /absolute/path/to/file.xml
+
+When giving an existing file, DIH works. But this is enough to show the difference between direct call and call via WebGUI.
+
+
+Steps I do in the WebGUI:
+
+0. In a multicore environment where one core is called "issues"
+
+1. Open the tab of core "issues", and there the sub-item "Dataimport":
+http://localhost:9090/solr/#/issues/dataimport//dataimport
+
+2. Specify a custom parameter in the text field labled "Custom Parameters" like "importfile=/absolute/path/to/file.xml"
+
+Resulting log output:
+24.07.2012 15:22:47 org.apache.solr.handler.dataimport.XPathEntityProcessor initQuery
+WARNUNG: Failed for url : 
+java.lang.RuntimeException: java.io.FileNotFoundException: Could not find file: 
+
+(no filename specified)
+
+When trying with an existing file, the same output (no filename) is logged.
+
+
+I've tried to find out how to specify the custom parameters by looking into dataimport.js but it did not help me (I did not dwell on it, though). If it would work by specifying the parameter in a different way it would be great if a little info would be added right next to the field.

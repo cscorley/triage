@@ -1,0 +1,2 @@
+Provide a non point-in-time interface to get a document.
+For example, if you add a new document, you will be able to get it, regardless of if the searcher has been refreshed.

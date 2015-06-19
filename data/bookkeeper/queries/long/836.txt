@@ -1,0 +1,3 @@
+In doCompactEntryLogs, Entries are added to new logs, while all old logs were not released until the end of handling.  So during the process, a lot of space will be used. Need to disable compaction when disk becomes full, otherwise compaction will fill up disk quickly.
+
+I would like to change old "forced garbage collection" logic, and suspend major compaction when it reaches warn threshold, suspend minor compaction when it reaches critical threshold.

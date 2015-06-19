@@ -1,0 +1,1 @@
+Changes to the manual are no longer being uploaded to the web page. OPENJPA-2091 made a change to the directory structure in the openjpa-project pom.xml. As a result, the assembly.xml is no longer finding the documents. A corresponding change needs to be made in the assembly.xml and the update.xml ant files. Also, the web page links need to be changed.

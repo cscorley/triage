@@ -1,0 +1,3 @@
+When you have schema with a large enough number of fields (in my case around 250 fields) and you use copyFields to populate a number of fields (very few in my case 3-4) you see a severe degradation in the performance of ingestion.
+
+Tracking this down using a profiler found that in the lucene Document.getField() was using 87% of all CPU time. As it turns out getField() does an iteration over the list of fields in the Document returning the field if the name matches.. Anyway in the case of copyFields with lots of values getField() gets called alot...

@@ -1,0 +1,1 @@
+Solr Post Group Faceting

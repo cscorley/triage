@@ -1,0 +1,1 @@
+Intermittent test failure in org.apache.openjpa.persistence.generationtype.TestGeneratedValues when running on MySQL

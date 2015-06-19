@@ -1,0 +1,1 @@
+When adding a SolrDocument with IndexableFields for values to a response, the values are written using toString() rather then the real value.  I noticed this issue using the new RealtimeGetComponent.  

@@ -1,0 +1,108 @@
+Improvement and intuition
+The original implementation for MIME type selection/detection is a bit less flexible by initial design, as it heavily relies on the outcome produced by magic-bytes MIME Type identification; Thus e.g. if magic-bytes is applicable in a file, Tika will follow the file type detected by magic-bytes. It may be better to provide more control over the method of choice.
+
+This proposed approach slightly incorporate the Bayesian probability theorem, where users are able to assign weights to each approach in terms of probability, so they have the control over preference of which file type or mime type identification methods implemented/available in Tika, and currently there are 3 methods for identifying MIME type in Tika (i.e. Magic-Bytes, File extension and Metadata content-type hint). By introducing some weights on the approach in the proposed approach, users are able to choose which method they trust most, the magic-bytes method is often trust-worthy though. But the virtue is that in some situations, file type identification must be sensitive, some might want all of the MIME type identification methods to agree on the same file type before they start processing those files, incorrect file type identification is less intolerable. The current implementation seems to be less flexible for this purpose and heavily rely on the Magic-bytes file identification method (although magic-bytes is most reliable compared to the other 2 ); 
+
+
+Proposed design:
+The idea of selection is to incorporate probability as weights on each MIME type identification method currently being implemented in Tika (they are Magic bytes approach, file extension match and metadata content-type hint).
+
+for example,
+as an user, i would probably like to assign the the preference to the method based on the degree of the trust, and order the results if they don't coincide.
+Bayesian rule may be a bit appropriate here to meet the intuition.
+The following is what are needed for Bayesian rule implementation.
+
+> Prior probability P(file_type) e.g. P(pdf), theoretically this is computed based on the samples, and this depends on the domain or use cases, intuitively we more care the orders of the weights or probability of the results rather than the actual numbers, and also the context of Prior depends on samples for a particular use case or domain, e.g. if we happen to crawl a website that contains mostly the pdf files, we probably can collect some samples and compute the prior, based on the samples we can say 90% of docs are pdf, so our prior is defined to be P(pdf) = 0.9, but here we propose to define the prior as configurable param for users, and by default we leave the prior to be "unapplicable". Alternatively, we can define prior for each file type to be  1/[number of supported file types in Tika] I think the number would be approximately 1/1157 and using this number seems to be more fair, but the point of avoiding it is that this prior is fixed for every type, and eventually we care more the orders of the result and if the number is fixed, so will the order be, bringing this number of 1/1157 into the Bayesian equation will not only be unable to affect the order but also it will lumber our implementation with extra computation, thus we will leave it as "unapplicable" which means we assign 1 to it as it never exists! but note we care more the order rather the actual number, and this param is configurable, and we believe it provides much flexibilities in some use cases.
+
+
+> Conditional probability of positive tests given a file type P(test| file_type) e.g. P(test1 = pdf | pdf), this probability is also based on collection of samples and domain or use cases, we leave it configurable, but based on our intuition we think test1(i.e. Magic-bytes method) is most trustworthy, thus the default value is 0.75 for P(test1 = a_file_type | a_file_type), this is to say given the file whose type is "a file type", the probability of the test1 predicting the file is "a_file_type" is 0.75, that is really our intuition, as we trust test1 most, next we propose to use 0.7 for test3, and 0.65 for test2;
+(note again, test1 = magic-bytes, test2 = file extension, test3 = Metadata Content-type hint)
+
+> Conditional probability of negative tests also need to be intuitively defined.
+E.g. By default, given a file type that is not pdf, the probability of test1 predicting it is pdf is 1-P(test1 = pdf | pdf), thus P(test1=pdf | ~pdf) = 1- 0.75 = 0.25, as we trust the test1 the most, the other tests are defined with 0.35 and 0.3 respectively with the same intuition.
+
+
+>> The goal is to find out 
+P(file_type | test1 = file_type, test2=file_type, test3=file_type)
+
+(Please note, we are mostly interested in the order of choice rather than the explicit computation, we selectively drop some of the parameters used in Bayesian rule. Those are not considered will by default be set to 1 .)
+
+For example, given a file the 3 tests have predicted as follows
+test1 = pdf
+test2 = pdf
+test3 = pdf
+
+prior: P(pdf) = 1 and P(~pdf) = 1 (meaning they are not applicable )
+P(test1=pdf|pdf) = 0.75
+P(test2=pdf|pdf) =0.65
+P(test3=pdf|pdf) = 0.7
+With the same concept or intuition, we have the negative conditional probability by default
+P(test1=pdf|~pdf) = 0.25
+P(test2=pdf|~pdf) =0.35
+P(test3=pdf|~pdf) = 0.3
+
+Then we ready to compute.
+Our goal is P(pdf|test1=pdf, test2=pdf, test3=pdf)
+
+P(pdf|test1=pdf, test2=pdf, test3=pdf) = [P(pdf) * P(test1=pdf|pdf) * P(test2=pdf|pdf) * P(test3=pdf|pdf)]/total probability 
+where 
+total probability = P(pdf) * P(test1=pdf|pdf) * P(test2=pdf|pdf) * P(test3=pdf|pdf) + P(~pdf) P(test1=pdf|~pdf) * P(test2=pdf|~pdf) * P(test3=pdf|~pdf) = 0.3675
+
+Thus, 
+P(pdf|test1=pdf, test2=pdf, test3=pdf) = 0.92857
+
+---------------------------------------------------------------------------------
+example 2
+test1=pdf
+test2=txt
+test3=txt
+
+In this example, test2 and test3 does not agree test1.
+So we have 2 types to compare, let's compute the 2 file type probabilities with conditions on those test results.
+
+for simplicity, 
+test1=pdf, i will write test1+ 
+> pdf
+P(+|test1+, test2-, test3-) 
+= [P(+)P(test1+|pdf)*P(test2-|pdf)*P(test3-|pdf)]/total probability
+= 0.40909
+
+>text
+P(+|test1-, test2+, test3+)  = 0.590909
+
+---------------------------------------------------------------------------------
+example 3
+test1=pdf
+test2=txt
+test3=uc
+
+> pdf 
+P(+|test1+, test2-, test3-)  = 0.40909
+
+>txt
+P(+|test1-, test2+, test3-) = 0.20968
+
+>nc
+P(+|test1-, test2-, test3+)  = 0.29518
+
+
+---------------------------------------------------------------------------------
+Since we are more interested in the weight order in a way we prefer to put more weight on the methods with higher preference, we can further simplify computation by ignoring the probability of the tests that have negative prediction.
+
+Consider the example 3 above, 
+
+> pdf 
+P(+|test1+, test2-, test3-)  = 0.40909
+we can ignore probability of test2- and test3-, as we are more interested in the order of preference;
+the equation can be rewriten as follows
+P(+|test1+) = 0.75/(0.75+0.35) = 0.75 where the total probability becomes 1, note prior is set to 1 by default for simplicity too.
+Similarly, we have 
+>txt
+P(+|test2+) = 0.65
+
+>uc
+P(+|test3+)=0.7
+
+This follows the initial intuitive assumption and the intuitive order is also preserved. 
+
+some of the parameters are being left out for computation simplicity by default, but the goal is to provide a way thru which users are able to control which method they want to use with probability weights, and this also provides some rooms or flexibility for more MIME detection algorithms. 

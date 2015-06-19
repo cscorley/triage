@@ -1,0 +1,1 @@
+Maven artifact for lucene-test-framework is identical to lucene-core artifact

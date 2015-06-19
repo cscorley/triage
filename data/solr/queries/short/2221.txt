@@ -1,0 +1,1 @@
+DIH: use StrUtils.parseBool() to get values of boolean options of import command

@@ -1,0 +1,1 @@
+if you use setNorm, lucene writes a headerless separate norms file

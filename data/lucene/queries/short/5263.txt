@@ -1,0 +1,1 @@
+Deletes may be silently lost if an IOException is hit and later not hit (e.g., disk fills up and then frees up)

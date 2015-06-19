@@ -1,0 +1,1 @@
+It would be handy to be able to, in the QEC, simply mark documents as excluded instead of completely excluding them.  This can be achieved using the EditorialMarker that was recently added.

@@ -1,0 +1,1 @@
+When releasing, we need the hadoop, uncommons, etc. jars/poms to be signed by the release process.

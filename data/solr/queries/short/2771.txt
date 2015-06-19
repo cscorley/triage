@@ -1,0 +1,1 @@
+Solr modules' tests should not depend on solr-core test classes; move BufferingRequestProcessor from solr-core tests to test-framework so that solr cell can use it

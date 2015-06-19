@@ -1,0 +1,5 @@
+Today if you drill down on a field but don't do facet counts on it, DrillSideways throws an exception.
+
+The caller can work around this: it must take all such drill-downs and manually move them into the base query as BQ MUST clauses.  But I think DrillSideways should do this.
+
+I hit this when trying to add a "See all..." link on a facet dim that has way too many labels to normally show: in this case I run a new search, but I facet only on this one dimension, when there could be drill-downs on other dimensions.

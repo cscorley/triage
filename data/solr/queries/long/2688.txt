@@ -1,0 +1,1 @@
+For discussion: we might want to switch the Solr 4.0 example to use DirectSpellChecker, which doesn't need an extra index or build/rebuild'ing.

@@ -1,0 +1,25 @@
+Code:
+Use branch spark 9cb14bc 
+9cb14bc - PIG-4174: e2e tests for Spark setup
+
+Env:
+hadoop 1 + Spark 0.9
+
+How to build:
+ant jar
+
+Steps to reproduce:
+1. Initialize Variables
+export OLD_PIG_HOME=/usr/local/Cellar/pig/0.12.0 # Should rather be 14
+export HADOOP_CONF_DIR=/usr/local/Cellar/hadoop/1.0.4/conf
+export HADOOP_BIN=/usr/local/Cellar/hadoop/1.0.4/bin/hadoop
+2. Generate Data
+ant -Dharness.old.pig=$OLD_PIG_HOME -Dharness.cluster.conf=$HADOOP_CONF_DIR -Dharness.cluster.bin=$HADOOP_BIN test-e2e-deploy-local
+(You might want to install necessary cpan modules incase of any dependency errors https://cwiki.apache.org/confluence/display/PIG/HowToTest#HowToTest-End-to-endTesting)
+Copy data to hdfs to use with Spark
+hadoop fs -put test/e2e/pig/testdist/data ./
+3. Run particular test
+ant -Dharness.old.pig=$OLD_PIG_HOME -Dharness.cluster.conf=$HADOOP_CONF_DIR -Dharness.cluster.bin=$HADOOP_BIN -Dtests.to.run="-t Checkin_1" test-e2e-spark
+
+following error message found in Step 3 "Run particular test"
+[exec] ERROR: driver->run() returned the following error message [./test_harness.pl at 156: Cannot create HDFS directory /user/pig/out/root-1411634072-nightly.conf/: 256 - Illegal seek

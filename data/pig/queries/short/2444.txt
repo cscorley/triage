@@ -1,0 +1,1 @@
+Remove the Zebra *.xml documentation files from the TRUNK and Branch-10

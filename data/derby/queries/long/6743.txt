@@ -1,0 +1,1 @@
+DERBY-6414(Incorrect handling when using an UPDATE to SET an identity column to DEFAULT) has been fixed in Derby 10.12. This will require changes in MERGE code in order for UPDATE of identity column to work in the MERGE sql.

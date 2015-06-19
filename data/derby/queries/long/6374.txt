@@ -1,0 +1,169 @@
+The constraint can be subverted using e.g. call SYSCS_UTIL.SYSCS_IMPORT_TABLE, cf. the below script:
+
+test.sql:
+   connect 'jdbc:derby:memory:wombat;create=true';
+   create table t_unique_nullable(i int, j int, constraint c_unique_n unique);
+   call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('APP', 'T_UNIQUE_NULLABLE', 'test.data', '|', '`', null, 1);
+   select * from t_unique_nullable;
+   create table t_unique(i int not null, j int, constraint c_unique unique);
+   call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('APP', 'T_UNIQUE', 'test.data', '|', '`', null, 1);
+
+which fails in the second import, but not the first one, given this data file:
+
+test.data
+   1 | 1
+   1 | 1
+   2 | 2
+
+
+run:
+   ij version 10.11
+   ij> connect 'jdbc:derby:memory:wombat;create=true';
+   ij> autocommit off;
+   ij> create table t_unique_nullable(i int, j int, constraint c_unique_n unique);
+   0 rows inserted/updated/deleted
+   ij> call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('APP', 'T_UNIQUE_NULLABLE', 'test.data',
+        				    '|', '`', null, 1);
+   0 rows inserted/updated/deleted
+   ij> select * from t_unique_nullable;
+   I          |J          
+   -----------------------
+   1          |1          
+   1          |1          
+   2          |2          
+
+   3 rows selected
+   ij> create table t_unique(i int not null, j int, constraint c_unique unique);
+   0 rows inserted/updated/deleted
+   ij> call SYSCS_UTIL.SYSCS_IMPORT_TABLE ('APP', 'T_UNIQUE', 'test.data',
+        				    '|', '`', null, 1);
+   ERROR XIE0R: Import error on line 2 of file test.data: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'C_UNIQUE' defined on 'T_UNIQUE'. 
+   java.sql.SQLException: Import error on line 2 of file test.data: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'C_UNIQUE' defined on 'T_UNIQUE'. 
+   	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:103)
+   	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:137)
+   	at org.apache.derby.impl.jdbc.Util.seeNextException(Util.java:310)
+   	at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(TransactionResourceImpl.java:431)
+   	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(TransactionResourceImpl.java:353)
+   	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(EmbedConnection.java:2395)
+   	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(ConnectionChild.java:82)
+   	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1429)
+   	at org.apache.derby.impl.jdbc.EmbedStatement.execute(EmbedStatement.java:704)
+   	at org.apache.derby.impl.jdbc.EmbedStatement.execute(EmbedStatement.java:631)
+   	at org.apache.derby.impl.tools.ij.ij.executeImmediate(ij.java:367)
+   	at org.apache.derby.impl.tools.ij.utilMain.doCatch(utilMain.java:527)
+   	at org.apache.derby.impl.tools.ij.utilMain.runScriptGuts(utilMain.java:369)
+   	at org.apache.derby.impl.tools.ij.utilMain.go(utilMain.java:245)
+   	at org.apache.derby.impl.tools.ij.Main.go(Main.java:229)
+   	at org.apache.derby.impl.tools.ij.Main.mainCore(Main.java:184)
+   	at org.apache.derby.impl.tools.ij.Main.main(Main.java:75)
+   	at org.apache.derby.tools.ij.main(ij.java:59)
+   	at ij.Ij.main(Ij.java:19)
+   Caused by: java.sql.SQLException: Import error on line 2 of file test.data: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'C_UNIQUE' defined on 'T_UNIQUE'. 
+   	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:138)
+   	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:73)
+   	... 18 more
+   Caused by: java.sql.SQLException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'C_UNIQUE' defined on 'T_UNIQUE'.
+   	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:138)
+   	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:73)
+   	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:288)
+   	at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(TransactionResourceImpl.java:424)
+   	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(TransactionResourceImpl.java:353)
+   	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(EmbedConnection.java:2395)
+   	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(ConnectionChild.java:82)
+   	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1429)
+   	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeStatement(EmbedPreparedStatement.java:1709)
+   	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeLargeUpdate(EmbedPreparedStatement.java:320)
+   	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeUpdate(EmbedPreparedStatement.java:309)
+   	at org.apache.derby.impl.load.Import.performImport(Import.java:289)
+   	at org.apache.derby.impl.load.Import.importTable(Import.java:126)
+   	at org.apache.derby.catalog.SystemProcedures.SYSCS_IMPORT_TABLE(SystemProcedures.java:1571)
+   	at org.apache.derby.exe.ac4d3680a5x0141x937dxb945x000006a67bf04.g0(Unknown Source)
+   	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+   	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+   	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+   	at java.lang.reflect.Method.invoke(Method.java:606)
+   	at org.apache.derby.impl.services.reflect.ReflectMethod.invoke(ReflectMethod.java:46)
+   	at org.apache.derby.impl.sql.execute.CallStatementResultSet.open(CallStatementResultSet.java:75)
+   	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:438)
+   	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:319)
+   	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1337)
+   	... 11 more
+   Caused by: ERROR 23505: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'C_UNIQUE' defined on 'T_UNIQUE'.
+   	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:265)
+   	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:260)
+   	at org.apache.derby.impl.sql.execute.UniqueIndexSortObserver.insertDuplicateKey(UniqueIndexSortObserver.java:72)
+   	at org.apache.derby.impl.store.access.sort.SortBuffer.insert(SortBuffer.java:245)
+   	at org.apache.derby.impl.store.access.sort.MergeInserter.insert(MergeInserter.java:103)
+   	at org.apache.derby.impl.sql.execute.InsertResultSet.changedRow(InsertResultSet.java:234)
+   	at org.apache.derby.impl.sql.execute.NoPutResultSetImpl.rowLocation(NoPutResultSetImpl.java:285)
+   	at org.apache.derby.impl.store.access.heap.HeapController.load(HeapController.java:450)
+   	at org.apache.derby.impl.store.access.heap.Heap.load(Heap.java:651)
+   	at org.apache.derby.impl.store.access.RAMTransaction.loadConglomerate(RAMTransaction.java:1216)
+   	at org.apache.derby.impl.store.access.RAMTransaction.recreateAndLoadConglomerate(RAMTransaction.java:885)
+   	at org.apache.derby.impl.store.access.RAMTransaction.createAndLoadConglomerate(RAMTransaction.java:844)
+   	at org.apache.derby.impl.sql.execute.InsertResultSet.bulkInsertCore(InsertResultSet.java:1331)
+   	at org.apache.derby.impl.sql.execute.InsertResultSet.open(InsertResultSet.java:467)
+   	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:438)
+   	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:319)
+   	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1337)
+   	... 27 more
+   ERROR 23505: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'C_UNIQUE' defined on 'T_UNIQUE'.
+   java.sql.SQLIntegrityConstraintViolationException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'C_UNIQUE' defined on 'T_UNIQUE'.
+   	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:83)
+   	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:288)
+   	at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(TransactionResourceImpl.java:424)
+   	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(TransactionResourceImpl.java:353)
+   	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(EmbedConnection.java:2395)
+   	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(ConnectionChild.java:82)
+   	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1429)
+   	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeStatement(EmbedPreparedStatement.java:1709)
+   	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeLargeUpdate(EmbedPreparedStatement.java:320)
+   	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeUpdate(EmbedPreparedStatement.java:309)
+   	at org.apache.derby.impl.load.Import.performImport(Import.java:289)
+   	at org.apache.derby.impl.load.Import.importTable(Import.java:126)
+   	at org.apache.derby.catalog.SystemProcedures.SYSCS_IMPORT_TABLE(SystemProcedures.java:1571)
+   	at org.apache.derby.exe.ac4d3680a5x0141x937dxb945x000006a67bf04.g0(Unknown Source)
+   	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+   	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+   	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+   	at java.lang.reflect.Method.invoke(Method.java:606)
+   	at org.apache.derby.impl.services.reflect.ReflectMethod.invoke(ReflectMethod.java:46)
+   	at org.apache.derby.impl.sql.execute.CallStatementResultSet.open(CallStatementResultSet.java:75)
+   	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:438)
+   	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:319)
+   	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1337)
+   	at org.apache.derby.impl.jdbc.EmbedStatement.execute(EmbedStatement.java:704)
+   	at org.apache.derby.impl.jdbc.EmbedStatement.execute(EmbedStatement.java:631)
+   	at org.apache.derby.impl.tools.ij.ij.executeImmediate(ij.java:367)
+   	at org.apache.derby.impl.tools.ij.utilMain.doCatch(utilMain.java:527)
+   	at org.apache.derby.impl.tools.ij.utilMain.runScriptGuts(utilMain.java:369)
+   	at org.apache.derby.impl.tools.ij.utilMain.go(utilMain.java:245)
+   	at org.apache.derby.impl.tools.ij.Main.go(Main.java:229)
+   	at org.apache.derby.impl.tools.ij.Main.mainCore(Main.java:184)
+   	at org.apache.derby.impl.tools.ij.Main.main(Main.java:75)
+   	at org.apache.derby.tools.ij.main(ij.java:59)
+   	at ij.Ij.main(Ij.java:19)
+   Caused by: java.sql.SQLException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'C_UNIQUE' defined on 'T_UNIQUE'.
+   	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:138)
+   	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:73)
+   	... 33 more
+   Caused by: ERROR 23505: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'C_UNIQUE' defined on 'T_UNIQUE'.
+   	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:265)
+   	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:260)
+   	at org.apache.derby.impl.sql.execute.UniqueIndexSortObserver.insertDuplicateKey(UniqueIndexSortObserver.java:72)
+   	at org.apache.derby.impl.store.access.sort.SortBuffer.insert(SortBuffer.java:245)
+   	at org.apache.derby.impl.store.access.sort.MergeInserter.insert(MergeInserter.java:103)
+   	at org.apache.derby.impl.sql.execute.InsertResultSet.changedRow(InsertResultSet.java:234)
+   	at org.apache.derby.impl.sql.execute.NoPutResultSetImpl.rowLocation(NoPutResultSetImpl.java:285)
+   	at org.apache.derby.impl.store.access.heap.HeapController.load(HeapController.java:450)
+   	at org.apache.derby.impl.store.access.heap.Heap.load(Heap.java:651)
+   	at org.apache.derby.impl.store.access.RAMTransaction.loadConglomerate(RAMTransaction.java:1216)
+   	at org.apache.derby.impl.store.access.RAMTransaction.recreateAndLoadConglomerate(RAMTransaction.java:885)
+   	at org.apache.derby.impl.store.access.RAMTransaction.createAndLoadConglomerate(RAMTransaction.java:844)
+   	at org.apache.derby.impl.sql.execute.InsertResultSet.bulkInsertCore(InsertResultSet.java:1331)
+   	at org.apache.derby.impl.sql.execute.InsertResultSet.open(InsertResultSet.java:467)
+   	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:438)
+   	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:319)
+   	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1337)
+   	... 27 more
+   ij> BUILD SUCCESSFUL (total time: 2 seconds)

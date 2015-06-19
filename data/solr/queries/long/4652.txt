@@ -1,0 +1,8 @@
+I have the following scenario:
+MyShardHandlerFactory is plugged in via solr.xml.  The jar containing MyShardHandlerFactory is in the shared lib dir.  There are a couple issues:
+
+1. From within a per core handler (that is loaded within the core's lib dir), you grab the ShardHandlerFactory from CoreContainer, casting to MyShardHandlerFactory will results in a ClassCastException with a message like "cannot cast instance of MyShardHandlerFactory to MyShardHandlerFactory".
+
+2. Adding a custom dir for shared lib (for example "mylib") does not work.  The ShardHandlerFactory is initialized before sharedLib is loaded.
+
+I've been pouring through the code on this and I don't see an easy fix.  I'll keep looking at it, but I wanted to get this up so hopefully others have some thoughts on how best to fix.  IMO, it seems like there needs to be a clear chain of resource loaders (one for loading solr.xml, a child for loading the lib dir, used for solr.xml plugins, a grandchild for per core config, and a great grandchild for per core lib dir based plugins).  Right now there are some siblings, because any place a SolrResourceLoader is created with a null parent classloader, it gets the jetty thread's classloader as the parent.

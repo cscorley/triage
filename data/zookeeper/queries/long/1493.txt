@@ -1,0 +1,1 @@
+In ZOOKEEPER-804, we added a check in zookeeper_process() to see if zookeeper_close() has been called. This was to avoid calling assert(cptr) on a NULL pointer, as dequeue_completion() returns NULL if the sent_requests queue has been cleared by free_completion() from zookeeper_close(). However, we should still call the completion if it is not NULL. 

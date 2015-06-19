@@ -1,0 +1,1 @@
+jetty8 with solr4.0: In jetty.xml maxFormContentSize configuration needs Fixing

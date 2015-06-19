@@ -1,0 +1,1 @@
+TimeLimitingCollector starts thread in static {} with no way to stop them

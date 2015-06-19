@@ -1,0 +1,1 @@
+CLUSTERSTATUS action should consult /live_nodes when reporting the state of a replica

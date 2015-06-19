@@ -1,0 +1,3 @@
+While testing with Java 8 I found that org.apache.openjpa.lib.util.concurrent.NullSafeConcurrentHashMap doesn't work on Oracle Java 8 as java.util.ConcurrentHashMap was completely rewritten and it doesn't like playing with our extension. 
+
+I'm not sure what the correct solution for this JIRA will be, but I wanted to get it documented. I did a small amount of searching and it appears that NullSafeConcurrentHashMap isn't used very much in our code base so it might be easiest to remove those references and deprecate the data structure. That being said, we'll still need to fix this data structure as it is possible that a user of OpenJPA pulled this structure into app code.

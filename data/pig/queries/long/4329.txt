@@ -1,0 +1,10 @@
+Although PIG-4135 disable fetch optimization when there is no limit in the plan, that doesn't solve the problem completely. In fact, fetch optimization should be still disabled if limit is not pushed up. Consider the following query-
+
+
+random_lists = load 'prodhive.schakraborty.search_server_denorm_impressions' using DseStorage();
+random_lists = filter random_lists by entity_section=='random';
+random_lists = limit random_lists 10;
+dump random_lists;
+
+
+Because the filter by blocks limit from being pushed up, POLoad actually scans the full table. In this case, fetch optimization makes the job extremely slow.

@@ -1,0 +1,1 @@
+DirectoryTaxonomyWriter can lose the INDEX_CREATE_TIME property, causing DirTaxoReader.refresh() to falsely succeed (or fail)

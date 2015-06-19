@@ -1,0 +1,1 @@
+Some master files don't have the svn:eol-style property

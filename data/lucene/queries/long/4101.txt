@@ -1,0 +1,5 @@
+Spinoff from LUCENE-3312.
+
+For 4.0 I think we should simplify the sugar field APIs by requiring
+that you add a StoredField if you want to store the field.  Expert users
+can still make a custom FieldType that both stores and indexes...

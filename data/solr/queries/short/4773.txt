@@ -1,0 +1,1 @@
+New discovery mode needs to ensure that instanceDir is correct

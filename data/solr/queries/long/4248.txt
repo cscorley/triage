@@ -1,0 +1,3 @@
+Eclipse has an awesome "file search" feature, but with the default eclipse config, such searches also search the numerous and large .svn directories.  If there's any way to mark .svn directories as "derived" then eclipse will not search them, which will greatly speed up searches.
+
+I will look into whether I can figure out a patch for doing this, but someone who is already intimately familiar with the workings of "ant eclipse" may be able to do it faster.

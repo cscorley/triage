@@ -1,0 +1,9 @@
+Need to change several thing in e2e:
+1. If test contains tag "verify_pig_script", "verify_pig_script" still run against tez, should run against MR
+2. Have the following line in test:
+$ENV
+{'PIG_CLASSPATH'} = $ENV{'PIG_CLASSPATH'}
+ . $separator . $pcp;
+PIG_CLASSPATH eventually get too long and exceed system limit
+3. Some tests such as MultiQuery_11, perl command is enclosed in double quote (perl -ne "print $;"), Pig runtime will do the parameter substitution and replace $ to the last command executed. This seems should goes to MR as well, if so, I will open another ticket to fix in trunk.
+4. Since e2e is now in a good shape, we need to enable all test suite instead of just tez.

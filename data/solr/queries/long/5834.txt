@@ -1,0 +1,1 @@
+As noticed by Hossman in SOLR-5823, the Overseer is not actually calling close on the runnables that are used to create threads - the treads are only being interrupted in Overseer#close, but not closed.

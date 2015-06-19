@@ -1,0 +1,8 @@
+The C client logs this error message when zookeeper_init is called with chroot. 
+
+2009-08-03 18:14:29,130:6624(0x5e66e950):ZOO_ERROR@sub_string@730: server path  does not include chroot path /chroot
+
+I'll attach a simple program to reproduce this.
+
+Thanks!
+--Michi

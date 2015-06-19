@@ -1,0 +1,1 @@
+Build script relies on svnant, which is not compatible with subversion 1.5 working copies

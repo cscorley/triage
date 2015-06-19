@@ -1,0 +1,22 @@
+In trying to implement http://wiki.apache.org/solr/HierarchicalFaceting I found the need to send multiple prefix facets in the same request on the same field.
+
+Currently facet params will parse the localParams, but only use them to pick out a name.  We can easily modify things to let localParams override global ones.  For example:
+
+
+&{!key=level3 facet.prefix=3/path/to/folder}path
+&{!key=level2 facet.prefix=2/path/to}path
+&{!key=level1 facet.prefix=1/path}path
+
+
+
+This can easily be supported if we use:
+
+
+params = SolrParams.wrapDefaults(localParams, orig);
+
+
+when local params exist
+
+------
+
+We have come a long way from simple facets!

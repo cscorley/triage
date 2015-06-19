@@ -1,0 +1,3 @@
+"X = FOREACH A DIFF(B1,B2);"
+should be
+"X = FOREACH A GENERATE DIFF(B1,B2);"

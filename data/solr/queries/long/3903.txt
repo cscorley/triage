@@ -1,0 +1,33 @@
+Observation
+
+
+	When the code pasted below is executed, a MissingFormatArgumentException is raised (Format specifier 's').
+	If setAction(..) is not called, no exception is thrown.
+
+
+
+Solution
+
+
+	Fixing the format call in ConcurrentUpdateSolrServer:164 might resolve the issue.
+
+
+
+Information
+
+
+	The issue is present in trunk.
+	I don't have the resources available to submit a proper patch at the moment, but might do so in the future. Meanwhile I'm posting this bug to let you know.
+
+
+
+
+
+ConcurrentUpdateSolrServer server = new ConcurrentUpdateSolrServer("http://localhost:8983/solr/collection1", 2, 2);
+UpdateRequest updateRequest = new UpdateRequest();
+SolrInputDocument document = new SolrInputDocument();
+updateRequest.add(document);
+updateRequest.setAction(UpdateRequest.ACTION.COMMIT, false, false);
+server.request(updateRequest);
+server.commit();
+

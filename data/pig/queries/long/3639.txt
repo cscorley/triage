@@ -1,0 +1,10 @@
+
+
+    [junit] Running org.apache.pig.test.TestRegisteredJarVisibility
+    [junit] Tests run: 3, Failures: 1, Errors: 0, Time elapsed: 44.127 sec
+    [junit] Test org.apache.pig.test.TestRegisteredJarVisibility FAILED
+
+
+This is a side-effect of PIG-3584 that bumped avro version to 1.7.5.
+
+The problem is that avro 1.7.5 pulls down jackson 1.9.9 jars as dependencies, and that makes TestRegisteredJarVisibility.testRegisterJarOverridePigJarPackages fail because the test case assumes that jackson 1.9.9 jars are not present in classpath.

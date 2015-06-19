@@ -1,0 +1,1 @@
+Once Lucene is wired, add this feature to Solr.

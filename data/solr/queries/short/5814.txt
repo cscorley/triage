@@ -1,0 +1,1 @@
+CoreContainer reports incorrect & missleading path for solrconfig.xml when there are loading problems

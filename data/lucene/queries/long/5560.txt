@@ -1,0 +1,3 @@
+As we are now on Java 7, we should cleanup our charset handling to use the official constants added by Java 7: StandardCharsets
+
+This issue is just a small code refactoring, trying to nuke the IOUtils constants and replace them with the official ones provided by Java 7.

@@ -1,0 +1,1 @@
+This is equivalent for ZOOKEEPER-442's Java impl. 

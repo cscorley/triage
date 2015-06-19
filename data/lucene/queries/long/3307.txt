@@ -1,0 +1,2 @@
+This seems wierd, if you analyze only NOT_ANALYZED fields, you must have an analyzer (null will not work)
+because documentsinverter wants it for things like offsetGap

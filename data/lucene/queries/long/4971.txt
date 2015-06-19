@@ -1,0 +1,3 @@
+Setting maxGraphExpansions > 0 with a lot of expansions (e.g. due to synonyms).
+Set<IntsRef> paths = toFiniteStrings(surfaceForm, ts2a);
+paths may be null, so maxAnalyzedPathsForOneInput = Math.max(maxAnalyzedPathsForOneInput, paths.size()) may end with NPE

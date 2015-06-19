@@ -1,0 +1,1 @@
+Some classes are currently in the list of bad apples although only one constructor is broken. For example, LimitTokenCountFilter has an option to consume the whole stream.

@@ -1,0 +1,16 @@
+In the case when "Set<String> words" is large, constructing a KeepWordFilter at query time is very costly because of the construction (copy) of the set, e.g.:
+
+    this.words = new CharArraySet(words, ignoreCase);
+
+This call does an addAll on the set, and is done for each query, and is the same work.
+
+Suggestion: overload the constructor and expose the CharArraySet, e.g.:
+
+  public KeepWordFilter(TokenStream in, CharArraySet words ) 
+{
+    super(in);
+    this.words = words;
+    this.termAtt = (TermAttribute)addAttribute(TermAttribute.class);
+  }
+
+This allows the ability to have CharArraySet to be constructed once staticly for the application instead at query time.

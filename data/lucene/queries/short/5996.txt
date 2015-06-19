@@ -1,0 +1,1 @@
+Add Collections.shuffle(List) to the forbidden APIs

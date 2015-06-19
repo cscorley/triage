@@ -1,0 +1,1 @@
+SUM functions returns different value in spark and mapreduce engine

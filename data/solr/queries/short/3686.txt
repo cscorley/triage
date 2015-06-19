@@ -1,0 +1,1 @@
+fix solr/core and solr/solrj not to share a lib/ directory

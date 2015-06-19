@@ -1,0 +1,1 @@
+Somehow the release audit started complaining about *.cer files.

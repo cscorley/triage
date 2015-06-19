@@ -1,0 +1,1 @@
+Lucene doc link in example's solrconfig.xml is dead after Lucene javadoc reorganization

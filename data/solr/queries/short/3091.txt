@@ -1,0 +1,1 @@
+When running in SolrCloud mode, whether a instance is supposed to be part of the quorum or not, it tries to start a local Solr ZK server.

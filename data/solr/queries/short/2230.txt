@@ -1,0 +1,1 @@
+solrj: submitting more than one stream/file via CommonsHttpSolrServer fails

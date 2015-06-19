@@ -1,0 +1,3 @@
+In FacetsCollector, creation of bits in MatchingDocs are allocated per query. For large indexes where maxDocs are large creating a bitset of maxDoc bits will be expensive and would great a lot of garbage.
+
+Attached patch is to allow for this allocation customizable while maintaining current behavior.

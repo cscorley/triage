@@ -1,0 +1,1 @@
+SnapshotDeletionPolicy should not require an id

@@ -1,0 +1,1 @@
+This is a frustrating little bug because it forces you to look at the logs for any insight into what happened - the error message in the exception you get with Solrj is very generic.

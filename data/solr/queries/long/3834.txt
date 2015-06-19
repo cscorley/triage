@@ -1,0 +1,1 @@
+Currently we only run the leader sync process if a former leader went down.

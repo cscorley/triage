@@ -1,0 +1,6 @@
+In a SolrCloud configuration, /terms does not return any terms when issued as follows:
+http://hostname:8983/solr/terms?terms.fl=name&terms=true&terms.limit=-1&isSh
+ard=true&terms.sort=index&terms.prefix=s
+but does return reasonable results when distrib is turned off like so
+http://hostname:8983/solr/terms?terms.fl=name&terms=true&distrib=false&terms
+.limit=-1&isShard=true&terms.sort=index&terms.prefix=s

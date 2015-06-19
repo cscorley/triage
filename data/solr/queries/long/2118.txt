@@ -1,0 +1,22 @@
+To change the terms index divisor: you currently do this:
+
+
+  <indexReaderFactory name="IndexReaderFactory" class="org.apache.solr.core.StandardIndexReaderFactory">
+    <int name="setTermIndexInterval">12</int>
+  </indexReaderFactory >
+
+
+
+But to change the terms index interval, you do this:
+
+<indexDefaults>
+...
+<termIndexInterval>256</termIndexInterval>
+...
+</indexDefaults>
+
+
+
+I feel the IR parameter should be setTermIndexDivisor or similar instead:
+the name is very misleading and someone could easily put a terrible value 
+in the wrong place by confusing the two.

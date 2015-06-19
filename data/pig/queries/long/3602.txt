@@ -1,0 +1,8 @@
+Currently, Pig reuses AMs via TezSession, but they are not shut down when Pig exits. There are two problems that I noticed with this-
+
+	Tez jobs are not marked as finished until TezSessions are expired after timeout. Since they occupy task slots, it blocks submitting jobs.
+	ant clean test-tez leaves orphan processes (DAGAppMaster).
+
+
+
+Ideally, TezSession should be kept alive while Pig runs but tore down when Pig exits.

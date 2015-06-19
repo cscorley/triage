@@ -1,0 +1,1 @@
+Untangle XML-specific nature of Config and Container classes

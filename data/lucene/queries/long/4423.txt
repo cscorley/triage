@@ -1,0 +1,1 @@
+This is no problem with SimpleText and Lucene40 since in their cases, offset is always 0 and length the length of the byte[] array, but it might break with custom codecs.

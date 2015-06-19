@@ -1,0 +1,1 @@
+Can we make oal.util.packed.BulkOperation* smaller?

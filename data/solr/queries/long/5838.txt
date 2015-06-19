@@ -1,0 +1,10 @@
+getRelativeSolrHomePath method at AbstractFullDistribZkTestBase has a control like that:
+
+
+
+if (base.startsWith("."));
+base.replaceFirst("\\.", new File(".").getName());
+
+
+
+if statement does nothing and result of replaceFirst is ignored.

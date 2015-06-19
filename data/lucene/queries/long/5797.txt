@@ -1,0 +1,9 @@
+Today we use the following procedure:
+
+	track HashSet<Long> uniqueValues, until it exceeds 256 unique values.
+	convert to array, sort and assign ordinals to each one
+	create encoder map (HashMap<Long,Integer>) to encode each value.
+
+
+
+This results in each value being hashed twice... but the vast majority of the time people will just be using single-byte norms and a simple array is enough for that range.

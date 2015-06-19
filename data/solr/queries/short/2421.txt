@@ -1,0 +1,1 @@
+Remove solr/lib/geronimo-stax-api_1.0_spec-1.0.1.jar - Stax API 1.0 is included in JAXP 1.4, which is included in Java 1.6

@@ -1,0 +1,1 @@
+LuceneTestCase should check for modifications on System properties

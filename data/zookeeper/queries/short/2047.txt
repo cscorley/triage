@@ -1,0 +1,1 @@
+testTruncationNullLog fails on windows

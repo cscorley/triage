@@ -1,0 +1,1 @@
+SearcherManager and NRTManager should be in the same package

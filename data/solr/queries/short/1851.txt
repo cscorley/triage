@@ -1,0 +1,1 @@
+luceneAutoCommit no longer has any effect - remove it from config

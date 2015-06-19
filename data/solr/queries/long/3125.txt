@@ -1,0 +1,1 @@
+This can be a problem when stop the whole cluster and then start it - a leader that has not yet showed up in the cluster state may see a stale leader and try to recover from it.

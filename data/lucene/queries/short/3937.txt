@@ -1,0 +1,1 @@
+Workaround the XERCES-J bug in Benchmark

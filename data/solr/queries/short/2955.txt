@@ -1,0 +1,1 @@
+Distributed grouping throws IllegalStateException when querying with group.sort=score desc

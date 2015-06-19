@@ -1,0 +1,22 @@
+The TestCase for DataCache included / excluded types relies on a NativeQuery to drop database tables at the end of the test. This fails with some versions of the MySQL JDBC driver. 
+
+The exception from the testcase looks like this  :
+<openjpa-1.0.4-SNAPSHOT-rexported nonfatal general error> org.apache.openjpa.persistence.PersistenceException: Unable to retrieve metadata for procedure.
+    at org.apache.openjpa.jdbc.sql.DBDictionary.newStoreException(DBDictionary.java:3964)
+    at org.apache.openjpa.jdbc.sql.SQLExceptions.getStore(SQLExceptions.java:97)
+    at org.apache.openjpa.jdbc.sql.SQLExceptions.getStore(SQLExceptions.java:83)
+    at org.apache.openjpa.jdbc.sql.SQLExceptions.getStore(SQLExceptions.java:59)
+    at org.apache.openjpa.jdbc.kernel.SQLStoreQuery$SQLExecutor.executeUpdate(SQLStoreQuery.java:242)
+
+   <snip>
+Caused by: java.sql.SQLException: Unable to retrieve metadata for procedure.
+    at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:910)
+    at com.mysql.jdbc.CallableStatement.extractProcedureName(CallableStatement.java:857)
+    at com.mysql.jdbc.CallableStatement.determineParameterTypes(CallableStatement.java:692)
+    at com.mysql.jdbc.CallableStatement.<init>(CallableStatement.java:513)
+    at com.mysql.jdbc.Connection.parseCallableStatement(Connection.java:4422)
+    at com.mysql.jdbc.Connection.prepareCall(Connection.java:4496)
+    at com.mysql.jdbc.Connection.prepareCall(Connection.java:4470)
+    at org.apache.commons.dbcp.DelegatingConnection.prepareCall(DelegatingConnection.java:212)
+
+Upgrading to a more recent version of the MySQL driver resolves these issues and allows the testcase to pass. 

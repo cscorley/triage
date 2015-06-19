@@ -1,0 +1,4 @@
+We're seeing builds fail with OOM PermGen space when using 64bit Sun JDK6 (but not IBM SDK 6) on Linux (but not MacOSX.)
+This will involve 2 parts:
+1) updating the test.jvm.arguments and surefire.jvm.args in the pom.xml files
+2) users and automated build servers will need to update their MAVEN_OPTS if they want to build with a 64bit JVM

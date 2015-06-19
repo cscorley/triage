@@ -1,0 +1,1 @@
+move contrib/analyzers to modules/analysis

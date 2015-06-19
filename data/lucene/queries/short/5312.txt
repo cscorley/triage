@@ -1,0 +1,1 @@
+Block-join-friendly index sorting

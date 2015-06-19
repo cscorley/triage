@@ -1,0 +1,1 @@
+Many internal page links are not working due to the case-sensitive nature of the fragement identifiers. Aditionally, there's a small typo in the Groovy udf example.

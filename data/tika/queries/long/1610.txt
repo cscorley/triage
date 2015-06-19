@@ -1,0 +1,25 @@
+CBOR is a data format whose design goals include the possibility of extremely small code size, fairly small message size, and extensibility without the need for version negotiation (cited from http://cbor.io/ ).
+
+It would be great if Tika is able to provide the support with CBOR parser and identification. In the current project with Nutch, the Nutch CommonCrawlDataDumper is used to dump the crawled segments to the files in the format of CBOR. In order to read/parse those dumped files by this tool, it would be great if tika is able to support parsing the cbor, the thing is that the CommonCrawlDataDumper is not dumping with correct extension, it dumps with its own rule, the default extension of the dumped file is html, so it might be less painful if tika is able to detect and parse those files without any pre-processing steps. 
+
+CommonCrawlDataDumper is calling the following to dump with cbor.
+import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
+import com.fasterxml.jackson.dataformat.cbor.CBORGenerator;
+
+fasterxml is a 3rd party library for converting json to .cbor and Vice Versa.
+
+According to RFC 7049 (http://tools.ietf.org/html/rfc7049), it looks like CBOR does not yet have its magic numbers to be detected/identified by other applications (PFA: rfc_cbor.jpg)
+It seems that the only way to inform other applications of the type as of now is using the extension (i.e. .cbor), or probably content detection (i.e. byte histogram distribution estimation).  
+
+There is another thing worth the attention, it looks like tika has attempted to add the support with cbor mime detection in the tika-mimetypes.xml (PFA:cbor_tika.mimetypes.xml.jpg); This detection is not working with the cbor file dumped by CommonCrawlDataDumper. 
+According to http://tools.ietf.org/html/rfc7049#section-2.4.5, there is a self-describing Tag 55799 that seems to be used for cbor type identification(the hex code might be 0xd9d9f7), but it is probably up to the application that take care of this tag, and it is also possible that the fasterxml that the nutch dumping tool is missing this tag, an example cbor file dumped by the Nutch tool i.e. CommonCrawlDataDumper has also been attached (PFA: 1424402690000.html).
+The following info is cited from the rfc, "...a decoder might be able to parse both CBOR and JSON.
+   Such a decoder would need to mechanically distinguish the two
+   formats.  An easy way for an encoder to help the decoder would be to
+   tag the entire CBOR item with tag 55799, the serialization of which
+   will never be found at the beginning of a JSON text..."
+It looks like the a file can have two parts/sections i.e. the plain text parts and the json prettified by cbor, this might be also worth the attention and consideration with the parsing and type identification.
+
+On the other hand, it is worth noting that the entries for cbor extension detection needs to be appended in the tika-mimetypes.xml too 
+e.g.
+<glob pattern="*.cbor"/>

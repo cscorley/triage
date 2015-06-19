@@ -1,0 +1,29 @@
+Note that this is not a Lucene bug; it's a JVM bug, but I wanted to track it in Lucene as well in case others hit it.
+
+I noticed this test frequently fails when running under IBM's J9 JVM (1.6.0) ... and I finally tracked down the root cause and made a small test case, eg on trunk, rev 1439839, if you run:
+
+
+  ant test -Dtestcase=TestExtendedMode -Dtestmethod=testRandomHugeStrings -Dtests.seed=26D2B352E9603950
+
+
+
+it fails with this:
+
+
+[junit4:junit4]    > Throwable #1: java.lang.IllegalArgumentException: startOffset must be non-negative, and endOffset must be >= startOffset, startOffset=4272,endOffset=4271
+[junit4:junit4]    > 	at __randomizedtesting.SeedInfo.seed([26D2B352E9603950:BEF1D491B7168518]:0)
+[junit4:junit4]    > 	at org.apache.lucene.analysis.tokenattributes.OffsetAttributeImpl.setOffset(OffsetAttributeImpl.java:45)
+[junit4:junit4]    > 	at org.apache.lucene.analysis.ja.JapaneseTokenizer.incrementToken(JapaneseTokenizer.java:463)
+[junit4:junit4]    > 	at org.apache.lucene.analysis.BaseTokenStreamTestCase.checkAnalysisConsistency(BaseTokenStreamTestCase.java:635)
+[junit4:junit4]    > 	at org.apache.lucene.analysis.BaseTokenStreamTestCase.checkRandomData(BaseTokenStreamTestCase.java:546)
+[junit4:junit4]    > 	at org.apache.lucene.analysis.BaseTokenStreamTestCase.checkRandomData(BaseTokenStreamTestCase.java:447)
+[junit4:junit4]    > 	at org.apache.lucene.analysis.BaseTokenStreamTestCase.checkRandomData(BaseTokenStreamTestCase.java:375)
+[junit4:junit4]    > 	at org.apache.lucene.analysis.ja.TestExtendedMode.testRandomHugeStrings(TestExtendedMode.java:76)
+
+
+
+I've seen other analyzer tests fail with similar exceptions.
+
+I dug in, and found that there's a bug in TreeMap.subMap, and it's easily reproduced with a small test case, which I'll attach.  I'll also open an issue with J9.
+
+I also found a workaround that seems to sidestep the bug for Lucene.

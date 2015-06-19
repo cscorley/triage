@@ -1,0 +1,15 @@
+
+
+a = load 'thing' as (x:int);
+b = group a by x;
+c = foreach b generate group as x, COUNT(a) as count;
+d = limit (order c by count DESC) 2000;
+describe d;
+
+
+
+This gives the following error:
+
+2011-12-13 13:56:32,144 [main] ERROR org.apache.pig.tools.grunt.Grunt - ERROR 1005: No plan for d to describe
+
+In trunk, it ran without issue. Not sure what the difference is, but it'd be nice to patch 0.9.2 since a lot of people (including amazon!) are using pig 9 now.

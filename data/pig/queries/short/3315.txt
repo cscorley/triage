@@ -1,0 +1,1 @@
+Automaton dependency missing from Pig 11.1-h2 POM.

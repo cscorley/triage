@@ -1,0 +1,10 @@
+Currently we have a fat jar created in legacy directory which contains pig along with dependencies. 
+Would need to modify build.xml to add spark dependency jars to include in legacy fat jar.
+
+Running job on Spark cluster:
+
+1. export SPARK_HOME=/path/to/spark
+2. export SPARK_PIG_JAR=$PIG_HOME/legacy/pig-0.14.0-SNAPSHOT-withouthadoop-h1.jar
+3. export SPARK_MASTER=spark://localhost:7077
+4 export HADOOP_HOME=/path/to/hadoop
+5. Launch the job using ./bin/pig -x spark

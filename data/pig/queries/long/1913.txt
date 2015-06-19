@@ -1,0 +1,1 @@
+There are some excluded tests listed in build.xml that would be better put in a side file. This also makes it easier to specify lists of tests to exclude from the command line by supplying an alternative file. 

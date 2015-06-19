@@ -1,0 +1,10 @@
+Covers the following tests:
+TestCubeOperator
+TestJoin
+TestMultiQuery
+TestNewPlanColumnPrune
+TestPigServer
+TestPigStats
+TestPruneColumn
+TestRank3
+TestScalarAliases

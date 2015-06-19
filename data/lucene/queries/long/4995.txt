@@ -1,0 +1,1 @@
+CompressingStoredFieldsReader has a strong reference on the buffer it uses for decompression. Although it makes the reader able to reuse this buffer, this can trigger high memory usage in case some documents are very large. Creating this buffer on demand would help give memory back to the JVM.

@@ -1,0 +1,167 @@
+This test fails randomly, I have no idea what it does, the test code looks like chinese to me.
+
+
+junit-sequential:
+    [junit] Testsuite: org.apache.solr.EchoParamsTest
+    [junit] Tests run: 4, Failures: 0, Errors: 2, Time elapsed: 1,794 sec
+    [junit]
+    [junit] ------------- Standard Error -----------------
+    [junit] ??? 24, 2011 6:04:37 ? org.apache.solr.SolrTestCaseJ4 assertQ
+    [junit] SEVERE: REQUEST FAILED: xpath=not(//lst[@name='params'])
+    [junit]     xml response was: <?xml version="1.0" encoding="UTF-8"?>
+    [junit] <response>
+    [junit] <lst name="responseHeader"><int name="status">0</int><int name="QTime">0</int><str name="handler">org.apache.solr.handle
+r.StandardRequestHandler</str><lst name="params"><str name="fl">implicit</str><str name="echoParams">all</str><str name="start">0</s
+tr><str name="q">foo</str><str name="echoHandler">true</str><str name="qt">crazy_custom_qt</str><str name="wt">xml</str><str name="r
+ows">20</str><str name="version">2.2</str></lst></lst><result name="response" numFound="0" start="0"></result>
+    [junit] </response>
+    [junit]
+    [junit]     request was:echoParams=all&start=0&q=foo&echoHandler=true&qt=crazy_custom_qt&wt=xml&rows=20&version=2.2
+    [junit] ??? 24, 2011 6:04:37 ? org.apache.solr.common.SolrException log
+    [junit] SEVERE: REQUEST FAILED: echoParams=all&start=0&q=foo&echoHandler=true&qt=crazy_custom_qt&wt=xml&rows=20&version=2.2:java
+.lang.RuntimeException: REQUEST FAILED: xpath=not(//lst[@name='params'])
+    [junit]     xml response was: <?xml version="1.0" encoding="UTF-8"?>
+    [junit] <response>
+    [junit] <lst name="responseHeader"><int name="status">0</int><int name="QTime">0</int><str name="handler">org.apache.solr.handle
+r.StandardRequestHandler</str><lst name="params"><str name="fl">implicit</str><str name="echoParams">all</str><str name="start">0</s
+tr><str name="q">foo</str><str name="echoHandler">true</str><str name="qt">crazy_custom_qt</str><str name="wt">xml</str><str name="r
+ows">20</str><str name="version">2.2</str></lst></lst><result name="response" numFound="0" start="0"></result>
+    [junit] </response>
+    [junit]
+    [junit]     request was:echoParams=all&start=0&q=foo&echoHandler=true&qt=crazy_custom_qt&wt=xml&rows=20&version=2.2
+    [junit]     at org.apache.solr.SolrTestCaseJ4.assertQ(SolrTestCaseJ4.java:398)
+    [junit]     at org.apache.solr.SolrTestCaseJ4.assertQ(SolrTestCaseJ4.java:372)
+    [junit]     at org.apache.solr.EchoParamsTest.testDefaultEchoParams(EchoParamsTest.java:40)
+    [junit]     at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit]     at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    [junit]     at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit]     at java.lang.reflect.Method.invoke(Method.java:601)
+    [junit]     at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+    [junit]     at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+    [junit]     at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+    [junit]     at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+    [junit]     at org.junit.rules.TestWatchman$1.evaluate(TestWatchman.java:48)
+    [junit]     at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+    [junit]     at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+    [junit]     at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+    [junit]     at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:1486)
+    [junit]     at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:1404)
+    [junit]     at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+    [junit]     at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+    [junit]     at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+    [junit]     at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+    [junit]     at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+    [junit]     at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+    [junit]     at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+    [junit]     at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+    [junit]     at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:39)
+    [junit]     at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:420)
+    [junit]     at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:911)
+    [junit]     at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
+    [junit]
+    [junit] NOTE: reproduce with: ant test -Dtestcase=EchoParamsTest -Dtestmethod=testDefaultEchoParams -Dtests.seed=-38103159553699
+66158:8631717666953616495
+    [junit] ??? 24, 2011 6:04:37 ? org.apache.solr.SolrTestCaseJ4 assertQ
+    [junit] SEVERE: REQUEST FAILED: xpath=not(//lst[@name='params'])
+    [junit]     xml response was: <?xml version="1.0" encoding="UTF-8"?>
+    [junit] <response>
+    [junit] <lst name="responseHeader"><int name="status">0</int><int name="QTime">1</int><str name="handler">org.apache.solr.handle
+r.StandardRequestHandler</str><lst name="params"><str name="fl">implicit</str><str name="echoParams">all</str><str name="start">0</s
+tr><str name="q">foo</str><str name="echoHandler">true</str><str name="qt">crazy_custom_qt</str><str name="wt">xml</str><str name="r
+ows">20</str></lst></lst><result name="response" numFound="0" start="0"></result>
+    [junit] </response>
+    [junit]
+    [junit]     request was:echoParams=all&start=0&q=foo&echoHandler=true&qt=crazy_custom_qt&wt=xml&rows=20
+    [junit] ??? 24, 2011 6:04:37 ? org.apache.solr.common.SolrException log
+    [junit] SEVERE: REQUEST FAILED: echoParams=all&start=0&q=foo&echoHandler=true&qt=crazy_custom_qt&wt=xml&rows=20:java.lang.Runtim
+eException: REQUEST FAILED: xpath=not(//lst[@name='params'])
+    [junit]     xml response was: <?xml version="1.0" encoding="UTF-8"?>
+    [junit] <response>
+    [junit] <lst name="responseHeader"><int name="status">0</int><int name="QTime">1</int><str name="handler">org.apache.solr.handle
+r.StandardRequestHandler</str><lst name="params"><str name="fl">implicit</str><str name="echoParams">all</str><str name="start">0</s
+tr><str name="q">foo</str><str name="echoHandler">true</str><str name="qt">crazy_custom_qt</str><str name="wt">xml</str><str name="r
+ows">20</str></lst></lst><result name="response" numFound="0" start="0"></result>
+    [junit] </response>
+    [junit]
+    [junit]     request was:echoParams=all&start=0&q=foo&echoHandler=true&qt=crazy_custom_qt&wt=xml&rows=20
+    [junit]     at org.apache.solr.SolrTestCaseJ4.assertQ(SolrTestCaseJ4.java:398)
+    [junit]     at org.apache.solr.SolrTestCaseJ4.assertQ(SolrTestCaseJ4.java:372)
+    [junit]     at org.apache.solr.EchoParamsTest.testDefaultEchoParamsDefaultVersion(EchoParamsTest.java:48)
+    [junit]     at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit]     at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    [junit]     at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit]     at java.lang.reflect.Method.invoke(Method.java:601)
+    [junit]     at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+    [junit]     at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+    [junit]     at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+    [junit]     at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+    [junit]     at org.junit.rules.TestWatchman$1.evaluate(TestWatchman.java:48)
+    [junit]     at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+    [junit]     at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+    [junit]     at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+    [junit]     at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:1486)
+    [junit]     at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:1404)
+    [junit]     at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+    [junit]     at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+    [junit]     at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+    [junit]     at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+    [junit]     at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+    [junit]     at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+    [junit]     at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+    [junit]     at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+    [junit]     at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:39)
+    [junit]     at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:420)
+    [junit]     at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:911)
+    [junit]     at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
+    [junit]
+    [junit] NOTE: reproduce with: ant test -Dtestcase=EchoParamsTest -Dtestmethod=testDefaultEchoParamsDefaultVersion -Dtests.seed=-
+3810315955369966158:2288923891937057479
+    [junit] NOTE: test params are: codec=RandomCodecProvider: {}, locale=ar_EG, timezone=America/Inuvik
+    [junit] NOTE: all tests run in this JVM:
+    [junit] [EchoParamsTest]
+    [junit] NOTE: Windows 7 6.1 amd64/Oracle Corporation 1.7.0 (64-bit)/cpus=2,threads=1,free=110754792,total=127008768
+    [junit] ------------- ---------------- ---------------
+    [junit] Testcase: testDefaultEchoParams(org.apache.solr.EchoParamsTest):    Caused an ERROR
+    [junit] Exception during query
+    [junit] java.lang.RuntimeException: Exception during query
+    [junit]     at org.apache.solr.SolrTestCaseJ4.assertQ(SolrTestCaseJ4.java:405)
+    [junit]     at org.apache.solr.SolrTestCaseJ4.assertQ(SolrTestCaseJ4.java:372)
+    [junit]     at org.apache.solr.EchoParamsTest.testDefaultEchoParams(EchoParamsTest.java:40)
+    [junit]     at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:1486)
+    [junit]     at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:1404)
+    [junit] Caused by: java.lang.RuntimeException: REQUEST FAILED: xpath=not(//lst[@name='params'])
+    [junit]     xml response was: <?xml version="1.0" encoding="UTF-8"?>
+    [junit] <response>
+    [junit] <lst name="responseHeader"><int name="status">0</int><int name="QTime">0</int><str name="handler">org.apache.solr.handle
+r.StandardRequestHandler</str><lst name="params"><str name="fl">implicit</str><str name="echoParams">all</str><str name="start">0</s
+tr><str name="q">foo</str><str name="echoHandler">true</str><str name="qt">crazy_custom_qt</str><str name="wt">xml</str><str name="r
+ows">20</str><str name="version">2.2</str></lst></lst><result name="response" numFound="0" start="0"></result>
+    [junit] </response>
+    [junit]
+    [junit]     request was:echoParams=all&start=0&q=foo&echoHandler=true&qt=crazy_custom_qt&wt=xml&rows=20&version=2.2
+    [junit]     at org.apache.solr.SolrTestCaseJ4.assertQ(SolrTestCaseJ4.java:398)
+    [junit]
+    [junit]
+    [junit] Testcase: testDefaultEchoParamsDefaultVersion(org.apache.solr.EchoParamsTest):      Caused an ERROR
+    [junit] Exception during query
+    [junit] java.lang.RuntimeException: Exception during query
+    [junit]     at org.apache.solr.SolrTestCaseJ4.assertQ(SolrTestCaseJ4.java:405)
+    [junit]     at org.apache.solr.SolrTestCaseJ4.assertQ(SolrTestCaseJ4.java:372)
+    [junit]     at org.apache.solr.EchoParamsTest.testDefaultEchoParamsDefaultVersion(EchoParamsTest.java:48)
+    [junit]     at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:1486)
+    [junit]     at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:1404)
+    [junit] Caused by: java.lang.RuntimeException: REQUEST FAILED: xpath=not(//lst[@name='params'])
+    [junit]     xml response was: <?xml version="1.0" encoding="UTF-8"?>
+    [junit] <response>
+    [junit] <lst name="responseHeader"><int name="status">0</int><int name="QTime">1</int><str name="handler">org.apache.solr.handle
+r.StandardRequestHandler</str><lst name="params"><str name="fl">implicit</str><str name="echoParams">all</str><str name="start">0</s
+tr><str name="q">foo</str><str name="echoHandler">true</str><str name="qt">crazy_custom_qt</str><str name="wt">xml</str><str name="r
+ows">20</str></lst></lst><result name="response" numFound="0" start="0"></result>
+    [junit] </response>
+    [junit]
+    [junit]     request was:echoParams=all&start=0&q=foo&echoHandler=true&qt=crazy_custom_qt&wt=xml&rows=20
+    [junit]     at org.apache.solr.SolrTestCaseJ4.assertQ(SolrTestCaseJ4.java:398)
+    [junit]
+    [junit]
+    [junit] Test org.apache.solr.EchoParamsTest FAILED
+

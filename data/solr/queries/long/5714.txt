@@ -1,0 +1,1 @@
+Currently, you have to specify how much direct memory to allocate per SolrCore. This can be inefficient, and has some negative consequences - for instance, when replicating, many times two HDFS directories will exist for the same index briefly, which will double the RAM used for that SolrCore.

@@ -1,0 +1,1 @@
+Percentage Infos on Dashboard have a fixed width

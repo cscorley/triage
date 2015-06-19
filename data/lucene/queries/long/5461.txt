@@ -1,0 +1,4 @@
+If setting the tagetMinStaleSec to 0, sometimes a call to waitForGeneration will block for targetMaxStaleSec instead of immediately call maybeRefreshBlocking on the manager.
+
+In effect to targetMaxStaleSec cannot be set higher than acceptable blocking resolving of a specified generation. 
+

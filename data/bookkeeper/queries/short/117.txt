@@ -1,0 +1,1 @@
+Support multi threads in hedwig cpp client to leverage multi-core hardware

@@ -1,0 +1,1 @@
+remove conflicting versions of the same jar dependencies

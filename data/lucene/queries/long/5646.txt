@@ -1,0 +1,31 @@
+from doing some profiling of merging:
+
+CompressingStoredFieldsWriter has 3 codepaths (as i see it):
+1. optimized bulk copy (no deletions in chunk). In this case compressed data is copied over.
+2. semi-optimized copy: in this case its optimized for an existing storedfieldswriter, and it decompresses and recompresses doc-at-a-time around any deleted docs in the chunk.
+3. ordinary merging
+
+In my dataset, i only see #2 happening, never #1. The logic for determining if we can do #1 seems to be:
+
+
+onChunkBoundary && chunkSmallEnough && chunkLargeEnough && noDeletions
+
+
+
+I think the logic for "chunkLargeEnough" is out of sync with the MAX_DOCS_PER_CHUNK limit? e.g. instead of:
+
+
+startOffsets[it.chunkDocs - 1] + it.lengths[it.chunkDocs - 1] >= chunkSize // chunk is large enough
+
+
+
+it should be something like:
+
+
+(it.chunkDocs >= MAX_DOCUMENTS_PER_CHUNK || startOffsets[it.chunkDocs - 1] + it.lengths[it.chunkDocs - 1] >= chunkSize) // chunk is large enough
+
+
+
+But this only works "at first" then falls out of sync in my tests. Once this happens, it never reverts back to #1 algorithm and sticks with #2. So its still not quite right.
+
+Maybe Adrien Grand knows off the top of his head...

@@ -1,0 +1,1 @@
+Scorer.getChildren() can throw or hide a subscorer for some boolean queries

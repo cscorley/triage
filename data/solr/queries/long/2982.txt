@@ -1,0 +1,5 @@
+Apache Commons Codec released version 1.6 of their codec pack in November, 2011.  Along with a few bug fixes, 1.6 contains a great new phonetic matching system called Beider-Morse Phonetic Matching (BMPM) that is far superior to the existing phonetic codecs, such as regular soundex, metaphone, caverphone, and so on.  BMPM has actually been available for some time, but this is the first port of it to java, and its first commit in the Apache ecosystem.
+
+For a lot more information, see here: http://stevemorse.org/phoneticinfo.htm   and  http://stevemorse.org/phonetics/bmpm.htm
+
+BMPM would be a fantastic "soundalike" tool to help search for personal names (or just surnames) in a Solr/Lucene index, much better than Levenshtein distance for this use case.

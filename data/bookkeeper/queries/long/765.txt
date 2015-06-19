@@ -1,0 +1,3 @@
+The current behaviour requires JAVA_HOME to be set, which isn't set by default on all machines. So machines on which bookkeeper ran fine, no longer work.
+
+Solution is to fallback to java in path is JAVA_HOME not set.

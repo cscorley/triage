@@ -1,0 +1,1 @@
+Recovery should not set onlyIfLeaderActive=true for slice in 'recovery' state

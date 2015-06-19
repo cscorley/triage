@@ -1,0 +1,1 @@
+As reported by Han on the mailing list: if you are running all tests with your postingsformat, but a test specifically ignores it, it doesnt work correctly.

@@ -1,0 +1,1 @@
+First, there was only Document, then AddUpdateCommand added support for SolrInputDocument, and most document producers create SolrInputDocuments.  But AddUpdateCommand continues to support both, leading to confusion and more work for update processors (which should they look at? both?).  It seems like we should remove "Document" from AddUpdateCommand for the sake of consistency.

@@ -1,0 +1,3 @@
+The methods that operate and modify the internal maps of AttributeSource should be final, which is a backwards break. But anybody that overrides such methods simply creates a buggy AS either case.
+
+I want to makeall impls final (in general the class should be final at all, but it is made for extension in TokenStream). So its important that the implementations are final!

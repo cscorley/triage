@@ -1,0 +1,133 @@
+The following setup and steps always lead to the same error:
+app01: ZooKeeper
+app02: ZooKeeper, Solr (in Tomcat)
+app03: ZooKeeper, Solr (in Tomcat) 
+
+
+*) Start ZooKeeper as ensemble on all machines.
+*) Start tomcat on app02/app03
+
+clusterstate.json
+
+null
+cZxid = 0x100000014
+ctime = Thu Apr 18 10:59:24 CEST 2013
+mZxid = 0x100000014
+mtime = Thu Apr 18 10:59:24 CEST 2013
+pZxid = 0x100000014
+cversion = 0
+dataVersion = 0
+aclVersion = 0
+ephemeralOwner = 0x0
+dataLength = 0
+numChildren = 0
+
+
+
+*) Upload the configuration (on app02) for the collection via the following command:
+
+    zkcli.sh -cmd upconfig --zkhost app01:4181,app02:4181,app03:4181 --confdir config/solr/storage/conf/ --confname storage-conf 
+
+
+
+*) Linking the configuration (on app02) via the following command:
+
+    zkcli.sh -cmd linkconfig --collection storage --confname storage-conf --zkhost app01:4181,app02:4181,app03:4181
+
+
+
+*) Create Collection via: 
+
+http://app02/solr/admin/collections?action=CREATE&name=storage&numShards=1&replicationFactor=2&collection.configName=storage-conf
+
+
+
+clusterstate.json
+
+{"storage":{
+    "shards":{"shard1":{
+        "range":"80000000-7fffffff",
+        "state":"active",
+        "replicas":{
+          "app02:9985_solr_storage_shard1_replica2":{
+            "shard":"shard1",
+            "state":"down",
+            "core":"storage_shard1_replica2",
+            "collection":"storage",
+            "node_name":"app02:9985_solr",
+            "base_url":"http://app02:9985/solr"},
+          "app03:9985_solr_storage_shard1_replica1":{
+            "shard":"shard1",
+            "state":"down",
+            "core":"storage_shard1_replica1",
+            "collection":"storage",
+            "node_name":"app03:9985_solr",
+            "base_url":"http://app03:9985/solr"}}}},
+    "router":"compositeId"}}
+cZxid = 0x100000014
+ctime = Thu Apr 18 10:59:24 CEST 2013
+mZxid = 0x100000047
+mtime = Thu Apr 18 11:04:06 CEST 2013
+pZxid = 0x100000014
+cversion = 0
+dataVersion = 2
+aclVersion = 0
+ephemeralOwner = 0x0
+dataLength = 847
+numChildren = 0
+
+
+
+This creates the replication of the shard on app02 and app03, but neither of them is marked as leader, both are marked as DOWN.
+And after wards I can not access the collection.
+In the browser I get:
+
+"SEVERE: org.apache.solr.common.SolrException: no servers hosting shard:"
+
+
+
+The following stacktrace in the logs:
+
+
+Apr 18, 2013 11:04:05 AM org.apache.solr.common.SolrException log
+SEVERE: org.apache.solr.common.SolrException: Error CREATEing SolrCore 'storage_shard1_replica2': 
+        at org.apache.solr.handler.admin.CoreAdminHandler.handleCreateAction(CoreAdminHandler.java:483)
+        at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:140)
+        at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:135)
+        at org.apache.solr.servlet.SolrDispatchFilter.handleAdminRequest(SolrDispatchFilter.java:591)
+        at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:192)
+        at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:141)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:225)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:169)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:999)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:565)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:307)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+        at java.lang.Thread.run(Thread.java:722)
+Caused by: org.apache.solr.common.cloud.ZooKeeperException: 
+        at org.apache.solr.core.CoreContainer.registerInZk(CoreContainer.java:931)
+        at org.apache.solr.core.CoreContainer.registerCore(CoreContainer.java:892)
+        at org.apache.solr.core.CoreContainer.register(CoreContainer.java:841)
+        at org.apache.solr.handler.admin.CoreAdminHandler.handleCreateAction(CoreAdminHandler.java:479)
+        ... 19 more
+Caused by: java.lang.NullPointerException
+        at org.apache.solr.cloud.ShardLeaderElectionContext.runLeaderProcess(ElectionContext.java:190)
+        at org.apache.solr.cloud.LeaderElector.runIamLeaderProcess(LeaderElector.java:156)
+        at org.apache.solr.cloud.LeaderElector.checkIfIamLeader(LeaderElector.java:100)
+        at org.apache.solr.cloud.LeaderElector.joinElection(LeaderElector.java:266)
+        at org.apache.solr.cloud.ZkController.joinElection(ZkController.java:935)
+        at org.apache.solr.cloud.ZkController.register(ZkController.java:761)
+        at org.apache.solr.cloud.ZkController.register(ZkController.java:727)
+        at org.apache.solr.core.CoreContainer.registerInZk(CoreContainer.java:908)
+        ... 22 more
+
+
+
+I have attached a minimal set of configuration files which are needed to replicate this error, also containing the log files for the commands I have run in the order above.

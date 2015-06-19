@@ -1,0 +1,22 @@
+The code quoted here from CoreContainer.java ends up looking for a class named Log4j instead of Log4jWatcher. Neither name exists in the tree. 
+
+      // Now load the framework
+      if(fname!=null) {
+        if("JUL".equalsIgnoreCase(fname)) 
+{
+          logging = new JulWatcher(slf4jImpl);
+        }
+//        else if( "Log4j".equals(fname) ) 
+{
+//          logging = new Log4jWatcher(slf4jImpl);
+//        }
+        else {
+          try 
+{
+            logging = loader.newInstance(fname, LogWatcher.class);
+          }
+          catch (Throwable e) 
+{
+            log.warn("Unable to load LogWatcher", e);
+          }
+        }

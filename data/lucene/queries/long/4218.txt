@@ -1,0 +1,1 @@
+A call to Numeric num = indexableField.numericValue() comes up with a correct value, whereas Document.get(field) yields null.

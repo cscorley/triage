@@ -1,0 +1,27 @@
+On LUCENE-5178 Han reported the following test failure:
+
+
+[junit4] FAILURE 0.27s | TestRangeAccumulator.testMissingValues <<<
+   [junit4]    > Throwable #1: org.junit.ComparisonFailure: expected:<...(0)
+   [junit4]    >   less than 10 ([8)
+   [junit4]    >   less than or equal to 10 (]8)
+   [junit4]    >   over 90 (8)
+   [junit4]    >   9...> but was:<...(0)
+   [junit4]    >   less than 10 ([28)
+   [junit4]    >   less than or equal to 10 (2]8)
+   [junit4]    >   over 90 (8)
+   [junit4]    >   9...>
+   [junit4]    > 	at __randomizedtesting.SeedInfo.seed([815B6AA86D05329C:EBC638EE498F066D]:0)
+   [junit4]    > 	at org.apache.lucene.facet.range.TestRangeAccumulator.testMissingValues(TestRangeAccumulator.java:670)
+   [junit4]    > 	at java.lang.Thread.run(Thread.java:722)
+
+
+
+which can be reproduced with
+
+
+tcase=TestRangeAccumulator -Dtests.method=testMissingValues -Dtests.seed=815B6AA86D05329C -Dtests.slow=true -Dtests.postingsformat=Lucene41 -Dtests.locale=ca -Dtests.timezone=Australia/Currie -Dtests.file.encoding=UTF-8
+
+
+
+It seems that the Codec that is picked is a Lucene45Codec with Lucene42DVFormat, which does not support docsWithFields for numericDV. We should improve LTC.defaultCodecSupportsDocsWithField to take a list of fields and check that the actual DVF used for each field supports it.

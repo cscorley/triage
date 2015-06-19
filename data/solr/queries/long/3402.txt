@@ -1,0 +1,3 @@
+Currently the Lucene Version value is put into the Map that is passed to the init method of Analysis factories.  During the initialization, the value is parsed and validated.  In situations where the Core wide value is used, it is converted to a String only for it to be parsed again.  I think we can improve this, reduce the amount of parsing, and provide a cleaner separation of concerns.
+
+Instead the value should be parsed externally and then passed into the Factory.  The Factory would be responsible for checking that it was given a Version value.  Any additional validation such as general guidelines about Versions to use, would then fall on code that passed in the Version to the Factory (namely, FieldPluginLoader).

@@ -1,0 +1,1 @@
+We should implement the requirements from http://www.apache.org/foundation/marks/pmcs.html latest in Q1 next year.

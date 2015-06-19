@@ -1,0 +1,1 @@
+Regular expression syntax with MultiFieldQueryParser causes assert/NPE

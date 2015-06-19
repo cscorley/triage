@@ -1,0 +1,1 @@
+Only reader that contains fields can be added into readerContext

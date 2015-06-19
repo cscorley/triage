@@ -1,0 +1,3 @@
+When executing the zkcli script from the 4.3.0 release, a log4j error message is displayed about no appenders, because there is no log4j configuration.  As a result of this problem, none of the normal zkcli stuff gets logged.
+
+A minimal config needs to be present so that it behaves like it did before the logging change.

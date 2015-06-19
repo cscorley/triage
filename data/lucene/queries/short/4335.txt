@@ -1,0 +1,1 @@
+Builds should regenerate all generated sources

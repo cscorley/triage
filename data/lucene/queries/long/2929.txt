@@ -1,0 +1,14 @@
+Currently, the DocsEnum api assumes you might consumes freqs at any time.
+Additionally the DocsAndPositionsEnum api assumes you might consume a payload at any time.
+
+High level things such as queries know what kinds of data they need from the index up-front,
+and the current APIs are limiting to codecs (other than Standard, which has these intertwined).
+
+So, we either need DocsAndFreqsEnum, DocsPositionsAndPayloadsEnum, or at least booleans
+in the methods that create these to specify whether you want freqs or payloads.
+
+we did this for freqs in the bulkpostings API, which is good, but these DocsEnum apis
+are also new in 4.0 and there's no reason to introduce non-performant APIs.
+
+additionally when/if we add payloads to the bulkpostings API, we should make sure we keep
+the same trend and require you to specify you want payloads or not up-front.

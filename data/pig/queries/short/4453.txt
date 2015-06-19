@@ -1,0 +1,1 @@
+Remove test-tez-local target

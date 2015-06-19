@@ -1,0 +1,21 @@
+This applies to the following
+setEmbeddedCP
+setNetworkServerCP
+setNetworkClientCP
+
+Bug DERBY-4283 references this issue, but only with regard to the setEmbeddedCP script.  That bug also indicates the issue was resolved in 10.5.2, but I am looking at 10.5.3 and I still see the exit command in the script.
+
+The proper way to use these CLASSPATH scripts is to source them rather than run them.
+. $DERBY_HOME/bin/setNetworkServerCP
+
+Doing so will run the script in the current shell.  If the scripts issue an exit upon encountering an error, then the users shell will exit as well.
+
+This is the relevant section of the scripts
+if [ -z "$DERBY_HOME" ] ; then
+  echo "Error: DERBY_HOME is not set. Please set the DERBY_HOME environment variable"
+  echo "to the location of your Derby installation."
+  exit 1   #<<<<This will exit the users shell if the script is sourced
+fi
+
+The scripts should generate a message if DERBY_HOME is not set, but should not issue an exit command.
+

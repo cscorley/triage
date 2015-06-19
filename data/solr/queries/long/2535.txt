@@ -1,0 +1,28 @@
+In Solr 1.4.1, going to the path solr/admin/file I see an XML-formatted listing of the conf directory, like:
+
+<response>
+<lst name="responseHeader"><int name="status">0</int><int name="QTime">1</int></lst>
+<lst name="files">
+  <lst name="elevate.xml"><long name="size">1274</long><date name="modified">2011-03-06T20:42:54Z</date></lst>
+  ...
+</lst>
+</response>
+
+
+
+I can list the xslt sub-dir using solr/admin/files?file=/xslt
+
+
+In Solr 3.1.0, both of these fail with a 500 error:
+
+HTTP ERROR 500
+
+Problem accessing /solr/admin/file/. Reason:
+
+    did not find a CONTENT object
+
+java.io.IOException: did not find a CONTENT object
+
+
+
+Looking at the code in class ShowFileRequestHandler, it seem like 3.1.0 should still handle directory listings if not file name is given, or if the file is a directory, so I am filing this as a bug.

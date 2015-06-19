@@ -1,0 +1,10 @@
+Add test cases for utf8 chinese in Pig:
+
+
+	TC1.1 Execute Pig script with Chinese script name and path, filter by Chinese value, and output to Chinese folder
+
+
+
+
+	TC1.2 Joining tables on columns storing Chinese data in Pig
+

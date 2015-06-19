@@ -1,0 +1,1 @@
+PostingsHighlighter should pass field name to PassageFormatter.format?

@@ -1,0 +1,1 @@
+the handling and implications of session moved exception should be documented.

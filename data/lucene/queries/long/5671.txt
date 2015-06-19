@@ -1,0 +1,5 @@
+This has a bugfix for a concurrency issue, reported on our users list. I think this is bad because it will strike users randomly while indexing/querying.
+
+See http://bugs.icu-project.org/trac/ticket/10767
+
+Apparently there is a better fix in the future, but the existing sync is enough to prevent the bug (my test passes 100% of the time with 53.1 whereas it fails 30% of the time with 52.1)

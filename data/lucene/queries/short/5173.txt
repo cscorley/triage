@@ -1,0 +1,1 @@
+Add checkindex piece of LUCENE-5116

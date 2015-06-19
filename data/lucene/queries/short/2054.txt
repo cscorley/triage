@@ -1,0 +1,1 @@
+Remove "System Properties" page from release specific docs

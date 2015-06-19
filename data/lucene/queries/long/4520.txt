@@ -1,0 +1,1 @@
+ValueSource.getSortField just returns a new ValueSourceSortField, whose constructor doesn't declare any checked exceptions.  So adding the throws clause to the method declaration means adding pointless try-catch warts to client code.

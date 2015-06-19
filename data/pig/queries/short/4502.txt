@@ -1,0 +1,1 @@
+E2E tests build fail with udfs compile

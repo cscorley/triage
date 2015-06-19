@@ -1,0 +1,1 @@
+hunspell SET/FLAG whitespace/BOM handling

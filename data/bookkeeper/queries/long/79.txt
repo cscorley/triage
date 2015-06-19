@@ -1,0 +1,1 @@
+in our test program, we tried to startDelivery/stopDelivery different subscriptions randomly. And it core dump.

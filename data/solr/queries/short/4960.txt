@@ -1,0 +1,1 @@
+race condition in CoreContainer.shutdown leads to double closes on cores

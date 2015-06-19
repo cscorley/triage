@@ -1,0 +1,1 @@
+BlockJoinQuery advance fails on an assert in case of a single parent with child segment

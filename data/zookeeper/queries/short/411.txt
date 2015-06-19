@@ -1,0 +1,1 @@
+Building zookeeper fails on RHEL 5 64 bit during test-cppunit

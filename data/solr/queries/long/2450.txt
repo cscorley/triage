@@ -1,0 +1,3 @@
+While using only Solr's stop words for clustering isn't a good idea (compared to indexing, clustering needs more aggressive stop word removal to get reasonable cluster labels), it would be good if Carrot2 used both its own and Solr's stop words.
+
+I'm not sure what the best way to implement this would be though. My first thought was to simply load stopwords.txt from Solr config dir and merge them with Carrot2's. But then, maybe a better approach would be to get the stop words from the StopFilter being used? Ideally, we should also consider the per-field stop filters configured on the fields used for clustering.

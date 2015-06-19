@@ -1,0 +1,25 @@
+Report from user Murali Vemulapati. The wiki recipe page also should be updated to handle multiple clients using the barrier on the same system (multiple processes, etc...). Currently the docs/example support only a single user of the barrier per host.
+
+------------------
+
+I believe there is a typo in the barrier example given at:
+
+http://hadoop.apache.org/zookeeper/docs/current/zookeeperTutorial.html
+
+With the following fix, the program runs as expected:
+==============
+83c83
+<                 this.name = new String(InetAddress.getLocalHost().getCanonicalHostName().toString());
+—
+>                 name = new String(InetAddress.getLocalHost().getCanonicalHostName().toString());
+100c100
+<                     CreateMode.EPHEMERAL_SEQUENTIAL);
+—
+>                     CreateMode.EPHEMERAL);
+==============
+The first change assigns the name to the instance variable 'name' of Barrier class (otherwise the 'name' instance variable will have a value of 'null'
+when calling zk.create to create the child node under the root barrier node).
+The second change lets us run multiple processes on the same machine.
+
+thanks
+murali

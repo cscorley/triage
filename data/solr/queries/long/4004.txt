@@ -1,0 +1,22 @@
+There's no text in the javadoc of SolrPing. Since it depends on a particular admin request handler, it would be helpful if it explained the situation. Patch to be attached.
+
+Since this is such a small patch, I'm dropping it here:
+
+
+diff --git a/solr/solrj/src/java/org/apache/solr/client/solrj/request/SolrPing.java b/solr/solrj/src/java/org/apache/
+index a1c6be2..4adbc41 100644
+--- a/solr/solrj/src/java/org/apache/solr/client/solrj/request/SolrPing.java
++++ b/solr/solrj/src/java/org/apache/solr/client/solrj/request/SolrPing.java
+@@ -28,7 +28,9 @@ import org.apache.solr.common.params.ModifiableSolrParams;
+ import org.apache.solr.common.util.ContentStream;
+ 
+ /**
+- * 
++ * Verify that there is a working Solr core at the URL of a {@link SolrServer}.
++ * To use this class, the solrconfig.xml for the relevant core must include the
++ * request handler for <code>/admin/ping</code>.
+  *
+  * @since solr 1.3
+  */
+
+

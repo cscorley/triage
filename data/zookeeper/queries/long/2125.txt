@@ -1,0 +1,47 @@
+Supporting SSL on Netty client-server communication. 
+1. It supports keystore and trustore usage. 
+2. It adds an additional ZK server port which supports SSL. This would be useful for rolling upgrade.
+
+RB: https://reviews.apache.org/r/31277/
+
+The patch includes three files: 
+
+	testing purpose keystore and truststore under "$(ZK_REPO_HOME)/src/java/test/data/ssl". Might need to create "ssl/".
+	latest ZOOKEEPER-2125.patch
+
+
+
+How to use it
+You need to set some parameters on both ZK server and client.
+
+Server
+You need to specify a listening SSL port in "zoo.cfg":
+
+
+secureClientPort=2281
+
+
+Just like what you did with "clientPort". And then set some jvm flags:
+
+
+export SERVER_JVMFLAGS="-Dzookeeper.serverCnxnFactory=org.apache.zookeeper.server.NettyServerCnxnFactory -Dzookeeper.ssl.keyStore.location=/root/zookeeper/ssl/testKeyStore.jks -Dzookeeper.ssl.keyStore.password=testpass -Dzookeeper.ssl.trustStore.location=/root/zookeeper/ssl/testTrustStore.jks -Dzookeeper.ssl.trustStore.password=testpass"
+
+
+Please change keystore and truststore parameters accordingly.
+
+Client
+You need to set jvm flags:
+
+
+export CLIENT_JVMFLAGS="-Dzookeeper.clientCnxnSocket=org.apache.zookeeper.ClientCnxnSocketNetty -Dzookeeper.client.secure=true -Dzookeeper.ssl.keyStore.location=/root/zookeeper/ssl/testKeyStore.jks -Dzookeeper.ssl.keyStore.password=testpass -Dzookeeper.ssl.trustStore.location=/root/zookeeper/ssl/testTrustStore.jks -Dzookeeper.ssl.trustStore.password=testpass"
+
+
+change keystore and truststore parameters accordingly.
+And then connect to the server's SSL port, in this case:
+
+
+bin/zkCli.sh -server 127.0.0.1:2281
+
+
+
+If you have any feedback, you are more than welcome to discuss it here!

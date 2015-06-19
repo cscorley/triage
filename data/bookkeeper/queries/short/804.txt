@@ -1,0 +1,1 @@
+Client program is not terminated when using openLedgerNoRecovery

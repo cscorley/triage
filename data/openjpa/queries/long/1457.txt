@@ -1,0 +1,7 @@
+The Java.net maven 1 repository contains a placeholder for some of the OpenJPA 1.2.2 artifacts (ie openjpa-lib and openjpa-kernel). Unfortunately the maven release plugin detects the placeholder and downloads it as a jar and copies it into your local repository. 
+
+Having the jar in your local repository causes problems with the javadoc tool and the release plugin cannot continue.
+
+Unfortunately this issue is not detected when doing a dryRun of the release:prepare goal - at least in my environment it only shows up when you start the release for real. 
+
+We use the Geronimo JPA spec jars elsewhere in the build - moving the TCK configuration to use them as well would resolve this issue.

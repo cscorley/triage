@@ -1,0 +1,1 @@
+I don't see any checks in place to prevent this method from writing its output file into the log or sego directories or even over service.properties. Fortunately, only the DBO can run this procedure by default.

@@ -1,0 +1,1 @@
+fs.defaultFS is overwritten in JobConf by replicated join at runtime

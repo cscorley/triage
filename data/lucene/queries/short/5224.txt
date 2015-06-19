@@ -1,0 +1,1 @@
+org.apache.lucene.analysis.hunspell.HunspellDictionary should implement ICONV and OCONV lines in the affix file

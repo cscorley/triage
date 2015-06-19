@@ -1,0 +1,3 @@
+The splitshard api doesn't call commit on new sub shards but it happily sets them to active state which means on a successful split, the documents are not visible to searchers unless an explicit commit is called on the cluster.
+
+The coreadmin split api will still not call commit on targetCores. That is by design and we're not going to change that.

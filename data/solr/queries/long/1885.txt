@@ -1,0 +1,2 @@
+Looks like we may still have a hanging issue:
+http://search.lucidimagination.com/search/document/90c4a942e18ad572/streamingupdatesolrserver_hangs

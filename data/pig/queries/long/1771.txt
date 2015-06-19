@@ -1,0 +1,22 @@
+The following script fail:
+
+
+
+a = load '1.txt' as (a0:chararray, a1:chararray, a3, a4:map[]);
+store a into '1.bin' using BinStorage();
+
+auxData = LOAD '1.bin' USING BinStorage('Utf8StorageConverter') AS (cookieId:chararray, type:chararray, record:tuple(), state:map[]);
+dump auxData;
+
+
+
+Error message:
+Caused by: org.apache.pig.impl.logicalLayer.FrontendException: ERROR 2246: Error merging schema record#-1:tuple{} and null#-1:bytearray
+        at org.apache.pig.newplan.logical.relational.LogicalSchema.merge(LogicalSchema.java:337)
+        at org.apache.pig.newplan.logical.relational.LOLoad.getSchema(LOLoad.java:103)
+        at org.apache.pig.newplan.logical.optimizer.SchemaResetter.visit(SchemaResetter.java:59)
+        at org.apache.pig.newplan.logical.relational.LOLoad.accept(LOLoad.java:159)
+        at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+        at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:50)
+        at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.compile(HExecutionEngine.java:261)
+        ... 12 more

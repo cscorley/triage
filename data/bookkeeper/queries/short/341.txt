@@ -1,0 +1,1 @@
+add documentation for bookkeeper ledger manager interface.

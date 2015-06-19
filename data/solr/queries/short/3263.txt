@@ -1,0 +1,1 @@
+Stop including more than one servlet-api jar version in the test classpath in the Maven build

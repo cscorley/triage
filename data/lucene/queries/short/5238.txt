@@ -1,0 +1,1 @@
+Fix junitcompat tests (so that they're not triggered when previous errors occur)

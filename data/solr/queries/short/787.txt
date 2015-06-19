@@ -1,0 +1,1 @@
+SolrJ POM refers to stax parser

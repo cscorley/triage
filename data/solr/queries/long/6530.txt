@@ -1,0 +1,11 @@
+Commits are executed by any node in SolrCloud i.e. they're not routed via the leader like other updates. 
+
+
+	Suppose there's 1 collection, 1 shard, 2 replicas (A and B) and A is the leader
+	Suppose a commit request is made to node B during a time where B cannot talk to A due to a partition for any reason (failing switch, heavy GC, whatever)
+	B fails to distribute the commit to A (times out) and asks A to recover
+	This was okay earlier because a leader just ignores recovery requests but with leader initiated recovery code, B puts A in the "down" state and A can never get out of that state.
+
+
+
+tl;dr; During network partitions, if enough commit/optimize requests are sent to the cluster, all the nodes in the cluster will eventually be marked as "down".

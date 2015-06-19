@@ -1,0 +1,1 @@
+MERGE statement fails with NullPointerException if ON clause references non-existent column

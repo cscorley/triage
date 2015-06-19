@@ -1,0 +1,7 @@
+From #lucene-dev IRC
+
+when it builds the src.tgz files
+it (i have no idea why) uses the pl script from inside the svn-export on the CHANGES.txt next to build.xml
+...
+it uses CWD changes.txt
+and executes it against the script inside the export dir

@@ -1,0 +1,1 @@
+Today, the ZkCli has the ability to put files to Zk (via put or putfile), but not get files.  This would be useful for me along with SOLR-5556, i.e. I could save the old solr.xml and replace it with a new one.

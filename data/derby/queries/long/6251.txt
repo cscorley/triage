@@ -1,0 +1,97 @@
+failing consistently on one machine, 10.9, windows, weme -
+http://people.apache.org/~myrnavl/derby_test_results/v10_9/windows/testlog/weme6.2/1484050-derbyall_diff.txt
+
+	
+	
+		
+		
+			Start: derbyrunjartest jdkWECE J2ME Foundation Specification v1.1 derbyall:derbytools 2013-05-17 23:02:07 ***
+2 del
+< Usage: java org.apache.derby.tools.ij [-p propertyfile] [inputfile]
+2a2
+> Process exception: (2) The system cannot find the file specified.
+4 del
+< USAGE: java org.apache.derby.tools.sysinfo -cp [ [ embedded ][ server ][ client] [ tools ] [ anyClass.class ] ]
+4a4
+> Process exception: (2) The system cannot find the file specified.
+6 del
+<  USAGE:
+7 del
+<  java org.apache.derby.tools.dblook -d <sourceDBUrl> [OPTIONS]
+8 del
+<  	where the source URL is the full URL, including the connection protocol
+9 del
+<  	and any connection attributes that might apply.  For example, use
+10 del
+<  	'jdbc:derby:myDB', or 'jdbc:derby://xxxFILTERED_HOSTNAMExxx:1527/myDB;user=usr;'. 
+11 del
+<  	options include: 
+12 del
+<  	-z <schemaName> to specify a schema to which the DDL generation
+13 del
+<  	 should be limited.  Only database objects with that schema will have
+14 del
+<  	 their DDL generated.
+15 del
+<  	-t <tableOne> <tableTwo> ... to specify a list of tables for which
+16 del
+<  	 the DDL will be generated; any tables not in the list will be ignored.
+17 del
+<  	-td <value> to specify what should be appended to the end
+18 del
+<  	 of each DDL statement.
+19 del
+< 		This defaults to ';'.
+20 del
+<  	-noview to prevent the generation of DDL for views.
+21 del
+<  	-append to keep from overwriting the output files.
+22 del
+<  	-verbose to have error messages printed to the console (in addition
+23 del
+<  	 to the log file).  If not specified, errors will only be printed to the
+24 del
+<  	 log file.
+25 del
+<  	-o <filename> to specify the file name to which the generated DDL
+26 del
+<  	 will be written.
+27 del
+<  		If not specified, default is the console. 
+27a6
+> Process exception: (2) The system cannot find the file specified.
+29 del
+< Usage: NetworkServerControl <commands> 
+30 del
+< Commands:
+31 del
+< start [-h <host>] [-p <portnumber>] [-noSecurityManager] [-ssl <sslmode>]
+32 del
+< shutdown [-h <host>][-p <portnumber>] [-ssl <sslmode>] [-user <username>] [-password <password>]
+33 del
+< ping [-h <host>][-p <portnumber>] [-ssl <sslmode>]
+34 del
+< sysinfo [-h <host>][-p <portnumber>] [-ssl <sslmode>]
+35 del
+< runtimeinfo [-h <host>][-p <portnumber>] [-ssl <sslmode>]
+36 del
+< logconnections 
+{on|off} [-h <host>][-p <portnumber>] [-ssl <sslmode>]
+37 del
+< maxthreads <max>[-h <host>][-p <portnumber>] [-ssl <sslmode>]
+38 del
+< timeslice <milliseconds>[-h <host>][-p <portnumber>] [-ssl <sslmode>]
+39 del
+< trace {on|off}
+ [-s <session id>][-h <host>][-p <portnumber>] [-ssl <sslmode>]
+40 del
+< tracedirectory <traceDirectory>[-h <host>][-p <portnumber>] [-ssl <sslmode>]
+40 add
+> Process exception: (2) The system cannot find the file specified.
+Test Failed.
+			End:   derbyrunjartest jdkWECE J2ME Foundation Specification v1.1 derbyall:derbytools 2013-05-17 23:02:07 ***
+		
+		
+	
+	
+

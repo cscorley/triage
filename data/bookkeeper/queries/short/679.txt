@@ -1,0 +1,1 @@
+Bookie should exit with non-zero if NIOServer crashes with Error

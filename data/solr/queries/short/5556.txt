@@ -1,0 +1,1 @@
+Allow class of CollectionsHandler and InfoHandler to be specified in solr.xml

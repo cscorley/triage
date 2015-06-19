@@ -1,0 +1,5 @@
+SegmentInfos carries a bunch of fields beyond the list of SI, but for merging purposes these fields are unused.
+
+We should cutover to List<SI> instead.
+
+Also SegmentInfos subclasses Vector<SI>, this should be removed and the collections be hidden inside the class. We can add unmodifiable views on it (asList(), asSet()).

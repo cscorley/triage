@@ -1,0 +1,3 @@
+I know we've intentionally bundled slf4j-jdk14-1.5.5.jar in the war to help newbies get up and running. But I find myself re-packaging the war for every customer when adapting to their choice of logger framework, which is counter-productive.
+
+It would be sufficient to have the jdk-logging binding in example/lib to let the example and tutorial still work OOTB but as soon as you deploy solr.war to production you're forced to explicitly decide what logging to use.

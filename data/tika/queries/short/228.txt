@@ -1,0 +1,1 @@
+Add OSGi metadata to Tika

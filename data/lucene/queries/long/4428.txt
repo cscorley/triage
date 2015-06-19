@@ -1,0 +1,13 @@
+It would be nice if the smokeTester could verify the metadata inside the jars/wars we release, things like the following in META-INF/MANIFEST.MF:
+
+
+	Implementation-Vendor: The Apache Software Foundation
+	X-Compile-Source-JDK: 1.6 <-- check they used a 1.6 actual compiler
+	X-Compile-Target-JDK: 1.6 <-- check that classes are the right format
+	Specification-Version: 4.0.0 <-- should match release version
+
+
+
+There should also exist META-INF/LICENSE.txt and META-INF/NOTICE.txt and they should be correct (e.g. the solr one should not have lucene's or whatever).
+
+I think we could use some code similar to what Mike did on SOLR-3879 to do this. The only difference is that inside the solr.war, we are only interested in lucene-xxx and apache-solr-xxx jar files (not third party ones).

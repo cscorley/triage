@@ -1,0 +1,1 @@
+Build an interactive shell /scripting (just like spark shell). Something very similar in R interactive/script runner mode.

@@ -1,0 +1,4 @@
+Iterator_1 e2e test is failing because the script tries to copy output to a directory that does not exist. From Hadoop 23, the copy commands do not auto-create non-existent paths anymore.
+
++Pig.fs("-mkdir :OUTPATH:")
+ Pig.fs("-copyFromLocal :TMP:/iterator_output.txt :OUTPATH:/part-m-00000")

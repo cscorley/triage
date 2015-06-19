@@ -1,0 +1,1 @@
+disable compaction when disk becomes full, otherwise compaction will fill up disk quickly

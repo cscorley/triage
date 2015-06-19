@@ -1,0 +1,2 @@
+The root cause of the issue described in PIG-3886 is that direct fetch doesn't support udfs that interact with the distributed cache.
+This should be documented so that users can easier track down such issues.

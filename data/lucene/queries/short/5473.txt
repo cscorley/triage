@@ -1,0 +1,1 @@
+the contructor function of SynonymFilter can not report exception correctly

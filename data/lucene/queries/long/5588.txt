@@ -1,0 +1,1 @@
+Since we are on Java 7 now and we already fixed FSDir.sync to use FileChannel (LUCENE-5570), we can also fsync the directory (at least try to do it). Unlike RandomAccessFile, which must be a regular file, FileChannel.open() can also open a directory: http://stackoverflow.com/questions/7694307/using-filechannel-to-fsync-a-directory-with-nio-2

@@ -1,0 +1,1 @@
+The edismax query parser should recognize the magic fields '_query_' and '_val_' as field names that can be allowed/restricted using "uf" just like any other field name.

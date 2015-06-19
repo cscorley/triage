@@ -1,0 +1,33 @@
+Add a new example config set for schemaless mode, including:
+
+
+	solrconfig.xml:
+	
+		ManagedIndexSchemaFactory
+		
+			mutable = true
+			resource name = "managed-schema"
+		
+		
+		In the default chain for the /update request processor, include:
+		
+			RemoveBlankFieldUpdateProcessorFactory (maybe?)
+			ParseFooUpdateProcessorFactory-s (see SOLR-4892)
+			AddSchemaFieldsUpdateProcessorFactory (see SOLR-4894)
+		
+		
+	
+	
+	managed-schema:
+	
+		Pre-defined field types: long, double, date, string, text, boolean
+		
+			Everything is stored
+			Everything is multi-valued
+		
+		
+		Pre-defined fields: id and _version_
+		Required unique key: id
+	
+	
+

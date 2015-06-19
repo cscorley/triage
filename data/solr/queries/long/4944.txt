@@ -1,0 +1,1 @@
+ChaosMonkeyShardSplitTest does not actually kill the overseer so it is not very useful in testing splits in failure scenarios.

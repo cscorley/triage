@@ -1,0 +1,48 @@
+Pig is using htrace-2.0 while hadoop-2.6.0 is using 3.0.4. htrace 3.04 has refactor its package layout which is total incompatible with htrace 2.0
+
+
+Exception in thread "main" java.lang.NoClassDefFoundError: org/htrace/Trace
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:214)
+	at com.sun.proxy.$Proxy9.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getFileInfo(ClientNamenodeProtocolTranslatorPB.java:752)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1988)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$18.doCall(DistributedFileSystem.java:1118)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$18.doCall(DistributedFileSystem.java:1114)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1114)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:1400)
+	at org.apache.pig.backend.hadoop.datastorage.HDataStorage.isContainer(HDataStorage.java:200)
+	at org.apache.pig.backend.hadoop.datastorage.HDataStorage.asElement(HDataStorage.java:128)
+	at org.apache.pig.backend.hadoop.datastorage.HDataStorage.asElement(HDataStorage.java:138)
+	at org.apache.pig.parser.QueryParserUtils.getCurrentDir(QueryParserUtils.java:91)
+	at org.apache.pig.parser.LogicalPlanBuilder.buildLoadOp(LogicalPlanBuilder.java:910)
+	at org.apache.pig.parser.LogicalPlanGenerator.load_clause(LogicalPlanGenerator.java:3569)
+	at org.apache.pig.parser.LogicalPlanGenerator.op_clause(LogicalPlanGenerator.java:1626)
+	at org.apache.pig.parser.LogicalPlanGenerator.general_statement(LogicalPlanGenerator.java:1103)
+	at org.apache.pig.parser.LogicalPlanGenerator.statement(LogicalPlanGenerator.java:561)
+	at org.apache.pig.parser.LogicalPlanGenerator.query(LogicalPlanGenerator.java:422)
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:191)
+	at org.apache.pig.PigServer$Graph.parseQuery(PigServer.java:1735)
+	at org.apache.pig.PigServer$Graph.access$0(PigServer.java:1722)
+	at org.apache.pig.PigServer.parseAndBuild(PigServer.java:387)
+	at org.apache.pig.PigServer.executeBatch(PigServer.java:412)
+	at org.apache.pig.PigServer.executeBatch(PigServer.java:398)
+	at pig.PigExample.main(PigExample.java:59)
+Caused by: java.lang.ClassNotFoundException: org.htrace.Trace
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 33 more
+
+

@@ -1,0 +1,1 @@
+IndexReader.document always return a doc with all the stored fields loaded. And this can be slow for the indexed document contain huge fields

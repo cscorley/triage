@@ -1,0 +1,6 @@
+Some jute generated functions (e.g. allocate_ACL_vector) that should be publicly exported are given local (vs global) linkage. This is due to an incomplete regex for EXPORT_SYMBOLS  in the C Makefile.am.
+
+Without allocate_ACL_vector it's not possible to set ACL lists from C.
+The regex should include "allocate_" :
+
+EXPORT_SYMBOLS = '(zoo_|zookeeper_|zhandle|Z|format_log_message|log_message|logLevel|deallocate_|allocate_|zerror|is_unrecoverable)'

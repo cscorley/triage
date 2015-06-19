@@ -1,0 +1,1 @@
+SearcherManager.afterRefresh() issues

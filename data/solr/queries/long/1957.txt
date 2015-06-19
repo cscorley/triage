@@ -1,0 +1,5 @@
+The VelocityResponseWriter deserves to be a first-class citizen in Solr, and not tacked on.  The benefit is that UI can be generated right from Solr cleanly and easily via simple templating.  The longer term goal is to migrate from the Solr admin interface from inflexible built-in JSPs to a cleaner layout Velocity set of templates that can be overridden externally if desired (for styling, or adding in plugin UI).
+
+Another large benefit to having VrW in core is that plugins can then ship with Velocity templates in their own .jar files to provide their own bits of UI or templated response capabilities (text fragments or full HTML responses).
+
+The impact of this change is a slightly larger solr.war with the additional Velocity dependencies added-in.

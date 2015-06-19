@@ -1,0 +1,1 @@
+POPoissonSample should handle endOfAllInput flag

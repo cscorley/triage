@@ -1,0 +1,24 @@
+Either there is a bug in how the params are handled that only manifests itself in J9, or the test needs fixed to not expect the params in a certain order
+
+
+REGRESSION:  org.apache.solr.handler.component.DistributedQueryElevationComponentTest.testDistribSearch
+
+Error Message:
+.responseHeader.params.fl!=version (unordered or missing)
+
+Stack Trace:
+junit.framework.AssertionFailedError: .responseHeader.params.fl!=version (unordered or missing)
+        at __randomizedtesting.SeedInfo.seed([C6763A182C2489BA:4790B4005B7BE986]:0)
+        at junit.framework.Assert.fail(Assert.java:50)
+        at
+org.apache.solr.BaseDistributedSearchTestCase.compareSolrResponses(BaseDistributedSearchTestCase.java:843)
+        at org.apache.solr.BaseDistributedSearchTestCase.compareResponses(BaseDistributedSearchTestCase.java:862)
+        at org.apache.solr.BaseDistributedSearchTestCase.query(BaseDistributedSearchTestCase.java:565)
+        at org.apache.solr.BaseDistributedSearchTestCase.query(BaseDistributedSearchTestCase.java:545)
+        at org.apache.solr.BaseDistributedSearchTestCase.query(BaseDistributedSearchTestCase.java:524)
+        at
+org.apache.solr.handler.component.DistributedQueryElevationComponentTest.doTest(DistributedQueryElevationComponentTe
+st.java:81)
+        at org.apache.solr.BaseDistributedSearchTestCase.testDistribSearch(BaseDistributedSearchTestCase.java:870)
+
+

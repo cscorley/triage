@@ -1,0 +1,1 @@
+Its serves as a base for other test classes that use the DOM.

@@ -1,0 +1,1 @@
+A possible NPE could raise in the error handling block if text was null (due to text.substring(0,len)) in UIMAUpdateRquestProcessor

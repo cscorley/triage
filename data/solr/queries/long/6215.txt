@@ -1,0 +1,1 @@
+SOLR-5936 should have removed the wrapped TrieField as part of dropping the legacy DateField.  This issue will fix the problem.

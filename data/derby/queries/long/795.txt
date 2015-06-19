@@ -1,0 +1,76 @@
+After calling rs.relative(0), on a scrollable ResultSet, the cursor looses its position, and a rs.getXXX(..) fails with:
+SQL Exception: Invalid cursor state - no current row.
+
+Probably caused by the following logic in ScrollInsensitiveResultSet.getRelativeRow(int row):
+	// Return the current row for 0
+		if (row == 0)
+		{
+                    if ((beforeFirst || afterLast) ||
+                        (!beforeFirst && !afterLast)) 
+{
+                        return null;
+                    }
+ else 
+{
+			return getRowFromHashTable(currentPosition);
+                    }
+		}
+
+The if () will always evaluate to true, regardless of the values of beforeFirst and afterLast
+
+Test code:
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class RelativeZeroIssue {
+
+    public static void main(String[] args) throws Exception {
+
+        Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+        Connection con = DriverManager.getConnection("jdbc:derby:testdb2;create=true");
+        con.setAutoCommit(false);
+        try 
+{    
+            Statement statement = con.createStatement();
+            
+            /** Create the table */
+            statement.execute("create table t1(id int)");
+            statement.execute("insert into t1 values 1,2,3,4,5,6,7,8");
+            
+            Statement s = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = s.executeQuery("select * from t1");
+            rs.next();
+            System.out.println(rs.getInt(1));
+            System.out.println(rs.relative(0));
+            System.out.println(rs.getInt(1));
+        }
+  finally 
+{
+            
+            con.rollback();
+            con.close();
+        }
+    }
+
+}
+
+
+Output from test:
+1
+false
+Exception in thread "main" SQL Exception: Invalid cursor state - no current row.
+        at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+        at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+        at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+        at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+        at org.apache.derby.impl.jdbc.ConnectionChild.newSQLException(Unknown Source)
+        at org.apache.derby.impl.jdbc.EmbedResultSet.checkOnRow(Unknown Source)
+        at org.apache.derby.impl.jdbc.EmbedResultSet.getColumn(Unknown Source)
+        at org.apache.derby.impl.jdbc.EmbedResultSet.getInt(Unknown Source)
+        at derbytest.RelativeZeroIssue.main(RelativeZeroIssue.java:51)
+Java Result: 1

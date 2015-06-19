@@ -1,0 +1,3 @@
+This is one place in Solr where we have crazy Java 1.0 classes which are not inner classes but in the same Java file but next to each other. This leads to problems on updating, because javac cannot determine if the class files needs updating.
+
+All those classes should be either in separate java files or should be inner classes

@@ -1,0 +1,1 @@
+test failure in XML tests, TriggerTests and BooleanValuesTest with ibm 1.6 sr 15 in 10.7 and earlier

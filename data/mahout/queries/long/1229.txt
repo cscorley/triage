@@ -1,0 +1,1 @@
+Conf directory permissions are cleared in the archive, so permissions-preserving archives (all but zip) when unpacked create conf directory but cannot unpack files into it (one gets permission denied errors).

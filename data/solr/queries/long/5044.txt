@@ -1,0 +1,7 @@
+Core-Admin in 4.x allows to create new cores on the fly, but one has to create the directories beforehand. 
+
+The information that this is actually required is not directly displayed to the user (because it's a nested exception), so the only thing he sees is:
+
+Error CREATEing SolrCore 'new_core': Unable to create core: new_core
+
+which doesn't really point out the problem.

@@ -1,0 +1,1 @@
+Distributed faceting can create invalid refinement requests when "key" is complex

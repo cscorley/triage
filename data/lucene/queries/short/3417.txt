@@ -1,0 +1,1 @@
+DictionaryCompoundWordTokenFilter does not properly add tokens from the end compound word.

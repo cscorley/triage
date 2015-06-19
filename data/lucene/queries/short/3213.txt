@@ -1,0 +1,1 @@
+Use AtomicReaderContext also for CustomScoreProvider

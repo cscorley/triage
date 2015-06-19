@@ -1,0 +1,2 @@
+General test improvements.
+We should use @BeforeClass where possible to avoid per test method overhead, and reuse lucene test utils where possible.

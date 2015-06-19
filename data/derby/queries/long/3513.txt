@@ -1,0 +1,18 @@
+User reports in an app server environment an intermittent  NullPointerException
+with the 10.1 trace:
+
+ R java.lang.NullPointerException
+org.apache.derby.iapi.jdbc.BrokeredConnection.newBrokeredStatement(BrokeredConnection.java:448)
+
+...org.apache.derby.jdbc.XAStatementControl.<init>(XAStatementControl.java:62)        
+...org.apache.derby.jdbc.EmbedXAConnection.wrapStatement(EmbedXAConnection.java:827)  
+org.apache.derby.iapi.jdbc.BrokeredConnection.createStatement(BrokeredConnection.java:296)
+ [snip user trace]
+
+The code at line 448 is simply:
+return new BrokeredStatement(statementControl, getJDBCLevel());
+
+so not much room for an NPE there.   I added println statements to identify the state values and where the NPE is actually occurring but that seemed to make the 
+problem go away.  It may be a JIT issue.
+
+I gave them the fix for DERBY-2142 and that did not correct the problem.

@@ -1,0 +1,21 @@
+FacetIndexingParams lets you configure few things such as OrdinalPolicy, PathPolicy and partitionSize. However, in order to set them you must extend DefaultFacetIndexingParams and override fixedXY(), as the respective getters are final.
+
+I'd like to do the following:
+
+	Turn FacetIndexingParams and FacetSearchParams into concrete classes, rather than interfaces. The reason they are interfaces because one app once wants to have one class which implements both. Since FSP holds FIP, I don't think that's needed.
+
+
+
+
+	Add setters to FacetIndexingParams for the relevant configuration parameters, rather than forcing someone to extend the class. Extensions should really be for special cases, which we haven't identified so far (except overriding these settings), hence why there's only DefaultFIP/FSP.
+
+
+
+
+	Add some javadocs...
+
+
+
+
+	I'm sure, w/ my pedantic and perfectionist nature, that more thing will be done once I get to it .
+

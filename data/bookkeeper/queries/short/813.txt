@@ -1,0 +1,1 @@
+BookieShell doesn't find index directory 

@@ -1,0 +1,1 @@
+Support core properties when creating cores via REST API (CoreAdminHandler)

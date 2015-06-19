@@ -1,0 +1,9 @@
+See 15 failures
+1) TestTezJobControlCompiler.testTezParallelismEstimatorSplitBranch
+junit.framework.AssertionFailedError: expected:<-1> but was:<7>
+	at org.apache.pig.tez.TestTezJobControlCompiler.testTezParallelismEstimatorSplitBranch(TestTezJobControlCompiler.java:272)
+
+2) TestAvroStorage.testLoadRecordsWithMaps
+3) TestTezCompiler - 13 failures.
+
+2 and 3 are due to relying on hashmap order

@@ -1,0 +1,10 @@
+I tried to upgrade from an ancient version of the sun jdk to 1.6 u21 b7, but now my javadoc build for 10.3 (10.3.3.1) has a number of errors re 'generics' usage:
+
+java\engine\org\apache\derby\iapi\jdbc\BrokeredCallableStatement40.java:303: generics are 
+
+not supported in -source 1.4
+  [javadoc] (use -source 5 or higher to enable generics)
+  [javadoc]     public <T> T unwrap(java.lang.Class<T> interfaces) 
+  [javadoc]            ^
+
+etc.

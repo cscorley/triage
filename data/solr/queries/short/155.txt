@@ -1,0 +1,1 @@
+Field contents not escaped when using libxml-ruby

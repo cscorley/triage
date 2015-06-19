@@ -1,0 +1,9 @@
+For a ManyToMany relationship, I attempted to use the following in the orm to persist the related entities:
+
+    <persistence-unit-metadata>
+        <persistence-unit-defaults>
+            <delimited-identifiers/>
+        </persistence-unit-defaults>
+    </persistence-unit-metadata>
+
+Although openjpa appears to find this, it doesn't use it in an em.persist(). It does work, however, if I put cascade=CascadeType.persist on the @ManyToMany annotation of the entity that is specifically persisted.

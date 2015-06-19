@@ -1,0 +1,3 @@
+Currently collated sort is via an Analyzer into an indexedfield, which is uninverted in the fieldcache.
+
+Instead we could support this with docvalues, and take advantage of future improvements like LUCENE-3729.

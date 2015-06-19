@@ -1,0 +1,7 @@
+for reasons i can't explain, TestJmxIntegration stoped working on my machine today, and when i started looking into it, i realized that there's no logical reason why it should be working on any machine at all.
+
+Back when this test was first written, it was setup to ensure that an MBean server was up and running prior to initializing the SolrCore, and then the configuration used by the test was designed to use JMX if and only if an existing MBean server was running.
+
+in r1402613 this was (inadvertantly?) changed so that the SolrCore was initialized @BeforeClass, but there was no certainty that the Mbean server was started until later – so the test fails in a variety of confusing ways because there is no JMX running at all.  The only reason it can succeed is if an MBean server already happens to be running.
+
+I've got a patch that should fix this in general, or at least make it fail with a clear error if hte problem is that a JMX server isn't found on core init

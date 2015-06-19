@@ -1,0 +1,15 @@
+For the below script
+
+A = LOAD 'data1';
+B = LOAD 'data2';
+C = UNION A, B;
+STORE C into 'data3';
+
+Output message is shown as below due to vertex group and storing from separate vertices.
+
+Successfully stored 10 records (xxx bytes) in: "data3"
+Successfully stored 20 records (yyy bytes) in: "data3"
+
+Even though it is correct it can be confusing for users and they have to sum it up before comparing to Pig on MR output message. OutputStats with same filename should be combined and shown as
+
+Successfully stored 30 records (xxx bytes) in: "data3"

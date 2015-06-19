@@ -1,0 +1,1 @@
+Currently, if NIOServerFactory throws something like OutOfMemoryError, bookie process will exit with 0. This is bad, as monitoring tools will take it to mean a normal shutdown and not restart.

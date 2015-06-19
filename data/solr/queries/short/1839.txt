@@ -1,0 +1,1 @@
+If the stress tests in BaseDistributedSearchTestCase fail, the test still passes

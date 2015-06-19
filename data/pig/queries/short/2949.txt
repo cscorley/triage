@@ -1,0 +1,1 @@
+JsonLoader only reads arrays of objects 

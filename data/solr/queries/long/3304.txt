@@ -1,0 +1,1 @@
+Get the Solr spatial module integrated with the lucene spatial module.

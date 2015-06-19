@@ -1,0 +1,1 @@
+Scripts in frameworks direcotry needs to be revisted to set up CLASSPATH properly

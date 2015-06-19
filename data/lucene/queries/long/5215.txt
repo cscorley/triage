@@ -1,0 +1,15 @@
+In LUCENE-5189 we've identified few reasons to do that:
+
+
+	If you want to update docs' values of field 'foo', where 'foo' exists in the index, but not in a specific segment (sparse DV), we cannot allow that and have to throw a late UOE. If we could rewrite FieldInfos (with generation), this would be possible since we'd also write a new generation of FIS.
+
+
+
+
+	When we apply NDV updates, we call DVF.fieldsConsumer. Currently the consumer isn't allowed to change FI.attributes because we cannot modify the existing FIS. This is implicit however, and we silently ignore any modified attributes. FieldInfos.gen will allow that too.
+
+
+
+The idea is to add to SIPC fieldInfosGen, add to each FieldInfo a dvGen and add support for FIS generation in FieldInfosFormat, SegReader etc., like we now do for DocValues. I'll work on a patch.
+
+Also on LUCENE-5189, Rob raised a concern about SegmentInfo.attributes that have same limitation – if a Codec modifies them, they are silently being ignored, since we don't gen the .si files. I think we can easily solve that by recording SI.attributes in SegmentInfos, so they are recorded per-commit. But I think it should be handled in a separate issue.

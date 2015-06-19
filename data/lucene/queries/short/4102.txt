@@ -1,0 +1,1 @@
+SuppressCodecs doesnt work with -Dtests.postingsformat

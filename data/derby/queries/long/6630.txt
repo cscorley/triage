@@ -1,0 +1,1 @@
+JCECipherFactory.run() performs security-sensitive operations. It is executed in a privilege block by the init() method, which is, in turn, executed by the public constructor. The class and its corresponding factory are public, which means that any code running in the same JVM can run this security-sensitive code with the privileges granted to Derby.

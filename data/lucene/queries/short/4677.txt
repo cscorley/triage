@@ -1,0 +1,1 @@
+Use vInt to encode node addresses inside FST

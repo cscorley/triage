@@ -1,0 +1,1 @@
+NPE and Illegal Argument Exception in wrapped SpanMultiTerms with no matches

@@ -1,0 +1,1 @@
+There is an off-by-one if the term starts exactly on a sentence boundary.

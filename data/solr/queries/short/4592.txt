@@ -1,0 +1,1 @@
+DefaultSolrCoreState#doRecovery needs to check the CoreContainer shutdown flag inside the recoveryLock sync block.

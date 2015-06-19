@@ -1,0 +1,1 @@
+Proxied responses should propagate all headers rather than the first one for each key.

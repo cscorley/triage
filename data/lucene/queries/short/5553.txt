@@ -1,0 +1,1 @@
+IndexReader#ReaderClosedListener is not always called on IndexReader#close()

@@ -1,0 +1,3 @@
+Ivy's bug that fails to remove differently versioned dependencies in (test-)lib/ dirs even though we set sync="true" on <ivy:retrieve> (I couldn't find a JIRA for this) continues to cause trouble/confusion (see related LUCENE-5467).
+
+We should make the ant precommit target depend on clean-jars, so that people won't think they need to run ant jar-checksums because of stale jars Ivy leaves in lib/ or test-lib/ directories, which currently causes ant precommit to bitch that there are missing checksums.

@@ -1,0 +1,1 @@
+Solr should not fall back to the back compat built in solr.xml in SolrCloud mode.

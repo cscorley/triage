@@ -1,0 +1,1 @@
+Silly bug ... we just fail to set the ordinal in IntFacetResultsHandler.

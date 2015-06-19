@@ -1,0 +1,1 @@
+Network client DataSources silently swallow SecurityExceptions when trying to read the tracing properties

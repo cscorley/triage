@@ -1,0 +1,1 @@
+analysis.jsp in 3x branch produces error with filter using TermAttribute ("..CharTermAttributeImpl that is not in the target")

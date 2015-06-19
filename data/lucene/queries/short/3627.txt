@@ -1,0 +1,1 @@
+CorruptIndexException on indexing after a failure occurs after segments file creation but before any bytes are written

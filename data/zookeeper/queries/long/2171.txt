@@ -1,0 +1,3 @@
+Apparently, ZOOKEEPER-107 (via a quick git-blame look) introduced a bunch of getHostName() calls in QCM. Besides the overhead, these can cause problems when mixed with failing/mis-configured DNS servers.
+
+It would be nice to reduce them, if that doesn't affect operational correctness. 

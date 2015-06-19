@@ -1,0 +1,5 @@
+This ticket has two goals for Pig unit:
+
+1) Pig unit has a really nice method assertOutput(String inputAlias, String[] inputValues, String outputAlias, String[] expectedOutputValues).  That method lets you override an input alias variable with a hardcoded list of values. That way, the script doesn't actually have to read that input variable from hdfs or cassandra. Then, it runs the script and checks the specified output alias variable against the expected set of values.  It's a really nice way to test your entire pig script with a single method call, but only IF your script has exactly 1 input and 1 output.  If you want to test more complicated scripts, you have to jump through some hoops in order to override more input variables. But, it would be fairly easy to change PigUnit so that it can override any number of inputs and check any number of outputs and do so easily.  That's basically the change that I put into the base testing class I wrote. But, it would be better to push that into PigUnit itself, and it's something that could easily be done in an afternoon.
+
+2) Update javadocs for the pig unit test classes to make them more readable.

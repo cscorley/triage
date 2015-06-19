@@ -1,0 +1,9 @@
+Spinoff from LUCENE-3842.  This just generalizes the
+UpToTwoPositiveIntOutputs to a list of any arbitrary output, by
+wrapping any other Outputs impl.  I also made separate methods to
+write/read a node-final output: since list of values can only occur on
+a final node output, this impl optimizes and avoids writing an extra
+byte per label for normal arc labels.
+
+This also fixes a bug in Builder that was sometimes failing to join
+multiple outputs together.

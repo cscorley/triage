@@ -1,0 +1,9 @@
+This is a regression of PIG-3795. In TezCompiler, visitDistinct() doesn't set the requested parallelism of TezOperator, resulting that only one reducer runs for the following query-
+
+
+A = LOAD 'table_testCustomPartitionerDistinct' as (a0:int, a1:int);
+B = distinct A PARTITION BY org.apache.pig.test.utils.SimpleCustomPartitioner3 parallel 2;
+
+
+
+The test fails because it sees a single output file while it expects two.

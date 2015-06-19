@@ -1,0 +1,1 @@
+NoMergePolicy should have one singleton - NoMergePolicy.INSTANCE

@@ -1,0 +1,1 @@
+TestIndexwriterWithThreads#testCloseWithThreads hangs if a thread hit an exception before indexing its first document

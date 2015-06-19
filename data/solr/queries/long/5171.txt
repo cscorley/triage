@@ -1,0 +1,254 @@
+Solr Admin.html does not work in IE10. Thought it was unmatched tags. It's a document mode issue. 
+
+Workaround for IE10. Modify Admin.html by adding the metatag after doctype <meta http-equiv="x-ua-compatible" content="IE=9">.  
+
+
+ I use total validator. 
+
+The line numbers refer to lines in the original source.
+Any with a line number of '0' are implicit tags added by Total Validator:
+   1 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+   2 next problemprevious problemW864 [WCAG 2.0 3.1.1 (A)] Use the 'lang' or 'xml:lang' attribute to denote the primary language of the 
+              document:
+     <html>
+  21   <head>
+  23     <title>
+  23       Solr Admin
+  23     </title>
+  25     <link rel="icon" type="image/ico" href="img/favicon.ico?_=4.4.0">
+  27     <link rel="stylesheet" type="text/css" href="css/styles/common.css?_=4.4.0">
+  28     <link rel="stylesheet" type="text/css" href="css/styles/analysis.css?_=4.4.0">
+  29     <link rel="stylesheet" type="text/css" href="css/styles/cloud.css?_=4.4.0">
+  30     <link rel="stylesheet" type="text/css" href="css/styles/cores.css?_=4.4.0">
+  31     <link rel="stylesheet" type="text/css" href="css/styles/dashboard.css?_=4.4.0">
+  32     <link rel="stylesheet" type="text/css" href="css/styles/dataimport.css?_=4.4.0">
+  33     <link rel="stylesheet" type="text/css" href="css/styles/index.css?_=4.4.0">
+  34     <link rel="stylesheet" type="text/css" href="css/styles/java-properties.css?_=4.4.0">
+  35     <link rel="stylesheet" type="text/css" href="css/styles/logging.css?_=4.4.0">
+  36     <link rel="stylesheet" type="text/css" href="css/styles/menu.css?_=4.4.0">
+  37     <link rel="stylesheet" type="text/css" href="css/styles/plugins.css?_=4.4.0">
+  38     <link rel="stylesheet" type="text/css" href="css/styles/documents.css?_=4.4.0">
+  39     <link rel="stylesheet" type="text/css" href="css/styles/query.css?_=4.4.0">
+  40     <link rel="stylesheet" type="text/css" href="css/styles/replication.css?_=4.4.0">
+  41     <link rel="stylesheet" type="text/css" href="css/styles/schema-browser.css?_=4.4.0">
+  42     <link rel="stylesheet" type="text/css" href="css/styles/threads.css?_=4.4.0">
+  43     <link rel="stylesheet" type="text/css" href="css/chosen.css?_=4.4.0">
+  45     <script type="text/javascript">
+  52     </script>
+  54   </head>
+  55   <body>
+  57     <div id="wrapper">
+  59       <div id="header">
+  61         <a href="./" id="solr">
+  61           <span>
+  61             Apache SOLR
+  61           </span>
+  61         </a>
+  63         <p id="environment">
+  63            
+  63         </p>
+  65       </div>
+  67       <div id="main" class="clearfix">
+  69         <div id="init-failures">
+  71 next problemprevious problemP883 [WCAG 2.0 1.3.1 (A)] Nest headings properly (H1 > H2 > H3):
+               <h2>
+  71             SolrCore Initialization Failures
+  71           </h2>
+  72 next problemprevious problemP892 [WCAG 2.0 1.3.1 (A)] Use CSS for presentation effects:
+               <ul>
+  72 next problemprevious problemE610 One or more of the following tags are missing from within the enclosing tag: <li> 
+               </ul>
+  73           <p>
+  73             Please check your logs for more information
+  73           </p>
+  75         </div>
+  77         <div id="content-wrapper">
+  78           <div id="content">
+  79              
+  82           </div>
+  83         </div>
+  85         <div id="menu-wrapper">
+  86           <div>
+  88             <ul id="menu">
+  90               <li id="index" class="global">
+  90                 <p>
+  90 next problemprevious problemE049 No matching anchor name:
+                       <a href="#/">
+  90                     Dashboard
+  90                   </a>
+  90                 </p>
+  90               </li>
+  92               <li id="logging" class="global">
+  92                 <p>
+  92 next problemprevious problemE049 No matching anchor name:
+                       <a href="#/~logging">
+  92                     Logging
+  92                   </a>
+  92                 </p>
+  93                 <ul>
+  94                   <li class="level">
+  94 next problemprevious problemE049 No matching anchor name:
+                         <a href="#/~logging/level">
+  94                       Level
+  94                     </a>
+  94                   </li>
+  95                 </ul>
+  96               </li>
+  98               <li id="cloud" class="global optional">
+  98                 <p>
+  98 next problemprevious problemE049 No matching anchor name:
+                       <a href="#/~cloud">
+  98                     Cloud
+  98                   </a>
+  98                 </p>
+  99                 <ul>
+ 100                   <li class="tree">
+ 100 next problemprevious problemE049 No matching anchor name:
+                         <a href="#/~cloud?view=tree">
+ 100                       Tree
+ 100                     </a>
+ 100                   </li>
+ 101                   <li class="graph">
+ 101 next problemprevious problemE049 No matching anchor name:
+                         <a href="#/~cloud">
+ 101                       Graph
+ 101                     </a>
+ 101                   </li>
+ 102                   <li class="rgraph">
+ 102 next problemprevious problemE049 No matching anchor name:
+                         <a href="#/~cloud?view=rgraph">
+ 102                       Graph (Radial)
+ 102                     </a>
+ 102                   </li>
+ 103                   <li class="dump">
+ 103 next problemprevious problemE049 No matching anchor name:
+                         <a href="#/~cloud">
+ 103                       Dump
+ 103                     </a>
+ 103                   </li>
+ 104                 </ul>
+ 105               </li>
+ 107               <li id="cores" class="global">
+ 107                 <p>
+ 107 next problemprevious problemE049 No matching anchor name:
+                       <a href="#/~cores">
+ 107                     Core Admin
+ 107                   </a>
+ 107                 </p>
+ 107               </li>
+ 109               <li id="java-properties" class="global">
+ 109                 <p>
+ 109 next problemprevious problemE049 No matching anchor name:
+                       <a href="#/~java-properties">
+ 109                     Java Properties
+ 109                   </a>
+ 109               </li>
+ 111               <li id="threads" class="global">
+ 111                 <p>
+ 111 next problemprevious problemE049 No matching anchor name:
+                       <a href="#/~threads">
+ 111                     Thread Dump
+ 111                   </a>
+ 111                 </p>
+ 111               </li>
+ 113             </ul>
+ 115             <div id="core-selector">
+ 116 next problemprevious problemE620 The 'data-placeholder' attribute is not valid for this tag here:
+     E866 [WCAG 2.0 1.1.1 (A)] Form controls without a label should have a 'title' attribute:
+                   <select data-placeholder="Core Selector">
+ 116 next problemprevious problemE610 One or more of the following tags are missing from within the enclosing tag: <optgroup> <option> 
+                   </select>
+ 117             </div>
+ 118             <div id="core-menu">
+ 119 next problemprevious problemP892 [WCAG 2.0 1.3.1 (A)] Use CSS for presentation effects:
+                   <ul>
+ 119 next problemprevious problemE610 One or more of the following tags are missing from within the enclosing tag: <li> 
+                   </ul>
+ 120             </div>
+ 122           </div>
+ 123         </div>
+ 125         <div id="meta">
+ 127           <ul>
+ 129             <li class="documentation">
+ 129               <a href="http://lucene.apache.org/solr/">
+ 129                 <span>
+ 129                   Documentation
+ 129                 </span>
+ 129               </a>
+ 129             </li>
+ 130             <li class="issues">
+ 130               <a href="http://issues.apache.org/jira/browse/SOLR">
+ 130                 <span>
+ 130                   Issue Tracker
+ 130                 </span>
+ 130               </a>
+ 130             </li>
+ 131             <li class="irc">
+ 131               <a href="http://webchat.freenode.net/?channels=#solr">
+ 131                 <span>
+ 131                   IRC Channel
+ 131                 </span>
+ 131               </a>
+ 131             </li>
+ 132             <li class="mailinglist">
+ 132               <a href="http://wiki.apache.org/solr/UsingMailingLists">
+ 132                 <span>
+ 132                   Community forum
+ 132                 </span>
+ 132               </a>
+ 132             </li>
+ 133             <li class="wiki-query-syntax">
+ 133               <a href="http://wiki.apache.org/solr/SolrQuerySyntax">
+ 133                 <span>
+ 133                   Solr Query Syntax
+ 133                 </span>
+ 133               </a>
+ 133             </li>
+ 135           </ul>
+ 137         </div>
+ 139       </div>
+ 141     </div>
+ 143     <div id="connection_status">
+ 145       <span>
+ 145         Connection lost ...
+ 145       </span>
+ 147     </div>
+ 149     <script type="text/javascript">
+ 149     </script>
+ 150 next problemprevious problemE620 The 'data-main' attribute is not valid for this tag here:
+     E621 The 'type' attribute for this tag is missing:
+         <script src="js/require.js?_=4.4.0" data-main="js/main">
+ 150     </script>
+ 152   </body>
+ 153 </html>
+
+
+ top
+
+More Information
+
+Link Errors
+
+E049 - 11 instance(s): A link was found to an anchor in the same page, but that anchor could could not be found. You need to either remove the link or add a matching anchor name.
+
+HTML Errors
+
+E610 - 3 instance(s): The HTML specification being tested against defines that the tag identified must have one or more specific tags nested within it. You should add one or more of the missing tag(s) as appropriate.
+
+E620 - 2 instance(s): The most common reason for this error is the use of a browser-specific attribute (such as 'leftmargin' in the <body> tag), which is not part of the official HTML specification being tested against. If the attribute is for purely for layout then consider using CSS instead.
+
+E621 - 1 instance(s): The HTML specification being validated against requires that the attribute indicated should be used.
+
+WCAG 2.0 A Errors
+
+E866 - 1 instance(s): Use the 'title' attribute to label form controls when the visual design cannot accommodate the label (for example, if there is no text on the screen that can be identified as a label) or where it might be confusing to display a label. User agents, including assisting technology, can speak the 'title' attribute. See http://www.w3.org/TR/WCAG20-TECHS/H65.html (displayed in new window)
+
+P883 - 1 instance(s): Heading elements must be ordered properly. For example, H2 elements should follow H1 elements, H3 elements should follow H2 elements, etc. Developers should not skip levels or use headings for presentation effects. See http://www.w3.org/TR/WCAG20-TECHS/F43.html (displayed in new window)
+
+P892 - 2 instance(s): Tags that are being used purely to create a visual presentation effect should not be used. You should use CSS to control layout and presentation so that users and their aids may control it. See http://www.w3.org/TR/WCAG20-TECHS/G140.html (displayed in new window)
+
+WCAG 2.0 A Warnings
+
+W864 - 1 instance(s): You should always identify the primary natural language of a document. See http://www.w3.org/TR/WCAG20-TECHS/H57.html (displayed in new window)
+
+ top

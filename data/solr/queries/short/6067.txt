@@ -1,0 +1,1 @@
+add buildAndRunCollectorChain methods to reduce code duplication in SolrIndexSearcher

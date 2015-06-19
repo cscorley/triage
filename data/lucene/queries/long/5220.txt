@@ -1,0 +1,16 @@
+While doing some unrelated debugging:
+
+I noticed when printing the Sort, the expressions get the inherited toString for a CUSTOM comparator, which is not very good:
+
+
+<custom:"sqrt(_score) + ln(popularity)": null>!
+
+
+
+I think its better if it looks something like this instead:
+
+<expr "sqrt(_score) + ln(popularity)">!
+
+
+
+Also equals/hashcode is wrong: it will bogusly report equals(true) if the expression is the same: but bindings could be different!

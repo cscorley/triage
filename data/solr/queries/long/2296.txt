@@ -1,0 +1,1 @@
+Version 3.4.2 fixes a concurrency bug in Carrot2 that may be causing SOLR-2282. I'll attach patches in a minute.

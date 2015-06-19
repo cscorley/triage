@@ -1,0 +1,1 @@
+Some tests annoyingly use a data dir under example/multicore/core0|1 - worse, more than one test does this, so sometimes they can stomp on each other.

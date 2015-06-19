@@ -1,0 +1,1 @@
+Add flag to CJKBigramFilter to allow indexing unigrams as well as bigrams

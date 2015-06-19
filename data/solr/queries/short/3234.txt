@@ -1,0 +1,1 @@
+Remove contrib/dataimporthandler's webapp jsp

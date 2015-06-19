@@ -1,0 +1,15 @@
+In SolrCloud, found a result grouping bug in the 4.0 release.
+A distributed result grouping request under SolrCloud got this result:
+
+
+Dec 10, 2012 10:32:07 PM org.apache.solr.common.SolrException log
+SEVERE: null:java.lang.IllegalArgumentException: numHits must be > 0; please use TotalHitCountCollector if you just need the total hit count
+        at org.apache.lucene.search.TopFieldCollector.create(TopFieldCollector.java:1120)
+        at org.apache.lucene.search.TopFieldCollector.create(TopFieldCollector.java:1069)
+        at org.apache.lucene.search.grouping.AbstractSecondPassGroupingCollector.<init>(AbstractSecondPassGroupingCollector.java:75)
+        at org.apache.lucene.search.grouping.term.TermSecondPassGroupingCollector.<init>(TermSecondPassGroupingCollector.java:49)
+        at org.apache.solr.search.grouping.distributed.command.TopGroupsFieldCommand.create(TopGroupsFieldCommand.java:128)
+        at org.apache.solr.search.grouping.CommandHandler.execute(CommandHandler.java:132)
+        at org.apache.solr.handler.component.QueryComponent.process(QueryComponent.java:339)
+        at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:206)
+

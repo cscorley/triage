@@ -1,0 +1,1 @@
+There have a been a lot of changes in the e2e testing (including making it all work from ant and adding tests for new functionality) since the 0.9 release.  It should be possible to test 0.9 with these improvements.

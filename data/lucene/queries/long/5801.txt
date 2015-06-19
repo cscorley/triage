@@ -1,0 +1,4 @@
+from lucene > 4.6.1 the class:
+org.apache.lucene.facet.util.OrdinalMappingAtomicReader
+
+was removed; resurrect it because used merging indexes related to merged taxonomies.

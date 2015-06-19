@@ -1,0 +1,1 @@
+As Follow Up on SOLR-3324 and SOLR-3515, we decided to allow specifying the verbose-Option as URL-Param. 

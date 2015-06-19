@@ -1,0 +1,1 @@
+Brics has my code to build Automaton from a set of sorted strings in one step (Daciuk/Mihov's algorithm again). This should be easily portable to Lucene and is quite useful.

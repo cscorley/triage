@@ -1,0 +1,24 @@
+I have a large SolrCloud setup, 7 nodes, each hosting few 1000 cores (leaders/replicas of same shard exist on different nodes), which is maybe making it easier to notice the problem.
+
+Node can randomly get into a state where it "stops" responding to PeerSync /get requests from other nodes. When that happens, threaddump of that node shows multiple entries like this one (one entry for each "blocked" request from other node; they don't go away with time):
+
+"http-bio-8080-exec-1781" daemon prio=5 tid=0x440177200000 nid=0x25ae  [ JVM locked by VM at safepoint, polling bits: safep ]
+   java.lang.Thread.State: RUNNABLE
+        at java.util.WeakHashMap.get(WeakHashMap.java:471)
+        at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:351)
+        at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:201)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+
+WeakHashMap's internal state can easily get corrupted when used in unsynchronized way, in which case it is known to enter infinite loop in .get() call. It is very likely that this happens here too. The reason why other maybe don't see this issue could be related to huge number of cores I have in this system. The problem is usually created when some node is starting. Also, it doesn't happen with each start, it obviously depends on "correct" timing of events which lead to map's corruption.
+
+The fix may be as simple as changing:
+
+protected final Map<SolrConfig, SolrRequestParsers> parsers = new WeakHashMap<SolrConfig, SolrRequestParsers>();
+
+to:
+
+  protected final Map<SolrConfig, SolrRequestParsers> parsers = Collections.synchronizedMap(
+      new WeakHashMap<SolrConfig, SolrRequestParsers>());
+
+but there may be performance considerations around this since it is entrance into Solr.

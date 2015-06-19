@@ -1,0 +1,11 @@
+I added a lot of tests and greatly refined this algorithm to match correct hunspell behavior. there were many bugs:
+
+
+	recursionLimit was a hack: this is actually specified by the dictionary to be twofold suffix + one prefix, or if COMPLEXPREFIXES is specified, twofold prefix + one suffix. This patch removes cursion limit
+	recursion didn't work correctly: it didnt validate multi-level continuation classes correctly.
+	add COMPLEXPREFIXES support.
+	probably other minor bugs fixed in the process.
+
+
+
+I validated all testing against hunspell

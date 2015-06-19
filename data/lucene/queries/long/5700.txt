@@ -1,0 +1,3 @@
+Currently this is a disaster. there is ramBytesUsed(), sizeInBytes(), etc etc everywhere, with zero consistency, little javadocs, and no structure. For example, look at LUCENE-5695, where we go back and forth on how to handle "don't know". 
+
+I don't think we should add any more of these methods to any classes in lucene until this has been cleaned up.

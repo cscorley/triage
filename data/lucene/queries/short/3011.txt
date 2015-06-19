@@ -1,0 +1,1 @@
+FST serialization and deserialization from plain DataInput/DataOutput streams.

@@ -1,0 +1,6 @@
+Now that we have the main interfaces in the Queries module, we can move the actual impls over.
+
+Impls that won't be moved are:
+
+function/distance/* (to be moved to a spatial module)
+function/FileFloatSource.java (depends on Solr's Schema, data directories and exposes a RequestHandler)

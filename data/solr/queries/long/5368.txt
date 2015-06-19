@@ -1,0 +1,15 @@
+when i use MoreLikeThisHandler，it throws a EarlyTerminatingCollectorException when the document is greater than 5.
+and I think it is because the fllowing reason in MoreLikeThisComponent.java
+NamedList<DocList> sim = getMoreLikeThese(rb, rb.req.getSearcher(),
+              rb.getResults().docList, mltcount);
+
+But the actual getMoreLikeThese's The method signature is
+
+  NamedList<DocList> getMoreLikeThese(ResponseBuilder rb,
+      SolrIndexSearcher searcher, DocList docs, int flags)
+
+so i think the mltcount shoud be flags。
+
+and also on line 113 
+
+

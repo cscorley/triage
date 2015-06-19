@@ -1,0 +1,1 @@
+encountered when doing maven-generate-artifacts from branch_3x of solr, build.xml references lib/commons-csv-1.0-SNAPSHOT-r609327.jar, but version in svn is lib/commons-csv-1.0-SNAPSHOT-r966014.jar

@@ -1,0 +1,10 @@
+If you pass an xpath that contains a namespace the XPath UDF will always fail to match.
+
+It would be better to either silently remove the namespace or provide a parameter that will remove it.
+
+The reason it is desirable to ignore xpath's with namespaces is that many xml tools when selecting an xpath provide the namespace.   It makes cutting & pasting into a pig script painful if you need to manually remove it.
+
+Additionally XPath only returns the first match.   It is often desirable to return all matches and allow for a flattening to process multiple records.   An XPathAll would be useful to have.
+
+A patch is available as a git pullrequest at
+     https://github.com/apache/pig/pull/14

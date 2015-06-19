@@ -1,0 +1,3 @@
+I would like to have my own QueryComponent, and have a more limited syntax for return fields.  Unfortunately the ReturnFields constructor currently does parsing.
+
+If we extract the parsing code into a static method of ReturnFields, then the class can be a simple container, and I can have my alternate parsing code to fill it.

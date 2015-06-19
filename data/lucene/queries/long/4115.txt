@@ -1,0 +1,10 @@
+I think we should add the following target deps:
+
+ant clean [depends on] clean-jars
+ant resolve [depends on] clean-jars
+ant eclipse [depends on] resolve, clean-jars
+ant idea [depends on] resolve, clean-jars
+
+This eliminates the need to remember about cleaning up stale jars which users complain about (and I think they're right about it). The overhead will be minimal since resolve is only going to copy jars from cache. Eclipse won't have a problem with updated JARs if they end up at the same location.
+
+If there are no objections I will fix this in a few hours.

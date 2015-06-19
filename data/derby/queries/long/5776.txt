@@ -1,0 +1,36 @@
+Since last week the windows nightly tests on trunk show a consistent new failure in derbyall with weme6.2:
+------------------------------
+
+	
+	
+		
+		
+			Start: iepnegativetests_ES jdkWECE J2ME Foundation Specification v1.1 derbyall:i18nTest 2012-05-17 03:09:49 ***
+112 del
+< ij> --more than one character passed to the delimiters get truncated to one
+113 del
+< --following one should give error because eventually '\' delimiter 
+113a112
+> ij> --following one should give error because eventually '\' delimiter 
+116 del
+<                                  '\a', '\', null) ;
+116a115
+>                                  '\', '\', null) ;
+Test Failed.
+------------------------------
+		
+		
+	
+	
+
+
+
+See e.g.: 
+http://people.apache.org/~myrnavl/derby_test_results/main/windows/testlog/weme6.2/1339441-derbyall_diff.txt
+This test did not fail the day before:
+http://people.apache.org/~myrnavl/derby_test_results/main/windows/testSummary-1338969.html
+
+Looks like a forgotten master update resulting from the commit for DERBY-5749
+http://svn.apache.org/viewvc?view=revision&revision=1339281
+
+I'll take care of updating the j9 canon.

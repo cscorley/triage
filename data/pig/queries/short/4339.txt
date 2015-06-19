@@ -1,0 +1,1 @@
+e2e test framework assumes default exectype as mapred

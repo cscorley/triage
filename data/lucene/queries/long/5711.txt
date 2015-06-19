@@ -1,0 +1,1 @@
+Related to LUCENE-5708 we keep state in the MP holding on to the IW which prevents sharing the MP across index writers. Aside of this we should really not keep state in the MP it should really only select merges without being bound to the index writer.

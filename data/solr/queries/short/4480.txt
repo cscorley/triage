@@ -1,0 +1,1 @@
+EDisMax parser blows up with query containing single plus or minus

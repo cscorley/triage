@@ -1,0 +1,12 @@
+Same as a bug I raised for javadoc generation, my build.xml is the same as upstream, the problem is my checkout path looks like this
+/home/buildserver/workspace/builds/
+{search-engineering}solr-lucene{trunk}
+
+This means that the prepare-webpages target gets its paths in the buildpaths variable as a pipe separated list like so
+
+/home/buildserver/workspace/builds/{search-engineering}
+solr-lucene
+{trunk}/lucene/analysis/common/build.xml|/home/buildserver/workspace/builds/{search-engineering}solr-lucene{trunk}
+/lucene/analysis/icu/build.xml|...(and so on)
+
+Attached is a patch that makes TestXPathEntityProcessor use a url rather than the filesystem path that makes XPath / xml happier with crazy path names

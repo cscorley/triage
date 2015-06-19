@@ -1,0 +1,1 @@
+Empty <relativePath> of <parent> so that it resolves the parent pom from the repositories

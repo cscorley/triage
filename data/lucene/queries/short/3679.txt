@@ -1,0 +1,1 @@
+Replace IndexReader.getFieldNames with IndexReader.getFieldInfos

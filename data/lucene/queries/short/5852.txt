@@ -1,0 +1,1 @@
+Log state in IndexReplicatorHandler exception handler

@@ -1,0 +1,1 @@
+Errors/Exceptions should be formated by ResponseWriter

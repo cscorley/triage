@@ -1,0 +1,1 @@
+BaseTokenStreamTestCase should test analyzers on real-ish content

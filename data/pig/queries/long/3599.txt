@@ -1,0 +1,1 @@
+After committing PIG-3527 and PIG-3595, these e2e tests started failing.

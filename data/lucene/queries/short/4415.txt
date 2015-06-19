@@ -1,0 +1,1 @@
+need to document/fix/remove build.xml dependencies on javascript

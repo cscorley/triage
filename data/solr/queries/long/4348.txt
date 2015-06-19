@@ -1,0 +1,1 @@
+You can set most common options by system property on start these days - we should make lock type work this way by default as well.

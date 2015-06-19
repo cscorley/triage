@@ -1,0 +1,30 @@
+The current suggesters are all based on a finite space of possible
+suggestions, i.e. the ones they were built on, so they can only
+suggest a full suggestion from that space.
+
+This means if the current query goes outside of that space then no
+suggestions will be found.
+
+The goal of FreeTextSuggester is to address this, by giving
+predictions based on an ngram language model, i.e. using the last few
+tokens from the user's query to predict likely following token.
+
+I got the idea from this blog post about Google's suggest:
+http://googleblog.blogspot.com/2011/04/more-predictions-in-autocomplete.html
+
+This is very much still a work in progress, but it seems to be
+working.  I've tested it on the AOL query logs, using an interactive
+tool from luceneutil to show the suggestions, and it seems to work well.
+It's fun to use that tool to explore the word associations...
+
+I don't think this suggester would be used standalone; rather, I think
+it'd be a fallback for times when the primary suggester fails to find
+anything.  You can see this behavior on google.com, if you type "the
+fast and the ", you see entire queries being suggested, but then if
+the next word you type is "burning" then suddenly you see the
+suggestions are only based on the last word, not the entire query.
+
+It uses ShingleFilter under-the-hood to generate the token ngrams;
+once LUCENE-5180 is in it will be able to properly handle a user query
+that ends with stop-words (e.g. "wizard of "), and then stores the
+ngrams in an FST.

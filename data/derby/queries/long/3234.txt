@@ -1,0 +1,5 @@
+Derby 10.3 or newer does not support J2SE 1.3 Virtual Machines (see DERBY-1982). However, the overview pages of all the published APIs say:
+
+"Derby runs on any J2SE 1.3 or higher virtual machine and supports J2ME/CDC/Foundation."
+
+This should be fixed to indicate J2SE 1.4.2 instead.

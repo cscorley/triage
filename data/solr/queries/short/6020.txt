@@ -1,0 +1,1 @@
+Auto-generate a unique key in schema-less mode if data does not have an "id" field

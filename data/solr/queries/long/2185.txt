@@ -1,0 +1,36 @@
+QueryElevationComponentTest fails if JUnit executes testSorting() before testInterface() since there is already data in the index which testInterface expects to be empty. 
+
+
+java.lang.RuntimeException: Exception during query
+	at org.apache.solr.SolrTestCaseJ4.assertQ(SolrTestCaseJ4.java:369)
+	at org.apache.solr.handler.component.QueryElevationComponentTest.testInterface(QueryElevationComponentTest.java:100)
+	at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:881)
+	at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:847)
+Caused by: java.lang.RuntimeException: REQUEST FAILED: xpath=//*[@numFound='0']
+	xml response was: <?xml version="1.0" encoding="UTF-8"?>
+<response>
+<lst name="responseHeader"><int name="status">0</int><int name="QTime">9</int><lst name="params"><str name="q.alt">*:*</str><str name="qt">/elevate</str><str name="defType">dismax</str></lst></lst><result name="response" numFound="6" start="0"><doc><str name="id">a</str><arr name="str_s"><str>a</str></arr><str name="title">ipod</str></doc><doc><str name="id">b</str><arr name="str_s"><str>b</str></arr><str name="title">ipod ipod</str></doc><doc><str name="id">c</str><arr name="str_s"><str>c</str></arr><str name="title">ipod ipod ipod</str></doc><doc><str name="id">x</str><arr name="str_s"><str>x</str></arr><str name="title">boosted</str></doc><doc><str name="id">y</str><arr name="str_s"><str>y</str></arr><str name="title">boosted boosted</str></doc><doc><str name="id">z</str><arr name="str_s"><str>z</str></arr><str name="title">boosted boosted boosted</str></doc></result>
+</response>
+
+	request was:q.alt=*:*&qt=/elevate&defType=dismax
+	at org.apache.solr.SolrTestCaseJ4.assertQ(SolrTestCaseJ4.java:362)
+
+
+NOTE: reproduce with: ant test -Dtestcase=QueryElevationComponentTest -Dtestmethod=testInterface -Dtests.seed=-9078717212967910902:2677111434934379417 -Dtests.multiplier=3
+
+
+
+it is necessarily reproducible since it depends on JUnit and its execution order which can be different. If i move the testSorting() up above testInterface() it fails on my machine.
+
+I guess a setup method would do the job:
+
+
+
+@Override
+  public void setUp() throws Exception{
+    super.setUp();
+    clearIndex();
+    assertU(commit());
+    assertU(optimize());
+  }
+

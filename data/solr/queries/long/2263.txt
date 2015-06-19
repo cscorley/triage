@@ -1,0 +1,7 @@
+I noticed that the RawRequestHandler can NOT properly serve up binary data like images, only textual documents.  I dug around for a while and it appears that reading in content via Streams, but sending them out via Writer doesn't work, because of character encoding problems.   
+
+I wanted RawRequestHandler to work with binary images because the /browse handler in 3.x uses some autocomplete functionality that looks for a "indicator.gif" in the /velocity directory.   And I'd like to be able to add other binary images to my velocity based search interface.   
+
+After much digging around, I realized that if I made RawResponseWriter implement BinaryQueryResponseWriter, then everything works.  I was able to stream both binary images and text documents to the browser.   
+
+Not sure if this is the right path to go, and if there are other ramifications that I don't grok on making this change, so wanted to put it up for discussion.  

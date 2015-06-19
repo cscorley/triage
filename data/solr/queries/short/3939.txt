@@ -1,0 +1,1 @@
+An empty or just replicated index cannot become the leader of a shard after a leader goes down.

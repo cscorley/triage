@@ -1,0 +1,1 @@
+Relocate the example mime-to-extension mapping

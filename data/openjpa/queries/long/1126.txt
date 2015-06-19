@@ -1,0 +1,3 @@
+The note on Calendar and Java 1.3 [1] is out-of-date and not needed as we now require Java 5 or higher.
+
+[1] http://openjpa.apache.org/builds/latest/docs/manual/manual.html#ref_guide_pc_calendar_timezone

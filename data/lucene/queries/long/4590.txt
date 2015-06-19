@@ -1,0 +1,3 @@
+It may be convenient to split Wikipedia's line file into two separate files: category-pages and non-category ones. 
+It is possible to split the original line file with grep or such.
+It is more efficient to do it in advance.

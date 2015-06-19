@@ -1,0 +1,1 @@
+java.lang.ArithmeticException: / by zero with queryResultCache size=0 and queryResultWindowSize=0

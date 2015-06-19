@@ -1,0 +1,34 @@
+This is a patch to fix errors in document "Control Structures."
+
+
+	"from ... import Pig" statement is commented out in several example programs.
+	Several examples include invalid shebang lines "#! /usr/bin/python." No space character is permitted between "!" and the path.
+	The sentence "... a map of parameters (...) must be provided as was illustrated in the example above" does not make a sence, because the example actually shows implicit binding.
+	An invalid comment line "// In a jython script"
+	"1. param" and "2. Command line arguments" in the section "Passing Parameters to a Script" are effectively heading lines, but not formatted in that way.
+	The python module "sys" is used but not imported in several example programs.
+	An example program in the section "Automated Pig Latin Generation" does not actually generate Pig Latin statements. The program does parameter binding. The patch removes the program and merges the sections "Automated Pig Latin Generation", "Conditional Compilation" and "Parallel Execution."
+	An example program in "PigProgressNotificationListener Object" lacks the first line of the class definition.
+	An input file of the example program idmapreduce.java is indicated to be placed on the local working directory, but the file must be placed on the home direcotry on the HDFS.
+	From the statement "Unlike user defined functions (UDFs), which only allow quoted strings as its parameters", the "which" clause should be removed because UDFs can actually take types of parameters other than strings.
+	In several example programs, smart quotation marks (‘ and ’) are wrongly used to quote strings. The patch replaces them by straight quotation marks ( ' ).
+	In several examples, endash marks (U+2013) are wrongly used as hyphens. The patch replaces them by hyphens ( - ).
+	Removes a meaningless statement: "If parameters are specified using the preprocessor statements, the script should include either %declare or %default."
+	A parameter precedence list says "parameters defined in a script" have the lowest precedence, but actually parameters in parameter files have the lowest precedence.
+	The last example of the page declares a parameter with a command output, but it wrongly uses quotation marks, not back ticks.
+	Improves indentation of example programs.
+	Updates a link: PigServer
+	Fixes typos:
+	
+		"Compile is a static function on the Pig object class "
+		"a Java Properties object and or a file containing a list of properties"
+		"The example above in the previous section shows how to make use of this call"
+		"PigStats as it is today will was before has become SimplePigStats"
+		" pig.java Pig Object"
+		"BoundScript .java Object"
+		"PigStats .java Object"
+		"PigProgressNotificationListener .java Object"
+		"a fully substituted Pig script is produced"
+	
+	
+

@@ -1,0 +1,1 @@
+addIndexes(Directory...) should not trigger merge on flush()

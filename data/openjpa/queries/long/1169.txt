@@ -1,0 +1,1 @@
+OpenJPA 1.3.0's new query positional parameter handling are a lot stricter than 1.2.x and causes U2JPA queries that can have arbitrary number of input/output parameters to fail. A solution is suggested by Pinaki Poddar to introduce a property that specifies a ParameterIndexingStyle to restore the 1.2.x behavior for U2JPA but keep its compatibility with the current OpenJPA core. 

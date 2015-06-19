@@ -1,0 +1,1 @@
+CollectionsAPIDistributedZkTest fails commonly on Jenkins cluster.

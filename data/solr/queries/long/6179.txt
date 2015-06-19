@@ -1,0 +1,6 @@
+These messages are currently logged as WARNings, and should either be switched to INFO level (or made more sophisticated so that it can tell when solr is setup for managed resources but the data isn't available)...
+
+
+2788 [coreLoadExecutor-5-thread-1] WARN  org.apache.solr.rest.ManagedResource  – No stored data found for /rest/managed
+2788 [coreLoadExecutor-5-thread-1] WARN  org.apache.solr.rest.ManagedResource  – No registered observers for /rest/managed
+

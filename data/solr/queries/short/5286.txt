@@ -1,0 +1,1 @@
+Remove vestigial Chinese and Polish analysis jars from the analysis-extras contrib configuration

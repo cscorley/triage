@@ -1,0 +1,18 @@
+I'm porting some code to trunk's new Doc/Field apis, and i keep running into this pattern:
+
+String[] values = doc.getValues("field");
+
+
+
+But with the new apis, this becomes a little too verbose:
+
+
+IndexableField[] fields = doc.getFields("field");
+String[] values = new String[fields.length];
+for (int i = 0; i < values.length; i++) {
+  values[i] = fields[i].stringValue();
+}
+
+
+
+I think we should probably add back the sugar api (with the same name) ?

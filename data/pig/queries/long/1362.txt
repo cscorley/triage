@@ -1,0 +1,1 @@
+As a part of PIG-1292 a check was introduced to make sure loader used in "collected" group-by implements CollectableLoader (new interface in that patch). In its method, loader may use udf context to store some info. We need to make sure that udf context signature is setup correctly in such cases. This is already the case in trunk, need to backport it to 0.7 branch. 

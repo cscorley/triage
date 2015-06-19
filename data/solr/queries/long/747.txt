@@ -1,0 +1,1 @@
+Improve the solr example solrconfig.xml and schema.xml

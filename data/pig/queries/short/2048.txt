@@ -1,0 +1,1 @@
+Add zookeeper to pig jar

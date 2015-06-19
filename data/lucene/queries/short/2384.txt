@@ -1,0 +1,1 @@
+Reset zzBuffer in StandardTokenizerImpl* when lexer is reset.

@@ -1,0 +1,1 @@
+It seems like the system properties are no longer being cleaned up properly, or some such test contamination. Tests run fine in isolation. To get around, I've added the ability to add specific settings rather than use System properties - at some point I'd like to be able to load jetties in parallel, and in this is a required step for that anyway.

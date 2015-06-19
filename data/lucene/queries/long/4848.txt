@@ -1,0 +1,5 @@
+I have implemented 3 Directory subclasses using NIO2 API's (available on JDK7).  These may be suitable for inclusion in a Lucene contrib module.
+
+See the mailing list at http://lucene.markmail.org/thread/lrv7miivzmjm3ml5 for more details about this code and the advantages it provides.
+
+The code is attached as a zip to this issue.  I'll be happy to make any changes requested.  I've included some minimal smoke tests, but any help in how to use the normal Lucene tests to perform more thorough testing would be appreciated.

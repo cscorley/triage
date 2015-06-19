@@ -1,0 +1,1 @@
+On OutOfMemoryError in NIOServerFactory thread bookie should shutdown

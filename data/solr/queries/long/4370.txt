@@ -1,0 +1,15 @@
+We need the ability to control the hard/soft commit behaviour of commitWithin parameter.
+
+Since Solr 4.0, the commitWithin's performs a soft-commit which prevents slaves from picking up the changes in a master/slave configuration.
+
+The behaviour I'm thinking is as follows:
+
+1.  By default, commitWithin will trigger soft commits.
+
+2.  But this behaviour can be overwritten in solrconfig.xml to allow commitWithin to perform hard commits, which will allow slaves to pick up the changes.
+
+	<commitWithin>
+		<forceHardCommit>true</forceHardCommit> <!-- default is false -->
+	</commitWithin>
+
+Related to SOLR-4100

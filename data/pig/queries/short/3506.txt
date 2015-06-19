@@ -1,0 +1,1 @@
+FLOOR documentation references CEIL function instead of FLOOR

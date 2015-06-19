@@ -1,0 +1,10 @@
+If "pig.output.lazy" is "true", empty part files from the output will be omitted.
+steps to reproduce
+1. set "pig.output.lazy" as “true" in $PIG_HOME/conf/pig.properties.
+2. run following lazy.pig script in spark mode:
+cat lazy.pig
+a = load '/user/pig/lazy' using PigStorage();
+b = filter a by $0  == 'hey';
+c = store b into '/tmp/lazy.out';
+lazy.pig and lazy are attached
+3.  empty file "/tmp/lazy.out/part-rxxxx” is still generated, the empty file is expected not to be generated when "pig.output.lazy" is "true"

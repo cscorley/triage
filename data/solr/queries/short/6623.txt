@@ -1,0 +1,1 @@
+NPE in StoredFieldsShardResponseProcessor possible when using TIME_ALLOWED param

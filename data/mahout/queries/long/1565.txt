@@ -1,0 +1,1 @@
+MR2 options are missing in MAHOUT_OPTS in bin/mahout and bin/mahout.cmd. Add those options.

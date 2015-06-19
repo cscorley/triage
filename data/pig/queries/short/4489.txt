@@ -1,0 +1,1 @@
+Enable local mode tests for Spark engine

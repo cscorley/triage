@@ -1,0 +1,9 @@
+Currently, solr tests are failing 90%+ of the time. We've been through this before many times, the argument is always that someone is looking at the failures and knows which ones are bad.
+
+This argument is a lie. Nobody is watching these failures, or DistributedQueryComponentOptimizationTest would not have failed repeatedly for two straight days when the fix was trivial (I fixed this last night: http://svn.apache.org/r1571930)
+
+Its frustrating to me as a committer, solr tests NEVER pass on my machine, no matter how many times I try. How can i possibly commit something without knowing i am making the situation even worse?
+
+This is all a big problem for developers, release managers, even users of the project. The test suite should pass.
+
+The old argument that "solr tests are allowed to fail" is no longer valid. I will disable all constantly failing tests.

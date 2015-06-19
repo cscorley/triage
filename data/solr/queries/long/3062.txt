@@ -1,0 +1,24 @@
+filter queries are not properly filtering results when using a join query in solr4
+
+To replicate, use the attached patch file which contains a test method that will fail (but should pass).
+
+OR
+
+run the solr example:
+
+cd solr
+ant example
+java -jar start.jar
+cd exampledocs
+java -jar post.jar *.xml
+
+Then try a few of the sample queries on the wiki page http://wiki.apache.org/solr/Join.  In particular, this is illustrates the issue:
+
+Find all manufacturer docs named "belkin", then join them against (product) docs and filter that list to only products with a price less than 12 dollars
+http://localhost:8983/solr/select?q=
+{!join+from=id+to=manu_id_s}
+compName_s:Belkin&fq=price:%5B%2A+TO+12%5D
+
+When you run that query, you will get two results, one with a price of 19.95 and another with a price of 11.5  Because of the filter query, I'm only expecting to see one result - the one with a price of 11.99.
+
+I was able to track this down to a change in revision #1188624 (http://svn.apache.org/viewvc?view=revision&revision=1188624 : LUCENE-1536: Filters can now be applied down-low, if their DocIdSet implements a new bits() method, returning all documents in a random access way).  Prior to that revision (i.e. 1188613 and before) the test method will pass and the example will work as expected.

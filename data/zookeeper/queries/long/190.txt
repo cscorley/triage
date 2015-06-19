@@ -1,0 +1,37 @@
+Right now, on the main documentation page, and also in the left-hand nav, the docs are in a single flat list. Let's reorganize them into related groups.  Maybe, for example, something like this:
+
+Overview
+
+	Overview
+	Getting Started
+
+
+
+Developer Docs
+
+	Programmer's Guide
+	Recipes
+	Java Example
+	Barrier and Queues Tutorial
+	API
+
+
+
+Administrtor Docs
+
+	Administrators Guide
+
+
+
+Contributor Docs
+
+	Zookeeper Internals
+
+
+
+Miscellaneous
+
+	FAQ
+	Wiki
+	Other Information
+

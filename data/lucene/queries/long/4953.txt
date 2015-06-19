@@ -1,0 +1,77 @@
+There was a test failure last night:
+
+
+1 tests failed.
+REGRESSION:  org.apache.lucene.search.grouping.AllGroupHeadsCollectorTest.testBasic
+
+Error Message:
+testBasic(org.apache.lucene.search.grouping.AllGroupHeadsCollectorTest): Insane FieldCache usage(s) found expected:<0> but was:<2>
+
+Stack Trace:
+java.lang.AssertionError: testBasic(org.apache.lucene.search.grouping.AllGroupHeadsCollectorTest): Insane FieldCache usage(s) found expected:<0> but was:<2>
+        at __randomizedtesting.SeedInfo.seed([1F9C2A2AD23A8E02:B466373F0DE6082C]:0)
+        at org.junit.Assert.fail(Assert.java:93)
+        at org.junit.Assert.failNotEquals(Assert.java:647)
+        at org.junit.Assert.assertEquals(Assert.java:128)
+        at org.junit.Assert.assertEquals(Assert.java:472)
+        at org.apache.lucene.util.LuceneTestCase.assertSaneFieldCaches(LuceneTestCase.java:592)
+        at org.apache.lucene.util.TestRuleFieldCacheSanity$1.evaluate(TestRuleFieldCacheSanity.java:55)
+        at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:46)
+        at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+        at org.apache.lucene.util.TestRuleThreadAndTestName$1.evaluate(TestRuleThreadAndTestName.java:49)
+        at org.apache.lucene.util.TestRuleIgnoreAfterMaxFailures$1.evaluate(TestRuleIgnoreAfterMaxFailures.java:70)
+        at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+        at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+        at com.carrotsearch.randomizedtesting.ThreadLeakControl$StatementRunner.run(ThreadLeakControl.java:358)
+        at com.carrotsearch.randomizedtesting.ThreadLeakControl.forkTimeoutingTask(ThreadLeakControl.java:782)
+        at com.carrotsearch.randomizedtesting.ThreadLeakControl$3.evaluate(ThreadLeakControl.java:442)
+        at com.carrotsearch.randomizedtesting.RandomizedRunner.runSingleTest(RandomizedRunner.java:746)
+        at com.carrotsearch.randomizedtesting.RandomizedRunner$3.evaluate(RandomizedRunner.java:648)
+        at com.carrotsearch.randomizedtesting.RandomizedRunner$4.evaluate(RandomizedRunner.java:682)
+        at com.carrotsearch.randomizedtesting.RandomizedRunner$5.evaluate(RandomizedRunner.java:693)
+        at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:46)
+        at org.apache.lucene.util.TestRuleStoreClassName$1.evaluate(TestRuleStoreClassName.java:42)
+        at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+        at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+        at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+        at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+        at org.apache.lucene.util.TestRuleAssertionsRequired$1.evaluate(TestRuleAssertionsRequired.java:43)
+        at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+        at org.apache.lucene.util.TestRuleIgnoreAfterMaxFailures$1.evaluate(TestRuleIgnoreAfterMaxFailures.java:70)
+        at org.apache.lucene.util.TestRuleIgnoreTestSuites$1.evaluate(TestRuleIgnoreTestSuites.java:55)
+        at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+        at com.carrotsearch.randomizedtesting.ThreadLeakControl$StatementRunner.run(ThreadLeakControl.java:358)
+        at java.lang.Thread.run(Thread.java:722)
+
+
+
+
+Build Log:
+[...truncated 6904 lines...]
+[junit4:junit4] Suite: org.apache.lucene.search.grouping.AllGroupHeadsCollectorTest
+[junit4:junit4]   2> *** BEGIN testBasic(org.apache.lucene.search.grouping.AllGroupHeadsCollectorTest): Insane FieldCache usage(s) ***
+[junit4:junit4]   2> VALUEMISMATCH: Multiple distinct value objects for ParallelAtomicReader(_0(5.0):C3)+id
+[junit4:junit4]   2>    'ParallelAtomicReader(_0(5.0):C3)'=>'id',class org.apache.lucene.index.SortedDocValues,0.5=>org.apache.lucene.search.FieldCacheImpl$SortedDocValuesImpl#386041791 (size =~ 232 bytes)
+[junit4:junit4]   2>    'ParallelAtomicReader(_0(5.0):C3)'=>'id',int,org.apache.lucene.search.FieldCache.DEFAULT_INT_PARSER=>org.apache.lucene.search.FieldCacheImpl$IntsFromArray#140912913 (size =~ 48 bytes)
+[junit4:junit4]   2>    'ParallelAtomicReader(_0(5.0):C3)'=>'id',int,null=>org.apache.lucene.search.FieldCacheImpl$IntsFromArray#140912913 (size =~ 48 bytes)
+[junit4:junit4]   2>
+[junit4:junit4]   2> VALUEMISMATCH: Multiple distinct value objects for ParallelAtomicReader(_1(5.0):C5)+id
+[junit4:junit4]   2>    'ParallelAtomicReader(_1(5.0):C5)'=>'id',int,null=>org.apache.lucene.search.FieldCacheImpl$IntsFromArray#1105632232 (size =~ 56 bytes)
+[junit4:junit4]   2>    'ParallelAtomicReader(_1(5.0):C5)'=>'id',int,org.apache.lucene.search.FieldCache.DEFAULT_INT_PARSER=>org.apache.lucene.search.FieldCacheImpl$IntsFromArray#1105632232 (size =~ 56 bytes)
+[junit4:junit4]   2>    'ParallelAtomicReader(_1(5.0):C5)'=>'id',class org.apache.lucene.index.SortedDocValues,0.5=>org.apache.lucene.search.FieldCacheImpl$SortedDocValuesImpl#27148040 (size =~ 232 bytes)
+[junit4:junit4]   2>
+[junit4:junit4]   2> *** END testBasic(org.apache.lucene.search.grouping.AllGroupHeadsCollectorTest): Insane FieldCache usage(s) ***
+[junit4:junit4]   2> NOTE: download the large Jenkins line-docs file by running 'ant get-jenkins-line-docs' in the lucene directory.
+[junit4:junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=AllGroupHeadsCollectorTest -Dtests.method=testBasic -Dtests.seed=1F9C2A2AD23A8E02 -Dtests.multiplier=2 -Dtests.nightly=true -Dtests.slow=true -Dtests.linedocsfile=/home/hudson/lucene-data/enwiki.random.lines.txt -Dtests.locale=be_BY -Dtests.timezone=Asia/Manila -Dtests.file.encoding=US-ASCII
+[junit4:junit4] FAILURE 0.75s J1 | AllGroupHeadsCollectorTest.testBasic <<<
+[junit4:junit4]    > Throwable #1: java.lang.AssertionError: testBasic(org.apache.lucene.search.grouping.AllGroupHeadsCollectorTest): Insane FieldCache usage(s) found expected:<0> but was:<2>
+[junit4:junit4]    >    at __randomizedtesting.SeedInfo.seed([1F9C2A2AD23A8E02:B466373F0DE6082C]:0)
+[junit4:junit4]    >    at org.apache.lucene.util.LuceneTestCase.assertSaneFieldCaches(LuceneTestCase.java:592)
+[junit4:junit4]    >    at java.lang.Thread.run(Thread.java:722)
+[junit4:junit4]   2> NOTE: test params are: codec=Lucene42: {sort3=MockFixedIntBlock(blockSize=733), id=Pulsing41(freqCutoff=3 minBlockSize=50 maxBlockSize=177), content=MockFixedIntBlock(blockSize=733), author=Pulsing41(freqCutoff=3 minBlockSize=50 maxBlockSize=177), sort2=MockVariableIntBlock(baseBlockSize=71), sort1=Pulsing41(freqCutoff=3 minBlockSize=50 maxBlockSize=177), group=Pulsing41(freqCutoff=3 minBlockSize=50 maxBlockSize=177)}, docValues:{author_dv=DocValuesFormat(name=Disk), group_dv=DocValuesFormat(name=Disk)}, sim=RandomSimilarityProvider(queryNorm=false,coord=yes): {content=IB LL-L1, author=DFR GBZ(0.3)}, locale=be_BY, timezone=Asia/Manila
+[junit4:junit4]   2> NOTE: FreeBSD 9.0-RELEASE amd64/Oracle Corporation 1.7.0_17 (64-bit)/cpus=16,threads=1,free=157973280,total=249626624
+[junit4:junit4]   2> NOTE: All tests run in this JVM: [GroupFacetCollectorTest, AllGroupsCollectorTest, AllGroupHeadsCollectorTest]
+
+
+
+It reproduces, and happens because ParallelCompositeReader isn't invoking the reader listeners on its .leaves() when everything is closed.  I made a separate test case to show the issue ...

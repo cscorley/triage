@@ -1,0 +1,1 @@
+ Support hdf5 data file with file extension *.h5.

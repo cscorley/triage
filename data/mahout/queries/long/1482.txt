@@ -1,0 +1,5 @@
+Our quickstart website must be much more helpful.
+
+We should describe how to add Mahout as maven dependency to a Java project and how to start working on the source code.
+
+https://mahout.apache.org/users/basics/quickstart.html

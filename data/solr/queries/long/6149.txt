@@ -1,0 +1,4 @@
+I created a custom filter for my field named text_reversed, i tried my custom filter in solr 4.7.1 and i was able to analyse the result, it works fine but in solr 4.8.1 it gaves me error of : Missing required parameter: analysis.fieldvalue. It is also not working with any field, here is the logs of the error 
+
+Here is the link of the screenshot 
+http://picpaste.com/HrW26A8d.png

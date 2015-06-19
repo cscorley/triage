@@ -1,0 +1,1 @@
+It would be nice to be able to put a list of slaves in a file, and start bookies on them all with one command (like is possible with hbase and hadoop).

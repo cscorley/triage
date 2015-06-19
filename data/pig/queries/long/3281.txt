@@ -1,0 +1,3 @@
+The pig version in pig.pom in branch-0.11 is still "0.11.0-SNAPSHOT".
+
+This makes it fail to publish the pig.pom file to Artifactory in jenkins.

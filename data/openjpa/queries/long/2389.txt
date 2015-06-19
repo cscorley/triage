@@ -1,0 +1,15 @@
+Hi, I'm on the Apache Roller team and we apparently have a dozen or so missing @Transient annotations somewhere within our many, many persistence classes but OpenJPA just tells us the element missing the annotation, not the entity class where that element is located[1].
+
+For example, running mvn test from Roller's weblogger-business module:
+
+575  RollerPU  WARN   [main] openjpa.Runtime - Fields "categories" are not a default persistent type, and do not have any annotations indicating their persistence strategy. They will be treated as non-persistent. If you intended for these fields to be persistent, be sure to annotate them appropriately. Otherwise annotate them with @Transient.
+575  RollerPU  WARN   [main] openjpa.Runtime - Fields "entryAttributes" are not a default persistent type, and do not have any annotations indicating their persistence strategy. They will be treated as non-persistent. If you intended for these fields to be persistent, be sure to annotate them appropriately. Otherwise annotate them with @Transient.
+575  RollerPU  WARN   [main] openjpa.Runtime - Fields "tags" are not a default persistent type, and do not have any annotations indicating their persistence strategy. They will be treated as non-persistent. If you intended for these fields to be persistent, be sure to annotate them appropriately. Otherwise annotate them with @Transient.
+740  RollerPU  WARN   [main] openjpa.Runtime - Fields "inputStream" are not a default persistent type, and do not have any annotations indicating their persistence strategy. They will be treated as non-persistent. If you intended for these fields to be persistent, be sure to annotate them appropriately. Otherwise annotate them with @Transient.
+740  RollerPU  WARN   [main] openjpa.Runtime - Fields "directory" are not a default persistent type, and do not have any annotations indicating their persistence strategy. They will be treated as non-persistent. If you intended for these fields to be persistent, be sure to annotate them appropriately. Otherwise annotate them with @Transient.
+740  RollerPU  WARN   [main] openjpa.Runtime - Fields "tags" are not a default persistent type, and do not have any annotations indicating their persistence strategy. They will be treated as non-persistent. If you intended for these fields to be persistent, be sure to annotate them appropriately. Otherwise annotate them with @Transient.
+781  RollerPU  WARN   [main] openjpa.Runtime - Fields "parent" are not a default persistent type, and do not have any annotations indicating their persistence strategy. They will be treated as non-persistent. If you intended for these fields to be persistent, be sure to annotate them appropriately. Otherwise annotate them with @Transient.
+
+These fields are so generic they could be on any of a half-dozen entity classes.  If you could alter the error message to include the entity class where the field missing @Transient is located, it would be much easier for code cleanup/debugging.  Thanks!
+
+[1] http://mail-archives.apache.org/mod_mbox/openjpa-commits/201201.mbox/%3C20120103184609.3E6B32388AB9@eris.apache.org%3E

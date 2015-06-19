@@ -1,0 +1,1 @@
+Scripting UDF is broken after PIG-3629

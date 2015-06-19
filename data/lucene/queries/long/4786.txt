@@ -1,0 +1,9 @@
+The following API document talks about SinkTokenizer:
+http://lucene.apache.org/core/4_1_0/analyzers-common/org/apache/lucene/analysis/sinks/package-summary.html
+
+However, SinkTokenizer is deleted and replaced by TeeSinkTokenFilter in lucene 4.1, according to the change log:
+http://lucene.apache.org/core/4_1_0/changes/Changes.html
+
+LUCENE-1422, LUCENE-1693: New TokenStream API that uses a new class called AttributeSource instead of the Token class, which is now a utility class that holds common Token attributes. All attributes that the Token class had have been moved into separate classes: TermAttribute, OffsetAttribute, PositionIncrementAttribute, PayloadAttribute, TypeAttribute and FlagsAttribute. The new API is much more flexible; it allows to combine the Attributes arbitrarily and also to define custom Attributes. The new API has the same performance as the old next(Token) approach. For conformance with this new API Tee-/SinkTokenizer was deprecated and replaced by a new TeeSinkTokenFilter. 
+
+Please update the API documents to reflect the latest code.

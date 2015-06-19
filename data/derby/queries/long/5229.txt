@@ -1,0 +1,9 @@
+In:
+
+    http://svn.apache.org/viewvc/db/derby/code/trunk/java/testing/README.htm?view=co
+
+the purpose of
+
+     set tstjardir=/local/testingjars
+
+is unclear and unexplained.

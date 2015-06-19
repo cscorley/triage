@@ -1,0 +1,9 @@
+Jenkins picked this up.  Repeat with:
+
+
+
+ant test  -Dtestcase=TestExpressionSorts -Dtests.method=testQueries -Dtests.seed=115AD00ED89D9F7B -Dtests.multiplier=3 -Dtests.slow=true -Dtests.locale=no_NO -Dtests.timezone=America/Nassau -Dtests.file.encoding=US-ASCII
+
+
+
+It appears to have to do with scoring, as removing the score sort from the original sorts causes the tests to pass.  If you remove the possible discrepancy between doDocScores and docMaxScore params to searcher.search, then the test gets farther before failing.

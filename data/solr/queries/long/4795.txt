@@ -1,0 +1,1 @@
+The sub shard leaders accept any update from a parent as long as their range is a subset of parent's range. A sub shard can continue to accept updates from parent even after it has gone active which can lead to inconsistencies. This affects partial updates (think counters) the most but can also lead to out-of-order updates to the same document.

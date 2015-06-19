@@ -1,0 +1,1 @@
+current DIH design is not thread safe. see last comments at SOLR-2382 and SOLR-2947. I'm going to provide the patch makes DIH core threadsafe. Mostly it's a SOLR-2947 patch from 28th Dec. 

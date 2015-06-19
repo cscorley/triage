@@ -1,0 +1,1 @@
+Slow WAR startups due to annotation scaning (affects Jetty 8)

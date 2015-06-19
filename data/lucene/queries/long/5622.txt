@@ -1,0 +1,3 @@
+Some tests print so much stuff they are now undebuggable (see LUCENE-5612).
+
+From now on, when tests.verbose is false, the number of bytes printed to standard output and error streams will be accounted for and if it exceeds a given limit an assertion will be thrown. The limit is adjustable per-suite using Limit annotation, with the default of 8kb per suite. The check can be suppressed entirely by specifying SuppressSysoutChecks.

@@ -1,0 +1,3 @@
+Alan Woodward noticed that span queries have been slower since LUCENE-4946 got committed.
+
+http://people.apache.org/~mikemccand/lucenebench/SpanNear.html

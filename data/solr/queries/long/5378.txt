@@ -1,0 +1,129 @@
+The idea is to add a new Suggester Component that will eventually replace the Suggester support through the SpellCheck Component.
+This will enable Solr to fully utilize the Lucene suggester module (along with supporting most of the existing features) in the following ways:
+
+	Dictionary pluggability (give users the option to choose the dictionary implementation to use for their suggesters to consume)
+	Map the suggester options/ suggester result format (e.g. support for payload)
+	The new Component will also allow us to have "beefier" Lookup support instead of resorting to collation and such. (Move computation from query time to index time) with more freedom
+
+
+
+In addition to this, this suggester version should also have support for distributed support, which was awkward at best with the previous implementation due to SpellCheck requirements.
+
+Config (index time) options:
+
+	name - name of suggester
+	sourceLocation - external file location (for file-based suggesters)
+	lookupImpl - type of lookup to use [default JaspellLookupFactory]
+	dictionaryImpl - type of dictionary to use (lookup input) [default
+    (sourceLocation == null ? HighFrequencyDictionaryFactory : FileDictionaryFactory)]
+	storeDir - location to store in-memory data structure in disk
+	buildOnCommit - command to build suggester for every commit
+	buildOnOptimize - command to build suggester for every optimize
+
+
+
+Query time options:
+
+	suggest.dictionary - name of suggester to use
+	suggest.count - number of suggestions to return
+	suggest.q - query to use for lookup
+	suggest.build - command to build the suggester
+	suggest.reload - command to reload the suggester
+
+
+
+Example query:
+
+
+http://localhost:8983/solr/suggest?suggest.dictionary=mySuggester&suggest=true&suggest.build=true&suggest.q=elec
+
+
+Distributed query:
+
+
+http://localhost:7574/solr/suggest?suggest.dictionary=mySuggester&suggest=true&suggest.build=true&suggest.q=elec&shards=localhost:8983/solr,localhost:7574/solr&shards.qt=/suggest
+
+
+
+Example Response:
+
+
+<response>
+  <lst name="responseHeader">
+    <int name="status">0</int>
+    <int name="QTime">28</int>
+  </lst>
+  <str name="command">build</str>
+  <result name="response" numFound="0" start="0" maxScore="0.0"/>
+  <lst name="suggest">
+    <lst name="suggestions">
+      <lst name="e">
+        <int name="numFound">2</int>
+        <lst name="suggestion">
+          <str name="term">electronics and computer1</str>
+          <long name="weight">2199</long>
+          <str name="payload"/>
+        </lst>
+        <lst name="suggestion">
+          <str name="term">electronics</str>
+          <long name="weight">649</long>
+          <str name="payload"/>
+        </lst>
+      </lst>
+    </lst>
+  </lst>
+</response>
+
+
+
+Example config file:
+
+	Using DocumentDictionary and FuzzySuggester
+	
+		Suggestion on product_name sorted by popularity with the additional product_id in the payload
+	
+	
+
+
+
+
+  
+  <searchComponent class="solr.SuggestComponent" name="suggest">
+      <lst name="suggester">
+        <str name="name">suggest_fuzzy_doc_dict</str>
+        <str name="lookupImpl">FuzzyLookupFactory</str>
+        <str name="dictionaryImpl">DocumentDictionaryFactory</str>
+        <str name="field">product_name</str>
+        <str name="weightField">popularity</str>
+        <str name="payloadField">product_id</str>
+        <str name="storeDir">suggest_fuzzy_doc_dict_payload</str>
+        <str name="suggestAnalyzerFieldType">text</str>
+      </lst>
+    </searchComponent>
+
+
+
+	Using DocumentExpressionDictionary and FuzzySuggester
+	
+		Suggestion on product_name sorted by the expression "((price * 2) + ln(popularity))" (where both price and popularity are fields in the document)
+	
+	
+
+
+
+
+
+    <searchComponent class="solr.SuggestComponent" name="suggest">
+      <lst name="suggester">
+        <str name="name">suggest_fuzzy_doc_expr_dict</str>
+        <str name="dictionaryImpl">DocumentExpressionDictionaryFactory</str>
+        <str name="lookupImpl">FuzzyLookupFactory</str>
+        <str name="field">product_name</str>
+        <str name="weightExpression">((price * 2) + ln(popularity))</str>
+        <str name="sortField">weight</str>
+        <str name="sortField">price</str>
+        <str name="strtoreDir">suggest_fuzzy_doc_expr_dict</str>
+        <str name="suggestAnalyzerFieldType">text</str>
+      </lst>
+    </searchComponent>
+

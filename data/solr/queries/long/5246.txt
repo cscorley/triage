@@ -1,0 +1,3 @@
+Follow up with work done in SOLR-5017:
+
+Shard splitting doesn't support collections configured with a hash router and routeField.

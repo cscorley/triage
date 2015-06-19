@@ -1,0 +1,1 @@
+Currently its not reported if a field has docvalues or stores offsets with positions, we should show these.

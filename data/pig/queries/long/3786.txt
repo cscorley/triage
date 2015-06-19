@@ -1,0 +1,3 @@
+POReservoirSample assumes it always get STATUS_OK until it hits STATUS_EOP, means all inputs finished. This is not true if the plan also contains a POStream, since POStream will issue a STATUS_EOP even if inputs are not exhausted. Need to make POReservoirSample handles STATUS_EOP and endOfAllInput flag. This cause e2e test failure such as ComputeSpec_3.
+
+POPoissonSample should do the same.

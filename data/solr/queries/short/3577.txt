@@ -1,0 +1,1 @@
+better javadocs and error messages related to global/fieldtype SimilarityFactory usage

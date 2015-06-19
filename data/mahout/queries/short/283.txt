@@ -1,0 +1,1 @@
+Update assemblies to include mahout-collections for release build

@@ -1,0 +1,19 @@
+It would be useful to exclude the effects of some "fq" params from the set of documents used to compute stats – similar to 
+how you can exclude tagged filters when generating facet counts... 
+
+https://wiki.apache.org/solr/SimpleFacetParameters#Tagging_and_excluding_Filters
+
+So that it's possible to do something like this... 
+
+http://localhost:8983/solr/select?fq=
+{!tag=priceFilter}
+price:[1 TO 20]q=:&stats=true&stats.field=
+{!ex=priceFilter}
+price 
+
+If you want to create a price slider this is very useful because then you can filter the price ([1 TO 20) and nevertheless get the lower and upper bound of the unfiltered price (min=0, max=100):
+
+
+|<-[-------]-------------->|
+$0 $1     $20            $100
+

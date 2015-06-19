@@ -1,0 +1,1 @@
+IndexReader.open should take Codecs

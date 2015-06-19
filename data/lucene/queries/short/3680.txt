@@ -1,0 +1,1 @@
+exception consistency in o.a.l.store

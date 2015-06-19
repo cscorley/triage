@@ -1,0 +1,1 @@
+SlowFuzzyQuery appears to fail with edit distance >=3 in some cases

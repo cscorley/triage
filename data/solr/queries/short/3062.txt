@@ -1,0 +1,1 @@
+Solr4 Join query with fq not correctly filtering results

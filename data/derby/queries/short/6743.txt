@@ -1,0 +1,1 @@
+MERGE code needs changes since now UPDATE statement can change the identity column value using DEFAULT keyword.

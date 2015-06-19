@@ -1,0 +1,9 @@
+While implementing the SPI for analysis factories, Robert and me found out that Solr does not see codecs/postingsformats or analysis factories outside it's webapp/lib folder. The reason is simple: SPI uses by default the context classloader of the thread calling the codec API for the first time (which is Jetty's webapp classpath).
+
+We solved the problem for analysis factories, because those are loaded with the help of SolrResourceLoader, which exports the ClassLoader it uses, so it can return all analysis compoenst visible to the ResourceLoader. This is cool, because you can drop the analysis/smartchinese or analysis/icu module JAR into your plugin folder and Solr will automatically use it.
+
+For Codecs and PostingsFormats this is a little bit more complicated: The list of codecs is loaded on clinit of Codecs.class or PostingsFormat.class, which can be very early in Solr's startup. When Solr changes his classpath in ResourceLoader, the new Codecs are never seen, so you cannot drop new codecs into the plugin folder. Similar problems may happen with other webapps, because Tomcat & Jetty have crazy classloader delegations (there were although reports that Lucene did not find their codecs at all - Simon Willnauer told me!)
+
+This patch will change NamedSPILoader to provide similar support like java.util.ServiceLoader does in JDK: You can tell NamedSPILoader to reload (means again list the classpath's JAR files and look for new META-INF/services files). This API is statically exported to Codec.reloadCodecs() and PostingsFormat.reploadPostingsFormats(), which takes a ClassLoader. This Classloader will then be checked only for new codecs, old ones or those already visible are not removed/replaced. SolrResourceLoader can then call this static method on each change of its classloader on startup.
+
+The implementation presented here is threadsafe, the SPI map is updated in a copy-on-write way and assigned to a volatile field.

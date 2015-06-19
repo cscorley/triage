@@ -1,0 +1,9 @@
+common.test:
+[junit4:junit4] <JUnit4> says aloha! Master seed: 4CF29391D095CE45
+[junit4:junit4] Executing 2 suites with 2 JVMs.
+[junit4:junit4] Suite: org.apache.lucene.search.join.TestBlockJoin
+[junit4:junit4] Completed on J1 in 2.48s, 7 tests
+[junit4:junit4]  
+[junit4:junit4] HEARTBEAT J0: 2012-07-11T14:27:14, no events in: 68.2s, approx. at: TestJoinUtil.testMultiValueRandomJoin
+[junit4:junit4] HEARTBEAT J0: 2012-07-11T14:28:14, no events in:  128s, approx. at: TestJoinUtil.testMultiValueRandomJoin
+[junit4:junit4] Suite: org.apache.lucene.search.join.TestJoinUtil

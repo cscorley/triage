@@ -1,0 +1,1 @@
+XML and JSON response writers don't handle short or binary field types

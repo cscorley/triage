@@ -1,0 +1,16 @@
+Add a collection admin API for cluster wide property management
+the new API would create an entry in the root as 
+/cluster-props.json
+
+
+{
+"prop":val"
+}
+
+
+
+The API would work as
+
+/command=clusterprop&name=propName&value=propVal
+
+there will be a set of well-known properties which can be set or unset with this command

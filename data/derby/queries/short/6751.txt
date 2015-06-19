@@ -1,0 +1,1 @@
+Prevent user code from getting the LanguageConnectionContext from an EmbedConnection

@@ -1,0 +1,119 @@
+Currently CloudSolrServer declares to throw MalformedURLException for some of its constructors. This does not seem necessary.
+
+Details based on looking through Solr 4.6 release code:
+
+CloudSolrServer has the following constructor that declares a checked exception MalformedURLException..
+
+
+ 
+ public CloudSolrServer(String zkHost) throws MalformedURLException {
+ 
+      this.zkHost = zkHost;
+ 
+      this.myClient = HttpClientUtil.createClient(null);
+ 
+      this.lbServer = new LBHttpSolrServer(myClient);
+ 
+      this.lbServer.setRequestWriter(new BinaryRequestWriter());
+ 
+      this.lbServer.setParser(new BinaryResponseParser());
+ 
+      this.updatesToLeaders = true;
+ 
+      shutdownLBHttpSolrServer = true;
+ 
+  }
+ 
+
+
+
+The only thing that seemed capable of throwing MalformedURLException seems to be LBHttpSolrServer’s constructor:
+
+
+
+  public LBHttpSolrServer(HttpClient httpClient, String... solrServerUrl)
+          throws MalformedURLException {
+    this(httpClient, new BinaryResponseParser(), solrServerUrl);
+  }
+
+
+
+which calls ..
+
+
+
+  public LBHttpSolrServer(HttpClient httpClient, ResponseParser parser, String... solrServerUrl)
+          throws MalformedURLException {
+    clientIsInternal = (httpClient == null);
+    this.parser = parser;
+    if (httpClient == null) {
+      ModifiableSolrParams params = new ModifiableSolrParams();
+      params.set(HttpClientUtil.PROP_USE_RETRY, false);
+      this.httpClient = HttpClientUtil.createClient(params);
+    } else {
+      this.httpClient = httpClient;
+    }
+    for (String s : solrServerUrl) {
+      ServerWrapper wrapper = new ServerWrapper(makeServer(s)); 
+      aliveServers.put(wrapper.getKey(), wrapper);
+    }
+    updateAliveList();
+  }
+
+
+
+which calls ..
+
+
+
+protected HttpSolrServer makeServer(String server) throws MalformedURLException {
+    HttpSolrServer s = new HttpSolrServer(server, httpClient, parser);
+    if (requestWriter != null) {
+      s.setRequestWriter(requestWriter);
+    }
+    if (queryParams != null) {
+      s.setQueryParams(queryParams);
+    }
+    return s;
+  }
+
+
+
+Note that makeServer(String server) above does not need to throw MalformedURLException.. sine the only thing that seems capable of throwing MalformedURLException is HttpSolrServer’s constructor (which does not):
+
+
+
+public HttpSolrServer(String baseURL, HttpClient client, ResponseParser parser) {
+    this.baseUrl = baseURL;
+    if (baseUrl.endsWith("/")) {
+      baseUrl = baseUrl.substring(0, baseUrl.length() - 1);
+    }
+    if (baseUrl.indexOf('?') >= 0) {
+      throw new RuntimeException(
+          "Invalid base url for solrj.  The base URL must not contain parameters: "
+              + baseUrl);
+    }
+    
+    if (client != null) {
+      httpClient = client;
+      internalClient = false;
+    } else {
+      internalClient = true;
+      ModifiableSolrParams params = new ModifiableSolrParams();
+      params.set(HttpClientUtil.PROP_MAX_CONNECTIONS, 128);
+      params.set(HttpClientUtil.PROP_MAX_CONNECTIONS_PER_HOST, 32);
+      params.set(HttpClientUtil.PROP_FOLLOW_REDIRECTS, followRedirects);
+      httpClient =  HttpClientUtil.createClient(params);
+    }
+    
+    this.parser = parser;
+  }
+
+
+
+I see nothing above that’d throw MalformedURLException. It is throwing a RuntimeException when the baseUrl does not match certain pattern, may be that was intended to be a MalformedURLException.
+
+It seems like an error or oversight that CloudSolrServer declares to throw MalformedURLException for some of its constructors. 
+
+This could be fixed by making LBHttpSolrServer not declare the MalformedURLException, and thus other callers to it do not need to do so.
+

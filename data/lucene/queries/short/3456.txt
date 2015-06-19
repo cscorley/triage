@@ -1,0 +1,1 @@
+Analysis Consumers should end and close any TokenStreams

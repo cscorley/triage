@@ -1,0 +1,11 @@
+I try use SOLR-1268 new feature. But I am confused.
+
+I set use.FastVectorHighlighter=true, but FVH is disabled.
+Because It was not set TermPosition=on and TermOffsets=on at schema.xml .
+
+So, I suggest adding log.warn() in the following conditions.
+
+
+	use.FastVectorHighlighter=true
+	TermPosition=off or TermOffsets=off
+

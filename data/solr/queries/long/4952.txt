@@ -1,0 +1,19 @@
+in SOLR-4942 i updated every solrconfig.xml to either...
+
+
+	include solrconfig.snippet.randomindexconfig.xml where it was easy to do so
+	use the useCompoundFile sys prop if it already had an <indexConfig> section, or if including the snippet wasn't going to be easy (ie: contrib tests)
+
+
+
+As an improvment on this:
+
+
+	audit all core configs not already using solrconfig.snippet.randomindexconfig.xml and either:
+	
+		make them use it, ignoring any previously unimportant explicit incdexConfig settings
+		make them use it, using explicit sys props to overwrite random values in cases were explicit indexConfig values are important for test
+		add a comment why it's not using the include snippet in cases where the explicit parsing is part of hte test
+	
+	
+

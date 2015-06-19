@@ -1,0 +1,11 @@
+Spinoff from LUCENE-2161, where the fact that DirReader.reopen is
+sync'd was dangerous in the context of NRT (could block all searches
+against that reader when CMS was throttling).  So, with LUCENE-2161,
+we're removing the synchronization when it's an NRT reader that you're
+reopening.
+
+But... why should we sync even for a "normal" reopen?  There are
+various sync'd methods on IndexReader/DirReader (we are reducing that,
+with LUCENE-2161 and also LUCENE-2156), but, in general it doesn't
+seem like "normal" reopen really needs to be sync'd.  Performing a reopen
+shouldn't incur any chance of blocking a search...

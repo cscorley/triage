@@ -1,0 +1,9 @@
+the pom files are missing a reference to:
+
+
+    <dependency>
+      <groupId>org.apache.velocity</groupId>
+      <artifactId>velocity</artifactId>
+      <version>1.6.1</version>
+    </dependency>
+

@@ -1,0 +1,1 @@
+automaton.jar is used for matching  regex patterns (PIG-965) . It is not bundled in pig-withouthadoop.jar .

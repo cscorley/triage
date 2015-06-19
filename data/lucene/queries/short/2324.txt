@@ -1,0 +1,1 @@
+Per thread DocumentsWriters that write their own private segments

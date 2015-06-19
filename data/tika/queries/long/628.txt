@@ -1,0 +1,11 @@
+At the moment, we don't produce a binary distribution, only a source one. As discussed on the mailing list a few times, I think we should change this.
+
+I'd suggest that we build a binary package that contains:
+
+	tika-app, tika-parsers and tika-core jar files
+	javadocs
+	a directory with all the dependencies in it (likely the same list as used in the tika bundle)
+
+
+
+This would allow non maven users to quickly get started with using Tika.

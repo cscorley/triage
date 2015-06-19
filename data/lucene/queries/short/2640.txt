@@ -1,0 +1,1 @@
+add LuceneTestCase[J4].newField

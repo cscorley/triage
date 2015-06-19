@@ -1,0 +1,1 @@
+When pulling DocsAndPositionsEnum you should state whether you need payloads

@@ -1,0 +1,1 @@
+trunk tests hang/deadlock TestIndexWriterWithThreads

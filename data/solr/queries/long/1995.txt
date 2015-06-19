@@ -1,0 +1,4 @@
+Index snapshot is created when accessed "replication?command=backup"
+
+Snapshot directory is named by "snapshot.20100710060001" at 6 p.m.
+I expected "snapshot.20100710180001".

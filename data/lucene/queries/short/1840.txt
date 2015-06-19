@@ -1,0 +1,1 @@
+QueryUtils should check that equals properly handles null

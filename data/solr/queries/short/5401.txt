@@ -1,0 +1,1 @@
+In Solr's ResourceLoader, add a check for @Deprecated annotation in the plugin/analysis/... class loading code, so we print a warning in the log if a deprecated factory class is used

@@ -1,0 +1,1 @@
+If a Threads State is TIMED_WAITING but not lock, there is not Icon display.

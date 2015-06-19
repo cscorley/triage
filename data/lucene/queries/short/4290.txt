@@ -1,0 +1,1 @@
+basic highlighter that uses postings offsets

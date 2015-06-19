@@ -1,0 +1,1 @@
+Adding grouping to Solr 3x

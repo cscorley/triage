@@ -1,0 +1,1 @@
+On reload, IndexWriterProvider holds onto the initial SolrCore it was created with

@@ -1,0 +1,1 @@
+Now that IS is never "heavy" (since you have to pass in your own IR), IS.close is truly a no-op... I think we should remove it.

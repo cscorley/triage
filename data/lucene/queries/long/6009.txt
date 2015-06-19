@@ -1,0 +1,13 @@
+When I added some new doc id sets, I took inspiration from FixedBitSet which had protection for bad users of its iterator by basically doing
+
+
+
+if (doc == NO_MORE_DOCS || ++doc >= numBits) {
+  return doc = NO_MORE_DOCS;
+}
+
+
+
+in order to not overflow the integer doc when the iterator was already exhausted. However, DocIdSetIterator clearly states that the behaviours of nextDoc() and advance() are undefined when the iterator is already exhausted so we do not need such protection.
+
+For the record, I don't expect better performance from this change since the branch is highly predictable (benchmarks seem to support this). At best it might just help inlining by making methods smaller.

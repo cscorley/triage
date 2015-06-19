@@ -1,0 +1,8 @@
+I thought about this after looking @ LUCENE-4353:
+
+AtomicReader has some sugar APIs that are over top of the flex apis (Fields, Terms, ...). But these might be a little trappy/confusing compared to 3.x.
+
+
+	I dont think we need AtomicReader.termDocsEnum(Bits, ...) and .termPositionsEnum(Bits, ...). I also don't think we need variants that take flags here. We should simplify these to be less trappy. I think we only need (String, BytesRef) here.
+	This means you need to use the flex apis for more expert usage: but we make this a bit too hard since we only let you get a Terms (which you must null check, then call .iterator() on, then seekExact, ...). I think it could help if we balanced this out by adding some sugar like AtomicReader.termsEnum? 3.x had a method that let you get a 'positioned termsenum'.
+

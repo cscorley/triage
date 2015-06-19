@@ -1,0 +1,1 @@
+SEVERE: Too many close [count:-1] for SolrCore in logs (4.2.1)

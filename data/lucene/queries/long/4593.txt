@@ -1,0 +1,7 @@
+I was looking at James patch for LUCENE-3298, and I thought that you know, FST almost abstracts its underlying "i/o" (storage) via reader/writer abstractions.
+
+It would be good to try to work on this more, e.g. we can imagine a little abstraction like lucene has a Store (Directory). 
+
+This way maybe we could cleanup the packed vs non-packed, allow for > 2GB fsts without slowing down small ones, and so on.
+
+I have a patch that is like an amoeba-step towards this

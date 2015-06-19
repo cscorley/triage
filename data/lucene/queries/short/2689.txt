@@ -1,0 +1,1 @@
+remove NativeFSLockFactory's attempt to acquire a test lock

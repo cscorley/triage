@@ -1,0 +1,1 @@
+CompoundFileWriter loses the IOContext sometimes

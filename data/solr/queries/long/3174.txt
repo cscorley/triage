@@ -1,0 +1,4 @@
+It would be great to visualize the cluster state in the new UI. 
+
+See Mark's wish:
+https://issues.apache.org/jira/browse/SOLR-3162?focusedCommentId=13218272&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13218272

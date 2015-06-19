@@ -1,0 +1,3 @@
+the new tag "swappable", introduced in SOLR-1028 is too easily confused with swapping cores. Rename to "dynamic"? "transient"? I think "transient" captures the notion best.
+
+Marking "blocker" just because I want to insure it's changed before the whole notion is released the first time, patch real soon now. I think we can justify changing the names of things like this more easily before it's in "official" circulation.

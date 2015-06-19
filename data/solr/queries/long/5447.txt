@@ -1,0 +1,10 @@
+Exactly as the title says, I would like to add a QParserPlugin to make Lucene's SimpleQueryParser available easily through Solr.  I will add the SimpleQParserPlugin to the standard plugins list in QParserPlugin.
+
+The following options will be exposed:
+
+
+	A way to specify the fields to be queried on with boosts.
+	A way to override the default field if a different one is desired than what the schema has.
+	A way to set the default operator for whitespace as either 'AND' or 'OR.'
+	A way to set the enabled/disabled operators that are available through the SimpleQueryParser.
+

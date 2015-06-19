@@ -1,0 +1,5 @@
+The residue is the count of all categories that did not make it to the top K. But, this is a senseless statistic. Take for example the following case: two documents with categories [A/1, A/2, A/3] and [A/1, A/4, A/5]. If you ask for top-1 category of "A", you'll get A (count=2), A/1 (count=2), but A's residue will be 4!
+
+As a user, that number doesn't tell you anything, except maybe when you index only one category per document for a given dimension. But in that case, the residue is root.value - sum(topK.value), which the application can compute if it needs to.
+
+In short, we're just wasting CPU cycles for that statistic, so I'm going to remove it.

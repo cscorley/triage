@@ -1,0 +1,1 @@
+Make CharsRefBuilder implement Appendable

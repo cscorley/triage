@@ -1,0 +1,17 @@
+Currently, we can specify a log4j.properties file to Pig command line like so
+
+pig -4 /path/to/log4j.properties
+
+
+
+It will be quite helpful if it read the log4j.properties from the classpath as well.
+For instance in the same command we can specify...
+
+pig -4 log4j.properties
+
+
+And Pig can first try to read it as a file and failing that could try reading it from the classpath, similar to how log4j handles the property - log4j.configuration.
+
+We needed this as one of your projects contained  the log4j.properties file  embedded inside the project jar
+
+I've attached a simple patch with a testcase to that effect.

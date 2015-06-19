@@ -1,0 +1,5 @@
+a recent thread reminded me of an old idea that never got implemented...
+
+the autowarmCount for LRUCaches should support "percentages" which get evaluated relative the current size of the cache when warming happens.  
+
+in this way, a Solr instance might be configured with autowarmCount="50%" to autowarm the top half of the queries ... a master machine might be configured this way to give some autowarming if it is inadvertently being queried, but things won't be maintained in the caches in perpetuity ... each subsequent cache instance would have fewer and fewer of the "old" queries warmed automatically.

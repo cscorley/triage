@@ -1,0 +1,3 @@
+The #merge method of the PostingsConsumer receives MappingMultiDocsEnum and MappingMultiDocsAndPositionsEnum as postings enum. In certain case (with specific postings formats), the #merge method needs to be overwritten, and the underlying DocsEnums wrapped by the MappingMultiDocsEnum need to be accessed.
+
+The MappingMultiDocsEnum class should provide a method #getSubs similarly to MultiDocsEnum class.

@@ -1,0 +1,1 @@
+In our leader election algorithm, if on connection loss we found we did not create our election node, we should retry, not throw an exception.

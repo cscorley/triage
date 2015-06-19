@@ -1,0 +1,1 @@
+test failure in iepnegativetests_ES with weme 6.2 (J2ME/CDC) with trunk (10.9 alpha) as of revision 1339441

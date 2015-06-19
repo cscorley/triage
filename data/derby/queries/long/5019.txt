@@ -1,0 +1,8 @@
+ant build emits
+
+
+warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+which just loads more stuff than needed, 
+
+so set it, and quell the warning.

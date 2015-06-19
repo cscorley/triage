@@ -1,0 +1,1 @@
+NumericUtils.floatToSortableInt/doubleToSortableLong does not sort certain NaN ranges correctly and NumericRangeQuery produces wrong results for NaNs with half-open ranges

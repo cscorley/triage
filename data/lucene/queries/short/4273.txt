@@ -1,0 +1,1 @@
+Fix DocsEnum freq flag consistent with DocsAndPositionsEnum flags

@@ -1,0 +1,3 @@
+The bug doesn't appear to be serious; mostly a test bug.  It happens with the query shape is based on ShapeCollection, which has a bug in its bounding box that will turn the longitude range into a -180 to 180 range when there is a more optimal tighter range.
+
+https://github.com/spatial4j/spatial4j/issues/77

@@ -1,0 +1,1 @@
+Performance problem when not using hdfs block cache.

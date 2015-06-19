@@ -1,0 +1,1 @@
+Stop daemon with "kill" rather than "kill -9"

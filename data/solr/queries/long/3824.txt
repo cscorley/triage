@@ -1,0 +1,14 @@
+Error messages are not displayed in Solritas GUI.
+
+Example: In SolrCloud mode I have two shards, but shut down shard B. Then there is an error message:
+
+
+
+<lst name="error">
+<str name="msg">no servers hosting shard:</str>
+<int name="code">503</int>
+</lst>
+
+
+
+However this is not displayed by Velocity template, it shows an empty search result.

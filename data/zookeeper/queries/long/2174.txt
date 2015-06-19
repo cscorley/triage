@@ -1,0 +1,1 @@
+JUnit4ZKTestRunner wraps JUnit test method execution, and if any exception is thrown, it logs a message stating that the test failed.  However, some ZooKeeper tests are annotated with @Test(expected=...) to indicate that an exception is the expected result, and thus the test passes.  The runner should be aware of expected exceptions and only log if an unexpected exception occurs.

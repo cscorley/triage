@@ -1,0 +1,10 @@
+zkpython is currently limited to a max of 256 total handles - not 256 open handles, but rather 256 total handles created
+over the lifetime of the python application.
+
+In general this isn't a real issue, however in the case of a long lived application which polls the cluster periodically (closing
+the session btw calls) this is an issue.
+
+it would be great if the slots could be reused? or perhaps a more complex structure, such as a linked list, which would allow
+dynamic growth/shrinkage of the handle list.
+
+Also see ZOOKEEPER-540

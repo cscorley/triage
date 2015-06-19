@@ -1,0 +1,1 @@
+In Solr Cell, literals should override Tika-parsed values

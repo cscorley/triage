@@ -1,0 +1,1 @@
+coord should still apply to missing terms/clauses

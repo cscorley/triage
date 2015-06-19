@@ -1,0 +1,1 @@
+Velocity "/browse" config should set mm=100% to behave as in 3.x

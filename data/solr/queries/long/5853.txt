@@ -1,0 +1,3 @@
+Spinoff from SOLR-4470
+
+Should use the excellent progress from SOLR-4577 and have the createCollection methods in the test framework return a status (currently void). This way we can get rid of some unnecessary and unreliable sleep's.

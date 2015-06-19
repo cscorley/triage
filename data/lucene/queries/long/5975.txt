@@ -1,0 +1,5 @@
+BitVector before Lucene 3.4 had many bugs, particulary that it wrote extra bogus trailing crap at the end.
+
+But since Lucene 4.8, we check that we read all the bytes... this check can fail for 3.0-3.3 indexes due to the previous bugs in those indexes, instead users will get exception on open like this: CorruptIndexException(did not read all bytes from file: read 5000 vs 5001....
+
+

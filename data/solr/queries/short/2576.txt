@@ -1,0 +1,1 @@
+DirectSolrSpellChecker is not returning frequency information

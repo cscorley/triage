@@ -1,0 +1,1 @@
+Typo on query parser syntax web page.

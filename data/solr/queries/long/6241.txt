@@ -1,0 +1,11 @@
+This test fails sometimes locally as well as on jenkins.
+
+
+
+Expected 2 of 3 replicas to be active but only found 1....
+at org.junit.Assert.fail(Assert.java:93)
+        at org.junit.Assert.assertTrue(Assert.java:43)
+        at org.apache.solr.cloud.HttpPartitionTest.testRf3WithLeaderFailover(HttpPartitionTest.java:367)
+        at org.apache.solr.cloud.HttpPartitionTest.doTest(HttpPartitionTest.java:148)
+        at org.apache.solr.BaseDistributedSearchTestCase.testDistribSearch(BaseDistributedSearchTestCase.java:863)
+

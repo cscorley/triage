@@ -1,0 +1,10 @@
+Something like this. Either top-level or common-build.xml?
+
+  <target name="refresh-checksums">
+    <checksum algorithm="SHA1">
+      <fileset dir="${basedir}">
+        <include name="**/*.jar"/>
+      </fileset>
+    </checksum>
+  </target>
+

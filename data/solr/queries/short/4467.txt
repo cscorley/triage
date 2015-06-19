@@ -1,0 +1,1 @@
+Ephemeral directory implementations may not recover correctly because the code to clear the tlog files on startup is off.

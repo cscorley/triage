@@ -1,0 +1,5 @@
+Facets have many encoders already, but only one of them is tested by all facet tests (the default). While EncodingTest covers all encoders, I already fixed it because it didn't catch a bug where one encoder didn't reset the given BytesRef. It will be useful if tests could choose a randomCategoryListParams(), or randomFacetIndexingParams() etc., to swap in random encoders.
+
+Also, I wrote an AssertingCategoryListIterator which asserts all kind of things (e.g. that if setNextReader returns false, getOrdinals isn't called). Would be good to use it by all tests.
+
+To do that, I think that it would be best if all facet tests extend a FacetTestCase with such utility methods.

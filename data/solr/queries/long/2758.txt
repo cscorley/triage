@@ -1,0 +1,4 @@
+There is exactly one small dependency that the SolrJ jar has to lucene-core and that is indirectly via ConcurrentLRUCache which is in common/util.  SolrJ doesn't even use this cache but it's there any way.  Attached is a patch for the move. It also removes the lucene-core dependency that the SolrJ maven pom.xml has on lucene-core.
+
+Steve Rowe agrees:
+https://issues.apache.org/jira/browse/SOLR-2756?focusedCommentId=13103103&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13103103

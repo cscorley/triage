@@ -1,0 +1,1 @@
+shardHandlerFactory is not properly persisted

@@ -1,0 +1,1 @@
+Filed TEZ-2366. Before Tez fix the issue, we can fix it temporarily in Pig side first.

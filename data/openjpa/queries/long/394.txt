@@ -1,0 +1,1 @@
+ Should generate CAST (? AS VARCHA(<LENGTH>)) , this problem is in 1.0.x branch.

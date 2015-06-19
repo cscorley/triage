@@ -1,0 +1,1 @@
+Because of a new feature in NetBeans 7.1, adding new import statements may automatically convert the existing imports to star imports (that is, import package.*). Since the existing Derby code rarely uses star imports, I suggest we disable this feature in the NetBeans project located under tools/ide/netbeans.

@@ -1,0 +1,1 @@
+When recovery is cancelled, any call to the leader to wait to see the replica in the right state for recovery should be aborted.

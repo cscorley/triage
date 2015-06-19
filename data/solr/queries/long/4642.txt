@@ -1,0 +1,1 @@
+Looks like the QueryResultKey has a bug when it creates the hashCode for the filters. 

@@ -1,0 +1,1 @@
+zkServer stop command incorrectly reading comment lines in zoo.cfg

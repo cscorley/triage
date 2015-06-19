@@ -1,0 +1,1 @@
+ Fix bunch of Pig e2e tests on Windows 

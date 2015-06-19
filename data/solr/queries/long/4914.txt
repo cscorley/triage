@@ -1,0 +1,3 @@
+Alan Woodward has done some work to refactor how core persistence works that we should work on going forward that I want to separate from a shorter-term tactical problem (See SOLR-4910).
+
+I'm attaching Alan's patch to this JIRA and we'll carry it forward separately from 4910.

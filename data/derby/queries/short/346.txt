@@ -1,0 +1,1 @@
+running jdbcapi/xaSimplePostive.sql under the DerbyNetClient framework gives   error "Cannot set holdability ResultSet.HOLD_CURSORS_OVER_COMMIT for a global transaction."

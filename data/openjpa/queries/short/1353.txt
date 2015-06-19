@@ -1,0 +1,1 @@
+Add legal info to the docs

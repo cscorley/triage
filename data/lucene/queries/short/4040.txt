@@ -1,0 +1,1 @@
+Improve QueryParser and supported syntax documentation

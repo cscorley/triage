@@ -1,0 +1,3 @@
+I ran the new PrintTaxonomyStats on a Wikipedia facets index, and it hit an AIOOBE because there was a child of the /categories path that had only one component ... this was created because I had added new CategoryPath("categories", "") during indexing.
+
+I think TaxoReader should preserve and return that empty string from .getPath?

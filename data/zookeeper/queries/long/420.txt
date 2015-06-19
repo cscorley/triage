@@ -1,0 +1,8 @@
+Currently you cannot just build and test the zkpython contrib, you need to actually install the zookeeper client c library as well
+as the zkpython lib itself.
+
+There really needs to be 2 steps:
+
+1) build/test zkpython "encapsulated" within the src repository, there should be no requirement to actually install anything
+(this is esp the case for automated processes and for review by PMC during release time for example)
+2) build an egg that can be distributed/installed by end user

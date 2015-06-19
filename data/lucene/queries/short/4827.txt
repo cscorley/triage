@@ -1,0 +1,1 @@
+don't hardcode PostingsHighlighter scoring parameters

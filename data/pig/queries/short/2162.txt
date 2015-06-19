@@ -1,0 +1,1 @@
+bin/pig should not modify user args

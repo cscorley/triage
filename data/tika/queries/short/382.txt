@@ -1,0 +1,1 @@
+No textextraction in tika-app

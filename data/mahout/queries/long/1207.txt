@@ -1,0 +1,1 @@
+Description element in mahout parent pom contains few typos.

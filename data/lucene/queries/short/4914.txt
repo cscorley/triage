@@ -1,0 +1,1 @@
+Spatial PrefixTree Node/Cell reset() doesn't reset 'leaf' flag

@@ -1,0 +1,1 @@
+Solrj doesn't return "between" count in range facets

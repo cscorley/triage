@@ -1,0 +1,20 @@
+I recently saw a failure on jenkins:
+
+http://jenkins.thetaphi.de/job/Lucene-Solr-4.x-Windows/4077/
+
+
+REGRESSION:  org.apache.solr.handler.TestReplicationHandler.doTestIndexAndConfigReplication
+
+Error Message:
+expected:<0> but was:<1404646041002>
+
+Stack Trace:
+java.lang.AssertionError: expected:<0> but was:<1404646041002>
+        at __randomizedtesting.SeedInfo.seed([7B532BE2B6B38F19:6F1B70B795B43207]:0)
+        at org.junit.Assert.fail(Assert.java:93)
+        at org.junit.Assert.failNotEquals(Assert.java:647)
+        at org.junit.Assert.assertEquals(Assert.java:128)
+        at org.junit.Assert.assertEquals(Assert.java:147)
+        at org.apache.solr.handler.TestReplicationHandler.assertVersions(TestReplicationHandler.java:987)
+        at org.apache.solr.handler.TestReplicationHandler.doTestIndexAndConfigReplication(TestReplicationHandler.java:559)
+

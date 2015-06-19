@@ -1,0 +1,1 @@
+Move the stress test in SOLR-4196 into a junit test

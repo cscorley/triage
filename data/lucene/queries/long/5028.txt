@@ -1,0 +1,5 @@
+We recently use this in oal.core.fst.PositiveIntOutputs to indicate whether to share outputs. The comment mentioned 'with doShare=false, in some case this may result in a smaller FST'. However, this is not intuitive, as for long type, we always have the smallest output reduced to NO_OUTPUT, thus the smallest one is 'moved' towards root, and no extra output is created.
+
+However, if there are many many small outputs around root arcs, when we share outputs, a large output might be pushed into the root arcs. When root arcs are packed as fixed-array, yes the size of FST is increased. But, I suppose this should invoke other intuitive heuristics, instead of the confusing 'doShare'?
+
+Besides, this only exist in PositiveIntOutputs.

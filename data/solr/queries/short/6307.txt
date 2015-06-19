@@ -1,0 +1,1 @@
+Atomic update remove does not work for int array or date array

@@ -1,0 +1,1 @@
+Allow at least solrconfig.xml and schema.xml to be edited via the admin screen

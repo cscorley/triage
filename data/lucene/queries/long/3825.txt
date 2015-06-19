@@ -1,0 +1,5 @@
+Once upon a time, snapshots of the lucene trunk went into the snapshot repo at repositories.apache.org. No longer. Instead, they just sit at:
+
+https://builds.apache.org//job/Lucene-Solr-Maven-trunk/lastSuccessfulBuild/artifact/maven_artifacts/
+
+Unfortunately, Jenkins makes a rather mediocre maven repo. the maven-wagon-plugin can't copy it and Nexus can't proxy it.

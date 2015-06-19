@@ -1,0 +1,3 @@
+Attempting to use group.facet=true and facet.limit=-1 to return all facets from a grouped result ends up with the counts not being returned. Adjusting the facet.limit to any number greater than 0 returns the facet counts as expected.
+
+This does not appear limited to a specific field type, as I have tried on (both multivalued and not) text, string, boolean, and double types.

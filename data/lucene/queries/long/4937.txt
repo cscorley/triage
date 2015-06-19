@@ -1,0 +1,1 @@
+I will buy a beer to whoever figures out why +0 sorts before -0 in branch_4x, but works correctly in trunk 

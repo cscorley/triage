@@ -1,0 +1,1 @@
+updateLog should fail to init if there is no _version_ field in schema.xml

@@ -1,0 +1,1 @@
+ tezclient.stop() should be called when tezClient.waitTillReady() is interrupted on shutdown.

@@ -1,0 +1,1 @@
+Pig on Tez gives wrong success message on failure in case of multiple outputs

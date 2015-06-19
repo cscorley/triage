@@ -1,0 +1,3 @@
+When we look at old-style solr.xml files, we try to test whether more than one core points to the same data dir. When constructing the paths, we need to substitute in any system-defined properties.
+
+This happens to work fine on a Mac (and unix in general?) but results in an illegal file name exception on Windows machines.

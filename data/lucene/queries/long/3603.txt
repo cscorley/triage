@@ -1,0 +1,1 @@
+Simple fix – make jar-src depend on a target which creates the build.dir. Also, I noticed that build.dir is set in multiple places across our build.xmls, so I'd like to improve that a bit (minor fixes as well).

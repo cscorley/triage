@@ -1,0 +1,1 @@
+In ZkController#ensureReplicaInLeaderInitiatedRecovery, the leader will publish the "down" state for a replica more than once if the node is not live. This is inefficient and can cause too many state change events to occur, one is sufficient.

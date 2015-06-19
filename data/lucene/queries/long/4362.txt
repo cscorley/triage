@@ -1,0 +1,21 @@
+This makes code really difficult to read and work with.
+Its easy enough to prevent.
+
+
+Index: build.xml
+===================================================================
+--- build.xml	(revision 1380979)
++++ build.xml	(working copy)
+@@ -77,11 +77,12 @@
+         <or>
+           <containsregexp expression="@author\b" casesensitive="yes"/>
+           <containsregexp expression="\bno(n|)commit\b" casesensitive="no"/>
++          <containsregexp expression="\t" casesensitive="no"/>
+         </or>
+       </fileset>
+       <map from="${validate.currDir}${file.separator}" to="* "/>
+     </pathconvert>
+-    <fail if="validate.patternsFound">The following files contain @author tags or nocommits:${line.separator}${validate.patternsFound}</fail>
++    <fail if="validate.patternsFound">The following files contain @author tags, tabs or nocommits:${line.separator}${validate.patternsFound}</fail>
+   </target>
+

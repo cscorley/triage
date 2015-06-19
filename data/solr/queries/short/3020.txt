@@ -1,0 +1,1 @@
+Make HunspellStemFilterFactory not modify tokens marked as keywords by KeywordMarkerFilterFactory or StemmerOverrideFilterFactory

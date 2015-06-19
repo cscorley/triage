@@ -1,0 +1,1 @@
+Config XML parsing should fail hard if an xpath is expect to match at most one node/string/int/boolean and multiple values are found

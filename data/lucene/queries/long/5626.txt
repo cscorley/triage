@@ -1,0 +1,14 @@
+This happened twice in jenkins:
+
+
+[lockStressTest2] Exception in thread "main" java.io.IOException:
+Access is denied
+[lockStressTest2] at
+java.io.WinNTFileSystem.createFileExclusively(Native Method)
+[lockStressTest2] at java.io.File.createNewFile(File.java:1012)
+[lockStressTest2] at
+org.apache.lucene.store.SimpleFSLock.obtain(SimpleFSLockFactory.java:135)
+
+
+
+My windows machine got struck by lightning, so I cannot fix this easily. 

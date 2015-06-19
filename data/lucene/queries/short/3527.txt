@@ -1,0 +1,1 @@
+Implement getDistance() on DirectSpellChecker.INTERNAL_LEVENSHTEIN

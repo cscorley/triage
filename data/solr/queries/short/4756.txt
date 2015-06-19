@@ -1,0 +1,1 @@
+Change some of our existing tests to use the new solr.xml format and core discovery by directory structure.

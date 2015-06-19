@@ -1,0 +1,1 @@
+Currently the timestamp is always set to the current time in milliseconds. There should be an option to override that. I propose a configuration setting that uses the second field as the timestamp column.

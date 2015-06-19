@@ -1,0 +1,1 @@
+PostingsHighlighter doesn't keep the top N best scoring passages

@@ -1,0 +1,3 @@
+The processAdd method in DistributedUpdateProcessor sets "distrib.from" in all cases. That shouldn't be the case.
+
+It should only be set in case the it's a leader/sub-shard leader.

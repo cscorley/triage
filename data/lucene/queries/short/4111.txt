@@ -1,0 +1,1 @@
+More spinning/endless loop problems with random regex in org.apache.lucene.analysis.pattern.TestPatternReplaceCharFilter.testRandomStrings

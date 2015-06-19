@@ -1,0 +1,1 @@
+Pig Cannot handle nullable values (arrays and records) in avro records

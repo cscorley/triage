@@ -1,0 +1,1 @@
+norms reading fails with FileNotFound in exceptional case

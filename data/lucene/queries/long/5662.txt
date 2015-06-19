@@ -1,0 +1,8 @@
+This is bad because you lose other unrelated documents in IndexWriter's buffer.
+
+Simple example:
+
+
+      BytesRef v = null; // somehow my app screwed up
+      doc.add(new StoredField("foo", v));
+

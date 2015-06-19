@@ -1,0 +1,1 @@
+I've come up with a use for DisjunctionMaxQuery, but not the dismax parser. I note that the toString() method on that item proposes a syntax with vertical bars. Is there any sympathy for a patch that added this to the standard parser, or some other syntax?

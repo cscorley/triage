@@ -1,0 +1,1 @@
+This jira will port the client side connection code to use netty rather than direct nio.

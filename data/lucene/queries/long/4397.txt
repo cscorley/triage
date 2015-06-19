@@ -1,0 +1,1 @@
+e.g. ant test -Dtestcase=TestIndexWriterWithThreads -Dtests.seed=C9BE919B1BE0DAC7

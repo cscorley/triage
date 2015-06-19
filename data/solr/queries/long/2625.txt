@@ -1,0 +1,49 @@
+It seems this bug was first noted here http://lucene.472066.n3.nabble.com/NullPointerException-with-TermVectorComponent-td504361.html
+It still is present in the current version.
+tv.tf_idf=true -> NPE and tv.all=true
+
+The query: tv.tf_idf=true&q=user:39699693
+
+The error: 
+
+HTTP ERROR 500
+
+Problem accessing /solr/select/tvrh/. Reason:
+
+    null
+
+java.lang.NullPointerException
+	at org.apache.solr.handler.component.TermVectorComponent$TVMapper.getDocFreq(TermVectorComponent.java:337)
+	at org.apache.solr.handler.component.TermVectorComponent$TVMapper.map(TermVectorComponent.java:330)
+	at org.apache.lucene.index.TermVectorsReader.readTermVector(TermVectorsReader.java:513)
+	at org.apache.lucene.index.TermVectorsReader.readTermVectors(TermVectorsReader.java:396)
+	at org.apache.lucene.index.TermVectorsReader.get(TermVectorsReader.java:373)
+	at org.apache.lucene.index.SegmentReader.getTermFreqVector(SegmentReader.java:786)
+	at org.apache.lucene.index.DirectoryReader.getTermFreqVector(DirectoryReader.java:525)
+	at org.apache.solr.search.SolrIndexReader.getTermFreqVector(SolrIndexReader.java:245)
+	at org.apache.solr.handler.component.TermVectorComponent.process(TermVectorComponent.java:225)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:194)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:129)
+	at org.apache.solr.core.RequestHandlers$LazyRequestHandlerWrapper.handleRequest(RequestHandlers.java:241)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:1360)
+	at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:356)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:252)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:228)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+
+It works just fine if I do: tv.all=true&q=user:39699693

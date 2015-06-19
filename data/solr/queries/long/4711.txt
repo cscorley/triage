@@ -1,0 +1,1 @@
+Some tests in Solr's cloud package always fail on Java 8. We should fix them before Java 8 comes out because its not a good idea to release a Solr distribution with a test that always fails.

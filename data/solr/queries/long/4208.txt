@@ -1,0 +1,1 @@
+With successive changes, the edismax query parser has become more complex. It would be nice to refactor it to reduce code complexity, also to allow better extension and code reuse.

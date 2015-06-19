@@ -1,0 +1,1 @@
+Left-over from SegmentInfos refactoring. The name should be singular, we don't have SegmentInfosWriter/Reader anymore.

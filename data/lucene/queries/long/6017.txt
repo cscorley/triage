@@ -1,0 +1,1 @@
+As Uwe noticed on LUCENE-5441, FixedBitSet.xor(DocIdSetIterator) doesn't have the same optimization when the provided iterator is a FixedBitSetIterator as other bulk methods (and, or, ...).

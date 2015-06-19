@@ -1,0 +1,1 @@
+Result Grouping fails if no hits

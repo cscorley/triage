@@ -1,0 +1,17 @@
+Port following test cases
+
+TestFRJoin.java
+TestFRJoinNullValue.java
+TestGrunt.java
+TestImplicitSplit.java
+TestInputOutputMiniClusterFileValidator.java
+TestJoin.java
+TestJoinSmoke.java
+TestKeyTypeDiscoveryVisitor.java
+TestNewPlanImplicitSplit.java
+TestPigServerWithMacros.java
+TestRegisteredJarVisibility.java
+TestStoreInstances.java
+TestToolsPigServer.java
+
+Also turn off opt.fetch for tez tests as some tests were passing because of that.

@@ -1,0 +1,1 @@
+support offsets in MemoryPostings

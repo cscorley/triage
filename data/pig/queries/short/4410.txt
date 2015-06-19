@@ -1,0 +1,1 @@
+Fix testRankWithEmptyReduce in tez mode

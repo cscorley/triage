@@ -1,0 +1,1 @@
+Replace benchmarks crazy HTML parser by a nekohtml 10-liner

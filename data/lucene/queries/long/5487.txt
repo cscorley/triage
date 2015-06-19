@@ -1,0 +1,12 @@
+This is just an exploratory patch ... still many nocommits, but I
+think it may be promising.
+
+I find the two booleans we pass to Weight.scorer confusing, because
+they really only apply to whoever will call score(Collector) (just
+IndexSearcher and BooleanScorer).
+
+The params are pointless for the vast majority of scorers, because
+very, very few query scorers really need to change how top-scoring is
+done, and those scorers can only score top-level (throw throw UOE
+from nextDoc/advance).  It seems like these two types of scorers
+should be separately typed.

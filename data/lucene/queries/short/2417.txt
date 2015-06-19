@@ -1,0 +1,1 @@
+Fix IndexCommit hashCode() and equals() to be consistent

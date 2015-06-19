@@ -1,0 +1,1 @@
+StreamingUpdateSolrServer is hard-coded to write XML data. It should integrate the RequestWriter API so that it can be used to send binary update payloads.

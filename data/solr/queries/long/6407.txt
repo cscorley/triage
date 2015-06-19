@@ -1,0 +1,13 @@
+
+   [junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=TestSortingResponseWriter -Dtests.method=testSortingOutput -Dtests.seed=9096ECEE5D29523B -Dtests.slow=true -Dtests.locale=en_GB -Dtests.timezone=CTT -Dtests.file.encoding=ISO-8859-1
+   [junit4] ERROR   0.14s J3  | TestSortingResponseWriter.testSortingOutput <<<
+   [junit4]    > Throwable #1: java.lang.ClassCastException: org.apache.lucene.codecs.lucene410.Lucene410DocValuesProducer$6 cannot be cast to org.apache.lucene.index.MultiDocValues$MultiSortedDocValues
+   [junit4]    > 	at __randomizedtesting.SeedInfo.seed([9096ECEE5D29523B:24667B8F5066589B]:0)
+   [junit4]    > 	at org.apache.solr.response.SortingResponseWriter$StringValue.<init>(SortingResponseWriter.java:1091)
+   [junit4]    > 	at org.apache.solr.response.SortingResponseWriter.getSortDoc(SortingResponseWriter.java:322)
+   [junit4]    > 	at org.apache.solr.response.SortingResponseWriter.write(SortingResponseWriter.java:126)
+   [junit4]    > 	at org.apache.solr.util.TestHarness.query(TestHarness.java:301)
+   [junit4]    > 	at org.apache.solr.util.TestHarness.query(TestHarness.java:278)
+   [junit4]    > 	at org.apache.solr.response.TestSortingResponseWriter.testSortingOutput(TestSortingResponseWriter.java:116)
+   [junit4]    > 	at java.lang.Thread.run(Thread.java:745)
+

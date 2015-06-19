@@ -1,0 +1,1 @@
+Remove XXXField.TYPE_STORED

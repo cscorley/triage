@@ -1,0 +1,3 @@
+Even when using the constructor specifying which ResponseParser to use, LBHttpSolrServer always uses its internal BinaryResponseParser. This forces anyone who wants to use another parser to extend the LBHttpSolrServer class instead of passing it the desired parser, or even null in order to get the original stream. 
+
+In general, it makes sense to have default values, and BinaryResponseParser is probably the best choice for LBHttpSolrServer, but ignoring the parameter is error prone for users.

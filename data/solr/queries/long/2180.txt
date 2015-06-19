@@ -1,0 +1,7 @@
+SolrEmbeddedServer.request() fails to call SolrQueryRequest.close() at the very end of a successful request. This (in some situations) causes EmbeddedSolr to leave old Searchers open until the Solr core stops (core unload, the JVM restarts). This leaves old Solr and Lucene caches in place, which causes a memory leak.
+
+A fix for this was committed on the trunk on Sunday, Oct/15/2010. 
+
+Revision r1023599  to SolrEmbeddedServer
+
+This should be backported, or the problem checked for, in 1.4.2 and 3.1. 

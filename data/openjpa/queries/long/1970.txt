@@ -1,0 +1,7 @@
+CPU is spinning forever at TreeMap.get in schema.java.
+The reason found to be because of structural modification of treemap outside a synchronized block.
+Synchronizing the treemap is fixing the issue.
+The issue can be reproduced with an openJPA test case but due to the nature of the problem, it is replicable intermittently on dual core machine.
+Attached patch has the test case and also the test case is ignored in default runs because it will cause the tests to stuck at TreeMap.get.
+
+This is seen in 1.1.x version of openJPA and hence uploading the patch only for that version.

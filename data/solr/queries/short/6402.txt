@@ -1,0 +1,1 @@
+OverseerCollectionProcessor should not exit for ZK ConnectionLoss

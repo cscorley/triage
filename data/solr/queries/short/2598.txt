@@ -1,0 +1,1 @@
+exampledocs/books.json should use name instead of title

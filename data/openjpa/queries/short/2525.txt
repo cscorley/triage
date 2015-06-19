@@ -1,0 +1,1 @@
+Use of JoinColumn(.. referencedColumnName= ..) targets to another joinColumn key exposed as an attribute will cause a ConstrainViolation exception on persist

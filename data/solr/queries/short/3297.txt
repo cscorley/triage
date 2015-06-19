@@ -1,0 +1,1 @@
+Add note to CHANGES.txt that StreamingUpdateSolrServer is replaced by ConcurrentUpdateSolrServer

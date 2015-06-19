@@ -1,0 +1,1 @@
+CheckIndex prints wrong version number on 3.1 indexes (and posibly also in trunk)

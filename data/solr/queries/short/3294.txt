@@ -1,0 +1,1 @@
+Remove binary carrot2.jar and replace it with a maven dependency.

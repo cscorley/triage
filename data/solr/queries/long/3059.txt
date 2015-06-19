@@ -1,0 +1,3 @@
+The XSLT update handler is poorly documented, and http://wiki.apache.org/solr/XsltUpdateRequestHandler should be improved
+
+Also, there should be an example stylesheet in the conf/xslt folder

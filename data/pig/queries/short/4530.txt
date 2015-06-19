@@ -1,0 +1,1 @@
+StackOverflow in TestMultiQueryLocal running under hadoop20

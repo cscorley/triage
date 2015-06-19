@@ -1,0 +1,25 @@
+the followng code failed on hudson
+http://hudson.zones.apache.org/hudson/view/ZooKeeper/job/ZooKeeper-trunk/371/
+
+      watchctx_t ctx1, ctx2;
+      zhandle_t *zk1 = createClient(&ctx1);
+      CPPUNIT_ASSERT_EQUAL(true, ctx1.waitForConnected(zk1));
+      zhandle_t *zk2 = createClient(&ctx2);
+      zookeeper_close(zk1);
+      CPPUNIT_ASSERT_EQUAL(true, ctx2.waitForConnected(zk2));
+
+there's a problem with this test, it assumes that close(1) can be called before createclient(2) gets connected.
+
+this is not correct: createclient is an async call an in some cases the connection can be established before
+create client returns.
+
+this shows a failure in this case because client1 was created, then client2 attempted to connect
+but failed due to this on the server (max conn exceeded):
+        sprintf(cmd, "export ZKMAXCNXNS=1;%s startClean %s", ZKSERVER_CMD, getHostPorts());
+
+conn 2 failed and therefore the following assert eventually failed.
+
+this code should not assume that close(1) will beat connect(2)
+
+
+Henry can you take a look?

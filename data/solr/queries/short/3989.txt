@@ -1,0 +1,1 @@
+RuntimeException thrown by SolrZkClient should wrap cause, have a message, or be SolrException

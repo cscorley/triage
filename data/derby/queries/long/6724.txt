@@ -1,0 +1,14 @@
+If an insert statement that has fired a trigger, is needs recompilation during execution, it fails with a NullPointerException in InternalTriggerExecutionContext.cleanup():
+
+
+java.lang.NullPointerException
+	at org.apache.derby.impl.sql.execute.InternalTriggerExecutionContext.cleanup(InternalTriggerExecutionContext.java:236)
+	at org.apache.derby.impl.sql.execute.TriggerEventActivator.cleanup(TriggerEventActivator.java:291)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.cleanUp(InsertResultSet.java:2199)
+	at org.apache.derby.impl.sql.conn.GenericStatementContext.cleanupOnError(GenericStatementContext.java:543)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:476)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:349)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1337)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeStatement(EmbedPreparedStatement.java:1709)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.execute(EmbedPreparedStatement.java:1394)
+

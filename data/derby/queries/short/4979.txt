@@ -1,0 +1,1 @@
+build.properties in plugins/eclipse/org.apache.derby.ui refers to non-existent file install_plugin.html

@@ -1,0 +1,28 @@
+This is some code that I wrote a while back.
+
+Normally, if you use SweetSpotSimilarity, you are going to make it do something useful by extending SweetSpotSimilarity. So, instead, I made a factory class and an configurable SweetSpotSimilarty. There are two classes. SweetSpotSimilarityFactory reads the parameters from schema.xml. It then creates an instance of VariableSweetSpotSimilarity, which is my custom SweetSpotSimilarity class. In addition to the standard functions, it also handles dynamic fields.
+
+So, in schema.xml, you could have something like this:
+
+<similarity class="org.apache.solr.schema.SweetSpotSimilarityFactory">
+    <bool name="useHyperbolicTf">true</bool>
+
+	<float name="hyperbolicTfFactorsMin">1.0</float>
+	<float name="hyperbolicTfFactorsMax">1.5</float>
+	<float name="hyperbolicTfFactorsBase">1.3</float>
+	<float name="hyperbolicTfFactorsXOffset">2.0</float>
+
+	<int name="lengthNormFactorsMin">1</int>
+	<int name="lengthNormFactorsMax">1</int>
+	<float name="lengthNormFactorsSteepness">0.5</float>
+
+	<int name="lengthNormFactorsMin_description">2</int>
+	<int name="lengthNormFactorsMax_description">9</int>
+	<float name="lengthNormFactorsSteepness_description">0.2</float>
+
+	<int name="lengthNormFactorsMin_supplierDescription_*">2</int>
+	<int name="lengthNormFactorsMax_supplierDescription_*">7</int>
+	<float name="lengthNormFactorsSteepness_supplierDescription_*">0.4</float>
+ </similarity>
+
+So, now everything is in a config file instead of having to create your own subclass.

@@ -1,0 +1,1 @@
+The xpath paths of /rss/item do not match the real world RSS feed which uses /rss/channel/item

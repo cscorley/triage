@@ -1,0 +1,3 @@
+The query (((text:hound)))^0.7 magically becomes (((text:hound^0.7)))^0.7 because of a strange optimization in BooleanQuery.rewrite() for 1-clause queries.
+
+See this issue to reproduce the bug: https://github.com/healthonnet/hon-lucene-synonyms/issues/36.

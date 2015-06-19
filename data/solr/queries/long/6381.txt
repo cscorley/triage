@@ -1,0 +1,63 @@
+I am currently doing tests with Java 9 build 26. It looks like everything works, but the TIKA Language Processor Test Suite throws a SecurityException because of:
+
+http://hg.openjdk.java.net/jdk9/jdk9/jdk/rev/48af79ee59bb
+
+This was added to Java 9 to prevent reflective access to some fields in java.lang.Class.
+
+I have no idea why TIKA or this Solr contrib wants to access the "classLoader" private field with reflective access. Maybe it has something to do with the test framework and RAM accounting, maybe Dawid Weiss knows more. The stack trace says nothing to me, looks like a separate thread outside the test runner.
+
+Maybe some class in LaguageProcessor has a static field referring to a class, so it is used for RAM accounting...:
+
+
+-test:
+   [junit4] <JUnit4> says salut! Master seed: A9C182BC3E2868C4
+   [junit4] Your default console's encoding may not display certain unicode glyphs: windows-1252
+   [junit4] Executing 2 suites with 2 JVMs.
+   [junit4] 
+   [junit4] Started J0 PID(9336@VEGA).
+   [junit4] Started J1 PID(2092@VEGA).
+   [junit4] Suite: org.apache.solr.update.processor.LangDetectLanguageIdentifierUpdateProcessorFactoryTest
+   [junit4]   2> Creating dataDir: C:\Users\Uwe Schindler\Projects\lucene\trunk-lusolr1\solr\build\contrib\solr-langid\test\J1\.\temp\solr.update.processor.LangDetectLanguageIdentifierUpdateProcessorFactoryTest-A9C182BC3E2868C4-001\init-core-data-001
+   [junit4]   2> log4j:WARN No appenders could be found for logger (org.apache.solr.SolrTestCaseJ4).
+   [junit4]   2> log4j:WARN Please initialize the log4j system properly.
+   [junit4]   2> log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+   [junit4]   2> NOTE: test params are: codec=Lucene41, sim=RandomSimilarityProvider(queryNorm=false,coord=crazy): {}, locale=en_NZ, timezone=Etc/GMT+6
+   [junit4]   2> NOTE: Windows 7 6.1 amd64/Oracle Corporation 1.9.0-ea (64-bit)/cpus=8,threads=1,free=134364528,total=199753728
+   [junit4]   2> NOTE: All tests run in this JVM: [LangDetectLanguageIdentifierUpdateProcessorFactoryTest]
+   [junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=LangDetectLanguageIdentifierUpdateProcessorFactoryTest -Dtests.seed=A9C182BC3E2868C4 -Dtests.locale=en_NZ -Dtests.timezone=Etc/GMT+6 -Dtests.file.encoding=UTF-8
+   [junit4] ERROR   0.00s J1 | LangDetectLanguageIdentifierUpdateProcessorFactoryTest (suite) <<<
+   [junit4]    > Throwable #1: java.lang.SecurityException: Cannot make java.lang.Class.classLoader accessible
+   [junit4]    > 	at __randomizedtesting.SeedInfo.seed([A9C182BC3E2868C4]:0)
+   [junit4]    > 	at java.lang.reflect.AccessibleObject.setAccessible0(AccessibleObject.java:147)
+   [junit4]    > 	at java.lang.reflect.AccessibleObject.setAccessible(AccessibleObject.java:129)
+   [junit4]    > 	at java.lang.Thread.run(Thread.java:745)
+   [junit4] Completed on J1 in 7.35s, 9 tests, 1 error <<< FAILURES!
+   [junit4] 
+   [junit4] Suite: org.apache.solr.update.processor.TikaLanguageIdentifierUpdateProcessorFactoryTest
+   [junit4]   2> Creating dataDir: C:\Users\Uwe Schindler\Projects\lucene\trunk-lusolr1\solr\build\contrib\solr-langid\test\J0\.\temp\solr.update.processor.TikaLanguageIdentifierUpdateProcessorFactoryTest-A9C182BC3E2868C4-001\init-core-data-001
+   [junit4]   2> log4j:WARN No appenders could be found for logger (org.apache.solr.SolrTestCaseJ4).
+   [junit4]   2> log4j:WARN Please initialize the log4j system properly.
+   [junit4]   2> log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+   [junit4]   2> NOTE: test params are: codec=FastCompressingStoredFields(storedFieldsFormat=CompressingStoredFieldsFormat(compressionMode=FAST, chunkSize=185), termVectorsFormat=CompressingTermVectorsFormat(compressionMode=FAST, chunkSize=185)), sim=RandomSimilarityProvider(queryNorm=true,coord=no): {}, locale=hu, timezone=Australia/ACT
+   [junit4]   2> NOTE: Windows 7 6.1 amd64/Oracle Corporation 1.9.0-ea (64-bit)/cpus=8,threads=1,free=90090688,total=200278016
+   [junit4]   2> NOTE: All tests run in this JVM: [TikaLanguageIdentifierUpdateProcessorFactoryTest]
+   [junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=TikaLanguageIdentifierUpdateProcessorFactoryTest -Dtests.seed=A9C182BC3E2868C4 -Dtests.locale=hu -Dtests.timezone=Australia/ACT -Dtests.file.encoding=UTF-8
+   [junit4] ERROR   0.00s J0 | TikaLanguageIdentifierUpdateProcessorFactoryTest (suite) <<<
+   [junit4]    > Throwable #1: java.lang.SecurityException: Cannot make java.lang.Class.classLoader accessible
+   [junit4]    > 	at __randomizedtesting.SeedInfo.seed([A9C182BC3E2868C4]:0)
+   [junit4]    > 	at java.lang.reflect.AccessibleObject.setAccessible0(AccessibleObject.java:147)
+   [junit4]    > 	at java.lang.reflect.AccessibleObject.setAccessible(AccessibleObject.java:129)
+   [junit4]    > 	at java.lang.Thread.run(Thread.java:745)
+   [junit4] Completed on J0 in 7.63s, 9 tests, 1 error <<< FAILURES!
+   [junit4] 
+   [junit4] 
+   [junit4] Tests with failures:
+   [junit4]   - org.apache.solr.update.processor.LangDetectLanguageIdentifierUpdateProcessorFactoryTest (suite)
+   [junit4]   - org.apache.solr.update.processor.TikaLanguageIdentifierUpdateProcessorFactoryTest (suite)
+   [junit4] 
+   [junit4] 
+   [junit4] JVM J0:     0.74 ..     9.37 =     8.63s
+   [junit4] JVM J1:     0.74 ..     9.32 =     8.58s
+   [junit4] Execution time total: 9.38 sec.
+   [junit4] Tests summary: 2 suites, 18 tests, 2 suite-level errors
+

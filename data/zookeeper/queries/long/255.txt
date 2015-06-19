@@ -1,0 +1,1 @@
+the zoo_set() api does not return the stat datastructure. the java counterpart returns a stat with set api. 

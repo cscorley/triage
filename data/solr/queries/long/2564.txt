@@ -1,0 +1,2 @@
+Since work on grouping module is going well. I think it is time to wire this up in Solr.
+Besides the current grouping features Solr provides, Solr will then also support second pass caching and total count based on groups.

@@ -1,0 +1,1 @@
+SOLR-3560 allows logged exceptions without a "trace" element to be handled, however the new trace element created here only shows the first line. 

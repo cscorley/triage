@@ -1,0 +1,29 @@
+When reading in seq2sparse output from HDFS in the spark-shell of form <Text,VectorWriteable>  SparkEngine's drmFromHDFS method is creating rdds with the same Key for all Pairs:  
+
+
+
+mahout> val drmTFIDF= drmFromHDFS( path = "/tmp/mahout-work-andy/20news-test-vectors/part-r-00000")
+
+
+
+Has keys:
+{...} 
+    key: /talk.religion.misc/84570
+    key: /talk.religion.misc/84570
+    key: /talk.religion.misc/84570
+{...}
+
+for the entire set.  This is the last Key in the set.
+
+The problem can be traced to the first line of drmFromHDFS(...) in SparkEngine.scala: 
+
+
+ val rdd = sc.sequenceFile(path, classOf[Writable], classOf[VectorWritable], minPartitions = parMin)
+        // Get rid of VectorWritable
+        .map(t => (t._1, t._2.get()))
+
+
+which gives the same key for all t._1.
+
+
+

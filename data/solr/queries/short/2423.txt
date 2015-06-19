@@ -1,0 +1,1 @@
+FieldType can take Object rather then String

@@ -1,0 +1,1 @@
+Solr contrib UIMA has its config just beneath <config>. I think it should move to uima's update processor tag.

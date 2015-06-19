@@ -1,0 +1,1 @@
+fail with error if analyzer has both a class and nested factories

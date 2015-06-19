@@ -1,0 +1,3 @@
+We already have packed data structures that support more than 2B values such as AppendingLongBuffer and MonotonicAppendingLongBuffer but none of them supports random write-access.
+
+We could write a PagedGrowableWriter for this, which would essentially wrap an array of GrowableWriters.

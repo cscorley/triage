@@ -1,0 +1,1 @@
+'ant generate-maven-artifacts' should work for lucene+solr 3.x+

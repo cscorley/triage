@@ -1,0 +1,1 @@
+The zookeeper info is currently generated with a jsp file – making it harder to maintain then it should be, and harder to include in other applications

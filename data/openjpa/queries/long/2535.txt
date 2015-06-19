@@ -1,0 +1,98 @@
+Hello!  I've found an issue with a scenario which contains double byte character set (DBCS) charaters (in this case the charters are Japanese).  That is, take this entity which contains a mixture of DBCS and SBCS:
+
+public class MxTbx03400Codecopy{
+  @Id
+  private String 業務id;
+  private String 閉塞フラグ;
+
+In OpenJPA 1.2.x, the following SQL is generated:
+
+SELECT t0.業務id, t0.閉塞フラグ FROM MX.MX_TBX03400_CODECOPY t0 WHERE (t0.閉塞フラグ = 0) ORDER BY t0.業務id ASC
+
+In 2.0+ the SQL generated is:
+
+SELECT t0."業務id", t0."閉塞フラグ" FROM MX.MX_TBX03400_CODECOPY t0 WHERE (t0."閉塞フラグ" = 0) ORDER BY t0."業務id" ASC
+
+Notice the later contains quoted identifiers.  I'm using DB2 and I have my column named "業務ID" (node the upper cap 'id').  Because OpenJPA adds the quotes, DB2 seems to treat this as case-sensitive and thus "業務id" doesn't match "業務ID".  
+
+OpenJPA doesn't always add quotes to all identifies, so I was confused as to why it did so in this case.  As a matter of fact, if I simply change my Entity variables to contain English only, the generated SQL is NOT quoted.  This led me to believe OpenJPA somehow detects the DBCS or something about it and adds the quotes.  After digging, I found where and why the quotes are added.  To see where the quotes are added, we must first look here:
+
+IdentifierUtilImpl:
+
+    public String delimit(IdentifierConfiguration config, IdentifierRule rule, String name, boolean force) {
+        if (!rule.getCanDelimit() || StringUtils.isEmpty(name)) 
+{
+            return name;
+        }
+
+        if ((force && !isDelimited(config, rule, name)) || requiresDelimiters(config, rule, name)) {
+            return config.getLeadingDelimiter() + name + config.getTrailingDelimiter();  //HAT: this line turns 業務id into "業務id"
+
+The last line is where the quotes are added.  As you can see it is guarded by an 'if' block.  The first (left) side of the OR (||) block returns false.  It is the code on the right side of the OR which returns true thus causing the quotes to be added.  As such, lets look at that code:
+
+IdentifierUtilImpl:
+
+    public boolean requiresDelimiters(IdentifierConfiguration config, IdentifierRule rule, String name) {
+        if (rule == null) 
+{
+            throw new IllegalArgumentException(_loc.get("no-rules-provided").getMessage());
+        }
+        if (rule.getCanDelimit() && !isDelimited(config, rule, name) && rule.requiresDelimiters(name)) 
+{  <<<<<<<<<<<
+            return true;
+        }
+        return false;
+    }
+
+In the above code, the method 'rule.requiresDelimiters' is the important method to look at which is in IdentifierRule (notice the javadoc stating an identifier must being with a letter....I guess a Japanese letter doesn't count):
+
+    /**
+
+	SQL identifier rules:
+	1) Can be up to 128 characters long
+	2) Must begin with a letter
+	3) Can contain letters, digits, and underscores
+	4) Can't contain spaces or special characters such as #, $, &, %, or
+	punctuation.
+	5) Can't be reserved words
+     */
+    public boolean requiresDelimiters(String identifier) {
+
+
+
+      ...............
+
+        // Assert identifier begins with a letter
+        char[] chars = identifier.toCharArray();
+        if (isMustBeginWithLetter()) {
+            if (!CharUtils.isAsciiAlpha(chars[0])) 
+{//HAT: WHY MUST IT BE A 7 bit char??????????
+                return true;
+            }
+        }
+
+It is this block of code, specifically the results of'CharUtils.isAsciiAlpha', which returns true.  I don't think this logic correct.  The JPA 2.0 Spec states:
+
+
+4.4.1 Identifiers
+An identifier is a character sequence of unlimited length. The character sequence must begin with a Java
+identifier start character, and all other characters must be Java identifier part characters. >>>>>>>An identifier
+start character is any character for which the method Character.isJavaIdentifierStart
+returns true.<<<<<<<<<<<
+
+As you can see, the last sentence in the above paragraph seems to say it all.  As such, I feel we should use 'Character.isJavaIdentifierStart' rather than 'CharUtils.isAsciiAlpha'.?  If I do the following:
+        System.out.println(Character.isJavaIdentifierStart('業'));
+
+true is printed.  As such, this seem like the right fix so we don't add quotes.
+
+Finally, I do have a work around for this test, which is to add this:
+
+ props.setProperty("openjpa.jdbc.DBDictionary", "db2(leadingDelimiter=\"\", trailingDelimiter=\"\")");
+
+This seems like a fine work around, but not very intuitive!  Again, by my findings above, it would seem like we should NOT be delimiting the identifier in the first place.  BTW, I also tried the following as a work around and it didn't resolve the issue:
+
+"openjpa.jdbc.DBDictionary", "db2(supportsDelimitedIdentifiers=false)"
+
+Thanks,
+
+Heath

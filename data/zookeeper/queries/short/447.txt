@@ -1,0 +1,1 @@
+zkServer.sh doesn't allow different config files to be specified on the command line

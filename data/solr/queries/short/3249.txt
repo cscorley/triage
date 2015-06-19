@@ -1,0 +1,1 @@
+Allow CloudSolrServer and SolrCmdDistributor to use JavaBin.

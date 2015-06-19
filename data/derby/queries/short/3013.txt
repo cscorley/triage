@@ -1,0 +1,1 @@
+column-definition WITH DEFAULT should accept CURRENT_USER, SESSION_USER in addition to USER

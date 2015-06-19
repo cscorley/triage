@@ -1,0 +1,1 @@
+RANK BY fails when default_parallel is greater than cardinality of field being ranked by

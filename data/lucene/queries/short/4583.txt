@@ -1,0 +1,1 @@
+StraightBytesDocValuesField fails if bytes > 32k

@@ -1,0 +1,43 @@
+We added a custom field type to allow an indexed binary field type that supports search (exact match), prefix search, and sort as unsigned bytes lexicographical compare. For sort, BytesRef's UTF8SortedAsUnicodeComparator accomplishes what we want, and even though the name of the comparator mentions UTF8, it doesn't actually assume so and just does byte-level operation, so it's good. However, when we do this across different nodes, we run into an issue where in QueryComponent.doFieldSortValues:
+
+          // Must do the same conversion when sorting by a
+          // String field in Lucene, which returns the terms
+          // data as BytesRef:
+          if (val instanceof BytesRef) 
+{
+            UnicodeUtil.UTF8toUTF16((BytesRef)val, spare);
+            field.setStringValue(spare.toString());
+            val = ft.toObject(field);
+          }
+
+UnicodeUtil.UTF8toUTF16 is called on our byte array,which isn't actually UTF8. I did a hack where I specified our own field comparator to be ByteBuffer based to get around that instanceof check, but then the field value gets transformed into BYTEARR in JavaBinCodec, and when it's unmarshalled, it gets turned into byte[]. Then, in QueryComponent.mergeIds, a ShardFieldSortedHitQueue is constructed with ShardDoc.getCachedComparator, which decides to give me comparatorNatural in the else of the TODO for CUSTOM, which barfs because byte[] are not Comparable...
+
+From Chris Hostetter:
+
+I'm not very familiar with the distributed sorting code, but based on your
+comments, and a quick skim of the functions you pointed to, it definitely
+seems like there are two problems here for people trying to implement
+custom sorting in custom FieldTypes...
+
+1) QueryComponent.doFieldSortValues - this definitely seems like it should
+be based on the FieldType, not an "instanceof BytesRef" check (oddly: the
+comment event suggestsion that it should be using the FieldType's
+indexedToReadable() method – but it doesn't do that.  If it did, then
+this part of hte logic should work for you as long as your custom
+FieldType implemented indexedToReadable in a sane way.
+
+2) QueryComponent.mergeIds - that TODO definitely looks like a gap that
+needs filled.  I'm guessing the sanest thing to do in the CUSTOM case
+would be to ask the FieldComparatorSource (which should be coming from the
+SortField that the custom FieldType produced) to create a FieldComparator
+(via newComparator - the numHits & sortPos could be anything) and then
+wrap that up in a Comparator facade that delegates to
+FieldComparator.compareValues
+
+That way a custom FieldType could be in complete control of the sort
+comparisons (even when merging ids).
+
+...But as i said: i may be missing something, i'm not super familia with
+that code.  Please try it out and let us know if thta works – either way
+please open a Jira pointing out the problems trying to implement
+distributed sorting in a custom FieldType.

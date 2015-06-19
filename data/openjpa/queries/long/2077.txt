@@ -1,0 +1,5 @@
+I made a change to XMLPersistenceMetaDataParser, adding a call to StringUtils.endsWithIgnoreCase().It worked fine in eclipse. But it failed with a maven build with a NoSuchMethodException. StringUtils is in commons-lang. This method is introduced  in version 2.4 The openjpa-parent pom.xml does specify version 2.4, so it should work. But, it also specifies org.codehaus.mojo openjpa-maven-plugin. Investigation discovered that this is pulling in commons-lang version 2.1,which is being used and gives the exception.
+
+I've discussed this with several people. The consensus is that the openjpa-maven-plugin that was introduced by OPENJPA-1934 was meant as a replacement for the codehaus version. So, I've changed multiple pom files, replacing references to the codehaus version with the apache version. I've tested these changes on a complete build and it works fine.
+
+I'll wait a day or 2 before committing, in case someone knows of a problem with this.

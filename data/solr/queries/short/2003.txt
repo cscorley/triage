@@ -1,0 +1,1 @@
+report errors for wrongly-encoded files in ResourceLoader.getLines()

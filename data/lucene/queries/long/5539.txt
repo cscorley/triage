@@ -1,0 +1,1 @@
+IW.commitMergedDeletes could use some simplification. For example, if we factor out a holder class for mergedDeletesAndUpdates and docMap, we can factor out a lot of the duplicated logic into a single method. I'll attach a patch shortly.

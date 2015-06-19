@@ -1,0 +1,4 @@
+In various classes, there is potential resource leak.
+e.g. LogIterator / RandomAccessFileReader is not closed upon return from the method.
+
+Corresponding close() should be called to prevent resource leak.

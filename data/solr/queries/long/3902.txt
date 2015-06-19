@@ -1,0 +1,1 @@
+As per previous discussions on the mailing list it'd be good to refactor some test classes, double check some dependencies, etc.

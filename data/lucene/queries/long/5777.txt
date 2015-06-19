@@ -1,0 +1,3 @@
+This bug was previously masked by LUCENE-5768.
+
+Basically '-' doesnt mean anything special (e.g. what it normally means for a regex), so we usually have to escape it. but some dictionaries like pt_PT already escape it, so now that our parsing works correctly, we are undoing that and creating a bad condition.

@@ -1,0 +1,3 @@
+Some tests, GcLedgerTests for example, create a lot of ledgers (30k) which causes a lot of zk writes. This causes a lot of zk logging, which can fill the log buffer and cause an oom when you're running with very little memory.
+
+Fix is trivial. zk should be set to only log at error level in log4j.properties.

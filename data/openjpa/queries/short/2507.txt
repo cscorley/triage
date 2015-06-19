@@ -1,0 +1,1 @@
+Weird EmptyStackException in CriteriaQueryImpl

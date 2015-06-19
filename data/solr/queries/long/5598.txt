@@ -1,0 +1,3 @@
+The LanguageIdentifierUpdateProcessor just uses the first value of the multiValued field to detect the language. 
+
+Method concatFields calls doc.getFieldValue(fieldName) but should instead iterate over doc.getFieldValues(fieldName).

@@ -1,0 +1,5 @@
+We had a situation where the maven artifacts depended on the wrong version of tika: we should test that the maven dependencies are correct.
+
+An easy way to do this is to force it to download all of its dependencies, and then run our existing license checks over that.
+
+This currently fails: maven is bringing in some extra 3rd party libraries.

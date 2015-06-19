@@ -1,0 +1,1 @@
+Redirect old /solr/admin to new ui

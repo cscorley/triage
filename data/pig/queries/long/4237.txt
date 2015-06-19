@@ -1,0 +1,3 @@
+Bags cannot be sent to an RDD, as it produces a SelfSpillBag$MemoryLimits not Serializable exception. This results in an error for almost every operation performed after grouping tuples.
+
+This error is fixed after making transient the protected MemoryLimit memLimit attribute inside org.apache.pig.data.SelfSpillBag, but I do not know the impact of this change.

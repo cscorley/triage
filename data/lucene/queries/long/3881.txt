@@ -1,0 +1,1 @@
+This Analyzer should contain the same components as StandardAnalyzer, except for the tokenizer, which should be UAX29URLEmailTokenizer instead of StandardTokenizer.

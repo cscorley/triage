@@ -1,0 +1,1 @@
+NRT reader doesn't see changes after successful IW.tryDeleteDocument

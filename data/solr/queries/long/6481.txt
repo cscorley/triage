@@ -1,0 +1,3 @@
+CLUSTERSTATUS action reports the state of replicas but it doesn't check /live_nodes, which means it might show a replica as "active" but the node is down, so the real state is "down".
+
+Ideally, we need a helper method that gets replica status that consults live nodes so this error doesn't keep cropping up all over the code base.

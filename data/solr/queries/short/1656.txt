@@ -1,0 +1,1 @@
+XInclude's are resolved relative CWD, not instance dir

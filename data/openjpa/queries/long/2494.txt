@@ -1,0 +1,13 @@
+Take the following entry in an orm.xml file:
+
+	<persistence-unit-metadata>
+		<persistence-unit-defaults>
+			<schema>schemaInPUDefaults</schema>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+
+Lets say this is the ONLY schema defined in the entire app, then this schema should be used by default (the spec clearly defines how the defaults in <persistence-unit-defaults> should be used by a provider).  However, this schema is not used by OpenJPA.  I have a test to recreate this issue and I'm working to provide a fix.
+
+Thanks,
+
+Heath Thomann

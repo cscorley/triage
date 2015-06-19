@@ -1,0 +1,1 @@
+Split Combining drops splits with empty getLocations()

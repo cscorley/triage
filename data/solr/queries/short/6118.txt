@@ -1,0 +1,1 @@
+expand.sort doesn't work with function queries

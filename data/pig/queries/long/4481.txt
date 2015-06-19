@@ -1,0 +1,3 @@
+ComputeSpec_1, ComputeSpec_2 and StreamingPerformance_3 produce the wrong result on Windows. Since Pig compare the test result with old version of Pig, which also produce wrong result, the test still pass.
+
+The cause of the issue is the parameter passing under Windows. Some parameter of executable cannot pass correctly on Windows. StreamingPerformance_3 requires a simple quoting change and command line change. However, I didn't find a proper way to fix ComputeSpec_1 and ComputeSpec_2 as FS and OFS parameters could not be passed correctly to awk. Changing the test slightly to get around (not changing the intention of the test).

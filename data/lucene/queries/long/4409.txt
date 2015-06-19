@@ -1,0 +1,23 @@
+today we have a lot of custom python scripts checking javadocs (checking for missing stuff too).
+
+Most of this is implemented by parsing html etc (some of this should stay this way, like broken-link detection)
+
+But actually the eclipse compiler can do most of this type of linting, and has a lot of options for it. We can pull it via ivy and run it from the command-line.
+
+I tested this manually by adding a bogus throws clause to Codec.java, downloading the ecj.jar from maven and running it manually:
+
+
+rmuir@beast:~/workspace/lucene-trunk/lucene/core/src/java$ java -cp ~/Downloads/ecj-3.7.2.jar org.eclipse.jdt.internal.compiler.batch.Main -source 1.6 -d none -enableJavadoc -properties ~/workspace/lucene-trunk/dev-tools/eclipse/.settings/org.eclipse.jdt.core.prefs .
+...
+----------
+120. ERROR in /home/rmuir/workspace/lucene-trunk/lucene/core/src/java/./org/apache/lucene/codecs/Codec.java (at line 59)
+	* @throws IOException */
+	          ^^^^^^^^^^^
+Javadoc: Exception IOException is not declared
+----------
+
+
+
+here i specified -d none (don't generate class files), and essentially told it to read the compiler warnings/errors options set in the dev-tools config. For javadocs-lint we would want our own separate properties file that disables the ordinary java warnings (because eclipse can warn/error/ignore on lots of things, not just javadocs, and does by default).
+
+Separately we could also use this to check/fail/warn on other things besides javadoc...

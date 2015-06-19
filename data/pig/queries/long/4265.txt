@@ -1,0 +1,27 @@
+$PIG_HOME/bin/pig -x local RubyUDFs_10.pig
+#RubyUDFs_10.pig
+
+a = load 'studenttab10k' using PigStorage() as (name, age:int, gpa:double);
+b = group a by name;
+c = foreach b generate group, SUM(a.age), SUM(a.gpa);
+d = foreach c generate $0, $1, (double)((int)$2*100)/100;
+store d into 'local.output/RubyUDFs_10_benchmark.out';
+
+the result in RubyUDFs_10.out/part
+#grep "david s" RubyUDFs_10.out/part-r-00000 
+david steinbeck	266	15.0
+
+#grep "david s" studenttab10k
+david steinbeck	21	2.44
+david steinbeck	33	1.17
+david steinbeck	42	1.94
+david steinbeck	42	1.35
+david steinbeck	31	2.77
+david steinbeck	40	2.42
+david steinbeck	57	3.91
+
+
+when runing Ruby_UDFs.pig in spark, the sum(a.gpa) is 16.0 and (double)((int)$2*100)/100 will be "david steinbeck	266	16.0".
+when running Ruby_UDFs.pig in mapreduce mode, the sum(a.gpa) is 15.999999999999998 and (double)((int)$2*100)/100 will be "david steinbeck	266	15.0".
+
+I don't know why the same code by different execution engines(spark and mapreduce) on the same os returns different results. 

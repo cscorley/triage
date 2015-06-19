@@ -1,0 +1,1 @@
+So as part of building an Aurora cluster ontop of Mesos, I wanted to learn ZK. I spent an evening reading much of the ZK documentation and noticed many grammatical or spelling errors. Being a good OSS citizen, I've went through the effort to fix them and create a patch fixing it.

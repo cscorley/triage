@@ -1,0 +1,22 @@
+When using an external file field (containing, say, reads), values in the field can be returned using &fl=field(reads), yielding something like:
+
+{"response":{"numFound":...,"start":0,"maxScore":1.0,"docs":[
+{"field(reads)":0.0}
+]}}
+
+
+In the response, the field can be renamed to, say, views like this: &fl=views:field(reads), yielding something like:
+
+{"response":{"numFound":...,"start":0,"maxScore":1.0,"docs":[
+{"views":0.0}
+]}}
+
+If, in this case, the field is renamed to reads: &fl=reads:field(reads), the result is now:
+
+{"response":{"numFound":...,"start":0,"maxScore":1.0,"docs":[
+{"reads":[0.0]}
+]}}
+
+(the 0.0 reads are now encapsulated in a list). 
+
+The same problem does not occur in the XML response writer. 

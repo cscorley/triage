@@ -1,0 +1,3 @@
+currently we build TreeMap<String,List<Character>> in ram, to sort before adding to the FST (which encodes the list as IntsRef). 
+
+char overflows here if there are more than 64k affixes (e.g. basque).

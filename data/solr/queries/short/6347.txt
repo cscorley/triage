@@ -1,0 +1,1 @@
+'deletereplica' can throw a NullPointerException

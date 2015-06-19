@@ -1,0 +1,3 @@
+SimplePostTool.java by default tries to issue a commit after posting.
+Problem is that it does this by appending "<commit/>" to the stream.
+This does not work when using non-XML requesthandler, such as CSV.

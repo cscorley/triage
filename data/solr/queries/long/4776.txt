@@ -1,0 +1,1 @@
+The current RangeFacet class exposes the "before" and "after" counts, however it doesn't expose the "between" count, which can be returned if facet.range.other includes "between" or is set to "all".

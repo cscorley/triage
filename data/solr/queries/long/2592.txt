@@ -1,0 +1,1 @@
+If the data in a cloud can be partitioned on some criteria (say range, hash, attribute value etc) It will be easy to narrow down the search to a smaller subset of shards and in effect can achieve more efficient search.  

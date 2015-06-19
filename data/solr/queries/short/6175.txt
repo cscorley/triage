@@ -1,0 +1,1 @@
+DebugComponent throws NPE on shard exceptions when using shards.tolerant

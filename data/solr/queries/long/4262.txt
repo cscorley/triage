@@ -1,0 +1,1 @@
+On the Core-Dashboard, the Replication Block shows only one (generic) icon .. originally this should reflect the Master-/Slave-State - like it's already done in the Title (as Text)

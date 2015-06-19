@@ -1,0 +1,12 @@
+Across the code base, we have lots of:
+
+
+long minValue, maxValue;
+final long delta = maxValue - minValue;
+final int bitsRequired = delta < 0 64 : Packedints.bitsRequired(delta);
+
+
+
+Packedints.bitsRequired(delta) doesn't work directly in that case since it expects a positive value. And that is important that it does so in order to get an error instead of silently being super wasteful if a negative value is provided.
+
+Yet in some cases such as the one depicted above, the value should be interpreted as an unsigned long. So I propose to add another bitsRequired method that would interpret the value as unsigned.

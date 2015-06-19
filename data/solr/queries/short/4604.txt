@@ -1,0 +1,1 @@
+UpdateLog#init is over called on SolrCore#reload

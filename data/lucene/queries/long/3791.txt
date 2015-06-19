@@ -1,0 +1,7 @@
+I admit it's selfish. I have a git workflow and I often do "git clean -xfd" which restores a pristine state of the current branch (faster than ant clean . Unfortunately this also results in removal of Eclipse files. "ant eclipse" doesn't reset formatting properly so I need to restore it manually.
+
+This patch does two things:
+
+	it sets project formatting automatically on "ant eclipse",
+	it removes explicit Lucene-formatting.xml to avoid duplication (and potential inconsistencies) between project-specific formatter rules contained in org.eclipse.jdt.core.prefs and the formatter's XML. The XML can be exported manually if needed.
+

@@ -1,0 +1,20 @@
+100% reproduces for me:
+
+2> NOTE: reproduce with: ant test -Dtests.class=*.TestRandomChains -Dtests.method=testRandomChains -Dtests.seed=88CA02C2BB7B1DA -Dargs="-Dfile.encoding=UTF-8"
+
+Running org.apache.lucene.analysis.core.TestRandomChains
+FAILURE 7.22s | TestRandomChains.testRandomChains
+   > Throwable #1: java.lang.AssertionError: endOffset 1 expected:<7> but was:<8>
+   >    at __randomizedtesting.SeedInfo.seed([88CA02C2BB7B1DA:356D894D6CA5AC1A]:0)
+   >    at org.junit.Assert.fail(Assert.java:93)
+   >    at org.junit.Assert.failNotEquals(Assert.java:647)
+   >    at org.junit.Assert.assertEquals(Assert.java:128)
+   >    at org.junit.Assert.assertEquals(Assert.java:472)
+   >    at org.apache.lucene.analysis.BaseTokenStreamTestCase.assertTokenStreamContents(BaseTokenStreamTestCase.java:165)
+   >    at org.apache.lucene.analysis.BaseTokenStreamTestCase.checkAnalysisConsistency(BaseTokenStreamTestCase.java:662)
+   >    at org.apache.lucene.analysis.BaseTokenStreamTestCase.checkRandomData(BaseTokenStreamTestCase.java:486)
+   >    at org.apache.lucene.analysis.BaseTokenStreamTestCase.checkRandomData(BaseTokenStreamTestCase.java:429)
+   >    at org.apache.lucene.analysis.core.TestRandomChains.testRandomChains(TestRandomChains.java:820)
+
+
+The root cause of this is inconsequent override of several Reader methods in subclasses of CharFilter. We should fix this urgently, thanks to the random chains we found this bug.

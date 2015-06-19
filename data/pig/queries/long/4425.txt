@@ -1,0 +1,1 @@
+Needed for improvements like SPARK-4874. Several unit tests need number of records in output file.

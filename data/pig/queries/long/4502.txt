@@ -1,0 +1,111 @@
+While running e2e pig system tests for Dal, the system tests fail with udfs compile
+
+
+2015-04-08 05:31:29,757|beaver.machine|INFO|9471|140392870434560|MainThread|RUNNING: /grid/0/hadoopqe/tools/apache-ant-1.8.4/bin/ant  -Dpig.dir="/usr/hdp/current/pig-client" -Dtests.suites="tests/nightly.conf" -Dhadoop.common.lib.dir="/usr/hdp/current/hadoop-client/lib" -DPH_BENCHMARK_CACHE_PATH="/grid/0/hadoopqe/pig-benchmarks/benchmarks" -Dfork.factor.conf.file="3" -Djython.jar="/usr/hdp/current/pig-client/lib/jython-standalone-2.5.3.jar" -Dpig.jar.dir="/usr/hdp/current/pig-client" -Dhadoop.common.dir="/usr/hdp/current/hadoop-client" -Dhcat.bin="/usr/hdp/current/hive-webhcat/bin/hcat" -Dharness.cluster.conf="/etc/hadoop/conf" -Dhadoop.mapreduce.dir="/usr/hdp/current/hadoop-mapreduce-client" -Djruby.jar="/usr/hdp/current/pig-client/lib/jruby-complete-1.6.7.jar" -Dharness.conf.file="conf/tez_rpm.conf" -Dhadoopversion="23" -Dharness.hadoop.home="/usr/hdp/current/hadoop-client" -Dharness.old.pig="/usr/hdp/current/pig-client" -Dfork.factor.group="3" -Dharness.cluster.bin="/usr/hdp/current/hadoop-client/bin/hadoop" test-tez
+2015-04-08 05:31:30,013|beaver.machine|INFO|9471|140392870434560|MainThread|Buildfile: /grid/0/hadoopqe/pig/test/e2e/pig/build.xml
+2015-04-08 05:31:30,768|beaver.machine|INFO|9471|140392870434560|MainThread|
+2015-04-08 05:31:30,768|beaver.machine|INFO|9471|140392870434560|MainThread|test-tez:
+2015-04-08 05:31:30,901|beaver.machine|INFO|9471|140392870434560|MainThread|
+2015-04-08 05:31:30,902|beaver.machine|INFO|9471|140392870434560|MainThread|property-check:
+2015-04-08 05:31:30,915|beaver.machine|INFO|9471|140392870434560|MainThread|
+2015-04-08 05:31:30,915|beaver.machine|INFO|9471|140392870434560|MainThread|udfs:
+2015-04-08 05:31:30,995|beaver.machine|INFO|9471|140392870434560|MainThread|
+2015-04-08 05:31:30,996|beaver.machine|INFO|9471|140392870434560|MainThread|init:
+2015-04-08 05:31:31,000|beaver.machine|INFO|9471|140392870434560|MainThread|[mkdir] Created dir: /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/build
+2015-04-08 05:31:31,001|beaver.machine|INFO|9471|140392870434560|MainThread|
+2015-04-08 05:31:31,001|beaver.machine|INFO|9471|140392870434560|MainThread|udf-compile:
+2015-04-08 05:31:31,021|beaver.machine|INFO|9471|140392870434560|MainThread|[echo] *** Compiling UDFs ***
+2015-04-08 05:31:31,035|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/build.xml:57: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+2015-04-08 05:31:31,122|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] Compiling 44 source files to /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/build
+2015-04-08 05:31:32,789|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:21: error: package org.apache.hadoop.hive.ql.exec does not exist
+2015-04-08 05:31:32,790|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] import org.apache.hadoop.hive.ql.exec.Description;
+2015-04-08 05:31:32,791|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]                                      ^
+2015-04-08 05:31:32,792|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:22: error: package org.apache.hadoop.hive.ql.exec does not exist
+2015-04-08 05:31:32,792|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] import org.apache.hadoop.hive.ql.exec.MapredContext;
+2015-04-08 05:31:32,793|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]                                      ^
+2015-04-08 05:31:32,794|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:23: error: package org.apache.hadoop.hive.ql.exec does not exist
+2015-04-08 05:31:32,794|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] import org.apache.hadoop.hive.ql.exec.UDFArgumentException;
+2015-04-08 05:31:32,795|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]                                      ^
+2015-04-08 05:31:32,796|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:24: error: package org.apache.hadoop.hive.ql.metadata does not exist
+2015-04-08 05:31:32,796|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] import org.apache.hadoop.hive.ql.metadata.HiveException;
+2015-04-08 05:31:32,797|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]                                          ^
+2015-04-08 05:31:32,799|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:25: error: package org.apache.hadoop.hive.ql.udf.generic does not exist
+2015-04-08 05:31:32,799|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] import org.apache.hadoop.hive.ql.udf.generic.GenericUDF;
+2015-04-08 05:31:32,800|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]                                             ^
+2015-04-08 05:31:32,801|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:26: error: package org.apache.hadoop.hive.serde2.objectinspector does not exist
+2015-04-08 05:31:32,802|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
+2015-04-08 05:31:32,803|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]                                                     ^
+2015-04-08 05:31:32,804|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:27: error: package org.apache.hadoop.hive.serde2.objectinspector.primitive does not exist
+2015-04-08 05:31:32,805|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
+2015-04-08 05:31:32,805|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]                                                               ^
+2015-04-08 05:31:32,861|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:35: error: cannot find symbol
+2015-04-08 05:31:32,862|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] public class DummyContextUDF extends GenericUDF {
+2015-04-08 05:31:32,862|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]                                      ^
+2015-04-08 05:31:32,862|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   symbol: class GenericUDF
+2015-04-08 05:31:32,863|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:33: error: cannot find symbol
+2015-04-08 05:31:32,863|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] @Description(name = "dummycontextudf",
+2015-04-08 05:31:32,864|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]  ^
+2015-04-08 05:31:32,864|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   symbol: class Description
+2015-04-08 05:31:32,865|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:37: error: cannot find symbol
+2015-04-08 05:31:32,865|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   private MapredContext context;
+2015-04-08 05:31:32,866|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]           ^
+2015-04-08 05:31:32,866|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   symbol:   class MapredContext
+2015-04-08 05:31:32,866|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   location: class DummyContextUDF
+2015-04-08 05:31:32,867|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:40: error: cannot find symbol
+2015-04-08 05:31:32,867|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   public ObjectInspector initialize(ObjectInspector[] arguments) throws UDFArgumentException {
+2015-04-08 05:31:32,867|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]                                     ^
+2015-04-08 05:31:32,868|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   symbol:   class ObjectInspector
+2015-04-08 05:31:32,868|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   location: class DummyContextUDF
+2015-04-08 05:31:32,869|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:40: error: cannot find symbol
+2015-04-08 05:31:32,869|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   public ObjectInspector initialize(ObjectInspector[] arguments) throws UDFArgumentException {
+2015-04-08 05:31:32,869|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]          ^
+2015-04-08 05:31:32,870|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   symbol:   class ObjectInspector
+2015-04-08 05:31:32,870|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   location: class DummyContextUDF
+2015-04-08 05:31:32,871|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:40: error: cannot find symbol
+2015-04-08 05:31:32,872|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   public ObjectInspector initialize(ObjectInspector[] arguments) throws UDFArgumentException {
+2015-04-08 05:31:32,873|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]                                                                         ^
+2015-04-08 05:31:32,873|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   symbol:   class UDFArgumentException
+2015-04-08 05:31:32,874|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   location: class DummyContextUDF
+2015-04-08 05:31:32,875|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:44: error: cannot find symbol
+2015-04-08 05:31:32,876|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   public Object evaluate(DeferredObject[] arguments) throws HiveException {
+2015-04-08 05:31:32,876|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]                          ^
+2015-04-08 05:31:32,877|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   symbol:   class DeferredObject
+2015-04-08 05:31:32,878|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   location: class DummyContextUDF
+2015-04-08 05:31:32,880|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:44: error: cannot find symbol
+2015-04-08 05:31:32,880|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   public Object evaluate(DeferredObject[] arguments) throws HiveException {
+2015-04-08 05:31:32,880|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]                                                             ^
+2015-04-08 05:31:32,881|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   symbol:   class HiveException
+2015-04-08 05:31:32,882|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   location: class DummyContextUDF
+2015-04-08 05:31:32,887|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:61: error: cannot find symbol
+2015-04-08 05:31:32,887|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]     public void configure(MapredContext context) {
+2015-04-08 05:31:32,888|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]                           ^
+2015-04-08 05:31:32,888|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   symbol:   class MapredContext
+2015-04-08 05:31:32,889|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   location: class DummyContextUDF
+2015-04-08 05:31:33,124|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /usr/hdp/current/hadoop-client/hadoop-common-2.7.0.2.3.0.0-1517.jar(org/apache/hadoop/fs/FileSystem.class): warning: Cannot find annotation method 'value()' in type 'LimitedPrivate': class file for org.apache.hadoop.classification.InterfaceAudience not found
+2015-04-08 05:31:33,125|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /usr/hdp/current/hadoop-client/hadoop-common-2.7.0.2.3.0.0-1517.jar(org/apache/hadoop/fs/FileSystem.class): warning: Cannot find annotation method 'value()' in type 'LimitedPrivate'
+2015-04-08 05:31:33,126|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /usr/hdp/current/hadoop-client/hadoop-common-2.7.0.2.3.0.0-1517.jar(org/apache/hadoop/fs/FileSystem.class): warning: Cannot find annotation method 'value()' in type 'LimitedPrivate'
+2015-04-08 05:31:33,127|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /usr/hdp/current/hadoop-client/hadoop-common-2.7.0.2.3.0.0-1517.jar(org/apache/hadoop/fs/FileSystem.class): warning: Cannot find annotation method 'value()' in type 'LimitedPrivate'
+2015-04-08 05:31:33,128|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /usr/hdp/current/hadoop-client/hadoop-common-2.7.0.2.3.0.0-1517.jar(org/apache/hadoop/fs/FSDataInputStream.class): warning: Cannot find annotation method 'value()' in type 'LimitedPrivate'
+2015-04-08 05:31:33,128|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /usr/hdp/current/hadoop-client/hadoop-common-2.7.0.2.3.0.0-1517.jar(org/apache/hadoop/fs/Path.class): warning: Cannot find annotation method 'value()' in type 'LimitedPrivate'
+2015-04-08 05:31:33,312|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:41: error: cannot find symbol
+2015-04-08 05:31:33,312|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]     return PrimitiveObjectInspectorFactory.writableLongObjectInspector;
+2015-04-08 05:31:33,312|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]            ^
+2015-04-08 05:31:33,313|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   symbol:   variable PrimitiveObjectInspectorFactory
+2015-04-08 05:31:33,313|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   location: class DummyContextUDF
+2015-04-08 05:31:33,322|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] /grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/org/apache/pig/test/udf/evalfunc/DummyContextUDF.java:60: error: method does not override or implement a method from a supertype
+2015-04-08 05:31:33,323|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   @Override
+2015-04-08 05:31:33,323|beaver.machine|INFO|9471|140392870434560|MainThread|[javac]   ^
+2015-04-08 05:31:33,575|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] Note: Some input files use or override a deprecated API.
+2015-04-08 05:31:33,575|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] Note: Recompile with -Xlint:deprecation for details.
+2015-04-08 05:31:33,576|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] Note: Some input files use unchecked or unsafe operations.
+2015-04-08 05:31:33,576|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] Note: Recompile with -Xlint:unchecked for details.
+2015-04-08 05:31:33,576|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] 18 errors
+2015-04-08 05:31:33,576|beaver.machine|INFO|9471|140392870434560|MainThread|[javac] 6 warnings
+2015-04-08 05:31:33,590|beaver.machine|INFO|9471|140392870434560|MainThread|
+2015-04-08 05:31:33,590|beaver.machine|INFO|9471|140392870434560|MainThread|BUILD FAILED
+2015-04-08 05:31:33,591|beaver.machine|INFO|9471|140392870434560|MainThread|/grid/0/hadoopqe/pig/test/e2e/pig/build.xml:337: The following error occurred while executing this line:
+2015-04-08 05:31:33,591|beaver.machine|INFO|9471|140392870434560|MainThread|/grid/0/hadoopqe/pig/test/e2e/pig/build.xml:156: The following error occurred while executing this line:
+2015-04-08 05:31:33,591|beaver.machine|INFO|9471|140392870434560|MainThread|/grid/0/hadoopqe/pig/test/e2e/pig/udfs/java/build.xml:57: Compile failed; see the compiler error output for details.
+2015-04-08 05:31:33,591|beaver.machine|INFO|9471|140392870434560|MainThread|
+2015-04-08 05:31:33,592|beaver.machine|INFO|9471|140392870434560|MainThread|Total time: 3 seconds
+

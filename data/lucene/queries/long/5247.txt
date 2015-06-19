@@ -1,0 +1,3 @@
+for example, if you call e.g. floatVal(int) on an expressionvaluesource you will get UOE.
+
+instead it should work like ordinary valuesources.

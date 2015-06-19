@@ -1,0 +1,1 @@
+Add FST.BytesReader to all FST arc-reading APIs

@@ -1,0 +1,1 @@
+junit4 taskdef installation has wrong dependencies

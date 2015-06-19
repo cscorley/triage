@@ -1,0 +1,1 @@
+SolrCmdDistributor should not let the http client do it's own retries.

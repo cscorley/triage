@@ -1,0 +1,74 @@
+SOLR-6304 allows me to send in arbitrary JSON document and have Solr do something reasonable with it. I tried this with a simple tweet and got a weird error:
+
+
+curl "http://localhost:8983/solr/tutorial/update/json/docs" -H 'Content-type:application/json' -d @sample_tweet.json
+
+{"responseHeader":{"status":400,"QTime":11},"error":{"msg":"Document contains multiple values for uniqueKey field: id=[14065694, 136447843652214784]","code":400}}
+
+
+
+Here's the tweet I'm trying to index:
+
+
+
+{
+        "user": {
+            "name": "John Doe",
+            "screen_name": "example",
+            "lang": "en",
+            "time_zone": "London",
+            "listed_count": 221,
+            "id": 14065694,
+            "geo_enabled": true
+        },
+        "id": "136447843652214784",
+        "text": "Morning San Francisco - 36 hours and counting.. #datasift",
+        "created_at": "Tue, 15 Nov 2011 14:17:55 +0000"
+}
+
+
+
+The error is because the nested user object within the tweet also has an "id" field. So then I tried to map /user/id to user_id_s via:
+
+
+
+curl "http://localhost:8983/solr/tutorial/update/json/docs?f=user_id_s:/user/id" -H 'Content-type:application/json' -d @sample_tweet.json
+{"responseHeader":{"status":400,"QTime":0},"error":{"msg":"Document is missing mandatory uniqueKey field: id","code":400}}
+
+
+
+So then I added the mapping for id explicitly and it worked:
+
+curl "http://localhost:8983/solr/tutorial/update/json/docs?f=id:/id&f=user_id_s:/user/id" -H 'Content-type:application/json' -d @sample_tweet.json
+{"responseHeader":{"status":0,"QTime":25}}
+
+Working through this wasn't terrible but our goal with features like this is to have Solr make good decisions when possible to ease the new user's burden of getting to know Solr.
+
+I'm just wondering if the reasonable thing to do wouldn't be to map the user fields with user_ prefix? ie /user/id becomes user_id automatically.
+
+Lastly, I wanted to use field guessing with this so my JSON document gets indexed in a reasonable way and the only data that got indexed is:
+
+
+
+{
+        "user_id_s": "14065694",
+        "id": "136447843652214784",
+        "_version_": 1481614081193410600
+}
+
+
+
+So I explicitly defined the /update/json/docs request handler in my solrconfig.xml as:
+
+
+
+  <requestHandler name="/update/json/docs" class="solr.UpdateRequestHandler">
+        <lst name="defaults">
+         <str name="update.chain">add-unknown-fields-to-the-schema</str>
+         <str name="stream.contentType">application/json</str>
+       </lst>
+  </requestHandler>
+
+
+
+Same result - no field guessing! (this is using the schemaless example config)

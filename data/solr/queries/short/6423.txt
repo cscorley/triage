@@ -1,0 +1,1 @@
+HdfsCollectionsAPIDistributedZkTest test fail: Could not find new collection awholynewcollection_1

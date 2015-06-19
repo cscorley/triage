@@ -1,0 +1,1 @@
+I didn't find MorfologikFilter factory in Solr, so here is a simple. Maybe someone will have make use of it 

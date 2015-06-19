@@ -1,0 +1,1 @@
+Hpricot Mapper for Solr-Ruby

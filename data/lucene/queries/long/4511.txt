@@ -1,0 +1,1 @@
+TermsFilter returns if a term returns null from AIR#terms(term) while it should just continue. I will upload a test & fix shortly

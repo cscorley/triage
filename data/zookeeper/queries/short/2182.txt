@@ -1,0 +1,1 @@
+Several test suites are not running during pre-commit, because their names do not end with "Test".

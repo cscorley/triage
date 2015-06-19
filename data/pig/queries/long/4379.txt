@@ -1,0 +1,1 @@
+There are use cases in which user want to distribute the dataset evenly without regard to key. org.apache.pig.backend.hadoop.executionengine.tez.runtime.RoundRobinPartitioner is perfect for this use case. We shall open this to public as oppose to an internal class inside tez package.

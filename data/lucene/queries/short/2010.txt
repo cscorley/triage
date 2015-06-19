@@ -1,0 +1,1 @@
+Remove segments with all documents deleted in commit/flush/close of IndexWriter instead of waiting until a merge occurs.

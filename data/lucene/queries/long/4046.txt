@@ -1,0 +1,3 @@
+Currently, DocsEnum#freq() does not allow IOException. This is problematic if somebody wants to implement a codec that allows lazy loading of freq. Frequency will be read and decoded only when #freq() will be called, therefore calling IndexInput's read methods that can throw IOException.
+
+The current workaround is to catch the IOException in freq() and ignore it (which is not very nice and not a good solution).

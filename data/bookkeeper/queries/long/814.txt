@@ -1,0 +1,2 @@
+Currently some of bookkeeper test cases are using temp files for unit tests. Those temp files aren't cleaned up after unit tests finished. 
+If running several times of these test cases, /tmp directory will soon be full.

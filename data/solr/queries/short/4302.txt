@@ -1,0 +1,1 @@
+Improve CoreAdmin STATUS request response time by allowing user to omit the Index info

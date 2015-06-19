@@ -1,0 +1,24 @@
+Spinoff from LUCENE-4069.
+
+In that use case, where the app needs to first lookup a document, then
+call updateDocument, it's wasteful today because the relatively costly
+lookup (by a primary key field, eg "id") is done twice.
+
+But, since you already resolved the PK to docID on the first lookup,
+it would be nice to then delete by that docID and then you can call
+addDocument instead.
+
+So I worked out a rough start at this, by adding
+IndexWriter.tryDeleteDocument.  It'd be a very expert API: it takes a
+SegmentInfo (referencing the segment that contains the docID), and as
+long as that segment hasn't yet been merged away, it will mark the
+document for deletion and return true (success).  If it has been
+merged away it returns false and the app must then delete-by-term.  It
+only works if the writer is in NRT mode (ie you've opened an NRT
+reader).
+
+In LUCENE-4069 using tryDeleteDocument gave a ~20% net speedup.
+
+I think tryDeleteDocument would also be useful when Solr "updates" a
+document by loading all stored fields, changing them, and calling
+updateDocument.

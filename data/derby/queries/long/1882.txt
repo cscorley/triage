@@ -1,0 +1,2 @@
+index.html links to adminguide/adminguide.pdf
+The release has the file as adminguide/derbyadmin.pdf

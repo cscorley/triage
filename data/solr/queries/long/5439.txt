@@ -1,0 +1,1 @@
+A non CloudSolrServer client appears to work as expected.

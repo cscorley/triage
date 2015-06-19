@@ -1,0 +1,5 @@
+At first we had lots of stuff in lib/ including .sha1 files and so on. So we didnt want to have this in the classpath because its just noisy.
+
+But nowadays we use an ivy sync=true, the only things in lib are the jars in the ivy.xml.
+
+So we can just put lib/ dirs in the classpath and not have redundant jar names also in build.xml: this makes it harder to upgrade and maintain.

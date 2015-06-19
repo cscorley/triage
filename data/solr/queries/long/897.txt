@@ -1,0 +1,3 @@
+ls -cd $
+{data_dir}
+/snapshot.* returns Argument list too long, use find instead

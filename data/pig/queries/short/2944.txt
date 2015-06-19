@@ -1,0 +1,1 @@
+ivysettings.xml does not let you override .m2/repository

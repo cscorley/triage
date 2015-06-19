@@ -1,0 +1,1 @@
+JUnit4ZKTestRunner logs test failure for all exceptions even if the test method is annotated with an expected exception.

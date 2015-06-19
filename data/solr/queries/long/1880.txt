@@ -1,0 +1,10 @@
+Right now, a typical distributed search using QueryComponent makes two HTTP requests to each shard:
+
+	STAGE_EXECUTE_QUERY executes one HTTP request to each shard to get top N ids and sort keys, merges the results to produce a final list of document IDs (PURPOSE_GET_TOP_IDS).
+	STAGE_GET_FIELDS executes a second HTTP request to each shard to get the document field values for the final list of document IDs (PURPOSE_GET_FIELDS).
+
+
+
+If the "fl" param is just "id" or just "id,score", all document data to return is already fetched by STAGE_EXECUTE_QUERY.  The second STAGE_GET_FIELDS query is completely unnecessary.  Eliminating that 2nd HTTP request can make a big difference in overall performance.
+
+Also, the "fl" param only gets id, score and sort columns, it would probably be cheaper to fetch the final sort column data in STAGE_EXECUTE_QUERY which has to read the sort column data anyway, and skip STAGE_GET_FIELDS.

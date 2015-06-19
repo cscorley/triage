@@ -1,0 +1,11 @@
+This is a spinoff from LUCENE-2466.
+
+In this issue I changed my locale to various locales and found some problems in Lucene/Solr triggered by use of the default Locale.
+
+I noticed some use of the default-locale for Date operations in DIH (TimeZone.getDefault/Locale.getDefault) and, while no tests fail, I think it might be better to support a locale parameter for this.
+
+The wiki documents that numeric parsing can support localized numerics formats: http://wiki.apache.org/solr/DataImportHandler#NumberFormatTransformer
+
+In both cases, I don't think we should ever use the default Locale. If no Locale is provided, I find that new Locale("") <-- Unicode Root Locale, is a better default for a server situation in a lot of cases, as it won't change depending on the computer, or perhaps we just make Locale params mandatory for this.
+
+Finally, in both cases, if localized numbers/dates are explicitly supported, I think we should come up with a test strategy to ensure everything is working. One idea is to do something similar to or make use of Lucene's LocalizedTestCase.

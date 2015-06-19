@@ -1,0 +1,1 @@
+Enforce read-only access to any path outside the temporary folder via security manager

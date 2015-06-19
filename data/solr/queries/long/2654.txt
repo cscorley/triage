@@ -1,0 +1,5 @@
+nipunb noted on the mailing list then when configuring solr to use an alternate <lockType/> (ie: simple) the stats for the SolrIndexSearcher list NativeFSLockFactory being used by the Directory.
+
+The problem seems to be that SolrIndexConfig is not consulted when constructing Directory objects used for IndexReader (it's only used by SolrIndexWriter)
+
+I don't think this is a problem in most cases since the IndexReaders should all be readOnly in the core solr code) but plugins could attempt to use them in other ways.  In general it seems like a really bad bug waiting to happen.

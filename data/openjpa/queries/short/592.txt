@@ -1,0 +1,1 @@
+In MySQL explicitly specifying openjpa.jdbc.Schema with default schema gives an error on first time EM access if mapping is already done

@@ -1,0 +1,1 @@
+Support building project with m2e plugin in eclipse

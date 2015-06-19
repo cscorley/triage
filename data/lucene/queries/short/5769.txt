@@ -1,0 +1,1 @@
+SingletonSortedSet should extend RandomAccessOrds

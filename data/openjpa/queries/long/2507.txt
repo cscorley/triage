@@ -1,0 +1,24 @@
+Using spring-data-jpa with openjpa, I sometimes encounter a strange error (not all the times, but under heavy load it makes its appearance, sparsely though):
+....
+Caused by: java.util.EmptyStackException
+        at java.util.Stack.peek(Stack.java:<arbitrary line>)
+        at org.apache.openjpa.persistence.criteria.CriteriaQueryImpl.ctx(CriteriaQueryImpl.java:<arbitrary line>
+....
+
+I do not know which behaviour triggers it, however I think it would be an improvement to change (I did not know where exactly to file it, because it is both an improvement and a bug in my opinion), in org.apache.openjpa.persistence.criteria.CriteriaQueryImpl, method: Context ctx(), this:
+return _contexts == null || _contexts.isEmpty() ? null :  _contexts.peek();
+to something like this:
+try 
+{
+	return _contexts == null || _contexts.isEmpty() ? null :  _contexts.peek();
+}
+ catch (EmptyStackException e) 
+{
+    return null;
+}
+
+, in order to prevent a case where multiple threads modify the "_contexts" between the evaluation of the inline "if".
+
+
+
+I am not able to reproduce it all the time, thus I can't create a useful test, neither have I created a patch due to the simplicity of the 'fix'. However I believe it is a harmless fix which could be considered a minor improvement.

@@ -1,0 +1,1 @@
+If users ship files directly by specifiying mapred.cache.files, mapred.cache.archives using -D or set command in pig scripts, they should be added as yarn local resources before the Tez DAG is launched. 

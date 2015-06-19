@@ -1,0 +1,8 @@
+If you give a query to facet.query that analyzes down to a null Query, then it will NPE.  One way this can happen is when the text analysis filters out the token.
+
+
+
+facet.query={!field f=lengthfilt}a
+
+
+lengthfilt is a field in the test schema that has a min length of 2.

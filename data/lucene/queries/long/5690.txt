@@ -1,0 +1,1 @@
+MultiTermsEnum and MultiDocsEnum both expose their subs.  It would be useful to do the same for MultiTerms.

@@ -1,0 +1,3 @@
+RecursivePrefixTreeFilter has some bugs that can occur when searching indexed shapes.  One bug is an unpositioned termsEnum.  It through an exception in testing; I'm not sure what its effects would be in production.  The other couple bugs are hard to describe here but were rare to occur in extensive testing. The effects were probably a slim chance of matching an indexed shape near the query shape. And SpatialPrefixTree does not support an indexed shape that covers the entire globe.
+
+These bugs were discovered during development of tests for RPTF LUCENE-4419 which I will submit shortly.

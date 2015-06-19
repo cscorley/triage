@@ -1,0 +1,1 @@
+Localization jar files incorrectly contain a service extension entry for java.sql.Driver

@@ -1,0 +1,1 @@
+Lucene src pack contains SNOWBALL-LICENSE.txt which is not in either of the two binary packages, is this a problem?

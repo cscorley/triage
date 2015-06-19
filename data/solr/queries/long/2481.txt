@@ -1,0 +1,1 @@
+It looks like DataImportHandler does not support commitWithin. Would be nice if it did.

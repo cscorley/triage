@@ -1,0 +1,30 @@
+Adding any custom query parser extending standard one with non-final field NAME lead to messy NullPointerException during Solr startup.
+
+Definition of standard parsers is located in  QParserPlugin.standardPlugins static array. The array contains names from static NAME fields and classes for each plugin.                       
+
+But all of listed parsers are derived from QParserPlugin, so we have circular dependency of static fields.
+
+Normally, class loader start initializing QParserPlugin before all listed plugins in SolrCore.initQParsers, and array elements referenced to NAME plugins' fields are filled properly.
+
+Custom parsers are instantiated before standard parsers. And when we subclass plugin with non-final NAME field and add it to Solr via solrconfig.xml, class loader start loading our class before QParserPlugin. Because QParserPlugin is a superclass for plugin, it must be initialized before subclasses, and static dereferencing cause null elements in standardPlugins array because it filled before NAME field of loading plugin's superclass.
+
+How to reproduce:
+
+	Checkout Solr (trunk or stable)
+	Add the following line to solr/example/solr/collection1/conf/solrconfig.xml
+  <queryParser name="fail" class="solr.search.LuceneQParserPlugin"/>
+	Call ant run-example in solr folder
+
+
+
+Possible workarounds:
+
+	dev-workaround: add int workaround = QParserPlugin.standardPlugins.length; as a first line to
+  SolrCore.initQParsers
+	user-workaround: add plugin with final NAME field (edismax) to solrconfig.xml  before subclasses of standard plugins.
+  <queryParser name="workaround" class="solr.search.ExtendedDismaxQParserPlugin"/>
+
+
+
+Possible fix:
+Move standardPlugins to new final class to break circular dependency.

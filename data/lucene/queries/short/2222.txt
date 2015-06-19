@@ -1,0 +1,1 @@
+FixedIntBlockIndexInput.Reader does not initialise 'pending' int array

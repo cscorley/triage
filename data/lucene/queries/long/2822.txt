@@ -1,0 +1,5 @@
+See the comment in LuceneTestCase.
+
+If you even do Class.forName("TimeLimitingCollector") it starts up a thread in a static method, and there isn't a way to kill it.
+
+This is broken.

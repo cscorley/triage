@@ -1,0 +1,2 @@
+In collectDelta, the procedure that collects the PKs for the documents that should be updated or deleted for an entity, iterates over the entire deltaSet for every deleted document. This is very expensive when you are updating and deleting millions of documents in one delta-import.
+Considering that the comparison between deleted and delta is on the PK, lets build the deltaSet as a HashMap instead of a HashSet to enable quick key lookups and remove the need for repeated iterations.

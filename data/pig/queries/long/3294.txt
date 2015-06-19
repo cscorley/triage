@@ -1,0 +1,3 @@
+It would be nice if Pig provide some interoperability with Hive. We can wrap Hive UDF in Pig so we can use Hive UDF in Pig.
+
+This is a candidate project for Google summer of code 2013. More information about the program can be found at https://cwiki.apache.org/confluence/display/PIG/GSoc2013

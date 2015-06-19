@@ -1,0 +1,5 @@
+If you want to wreak havoc on a ZK based system just do [date -s "+1hour"] and watch the mayhem as all sessions expire at once.
+
+This shouldn't happen.  Zookeeper could easily know handle elapsed times as elapsed times rather than as differences between absolute times.  The absolute times are subject to adjustment when the clock is set while a timer is not subject to this problem.  In Java, System.currentTimeMillis() gives you absolute time while System.nanoTime() gives you time based on a timer from an arbitrary epoch.
+
+I have done this and have been running tests now for some tens of minutes with no failures.  I will set up a test machine to redo the build again on Ubuntu and post a patch here for discussion.

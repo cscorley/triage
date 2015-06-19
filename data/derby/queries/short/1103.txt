@@ -1,0 +1,1 @@
+Change the client driver to allow statements to be garbage-collected once they are not referenced in an application

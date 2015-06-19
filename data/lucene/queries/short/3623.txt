@@ -1,0 +1,1 @@
+SegmentReader.getFieldNames ignores FieldOption.DOC_VALUES

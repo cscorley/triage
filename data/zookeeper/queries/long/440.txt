@@ -1,0 +1,2 @@
+Ben, it would be great if you could update the performance documentation in Forrest docs based on the 3.2 performance improvements.
+Specifically the scalling graphs (reads vs write load for various quorum sizes)

@@ -1,0 +1,1 @@
+If IndexReader is passed to o.a.l.s.highlight.QueryScorer for scoring, WeightedSpanTermExtractor#getWeightedSpanTermsWithScores closes the parameter reader (IndexReader) instead of closing the member variable 'reader'. To fix, line 519 of WeightedSpanTermExtractor should be changed from IOUtils.close(reader) to IOUtils.close(this.reader).

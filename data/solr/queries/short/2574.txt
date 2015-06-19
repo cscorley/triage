@@ -1,0 +1,1 @@
+upgrade SLF4J (primary motivation: simplifiy use of solrj)

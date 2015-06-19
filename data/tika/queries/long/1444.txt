@@ -1,0 +1,11 @@
+Please, remove the <glob pattern="*.vhd"/> entry from text/x-vhdl mimetype definition and add the following:
+
+
+
+<mime-type type="application/x-vhd">
+	<glob pattern="*.vhd"/>
+	<magic priority="50">
+    	 	<match value="conectix" type="string" offset="0"/>
+    	</magic>
+</mime-type>
+

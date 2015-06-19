@@ -1,0 +1,1 @@
+Rename numReplicas to replicationFactor in Collections API.

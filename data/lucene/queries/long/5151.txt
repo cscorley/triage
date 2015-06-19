@@ -1,0 +1,11 @@
+Stupid error, they do this:
+
+
+
+if (bytes.length == 0) {
+  continue;
+}
+
+
+
+Since they don't advance 'doc', the hang on that if forever. I'll post a fix soon.

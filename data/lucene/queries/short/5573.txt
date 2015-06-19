@@ -1,0 +1,1 @@
+Deadlock during class loading/ initialization

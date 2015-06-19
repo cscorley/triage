@@ -1,0 +1,3 @@
+QueryElevationComponent does not work when unique key of the documents is of type 'sint'. I did not try any other combination, but when I looking at the source in QueryElevationComponent.java I doubt it will work with any other type than string.
+
+I propose to either make it work with other data types or at least to post a warning.

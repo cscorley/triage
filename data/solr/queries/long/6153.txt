@@ -1,0 +1,50 @@
+Currently this is the response when we ask ReplicationHandler for "details" - 
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+   <lst name="responseHeader">
+      <int name="status">0</int>
+      <int name="QTime">0</int>
+   </lst>
+   <lst name="details">
+      <str name="indexSize">3.1 KB</str>
+      <str name="indexPath">C:\Users\JenkinsSlave\workspace\Lucene-Solr-trunk-Windows\solr\build\solr-core\test\J0\.\temp\solr.handler.TestReplicationHandlerBackup-DCCC360504A48D2D-001\solr-instance-001\collection1\data\index/</str>
+      <arr name="commits">
+         <lst>
+            <long name="indexVersion">1402224615148</long>
+            <long name="generation">2</long>
+            <arr name="filelist">
+               <str>_0.cfe</str>
+               <str>_0.cfs</str>
+               <str>_0.si</str>
+               <str>segments_2</str>
+            </arr>
+         </lst>
+      </arr>
+      <str name="isMaster">true</str>
+      <str name="isSlave">false</str>
+      <long name="indexVersion">1402224615148</long>
+      <long name="generation">2</long>
+      <lst name="master">
+         <str name="confFiles">schema-replication2.xml:schema.xml</str>
+         <arr name="replicateAfter">
+            <str>commit</str>
+         </arr>
+         <str name="replicationEnabled">true</str>
+         <long name="replicableVersion">1402224615148</long>
+         <long name="replicableGeneration">2</long>
+      </lst>
+      <lst name="backup">
+         <str name="startTime">Sun Jun 08 13:50:15 IDT 2014</str>
+         <int name="fileCount">4</int>
+         <str name="status">success</str>
+         <str name="snapshotCompletedAt">Sun Jun 08 13:50:15 IDT 2014</str>
+      </lst>
+   </lst>
+   <str name="WARNING">This response format is experimental.  It is likely to change in the future.</str>
+</response>
+
+
+
+In the "backup" node we should add the snapshot name also.

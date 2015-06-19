@@ -1,0 +1,101 @@
+It's always worth looking into those randomized failures. 
+
+http://builds.flonkings.com/job/Lucene-trunk-Linux-Java7-64-test-only/81259/console
+
+Log quote:
+
+
+[junit4]   2> ==== jstack at approximately timeout time ====
+   [junit4]   2> "Lucene Merge Thread #0" ID=25 RUNNABLE
+   [junit4]   2> 	at org.apache.lucene.codecs.lucene45.Lucene45DocValuesProducer.getSortedSet(Lucene45DocValuesProducer.java:541)
+   [junit4]   2> 	at org.apache.lucene.codecs.perfield.PerFieldDocValuesFormat$FieldsReader.getSortedSet(PerFieldDocValuesFormat.java:285)
+   [junit4]   2> 	at org.apache.lucene.index.SegmentReader.getSortedSetDocValues(SegmentReader.java:500)
+   [junit4]   2> 	at org.apache.lucene.index.SegmentMerger.mergeDocValues(SegmentMerger.java:204)
+   [junit4]   2> 	at org.apache.lucene.index.SegmentMerger.merge(SegmentMerger.java:119)
+   [junit4]   2> 	at org.apache.lucene.index.IndexWriter.mergeMiddle(IndexWriter.java:4068)
+   [junit4]   2> 	at org.apache.lucene.index.IndexWriter.merge(IndexWriter.java:3664)
+   [junit4]   2> 	at org.apache.lucene.index.ConcurrentMergeScheduler.doMerge(ConcurrentMergeScheduler.java:405)
+   [junit4]   2> 	at org.apache.lucene.index.ConcurrentMergeScheduler$MergeThread.run(ConcurrentMergeScheduler.java:482)
+   [junit4]   2> 
+   [junit4]   2> "TEST-TestLucene45DocValuesFormat.testSortedSetVariableLengthVsUninvertedField-seed#[7362FE36DE729D42]" ID=23 RUNNABLE
+   [junit4]   2> 	at org.apache.lucene.index.SortedSetDocValues.<clinit>(SortedSetDocValues.java:72)
+   [junit4]   2> 	at org.apache.lucene.index.DocTermOrds.iterator(DocTermOrds.java:767)
+   [junit4]   2> 	at org.apache.lucene.search.FieldCacheImpl.getDocTermOrds(FieldCacheImpl.java:1214)
+   [junit4]   2> 	at org.apache.lucene.index.BaseDocValuesFormatTestCase.doTestSortedSetVsUninvertedField(BaseDocValuesFormatTestCase.java:2342)
+   [junit4]   2> 	at org.apache.lucene.index.BaseDocValuesFormatTestCase.testSortedSetVariableLengthVsUninvertedField(BaseDocValuesFormatTestCase.java:2375)
+   [junit4]   2> 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+   [junit4]   2> 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+   [junit4]   2> 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+   [junit4]   2> 	at java.lang.reflect.Method.invoke(Method.java:606)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.RandomizedRunner.invoke(RandomizedRunner.java:1617)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.RandomizedRunner$6.evaluate(RandomizedRunner.java:826)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.RandomizedRunner$7.evaluate(RandomizedRunner.java:862)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.RandomizedRunner$8.evaluate(RandomizedRunner.java:876)
+   [junit4]   2> 	at org.apache.lucene.util.TestRuleSetupTeardownChained$1.evaluate(TestRuleSetupTeardownChained.java:50)
+   [junit4]   2> 	at org.apache.lucene.util.TestRuleFieldCacheSanity$1.evaluate(TestRuleFieldCacheSanity.java:51)
+   [junit4]   2> 	at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:46)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+   [junit4]   2> 	at org.apache.lucene.util.TestRuleThreadAndTestName$1.evaluate(TestRuleThreadAndTestName.java:49)
+   [junit4]   2> 	at org.apache.lucene.util.TestRuleIgnoreAfterMaxFailures$1.evaluate(TestRuleIgnoreAfterMaxFailures.java:70)
+   [junit4]   2> 	at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.ThreadLeakControl$StatementRunner.run(ThreadLeakControl.java:359)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.ThreadLeakControl.forkTimeoutingTask(ThreadLeakControl.java:783)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.ThreadLeakControl$3.evaluate(ThreadLeakControl.java:443)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.RandomizedRunner.runSingleTest(RandomizedRunner.java:835)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.RandomizedRunner$3.evaluate(RandomizedRunner.java:737)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.RandomizedRunner$4.evaluate(RandomizedRunner.java:771)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.RandomizedRunner$5.evaluate(RandomizedRunner.java:782)
+   [junit4]   2> 	at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:46)
+   [junit4]   2> 	at org.apache.lucene.util.TestRuleStoreClassName$1.evaluate(TestRuleStoreClassName.java:42)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+   [junit4]   2> 	at org.apache.lucene.util.TestRuleAssertionsRequired$1.evaluate(TestRuleAssertionsRequired.java:43)
+   [junit4]   2> 	at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+   [junit4]   2> 	at org.apache.lucene.util.TestRuleIgnoreAfterMaxFailures$1.evaluate(TestRuleIgnoreAfterMaxFailures.java:70)
+   [junit4]   2> 	at org.apache.lucene.util.TestRuleIgnoreTestSuites$1.evaluate(TestRuleIgnoreTestSuites.java:55)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+   [junit4]   2> 	at com.carrotsearch.randomizedtesting.ThreadLeakControl$StatementRunner.run(ThreadLeakControl.java:359)
+
+
+
+Robert looked into it and was wtf'd, quote:
+
+
+what happened here...
+
+
+
+I looked into it and was wtf'd, quote (from my head):
+
+
+wtf?!
+
+
+
+I looked deeper at the code and it's a beautiful and classic class loading deadlock. I don't think I've seen an example of this in real life ever, except for this one case.
+
+Problem description.
+
+1. Thread A attempts to return a new instance of RandomAccessOrds:
+
+
+return new RandomAccessOrds() {
+
+
+
+RandomAccessOrds extends SortedSetDocValues and has a final static field which in turn loads RandomAccessOrds (circular reference).
+
+2. Thread B attempts to create:
+
+
+
+private class Iterator extends SortedSetDocValues {
+
+
+
+3. If thread B starts loading SortedSetDocValues, it blocks other threads from doing so. If, at the same time, thread A starts loading RandomAccessOrds then thread A will eventually attempt to initialize SortedSetDocValues and both will wait for each other indefinitely.
+
+I attach a simpler example that does the same as a POC.

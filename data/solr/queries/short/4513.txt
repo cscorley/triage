@@ -1,0 +1,1 @@
+We can speed up the Collections API and Collections Unloading tests quite a bit by not loading any cores on startup.

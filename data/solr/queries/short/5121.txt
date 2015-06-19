@@ -1,0 +1,1 @@
+zkcli usage for makepath doesn't match actual command.

@@ -1,0 +1,1 @@
+SolrJ CloudServer should be leader and network aware when adding docs

@@ -1,0 +1,1 @@
+In 0.6 PigStorage was changed to use LineRecordReader to parse lines out of its stream instead of doing the parsing itself.  This resulted in about a 30% speed up in parsing time.  TextLoader should be changed to use LineRecordReader in the same way to benefit from the same speed up.

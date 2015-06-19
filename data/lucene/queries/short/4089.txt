@@ -1,0 +1,1 @@
+fix or document termsIndexInterval/Divisor for 4.0

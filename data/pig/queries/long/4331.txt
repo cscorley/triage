@@ -1,0 +1,1 @@
+Pig queries can be run using tez, by specifying "pig -x tez". The output of pig --help needs to be updated to indicate that.

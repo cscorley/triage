@@ -1,0 +1,1 @@
+Consider openjpa.Optimistic setting when calculating the default lock mode to apply to a named query

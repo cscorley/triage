@@ -1,0 +1,1 @@
+Once Tez DAG is built, TezLauncher submits it to Tez cluster using TezClient API.

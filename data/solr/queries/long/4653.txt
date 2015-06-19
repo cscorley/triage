@@ -1,0 +1,1 @@
+Currently the dir path is resolved relative to core's instanceDir but if you don't know it nothing happens (no warning, no nothing). This is very frustrating.

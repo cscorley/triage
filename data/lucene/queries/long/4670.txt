@@ -1,0 +1,1 @@
+This is especially useful to LUCENE-4599 where actions have to be taken after a doc/field/term has been added.

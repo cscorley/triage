@@ -1,0 +1,1 @@
+Latest commons-io version is 2.4, but Solr 4.10 still uses 2.3. It is also required by the Couchbase plugin for Solr (SOLR-6266) that Solr uses commons-io-2.4.

@@ -1,0 +1,1 @@
+Prepared XA transaction locks are not kept across DB restart

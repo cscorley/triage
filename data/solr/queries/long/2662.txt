@@ -1,0 +1,1 @@
+When the queryResultCache is not defined in the configuration, the start parameter increments the rows parameter. Start + rows is returned and start is always 0.

@@ -1,0 +1,4 @@
+The log folder and log file name is configurable now.
+The default log folder is "." in distribution. So the log file (zookeeper.out) will be placed in bin folder
+
+Can this be changed to <zk_home>/logs/zookeeperserver-<hostname>.log ?

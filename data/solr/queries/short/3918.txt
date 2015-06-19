@@ -1,0 +1,1 @@
+Change the way -excl-slf4j targets work

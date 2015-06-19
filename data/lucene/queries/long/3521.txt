@@ -1,0 +1,1 @@
+This bug fix release fixes problems with icu under java7: http://bugs.icu-project.org/trac/ticket/8734

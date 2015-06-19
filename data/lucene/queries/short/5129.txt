@@ -1,0 +1,1 @@
+CategoryAssociationsContainer should not allow null associations

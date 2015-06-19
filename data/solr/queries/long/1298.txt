@@ -1,0 +1,5 @@
+It would be helpful if the results of FunctionQueries could be added as fields to a document. 
+
+Couple of options here:
+1. Run FunctionQuery as part of relevance score and add that piece to the document
+2. Run the function (not really a query) during Document/Field retrieval

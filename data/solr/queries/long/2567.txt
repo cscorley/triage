@@ -1,0 +1,2 @@
+even if we set a luceneMatchVersion to >= 3.2 (SOLR-2557),
+Solr still defaults to LogByte

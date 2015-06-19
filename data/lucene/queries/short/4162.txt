@@ -1,0 +1,1 @@
+MathUtil is publiuc and checks parameter only with assert. Incorrect usage can easily lead to endless loop

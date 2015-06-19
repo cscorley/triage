@@ -1,0 +1,3 @@
+I'm sometimes given a ShingleAnalyzerWrapper that I would like to change the shingle size on, so I need to create a new instance.  However, I don't always know what the underlying analyzer is and I can't access it b/c it is a protected method on a final class.  
+
+The solution here is to make the getAnalyzer method public final for the ShingleAnalyzerWrapper.

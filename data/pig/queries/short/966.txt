@@ -1,0 +1,1 @@
+Proposed rework for LoadFunc, StoreFunc, and Slice/r interfaces

@@ -1,0 +1,1 @@
+IW.addIndexes doesn't prune all deleted segments

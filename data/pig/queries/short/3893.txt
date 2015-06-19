@@ -1,0 +1,1 @@
+Hash join followed by replicated join fails in Tez mode

@@ -1,0 +1,37 @@
+This patch fixes following errors in the document "User Defined Functions".
+
+
+	Malformed type parameters such as "List (FuncSpec)" and "new ArrayList (FuncSpec) ()"
+	"Reporting Progress" subsection describes EvalFunc#progress, but the example program calls PigProgressable#progress. The program works, but it would be better to be consistent with the description calling EvalFunc#progress.
+	Several sentences about LoadFunc and StoreFunc refer to the current load/store API as "the new API" such as "The meaning of putNext() has not changed ... - in the new API, this is the method ...". It is not good because the document is not about migration from the old API. The patch removes those words.
+	"Passing Configurations to UDFs" subsection refers to "describeSchema" method, but it does not exist. The patch replaces it with "checkSchema" method.
+	Updates links
+	
+		Using Java Reflection
+		javadoc - The Java API Documentation Generator
+		How to Contribute to Pig
+	
+	
+	Fixes typos
+	
+		"implemented in three five languages: Java, Python, JavaScript, Ruby and Groovy"
+		"The exact signature of the function should be clear from its documentation"
+		The EvalFunc function class provides a progress function
+		"Inside EvalFunc exec method, you can assume that these files already exist in distributed cache"
+		"throw new IOException(...);"
+		"throw newIOException new IOException (...);"
+		"throw new OException IOException (...);"
+		"to use the UPPER command function "
+		" Square square - Square of a number of any data type"
+		"ships the required scriptengine (js Rhino) to interpret it"
+	
+	
+
+
+
+The patch creates a new section "Using Short Names" including two subsections:
+
+
+	"Import Lists" moved from "Eval Functions": this subsection should be out of "Eval Functions", because import lists can be used for load/store functions, and the example program imports a load function.
+	"Defining Aliases" describing DEFINE statement: it seems good to explain the statement here, next to the description of import lists. DEFINE statement currently has not been referred from the document.
+

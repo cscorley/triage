@@ -1,0 +1,58 @@
+I am thinking this is a bug and opening a JIRA issue since I did not get any response to my question in derby-dev. One more thing I noticed is this test passes in 10.1 branch.  It is failing only in trunk.
+
+The test unit/T_RawStoreFactory.unit fails with an assert failure in CDC/FP. This failure looks like an intermittent one though it is failing all the time now. I have run this test successfully some time back. I would like to find out if this is a bug (Derby or jvm) or just an intermittent failure. I am using j9 foundation  from IBM WCTME5.7.
+
+---------------------------------------------------------------------
+diff for the test:
+---------------------------------------------------------------------
+ < – Unit Test T_RawStoreFactory finished
+ 2 add
+ > There should be 0 observers, but we still have 1 observers.
+> Shutting down due to unit test failure.
+---------------------------------------------------------------------
+stack trace for AssertFailure in derby.log is:
+---------------------------------------------------------------------
+ FAIL - org.apache.derby.iapi.services.sanity.AssertFailure: ASSERT
+FAILED still on observer list
+org.apache.derby.impl.store.raw.data.TruncateOnCommit@f147d525
+org.apache.derby.iapi.services.sanity.AssertFailure: ASSERT FAILED
+still on observer list
+org.apache.derby.impl.store.raw.data.TruncateOnCommit@f147d525
+       at org.apache.derby.iapi.services.sanity.SanityManager.THROWASSERT(SanityManager.java:150)
+       at org.apache.derby.impl.store.raw.data.TruncateOnCommit.update(TruncateOnCommit.java:69)
+       at java.util.Observable.notifyObservers(Observable.java:117)
+       at org.apache.derby.iapi.store.raw.xact.RawTransaction.notifyObservers(RawTransaction.java:313)
+       at org.apache.derby.impl.store.raw.xact.Xact.doComplete(Xact.java:1927)
+       at org.apache.derby.impl.store.raw.xact.Xact.preComplete(Xact.java:1880)
+       at org.apache.derby.impl.store.raw.xact.Xact.prepareCommit(Xact.java:726)
+       at org.apache.derby.impl.store.raw.xact.Xact.commit(Xact.java:839)
+       at org.apache.derby.impl.store.raw.xact.Xact.commit(Xact.java:636)
+       at org.apache.derbyTesting.unitTests.store.T_Util.t_commit(T_Util.java:838)
+       at org.apache.derbyTesting.unitTests.store.T_RawStoreFactory.TC001(T_RawStoreFactory.java:7435)
+       at org.apache.derbyTesting.unitTests.store.T_RawStoreFactory.runTempTests(T_RawStoreFactory.java:420)
+       at org.apache.derbyTesting.unitTests.store.T_RawStoreFactory.runTestSet(T_RawStoreFactory.java:247)
+       at org.apache.derbyTesting.unitTests.harness.T_MultiIterations.runTests(T_MultiIterations.java:94)
+       at org.apache.derbyTesting.unitTests.harness.T_MultiThreadedIterations.runTests(T_MultiThreadedIterations.java:91)
+       at org.apache.derbyTesting.unitTests.harness.T_Generic.Execute(T_Generic.java:117)
+       at org.apache.derbyTesting.unitTests.harness.BasicUnitTestManager.runATest(BasicUnitTestManager.java:183)
+       at org.apache.derbyTesting.unitTests.harness.BasicUnitTestManager.runTests(BasicUnitTestManager.java:245)
+       at org.apache.derbyTesting.unitTests.harness.BasicUnitTestManager.boot(BasicUnitTestManager.java:92)
+       at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:2008)
+       at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:290)
+       at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1846)
+       at org.apache.derby.impl.services.monitor.BaseMonitor.startServices(BaseMonitor.java:966)
+       at org.apache.derby.impl.services.monitor.BaseMonitor.runWithState(BaseMonitor.java:398)
+       at org.apache.derby.impl.services.monitor.FileMonitor.<init>(FileMonitor.java:59)
+       at org.apache.derby.iapi.services.monitor.Monitor.startMonitor(Monitor.java:288)
+       at org.apache.derbyTesting.unitTests.harness.UnitTestMain.main(UnitTestMain.java:50)
+---------------------------------------------------------------------
+
+On looking at the code, I did not understand how this assert failure can happen. The assert is thrown in following code in TruncateOnCommit: 
+public void update(Observable obj, Object arg) {
+       if (SanityManager.DEBUG) 
+{
+               if (arg == null)
+               SanityManager.THROWASSERT("still on observer list " + this);
+       }
+
+I am puzzled by how 'arg' can become null in this case. As I understand, 'update' method of each Observer gets called by the notifyObserver method in java.util.Observable class. notifyObserver passes 'arg', which describes the type of change, as the second argument to update. In this code path, 'arg' passed to notifyObserver is RawTransaction.COMMIT (which is not null).  However the code has an assert to check for null value which means there is some situation where the 'arg' can become null.  I have not understood what causes this situation but it is always being hit when running in this environment. 

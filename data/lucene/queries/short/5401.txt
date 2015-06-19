@@ -1,0 +1,1 @@
+Field.StringTokenStream#end() does not call super.end()

@@ -1,0 +1,1 @@
+Velocity (/browse) GUI has hardcoded price range facet and a hardcoded manufacturedate_dt date facet. Need general solution which work for any facet.range and facet.date.

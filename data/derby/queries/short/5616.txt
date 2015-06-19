@@ -1,0 +1,1 @@
+demo/vtis/sql/demoFileVtis.sql needs to be adjusted: messages_en.properties has moved

@@ -1,0 +1,35 @@
+Tripped by the new random sim from LUCENE-4297:
+
+The basics are this:
+
+	BooleanQuery has the following rewrite():
+
+
+  public Query rewrite(IndexReader reader) throws IOException {
+    if (minNrShouldMatch == 0 && clauses.size() == 1) {                    // optimize 1-clause queries
+
+
+
+
+
+
+	you have a coord() impl that doesnt return 1.0 if overlap == maxOverlap, particularly:
+
+
+return overlap / ((float)maxOverlap + 1);
+
+
+
+
+
+
+	TestBooleanMinShouldMatch.testRandomQueries generates random boolean queries (Q1), then compares the scores of the random query to the same query but with minNrShouldmatch applied to its should clauses (Q2)
+
+
+
+
+	in the case of a single term BQ, the rewrite applies to Q1, making it a term query, but not to Q2. so the coord() only gets called for Q2, not Q1. and with this crazy coord it means the scores are different.
+
+
+
+I think the rewrite is wrong, we should also rewrite single-query BQs where minNrShouldMatch = 1 and there is a single optional clause.

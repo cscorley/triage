@@ -1,0 +1,3 @@
+A separate highlight query provided by the hl.q parameter will always use the lucene query parser unless a separate parser is explicitly provided as a localparam.  This is mildly annoying if you're using a hand-rolled query parser.  This patch adds a new hl.qparser parameter that allows you to specify a query parser outside of localparams, and will fall back to using the overall query defType if hl.qparser is not passed.
+
+Patch also fixes a bug in edismax and dismax query parsers whereby they couldn't be used for highlight queries because they weren't properly set up until parse() is called, and HighlightComponent doesn't do that.

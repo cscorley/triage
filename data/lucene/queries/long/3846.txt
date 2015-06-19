@@ -1,0 +1,7 @@
+Would be nice to have a suggester that can handle some fuzziness (like spell correction) so that it's able to suggest completions that are "near" what you typed.
+
+As a first go at this, I implemented 1T (ie up to 1 edit, including a transposition), except the first letter must be correct.
+
+But there is a penalty, ie, the "corrected" suggestion needs to have a much higher freq than the "exact match" suggestion before it can compete.
+
+Still tons of nocommits, and somehow we should merge this / make it work with analyzing suggester too (LUCENE-3842).

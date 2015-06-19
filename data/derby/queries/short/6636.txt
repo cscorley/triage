@@ -1,0 +1,1 @@
+The public api of BaseDataFileFactory may allow blackhats to assume elevated privileges.

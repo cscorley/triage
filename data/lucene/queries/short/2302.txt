@@ -1,0 +1,1 @@
+Replacement for TermAttribute+Impl with extended capabilities (byte[] support, CharSequence, Appendable)

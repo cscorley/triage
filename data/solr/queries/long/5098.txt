@@ -1,0 +1,3 @@
+POST to /schema/fieldtypes will add one or more new field types to the schema.
+
+PUT to /schema/fieldtypes/name will add the name'd field type to the schema.

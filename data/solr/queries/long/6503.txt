@@ -1,0 +1,1 @@
+Solr-Cell contains the netcdf-4.2-min.jar file, which contains some LGPL licensed classes in binary form.

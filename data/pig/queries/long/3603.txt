@@ -1,0 +1,1 @@
+Counters are now supported by Tez (TEZ-12). We should add counters to TezStats.

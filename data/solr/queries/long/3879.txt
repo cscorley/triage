@@ -1,0 +1,22 @@
+This is incorrect and can lead to deployment issues:
+
+
+Servlet Spec 2.5
+
+SRV.9.7.2 Web Application Class Loader
+The class loader that a container uses to load a servlet in a WAR must
+allow the developer to load any resources contained in library JARs
+within the WAR following normal J2SE semantics using getResource. As
+described in the J2EE license agreement, servlet containers that are
+not part of a J2EE product should not allow the application to
+override J2SE platform classes, such as those in the java.* and
+javax.* namespaces, that J2SE does not allow to be modified. Also,
+servlet containers that are part of a J2EE product should not allow
+the application to override J2SE or J2EE platform classes, such as
+those in java.* and javax.* namespaces, that either J2SE or J2EE do
+not allow to be modified. The container should not allow applications
+to override or access the container’s implementation
+
+
+
+The fix is pretty easy and it would be nice to include it in the upcoming release of Solr 4.0

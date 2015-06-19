@@ -1,0 +1,5 @@
+See http://hadoop.apache.org/pig/javadoc/docs/api/.  This currently contains javadocs for 0.2.  It is also versionless.
+
+It needs to be changed so that javadocs for recent versions are posted.  It also needs to change so that the version is in the api so that multiple versions of the API can be posted.
+
+It's probably too late to do this for 0.6 and before, but it needs to happen for 0.7.

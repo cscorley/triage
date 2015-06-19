@@ -1,0 +1,1 @@
+position increments should be implemented by TokenStream.end()

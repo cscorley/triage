@@ -1,0 +1,1 @@
+Admin UI - Default to wt=json on Query-Screen

@@ -1,0 +1,1 @@
+Backport ZOOKEEPER-1294 fix to 3.4 and 3.3

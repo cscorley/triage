@@ -1,0 +1,1 @@
+Only the jar files that contain the driver should have the autoloading services file for the JDBC driver.

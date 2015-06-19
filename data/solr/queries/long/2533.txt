@@ -1,0 +1,5 @@
+Started from LUCENE-2883: Support for sorting by ValueSource and FunctionQueries is done through ValueSource#getSort and the ValueSourceSortField.  In order to support VSs containing other Queries, its necessary to allow the Querys to be weighted by an IndexSearcher.  Currently this is handled by having ValueSourceSortField implement SolrSortField.  In Solr's SolrIndexSearcher, SortFields implementing SolrSortField are then weighted before the Sort is used.
+
+Sorting by FunctionQuery and ValueSource are invaluable and will become available to all Lucene users in LUCENE-2883.  But in order to do so, we need to remove the coupling of this functionality to Solr, and make it more standard.
+
+Any and all thoughts about how to do this are appreciated.

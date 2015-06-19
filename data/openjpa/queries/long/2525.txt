@@ -1,0 +1,91 @@
+Using the following entities, when a simple single entry aCase -> aText -> aEvident instances are created, a ConstraintViolationException will be observed when this object tree is persisted
+
+@Entity
+public class ACase 
+{
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int id;
+
+    @OneToOne(fetch=FetchType.LAZY, mappedBy="aCase", cascade=CascadeType.MERGE)
+    private AText aText;
+}
+
+@Entity
+public class AText 
+{
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int id;
+
+    @OneToOne(fetch=FetchType.LAZY, cascade=CascadeType.MERGE)
+    @JoinColumn(name="ACASE_ID", nullable=false)
+    private ACase aCase;
+
+    @OneToMany(targetEntity=AEvident.class, mappedBy="aText", cascade=CascadeType.MERGE)
+    private Set<AEvident> aEvidents = new HashSet<AEvident>();
+
+    @Column(name="ACASE_ID", insertable=false, updatable=false, unique=true)
+    private int aCaseId;        // <<< this field is not updated to the associated aCase.id value after aText instance is persisted/merged.
+}
+
+@Entity
+public class AEvident {
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int id;
+
+    @ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.MERGE)
+    @JoinColumn(name="ACASE_ID", referencedColumnName="ACASE_ID")  // <<< when aEvident instance is persisted in the same transaction, the INSERT used the default value (0) in aText.aCaseId, which does not exist, hence the ConstraintViolationException is thrown.
+    public AText getAText() {
+}
+
+
+INSERT INTO ACase (name) VALUES  [params=(String) Case_A]
+VALUES(IDENTITY_VAL_LOCAL())
+INSERT INTO AText (ACASE_ID, name) VALUES (?, ?) [params=(int) 15, (String) Text_A]
+VALUES(IDENTITY_VAL_LOCAL())
+INSERT INTO AEvident (name, ACASE_ID) VALUES (?, ?) [params=(String) Evident_A, (int) 0]
+
+Caused by: <openjpa-2.2.3-SNAPSHOT-rsvn: E155036: The working copy at '/cygdrive/c/Watson/oea/workspace/openjpa.22x' fatal general error> org.apache.openjpa.persistence.PersistenceException: The transaction has been rolled back.  See the nested exceptions for details on the errors that occurred.
+FailedObject: org.apache.openjpa.persistence.relations.AEvident@a33283dc
+    at org.apache.openjpa.kernel.BrokerImpl.newFlushException(BrokerImpl.java:2352)
+    at org.apache.openjpa.kernel.BrokerImpl.flush(BrokerImpl.java:2190)
+    at org.apache.openjpa.kernel.BrokerImpl.flushSafe(BrokerImpl.java:2087)
+    at org.apache.openjpa.kernel.BrokerImpl.beforeCompletion(BrokerImpl.java:2005)
+    at org.apache.openjpa.kernel.LocalManagedRuntime.commit(LocalManagedRuntime.java:81)
+    at org.apache.openjpa.kernel.BrokerImpl.commit(BrokerImpl.java:1529)
+    at org.apache.openjpa.kernel.DelegatingBroker.commit(DelegatingBroker.java:933)
+    at org.apache.openjpa.persistence.EntityManagerImpl.commit(EntityManagerImpl.java:570)
+    ... 23 more
+Caused by: <openjpa-2.2.3-SNAPSHOT-rsvn: E155036: The working copy at '/cygdrive/c/Watson/oea/workspace/openjpa.22x' fatal general error> org.apache.openjpa.persistence.PersistenceException: INSERT on table 'AEVIDENT' caused a violation of foreign key constraint 'SQL140820224303470' for key (0).  The statement has been rolled back. 
+{prepstmnt -198000009 INSERT INTO AEvident (name, ACASE_ID) VALUES (?, ?) [params=(String) Evident_A, (int) 0]} [code=20000, state=23503]
+FailedObject: org.apache.openjpa.persistence.relations.AEvident@a33283dc
+    at org.apache.openjpa.jdbc.sql.DBDictionary.narrow(DBDictionary.java:4985)
+    at org.apache.openjpa.jdbc.sql.DBDictionary.newStoreException(DBDictionary.java:4951)
+    at org.apache.openjpa.jdbc.sql.SQLExceptions.getStore(SQLExceptions.java:137)
+    at org.apache.openjpa.jdbc.sql.SQLExceptions.getStore(SQLExceptions.java:78)
+    at org.apache.openjpa.jdbc.kernel.PreparedStatementManagerImpl.flushAndUpdate(PreparedStatementManagerImpl.java:144)
+    at org.apache.openjpa.jdbc.kernel.BatchingPreparedStatementManagerImpl.flushAndUpdate(BatchingPreparedStatementManagerImpl.java:79)
+    at org.apache.openjpa.jdbc.kernel.PreparedStatementManagerImpl.flushInternal(PreparedStatementManagerImpl.java:100)
+    at org.apache.openjpa.jdbc.kernel.PreparedStatementManagerImpl.flush(PreparedStatementManagerImpl.java:88)
+    at org.apache.openjpa.jdbc.kernel.ConstraintUpdateManager.flush(ConstraintUpdateManager.java:357)
+    at org.apache.openjpa.jdbc.kernel.ConstraintUpdateManager.flushGraph(ConstraintUpdateManager.java:349)
+    at org.apache.openjpa.jdbc.kernel.ConstraintUpdateManager.flush(ConstraintUpdateManager.java:97)
+    at org.apache.openjpa.jdbc.kernel.BatchingConstraintUpdateManager.flush(BatchingConstraintUpdateManager.java:59)
+    at org.apache.openjpa.jdbc.kernel.AbstractUpdateManager.flush(AbstractUpdateManager.java:105)
+    at org.apache.openjpa.jdbc.kernel.AbstractUpdateManager.flush(AbstractUpdateManager.java:78)
+    at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.flush(JDBCStoreManager.java:732)
+    at org.apache.openjpa.kernel.DelegatingStoreManager.flush(DelegatingStoreManager.java:131)
+    ... 30 more
+Caused by: org.apache.openjpa.lib.jdbc.ReportingSQLException: INSERT on table 'AEVIDENT' caused a violation of foreign key constraint 'SQL140820224303470' for key (0).  The statement has been rolled back. {prepstmnt -198000009 INSERT INTO AEvident (name, ACASE_ID) VALUES (?, ?) [params=(String) Evident_A, (int) 0]}
+ [code=20000, state=23503]
+    at org.apache.openjpa.lib.jdbc.LoggingConnectionDecorator.wrap(LoggingConnectionDecorator.java:219)
+    at org.apache.openjpa.lib.jdbc.LoggingConnectionDecorator.wrap(LoggingConnectionDecorator.java:195)
+    at org.apache.openjpa.lib.jdbc.LoggingConnectionDecorator.access$4(LoggingConnectionDecorator.java:194)
+    at org.apache.openjpa.lib.jdbc.LoggingConnectionDecorator$LoggingConnection$LoggingPreparedStatement.executeUpdate(LoggingConnectionDecorator.java:1134)
+    at org.apache.openjpa.lib.jdbc.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:275)
+    at org.apache.openjpa.jdbc.kernel.JDBCStoreManager$CancelPreparedStatement.executeUpdate(JDBCStoreManager.java:1792)
+    at org.apache.openjpa.jdbc.kernel.PreparedStatementManagerImpl.executeUpdate(PreparedStatementManagerImpl.java:268)
+    at org.apache.openjpa.jdbc.kernel.PreparedStatementManagerImpl.flushAndUpdate(PreparedStatementManagerImpl.java:119)
+    ... 41 more

@@ -1,0 +1,1 @@
+Currently our suggest module depends on the expression module just because the DocumentExpressionDictionary provides some util ctor to pass in an expression directly. That is a lot of dependency for little value IMO and pulls in lots of JARs. DocumentExpressionDictionary should only take a ValueSource instead.

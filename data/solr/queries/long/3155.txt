@@ -1,0 +1,1 @@
+Some of the JSON that the zookeeper info servlet spits out is not valid.  Rather then try to fix it, I think we should just use an existing (tested!) json framework.  the noggit writer is available, or maybe expose the solr JSONWriter

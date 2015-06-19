@@ -1,0 +1,46 @@
+Hi all,
+
+We have an obvious deadlock between a "MaybeRefreshIndexJob" thread
+calling ReferenceManager.maybeRefresh(ReferenceManager.java:204) and a
+"RebuildIndexJob" thread calling
+IndexWriter.deleteAll(IndexWriter.java:2065).
+
+Lucene wants to flush in the "MaybeRefreshIndexJob" thread trying to intrinsically lock the IndexWriter instance at DocumentsWriterPerThread.java:563 before notifyAll()ing the flush. 
+
+Simultaneously the "RebuildIndexJob" thread who already intrinsically locked the IndexWriter instance at IndexWriter#deleteAll wait()s at DocumentsWriterFlushControl.java:245 for the flush forever causing a deadlock.
+
+
+
+"MaybeRefreshIndexJob Thread - 2" daemon prio=10 tid=0x00007f8fe4006000 nid=0x1ac2 waiting for monitor entry [0x00007f8fa7bf7000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at org.apache.lucene.index.IndexWriter.useCompoundFile(IndexWriter.java:2223)
+	- waiting to lock <0x00000000f1c00438> (a org.apache.lucene.index.IndexWriter)
+	at org.apache.lucene.index.DocumentsWriterPerThread.sealFlushedSegment(DocumentsWriterPerThread.java:563)
+	at org.apache.lucene.index.DocumentsWriterPerThread.flush(DocumentsWriterPerThread.java:533)
+	at org.apache.lucene.index.DocumentsWriter.doFlush(DocumentsWriter.java:422)
+	at org.apache.lucene.index.DocumentsWriter.flushAllThreads(DocumentsWriter.java:559)
+	at org.apache.lucene.index.IndexWriter.getReader(IndexWriter.java:365)
+	- locked <0x00000000f1c007d0> (a java.lang.Object)
+	at org.apache.lucene.index.StandardDirectoryReader.doOpenFromWriter(StandardDirectoryReader.java:270)
+	at org.apache.lucene.index.StandardDirectoryReader.doOpenIfChanged(StandardDirectoryReader.java:245)
+	at org.apache.lucene.index.StandardDirectoryReader.doOpenIfChanged(StandardDirectoryReader.java:235)
+	at org.apache.lucene.index.DirectoryReader.openIfChanged(DirectoryReader.java:170)
+	at org.apache.lucene.search.SearcherManager.refreshIfNeeded(SearcherManager.java:118)
+	at org.apache.lucene.search.SearcherManager.refreshIfNeeded(SearcherManager.java:58)
+	at org.apache.lucene.search.ReferenceManager.doMaybeRefresh(ReferenceManager.java:155)
+	at org.apache.lucene.search.ReferenceManager.maybeRefresh(ReferenceManager.java:204)
+	at jobs.MaybeRefreshIndexJob.timeout(MaybeRefreshIndexJob.java:47)
+
+"RebuildIndexJob Thread - 1" prio=10 tid=0x00007f903000a000 nid=0x1a38 in Object.wait() [0x00007f9037dd6000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000000f1c0c240> (a org.apache.lucene.index.DocumentsWriterFlushControl)
+	at java.lang.Object.wait(Object.java:503)
+	at org.apache.lucene.index.DocumentsWriterFlushControl.waitForFlush(DocumentsWriterFlushControl.java:245)
+	- locked <0x00000000f1c0c240> (a org.apache.lucene.index.DocumentsWriterFlushControl)
+	at org.apache.lucene.index.DocumentsWriter.abort(DocumentsWriter.java:235)
+	- locked <0x00000000f1c05370> (a org.apache.lucene.index.DocumentsWriter)
+	at org.apache.lucene.index.IndexWriter.deleteAll(IndexWriter.java:2065)
+	- locked <0x00000000f1c00438> (a org.apache.lucene.index.IndexWriter)
+	at jobs.RebuildIndexJob.buildIndex(RebuildIndexJob.java:102)
+

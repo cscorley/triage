@@ -1,0 +1,1 @@
+Create tika-example module

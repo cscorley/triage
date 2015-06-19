@@ -1,0 +1,22 @@
+We get an http 500 as follow :
+
+
+
+
+<lst name="error">
+  <str name="trace">java.lang.NullPointerException</str>
+  <int name="code">500</int>
+</lst>
+
+
+
+
+When facet.missing is turned on and combined with facet.pivot (if one of the pivot-faceted fields have missing counts -)
+
+Ideally, the decission tree could be computing for the missing "entries" using the 
+
+ -field:[* TO *] 
+
+ query but it might be a performance issue on a large index (I guess)
+
+The fallback to this could be to raise a 400 error with a clean message telling that both parameters can't be combined and then the documentation should be modified accordingly.

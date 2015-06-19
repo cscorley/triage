@@ -1,0 +1,8 @@
+It is often useful to divide a packed stream into fixed blocks which are all compressed independently:
+
+	if your sequence of ints is very large, you won't have to buffer everything into memory to compute the required number of bits per value,
+	the compression ratio will be better in case of rare extreme values.
+
+
+
+The only drawback compared to the original PackedInts API is that the stream cannot be directly used to deserialize a random-access PackedInts.Reader (but for sequential access, this is just fine).

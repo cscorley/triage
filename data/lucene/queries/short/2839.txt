@@ -1,0 +1,1 @@
+Visibility of Scorer.score(Collector, int, int) is wrong

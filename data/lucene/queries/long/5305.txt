@@ -1,0 +1,37 @@
+reproduce with: ant test  -Dtestcase=DocumentExpressionDictionaryTest -Dtests.method=testBasic -Dtests.seed=42EFE66B86DB4740 -Dtests.slow=true -Dtests.locale=es_BO -Dtests.timezone=US/Central -Dtests.file.encoding=UTF-8
+
+common.test:
+[junit4:pickseed] Seed property 'tests.seed' already defined: 42EFE66B86DB4740
+   [junit4] <JUnit4> says Привет! Master seed: 42EFE66B86DB4740
+   [junit4] Executing 1 suite with 1 JVM.
+   [junit4] 
+   [junit4] Started J0 PID(2144@a8206617c3d8.ant.amazon.com).
+   [junit4] Suite: org.apache.lucene.search.suggest.DocumentExpressionDictionaryTest
+   [junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=DocumentExpressionDictionaryTest -Dtests.method=testBasic -Dtests.seed=42EFE66B86DB4740 -Dtests.slow=true -Dtests.locale=es_BO -Dtests.timezone=US/Central -Dtests.file.encoding=UTF-8
+   [junit4] ERROR   0.65s | DocumentExpressionDictionaryTest.testBasic <<<
+   [junit4]    > Throwable #1: java.lang.IllegalArgumentException: CompositeReader is not supported
+   [junit4]    > 	at __randomizedtesting.SeedInfo.seed([42EFE66B86DB4740:E915FB7E5907C16E]:0)
+   [junit4]    > 	at org.apache.lucene.search.suggest.DocumentExpressionDictionary$DocumentExpressionInputIterator.<init>(DocumentExpressionDictionary.java:110)
+   [junit4]    > 	at org.apache.lucene.search.suggest.DocumentExpressionDictionary.getWordsIterator(DocumentExpressionDictionary.java:98)
+   [junit4]    > 	at org.apache.lucene.search.suggest.DocumentExpressionDictionaryTest.testBasic(DocumentExpressionDictionaryTest.java:92)
+   [junit4]    > 	at java.lang.Thread.run(Thread.java:724)
+   [junit4]   2> NOTE: test params are: codec=Lucene41, sim=RandomSimilarityProvider(queryNorm=false,coord=yes): 
+{f1=DFR I(F)3(800.0)}
+, locale=es_BO, timezone=US/Central
+   [junit4]   2> NOTE: Mac OS X 10.8.5 x86_64/Oracle Corporation 1.7.0_25 (64-bit)/cpus=8,threads=1,free=121040408,total=161349632
+   [junit4]   2> NOTE: All tests run in this JVM: [DocumentExpressionDictionaryTest]
+   [junit4] Completed in 1.05s, 1 test, 1 error <<< FAILURES!
+   [junit4] 
+   [junit4] 
+   [junit4] Tests with failures:
+   [junit4]   - org.apache.lucene.search.suggest.DocumentExpressionDictionaryTest.testBasic
+   [junit4] 
+   [junit4] 
+   [junit4] JVM J0:     0.66 ..     2.36 =     1.70s
+   [junit4] Execution time total: 2.37 sec.
+   [junit4] Tests summary: 1 suite, 1 test, 1 error
+
+BUILD FAILED
+/Users/jdconrad/Code/LuceneSolr/lucene-solr/lucene/module-build.xml:60: The following error occurred while executing this line:
+/Users/jdconrad/Code/LuceneSolr/lucene-solr/lucene/common-build.xml:1259: The following error occurred while executing this line:
+/Users/jdconrad/Code/LuceneSolr/lucene-solr/lucene/common-build.xml:902: There were test failures: 1 suite, 1 test, 1 error

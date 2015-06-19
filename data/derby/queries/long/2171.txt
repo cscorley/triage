@@ -1,0 +1,26 @@
+I find the Issues section of the RELEASE-NOTES very confusing, the summary has a bullet list of items with a number.
+
+The descriptions for all these issues do not describe the issue, they descibe the original bug report. Thus when I read this list I don't get the impression that these are issues I should care about. However when reading the detail I do see it is an issue that I should care about.
+
+For example:
+
+From bullet list.
+"263 - Client should throw not implemented exception for depricated setUnicodeStream/getUnicodeStream"
+
+Says to me there is an outstanding bug in 10.2 where the client is throwing an exception it should not.
+But the actual issue that will affect an application is well described by the statement problem statement in the section for 253
+
+"PreparedStatement.setUnicodeStream() and ResultSet.getUnicodeStream() throw SQLException when invoked after upgrading to Apache Derby 10.2."
+
+Seems like that would be the better text to be put in the bullet list.
+
+Looking at the detailed notes for the issues the text in Problem sometimes describes something that is a good thing, not a Problem.
+E.g. 781, is it a problem Derby now performs a hash-join, if so why was it changed? (and 1357)
+
+Some that describe a Problem (e..g. 721,1130,1295,1314,1384,1652) are actually describing a problem that no longer exists in 10.2, but I thought this section was about issues that existed in 10.2. In these cases the Symptom text tends to describe the "problem" better. Ie. the problem is that the code behaviour has changed, not the old bug.
+
+I don't understand why these are considered issues though: 668, 1621 - they seem to be fixed bugs.
+
+253, 1857, 822 are good examples to follow (except for the one liner in the bullet list)
+
+Also maybe there could be some text that explains what ISSUES are.  Something along the lines of applications upgrading to 10.2 or using Derby for the first time should be aware of these issues.

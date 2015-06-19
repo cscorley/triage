@@ -1,0 +1,6 @@
+To be able to run the upgrade test using the test harness, it should be possible to run the test using the harness' security manager. Some issues in doing this are identified in http://www.nabble.com/Upgrade-test-and-security-permissions-p3517019.html. We need to identify the set of permissions required to run the test. This seems to a slightly more involved task because of use of jars from multiple versions. Hence opening it as a sub-task.
+
+As a temporary solution, I think we can add "noSecurityManager=true" to allow the test to run in the harness.
+
+
+

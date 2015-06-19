@@ -1,0 +1,8 @@
+Currently post.jar does not print detailed error message that is encountered during indexing. In certain use cases, it's helpful to see the error message so that clients can take appropriate actions.
+
+In 4.7, here's what gets shown if there is an error during indexing:
+
+SimplePostTool: WARNING: Solr returned an error #400 Bad Request
+SimplePostTool: WARNING: IOException while reading response: java.io.IOException: Server returned HTTP response code: 400 for URL: http://localhost:8983/solr/update
+
+It would be helpful to print out the "msg" that is returned from Solr.

@@ -1,0 +1,1 @@
+TrieTokenizer causes StringIOOBE when input is empty instead of returning no token

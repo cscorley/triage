@@ -1,0 +1,1 @@
+The javadoc for SolrDocument.addField doesn't give any information on the valid data types for the 'Object' parameter with the data in it. This is a bit frustrating.

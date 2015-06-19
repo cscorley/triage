@@ -1,0 +1,1 @@
+[Zebra]  suggestion to have zebra manifest file contain version and svn-revision etc.

@@ -1,0 +1,1 @@
+If an analysis component (tokenizer, filter, etc) gets really into a hissy fit and throws a RuntimeException, the resulting log traffic is less than informative, lacking any pointer to the doc under discussion (in the doc case). It would be more better if there was a catch/try shortstop that logged this more informatively.

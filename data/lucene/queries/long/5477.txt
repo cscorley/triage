@@ -1,0 +1,1 @@
+Because this suggester impl. is just a Lucene index under-the-hood, it should be straightforward to enable near-real-time additions/removals of suggestions.

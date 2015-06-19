@@ -1,0 +1,8 @@
+Some tests are currently creating files under the source tree.
+
+This causes a lot of problems, it makes my checkout look dirty after running 'ant test' and i have to cleanup.
+
+I opened and issue for this a month in a half for solrj/src/test-files/solrj/solr/shared/test-solr.xml (SOLR-3112), 
+but now we have a second file (core/src/test-files/solr/conf/elevate-data-distrib.xml).
+
+So I think hudson needs to chmod these src directories to 555, so that solr tests that do this will fail.

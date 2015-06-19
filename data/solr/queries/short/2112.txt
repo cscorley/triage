@@ -1,0 +1,1 @@
+Solrj should support streaming response

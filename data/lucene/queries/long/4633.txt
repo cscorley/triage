@@ -1,0 +1,5 @@
+While migrating code to Lucene 4.0 I tripped it. If you call replaceTaxonomy() with e.g. a taxonomy index that contains category "a", and then you try to add category "a" to the new taxonomy, it receives a new ordinal!
+
+The reason is that replaceTaxo doesn't refresh the internal IndexReader, but does clear the cache (as it should). This causes the next addCategory to not find category "a" in the cache, and not in the reader instance at hand.
+
+Simple fix, I'll attach a patch with it and a test exposing the bug.

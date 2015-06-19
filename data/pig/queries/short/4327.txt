@@ -1,0 +1,1 @@
+Schema of map with value that has an alias can't be parsed again

@@ -1,0 +1,1 @@
+If I install Pig using rpm, pig script does not take PIG_CLASSPATH

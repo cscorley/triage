@@ -1,0 +1,1 @@
+Fix solr example config to no longer use deprecated stuff

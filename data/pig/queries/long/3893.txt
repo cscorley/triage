@@ -1,0 +1,30 @@
+To reproduce the issue, run this query-
+
+
+x = LOAD 'foo' AS (x:int, y:chararray);
+y = LOAD 'bar' AS (x:int, y:chararray);
+a = JOIN x BY x, y BY x;
+z = LOAD 'zoo' AS (x:int, y:chararray);
+b = JOIN a BY x::x, z BY x USING 'replicated';
+DUMP b;
+
+
+This fails with the following error-
+
+
+                    : Container released by application, AttemptID:attempt_1397437587062_0071_1_03_000000_3 Info:Error: org.apache.pig.backend.executionengine.ExecException: ERROR 0: java.lang.ClassCastException: org.apache.tez.runtime.library.common.readers.ShuffledUnorderedKVReader cannot be cast to org.apache.tez.runtime.library.api.KeyValuesReader
+                    : at org.apache.pig.backend.hadoop.executionengine.tez.POShuffleTezLoad.attachInputs(POShuffleTezLoad.java:108)
+                    : at org.apache.pig.backend.hadoop.executionengine.tez.PigProcessor.initializeInputs(PigProcessor.java:202)
+                    : at org.apache.pig.backend.hadoop.executionengine.tez.PigProcessor.run(PigProcessor.java:141)
+                    : at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:307)
+                    : at org.apache.hadoop.mapred.YarnTezDagChild$5.run(YarnTezDagChild.java:562)
+                    : at java.security.AccessController.doPrivileged(Native Method)
+                    : at javax.security.auth.Subject.doAs(Subject.java:415)
+                    : at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1548)
+                    : at org.apache.hadoop.mapred.YarnTezDagChild.main(YarnTezDagChild.java:551)
+                    : Caused by: java.lang.ClassCastException: org.apache.tez.runtime.library.common.readers.ShuffledUnorderedKVReader cannot be cast to org.apache.tez.runtime.library.api.KeyValuesReader
+                    : at org.apache.pig.backend.hadoop.executionengine.tez.POShuffleTezLoad.attachInputs(POShuffleTezLoad.java:89)
+                    : ... 8 more
+
+
+The problem is that POLR that belongs to FRJoin is attached to POShuffleTezLoad since replicated join runs in the same vertex as in hash join.

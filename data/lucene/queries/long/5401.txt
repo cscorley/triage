@@ -1,0 +1,5 @@
+Field.StringTokenStream#end() currently does not call super.end(). This prevents resetting the PositionIncrementAttribute to 0 in end(), which can lead to wrong positions in the index under certain conditions.
+
+I added a test to TestDocument which indexes two Fields with the same name, String values, indexed=true, tokenized=false and IndexOptions.DOCS_AND_FREQS_AND_POSITIONS. Without the fix the test fails. The first token gets the correct position 0, but the second token gets position 2 instead of 1. The reason is that in DocInverterPerField line 176 (which is just after the call to end()) we increment the position a second time, because end() didn't reset the increment to 0.
+
+All tests pass with the fix.

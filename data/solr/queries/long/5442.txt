@@ -1,0 +1,5 @@
+Seems that propagating the transfer-encoding and connection headers from the proxied response to the real response can cause some http clients (python's so far) to see chunked encoding data as part of the supposedly non chunked response content. The headers are also duplicated in the response.
+
+The headers do not get duplicated with Jetty, and python http libs seem to have no problems when getting proxied via Jetty.
+
+Testing seems to confirm that not passing on these headers fixes the Tomcat issue.

@@ -1,0 +1,6 @@
+There is a new version 1.14.2 of Serp that appears to fix OPENJPA-888 (https://issues.apache.org/jira/browse/OPENJPA-888).
+
+Would it be possible to update to 1.14.2 in OpenJPA?
+
+Serp 1.14.2 : http://serp.cvs.sourceforge.net/viewvc/serp/serp/
+Also: http://openjpa.apache.org/publishing-serp-to-maven-central-repository.html

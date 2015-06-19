@@ -1,0 +1,1 @@
+PostingsHighlighter fails with IndexOutOfBoundsException

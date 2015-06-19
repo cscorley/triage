@@ -1,0 +1,1 @@
+Support for the setting of core.properties key/values at create-time on Collections API

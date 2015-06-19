@@ -1,0 +1,1 @@
+Fix zookeeper test dependency

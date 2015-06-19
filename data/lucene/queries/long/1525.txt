@@ -1,0 +1,1 @@
+There are some missing dependencies in generated maven pom.xml files (benchmark and highlighter)

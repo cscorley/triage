@@ -1,0 +1,1 @@
+SolrEntityProcessor should substitute params at query time, not startup time

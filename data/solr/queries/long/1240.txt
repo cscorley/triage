@@ -1,0 +1,1 @@
+For faceting numerical ranges using many facet.query query arguments leads to unmanageably large queries as the fields you facet over increase. Adding the same faceting parameter for numbers which already exists for dates should fix this.

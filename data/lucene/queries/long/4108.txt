@@ -1,0 +1,3 @@
+I'd like to add the option to replace a taxonomy with another one, "live" on DirectoryTaxoWriter. Similar to how one can do so on IndexWriter, by calling deleteAll() and addIndexes(), it is valuable to be able to do so on DirTW as well.
+
+That way, if you need to replace a search index and taxonomy index "live", you will be able to, given this new API.

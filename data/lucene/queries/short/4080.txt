@@ -1,0 +1,1 @@
+SegmentReader.numDeletedDocs() sometimes gives an incorrect numDeletedDocs

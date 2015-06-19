@@ -1,0 +1,79 @@
+I'm not sure if this is an existing bug, or something new caused by changes in SOLR-5986, but it just poped up in jenkinds today...
+
+http://jenkins.thetaphi.de/job/Lucene-Solr-5.x-MacOSX/1844
+Revision: 1631656
+
+
+   [junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=TestDistributedGrouping -Dtests.method=testDistribSearch -Dtests.seed=E9460FA0973F6672 -Dtests.slow=true -Dtests.locale=cs -Dtests.timezone=Indian/Mayotte -Dtests.file.encoding=ISO-8859-1
+   [junit4] ERROR   55.9s | TestDistributedGrouping.testDistribSearch <<<
+   [junit4]    > Throwable #1: org.apache.solr.client.solrj.impl.HttpSolrServer$RemoteSolrException: java.lang.NullPointerException
+   [junit4]    > 	at org.apache.solr.search.grouping.distributed.responseprocessor.StoredFieldsShardResponseProcessor.process(StoredFieldsShardResponseProcessor.java:45)
+   [junit4]    > 	at org.apache.solr.handler.component.QueryComponent.handleGroupedResponses(QueryComponent.java:708)
+   [junit4]    > 	at org.apache.solr.handler.component.QueryComponent.handleResponses(QueryComponent.java:691)
+   [junit4]    > 	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:337)
+   [junit4]    > 	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:136)
+   [junit4]    > 	at org.apache.solr.core.SolrCore.execute(SolrCore.java:1983)
+   [junit4]    > 	at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:773)
+   [junit4]    > 	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:408)
+   [junit4]    > 	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:202)
+   [junit4]    > 	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+   [junit4]    > 	at org.apache.solr.client.solrj.embedded.JettySolrRunner$DebugFilter.doFilter(JettySolrRunner.java:137)
+   [junit4]    > 	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+   [junit4]    > 	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+   [junit4]    > 	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:229)
+   [junit4]    > 	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+   [junit4]    > 	at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:301)
+   [junit4]    > 	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1077)
+   [junit4]    > 	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+   [junit4]    > 	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+   [junit4]    > 	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+   [junit4]    > 	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+   [junit4]    > 	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+   [junit4]    > 	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+   [junit4]    > 	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+   [junit4]    > 	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942)
+   [junit4]    > 	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004)
+   [junit4]    > 	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640)
+   [junit4]    > 	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+   [junit4]    > 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+   [junit4]    > 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+   [junit4]    > 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+   [junit4]    > 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+   [junit4]    > 	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+   [junit4]    > 	at java.lang.Thread.run(Thread.java:745)
+   [junit4]    > 	at __randomizedtesting.SeedInfo.seed([E9460FA0973F6672:68A081B8E060064E]:0)
+   [junit4]    > 	at org.apache.solr.client.solrj.impl.HttpSolrServer.executeMethod(HttpSolrServer.java:569)
+   [junit4]    > 	at org.apache.solr.client.solrj.impl.HttpSolrServer.request(HttpSolrServer.java:215)
+   [junit4]    > 	at org.apache.solr.client.solrj.impl.HttpSolrServer.request(HttpSolrServer.java:211)
+   [junit4]    > 	at org.apache.solr.client.solrj.request.QueryRequest.process(QueryRequest.java:91)
+   [junit4]    > 	at org.apache.solr.client.solrj.SolrServer.query(SolrServer.java:301)
+   [junit4]    > 	at org.apache.solr.BaseDistributedSearchTestCase.queryServer(BaseDistributedSearchTestCase.java:512)
+   [junit4]    > 	at org.apache.solr.TestDistributedGrouping.simpleQuery(TestDistributedGrouping.java:274)
+   [junit4]    > 	at org.apache.solr.TestDistributedGrouping.doTest(TestDistributedGrouping.java:262)
+   [junit4]    > 	at org.apache.solr.BaseDistributedSearchTestCase.testDistribSearch(BaseDistributedSearchTestCase.java:875)
+   [junit4]    > 	at java.lang.Thread.run(Thread.java:745)
+
+
+
+top level query executed by the test...
+
+
+    // Can't validate the response, but can check if no errors occur.
+    simpleQuery("q", "*:*", "rows", 100, "fl", "id," + i1, "group", "true", "group.query", t1 + ":kings OR " + t1 + ":eggs", "group.limit", 10, "sort", i1 + " asc, id asc", CommonParams.TIME_ALLOWED, 1);
+
+
+
+Line where NPE happens...
+
+
+
+    SolrDocumentList docs = (SolrDocumentList)srsp.getSolrResponse().getResponse().get("response");
+    String uniqueIdFieldName = rb.req.getSchema().getUniqueKeyField().getName();
+
+    for (SolrDocument doc : docs) {                         // <-- LINE 45
+      Object id = doc.getFieldValue(uniqueIdFieldName).toString();
+      ShardDoc shardDoc = rb.resultIds.get(id);
+
+
+
+...so i'm guessing the problem here is that in some situations where TIME_ALLOWED is exceeded, we can now see processing continue with a null set of docs in the response?

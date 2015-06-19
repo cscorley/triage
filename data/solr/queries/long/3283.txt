@@ -1,0 +1,1 @@
+PingRequestHandler insists that "qt" be specified for its query.  I think it should be optional since the default request handler can be looked up via null.  QuerySenderListener doesn't mandate qt for the same reason.

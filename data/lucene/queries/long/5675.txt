@@ -1,0 +1,11 @@
+Today the primary key lookup in lucene is not that great for systems like solr and elasticsearch that have versioning in front of IndexWriter.
+
+To some extend BlockTree can "sometimes" help avoid seeks by telling you the term does not exist for a segment. But this technique (based on FST prefix) is fragile. The only other choice today is bloom filters, which use up huge amounts of memory.
+
+I don't think we are using everything we know: particularly the version semantics.
+
+Instead, if the FST for the terms index used an algebra that represents the max version for any subtree, we might be able to answer that there is no term T with version < V in that segment very efficiently.
+
+Also ID fields dont need postings lists, they dont need stats like docfreq/totaltermfreq, etc this stuff is all implicit. 
+
+As far as API, i think for users to provide "IDs with versions" to such a PF, a start would to set a payload or whatever on the term field to get it thru indexwriter to the codec. And a "consumer" of the codec can just cast the Terms to a subclass that exposes the FST to do this version check efficiently.

@@ -1,0 +1,21 @@
+We saw the following out of order log when close Zookeeper client session.
+
+
+2015-02-16 06:01:12,985 INFO org.apache.zookeeper.ZooKeeper: Session: 0x24b8df4044005d4 closed
+.....................................
+2015-02-16 06:01:12,995 INFO org.apache.zookeeper.ClientCnxn: EventThread shut down
+
+
+
+This logs are very confusing if a new Zookeeper client session is created between these two logs. We may think new Zookeeper client session shutdown it EventThread instead of the old closed Zookeeper client session.
+
+Should we wait for sendThread and eventThread died in the ClientCnxn.close?
+We can add the following code in ClientCnxn.close.
+
+
+sendThread.join(timeout);
+eventThread.join(timeout);
+
+
+with the change, we won't interleave old closed session with new session.
+We can also create a new close API to support this so we won't affect the old code if people use old close API.

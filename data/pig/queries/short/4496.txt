@@ -1,0 +1,1 @@
+Fix CBZip2InputStream to close underlying stream

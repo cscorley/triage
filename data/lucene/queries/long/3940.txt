@@ -1,0 +1,14 @@
+I modified BaseTokenStreamTestCase to assert that the start/end
+offsets match for graph (posLen > 1) tokens, and this caught a bug in
+Kuromoji when the decompounding of a compound token has a punctuation
+token that's dropped.
+
+In this case we should leave hole(s) so that the graph is intact, ie,
+the graph should look the same as if the punctuation tokens were not
+initially removed, but then a StopFilter had removed them.
+
+This also affects tokens that have no compound over them, ie we fail
+to leave a hole today when we remove the punctuation tokens.
+
+I'm not sure this is serious enough to warrant fixing in 3.6 at the
+last minute...

@@ -1,0 +1,1 @@
+IndexSearcher fails to pass docBase to Collector when using ExecutorService

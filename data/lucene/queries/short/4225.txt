@@ -1,0 +1,1 @@
+New FixedPostingsFormat for less overhead than SepPostingsFormat

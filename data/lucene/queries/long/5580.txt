@@ -1,0 +1,5 @@
+I have seen a couple of index corruptions over the last months, and most of them happened on stored fields. The explanation might just be that since stored fields are usually most of the index size, they are just more likely to be corrupted due to a hardware/operating-system failure, but it might be as well a sneaky bug on our side.
+
+Lucene recently added checksums to index files, and you can enable integrity verification upon merge, but this comes with a cost since you need to read all index files twice instead of once. If you are merging a very large segment and your merges are I/O-bound, this might be noticeable.
+
+I would like to implement integrity checks for stored fields on merges on the fly, so that the stored fields files need to be read only once.

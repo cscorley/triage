@@ -1,0 +1,1 @@
+Distinguish Editorial Results from "normal" results in the QueryElevationComponent

@@ -1,0 +1,1 @@
+PluckTuple is useful when cleaning up long prefixes in a lengthy Pig script. Currently, the udf filters out fields only with exact match, but it would be useful if it could filter based on regex/wildcard.

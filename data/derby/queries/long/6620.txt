@@ -1,0 +1,8 @@
+The swallowing occurs here:
+
+
+org.apache.derby.jdbc.ClientBaseDataSourceRoot run Catch java.lang.SecurityException 1 line 457
+
+
+
+Maybe a warning could be raised to alert the user to the problem and encourage them to correct their security policy.

@@ -1,0 +1,1 @@
+Incorrect handling of long values in AbstractResult

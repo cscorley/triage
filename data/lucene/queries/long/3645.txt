@@ -1,0 +1,1 @@
+varargs method callers don't have to wrap args in arrays

@@ -1,0 +1,1 @@
+The main Windows only shows "Loading" on IE 10. Working fine in Chrome.

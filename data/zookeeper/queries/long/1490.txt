@@ -1,0 +1,14 @@
+if the configured log directory does not exists zookeeper will not start. Better to create the directory and start
+in zkEnv.sh we can change as follows
+
+if [ "x$
+{ZOO_LOG_DIR}
+" = "x" ]
+then
+    ZOO_LOG_DIR="."
+   else
+    if [ ! -w "$ZOO_LOG_DIR" ] ; then
+        mkdir -p "$ZOO_LOG_DIR"
+    fi
+fi
+

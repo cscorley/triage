@@ -1,0 +1,3 @@
+The ganglia python module uses 'slope=positive' when submitting zk_packets_received and zk_packets_sent.  This results in a graph that is jagged (alternating valid results with zeros) at the highest resolution and under-represents the actual value at all averaged resolutions (>1hr).
+
+The module should be changed to calculate the delta in requests and report requests per second instead.

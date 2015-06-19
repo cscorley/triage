@@ -1,0 +1,1 @@
+Add max cfs segment size to LogMergePolicy and TieredMergePolicy

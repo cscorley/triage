@@ -1,0 +1,27 @@
+The following info is not returned even when they are available (on java 1.6 and 1.7): 
+
+
+
+getSystemLoadAverage()
+getOpenFileDescriptorCount()
+getMaxFileDescriptorCount()
+getCommittedVirtualMemorySize()
+getTotalPhysicalMemorySize()
+getTotalSwapSpaceSize()
+getProcessCpuTime()
+
+
+
+This is happening because the following exception is thrown: 
+
+
+
+java.lang.IllegalAccessException: Class org.apache.solr.handler.admin.SystemInfoHandler can not access a member of class com.sun.management.UnixOperatingSystem with modifiers "public native"
+
+
+
+It seems to be enough to call setAccessible(true) on the method to get rid of that exception.
+
+Additionally I see a strange value for the ulimit key:
+
+"ulimit":"(error executing: ulimit -n)",

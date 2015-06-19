@@ -1,0 +1,7 @@
+From Andy, commenting on SOLR-4196 
+
+I noticed a bug in Solr-4.1 release that if there are unloaded transient cores in solr.xml, and a new core is created via the admin handler, the record of the core in solr.xml is removed on persist.
+
+Creating as a separate bug, I don't want to lose it, but I havent verified it yet.
+
+Thanks for bringing this up Andy!

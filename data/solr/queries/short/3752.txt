@@ -1,0 +1,1 @@
+Currently it seems that when a leader goes down, he stays marked as the leader in the ClusterState - it's not strictly necessary, but I think the leader should be cleared until the new one is elected.

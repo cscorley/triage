@@ -1,0 +1,1 @@
+Solr Admin UI is completely dysfunctional on IE 9

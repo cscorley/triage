@@ -1,0 +1,1 @@
+According tests that Toke Eskildsen and I performed in LUCENE-4062, this impl is consistently faster than the current one on various archs/JVMs.

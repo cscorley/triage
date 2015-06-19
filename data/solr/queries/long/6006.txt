@@ -1,0 +1,3 @@
+I'm not sure what version this first appeared in, as we just bumped from 4.5 to 4.7, but log4j is specified as a dependency in the solr-solrj pom.xml, and without the optional flag. I checked out the source to verify that there isn't actually a dependency on log4j (doesn't seem to be), but I wasn't able to decipher the ant build (looks like there's a pom.xml.template that generates the pom with dependencies coming from Ivy?)
+
+Anyway, this is an issue since now we have to manually <exclude> log4j from every project that depends on SolrJ.

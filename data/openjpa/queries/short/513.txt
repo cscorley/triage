@@ -1,0 +1,1 @@
+No schema validation with Sun JDK

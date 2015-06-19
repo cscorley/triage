@@ -1,0 +1,10 @@
+My test case has run across an arithmetic bug in FixedStraightBytesImpl - specifically in the @Override on position(int). The combination of size=32 and docID = 70M produces a negative integer and causes a stacktrace in MMapDirectory.seek(long) which I will post below.  I would imagine that this hasn't been hit before because most index shards have less than 70M documents.
+
+That is to say, when asking for the docvalue in a FixedStraightBytes field where the size of values are 32 and the docID can be sufficiently high, an arithmetic overflow occurs in line 359 of FixedStraightBytesImpl.java, causing the method to return a negative value when operating on the first (0th) shard with a baseOffset of 0.  This produces an IllegalArgumentException:
+
+Caused by: java.lang.IllegalArgumentException: Seeking to negative position: MMapIndexInput(_7_5_dv.dat in path="/.../_7_dv.cfs" slice=5:2562955684)
+        at org.apache.lucene.store.MMapDirectory$MMapIndexInput.seek(MMapDirectory.java:396)
+        at org.apache.lucene.codecs.lucene40.values.FixedStraightBytesImpl$DirectFixedStraightSource.position(FixedStraightBytesImpl.java:359)
+        at org.apache.lucene.codecs.lucene40.values.DirectSource.getBytes(DirectSource.java:60)
+        at org.apache.lucene.codecs.lucene40.values.FixedStraightBytesImpl$DirectFixedStraightSource.getBytes(FixedStraightBytesImpl.java:349)
+        ...

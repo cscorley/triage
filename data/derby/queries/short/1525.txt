@@ -1,0 +1,1 @@
+Permissions-related syscat failures under DerbyNetClient on jdk1.3

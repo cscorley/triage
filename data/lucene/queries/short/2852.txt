@@ -1,0 +1,1 @@
+RAMInputStream hits false EOF if you seek to EOF then seek back then readBytes

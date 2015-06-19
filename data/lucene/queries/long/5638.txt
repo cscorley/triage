@@ -1,0 +1,7 @@
+Changes like LUCENE-5634 make it clear that the default AttributeFactory stuff has a very high cost: weakmaps/reflection/etc.
+
+Additionally I think clearAttributes() is more expensive than it should be: it has to traverse a linked-list, calling clear() per token.
+
+Operations like cloning (save/restoreState) have a high cost tll.
+
+Maybe we can have a better Default? In other words, rename DEFAULT_ATTRIBUTE_FACTORY to REFLECTION_ATTRIBUTE_FACTORY, and instead have a faster default factory that just has one AttributeImpl with the "core ones" that 95% of users are dealing with (TOKEN_ATTRIBUTE_FACTORY?): anything outside of that falls back to reflection.

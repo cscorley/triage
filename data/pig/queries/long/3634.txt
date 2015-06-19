@@ -1,0 +1,13 @@
+This is a followup for PIG-3534. In PIG-3534, we use 5 vertexes (3 DAGs) to implement an order-by. We can optimize to use 4 vertexes in 1 DAG:
+
+vertex 1: close the current vertex, create input + samples input
+vertex 2: aggregate samples to create quantiles
+vertex 3: use quantiles to partition input
+vertex 4: sort input after partition
+
+The DAG is:
+
+
+vertex 1   ------------------>  vertex 3 ------> vertex 4
+           \--> vertex 2 ---/
+

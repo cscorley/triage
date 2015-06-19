@@ -1,0 +1,7 @@
+When Simon created the nice looking javadocs for LuSolr 4.6, he just copypasted the command line from http://wiki.apache.org/lucene-java/HowToGenerateNiceJavadocs
+
+Unfortunately this does not work with AppleJDK6, because it has no rt.jar! The rt.jar file is there in a completely different directory and is named classes.jar. I had a similar problem when I wanted to regenerate the Javadocs on my Linux box, but specified -Dbootclasspath with shell specials (e.g., ~ for homedir).
+
+This patch will assist the user and will "validate" the given bootclasspath, so it points to a JAR file that actually contains the runtime. Also to make life easier, instead of -Dbootclasspath you can set -Dbootjdk to the JDK homefolder (same like JAVA_HOME) and ANT will figure out if it is Apple or Oracle or maybe only a JRE.
+
+In the meantime, I regenerated the 4.6 Javadocs with correct bootclasspath.

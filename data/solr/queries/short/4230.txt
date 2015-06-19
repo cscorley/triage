@@ -1,0 +1,1 @@
+Enhance geofilt and bbox parsers to support Solr 4 spatial field types

@@ -1,0 +1,3 @@
+The edismax request parameters on the Solr Admin Query from do not have hover titles, even though the corresponding dismax fields do.
+
+Solution: Copy the title attributes from the corresponding dismax parameters.

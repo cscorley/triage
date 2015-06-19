@@ -1,0 +1,1 @@
+PDFBox 1.7.1 fixes some bugs. I'm hitting PDFBOX-1353 and PDFBOX-1340. So I hope to upgrade PDFBox version of Tika's pom.xml

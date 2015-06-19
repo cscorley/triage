@@ -1,0 +1,1 @@
+Add initial work from SigmoidAnalytics Spork repo (https://github.com/sigmoidanalytics/spork) to Spark branch of Pig.

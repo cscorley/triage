@@ -1,0 +1,1 @@
+eliminate contrib/clustering/example by moving to main example disabled by default

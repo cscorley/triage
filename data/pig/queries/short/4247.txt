@@ -1,0 +1,1 @@
+S3 properties are not picked up from core-site.xml in local mode

@@ -1,0 +1,3 @@
+Backport of SOLR-2452 to branch_3x didn't change the package name of SolrJettyTestBase, so the package name org.apache.solr.client.solrj and the directory in which it now resides org/apache/solr/ are different.
+
+The package name should be changed to org.apache.solr (this is already done in trunk), and this will cause changes to package import statements where the class is used.

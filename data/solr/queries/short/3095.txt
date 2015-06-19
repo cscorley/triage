@@ -1,0 +1,1 @@
+update processor chain should check for "enable" attribute on all processors

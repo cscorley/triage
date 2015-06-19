@@ -1,0 +1,18 @@
+ContextImpl.java
+
+  private void putVal(String name, Object val, Map map) {
+    if(val == null) map.remove(name);
+    else entitySession.put(name, val);
+  }
+
+
+
+change to 
+
+ContextImpl.java
+
+  private void putVal(String name, Object val, Map map) {
+    if(val == null) map.remove(name);
+    else map.put(name, val);
+  }
+

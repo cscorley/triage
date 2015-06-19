@@ -1,0 +1,8 @@
+SolrResourceLoader currently allows to load files from any absolute/CWD-relative path, which is used as a fallback if the resource cannot be looked up via the class loader.
+
+We should limit this fallback to sub-dirs below the instanceDir passed into the ctor. The CWD special case should be removed, too (the virtual CWD is instance's config or root dir).
+
+The reason for this is security related. Some Solr components allow to pass in resource paths via REST parameters (e.g. XSL stylesheets, velocity templates,...) and load them via resource loader. By this it is possible to limit the whole thing to
+not allow loading e.g. /etc/passwd as a stylesheet.
+
+In 4.4 we should add a solrconfig.xml setting to enable the old behaviour, but disable it by default, if your existing installation requires the files from outside the instance dir which are not available via the URLClassLoader used internally. In Lucene 5.0 we should not support this anymore.

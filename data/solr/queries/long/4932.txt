@@ -1,0 +1,3 @@
+From elyograg: distribUpdateSoTimeout="0" distribUpdateConnTimeout="0" are added to the <cores> element when persisted.
+
+The problem with the current test is it have everything I could think of in it, and they are all preserved. Adding a test that has only the minimal solr.xml should flush out persisting the attribs not in the original.

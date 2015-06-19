@@ -1,0 +1,1 @@
+Admin UI - Note on Core-Admin about directories while creating core

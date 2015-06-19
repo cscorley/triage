@@ -1,0 +1,1 @@
+Add a min() function query, upgrade max() function query to take two value sources

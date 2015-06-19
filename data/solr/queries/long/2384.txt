@@ -1,0 +1,1 @@
+When in debug mode in the Velocity /browse GUI, it would be useful to be able to show all fields for the hits.

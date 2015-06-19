@@ -1,0 +1,1 @@
+This can result in non-duplicate documents being left out of the index. A solution would be that the fields to be used in the signature generation are recalculated with every document inserted.

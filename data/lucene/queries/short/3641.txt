@@ -1,0 +1,1 @@
+MultiReader does not propagate readerFinishedListeners to clones/reopened readers

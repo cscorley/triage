@@ -1,0 +1,23 @@
+i has a job which runs about 65 hours, but the dataimport?command=status http requests returns 5 hours.
+
+in getTimeElapsedSince method of DocBuilder:
+
+ 
+static String getTimeElapsedSince(long l) {
+    l = System.currentTimeMillis() - l;
+    return (l / (60000 * 60)) % 60 + ":" + (l / 60000) % 60 + ":" + (l / 1000)
+            % 60 + "." + l % 1000;
+  }
+
+ 
+
+the hours Compute is wrong, it mould be :
+
+ 
+static String getTimeElapsedSince(long l) {
+    l = System.currentTimeMillis() - l;
+    return (l / (60000 * 60)) + ":" + (l / 60000) % 60 + ":" + (l / 1000)
+            % 60 + "." + l % 1000;
+  }
+
+ 

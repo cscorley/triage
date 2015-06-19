@@ -1,0 +1,1 @@
+Solr should get it's temp dir like lucene - first checking the tempDir sys prop

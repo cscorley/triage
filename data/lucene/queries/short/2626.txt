@@ -1,0 +1,1 @@
+FastVectorHighlighter: enable FragListBuilder and FragmentsBuilder to be set per-field override

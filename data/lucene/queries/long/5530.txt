@@ -1,0 +1,18 @@
+Queries using QueryParser's non-default field e.g.
+author:"j* smith" are not supported by ComplexPhraseQueryParser. For example following code snippet 
+
+
+
+ComplexPhraseQueryParser qp = new ComplexPhraseQueryParser(TEST_VERSION_CURRENT, "defaultField", new MockAnalyzer(new Random()));
+      qp.parse("author:\"fred* smith\"") ;
+
+
+
+yields 
+
+
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot have clause for field "defaultField" nested in phrase  for field "author"
+	at org.apache.lucene.queryparser.complexPhrase.ComplexPhraseQueryParser.checkPhraseClauseIsForSameField(ComplexPhraseQueryParser.java:147)
+	at org.apache.lucene.queryparser.complexPhrase.ComplexPhraseQueryParser.newTermQuery(ComplexPhraseQueryParser.java:135)
+	... 49 more
+

@@ -1,0 +1,1 @@
+OverseerCollectionProcessor isn't properly generating https urls in some cases

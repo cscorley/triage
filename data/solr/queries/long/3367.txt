@@ -1,0 +1,1 @@
+We can show logging events in the Admin UI.

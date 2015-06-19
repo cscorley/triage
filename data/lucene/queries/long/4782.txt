@@ -1,0 +1,1 @@
+In SimpleNaiveBayesClassifier docsWithClassSize variable is initialized to MultiFields.getTerms(this.atomicReader, this.classFieldName).getDocCount() which may be -1 if the codec doesn't support doc counts, therefore there should be an alternative way to initialize such a variable with the documents count.

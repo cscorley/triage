@@ -1,0 +1,1 @@
+tie MockGraphTokenFilter into all analyzers tests

@@ -1,0 +1,3 @@
+The logging section of the UI isn't working on branch_4x or trunk.  The /solr/admin/info/logging handler response has an error tag saying Logging Not Initialized.  The problem can be seen by starting the example in the latest checkout from branch_4x or trunk.
+
+The logging UI in the version 4.4 example is working fine.

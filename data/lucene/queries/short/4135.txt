@@ -1,0 +1,1 @@
+TestNumericQueryParser fails on java 7

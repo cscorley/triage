@@ -1,0 +1,1 @@
+I'm using the Suggester.  When I switched from TSTLookup to FSTLookup, I noticed that it returned one fewer suggestion than what I asked for. I have spellcheck.onlyMorePopular=true; when I set it to false, I see the correct count. Another aspect of the bug is that this off-by-one bug only seems to occur when my suggestion has an exact match.

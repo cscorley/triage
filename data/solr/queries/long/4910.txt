@@ -1,0 +1,40 @@
+I'm working on SOLR-4862 (persisting a created core doesn't preserve some values) and at least compared to 4.3 code, persisting to solr.xml is completely broken.
+
+I learned to hate persistence while working on SOLR-4196 & etc. and I'm glad it's going away. I frequently got lost in implicit properties (they're easy to persist and shouldn't be), what should/shouldn't be persisted (e.g. the translated $
+{var:default}
+ or the original), and it was a monster, so don't think I'm nostalgic for the historical behavior.
+
+Before I dive back in I want to get some idea whether or not the current behavior was intentional or not, I don't want to go back into that junk only to undo someone else's work.
+
+Creating a new core (collection2 in my example) with persistence turned on in solr.xml for instance changes the original definition for collection1 (stock 4.x as of tonight) from this:
+
+<core name="collection1" instanceDir="collection1" shard="$
+{shard:}" collection="${collection:collection1}" config="${solrconfig:solrconfig.xml}" schema="${schema:schema.xml}"
+          coreNodeName="${coreNodeName:}"/>
+to this:
+
+
+  <core loadOnStartup="true" shard="${shard}
+" instanceDir="collection1/" transient="false" name="collection1" dataDir="data/" collection="$
+{collection:collection1}
+">
+      <property name="name" value="collection1"/>
+      <property name="config" value="solrconfig.xml"/>
+      <property name="solr.core.instanceDir" value="solr/collection1/"/>
+      <property name="transient" value="false"/>
+      <property name="schema" value="schema.xml"/>
+      <property name="loadOnStartup" value="true"/>
+      <property name="solr.core.schemaName" value="schema.xml"/>
+      <property name="solr.core.name" value="collection1"/>
+      <property name="solr.core.dataDir" value="data/"/>
+      <property name="instanceDir" value="collection1/"/>
+      <property name="solr.core.configName" value="solrconfig.xml"/>
+    </core>
+
+
+
+So, there are two questions:
+1> what is correct for 4.x?
+2> do we care at all about 5.x?
+
+As much as I hate to say it, I think that we need to go back to the 4.3 behavior. It might be as simple as not persisting in the <property> tags anything already in the original definition. Not quite sure what to put where in the newly-created core though, I suspect that the compact <core + attribs> would be best (assuming there's no <property> tag already in the definition. I really hate the mix of attributes on the <core> tag and <property> tags, wish we had one or the other....

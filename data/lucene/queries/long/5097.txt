@@ -1,0 +1,2 @@
+It might be a good idea to remove tons of useless code from tests:
+Most people use TokenStreams and Analyzers by only passing a String, wrapped by a StringReader. It would make life easier, if Analyzer would have an additional public (and final!!!) method that simply does the wrapping with StringReader by itsself. It might maybe not even needed to throw IOException (not sure)

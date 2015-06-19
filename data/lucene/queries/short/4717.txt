@@ -1,0 +1,1 @@
+Lucene40's DocValues (sometimes?) have a bogus extra ordinal

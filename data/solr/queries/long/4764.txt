@@ -1,0 +1,9 @@
+Spinoff from SOLR-4761
+
+Solr first opens a DirectoryReader from the directory, then later will pass this to IW openIfChanged.
+
+I noticed this when i was confused that mergedsegmentwarmer doesn't appear to work at first until after you've reopened...
+
+I'm not totally sure what the current behavior causes (does IW's pool reuse segments from this passed-in "external" reader, or is this causing some horrible doubling-up/inefficient stuff etc?). To some extent i think we should change it even if its actually performant: I think its confusing.
+
+I think ideally we'd change IndexReaderFactory's method to take writer instead of directory so that custom DirectoryReaders can still work.

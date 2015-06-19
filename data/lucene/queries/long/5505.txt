@@ -1,0 +1,3 @@
+Several dictionaries cannot be loaded today (Armenian, Papiamento, Macedonian, Russian, Urdu) because they have stuff like SET<tab>UTF-8, FLAG<space><space>UTF-8 or have a BOM marker on the first line (or even combinations of these).
+
+Also because SET need not be the first line in the file, we should ignore BOM markers on the first line in general (e.g. it might be something else like FLAG).

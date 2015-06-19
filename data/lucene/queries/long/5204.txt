@@ -1,0 +1,3 @@
+We have a few DirectoryWrapper implementations such as RateLimitedDirectoryWrapper and MockDirectoryWrapper. However, the Directory class is not straightforward to wrap since it already has logic for getting and setting the lock factory, so wrappers need to decide whether they should forward lock handling to the delegate or handle it themselves.
+
+I would like to move the locking logic out of the Directory class and to have a base FilterDirectory that could be extended by other directory wrapper impls.

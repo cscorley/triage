@@ -1,0 +1,1 @@
+FastVectorHighlighter truncates words at beginning and end of fragments

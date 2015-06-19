@@ -1,0 +1,1 @@
+openjpa does not process persistence unit default <cascade-persist>

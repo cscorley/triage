@@ -1,0 +1,1 @@
+Regenerate Snowball code so its not so heavy

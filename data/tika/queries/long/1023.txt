@@ -1,0 +1,19 @@
+Here is how the dependencu is declared:
+
+
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>vorbis-java-core</artifactId>
+      <version>${project.version}</version>
+      <classifier>tests</classifier>
+      <scope>test,provided</scope>
+    </dependency>
+
+
+
+It's the first time I see such a multiple scope.
+
+Among other things it make the Maven WAR plugin include this dependency as if it was a build scope dependency.
+
+
+I don't know if this worked in old version of Maven but org.apache.maven.model.Dependency has only one scope for sure.

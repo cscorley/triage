@@ -1,0 +1,1 @@
+On the Pig UDF page - http://pig.apache.org/docs/r0.11.0/udf.html#udfs, it says that - "Pig UDFs can currently be implemented in three languages: Java, Python, JavaScript, Ruby and Groovy." However, these are 5 languages. Very minor probably typing mistake. But thought of reporting it.

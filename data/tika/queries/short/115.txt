@@ -1,0 +1,1 @@
+Tika package with all the dependencies

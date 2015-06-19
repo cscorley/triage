@@ -1,0 +1,21 @@
+A list of Jira issues in the release notes are introduced with:
+
+'Bug Fixes
+
+    The following issues are addressed by Derby release 10.3.1.0 beta. These issues are not addressed in the preceding 10.2.2.0 release."
+
+The list of issues contains items that:
+
+
+	are not bug fixes:(e.g.  DERBY-2794, DERBY-2772)
+
+
+
+
+	are bug fixes that did not exist in 10.2.2.0 or early releases since they are related to fixes in new functionality (e.g. DERBY-2706)
+
+
+
+Note sure if the fix is to change the description to be a list of changes made for 10.3, or to only report bug fixes that have an affects field for 10.2.2.0 or earlier.
+
+Which ever approach is taken, I also wonder if sub-tasks should not be shown at all, since they tend to be a work management aid for developers, not intended for end-users.

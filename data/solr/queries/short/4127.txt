@@ -1,0 +1,1 @@
+Atomic updates used w/o updateLog should throw an error

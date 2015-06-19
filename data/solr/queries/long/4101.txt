@@ -1,0 +1,1 @@
+This will be useful for highlighters (particularly ones based on interval iterators, see LUCENE-2878)

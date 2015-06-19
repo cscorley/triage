@@ -1,0 +1,1 @@
+smokeTestRelease.py should be able to pass cmdline test args to 'ant test', e.g. "-Dtests.jettyConnector=Socket"; also, "ant nightly-smoke" should be able to pass these args to smokeTestRelease.py

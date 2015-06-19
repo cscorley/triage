@@ -1,0 +1,5 @@
+Reported by a user on the CDH user list (user reports that the listed fix addressed this issue for him): 
+
+"Net::ZooKeeper consumes 100% cpu when "wait" is used. At my initial inspection, it seems to be related to implementation mistake in pthread_cond_timedwait."
+
+https://rt.cpan.org/Public/Bug/Display.html?id=61290

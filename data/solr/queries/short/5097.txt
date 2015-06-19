@@ -1,0 +1,1 @@
+Add REST support for adding dynamic fields to the schema

@@ -1,0 +1,7 @@
+ant clean test -Dtestcase=AutoCommitTest -Dtestmethod=testMaxDocs -Dtests.seed=50ccee7e682c1673:-5043acd3fdf2c09f:123d82991d063e29 -Dargs="-Dfile.encoding=MacRoman"
+
+This fails for me 40% of the time or so. Also fails with -Dtests.iter.
+
+Set tests.iter=1000 on 3x and no problem.
+
+Don't quite know what the priority should be.

@@ -1,0 +1,1 @@
+Clarify FieldCache API around the use of NumericDocValues fields

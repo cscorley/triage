@@ -1,0 +1,3 @@
+run: mvn apache-rat:check,
+
+It gives errors. Rat is used to check all files have licenses etc.

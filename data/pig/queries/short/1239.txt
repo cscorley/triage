@@ -1,0 +1,1 @@
+PigContext.connect() should not create a jobClient and jobClient should be created on demand when needed

@@ -1,0 +1,1 @@
+Since the roles feature is not complete, provide a patch for masking the feature in the 10.4 release branch.

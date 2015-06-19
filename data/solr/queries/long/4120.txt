@@ -1,0 +1,5 @@
+When creating a new collection through the Collection API, the Overseer (handling the creation) will spread shards for this new collection across all live nodes.
+
+Sometimes you dont want a collection spread across all available nodes. Allow for the create operation of the Collection API, to take a createNodeSet parameter containing a list of Solr to spread the new shards across. If not provided it will just spread across all available nodes (default).
+
+For an example of a concrete case of usage see: https://issues.apache.org/jira/browse/SOLR-4114?focusedCommentId=13505506&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13505506

@@ -1,0 +1,14 @@
+This can happen if you have a sentence where the query terms match many times in the same sentence:
+
+for example if you query on "testing highlighter" but you have
+
+"Testing highlighters is sometimes harder than testing other things."
+
+The issue is that the formatter receives all 3 matches, but in this order:
+Testing (first occurrence)
+testing (second occurrence)
+highlighters
+
+The formatter expects the matches to be in sorted order by offset (not by term, then offset). This is how the javadocs say they should be.
+
+But there is currently a bug, a stupid side effect of how the ranking is done. Because of this, in this example "highlighters" isnt marked up in bold.

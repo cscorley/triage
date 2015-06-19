@@ -1,0 +1,15 @@
+Using 4.0 trunk version as of 3/16/2011
+
+Not sure at which point in the 4.0 trunk did this problem happen but this did not happen in previous versions.
+
+Symptom:
+
+1) Assume you have a search db with a query for "love" that returns 500 results.
+2) Append "&sort=anyfield desc" to the search query and you now only get 1 result back.
+
+I even rebuilt the db from scratch to make sure it was not a corrupted solr db but that is not the case.
+
+Temporary Fix:
+
+1) Append ",score desc" to the "sort" value such as "&sort=anyfield desc,score desc" fixes the issue and gives back the correct result.
+

@@ -1,0 +1,1 @@
+PIG-4333 split the BigData tests into groups. But still the tests take a long time because of Types tests as there are >35 tests in one group and Multiquery which has 27 tests in one group.

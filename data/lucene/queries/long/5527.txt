@@ -1,0 +1,36 @@
+Spin-off of LUCENE-5299.
+
+LUCENE-5229 proposes different changes, some of them being controversial, but there is one of them that I really really like that consists in refactoring the Collector API in order to have a different Collector per segment.
+
+The idea is, instead of having a single Collector object that needs to be able to take care of all segments, to have a top-level Collector:
+
+
+public interface Collector {
+
+  AtomicCollector setNextReader(AtomicReaderContext context) throws IOException;
+  
+}
+
+
+
+and a per-AtomicReaderContext collector:
+
+
+
+public interface AtomicCollector {
+
+  void setScorer(Scorer scorer) throws IOException;
+
+  void collect(int doc) throws IOException;
+
+  boolean acceptsDocsOutOfOrder();
+
+}
+
+
+
+I think it makes the API clearer since it is now obious setScorer and acceptDocsOutOfOrder need to be called after setNextReader which is otherwise unclear.
+
+It also makes things more flexible. For example, a collector could much more easily decide to use different strategies on different segments. In particular, it makes the early-termination collector much cleaner since it can return different atomic collectors implementations depending on whether the current segment is sorted or not.
+
+Even if we have lots of collectors all over the place, we could make it easier to migrate by having a Collector that would implement both Collector and AtomicCollector, return this in setNextReader and make current concrete Collector implementations extend this class instead of directly extending Collector.

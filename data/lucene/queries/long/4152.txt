@@ -1,0 +1,10 @@
+Description is exactly as written.
+
+getSequentialSubReaders/getTopLevelReaderContext, these method names are way too long/unuseable. They also have tricky semantics (e.g. returning null).
+
+In lucene 4, people cannot just use any indexreader and get a merged view. So we need to make this stuff easy on them:
+
+	single-syllable method name (leaves(), subs(), i will think on this)
+	supports enhanced for-loop (no returning null or anything like that)
+	on indexreader (not atomic or composite, plain old indexreader)
+

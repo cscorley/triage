@@ -1,0 +1,1 @@
+offsets in MemoryIndex broken when adding field with more than once

@@ -1,0 +1,1 @@
+Separate SegmentReaders (and other atomic readers) from composite IndexReaders

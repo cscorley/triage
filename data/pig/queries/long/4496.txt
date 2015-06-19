@@ -1,0 +1,1 @@
+CBZip2InputStream doesn't close the underlying FSDataInputStream when itself is closed. However, users such as BZip2LineRecordReader and XMLLoader assume CBZip2InputStream will do so. This leads to leaking resources and possible failure in reading the next split depending on the FileSystem implementation.

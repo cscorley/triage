@@ -1,0 +1,3 @@
+FuzzyQuery's maxEdit value must be larger than the length of both terms for there to be a match.  Based on a response from the java-user list, it looks like I wasn't the only one surprised by this.  Let's document this design choice more clearly in the documentation or modify the behavior.
+
+Apologies if I missed the documentation of this.

@@ -1,0 +1,14 @@
+This patch contains: 
+
+
+	FieldTermStack.TermInfo has now a field TermInfo.weight (float), which holds the index-weight (IDF) of the corresponding term
+	FieldPhraseList.WeightedPhraseInfo has now a field WeightedPhraseInfo.termsInfos (ArrayList<TermInfo>), which provides  information about the contained terms within the corresponding phrase
+	WeightedPhraseInfo.addIfNoOverlap() no longer dumps the second part of a hyphenated word (for example: social-economics)
+	FieldQueryTest has been updated
+
+
+
+Regarding test-cases: 
+TermInfo.toString() wasn't modified, thus, test-cases remain pretty much the same except the additional parameter for TermInfo-constructor. 
+
+This is the third (see LUCENE-4091, LUCENE-4107) patch aiming at the introduction of another method for weighting fragments (see LUCENE-3440). 

@@ -1,0 +1,1 @@
+Correct spatial and trie documentation links in JavaDocs and site

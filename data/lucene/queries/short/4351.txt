@@ -1,0 +1,1 @@
+Upgrade Spatial4j to 0.3

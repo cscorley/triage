@@ -1,0 +1,7 @@
+Robert had a great idea to save memory with CompressingStoredFieldsIndex.MEMORY_CHUNK: instead of storing the absolute start pointers we could compute the mean number of bytes per chunk of documents and only store the delta between the actual value and the expected value (avgChunkBytes * chunkNumber).
+
+By applying this idea to every n(=1024?) chunks, we would even:
+
+	make sure to never hit the worst case (delta ~= maxStartPointer)
+	reduce memory usage at indexing time.
+

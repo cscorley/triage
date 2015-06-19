@@ -1,0 +1,1 @@
+test_01_planCost has been failing for last couple nights on trunk and 10.11 with Unexpected SQL state. expected:<XIE0S> but was:<null>

@@ -1,0 +1,1 @@
+<lockType/> not used consistently in all places Directory objects are instantiated

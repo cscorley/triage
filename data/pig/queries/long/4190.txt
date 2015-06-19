@@ -1,0 +1,9 @@
+Related e2e tests: Union_7, Union_8, Union_13
+
+Sample script:
+a = load '/user/pig/tests/data/singlefile/studenttab10k' as (name, age, gpa);
+b = load '/user/pig/tests/data/singlefile/studentcolon10k' using PigStorage(':') as (name, age, gpa);
+c = union a, b;
+d = load '/user/pig/tests/data/singlefile/votertab10k' as (name, age, registration, contributions);
+e = join c by name, d by name using 'replicated';
+store e into '/user/pig/out/praveenr-1411380943-nightly.conf/Union_7.out';

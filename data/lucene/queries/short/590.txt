@@ -1,0 +1,1 @@
+Demo HTML parser gives incorrect summaries when title is repeated as a heading

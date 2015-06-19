@@ -1,0 +1,1 @@
+OptimisticLockEx due to rounding of a Timestamp (either by OJ, or the DB)

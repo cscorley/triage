@@ -1,0 +1,1 @@
+deleteInstanceDir is added to CoreAdminHandler but is not supported in Unload CoreAdminRequest

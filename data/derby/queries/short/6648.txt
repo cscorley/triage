@@ -1,0 +1,1 @@
+Application code should not be able to call ContextService.getContextOrNull()

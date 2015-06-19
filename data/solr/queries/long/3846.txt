@@ -1,0 +1,48 @@
+Here's the seed was using, but this is apparently unnecessary:
+
+<JUnit4> says ¡Hola! Master seed: 6785BB3284A15298
+
+eventually it seems to complete, but it takes many minutes, for instance this was reported once, but I usually lose patience and ctrl-c out:
+
+
+[junit4:junit4] Completed on J2 in 2449.62s, 1 test
+[junit4:junit4] 
+[junit4:junit4] JVM J0:     1.21 ..   266.67 =   265.47s
+[junit4:junit4] JVM J1:     1.21 ..   238.33 =   237.12s
+[junit4:junit4] JVM J2:     1.21 ..  2538.60 =  2537.39s
+[junit4:junit4] JVM J3:     0.97 ..   267.37 =   266.40s
+[junit4:junit4] Execution time total: 42 minutes 18 seconds
+
+
+and a lot of lines like:
+HEARTBEAT J2: 2012-09-16T17:38:38, no events in:  187s, approx. at: TestReplicationHandler.test
+
+
+Yonik reports that he can make this happen 100% of the time on OS X/Lion, which squares with my experience as I recall. Yonik also reports...
+
+On my linux box (built in '09, PhenomII, HDD) the test takes 50-55 sec.
+On my kids old windows box ('08, athlon64, HDD, Win7) the test takes 88-95 sec.
+
+On my mac it always takes forever, and I see loops of stuff like this:
+
+
+
+SEVERE Master at: http://localhost:62803/solr is not available. Index
+fetch failed. Exception:
+org.apache.solr.client.solrj.SolrServerException: Server refused
+connection at: http://localhost:62803/solr
+[junit4:junit4]   2> 52751 T219 C17 UPDATE [collection1] webapp=/solr
+path=/update params={wt=javabin&version=2} {add=[150]} 0 0
+[junit4:junit4]   2> 52755 T219 C17 UPDATE [collection1] webapp=/solr
+path=/update params={wt=javabin&version=2} {add=[151]} 0 0
+[junit4:junit4]   2> 62758 T215 oash.SnapPuller.fetchLatestIndex
+SEVERE Master at: http://localhost:62803/solr is not available. Index
+fetch failed. Exception:
+
+
+
+And I'm soooo happy it's not happening to others and just being swept under the rug, restores my faith. I should have known better 
+
+See the discussion on the dev list labeled "being a good citizen is hard when you can't successfully run tests" for more context.
+
+I don't know how much time I'll have to dive in to it but I'll certainly be happy to test anyone's patch.

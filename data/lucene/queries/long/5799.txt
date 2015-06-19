@@ -1,0 +1,6 @@
+This method (used for both numeric docvalues and norms) is a little slow:
+
+	does some boxing for no good reason (can just use a boolean instead)
+	checks docsWithField always, instead of only when value == 0. This can cause unnecessary i/o.
+
+

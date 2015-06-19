@@ -1,0 +1,11 @@
+lucene-misc contrib module has two package names equals to the core version: org.apache.lucene.index and org.apache.lucene.store. For theese modules we need to configure the creation of the bundles so that the OSGI repository recognize theese packages as merged else we get a 'uses constraint violation' error in the installation.
+
+The solution is to mark the packages as mergeables adding a configuration in the maven-bunde-plugin:
+
+        <configuration>
+          <instructions>
+                <Export-Package>*;-split-package:=merge-first</Export-Package>
+          </instructions>
+        </configuration>
+
+the * represents the package names. We could put org.apache.lucene.* too

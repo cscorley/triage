@@ -1,0 +1,1 @@
+Efficient compression of small to medium stored fields

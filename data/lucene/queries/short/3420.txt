@@ -1,0 +1,1 @@
+assertion derived class modifier from parent class silently breaks backward compatibility

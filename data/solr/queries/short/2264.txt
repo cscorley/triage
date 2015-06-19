@@ -1,0 +1,1 @@
+CSVRequestHandler can throw NPE when no escape parameter is specified for splitting

@@ -1,0 +1,1 @@
+Filter stack traces on console output.

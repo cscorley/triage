@@ -1,0 +1,8 @@
+In the process also cleanup the following: The CollectionAdminRequest has a createCollection() method which has the following hard-coded:
+
+
+req.setRouterName("implicit");
+
+
+
+This is a bug and we should remove it.

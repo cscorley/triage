@@ -1,0 +1,24 @@
+LUCENE-2048 drew my attention to SchemaField.calProps and made me realize that some of the validation checks in this method are backwards
+
+The check rmuir added in LUCENE-2048 seems to just bea straight up mistake...
+
+	omitTermFreqAndPosition=false, omitPositions=true ... ERROR
+	omitTermFreqAndPosition=true, omitPositions=false ... NO error but non-sense
+
+
+
+The following however are long standing oddities...
+
+	indexed=false omitNorms=true ... ERROR
+	indexed=false omitTermFreqAndPositions=true ... ERROR
+	indexed=false omitNorms=false ... NO error but non-sense
+	indexed=false omitTermFreqAndPositions=false ... NO error but non-sense
+	(omitPositions was added to the "INDEX" check and has similar problems)
+
+
+
+I asked yonik about this in IRC, and he speculates that the reason this test started out that way is that it doesn't make any sense to ask for some index specific stuff to be omited if you have already said you don't want indexing at all.
+
+my counter point was that it doesn't hurt to ask for some indexing metadata to be omited, but it certainly doesn't make sense to explicitly ask for any of that metadata to be left in if you asid you don't want any indexing.
+
+To draw an analogy: "Please omit the dressing from my salad, and please don't bring me a salad" is a redundant request, but it doesn't hurt anything.  "Please make sure there is dressing on my salad, and please don't bring me a salad" makes no sense at all – if you don't want the salad, then why are asking for dressing on it?

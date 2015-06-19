@@ -1,0 +1,95 @@
+When reviewing my Jenkins installation, I found out that /tmp is filled by Jenkins with the following files (in Linux and Windows).
+
+rw-rr- 1 jenkins  nogroup     12433 Jul  5 21:14
+RefSorter-1839005885812820606.sorted
+rw-rr- 1 jenkins  nogroup     13574 Jul  5 19:26
+RefSorter-2799526995307200478.sorted
+rw-rr- 1 jenkins  nogroup     12600 Jul  5 17:14
+RefSorter-2841491891429925756.sorted
+rw-rr- 1 jenkins  nogroup     11697 Jul  5 19:57
+RefSorter-3302954184439492426.sorted
+rw-rr- 1 jenkins  nogroup     13496 Jul  5 16:30
+RefSorter-3738422482066276549.sorted
+rw-rr- 1 jenkins  nogroup     13781 Jul  5 15:36
+RefSorter-4235756851148318773.sorted
+rw-rr- 1 jenkins  nogroup     12719 Jul  5 18:54
+RefSorter-4530019493984469514.sorted
+rw-rr- 1 jenkins  nogroup     12696 Jul  5 16:04
+RefSorter-5245195867837976219.sorted
+rw-rr- 1 jenkins  nogroup     13879 Jul  5 18:27
+RefSorter-5977302780601133089.sorted
+rw-rr- 1 jenkins  nogroup     12712 Jul  5 21:39
+RefSorter-6336186633027300753.sorted
+rw-rr- 1 jenkins  nogroup     12820 Jul  5 20:30
+RefSorter-6447286760971372233.sorted
+rw-rr- 1 jenkins  nogroup     12105 Jul  5 17:48
+RefSorter-6532780916605441895.sorted
+rw-rr- 1 jenkins  nogroup     13505 Jul  5 20:53
+RefSorter-7247901917320979657.sorted
+rw-rr- 1 jenkins  nogroup     12688 Jul  5 22:10
+RefSorter-7796370222379929612.sorted
+rw-rr- 1 jenkins  nogroup        19 Jul  5 18:54
+sort1277839437346448611partition
+rw-rr- 1 jenkins  nogroup  21299752 Jul  5 15:35
+sort1362726822297484023intermediate
+rw-rr- 1 jenkins  nogroup  21300496 Jul  5 17:48
+sort1435680293746542872intermediate
+rw-rr- 1 jenkins  nogroup        19 Jul  5 16:30
+sort1498884601796138622partition
+rw-rr- 1 jenkins  nogroup  21300869 Jul  5 20:30
+sort1634015425760928615intermediate
+rw-rr- 1 jenkins  nogroup        19 Jul  5 20:30
+sort1954741677243403383partition
+rw-rr- 1 jenkins  nogroup  21300802 Jul  5 20:53
+sort2203784121687916561intermediate
+rw-rr- 1 jenkins  nogroup  21300493 Jul  5 22:10
+sort24154414907891444intermediate
+rw-rr- 1 jenkins  nogroup        19 Jul  5 22:10
+sort2816986454022083882partition
+rw-rr- 1 jenkins  nogroup  21300111 Jul  5 18:27
+sort285022281545547041intermediate
+rw-rr- 1 jenkins  nogroup        19 Jul  5 18:28
+sort295507558144077223partition
+rw-rr- 1 jenkins  nogroup  21300569 Jul  5 16:30
+sort3013772538520090513intermediate
+rw-rr- 1 jenkins  nogroup  21300574 Jul  5 17:14
+sort3297463807520676013intermediate
+rw-rr- 1 jenkins  nogroup        19 Jul  5 21:14
+sort3364874175018276528partition
+rw-rr- 1 jenkins  nogroup        19 Jul  5 17:14
+sort3846182021346233750partition
+rw-rr- 1 jenkins  nogroup  21300204 Jul  5 19:26
+sort4397860673342757974intermediate
+rw-rr- 1 jenkins  nogroup  21300050 Jul  5 16:04
+sort4474792189525490476intermediate
+rw-rr- 1 jenkins  nogroup  21300825 Jul  5 18:54
+sort4518448528614283778intermediate
+rw-rr- 1 jenkins  nogroup        19 Jul  5 21:39
+sort4756172476965226743partition
+rw-rr- 1 jenkins  nogroup        19 Jul  5 20:53
+sort5416699953867843402partition
+rw-rr- 1 jenkins  nogroup        19 Jul  5 19:26
+sort5558474409634346477partition
+rw-rr- 1 jenkins  nogroup        19 Jul  5 17:48
+sort6281513108922200314partition
+rw-rr- 1 jenkins  nogroup  21300155 Jul  5 21:39
+sort6639309492804635005intermediate
+rw-rr- 1 jenkins  nogroup        19 Jul  5 19:57
+sort6777765458777941142partition
+rw-rr- 1 jenkins  nogroup  21301369 Jul  5 19:57
+sort6973021800616034113intermediate
+rw-rr- 1 jenkins  nogroup  21300341 Jul  5 21:14
+sort7260811068342958052intermediate
+rw-rr- 1 jenkins  nogroup        19 Jul  5 16:04
+sort852078170643422390partition
+rw-rr- 1 jenkins  nogroup        19 Jul  5 15:35
+sort8857722113319559286partition
+
+The pattern "RefSorter-" I found in Lucene's source code, so it must come
+from tests. Why are they not cleaned up and why do we need those files? Would a RamDirectory not be enough for this?
+
+This is serious, as the files are never cleaned up, they stay alive when the test passes, so its not caused by the always failing Solr Suggester tests.
+
+There are also other filenames with .sorted and similar at end.
+
+The slave was taken automatically offline after its RAM-based /tmp (2 GB) was filling in <24h). On the Windows Box c:\Users\JenkinsSlave\AppData\Temp contained already 60,000 files like this (still deleting them), taking 12 GB of disk space. I will review Apache Jenkins, too -> also cleaned up lots of files.

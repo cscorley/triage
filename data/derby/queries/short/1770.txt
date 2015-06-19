@@ -1,0 +1,1 @@
+Make "mode db2sql" an optional phrase in the "create trigger" statement

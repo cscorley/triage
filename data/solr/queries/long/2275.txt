@@ -1,0 +1,1 @@
+Any whitespace around simple mm parameters in the configuration file produces a NumberFormatException at SolrPluginUtils.java:625. E.g. <str> 2 <str>. Adding whitespace in tests also causes this error to occur.

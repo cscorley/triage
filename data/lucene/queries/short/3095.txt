@@ -1,0 +1,1 @@
+TestIndexWriter#testThreadInterruptDeadlock fails with OOM 

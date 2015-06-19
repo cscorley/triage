@@ -1,0 +1,5 @@
+The shard splitting feature changed the method definition of ZkController#preRegister to accept a SolrCore instead of CoreDescriptor.
+
+From the comments in SOLR-3755:
+Set update log to buffering mode before it is published (fixes bug with extra doc count on sub-shard)
+Regarding those changes - I'd really like to find another way to do that. The original change around this made preRegister start taking a core rather than a core descriptor. I'd like to work that out so it doesn't need to be the case. That is where the core will find out some of it's properties (shard id, core node name, perhaps more in the future). It would be nice if the core init code had access to this information - so it would be nice if we could call preRegister (or some refactored version) before actually creating the SolrCore.

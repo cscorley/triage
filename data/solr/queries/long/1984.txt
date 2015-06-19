@@ -1,0 +1,3 @@
+Please can you include my contribution into Solr night builds.
+
+I can not compile on Linux server, I have tested only on Windows. 

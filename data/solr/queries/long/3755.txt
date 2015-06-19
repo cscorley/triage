@@ -1,0 +1,1 @@
+We can currently easily add replicas to handle increases in query volume, but we should also add a way to add additional shards dynamically by splitting existing shards.

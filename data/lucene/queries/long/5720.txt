@@ -1,0 +1,1 @@
+These are heavily optimized for the in-RAM case (for example FieldCache uses PackedInts.FAST to make it even faster so), but for the docvalues case they are not: we always essentially use COMPACT, we have only one decoder that must solve all the cases, even the complicated ones, we use BlockPackedWriter for all integers (even if they are ordinals), etc.

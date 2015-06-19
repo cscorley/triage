@@ -1,0 +1,1 @@
+Only return versions in update responses when requested

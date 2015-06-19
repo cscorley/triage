@@ -1,0 +1,1 @@
+Killed JVM when first commit was running will generate a corrupted index

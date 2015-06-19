@@ -1,0 +1,1 @@
+ConcurrentLRUCache can throw class cast exception

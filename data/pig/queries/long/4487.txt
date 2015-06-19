@@ -1,0 +1,10 @@
+  If there are multiple output vertices, even though commit is it at DAG level and no records are stored till the whole DAG is successful, pig stats says successfully stored records for successful vertices. It should say that only if vertex level commit is set to true.
+
+For eg:
+Input(s):
+Successfully read 301 records (7930 bytes) from: "aaa"
+Successfully read 301 records (7136 bytes) from: "bbb"
+
+Output(s):
+Failed to produce result in "xxx"
+Successfully stored 10 records (738 bytes) in: "yyy"

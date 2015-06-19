@@ -1,0 +1,22 @@
+Noticed during some leadership election when we shutdown Solr nodes.  
+Delving through the code it seems that PeerSync uses the /get handler (with some very ugly code explicitly creating an HTTP request by hand). If that isn't configured, then any election change will cause a full sync in ALL replicas for the shard in question.
+
+
+2013-11-25 06:35:39,766 INFO [main-EventThread] o.a.s.c.SyncStrategy [SyncStrategy.java:94] Sync replicas to http://xxxxx:xxx/solr/xxxx_shard74_replica1/
+2013-11-25 06:35:39,766 INFO [main-EventThread] o.a.s.u.PeerSync [PeerSync.java:186] PeerSync: core=xxx_shard74_replica1 u
+rl=http://xxxxxxx:xxxxx/solr START replicas=[http://xxxxxxx:xxxx/solr/xxx_shard74_replica2/, http://xxxx:xxx/sol
+r/xxx_shard74_replica3/] nUpdates=100
+2013-11-25 06:35:39,768 WARN [main-EventThread] o.a.s.u.PeerSync [PeerSync.java:321] PeerSync: core=xxx_shard74_replica1 u
+rl=http://xxx:xxx/solr  got a 404 from http://xxx:xxx/solr/xxx_shard74_replica2/, counting as success
+2013-11-25 06:35:39,769 INFO [main-EventThread] o.a.s.u.PeerSync [PeerSync.java:273] PeerSync: core=xxx_shard74_replica1 u
+rl=http://nsrchnj2:10650/solr DONE. sync succeeded
+2013-11-25 06:35:39,769 INFO [main-EventThread] o.a.s.c.SyncStrategy [SyncStrategy.java:134] Sync Success - now sync replicas to me
+2013-11-25 06:35:39,769 INFO [main-EventThread] o.a.s.c.SyncStrategy [SyncStrategy.java:191] http://xxx:xxx/solr/xxx_shard74_replica1/: try and ask http://xxx:xxx/solr/xxx_shard74_replica2/ to sync
+2013-11-25 06:35:39,771 ERROR [main-EventThread] o.a.s.c.SyncStrategy [SolrException.java:129] Sync request error: org.apache.solr.client.
+solrj.impl.HttpSolrServer$RemoteSolrException: Server at http://xxx:xxx/solr/xxx_shard74_replica3 returned non ok 
+status:404, message:Not Found
+2013-11-25 06:35:39,771 INFO [main-EventThread] o.a.s.c.SyncStrategy [SyncStrategy.java:211] http://xxx:xxx/solr/xxx_shard74_replica1/: Sync failed - asking replica (http://xxx:xxx/solr/xxx_shard74_replica2/) to recover.
+
+
+
+The triggers here (for me) were the 404 response codes, but we should just make it clear in the docs that the /get handler is required and shouldn't be removed (if using Solr Cloud)

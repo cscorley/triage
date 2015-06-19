@@ -1,0 +1,5 @@
+The nightly builds are timing out, here are the problems
+
+	we need to get a notification of build failure when this happens, because if they just silently die they dont report anything to the dev list, masking real test failures (like this one https://builds.apache.org/view/G-L/view/Lucene/job/Lucene-trunk/1624/testReport/org.apache.lucene.search/TestNumericRangeQuery32/testEnum/)
+	we need to fix the tests with NIGHTLY so that this generally succeeds
+

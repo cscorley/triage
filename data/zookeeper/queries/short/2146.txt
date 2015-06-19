@@ -1,0 +1,1 @@
+BinaryInputArchive readString should check length before allocating memory

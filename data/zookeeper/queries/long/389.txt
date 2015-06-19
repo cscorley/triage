@@ -1,0 +1,3 @@
+The current c shell should have help information (in the shell)
+
+currently it's hard to know what commands are available

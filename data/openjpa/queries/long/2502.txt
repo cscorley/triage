@@ -1,0 +1,18 @@
+Running an example in the spec using Criteria API with "left join fetch" AND query cache enabled yield the following NPE exception. See the testcase to reproduce the problem and the spec section where the example comes from:
+
+<openjpa-2.2.1.1-SNAPSHOT-r422266:1438134 nonfatal user error> org.apache.openjpa.persistence.ArgumentException: Failed to execute query "null". Check the query syntax for correctness. See nested exception for details.
+	at org.apache.openjpa.kernel.QueryImpl.execute(QueryImpl.java:872)
+	at org.apache.openjpa.kernel.QueryImpl.execute(QueryImpl.java:794)
+	at org.apache.openjpa.kernel.DelegatingQuery.execute(DelegatingQuery.java:542)
+	at org.apache.openjpa.persistence.QueryImpl.execute(QueryImpl.java:286)
+	at org.apache.openjpa.persistence.QueryImpl.getResultList(QueryImpl.java:302)
+	at com.ibm.ws.persistence.QueryImpl.getResultList(QueryImpl.java:118)
+	at test.TestNPE.test(TestNPE.java:62)
+......
+Caused by: java.lang.NullPointerException
+	at org.apache.openjpa.datacache.QueryKey.createKey(QueryKey.java:203)
+	at org.apache.openjpa.datacache.QueryKey.newInstance(QueryKey.java:139)
+	at org.apache.openjpa.datacache.QueryCacheStoreQuery$QueryCacheExecutor.executeQuery(QueryCacheStoreQuery.java:339)
+	at org.apache.openjpa.kernel.QueryImpl.execute(QueryImpl.java:1005)
+	at org.apache.openjpa.kernel.QueryImpl.execute(QueryImpl.java:863)
+	... 33 more

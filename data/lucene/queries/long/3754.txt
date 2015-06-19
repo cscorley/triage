@@ -1,0 +1,1 @@
+Currently, generated archive manifests are all stored in the same location, so each module's build overwrites the previously built module's manifest.  Locating these files in the per-module build dirs will allow them to be rebuilt only when necessary, rather than every time a module's jar target is called.

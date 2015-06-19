@@ -1,0 +1,6 @@
+after commit patch of PIG-4362. Many unittest in Jenkins fails
+error message:
+Caused by: java.lang.NullPointerException
+	at org.apache.pig.backend.hadoop.executionengine.spark.SparkLauncher.cleanUpSparkJob(SparkLauncher.java:182)
+	at org.apache.pig.backend.hadoop.executionengine.spark.SparkLauncher.launchPig(SparkLauncher.java:176)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.launchPig(HExecutionEngine.java:301)

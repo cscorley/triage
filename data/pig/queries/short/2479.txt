@@ -1,0 +1,1 @@
+changingPattern should be used with checkmodified in ivysettings.xml

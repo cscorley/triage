@@ -1,0 +1,1 @@
+Edismax parser does not honor mm parameter if analyzer splits a token

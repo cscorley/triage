@@ -1,0 +1,1 @@
+The core jar in the tarball contains the kitchen sink 

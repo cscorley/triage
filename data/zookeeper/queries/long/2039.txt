@@ -1,0 +1,3 @@
+The Jute utility's naïve byte-array comparison compares b1[off1+i] with b2[off2+1]. (A literal 1, not the variable i)
+
+It should be off2+i, in parallel with the other operand.

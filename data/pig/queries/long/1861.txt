@@ -1,0 +1,12 @@
+a = load '$in' using com.yahoo.grid.sath.JobHistoryLoader() as
+(job:map[],maps:bag{},reducers:bag{},other:bag{},conf:map[]);
+
+The pig script stored in: conf#'pig.script' has the whitespace removed, this makes it difficult to extract and run the
+script. In particular, statements that terminate in ";" work correctly as
+"statement1;statement2;statement99"  but statements that do not end in ";" result in
+"statement1statement2statement3" and it's difficult to parse the pig script and fix the concatenated string.
+
+There's also a problem with comments as in:
+
+/mycomment//more comments/ PIG_CODE //comment PIG_CODE
+On a side note, I also noticed that in many of the scripts the last statement is missing ";"

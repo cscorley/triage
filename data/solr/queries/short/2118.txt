@@ -1,0 +1,1 @@
+IndexReaderFactory.setTermIndexInterval is misleading and confusing

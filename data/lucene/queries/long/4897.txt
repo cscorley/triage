@@ -1,0 +1,8 @@
+Mike McCandless said in lucene-java-user mailing list.
+"Maybe we could add some simple sugar APIs?
+
+Eg something like Collection<CategoryPath> getChildren(int parentOrd)?
+ (Or maybe it returns Iterator<CategoryPath>?)"
+
+What about Collection<Integer> getChildren(int parentOrd)?
+Integer would be more versatile and can easily be converted to CategoryPath with TaxonomyReader.getPath.

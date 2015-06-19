@@ -1,0 +1,1 @@
+DocTermsOrds lookupTerm is wrong in some cases

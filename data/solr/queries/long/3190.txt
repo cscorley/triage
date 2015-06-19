@@ -1,0 +1,4 @@
+I'm working on a couple of SolrEntityProcessor improvements:
+
+1) ability to provide a specific HttpClient instance to make authentication, https connections and so on.
+2) introduce consistency between solr parameters and parameters used from SolrEntityProcessor to query Solr: better rename fields to fl and format to wt while we can (the processor has not been released yet). Better use CommonParams constants instead of new ones with same content.

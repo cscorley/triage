@@ -1,0 +1,14 @@
+IndexSearcher has 3 methods:
+
+
+StoredDocument doc(int)
+void doc(int, StoredFieldVisitor)
+final StoredDocument document(int, Set<String>)
+
+
+
+The last one is confusing for subclasses (e.g. SolrIndexSearcher) that override these methods. for example that one has its own StoredDocument doc(int, Set) method. 
+
+But now this means a user could always call the wrong method (this final document() method) and get the wrong behavior (versus calling doc()).
+
+I think the name is also wrong. it should be doc() like the others.

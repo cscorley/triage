@@ -1,0 +1,1 @@
+GeoShape intersects filter omitted matching docs

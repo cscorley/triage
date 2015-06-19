@@ -1,0 +1,7 @@
+A colleague of mine has spotted this error in time calculation in the code in zkfuse.cc lines 81 to 85:
+inline
+uint64_t nanosecsToMillisecs(uint64_t nanosecs)
+{
+    return nanosecs * 1000000;
+}
+I am not sure how this method is used, but for sure it will make something wrong happen if it is.

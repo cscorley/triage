@@ -1,0 +1,1 @@
+SolrZkClient#setData should return Stat object.

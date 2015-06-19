@@ -1,0 +1,9 @@
+
+
+if ($testCmd->{'exectype'} eq "tez") {
+        push(@baseCmd, ("-x", "tez"));
+    }
+
+
+
+It should just push the exectype.

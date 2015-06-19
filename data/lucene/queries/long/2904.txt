@@ -1,0 +1,1 @@
+Now that LogMP can do non-contiguous merges, the fact that it disregards which segments are already being merged is more problematic since it could result in it returning conflicting merges and thus failing to run multiple merges concurrently.

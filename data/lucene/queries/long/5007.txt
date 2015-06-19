@@ -1,0 +1,13 @@
+SOLR-4189 added sensitivity to sysprop tests.jettyConnector to allow setting test mode Jetty to use Socket connector instead of the default SelectChannel connector.
+
+New module lucene/replicator is running into the same problem, failing 100% of the time when running under 'ant nightly-smoke' on ASF Jenkins on FreeBSD.
+
+At present there's no way from smokeTestRelease.py, or from "ant nightly-smoke", to pass through this sysprop (or any other).
+
+Robert Muir wrote on dev@l.o.a about one of the replicator module's failures on FreeBSD:
+
+
+This is a jenkins setup/test harness issue.
+
+there needs to be a way for the jetty connector sysprop to be passed
+all the way thru to ant test running from the smoketester.

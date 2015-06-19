@@ -1,0 +1,15 @@
+At line 106:
+
+
+    while (continueTrying && ++tries < maxTries) {
+
+
+
+should be
+
+
+    while (continueTrying && ++tries <= maxTries) {
+
+
+
+This is only a problem when called from DistributedUpdateProcessor, as it can have maxTries set to 1, which means the loop is never actually run.

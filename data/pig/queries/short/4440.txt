@@ -1,0 +1,1 @@
+Some code samples in documentation use Unicode left/right single quotes, which cause a parse failure.

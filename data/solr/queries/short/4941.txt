@@ -1,0 +1,1 @@
+useCompoundFile default has changed, simple config option no longer seems to work

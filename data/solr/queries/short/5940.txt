@@ -1,0 +1,1 @@
+Make post.jar report back detailed error in case of 400 responses

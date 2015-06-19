@@ -1,0 +1,1 @@
+User code can cast a java.sql.Connection to an EmbedConnection and then get the LanguageConnectionContext by calling EmbedConnection.getLanguageConnection(). We should prevent user code from doing this.

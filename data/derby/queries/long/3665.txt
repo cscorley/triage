@@ -1,0 +1,27 @@
+Seen when starting release testing on 10.3.3.0: http://dbtg.thresher.com/derby/test/index.html#10.3Releases , but was already reported in 10.3 tinderbox test: http://dbtg.thresher.com/derby/test/tinderbox_10.3_16/jvm1.6/testing/Limited/testSummary-652963.html
+
+
+"Method":
+derbynet/testProperties.java
+
+"Signature":
+6 del
+< Apache Derby Network Server - 10.3.2.2 -(EXPECTED SUBVERSION INFO)  shutdown at xxxxxxFILTERED-TIMESTAMPxxxxxGMT
+6a6
+> Apache Derby Network Server - 10.3.3.0 -(EXPECTED SUBVERSION INFO)  shutdown at xxxxxxFILTERED-TIMESTAMPxxxxxGMT
+11 del
+< Apache Derby Network Server - 10.3.2.2 -(EXPECTED SUBVERSION INFO)  shutdown at xxxxxxFILTERED-TIMESTAMPxxxxxGMT
+11a11
+> Apache Derby Network Server - 10.3.3.0 -(EXPECTED SUBVERSION INFO)  shutdown at xxxxxxFILTERED-TIMESTAMPxxxxxGMT
+16 del
+< Apache Derby Network Server - 10.3.2.2 -(EXPECTED SUBVERSION INFO)  shutdown at xxxxxxFILTERED-TIMESTAMPxxxxxGMT
+16a16
+> Apache Derby Network Server - 10.3.3.0 -(EXPECTED SUBVERSION INFO)  shutdown at xxxxxxFILTERED-TIMESTAMPxxxxxGMT
+20 del
+< Apache Derby Network Server - 10.3.2.2 -(EXPECTED SUBVERSION INFO)  shutdown at xxxxxxFILTERED-TIMESTAMPxxxxxGMT
+20a20
+> Apache Derby Network Server - 10.3.3.0 -(EXPECTED SUBVERSION INFO)  shutdown at xxxxxxFILTERED-TIMESTAMPxxxxxGMT
+61 del
+< Apache Derby Network Server - 10.3.2.2 -(EXPECTED SUBVERSION INFO)  shutdown at xxxxxxFILTERED-TIMESTAMPxxxxxGMT
+61a61
+> Apache Derby Network Server - 10.3.3.0 -(EXPECTED SUBVERSION INFO)  shutdown at xxxxxxFILTERED-TIMESTAMPxxxxxGMT

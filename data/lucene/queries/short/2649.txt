@@ -1,0 +1,1 @@
+FieldCache should include a BitSet for matching docs

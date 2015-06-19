@@ -1,0 +1,1 @@
+If derbytesting.jar is in a different directory than the derby jars SystemPrivilegesPermissionTest fails with java.security.AccessControlException 

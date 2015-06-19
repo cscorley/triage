@@ -1,0 +1,16 @@
+It's a simple bug, reproduced by this simple test:
+
+
+
+  public void testEnsureCapacity() {
+    OpenBitSet bits = new OpenBitSet(1);
+    bits.fastSet(0);
+    bits.ensureCapacity(5); // make room for more bits
+    bits.fastSet(2);
+  }
+
+
+
+The problem is that numBits which is used only for assrets isn't modified by ensureCapacity and so the next fastSet trips the assert. I guess we should also fix ensureCapacityWords and test it too.
+
+I may not be able to fix this until Sunday though, so if anyone wants to fix it before (maybe it can make it into 4.5.1), feel free.

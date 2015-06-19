@@ -1,0 +1,7 @@
+The artifact with the sources to be published in the Maven repository should be named $
+{artifactId}-${version}-sources.jar not ${artifactId}
+-$
+{version}
+-src.jar.
+
+See also: http://maven.apache.org/guides/mini/guide-central-repository-upload.html and ZOOKEEPER-224

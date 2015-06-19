@@ -1,0 +1,1 @@
+The javadoc has been split into JDBC3 and JDBC4 specific version (see DERBY-1079). Andrew suggested that a top level web page pointing at this javadoc needs to be wired into the released documentation.

@@ -1,0 +1,11 @@
+Two changes made for Pig 070 also need to be applied to Pig 060.
+
+(1) ILLUSTRATE 
+
+Update Pig Latin Ref-2  Manual to include note:
+
+(Note! This feature is NOT maintained at the moment. We are looking for someone to adopt it.)
+
+(2) Passing Configurations to UDFs
+
+Update Pig UDF Manual - add new section (see PIG-1085)

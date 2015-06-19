@@ -1,0 +1,1 @@
+add CodecHeader to .frq and .prx

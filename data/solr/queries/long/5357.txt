@@ -1,0 +1,12 @@
+The example-schemaless example does not contain solr.xml
+
+So when you run the example using 
+
+ java -Dsolr.solr.home=example-schemaless/solr -jar start.jar 
+
+ Solr fails to start and an exception is thrown.
+
+
+
+Caused by: org.apache.solr.common.SolrException: solr.xml does not exist in /Users/varun/search-work/lucene-trunk/solr/example/example-schemaless/solr/solr.xml cannot start Solr
+

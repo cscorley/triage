@@ -1,0 +1,6 @@
+SpatialPrefixTree#recursiveGetNodes uses an optimization that prevents
+recursion into the deepest tree level if a parent node in the penultimate
+level covers all its children.  This produces a bug if the optimization
+happens both at indexing and at query/filter time.
+
+Original post

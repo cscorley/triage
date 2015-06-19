@@ -1,0 +1,35 @@
+I dont know how these became like this: but this is currently a mess.
+
+after 'ant jar-checksums':
+
+rmuir@beast:~/workspace/lucene-clean-trunk$ svn status
+!       solr/licenses/solr-core-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/lucene-core-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/lucene-highlighter-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/slf4j-api.jar.sha1
+!       solr/licenses/jcl-over-slf4j.jar.sha1
+!       solr/licenses/lucene-analyzers-common-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/lucene-analyzers-phonetic-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/lucene-queries-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/jul-to-slf4j.jar.sha1
+!       solr/licenses/solr-solrj-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/lucene-memory-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/log4j.jar.sha1
+!       solr/licenses/lucene-queryparser-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/lucene-spatial-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/lucene-grouping-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/lucene-codecs-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/lucene-misc-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/slf4j-log4j12.jar.sha1
+!       solr/licenses/lucene-analyzers-kuromoji-5.0-SNAPSHOT.jar.sha1
+!       solr/licenses/lucene-suggest-5.0-SNAPSHOT.jar.sha1
+
+
+
+Since 'jenkins-base' runs with this logic, i dont understand why this isnt currently failing the build:
+
+
+  <!-- Jenkins tasks -->
+  <target name="-jenkins-base" depends="clean,test-with-heapdumps,validate,documentation-lint,jar-checksums,check-svn-working-copy"/>
+
+

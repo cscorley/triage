@@ -1,0 +1,1 @@
+Failure in testDERBY5120NumRowsInSydependsForTrigger when upgrading from 10.11.1.0 to trunk

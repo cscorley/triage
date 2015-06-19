@@ -1,0 +1,1 @@
+TestJmxIntegration fails with IBM J9 6.0 and 7.0

@@ -1,0 +1,1 @@
+BytesRef reuse bugs in QueryParser and analysis.jsp

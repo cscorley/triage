@@ -1,0 +1,1 @@
+DocIdSetBuilder starts with a SparseFixedBitSet and then upgrades to a FixedBitSet when the cardinality grows larger than maxDoc >>> 14. However Robert improved SparseFixedBitSet performance quite significantly in LUCENE-6003 so we should see if it makes sense to update this heuristic.

@@ -1,0 +1,1 @@
+It would make development easier to move most of the java code out from the .jj file and into a real java file.

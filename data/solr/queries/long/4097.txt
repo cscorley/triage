@@ -1,0 +1,1 @@
+saw this in a test - seems the watcher can be notified before we first set the clusterstate volatile - then a log line that expects to use the clusterstate npe's and we don't actually finish that update.

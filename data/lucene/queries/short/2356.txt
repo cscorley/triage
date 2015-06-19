@@ -1,0 +1,1 @@
+Enable setting the terms index divisor used by IndexWriter whenever it opens internal readers

@@ -1,0 +1,4 @@
+textTight uses the snowball stemmer.
+
+I think it would be an improvement if textTight used less aggressive stemming, 
+and would serve as a more useful example.

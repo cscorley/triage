@@ -1,0 +1,169 @@
+
+	
+	
+		
+		
+			Start: LOBTest jdk1.4.2 DerbyNet derbynetmats:jdbcapi 2006-11-07 00:04:57 ***
+45 del
+< 	1 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+45a45
+> 	1 getBytes             ->Object'   	: byte[]
+68 del
+< 	2 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+68a68
+> 	2 getBytes             ->Object'   	: byte[]
+91 del
+< 	3 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+91a91
+> 	3 getBytes             ->Object'   	: byte[]
+607 del
+< 	1 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+607a607
+> 	1 getBytes             ->Object'   	: byte[]
+630 del
+< 	2 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+630a630
+> 	2 getBytes             ->Object'   	: byte[]
+653 del
+< 	3 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+653a653
+> 	3 getBytes             ->Object'   	: byte[]
+1169 del
+< 	1 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+1169a1169
+> 	1 getBytes             ->Object'   	: byte[]
+1192 del
+< 	2 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+1192a1192
+> 	2 getBytes             ->Object'   	: byte[]
+1215 del
+< 	3 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+1215a1215
+> 	3 getBytes             ->Object'   	: byte[]
+1710 del
+< 	1 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+1710a1710
+> 	1 getBytes             ->Object'   	: byte[]
+1733 del
+< 	2 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+1733a1733
+> 	2 getBytes             ->Object'   	: byte[]
+1756 del
+< 	3 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+1756a1756
+> 	3 getBytes             ->Object'   	: byte[]
+2251 del
+< 	1 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+2251a2251
+> 	1 getBytes             ->Object'   	: byte[]
+2274 del
+< 	2 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+2274a2274
+> 	2 getBytes             ->Object'   	: byte[]
+2297 del
+< 	3 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+2297a2297
+> 	3 getBytes             ->Object'   	: byte[]
+2794 del
+< 	1 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+2794a2794
+> 	1 getBytes             ->Object'   	: byte[]
+3347 del
+< 	1 getBytes             ->		EXCEPTION (Invalid data conversion: Wrong result column type for requested conversion.)
+3347a3347
+> 	1 getBytes             ->Object'   	: byte[]
+Test Failed.
+			End:   LOBTest jdk1.4.2 DerbyNet derbynetmats:jdbcapi 2006-11-07 00:05:15 ***
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbynetmats/DerbyNet/jdbcapi/parameterMapping.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: parameterMapping jdk1.4.2 DerbyNet derbynetmats:jdbcapi 2006-11-07 00:06:51 ***
+1256 del
+<   getBytes=IC JDBC MATCH (INVALID)
+1256a1256
+>   getBytes=0x33,0x32 was null false CLOUD EXT (OK)
+1428 del
+<   getBytes=IC JDBC MATCH (INVALID)
+1428a1428
+>   getBytes=0x33,0x32 was null false CLOUD EXT (OK)
+1600 del
+<   getBytes=IC JDBC MATCH (INVALID)
+1600a1600
+>   getBytes=0x33,0x32 was null false CLOUD EXT (OK)
+Test Failed.
+			End:   parameterMapping jdk1.4.2 DerbyNet derbynetmats:jdbcapi 2006-11-07 00:08:07 ***
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbynetmats/DerbyNet/jdbcapi/resultset.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: resultset jdk1.4.2 DerbyNet derbynetmats:jdbcapi 2006-11-07 00:02:49 ***
+595 del
+< getBytes(8) got exception 
+595a595,597
+> getBytes(8): 0x65696768742020202020
+> getBytes(c): 0x65696768742020202020
+> getDate(8) got exception 
+597,600d598
+< getBytes(c) got exception 
+< Data Conversion SQLException
+< getDate(8) got exception 
+< Data Conversion SQLException
+646 del
+< getBytes(9) got exception 
+646a644,646
+> getBytes(9): 0x6E696E65
+> getBytes(v): 0x6E696E65
+> getDate(9) got exception 
+648,651d647
+< getBytes(v) got exception 
+< Data Conversion SQLException
+< getDate(9) got exception 
+< Data Conversion SQLException
+Test Failed.
+			End:   resultset jdk1.4.2 DerbyNet derbynetmats:jdbcapi 2006-11-07 00:03:04 ***
+		
+		
+	
+	
+

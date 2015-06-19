@@ -1,0 +1,70 @@
+I have an example in Solr In Action that uses the
+PatternReplaceCharFilterFactory and now it doesn't work in 4.7.0.
+Specifically, the <fieldType> is:
+
+    <fieldType name="text_microblog" class="solr.TextField"
+positionIncrementGap="100">
+      <analyzer>
+        <charFilter class="solr.PatternReplaceCharFilterFactory"
+                    pattern="([a-zA-Z])\1+"
+                    replacement="$1$1"/>
+        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <filter class="solr.WordDelimiterFilterFactory"
+                generateWordParts="1"
+                splitOnCaseChange="0"
+                splitOnNumerics="0"
+                stemEnglishPossessive="1"
+                preserveOriginal="0"
+                catenateWords="1"
+                generateNumberParts="1"
+                catenateNumbers="0"
+                catenateAll="0"
+                types="wdfftypes.txt"/>
+        <filter class="solr.StopFilterFactory"
+                ignoreCase="true"
+                words="lang/stopwords_en.txt"
+                />
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.ASCIIFoldingFilterFactory"/>
+        <filter class="solr.KStemFilterFactory"/>
+      </analyzer>
+    </fieldType>
+
+The PatternReplaceCharFilterFactory (PRCF) is used to collapse
+repeated letters in a term down to a max of 2, such as #yummmm would
+be #yumm
+
+When I run some text through this analyzer using the Analysis form,
+the output is as if the resulting text is unavailable to the
+tokenizer. In other words, the only results being displayed in the
+output on the form is for the PRCF
+
+This example stopped working in 4.7.0 and I've verified it worked
+correctly in 4.6.1.
+
+Initially, I thought this might be an issue with the actual analysis,
+but the analyzer actually works when indexing / querying. Then,
+looking at the JSON response in the Developer console with Chrome, I
+see the JSON that comes back includes output for all the components in
+my chain (see below) ... so looks like a UI rendering issue to me?
+
+{"responseHeader":
+{"status":0,"QTime":24}
+,"analysis":{"field_types":{"text_microblog":{"index":["org.apache.lucene.analysis.pattern.PatternReplaceCharFilter","#Yumm
+ Drinking a latte at Caffe Grecco in SF's historic North Beach...
+Learning text analysis with #SolrInAction by @ManningBooks on my i-Pad
+foo5","org.apache.lucene.analysis.core.WhitespaceTokenizer",[
+{"text":"#Yumm","raw_bytes":"[23
+59 75 6d 6d]","start":0,"end":6,"position":1,"positionHistory":[1],"type":"word"}
+,
+{"text":":)","raw_bytes":"[3a
+29]","start":7,"end":9,"position":2,"positionHistory":[2],"type":"word"}
+,
+{"text":"Drinking","raw_bytes":"[44
+72 69 6e 6b 69 6e
+67]","start":10,"end":18,"position":3,"positionHistory":[3],"type":"word"}
+,
+{"text":"a","raw_bytes":"[61]","start":19,"end":20,"position":4,"positionHistory":[4],"type":"word"}
+,{"text":"latte","raw_bytes":"[6c ...
+
+the JSON returned to the browser has evidence that the full analysis chain was applied, so this seems to just be a rendering issue.

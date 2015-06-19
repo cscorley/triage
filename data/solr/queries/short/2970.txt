@@ -1,0 +1,1 @@
+CSV ResponseWriter returns fields defined as stored=false in schema

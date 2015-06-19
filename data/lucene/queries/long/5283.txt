@@ -1,0 +1,1 @@
+This should be an optional setting that defaults to 'false' (the build proceeds).

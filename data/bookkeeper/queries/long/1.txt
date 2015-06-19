@@ -1,0 +1,8 @@
+The following final static variable is causing LedgerDeleteTest to fail:
+
+
+final static long LOG_SIZE_LIMIT = Long.getLong("logSizeLimit", 2 * 1024 * 1024 * 1024L);
+
+
+
+because the test counts on the value of the variable to change and the new maven setup uses a single process by default, so the value of the variable doesn't change. 

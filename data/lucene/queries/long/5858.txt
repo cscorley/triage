@@ -1,0 +1,3 @@
+These take significant space and bloat core lucene. Not everyone needs the ability to read ancient indexes (especially building a new app). 
+
+We should move this cruft out of the core/ jar. codecs/ is the obvious place, its already setup in the build system for tests and everything else.

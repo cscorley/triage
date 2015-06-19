@@ -1,0 +1,20 @@
+Its FaultyIndexInput is broken (doesn't implement seek/clone correctly).
+
+This causes it to read bogus data and try to allocate an enormous byte[] for a term.
+
+The bug was previously hidden:
+FaultyDirectory doesnt override openSlice, so CFS must not be used at flush if you want to trigger the bug.
+FailtyIndexInput's clone is broken, it uses "new" but doesn't seek the clone to the right place. This causes a disaster with BufferedIndexInput (which it extends), because BufferedIndexInput (not just the delegate) must "know" its position since it has seek-within-block etc code...
+
+It seems with this test (very simple one), that only 3.x codec triggers it because its term dict relies upon clone()'s being seek'd to right place. 
+
+I'm not sure what other codecs rely upon this, but imo we should also add a low-level test for directories that does something like this to ensure its really tested:
+
+
+
+dir.createOutput(x);
+dir.openInput(x);
+input.seek(somewhere);
+clone = input.clone();
+assertEquals(somewhere, clone.getFilePointer());
+

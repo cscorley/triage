@@ -1,0 +1,14 @@
+Provide a way to split a shard using a route key such that all documents of the specified route key end up in a single dedicated sub-shard.
+
+Example:
+Assume that collection1, shard1 has hash range [0, 20]. Also that route key 'A!' has hash range [12,15]. Then invoking:
+
+
+/admin/collections?action=SPLIT&collection=collection1&split.key=A!
+
+
+should produce three sub-shards with hash range [0,11], [12,15] and [16,20].
+
+Specifying the source shard is not required here because the route key is enough to figure it out. Route keys spanning more than one shards will not be supported.
+
+Note that the sub-shard with the hash range of the route key may also contain documents for other route keys whose hash ranges overlap.

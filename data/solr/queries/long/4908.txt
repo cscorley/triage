@@ -1,0 +1,21 @@
+The SolrContentHandler produces glued words when extracting html
+
+for html documents like:
+
+
+<html><head></head><body>glued<br/>words</body></html>
+
+
+
+This was solved in Tika TIKA-343 but the problem occurs when using the extraction handler because the SolrContentHandler discards ignoreableWhitespace.
+The Tika XHTMLContentHandler issues ignoreableWhitspace events with a newline in the character stream when a <br> tag is encountered.
+
+The SolrContentHandler should be modified to add the ignorable whitespace to the content.
+
+Reproduction Steps:
+
+	POST the html example file from the attachtments to http://localhost:8983/solr/update/extract?literal.id=html-test-1&commit=true (e.g. with curl or HTTP Requester Plugin in Firefox)
+	Query for the document http://localhost:8983/solr/collection1/select?q=id%3A%22html-test-1%22&fl=content&wt=xml&indent=true
+	Look for the field content, which contains the word "Shouldnotbeglued"
+
+

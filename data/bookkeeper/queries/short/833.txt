@@ -1,0 +1,1 @@
+EntryLogId and EntryLogLimit should not be larger than Integer.MAX_VALUE

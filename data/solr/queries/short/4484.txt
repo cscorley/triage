@@ -1,0 +1,1 @@
+ReplicationHandler#loadReplicationProperties still uses Files rather than the Directory to try and read the replication properties files.

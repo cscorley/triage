@@ -1,0 +1,1 @@
+Store DocValues per segment instead of per field

@@ -1,0 +1,18 @@
+This bug was orriginally opened because Jenkins uncovered a test seed that causes a reproducible IndexWriter assertion failure in TestDistribDocBasedVersion on the 4x branch.
+
+McCandless helped dig in and believe that something in the way the solr test framework is setup is causing the test to delete the index dirs before the IndexWriter is being closed. Meanwhile, the failures later reproduced in other seeds on both 4x and trunk – and it appears that recent changes caused the nature of the failure to change, so that now – in addition to the IndexWriter assertion failure – the test cleanup also stalls out and the test runner has to terminate some stalled threads.
+
+One interesting factor about this test is that at the end of the test there were docs that had been added that were not committed – which is probably unusually for most tests, and may explain why more cloud tests aren't exhibiting similar symptoms more often.
+
+When a useless (from perspective of what the test is trying to verify) "commit" was added to the test, the failing seed stoped reproducing.
+
+An example of how to reliably reproduce this problem on an (older version of) trunk...
+
+
+svn update -r 1574381 && ant clean && cd solr/core && ant test  -Dtestcase=TestDistribDocBasedVersion -Dtests.seed=1249227945045A2E -Dtests.slow=true -Dtests.locale=ko_KR -Dtests.timezone=America/Monterrey -Dtests.file.encoding=ISO-8859-1
+
+
+
+Original email thread...
+
+https://mail-archives.apache.org/mod_mbox/lucene-dev/201401.mbox/%3Calpine.DEB.2.02.1401100930260.20275@frisbee%3E

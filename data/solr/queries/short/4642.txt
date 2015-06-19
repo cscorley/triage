@@ -1,0 +1,1 @@
+QueryResultKey, bug in filter hashCode

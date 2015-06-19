@@ -1,0 +1,6 @@
+When used in data-import config file to replace spaces in title with _ 
+
+<field column="title_underscore"  regex="\s+" replaceWith="_"
+ sourceColName="title" />
+
+regexTransformer returns empty results for titles without spaces, i.e. when there is no match for the regex. According to the description it is equivalent to replaceAll which returns string when there is no match.

@@ -1,0 +1,1 @@
+SOLR-5859 adds a leadership check every time Overseer exits loop. This however gets triggered even when Solr really is exiting, causing a spurious error. Here's a one-liner to stop that from happening.

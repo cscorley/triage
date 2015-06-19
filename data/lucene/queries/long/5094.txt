@@ -1,0 +1,1 @@
+I think this would be useful. it could e.g. be exposed via SortedSetDocValuesReaderState and so on.

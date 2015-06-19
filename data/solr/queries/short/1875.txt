@@ -1,0 +1,1 @@
+per-segment single valued string faceting

@@ -1,0 +1,5 @@
+Pre TLP, whenever we updated the docs/ directory of trunk, the website docs for trunk would be "automatically" updated. Updates to the docs still needed to be built with the old build_trigger mechanism, and the site published through CMS.
+
+The docs were pulled in using a svn:external link. This is no longer possible, as master's docs/ directory is in git. 
+
+We need a new way to sync master docs on the website with what is in git.

@@ -1,0 +1,41 @@
+The hint, 'openjpa.hint.UseLiteralInSQL', is not properly converting a boolean to an int.  To illustrate this, lets take this entity:
+
+public class MyEntity implements Serializable {
+ @Id
+ private Integer pk;
+
+ private boolean flag;
+..........
+
+
+With this entity, lets take this test:
+
+Query q = em.createQuery("SELECT f FROM MyEntity f WHERE f.flag = true");
+q.setHint("openjpa.hint.UseLiteralInSQL", "false");  //false is the default
+q.getResultList();
+
+
+With this code, the following SQL will be generated:
+
+SELECT t0.pk, t0.code, t0.code2, t0.flag FROM MyEntity t0 WHERE (t0.flag = ?)  [params=(int) 1]
+
+
+Next, lets take this code:
+
+Query q = em.createQuery("SELECT f FROM MyEntity f WHERE f.flag = true");
+q.setHint("openjpa.hint.UseLiteralInSQL", "true");
+q.getResultList();
+
+
+With this code, the following SQL will be generated:
+
+SELECT t0.pk, t0.code, t0.code2, t0.flag FROM MyEntity t0 WHERE (t0.flag = true)
+
+
+However, in the latter case where UseLiteralInSQL=true, the following SQL should be generated:
+
+SELECT t0.pk, t0.code, t0.code2, t0.flag FROM MyEntity t0 WHERE (t0.flag = '1')
+
+Thanks,
+
+Heath

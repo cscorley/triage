@@ -1,0 +1,8 @@
+After benchmarking indexing speed on SOLR-3245, I ran a profiler and a couple things stood out.
+
+There are other things I want to improve too, but these almost double the speed for many dictionaries.
+
+
+	Hunspell supports two-stage affix stripping, but the vast majority of dictionaries don't have any affixes that support it. So we just add a boolean (Dictionary.twoStageAffix) that is false until we see one.
+	We use java.util.regex.Pattern for condition checks. This is slow, I switched to o.a.l.automaton and its much faster, and uses slightly less RAM too.
+

@@ -1,0 +1,5 @@
+in the e2e tests we default hcat.bin to
+
+<condition property="hcat.bin" value="/usr/local/hcat/bin/hcat">
+
+It will be better if default this to hcat so as long as hcat is in your path it will get picked up. This will make sure the tests work as is on a cluster using bigtop rpm's

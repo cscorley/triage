@@ -1,0 +1,1 @@
+TestAddIndexes fails (norms file not found)

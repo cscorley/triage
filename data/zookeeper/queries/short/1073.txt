@@ -1,0 +1,1 @@
+address a documentation issue in ZOOKEEPER-1030

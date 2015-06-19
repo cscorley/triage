@@ -1,0 +1,1 @@
+MoreLikeThis on a shard finds no interesting terms if the document queried is not in that shard

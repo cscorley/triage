@@ -1,0 +1,1 @@
+Have Prefix Queries Use a MultiTermAnalyzer in SimpleQParser.

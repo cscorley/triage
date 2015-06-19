@@ -1,0 +1,1 @@
+We need to document feature added in PIG-3463.

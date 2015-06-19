@@ -1,0 +1,3 @@
+The current Admin UI dashboard display alternating row's in a very light gray. This decreases legibility and makes those rows appear less important or in an disabled state.
+
+To improve this, the rows should be given the same color.

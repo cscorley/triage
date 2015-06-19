@@ -1,0 +1,14 @@
+Solr currently cannot offer what I'm calling here a "context-sensitive" spelling suggestion.  That is, if a user enters one or more words that have docFrequency > 0, but nevertheless are misspelled, then no suggestions are offered.  Currently, Solr will always consider a word "correctly spelled" if it is in the index and/or dictionary, regardless of context.  This issue & patch add support for context-sensitive spelling suggestions. 
+
+See SpellCheckCollatorTest.testContextSensitiveCollate() for a the typical use case for this functionality.  This tests both using IndexBasedSepllChecker and DirectSolrSpellChecker. 
+
+Two new Spelling Parameters were added:
+
+	spellcheck.alternativeTermCount - The count of suggestions to return for each query term existing in the index and/or dictionary.  Presumably, users will want fewer suggestions for words with docFrequency>0.  Also setting this value turns "on" context-sensitive spell suggestions.
+	spellcheck.maxResultsForSuggest - The maximum number of hits the request can return in order to both generate spelling suggestions and set the "correctlySpelled" element to "false".  For example, if this is set to 5 and the user's query returns 5 or fewer results, the spellchecker will report "correctlySpelled=false" and also offer suggestions (and collations if requested).  Setting this greater than zero is useful for creating "did-you-mean" suggestions for queries that return a low number of hits.
+
+
+
+I have also included a test using shards.  See additions to DistributedSpellCheckComponentTest. 
+
+In Lucene, SpellChecker.java can already support this functionality (by passing a null IndexReader and field-name).  The DirectSpellChecker, however, needs a minor enhancement.  This gives the option to allow DirectSpellChecker to return suggestions for all query terms regardless of frequency.

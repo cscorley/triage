@@ -1,0 +1,13 @@
+OpenJPA attempts to execute an ALTER SEQUENCE....INCREMENT BY SQL statement for a user defined sequence.  This is done to ensure that the 'allocationSize' value defined by the entity's sequence, or default value, matches the sequence defined in the database.  For example, with an allocationSize of 1000 for a sequence named 'SEQ_JPASAMPLE', the following SQL will be generated (the SQL might vary slightly depending on the databases): 
+
+ALTER SEQUENCE SEQ_JPASAMPLE INCREMENT BY 1000
+
+If the user executing this command doesn't have permissions to execute the command, it will fail and in turn OpenJPA will disable sequence caching.  User's have asked for a way to disable this SQL statement and have full control over the sequence they define in their domain model and its corresponding definition in the database.
+
+We can easily add a property to disable this SQL statement.  However, the onus is then on the user to ensure that they keep in sync the 'allocationSize' in their entity's sequence definition with the 'INCREMENT BY' for the corresponding sequence in the database.
+
+To disable this sequence I propose a new property on DBDictionary named 'disableAlterSeqenceIncrementBy', with a default of false.  I also propose adding a warning message, logged once, when this property is enabled and we avoid executing the SQL.
+
+Thanks,
+
+Heath Thomann

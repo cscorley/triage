@@ -1,0 +1,5 @@
+Make WriteLineDocTask and LineDocSource more flexible/extendable:
+
+	allow to emit lines also for empty docs (keep current behavior as default)
+	allow more/less/other fields
+

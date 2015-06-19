@@ -1,0 +1,1 @@
+Stored fields might accumulate checksums on merges

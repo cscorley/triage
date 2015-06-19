@@ -1,0 +1,1 @@
+Before the shard state is switched, the overseer collection processor calls a distributed commit so that the sub shards have visible data. A hard commit is not necessary here because we only care about visibility. It also triggers timeouts for large collections.

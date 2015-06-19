@@ -1,0 +1,1 @@
+A FilterDirectoryReader would allow you to easily wrap all subreaders of a DirectoryReader with FilterAtomicReaders.

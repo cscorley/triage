@@ -1,0 +1,1 @@
+don't write deleted documents on flush

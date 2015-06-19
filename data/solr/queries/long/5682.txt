@@ -1,0 +1,5 @@
+As of SOLR-5556 a user can specify the class of the admin InfoHandler, but can't easily override the individual handlers that it provides (the PropertiesRequestHandler, LoggingHandler, ThreadDumpHandler, SystemInfoHandler).
+
+Contrast this with say, the AdminHandlers, where a user can provide his/her own implementations of the underlying request handlers easily.
+
+I've run into this limitation in the following setup: I use derived versions of the various AdminHandlers, and would like to use the same implementations for the InfoHandler.  I can do this by deriving from InfoHandler, but then I'd need to duplicate the handleRequestBody dispatching code.  That's doable, but not as nice as what the AdminHandlers provides.

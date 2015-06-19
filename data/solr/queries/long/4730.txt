@@ -1,0 +1,1 @@
+Solr homepage (http://lucene.apache.org/solr/4_2_1/) lists reference docs and javadocs, but makes it very easy to skip the link to the Wiki.  From a new user's perspective, the wiki is probably the most important, so please make it more prominent.

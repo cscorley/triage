@@ -1,0 +1,1 @@
+PIG-3527 Added POSimpleTezLoad under the physicalLayer package. This breaks the compilation with hadoop 1.x in tez branch.

@@ -1,0 +1,1 @@
+Loosen assert in IW on pending event after close

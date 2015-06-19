@@ -1,0 +1,1 @@
+Incorrect return value from SimpleNaiveBayesClassifier.assignClass 

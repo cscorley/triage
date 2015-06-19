@@ -1,0 +1,1 @@
+In many cases, it would be nice if the results that are provided by the QueryElevationComponent were identified as such so that one could make a decision at rendering time whether to treat them differently or not.

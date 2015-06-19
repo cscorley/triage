@@ -1,0 +1,1 @@
+zkServer.sh does not correctly check for $SERVER_JVMFLAGS

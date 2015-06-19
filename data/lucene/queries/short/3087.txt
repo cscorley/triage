@@ -1,0 +1,1 @@
+highlighting exact phrase with overlapping tokens fails.

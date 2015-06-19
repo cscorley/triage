@@ -1,0 +1,1 @@
+Leader currently takes a snapshot when it calls loadData in the beginning of the lead() method. The loaded data, however, may contain uncommitted state.

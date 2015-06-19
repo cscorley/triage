@@ -1,0 +1,1 @@
+Make AppendingLongBuffer's page size configurable

@@ -1,0 +1,1 @@
+There is a bug near line 126/127 in BaseResponseWriter.java in the isStreamingDocs() == false section for the DocList case. The SorlDocuments aren't being added back to the list object for return. I noticed this while I was working on SOLR-1925. Simple patch to fix, attached.

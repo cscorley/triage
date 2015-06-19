@@ -1,0 +1,1 @@
+AbstractFullDistribZkTestBase#compareResults always returns false for shouldFail.

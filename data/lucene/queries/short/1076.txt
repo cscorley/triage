@@ -1,0 +1,1 @@
+Allow MergePolicy to select non-contiguous merges

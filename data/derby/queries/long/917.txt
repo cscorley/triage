@@ -1,0 +1,7 @@
+Currently we have the following suites. 
+1) largeDataTests which runs only in embedded mode. 
+2) largeData which will run the largedata tests in embedded mode, in DerbyNet and in DerbyNetClient frameworks. 
+
+The test largedata/LobLimits.java tests on large lobs (2Gb) and this will work only in embedded as of now.  In case of Network Server, materialization happens and hence this test cannot run there.  Hence add this test in the DerbyNetClient.exclude and DerbyNet.exclude so it wont run against network server.
+
+Work is being done to stream lobs - as part of DERBY-326 and other related jira issues. ( Thanks to Tomohito and others who are working on streaming related issues for network server). Once these issues are addressed,  this test can also be run in network server mode. 

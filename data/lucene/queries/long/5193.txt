@@ -1,0 +1,1 @@
+I think it's useful if we have a top-level jar-src which generates source jars for all modules. One can basically do that by iterating through the directories and calling 'ant jar-src' already, so this is just a convenient way to do it. Will attach a patch shortly.

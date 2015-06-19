@@ -1,0 +1,3 @@
+I've wired up a static jetty context and hooked in a simple HTML page that shows off a bunch of the different types of queries people can do w/ the Example data.  Browse to it at http://localhost:8983/example/queries.html
+
+Will commit shortly.

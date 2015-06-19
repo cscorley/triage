@@ -1,0 +1,1 @@
+It'd be nice to be able to use multiple fields instead of just one for training / running each classifier.

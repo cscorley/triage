@@ -1,0 +1,1 @@
+Mahout examples try to write to examples/bin/work, which may not be writeable by current user

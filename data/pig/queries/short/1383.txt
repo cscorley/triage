@@ -1,0 +1,1 @@
+Remove empty svn directories from source tree

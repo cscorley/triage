@@ -1,0 +1,1 @@
+Spinoff from SOLR-4718. We don't have any good way of putting solr.xml up in Zookeeper in the first place. So while we can fake getting the file up there we need a way consistent with ZkCLI

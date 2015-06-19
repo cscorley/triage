@@ -1,0 +1,41 @@
+It looks like QuorumPeer.loadDataBase() could fail if the server was restarted after zk.takeSnapshot() but before finishing self.setCurrentEpoch(newEpoch) in Learner.java.
+
+
+
+case Leader.NEWLEADER: // it will be NEWLEADER in v1.0
+    zk.takeSnapshot();
+    self.setCurrentEpoch(newEpoch); // <<< got restarted here
+    snapshotTaken = true;
+    writePacket(new QuorumPacket(Leader.ACK, newLeaderZxid, null, null), true);
+    break;
+
+
+
+The server fails to start because currentEpoch is still 1 but the last processed zkid from the snapshot has been updated.
+
+
+2013-02-20 13:45:02,733 5543 [pool-1-thread-1] ERROR org.apache.zookeeper.server.quorum.QuorumPeer  - Unable to load database on disk
+java.io.IOException: The current epoch, 1, is older than the last zxid, 8589934592
+        at org.apache.zookeeper.server.quorum.QuorumPeer.loadDataBase(QuorumPeer.java:439)
+        at org.apache.zookeeper.server.quorum.QuorumPeer.start(QuorumPeer.java:413)
+        ...
+
+
+
+
+$ find datadir                                     
+datadir
+datadir/version-2
+datadir/version-2/currentEpoch.tmp
+datadir/version-2/acceptedEpoch
+datadir/version-2/snapshot.0
+datadir/version-2/currentEpoch
+datadir/version-2/snapshot.200000000
+
+$ cat datadir/version-2/currentEpoch.tmp
+2%
+$ cat datadir/version-2/acceptedEpoch
+2%
+$ cat datadir/version-2/currentEpoch
+1%
+

@@ -1,0 +1,1 @@
+ant precommit should remind people to run clean-jars and jar-checksums when checksums are not right

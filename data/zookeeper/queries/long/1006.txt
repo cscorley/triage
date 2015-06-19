@@ -1,0 +1,44 @@
+CnxManagerTest.testWorkerThreads 
+
+See attachment, this is the first time I've seen this test fail, and it's failed 2 out of the last three test runs.
+
+Notice (attachment) once this happens the port never becomes available.
+
+
+2011-03-02 15:53:12,425 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:11245:NIOServerCnxn$Factory@251] - Accepted socket connection from /172.29.6.162:51441
+2011-03-02 15:53:12,430 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:11245:NIOServerCnxn@639] - Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running
+2011-03-02 15:53:12,430 - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:11245:NIOServerCnxn@1435] - Closed socket connection for client /172.29.6.162:51441 (no session established for client)
+2011-03-02 15:53:12,430 - WARN  [QuorumPeer:/0:0:0:0:0:0:0:0:11241:Follower@82] - Exception when following the leader
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:375)
+	at org.apache.jute.BinaryInputArchive.readInt(BinaryInputArchive.java:63)
+	at org.apache.zookeeper.server.quorum.QuorumPacket.deserialize(QuorumPacket.java:84)
+	at org.apache.jute.BinaryInputArchive.readRecord(BinaryInputArchive.java:108)
+	at org.apache.zookeeper.server.quorum.Learner.readPacket(Learner.java:148)
+	at org.apache.zookeeper.server.quorum.Learner.registerWithLeader(Learner.java:267)
+	at org.apache.zookeeper.server.quorum.Follower.followLeader(Follower.java:66)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:645)
+2011-03-02 15:53:12,431 - INFO  [QuorumPeer:/0:0:0:0:0:0:0:0:11241:Follower@165] - shutdown called
+java.lang.Exception: shutdown Follower
+	at org.apache.zookeeper.server.quorum.Follower.shutdown(Follower.java:165)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:649)
+2011-03-02 15:53:12,432 - INFO  [QuorumPeer:/0:0:0:0:0:0:0:0:11241:QuorumPeer@621] - LOOKING
+2011-03-02 15:53:12,432 - INFO  [QuorumPeer:/0:0:0:0:0:0:0:0:11241:FastLeaderElection@663] - New election. My id =  0, Proposed zxid = 0
+2011-03-02 15:53:12,433 - INFO  [WorkerReceiver Thread:FastLeaderElection@496] - Notification: 0 (n.leader), 0 (n.zxid), 2 (n.round), LOOKING (n.state), 0 (n.sid), LOOKING (my state)
+2011-03-02 15:53:12,433 - INFO  [WorkerReceiver Thread:FastLeaderElection@496] - Notification: 0 (n.leader), 0 (n.zxid), 2 (n.round), LOOKING (n.state), 0 (n.sid), LOOKING (my state)
+2011-03-02 15:53:12,433 - INFO  [WorkerReceiver Thread:FastLeaderElection@496] - Notification: 0 (n.leader), 0 (n.zxid), 2 (n.round), LOOKING (n.state), 0 (n.sid), LOOKING (my state)
+2011-03-02 15:53:12,633 - INFO  [WorkerReceiver Thread:FastLeaderElection@496] - Notification: 0 (n.leader), 0 (n.zxid), 2 (n.round), LOOKING (n.state), 0 (n.sid), LOOKING (my state)
+2011-03-02 15:53:12,633 - INFO  [QuorumPeer:/0:0:0:0:0:0:0:0:11245:QuorumPeer@655] - LEADING
+2011-03-02 15:53:12,636 - INFO  [QuorumPeer:/0:0:0:0:0:0:0:0:11245:Leader@54] - TCP NoDelay set to: true
+2011-03-02 15:53:12,638 - INFO  [QuorumPeer:/0:0:0:0:0:0:0:0:11245:ZooKeeperServer@151] - Created server with tickTime 1000 minSessionTimeout 2000 maxSessionTimeout 20000 datadir /var/lib/hudson/workspace/CDH3-ZooKeeper-3.3.3_sles/build/test/tmp/test9001250572426375869.junit.dir/version-2 snapdir /var/lib/hudson/workspace/CDH3-ZooKeeper-3.3.3_sles/build/test/tmp/test9001250572426375869.junit.dir/version-2
+2011-03-02 15:53:12,639 - ERROR [QuorumPeer:/0:0:0:0:0:0:0:0:11245:Leader@133] - Couldn't bind to port 11245
+java.net.BindException: Address already in use
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:365)
+	at java.net.ServerSocket.bind(ServerSocket.java:319)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at org.apache.zookeeper.server.quorum.Leader.<init>(Leader.java:131)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.makeLeader(QuorumPeer.java:512)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:657)
+

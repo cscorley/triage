@@ -1,0 +1,1 @@
+We should have ValueSource implementations that wrap DocValues in lucene-queries so that DocValues can be used in function queries.

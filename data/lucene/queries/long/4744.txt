@@ -1,0 +1,1 @@
+FieldCache.StopFillCacheException bugged me for a while and I think its a pretty hacky way to make our FC work with prefix coded terms. I think we should try to get rid of it... I will attach a patch soon.

@@ -1,0 +1,1 @@
+A shell script to generate .gitignore from svn:ignore properties

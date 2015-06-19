@@ -1,0 +1,9 @@
+The solr/dist/ directory is currently used:
+
+	to hold binary artifacts to be used by example configurations;
+	to store intermediate binary, source and javadoc archives that will be part of a release packages and deployed as maven artifacts; and
+	to hold the results of the package, package-src and generate-maven-artifacts targets: binary and source packages and maven artifacts.
+
+
+
+Release packages and maven artifacts should go someplace else so that the files comprising a release are clearly separated from the other stuff.

@@ -1,0 +1,1 @@
+from SOLR-3180, I saw log reply updates blocked on waiting for a ZK connection.

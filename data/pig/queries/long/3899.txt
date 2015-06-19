@@ -1,0 +1,1 @@
+PigTezLogger references TezProcessorContext through TezStatusReporter.  PigTezLogger is held in a static variable in DefaultAbstractBag and also can be held in static variables by user UDFs. TezProcessorContext holds references to the Input and its sort buffers causing lot of memory leak.

@@ -1,0 +1,1 @@
+Enable Java compile optimize flag during build

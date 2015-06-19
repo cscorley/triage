@@ -1,0 +1,1 @@
+The "rename" core admin action does not persist the new name to solr.xml.

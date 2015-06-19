@@ -1,0 +1,1 @@
+On a default install, even if you know to switch to the /spell handler, you won't get spelling suggestions.

@@ -1,0 +1,1 @@
+FieldCache should not pay attention to deleted docs when creating entries

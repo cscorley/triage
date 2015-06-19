@@ -1,0 +1,1 @@
+Fix Disjunction*Scorer not to score unless you ask it to

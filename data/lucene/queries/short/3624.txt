@@ -1,0 +1,1 @@
+Throw exception for "Multi-SortedSource" instead of returning null

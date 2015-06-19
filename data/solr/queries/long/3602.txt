@@ -1,0 +1,3 @@
+Looks like 3.4.4 may be considered stable - if that happens, we should look into updating.
+
+Otherwise, we should keep on eye out for 3.3.6

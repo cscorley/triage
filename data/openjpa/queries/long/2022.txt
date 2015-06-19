@@ -1,0 +1,11 @@
+When running either of the versions of the reversemappingtool as reported in the 1940 bug as fixed, i get the same error as in 2.1.0 :
+
+[reversemappingtool] 2363  openjpa  INFO   [main] openjpa.Tool - ReverseMappingTool : generating classes.
+[reversemappingtool] 2365  openjpa  INFO   [main] openjpa.MetaData - Table "RMTOOLS."AppUsers"" could not be reverse mapped.  This means that the table does not have a primary key (primary keys are required to establish unique identifiers for all persistent objects) and does not match a known pattern for a table used for cross-reference or value collections.
+[reversemappingtool] 2366  openjpa  INFO   [main] openjpa.MetaData - Table "RMTOOLS."CredentialTypes"" could not be reverse mapped.  This means that the table does not have a primary key (primary keys are required to establish unique identifiers for all persistent objects) and does not match a known pattern for a table used for cross-reference or value collections.
+[reversemappingtool] 2366  openjpa  INFO   [main] openjpa.MetaData - Table "RMTOOLS."Credentials"" could not be reverse mapped.  This means that the table does not have a primary key (primary keys are required to establish unique identifiers for all persistent objects) and does not match a known pattern for a table used for cross-reference or value collections.
+
+this happens for all my tables. Is it possible this bug was reintroduced?
+
+
+thanks

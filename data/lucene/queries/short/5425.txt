@@ -1,0 +1,1 @@
+Make creation of FixedBitSet in FacetsCollector overridable

@@ -1,0 +1,1 @@
+In the interest of productivity, the POPackage refactoring happening in PIG-3591 should be committed to the tez branch while still WIP.

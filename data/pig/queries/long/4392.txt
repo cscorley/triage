@@ -1,0 +1,20 @@
+To reproduce:
+input.txt
+
+1 2 3
+4 5 6
+7 8 9
+
+
+rank.pig
+
+set default_parallel 4;
+
+d = load 'input.txt' using PigStorage(' ') as (a:int, b:int, c:int);
+e = rank d by a;
+dump e;
+
+
+If default_parallel is set to 3, the script succeeds. So I'm guessing RANK BY has issues if the default_parallel exceeds the cardinality of the field being ranked by.
+
+I'm seeing this issue with Pig 0.11.1 (which has the PIG-2932 patch applied) and Hadoop 2.3.0.

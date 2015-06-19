@@ -1,0 +1,1 @@
+IndexWriter.numDocs doesn't take into account applied but not flushed deletes

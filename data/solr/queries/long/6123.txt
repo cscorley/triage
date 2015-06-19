@@ -1,0 +1,5 @@
+If a long running shard split is in progress, say for collection=X, then clusterstatus API with collection=X will time out.
+
+The OverseerCollectionProcessor should never block an operation such as clusterstatus even if there are tasks for the same collection in progress.
+
+This bug was introduced by SOLR-5681.

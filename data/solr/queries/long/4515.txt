@@ -1,0 +1,8 @@
+OpenExchangeRatesOrgProvider currently defaults the value of the "ratesFileLocation" init param to "http://openexchangerates.org/latest.json" – but that URL currently 301 redirects to a page with the following information...
+
+
+Notice: App ID Required
+As per public notices beginning June 2012, an App ID is required to access the Open Exchange Rates API. It's free for personal use, a bargain for your business. You can sign up here » 
+
+
+...so we should update the code to require users to be explicit about their URL (including APP_ID) or point to a local file.  As things stand right now, anyone who configures this provider w/o explicitly setting ratesFileLocation ges a clean startup, but anytime they attempt to use the fieldtype to do a conversion they get an error that "No available conversion rate from USD to USD. Available rates are []"

@@ -1,0 +1,1 @@
+Standalone mode won't take client port from dynamic config

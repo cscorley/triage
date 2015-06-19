@@ -1,0 +1,13 @@
+These two operations uses startTime as the latency for metric, which is wrong. 
+
+
+
+    void openComplete(int rc, LedgerHandle lh) {
+        if (BKException.Code.OK != rc) {
+            openOpLogger.registerFailedEvent(startTime);
+        } else {
+            openOpLogger.registerSuccessfulEvent(startTime);
+        }
+        cb.openComplete(rc, lh, ctx);
+    }
+

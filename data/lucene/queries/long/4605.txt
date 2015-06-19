@@ -1,0 +1,3 @@
+Add a convenience constants FLAGS_NONE to DocsEnum and DocsAndPositionsEnum. Today, if someone e.g. wants to get the docs only, he needs to pass 0 as the flags, but the value of 0 is not documented anywhere. I had to dig in the code the verify that indeed that's the value.
+
+I'll attach a patch later.

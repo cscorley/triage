@@ -1,0 +1,3 @@
+The current StAX jar in the lib folder is an un-released version – 1.2.0-dev. This should be replaced by a stable release. The latest released version available on the central maven repository is 1.2.0 as seen at http://repo1.maven.org/maven2/stax/stax/
+
+This issue shall track the migration to a stable released version of StAX and related problems, if any.

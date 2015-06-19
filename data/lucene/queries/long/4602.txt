@@ -1,0 +1,21 @@
+Spinoff from LUCENE-4600
+
+DocValues can be used to hold the byte[] encoding all facet ords for
+the document, instead of payloads.  I made a hacked up approximation
+of in-RAM DV (see CachedCountingFacetsCollector in the patch) and the
+gains were somewhat surprisingly large:
+
+
+                    Task    QPS base      StdDev    QPS comp      StdDev                Pct diff
+                HighTerm        0.53      (0.9%)        1.00      (2.5%)   87.3% (  83% -   91%)
+                 LowTerm        7.59      (0.6%)       26.75     (12.9%)  252.6% ( 237% -  267%)
+                 MedTerm        3.35      (0.7%)       12.71      (9.0%)  279.8% ( 268% -  291%)
+
+
+
+I didn't think payloads were THAT slow; I think it must be the advance
+implementation?
+
+We need to separately test on-disk DV to make sure it's at least
+on-par with payloads (but hopefully faster) and if so ... we should
+cutover facets to using DV.

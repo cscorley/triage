@@ -1,0 +1,49 @@
+This ticket introduces the CollapsingQParserPlugin 
+
+The CollapsingQParserPlugin is a PostFilter that performs field collapsing. This is a high performance alternative to standard Solr field collapsing (with ngroups) when the number of distinct groups in the result set is high.
+
+For example in one performance test, a search with 10 million full results and 1 million collapsed groups:
+Standard grouping with ngroups : 17 seconds.
+CollapsingQParserPlugin: 300 milli-seconds.
+
+Sample syntax:
+
+Collapse based on the highest scoring document:
+
+
+
+fq=(!collapse field=<field_name>}
+
+
+
+Collapse based on the min value of a numeric field:
+
+
+fq={!collapse field=<field_name> min=<field_name>}
+
+
+
+Collapse based on the max value of a numeric field:
+
+
+fq={!collapse field=<field_name> max=<field_name>}
+
+
+
+Collapse with a null policy:
+
+
+fq={!collapse field=<field_name> nullPolicy=<null_policy>}
+
+
+There are three null policies:
+ignore : removes docs with a null value in the collapse field (default).
+expand : treats each doc with a null value in the collapse field as a separate group.
+collapse : collapses all docs with a null value into a single group using either highest score, or min/max.
+
+The CollapsingQParserPlugin also fully supports the QueryElevationComponent
+
+Note:  The July 16 patch also includes and ExpandComponent that expands the collapsed groups for the current search result page. This functionality will be moved to it's own ticket.
+
+
+

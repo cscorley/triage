@@ -1,0 +1,7 @@
+Brian Robinson on the solr-user list got really confused by this warning message...
+
+Unknown attribute id in add:allowDups
+
+...the mention of "id" in that warning was a big red herring that led him to assume something was wrong with the "id" in his documents, because it's not at all clear that's refering to the "xml node id" of an unexpected "xml attribute" (which in this case is "allowDups")
+
+filing this issue so i remembe to fix this warning to be more helpful, and review the rest of the file while i'm at it for other confusing warnings.

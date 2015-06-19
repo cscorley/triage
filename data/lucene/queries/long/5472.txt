@@ -1,0 +1,3 @@
+As reported on the solr-user list, when a term is greater then 2^15 bytes it is silently ignored at indexing time – a message is logged in to infoStream if enabled, but no error is thrown.
+
+seems like we should change this behavior (if nothing else starting in 5.0) to throw an exception.

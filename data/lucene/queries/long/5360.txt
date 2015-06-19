@@ -1,0 +1,1 @@
+It will be nice to have ant target for building netbeans IDE project definition.

@@ -1,0 +1,22 @@
+Around line 190 of NIOFSDirectory, the loop to read in bytes doesn't properly handle the -1 condition that can be returned from FileChannel.read().  If it returns -1, then it will move the file pointer back and you will enter an infinite loop.  SimpleFSDirectory displays the same characteristics, although I have only seen the issue on NIOFSDirectory.
+
+The code in question from NIOFSDirectory:
+
+
+try {
+        while (readLength > 0) {
+          final int limit;
+          if (readLength > chunkSize) {
+            // LUCENE-1566 - work around JVM Bug by breaking
+            // very large reads into chunks
+            limit = readOffset + chunkSize;
+          } else {
+            limit = readOffset + readLength;
+          }
+          bb.limit(limit);
+          int i = channel.read(bb, pos);
+          pos += i;
+          readOffset += i;
+          readLength -= i;
+        }
+

@@ -1,0 +1,1 @@
+ThaiAnalyzer assumes things about your jre

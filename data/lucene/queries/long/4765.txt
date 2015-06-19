@@ -1,0 +1,3 @@
+The general idea is basically the docvalues parallel to FieldCache.getDocTermOrds/UninvertedField
+
+Currently this stuff is used in e.g. grouping and join for multivalued fields, and in solr for faceting.

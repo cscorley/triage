@@ -1,0 +1,3 @@
+We have a reader that have a different data structure (in memory) where the cost of computing ordinals per reader open is too expensive in the realtime setting.
+
+We are maintaining in memory data structure that supports all functionality and would like to leverage SortedSetDocValuesAccumulator.

@@ -1,0 +1,2 @@
+[junit] Running org.apache.zookeeper.RemoveWatchesTest
+    [junit] Tests run: 46, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 306.188 sec

@@ -1,0 +1,1 @@
+HBaseStorage always disable split combination.  It should be documented explicitly.

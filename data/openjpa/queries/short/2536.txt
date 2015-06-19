@@ -1,0 +1,1 @@
+FetchGroup is not returning lazy fields.

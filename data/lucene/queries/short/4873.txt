@@ -1,0 +1,1 @@
+corner case in MinShouldMatchSumScorer when there are many terms

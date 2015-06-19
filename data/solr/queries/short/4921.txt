@@ -1,0 +1,1 @@
+Support for Adding Documents via the Solr UI

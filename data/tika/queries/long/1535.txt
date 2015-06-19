@@ -1,0 +1,7 @@
+The Class MIMETypes does not currently allow for inheritance.
+
+There are a couple of methods in this class which looks independent, and some of which needs to be exposed or overwritten for special needs or use cases, this will enable tika users with more flexibility for new mime detection algorithm.
+
+
+------------------------------------
+Perhaps it may be a good idea to extract out the detector logic from the MimeTypes class, and create an independent detector for Tika.

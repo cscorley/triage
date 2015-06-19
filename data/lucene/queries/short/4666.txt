@@ -1,0 +1,1 @@
+Simplify CompressingStoredFieldsFormat merging

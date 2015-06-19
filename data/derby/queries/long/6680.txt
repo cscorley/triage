@@ -1,0 +1,11 @@
+The following properties may be read by LocalizedResource, a class which is included in derby.jar, derbynet.jar, derbyclient.jar, and derbytools.jar:
+
+
+derby.ui.codeset
+derby.ui.locale
+
+
+
+A user has tripped across this problem in production. With the user's language settings, the network server fails to come up because the server policy file does not grant the server permission to read these properties. See http://apache-database.10148.n7.nabble.com/Hellow-I-have-some-problem-in-customize-security-policy-with-derby-modified-3-td141002.html
+
+We should adjust server.policy and template.policy accordingly.

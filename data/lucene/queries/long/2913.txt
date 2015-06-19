@@ -1,0 +1,1 @@
+These classes are missing bean-style getter methods for some basic properties. This is inconsistent and should be fixed.

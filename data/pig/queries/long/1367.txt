@@ -1,0 +1,5 @@
+PIG-1315 has the Zebra support for this feature and the map-side group-by. It also has the test case for map-side COGROUP; while the test case for map-side GROUP-BY is in PIG-1357.
+
+However PIG-1315 is committed to the trunk as a whole; but only committed to the 0.7 branch without the map-side group-by test case because PIG has yet to decide if the feature will be in the 0.7 release.
+
+This JIRA is created for tracking purpose should the decision to support map-side COGROUP in 0.7 by PIG is made. If not, this should be made invalid eventually.

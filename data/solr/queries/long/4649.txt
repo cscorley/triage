@@ -1,0 +1,24 @@
+I discovered in looking at differences between the .war's produced by the Maven and Ant builds (over on SOLR-3706) that the Ant-built .war contains cglib-nodep-*.jar and objenesis-*.jar under WEB-INF/lib/.
+
+mvn dependency:tree says that easymock-*.jar depends on these two jars.  In the Maven build, the solr core module depends on easymock-*.jar with test scope; as a result, none of these three jars are included in the Maven-built .war, since test scope deps are automatically excluded from the .war.
+
+easymock-*.jar is not included in the Ant-built .war because solr/webapp/build.xml explicitly excludes it.  These other two jars should get the same treatment.
+
+Here's a patch to remove these two jars from the .war:
+
+
+
+Index: solr/webapp/build.xml
+===================================================================
+--- solr/webapp/build.xml	(revision 1461743)
++++ solr/webapp/build.xml	(working copy)
+@@ -50,6 +50,8 @@
+       <lib dir="${common-solr.dir}/core/lib" excludes="${exclude.from.war},${common.classpath.excludes}">
+         <exclude name="*servlet-api*.jar" />
+         <exclude name="easymock-*.jar" />
++        <exclude name="cglib-nodep-*.jar" />
++        <exclude name="objenesis-*.jar" />
+       </lib>
+       <lib dir="${common-solr.dir}/solrj/lib" excludes="${exclude.from.war},${common.classpath.excludes}"/>
+       <lib dir="${lucene-libs}" excludes="${exclude.from.war},${common.classpath.excludes}" />
+

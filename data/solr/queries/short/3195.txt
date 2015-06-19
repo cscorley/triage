@@ -1,0 +1,1 @@
+timeAllowed is ignored for grouping queries

@@ -1,0 +1,1 @@
+The attached patch adds the piggybank contrib jar to the mvn-install and mvn-deploy ant targets in the same way as the pigunit & pigsmoke artifacts.

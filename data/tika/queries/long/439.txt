@@ -1,0 +1,5 @@
+DWGParser isn't picked up by the AutoDetectParser as it's missing from the tika-parsers/src/main/resources/META-INF/services/org.apache.tika.parser.Parser list
+
+Also, that list should probably be sorted, so it's easier to spot missing ones
+
+I think netcdf and opendocument might be missing too

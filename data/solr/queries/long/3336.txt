@@ -1,0 +1,13 @@
+The SolrEntityProcessor performs variable substitution at startup, not at query time. This means that this technique cannot work:
+
+
+
+<entity get a document>
+   <field SomeField/>
+   <entity SolrEntityProcessor query="${SomeField}"/>
+</entity>
+
+
+
+The SEP should substitute the new value of SomeField into each query string.
+

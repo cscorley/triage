@@ -1,0 +1,3 @@
+Today we rewrite to a query like +baseQuery +ConstantScoreQuery(boost=0.0 TermQuery(drillDownTerm)), but I'm not certain 0.0 boost is safe / doesn't actually change scores.
+
+We should also add a test to assert that scores are not changed by drill down.

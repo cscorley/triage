@@ -1,0 +1,7 @@
+Looks like UnInvertedField#getUnInvertedField has implemented a bit additional synchronization module rather than what is required, and thereby increasing the complexity.
+
+https://github.com/apache/lucene-solr/blob/trunk/solr/core/src/java/org/apache/solr/request/UnInvertedField.java#L667
+
+As pointed out in the above link, as the synchronization is performed on the cache variable(which itself will protect the threads from obtaining access to the cache), we can safely remove all the placeholder flags. As long as cache.get() is in synchronized block, we can simply populate the cache with new entries and other threads will be able to see the changes.
+
+This change has been introduced in https://issues.apache.org/jira/browse/SOLR-2548 (Multithreaded faceting)

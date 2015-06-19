@@ -1,0 +1,1 @@
+This is really quite awful, but the test I created for > 2.1 GB FSTs never tested save/load ... and ... it doesn't work.

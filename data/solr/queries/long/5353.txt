@@ -1,0 +1,7 @@
+Allow a split key to be passed in to CoreAdmin SPLIT action so that we can split only a particular route key's documents out of the index.
+
+e.g. consider an index containing documents belonging to two route keys with hash ranges A!=[12,15] and B!=[13,17]. We want to split all documents having route key 'A!' while leaving behind any documents having route key 'B!' even though some documents with 'B!' fall into the hash range of 'A!'
+
+This is different from what was achieved in SOLR-5338 because that issue splits all documents belonging to the hash range of a given route key. Since multiple keys can have overlapping hash range and we were splitting into the same collection, we had no choice but to move all documents belonging to the hash range into the new shard.
+
+In this particular issue, we are trying to migrate documents to a different collection and therefore we can leave documents having other route keys behind.

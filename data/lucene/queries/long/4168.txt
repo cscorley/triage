@@ -1,0 +1,1 @@
+Override on the build server to calculate stats during runs, then update the cache in the repo from time to time.

@@ -1,0 +1,1 @@
+BeiderMorseFilter inserts tokens with positionIncrement=0, but ignores all custom attributes except OffsetAttribute

@@ -1,0 +1,8 @@
+The error handling in LBHttpSolrServer can be simplified – right now almost identical code is run whether the server is a zombie or not, which sometimes doesn't make complete sense.  For example, the zombie code goes through some effort to throw an exception or save the exception based on the type of exception, but the end result is the same – an exception is thrown.  It's simpler if the same code is run each time.
+
+Also, made some minor changes to test cases:
+
+	made sure SolrServer.shutdown is called in finally, so it happens even if a request throws an exception
+	got rid of some unnecessary checks
+	normalized some functions/variables so the functions are public scope and the variables aren't
+

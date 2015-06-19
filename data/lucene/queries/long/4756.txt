@@ -1,0 +1,1 @@
+BaseUIMATokenizer should release AnalysisEngine and CAS on close()

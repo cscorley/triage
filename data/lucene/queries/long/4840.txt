@@ -1,0 +1,3 @@
+Currently SSDVFF does not index any postings ... so you cannot drill-down, at least not the "normal" way.
+
+To fix this, we may need to make SSDVFF more like FacetFields, i.e. receive all CategoryPaths up front, and then re-use the code in FacetFields that adds the pre-tokenized field to the doc.

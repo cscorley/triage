@@ -1,0 +1,5 @@
+This appears to be a simple copy/paste error, where someone attempted to copy the code for tracking open/close counts on SolrIndexSearcher,  and use it to track open/close counts on SolrIndexWriter, but didn't update all of the variables. In particular :
+
+– the "startTrackingWriters()" method sets the values of numOpens and numCloses, not numWriterOpens and numWriterCloses
+– because in "beforeClassSolrTestCase()", startTrackingWriters() is called after startTrackingSearchers(), this means that the "start" counts referenced by startTrackingSearchers can be incorrect. This can cause "endTrackingSearchers()" to report nonsensical (e.g. negative) open or close counts in test cases.
+– inside "endTrackingWriters()", the test condition for detecting when writers have been opened but not closed uses numOpens / numCloses, even though the error message it logs uses numWriterOpens / numWriterCloses.

@@ -1,0 +1,50 @@
+This is interesting. I posted a link to a state-machine-based UTF8 parser/recognizer:
+http://bjoern.hoehrmann.de/utf-8/decoder/dfa/
+
+I spent some time thinking if the lookup table could be converted into a stateless computational function, which would avoid a table lookup (which in Java will cause an additional bounds check that will be hard to eliminate I think). This didn't turn out to be easy (it boils down to finding a simple function that would map a set of integers to its concrete permutation; a generalization of minimal perfect hashing).
+
+But out of curiosity I though it'd be fun to compare how Lucene's codepoint counting compares to Java's built-in one (Decoder) and a sequence of if's.
+
+I've put together a Caliper benchmark that processes 50 million unicode codepoints; one only ASCII, one Unicode. The results are interesting. On my win/I7:
+
+
+
+ implementation dataType          ns linear runtime
+         LUCENE  UNICODE 167359502.6 ===============
+         LUCENE    ASCII 334015746.5 ==============================
+NOLOOKUP_SWITCH  UNICODE 154294141.8 =============
+NOLOOKUP_SWITCH    ASCII 119500892.8 ==========
+    NOLOOKUP_IF  UNICODE  90149072.6 ========
+    NOLOOKUP_IF    ASCII  29151411.4 ==
+
+
+
+Disregard the switch lookup – it's for fun only. But a sequence of if's is significantly faster than the current Lucene's table lookup, especially on ASCII input. And now compare this to Java's built-in decoder...
+
+
+
+           JAVA  UNICODE   5753930.1 =
+           JAVA    ASCII        23.8 =
+
+
+
+Yes, it's the same benchmark. Wtf? I realize buffers are partially native and probably so is utf8 decoder but by so much?! Again, to put it in context:
+
+
+
+ implementation dataType          ns linear runtime
+         LUCENE  UNICODE 167359502.6 ===============
+         LUCENE    ASCII 334015746.5 ==============================
+           JAVA  UNICODE   5753930.1 =
+           JAVA    ASCII        23.8 =
+    NOLOOKUP_IF  UNICODE  90149072.6 ========
+    NOLOOKUP_IF    ASCII  29151411.4 ==
+NOLOOKUP_SWITCH  UNICODE 154294141.8 =============
+NOLOOKUP_SWITCH    ASCII 119500892.8 ==========
+
+
+
+Wtf? The code is here if you want to experiment.
+https://github.com/dweiss/utf8dfa
+
+I realize the Java version needs to allocate a temporary space buffer but if these numbers hold for different VMs it may actually be worth it...

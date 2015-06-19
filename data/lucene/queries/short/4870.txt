@@ -1,0 +1,1 @@
+Lucene deletes entire index if and exception is thrown due do TooManyOpenFiles and OpenMode.CREATE_OR_APPEND

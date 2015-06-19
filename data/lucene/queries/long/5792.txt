@@ -1,0 +1,3 @@
+Since these classes are writeteable, they need a buffer in order to stage pending changes for efficiency reasons. The issue is that at read-time, the code then needs, for every call to get to check whether the requested value is in the buffer of pending values or has been packed into main storage, which is inefficient.
+
+I would like to fix these APIs to separate the writer from the reader, the latter being immutable.

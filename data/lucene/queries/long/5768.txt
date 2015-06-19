@@ -1,0 +1,5 @@
+I added a hack for the french dictionary, but the hack isn't contained well, so it screws up condition checks with character classes like the following in english:
+
+SFX S   y     ies        [^aeiou]y
+
+ 

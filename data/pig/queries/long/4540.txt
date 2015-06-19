@@ -1,0 +1,21 @@
+git log|head -n 10
+d0cd773 - (HEAD, origin/spark, spark) PIG-4421: implement visitSkewedJoin in SparkCompiler (Liyun via Xuefu) (6 hours ago) <Xuefu Zhang>
+
+	c139d87 - PIG-4276: Fix ordering related failures in TestEvalPipeline for Spark (Mohit via Xuefu) (6 hours ago) <Xuefu Zhang>
+
+
+
+In these two patch, Mohit and I all added following function in org.apache.pig.test.Util
+
+
+  public static boolean isSparkExecType(ExecType execType) {
+        if (execType.name().toLowerCase().startsWith("spark")) {
+            return true;
+        }
+
+        return false;
+    }
+
+
+
+We need remove one of isSparkExecType(ExecType execType).

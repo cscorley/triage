@@ -1,0 +1,1 @@
+Aggregating facets with Lucene's Score using FacetsCollector results in an Exception (assertion when enabled).

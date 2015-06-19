@@ -1,0 +1,1 @@
+MultiPhraseQuery assigns different scores to identical docs when using 0 pos-incr

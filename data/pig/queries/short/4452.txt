@@ -1,0 +1,1 @@
+Embedded SQL using "SQL" instead of "sql" fails with string index out of range: -1 error

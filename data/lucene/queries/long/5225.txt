@@ -1,0 +1,3 @@
+The BlockJoinScorer temporarily saves the child docids and scores in two arrays (pendingChildDocs/pendingChildScores) for the current block (parent/child docs) being processed. This is only need for ToParentBlockJoinCollector and in the case that this collector isn't used then these two arrays shouldn't be used as well.
+
+I've seen cases where only the ToParentBlockJoinQuery is used and there are many child docs (100k and up), in that case these two arrays are a waste of resources.

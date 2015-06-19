@@ -1,0 +1,5 @@
+In order to actually add real features (as opposed to just spending 24/7 fixing bugs and back compat), I need a trunk that doesn't have the back compat handcuffs.
+
+In the meantime, we should rename the current trunk (which is totally tied down in back compat already, without even a single release!) to branch_5x while you guys (i wont be doing any back compat anymore) figure out what you want to do with the back compat policly.
+
+Here is the proposal what to do in this issue: http://mail-archives.apache.org/mod_mbox/lucene-dev/201409.mbox/%3CCAOdYfZUpAbYp-omdw=ngJSdzBKVHn2ZYdoBZvj1gDxK+LRT1SQ@mail.gmail.com%3E

@@ -1,0 +1,54 @@
+Seen in the nightly testing of trunk.
+
+http://download.java.net/javadesktop/derby/request_5595117/javadb-task-3919785.html
+
+
+java.lang.Exception: DRDA_InvalidReplyTooShort.S:Ungültige Antwort von Network Server: Daten nicht ausreichend.
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.consolePropertyMessageWork(NetworkServerControlImpl.java:3357)
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.consolePropertyMessage(NetworkServerControlImpl.java:1988)
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.fillReplyBuffer(NetworkServerControlImpl.java:2957)
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.readStringReply(NetworkServerControlImpl.java:3010)
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.runtimeInfo(NetworkServerControlImpl.java:1443)
+	at org.apache.derby.drda.NetworkServerControl.getRuntimeInfo(NetworkServerControl.java:516)
+	at org.apache.derbyTesting.functionTests.tests.derbynet.RuntimeInfoTest.x_testRuntimeInfoAfterConnClose(RuntimeInfoTest.java:193)
+	at org.apache.derbyTesting.functionTests.tests.derbynet.RuntimeInfoTest.testRunTests(RuntimeInfoTest.java:97)
+	at org.apache.derbyTesting.junit.BaseTestCase.runBare(BaseTestCase.java:119)
+	at org.apache.derbyTesting.junit.BaseJDBCTestCase.runBareOverridable(BaseJDBCTestCase.java:440)
+	at org.apache.derbyTesting.junit.BaseJDBCTestCase.runBare(BaseJDBCTestCase.java:457)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at org.apache.derbyTesting.junit.BaseTestSetup.run(BaseTestSetup.java:58)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at org.apache.derbyTesting.junit.BaseTestSetup.run(BaseTestSetup.java:58)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+
+
+
+derby.log showed that there was a NullPointerException while building the runtimeinfo string:
+
+
+java.lang.NullPointerException
+	at org.apache.derby.impl.drda.Database.buildRuntimeInfo(Database.java:417)
+	at org.apache.derby.impl.drda.Session.buildRuntimeInfo(Session.java:291)
+	at org.apache.derby.impl.drda.DRDAConnThread.buildRuntimeInfo(DRDAConnThread.java:9186)
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.buildRuntimeInfo(NetworkServerControlImpl.java:4069)
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.getRuntimeInfo(NetworkServerControlImpl.java:2229)
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.sendRuntimeInfo(NetworkServerControlImpl.java:2157)
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.processCommands(NetworkServerControlImpl.java:1804)
+	at org.apache.derby.impl.drda.DRDAConnThread.sessionInitialState(DRDAConnThread.java:665)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:284)
+

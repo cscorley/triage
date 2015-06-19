@@ -1,0 +1,1 @@
+zkcli.sh/bat is broken because it cannot find the logging jars.

@@ -1,0 +1,1 @@
+revise Scorer visitor API

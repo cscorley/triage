@@ -1,0 +1,29 @@
+The goal is to give Solr server clusters self-healing attributes
+where if a server fails, indexing and searching don't stop and
+all of the partitions remain searchable. For configuration, the
+ability to centrally deploy a new configuration without servers
+going offline.
+
+We can start with basic failover and start from there?
+
+Features:
+
+
+	Automatic failover (i.e. when a server fails, clients stop
+trying to index to or search it)
+
+
+
+
+	Centralized configuration management (i.e. new solrconfig.xml
+or schema.xml propagates to a live Solr cluster)
+
+
+
+
+	Optionally allow shards of a partition to be moved to another
+server (i.e. if a server gets hot, move the hot segments out to
+cooler servers). Ideally we'd have a way to detect hot segments
+and move them seamlessly. With NRT this becomes somewhat more
+difficult but not impossible?
+

@@ -1,0 +1,7 @@
+In version 0.9 I was able to use the org.apache.tika.Tika class in my OSGi application simply by including the tika-bundle.
+
+I am now trying to move to version 1.2 and this class is missing from the tika-bundle-1.2.jar
+
+The top level documentation says "Tika bundle. An OSGi bundle that includes everything you need to use all Tika functionality in an OSGi environment." so I think that this should be continued to included.
+
+I tried including the tika-core-1.2.jar into my application, but even after fiddling with various start levels I can't get the Tika class to find the parsers in the tika-bundle.

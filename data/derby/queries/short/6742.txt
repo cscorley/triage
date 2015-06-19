@@ -1,0 +1,1 @@
+For update statement, collect generated keys if Statement.RETURN_GENERATED_KEYS flag is supplied to the JDBC call.

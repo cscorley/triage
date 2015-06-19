@@ -1,0 +1,1 @@
+can't update current trunk or 4x with 4.4 or earlier binary protocol

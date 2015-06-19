@@ -1,0 +1,10 @@
+Just realized a...significant problem with the "arbitrary property" bit (SOLR-6512). The way I wrote it I can delete any property at all, things like
+core
+node_name
+etc.
+
+And when you do delete some of these, interesting things happen, like the cluster becomes unusable. Oops.
+
+I think the right thing to do here is to automatically add a "property" prefix to all of the arbitrary properties that a user tries to add or delete.
+
+I'll have a patch up tomorrow for this I hope.

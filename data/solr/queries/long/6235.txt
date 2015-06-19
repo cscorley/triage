@@ -1,0 +1,20 @@
+
+
+1 tests failed.
+FAILED:  org.apache.solr.cloud.SyncSliceTest.testDistribSearch
+
+Error Message:
+No live SolrServers available to handle this request
+
+Stack Trace:
+org.apache.solr.client.solrj.SolrServerException: No live SolrServers available to handle this request
+        at __randomizedtesting.SeedInfo.seed([685C57B3F25C854B:E9BAD9AB8503E577]:0)
+        at org.apache.solr.client.solrj.impl.LBHttpSolrServer.request(LBHttpSolrServer.java:317)
+        at org.apache.solr.client.solrj.impl.CloudSolrServer.request(CloudSolrServer.java:659)
+        at org.apache.solr.client.solrj.request.QueryRequest.process(QueryRequest.java:91)
+        at org.apache.solr.client.solrj.SolrServer.query(SolrServer.java:301)
+        at org.apache.solr.cloud.AbstractFullDistribZkTestBase.checkShardConsistency(AbstractFullDistribZkTestBase.java:1149)
+        at org.apache.solr.cloud.AbstractFullDistribZkTestBase.checkShardConsistency(AbstractFullDistribZkTestBase.java:1118)
+        at org.apache.solr.cloud.SyncSliceTest.doTest(SyncSliceTest.java:236)
+        at org.apache.solr.BaseDistributedSearchTestCase.testDistribSearch(BaseDistributedSearchTestCase.java:865)
+

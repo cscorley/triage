@@ -1,0 +1,3 @@
+we ran bookie recovery tool to recover bookie after encountered hardware issue. but the recovery tool doesn't remove the cookie after it finished recovery. so when we fixed the bookie and added it back to the cluster, it couldn't start because the cookie exists on zookeeper but not on disks.
+
+we want the tool could delete the cookie after recover a bookie, or maybe provide another tool to remove the cookie for a bookie.

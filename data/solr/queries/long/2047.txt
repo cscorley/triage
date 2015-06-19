@@ -1,0 +1,13 @@
+Currently, the type of enable flag in ReplicationHandler is str:
+
+
+
+<lst name="slave">
+  <str name="enable">true</str>
+  <str name="masterUrl">http://localhost:8983/solr/replication</str>
+  <str name="pollInterval">00:00:60</str>
+</lst>
+
+
+
+It should be bool.

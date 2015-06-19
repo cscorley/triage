@@ -1,0 +1,1 @@
+TestCoreContainer and CoreAdminHandlerTest try to use solr/core/src/test-files/solr/data if it exists

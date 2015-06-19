@@ -1,0 +1,7 @@
+SNAPSHOT's cannot actually be used and released by Lucene/Solr, but we use them downstream in some cases during development - we have to harmonize jars across multiple projects.
+
+It would be nice if we could avoid doing the check sum check on SNAPSHOT's, but still do the license check (dev adds any dependency, dev must add license immediately).
+
+This first patch adds a new system property called skipSnapshotsChecksum - if you set it to true, SNAPSHOT dependency's will not be check sum compared.
+
+I think this change makes the license checker more consumable.

@@ -1,0 +1,3 @@
+Came out of LUCENE-2510.
+
+We can add generics to ResourceLoader.newInstance so it returns T instead of Object.  This will add improved type safety and remove the need for casting the result to a specific type.

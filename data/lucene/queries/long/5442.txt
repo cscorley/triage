@@ -1,0 +1,5 @@
+SOLR-5365 is an example of a bug that croped up because we upgraded a 3rd party dep (tika) w/o realizing that the version we upgraded too depended on a newer version of another 3rd party dep (commons-compress)
+
+in a comment in SOLR-5365, Jan suggested that it would be nice if there was an easy way to spot problems like this ... i asked steve about it, thinking maybe this is something the maven build could help with, and he mentioned that there is already an ant task to inspect the ivy transative deps in order to generate the maven deps and it could be used to help detect this sort of problem.
+
+opening this issue per steve's request as a reminder to look into this possibility.

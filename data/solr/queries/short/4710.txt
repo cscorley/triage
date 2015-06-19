@@ -1,0 +1,1 @@
+You cannot delete a collection fully from ZooKeeper unless all nodes are up and functioning correctly.

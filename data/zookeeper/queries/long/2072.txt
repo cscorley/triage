@@ -1,0 +1,9 @@
+Currently, netty server is setting up child channel in this way:
+
+
+ bootstrap.getPipeline().addLast("servercnxnfactory", channelHandler);
+
+
+
+According to the netty doc,
+you cannot use this approach if you are going to open more than one Channels or run a server that accepts incoming connections to create its child channels.

@@ -1,0 +1,1 @@
+The Jikes project is now hosted at SourceForge.  The link for Jikes 1.14 in BUILDING.txt needs to be changed to http://jikes.sourceforge.net/

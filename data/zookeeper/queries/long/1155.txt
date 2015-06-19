@@ -1,0 +1,6 @@
+setup an CI build on windows to make sure that the new code checked in compiles fine on windows (VS compilers) for the zookeeper c bindings.
+
+There is a ticket opened with the INFRA team to assign a build box and setup CI env for zookeeper c bindings
+https://issues.apache.org/jira/browse/INFRA-3842
+
+feel free to help us with this effort, this will ensure that the new checkins dont break windows builds.

@@ -1,0 +1,3 @@
+In order to declare a trigger, you have to include the phrase "mode db2sql". This phrase in non-ANSI--it does not turn up in the CREATE TRIGGER production from the ANSI spec, volume 2, section 11.39. It does turn up in the DB2 reference manual with the following explanation: "This clause is used to specify the mode of triggers. This is the only valid mode currently supported."
+
+This phrase should be made optional. This will strike a happy balance between our goals of supporting the ANSI syntax while still maintaining compatibility with previous versions of Derby.

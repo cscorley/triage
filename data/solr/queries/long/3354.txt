@@ -1,0 +1,69 @@
+From my build server.
+
+12-Apr-2012 02:29:21	    [junit] Testcase: testSimpleSliceLeaderElection(org.apache.solr.cloud.LeaderElectionIntegrationTest):        FAILED
+12-Apr-2012 02:29:21	    [junit] We didn't find a new leader! 7004 was shutdown, but it's still showing as the leader
+12-Apr-2012 02:29:21	    [junit] junit.framework.AssertionFailedError: We didn't find a new leader! 7004 was shutdown, but it's still showing as the leader
+12-Apr-2012 02:29:21	    [junit]         at org.junit.Assert.fail(Assert.java:93)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.solr.cloud.LeaderElectionIntegrationTest.testSimpleSliceLeaderElection(LeaderElectionIntegrationTest.java:174)
+12-Apr-2012 02:29:21	    [junit]         at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+12-Apr-2012 02:29:21	    [junit]         at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+12-Apr-2012 02:29:21	    [junit]         at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+12-Apr-2012 02:29:21	    [junit]         at java.lang.reflect.Method.invoke(Method.java:597)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:30)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.lucene.util.SystemPropertiesRestoreRule$1.evaluate(SystemPropertiesRestoreRule.java:63)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.lucene.util.LuceneTestCase$SubclassSetupTeardownRule$1.evaluate(LuceneTestCase.java:754)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.lucene.util.LuceneTestCase$InternalSetupTeardownRule$1.evaluate(LuceneTestCase.java:670)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.lucene.util.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:69)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.lucene.util.LuceneTestCase$TestResultInterceptorRule$1.evaluate(LuceneTestCase.java:591)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.lucene.util.UncaughtExceptionsRule$1.evaluate(UncaughtExceptionsRule.java:75)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.lucene.util.LuceneTestCase$SaveThreadAndTestNameRule$1.evaluate(LuceneTestCase.java:642)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.rules.RunRules.evaluate(RunRules.java:18)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.lucene.util.LuceneTestCaseRunner.runChild(LuceneTestCaseRunner.java:164)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.lucene.util.LuceneTestCaseRunner.runChild(LuceneTestCaseRunner.java:57)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:30)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.lucene.util.SystemPropertiesRestoreRule$1.evaluate(SystemPropertiesRestoreRule.java:63)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.lucene.util.UncaughtExceptionsRule$1.evaluate(UncaughtExceptionsRule.java:75)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.lucene.util.StoreClassNameRule$1.evaluate(StoreClassNameRule.java:38)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.lucene.util.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:69)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.rules.RunRules.evaluate(RunRules.java:18)
+12-Apr-2012 02:29:21	    [junit]         at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+12-Apr-2012 02:29:21	    [junit]         at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:39)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:518)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1052)
+12-Apr-2012 02:29:21	    [junit]         at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:879)
+12-Apr-2012 02:29:21	    [junit] 
+12-Apr-2012 02:29:21	    [junit] 
+12-Apr-2012 02:29:21	    [junit] Tests run: 2, Failures: 1, Errors: 0, Time elapsed: 103.344 sec
+12-Apr-2012 02:29:21	    [junit] 
+12-Apr-2012 02:29:21	    [junit] ------------- Standard Error -----------------
+12-Apr-2012 02:29:21	    [junit] 15674 T341 oasc.SyncStrategy.sync SEVERE No UpdateLog found - cannot sync
+12-Apr-2012 02:29:21	    [junit] 15814 T344 oasc.SyncStrategy.sync SEVERE No UpdateLog found - cannot sync
+12-Apr-2012 02:29:21	    [junit] 15949 T347 oasc.SyncStrategy.sync SEVERE No UpdateLog found - cannot sync
+12-Apr-2012 02:29:21	    [junit] 16094 T350 oasc.SyncStrategy.sync SEVERE No UpdateLog found - cannot sync
+12-Apr-2012 02:29:21	    [junit] 16622 T341 oasc.SyncStrategy.sync SEVERE No UpdateLog found - cannot sync
+12-Apr-2012 02:29:21	    [junit] 17271 T344 oasc.SyncStrategy.sync SEVERE No UpdateLog found - cannot sync
+12-Apr-2012 02:29:21	    [junit] 17423 T347 oasc.SyncStrategy.sync SEVERE No UpdateLog found - cannot sync
+12-Apr-2012 02:29:21	    [junit] 18157 T350 oasc.SyncStrategy.sync SEVERE No UpdateLog found - cannot sync
+12-Apr-2012 02:29:21	    [junit] 19288 T344 oasc.SyncStrategy.sync SEVERE No UpdateLog found - cannot sync
+12-Apr-2012 02:29:21	    [junit] NOTE: reproduce with: ant test -Dtestcase=LeaderElectionIntegrationTest -Dtestmethod=testSimpleSliceLeaderElection -Dtests.seed=f9259363cc51aac:-3c1e4bd6b3493ae5:da5b01cc1f4013 -Dargs="-Dfile.encoding=UTF-8"
+12-Apr-2012 02:29:21	    [junit] NOTE: reproduce with: ant test -Dtestcase=LeaderElectionIntegrationTest -Dtestmethod=testSimpleSliceLeaderElection -Dtests.seed=f9259363cc51aac:-3c1e4bd6b3493ae5:da5b01cc1f4013 -Dargs="-Dfile.encoding=UTF-8"
+12-Apr-2012 02:29:21	    [junit] NOTE: test params are: codec=Lucene3x, sim=DefaultSimilarity, locale=be_BY, timezone=America/Guatemala
+12-Apr-2012 02:29:21	    [junit] NOTE: all tests run in this JVM:
+12-Apr-2012 02:29:21	    [junit] [BasicFunctionalityTest, ConvertedLegacyTest, EchoParamsTest, TestDistributedGrouping, TestPluginEnable, TestTrie, CommonGramsFilterFactoryTest, LengthFilterTest, TestBrazilianStemFilterFactory, TestDictionaryCompoundWordTokenFilterFactory, TestGermanLightStemFilterFactory, TestHunspellStemFilterFactory, TestKeywordMarkerFilterFactory, TestLatvianStemFilterFactory, TestNGramFilters, TestPatternReplaceCharFilterFactory, TestPersianNormalizationFilterFactory, TestPhoneticFilterFactory, TestPortugueseLightStemFilterFactory, TestRemoveDuplicatesTokenFilterFactory, TestRussianLightStemFilterFactory, TestShingleFilterFactory, TestSlowSynonymFilter, TestStandardFactories, TestStopFilterFactory, TestThaiWordFilterFactory, TestWikipediaTokenizerFactory, BasicDistributedZkTest, LeaderElectionIntegrationTest]
+12-Apr-2012 02:29:21	    [junit] NOTE: Linux 2.6.32-38-server amd64/Sun Microsystems Inc. 1.6.0_20 (64-bit)/cpus=4,threads=1,free=183083864,total=273612800
+12-Apr-2012 02:29:21	    [junit] ------------- ---------------- ---------------
+12-Apr-2012 02:29:21	    [junit] TEST org.apache.solr.cloud.LeaderElectionIntegrationTest FAILED
+

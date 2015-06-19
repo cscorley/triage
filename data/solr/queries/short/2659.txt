@@ -1,0 +1,1 @@
+src/test-files/** should be moved under src/test-files/<module-name>/** for all Solr modules except core

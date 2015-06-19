@@ -1,0 +1,5 @@
+Hudson has a special huge linedocs file that it sets via a -D parameter,
+but this means that anything using LineDocs won't reproduce via our home
+computers if it fails on hudson.
+
+I think we should disable this.

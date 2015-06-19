@@ -1,0 +1,1 @@
+Pig script failure on Tez with split and order by due to missing sample collection

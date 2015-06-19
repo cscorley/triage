@@ -1,0 +1,5 @@
+Basically copying the issue described here:
+
+http://stackoverflow.com/questions/28327044/pig-streaming-some-output-files-are-missing
+
+Roughly, I believe the issue is that there is a race condition in the code in the HadoopExecutableManager that moves multiple output files from a script into HDFS and the MapReduce task that is shutting down after it writes the last bits from the "main" output of the STREAM task. Pig needs to make sure that the ExecutableManager is closed (and thus the files are moved from the local dir to HDFS) before it returns the end-of-stream tuple to signal that the stream is finished.

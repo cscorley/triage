@@ -1,0 +1,1 @@
+Error message is incorrect for linkconfig in ZkCLI

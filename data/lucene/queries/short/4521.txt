@@ -1,0 +1,1 @@
+tryDeleteDocument returns true (success) but may fail to write changes to the index on commit

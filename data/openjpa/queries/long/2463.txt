@@ -1,0 +1,23 @@
+Patch for issue OPENJPA-2233 introduced a message when a Embeddable entity defines an ID property, which the Enhancer can't properly add a helper method (getIDOwningClass).
+
+— openjpa-kernel/src/main/java/org/apache/openjpa/enhance/PCEnhancer.java	(revision 1325823)
++++ openjpa-kernel/src/main/java/org/apache/openjpa/enhance/PCEnhancer.java	(working copy)
+@@ -1150,6 +1150,11 @@
+             if (_meta.hasAbstractPKField() == true) 
+{ 
+                 addGetIDOwningClass();
+             }
++            
++        	if (_meta.isEmbeddedOnly() 
++            		&& _meta.getIdentityType() == ClassMetaData.ID_APPLICATION) 
+{
++            	_log.error(_loc.get("ID-field-in-embeddable-unsupported", _meta.toString()));
++            }
+             addNewObjectIdInstanceMethod(true);
+             addNewObjectIdInstanceMethod(false);
+
+The problem is that this message is also emitted when inheriting from a MappedSuperClass, containing an Id field/property, which is a very common pattern. 
+
+As the persistence engine of OpenJPA works perfectly with such a class hierarchy (and even the Enhancer with the complement of that patch just skips adding a call to the non-added helper method), it is pointless to alarm operations personnel with a message labeled and tagged as an error.
+
+Therefore I suggest to log it as a warning, also editing the corresponding message text to better indicate that the Enhancer will simply not add/call the helper method, skipping a potential optimization.

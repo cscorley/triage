@@ -1,0 +1,23 @@
+Currently the maven process described in http://wiki.apache.org/lucene-java/PublishMavenArtifacts does not work (on mac)
+
+It worked fine for the 4.0-alpha and 4.0-beta releases.
+
+NOTE: This appears to be working on linux so I am going with that. But this seems strange it doesnt work on mac.
+
+
+artifact:install-provider] Installing provider: org.apache.maven.wagon:wagon-ssh:jar:1.0-beta-7:runtime
+[artifact:pom] Downloading: org/apache/lucene/lucene-parent/4.0.0/lucene-parent-4.0.0.pom from repository sonatype.releases at http://oss.sonatype.org/content/repositories/releases
+[artifact:pom] Unable to locate resource in repository
+[artifact:pom] [INFO] Unable to find resource 'org.apache.lucene:lucene-parent:pom:4.0.0' in repository sonatype.releases (http://oss.sonatype.org/content/repositories/releases)
+[artifact:pom] Downloading: org/apache/lucene/lucene-parent/4.0.0/lucene-parent-4.0.0.pom from repository central at http://repo1.maven.org/maven2
+[artifact:pom] Unable to locate resource in repository
+[artifact:pom] [INFO] Unable to find resource 'org.apache.lucene:lucene-parent:pom:4.0.0' in repository central (http://repo1.maven.org/maven2)
+[artifact:pom] An error has occurred while processing the Maven artifact tasks.
+[artifact:pom]  Diagnosis:
+[artifact:pom] 
+[artifact:pom] Unable to initialize POM lucene-test-framework-4.0.0.pom: Cannot find parent: org.apache.lucene:lucene-parent for project: org.apache.lucene:lucene-test-framework:jar:null for project org.apache.lucene:lucene-test-framework:jar:null
+[artifact:pom] Unable to download the artifact from any repository
+
+BUILD FAILED
+
+

@@ -1,0 +1,1 @@
+I propose that we remove the targets to build rpms and debs from build.xml and consequently quit publishing them as part of our releases.  Bigtop publishes these packages now.  And building them takes infrastructure that not every committer/PMC member has.

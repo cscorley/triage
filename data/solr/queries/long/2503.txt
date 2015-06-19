@@ -1,0 +1,3 @@
+I think "a value of feature maps to a dynamicField" is a nice to have function.
+
+http://www.lucidimagination.com/search/document/983a059d6d370ce/uima_fieldmappings_and_solr_dynamicfield

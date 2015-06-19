@@ -1,0 +1,1 @@
+Tika-bundle 1.3 does not import org.w3c.dom package

@@ -1,0 +1,3 @@
+The cause of flaky failure of testPortChange() is a race in sync().
+
+I figured out it could take some time to fix sync(). Meanwhile, we can make testPortChange() less flaky by doing reconfig on the leader. We can change this back in the fix of ZOOKEEPER-2136.

@@ -1,0 +1,1 @@
+Admin UI displays -1 for term count in multiValued fields

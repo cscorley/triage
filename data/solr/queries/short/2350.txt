@@ -1,0 +1,1 @@
+improve post.jar to handle non UTF-8 files

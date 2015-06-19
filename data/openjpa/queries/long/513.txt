@@ -1,0 +1,11 @@
+Now that I have a resolution (JDK patch) for OPENJPA-429, when I run a 1.1.0 build, I am getting some errors from the test phase of openjpa-persistence-jdbc.  The following tests are failing according to the surefire report:
+
+Results :
+
+Tests in error:
+  testEntityListeners(org.apache.openjpa.persistence.callbacks.TestEntityListeners)
+  testGlobalListeners(org.apache.openjpa.persistence.callbacks.TestEntityListeners)
+  testPersistenceUnitWithoutXSD(org.apache.openjpa.persistence.xml.TestPersistenceUnitWithoutXSD)
+  testEnhancementOfAllPUsWithinAResource(org.apache.openjpa.enhance.TestEnhancementWithMultiplePUs)
+
+Tests run: 568, Failures: 0, Errors: 4, Skipped: 0

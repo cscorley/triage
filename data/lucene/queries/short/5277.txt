@@ -1,0 +1,1 @@
+Modify FixedBitSet copy constructor to take numBits to allow grow/shrink the new bitset

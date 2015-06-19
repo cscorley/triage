@@ -1,0 +1,1 @@
+Missing exception in error log line in UpdateLog

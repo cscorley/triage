@@ -1,0 +1,1 @@
+LEFT JOIN FETCH not honored when data cache is enabled

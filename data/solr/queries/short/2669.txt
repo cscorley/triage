@@ -1,0 +1,1 @@
+SchemaField.calcProps has some backwards validation

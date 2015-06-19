@@ -1,0 +1,1 @@
+When submit several DAG simultaneously using Java/Python API, TezResourceManager get messed up due to every DAG submission resets stagingDir. Causing test fail such as Jython_CompileBindRun_3.

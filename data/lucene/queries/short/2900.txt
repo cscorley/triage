@@ -1,0 +1,1 @@
+make applying deletes optional when pulling a new NRT reader

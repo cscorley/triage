@@ -1,0 +1,1 @@
+equals method of TermsFilter might equate two different filters

@@ -1,0 +1,1 @@
+When a leader is elected and asks replicas to sync back to him and that fails, we should ask those nodes to recovery asynchronously rather than synchronously.

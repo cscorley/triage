@@ -1,0 +1,11 @@
+someone at work migrating from a pre-apache version of solr to the latest release ran into a nasty NegativeArraySizeException
+today today because of these lines in DocSetHitCollector...
+
+  static int HASHDOCSET_MAXSIZE= SolrConfig.config.getInt("//HashDocSet/@maxSize",-1);
+  final int[] scratch = new int[HASHDOCSET_MAXSIZE];
+
+(apparently in the version she was migrating from, not having that option set worked fine, i'm guessing it just never used HashDocSets)
+
+we should fix that so it either has a sensible default, or at the very least throws a usefull error message .. it's probably worth auditing all of the config options as well.  
+
+(i'm imagining a unit test using a solrconfig.xml file that is completely blank, and verifies that Solr starts up fine without exceptions, logs a bunch of warnings, and then sits there unable to do anything (since no request handlers are registered)

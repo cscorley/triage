@@ -1,0 +1,1 @@
+make maxPassages per-field in postingshighlighter

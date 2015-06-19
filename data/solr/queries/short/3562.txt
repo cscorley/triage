@@ -1,0 +1,1 @@
+Add options to remove instance dir or data dir on core reload.

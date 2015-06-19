@@ -1,0 +1,1 @@
+Create dev-tools/eclipse/dot.classpath automatically

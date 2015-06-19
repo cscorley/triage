@@ -1,0 +1,22 @@
+The DataImportHandler has two URL parameters for defining the data-config.xml file to be used for the command. 'config' is used in some places and 'dataConfig' is used in other places.
+
+'config' does not work from an HTTP request. However, if it is in the "defaults" section of the DIH <requestHandler> definition, it works. If the 'config' parameter is used in an HTTP request, the DIH uses the default in the <requestHandler> anyway.
+
+This is the exception stack recieved by the client if there is no default. (This is the 3.X branch.)
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>Error 500 </title>
+</head>
+<body><h2>HTTP ERROR: 500</h2><pre>null
+
+java.lang.NullPointerException
+	at org.apache.solr.handler.dataimport.DataImportHandler.handleRequestBody(DataImportHandler.java:146)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:131)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:1316)
+	at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:338)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:241)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1089)
+..etc..

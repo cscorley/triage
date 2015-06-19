@@ -1,0 +1,16 @@
+Woodstox project has long changed their groupId and artifacts under the old groupId are actually not defined correctly in the maven2, causing various silly issues with maven:
+
+pom file of Solrj 1.4-SNAPSHOT has woodstox Sax dependency defined as 
+    <dependency>
+      <groupId>woodstox</groupId>
+      <artifactId>wstx-asl</artifactId>
+      <version>3.2.7</version>
+    </dependency>
+
+where the correct dependency should be 
+
+      <dependency>
+        <groupId>org.codehaus.woodstox</groupId>
+        <artifactId>wstx-asl</artifactId>
+        <version>3.2.7</version>
+      </dependency>

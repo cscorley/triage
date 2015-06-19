@@ -1,0 +1,1 @@
+If opening a reader fails for some reason when opening a SolrIndexSearcher, a Directory can be left unreleased.

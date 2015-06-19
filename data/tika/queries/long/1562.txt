@@ -1,0 +1,1 @@
+Manning publications has granted permission for me to contribute the Tika in Action code to Apache TIka. Yay! I'll put it in the examples module and update it if needed.

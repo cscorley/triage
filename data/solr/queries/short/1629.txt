@@ -1,0 +1,1 @@
+"Return to admin page" link on registry.jsp goes to wrong page

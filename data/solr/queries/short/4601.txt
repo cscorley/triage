@@ -1,0 +1,1 @@
+A Collection that is only partially created and then deleted will leave pre allocated shard information in ZooKeeper.

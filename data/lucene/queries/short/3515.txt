@@ -1,0 +1,1 @@
+Possible slowdown of indexing/merging on 3.x vs trunk

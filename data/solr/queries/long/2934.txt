@@ -1,0 +1,56 @@
+I'm trying to add the HunspellStemFilterFactory to my Solr project. 
+I'm trying this on a fresh new download of Solr 3.5.
+I downloaded french dictionary here (found it from here): http://www.dicollecte.org/download/fr/hunspell-fr-moderne-v4.3.zip
+
+But when I start Solr and go to the Solr Analysis, an error occurs in Solr.
+
+Is there the trace : 
+java.lang.RuntimeException: Unable to load hunspell data! [dictionary=en_GB.dic,affix=fr-moderne.aff]
+	at org.apache.solr.analysis.HunspellStemFilterFactory.inform(HunspellStemFilterFactory.java:82)
+	at org.apache.solr.core.SolrResourceLoader.inform(SolrResourceLoader.java:546)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:126)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:461)
+	at org.apache.solr.core.CoreContainer.load(CoreContainer.java:316)
+	at org.apache.solr.core.CoreContainer.load(CoreContainer.java:207)
+	at org.apache.solr.core.CoreContainer$Initializer.initialize(CoreContainer.java:130)
+	at org.apache.solr.servlet.SolrDispatchFilter.init(SolrDispatchFilter.java:94)
+	at org.mortbay.jetty.servlet.FilterHolder.doStart(FilterHolder.java:97)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.java:713)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.xml.XmlConfiguration.main(XmlConfiguration.java:985)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mortbay.start.Main.invokeMain(Main.java:194)
+	at org.mortbay.start.Main.start(Main.java:534)
+	at org.mortbay.start.Main.start(Main.java:441)
+	at org.mortbay.start.Main.main(Main.java:119)
+
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 3
+	at java.lang.String.charAt(Unknown Source)
+	at org.apache.lucene.analysis.hunspell.HunspellDictionary$DoubleASCIIFlagParsingStrategy.parseFlags(HunspellDictionary.java:382)
+	at org.apache.lucene.analysis.hunspell.HunspellDictionary.parseAffix(HunspellDictionary.java:165)
+	at org.apache.lucene.analysis.hunspell.HunspellDictionary.readAffixFile(HunspellDictionary.java:121)
+	at org.apache.lucene.analysis.hunspell.HunspellDictionary.<init>(HunspellDictionary.java:64)
+	at org.apache.solr.analysis.HunspellStemFilterFactory.inform(HunspellStemFilterFactory.java:46)
+
+
+I can't find where the problem is. It seems like my dictionary isn't well written for hunspell, but I tried with two different dictionaries, and I had the same problem.
+I also tried with an english dictionary, and ... it works !
+So I think that my french dictionary is wrong for hunspell, but I don't know why ...
+
+Can you help me ?

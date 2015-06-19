@@ -1,0 +1,3 @@
+if a group.query does not match any documents, then in distribued search (aka: solrcloud) that group.query will be completley excluded frm the final result.
+
+This is inconsistent with single node grouping behavior, where the group.query will be included in the final result (in the orde that it's pat of the request) with a numFound=0

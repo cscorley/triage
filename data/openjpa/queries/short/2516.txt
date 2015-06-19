@@ -1,0 +1,1 @@
+ConnectionProperties not being honor in Driver connect invocation

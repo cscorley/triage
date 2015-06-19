@@ -1,0 +1,1 @@
+LBHttpSolrServer should only retry on Connection exceptions when sending updates.

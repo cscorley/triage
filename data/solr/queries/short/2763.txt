@@ -1,0 +1,1 @@
+Extracting update request handler throws exception and returns 400 when zero-length file posted using multipart form post

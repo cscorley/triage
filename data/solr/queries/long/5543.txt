@@ -1,0 +1,39 @@
+We are having issues with SWAP CoreAdmin in 4.6.
+
+Using legacy solr.xml we issue a COreodmin SWAP, and we want it persistent. It has been running flawless since 4.5. Now it creates duplicate lines in solr.xml.
+
+Even the example multi core schema in doesn't work with persistent="true" - it creates duplicate lines in solr.xml.
+
+ <cores adminPath="/admin/cores">
+    <core name="autosuggest" loadOnStartup="true" instanceDir="autosuggest" transient="false"/>
+
+    <core name="citystateprovider" loadOnStartup="true" instanceDir="citystateprovider" transient="false"/>
+
+    <core name="collection1" loadOnStartup="true" instanceDir="collection1" transient="false"/>
+
+    <core name="facility" loadOnStartup="true" instanceDir="facility" transient="false"/>
+
+    <core name="inactiveproviders" loadOnStartup="true" instanceDir="inactiveproviders" transient="false"/>
+
+    <core name="linesvcgeo" instanceDir="linesvcgeo" loadOnStartup="true" transient="false"/>
+
+    <core name="linesvcgeofull" instanceDir="linesvcgeofull" loadOnStartup="true" transient="false"/>
+
+    <core name="locationgeo" loadOnStartup="true" instanceDir="locationgeo" transient="false"/>
+
+    <core name="market" loadOnStartup="true" instanceDir="market" transient="false"/>
+
+    <core name="portalprovider" loadOnStartup="true" instanceDir="portalprovider" transient="false"/>
+
+    <core name="practice" loadOnStartup="true" instanceDir="practice" transient="false"/>
+
+    <core name="provider" loadOnStartup="true" instanceDir="provider" transient="false"/>
+
+    <core name="providersearch" loadOnStartup="true" instanceDir="providersearch" transient="false"/>
+
+    <core name="tridioncomponents" loadOnStartup="true" instanceDir="tridioncomponents" transient="false"/>
+
+    <core name="linesvcgeo" instanceDir="linesvcgeo" loadOnStartup="true" transient="false"/>
+
+    <core name="linesvcgeofull" instanceDir="linesvcgeofull" loadOnStartup="true" transient="false"/>
+</cores>

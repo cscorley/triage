@@ -1,0 +1,1 @@
+[zebra] Map-side Cogroup Test case is needed on 0.7 if the feature is supported in 0.7

@@ -1,0 +1,1 @@
+Prevent runtime failure if users use initargs "useCompoundFile" setting on LogMergePolicy or TieredMergePolicy

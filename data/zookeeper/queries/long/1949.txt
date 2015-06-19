@@ -1,0 +1,5 @@
+Following recipe jars doesn't exists in the distribution "zookeeper-3.4.6.tar.gz"
+
+recipes/election/zookeeper-3.4.6-recipes-election.jar
+recipes/lock/zookeeper-3.4.6-recipes-lock.jar
+recipes/queue/zookeeper-3.4.6-recipes-queue.jar

@@ -1,0 +1,17 @@
+the ReplicationHandler (and the replication admin UI screen) report the index version & gen for the master based on what commit point is currently open for searching – but this is not necessarily the most recent commit point available for replication.
+
+Thus, it can appear that a slave has "gotten ahead" of the master, if there are "empty commits" (because of reader reopening shotcuts) or commits using openSearcher=false.
+
+We need to add additional data to help make it clear there is no actual problem in this sitation.
+
+Summary of original bug report..
+
+
+Index and Gen number on Slave is higher than master. 
+If you apply commit on master with no pending docs then the commit time stamp and gen is incremented. When Slaves polls master for replication it see the index version difference and starts replicating but all files are skipped. 
+
+On Admin UI (on Slaves) the version number displayed for master is old where as for slave is the latest which is higher than master.
+Below is the response from master (/replication?command=details) where i see two different Version an Gen numbers. This creates confusion of having version out of sync, though its not. 
+
+...
+

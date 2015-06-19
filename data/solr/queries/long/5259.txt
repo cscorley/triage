@@ -1,0 +1,3 @@
+Note the missing space between version and field.
+
+Caused by: org.apache.solr.common.SolrException: Unable to use updateLog: version_field must exist in schema, using indexed="true" stored="true" and multiValued="false" (_version is not indexed

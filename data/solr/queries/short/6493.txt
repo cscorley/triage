@@ -1,0 +1,1 @@
+stats on multivalued fields don't respect excluded filters

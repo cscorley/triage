@@ -1,0 +1,1 @@
+Upstream Blur has moved HdfsIndexOutput to use BufferedIndexOutput and the simple FS IndexOutput does as well - seems we should do the same.

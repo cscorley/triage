@@ -1,0 +1,6 @@
+In OverseerCollectionProcessor:
+
+    // find the leader for the shard
+    Replica parentShardLeader = clusterState.getLeader(collectionName, slice);
+
+This returns null if there is no current leader and the following code does not deal with that case and instead NPE's.

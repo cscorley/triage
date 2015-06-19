@@ -1,0 +1,1 @@
+Allow more flexibility in configuring the http clients that Solr uses

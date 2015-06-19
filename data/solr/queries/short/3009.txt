@@ -1,0 +1,1 @@
+hitGrouped.vm isn't shipped with 3.x

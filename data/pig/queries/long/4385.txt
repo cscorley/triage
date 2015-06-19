@@ -1,0 +1,1 @@
+testDefaultBootup fails because Pig cannot find created file "pig.properties". I think  test of using "pig.property" file should be separated from testDefaultBootup. Only clean way how to do it is to use Properties for start of PigServer.

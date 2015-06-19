@@ -1,0 +1,7 @@
+Aggregator was replaced by FacetsAggregator. FacetRequest has createAggregator() which by default throws an UOE. It was left there until we migrate the aggregators to FacetsAggregator – now all of our requests support FacetsAggregator.
+
+Aggregator is used only by StandardFacetsAccumulator, which too needs to vanish, at some point. But it currently it's the only one which handles sampling, complements aggregation and partitions.
+
+What I'd like to do is remove FacetRequest.createAggregator and in StandardFacetsAccumulator support only CountFacetRequest and SumScoreFacetRequest, which are the only ones that make sense for sampling and partitions. SumScore does not even support complements (which only work for counting).
+
+I'll also rename StandardFA to OldStandardFA. The plan is to eventually implement a SamplingAccumulator, PartitionsAccumulator/Aggregator and ComplementsAggregator, removing that class entirely. Until then ...

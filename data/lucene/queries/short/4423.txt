@@ -1,0 +1,1 @@
+DocumentStoredFieldVisitor.binaryField ignores offset and length

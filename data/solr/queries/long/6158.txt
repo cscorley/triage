@@ -1,0 +1,27 @@
+I tried the small tutorial on http://heliosearch.org/solr-4-8-features/ to create "Named Config Sets" based on the Solr example shipped with Solr 4.8.1 (like it's done in the tutorial, same problem with 4.8.0).
+Creating a new core with a configSet seems to work (directory 'books' and 'books/core.properties' are created correctly).
+
+But loading the new core does not work:
+
+67446 [qtp25155085-11] INFO  org.apache.solr.handler.admin.CoreAdminHandler  core create command configSet=generic&name=books&action=CREATE
+67452 [qtp25155085-11] ERROR org.apache.solr.core.CoreContainer  Unable to create core: books
+org.apache.solr.common.SolrException: Could not load configuration from directory C:\dev\solr-4.8.1\example\configsets\generic
+        at org.apache.solr.core.ConfigSetService$Default.locateInstanceDir(ConfigSetService.java:145)
+        at org.apache.solr.core.ConfigSetService$Default.createCoreResourceLoader(ConfigSetService.java:130)
+        at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:58)
+        at org.apache.solr.core.CoreContainer.create(CoreContainer.java:554)
+        ...
+
+
+
+It seems like Solr looks up the config sets in the wrong directory:
+C:\dev\solr-4.8.1\example\configsets\generic (in the log above) instead of
+C:\dev\solr-4.8.1\example\solr\configsets\generic (like stated in the tutorial and the documentation on https://cwiki.apache.org/confluence/display/solr/Config+Sets)
+
+Moving the configsets directory one level up (into 'example') will work.
+But as of the documentation (and the tutorial) it should be located in the solr home directory.
+
+In case I'm completely wrong and everythings works as expected, how can the configsets directory be configured?
+The documentation on https://cwiki.apache.org/confluence/display/solr/Config+Sets mentions a "configurable configset base directory", but I can't find any information on the web.
+
+Another thing: If it would work as I expect, the references <lib dir="../../../contrib/extraction/lib" regex=".*\.jar" /> etc. in solr-4.8.1/example/solr/configsets/generic/conf/solrconfig.xml should get one more "../" added, I guess (missing in the tutorial).

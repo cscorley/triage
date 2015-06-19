@@ -1,0 +1,14 @@
+In LUCENE-2413 all TokenStreams were consolidated into the analyzers module.
+
+This is a good step, but I think the next step is to put the Solr factories into the analyzers module, too.
+
+This would make analyzers artifacts plugins to both lucene and solr, with benefits such as:
+
+	users could use the old analyzers module with solr, too. This is a good step to use real library versions instead of Version for backwards compat.
+	analyzers modules such as smartcn and icu, that aren't currently available to solr users due to large file sizes or dependencies, would be simple optional plugins to solr and easily available to users that want them.
+
+
+
+Rough sketch in this thread: http://www.lucidimagination.com/search/document/3465a0e55ba94d58/solr_and_analyzers_module
+
+Practically, I havent looked much and don't really have a plan for how this will work yet, so ideas are very welcome.

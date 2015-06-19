@@ -1,0 +1,1 @@
+Openjpa manual needs to be updated for database restriction on BigDecimal field on Sybase

@@ -1,0 +1,1 @@
+org.apache.solr.client.solrj.impl.CloudSolrServerTest is failing pretty much every time for a long time with an exception about not being able to connect to ZooKeeper within the timeout.

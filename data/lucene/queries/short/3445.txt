@@ -1,0 +1,1 @@
+Add SearcherManager, to manage IndexSearcher usage across threads and reopens

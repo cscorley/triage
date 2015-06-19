@@ -1,0 +1,2 @@
+One of EdgeNGramTokenizer, ShingleFilter, NGramTokenFilter is buggy, or possibly only the combination of them conspiring together.
+

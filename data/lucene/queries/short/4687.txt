@@ -1,0 +1,1 @@
+Lazily initialize TermsEnum in BloomFilterPostingsFormat

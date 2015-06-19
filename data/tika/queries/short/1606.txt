@@ -1,0 +1,1 @@
+Tika has a dependency on a very old version of Guava

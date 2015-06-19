@@ -1,0 +1,19 @@
+I'm working on extending the DebugComponent for adding some useful information to be able to track distributed requests better. I'm adding two different things, first, the request can generate a "request ID" that will be printed in the logs for the main query and all the different internal requests to the different shards. This should make it easier to find the different parts of a single user request in the logs. It would also add the "purpose" of each internal request to the logs, like: RequestPurpose=GET_FIELDS,GET_DEBUG or RequestPurpose=GET_TOP_IDS. 
+
+Also, I'm adding a "track" section to the debug info where to add information about the different phases of the distributed request (right now, I'm only including QTime, but could eventually include more information) like: 
+
+
+<lst name="debug">
+    <lst name="track">
+        <lst name="EXECUTE_QUERY">
+            <str name="localhost:8985/solr">QTime: 10</str>
+            <str name="localhost:8984/solr">QTime: 25</str>
+        </lst>
+        <lst name="GET_FIELDS">
+            <str name="localhost:8985/solr">QTime: 1</str>
+        </lst>
+    </lst>
+</lst>
+
+
+To get this, debugQuery must be set to true, or debug must include "debug=track". This information is only added to distributed requests.  I would like to get feedback on this.

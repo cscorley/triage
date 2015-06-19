@@ -1,0 +1,4 @@
+This would help in getting a stack trace of a hung JVM before the timeout and/or in killing the offending JVM.
+
+RR issue:
+https://github.com/carrotsearch/randomizedtesting/issues/135

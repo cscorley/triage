@@ -1,0 +1,3 @@
+The 4.0 admin UI does not use JSP to create its interface (It uses javascript and RequestHandlers)
+
+We only use JSP to fill in the path to the core in index.jsp – this can be replaced with simple template text

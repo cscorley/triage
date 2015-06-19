@@ -1,0 +1,1 @@
+JSON response writer mangles type in some cases for ExternalFileFields

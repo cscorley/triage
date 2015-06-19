@@ -1,0 +1,1 @@
+DIH logs spurious warning for special fields that don't exist in schema

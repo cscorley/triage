@@ -1,0 +1,1 @@
+Can't build ZooKeeper RPM with RPM >= 4.6.0 (i.e. on RHEL 6 and Fedora >= 10)

@@ -1,0 +1,5 @@
+Several issues found in Windows e2e tests:
+1. Inconsistency in existing conf file, tmpPath is tmp/pigtest in default.conf, but /tmp/pigtest in others; We do perl cleanup using "$me =~ s/[^a-zA-Z0-9]*//g" in default.conf, but "chomp $me" in rpm.conf
+2. build.xml only test tarball install, for rpm install which does not have the whole tarball, compiling test udf fail
+3. Some tests fail due to different OS error message in grunt.conf
+4. Windows cmd such as perl/awk use a different quoting to pass parameters

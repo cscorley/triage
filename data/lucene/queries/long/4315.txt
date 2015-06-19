@@ -1,0 +1,12 @@
+The Fields abstract class is a little bit inconsistent. It does not allow iterator() to throw IOException, but size() is allowed to do this. This is inconsistent, as looping through iterator always returns size without IOException.
+
+Also Fields.size() allows -1 as return value, but almost all implementation (only MultiFields and FieldFilteredAtomicReader actually return -1) implement it in a very cheap way. This is simple statistics, we should rethink this:
+
+	TermVectorsWriter's basic merging (without optimization requires this information, also requires Terms.size())
+	We can default Fields.size() to count iterator (instead of abstract), if not explicitely implemented. This method is called only by tools like Luke (introspection) and TermVectors merging.
+
+
+
+We should maybe enforce size() for Fields to return a value >=0 (Preflex also knows its size!), and if the impl class does not have it (MultiFields, FieldFilteredAtomicReader), loop by supplying default impl.
+
+The current patch still allows -1 as return value and removes IOException from the signature.

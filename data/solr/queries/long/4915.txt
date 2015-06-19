@@ -1,0 +1,9 @@
+Currently you get something like: 
+
+Error CREATEing SolrCore 'collection2_shard2_replica1': Unable to create core: collection2_shard2_replica1
+
+
+But this would be much better:
+
+
+Error CREATEing SolrCore 'collection2_shard2_replica1': Unable to create core: collection2_shard2_replica1 Caused by: KeeperErrorCode = NoNode for /configs/collection1/solrconfig.xml

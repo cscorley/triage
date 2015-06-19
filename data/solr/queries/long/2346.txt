@@ -1,0 +1,88 @@
+I am able to successfully index/search non-Engilsh files (like Hebrew, Japanese) which was encoded in UTF-8. However, When I tried to index data which was encoded in local encoding like Big5 for Japanese I could not see the desired results. The contents after indexing looked garbled for Big5 encoded document when I searched for all indexed documents. When I index attached non utf-8 file it indexes in following way
+
+
+	<result name="response" numFound="1" start="0">
+	<doc>
+	<arr name="attr_content">
+  <str>�� ������</str>
+  </arr>
+	<arr name="attr_content_encoding">
+  <str>Big5</str>
+  </arr>
+	<arr name="attr_content_language">
+  <str>zh</str>
+  </arr>
+	<arr name="attr_language">
+  <str>zh</str>
+  </arr>
+	<arr name="attr_stream_size">
+  <str>17</str>
+  </arr>
+	<arr name="content_type">
+  <str>text/plain</str>
+  </arr>
+  <str name="id">doc2</str>
+  </doc>
+  </result>
+  </response>
+
+
+
+Here you said it index file in UTF8 however it seems that non UTF8 file gets indexed in Big5 encoding.
+Here I tried fetching indexed data stream in Big5 and converted in UTF8.
+
+String id = (String) resulDocument.getFirstValue("attr_content");
+            byte[] bytearray = id.getBytes("Big5");
+            String utf8String = new String(bytearray, "UTF-8");
+It does not gives expected results.
+
+When I index UTF-8 file it indexes like following
+
+
+	<doc>
+	<arr name="attr_content">
+  <str>マイ ネットワーク</str>
+  </arr>
+	<arr name="attr_content_encoding">
+  <str>UTF-8</str>
+  </arr>
+	<arr name="attr_stream_content_type">
+  <str>text/plain</str>
+  </arr>
+	<arr name="attr_stream_name">
+  <str>sample_jap_unicode.txt</str>
+  </arr>
+	<arr name="attr_stream_size">
+  <str>28</str>
+  </arr>
+	<arr name="attr_stream_source_info">
+  <str>myfile</str>
+  </arr>
+	<arr name="content_type">
+  <str>text/plain</str>
+  </arr>
+  <str name="id">doc2</str>
+  </doc>
+
+
+
+So, I can index and search UTF-8 data.
+
+
+For more reference below is the discussion with Yonik.
+    Please find attached TXT file which I was using to index and search.
+
+    curl "http://localhost:8983/solr/update/extract?literal.id=doc1&uprefix=attr_&fmap.content=attr_content&fmap.div=foo_t&boost.foo_t=3&commit=true&charset=utf-8" -F "myfile=@sample_jap_non_UTF-8"
+
+
+One problem is that you are giving big5 encoded text to Solr and saying that it's UTF8.
+Here's one way to actually tell solr what the encoding of the text you are sending is:
+
+curl "http://localhost:8983/solr/update/extract?literal.id=doc1&uprefix=attr_&fmap.content=attr_content&fmap.div=foo_t&boost.foo_t=3&commit=true" --data-binary @sample_jap_non_UTF-8.txt -H 'Content-type:text/plain; charset=big5'
+
+Now the problem appears that for some reason, this doesn't work...
+Could you open a JIRA issue and attach your two test files?
+
+-Yonik
+http://lucidimagination.com
+

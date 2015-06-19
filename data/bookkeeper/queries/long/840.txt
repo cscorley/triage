@@ -1,0 +1,4 @@
+the dead lock happens on entry log rolling and compaction.
+
+    entry log rolling will lock entry logger then lock flushLock.
+    compaction waiting for flush, will lock flushLock and then entry logger.

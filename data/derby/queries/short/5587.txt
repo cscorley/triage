@@ -1,0 +1,1 @@
+Due to licensing issues, fix or remove the monohtml docs posted on Derby's documentation page.

@@ -1,0 +1,14 @@
+Elevation does not work when localParams are specified.
+In example collection1 shipped with Solr query like this one 
+
+http://localhost:8983/solr/collection1/elevate?q=ipod&fl=id,title,[elevated]
+
+ properly returns elevated documents on top.
+
+If localParams are specified e.g. 
+{!q.op=AND}
+ in query like 
+
+http://localhost:8983/solr/collection1/elevate?q=\{!q.op=AND\}ipod&fl=id,title,[elevated]
+
+documents are not elevated anymore.

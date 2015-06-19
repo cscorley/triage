@@ -1,0 +1,1 @@
+As reported by: llu@tradeshift.com on https://github.com/apache/tika/pull/48

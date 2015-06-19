@@ -1,0 +1,1 @@
+There have been cases where the memory reported by this API was larger than the JVM heap size in the past so we should try to add some basic tests to it.

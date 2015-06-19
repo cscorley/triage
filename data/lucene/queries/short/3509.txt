@@ -1,0 +1,1 @@
+Add settings to IWC to optimize IDV indices for CPU or RAM respectivly

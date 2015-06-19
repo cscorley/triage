@@ -1,0 +1,12 @@
+Typical collection admin commands are long running and it is very common to have the requests get timed out.  It is more of a problem if the cluster is very large.Add an option to run these commands asynchronously
+
+add an extra param async=true for all collection commands
+
+the task is written to ZK and the caller is returned a task id. 
+as separate collection admin command will be added to poll the status of the task
+
+command=status&id=7657668909
+
+if id is not passed all running async tasks should be listed
+
+A separate queue is created to store in-process tasks . After the tasks are completed the queue entry is removed. OverSeerColectionProcessor will perform these tasks in multiple threads

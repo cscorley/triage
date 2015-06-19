@@ -1,0 +1,3 @@
+Just fixed some spelling in the mailinglist.xml in /java/trunk/xdocs
+
+

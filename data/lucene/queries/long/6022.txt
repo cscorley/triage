@@ -1,0 +1,1 @@
+When live documents are not null, DocValuesDocIdSet checks if doc values match the document before the live docs. Given that checking if doc values match could involve a heavy computation (eg. geo distance) and that the default codec has live docs in memory but doc values on disk, I think it makes more sense to check live docs first?

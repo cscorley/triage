@@ -1,0 +1,1 @@
+Filters should return null if they don't accept documents

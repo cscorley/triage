@@ -1,0 +1,1 @@
+RamUsageEstimator causes AWT classes to be loaded by calling ManagementFactory#getPlatformMBeanServer

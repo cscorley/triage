@@ -1,0 +1,3 @@
+Issues like SOLR-6336 uncovered cases where we were using too many ZK watches. Watches are costly and we should fix such places but there's no good way for tests to find out about them.
+
+This issue is for a mechanism for tests to report or fail on watches being redundantly set on data. This would also allow for specific tests to configure if there's a valid case for such a thing happening.

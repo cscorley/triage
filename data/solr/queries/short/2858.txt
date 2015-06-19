@@ -1,0 +1,1 @@
+On branch_3x, upgrade velocity contrib's velocity and velocity-tools jars to the versions on trunk

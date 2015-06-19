@@ -1,0 +1,5 @@
+Tez auto-parallelism currently has some limitation:
+1. ShuffledVertexManager only decrease parallelism not increase
+2. Pig currently exaggerate parallelism at frontend, ShuffledVertexManager might get initial parallelism way large than actual, that would be costly
+
+Instead of that, we can gradually adjust initial vertex parallelism at runtime once upstream vertexes finishes.

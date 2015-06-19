@@ -1,0 +1,1 @@
+Allow rang faceting on any ValueSource

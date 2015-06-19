@@ -1,0 +1,15 @@
+SOLR-4909 added TestNonNRTOpen on Sep 10, 2013 - since then the policeman jenkins server has reported TestNonNRTOpen.testReaderIsNotNRT failing 33 times by my count – but i've never been able to reproduce, nor have I seen any similar failures from apache jenkins.
+
+The failures are all virtually identical, and seem to happen just as likely on 4x/trunk, mac/linux/windows, 1.6/1.7/1.8
+
+Recent Example...
+
+
+   [junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=TestNonNRTOpen -Dtests.method=testReaderIsNotNRT -Dtests.seed=8BF5F44429C5ABCA -Dtests.multiplier=3 -Dtests.slow=true -Dtests.locale=nl -Dtests.timezone=America/Whitehorse -Dtests.file.encoding=ISO-8859-1
+   [junit4] FAILURE 0.23s J0 | TestNonNRTOpen.testReaderIsNotNRT <<<
+   [junit4]    > Throwable #1: java.lang.AssertionError: expected:<3> but was:<2>
+   [junit4]    > 	at __randomizedtesting.SeedInfo.seed([8BF5F44429C5ABCA:3E7395C39604193E]:0)
+   [junit4]    > 	at org.apache.solr.core.TestNonNRTOpen.assertNotNRT(TestNonNRTOpen.java:133)
+   [junit4]    > 	at org.apache.solr.core.TestNonNRTOpen.testReaderIsNotNRT(TestNonNRTOpen.java:94)
+   [junit4]    > 	at java.lang.Thread.run(Thread.java:744)
+

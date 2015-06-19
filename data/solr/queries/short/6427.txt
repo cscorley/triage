@@ -1,0 +1,1 @@
+HdfsCollectionsAPIDistributedZkTest can fail because it tries to use an hdfs location with the file system based spellchecker which results in it trying to write to an illegal filesystem location.

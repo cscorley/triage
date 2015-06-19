@@ -1,0 +1,14 @@
+/admin/index.jsp could issue a double submit on IE causing Jetty to error out.
+
+Here are the steps to reproduce on IE8 (only applies to IE8 on occasional basis, really more of an IE8 bug...):
+1. Open IE8
+2. Browse to http://localhost:8983/solr/admin
+3. Submit a query
+4. Displayed on Jetty log due to double submit:
+SEVERE: org.mortbay.jetty.EofException
+        at org.mortbay.jetty.HttpGenerator.flush(HttpGenerator.java:791)
+
+This can be fixed easily by modifying index.jsp's javascript submit to return false:
+... queryForm.submit(); return false; ...
+
+I will try to submit a patch for this easy fix, new to all this so please bear with me...

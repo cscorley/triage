@@ -1,0 +1,1 @@
+UIMAUpdateRequestProcessor should reuse the AnalysisEngine

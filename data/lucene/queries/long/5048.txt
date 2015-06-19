@@ -1,0 +1,61 @@
+I have a Server/Client software that I have created which has a server process that accepts connections from clients that transmit data about local connection information. This data is than buffered and a ThreadPoolExecutor runs to take the data and put it into a lucene index as well as a facet index. This works perfect for the lucene index, but the facet index randomly generates a NegativeArraySizeException. I cannot find any reason why the exception would be caused because lines with the same type of data do not throw it, then all of a sudden the exception is thrown, typically 4 of them in a row. I talked with mikemccand on IRC and he requested I submit this issue.
+
+After some discussion, he seems to think it's because some of the values I am using are rather large.
+
+Here is the exception...
+java.lang.NegativeArraySizeException
+        at java.lang.AbstractStringBuilder.<init>(AbstractStringBuilder.java:64)
+        at java.lang.StringBuilder.<init>(StringBuilder.java:97)
+        at org.apache.lucene.facet.taxonomy.writercache.cl2o.CharBlockArray.subSequence(CharBlockArray.java:164)
+        at org.apache.lucene.facet.taxonomy.writercache.cl2o.CategoryPathUtils.hashCodeOfSerialized(CategoryPathUtils.java:50)
+        at org.apache.lucene.facet.taxonomy.writercache.cl2o.CompactLabelToOrdinal.stringHashCode(CompactLabelToOrdinal.java:294)
+        at org.apache.lucene.facet.taxonomy.writercache.cl2o.CompactLabelToOrdinal.grow(CompactLabelToOrdinal.java:184)
+        at org.apache.lucene.facet.taxonomy.writercache.cl2o.CompactLabelToOrdinal.addLabel(CompactLabelToOrdinal.java:116)
+        at org.apache.lucene.facet.taxonomy.writercache.cl2o.Cl2oTaxonomyWriterCache.put(Cl2oTaxonomyWriterCache.java:84)
+        at org.apache.lucene.facet.taxonomy.directory.DirectoryTaxonomyWriter.addToCache(DirectoryTaxonomyWriter.java:592)
+        at org.apache.lucene.facet.taxonomy.directory.DirectoryTaxonomyWriter.addCategoryDocument(DirectoryTaxonomyWriter.java:551)
+        at org.apache.lucene.facet.taxonomy.directory.DirectoryTaxonomyWriter.internalAddCategory(DirectoryTaxonomyWriter.java:501)
+        at org.apache.lucene.facet.taxonomy.directory.DirectoryTaxonomyWriter.internalAddCategory(DirectoryTaxonomyWriter.java:494)
+        at org.apache.lucene.facet.taxonomy.directory.DirectoryTaxonomyWriter.addCategory(DirectoryTaxonomyWriter.java:468)
+        at org.apache.lucene.facet.index.FacetFields.addFields(FacetFields.java:175)
+        at net.domain.NetstatIndexer.IndexJob.run(IndexJob.java:73)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+        at java.lang.Thread.run(Thread.java:722)
+
+Here is an example data entry which appears when the exception occurs...
+Location: nj
+LocalIP: 10.1.200.187
+RemoteIP: 41.161.197.166
+LocalPorts: [443]
+Connections: 1
+Times: [120]
+Timestamp: 2013-06-09T12:51:00.000-07:00
+States: ["Established"]
+
+And here is the the code stripped down to provide an example of how I am handling the facet/doc code.
+
+doc.add(new TextField("Location", ehost[0], Field.Store.YES));
+cats.add(new CategoryPath("Location", doc.get("Location")));
+doc.add(new TextField("LocalIP", (String) stat.get("LocalIP"), Field.Store.YES));
+cats.add(new CategoryPath("LocalIP", doc.get("LocalIP")));
+doc.add(new TextField("RemoteIP", (String) stat.get("RemoteIP"), Field.Store.YES));
+cats.add(new CategoryPath("RemoteIP", doc.get("RemoteIP")));
+doc.add(new TextField("LocalPorts", StringUtils.join(stat.get("LocalPorts"), ","), Field.Store.YES));
+cats.add(new CategoryPath("LocalPorts", doc.get("LocalPorts")));
+doc.add(new TextField("RemotePorts", StringUtils.join(stat.get("RemotePorts"), ","), Field.Store.YES));
+cats.add(new CategoryPath("RemotePorts", doc.get("RemotePorts")));
+doc.add(new LongField("Connections", (Long) stat.get("Connections"), Field.Store.YES));
+cats.add(new CategoryPath("Connections", doc.get("Connections")));
+doc.add(new TextField("Times", StringUtils.join(stat.get("Times"), ","), Field.Store.YES));
+cats.add(new CategoryPath("Times", doc.get("Times")));
+doc.add(new TextField("Timestamp", (String) stat.get("Timestamp"), Field.Store.YES));
+cats.add(new CategoryPath("Timestamp", doc.get("Timestamp")));
+doc.add(new TextField("States", StringUtils.join(stat.get("States"), ","), Field.Store.YES));
+cats.add(new CategoryPath("States", doc.get("States")));
+System.out.println("Location: "doc.get("Location")" LocalIP: "doc.get("LocalIP")" RemoteIP: "doc.get("RemoteIP")" LocalPorts: "doc.get("LocalPorts")" Connections: "doc.get("Connections")" Times: "doc.get("Times")" Timestamp: "doc.get("Timestamp")" States: "+doc.get("States"));
+if (cats.size()!=0) 
+{
+        FacetFields ff = new FacetFields(Main.twriter);
+        ff.addFields(doc, cats); // <-- Exception occurs here randomly
+}

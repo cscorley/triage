@@ -1,0 +1,1 @@
+Introduce an Changelog file to raise contributors attribution

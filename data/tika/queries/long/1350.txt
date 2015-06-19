@@ -1,0 +1,6 @@
+When parsing some emails in a PST file I get the error "Unknown message type: IPM.Note" preventing them from being parsed. This is because of an extra null byte at the end of the message class string.
+
+This has been fixed in version 0.8.1 of java-libpst so a version bump is all that is required. 
+https://github.com/rjohnsondev/java-libpst/issues/14
+
+I would attempt to do this myself but I am unsure how to open a pull request with SVN.

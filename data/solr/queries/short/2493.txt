@@ -1,0 +1,1 @@
+SolrQueryParser constantly parse luceneMatchVersion in solrconfig. Large performance hit.

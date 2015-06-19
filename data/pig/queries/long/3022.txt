@@ -1,0 +1,12 @@
+To reproduce:
+
+
+ant clean test -Dtestcase=TestRegisteredJarVisibility -Dhadoopversion=23
+
+
+The test job always fails with YARN mini cluster: 
+
+
+2012-10-31 17:34:02,277 WARN  [AsyncDispatcher event handler] resourcemanager.RMAuditLogger (RMAuditLogger.java:logFailure(255)) - USER=cheolsoo    OPERATION=Application Finished - Failed TARGET=RMAppManager RESULT=FAILURE  DESCRIPTION=App failed with state: FAILED   PERMISSIONS=Application application_1351730024514_0001 failed 1 times due to AM Container for appattempt_1351730024514_0001_000001 exited with  exitCode: 1 due to:
+.Failing this attempt.. Failing the application.    APPID=application_1351730024514_0001
+

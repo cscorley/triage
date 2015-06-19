@@ -1,0 +1,1 @@
+Highlighting overlapping tokens outputs doubled words

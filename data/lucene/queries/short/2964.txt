@@ -1,0 +1,1 @@
+Allow benchmark tasks from alternative packages

@@ -1,0 +1,1 @@
+There is really no need for accuracy to be a class variable in the Spellchecker

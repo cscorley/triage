@@ -1,0 +1,1 @@
+Replica index is one version behind sending the commit to non-leader instance

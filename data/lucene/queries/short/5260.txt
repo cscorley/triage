@@ -1,0 +1,1 @@
+Make older Suggesters more accepting of TermFreqPayloadIterator

@@ -1,0 +1,1 @@
+various bugs using localparams with stats.field 

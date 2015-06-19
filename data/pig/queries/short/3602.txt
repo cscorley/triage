@@ -1,0 +1,1 @@
+Tear down TezSessions when Pig exits

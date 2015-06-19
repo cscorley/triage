@@ -1,0 +1,1 @@
+OPENJPA-2171 removed a direct dependency on asm, and placed a new dependency on xbean asm4. When that dependency was changed, we didn't update openjpa-project/assembly.xml and openjpa-project/bin-assembly.xml.

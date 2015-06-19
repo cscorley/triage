@@ -1,0 +1,1 @@
+New logical plan: Merge schema fail if LoadFunc.getSchema return different schema with "Load...AS"

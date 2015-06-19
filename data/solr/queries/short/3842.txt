@@ -1,0 +1,1 @@
+DataImportHandler: When attempting to use column values as field names, multivalued fields only retain the first result

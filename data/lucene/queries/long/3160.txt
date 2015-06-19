@@ -1,0 +1,3 @@
+running 'ant clean' (or any target) from tarsrc/lucene-3.2.0 fails due to dependency in ../common-build.xml.
+
+see also LUCENE-2974 for one idea to prevent this from breaking in the future.

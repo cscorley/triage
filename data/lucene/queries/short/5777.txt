@@ -1,0 +1,1 @@
+double escaping of dash in hunspell conditions

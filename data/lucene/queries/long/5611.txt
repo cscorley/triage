@@ -1,0 +1,21 @@
+I think Lucene's current indexing chain has too many classes /
+hierarchy / abstractions, making it look much more complex than it
+really should be, and discouraging users from experimenting/innovating
+with their own indexing chains.
+
+Also, if it were easier to understand/approach, then new developers
+would more likely try to improve it ... it really should be simpler.
+
+So I'm exploring a pared back indexing chain, and have a starting patch
+that I think is looking ok: it seems more approachable than the
+current indexing chain, or at least has fewer strange classes.
+
+I also thought this could give some speedup for tiny documents (a more
+common use of Lucene lately), and it looks like, with the evil
+optimizations, this is a ~25% speedup for Geonames docs.  Even without
+those evil optos it's a bit faster.
+
+This is very much a work in progress / nocommits, and there are some
+behavior changes e.g. the new chain requires all fields to have the
+same TV options (rather than auto-upgrading all fields by the same
+name that the current chain does)...

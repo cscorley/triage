@@ -1,0 +1,1 @@
+DiskDV SortedDocValues shouldnt hold doc-to-ord in heap memory

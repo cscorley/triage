@@ -1,0 +1,3 @@
+A user on IRC was having trouble getting file descriptor counts and JVM memory usage in the admin UI, but it worked perfectly fine on another system.  The problem system uses OpenJDK, the other one uses the Apple JDK.  The user had tracked it down to an exception while trying to get open file descriptor info.
+
+Looking in the SystemInfoHandler.java file, I see a comment reference to com.sun.management.UnixOperatingSystemMXBean at the point where it is getting file descriptor info.  A little extra searching turned up ZOOKEEPER-1579 which refers to HBASE-6945, the same problem with OpenJDK.

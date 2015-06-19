@@ -1,0 +1,1 @@
+Hadoop 21 is not yet released but we know that switch to new MR API is coming there. This JIRA is for early integration with the portion of this API that has been implemented in Hadoop 20.

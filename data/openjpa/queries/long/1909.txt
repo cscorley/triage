@@ -1,0 +1,5 @@
+in OPENJPA-1900 I found out that we do not enhance our entities with the configuration which get used later while running the unit tests.
+
+But enhancing sometimes has a huge implication on the behaviour! Thus we should always try to use the same persistence.xml for enhancing as we do for running the unit tests.
+
+This small patch fixes the usage for our proxy tests which use openjpa.DetachState=fetch-groups (leading to Externalizable entities)

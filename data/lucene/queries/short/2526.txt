@@ -1,0 +1,1 @@
+.toString on empty MultiPhraseQuery hits NPE

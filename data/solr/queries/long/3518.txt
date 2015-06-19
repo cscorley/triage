@@ -1,0 +1,3 @@
+The hits field in the NamedList obtained from SolrQueryResponse.toLog() is not available for distrib=true requests. The hits fields is also not written to the log.
+
+See also:: http://lucene.472066.n3.nabble.com/SolrDispatchFilter-no-hits-in-response-NamedList-if-distrib-true-td3987751.html

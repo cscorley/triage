@@ -1,0 +1,1 @@
+Disabling QueryCaching at runtime does not work

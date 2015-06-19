@@ -1,0 +1,1 @@
+Tests no longer check directories are closed

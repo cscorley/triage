@@ -1,0 +1,1 @@
+This is a very expensive call if there are are large no:of collections. Mostly, it is used to check if a collection exists

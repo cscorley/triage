@@ -1,0 +1,1 @@
+Incorrect reference to apache-solr-XX.jar in the README.txt of the binary distribution

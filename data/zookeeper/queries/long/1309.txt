@@ -1,0 +1,5 @@
+If there is an IOException thrown by the constructor of ClientCnxn then file handles are leaked because of the initialization of the Selector which is never closed.
+
+    final Selector selector = Selector.open();
+
+If there is an abnormal exit from the constructor then the Selector is not closed and file handles are leaked.  You can easily see this by setting the hosts string to garbage ("qwerty", "asdf", etc.) and then try to open a new ZooKeeper connection.  I've observed the same behavior in production when there were DNS issues where the host names of the ensemble can no longer be resolved and the application servers quickly run out of handles attempting to (re)connect to zookeeper.

@@ -1,0 +1,1 @@
+Add analysis configurations for different languages to the example

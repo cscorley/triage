@@ -1,0 +1,1 @@
+Currently runtime logging of deprecated Factories is handled by BaseTokenStreamFactory which looks odd since the logging comes from this class instead of the Factories themselves.  We should just move the logging down to the deprecated class.

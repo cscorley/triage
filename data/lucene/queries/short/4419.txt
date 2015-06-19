@@ -1,0 +1,1 @@
+Test RecursivePrefixTree indexing non-point data

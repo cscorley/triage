@@ -1,0 +1,23 @@
+This has happened several times on Jenkins, typically on SSLMigrationTest.testDistribSearch, but probably on other tests as well.
+
+The symptom is: the test framework never terminates, it also reports an incorrect  hung test.
+
+The problem is that the actual forked JVM is hung on reading stdin, waiting for the next test suite (no test thread is present); the master process is hung on receiving data from the forked jvm (both the events file and stdout spill is truncated in the middle of a test). The last output is:
+
+
+
+[
+  "APPEND_STDERR",
+  {
+    "chunk": "612639 T30203 oasu.DefaultSolrCoreState.doRecovery Running recovery - first canceling any ongoing recovery%0A"
+  }
+]
+
+[
+  "APPEND_STDERR"
+
+
+
+Overall, it looks insane – there are flushes after each test completes (normally or not), there are tests following the one that last reported output and before dynamic suites on stdin. 
+
+I have no idea. The best explanation is insane – looks like the test thread just died in the middle of executing Java code...

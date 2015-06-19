@@ -1,0 +1,3 @@
+SOLR-2439 changed how javadoc linkages are handled between solr javadocs and lucene javadocs – but i think there is still an improvement to be made.
+
+currently if you are building a "SNAPSHOT" of solr, it links to builds.apache.org for the lucene docs – but if you are building solr from src, you must have a full copy of the entire lucene+solr tree, so we should just use a relative link up to the local copy of the lucene javadocs (if you are compiling your own solr, you are probably not using precompiled lucene jars, so you may want to update the lucene javadocs as well)

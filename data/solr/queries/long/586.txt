@@ -1,0 +1,29 @@
+I know there is an issue open (SOLR-19) for getting a solr build going under Maven.  This issue differs from that in that it does not concern the build process of the solr project, but rather simple dependency management for maven projects that depend on the solr artifacts.  I've outlined a way to easily incorporate solrj + dependencies into your own maven projects, in hopes that others doing this find it useful.  
+
+This issue's purpose is twofold:
+1) Let others know the process.
+2) Open the idea of whether this can be streamlined/incorporated into the standard build in some manner.
+
+Depending on Solrj in a Maven Project
+1) Build a 1.3 snapshot.
+  1.1) Check out the code from http://svn.apache.org/repos/asf/lucene/solr/
+  1.2) Build using "ant dist" 
+2) Install the artifacts into your maven repo, using the included pom files.
+  2.1) Move to your dist/apache-solr-1.3-dev/dist directory.
+  2.2) Copy the attached pom files into this directory.
+  2.3) Install solr-common into your repo.
+    ex) mvn install:install-file -Dfile=apache-solr-common-1.3-dev.jar -DpomFile=solr-common.pom.xml
+  2.4) Install solrj into your repo.
+    ex) mvn install:install-file -Dfile=apache-solr-solrj-1.3-dev.jar -DpomFile=solrj.pom.xml
+3) Use Solrj in your existing Maven projects by including it as a dependency in your own pom.xml
+        <dependency>
+            <groupId>org.apache.lucene.solr</groupId>
+            <artifactId>solrj</artifactId>
+            <version>1.3-SNAPSHOT</version>
+        </dependency>
+
+So given the above process, it seems like it would be relatively simple to standardize this process by:
+1) Including the solr-common and solrj pom files w/ the dist.  
+2) Automating the periodic installation of the artifacts to a central repo, such as the ibiblio repo.  
+
+If those steps were performed, then creating a (maven) project based on solrj would be super simple: just #3 from above.  Since most custom developments are probably for the clients, it seems like simplifying this would be a nice step to take. 

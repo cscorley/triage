@@ -1,0 +1,4 @@
+it prints things like:
+
+test: docvalues.......OK [0 total doc count; 18 docvalues fields]
+

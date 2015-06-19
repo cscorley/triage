@@ -1,0 +1,49 @@
+This is a spinoff of the work Mark Miller, Uwe and me have initiated in SOLR-5914. 
+
+The core concept is this:
+
+
+	every test should create its temporary folders and files in a sub-folder of one, easily identifiable, parent.
+
+
+
+
+	the parent folder is named after the test class, with [org.apache.] removed for brevity. the folder name includes the master seed and a generated sequence integer, if needed, to easily demarcate different runs (and identify which run produced which files).
+
+
+
+
+	temporary folder/ file creation routines should be available in LTC, so that no additional imports/ fiddling is needed.
+
+
+LTC#createTempDir()
+LTC#createTempDir(String prefix)
+LTC#createTempFile()
+LTC#createTempFile(String prefix, String suffix)
+
+
+Note the absence of "create a temporary file/dir under a given directory" method. These shouldn't be needed since any temporary folder created by the above is guaranteed to be empty. If one still needs temporary file creation use createTempDir() and then relevant File class methods.
+
+
+
+
+	any temporary folders and files should be removable at the end of the suite (class), if all tests completes successfully. Failure to remove any files should be marked as an error (will manifest itself on windows if one leaves open file handles).
+
+
+
+
+	there should be a way to temporarily mark a class to circumvent the above check (SuppressTempFileChecks annotation for known offenders). Annotating a class with SuppressTempFileChecks will still attempt to remove temporary files, but will not cause an error if this fails. Any files that couldn't be deleted will be printed to stdout with an appropriate message.
+
+
+
+
+	there should be a way for developers to leave temporary files on disk for further inspection (even in case of successful runs). The following system properties will work:
+
+
+        "tests.leavetmpdir" /* default */,
+        "tests.leaveTemporary" /* ANT tasks's (junit4) flag. */,
+        "tests.leavetemporary" /* lowercase version of the above */,
+        "solr.test.leavetmpdir" /* Solr's legacy property for backcompat */))
+
+
+

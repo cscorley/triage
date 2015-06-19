@@ -1,0 +1,1 @@
+CollapsingQParserPlugin throws a NPE if required 'field' param is missing

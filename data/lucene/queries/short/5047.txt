@@ -1,0 +1,1 @@
+Trunk's NIOFSDir and MMapDir throw different Exception on file not found cases because of use of FileChannel.open()

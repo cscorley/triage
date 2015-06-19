@@ -1,0 +1,1 @@
+NRT support for file systems that do no have delete on last close or cannot delete while referenced semantics.

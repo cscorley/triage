@@ -1,0 +1,18 @@
+Derby doesn't implement nor include any cryptographic software, but it can take advantage of the JCE. So, Derby needs to:
+
+(1) Include a crypto notice in its README and downloads; see http://www.apache.org/dev/crypto.html
+(2) Provide an RDF file with information for the ASF export page at http://www.apache.org/licenses/exports/ ; see http://mail-archives.apache.org/mod_mbox/www-legal-discuss/200609.mbox/%3cW1948815985110611157220467@webmail7%3e
+
+Here's seed information for the user notice (please comment and add more):
+
+Apache Derby interfaces with the Java Cryptography Extension (JCE) API to provide:
+
+	Full on-disk encryption of database files
+	Storage and authentication of user passwords stored in the database
+	User and password encryption over a network
+
+
+
+Apache Derby does not include any implementation of JCE. 
+
+

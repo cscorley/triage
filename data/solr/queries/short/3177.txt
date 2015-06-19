@@ -1,0 +1,1 @@
+Excluding tagged filter in StatsComponent

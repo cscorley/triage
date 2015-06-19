@@ -1,0 +1,11 @@
+As reported by giovanni.bricconi on the user list, there is a bug in "fl" parsing that causes solr to get confused when a field name is followed by a newline character – eg: in a requestHandler default like...
+
+
+<!-- newlines showing using "$" -->$
+<str name="fl">$
+   sku,store_slug$  
+</str>$
+
+
+
+...this results in solr assuming it should use function parsing to evaluate the field name, which can cause missleading errors if the field name can't be used in a function (eg: "can not use FieldCache on multivalued field: store_slug")

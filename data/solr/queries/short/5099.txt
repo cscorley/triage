@@ -1,0 +1,1 @@
+The core.properties not created during collection creation

@@ -1,0 +1,9 @@
+Support single quotes and unquoted keys
+
+
+
+//all the following must be valid and equivalent
+{"id" :"mykey"}
+{'id':'mykey'}
+{id: "mykey"}
+

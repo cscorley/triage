@@ -1,0 +1,11 @@
+There are some hard-coded Version.LUCENE_XY constants used in various places.  Some of these are intentional and appropriate:
+
+	in deprecated code, e.g. ArabicLetterTokenizer, deprecated in 3.1, uses Version.LUCENE_31
+	to make behavior version-dependent (e.g. StandardTokenizer and other analysis components)
+	to test different behavior at different points in history (e.g. TestStopFilter to test position increments)
+
+
+
+But should hard-coded constants be used elsewhere?
+
+For those that should remain, and need to be updated with each release, there should be an easy way to find them.

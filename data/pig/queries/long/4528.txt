@@ -1,0 +1,3 @@
+Hi there.
+I've just found a minor typo in documentation, so I'd like to send a patch.
+Thanks.

@@ -1,0 +1,1 @@
+programmer guide C api docs are out of sync with latest zookeeper.h 

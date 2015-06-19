@@ -1,0 +1,1 @@
+Skewed outer join produce more than expected rows under certain condition. The extra rows contain null left relation. Can be reproduced reliably with reproduce.patch (run SkewedJoin_11).

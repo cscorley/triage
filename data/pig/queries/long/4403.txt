@@ -1,0 +1,64 @@
+When adding a JSON serde parser as additional jar on running pig with HCatalog:
+
+
+pig -useHCatalog -Dpig.additional.jars.uris=file:///usr/lib/hive/lib/json-serde-1.3.1-SNAPSHOT-jar-with-dependencies.jar
+
+
+
+Pig crashes on 
+
+ERROR 2999: Unexpected internal error. java.net.URISyntaxException: Relative path in absolute URI: hive-hcatalog-pig-adapter-0.14.0.2.2.0.0-2041.jar:file:
+
+
+
+
+2015-01-30 18:21:23,848 [main] INFO  org.apache.pig.Main - Apache Pig version 0.14.0.2.2.0.0-2041 (rexported) compiled Nov 19 2014, 15:24:46
+2015-01-30 18:21:23,848 [main] INFO  org.apache.pig.Main - Logging error messages to: /home/olivier/bsft_ds/data/pig.2015-01-30_18-21-22.log
+2015-01-30 18:21:24,748 [main] INFO  org.apache.pig.impl.util.Utils - Default bootup file /home/olivier/.pigbootup not found
+2015-01-30 18:21:24,967 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine - Connecting to hadoop file system at: hdfs://aws-usw2a-p-hw-master11.blueshift.vpc:8020
+2015-01-30 18:21:26,214 [main] ERROR org.apache.pig.Main - ERROR 2999: Unexpected internal error. java.net.URISyntaxException: Relative path in absolute URI: hive-hcatalog-pig-adapter-0.14.0.2.2.0.0-2041.jar:file:
+----------------------------
+ERROR 2999: Unexpected internal error. java.net.URISyntaxException: Relative path in absolute URI: hive-hcatalog-pig-adapter-0.14.0.2.2.0.0-2041.jar:file:
+
+java.lang.IllegalArgumentException: java.net.URISyntaxException: Relative path in absolute URI: hive-hcatalog-pig-adapter-0.14.0.2.2.0.0-2041.jar:file:
+	at org.apache.hadoop.fs.Path.initialize(Path.java:206)
+	at org.apache.hadoop.fs.Path.<init>(Path.java:172)
+	at org.apache.hadoop.fs.Path.<init>(Path.java:94)
+	at org.apache.hadoop.fs.Globber.glob(Globber.java:211)
+	at org.apache.hadoop.fs.FileSystem.globStatus(FileSystem.java:1625)
+	at org.apache.pig.impl.io.FileLocalizer.fetchFilesInternal(FileLocalizer.java:816)
+	at org.apache.pig.impl.io.FileLocalizer.fetchFiles(FileLocalizer.java:767)
+	at org.apache.pig.PigServer.registerJar(PigServer.java:558)
+	at org.apache.pig.PigServer.addJarsFromProperties(PigServer.java:265)
+	at org.apache.pig.PigServer.<init>(PigServer.java:231)
+	at org.apache.pig.PigServer.<init>(PigServer.java:214)
+	at org.apache.pig.tools.grunt.Grunt.<init>(Grunt.java:46)
+	at org.apache.pig.Main.run(Main.java:487)
+	at org.apache.pig.Main.main(Main.java:170)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:221)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+Caused by: java.net.URISyntaxException: Relative path in absolute URI: hive-hcatalog-pig-adapter-0.14.0.2.2.0.0-2041.jar:file:
+	at java.net.URI.checkPath(URI.java:1804)
+	at java.net.URI.<init>(URI.java:752)
+	at org.apache.hadoop.fs.Path.initialize(Path.java:203)
+	... 19 more
+================================================================================
+
+
+
+Checking with -printDebugCmd I can see that the command looks like:
+
+
+-Dpig.additional.jars.uris=file:///usr/hdp/2.2.0.0-2041/hive/lib/hive-metastore-0.14.0.2.2.0.0-2041.jar,file:///usr/hdp/2.2.0.0-2041/hive/lib/libthrift-0.9.0.jar,file:///usr/hdp/2.2.0.0-2041/hive/lib/hive-exec-0.14.0.2.2.0.0-2041.jar,file:///usr/hdp/2.2.0.0-2041/hive/lib/libfb303-0.9.0.jar,file:///usr/hdp/2.2.0.0-2041/hive/lib/jdo-api-3.0.1.jar,file://,file://,file:///usr/hdp/2.2.0.0-2041/hive/lib/hive-hbase-handler-0.14.0.2.2.0.0-2041.jar,file:///usr/hdp/2.2.0.0-2041/hive-hcatalog/share/hcatalog/hive-hcatalog-core-0.14.0.2.2.0.0-2041.jar,file://,file:///usr/hdp/2.2.0.0-2041/hive-hcatalog/share/hcatalog/hive-hcatalog-pig-adapter-0.14.0.2.2.0.0-2041.jar:file:/usr/lib/hive/lib/json-serde-1.3.1-SNAPSHOT-jar-with-dependencies.jar 
+
+
+
+So it seems that 0.14 combines the -useHCatalog jars (comma separated), with -Dpig.additional.jars.uris (also comma separated) using a colon, and thus breaks the Jar classpath.
+
+Running with either only -useHCatalg or -Dpig.additional.jars.uris does not result in any issues.
+
+Could it be that 0.14 contains legacy code that combines these multiple flags with a symbol that breaks the path?

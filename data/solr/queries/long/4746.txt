@@ -1,0 +1,13 @@
+As noted by David Parkes
+
+
+
+      {"unique_catalog_name":{"matches":
+
+changes to
+
+      {"unique_catalog_name",{"matches":
+
+
+
+when using distributed search.

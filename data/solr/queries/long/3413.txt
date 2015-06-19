@@ -1,0 +1,6 @@
+If you try to use return fields to put multiple copies of the same field in the response, on the the last one works.
+
+For example:
+http://localhost:8983/solr/select?q=*:*&fl=id,xxx:id
+
+returns the single field "xxx"

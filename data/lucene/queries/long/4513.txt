@@ -1,0 +1,1 @@
+If a nested doc is deleted is still scored into the parent doc, which I think isn't right. 

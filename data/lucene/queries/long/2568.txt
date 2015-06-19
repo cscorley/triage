@@ -1,0 +1,1 @@
+This is because AutomatonTestUtil.RandomAcceptedString is returning an invalid UTF32 int[] – it has an unpaired surrogate, and IBM's JRE handles this differently than Oracle's.

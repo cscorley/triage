@@ -1,0 +1,1 @@
+TezLauncher thread should be deamon thread 

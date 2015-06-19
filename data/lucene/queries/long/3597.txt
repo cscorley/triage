@@ -1,0 +1,5 @@
+The grouping example in package.html doesn't look like it works for 3.x,
+because it has stuff like TopGroups<BytesRef> groupsResult (but in 3.x
+the method returns TopGroups<String>). 
+
+So i think it needs to be updated for 3.x

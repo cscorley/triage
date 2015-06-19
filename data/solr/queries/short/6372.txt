@@ -1,0 +1,1 @@
+HdfsDirectoryFactory should use supplied Configuration for communicating with secure kerberos

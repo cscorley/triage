@@ -1,0 +1,18 @@
+i wish have bellow results:
+
+<lst name="grouped">
+   <lst name="countrycode">
+       <int name="matches">1411</int>
+       <arr name="groups">
+         <lst>
+            <str name="groupValue">unit</str>
+            <result name="doclist" numFound="921" start="0"/>
+         </lst>
+         <lst>
+            <str name="groupValue">china</str>
+            <result name="doclist" numFound="139" start="0"/>
+         </lst>
+       </arr>
+   </lst>
+</lst>
+

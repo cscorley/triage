@@ -1,0 +1,1 @@
+Always check for latest Hive snapshot dependencies

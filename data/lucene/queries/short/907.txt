@@ -1,0 +1,1 @@
+Demo and contrib jars should contain NOTICE.TXT and LICENSE.TXT

@@ -1,0 +1,1 @@
+In LUCENE-4512 MEMORY_CHUNK got much more memory-efficient so I think there are not many use-cases for DISK_DOC anymore.

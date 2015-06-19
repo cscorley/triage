@@ -1,0 +1,3 @@
+commit and autocommit operations don't reset DirectUpdateHandler2.numDocsPending stats attribute (see attached screenshots)
+
+I believe this regression was caused by DUH2 refactorings (near realtime, etc). See commit https://github.com/apache/lucene-solr/commit/ffd9c717448eca895d19be8ee9718bc399ac34a7#diff-18

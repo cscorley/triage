@@ -1,0 +1,5 @@
+The ivy resolver for apache-snapshots sets checkModified="true" which updates the metadata of Tez dependencies if there are modifications, but since the intermediary Tez builds are published under the same revision (0.5.0-incubating-SNAPSHOT) the local cache will only be populated for the first time with the jars and it won't get updated afterwards.
+
+In order to force ivy to always look up the repository whether there are changes in the Tez snapshots jars, changing="true" should be set on the Tez dependencies.
+
+Remark: when Tez dependencies are bumped up to a stable release, this flag needs to be removed.

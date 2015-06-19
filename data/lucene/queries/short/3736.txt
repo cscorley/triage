@@ -1,0 +1,1 @@
+ParallelReader is now atomic, rename to ParallelAtomicReader and also add a ParallelCompositeReader (that requires LogDocMergePolicy to have identical subreader structure)

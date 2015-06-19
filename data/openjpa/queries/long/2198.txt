@@ -1,0 +1,5 @@
+User has the following lock setting
+<property name="openjpa.jdbc.TransactionIsolation" value="repeatable-read"/>
+<property name="openjpa.Optimistic" value="false"/>
+
+Running a query returned OptimisticLockExceptions 

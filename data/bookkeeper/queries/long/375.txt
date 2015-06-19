@@ -1,0 +1,1 @@
+This JIRA is for documenting the details about auto replication service in BookKeeper.

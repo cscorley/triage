@@ -1,0 +1,3 @@
+One of ours fields seems to have a problem that didn't result in an exception before. It seems one of my filters doesn't deal with posIncAttr properly but Lucene did not log which of my numerous fields was the problem.
+
+This patch includes the field name in the exception.

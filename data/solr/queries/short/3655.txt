@@ -1,0 +1,1 @@
+A starting replica can briefly appear active after Solr starts and before recovery begins.

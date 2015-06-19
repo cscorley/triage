@@ -1,0 +1,1 @@
+This is a follow up from LUCENE-5934.  Mike has already has something like this for the smoke tester, but here I am suggesting a test within the test (similar to other Version tests we have which check things like deprecation status of old versions).

@@ -1,0 +1,11 @@
+HossmanSays: in the solr src releases, some shell scripts are not executable by default.
+
+I don't know if we can improve this? Maybe its an svn prop?
+Maybe something needs to be specified to the tar/zip process?
+Currently the 'source release' is really an svn export...
+
+Personally i always do 'sh foo.sh' rather than './foo.sh',
+but if it makes it more user-friendly we should figure it out
+
+Just opening the issue since we don't forget about it, I think solr cloud
+adds some more shell scripts so we should at least figure out what we want to do.

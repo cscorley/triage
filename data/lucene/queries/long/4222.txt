@@ -1,0 +1,9 @@
+
+
+public double getFloorSegmentMB() {
+  return floorSegmentBytes/1024*1024.;
+}
+
+
+
+This is clearly wrong.  It should be either "/1024/1024." or "/(1024*1024.)".  As written, the / and * operations offset, so the value gets returned in bytes.  The merge policy itself uses the value directly rather than calling this getter, so only the return value itself is wrong.

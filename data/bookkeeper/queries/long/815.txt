@@ -1,0 +1,1 @@
+we observed in our use case that when a ledger file is evicted before flushing. the fence state isn't persisted to disk, which would cause fencing doesn't work correctly.

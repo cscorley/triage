@@ -1,0 +1,36 @@
+We are working on the Solr trunk ....and have a Master and Two slaves configuration ..... 
+Our indexing consists of Periodic Full and Incremental index building on the master and replication on the slaves.
+
+When a Full indexing (clean and rebuild) is performed, we always end with an extra index folder copy, which holds the complete index and hence the size just grows on, on the slaves.
+
+e.g.
+drwxr-xr-x 2 tomcat     tomcat 4096 2010-10-09 12:10 index
+drwxr-xr-x 2 tomcat     tomcat 4096 2010-10-11 09:43 index.20101009120649
+drwxr-xr-x 2 tomcat     tomcat 4096 2010-10-12 10:27 index.20101011094043
+rw-rr- 1 tomcat        tomcat   75 2010-10-11 09:43  index.properties
+rw-rr- 1 tomcat        tomcat  422 2010-10-12 10:26 replication.properties
+drwxr-xr-x 2 tomcat     tomcat   68 2010-10-12 10:27 spellchecker
+
+Where index.20101011094043 is the active index and the other index.xxx directories are no more used.
+
+The SnapPuller deletes the temporary Index directory, but does not delete the old one when the switch is performed for the full copy.
+
+The below code should do the trick.
+
+ boolean fetchLatestIndex(SolrCore core) throws IOException 
+{
+    ..........
+      }
+ finally {
+        if(deleteTmpIdxDir) 
+{
+            delTree(tmpIndexDir);
+        }
+ else 
+{
+            // Delete the old index directory, as the flag is set only after the full copy is performed
+            delTree(indexDir);
+        }
+      }
+    .........
+  }

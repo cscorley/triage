@@ -1,0 +1,19 @@
+Testing on rhel environment, TestPoissonSampleLoader fails with 
+
+
+Testcase: testNumSamples took 22.077 sec
+        FAILED
+expected:<47> but was:<42>
+junit.framework.AssertionFailedError: expected:<47> but was:<42>
+        at org.apache.pig.test.TestPoissonSampleLoader.testNumSamples(TestPoissonSampleLoader.java:125)
+
+
+
+From 
+
+124         count = testNumSamples("0.0001", "100");
+125         assertEquals(count, 42);
+
+
+
+This runs fine on my mac environment.

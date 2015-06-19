@@ -1,0 +1,11 @@
+Until recently, I thought the solr test framework was setup such that every test got it's own copy of the "test-files/solr" directory to use as it's Solr Home Dir – then mark committed r1421543, to fix a problem where that test was writing a file (that would later be removed) to the solr conf dir, which would confuse another currently running test and cause it to fail.
+
+This made me realize that what i was remembering is that the ant build files copy the src/test-files directories into build/ prior to running the tests – but all tests (in that module) still share the same copy.
+
+Subsequent discussions with folks on IRC lead me to the following realizations..
+
+
+	making a copy of the test-files dir for each test would help eliminate confusing by reducing non-reproducible failures if tests collide – but might be slow
+	making a copy of the test-files dir for each test would not help identify situations were code was mistakenly/unexpectedly writing to the solr home dir
+	what would probably make the most sense, would be to make the build/test-files directory "read only".  that way by default tests would get a read only solr home dir – triggering failures if the code is broken and tries to write to that dir.  tests that want/need to write to the solr home dir would have to go out of their way to clone the read only test-files/solr directory and use it as their solr home.
+

@@ -1,0 +1,1 @@
+(Char)TermAttribute cloning memory consumption

@@ -1,0 +1,1 @@
+registry.jsp is still using deprecated access to the singleton SolrCore.getSolrCore() ... easy fix.

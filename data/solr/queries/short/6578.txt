@@ -1,0 +1,1 @@
+Update commons-io dependency to the latest 2.4 version

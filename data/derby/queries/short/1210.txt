@@ -1,0 +1,1 @@
+With encryptionCFB suite store/access.sql fails with IBM jdk 1.3.1

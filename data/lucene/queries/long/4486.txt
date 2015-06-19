@@ -1,0 +1,1 @@
+if you wrap a query into a constant score the highlighter fails to highlight since ConstantScoreQuery is not recognized in WeightedSpanTermExtractor

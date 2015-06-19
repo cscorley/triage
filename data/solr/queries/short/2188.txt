@@ -1,0 +1,1 @@
+StandardTokenizerFactory should accept a maxTokenLength parameter

@@ -1,0 +1,1 @@
+Race can cause NPE in logging line on cluster state update.

@@ -1,0 +1,1 @@
+getNGroups returns null if group.format=simple and group.ngroups=true

@@ -1,0 +1,1 @@
+FST should differentiate between final vs non-final stop nodes

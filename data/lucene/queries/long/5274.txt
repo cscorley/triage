@@ -1,0 +1,10 @@
+I've been messing around with the FastVectorHighlighter and it looks like I can teach it to highlight matches on "child fields".  Like this query:
+foo:scissors foo_exact:running
+would highlight foo like this:
+<em>running</em> with <em>scissors</em>
+
+Where foo is stored WITH_POSITIONS_OFFSETS and foo_plain is an unstored copy of foo a different analyzer and its own WITH_POSITIONS_OFFSETS.
+
+This would make queries that perform weighted matches against different analyzers much more convenient to highlight.
+
+I have working code and test cases but they are hacked into Elasticsearch.  I'd love to Lucene-ify if you'll take them.

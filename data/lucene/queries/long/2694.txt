@@ -1,0 +1,3 @@
+Spinoff of LUCENE-2690 (see the hacked patch on that issue)...
+
+Once we fix MTQ rewrite to be per-segment, we should take it further and make weight/scorer init also run in the same single pass as rewrite.

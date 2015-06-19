@@ -1,0 +1,1 @@
+Enhance SolrTestCaseJ4 to allow tests to account for small deltas when comparing floats/doubles

@@ -1,0 +1,119 @@
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbyall/storeall/storemore/OnlineBackupTest1.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: OnlineBackupTest1 jdkJ2ME Foundation Specification v1.0 storeall:storemore 2006-11-11 13:41:44 ***
+5 del
+< database shutdown properly
+6 del
+< Restored From the Backup
+7 del
+< Consistency Check is Done
+8 del
+< database shutdown properly
+9 del
+< End Online Backup Test1
+9 add
+> Unhandled exception
+> Type=GPF vmState=0x00000040
+> Target=2_20_20040706_1457_lHdSMR (Windows 2000 5.0 build 2195 Service Pack 4)
+> CPU=x86 (2 logical CPUs) (0x2ff8a000 RAM)
+> ExceptionCode=c0000005 ExceptionAddress=1130A074 ContextFlags=0001003f Handler1=1130A07C
+> Handler2=1130A080
+> EDI=fd2023b2 ESI=02466098 EAX=03cbc072 EBX=00000000
+> ECX=02462724 EDX=070330fa EBP=00000000
+> EIP=12c29c90 ESP=0115fb0c
+> Module=e:\cloudtst\jartest\wctme5.7\ive\bin\j9jit22.dll
+> Module_base_address=12c00000 Offset_in_DLL=00029c90
+> JavaVMInitArgs.nOptions=23:
+>     -Dcom.ibm.oti.vm.exe=e:\cloudtst\jartest\wctme5.7\ive\bin\j9.exe
+>     _port_library (extra info: 0012F894)
+>     -Duser.language=en
+>     -Duser.country=US
+>     -Dij.dataSource=org.apache.derby.jdbc.EmbeddedSimpleDataSource
+>     -Xjcl:jclfoun10_22
+>     -Xbootclasspath/a:e:/cloudtst/jartest/wctme5.7/ive/lib/jdbc.jar
+>     -Dderby.system.home=E:\cloudtst\jartest\JarResults.2006-11-10\wctme5.7_foundation_derbyall\derbyall\storeall\storemore\OnlineBackupTest1
+>     -Dderby.infolog.append=true
+>     -Dframework=embedded
+>     -DderbyTesting.jar.path=e:/cloudtst/jartest/tools/testing/derby
+>     -Djava.security.manager
+>     -Djava.security.policy=E:\cloudtst\jartest\JarResults.2006-11-10\wctme5.7_foundation_derbyall\derby_tests.policy
+>     -DderbyTesting.clientjar=file:/E:/cloudtst/jartest/classes/
+>     -DderbyTesting.codejar=file:/E:/cloudtst/jartest/classes/
+>     -DderbyTesting.testjar=file:/E:/cloudtst/jartest/classes/
+>     -DderbyTesting.codedir=E:\cloudtst\jartest\classes
+>     -DderbyTesting.serverhost=xxxFILTERED_HOSTNAMExxx
+>     -DderbyTesting.clienthost=xxxFILTERED_HOSTNAMExxx
+>     -Djava.home=e:\cloudtst\jartest\wctme5.7\ive
+>     -Dcom.ibm.oti.vm.bootstrap.library.path=e:\cloudtst\jartest\wctme5.7\ive\bin\
+>     -Djava.library.path=e:\cloudtst\jartest\wctme5.7\ive\bin\;.;e:/cloudtst/jartest/wctme5.7/ive/bin;e:/cloudtst/jartest/wctme5.7/ive/lib;e:/cloudtst/jartest/frameworks/embedded/bin;E:\cloudtst\jartest\tools\nt;E:\cloudtst\jartest\tools\nightlybuild;E:\cloudtst\jartest\jdk15\bin;E:\PROGRA~1\MKSTOO~1\bin;E:\PROGRA~1\MKSTOO~1\bin\X11;E:\PROGRA~1\MKSTOO~1\mksnt;C:\WINNT\system32;C:\WINNT;C:\WINNT\System32\Wbem;C:\Program Files\Perforce
+> (no Thread object associated with thread)
+> Thread: Gc Slave Thread (priority 5) (daemon)
+> Thread: derby.antiGC (priority 1) (daemon)
+> Thread: Thread-0 (priority 5) (daemon)
+> Thread: derby.rawStoreDaemon (priority 5) (daemon)
+> Thread: Finalizer thread (priority 5) (daemon)
+> Thread: BACKUP (priority 5)
+>  00000039 org/apache/d
+> Error: Dump failed - could not link MiniDumpWriteDump in DBGHELP.DLL
+> erbyTesting/functionTests/tests/store/OnlineBackup.performBackup()V
+>  00000006 org/apache/derbyTesting/functionTests/tests/store/OnlineBackup.run()V
+> Thread: DML_THREAD (priority 5)
+Test Failed.
+			End:   OnlineBackupTest1 jdkJ2ME Foundation Specification v1.0 storeall:storemore 2006-11-11 13:42:52 ***
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbyall/storeall/storemore/OnlineBackupTest3.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+		
+		
+	
+	
+

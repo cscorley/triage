@@ -1,0 +1,6 @@
+1. Run Solr and bruing up the Admin dashboard
+2. Stop Solr
+3. Click around the Admin GUI. It apparently works, but displays a spinning wheel for most panels
+4. Click on "Dashboard". An old cached dashboard is displayed
+
+What should happen is that once connection to Solr is lost, the whole Admin UI displays a large red box "CONNECTION LOST" or something  

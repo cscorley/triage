@@ -1,0 +1,19 @@
+The problem is the following snippet:
+
+
+
+protected String getPreTag( int num ){
+  return preTags.length > num ? preTags[num] : preTags[0];
+}
+
+
+
+it should be:
+
+
+
+protected String getPreTag( int num ){
+  int n = num % preTags.length;
+  return  preTags[n];
+}
+

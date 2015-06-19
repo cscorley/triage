@@ -1,0 +1,1 @@
+ autoincrement regression test fails with single diff - looks like just a master issue

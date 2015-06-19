@@ -1,0 +1,1 @@
+ChaosMonkey should randomly turn off Solr's commit on shutdown option.

@@ -1,0 +1,47 @@
+Running jdbcapi/xaSimplePositive.sql with network client  causes  an error  in the last case:
+
+Cannot set holdability ResultSet.HOLD_CURSORS_OVER_COMMIT for a global transaction.
+
+The trace on the client is:
+ij(XA)> select * from APP.global_xactTable where gxid is not null order by gxid;
+ERROR XJ05C: DERBY SQL error: SQLCODE: -1, SQLSTATE: XJ05C, SQLERRMC: XJ05C.S
+org.apache.derby.client.am.SqlException: DERBY SQL error: SQLCODE: -1, SQLSTATE: XJ05C, SQLERRMC: XJ05C.S
+	at org.apache.derby.client.am.Statement.completeSqlca(Statement.java:1354)
+	at org.apache.derby.client.am.Statement.completeOpenQuery(Statement.java:1025)
+	at org.apache.derby.client.net.NetStatementReply.parseOpenQueryFailure(NetStatementReply.java:503)
+	at org.apache.derby.client.net.NetStatementReply.parseOPNQRYreply(NetStatementReply.java:226)
+	at org.apache.derby.client.net.NetStatementReply.readOpenQuery(NetStatementReply.java:56)
+	at org.apache.derby.client.net.StatementReply.readOpenQuery(StatementReply.java:49)
+	at org.apache.derby.client.net.NetStatement.readOpenQuery_(NetStatement.java:151)
+	at org.apache.derby.client.am.Statement.readOpenQuery(Statement.java:1021)
+	at org.apache.derby.client.am.Statement.flowExecute(Statement.java:1556)
+	at org.apache.derby.client.am.Statement.executeX(Statement.java:631)
+	at org.apache.derby.client.am.Statement.execute(Statement.java:622)
+	at org.apache.derby.impl.tools.ij.ij.executeImmediate(ij.java:299)
+	at org.apache.derby.impl.tools.ij.utilMain.doCatch(utilMain.java:433)
+	at org.apache.derby.impl.tools.ij.utilMain.go(utilMain.java:312)
+	at org.apache.derby.impl.tools.ij.Main.go(Main.java:203)
+	at org.apache.derby.impl.tools.ij.Main.mainCore(Main.java:169)
+	at org.apache.derby.impl.tools.ij.Main14.main(Main14.java:55)
+	at org.apache.derby.tools.ij.main(ij.java:60)
+
+
+On the server, the trace is:
+
+Cannot set holdability ResultSet.HOLD_CURSORS_OVER_COMMIT for a global transaction.
+SQL Exception: Cannot set holdability ResultSet.HOLD_CURSORS_OVER_COMMIT for a global transaction.
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:79)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:96)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:160)
+	at org.apache.derby.jdbc.EmbedXAConnection.checkHoldCursors(EmbedXAConnection.java:712)
+	at org.apache.derby.jdbc.XAStatementControl.checkHoldCursors(XAStatementControl.java:193)
+	at org.apache.derby.iapi.jdbc.BrokeredPreparedStatement.execute(BrokeredPreparedStatement.java:426)
+	at org.apache.derby.impl.drda.DRDAStatement.execute(DRDAStatement.java:548)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseEXCSQLSTT(DRDAConnThread.java:3533)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:871)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:226)
+handle SQLException here
+
+
+I have been trying to get the jdbcapi/xaSimplePostive.sql test running with network client.  The changes for  DERBY -246 and DERBY-339  allow all but the last case in xaSimplePositve to pass.   Unfortunately I have not  yet been able  to strip down the test to get a smaller reproducable case.  
+

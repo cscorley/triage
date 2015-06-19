@@ -1,0 +1,3 @@
+Implementation of SolrServer that uses the Apache Http Components framework.
+
+Http Components (http://hc.apache.org/) is the successor of Commons HttpClient and thus HttpComponentsSolrServer would be a successor of CommonsHttpSolrServer, in the future.

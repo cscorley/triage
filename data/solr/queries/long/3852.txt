@@ -1,0 +1,28 @@
+Original bug description indicated that when using Solr with embedded ZK everything was fine, but with an external ZK you'd get an ArrayIndexOutOfBoundsException.
+
+Crux of the problem is some bad assumptions about any ZK node containing data – the ZookeeperInfoServlet powering the tree view of the Cloud Admin UI assumed that any data would be utf8 text.
+
+If you are using extenral ZK, and other systems are writing data into ZK, then you are more likely to see this problem, because those other systems might be writing binary data in to ZK nodes – if you are using ZK embedded in solr, or using solr with it's own private (external) ZK instance, then you would only see this problem if you explicitly put binary files into solr configs and upconfig them into ZK.
+
+
+
+One workarround for people encountering this problem when using Solr with a ZK instance shared by other tools is to make sure you use a "chroot" patch when pointing Solr at ZK, so that it won't know about any other paths in your ZK tree that might have binary data...
+
+https://wiki.apache.org/solr/SolrCloud#Zookeeper_chroot
+
+If you are having this problem because you put binay files into your own config dir (ie: images for velocity or something like that) then there is no straight forward workarround.
+
+Example stack trace for this bug...
+
+
+43242 [qtp965223859-14] WARN  org.eclipse.jetty.servlet.ServletHandler /solr/zookeeper
+java.lang.ArrayIndexOutOfBoundsException: 213
+        at org.apache.lucene.util.UnicodeUtil.UTF8toUTF16(UnicodeUtil.java:620)
+        at org.apache.lucene.util.BytesRef.utf8ToString(BytesRef.java:168)
+        at org.apache.solr.servlet.ZookeeperInfoServlet$ZKPrinter.printTree(ZookeeperInfoServlet.java:303)
+        at org.apache.solr.servlet.ZookeeperInfoServlet$ZKPrinter.printTree(ZookeeperInfoServlet.java:339)
+        at org.apache.solr.servlet.ZookeeperInfoServlet$ZKPrinter.printTree(ZookeeperInfoServlet.java:339)
+...
+org.apache.solr.servlet.ZookeeperInfoServlet$ZKPrinter.print(ZookeeperInfoServlet.java:228)
+        at org.apache.solr.servlet.ZookeeperInfoServlet.doGet(ZookeeperInfoServlet.java:106)
+

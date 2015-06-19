@@ -1,0 +1,1 @@
+  We don't have e2e tests for cases like union followed by group by, join (replicate, skewed, hash), orderby, limit, etc. PIG-3835 adds optimization to those cases and we should have e2e tests for that.

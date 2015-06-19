@@ -1,0 +1,1 @@
+When using the HDFS block cache, when a file is deleted, it's underlying data entries in the block cache are not removed, which is a problem with the global block cache option.

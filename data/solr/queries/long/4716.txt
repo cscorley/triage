@@ -1,0 +1,1 @@
+For bug SOLR-4210. remoteQuery() have some issue in tomcat. it's ok in jetty but not work in tomcat(maybe some other web server too) cause the IOUtils.closeQuietly(os) wouldn't flush before close . this lead a "Bogus chunk size" error cause the transfer-encoding is chunked and also the "Content-Length" was set to non "-1". so we should invoke flush() explicitly before close.

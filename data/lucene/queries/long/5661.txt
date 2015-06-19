@@ -1,0 +1,5 @@
+Specifically setRamBufferSizeMB and setMaxBufferedDocs.
+
+Furthermore these are "live" settings on IWC, so there are potential race conditions.
+
+It would be good if there were a better API, even if that just means documenting "if both X and Y are set, X takes precedence".

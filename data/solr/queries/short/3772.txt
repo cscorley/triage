@@ -1,0 +1,1 @@
+On cluster startup, we should wait until we see all registered replicas before running the leader process - or if they all do not come up, N amount of time.

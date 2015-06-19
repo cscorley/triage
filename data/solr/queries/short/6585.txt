@@ -1,0 +1,1 @@
+Let a requestHandler handle sub paths as well

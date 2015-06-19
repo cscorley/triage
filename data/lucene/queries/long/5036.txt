@@ -1,0 +1,1 @@
+While I was looking into the latest failure here I cleaned up StoredFieldsProcessor & TermVectorsConsumer a bit since they still seem to have some leftovers from ancient times where we reused the indexing chains across flushes 

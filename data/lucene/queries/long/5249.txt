@@ -1,0 +1,8 @@
+Mark Miller wrote on the dev list:
+
+
+I'd like it for some things if we actually kept the versions somewhere else - for instance, Hadoop dependencies should match across the mr module and the core module.
+
+Perhaps we could define versions for dependencies across multiple modules that should probably match, in a prop file or ant file and use sys sub for them in the ivy files.
+
+For something like Hadoop, that would also make it simple to use Hadoop 1 rather than 2 with a single sys prop override. Same with some other depenencies.

@@ -1,0 +1,11 @@
+Related e2e test: ComputeSpec_1~ComputeSpec_8.
+found following error when run ComputeSpec_4.pig
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+299 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+300 ===== Task Information Header =====
+301 Command: perl PigStreaming.pl (stdin-org.apache.pig.builtin.PigStreaming/stdout-org.apache.pig.builtin.PigStreaming)
+302 Start time: Mon Dec 29 10:48:43 CST 2014
+303 =====          * * *          =====
+304 Can't open perl script "PigStreaming.pl": No such file or directory
+305 Details at logfile: /home/zly/prj/oss/pig/test/e2e/pig/testdist/out/pigtest/root/root-1419821303-streaming.conf/ComputeSpec_4.log
+306 ERROR TestDriver::runTestGroup at : 729 Failed to run test ComputeSpec_4 <Failed running ./out/pigtest/root/root-1419821303-streaming.conf/ComputeSpec_4.    pig

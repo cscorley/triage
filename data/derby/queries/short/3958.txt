@@ -1,0 +1,1 @@
+ImportExportProcedures imports ./testData/ImportExport/position_info.del using US-ASCII but the file contains non-ascii characters

@@ -1,0 +1,1 @@
+UDF in nested plan results frontend exception

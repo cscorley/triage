@@ -1,0 +1,7 @@
+This is being used now:
+                <Set name="filenameDateFormat">yyyy_mm_dd</Set>
+but mm means minutes (I guess) and filenames created are not meaningfull. Changing to 
+                <Set name="filenameDateFormat">yyyy_MM_dd</Set>
+creates proper filenames.
+
+Note that the logger is commented out by default, but I always enable it.

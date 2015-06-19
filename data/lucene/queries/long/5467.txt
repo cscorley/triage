@@ -1,0 +1,9 @@
+Although ivy sync=true seems to work in most cases, sometimes (especially when updating version numbers) the old JAR files are not nuked on resolve. I have no idea about why this is still a bug in ivy, but sync=true does not help in all cases.
+
+It would be good to re-add the ant clean-jars target to the top-level build.xml, because this allows you to remove all JAR files and do a re-resolve.
+
+The bug occurred to Mark Miller and also to me this morning when Mark updated slf4j versions: If you run ant jar-checksums after updating the version numbers, it creates 2 checksum files (for the old and the new version). The call to ant check-svn-working-copy then does not find a violation, because the old version's checksum is still recreated. It only complains about the new one, but when you add it it will not complain anymore about the old one.
+
+The violation is only found by Jenkins, because this one does a fresh svn checkout (or it emulates one), so it starts without any JARs. Because of this, checksum re-creation deletes the old file (still on subversion server) and a violation is detected.
+
+Currently I do the JAR file deletion by a find/xargs/rm and then recreate checksums, which finds the problem. The good old ant clean-jars would be back as a last resort if you are hit my this IVY bug when you are updating revision numbers.

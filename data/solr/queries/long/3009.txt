@@ -1,0 +1,1 @@
+A user reported getting "Can't find resource 'hitGrouped.vm'" when trying /browse?q=Titel%3Anike&group=true&group.field=EAN on a 3.x version.  Looking at svn, we don't ship hitGrouped.vm on 3.x, but we do on trunk/4.0.

@@ -1,0 +1,1 @@
+edismax uf param does not work with magic fields '_query_' and '_val_'

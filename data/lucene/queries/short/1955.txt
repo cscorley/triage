@@ -1,0 +1,1 @@
+Fix Hits deprecation notice

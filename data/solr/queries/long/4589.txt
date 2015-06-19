@@ -1,0 +1,11 @@
+Following up on a user report of exterme CPU usage in 4.1, I've discovered that the following combination of factors can result in extreme CPU usage and excessively HTTP response times...
+
+
+	Solr 4.x (tested 3.6.1, 4.0.0, and 4.2.0)
+	enableLazyFieldLoading == true (included in example solrconfig.xml)
+	documents with a large number of values in multivalued fields (eg: tested ~10-15K values)
+	multiple requests returning the same doc with different "fl" lists
+
+
+
+I haven't dug into the route cause yet, but the essential observations is: if lazyloading is used in 4.x, then once a document has been fetched with an initial fl list X, subsequent requests for that document using a differnet fl list Y can be many orders of magnitute slower (while pegging the CPU) – even if those same requests using fl Y uncached (or w/o lazy laoding) would be extremely fast.

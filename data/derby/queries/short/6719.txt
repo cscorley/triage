@@ -1,0 +1,1 @@
+Add derbyoptionaltools.jar to the class paths of the scripts in the bin directory

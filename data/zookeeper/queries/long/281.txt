@@ -1,0 +1,13 @@
+> autoreconf -i -f -v
+autoreconf-2.63: Entering directory `.'
+autoreconf-2.63: configure.ac: not using Gettext
+autoreconf-2.63: running: aclocal --force 
+configure.ac:21: error: AC_SUBST: `DX_FLAG_[]DX_CURRENT_FEATURE' is not a valid shell variable name
+acinclude.m4:77: DX_REQUIRE_PROG is expanded from...
+acinclude.m4:117: DX_ARG_ABLE is expanded from...
+acinclude.m4:178: DX_INIT_DOXYGEN is expanded from...
+configure.ac:21: the top level
+autom4te-2.63: /usr/bin/m4 failed with exit status: 1
+aclocal-1.10: autom4te failed with exit status: 1
+autoreconf-2.63: aclocal failed with exit status: 1
+>

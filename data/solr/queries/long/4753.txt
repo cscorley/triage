@@ -1,0 +1,3 @@
+a user reported core reference counting issues in 4.2.1...
+
+http://markmail.org/message/akrrj5o24prasm6e

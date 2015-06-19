@@ -1,0 +1,5 @@
+As noted on the mailing list...
+
+http://markmail.org/message/cvihm2m6aqhrfbo5
+
+a RejectedExecutionException can occur when shutting down a solr core if the UpdateHandler.close() wants to do an autocommit - because the searchExecutor has already been closed.

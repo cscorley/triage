@@ -1,0 +1,1 @@
+ZkController baseURL only get the host name not address, will occur can't get the right URL to do recovery.   

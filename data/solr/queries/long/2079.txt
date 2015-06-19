@@ -1,0 +1,1 @@
+This patch adds the HttpServletRequest object to the SolrQueryRequest object. The HttpServletRequest object is needed to obtain the client's IP address for geotargetting, and is part of the patches from W. Quach and C. Mattmann.

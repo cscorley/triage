@@ -1,0 +1,1 @@
+Solr 4 spatial- Add a filter=false local-param to just use the distance based valuesource

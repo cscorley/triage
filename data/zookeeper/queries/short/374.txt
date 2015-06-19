@@ -1,0 +1,1 @@
+Uninitialized struct variable in C causes warning which is treated as an error

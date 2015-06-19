@@ -1,0 +1,1 @@
+Custom analyzer load exceptions are not logged.

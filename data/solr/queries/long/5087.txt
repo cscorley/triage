@@ -1,0 +1,10 @@
+CoreAdminHandler.handleMergeAction is generating NullPointerException
+
+If directoryFactory.get(...) in handleMergeAction throws an exception the original error is lost as the finally clause will attempt to clean up and generate an NPE. (notice that "dirsToBeReleased" is pre-allocated with nulls that are not filled in)
+
+
+ERROR org.apache.solr.core.SolrCore: java.lang.NullPointerException
+at org.apache.solr.core.CachingDirectoryFactory.release(CachingDirectoryFactory.java:430)
+at org.apache.solr.handler.admin.CoreAdminHandler.handleMergeAction(CoreAdminHandler.java:380)
+at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:180)
+

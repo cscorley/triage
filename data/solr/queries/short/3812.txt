@@ -1,0 +1,1 @@
+ConnectionLoss during recovery can cause lost updates, leading to shard inconsistency.

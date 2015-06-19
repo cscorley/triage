@@ -1,0 +1,3 @@
+When edismax is unable to parse the original user query, it retries using an escaped version of that query (where all reserved chars have been escaped).
+
+Currently, the escaping done in splitIntoClauses appears to be missing several chars from QueryParserBase#escape(String), namely '', '|', '&', '/'

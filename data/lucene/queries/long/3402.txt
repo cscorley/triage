@@ -1,0 +1,20 @@
+An example can be seen here: http://sierranevada.servebeer.com/1314308641.log
+
+The general problem is this: the assertions and cleanups in lucenetestcase's afterclass should be reordered, and have better error handling.
+In this particular case these were the steps that happened:
+
+	AutoCommitTest didn't close its searchers, so SolrTestCaseJ4 threw an assertion exception in its @AfterClass method.
+	Because the searcher wasn't closed, LuceneTestCase threw an assertion exception about unclosed directories/file handles in its afterClass. Even though the test had already "failed" it ran this assertion because testsFailed is false, since our TestWatchMan isnt aware of failures that happen in @AfterClass methods 
+	Because it threw this exception, it never made it to the part where it resets the random, so the next test blew up in its BeforeClass.
+
+
+
+To add insult to injury, all this happened but we didnt get a random seed printed, so we cant even hope to reproduce the situation.
+
+After discussion with hossman, we came up with some ideas on how to improve this, and I'm adding some i just thought of, too:
+
+	try to divide up these assertions and cleanups in LuceneTestCase: we could use multiple @AfterClass-annotated methods but then i'm not sure we can control the order, which is scary. But one safe thing to do is to put these pieces of code in little methods and afterclass can handle this stuff with try/finally.
+	think about exposing the testsFailed variable for subclasses that do assertions in their @AfterClasses. otherwise you might not get a random seed, which is bad.
+	think about upgrading junit, because I know from experimentation that the TestWatchMan (or whatever its replacement is) can "see more" of the test lifecycle and this would probably make a lot of this much cleaner.
+
+

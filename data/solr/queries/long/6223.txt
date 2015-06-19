@@ -1,0 +1,2 @@
+I found that, when using shards.tolerant, if there is some kind of exception in the second phase of the search, some component’s throw NPE. 
+I found it with the QueryComponent first, but then saw that other components would suffer in the same way: DebugComponent, HighlightComponent and MLTComponent. I only checked the components of the default chain.

@@ -1,0 +1,1 @@
+C client returns NULL for stat object for deleted nodes. zookeeper.c blindly dereferences it. Segfault. 

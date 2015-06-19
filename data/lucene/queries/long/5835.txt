@@ -1,0 +1,1 @@
+It would be nice to allow to configure the behavior on missing values for this comparator, similarly to what TermOrdValComparator does.

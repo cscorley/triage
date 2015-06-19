@@ -1,0 +1,3 @@
+Starting 0.6 our release notes are published on our main web page - interleaved with other news items.
+
+For reference it would be good to have one canonical go-to page for past release notes on our main Apache CMS powered web page.

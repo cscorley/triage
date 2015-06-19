@@ -1,0 +1,17 @@
+Found this failure on my local jenkins instance:
+
+
+
+Error Message
+
+CreateCollection task did not complete! expected:<[completed]> but was:<[running]>
+Stacktrace
+
+org.junit.ComparisonFailure: CreateCollection task did not complete! expected:<[completed]> but was:<[running]>
+	at __randomizedtesting.SeedInfo.seed([D4EC4F9D698903B5:550AC1851ED66389]:0)
+	at org.junit.Assert.assertEquals(Assert.java:125)
+	at org.apache.solr.cloud.CollectionsAPIAsyncDistributedZkTest.testSolrJAPICalls(CollectionsAPIAsyncDistributedZkTest.java:75)
+	at org.apache.solr.cloud.CollectionsAPIAsyncDistributedZkTest.doTest(CollectionsAPIAsyncDistributedZkTest.java:61)
+	at org.apache.solr.BaseDistributedSearchTestCase.testDistribSearch(BaseDistributedSearchTestCase.java:865)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+

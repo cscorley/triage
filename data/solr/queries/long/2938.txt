@@ -1,0 +1,1 @@
+Currenly, Carrot2 clustering component allows to assign one Solr field per one Carrot2 field (title, content). In some cases it would make sense to put content of more than one Solr field into one Carrot2 field. Clustering component field parameters (carrot.title, carrot.snippet) should handle comma/space separated lists of Solr fields.

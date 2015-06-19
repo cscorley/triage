@@ -1,0 +1,3 @@
+IS.searchAfter() always returns an empty result when using FunctionValues for sorting.
+
+The culprit is ValueSourceComparator.compareDocToValue() returning -1 when it should return +1.

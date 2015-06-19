@@ -1,0 +1,3 @@
+PigStorageSchema.getNest() initializes schema (and as a result PigContext) for every tuple by mistake. Initializing PigContext is extremely costly.
+
+This does not affect 10.x or trunk since PigStorageSchema's functionality is rolled into PigStorage.

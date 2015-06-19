@@ -1,0 +1,1 @@
+UninvertingReader should return null when a field has no terms

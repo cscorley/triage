@@ -1,0 +1,19 @@
+When digging though logs, it is hard to figure out what went wrong with errors like:
+
+
+
+2011-03-04 11:43:52,773 INFO org.apache.solr.update.processor.UpdateRequestProcessor - {} 0 0
+2011-03-04 11:43:52,773 ERROR org.apache.solr.core.SolrCore - java.lang.NumberFormatException: multiple points
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1084)
+	at java.lang.Float.parseFloat(Float.java:422)
+	at org.apache.solr.schema.TrieField.createField(TrieField.java:512)
+	at org.apache.solr.schema.SchemaField.createField(SchemaField.java:94)
+	at org.apache.solr.update.DocumentBuilder.addField(DocumentBuilder.java:204)
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:277)
+	at org.apache.solr.update.processor.RunUpdateProcessor.processAdd(RunUpdateProcessorFactory.java:60)
+	at org.apache.solr.update.processor.LogUpdateProcessor.processAdd(LogUpdateProcessorFactory.java:94)
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:53)
+
+
+
+would be nice to know the field name/value and ideally the ID value also.

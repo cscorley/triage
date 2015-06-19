@@ -1,0 +1,1 @@
+Unsynchronized WeakHashMap in SolrDispatchFilter causing issues in SolrCloud

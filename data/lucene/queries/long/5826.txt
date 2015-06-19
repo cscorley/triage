@@ -1,0 +1,17 @@
+When ignoreCase=false, we should accept title-cased/upper-cased forms just like hunspell -m. Furthermore there are some options around this:
+
+	LANG: can turn on alternate casing for turkish/azeri
+	KEEPCASE: can prevent acceptance of title/upper cased forms for words
+
+
+
+While we are here setting up the same logic anyway, add support for similar  options:
+
+	NEEDAFFIX/PSEUDOROOT: form is invalid without being affixed
+	ONLYINCOMPOUND: form/affixes only make sense inside compounds.
+
+
+
+This stuff is unrelated to the ignoreCase=true option. If you use that option though, it does use correct alternate casing for tr_TR/az_AZ now though.
+
+I didn't yet implement CHECKSHARPS because it seems more complicated, I have to figure out what the logic there should be first.

@@ -1,0 +1,6 @@
+There are two case query with the same meaning below. But the case2 can't use the queryResultCache when case1 is executed.
+
+case1: q=:&fq=field1:value1&fq=field2:value2
+case2: q=:&fq=field2:value2&fq=field1:value1
+
+I think queryResultCache should not be related with the order of fq's list.

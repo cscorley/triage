@@ -1,0 +1,5 @@
+SOLR-1352 introduced a multi-threading feature for DataImportHandler.  Historically, this feature only seemed to work in a limited set of cases and I don't think we can guarantee users that using "threads" will behave consistently.  Also, the multi-threaded option adds considerable complexity making code refactoring difficult. 
+
+I propose removing "threads" from Trunk.  (But keep it in 3.x, applying any bug fixes for it there.)  This can be a first step in improving the DIH code base.  
+
+Eventually we can possibly add a carefully though-out "threads" implementation back in.

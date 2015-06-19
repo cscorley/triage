@@ -1,0 +1,1 @@
+We require that generated code must implement Activation. This helps prevent applications from using Derby's class loaders to load arbitrary classes. We should also require that generated code live in the org.apache.derby.exe package. This will prevent applications from loading  highly privileged code using Derby class loaders.

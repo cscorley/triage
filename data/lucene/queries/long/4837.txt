@@ -1,0 +1,1 @@
+We expose a getter on BufferedIndexInput so for consistency it makes sense to expose it on BufferedIndexOutput as well. Wrappers like RateLimiter can also take advantage of this information to adjust their buffer size.

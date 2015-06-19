@@ -1,0 +1,1 @@
+Add payload content to the vebose output of the analysis.jsp page for debugging purposes.

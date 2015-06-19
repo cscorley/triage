@@ -1,0 +1,1 @@
+Blended score in AnalyzingInfixSuggester

@@ -1,0 +1,12 @@
+Stated in the code:
+
+
+    // TODO we can't randomize this yet (it drives ant crazy) but this makes tests reproduce
+    // in case machines have different default charsets...
+    sb.append(" -Dargs=\"-Dfile.encoding=" + System.getProperty("file.encoding") + "\"");
+
+
+
+But this should work without any problems with junit4 because communication streams are separate and we're decoding output properly (or so I hope). 
+
+Try and see what happens 

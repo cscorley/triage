@@ -1,0 +1,4 @@
+CXF 3.0.2 JAX-RS front-end offers a complete JAX-RS 2.0 support, has fewer dependencies and is smaller compared to CXF 2.7.x one. It is also backward-compatible with the applications written against JAX-RS 1.1.
+Lets do this upgrade after Tika 1.6 is out.
+
+CXF 3.1.0 is Java 7 based and is still under development.

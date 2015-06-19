@@ -1,0 +1,8 @@
+In the ZKController.getHostAddress, it gets host name. In the linux, get hostname from /etc/sysconfig/network or /etc/hostname that maybe not config for ip address.
+
+Other server can't access it(http://hostname:port/..) correctly that cause recovery fail.
+
+
+
+
+

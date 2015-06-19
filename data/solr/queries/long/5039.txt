@@ -1,0 +1,7 @@
+I thought this had been a JIRA before, but I couldn't find it. Problem is that LukeRequestHandler.getDetailedFieldInfo gets the count by this line:
+
+tiq.distinctTerms = new Long(terms.size()).intValue();
+
+which is -1 at least for multiValued fields. I'll attach a patch in a second that just counts things up. It worked last night, but it was late.
+
+I obviously don't understand what's up with MultiTerms.size() is hard-coded to return -1. Can anyone shed light on this? Or see the two-line change and see if it makes sense?

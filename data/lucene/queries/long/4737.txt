@@ -1,0 +1,68 @@
+Curiously, the tests only seem to fail when I run "ant test" from lucene/core.  No "Reproduce with" line is printed ... and if I run the failing tests alone, they do not fail.
+
+The failures look like this:
+
+[junit4:junit4] Suite: org.apache.lucene.util.junitcompat.TestFailIfDirectoryNotClosed
+[junit4:junit4] FAILURE 0.02s J2 | TestFailIfDirectoryNotClosed.testFailIfDirectoryNotClosed <<<
+[junit4:junit4]    > Throwable #1: java.lang.AssertionError: expected:<1> but was:<0>
+[junit4:junit4]    > 	at org.junit.Assert.fail(Assert.java:93)
+[junit4:junit4]    > 	at org.junit.Assert.failNotEquals(Assert.java:647)
+[junit4:junit4]    > 	at org.junit.Assert.assertEquals(Assert.java:128)
+[junit4:junit4]    > 	at org.junit.Assert.assertEquals(Assert.java:472)
+[junit4:junit4]    > 	at org.junit.Assert.assertEquals(Assert.java:456)
+[junit4:junit4]    > 	at org.apache.lucene.util.junitcompat.TestFailIfDirectoryNotClosed.testFailIfDirectoryNotClosed(TestFailIfDirectoryNotClosed.java:41)
+[junit4:junit4]    > 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[junit4:junit4]    > 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:60)
+[junit4:junit4]    > 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:37)
+[junit4:junit4]    > 	at java.lang.reflect.Method.invoke(Method.java:611)
+[junit4:junit4]    > 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+[junit4:junit4]    > 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+[junit4:junit4]    > 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+[junit4:junit4]    > 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+[junit4:junit4]    > 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+[junit4:junit4]    > 	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:30)
+[junit4:junit4]    > 	at com.carrotsearch.randomizedtesting.rules.SystemPropertiesRestoreRule$1.evaluate(SystemPropertiesRestoreRule.java:53)
+[junit4:junit4]    > 	at org.junit.rules.RunRules.evaluate(RunRules.java:18)
+[junit4:junit4]    > 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+[junit4:junit4]    > 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+[junit4:junit4]    > 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+[junit4:junit4]    > 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+[junit4:junit4]    > 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+[junit4:junit4]    > 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+[junit4:junit4]    > 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+[junit4:junit4]    > 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+[junit4:junit4]    > 	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+[junit4:junit4]    > 	at com.carrotsearch.ant.tasks.junit4.slave.SlaveMain.execute(SlaveMain.java:180)
+[junit4:junit4]    > 	at com.carrotsearch.ant.tasks.junit4.slave.SlaveMain.main(SlaveMain.java:275)
+[junit4:junit4]    > 	at com.carrotsearch.ant.tasks.junit4.slave.SlaveMainSafe.main(SlaveMainSafe.java:12)
+[junit4:junit4] Completed on J2 in 0.02s, 1 test, 1 failure <<< FAILURES!
+
+
+
+And at the end of "ant test" I see:
+
+[junit4:junit4] Tests with failures (first 10 out of 34):
+[junit4:junit4]   - org.apache.lucene.store.TestLockFactory (suite)
+[junit4:junit4]   - org.apache.lucene.util.junitcompat.TestCodecReported.testCorrectCodecReported
+[junit4:junit4]   - org.apache.lucene.index.TestIndexWriterReader (suite)
+[junit4:junit4]   - org.apache.lucene.util.junitcompat.TestFailIfDirectoryNotClosed.testFailIfDirectoryNotClosed
+[junit4:junit4]   - org.apache.lucene.util.junitcompat.TestSetupTeardownChaining.testSetupChaining
+[junit4:junit4]   - org.apache.lucene.util.junitcompat.TestSetupTeardownChaining.testTeardownChaining
+[junit4:junit4]   - org.apache.lucene.codecs.compressing.TestCompressingStoredFieldsFormat (suite)
+[junit4:junit4]   - org.apache.lucene.util.junitcompat.TestLeaveFilesIfTestFails.testLeaveFilesIfTestFails
+[junit4:junit4]   - org.apache.lucene.util.junitcompat.TestReproduceMessage.testFailureBeforeClass
+[junit4:junit4]   - org.apache.lucene.util.junitcompat.TestReproduceMessage.testFailureInitializer
+
+
+
+Java version is:
+
+
+java version "1.6.0"
+Java(TM) SE Runtime Environment (build pxa6460sr9fp2ifix-20111111_05(SR9 FP2+IV03622+IV02378+IZ99243+IZ97310+IV00707))
+IBM J9 VM (build 2.4, JRE 1.6.0 IBM J9 2.4 Linux amd64-64 jvmxa6460sr9-20111111_94827 (JIT enabled, AOT enabled)
+J9VM - 20111111_094827
+JIT  - r9_20101028_17488ifx45
+GC   - 20101027_AA)
+JCL  - 20110727_04
+

@@ -1,0 +1,18 @@
+In the current tez branch, mini cluster unit tests are very slow. The reason is as follows:
+
+	TezSession reuse is by default on.
+	Each test case runs, and it waits for Tez AM to terminate.
+	After Tez AM times out (usually after several minutes), another test case runs.
+
+
+
+Two questions that I have are:
+
+	Why doesn't TezSession reuse work in mini cluster?
+	Why is TezSession reuse not disabled in some tests (e.g. TestAccumulator) where we explicitly set "tez.session.reuse" to false?
+
+
+
+As for #2, I realized that "tez.session.reuse" was never set in the properties object that is passed to PigServer. I am going to upload a patch that fixes this problem in this jira.
+
+As for #1, I don't have an answer yet. But I think we can fix this in a separate jira once we get Tez unit tests working again.

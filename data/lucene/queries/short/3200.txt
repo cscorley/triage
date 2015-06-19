@@ -1,0 +1,1 @@
+Cleanup MMapDirectory to use only one MMapIndexInput impl with mapping sized of powers of 2

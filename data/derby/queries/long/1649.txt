@@ -1,0 +1,31 @@
+
+	
+	
+		
+		
+			Start: wisconsin jdk1.5.0_06 DerbyNetClient derbynetmats:derbynetmats 2006-08-04 00:47:14 ***
+41 del
+< 	C
+41a41
+> 	SQL_CURLH000C7
+102 del
+....
+-----------------------------
+This diff first started occurring on Aug 3 nightly run.change between (428211)
+ and 10.2.0.5 alpha - (428586)
+		
+		
+	
+	
+
+
+
+My first guess is, this may be related to this checkin
+------------------------------------------------------------------------
+r428252 | djd | 2006-08-02 22:58:44 -0700 (Wed, 02 Aug 2006) | 3 lines
+
+DERBY-1609 (partial) Change the lang/wisconsin.java test to use the new ij.runScript method
+rather than its previous use of the utilMain.go method. Change the sed commands because the
+cursor names are different in the output due to the use of a connection in a different state.
+------------------------------------------------------------------------
+

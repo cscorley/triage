@@ -1,0 +1,1 @@
+Terms.intersect is an optional method. The fact that it is overridden in FilterTerms forces any non-trivial class that extends FilterTerms to override intersect in order this method to have a correct behavior. If FilterTerms did not override this method and used the default impl, we would not have this problem.

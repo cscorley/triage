@@ -1,0 +1,1 @@
+We should wait until all the known nodes are part of the election, or X amount of time if that does not happen (when a node or more does not come back for whatever reason).

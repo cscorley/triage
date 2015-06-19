@@ -1,0 +1,1 @@
+Build target prepare-release should produce a directory containing only distribution files

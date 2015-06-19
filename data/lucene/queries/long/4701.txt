@@ -1,0 +1,1 @@
+It'd be nicer to use MockAnalyzer in facet tests instead of specific analyzers from analyzers-common module.

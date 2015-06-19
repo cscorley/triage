@@ -1,0 +1,3 @@
+The core name during the persistence process is drawn from the core descriptor rather than the corecontainer, and the result is that renames are not persistent.  It would be straightforward to change this by using the same style of manipulation of core name as used in the swap admin action.
+
+It would also be useful to change the access privileges of the name property of a CoreDescriptor so that admin handler implementations can manipulate core names directly.

@@ -1,0 +1,1 @@
+BytesRef#startsWith & endsWith should be static those are really utilities.

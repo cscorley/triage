@@ -1,0 +1,3 @@
+If we don't do this, the behavior is a little unexpected. You cannot avoid having other processors always hit documents twice unless we support using multiple update chains. We have another issue open that should make this better, but I'd like to do this sooner than that. We are going to have to end up cloning anyway when we want to offer the ability to not wait for the local add before sending to replicas.
+
+Cloning with the current SolrInputDocument, SolrInputField apis is a little scary - there is an Object to contend with - but it seems we can pretty much count on that being a primitive that we don't have to clone?

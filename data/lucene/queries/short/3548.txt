@@ -1,0 +1,1 @@
+CharsRef#append broken on trunk & 3.x

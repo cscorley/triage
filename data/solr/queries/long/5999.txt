@@ -1,0 +1,10 @@
+LUCENE-2446 added checksums to Lucene segment files. We could expose CheckIntegrityAtMerge in the indexConfig tag in solrconfig.xml.
+Something like - 
+
+     <!--
+		Use true to enable this safety check, which can help
+   		reduce the risk of propagating index corruption from older segments 
+   		into new ones, at the expense of slower merging.
+     -->
+     <checkIntegrityAtMerge>false</checkIntegrityAtMerge>
+

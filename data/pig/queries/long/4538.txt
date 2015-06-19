@@ -1,0 +1,16 @@
+The following script fail:
+
+
+in1 = LOAD 'data.txt' AS (ident:chararray);
+in2 = LOAD 'data.txt' USING org.apache.pig.piggybank.storage.CSVExcelStorage(',') AS (ident:chararray);
+in3 = LOAD 'data.txt';
+joined = JOIN in1 BY ident LEFT OUTER, in2 BY ident;
+crossed = CROSS joined, in2;
+DUMP crossed;
+
+
+The second MR job fail with message:
+
+ERROR 1070: Could not resolve org.apache.pig.piggybank.storage.CSVExcelStorage using imports: [, java.lang., org.apache.pig.builtin., org.apache.pig.impl.builtin.]
+
+This is a regression from Pig 0.13, possibly introduced by PIG-3591.

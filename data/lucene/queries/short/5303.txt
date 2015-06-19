@@ -1,0 +1,1 @@
+OrdinalsCache should use reader.getCoreCacheKey()

@@ -1,0 +1,1 @@
+using defaults NEW in UUIDField, and NOW in DateField, probably wo't work the way people expect in SolrCloud ... SOLR-3495 added update processors to deal with these usecases in a better way, but I didn't think to updat the javadocs of UUIDField and DateField to point them out to people.

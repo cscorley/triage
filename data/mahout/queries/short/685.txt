@@ -1,0 +1,1 @@
+Make the maven release process work for 0.5

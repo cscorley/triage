@@ -1,0 +1,10 @@
+Followup after the discussion on mailing list; this issue tries to fix the following problems in the ANT build:
+
+	$
+{ant.java.version}
+ is incorrect for Java 8 with ANT < 1.8.3 (it says its Java 7, so we habve otherwise no chance to detect java 8). This can be fixed by the same set of reflection tests from Constants.java. We can also fail build early if somebody uses Java 1.5
+	javadoc macro uses this incorrect ant.java.version property to execute javadocs. The source attribute of the javac task must be $
+{javac.source}
+ (like javac)
+	If we run builds by Jenkins, we silently disable targets that cannot be executed. This has effects on real developers. If a real person executes the ant tasks it should not pass silently, it should tell the user that his configuration is unsupported. This can be done by passing a hidden "jenkins-build" property down.
+

@@ -1,0 +1,1 @@
+Spatial field types should not store doc frequencies or positions

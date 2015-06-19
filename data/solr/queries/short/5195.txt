@@ -1,0 +1,1 @@
+UIMAUpdateRequestProcessor shouldn't hold the SolrCore reference

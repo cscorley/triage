@@ -1,0 +1,15 @@
+The embedded SQL command is case sensitive and fails with an string index out of range error that is not helpful for determining the cause of the failure.
+
+grunt> SQL CREATE TABLE bk_test(col1 STRING);
+2015-03-06 17:47:19,416 [main] ERROR org.apache.pig.tools.grunt.Grunt - ERROR 2999: Unexpected internal error. String index out of range: -1
+
+grunt> sql CREATE TABLE bk_test(col1 STRING);
+2015-03-06 17:49:47,219 [main] INFO  org.apache.pig.tools.grunt.GruntParser - Going to run hcat command: create table bk_test(col1 STRING);
+
+The issue is possibly in this section of code implementing embedded SQL as part of PIG-2482 looking for indexOf("sql") which would return -1 on "SQL":
+
++    public static int runSQLCommand(String hcatBin, String cmd, boolean mInteractive) throws IOException {
++        String[] tokens = new String[3];
++        tokens[0] = hcatBin;
++        tokens[1] = "-e";
++        tokens[2] = cmd.substring(cmd.indexOf("sql")).substring(4);

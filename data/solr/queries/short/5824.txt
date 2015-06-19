@@ -1,0 +1,1 @@
+Merge up Solr MapReduce contrib code to latest external changes.

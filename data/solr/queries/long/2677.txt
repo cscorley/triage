@@ -1,0 +1,8 @@
+The counters timesFailed and replicationFailedAtList on slave replication details page indicate errors on every poll, but in log file there is only:
+INFO: Slave in sync with master.
+
+This happens until the first real replication of files.
+
+I tracked things down and it seems that in SnapPuller.java the "successfulInstall" is initialized with false and not set to true when indexes are in sync.
+
+I'll attach a small patch (untested).

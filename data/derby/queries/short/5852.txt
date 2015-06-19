@@ -1,0 +1,1 @@
+dblook fails with client if derby.jar is not in classpath with java.sql.SQLException: Error marshalling or unmarshalling a user defined type

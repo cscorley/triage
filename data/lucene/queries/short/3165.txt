@@ -1,0 +1,1 @@
+prepare-release fails if run from source package

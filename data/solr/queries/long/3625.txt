@@ -1,0 +1,141 @@
+The SolrConf class loader does not find indirectly used jars from external lib directories. This is a regression. It worked as of July 2, 2012, when I posted the most recent OpenNLP patch (LUCENE-2899). Something has broken since then.
+
+This regression is true in both 4.x and the trunk. Both worked on July 2, 2012.
+
+I have a project (the OpenNLP plugin) which uses jars from three places: 
+
+	solr/contrib/opennlp/src
+	
+		tokenizer and filter factories
+	
+	
+	solr/contrib/opennlp/lib
+	
+		OpenNLP project libraries
+	
+	
+	lucene/analysis/opennlp/src
+	
+		tokenizer and filter
+	
+	
+
+
+
+SolrConf can only find the OpenNLP project jars when I add them to the solr.war libraries. It cannot find them from any of these directories: 
+
+
+solr/example/solr/lib
+solr/example/solr/collection1/lib
+solr/contrib/opennlp/lib
+
+
+Here are the relevant config file entries. From solrconfig.xml:
+
+
+  <lib dir="../../../dist/" regex="apache-solr-opennlp-\d.*\.jar" />
+  <lib dir="../../../contrib/opennlp/lib" regex=".*\.jar" />
+
+
+(yes, it needs to be three dot-dot-slash, not two. See SOLR-3624.)
+From schema.xml:
+
+
+    <!-- OpenNLP all-in-one analyzer -->
+    <fieldType name="text_opennlp" class="solr.TextField" positionIncrementGap="
+100"
+    >
+      <analyzer>
+        <tokenizer class="solr.OpenNLPTokenizerFactory"
+          sentenceModel="opennlp/en-test-sent.bin"
+          tokenizerModel="opennlp/en-test-tokenizer.bin"
+        />
+      </analyzer>
+    </fieldType>
+
+
+
+Here is the log. opennlp.tools.sentdetect.SentenceModel is a class in the OpenNLP jar.
+
+
+INFO: Adding 'file:/Users/lancenorskog/Documents/open/solr/trunk/solr/dist/apache-solr-opennlp-5.0-SNAPSHOT.jar' to classloader
+Jul 15, 2012 6:17:37 PM org.apache.solr.core.SolrResourceLoader replaceClassLoader
+INFO: Adding 'file:/Users/lancenorskog/Documents/open/solr/trunk/solr/contrib/opennlp/lib/jwnl-1.3.3.jar' to classloader
+Jul 15, 2012 6:17:37 PM org.apache.solr.core.SolrResourceLoader replaceClassLoader
+INFO: Adding 'file:/Users/lancenorskog/Documents/open/solr/trunk/solr/contrib/opennlp/lib/opennlp-maxent-3.0.2-incubating.jar' to classloader
+Jul 15, 2012 6:17:37 PM org.apache.solr.core.SolrResourceLoader replaceClassLoader
+INFO: Adding 'file:/Users/lancenorskog/Documents/open/solr/trunk/solr/contrib/opennlp/lib/opennlp-tools-1.5.2-incubating.jar' to classloader
+Jul 15, 2012 6:17:37 PM org.apache.solr.core.SolrConfig <init>
+INFO: Using Lucene MatchVersion: LUCENE_50
+Jul 15, 2012 6:17:37 PM org.apache.solr.core.SolrConfig <init>
+INFO: Loaded SolrConfig: solrconfig.xml
+Jul 15, 2012 6:17:37 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: Reading Solr Schema
+Jul 15, 2012 6:17:37 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: Schema name=example
+Jul 15, 2012 6:17:38 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: unique key field: id
+Jul 15, 2012 6:17:38 PM org.apache.solr.schema.FileExchangeRateProvider reload
+INFO: Reloading exchange rates from file currency.xml
+Jul 15, 2012 6:17:38 PM org.apache.solr.schema.FileExchangeRateProvider reload
+INFO: Reloading exchange rates from file currency.xml
+Jul 15, 2012 6:17:38 PM org.apache.solr.common.SolrException log
+SEVERE: null:java.lang.NoClassDefFoundError: opennlp/tools/sentdetect/SentenceModel
+	at org.apache.lucene.analysis.opennlp.tools.OpenNLPOpsFactory.getSentenceModel(OpenNLPOpsFactory.java:60)
+	at org.apache.solr.analysis.OpenNLPTokenizerFactory.inform(OpenNLPTokenizerFactory.java:90)
+	at org.apache.solr.core.SolrResourceLoader.inform(SolrResourceLoader.java:584)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:112)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:816)
+	at org.apache.solr.core.CoreContainer.load(CoreContainer.java:514)
+	at org.apache.solr.core.CoreContainer.load(CoreContainer.java:335)
+	at org.apache.solr.core.CoreContainer$Initializer.initialize(CoreContainer.java:284)
+	at org.apache.solr.servlet.SolrDispatchFilter.init(SolrDispatchFilter.java:106)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:114)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:754)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:258)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:699)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:454)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.deploy.bindings.StandardStarter.processBinding(StandardStarter.java:36)
+	at org.eclipse.jetty.deploy.AppLifeCycle.runBindings(AppLifeCycle.java:183)
+	at org.eclipse.jetty.deploy.DeploymentManager.requestAppGoal(DeploymentManager.java:491)
+	at org.eclipse.jetty.deploy.DeploymentManager.addApp(DeploymentManager.java:138)
+	at org.eclipse.jetty.deploy.providers.ScanningAppProvider.fileAdded(ScanningAppProvider.java:142)
+	at org.eclipse.jetty.deploy.providers.ScanningAppProvider$1.fileAdded(ScanningAppProvider.java:53)
+	at org.eclipse.jetty.util.Scanner.reportAddition(Scanner.java:604)
+	at org.eclipse.jetty.util.Scanner.reportDifferences(Scanner.java:535)
+	at org.eclipse.jetty.util.Scanner.scan(Scanner.java:398)
+	at org.eclipse.jetty.util.Scanner.doStart(Scanner.java:332)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.deploy.providers.ScanningAppProvider.doStart(ScanningAppProvider.java:118)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.deploy.DeploymentManager.startAppProvider(DeploymentManager.java:552)
+	at org.eclipse.jetty.deploy.DeploymentManager.doStart(DeploymentManager.java:227)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.util.component.AggregateLifeCycle.doStart(AggregateLifeCycle.java:63)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:53)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:91)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:263)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.xml.XmlConfiguration$1.run(XmlConfiguration.java:1215)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.jetty.xml.XmlConfiguration.main(XmlConfiguration.java:1138)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.jetty.start.Main.invokeMain(Main.java:457)
+	at org.eclipse.jetty.start.Main.start(Main.java:602)
+	at org.eclipse.jetty.start.Main.main(Main.java:82)
+Caused by: java.lang.ClassNotFoundException: opennlp.tools.sentdetect.SentenceModel
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:424)
+	at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:377)
+	... 48 more
+

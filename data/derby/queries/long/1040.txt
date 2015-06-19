@@ -1,0 +1,28 @@
+The store locking tests should be run with network server,  locking behaviour investigated, and a perhaps a proposal made for testing locking with network server.   For network server,   the pre-fetching of data causes diffs in the tests and I am not sure if this is expected or not.  I noticed  for example such diffs in updatelocks.sql and readlocks.sql.
+
+Below is the list of locking tests I see in store.  Feel free to take one or two and file a subtask.
+
+EscalateLock.sql
+RowLockBasic.sql
+RowLockIso.sql
+TableLockBasic.sql
+TableLockBasic.subsql
+lockTableVti.sql
+readBtreeCursorLocks.subsql
+readBtreeSetLocks.subsql
+readCursorLocks.subsql
+readSetLocks.subsql
+readlocks.sql
+updateBtreeCursorLocks.subsql
+updateBtreeHoldCursorLocksJDBC30.subsql
+updateBtreeSetLocks.subsql
+updatecursorlocks.subsql
+updateholdcursorlocksJDBC30.subsql
+updatelocks.sql
+updatelocksJDBC30.sql
+updatesetlocks.subsql
+RowLockIso.sql
+rlliso1multi.sql
+rlliso1multi.subsql
+rlliso2multi.sql
+rlliso3multi.sql

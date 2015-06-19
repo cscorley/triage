@@ -1,0 +1,1 @@
+Current implementation of DirectoryTaxonomyWriter.getSize() is synchrionized and invokes indexWriter.maxDoc(), both harming performance.

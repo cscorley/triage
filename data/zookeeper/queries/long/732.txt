@@ -1,0 +1,6 @@
+Apparently errors returned by the C library are not being correctly converted into a Python exception in some cases: 
+
+>>> zookeeper.get_children(0, "/", None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+SystemError: error return without exception set

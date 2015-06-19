@@ -1,0 +1,1 @@
+NPE using http://localhost:8983/solr/select/?q=

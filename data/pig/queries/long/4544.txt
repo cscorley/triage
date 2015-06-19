@@ -1,0 +1,1 @@
+This seems to be the last version of HBase support Hadoop 1. 0.99.0 Drops support for Hadoop 1 (HBASE-10690).

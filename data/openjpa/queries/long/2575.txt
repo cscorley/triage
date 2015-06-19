@@ -1,0 +1,7 @@
+Hi
+
+if there is a temp loader in org.apache.openjpa.enhance.PCClassFileTransformer#transform0 then it should be the context where classes are loaded during the enhancement (transform0). typically "new Project().loadClass(new ByteArrayInputStream(bytes), _tmpLoader)" shouldn't be done outside of _tmpLoader contextual loader.
+
+Standard Thread.currentThread().setContextClassLoader(_tmpLoader); then setContextClassLoader(old) try/finally solves it.
+
+Side note: this issue has been reported originally on tomee@.

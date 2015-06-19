@@ -1,0 +1,1 @@
+When we get closer to the 4.0 release, update Carrot2 to the then newest version so that the dependencies get a refresh too (re: http://lucene.472066.n3.nabble.com/Old-Google-Guava-library-needs-updating-r05-td3854433.html).

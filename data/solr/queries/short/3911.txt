@@ -1,0 +1,1 @@
+Make Directory and DirectoryFactory first class so that the majority of Solr's features work with any custom implementations.

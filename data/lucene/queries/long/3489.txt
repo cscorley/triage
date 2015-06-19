@@ -1,0 +1,7 @@
+Folloup for LUCENE-3463.
+
+TODO:
+
+	Move test-methods that need the new @UseNoMemoryExpensiveCodec annotation to separate classes
+	Eliminate the assumeFalse-calls that check the current codec and disable the test if SimpleText or Memory is used
+

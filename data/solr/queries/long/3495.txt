@@ -1,0 +1,3 @@
+new Update Processor's to automatically add fields with new UUIDs and Timestamps to SolrInputDocuments leveraging SOLR-2802.  Both processors should default to selecting the uniqueKey field if it is the appropriate type.
+
+This is necessary for 4.0 because of SOLR-2796

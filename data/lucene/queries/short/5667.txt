@@ -1,0 +1,1 @@
+Optimize common-prefix across all terms in a field

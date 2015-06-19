@@ -1,0 +1,1 @@
+UAX29URLEmailTokenizer fails to recognize emails as such when the mailto: scheme is prepended

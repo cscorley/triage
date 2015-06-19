@@ -1,0 +1,1 @@
+ClassNotFoundException due to white-spaces in solrconfig.xml

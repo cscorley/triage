@@ -1,0 +1,8 @@
+1) ReferenceManager.doMaybeRefresh seems to call afterRefresh even if it didn't refresh/swap, (when newReference == null)
+
+2) It would be nice if users were allowed to override SearcherManager.afterRefresh() to get notified when a new searcher is in action.
+
+But SearcherManager and ReaderManager are final, while NRTManager is not.
+
+
+The only way to currently hook into when a new searched is created is using the factory, but if you wish to do some async task then, there are no guarantees that acquire() will return the new searcher, so you have to pass it around and incRef manually. While if allowed to hook into afterRefresh you can just rely on acquire()  & existing infra you have around it to give you the latest one.

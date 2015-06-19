@@ -1,0 +1,5 @@
+Util.getLocalTestMode() currently only returns "tez_local" or "local".
+
+I see that ~212 testcases do this check, and we are not running these tests against Spark at this point.
+
+Currently all Spark tests run in local mode ("local" as a the Spark Cluster URL passed to JavaSparkContext), so we should enable these tests as well.

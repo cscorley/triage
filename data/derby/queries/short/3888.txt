@@ -1,0 +1,1 @@
+ALTER TABLE ... ADD COLUMN cannot add identity columns

@@ -1,0 +1,3 @@
+IndexWriter has logic to handle the case where it can't delete a file (it puts in a retry list and indexfiledeleter will periodically retry, you can force this retry with deletePendingFiles).
+
+But from what I can tell, this logic is incomplete, e.g. its not properly handled during CFS creation, so if a file temporarily can't be deleted things like flush will fail.

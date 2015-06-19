@@ -1,0 +1,1 @@
+FreeTextSuggester can now use Files.createTempDirectory()

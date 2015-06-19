@@ -1,0 +1,1 @@
+A replica should not try and recover from a leader until it has published that it is ACTIVE.

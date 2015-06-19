@@ -1,0 +1,1 @@
+Allow similarity to encode norms other than a single byte

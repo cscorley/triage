@@ -1,0 +1,1 @@
+CommitIndexTask is broken if no params are set

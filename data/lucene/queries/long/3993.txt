@@ -1,0 +1,8 @@
+
+	@Ignore and @TestGroup-ignored tests should report the reason much like assumption-ignored tests.
+  https://github.com/carrotsearch/randomizedtesting/issues/82
+	perturb randomness in @BeforeClass hooks so that bad apples are more evently distributed across suites.
+  https://issues.apache.org/jira/browse/LUCENE-3995
+	IntelliJ Idea test configs
+  https://github.com/carrotsearch/randomizedtesting/issues/83
+

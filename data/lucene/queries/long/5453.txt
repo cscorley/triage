@@ -1,0 +1,1 @@
+As mentioned on LUCENE-5452, its hard to see whats going on in highlightFields (e.g. the termsenum reuse). I think thats just because the code needs to be re-arranged a little bit and a few comments added.

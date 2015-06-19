@@ -1,0 +1,1 @@
+FacetFields should omitNorms for $facets field

@@ -1,0 +1,52 @@
+The below is my script :
+
+
+register myanotherudf.jar;
+A = load 'myinput' using PigStorage() as ( date:chararray,bcookie:chararray,count:int,avg:double,pvs:int);
+B = foreach A generate (int)(avg / 100.0) * 100   as avg, pvs;
+C = group B by ( avg );
+D = foreach C {
+        Pvs = order B by pvs;
+        Const = org.vivek.MyAnotherUDF(Pvs.pvs).(count,sum);
+        generate Const.sum as sum;
+        };
+store D into 'out_D';
+
+
+
+The script is failing during compilation of the plan. The usage of the udf inside the foreach is causing the problem. The udf implements algebraic and the 
+output schema is also defined.
+The below is the exception that I get :
+
+ERROR 2042: Error in new logical plan. Try -Dpig.usenewlogicalplan=false.
+
+org.apache.pig.impl.logicalLayer.FrontendException: ERROR 2042: Error in new logical plan. Try -Dpig.usenewlogicalplan=false.
+        at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.compile(HExecutionEngine.java:309)
+        at org.apache.pig.PigServer.compilePp(PigServer.java:1364)
+        at org.apache.pig.PigServer.executeCompiledLogicalPlan(PigServer.java:1206)
+        at org.apache.pig.PigServer.execute(PigServer.java:1200)
+        at org.apache.pig.PigServer.access$100(PigServer.java:128)
+        at org.apache.pig.PigServer$Graph.execute(PigServer.java:1527)
+        at org.apache.pig.PigServer.executeBatchEx(PigServer.java:372)
+        at org.apache.pig.PigServer.executeBatch(PigServer.java:339)
+        at org.apache.pig.tools.grunt.GruntParser.executeBatch(GruntParser.java:112)
+        at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:169)
+        at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:141)
+        at org.apache.pig.tools.grunt.Grunt.exec(Grunt.java:90)
+        at org.apache.pig.Main.run(Main.java:500)
+        at org.apache.pig.Main.main(Main.java:107)
+Caused by: java.lang.NullPointerException
+        at org.apache.pig.newplan.ReverseDependencyOrderWalker.walk(ReverseDependencyOrderWalker.java:70)
+        at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:50)
+        at org.apache.pig.newplan.logical.optimizer.SchemaResetter.visit(SchemaResetter.java:105)
+        at org.apache.pig.newplan.logical.relational.LOGenerate.accept(LOGenerate.java:229)
+        at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+        at org.apache.pig.newplan.logical.optimizer.SchemaResetter.visit(SchemaResetter.java:94)
+        at org.apache.pig.newplan.logical.relational.LOForEach.accept(LOForEach.java:71)
+        at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+        at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:50)
+        at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.compile(HExecutionEngine.java:261)
+        ... 13 more
+
+
+When i trun off new logical plan the script executes successfully. The issue is observed in both 0.8 and 0.9

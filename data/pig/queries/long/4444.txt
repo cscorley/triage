@@ -1,0 +1,1 @@
+Introduced by PIG-4437. No big deal, update the test due to size estimation algorithm change.

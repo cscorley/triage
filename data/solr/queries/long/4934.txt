@@ -1,0 +1,9 @@
+
+	LUCENE-5038 eliminated setUseCompoundFile(boolean) from the built in MergePolicies
+	existing users may have configs that use <mergePolicy> init args to try and call that setter
+	we already do some explicit checks for these MergePolices in SolrIndexConfig to deal with legacy syntax
+	update the existing logic to remove "useCompoundFile" from the MergePolicy initArgs for these known policies if found, and log a warning.
+
+
+
+(NOTE: i don't want to arbitrarily remove "useCompoundFile" from the initArgs regardless of class in case someone has a custom MergePolicy that implements that logic – that would suck)

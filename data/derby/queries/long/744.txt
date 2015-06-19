@@ -1,0 +1,18 @@
+Problem report from Kathey Marsden:
+
+There seems to be some sort of problem with the sanity state.
+
+After ant clobber, rm -rf jars, rm -rf snapshot  no apparent problematic
+files, ant -Dsane=false snapshot  seemed to sometimes build the jars to
+the sane jar directory and yield the following error.
+....
+  [delete] Deleting directory D:\svn\opensource\10.1\javadoc\sourcedir
+   [mkdir] Created dir: D:\svn\opensource\10.1\snapshot
+
+BUILD FAILED
+D:\svn\opensource\10.1\build.xml:1287:
+D:\svn\opensource\10.1\jars\insane not found.
+
+A reliable  workaround was to run
+ant insane
+before ant -Dsane=false snapshot.

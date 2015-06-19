@@ -1,0 +1,1 @@
+HttpReplicatorTest.testBasic fails often in jenkins on OS X with java 1.6

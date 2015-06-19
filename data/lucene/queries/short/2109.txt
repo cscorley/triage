@@ -1,0 +1,1 @@
+Make DocsEnum subclass of DocIdSetIterator

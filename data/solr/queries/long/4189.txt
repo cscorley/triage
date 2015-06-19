@@ -1,0 +1,13 @@
+Currently on FreeBSD we run no Solr tests, because the SelectChannelConnector, recently used for Solr's JettySolrRunner seems to linger threads, which may be caused by the blackhole or more likely a JVM bug.
+
+This patch allows to configure the connector for the testMode Jetty in embedded Solr through a sysprop: 
+
+
+ant test -Dtests.jettyConnector=Socket
+ant test -Dtests.jettyConnector=SelectChannel
+
+
+
+The default is SelectChannel. On FreeBSD Jenkins I would pass this as property to ANT through Jenkins config (where currently the tests are disabled). On Maven this should also be possible (Steven?).
+
+The patch also binds the test-mode jetty to 127.0.0.1 to prevent windows firewall from popping up all the time, because Solr binds to internet. For tests, the emebedded Jetty should never run on all interfaces (0.0.0.0).

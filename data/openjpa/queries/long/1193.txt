@@ -1,0 +1,5 @@
+When FinalizingBrokerImpl is used, AbstractBrokerFactory uses a set backed by java's ConcurrentHashMap to keep track of brokers, rather than a weak reference org.apache.openjpa.lib.util.concurrent.ConcurrentReferenceHashSet as it did previously. This can lead to a memory leak if the brokers are never removed from the Set.
+
+The change was originally checked in by Patrick Linskey in revision 653000 with the comment "Improve concurrency by actively managing AbstractBrokerFactory's broker set when using non-finalizing brokers. Credit goes to Arunabh Hazarika for identifying the bottleneck and prototyping this solution."
+
+Changing the _brokers Set back to a weak reference ConcurrentReferenceHashSet fixes the memory leak.

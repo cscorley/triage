@@ -1,0 +1,1 @@
+preflex codec returns wrong terms if you use an empty field name

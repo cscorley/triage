@@ -1,0 +1,23 @@
+This code is in org.apache.openjpa.jdbc.sql.AbstractResult.
+
+   public long getLong(Object obj)
+       throws SQLException 
+{
+       return getLongInternal(translate(obj, null), null);
+   }
+
+   public long getLong(Column col, Joins joins)
+       throws SQLException 
+{
+       return getLongInternal(translate(col, joins), joins);
+   }
+
+   protected long getLongInternal(Object obj, Joins joins)
+       throws SQLException 
+{
+       Number val = (Number) checkNull(getObjectInternal(obj,
+           JavaTypes.INT, null, joins));
+       return (val == null) ? 0 : val.intValue();
+   }
+
+It seems like it's an obvious bug; using intValue and JavaTypes.INT in getLongInternal should use longValue and JavaTypes.LONG.

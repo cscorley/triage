@@ -1,0 +1,1 @@
+closing NRT reader after upgrading from 3.x index can cause index corruption

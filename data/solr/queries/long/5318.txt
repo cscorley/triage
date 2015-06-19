@@ -1,0 +1,15 @@
+the create core admin command don't take into account the transient core property, when the core is registered (so, the core will be never closed by the transient core cache)
+
+To reproduce :
+set transientCacheSize=2 and start with no cores
+
+Create 3 cores :
+curl "http://ip:port/solr/admin/cores?action=CREATE&name=coreX&instanceDir=path_to_instanceDir_coreX&dataDir=path_to_dataDir_coreX&loadOnStartup=false&transient=true"
+
+Look at the status :
+http://ip:port/solr/admin/cores?action=STATUS
+
+All cores are still loaded.
+One core should not be loaded (closed by the transient cache)
+
+The patch in attachment is for svn solr branch_4X (revision number 1526418)

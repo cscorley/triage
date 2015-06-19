@@ -1,0 +1,1 @@
+I was going through our dependency tree, and realized that we haven't updated the LICENSE files in tika-app and tika-bundle to reflect some of the more recent additions. We need to bring this license metadata up to date before releasing 1.0.

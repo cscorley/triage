@@ -1,0 +1,1 @@
+POReservoirSample should handle endOfAllInput flag

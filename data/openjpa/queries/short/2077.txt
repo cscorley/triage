@@ -1,0 +1,1 @@
+Pom references to org.codehaus.mojo openjpa-maven-plugin cause problems

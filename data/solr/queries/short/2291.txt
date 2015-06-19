@@ -1,0 +1,1 @@
+JSONWriter.writeSolrDocument() does not respect its Set<String> returnFields parameter.

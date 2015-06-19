@@ -1,0 +1,1 @@
+PMD (http://pmd.sourceforge.net/) is another static analysis tool for Java. The reports seem useful and enabling them in Maven is trivial.

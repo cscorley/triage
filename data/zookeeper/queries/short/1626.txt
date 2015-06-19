@@ -1,0 +1,1 @@
+Zookeeper C client should be tolerant of clock adjustments 

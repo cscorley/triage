@@ -1,0 +1,1 @@
+Error when there is a bag inside an RDD

@@ -1,0 +1,1 @@
+StopFilterFactory docs do not advertise/explain hte "format" option

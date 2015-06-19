@@ -1,0 +1,1 @@
+NPE in TermGroupFacetCollector when faceting on mv fields

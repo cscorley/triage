@@ -1,0 +1,12 @@
+SOLR-2657 points out that all fields show up when you request score and something becides a 'normal' field.  To support the strange behavior and avoid it when uncenessary we have this:
+
+
+    if( fields.size() == 1 && _wantsScore && augmenters.size() == 1 && globs.isEmpty() ) {
+      _wantsAllFields = true;
+    }
+
+
+
+I suggest we advertise in 3.x that expecting fl=score to return all fields is deprecated, and remove this bit of crazy code from 4.x
+
+

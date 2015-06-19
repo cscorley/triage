@@ -1,0 +1,14 @@
+Koji mentioned this in a comment in SOLR-1298...
+
+
+	fl= .. returns all stored fields (expected, backcompat)
+	fl=* .. returns all stored fields (expected, backcompat)
+	fl=score,* .. returns the score psuedo field and all stored fields (expected, backcompat)
+	fl=score .. returns the score psuedo field and all stored fields (expected, backcompat)
+	fl=score,price .. returns the score psuedo field and the stored price field (expected, backcompat)
+	fl=log(price) .. returns the log(price) psuedo field (expected)
+	fl=score,log(price) .. returns the score and log(price) psuedo fields as well as all of the stored fields (NOT EXPECTED)
+
+
+
+The problem seems to be that when the entire fl is made up of psuedo fields, and one of them is score, the legacy behavior for an fl of only score is used (instead of recognizing that other "fields" were requested, so we should not output all stored fields

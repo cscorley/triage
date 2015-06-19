@@ -1,0 +1,1 @@
+Following on from conversations about mutation testing, there is an interest in building a Java security manager that is able to assert / guarantee certain behaviours 

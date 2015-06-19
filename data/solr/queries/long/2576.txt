@@ -1,0 +1,1 @@
+DirectSolrSpellChecker is not returning frequency information.  This also causes the "correctlySpelled" flag in extended results to sometimes be wrong.  

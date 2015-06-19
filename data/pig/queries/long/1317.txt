@@ -1,0 +1,1 @@
+In LOLoad.getProjectionMap(), the private method determineSchema() is called which inturn calls LoadMetadata.getSchema() - the latter call could potentially be expensive if the input file is read to determine the schema or a metadata system is contacted to get the schema - determineSchema() can cache the schema it gets so that subsequent calls use the cached version.

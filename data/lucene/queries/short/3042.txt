@@ -1,0 +1,1 @@
+AttributeSource can have an invalid computed state

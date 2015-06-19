@@ -1,0 +1,4 @@
+Since Solr will be shipping Tika in 1.4, which uses PDFBox, which uses BouncyCastle, Solr must declare it's Crypto usage per ASF guidelines.
+
+See http://www.apache.org/dev/crypto.html
+and https://issues.apache.org/jira/browse/NUTCH-621 for references and examples of what to do.

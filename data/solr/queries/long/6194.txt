@@ -1,0 +1,39 @@
+I'd like to change the visibility and access to a couple of the internal classes of DataImportHandler, specifically DataImporter and DIHConfiguration.  My reasoning is that I've added the ability for a new data import handler "command" called getquery that will return the exact queries (fully resolved) that are executed for an entity within the data import configuration.  This makes it much easier to debug the dih, rather than turning on debug/verbose flags and digging through the raw response.  Additionally, it gives me a "service" that I can then go take the queries from and run them.
+
+Here's a snippet of Java code that I can now execute now that I have access to the DIHConfiguration:
+
+Snippet.java
+
+  /**
+   * @return a map of all the queries for each entity in the given config
+   */
+  protected Map<String,String> getEntityQueries(DIHConfiguration config, Map<String,Object> params)
+  {
+    Map<String,String> queries = new LinkedHashMap<>();
+    if (config != null && config.getEntities() != null)
+    {
+      //make a new variable resolve
+      VariableResolver vr = new VariableResolver();
+      vr.addNamespace("dataimporter.request",params);
+
+      //for each entity
+      for (Entity e : config.getEntities())
+      {
+        //get the query and resolve it
+        if (e.getAllAttributes().containsKey(SqlEntityProcessor.QUERY))
+        {
+          String query = e.getAllAttributes().get(SqlEntityProcessor.QUERY);
+          query = query.replaceAll("\\s+", " ").trim();
+          String resolved = vr.replaceTokens(query);
+          resolved = resolved.replaceAll("\\s+", " ").trim();
+          queries.put(e.getName(),resolved);
+          queries.put(e.getName()+"_raw",query);
+        }
+      }
+    }
+    return queries;
+  }
+
+
+
+I'm attaching a patch that I would appreciate someone have a look for consideration.  It's fully tested – please let me know if there is something else I need to do/test.

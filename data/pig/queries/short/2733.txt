@@ -1,0 +1,1 @@
+Add *.patch, *.log, *.orig, *.rej, *.class to gitignore

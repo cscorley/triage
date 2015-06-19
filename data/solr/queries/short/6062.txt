@@ -1,0 +1,1 @@
+Phrase queries are created for each field supplied through edismax's pf, pf2 and pf3 parameters (rather them being combined in a single dismax query)

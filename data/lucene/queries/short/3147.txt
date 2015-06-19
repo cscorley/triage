@@ -1,0 +1,1 @@
+MockDirectoryWrapper should track open file handles of IndexOutput too

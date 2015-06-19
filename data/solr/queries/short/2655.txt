@@ -1,0 +1,1 @@
+DIH multi threaded mode does not resolves attributes correctly

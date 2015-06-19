@@ -1,0 +1,21 @@
+Take the following SQL from a finder:
+
+SELECT t1.code, t1.EXTDISCR, t0.field1, t0.field2 FROM TB1 t0 LEFT OUTER JOIN AbstractExtValue t1 ON t0.EXT_USR = t1.code WHERE (t1.EXTDISCR IS NULL OR t1.EXTDISCR IN ) AND t0.field1 = ? AND t0.field2 IS NULL
+
+Notice the 't0.field2 IS NULL' part.  Field2 is part of a compound PK of table 'TB1', where the compound PK consists of two fields (field1 and field2).  This will become more apparent when looking at the attached test.  Because the PK field 'IS NULL', this finder query should NOT be added to the FinderQuery cache (i.e. we can't cache something which is "hard coded" to 'IS NULL'....in the case where field2 is non-null, the query will never account for that).  However, this query is in fact incorrectly added to the cache.  To understand why this is incorrectly added we must look at two things.  First, if we look at the attached test, we can see that the test uses inheritance and a discriminator value.  In the above SQL the 't1.EXTDISCR' is the discriminator value.  As you can see we are selecting field1 and field2, where field2 IS NULL.  Second, we have to look at the OpenJPA code where we determine if the finder query can be cached.  That is, look here in FinderQueryImpl:
+
+    static FinderQueryImpl newFinder(ClassMapping mapping,
+        SelectExecutor select) {
+        SelectImpl impl = extractImplementation(select);
+        if (impl == null)
+            return null;
+        SQLBuffer buffer = impl.getSQL();
+        Column[] pkCols = mapping.getPrimaryKeyColumns();
+        boolean canCache = pkCols.length == buffer.getParameters().size();
+
+As you can see, the last line determines if the query can be cached (i.e. 'canCache').  In this case, OpenJPA compares the pkCols (PK columns) to the parameters.  In most cases, these two should be equal for a finder query.  However, at least in the case where a discriminator is used, the finder will have one extra more parameter in the finder query.  In those cases, the 'canCache' will be false and the query not cached.  However, take the case where one of the compound PKs contains 'IS NULL' (see above SQL at the start of this text).  In this case, 'pkCols.length' will be two, AND the params will be two.  So by the 'canCache' test, it will be true.  However, in this case we should not cache the above query (i.e. in so doing field2 will always be "NULL").  
+To resolve this issue, I feel that we need to make sure the the columns in the 'buffer'  exactly match that of pkCols.  See the attached test/patch for proposed fix.
+
+Thanks,
+
+Heath Thomann

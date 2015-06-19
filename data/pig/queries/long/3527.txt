@@ -1,0 +1,1 @@
+The PigProcessor needs to be able to handle multiple distinct inputs. These can come in a variety of flavors including multiple "file" inputs (Merge join), multiple shuffle inputs (Hash Join / Co-group), and a mix (Replicated Join).

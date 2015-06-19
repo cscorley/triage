@@ -1,0 +1,4 @@
+lucene's common-build.xml 'validate' depends on compile-tools, but some
+modules like icu, kuromoji, etc have a compile-tools target (for other reasons).
+
+I think it should explicitly depend on common.compile-tools instead.

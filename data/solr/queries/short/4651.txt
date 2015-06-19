@@ -1,0 +1,1 @@
+Remove -excl-slf4j build targets from trunk

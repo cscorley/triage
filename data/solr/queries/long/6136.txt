@@ -1,0 +1,30 @@
+ConcurrentUpdateSolrServer.blockUntilFinished() includes a Spin Lock. This causes an extremely high amount of CPU to be used on the Cloud Leader during indexing.
+
+Here is a summary of our system testing. 
+
+Importing data on Solr4.5.0: 
+Throughput gets as high as 240 documents per second.
+
+[tomcat@solr-stg01 logs]$ uptime 
+09:53:50 up 310 days, 23:52, 1 user, load average: 3.33, 3.72, 5.43
+
+PID USER PR NI VIRT RES SHR S %CPU %MEM TIME+ COMMAND 
+9547 tomcat 21 0 6850m 1.2g 16m S 86.2 5.0 1:48.81 java
+
+Importing data on Solr4.7.0 with no replicas: 
+Throughput peaks at 350 documents per second.
+
+[tomcat@solr-stg01 logs]$ uptime 
+10:03:44 up 311 days, 2 min, 1 user, load average: 4.57, 2.55, 4.18
+
+PID USER PR NI VIRT RES SHR S %CPU %MEM TIME+ COMMAND 
+9728 tomcat 23 0 6859m 2.2g 28m S 62.3 9.0 2:20.20 java
+
+Importing data on Solr4.7.0 with replicas: 
+Throughput peaks at 30 documents per second because the Solr machine is out of CPU.
+
+[tomcat@solr-stg01 logs]$ uptime 
+09:40:04 up 310 days, 23:38, 1 user, load average: 30.54, 12.39, 4.79
+
+PID USER PR NI VIRT RES SHR S %CPU %MEM TIME+ COMMAND 
+9190 tomcat 17 0 7005m 397m 15m S 198.5 1.6 7:14.87 java

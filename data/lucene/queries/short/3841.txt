@@ -1,0 +1,1 @@
+CloseableThreadLocal does not work well with Tomcat thread pooling

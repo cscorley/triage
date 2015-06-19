@@ -1,0 +1,1 @@
+The build configuration for the jdk5 modules in 1.0.x should be activated for and JDK >= 1.5, not just 1.5.

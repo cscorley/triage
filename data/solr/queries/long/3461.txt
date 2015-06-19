@@ -1,0 +1,12 @@
+I already noticed that on my local machine (Thinkpad Laptop with SSD), but
+I was thinking it might be my slow IO system (thanks Robert for this
+running-gag). But when reviewing test times on the new Jenkins Windows
+build server, this test takes very long (around 30 minutes, which is half
+of the complete time when running with 1 test runner on 2 cores).
+
+There must be something that makes this test very slow on Windows:
+http://goo.gl/irDVw
+
+The method taking so long is actually "testStressRecovery", I would like
+to @Ignore it until it is fixed. It makes running Solr tests in Windows
+take ages and stops me from running them at all 

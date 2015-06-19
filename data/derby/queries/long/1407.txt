@@ -1,0 +1,1104 @@
+On 6/2 (build  411013) and 6/9 (build 413202) the encryption run for the access test under the blowfish algorithm did not complete.  It must
+have hung very early on as the the diff is most of the test out put.   There was nothing in derby.log.  
+
+
+ Here is the diff:
+
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbyall/encryptionAll/encryptionBlowfish/access.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: access jdk1.3.1 encryptionAll:encryptionBlowfish 2006-06-12 00:56:48 ***
+139 del
+< 1024 rows inserted/updated/deleted
+< ij> drop table foo;
+< 0 rows inserted/updated/deleted
+< ij> – ----------------------------------------------------------------------------
+< – stress the conglomerate directory.  abort of an alter table will clear
+< – the cache.
+< – ----------------------------------------------------------------------------
+< autocommit off;
+< ij> create table a (a int);
+< 0 rows inserted/updated/deleted
+< ij> commit;
+< ij> alter table a add column c1 int;
+< 0 rows inserted/updated/deleted
+< ij> rollback;
+< ij> select * from a;
+< A          
+< -----------
+< ij> drop table a;
+< 0 rows inserted/updated/deleted
+< ij> commit;
+< ij> – ----------------------------------------------------------------------------
+< – test case for partial row runtime statistics.
+< – ----------------------------------------------------------------------------
+< create table foo (a int, b int, c int, d int, e int);
+< 0 rows inserted/updated/deleted
+< ij> insert into foo values (1, 2, 3, 4, 5);
+< 1 row inserted/updated/deleted
+< ij> insert into foo values (10, 20, 30, 40, 50);
+< 1 row inserted/updated/deleted
+< ij> call SYSCS_UTIL.SYSCS_SET_RUNTIMESTATISTICS(1);
+< 0 rows inserted/updated/deleted
+< ij> maximumdisplaywidth 2500;
+< ij> – all the columns
+< select * from foo;
+< A          |B          |C          |D          |E          
+< -----------------------------------------------------------
+< 1          |2          |3          |4          |5          
+< 10         |20         |30         |40         |50         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– all the columns
+< select * from foo
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Table Scan ResultSet for FOO at serializable isolation level using share table locking chosen by the optimizer
+< Number of opens = 1
+< Rows seen = 2
+< Rows filtered = 0
+< Fetch Size = 16
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	next time in milliseconds/row = 0
+< scan information: 
+< 	Bit set of columns fetched=All
+< 	Number of columns fetched=5
+< 	Number of pages visited=1
+< 	Number of rows qualified=2
+< 	Number of rows visited=2
+< 	Scan type=heap
+< 	start position: 
+< null	stop position: 
+< null	qualifiers:
+< None
+< ij> – just last column - should be 5 and 50
+< select e from foo;
+< E          
+< -----------
+< 5          
+< 50         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– just last column - should be 5 and 50
+< select e from foo
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Table Scan ResultSet for FOO at serializable isolation level using share table locking chosen by the optimizer
+< Number of opens = 1
+< Rows seen = 2
+< Rows filtered = 0
+< Fetch Size = 16
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	next time in milliseconds/row = 0
+< scan information: 
+< 	Bit set of columns fetched=
+{4}
+< 	Number of columns fetched=1
+< 	Number of pages visited=1
+< 	Number of rows qualified=2
+< 	Number of rows visited=2
+< 	Scan type=heap
+< 	start position: 
+< null	stop position: 
+< null	qualifiers:
+< None
+< ij> – as subset of columns - should be 5,3,1 and 50,30,10
+< select e, c, a from foo;
+< E          |C          |A          
+< -----------------------------------
+< 5          |3          |1          
+< 50         |30         |10         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– as subset of columns - should be 5,3,1 and 50,30,10
+< select e, c, a from foo
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Project-Restrict ResultSet (2):
+< Number of opens = 1
+< Rows seen = 2
+< Rows filtered = 0
+< restriction = false
+< projection = true
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	restriction time (milliseconds) = 0
+< 	projection time (milliseconds) = 0
+< Source result set:
+< 	Table Scan ResultSet for FOO at serializable isolation level using share table locking chosen by the optimizer
+< 	Number of opens = 1
+< 	Rows seen = 2
+< 	Rows filtered = 0
+< 	Fetch Size = 16
+< 		constructor time (milliseconds) = 0
+< 		open time (milliseconds) = 0
+< 		next time (milliseconds) = 0
+< 		close time (milliseconds) = 0
+< 		next time in milliseconds/row = 0
+< 	scan information: 
+< 		Bit set of columns fetched=
+{0, 2, 4}
+< 		Number of columns fetched=3
+< 		Number of pages visited=1
+< 		Number of rows qualified=2
+< 		Number of rows visited=2
+< 		Scan type=heap
+< 		start position: 
+< null		stop position: 
+< null		qualifiers:
+< None
+< ij> – as subset of columns, with qualifier in list - should be 5,3,1 and 50,30,10
+< select e, c, a from foo where foo.e = 5;
+< E          |C          |A          
+< -----------------------------------
+< 5          |3          |1          
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– as subset of columns, with qualifier in list - should be 5,3,1 and 50,30,10
+< select e, c, a from foo where foo.e = 5
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Project-Restrict ResultSet (2):
+< Number of opens = 1
+< Rows seen = 1
+< Rows filtered = 0
+< restriction = false
+< projection = true
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	restriction time (milliseconds) = 0
+< 	projection time (milliseconds) = 0
+< Source result set:
+< 	Table Scan ResultSet for FOO at serializable isolation level using share table locking chosen by the optimizer
+< 	Number of opens = 1
+< 	Rows seen = 1
+< 	Rows filtered = 0
+< 	Fetch Size = 16
+< 		constructor time (milliseconds) = 0
+< 		open time (milliseconds) = 0
+< 		next time (milliseconds) = 0
+< 		close time (milliseconds) = 0
+< 		next time in milliseconds/row = 0
+< 	scan information: 
+< 		Bit set of columns fetched={0, 2, 4}
+< 		Number of columns fetched=3
+< 		Number of pages visited=1
+< 		Number of rows qualified=1
+< 		Number of rows visited=2
+< 		Scan type=heap
+< 		start position: 
+< null		stop position: 
+< null		qualifiers:
+< Column[0][0] Id: 4
+< Operator: =
+< Ordered nulls: false
+< Unknown return value: false
+< Negate comparison result: false
+< ij> – as subset of columns, with qualifier not in list 
+< –   - should be 5,3,1 and 50,30,10
+< select e, c, a from foo where foo.b = 20;
+< E          |C          |A          
+< -----------------------------------
+< 50         |30         |10         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– as subset of columns, with qualifier not in list 
+< –   - should be 5,3,1 and 50,30,10
+< select e, c, a from foo where foo.b = 20
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Project-Restrict ResultSet (2):
+< Number of opens = 1
+< Rows seen = 1
+< Rows filtered = 0
+< restriction = false
+< projection = true
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	restriction time (milliseconds) = 0
+< 	projection time (milliseconds) = 0
+< Source result set:
+< 	Table Scan ResultSet for FOO at serializable isolation level using share table locking chosen by the optimizer
+< 	Number of opens = 1
+< 	Rows seen = 1
+< 	Rows filtered = 0
+< 	Fetch Size = 16
+< 		constructor time (milliseconds) = 0
+< 		open time (milliseconds) = 0
+< 		next time (milliseconds) = 0
+< 		close time (milliseconds) = 0
+< 		next time in milliseconds/row = 0
+< 	scan information: 
+< 		Bit set of columns fetched=
+{0, 1, 2, 4}
+< 		Number of columns fetched=4
+< 		Number of pages visited=1
+< 		Number of rows qualified=1
+< 		Number of rows visited=2
+< 		Scan type=heap
+< 		start position: 
+< null		stop position: 
+< null		qualifiers:
+< Column[0][0] Id: 1
+< Operator: =
+< Ordered nulls: false
+< Unknown return value: false
+< Negate comparison result: false
+< ij> – as subset of columns - should be 1,2 and 10,20
+< select a, b from foo;
+< A          |B          
+< -----------------------
+< 1          |2          
+< 10         |20         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– as subset of columns - should be 1,2 and 10,20
+< select a, b from foo
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Table Scan ResultSet for FOO at serializable isolation level using share table locking chosen by the optimizer
+< Number of opens = 1
+< Rows seen = 2
+< Rows filtered = 0
+< Fetch Size = 16
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	next time in milliseconds/row = 0
+< scan information: 
+< 	Bit set of columns fetched=
+{0, 1}
+< 	Number of columns fetched=2
+< 	Number of pages visited=1
+< 	Number of rows qualified=2
+< 	Number of rows visited=2
+< 	Scan type=heap
+< 	start position: 
+< null	stop position: 
+< null	qualifiers:
+< None
+< ij> – now check index scans - force the index just to 
+< – make sure it does an index scan.
+< create index foo_cover on foo (e, d, c, b, a);
+< 0 rows inserted/updated/deleted
+< ij> – all the columns
+< select * from foo;
+< A          |B          |C          |D          |E          
+< -----------------------------------------------------------
+< 1          |2          |3          |4          |5          
+< 10         |20         |30         |40         |50         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– all the columns
+< select * from foo
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Project-Restrict ResultSet (2):
+< Number of opens = 1
+< Rows seen = 2
+< Rows filtered = 0
+< restriction = false
+< projection = true
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	restriction time (milliseconds) = 0
+< 	projection time (milliseconds) = 0
+< Source result set:
+< 	Index Scan ResultSet for FOO using index FOO_COVER at serializable isolation level using share table locking chosen by the optimizer
+< 	Number of opens = 1
+< 	Rows seen = 2
+< 	Rows filtered = 0
+< 	Fetch Size = 16
+< 		constructor time (milliseconds) = 0
+< 		open time (milliseconds) = 0
+< 		next time (milliseconds) = 0
+< 		close time (milliseconds) = 0
+< 		next time in milliseconds/row = 0
+< 	scan information: 
+< 		Bit set of columns fetched=
+{0, 1, 2, 3, 4}
+< 		Number of columns fetched=5
+< 		Number of deleted rows visited=0
+< 		Number of pages visited=1
+< 		Number of rows qualified=2
+< 		Number of rows visited=2
+< 		Scan type=btree
+< 		Tree height=1
+< 		start position: 
+< 	None
+< 		stop position: 
+< 	None
+< 		qualifiers:
+< None
+< ij> – just last column - should be 5 and 50
+< select e from foo;
+< E          
+< -----------
+< 5          
+< 50         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– just last column - should be 5 and 50
+< select e from foo
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Index Scan ResultSet for FOO using index FOO_COVER at serializable isolation level using share table locking chosen by the optimizer
+< Number of opens = 1
+< Rows seen = 2
+< Rows filtered = 0
+< Fetch Size = 16
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	next time in milliseconds/row = 0
+< scan information: 
+< 	Bit set of columns fetched={0}
+< 	Number of columns fetched=1
+< 	Number of deleted rows visited=0
+< 	Number of pages visited=1
+< 	Number of rows qualified=2
+< 	Number of rows visited=2
+< 	Scan type=btree
+< 	Tree height=1
+< 	start position: 
+< 	None
+< 	stop position: 
+< 	None
+< 	qualifiers:
+< None
+< ij> – as subset of columns - should be 5,3,1 and 50,30,10
+< select e, c, a from foo;
+< E          |C          |A          
+< -----------------------------------
+< 5          |3          |1          
+< 50         |30         |10         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– as subset of columns - should be 5,3,1 and 50,30,10
+< select e, c, a from foo
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Project-Restrict ResultSet (3):
+< Number of opens = 1
+< Rows seen = 2
+< Rows filtered = 0
+< restriction = false
+< projection = true
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	restriction time (milliseconds) = 0
+< 	projection time (milliseconds) = 0
+< Source result set:
+< 	Project-Restrict ResultSet (2):
+< 	Number of opens = 1
+< 	Rows seen = 2
+< 	Rows filtered = 0
+< 	restriction = false
+< 	projection = true
+< 		constructor time (milliseconds) = 0
+< 		open time (milliseconds) = 0
+< 		next time (milliseconds) = 0
+< 		close time (milliseconds) = 0
+< 		restriction time (milliseconds) = 0
+< 		projection time (milliseconds) = 0
+< 	Source result set:
+< 		Index Scan ResultSet for FOO using index FOO_COVER at serializable isolation level using share table locking chosen by the optimizer
+< 		Number of opens = 1
+< 		Rows seen = 2
+< 		Rows filtered = 0
+< 		Fetch Size = 16
+< 			constructor time (milliseconds) = 0
+< 			open time (milliseconds) = 0
+< 			next time (milliseconds) = 0
+< 			close time (milliseconds) = 0
+< 			next time in milliseconds/row = 0
+< 		scan information: 
+< 			Bit set of columns fetched={0, 2, 4}
+< 			Number of columns fetched=3
+< 			Number of deleted rows visited=0
+< 			Number of pages visited=1
+< 			Number of rows qualified=2
+< 			Number of rows visited=2
+< 			Scan type=btree
+< 			Tree height=1
+< 			start position: 
+< 	None
+< 			stop position: 
+< 	None
+< 			qualifiers:
+< None
+< ij> – as subset of columns, with qualifier in list - should be 5,3,1 and 50, 30, 10
+< select e, c, a from foo where foo.e = 5;
+< E          |C          |A          
+< -----------------------------------
+< 5          |3          |1          
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– as subset of columns, with qualifier in list - should be 5,3,1 and 50, 30, 10
+< select e, c, a from foo where foo.e = 5
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Project-Restrict ResultSet (3):
+< Number of opens = 1
+< Rows seen = 1
+< Rows filtered = 0
+< restriction = false
+< projection = true
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	restriction time (milliseconds) = 0
+< 	projection time (milliseconds) = 0
+< Source result set:
+< 	Project-Restrict ResultSet (2):
+< 	Number of opens = 1
+< 	Rows seen = 1
+< 	Rows filtered = 0
+< 	restriction = false
+< 	projection = true
+< 		constructor time (milliseconds) = 0
+< 		open time (milliseconds) = 0
+< 		next time (milliseconds) = 0
+< 		close time (milliseconds) = 0
+< 		restriction time (milliseconds) = 0
+< 		projection time (milliseconds) = 0
+< 	Source result set:
+< 		Index Scan ResultSet for FOO using index FOO_COVER at serializable isolation level using share row locking chosen by the optimizer
+< 		Number of opens = 1
+< 		Rows seen = 1
+< 		Rows filtered = 0
+< 		Fetch Size = 16
+< 			constructor time (milliseconds) = 0
+< 			open time (milliseconds) = 0
+< 			next time (milliseconds) = 0
+< 			close time (milliseconds) = 0
+< 			next time in milliseconds/row = 0
+< 		scan information: 
+< 			Bit set of columns fetched={0, 2, 4}
+< 			Number of columns fetched=3
+< 			Number of deleted rows visited=0
+< 			Number of pages visited=1
+< 			Number of rows qualified=1
+< 			Number of rows visited=2
+< 			Scan type=btree
+< 			Tree height=1
+< 			start position: 
+< 	>= on first 1 column(s).
+< 	Ordered null semantics on the following columns: 
+< 			stop position: 
+< 	> on first 1 column(s).
+< 	Ordered null semantics on the following columns: 
+< 			qualifiers:
+< None
+< ij> – as subset of columns, with qualifier not in list - should be 5,3,1 
+< – and 50, 30, 10
+< select e, c, a from foo where foo.b = 20;
+< E          |C          |A          
+< -----------------------------------
+< 50         |30         |10         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– as subset of columns, with qualifier not in list - should be 5,3,1 
+< – and 50, 30, 10
+< select e, c, a from foo where foo.b = 20
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Project-Restrict ResultSet (3):
+< Number of opens = 1
+< Rows seen = 1
+< Rows filtered = 0
+< restriction = false
+< projection = true
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	restriction time (milliseconds) = 0
+< 	projection time (milliseconds) = 0
+< Source result set:
+< 	Project-Restrict ResultSet (2):
+< 	Number of opens = 1
+< 	Rows seen = 1
+< 	Rows filtered = 0
+< 	restriction = false
+< 	projection = true
+< 		constructor time (milliseconds) = 0
+< 		open time (milliseconds) = 0
+< 		next time (milliseconds) = 0
+< 		close time (milliseconds) = 0
+< 		restriction time (milliseconds) = 0
+< 		projection time (milliseconds) = 0
+< 	Source result set:
+< 		Index Scan ResultSet for FOO using index FOO_COVER at serializable isolation level using share table locking chosen by the optimizer
+< 		Number of opens = 1
+< 		Rows seen = 1
+< 		Rows filtered = 0
+< 		Fetch Size = 16
+< 			constructor time (milliseconds) = 0
+< 			open time (milliseconds) = 0
+< 			next time (milliseconds) = 0
+< 			close time (milliseconds) = 0
+< 			next time in milliseconds/row = 0
+< 		scan information: 
+< 			Bit set of columns fetched={0, 2, 3, 4}
+< 			Number of columns fetched=4
+< 			Number of deleted rows visited=0
+< 			Number of pages visited=1
+< 			Number of rows qualified=1
+< 			Number of rows visited=2
+< 			Scan type=btree
+< 			Tree height=1
+< 			start position: 
+< 	None
+< 			stop position: 
+< 	None
+< 			qualifiers:
+< Column[0][0] Id: 3
+< Operator: =
+< Ordered nulls: false
+< Unknown return value: false
+< Negate comparison result: false
+< ij> – as subset of columns - should be 1,2 and 10, 20
+< select a, b from foo;
+< A          |B          
+< -----------------------
+< 1          |2          
+< 10         |20         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– as subset of columns - should be 1,2 and 10, 20
+< select a, b from foo
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Project-Restrict ResultSet (2):
+< Number of opens = 1
+< Rows seen = 2
+< Rows filtered = 0
+< restriction = false
+< projection = true
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	restriction time (milliseconds) = 0
+< 	projection time (milliseconds) = 0
+< Source result set:
+< 	Index Scan ResultSet for FOO using index FOO_COVER at serializable isolation level using share table locking chosen by the optimizer
+< 	Number of opens = 1
+< 	Rows seen = 2
+< 	Rows filtered = 0
+< 	Fetch Size = 16
+< 		constructor time (milliseconds) = 0
+< 		open time (milliseconds) = 0
+< 		next time (milliseconds) = 0
+< 		close time (milliseconds) = 0
+< 		next time in milliseconds/row = 0
+< 	scan information: 
+< 		Bit set of columns fetched={3, 4}
+< 		Number of columns fetched=2
+< 		Number of deleted rows visited=0
+< 		Number of pages visited=1
+< 		Number of rows qualified=2
+< 		Number of rows visited=2
+< 		Scan type=btree
+< 		Tree height=1
+< 		start position: 
+< 	None
+< 		stop position: 
+< 	None
+< 		qualifiers:
+< None
+< ij> – check deleted row feature
+< insert into foo values (100, 2, 3, 4, 5);
+< 1 row inserted/updated/deleted
+< ij> insert into foo values (1000, 2, 3, 4, 5);
+< 1 row inserted/updated/deleted
+< ij> delete from foo where foo.a = 100;
+< 1 row inserted/updated/deleted
+< ij> delete from foo where foo.a = 1000;
+< 1 row inserted/updated/deleted
+< ij> – now check with deleted rows involved.
+< – all the columns
+< select * from foo;
+< A          |B          |C          |D          |E          
+< -----------------------------------------------------------
+< 1          |2          |3          |4          |5          
+< 10         |20         |30         |40         |50         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– now check with deleted rows involved.
+< – all the columns
+< select * from foo
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Project-Restrict ResultSet (2):
+< Number of opens = 1
+< Rows seen = 2
+< Rows filtered = 0
+< restriction = false
+< projection = true
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	restriction time (milliseconds) = 0
+< 	projection time (milliseconds) = 0
+< Source result set:
+< 	Index Scan ResultSet for FOO using index FOO_COVER at serializable isolation level using share table locking chosen by the optimizer
+< 	Number of opens = 1
+< 	Rows seen = 2
+< 	Rows filtered = 0
+< 	Fetch Size = 16
+< 		constructor time (milliseconds) = 0
+< 		open time (milliseconds) = 0
+< 		next time (milliseconds) = 0
+< 		close time (milliseconds) = 0
+< 		next time in milliseconds/row = 0
+< 	scan information: 
+< 		Bit set of columns fetched={0, 1, 2, 3, 4}
+< 		Number of columns fetched=5
+< 		Number of deleted rows visited=2
+< 		Number of pages visited=1
+< 		Number of rows qualified=2
+< 		Number of rows visited=4
+< 		Scan type=btree
+< 		Tree height=1
+< 		start position: 
+< 	None
+< 		stop position: 
+< 	None
+< 		qualifiers:
+< None
+< ij> – just last column - should be 5 and 50
+< select e from foo;
+< E          
+< -----------
+< 5          
+< 50         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– just last column - should be 5 and 50
+< select e from foo
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Index Scan ResultSet for FOO using index FOO_COVER at serializable isolation level using share table locking chosen by the optimizer
+< Number of opens = 1
+< Rows seen = 2
+< Rows filtered = 0
+< Fetch Size = 16
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	next time in milliseconds/row = 0
+< scan information: 
+< 	Bit set of columns fetched=
+{0}
+< 	Number of columns fetched=1
+< 	Number of deleted rows visited=2
+< 	Number of pages visited=1
+< 	Number of rows qualified=2
+< 	Number of rows visited=4
+< 	Scan type=btree
+< 	Tree height=1
+< 	start position: 
+< 	None
+< 	stop position: 
+< 	None
+< 	qualifiers:
+< None
+< ij> – as subset of columns - should be 5,3,1 and 50,30,10
+< select e, c, a from foo;
+< E          |C          |A          
+< -----------------------------------
+< 5          |3          |1          
+< 50         |30         |10         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– as subset of columns - should be 5,3,1 and 50,30,10
+< select e, c, a from foo
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Project-Restrict ResultSet (3):
+< Number of opens = 1
+< Rows seen = 2
+< Rows filtered = 0
+< restriction = false
+< projection = true
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	restriction time (milliseconds) = 0
+< 	projection time (milliseconds) = 0
+< Source result set:
+< 	Project-Restrict ResultSet (2):
+< 	Number of opens = 1
+< 	Rows seen = 2
+< 	Rows filtered = 0
+< 	restriction = false
+< 	projection = true
+< 		constructor time (milliseconds) = 0
+< 		open time (milliseconds) = 0
+< 		next time (milliseconds) = 0
+< 		close time (milliseconds) = 0
+< 		restriction time (milliseconds) = 0
+< 		projection time (milliseconds) = 0
+< 	Source result set:
+< 		Index Scan ResultSet for FOO using index FOO_COVER at serializable isolation level using share table locking chosen by the optimizer
+< 		Number of opens = 1
+< 		Rows seen = 2
+< 		Rows filtered = 0
+< 		Fetch Size = 16
+< 			constructor time (milliseconds) = 0
+< 			open time (milliseconds) = 0
+< 			next time (milliseconds) = 0
+< 			close time (milliseconds) = 0
+< 			next time in milliseconds/row = 0
+< 		scan information: 
+< 			Bit set of columns fetched=
+{0, 2, 4}
+< 			Number of columns fetched=3
+< 			Number of deleted rows visited=2
+< 			Number of pages visited=1
+< 			Number of rows qualified=2
+< 			Number of rows visited=4
+< 			Scan type=btree
+< 			Tree height=1
+< 			start position: 
+< 	None
+< 			stop position: 
+< 	None
+< 			qualifiers:
+< None
+< ij> – as subset of columns, with qualifier in list - should be 5,3,1 and 50,30,10
+< select e, c, a from foo where foo.e = 5;
+< E          |C          |A          
+< -----------------------------------
+< 5          |3          |1          
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+< ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+< Statement Name: 
+< 	null
+< Statement Text: 
+< 	– as subset of columns, with qualifier in list - should be 5,3,1 and 50,30,10
+< select e, c, a from foo where foo.e = 5
+< Parse Time: 0
+< Bind Time: 0
+< Optimize Time: 0
+< Generate Time: 0
+< Compile Time: 0
+< Execute Time: 0
+< Begin Compilation Timestamp : null
+< End Compilation Timestamp : null
+< Begin Execution Timestamp : null
+< End Execution Timestamp : null
+< Statement Execution Plan Text: 
+< Project-Restrict ResultSet (3):
+< Number of opens = 1
+< Rows seen = 1
+< Rows filtered = 0
+< restriction = false
+< projection = true
+< 	constructor time (milliseconds) = 0
+< 	open time (milliseconds) = 0
+< 	next time (milliseconds) = 0
+< 	close time (milliseconds) = 0
+< 	restriction time (milliseconds) = 0
+< 	projection time (milliseconds) = 0
+< Source result set:
+< 	Project-Restrict ResultSet (2):
+< 	Number of opens = 1
+< 	Rows seen = 1
+< 	Rows filtered = 0
+< 	restriction = false
+< 	projection = true
+< 		constructor time (milliseconds) = 0
+< 		open time (milliseconds) = 0
+< 		next time (milliseconds) = 0
+< 		close time (milliseconds) = 0
+< 		restriction time (milliseconds) = 0
+< 		projection time (milliseconds) = 0
+< 	Source result set:
+< 		Index Scan ResultSet for FOO using index FOO_COVER at serializable isolation level using share row locking chosen by the optimizer
+< 		Number of opens = 1
+< 		Rows seen = 1
+< 		Rows filtered = 0
+< 		Fetch Size = 16
+< 			constructor time (milliseconds) = 0
+< 			open time (milliseconds) = 0
+< 			next time (milliseconds) = 0
+< 			close time (milliseconds) = 0
+< 			next time in milliseconds/row = 0
+< 		scan information: 
+< 			Bit set of columns fetched={0, 2, 4}
+< 			Number of columns fetched=3
+< 			Number of deleted rows visited=2
+< 			Number of pages visited=1
+< 			Number of rows qualified=1
+< 			Number of rows visited=4
+< 			Scan type=btree
+< 			Tree height=1
+< 			start position: 
+< 	>= on first 1 column(s).
+< 	Ordered null semantics on the following columns: 
+< 			stop position: 
+< 	> on first 1 column(s).
+< 	Ordered null semantics on the following columns: 
+< 			qualifiers:
+< None
+< ij> – as subset of columns, with qualifier not in list 
+< –   - should be 5,3,1 and 50,30,10
+< select e, c, a from foo where foo.b = 20;
+< E          |C          |A          
+< -----------------------------------
+< 50         |30         |10         
+< ij> values SYSCS_UTIL.SYSCS_GET_RUNTIMESTATISTICS();
+< 1                                                                                                                                                                       
+		
+		
+	
+	
+

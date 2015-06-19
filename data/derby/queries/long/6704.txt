@@ -1,0 +1,17 @@
+In our release tests for 10.11 we have seen this stack trace:
+
+
+ org.apache.derbyTesting.functionTests.tests.jdbcapi.AutoloadTest.spawnProcess:JDBCDriversEmbeddedTest	2701.548 s
+ junit.framework.AssertionFailedError: Test process failed:Spawned org.apache.derbyTesting.functionTests.tests.jdbcapi.JDBCDriversEmbeddedTest exitCode=143
+STDOUT:
+..
+ at org.apache.derbyTesting.functionTests.tests.jdbcapi.AutoloadTest.spawnProcess(AutoloadTest.java:256)
+ at org.apache.derbyTesting.junit.BaseTestCase.runBare(BaseTestCase.java:118)
+ at org.apache.derbyTesting.junit.BaseJDBCTestCase.runBareOverridable(BaseJDBCTestCase.java:440)
+ at org.apache.derbyTesting.junit.BaseJDBCTestCase.runBare(BaseJDBCTestCase.java:457)
+ at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+ at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+ at junit.extensions.TestSetup.run(TestSetup.java:25)
+
+
+presumably because the spawned process is killed by the test framework; it had been executing for 2701 second, but we don't have much insight into what happened to the subprocess because we don't collect its std our or std err.

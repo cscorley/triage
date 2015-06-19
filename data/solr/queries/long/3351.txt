@@ -1,0 +1,1 @@
+Add support for custom Phrase Slop for "pf2" and "pf3" of edismax. If not specified, it should use "ps" as today.

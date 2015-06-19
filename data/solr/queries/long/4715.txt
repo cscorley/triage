@@ -1,0 +1,1 @@
+CloudSolrServer (and LBHttpSolrServer) do not allow the user to set underlying HttpSolrServer and HttpClient settings without arcane java enchantments.

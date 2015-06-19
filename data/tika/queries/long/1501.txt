@@ -1,0 +1,8 @@
+Currently, the unit tests for the Tika Bundle contain several bits like:
+
+
+@Ignore // TODO Fix this test
+
+
+
+We should really fix these unit tests so they work, and re-enable them

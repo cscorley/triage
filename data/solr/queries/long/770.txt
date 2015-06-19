@@ -1,0 +1,1 @@
+Per http://lucene.markmail.org/message/tnsfyvykendpzcwq?q= we need to replace the StAX jar with one that doesn't have IP issues in question.  This was already fixed on trunk, see http://lucene.markmail.org/message/bcg2oxqpzd66pwlq?q=list:org%2Eapache%2Elucene%2Esolr-dev

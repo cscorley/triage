@@ -1,0 +1,1 @@
+tests: An explicit include derective is needed for the usage of memcpy(), memset(), strlen(), strdup() and free() functions.

@@ -1,0 +1,1 @@
+Grouping collector that computes grouped facet counts

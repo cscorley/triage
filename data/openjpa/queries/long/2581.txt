@@ -1,0 +1,25 @@
+openjpa:sql allows to create sql-scripts based on the project's jpa entities. The following sql actions are allowed:
+
+add (see MappingTool#ACTION_ADD)
+refresh (see MappingTool#ACTION_REFRESH)
+drop (see MappingTool#ACTION_DROP)
+buildSchema (see MappingTool#ACTION_BUILD_SCHEMA)
+import (see MappingTool#ACTION_IMPORT)
+export (see MappingTool#ACTION_EXPORT)
+validate (see MappingTool#ACTION_VALIDATE)
+
+
+We need an action which creates drop statements regardless if there is already an table/sequence/... with the same name in the database. The drop action currently removes columns from an existing table, if there is a table in the database with additional columns.
+We created a patch (see attachment) which adds an additional action (dropSchema). This action creates drop statements regardless of the current database state.
+
+Furthermore, buildSchema should create all create statements regardless of the current database state. JavaDoc of buildSchema:
+
+/**
+* Re-execute all SQL used for the creation of the current database;
+* this action is usually used when creating SQL scripts.
+*/
+
+Currently buildSchema checks if a table already exists in the database and adds missing columns. (like the add action) The attached patch changes the current behavior of buildSchema so that it generates the schema regardless of the current database state.
+
+Best regards,
+Stefan

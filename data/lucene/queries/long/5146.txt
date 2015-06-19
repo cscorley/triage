@@ -1,0 +1,1 @@
+Uwe would say: "sorry but your code is wrong". We don't actually read the weight value in AnalyzingComparator which can cause really odd suggestions since we read parts of the input as the weight. Non of our tests catches that so I will go ahead and add some tests for it as well.

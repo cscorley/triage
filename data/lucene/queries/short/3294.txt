@@ -1,0 +1,1 @@
+Some code still compares string equality instead using equals

@@ -1,0 +1,13 @@
+Now applications that use SimplePostTool can set Content-type, but it has to use type system property.
+
+
+
+public void postData(InputStream data, Integer length, OutputStream output) {
+        
+  final String type = System.getProperty("type", DEFAULT_DATA_TYPE);
+          :
+}
+
+
+
+If the getProperty() is moved to main() and type can be set via an argument of the method, the client applications can be flexible.

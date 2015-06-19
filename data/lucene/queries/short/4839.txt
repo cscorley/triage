@@ -1,0 +1,1 @@
+Sorter API: Use TimSort to sort doc IDs and postings lists

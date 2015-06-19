@@ -1,0 +1,7 @@
+Current bookie compaction in GarbageCollector has setting: 'compactionRate'. It is throttling and limiting the compaction by entries. 
+But from a bandwidth perspective, it would be good that we could throttle and limit compaction by bytes, which would really reflect the bandwidth of disk. 
+
+So in this enhancement, we added another "by bytes" option when doing compaction in GarbageCollector:
+"boolean isThrottleByBytes": true when use by bytes, false when use by entries;
+"int compactionRateByEntries": by entries, number of concurrent entries;
+"int compactionRateByBytes": by bytes, number of bytes of entries before flush.

@@ -1,0 +1,13 @@
+TwoDoublesStrategy supports finding Documents that are within a Circle, yet it is impossible to provide one due to the following code found at the start of TwoDoublesStrategy.makeQuery():
+
+
+
+Shape shape = args.getShape();
+    if (!(shape instanceof Rectangle)) {
+      throw new InvalidShapeException("A rectangle is the only supported shape (so far), not "+shape.getClass());//TODO
+    }
+    Rectangle bbox = (Rectangle) shape;
+
+
+
+I think instead the code which handles Circles should ask for the bounding box of the Shape and uses that instead.

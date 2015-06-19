@@ -1,0 +1,1 @@
+DocValues updates send wrong fieldinfos to codec producers

@@ -1,0 +1,1 @@
+group=true requests result in numerous redundant shard requests

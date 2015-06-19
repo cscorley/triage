@@ -1,0 +1,62 @@
+In test class TestDiskChecker, test case will fail if tmp dir's usableSpace / totalSpace > 0.95, because threshold will be a negative number.
+
+
+     public void testCheckDiskFull() throws IOException {
+        File file = File.createTempFile("DiskCheck", "test");
+        long usableSpace = file.getUsableSpace();
+        long totalSpace = file.getTotalSpace();
+        float threshold =
+                (1f - ((float) usableSpace / (float) totalSpace)) - 0.05f;        
+ < === if "usableSpace / totalSpace" is 0.99, then threshold is -0.04, this is invalid.
+        diskChecker.setDiskSpaceThreshold(threshold, threshold);
+        diskChecker.checkDiskFull(file);
+    }
+
+
+
+in my running of test:
+  1 -------------------------------------------------------------------------------
+  2 Test set: org.apache.bookkeeper.util.TestDiskChecker
+  3 -------------------------------------------------------------------------------
+  4 Tests run: 4, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.557 sec <<< FAILURE!
+  5 testCheckDiskFull(org.apache.bookkeeper.util.TestDiskChecker)  Time elapsed: 0.066 sec  <<< ERROR!
+  6 java.lang.Exception: Unexpected exception, expected<org.apache.bookkeeper.util.DiskChecker$DiskOutOfSpaceException> but was<java.lang.IllegalArgumentException>
+  7     at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:28)
+  8     at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+  9     at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+ 10     at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+ 11     at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+ 12     at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+ 13     at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+ 14     at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+ 15     at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+ 16     at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+ 17     at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+ 18     at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+ 19     at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+ 20     at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ 21     at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+ 22     at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ 23     at java.lang.reflect.Method.invoke(Method.java:606)
+ 24     at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+ 25     at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+ 26     at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:172)
+ 27     at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:78)
+ 28     at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:70)
+ 29 Caused by: java.lang.IllegalArgumentException: Disk space threashold -0.04741608 is not valid. Should be > 0 and < 1              < ======
+ 30     at org.apache.bookkeeper.util.DiskChecker.validateThreshold(DiskChecker.java:163)
+ 31     at org.apache.bookkeeper.util.DiskChecker.setDiskSpaceThreshold(DiskChecker.java:157)
+ 32     at org.apache.bookkeeper.util.TestDiskChecker.testCheckDiskFull(TestDiskChecker.java:51)
+ 33     at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ 34     at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+ 35     at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ 36     at java.lang.reflect.Method.invoke(Method.java:606)
+ 37     at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+ 38     at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+ 39     at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+ 40     at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+ 41     at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:21)
+ 42     ... 21 more
+
+print out vars in test to verify these values: 
+2015-01-13 12:42:58,448 - INFO  - [main:TestDiskCheckerTest@78] - usableSpace:2062532608, totalSpace:2073448448, threshold: -0.04473542

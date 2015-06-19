@@ -1,0 +1,5 @@
+I did not address all the ways in which values in AvroMapWrapper could be access in the ticket PIG-4448
+
+I've fixed AvroMapWrapper now . Wrote some exhaustive tests around it and also discovered that AvroStorageDataConversionUtilities do not handle maps. 
+
+I'll update with a patch once the commit tests pass

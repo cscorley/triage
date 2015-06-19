@@ -1,0 +1,3 @@
+In SOLR-1566, we dramatically refactored the response writer framework – BaseResponseWriter, GenericBinaryResponseWriter, and GenericTextResponseWriter got left out in the cold because they don't have any tests and it is unclear how they are supposed to work.  With the new refactoring, I think the goals of these classes are better supported by extending BinaryResponseWriter and TextResponseWriter.
+
+in 3.x, these classes  should be deprecated and suggest using BinaryResponseWriter and TextResponseWriter

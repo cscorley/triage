@@ -1,0 +1,3 @@
+openjpa bundle module leaks jest dependencies
+
+We removed JEST from the openjpa bundle. It's more a client than a part of the kernel. Still we leak jest from our 2.4.0 openjpa.jar bundle.

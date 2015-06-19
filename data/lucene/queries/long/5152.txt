@@ -1,0 +1,3 @@
+a spinnoff from LUCENE-5120 where the analyzing suggester modified a returned output from and FST (BytesRef) which caused sideffects in later execution. 
+
+I added an assertion into the FST that checks if a cached root arc is modified and in-fact this happens for instance in our MemoryPostingsFormat and I bet we find more places. We need to think about how to make this less trappy since it can cause bugs that are super hard to find.

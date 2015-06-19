@@ -1,0 +1,25 @@
+The idea was to create a new, fresh (and hopefully clean) Solr Admin Interface. [Based on this ML-Thread]
+
+Features:
+
+	Dashboard
+	Query-Form
+	Plugins
+	Analysis (SOLR-2476, SOLR-2400)
+	Schema-Browser
+	Dataimport (SOLR-2482)
+	Core-Admin
+	Replication
+	Zookeeper
+	Logging (SOLR-2459)
+	
+		Stub (using static data)
+	
+	
+
+
+
+Newly created Wiki-Page: http://wiki.apache.org/solr/ReworkedSolrAdminGUI
+
+I've quickly created a Github-Repository (Just for me, to keep track of the changes)
+» https://github.com/steffkes/solr-admin

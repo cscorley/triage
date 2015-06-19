@@ -1,0 +1,5 @@
+Currently, Pig on tez use memory/heap setting from MR not tez, but respect other tez settings. In the environment which MR and tez settings are not aligned, this could be a problem. For a specific scenario, user increase both tez both memory settings and io.sort.mb to tune tez performance, but MR settings retains. Pig on Tez get increased io.sort.mb but same vertex memory, end up with OOM exception.
+
+I think tez engine shall respect Tez settings first, unless user really want to use mr settings for backward compatibility. It can be:
+1. a flag which turn on the mr settings for tez
+2. If the mr memory settings are from Pig script not the config file

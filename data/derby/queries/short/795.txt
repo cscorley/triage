@@ -1,0 +1,1 @@
+After calling ResultSet.relative(0) the cursor loses its position

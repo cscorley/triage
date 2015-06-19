@@ -1,0 +1,1 @@
+Make test changes required to run Derby regression tests with JDK 1.7 and branches before 10.8

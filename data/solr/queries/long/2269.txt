@@ -1,0 +1,7 @@
+http://www.lucidimagination.com/search/document/b8c19488a691265c/changes_mess
+
+
+I realized that some entries for DIH are in
+solr/CHANGES.txt. These should go solr/contrib/dataimporthandler/CHANGES.txt
+(Some of them are my fault). I also found that solr/contrib/*/CHANGES.txt
+have "1.5-dev" title. These should be "4.0-dev" or "3.1-dev".

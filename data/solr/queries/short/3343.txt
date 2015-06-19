@@ -1,0 +1,1 @@
+Move non-shared utils from solrj to solr core

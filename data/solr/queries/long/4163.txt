@@ -1,0 +1,7 @@
+The README.txt bundled with binary distribution of SOLR 4.0 says:
+dist/apache-solr-XX.jar
+  The Apache Solr Libraries.  This JAR file is needed to compile
+  Apache Solr Plugins (see http://wiki.apache.org/solr/SolrPlugins for
+  more information).
+
+The jar file does not exist there (or anywhere nearby). There seem to be instead a collection of jars.

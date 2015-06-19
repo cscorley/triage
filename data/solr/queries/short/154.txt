@@ -1,0 +1,1 @@
+Added package tasks for creating Rails plugin and namespaced both the rails and gem packaging

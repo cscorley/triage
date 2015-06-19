@@ -1,0 +1,1 @@
+create command don't take into account the transient core property

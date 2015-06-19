@@ -1,0 +1,1 @@
+Some words in the messages were confused or mis-spelled. In addition, some messages were not used by any openjpa components. The fpatch cleaned up some of the texts.

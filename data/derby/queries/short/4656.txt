@@ -1,0 +1,1 @@
+eclipse ui/doc plugin 1.1.2 was built with 1.6 jvm, results in "The chosen operation is not currently available" on Add Derby Nature with 1.5 jvms

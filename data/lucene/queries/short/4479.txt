@@ -1,0 +1,1 @@
+TokenSources.getTokenStream() doesn't return correctly for termvectors with positions but no offsets

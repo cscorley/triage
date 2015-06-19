@@ -1,0 +1,23 @@
+In ClientCnxn.queuePacket, it checks variables of state and closing and then make decisions. There is toctou race in queuePacket():
+
+
+        if (!state.isAlive() || closing) {
+            conLossPacket(packet);
+        } else {
+            ...
+        }
+
+
+
+A possible race:
+in SendThread.run():
+
+
+  while (state.isAlive()) {
+    ...
+  }
+  cleanup();
+
+
+
+When it checks in queuePacket(), state is still alive. Then state isn't alive, SendThread.run() cleans up outgoingQueue. Then queuePacket adds packet to outgoingQueue. The packet should be waken up with exception. But it won't at this case.

@@ -1,0 +1,1 @@
+Make custom Pig counters defined in PigWarning/PigCounters work. 

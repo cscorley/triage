@@ -1,0 +1,13 @@
+There are some places where an int[] could be advantageously replaced with a packed integer array.
+
+I am thinking (at least) of:
+
+	FST.nodeAddress (GrowableWriter)
+	FST.inCounts (GrowableWriter)
+	FST.nodeRefToAddress (read-only Reader)
+
+
+
+The serialization/deserialization methods should be modified too in order to take advantage of PackedInts.get
+{Reader,Writer}
+.

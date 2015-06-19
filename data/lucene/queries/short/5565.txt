@@ -1,0 +1,1 @@
+Remove String based encoding from SpatialPrefixTree/Cell API; just use bytes

@@ -1,0 +1,3 @@
+The Point2D and Rectangle classes have alot of duplicate, redundant and used functionality.  This issue cleans them both up and simplifies the functionality they provide.
+
+Subsequent to this, Eclipse and LineSegment, which depend on Point2D, are not used anywhere in the contrib, therefore rather than trying to update them to use the improved Point2D, they will be removed.

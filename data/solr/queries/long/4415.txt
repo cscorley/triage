@@ -1,0 +1,2 @@
+Read/Write shard’s (at the Slice level) state to ZK. Make sure that the state is watched and available on nodes.
+Also, check state of shard at read/write points where required.

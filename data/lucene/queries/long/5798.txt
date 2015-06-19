@@ -1,0 +1,3 @@
+This method is called by merging for each term, potentially many times, but only returning a few docs for each invocation (e.g. imagine high cardinality fields, unique id fields, normal zipf distribution on full text).
+
+Today we create a new EnumWithSlice[] array and new EnumWithSlice entry for each term, but this creates a fair amount of unnecessary garbage: instead we can just make this array up-front as size subReaderCount and reuse it.

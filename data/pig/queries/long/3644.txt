@@ -1,0 +1,1 @@
+Skewed join in Tez can be implemented similarly to order-by (PIG-3634).

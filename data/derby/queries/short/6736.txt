@@ -1,0 +1,1 @@
+The jacoco-junit target fails to store coverage data for some sub-suites

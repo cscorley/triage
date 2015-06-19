@@ -1,0 +1,1 @@
+ZooKeeper calls can easily not be retried enough on ConnectionLoss.

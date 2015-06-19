@@ -1,0 +1,5 @@
+SOLR-4503 introduced schema information REST API resources for fields, dynamicFields, fieldTypes, and copyFields.
+
+However, TestFieldsCollectionResource tests make assumptions about the order in which results are returned, and FieldsCollectionResource doesn't provide them in a stable order, and as a result, those tests are failing in environments where the hash iteration order is different from mine (see http://markmail.org/message/phknufx4ywlc7eiw).
+
+Also, FieldsCollectionResource always ignores the "includeDynamic" query parameter, which makes sense in the get-me-info-on-all-the-fields case (i.e., the "fl" query parameter is not specified), but when the "fl" query parameter is specified, the "includeDynamic" query parameter should be respected, so that if a requested field doesn't match an explicit field, but matches a dynamic field, properties for the matching dynamic field are returned.

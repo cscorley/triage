@@ -1,0 +1,7 @@
+DIHCacheSupport introduced at SOLR-2382 uses new config attributes cachePk and cacheLookup. But support old one where="xid=x.id" is broken by DIHCacheSupport.<init> - it never put where="" sides into the context, but it revealed by SortedMapBackedCache.<init>, which takes just first column as a primary key. That's why all tests are green.
+
+To reproduce the issue I need just reorder entry at line 219 and make desc first and picked up as a primary key. 
+
+To do that I propose to chose concrete map class randomly for all DIH test cases at createMap(). 
+
+I'm attaching test breaking patch and seed.

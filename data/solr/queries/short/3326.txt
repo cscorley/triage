@@ -1,0 +1,1 @@
+Convert plugin documentation links to real links

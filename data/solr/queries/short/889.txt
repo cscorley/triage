@@ -1,0 +1,1 @@
+Upgrade dependent libraries to most recent stable version

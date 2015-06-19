@@ -1,0 +1,8 @@
+Hypothetical scenario:
+
+	node comes up and needs to recover
+	node starts buffering updates and replicating index
+	node receives and buffers 1000 updates and dies before replication finishes
+	node comes up, replays tlog
+	peersync checks last 100 updates, they match, and node goes into "active" state (without having ever finished the index replication)
+

@@ -1,0 +1,1 @@
+Enable PMD reports

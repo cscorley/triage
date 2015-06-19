@@ -1,0 +1,1 @@
+Replace Maven POM templates with full POMs, and change documentation accordingly

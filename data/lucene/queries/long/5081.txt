@@ -1,0 +1,1 @@
+Our filters use bit sets a lot to store document IDs. However, it is likely that most of them are sparse hence easily compressible. Having efficient compressed sets would allow for caching more data.

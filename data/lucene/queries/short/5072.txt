@@ -1,0 +1,1 @@
+Fix frame injection bug in javadocs generated with Java 6 (and Java 7 prior u25)

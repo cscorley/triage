@@ -1,0 +1,1 @@
+SyncStrategy should use an executor for the threads it creates to request recoveries.

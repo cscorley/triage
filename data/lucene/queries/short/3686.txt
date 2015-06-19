@@ -1,0 +1,1 @@
+EnhancementsPayloadIterator.getCategoryData(CategoryEnhancement) problematic usage of Object.equals()

@@ -1,0 +1,1 @@
+Create a synonym filter factory that is (re)configurable, and capable of reporting its configuration, via REST API

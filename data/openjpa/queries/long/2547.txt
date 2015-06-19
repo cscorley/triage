@@ -1,0 +1,24 @@
+I have created a scenario where two threads both attempt to get a pessimistic lock on an object, where one thread legitimately gets the lock, and the other gets a 'false' lock.  To describe this issue, lets look at a test.  I will provide (attache) a full working test, but for now lets look at this snippet of the test which is at the heart of the issue:
+
+PessimisticLockEntity entity = oem.find(PessimisticLockEntity.class, pKey);
+
+            boolean locked = false;
+            while (!locked) {
+                try 
+{
+                    oem.getFetchPlan().setLockTimeout(5000);
+                    oem.lock(entity, LockModeType.PESSIMISTIC_READ);
+                    locked = true;
+                }
+ catch (PessimisticLockException ple) {
+
+
+With this test, imagine the case where two threads call this code at roughly the same time.  In this case, one thread should receive a lock, and the other thread should receive a PessimisticLockException (PLE).  In my test, this is what happens.....so far so good.  However, the thread with the lock (call it T1) then sleeps for a while, and the thread which got the PLE (call it T2) attempts to get the lock over and over again.  When T2 tries to get a lock while T1 holds the lock, T2 should continue to receive a PLE.  However, I've found that T2 "gets" a lock.  That is, a PLE is never thrown because OpenJPA doesn't execute SQL to obtain the lock.  OpenJPA skips that steps and thinks T2 has a lock.  This gives T2 a false lock.
+
+I've found that prior to JIRA OPENJPA-2449, we got the expected results (i.e. T2 continues to get a PLE while T1 holds the lock).  It is only with OPENJPA-2449 that the incorrect behavior occurs.
+
+I will provide a patch which contains a potential fix, and a test that does two things: 1) tests the scenario above and 2) provides a test to verify OPENJPA-2449 (we never provided a test when we committed OPENJPA-2449).  My fix, if correct, simply adds one additional check to the code added via OPENJPA-2449.
+
+Thanks,
+
+Heath

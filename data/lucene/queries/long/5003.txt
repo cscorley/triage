@@ -1,0 +1,8 @@
+With jdk8-b89, the linting of javadocs with Eclipse's JDT compiler (ECJ) does no lonmger work:
+
+	The version we currently use (3.7.2) can no longer parse the class files in rt.jar / or does no longer find them
+	The latest version (4.2.2) produces a compiler error, because it cannot handle some "default" interface method duplication in some Java Collections interfaces (CharArraySet fails)
+
+
+
+I will disable the ECJ linting for now with Java > 1.7

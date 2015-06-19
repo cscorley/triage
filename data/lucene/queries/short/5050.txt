@@ -1,0 +1,1 @@
+CompressingStoredFieldsReader should close the index file as soon as it has been read

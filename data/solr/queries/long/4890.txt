@@ -1,0 +1,6 @@
+I just did a fresh install of Solr 4.3.0 twice. Both times, the default build yielded this in Logging:
+
+Can't find (or read) directory to add to classloader: /non/existent/dir/yields/warning (resolved as: /non/existent/dir/yields/warning).
+
+
+This appears to come from line 87 in solrconfig.xml for collection1, which I think is supposed to be commented out. Or maybe it has some other purpose. Either way, the comments in that file, at least regarding this line, are totally unhelpful.

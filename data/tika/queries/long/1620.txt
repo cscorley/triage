@@ -1,0 +1,14 @@
+According to class documentation, the  org.apache.tika.parser.external.ExternalParser class should replace the OUTPUT_FILE_TOKEN constant with an output file name when specified as a command argument.  It is currently not the case and the parser will fail to grab any output from processes generating output files.
+
+In order to fix this, you should add one line to the following code in the parse method (starting on line 168):
+
+
+
+if(cmd[i].indexOf(OUTPUT_FILE_TOKEN) != -1) {
+    output = tmp.createTemporaryFile();
+    outputFromStdOut = false;
+    //START FIX:
+    cmd[i] = cmd[i].replace(OUTPUT_FILE_TOKEN, output.getPath());
+    //END FIX.
+}
+

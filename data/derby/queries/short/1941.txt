@@ -1,0 +1,1 @@
+CLASSPATH in QuickStart section of java/testing/README.htm should contain derbyrun.jar

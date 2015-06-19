@@ -1,0 +1,1 @@
+Creating a new ZooKeeper client can leak file handles

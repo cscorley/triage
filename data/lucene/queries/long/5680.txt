@@ -1,0 +1,3 @@
+This has come up on the list (http://markmail.org/message/2wmpvksuwc5t57pg) – it would be good if we can allow updating several doc-values fields, atomically. It will also improve/simplify our tests, where today we index two fields, e.g. the field itself and a control field. In some multi-threaded tests, since we cannot be sure which updates came through first, we limit the test such that each thread updates a different set of fields, otherwise they will collide and it will be hard to verify the index in the end.
+
+I was working on a patch and it looks pretty simple to do, will post a patch shortly.

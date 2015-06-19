@@ -1,0 +1,1 @@
+NormalizeCharMap.build creates utf32-keyed automaton and uses it with utf16 keys

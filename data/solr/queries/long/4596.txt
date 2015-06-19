@@ -1,0 +1,1 @@
+Makes it harder to screw up and put you in a situation where offers to the queue can race with proper creation of the zk path.

@@ -1,0 +1,1 @@
+In LUCENE-4599, I wrote an alternate term vectors format which has a more compact format, and I think it could replace the current Lucene40TermVectorsFormat for the next (4.2) release?

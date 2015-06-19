@@ -1,0 +1,1 @@
+In the same way that we now have a PagedGrowableWriter, we could have a PagedMutable which would behave just like PackedInts.Mutable but would support more than 2B values.

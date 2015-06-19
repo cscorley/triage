@@ -1,0 +1,1 @@
+we should change the suggested search in the demo docs because the lucene code base is full of swear words

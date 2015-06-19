@@ -1,0 +1,1 @@
+There are a few places in current codebase that assume http is used. This prevents using https when running solr in cloud mode.

@@ -1,0 +1,1 @@
+SetQueryTimeoutTest. fails in J2ME environment

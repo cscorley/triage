@@ -1,0 +1,1 @@
+getNGroups returns null if group.format=simple and group.ngroups=true, though this information is present in the response, but ignored, when there are no groups (which is true if group.format=simple, because the groups are collapsed).

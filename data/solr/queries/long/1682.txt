@@ -1,0 +1,1 @@
+Child issue of SOLR-236. This issue is dedicated to field collapsing in general and all its code (CollapseComponent, DocumentCollapsers and CollapseCollectors). The main goal is the finalize the request parameters and response format.

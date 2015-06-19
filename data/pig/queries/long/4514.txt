@@ -1,0 +1,6 @@
+
+
+src/org/apache/pig/backend/hadoop/executionengine/tez/runtime/PigGraceShuffleVertexManager.java:173: error: exception TezException is never thrown in body of corresponding try statement
+    [javac]             } catch (TezException e) {
+    [javac]               ^
+

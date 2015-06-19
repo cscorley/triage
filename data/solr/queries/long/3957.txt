@@ -1,0 +1,5 @@
+Remove all the useless (which I daresay is all of them) response WARNINGs stating "This response format is experimental".
+
+At this point, all of these are more than just experimental, and even if so things are subject to change and in most cases can be done in a compatible manner anyway.
+
+Less noise.

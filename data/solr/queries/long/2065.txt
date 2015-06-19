@@ -1,0 +1,1 @@
+Scoring explanations should be supported regardless of where the documents occur in a response, and regardless of the format (grouped, standard, etc).

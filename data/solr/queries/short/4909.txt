@@ -1,0 +1,1 @@
+Solr and IndexReader Re-opening on Replication Slave

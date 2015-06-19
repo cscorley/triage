@@ -1,0 +1,24 @@
+Overseer.updateSlice method has the following code:
+
+
+
+String router = message.getStr(OverseerCollectionProcessor.ROUTER,DocRouter.DEFAULT_NAME);
+        List<String> shardNames  = new ArrayList<String>();
+
+        //collection does not yet exist, create placeholders if num shards is specified
+        boolean collectionExists = state.getCollections().contains(collection);
+        if (!collectionExists && numShards!=null) {
+          if(ImplicitDocRouter.NAME.equals(router)){
+            getShardNames(shardNames, message.getStr("shards",null));
+            numShards = shardNames.size();
+          }else {
+            getShardNames(numShards, shardNames);
+          }
+          state = createCollection(state, collection, shardNames, message);
+        }
+
+
+
+Here it tries to read the router name from the message. Even if we ignore that the key to lookup the router is wrong here, the router name is never sent in a state message.
+
+Considering that we don't even support creating a collection with "implicit" router from command line, we should stop expecting the parameter.

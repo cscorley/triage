@@ -1,0 +1,1 @@
+TermsEnum.docs currently only works when liveDocs is null or the reader's liveDocs. This is enough for addIndexes but it would be cleaner to follow TermsEnum.docs contract and accept any source of liveDocs.

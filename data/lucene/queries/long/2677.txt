@@ -1,0 +1,2 @@
+TestMultiLevelSkipList and TestsFieldReader are falling if run with -Dtests.iter > 1 - not all values are reset though
+I will attach a patch in a second.

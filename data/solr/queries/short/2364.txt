@@ -1,0 +1,1 @@
+<lib dir="..."/> directives are logging serious errors when they should not be

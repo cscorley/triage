@@ -1,0 +1,9 @@
+This is the problem that I faced - A user upgraded Solr from 4.0 to 4.9 and the queries being formed were behaving differently.
+
+I tracked it down to LUCENE-5180 ( which I believe is the correct thing to do ) . The problem is since Solr does't ship with the Lucene CHANGES.txt file and we didn't record this under the the Solr CHANGES.txt file also, a user is not aware of such changes when upgrading.
+
+I can think of two options - 
+1. Duplicate the changes which have side effects in Solr under Solr's CHANGES.txt file also ( not sure if we do this already and that we missed this one ).
+2. Be conservative and ship Solr binaries with the Lucene CHANGES.txt file also
+
+We should address this problem

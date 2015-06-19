@@ -1,0 +1,1 @@
+Enable Java 7 in trunk

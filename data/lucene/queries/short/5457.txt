@@ -1,0 +1,1 @@
+Expose SloppyMath earth diameter table

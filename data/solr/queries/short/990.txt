@@ -1,0 +1,1 @@
+Add pid file to snapinstaller to skip script overruns, and recover from failure

@@ -1,0 +1,1 @@
+There is a bug where the ordering in which contexts and payload are encoded/decoded in SortedInputIterator is wrong.

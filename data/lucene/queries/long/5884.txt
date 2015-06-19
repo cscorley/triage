@@ -1,0 +1,1 @@
+It's a little heavy now, relying too much on reflection (RUE.shallowSizeOf)... and we do this up to 128 times per FST (= per indexed field, per segment, for the terms index).

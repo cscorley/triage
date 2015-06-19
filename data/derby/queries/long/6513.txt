@@ -1,0 +1,8 @@
+When I build the 10.10 branch using JDK 8, I see the following warnings:
+
+
+    [javac] warning: [options] source value 1.4 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.4 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] 3 warnings
+

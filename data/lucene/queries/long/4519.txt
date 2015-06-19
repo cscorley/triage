@@ -1,0 +1,1 @@
+public Iterable<? extends IndexableField> indexableFields() should be replaced with public Iterable<IndexableField> indexableFields().

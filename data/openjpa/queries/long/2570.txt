@@ -1,0 +1,9 @@
+In JIRA OPENJPA-1608, a fix was added to the InformixDictionary which causes the following SQL to be executed on each connection:
+
+"SET ENVIRONMENT RETAINUPDATELOCKS 'ALL'" 
+
+I've had a request to allow a user to disable this option should they so choose.  This JIRA will be used to simply add a property to allow a user to disable this SQL.  By default this SQL will remain as-is today.
+
+Thanks,
+
+Heath Thomann

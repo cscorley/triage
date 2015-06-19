@@ -1,0 +1,1 @@
+Do not pass a SolrCore in ZkController.preRegister()

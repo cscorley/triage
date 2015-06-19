@@ -1,0 +1,3 @@
+Unlike MR, union needs to be implemented as multiple vertices because Tez doesn't allow multiple inputs in root vertex.
+
+I propose that we implement union by connecting load vertices to union vertex with broadcasting edges.

@@ -1,0 +1,1 @@
+Currently if there are more highlighting fragments for the "features" field in example, only the first one is rendered in the /browse GUI

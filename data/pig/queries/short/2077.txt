@@ -1,0 +1,1 @@
+Project UDF output inside a non-foreach statement fail on 0.8

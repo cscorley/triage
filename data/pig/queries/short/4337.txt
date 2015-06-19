@@ -1,0 +1,1 @@
+Split Types and MultiQuery e2e tests into multiple groups

@@ -1,0 +1,1 @@
+This also makes it nice in case we want to use it for json parsing elsewhere.

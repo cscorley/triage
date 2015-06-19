@@ -1,0 +1,1 @@
+Expose transaction log files number and their size via JMX

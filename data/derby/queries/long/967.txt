@@ -1,0 +1,46 @@
+"Signature":
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbylang/derbylang/autoincrement.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: autoincrement jdk1.5.0_04 derbylang:derbylang 2005-11-02 00:00:16 ***
+742a743,744
+> ROW  |T1                                                                                                                              |X   
+> TABLE|T1                                                                                                                              |IX  
+Test Failed.
+			End:   autoincrement jdk1.5.0_04 derbylang:derbylang 2005-11-02 00:00:24 ***
+		
+		
+	
+	
+
+
+
+First seen:
+http://www.multinet.no/~solberg/public/Apache/TinderBox_Derby/Limited/testSummary-330144.html

@@ -1,0 +1,2 @@
+In lucene tar-gz format is file.tar.gz while in solr it is file.tgz.
+I think we would like them to be the same in the future?

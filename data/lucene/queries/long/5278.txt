@@ -1,0 +1,3 @@
+MockTokenizer throws away the character right after a token even if it is a valid start to a new token.  You won't see this unless you build a tokenizer that can recognize every character like with new RegExp(".") or RegExp("...").
+
+Changing this behaviour seems to break a number of tests.

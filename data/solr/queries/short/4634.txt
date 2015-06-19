@@ -1,0 +1,1 @@
+Fix test bugs in Javascript tests to work with Java 8's Mozilla-Rhino-replacement "Nashorn"

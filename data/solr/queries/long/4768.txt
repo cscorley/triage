@@ -1,0 +1,23 @@
+I know why the two .wars are different:
+
+The binary package Solr war's target chain is:
+
+  
+'package'->'create-package'->'dist'->'dist-war'->webapp:'dist'
+
+
+The maven Solr war's target chain is:
+
+  
+'generate-maven-artifacts'->webapp:'dist-maven'->webapp:'dist'
+
+
+So both create the war using webapp:'dist', but only 'dist-war' passes in a modified 'exclude.from.war' property definition (which is empty by default):
+
+  
+<property name="exclude.from.war" value="*slf4j*,log4j-*" />
+
+
+As a result, the maven Solr war contains logging jars while the official war does not.
+
+I think the fix is to make the above the default setting, rather than passing in a non-default property value from 'dist-war'.

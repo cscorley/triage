@@ -1,0 +1,1 @@
+DIH - multithreaded does not rollback on errors from EntityProcessor

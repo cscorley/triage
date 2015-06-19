@@ -1,0 +1,7 @@
+The bug here is in java (not MMapDir), but i think we shoudl do something.
+
+Users get confused when they configure their JVM to trigger something on OOM, and then see "OutOfMemoryError: Map Failed": but their trigger doesnt fire.
+
+Thats because in the jdk, when it maps files it catches OutOfMemoryError, asks for a garbage collection, sleeps for 100 milliseconds, then tries to map again. if it fails a second time it wraps the OOM in a generic IOException.
+
+I think we should add a try/catch to our filechannel.map

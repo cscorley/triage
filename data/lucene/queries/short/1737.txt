@@ -1,0 +1,1 @@
+Always use bulk-copy when merging stored fields and term vectors

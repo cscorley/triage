@@ -1,0 +1,1 @@
+Small refactor to make max and min float return values quicker

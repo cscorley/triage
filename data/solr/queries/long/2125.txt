@@ -1,0 +1,17 @@
+The calculations of distance appears to be off.
+
+Note: "The radius of the sphere to be used when calculating distances on a sphere (i.e. haversine). Default is the Earth's mean radius in kilometers (see org.apache.solr.search.function.distance.Constants.EARTH_MEAN_RADIUS_KM) which is set to 3,958.761458084784856. Most applications will not need to set this."
+
+The radius of the earth in KM is  6371.009 km (≈3958.761 mi).
+
+Also filtering distance appears to be off - example data:
+
+45.17614,-93.87341 to 44.9369054,-91.3929348 Approx 137 miles Google. 169 miles = 220 kilometers
+
+http://....../solr/select?fl=*,score&start=0&rows=10&q=
+{!sfilt%20fl=store_lat_lon}
+&qt=standard&pt=44.9369054,-91.3929348&d=280&sort=dist(2,store,vector(44.9369054,-91.3929348)) asc 
+
+Nothing shows. d=285 shows results. This is off by a lot.
+
+Bill

@@ -1,0 +1,9 @@
+HI!  I've discovered an issue which is pretty much as described in JIRA OPENJPA-2463.  That is, when I have a MappedSuperclass with an @Id, I see this error:
+
+openjpa.Enhance: Error: The identity field defined in the com.yyy.zzz.MyEntity Embeddable is not supported.
+
+This error message is erroneously printed because of the fix via JIRA OPENJPA-2233.  This JIRA was well intended for the case where an @Embeddable contains an @Id (a spec violation) but was too over reaching in that it also flagged an error for a MappedSuperclass with an @Id.  I will provide a fix to ensure the error message is only printed when an @Embeddable contains an @Id.
+
+Thanks,
+
+Heath Thomann

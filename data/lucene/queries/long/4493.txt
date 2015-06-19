@@ -1,0 +1,1 @@
+On Jenkins I have currently a complicated setup to enable documentation-linting depending on the JVM. Similar to LUCENE-4488, I will move the JVM version detection to the ANT build.xml and remove the extra config and parameter passing from Jenkins.

@@ -1,0 +1,1 @@
+The name FieldsConsumer is missleading here it really is an InvertedFieldsConsumer and since we are extending codecs to consume non-inverted Fields we should be clear here. Same applies to Fields.java as well as FieldsProducer.

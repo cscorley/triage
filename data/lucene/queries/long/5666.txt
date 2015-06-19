@@ -1,0 +1,5 @@
+Currently the fieldcache is not pluggable at all. It would be better if everything used the docvalues apis.
+
+This would allow people to customize the implementation, extend the classes with custom subclasses with additional stuff, etc etc.
+
+FieldCache can be accessed via the docvalues apis, using the FilterReader api.

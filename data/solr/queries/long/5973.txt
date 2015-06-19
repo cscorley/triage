@@ -1,0 +1,24 @@
+This ticket introduces a new RankQuery and MergeStrategy to Solr. By extending the RankQuery class, and implementing it's interface, you can specify a custom ranking collector (TopDocsCollector) and distributed merge strategy for a Solr query. 
+
+
+
+Sample syntax:
+
+
+
+q=hello&rq={!customRank param1=a param2=b}&wt=json&indent=true
+
+
+In the sample above the new "rq" (rank query) param: 
+
+rq={!customRank  param1=a param2=b}
+
+ points to a QParserPlugin that returns a Query that extends RankQuery.  The RankQuery defines the custom ranking and merge strategy for the main query.
+
+The RankQuery impl will have to do several things:
+
+1) Implement the getTopDocsCollector() method to return a custom top docs ranking collector.
+2) Implement the wrap() method. The QueryComponent calls the wrap() method to wrap the RankQuery around the main query. This design allows the RankQuery to manage Query caching issues and implement custom Query explanations if needed.
+3)  Implement hashCode() and equals() so the queryResultCache works properly with main query and custom ranking algorithm.
+ 4) Optionally implement a custom MergeStrategy to handle the merging of distributed results from the shards.
+

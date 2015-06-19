@@ -1,0 +1,19 @@
+This is a regression from PIG-3914.
+
+
+2014-05-09 22:31:53,241 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJob - DAG Status: status=FAILED, progress=TotalTasks: 6487 Succeeded: 6485 Running: 0 Failed: 1 Killed: 1, diagnostics=Vertex failed, vertexName=scope-506, vertexId=vertex_1399657418038_0002_1_17, diagnostics=[Task failed, taskId=task_1399657418038_0002_1_17_000001, diagnostics=[AttemptID:attempt_1399657418038_0002_1_17_000001_0 Info:Error: java.lang.UnsupportedOperationException
+        at org.apache.pig.backend.hadoop.executionengine.tez.TezTaskContext.getCounter(TezTaskContext.java:44)
+        at org.apache.pig.tools.pigstats.PigStatusReporter.getCounter(PigStatusReporter.java:76)
+        at org.apache.hadoop.mapreduce.lib.output.FileWriter.close(FileWriter.java:96)
+        at org.apache.hadoop.mapreduce.lib.output.PartitionedRecordWriter.close(PartitionedRecordWriter.java:70)
+        at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigOutputFormat$PigRecordWriter.close(PigOutputFormat.java:153)
+        at org.apache.tez.mapreduce.output.MROutput.close(MROutput.java:285)
+        at org.apache.tez.mapreduce.output.MROutput.commit(MROutput.java:302)
+        at org.apache.pig.backend.hadoop.executionengine.tez.PigProcessor.run(PigProcessor.java:182)
+        at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:307)
+        at org.apache.hadoop.mapred.YarnTezDagChild$5.run(YarnTezDagChild.java:581)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at javax.security.auth.Subject.doAs(Subject.java:415)
+        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1548)
+        at org.apache.hadoop.mapred.YarnTezDagChild.main(YarnTezDagChild.java:570)
+

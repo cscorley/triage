@@ -1,0 +1,1 @@
+ToChildBlockJoinQuery becomes crazy on wrong subquery

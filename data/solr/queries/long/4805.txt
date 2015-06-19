@@ -1,0 +1,7 @@
+If you have a collection that is composed of a single core, then calling reload on that collection leaves the core offline.  This happens even if nothing at all has changed about the collection or its config.  This happens whether you call reload via an http GET or if you directly call reload via the collections api. 
+
+Tried a collection with a single core that contains data, change nothing about the config in ZK and call reload and the collection.  The call completes, but ZK flags that replica with "state":"down"
+
+Try it where a the single core contains no data and the same thing happens, ZK config updates and broadcasts "state":"down" for the replica.
+
+I did not try this in a multicore or replicated core environment.

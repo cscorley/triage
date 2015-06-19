@@ -1,0 +1,1 @@
+In SolrJ's Maven Dependency Graph, slf4j-api is optional, which breaks plain solrj users

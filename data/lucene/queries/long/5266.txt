@@ -1,0 +1,1 @@
+Given that the initial focus for PackedInts readers was more on in-memory readers (for storing stuff like the mapping from old to new doc IDs at merging time), I never spent time trying to optimize the direct readers although it could be beneficial now that they are used for disk-based doc values.

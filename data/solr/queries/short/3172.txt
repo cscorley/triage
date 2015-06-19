@@ -1,0 +1,1 @@
+luceneMatchVersion of solrconfig-languageidentifier.xml hardcoded to LUCENE_35

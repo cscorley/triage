@@ -1,0 +1,7 @@
+We removed this before because of LUCENE-2828,
+but the problem there was the delegator (not the lengthNorm method).
+
+TFIDFSim requires byte[] norms today. So its computeNorm should be final,
+calling lengthNorm() that returns a byte.
+
+This way there is no possibility for you to do something stupid.

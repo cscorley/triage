@@ -1,0 +1,10 @@
+
+removing snapshot /Users/trey/solr.home/data/snapshot.20080701175730
+ps: illegal option – f
+usage: ps [-AaCcEefhjlMmrSTvwXx] [-O fmt | -o fmt] [-G gid[,gid...]]
+          [-u]
+          [-p pid[,pid...]] [-t tty[,tty...]] [-U user[,user...]]
+       ps [-L]
+
+MacOSX does not support the -f option to show all the command line arguments.  This is the default behavior for ps (on OSX, but can be supressed with -c).
+It also doesn't much like -wwwu $user.  Wants -www -U $user. 

@@ -1,0 +1,1 @@
+"numberToKeep" on replication handler does not work with "backupAfter"

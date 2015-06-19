@@ -1,0 +1,1 @@
+MANIFEST.MF cleanup (main jar and luci customizations)

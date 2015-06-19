@@ -1,0 +1,1 @@
+NPE if insert statement needs recompilation after having fired a trigger

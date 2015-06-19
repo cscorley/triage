@@ -1,0 +1,1 @@
+The SimpleQParser uses getAnalyzer(), but it should be getQueryAnalyzer().

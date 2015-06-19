@@ -1,0 +1,1 @@
+Recovery tool doesn't remove cookie after recovering one bookie

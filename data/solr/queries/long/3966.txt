@@ -1,0 +1,6 @@
+The LangID UpdateProcessor emits the warning below for documents that do not contain an input field. The level should go to DEBUG or be removed. It is not uncommon to see a log full of these messages just because not all documents contain all the fields we're mapping. 
+
+
+Oct 19, 2012 11:23:43 AM org.apache.solr.update.processor.LanguageIdentifierUpdateProcessor process
+WARNING: Document <ID> does not contain input field <FIELD>. Skipping this
+ 

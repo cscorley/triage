@@ -1,0 +1,1 @@
+Migrate enable/disable Ping from JSP to PingRequestHandler

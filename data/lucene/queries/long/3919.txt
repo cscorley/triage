@@ -1,0 +1,6 @@
+In lucene we essentially test each analysis component separately. we also give some
+good testing to the example Analyzers we provide that combine them.
+
+But we don't test various combinations that are possible: which is bad because
+it doesnt test possibilities for custom analyzers (especially since lots of solr users
+etc define their own).

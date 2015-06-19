@@ -1,0 +1,8 @@
+Some background here: http://www.lucidimagination.com/search/document/6babe83bd4a98b64/which_unicode_version_is_supported_with_lucene
+
+Some possible solutions:
+
+	wait and see if we get resolution on http://jira.codehaus.org/browse/JETTY-1340. To be honest, I am not even sure where jetty is being maintained (there is a separate jetty project at eclipse.org with another bugtracker, but the older releases are at codehaus).
+	include a patched version of jetty with correct utf-8, using that patch.
+	remove jetty and include a different container instead.
+

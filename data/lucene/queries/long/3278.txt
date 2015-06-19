@@ -1,0 +1,1 @@
+Much like with contrib/queries, we should differentiate the contrib/queryparser from the queryparser module.  No directory structure changes will be made, just ant and maven.

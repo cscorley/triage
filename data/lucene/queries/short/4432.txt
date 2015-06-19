@@ -1,0 +1,1 @@
+Make top-level default ant task print -projecthelp

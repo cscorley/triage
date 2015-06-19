@@ -1,0 +1,1 @@
+Extend Codec to handle also stored fields and term vectors

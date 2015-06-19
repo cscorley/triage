@@ -1,0 +1,1 @@
+schema should fail hard if uniqueKey field is multivalued

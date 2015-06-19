@@ -1,0 +1,1 @@
+pig-withouthadoop.jar miss some libraries after new parser check in. It is not runnable now. We should fix it with reference to how we build pig.jar.

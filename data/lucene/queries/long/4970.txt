@@ -1,0 +1,3 @@
+If I apply setBoost() method to NGramPhraseQuery, Score will not change.
+
+I think, setBoost() is forgatten after optimized in rewrite() method.

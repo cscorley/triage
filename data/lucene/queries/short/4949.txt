@@ -1,0 +1,1 @@
+nightly builds have wrong version - need to simplify jenkins config tweaks needed after a release

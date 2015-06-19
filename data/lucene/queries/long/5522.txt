@@ -1,0 +1,1 @@
+I bumped into this while updating my examples code. Will attach a patch which fixes this shortly.

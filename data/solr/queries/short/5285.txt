@@ -1,0 +1,1 @@
+Solr response format should support child Docs

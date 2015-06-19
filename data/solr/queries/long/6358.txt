@@ -1,0 +1,1 @@
+Idea detects and sets this correctly anyway. Currently ant idea copies a file which specifies the VCS mapping to be SVN, which ends up not that working well when cloning using the Git mirror. Will attach a patch which removes the section.

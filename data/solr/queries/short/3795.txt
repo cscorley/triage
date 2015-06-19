@@ -1,0 +1,1 @@
+/admin/luke?show=schema is returning raw toString of SchemaField and CopyField objects for "copyDests" and "copySources"

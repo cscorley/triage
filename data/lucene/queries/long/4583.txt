@@ -1,0 +1,25 @@
+I didn't observe any limitations on the size of a bytes based DocValues field value in the docs.  It appears that the limit is 32k, although I didn't get any friendly error telling me that was the limit.  32k is kind of small IMO; I suspect this limit is unintended and as such is a bug.    The following test fails:
+
+
+
+  public void testBigDocValue() throws IOException {
+    Directory dir = newDirectory();
+    IndexWriter writer = new IndexWriter(dir, writerConfig(false));
+
+    Document doc = new Document();
+    BytesRef bytes = new BytesRef((4+4)*4097);//4096 works
+    bytes.length = bytes.bytes.length;//byte data doesn't matter
+    doc.add(new StraightBytesDocValuesField("dvField", bytes));
+    writer.addDocument(doc);
+    writer.commit();
+    writer.close();
+
+    DirectoryReader reader = DirectoryReader.open(dir);
+    DocValues docValues = MultiDocValues.getDocValues(reader, "dvField");
+    //FAILS IF BYTES IS BIG!
+    docValues.getSource().getBytes(0, bytes);
+
+    reader.close();
+    dir.close();
+  }
+

@@ -1,0 +1,1 @@
+Use BooleanScorer1 for filter-down-low queries

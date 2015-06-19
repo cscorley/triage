@@ -1,0 +1,37 @@
+Tried to create a map of a primitive type, the resulting schema can't be parsed again by the parser if there is a alias set for the value.
+
+I could not set an alias, but the alias gets set by pig itself, e.g. when converting avro schemas to pig schemas and there was a map of records in avro.
+
+See also my other bug report https://issues.apache.org/jira/browse/PIG-4326 , even without that fix, pig produces schemas of maps with values that have an alias.
+
+You can easily reproduce the crash, using those two unit tests. The second one should actually succeed but throws a ParserException instead
+
+
+
+@Test
+public void testWorksWithoutAlias() throws FrontendException {
+    List<FieldSchema> innerFields = new ArrayList<>();
+    innerFields.add(new FieldSchema(null, DataType.LONG));
+    List<FieldSchema> fields = new ArrayList<>();
+    fields.add(new FieldSchema("mapAlias", new Schema(innerFields), DataType.MAP));
+
+    Schema inputSchema = new Schema(fields);
+    Schema fromString = Utils.getSchemaFromBagSchemaString(inputSchema.toString());
+    assertEquals(inputSchema.toString(), fromString.toString());
+}
+
+@Test
+public void testBreaksWithAlias() throws FrontendException {
+    List<FieldSchema> innerFields = new ArrayList<>();
+    innerFields.add(new FieldSchema("valueAlias", DataType.LONG));
+    List<FieldSchema> fields = new ArrayList<>();
+    fields.add(new FieldSchema("mapAlias", new Schema(innerFields), DataType.MAP));
+
+    Schema inputSchema = new Schema(fields);
+    Schema fromString = Utils.getSchemaFromBagSchemaString(inputSchema.toString());
+    assertEquals(inputSchema.toString(), fromString.toString());
+}
+
+
+
+I suppose that the issue is in the grammar itself and easy to fix for someone knowing antlr. I don't think the issue is related to the actual type of the value, as I could also provide tests that fail if we don't use a primitive but complex type with an alias.

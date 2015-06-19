@@ -1,0 +1,1 @@
+Pass potent SR to IRWarmer.warm(), and also call warm() for new segments

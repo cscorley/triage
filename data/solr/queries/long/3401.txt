@@ -1,0 +1,1 @@
+The new web gui does not show the Core Admin view unless there are already multiples cores defined.  We should show the view in instances when we're running in single core mode as well.

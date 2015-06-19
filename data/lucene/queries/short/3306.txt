@@ -1,0 +1,1 @@
+disable positions for spellchecker ngram fields

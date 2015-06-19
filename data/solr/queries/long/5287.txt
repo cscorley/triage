@@ -1,0 +1,25 @@
+A user asking a question on the Solr list got me to thinking about editing the main config files from the Solr admin screen. I chatted briefly with Stefan Matheis (steffkes) about the mechanics of this on the browser side, he doesn't see a problem on that end. His comment is there's no end point that'll write the file back.
+
+Am I missing something here or is this actually not a hard problem? I see a couple of issues off the bat, neither of which seem troublesome.
+
+1> file permissions. I'd imagine lots of installations will get file permission exceptions if Solr tries to write the file out. Well, do a chmod/chown.
+
+2> screwing up the system maliciously or not. I don't think this is an issue, this would be part of the admin handler after all.
+
+Does anyone have objections to the idea? And how does this fit into the work that Not used by Steve Rowe has been doing?
+
+I can imagine this extending to SolrCloud with a "push this to ZK" option or something like that, perhaps not in V1 unless it's easy.....
+
+Of course any pointers gratefully received. Especially ones that start with "Don't waste your effort, it'll never work (or be accepted)"...
+
+Because what scares me is this seems like such an easy thing to do that would be a significant ease-of-use improvement, so there has to be something I'm missing.
+
+So if we go forward with this we'll make this the umbrella JIRA, the two immediate sub-JIRAs that spring to mind will be the UI work and the endpoints for the UI work to use.
+
+I think there are only two end-points here
+1> list all the files in the conf (or arbitrary from <solr_home>/collection) directory.
+2> write this text to this file
+
+Possibly later we could add "clone the configs from coreX to coreY".
+
+BTW, I've assigned this to myself so I don't lose it, but if anyone wants to take it over it won't hurt my feelings a bit....

@@ -1,0 +1,1 @@
+Add license headers to prettify.js files

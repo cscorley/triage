@@ -1,0 +1,1 @@
+some trivial refactoring to postingshighlighter

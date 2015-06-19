@@ -1,0 +1,14 @@
+ResourceLoader is used to load things like stopwords and synonyms files, but it uses the default 'Charset' argument for this.
+
+when you open an InputStream with a Charset, you get:
+
+
+decoder = charset.newDecoder().onMalformedInput(
+    CodingErrorAction.REPLACE).onUnmappableCharacter(
+    CodingErrorAction.REPLACE);
+
+
+
+For cases like malformed encoded stopwords and synonyms files, I think its more helpful to use CodingErrorAction.REPORT than to silently replace with a replacement char. Then the user gets an exception.
+
+See: http://www.lucidimagination.com/search/document/1e50cb0992727fa1/foreign_characters_question

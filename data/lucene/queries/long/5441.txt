@@ -1,0 +1,27 @@
+Back from the times of Lucene 2.4 when DocIdSet was introduced, we somehow kept the stupid "filters can return a BitSet directly" in the code. So lots of Filters return just FixedBitSet, because this is the superclass (ideally interface) of FixedBitSet.
+
+We should decouple that and not implement that abstract interface directly by FixedBitSet. This leads to bugs e.g. in BlockJoin, because it used Filters in a wrong way, just because it was always returning Bitsets. But some filters actually don't do this.
+
+I propose to let FixedBitSet (only in trunk, because that a major backwards break) just have a method asDocIdSet(), that returns an anonymous instance of DocIdSet: bits() returns the FixedBitSet itsself, iterator() returns a new Iterator (like it always did) and the cost/cacheable methods return static values.
+
+Filters in trunk would need to be changed like that:
+
+
+
+FixedBitSet bits = ....
+...
+return bits;
+
+
+
+gets:
+
+
+
+FixedBitSet bits = ....
+...
+return bits.asDocIdSet();
+
+
+
+As this methods returns an anonymous DocIdSet, calling code can no longer rely or check if the implementation behind is a FixedBitSet.

@@ -1,0 +1,15 @@
+two words concat togther in the following message due to the space was missing in front of separator. Therefore, contract and detected became one word: contractdetected. 
+
+subclasser-contract-violation-field: Possible violation of subclassing contract\
+	detected while processing persistent field 
+{1}, declared in {2}. \ 
+	Are you sure you are obeying the OpenJPA requirements? Details: {0}
+
+Fix will be :
+subclasser-contract-violation-field: Possible violation of subclassing \
+	contract detected while processing persistent field {1}
+, declared in 
+{2}
+. \ 
+	Are you sure you are obeying the OpenJPA requirements? Details: 
+{0}

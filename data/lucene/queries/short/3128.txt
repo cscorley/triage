@@ -1,0 +1,1 @@
+"ant eclipse" should create an Eclipse project

@@ -1,0 +1,1 @@
+e2e harness: should not require PH_OLD_CLUSTER_CONF

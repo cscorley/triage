@@ -1,0 +1,1 @@
+Stop building Eclipse plugins as Derby release artifacts

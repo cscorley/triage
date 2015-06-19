@@ -1,0 +1,1 @@
+ReplicationHandler can try and do a snappull and open a new writer after shutdown has already occurred, leaving an IndexWriter that is not closed.

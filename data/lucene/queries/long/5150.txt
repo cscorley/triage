@@ -1,0 +1,1 @@
+In LUCENE-5101, Paul Elschot mentioned that it would be interesting to be able to encode the inverse set to also compress very dense sets.

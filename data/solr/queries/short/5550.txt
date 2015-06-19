@@ -1,0 +1,1 @@
+shards.info is not returned in case of short circuited distributed query

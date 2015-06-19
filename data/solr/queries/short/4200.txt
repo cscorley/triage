@@ -1,0 +1,1 @@
+Significant log noise at INFO from CachingDirectoryFactory#close

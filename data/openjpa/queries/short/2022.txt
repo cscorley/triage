@@ -1,0 +1,1 @@
+Reversemappingtooltask with oracle is failing like in OPENJPA-1940 previous bug

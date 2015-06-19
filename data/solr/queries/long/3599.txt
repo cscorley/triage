@@ -1,0 +1,5 @@
+I've seen a few installs now where the client session timeout had to be raised because our default was too low for their specific conditions (load or network or something caused lots of solr->zookeeper session expirations unless the timeout was raised).
+
+We should make it apparent where to configure this, and make it easier on people by allowing it to be specified on startup by system property.
+
+Separately, we might want to consider raising our default timeout a bit, but that is another issue.

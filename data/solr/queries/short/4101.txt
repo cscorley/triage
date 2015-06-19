@@ -1,0 +1,1 @@
+Provide a flag to store positions and offsets on fields defined in the schema

@@ -1,0 +1,4 @@
+DocValues should somehow allow a configurable default per-field.
+Possible implementations include setting it on the field in the document or registration of an IndexWriter callback.
+
+If we don't make the default configurable, then another option is to have DocValues fields keep track of whether a value was indexed for that document or not.

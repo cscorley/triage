@@ -1,0 +1,50 @@
+Using the JDBCDatasource in conjunction with the DB2 JDBC Drivers results in the following error when the DIH tries to close the the connection due to active transactions. As a consequence each delta im port or full import opens a new connection without closing it. So the maximum amount of connections will be reached soon. Setting the connection to readOnly or changing the transaction isolation level doesn't help neither.
+
+The JDBC Driver I used: "com.ibm.db2.jcc.DB2Driver" relieing in db2jcc4.jar shipped with DB2 Express 9.7 for example
+
+Here is the stack trace...
+
+14.08.2010 01:49:51 org.apache.solr.handler.dataimport.JdbcDataSource closeConnection
+FATAL: Ignoring Error when closing connection
+com.ibm.db2.jcc.am.SqlException: [jcc][10251][10308][4.8.87] java.sql.Connection.close() requested while a transaction is in progress on the connection.The transaction remains active, and the connection cannot be closed. ERRORCODE=-4471, SQLSTATE=null
+	at com.ibm.db2.jcc.am.gd.a(gd.java:660)
+	at com.ibm.db2.jcc.am.gd.a(gd.java:60)
+	at com.ibm.db2.jcc.am.gd.a(gd.java:120)
+	at com.ibm.db2.jcc.am.lb.u(lb.java:1202)
+	at com.ibm.db2.jcc.am.lb.x(lb.java:1225)
+	at com.ibm.db2.jcc.am.lb.v(lb.java:1211)
+	at com.ibm.db2.jcc.am.lb.close(lb.java:1195)
+	at com.ibm.db2.jcc.uw.UWConnection.close(UWConnection.java:838)
+	at org.apache.solr.handler.dataimport.JdbcDataSource.closeConnection(JdbcDataSource.java:399)
+	at org.apache.solr.handler.dataimport.JdbcDataSource.close(JdbcDataSource.java:390)
+	at org.apache.solr.handler.dataimport.DataConfig$Entity.clearCache(DataConfig.java:173)
+	at org.apache.solr.handler.dataimport.DataConfig.clearCaches(DataConfig.java:331)
+	at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:339)
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:389)
+	at org.apache.solr.handler.dataimport.DataImporter$1.run(DataImporter.java:370)
+
+Well the issue can be solved by invoking a commit or rollback directly before the connection.close() statement. Here is the code snipped of changes I made in JdbcDatasource.java
+
+  private void closeConnection()  {
+    try {
+      if (conn != null) {
+
+    	if (conn.isReadOnly())
+		
+{
+			LOG.info("connection is readonly, therefore rollback");
+			conn.rollback();
+		}
+ else
+		{
+			LOG.info("connection is not readonly, therefore commit");
+			conn.commit();
+		}
+
+        conn.close();
+      }
+    } catch (Exception e) 
+{
+      LOG.error("Ignoring Error when closing connection", e);
+    }
+  }

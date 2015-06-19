@@ -1,0 +1,4 @@
+Covers:
+TestMultiQueryLocal
+TestPOPartialAggPlan
+TestStore

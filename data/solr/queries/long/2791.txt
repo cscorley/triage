@@ -1,0 +1,4 @@
+If I start replication by issuing a "fetchindex" command with a "masterUrl" parameter, it seems to me (by looking at the trunk code) that "abortfetch" command would not do anything. 
+It appears to be aborting only when replication is configured with hardcoded master/slave cores.
+
+The fix appears to be to use tempSnapPuller.abortPull always because tempSnapPuller is always the snap puller doing the actual work. 

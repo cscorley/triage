@@ -1,0 +1,1 @@
+  We have been instantiating our ObjectRegistryImpl which is wrong and will leak memory. It was a copy from hive code in the beginning and I think lot has changed in Tez after that and we have missed it. We also need to expose the ObjectRegistry to users so that they can cache their own stuff for IndexedLoadFunc implementations.

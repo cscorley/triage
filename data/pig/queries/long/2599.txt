@@ -1,0 +1,3 @@
+Switch Pig build system from ant to maven.
+
+This is a candidate project for Google summer of code 2014. More information about the program can be found at https://cwiki.apache.org/confluence/display/PIG/GSoc2014

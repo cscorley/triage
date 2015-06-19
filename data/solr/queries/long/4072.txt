@@ -1,0 +1,8 @@
+If you don't include both the collection and confname when doing a linkconfig, it shows you an incorrect error message stating that the CONFDIR is required for linkconfig.  That should be changed to COLLECTION.  The incorrect code is below.
+
+else if (line.getOptionValue(CMD).equals(LINKCONFIG)) {
+          if (!line.hasOption(COLLECTION) || !line.hasOption(CONFNAME)) {
+            System.out.println("-" +  CONFDIR  + " and -" + CONFNAME
+                + " are required for " + LINKCONFIG);
+            System.exit(1);
+          }

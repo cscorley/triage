@@ -1,0 +1,3 @@
+Running `bin/zkServer.sh start` from a freshly-built copy of trunk fails if the source code is checked-out to a directory with spaces in the name. I'll include a small fix to fix this problem.
+
+thanks!

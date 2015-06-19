@@ -1,0 +1,7 @@
+Currently LuceneTaxonomyReader does not support NRT - i.e., on changes to LuceneTaxonomyWriter, you cannot have the reader updated, like IndexReader/Writer. In order to do that we need to do the following:
+
+
+	Add ctor to LuceneTaxonomyReader to allow you to instantiate it with LuceneTaxonomyWriter.
+	Add API to LuceneTaxonomyWriter to expose its internal IndexReader
+	Change LTR.refresh() to return an LTR, rather than void. This is actually not strictly related to that issue, but since we'll need to modify refresh() impl, I think it'll be good to change its API as well. Since all of facet API is @lucene.experimental, no backwards issues here (and the sooner we do it, the better).
+

@@ -1,0 +1,17 @@
+IndexWriter.addIndexes(IndexReader) needs some improvements:
+
+
+	It falsely states that this method blocks any add/delete documents attempts.
+
+
+
+
+	It merges all input IndexReaders at once, and not e.g. like MergePolicy does at mergeFactor steps. Therefore I think it'd be good to clarify it to the user, and also encourage him to call this method several times if he has many IndexReaders to merge.
+	
+		And while at it, mentioning that the IR can be opened with termIndexInterval=-1 since we don't need it during merge will be good – saves RAM.
+	
+	
+
+
+
+I'll attach a patch shortly.

@@ -1,0 +1,1 @@
+POValueInputTez should handle getNextTuple even after reader.next() returns null

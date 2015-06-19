@@ -1,0 +1,8 @@
+When a socket connection is established, in ZooKeeperServer, it would print logs:
+
+"Established session 0x$(session) with negotiated timeout $(timeout) for client: $(client_hostport)"
+
+However, in client, it would only print the server address:
+"Socket connection established to $(server_hostport), initiating session"
+
+It would be nice to log client local address when socket connection established. Because clients will reconnect and ports is randomly assigned. We can better associate these addresses in this way.

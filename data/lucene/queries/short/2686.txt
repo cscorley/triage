@@ -1,0 +1,1 @@
+DisjunctionSumScorer should not call .score on sub scorers until consumer calls .score

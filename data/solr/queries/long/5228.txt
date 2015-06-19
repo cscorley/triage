@@ -1,0 +1,9 @@
+On the solr-user mailing list, Nutan recently mentioned spending days trying to track down a problem that turned out to be because he had attempted to add a <dynamicField .. /> that was outside of the <fields> block in his schema.xml – Solr was just silently ignoring it.
+
+We have made improvements in other areas of config validation by generating statup errors when tags/attributes are found that are not expected – but in this case i think we should just stop expecting/requiring that the <fields> and <types> tags will be used to group these sorts of things.  I think schema.xml parsing should just start ignoring them and only care about finding the <field>, <dynamicField>, and <fieldType> tags wherever they may be.
+
+If people want to keep using them, fine.  If people want to mix fieldTypes and fields side by side (perhaps specify a fieldType, then list all the fields using it) fine.  I don't see any value in forcing people to use them, but we definitely shouldn't leave things the way they are with otherwise perfectly valid field/type declarations being silently ignored.
+
+—
+
+I'll take this on unless i see any objections.

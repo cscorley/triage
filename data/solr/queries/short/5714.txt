@@ -1,0 +1,1 @@
+You should be able to use one pool of memory for multiple collection's HDFS block caches.

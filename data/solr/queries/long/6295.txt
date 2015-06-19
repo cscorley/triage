@@ -1,0 +1,29 @@
+This happened in Solr land in the SolrExampleStreamingTest.testChildDoctransformer
+
+https://builds.apache.org/job/Lucene-Solr-Maven-4.x/665/
+
+
+327371 T810 oejs.ServletHandler.doHandle WARN Error for /solr/collection1/select java.lang.AssertionError
+	at org.apache.lucene.search.join.ToChildBlockJoinQuery$ToChildBlockJoinScorer.advance(ToChildBlockJoinQuery.java:286)
+	at org.apache.lucene.search.FilteredQuery$LeapFrogScorer.advanceToNextCommonDoc(FilteredQuery.java:274)
+	at org.apache.lucene.search.FilteredQuery$LeapFrogScorer.nextDoc(FilteredQuery.java:286)
+	at org.apache.lucene.search.Weight$DefaultBulkScorer.scoreAll(Weight.java:192)
+	at org.apache.lucene.search.Weight$DefaultBulkScorer.score(Weight.java:163)
+	at org.apache.lucene.search.BulkScorer.score(BulkScorer.java:35)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:621)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:297)
+	at org.apache.solr.search.SolrIndexSearcher.buildAndRunCollectorChain(SolrIndexSearcher.java:209)
+	at org.apache.solr.search.SolrIndexSearcher.getDocListNC(SolrIndexSearcher.java:1619)
+	at org.apache.solr.search.SolrIndexSearcher.getDocListC(SolrIndexSearcher.java:1433)
+	at org.apache.solr.search.SolrIndexSearcher.search(SolrIndexSearcher.java:514)
+	at org.apache.solr.search.SolrIndexSearcher.getDocList(SolrIndexSearcher.java:1268)
+	at org.apache.solr.response.transform.ChildDocTransformer.transform(ChildDocTransformerFactory.java:144)
+	at org.apache.solr.response.TextResponseWriter.writeDocuments(TextResponseWriter.java:252)
+	at org.apache.solr.response.TextResponseWriter.writeVal(TextResponseWriter.java:170)
+	at org.apache.solr.response.XMLWriter.writeResponse(XMLWriter.java:112)
+	at org.apache.solr.response.XMLResponseWriter.write(XMLResponseWriter.java:40)
+	at org.apache.solr.servlet.SolrDispatchFilter.writeResponse(SolrDispatchFilter.java:765)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:426)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:207)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+

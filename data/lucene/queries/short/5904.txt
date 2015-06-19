@@ -1,0 +1,1 @@
+Add MDW.enableVirusScanner / fix windows handling bugs

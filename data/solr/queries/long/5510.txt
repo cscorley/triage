@@ -1,0 +1,20 @@
+See this for some more details https://gist.github.com/serba/1fe113e78ae7e01a4f58
+
+This is a regression caused by SOLR-5311
+
+There are two reasons why a core does not have a reference in clusterstate
+
+	It is starting up for the first time (core creation)
+	Somebody invoked a DELETEREPLICA when the node itself was down
+
+
+
+we neded to differentiate these two because for 1) the registration should succeed and for #2 the registration should fail
+
+The only way to do that was to check for the presence of the attribute coreNodeName in the core.properties. In case #1 it would be absent and in case#2 it would be present
+
+but when genericCoreNodeNames="$
+{genericCoreNodeNames:false}
+"
+
+ZkController#getCoreNodeName(getCoreNodeName) behaves similarly for both the cases and hence the failure

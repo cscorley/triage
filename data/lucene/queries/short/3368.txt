@@ -1,0 +1,1 @@
+IndexWriter commits update documents without corresponding delete

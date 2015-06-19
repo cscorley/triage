@@ -1,0 +1,1 @@
+There are changes made in Pig interfaces which break zebra loaders/storers. It would be good to run the pig tests in the zebra unit tests as part of running pig's core-test for each patch submission. So essentially in the "test" ant target in pig, we would need to invoke zebra's "pigtest" target.

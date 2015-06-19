@@ -1,0 +1,1 @@
+Shading library in BOOKKEEPER-708 introduces an unlicensed pom file for bookkeeper-server module. we should address this, otherwise we could not publish the new jar per apache release procedure.

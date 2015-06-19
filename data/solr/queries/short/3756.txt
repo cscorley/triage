@@ -1,0 +1,1 @@
+If we are elected the leader of a shard, but we fail to publish this for any reason, we should clean up and re trigger a leader election.

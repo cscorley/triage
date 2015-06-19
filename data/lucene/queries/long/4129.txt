@@ -1,0 +1,5 @@
+We did this for all other files, but not .frq/.prx.
+
+Currently the postings writer only records itself in the blocktree terms dictionary, which is fine, but thats really documenting the .tim itself, that it is "Blocktree with Lucene40Postings metadata".
+
+I think we should put headers in .frq/.prx as well: e.g. it could detect file jumbling.

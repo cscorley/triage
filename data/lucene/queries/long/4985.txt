@@ -1,0 +1,3 @@
+Spinoff from LUCENE-4980, where we added a strange class called RangeFacetsAccumulatorWrapper, which takes an incoming FSP, splits out the FacetRequests into range and non-range, delegates to two accumulators for each set, and then zips the results back together in order.
+
+Somehow we should generalize this class and make it work with SortedSetDocValuesAccumulator as well.

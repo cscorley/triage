@@ -1,0 +1,1 @@
+pig trunk compilation is broken - VertexManagerPluginContext.reconfigureVertex change

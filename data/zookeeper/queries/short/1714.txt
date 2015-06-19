@@ -1,0 +1,1 @@
+perl client segfaults if ZOO_READ_ACL_UNSAFE constant is used

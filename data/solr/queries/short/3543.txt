@@ -1,0 +1,1 @@
+JavaBinLoader catches (and logs) exceptions and the (solrj)client has no idea that an update failed

@@ -1,0 +1,1 @@
+SOLR-3367 brought the need for more available space for the content-area, we should move the used sub-navigation to the left navigation panel. function follows the current handling for all the core-areas we already have (lower part of the left navigation)

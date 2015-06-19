@@ -1,0 +1,1 @@
+The CSV Update handler throws an exception if a field doesn't exist.  Given the new schemaless stuff, we probably shouldn't do this.

@@ -1,0 +1,7 @@
+BBoxStrategy needs better tests before I'm comfortable seeing it in 4x.  Specifically it should use random rectangles based validation (ones that may cross the dateline), akin to the other tests.  And I think I see an equals/hashcode bug to be fixed in there too.
+
+One particular thing I'd like to see added is how to handle a zero-area case for AreaSimilarity.  I think an additional feature in which you declare a minimum % area (relative to the query shape) would be good.
+
+It should be possible for the user to combine rectangle center-point to query shape center-point distance sorting as well.  I think it is but I need to make sure it's possible without having to index a separate center point field.
+
+Another possibility (probably not to be addressed here) is a minimum ratio between width/height, perhaps 10%.  A long but nearly no height line should not be massively disadvantaged relevancy-wise to an equivalently long diagonal road that has a square bbox.

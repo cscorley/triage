@@ -1,0 +1,1 @@
+query is always null in countDocsWithClass() of SimpleNaiveBayesClassifier

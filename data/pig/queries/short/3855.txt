@@ -1,0 +1,1 @@
+Turn on UnionOptimizer by default and add new e2e tests for union

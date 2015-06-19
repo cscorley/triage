@@ -1,0 +1,1 @@
+Logic to process INFORMANDACTIVATE packets in syncWithLeader seems bogus

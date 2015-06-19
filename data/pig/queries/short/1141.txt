@@ -1,0 +1,1 @@
+Make streaming work with the new load-store interfaces 

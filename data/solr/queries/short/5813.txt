@@ -1,0 +1,1 @@
+Creating a SolrCore with a collection name of empty string should fail nicely in SolrCloud mode.

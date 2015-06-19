@@ -1,0 +1,7 @@
+Spinoff from LUCENE-5616.
+
+See the example there, docvalues readers get a fieldinfos, but it doesn't contain the correct ones, so they have invalid field numbers at read time.
+
+This should really be fixed. Maybe a simple solution is to not write "batches" of fields in updates but just have only one field per gen? 
+
+This removes many-many relationships and would make things easy to understand.

@@ -1,0 +1,1 @@
+Building toursdb would go a little faster if it used autocommit off mode.

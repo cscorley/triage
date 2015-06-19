@@ -1,0 +1,7 @@
+Spun off from SOLR-3591...
+
+
+	having no SolrCores is a valid situation
+	independent of what may happen in SOLR-3591, the web UI should cleanly deal with there being no SolrCores, and just hide/grey out any tabs that can't be supported w/o at least one core
+	even if there are no SolrCores the core admin features (ie: creating a new core) should be accessible in the UI
+

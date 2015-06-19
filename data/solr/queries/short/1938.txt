@@ -1,0 +1,1 @@
+make ElisionFilterFactory user-friendly

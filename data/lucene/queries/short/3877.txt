@@ -1,0 +1,1 @@
+Lucene should not call System.out.println

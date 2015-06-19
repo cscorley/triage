@@ -1,0 +1,26 @@
+It would be nice if, at the end of running ant test, it spit out the names of which tests failed so that one doesn't have to go scrolling up through the output or go run grep on the test-reports as a separate step.
+
+For another project, I use:
+
+
+<target name="test-summary">
+    <echo>Looking for summaries in: ${build.dir}/test-reports with basedir: ${basedir}</echo>
+    <echo>Errors:</echo>
+    <exec executable="grep">
+            <arg value="-r"/>
+            <arg value="-rl"/>
+            <arg value="errors=\&quot;[1-9]\&quot;"/>
+            <arg value="${build.dir}/test-reports"/>
+    </exec>
+    <echo>Failures:</echo>
+    <exec executable="grep">
+            <arg value="-r"/>
+            <arg value="-rl"/>
+            <arg value="failures=\&quot;[1-9]\&quot;"/>
+            <arg value="${build.dir}/test-reports"/>
+    </exec>
+  </target>
+
+ 
+
+which can likely be modified for Lucene.  I can do it, but wanted to see if others had an opinion.

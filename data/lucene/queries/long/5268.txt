@@ -1,0 +1,9 @@
+In LUCENE-5123, we added a new, more flexible, "pull" API for writing
+postings.  This API allows the postings format to iterate the
+fields/terms/postings more than once, and mirrors the API for writing
+doc values.
+
+But that was just the first step (only SimpleText was cutover to the
+new API).  I want to cutover more components, so we can (finally)
+e.g. play with different encodings depending on the term's postings,
+such as using a bitset for high freq DOCS_ONLY terms (LUCENE-5052).

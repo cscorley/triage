@@ -1,0 +1,1 @@
+GroupingSearcher.setAllGroups(true) always returns count 0

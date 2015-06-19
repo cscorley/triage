@@ -1,0 +1,14 @@
+If visitSkewedJoin is not implemented, following unittests will fail.
+org.apache.pig.test.TestSkewedJoin.testSkewedJoinWithGroup
+org.apache.pig.test.TestSkewedJoin.testSkewedJoinMapKey
+org.apache.pig.test.TestSkewedJoin.testSkewedJoinManyReducers
+org.apache.pig.test.TestSkewedJoin.testNonExistingInputPathInSkewJoin
+org.apache.pig.test.TestSkewedJoin.testSkewedJoinOneValue
+org.apache.pig.test.TestSkewedJoin.testSkewedJoinWithNoProperties
+org.apache.pig.test.TestSkewedJoin.testSkewedJoinEmptyInput
+org.apache.pig.test.TestSkewedJoin.testSkewedJoinNullKeys
+org.apache.pig.test.TestSkewedJoin.testSkewedJoinOuter
+org.apache.pig.test.TestSkewedJoin.testRecursiveFileListing
+org.apache.pig.test.TestSkewedJoin.testSkewedJoinReducers
+org.apache.pig.test.TestJoinSmoke.testSkewedJoinWithGroup
+org.apache.pig.test.TestJoinSmoke.testSkewedJoinOuter

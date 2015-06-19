@@ -1,0 +1,59 @@
+Using Bigtop or other RPM build for Zookeeper, there is a problem with using the hyphen '-' character in the version string:
+
+[bigdata@bdvs1166 bigtop]$ gradle zookeeper-rpm
+:buildSrc:compileJava UP-TO-DATE
+:buildSrc:compileGroovy UP-TO-DATE
+:buildSrc:processResources UP-TO-DATE
+:buildSrc:classes UP-TO-DATE
+:buildSrc:jar UP-TO-DATE
+:buildSrc:assemble UP-TO-DATE
+:buildSrc:compileTestJava UP-TO-DATE
+:buildSrc:compileTestGroovy UP-TO-DATE
+:buildSrc:processTestResources UP-TO-DATE
+:buildSrc:testClasses UP-TO-DATE
+:buildSrc:test UP-TO-DATE
+:buildSrc:check UP-TO-DATE
+:buildSrc:build UP-TO-DATE
+:zookeeper_vardefines
+:zookeeper-download
+:zookeeper-tar
+Copy /home/bigdata/bigtop/dl/zookeeper-3.4.6-IBM-1.tar.gz to /home/bigdata/bigtop/build/zookeeper/tar/zookeeper-3.4.6-IBM-1.tar.gz
+:zookeeper-srpm
+error: line 64: Illegal char '-' in: Version: 3.4.6-IBM-1
+:zookeeper-srpm FAILED
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Script '/home/bigdata/bigtop/packages.gradle' line: 462
+
+* What went wrong:
+Execution failed for task ':zookeeper-srpm'.
+> Process 'command 'rpmbuild'' finished with non-zero exit value 1
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+
+
+Also, according to the rpm-maven-plugin documentation:
+
+
+version
+The version number to use for the RPM package. By default, this is the project version. This value cannot contain a dash (-) due to contraints in the RPM file naming convention. Any specified value will be truncated at the first dash
+
+release
+The release number of the RPM.
+Beginning with release 2.0-beta-2, this is an optional parameter. By default, the release will be generated from the modifier portion of the project version using the following rules:
+If no modifier exists, the release will be 1.
+If the modifier ends with SNAPSHOT, the timestamp (in UTC) of the build will be appended to end.
+All instances of '-' in the modifier will be replaced with '_'.
+If a modifier exists and does not end with SNAPSHOT, "_1" will be appended to end.
+
+
+
+
+We should allow underscore '_' as part of the version string. e.g. 
+3.4.6_abc_1

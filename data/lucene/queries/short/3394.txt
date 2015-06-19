@@ -1,0 +1,1 @@
+TestIndexFileDeleter checkIndex fail

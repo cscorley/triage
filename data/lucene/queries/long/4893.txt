@@ -1,0 +1,10 @@
+In lucene 4.1, only StandardFacetsAccumulator could be instantiated.
+And as of lucene 4.2, it became possible to instantiate FacetsAccumulator.
+
+I invoked FacetsCollector.getFacetResults twice, and I saw doubled facet counts.
+If I invoke it three times, I see facet counts multiplied three times.
+It all happens in FacetsAccumulator.accumulate.
+
+StandardFacetsAccumulator doesn't have this bug since it frees facetArrays whenever StandardFacetsAccumulator.accumulate is called.
+
+Is it a feature or a bug?

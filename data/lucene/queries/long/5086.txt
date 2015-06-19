@@ -1,0 +1,29 @@
+Yea, that type of day and that type of title .
+
+Since the last update of Java 6 on OS X, I started to see an annoying icon pop up at the doc whenever running elasticsearch. By default, all of our scripts add headless AWT flag so people will probably not encounter it, but, it was strange that I saw it when before I didn't.
+
+I started to dig around, and saw that when RamUsageEstimator was being loaded, it was causing AWT classes to be loaded. Further investigation showed that actually for some reason, calling ManagementFactory#getPlatformMBeanServer now with the new Java version causes AWT classes to be loaded (at least on the mac, haven't tested on other platforms yet). 
+
+There are several ways to try and solve it, for example, by identifying the bug in the JVM itself, but I think that there should be a fix for it in Lucene itself, specifically since there is no need to call #getPlatformMBeanServer to get the hotspot diagnostics one (its a heavy call...).
+
+Here is a simple call that will allow to get the hotspot mxbean without using the #getPlatformMBeanServer method, and not causing it to be loaded and loading all those nasty AWT classes:
+
+
+
+    Object getHotSpotMXBean() {
+        try {
+            // Java 6
+            Class sunMF = Class.forName("sun.management.ManagementFactory");
+            return sunMF.getMethod("getDiagnosticMXBean").invoke(null);
+        } catch (Throwable t) {
+            // ignore
+        }
+        // potentially Java 7
+        try {
+            return ManagementFactory.class.getMethod("getPlatformMXBean", Class.class).invoke(null, Class.forName("com.sun.management.HotSpotDiagnosticMXBean"));
+        } catch (Throwable t) {
+            // ignore
+        }
+        return null;
+    }
+

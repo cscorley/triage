@@ -1,0 +1,1 @@
+build-20news-bayes.sh doesn't work when downloading content

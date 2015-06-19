@@ -1,0 +1,1 @@
+Include maven-ant-tasks jar in the source tree and use this jar from generate-maven-artifacts

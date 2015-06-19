@@ -1,0 +1,9 @@
+Today we only use BooleanScorer if the query consists of SHOULD and MUST_NOT.
+
+If there is one or more MUST clauses we always use BooleanScorer2.
+
+But I suspect that unless the MUST clauses have very low hit count compared to the other clauses, that BooleanScorer would perform better than BooleanScorer2.  BooleanScorer still has some vestiges from when it used to handle MUST so it shouldn't be hard to bring back this capability ... I think the challenging part might be the heuristics on when to use which (likely we would have to use firstDocID as proxy for total hit count).
+
+Likely we should also have BooleanScorer sometimes use .advance() on the subs in this case, eg if suddenly the MUST clause skips 1000000 docs then you want to .advance() all the SHOULD clauses.
+
+I won't have near term time to work on this so feel free to take it if you are inspired!

@@ -1,0 +1,12 @@
+We should create a backup file for a static or dynamic configuration file before changing the file. 
+
+Since the static file is changed at most twice (once when removing the ensemble definitions, at which point a dynamic file doesn't exist yet, and once when removing clientPort information) its probably fine to back up the static file independently from the dynamic file. 
+
+To track backup history:
+
+Option 1: we could have a .bakXX extention for backup where XX is a  sequence number. 
+
+Option 2: have the configuration version be part of the file name for dynamic configuration files (instead of in the file like now). Such as zoo_replicated1.cfg.dynamic.1000000 then on reconfiguration simply create a new dynamic file (with new version) and update the link in the static file to point to the new dynamic one.
+
+Review place:
+https://reviews.apache.org/r/24208/

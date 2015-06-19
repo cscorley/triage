@@ -1,0 +1,43 @@
+Certain INSERT INTO statements with multiple subselects insert wrong values, i.e. may lead to data corruption.
+
+Here is a very simple example how to reproduce this bug: Start with a new (empty) Derby database, create 3 tiny tables, and insert two records:
+
+create table m1 (k varchar(64), s decimal);
+create table m2 (k varchar(64), s decimal);
+create table v (s decimal);
+
+insert into m1 values ('Bug', 2015);
+insert into m2 values ('Bug', 1957);
+
+Now, the following (likewise simple) select
+
+select res.* from (select d2.s from m1
+left join (select k,s from m2) as d2 on m1.k=d2.k) as res
+
+yields 1957, of course. - Of course? Not entirely: If I add an INSERT INTO to that select, i.e.
+
+insert into v (select res.* from (select d2.s from m1
+left join (select k,s from m2) as d2 on m1.k=d2.k) as res)
+
+then table v contains 1 row (as it should), but in this row s=4,355,431. This value is interesting, because 4355431 = Hex 427567 and 'B' = X42, 'u'=X75, 'g'=X67.
+
+Finally, if I slightly modify the INSERT INTO above as
+
+insert into v (select res.* from (select d2.s*1 from m1
+left join (select k,s from m2) as d2 on m1.k=d2.k) as res)
+
+then it works correct.
+
+This phenomenon arose with every Derby version 10.x I tried (see list above).
+
+Possibly this bug is related to DERBY-6786, where similar INSERT INTOs with subselects appear.
+
+Addendum: There is indeed a close relationship between DERBY-6786 and this one: Let's denote by SQL1 the first INSERT INTO above, by SQL2 the second one, i.e.
+
+SQL1 = insert into v (select res.* from (select d2.s from m1 left join (select k,s from m2) as d2 on m1.k=d2.k) as res)
+SQL2 = insert into v (select res.* from (select d2.s*1 from m1 left join (select k,s from m2) as d2 on m1.k=d2.k) as res)
+
+We further assume that there are exactly 1 record R1 in table M1 and exactly 1 record R2 in table M2, both without NULL-values. Then:
+
+If R1.k is equal to R2.k, then SQL1 -> data corruption, SQL2 -> correct.
+If R1.k is not equal to R2.k, then SQL1 -> correct, SQL2 -> NullPointerException.

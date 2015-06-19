@@ -1,0 +1,1 @@
+Change default value of 'mm' param to depend on explicit/implicit value of q.op

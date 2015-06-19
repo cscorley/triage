@@ -1,0 +1,1 @@
+A facet.query analyzed to a null Query will NPE

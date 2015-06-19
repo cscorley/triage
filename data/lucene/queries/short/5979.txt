@@ -1,0 +1,1 @@
+Use the cost API instead of a heuristic on the first document in FilteredQuery to decide on whether to use random access

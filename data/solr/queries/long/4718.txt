@@ -1,0 +1,30 @@
+So the near-final piece of this puzzle is to make solr.xml be storable in Zookeeper. Code-wise in terms of Solr, this doesn't look very difficult, I'm working on it now.
+
+More interesting is how to get the configuration into ZK in the first place, enhancements to ZkCli? Or boostrap-conf? Other? I'm punting on that for this patch.
+
+Second level is how to tell Solr to get the file from ZK. Some possibilities:
+
+1> A system prop, -DzkSolrXmlPath=blah where blah is the path on zk where the file is. Would require -DzkHost or -DzkRun as well.
+  > pros - simple, I can wrap my head around it.
+
+	easy to script
+  > cons - can't run multiple JVMs pointing to different files. Is this really a problem?
+
+
+
+2> New solr.xml element. Something like:
+<solr>
+  <solrcloud>
+     <str name="zkHost">zkurl</str>
+     <str name="zkSolrXmlPath">whatever</str>
+  </solrcloud>
+<solr>
+   Really, this form would hinge on the presence or absence of zkSolrXmlPath. If present, go up and look for the indicated solr.xml file on ZK. Any properties in the ZK version would overwrite anything in the local copy.
+
+NOTE: I'm really not very interested in supporting this as an option for old-style solr.xml unless it's really easy. For instance, what if the local solr.xml is new-style and the one in ZK is old-style? Or vice-versa? Since old-style is going away, this doesn't seem like it's worth the effort.
+
+pros - No new mechanisms
+cons - once again requires that there be a solr.xml file on each client. Admittedly for installations that didn't care much about multiple JVMs, it could be a stock file that didn't change...
+
+
+For now, I'm going to just manually push solr.xml to ZK, then read it based on a sysprop. That'll get the structure in place while we debate. Not going to check this in until there's some consensus though.

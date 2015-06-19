@@ -1,0 +1,1 @@
+While using the composite-id router, if the routing-id contains a "/" in the id part, the code throws an ArrayIndexOutOfBoundsException.

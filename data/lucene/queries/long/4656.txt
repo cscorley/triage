@@ -1,0 +1,1 @@
+TestRandomChains can fail because EmptyTokenizer doesn't have a CharTermAttribute and doesn't compute the end offset (if the offset attribute was added by a filter).

@@ -1,0 +1,1 @@
+The collections API should return responses (sucess or failure) for each node it attempts to work with.

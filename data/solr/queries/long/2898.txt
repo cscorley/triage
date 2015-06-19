@@ -1,0 +1,1 @@
+Support grouped faceting. As described in LUCENE-3097 (matrix counts).

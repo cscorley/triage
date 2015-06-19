@@ -1,0 +1,1 @@
+NullPointerException when using spellcheck.q

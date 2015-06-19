@@ -1,0 +1,1 @@
+Avoid NegativeArraySizeException in DocToDoubleVectorUtils

@@ -1,0 +1,14 @@
+With our without a repro seed, SyncSliceTest is failing all the time for me:
+
+
+   [junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=SyncSliceTest -Dtests.method=testDistribSearch -Dtests.seed=2CA4CC8B262333A5 -Dtests.slow=true -Dtests.locale=es_HN -Dtests.timezone=America/Sitka -Dtests.file.encoding=UTF-8
+   [junit4] FAILURE 62.7s | SyncSliceTest.testDistribSearch <<<
+   [junit4]    > Throwable #1: java.lang.AssertionError: expected:<5> but was:<4>
+   [junit4]    > 	at __randomizedtesting.SeedInfo.seed([2CA4CC8B262333A5:AD424293517C5399]:0)
+   [junit4]    > 	at org.apache.solr.cloud.SyncSliceTest.doTest(SyncSliceTest.java:176)
+   [junit4]    > 	at org.apache.solr.BaseDistributedSearchTestCase.testDistribSearch(BaseDistributedSearchTestCase.java:869)
+   [junit4]    > 	at java.lang.Thread.run(Thread.java:745)
+
+
+
+Also, see today's Policeman Jenkins failure: http://jenkins.thetaphi.de/job/Lucene-Solr-trunk-Linux/11231/

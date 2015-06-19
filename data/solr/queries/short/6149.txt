@@ -1,0 +1,1 @@
+Analysis browser not working in solr 4.8.1

@@ -1,0 +1,3 @@
+In a simple JPQL with left join fetch for a lazy loaded association specified and data cached enabled, first time the query executed, the lazy loaded association get loaded, returned and cached. Subsequent invocation of the same query does NOT "load" and return the association from the query invocation.
+
+I'll attach a test case to reproduce the problem.

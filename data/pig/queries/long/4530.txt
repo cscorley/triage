@@ -1,0 +1,6 @@
+If you run the command ant -Djavac.args="-Xlint -Xmaxwarns 1000" clean jar test-commit
+as indicated here https://cwiki.apache.org/confluence/display/PIG/HowToContribute
+
+The result is a failed build caused by Stack overflow due to an unintended infinite recursion in setting up the MiniCluster.
+
+It looks like the cause is that  shims/test/hadoop20/org/apache/pig/test/MiniCluster.java does not override the static public Launcher getLauncher() method.

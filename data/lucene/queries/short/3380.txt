@@ -1,0 +1,1 @@
+enable FileSwitchDirectory randomly in tests and fix compound-file/NoSuchDirectoryException bugs

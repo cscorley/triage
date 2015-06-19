@@ -1,0 +1,1 @@
+Creating a core while referencing system properties looks like it loses files.

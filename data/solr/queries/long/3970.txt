@@ -1,0 +1,9 @@
+The admin dashboard shows the following for "Runtime" under "JVM" but it is incomplete.  Unless you are intimately familiar with the correlation between HotSpot version numbers and Java version numbers, you can't look at this and know what version of Oracle Java is being used.
+
+Java HotSpot(TM) 64-Bit Server VM (23.3-b01)
+
+The complete version output (from java -version) on this system is this:
+
+java version "1.7.0_07"
+Java(TM) SE Runtime Environment (build 1.7.0_07-b10)
+Java HotSpot(TM) 64-Bit Server VM (build 23.3-b01, mixed mode)

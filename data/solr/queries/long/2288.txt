@@ -1,0 +1,12 @@
+there's a ton of compiler warning in the solr tree, and it's high time we cleaned them up, or annotate them to be suppressed so we can start making a bigger stink when/if code is added to the tree thta produces warnings (we'll never do a good job of noticing new warnings when we have ~175 existing ones)
+
+Using this issue to track related commits
+
+The goal of this issue should not be to change any functionality or APIs, just deal with each warning in the most appropriate way;
+
+
+	fix generic declarations
+	add SuppressWarning anotation if it's safe in context
+
+
+

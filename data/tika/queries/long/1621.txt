@@ -1,0 +1,1 @@
+I ran into a problem in tika-python that took me a while to track down - I was passing a full file path as Content-Disposition instead of just the file name. The reason it was so hard to track down was that we swallow the error in TikaResource if there is an issue determining the attachment and disposition, etc. I'd like to simply print the exception and stack trace.

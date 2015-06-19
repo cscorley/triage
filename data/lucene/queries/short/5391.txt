@@ -1,0 +1,1 @@
+UAX29URLEmailTokenizer should not tokenize no-scheme domain-only URLs that are followed by an alphanumeric character

@@ -1,0 +1,1 @@
+Schema-Browser hangs because of similarity

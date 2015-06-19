@@ -1,0 +1,3 @@
+I'll also fix buildAndPushRelease so it can push to a local URL; this way at any time we can build, push to local staging, and run smoke tester on it, and hopefully nothing fails...
+
+But really any tests in smoke tester should ideally be pushed back earlier in our dev process (into jenkins, into "ant test").

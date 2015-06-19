@@ -1,0 +1,11 @@
+The following constructor of SolrIndexSearcher doesn't use 'config'.
+
+SolrIndexSearcher
+
+public SolrIndexSearcher(SolrCore core, String path, IndexSchema schema, SolrIndexConfig config, String name, DirectoryReader r, boolean closeReader, boolean enableCache, boolean reserveDirectory, DirectoryFactory directoryFactory)
+
+
+
+It doesn't make sense to pass in the SolrIndexConfig when we're passing in the DirectoryReader (and asserting that it's never null). Prior to LUCENE-5666, when 'r' was null, the config was used to get a reader but not any more.
+
+I'll just remove the param from the constructor and remove it from all places that calls this version of the constructor.

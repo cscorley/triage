@@ -1,0 +1,3 @@
+If there are only delete by term and no document adds, then IndexWriter.hasUncommittedChanges() returns false.
+
+http://lucene.472066.n3.nabble.com/Solr-4-4-Master-Slave-configuration-Replication-Issue-with-Commits-after-deleting-documents-using-DeD-td4094158.html

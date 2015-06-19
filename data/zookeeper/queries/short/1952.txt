@@ -1,0 +1,1 @@
+Default log directory and file name can be changed

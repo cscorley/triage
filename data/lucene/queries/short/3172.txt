@@ -1,0 +1,1 @@
+installation problems on lucene-misc OSGI bundle

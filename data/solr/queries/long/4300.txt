@@ -1,0 +1,3 @@
+Yonik pointed out in SOLR-1028 that there is a possible race condition here, he's right not to my surprise. Calling it a "blocker" for now so we make a decision on it rather than let it fall through the cracks. I should be able to get a patch up tonight (Sunday).
+
+That said, there's potential here to introduce deadlocks, is it worth rushing into 4.1?

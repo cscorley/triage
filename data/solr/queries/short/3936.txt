@@ -1,0 +1,1 @@
+QueryElevationComponent: Wrong order when result grouping is activated

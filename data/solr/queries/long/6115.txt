@@ -1,0 +1,5 @@
+The enum/string handling for actions in Overseer and OCP is a mess. We should fix it.
+
+From: https://issues.apache.org/jira/browse/SOLR-5466?focusedCommentId=13918059&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13918059
+
+I started to untangle the fact that we have all the strings in OverseerCollectionProcessor, but also have a nice CollectionAction enum. And the commands are intermingled with parameters, it all seems rather confusing. Does it make sense to use the enum rather than the strings? Or somehow associate the two? Probably something for another JIRA though...

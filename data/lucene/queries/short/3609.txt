@@ -1,0 +1,1 @@
+BooleanFilter changed behavior in 3.5, no longer acts as if "minimum should match" set to 1

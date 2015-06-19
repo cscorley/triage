@@ -1,0 +1,1 @@
+zkServer.sh is missing nohup/sleep, which are necessary for remote invocation

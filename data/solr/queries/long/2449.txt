@@ -1,0 +1,1 @@
+Currently, Carrot2 clustering algorithms read linguistic resources (stop words, stop labels) from the classpath (Carrot2 JAR), which makes them difficult to edit/override. The directory from which Carrot2 should read its resources (absolute, or relative to Solr config dir) could be specified in the engine element. By default, the path could be e.g. <solr.conf>/clustering/carrot2.

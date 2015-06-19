@@ -1,0 +1,27 @@
+Network Server should not use the underlying embedded 
+Prepared statement when accessing a BrokeredPreparedStatement.
+
+In DERBY-1025 Dan pointed out this code which while not related to DERBY-1025 does appear to be a problem. Here is his comment regarding this code in DRDAStatement:
+
+
+ /**
+
+	Get prepared statement
+*
+	@return prepared statement
+*/
+protected PreparedStatement getPreparedStatement() throws SQLException
+{
+if (ps instanceof BrokeredPreparedStatement)
+return (PreparedStatement)(
+((BrokeredPreparedStatement) ps).getStatement());
+else
+return ps;
+}
+
+
+
+
+This code, for some unknown reason due to lack of comments, is getting the underlying embedded statement
+from a BrokeredPreparedStatement. This should not be allowed, the BrokeredStatement wrappers are there to
+hide the embedded statement object as it can change under the covers of the wrapper.

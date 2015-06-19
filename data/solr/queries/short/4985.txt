@@ -1,0 +1,1 @@
+solrconfig for hdfs example has wrong lucene match version in trunk

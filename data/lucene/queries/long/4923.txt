@@ -1,0 +1,3 @@
+LUCENE-4571 added a MinShouldMatchScorer: capable of using advance() on subscorers for minShouldMatch > 1. 
+
+However, we didn't yet cleanup the (now dead) minShouldMatch logic from DisjunctionSumScorer: which is now only used for pure disjunctions. This can also give some reasonable performance improvements for in-order collection.

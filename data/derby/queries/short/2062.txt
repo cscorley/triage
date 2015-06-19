@@ -1,0 +1,1 @@
+Need to filter out this line from the output with jcc 2.6.90. DB2ConnectionCorrelator: NF000001.GDBA.010EB568BF46

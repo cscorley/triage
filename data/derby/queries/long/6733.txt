@@ -1,0 +1,1 @@
+Add an MBean that allows users to monitor Derby's CacheFactory instances, as discussed in DERBY-5772.

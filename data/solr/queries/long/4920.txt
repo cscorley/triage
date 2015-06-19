@@ -1,0 +1,5 @@
+JdbcDataSource will incorrectly suppress exceptions when retrieving a connection from a JNDI context and fall back to trying to use DriverManager to obtain a connection. This makes it impossible to troubleshoot misconfigured JNDI DataSource.
+
+Additionally, when a SQLException is thrown while initializing a connection, such as in setAutoCommit(), the connection will not be closed. This can cause a resource leak.
+
+A patch will be attached with unit tests that addresses both issues.

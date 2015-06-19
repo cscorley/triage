@@ -1,0 +1,1 @@
+A query with LEFT FETCH JOIN returns incorrect results.

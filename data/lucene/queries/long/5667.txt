@@ -1,0 +1,12 @@
+I tested different UUID sources in Lucene
+http://blog.mikemccandless.com/2014/05/choosing-fast-unique-identifier-uuid.html
+and I was surprised to see that Flake IDs were slower than UUID V1.
+They use the same raw sources of info (timestamp, node id, sequence
+counter) but Flake ID preserves total order by keeping the timestamp
+"intact" in the leading 64 bits.
+
+I think the reason might be because a Flake ID will typically have a
+longish common prefix for all docs, and I think we might be able to
+optimize this in block-tree by storing that common prefix outside of
+the FST, or maybe just pre-computing the common prefix on init and
+storing the "effective" start node for the FST.

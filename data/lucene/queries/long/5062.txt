@@ -1,0 +1,1 @@
+If the spatial data for a document is comprised of multiple overlapping or adjacent parts, it might fail to match a query shape when doing the CONTAINS predicate when the sum of those shapes contain the query shape but none do individually.

@@ -1,0 +1,1 @@
+investigate solr test failures using flex

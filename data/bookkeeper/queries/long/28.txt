@@ -1,0 +1,4 @@
+hedwig's current startup script is messy. bookkeeper doesn't even have one. They should be created before initial release 
+
+bookkeeper-server/bin/bookkeeper
+hedwig-server/bin/hedwig

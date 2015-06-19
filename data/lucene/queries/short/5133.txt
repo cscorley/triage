@@ -1,0 +1,1 @@
+AnalyzingInfixSuggester should return structured highlighted results instead of single String per result

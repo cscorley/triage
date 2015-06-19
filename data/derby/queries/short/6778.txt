@@ -1,0 +1,1 @@
+SSL tests are failing on 10.8 codeline with IBM jdk 1.4.2 after poodle security backport

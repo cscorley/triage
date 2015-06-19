@@ -1,0 +1,1 @@
+ensure example configuration files have the correct LUCENE_MATCH_VERSION

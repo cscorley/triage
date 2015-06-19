@@ -1,0 +1,1 @@
+Test failures as a result of SOLR-4196

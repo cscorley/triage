@@ -1,0 +1,1 @@
+Hedwig cpp client library should not link to cppunit which is just used for test.

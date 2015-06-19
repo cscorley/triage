@@ -1,0 +1,3 @@
+Currently we auto assign a unique node name based on the host address and core name - we should let the user optionally override this so that a new host address + core name combo can take over the duties of a previous registered node.
+
+Especially useful for ec2 if you are not using elastic ips.

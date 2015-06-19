@@ -1,0 +1,1 @@
+SolrPluginUtils.docListToSolrDocumentList is broken, existing test is also broken

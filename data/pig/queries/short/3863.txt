@@ -1,0 +1,1 @@
+e2e tests run all tests even execonly flag does not match

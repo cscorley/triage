@@ -1,0 +1,9 @@
+Our ivy configuration does this: each dependency is specified and so we know what will happen. Unfortunately the maven setup is not configured the same way.
+
+Instead the maven setup is configured to download the internet: and it excludes certain things specifically.
+
+This is really hard to configure and maintain: we added a 'validate-maven-dependencies' that tries to fail on any extra jars, but all it really does is run a license check after maven "runs". It wouldnt find unnecessary dependencies being dragged in if something else in lucene was using them and thus they had a license file.
+
+Since maven supports wildcard exclusions: MNG-3832, we can disable this transitive shit completely.
+
+We should do this, so its configuration is the exact parallel of ivy.

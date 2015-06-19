@@ -1,0 +1,1 @@
+Most operations in Bookie are taking <1ms. Stats should be collected in nanos , expecially since latencies are already measured in nanos.

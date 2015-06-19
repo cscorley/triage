@@ -1,0 +1,20 @@
+Some TokenFilters have numeric arguments in their constructors. They should throw IllegalArgumentException for negative or meaningless values. 
+
+Here is some examples that demonstrates invalid/meaningless arguments :
+
+
+
+ <filter class="solr.LimitTokenCountFilterFactory" maxTokenCount="-10" />
+
+
+
+
+
+ <filter class="solr.LengthFilterFactory" min="-5" max="-1" />
+
+
+
+
+
+ <filter class="solr.LimitTokenPositionFilterFactory" maxTokenPosition="-3" />
+

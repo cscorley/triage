@@ -1,0 +1,1 @@
+SolrJettyTestBase can no longer be reused by end users

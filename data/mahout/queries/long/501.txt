@@ -1,0 +1,64 @@
+Running 'mahout lucene.vector' results in the following stacktrace:
+
+frank@frankthetank:~$ mahout lucene.vector
+Running on hadoop, using HADOOP_HOME=/home/frank/software/dist/hadoop
+HADOOP_CONF_DIR=/home/frank/software/dist/hadoop/conf
+10/09/13 22:44:43 WARN driver.MahoutDriver: No lucene.vector.props found on classpath, will use command-line arguments only
+10/09/13 22:44:43 ERROR lucene.Driver: Exception
+org.apache.commons.cli2.OptionException: Missing required option --dir
+        at org.apache.commons.cli2.option.DefaultOption.validate(DefaultOption.java:172)
+        at org.apache.commons.cli2.option.GroupImpl.validate(GroupImpl.java:265)
+        at org.apache.commons.cli2.commandline.Parser.parse(Parser.java:104)
+        at org.apache.mahout.utils.vectors.lucene.Driver.main(Driver.java:133)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+        at java.lang.reflect.Method.invoke(Method.java:597)
+        at org.apache.hadoop.util.ProgramDriver$ProgramDescription.invoke(ProgramDriver.java:68)
+        at org.apache.hadoop.util.ProgramDriver.driver(ProgramDriver.java:139)
+        at org.apache.mahout.driver.MahoutDriver.main(MahoutDriver.java:175)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+        at java.lang.reflect.Method.invoke(Method.java:597)
+        at org.apache.hadoop.util.RunJar.main(RunJar.java:156)
+Usage:                                                                          
+ [--dir <dir> --idField <idField> --output <output> --delimiter <delimiter>     
+--help --field <field> --max <max> --dictOut <dictOut> --norm <norm>            
+--outputWriter <outputWriter> --maxDFPercent <maxDFPercent> --weight <weight>   
+--minDF <minDF>]                                                                
+Options                                                                         
+  --dir (-d) dir                      The Lucene directory                      
+  --idField (-i) idField              The field in the index containing the     
+                                      index.  If null, then the Lucene internal 
+                                      doc id is used which is prone to error if 
+                                      the underlying index changes              
+  --output (-o) output                The output file                           
+  --delimiter (-l) delimiter          The delimiter for outputing the           
+                                      dictionary                                
+  --help (-h)                         Print out help                            
+  --field (-f) field                  The field in the index                    
+  --max (-m) max                      The maximum number of vectors to output.  
+                                      If not specified, then it will loop over  
+                                      all docs                                  
+  --dictOut (-t) dictOut              The output of the dictionary              
+  --norm (-n) norm                    The norm to use, expressed as either a    
+                                      double or "INF" if you want to use the    
+                                      Infinite norm.  Must be greater or equal  
+                                      to 0.  The default is not to normalize    
+  --outputWriter (-e) outputWriter    The VectorWriter to use, either seq       
+                                      (SequenceFileVectorWriter - default) or   
+                                      file (Writes to a File using JSON format) 
+  --maxDFPercent (-x) maxDFPercent    The max percentage of docs for the DF.    
+                                      Can be used to remove really high         
+                                      frequency terms.  Expressed as an integer 
+                                      between 0 and 100. Default is 99.         
+  --weight (-w) weight                The kind of weight to use. Currently TF   
+                                      or TFIDF                                  
+  --minDF (-md) minDF                 The minimum document frequency.  Default  
+                                      is 1                                      
+10/09/13 22:44:43 INFO driver.MahoutDriver: Program took 54 ms
+
+This is because the program shortname lucene.vector from driver.classes.props has a dot, while the props file is called lucenevector.props, which doesn't have a dot between lucene and vector.
+
+Fix: change lucenevector.props filename to lucene.vector.props.

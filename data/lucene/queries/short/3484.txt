@@ -1,0 +1,1 @@
+TaxonomyWriter parents array creation is not thread safe, can cause NPE

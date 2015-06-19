@@ -1,0 +1,1 @@
+make secondary ordering of facet.field values (and facet.pivot?) consistently deterministic

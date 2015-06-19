@@ -1,0 +1,1 @@
+Make IndexReader.decRef() call refCount.decrementAndGet instead of getAndDecrement

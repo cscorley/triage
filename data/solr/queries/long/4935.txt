@@ -1,0 +1,5 @@
+I'll be soooo happy when we stop supporting persistence.
+
+Two problems
+1> if instanceDir is not specified on the create, it's not persisted. And subsequent starts of Solr will fail.
+2> extraneous params are specified, made worse by SolrJ adding some stuff on the create request like wt=javabin etc.

@@ -1,0 +1,1 @@
+I've been improving the cloud-dev scripts to help with manual testing. I've been doing this mostly as part of SOLR-5656, but I'd like to spin in out into it's own issue.

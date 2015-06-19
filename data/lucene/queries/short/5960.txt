@@ -1,0 +1,1 @@
+Avoid grow of Set in AnalyzingSuggester.topoSortStates(Automaton)

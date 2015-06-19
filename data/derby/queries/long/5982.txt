@@ -1,0 +1,16 @@
+Sysinfo can report   JRE - JDBC: ?-?  on java 8 at least on the 10.8 branch, e.g. 
+JRE - JDBC: ?-?
+.../db-derby-10.8.2.3.1326460/derby.jar] 10.8.2.3 - (1326460)
+
+This method derbyVMLevel() in org.apache.derby.tools.sysinfo.Main has code:
+
+   else if (javaVersion.equals("1.7")) 
+{
+                // We don't have full JDBC 4.1 support yet, so still print JDBC
+                // 4.0
+            return "Java SE 7 - JDBC 4.0";
+            }
+            else
+                return "?-?";
+
+In trunk that code and the output  has been removed completely I think.

@@ -1,0 +1,1 @@
+The random string generators in BaseTokenStreamTestCase have wider applicability and should move in with their cousins.

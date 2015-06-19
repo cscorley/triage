@@ -1,0 +1,5 @@
+From Bikas Saha:
+
+https://issues.apache.org/jira/browse/TEZ-668 is a breaking change in TEZ trunk
+
+This adds a start method to the Input/Output and the processor is expected to call input.start()/output.start() for the input/output to actually start fetching/writing data. After this get committed, Hive and Pig Processors need to call start() on the input/output that they want to start. The processors may decide to not call start for an input they do not want to read (e.g. data already in ObjectRegistry) or they may choose to stagger the inputs in a certain order based on memory or processing requirements.

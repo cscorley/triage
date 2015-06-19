@@ -1,0 +1,11 @@
+This patch integrates a weight-based approach for sorting highlighted fragments. 
+
+See LUCENE-4133 (Part of LUCENE-3440). 
+
+This patch contains: 
+
+
+	Introduction of class WeightedFragListBuilder, a implementation of SolrFragListBuilder
+	Updated example-configuration
+
+

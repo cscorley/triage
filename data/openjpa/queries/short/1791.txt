@@ -1,0 +1,1 @@
+Remove test-base and testsupport artifacts dependency for *-test.jar creation

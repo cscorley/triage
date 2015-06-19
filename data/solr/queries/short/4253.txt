@@ -1,0 +1,1 @@
+Misleading resource loading warning from Carrot2 clustering component

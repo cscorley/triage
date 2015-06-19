@@ -1,0 +1,1 @@
+[zebra] The zebra version number should be changed from 0.7 to 0.8

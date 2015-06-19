@@ -1,0 +1,1 @@
+Bump Constants.LUCENE_MAIN_VERSION before beta release

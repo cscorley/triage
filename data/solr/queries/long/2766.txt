@@ -1,0 +1,26 @@
+I was updating Solr's web site with the 3.4.0 release, but suddenly
+discovered that the javadocs for the test-framework and solrj (linked
+under the Documentation tab on the left) are missing from
+apache-solr-3.4.0.tgz.
+
+Ie, when I "tar xzf" that, then:
+
+
+find . -name index.html
+./docs/index.html
+./docs/api/index.html
+
+
+
+(3.3.0's tgz does include them)
+
+I think this is just a packaging problem (maybe from the recent
+renaming?); I see their javadocs under solr/build/solr-solrj/docs/api
+and solr/build/solr-test-framework/docs/api.
+
+I also see seprate javadocs for all solr contribs... are these
+supposed to be published on the web site?
+
+For now I've just copied up the solrj and test-framework jdocs, built
+from the 3.4 branch, to the site.  But we should fix this for
+3.5.0....

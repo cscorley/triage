@@ -1,0 +1,1 @@
+In LuceneTestCase.beforeClass, make a new random (also using the class hashcode) to vary defaults

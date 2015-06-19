@@ -1,0 +1,34 @@
+The <lib dir="foo" ... /> syntax for solrconfig.xml was specificly designed so that it would not log errors if the directory (or jars in that directory) didn't exist – this was designed to make it possible to have a <lib/> directive that would optionally include jars if they are not there, and ignore them if they can't be found (<lib path="foo/bar.jar".../> can be used when you have an explict jar you want to load and you want an error if it's not there)
+
+At some point in the not too distant past, something seems to have changed on both the 3x and trunk branches in how SolrResourceLoader.replaceClassLoader works, such that in the example you get errors logged like this...
+
+
+Feb 15, 2011 4:52:03 PM org.apache.solr.core.SolrResourceLoader addToClassLoader
+SEVERE: Can't find (or read) file to add to classloader: /total/crap/dir/ignored
+
+
+
+This is in spite of hte fact that the solrconfig.xml says...
+
+
+  <!-- If a dir option (with or without a regex) is used and nothing is found
+       that matches, it will be ignored
+    -->
+  <lib dir="../../contrib/clustering/lib/downloads/" />
+  <lib dir="../../contrib/clustering/lib/" />
+  <lib dir="/total/crap/dir/ignored" /> 
+
+
+
+Note these errors are also logged when running the example, even though there are no <lib/> declarations that corrispond to them – they seem to be errors coming from the default behavior of looking for $solr_home/lib (which is evidently happening twice?)...
+
+
+Feb 15, 2011 4:52:03 PM org.apache.solr.core.SolrResourceLoader <init>
+INFO: Solr home set to 'solr/'
+Feb 15, 2011 4:52:03 PM org.apache.solr.core.SolrResourceLoader addToClassLoader
+SEVERE: Can't find (or read) file to add to classloader: solr/./lib
+Feb 15, 2011 4:52:03 PM org.apache.solr.core.SolrResourceLoader <init>
+INFO: Solr home set to 'solr/./'
+Feb 15, 2011 4:52:03 PM org.apache.solr.core.SolrResourceLoader addToClassLoader
+SEVERE: Can't find (or read) file to add to classloader: solr/././lib
+

@@ -1,0 +1,15 @@
+at least one user has gotten confused by doing a serach like this...
+
+http://localhost:8983/solr/shop/select/?indent=on&facet=true&sort=prijs%20ASC&start=0&rows=18&fl=id,prijs,prijseenhe
+id,artikelgroep&q=:&facet.field=artikelgroep&facet.mincount=1
+
+and getting this error...
+
+
+Can't determine Sort Order: 'prijs ASC', pos=5
+
+
+
+... i can't think of any reason why it would be bad to accept both uppercase and lowercase versions of "asc" and "desc"
+
+http://mail-archives.apache.org/mod_mbox/lucene-solr-user/201302.mbox/%3C0A03B892A1F8E14C8D9E8DCB8320052804F30FDC@EX2010-MAIL1.WIZARD.PVT%3E

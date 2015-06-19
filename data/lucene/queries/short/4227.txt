@@ -1,0 +1,1 @@
+DirectPostingsFormat, storing postings as simple int[] in memory, if you have tons of RAM

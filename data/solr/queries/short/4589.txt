@@ -1,0 +1,1 @@
+4.x + enableLazyFieldLoading + large multivalued fields + varying fl = pathological CPU load & response time

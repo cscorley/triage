@@ -1,0 +1,1 @@
+Upgrade to commons-compress 1.2

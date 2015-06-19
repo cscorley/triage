@@ -1,0 +1,1 @@
+StandardQueryParser ignores AND operator for tokenized query terms

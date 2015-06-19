@@ -1,0 +1,8 @@
+LastAddConfirmed in LedgerHandle is updated when an entry is persisted successfully. 
+
+When sending a new entry, the most recent lastAddConfirmed is sent along. The reason is to start with a reasonable (confirmed) entryId when doing ledger recovery, by reading all entries from lastAddConfirmed until a NoEntryException is reached. 
+
+If lastAddConfirmed updates are not visible to the thread that is writing new entries, new entries will carrie an older lastAddConfirmed value, and recovering the ledger will requiring reading one-by-one many entries.
+When writing several thousand of entries per sec, the lastAddConfirmed can lag behind a lot from the real last entry.
+
+We should use volatile, to ensure writing thread sees the updated version.

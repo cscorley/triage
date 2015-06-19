@@ -1,0 +1,157 @@
+HI!  I'm hitting a rather interesting issue and unfortunately to describe it is going to be a bit lengthy......so settle in.    Here is the exception:
+
+<openjpa-2.1.2-SNAPSHOT-r422266:1548248 fatal store error> org.apache.openjpa.persistence.RollbackException: Optimistic locking errors were detected when flushing to the data store.  The following objects may have been concurrently modified in another transaction: [hat.entities.VersionTSEntity-1390400526251]
+	at org.apache.openjpa.persistence.EntityManagerImpl.commit(EntityManagerImpl.java:593)
+	at hat.tests.PMR57956Test.testupdate(PMR57956Test.java:94)
+........
+Caused by: <openjpa-2.1.2-SNAPSHOT-r422266:1548248 nonfatal store error> org.apache.openjpa.persistence.OptimisticLockException: Optimistic locking errors were detected when flushing to the data store.  The following objects may have been concurrently modified in another transaction: [hat.entities.VersionTSEntity-1390400526251]
+	at org.apache.openjpa.kernel.BrokerImpl.newFlushException(BrokerImpl.java:2310)
+	at org.apache.openjpa.kernel.BrokerImpl.flush(BrokerImpl.java:2158)
+	at org.apache.openjpa.kernel.BrokerImpl.flushSafe(BrokerImpl.java:2056)
+	at org.apache.openjpa.kernel.BrokerImpl.beforeCompletion(BrokerImpl.java:1974)
+	at org.apache.openjpa.kernel.LocalManagedRuntime.commit(LocalManagedRuntime.java:81)
+	at org.apache.openjpa.kernel.BrokerImpl.commit(BrokerImpl.java:1498)
+	at org.apache.openjpa.kernel.DelegatingBroker.commit(DelegatingBroker.java:933)
+	at org.apache.openjpa.persistence.EntityManagerImpl.commit(EntityManagerImpl.java:569)
+	... 21 more
+Caused by: <openjpa-2.1.2-SNAPSHOT-r422266:1548248 nonfatal store error> org.apache.openjpa.persistence.OptimisticLockException: An optimistic lock violation was detected when flushing object instance "hat.entities.VersionTSEntity-1390400526251" to the data store.  This indicates that the object was concurrently modified in another transaction.
+FailedObject: hat.entities.VersionTSEntity-1390400526251
+	at org.apache.openjpa.jdbc.kernel.AbstractUpdateManager.populateRowManager(AbstractUpdateManager.java:183)
+	at org.apache.openjpa.jdbc.kernel.AbstractUpdateManager.flush(AbstractUpdateManager.java:97)
+	at org.apache.openjpa.jdbc.kernel.AbstractUpdateManager.flush(AbstractUpdateManager.java:78)
+	at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.flush(JDBCStoreManager.java:742)
+	at org.apache.openjpa.kernel.DelegatingStoreManager.flush(DelegatingStoreManager.java:131)
+	... 28 more
+
+
+To see how this occurs, lets look at the test.  Here is the entity:
+
+@Entity
+public class VersionTSEntity implements Serializable {
+    @Id
+    private Long id;
+
+    @Version
+    private Timestamp updateTimestamp;
+
+    private Integer someInt;
+
+
+And here is my test, with pertinent in-line comments:
+
+//This loop is necessary since we need a timestamp which has been //rounded up by either OJ, or the database....usually 1 or 2 loops will cause //the exception.
+        for (int i = 0; i < 1000; i++) {
+
+            // Find an existing VersionTSEntity:
+            VersionTSEntity t = em.find(VersionTSEntity.class, id);
+
+            tx.begin();
+            // Update/dirty VersionTSEntity:   
+            t.setSomeInt(t.getSomeInt() + 1);
+            t = em.merge(t);
+
+            tx.commit();
+            //If this clear is removed the test works fine.
+            em.clear();
+
+// Lets say at this point the 'in-memory' timestamp is: 
+// 2014-01-22 07:22:11.548778567.  What we actually sent to the DB (via 
+// the previous merge) is by default rounded (see 
+// DBDictionary.setTimestamp) to the nearest millisecond on Oracle (see 
+// DBDictionary.datePrecision) and nearest microsecond on DB2 (see 
+// DB2Dictionary.datePrecision) when sending the value to the db.
+// Therefore, what we actually send to the db is: 
+// 2014-01-22 07:22:11.548779 (for DB2) or 2014-01-22 07:22:11.549 (for 
+// Oracle).  
+// Notice in either case we rounded up...keep this in mind as it will be 
+// important for the remainder of the test......
+
+            // now, do a merge with the unchanged entity
+            tx = em.getTransaction();
+            tx.begin();
+
+            t = em.merge(t); 
+
+            //This 'fixes' the issue:
+            //em.refresh(t);
+
+// Here is where things get interesting.....an error will happen here when 
+// the timestamp has been rounded up, as I'll explain:
+// As part of this merge/commit, we select the timestamp from the db to get 
+// its value (see method checkVersion below), i.e: 
+// 'SELECT t0.updateTimestamp FROM VersionTSEntity t0 WHERE 
+//     t0.id = ?'.  
+// We then compare the 'in-memory' timestamp to that which we got back 
+// from the DB, i.e. on DB2 we compare:
+// in-mem:  2014-01-22 07:22:11.548778567
+// from db: 2014-01-22 07:22:11.548779
+// Because these do not 'compare' properly (the db version is greater), we 
+// throw the OptimisticLockEx!!
+// For completeness, lets look at an example where the timestamp is as 
+// follows after the above update: 2014-01-22 07:22:11.548771234.  We 
+// would send to DB2 the following value: 2014-01-22 07:22:11.548771.  
+// Then, as part of the very last merge/commit, we'd compare:
+// in-mem:  2014-01-22 07:22:11.548771234
+// from db: 2014-01-22 07:22:11.548771
+// These two would 'compare' properly (the db version is lesser), as such 
+// we would not throw an OptLockEx and the test works fine.
+
+         tx.commit();
+
+
+To see where/why the OptLockEx is thrown, we need to look here in VersionColumnStrategy (see //HAT:
+
+public boolean checkVersion(OpenJPAStateManager sm, JDBCStore store,
+        boolean updateVersion)  throws SQLException {
+        Column[] cols = vers.getColumns();
+        Select sel = store.getSQLFactory().newSelect();
+        sel.select(cols);
+        sel.wherePrimaryKey(sm.getObjectId(), vers.getClassMapping(), 
+                                            store);
+
+        // No need to lock version field (i.e. optimistic), except when version update is required (e.g. refresh) 
+        JDBCFetchConfiguration fetch = store.getFetchConfiguration();
+        if (!updateVersion && fetch.getReadLockLevel() >= MixedLockLevels.LOCK_PESSIMISTIC_READ) 
+{
+            fetch = (JDBCFetchConfiguration) fetch.clone();
+            fetch.setReadLockLevel(MixedLockLevels.LOCK_NONE);
+        }
+        Result res = sel.execute(store, fetch);
+        try 
+{
+            if (!res.next())
+                return false;
+
+            //HAT: here is where we get the timestamp from the db, and 'compare' them:
+            Object memVersion = sm.getVersion();
+            Object dbVersion  = populateFromResult(res, null);
+            
+            boolean refresh   = compare(memVersion, dbVersion) < 0;
+
+            if (updateVersion)
+                sm.setVersion(dbVersion);
+            return !refresh;
+        }
+ finally 
+{
+            res.close();
+        }
+    }
+
+
+
+Keep in mind here that it seems like the scenario is a bit unique....in other words, if I remove the 'em.clear', we do not deem it necessary to call the 'checkVersion' method (thus we don't go back to the DB to get the timestamp).  So it seems that there are two unique things causing us to hit the issue: 1) merge/clear/merge which causes a 'checkVersion', 2) rounding of timestamps.  I added the 'clear' in my test because it is at this point the customer returns the entity to the caller of an EJB....the caller then sends the entity back to the EJB to merge it.....
+
+Now, there are two existing fixes to this issue on DB2, and one fix for this on Oracle.  As you can see in my test above, if we 'em.refresh' the entity before commit, the in-memory value will match that of the db value.  This fix works regardless of whether or not DB2 or Oracle is used (the customer doesn't really like this idea though).  The next fix, which only works on DB2, is to set DBDictionary.datePrecision=1 (nanosecond precision).  This still doesn't resolve the issue on Oracle.  To see why this is the case, we have to look at the way DB2 and Oracle appear to handle timestamp precision.  Both seem to use microsecond precision by default (for both I think you have the option to go up to nanosecond).  Where they differ is that for precision greater than microsecond, DB2 truncates (no rounding) to a microsec.  However, Oracle rounds to the microsec.  So, lets take the value 2014-01-22 07:22:11.548778567.  If datePrecision=1 we'd send to the DB 2014-01-22 07:22:11.548778567.  On DB2, it would truncate the value to 2014-01-22 07:22:11.548778, but on Oracle, it would round to: 2014-01-22 07:22:11.548779.  So, for DB2, the compare would be:
+in-mem:  2014-01-22 07:22:11.548778567
+from db: 2014-01-22 07:22:11.548778
+
+This compare passes, so all is well.  For Oracle, we'd compare:
+in-mem:  2014-01-22 07:22:11.548778567
+from db: 2014-01-22 07:22:11.548779
+
+This compare fails, thus the OptLockEx.  I think setting datePrecision=1 is a fair recommendation/fix for DB2 (others?)......but for Oracle (others?) a fix is needed.  My plan is to provide a fix which rounds the in-memory version of the timestamp to the value set in DBDictionary.datePrecision.  So the exception can still occur if a user has not set datePrecision to match the precision of the Timestamp defined in the database.
+
+Thanks,
+
+Heath Thomann

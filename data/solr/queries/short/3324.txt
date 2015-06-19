@@ -1,0 +1,1 @@
+Put field name/type in the analysis URL 

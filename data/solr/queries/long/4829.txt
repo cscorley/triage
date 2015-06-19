@@ -1,0 +1,1 @@
+Failure to dereference tlogs or RecentUpdates can cause old transaction logs to never be closed & deleted.

@@ -1,0 +1,40 @@
+I saw a failure in LangScripts schemas.sql on a trunk test run on windows 2008 with ibm 1.7:
+
+1) schemas(org.apache.derbyTesting.functionTests.tests.lang.LangScripts)junit.framework.ComparisonFailure: Output at line 477 expected:<...                   |[BTREE (1)]      > but was:<...                   |[NULL     ]      >
+	at org.apache.derbyTesting.functionTests.util.CanonTestCase.compareCanon(CanonTestCase.java:110)
+	at org.apache.derbyTesting.functionTests.util.ScriptTestCase.runTest(ScriptTestCase.java:201)
+	at org.apache.derbyTesting.junit.BaseTestCase.runBare(BaseTestCase.java:120)
+	at org.apache.derbyTesting.junit.BaseJDBCTestCase.runBareOverridable(BaseJDBCTestCase.java:443)
+	at org.apache.derbyTesting.junit.BaseJDBCTestCase.runBare(BaseJDBCTestCase.java:460)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at org.apache.derbyTesting.junit.BaseTestSetup.run(BaseTestSetup.java:58)
+
+
+
+See: http://people.apache.org/~myrnavl/derby_test_results/main/windows/testSummary-1639825.html
+
+Without code changes this same test passed fine with other jvms.
+The diff is resulting from this query:
+
+select schemaname, tablename, descriptor as descr
+from sys.sysschemas s, sys.sysconglomerates c , sys.systables t
+where CAST(t.tablename AS VARCHAR(128)) = 'SAMPLETAB'
+        and s.schemaid = c.schemaid
+        and c.tableid = t.tableid
+order by schemaname, tablename;
+
+
+
+This gives three rows: In the master file (removed some spaces for display):
+
+SCHEMANAME  |TABLENAME        |DESCR
+-------------------------------------------------------------------------
+APP                     |SAMPLETAB        |NULL
+TEST                   |SAMPLETAB        |BTREE (1)
+TEST                   |SAMPLETAB        |NULL
+
+
+
+In the failed situation, the 'TEST' rows are ordered differently.

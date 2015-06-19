@@ -1,0 +1,1 @@
+Add SuppressSSL instead of static boolean in SolrTestCaseJ4

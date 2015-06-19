@@ -1,0 +1,1 @@
+we should randomize indexwriter settings like lucene tests do, to vary # of segments and such.

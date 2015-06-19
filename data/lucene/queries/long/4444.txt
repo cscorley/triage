@@ -1,0 +1,3 @@
+SpatialArgsParser is not letting the SpatialContext read the shape string (via readShape(); instead it's using new SpatialArgsParser(ctx).readShape(...shapestring...).  For the standard SpatialContext there is no difference.  But the JTS extension has its own which parses WKT for polygon support, etc.
+
+Quick fix of course but this really sucks if 4.0 won't have the ability to plug in alternative shapes.

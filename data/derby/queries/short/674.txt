@@ -1,0 +1,1 @@
+Add a new regression test to catch large increases in the size of jar files

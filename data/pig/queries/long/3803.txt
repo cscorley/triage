@@ -1,0 +1,1 @@
+This is a parity to PIG-3786 to handle POPoissonSample.

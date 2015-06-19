@@ -1,0 +1,1 @@
+TestIndexWriter failes for SimpleTextCodec

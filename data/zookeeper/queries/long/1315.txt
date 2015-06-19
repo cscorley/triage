@@ -1,0 +1,1 @@
+zookeeper_init always reports sessionPasswd=<hidden> even when it's empty.

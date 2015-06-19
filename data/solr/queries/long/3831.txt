@@ -1,0 +1,11 @@
+After setting up two independent solr nodes using the SolrCloud tutorial, atomic updates to a field of type "payloads" gives an error when updating the destination node.
+
+The error is:
+
+SEVERE: java.lang.NumberFormatException: For input string: "100}"
+
+The input sent to the first node is in the expected default format for a payload field (eg "foo|100") and that update succeeds. I've found that the update always works for the first node, but never the second.
+
+I've tested each server running independently and found that this update works as expected.
+
+

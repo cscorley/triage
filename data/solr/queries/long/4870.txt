@@ -1,0 +1,11 @@
+As reported by AlexeyK on solr-user:
+
+http://lucene.472066.n3.nabble.com/Solr-4-3-node-is-seen-as-active-in-Zk-while-in-recovery-mode-endless-recovery-td4065549.html
+
+
+Speaking about the update log - i have noticed a strange behavior concerning
+the replay. The replay is supposed to be done for a predefined number of
+log entries, but actually it is always done for the whole last 2 tlogs.
+RecentUpdates.update() reads log within  while (numUpdates <
+numRecordsToKeep), while numUpdates is never incremented, so it exits when
+the reader reaches EOF.

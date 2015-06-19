@@ -1,0 +1,11 @@
+In SOLR-1577, Yonik implemented functionality so that an "empty" <dataDir/> directive would be treated the same as no dataDir declaration at all (ie: using "data" in the instanceDir) so that people could have a sensible default but still use a system property to override using: 
+
+<dataDir>${solr.data.dir:}</dataDir>
+
+
+however we still have this bad meme in a lot of test configs: 
+
+<dataDir>${solr.data.dir:./solr/data}</dataDir>
+
+
+we should clean that up (if for no other reason then that it sets a really bad example and doesn't help with testing anything)

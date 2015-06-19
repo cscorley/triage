@@ -1,0 +1,1 @@
+Add a method to SegmentReader to get the current index heap memory size

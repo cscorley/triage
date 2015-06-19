@@ -1,0 +1,1 @@
+Allow cores that have failed to init to be deleted via CoreAdminHandler

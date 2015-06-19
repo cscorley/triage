@@ -1,0 +1,1 @@
+Contrib/Module-uptodate assume name matches path and jar

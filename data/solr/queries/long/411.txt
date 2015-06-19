@@ -1,0 +1,8 @@
+I'd like to suggest Solr migrate the way it names it's JARs to be like what is increasingly the de-facto standard for naming released JARs:
+apache-solr-common-1.3-dev.jar
+apache-solr-solrj-1.3-dev.jar
+apache-solr-1.3-dev.jar
+
+instead of the current way which puts the subproject after the version declaration.
+
+Patch to follow that modifies the build.xml

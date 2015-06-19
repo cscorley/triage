@@ -1,0 +1,1 @@
+bin/pig fail when both pig-0.9.1.jar and pig.jar are in PIG_HOME

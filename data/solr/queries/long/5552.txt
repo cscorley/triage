@@ -1,0 +1,10 @@
+One particular issue that leads to out-of-sync shards, related to SOLR-4260
+
+Here's what I know so far, which admittedly isn't much:
+As cloud85 (replica before it crashed) is initializing, it enters the wait process in ShardLeaderElectionContext#waitForReplicasToComeUp; this is expected and a good thing.
+Some short amount of time in the future, cloud84 (leader before it crashed) begins initializing and gets to a point where it adds itself as a possible leader for the shard (by creating a znode under /collections/cloud/leaders_elect/shard1/election), which leads to cloud85 being able to return from waitForReplicasToComeUp and try to determine who should be the leader.
+cloud85 then tries to run the SyncStrategy, which can never work because in this scenario the Jetty HTTP listener is not active yet on either node, so all replication work that uses HTTP requests fails on both nodes ... PeerSync treats these failures as indicators that the other replicas in the shard are unavailable (or whatever) and assumes success. Here's the log message:
+2013-12-11 11:43:25,936 [coreLoadExecutor-3-thread-1] WARN solr.update.PeerSync - PeerSync: core=cloud_shard1_replica1 url=http://cloud85:8985/solr couldn't connect to http://cloud84:8984/solr/cloud_shard1_replica2/, counting as success
+The Jetty HTTP listener doesn't start accepting connections until long after this process has completed and already selected the wrong leader.
+From what I can see, we seem to have a leader recovery process that is based partly on HTTP requests to the other nodes, but the HTTP listener on those nodes isn't active yet. We need a leader recovery process that doesn't rely on HTTP requests. Perhaps, leader recovery for a shard w/o a current leader may need to work differently than leader election in a shard that has replicas that can respond to HTTP requests? All of what I'm seeing makes perfect sense for leader election when there are active replicas and the current leader fails.
+All this aside, I'm not asserting that this is the only cause for the out-of-sync issues reported in this ticket, but it definitely seems like it could happen in a real cluster.

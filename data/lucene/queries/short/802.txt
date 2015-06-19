@@ -1,0 +1,1 @@
+lucene jars should include LiCENSE and NOTICE

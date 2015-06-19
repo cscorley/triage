@@ -1,0 +1,1 @@
+Fix FuzzyQuery's defaults, so its fast.

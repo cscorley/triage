@@ -1,0 +1,4 @@
+Details in https://issues.apache.org/jira/browse/TEZ-1190?focusedCommentId=14393033&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14393033
+
+People split the data, perform some foreach transformations/filter, union them and then do some operation like group by or join with other data. In those cases it creates multiple edges from same Split, so we do not merge them, but  
+write out the data to another dummy vertex to avoid multiple edges and this adds overhead and affects performance. Vertex groups accept multiple edges from same vertex. So if the multiple edges end up in a vertex group (and not a vertex which is the case in self join) we can avoid the dummy vertex.

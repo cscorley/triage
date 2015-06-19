@@ -1,0 +1,12 @@
+Some log messages could be more informative. For example:
+
+
+
+680 [coreLoadExecutor-3-thread-3] WARN org.apache.solr.schema.IndexSchema  – schema has no name!
+
+
+
+Would be very nice to know which core this is complaining about.
+Later, once the core is loaded, the core name shows up in the logs,
+but it would be nice to have it earlier without having to
+triangulating it through 'Loading core' messages.

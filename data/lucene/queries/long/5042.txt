@@ -1,0 +1,10 @@
+Now that we fixed NGramTokenizer and NGramTokenFilter to not produce corrupt token streams, the only way to have "true" offsets for n-grams is to use the tokenizer (the filter emits the offsets of the original token).
+
+Yet, our NGramTokenizer has a few flaws, in particular:
+
+	it doesn't have the ability to pre-tokenize the input stream, for example on whitespaces,
+	it doesn't play nice with surrogate pairs.
+
+
+
+Since we already broke backward compatibility for it in 4.4, I'd like to also fix these issues before we release.

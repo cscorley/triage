@@ -1,0 +1,24 @@
+This is a regression of PIG-3573.
+
+In ivy/libraries.properties, the version of jline is specified as 0.9.94-
+
+
+jline.version=0.9.94
+
+
+But since jline is also a dependency of accumulo, jline-1.0.jar is pulled down at compile time-
+
+
+$ ls build/ivy/lib/Pig/jline-*
+build/ivy/lib/Pig/jline-1.0.jar
+
+
+
+Now when pig-withouthadoop.jar is built, jline-1.0.jar is not packaged because ant looks for jline-0.9.94.jar-
+
+
+<include name="jline-${jline.version}.jar"/>
+
+
+
+This causes a ClassNotFount exception at runtime.

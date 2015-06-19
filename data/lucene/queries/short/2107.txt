@@ -1,0 +1,1 @@
+Add contrib/fast-vector-highlighter to Maven central repo

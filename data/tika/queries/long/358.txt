@@ -1,0 +1,7 @@
+There's a commonly generated HTML document format that fools the auto-detection code into classifying it as XML.
+
+I've attached one example of this, from http://www.saveums.com/detect.html
+
+Then the XML parser barfs because there's a dangling comment at the end.
+
+In all the cases I've seen, the server returns the right mime-type (text/html), so perhaps this could be used to disambiguate.

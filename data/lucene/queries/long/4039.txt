@@ -1,0 +1,1 @@
+I was interested in measuring the performance of IndexWriter.addIndexes(Directory) vs. IndexWriter.addIndexes(IndexReader). I wrote an AddIndexesTask and a matching .alg. The task takes a parameter whether to use the IndexReader or Directory variants. I'll upload the patch and describe the perf results.

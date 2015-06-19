@@ -1,0 +1,1 @@
+test failure in NSSecurityMechanismTest; The expected SQL state must be five characters long

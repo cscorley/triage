@@ -1,0 +1,1 @@
+ArrayIndexOutOfBoundsException in LedgerFragmentReplicator::updateEnsembleInfo, because update ensemble info might happen after re-read ledger metadata, so the ensemble might already change. if ensemble is already changed, skip replacing the bookie doesn't exist.

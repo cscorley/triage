@@ -1,0 +1,9 @@
+With LUCENE-5818 we fixed stripping to be correct (ensuring it doesnt strip the entire word before applying an affix). This is usually true, but there is an option in the affix file to allow this.
+
+Its used by several languages (french, latvian, swedish, etc)
+
+
+FULLSTRIP
+              With FULLSTRIP, affix rules can strip full words, not  only  one
+              less characters, before adding the affixes
+

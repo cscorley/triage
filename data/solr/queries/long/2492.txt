@@ -1,0 +1,1 @@
+If a DIH run processes deletes using the $deleteDocById and/or $deleteDocByQuery special commands, and if no adds or updates get processed in the same run, then "commit" is never called.  Also, the # of deleted documents does not get incremented.

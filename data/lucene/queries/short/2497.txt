@@ -1,0 +1,1 @@
+Revision 949509 (LUCENE-2480) causes IOE "read past EOF" when processing older format SegmentInfo data when JVM assertion processing is disabled.

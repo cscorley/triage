@@ -1,0 +1,1 @@
+SolrCoreState ref counting is off for SolrCore reloads.

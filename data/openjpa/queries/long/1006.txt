@@ -1,0 +1,10 @@
+An application has a configuration that allows query caching, but is making runtime calls to inform a fetch plan to disable query caching.
+
+The bug is that this dynamic no-caching request is being ignored by the query cache executor, which then caches the query regardless.
+
+Tried to disable query cache using 
+OpenJPAEntityManager.getFetchPlan().setQueryResultCache(false);
+
+and also 
+
+query.getFetchPlan().setQueryResultCacheEnabled(false);

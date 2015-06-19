@@ -1,0 +1,1 @@
+SortingAtomicReader should implement getSortedNumericDocValues

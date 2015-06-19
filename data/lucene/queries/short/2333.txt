@@ -1,0 +1,1 @@
+Failures during contrib builds, when classes in core were changed without ant clean

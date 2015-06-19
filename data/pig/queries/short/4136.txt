@@ -1,0 +1,1 @@
+No special handling jythonjar/jrubyjar in e2e tests after PIG-4047

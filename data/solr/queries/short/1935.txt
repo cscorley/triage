@@ -1,0 +1,1 @@
+BaseResponseWriter neglects to add SolrDocument in DocList isStreamingDocs=false

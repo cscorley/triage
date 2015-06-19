@@ -1,0 +1,1 @@
+FuzzyQuery currently only disallows negative values of maxExpansions.  However, passing 0 causes an NPE when the underlying TopTermsRewrite does a peek() on an empty queue, which returns null, and then goes on using it unknowingly.

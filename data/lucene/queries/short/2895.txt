@@ -1,0 +1,1 @@
+MockRandomCodec loads termsIndex even if termsIndexDivisor is set to -1

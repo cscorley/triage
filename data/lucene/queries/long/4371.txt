@@ -1,0 +1,4 @@
+From LUCENE-4364:
+
+
+In my opinion, we should maybe check, if we can remove the whole Slicer in all Indexinputs? Just make the slice(...) method return the current BufferedIndexInput-based one. This could be another issue, once this is in.

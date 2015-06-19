@@ -1,0 +1,1 @@
+Missing sql warning in localizer.properties resulting in lost message when there is sql warning.

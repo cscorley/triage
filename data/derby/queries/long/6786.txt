@@ -1,0 +1,89 @@
+Hello,
+I'm getting this wrapped NullPointerException when I try to execute an INSERT INTO SQL statement:
+
+java.sql.SQLException: The exception 'java.lang.NullPointerException' was thrown while evaluating an expression.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:101)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:148)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Util.java:349)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(TransactionResourceImpl.java:431)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(TransactionResourceImpl.java:353)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(EmbedConnection.java:2400)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(ConnectionChild.java:85)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1437)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(EmbedStatement.java:711)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeLargeUpdate(EmbedStatement.java:190)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeUpdate(EmbedStatement.java:179)
+	at de.foconis.dakobp.unittests.div.TestMain.testNullpointer(TestMain.java:49)
+	at de.foconis.dakobp.unittests.div.TestMain.main(TestMain.java:28)
+Caused by: java.sql.SQLException: The exception 'java.lang.NullPointerException' was thrown while evaluating an expression.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:125)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	... 12 more
+Caused by: java.sql.SQLException: Java exception: ': java.lang.NullPointerException'.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:125)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:148)
+	at org.apache.derby.impl.jdbc.Util.javaException(Util.java:370)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(TransactionResourceImpl.java:436)
+	... 10 more
+Caused by: java.lang.NullPointerException
+	at org.apache.derby.exe.acf81e0010x014axa9c2x46e6x000000c6dc781.e2(Unknown Source)
+	at org.apache.derby.impl.services.reflect.DirectCall.invoke(ReflectGeneratedClass.java:105)
+	at org.apache.derby.impl.sql.execute.ProjectRestrictResultSet.getNextRowCore(ProjectRestrictResultSet.java:275)
+	at org.apache.derby.impl.sql.execute.ProjectRestrictResultSet.getNextRowCore(ProjectRestrictResultSet.java:263)
+	at org.apache.derby.impl.sql.execute.DMLWriteResultSet.getNextRowCore(DMLWriteResultSet.java:127)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.open(InsertResultSet.java:519)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:461)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:340)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1344)
+	... 5 more
+
+Most likely this bug has already been reported as DERBY-5041, which has already been closed (although I don't use a GROUP BY clause).
+
+The original statement is quite complex and partially generated, but the error can be reproduced easily, using a statement as simple as this:
+insert into t
+ select erg.* from (
+  select d1.s from (select k,s from k1) as d1
+   right join (select k,s from k2) as d2 on d1.k = d2.k
+  ) as erg
+ where s > 10
+
+I will attach the file "repro.sql", containing all SQL statements required to reproduce it (including the CREATE TABLEs).
+
+These are my investigation results:
+
+Conditions
+-------------
+1. the outermost statement must NOT be a SELECT (e. g. INSERT)
+2. there has to be a outer join in the subselect, where at least one dataset has no join partner
+3. an outer SELECT must have a restriction (WHERE clause) and access a column from the table, that did not have a join partner
+
+Error state
+-------------
+The NullPointer occurs inside a generated class. So i enabled the Debug Option "DumpClassFile", to get the generated class file (the decompiled java class file will also be appended).
+The method "e2", stated in the StackTrace, performs the restrction "where s > 10". Therefore it calls getColumnFromRow() with its resultSetNumber.
+
+This is where the error occurs: there is no "current row" available. Precisely, the "row" property of the activation class at the specified index (which is the resultSetNumber=3 in this example) is not set.
+It gets a bit complicated now, I will try to explain it, starting with the generated resultset hierarchy.
+
+This tree of resultset implementations is generated to perform the query:
+
+Implementation				resultSetNumber
+-------------------				---------------------
+InsertResultSet			-> none
+ ProjectRestrictResultSet		-> 5
+  ProjectRestrictResultSet	-> 4
+   HashLeftOuterJoinResultSet	-> 0
+    TableScanResultSet		-> 1
+    HashTableResultSet		-> 3
+     TableScanResultSet		-> 2
+
+The HashTableResultSet, which got the resultSetNumber 3 doesn't set a current row, because there is no join partner (still everything correct). But the ProjectRestrictResultSet on position 4 uses the restriction method ("e2"), which accesses a column on resultSetNumber 3 -> error.
+
+As far as I can tell, a restriction must never relate to the source of an outer join ResultSet. The numeration error does not occur, if the outermost statement is a SELECT and the numeration is generated top-down.
+
+Unfortunately I couldn't find an easy solution for this problem. In my case, this is a critical bug, because changing the query as workaround is difficult, since parts of it are generated. Please note, that this error is not dependent on any environment settings or platform and occured with all of the abolve mentioned versions. I didn't test the versions from 10.6 to 10.7, but probably those are also affected.
+
+If you require any further information, please let me know. I'm able to perform a build, so I wouldn't need a full version, a patch would be sufficient.

@@ -1,0 +1,5 @@
+Send the following command to a Solr server with many segments in a multi-shard, multi-server environment:
+
+curl "http://localhost:8080/solr/update?optimize=true&waitFlush=true&maxSegments=6&distrib=false"
+
+The local server will end up with the number of segments at 6, as requested, but all other shards in the index will be optimized with maxSegments=1, which takes far longer to complete.  All shards should be optimized to the requested value of 6.

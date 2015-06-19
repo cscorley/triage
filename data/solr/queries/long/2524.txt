@@ -1,0 +1,6 @@
+Grouping was recently added to Lucene 3x. See LUCENE-1421 for more information.
+I think it would be nice if we expose this functionality also to the Solr users that are bound to a 3.x version.
+The grouping feature added to Lucene is currently a subset of the functionality that Solr 4.0-trunk offers. Mainly it doesn't support grouping by function / query.
+
+The work involved getting the grouping contrib to work on Solr 3x is acceptable. I have it more or less running here. It supports the response format and request parameters (expect: group.query and group.func) described in the FieldCollapse page on the Solr wiki.
+I think it would be great if this is included in the Solr 3.2 release. Many people are using grouping as patch now and this would help them a lot. Any thoughts?

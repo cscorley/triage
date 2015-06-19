@@ -1,0 +1,8 @@
+We should remove the deprecated code from trunk. 
+
+This also has benefits to 4x branch, particularly:
+
+	we should backport fixes to tests to avoid deprecated methods, e.g. IndexReader.open -> DirectoryReader.open. Of course I will add specific deprecated tests testing the back compat. This is all very important to
+ensure easier merging from trunk->4x  for the future.
+	by removing deprecated methods, I found some minor doc bugs, such as javadocs linking to deprecated stuff. I would like to backport these docs fixes as well.
+

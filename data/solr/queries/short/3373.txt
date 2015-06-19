@@ -1,0 +1,1 @@
+Unknown Characters in MBeanHandler-Output while using diff-feature

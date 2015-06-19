@@ -1,0 +1,1 @@
+Register statement does not work. Pig complains not able to find class.

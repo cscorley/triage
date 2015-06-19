@@ -1,0 +1,1 @@
+Background merge after field removed from solr.xml causes error

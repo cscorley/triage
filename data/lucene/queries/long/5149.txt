@@ -1,0 +1,3 @@
+Currently CommonTermsQuery only allows a minShouldMatch for the low frequent query. Yet, we should also allow this for the high frequent part to have better control over scoring. here is an ES issue that is related to this:
+
+https://github.com/elasticsearch/elasticsearch/issues/3188

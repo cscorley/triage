@@ -1,0 +1,3 @@
+In addition to supporting xml and csv updating, it would be good to support json.
+
+This patch uses noggit, a streaming json parser, to build the commands.

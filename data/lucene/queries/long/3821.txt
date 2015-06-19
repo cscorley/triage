@@ -1,0 +1,7 @@
+The general bug is a case where a phrase with no slop is found,
+but if you add slop its not.
+
+I committed a test today (TestSloppyPhraseQuery2) that actually triggers this case,
+jenkins just hasn't had enough time to chew on it.
+
+ant test -Dtestcase=TestSloppyPhraseQuery2 -Dtests.iter=100 is enough to make it fail on trunk or 3.x

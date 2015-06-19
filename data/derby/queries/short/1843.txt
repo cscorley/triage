@@ -1,0 +1,1 @@
+new dblook.bat does not pass on arguments

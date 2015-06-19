@@ -1,0 +1,1 @@
+Merging is currently unnecessarily complex: it tries to compute the size of the compressed block by analyzing the compressed stream although it could use the fields index instead.

@@ -1,0 +1,14 @@
+Try to remove an element in the string array with curl:
+
+
+
+curl http://localhost:8080/update\?commit\=true -H 'Content-type:application/json' -d '[{ "attr_birth_year_is": { "remove": [1960]},  "id": 1098}]'
+
+curl http://localhost:8080/update\?commit\=true -H 'Content-type:application/json' -d '[{"reserved_on_dates_dts": {"remove": ["2014-02-12T12:00:00Z", "2014-07-16T12:00:00Z", "2014-02-15T12:00:00Z", "2014-02-21T12:00:00Z"]}, "id": 1098}]'
+
+
+
+Neither of them works.
+
+The set and add operation for int array works. 
+The set, remove, and  add operation for string array works

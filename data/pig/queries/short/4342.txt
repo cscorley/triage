@@ -1,0 +1,1 @@
+Pig 0.14 cannot identify the uppercase of DECLARE and DEFAULT

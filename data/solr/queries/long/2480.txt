@@ -1,0 +1,20 @@
+Proposal:
+There are password-protected files. PDF, Office documents in 2007 format/97 format.
+These files are posted using SolrCell.
+We do not have to read these files if we do not know the reading password of files.
+So, these files may not be extracted text.
+My requirement is that these files should be processed normally without extracting text, and without throwing exception.
+
+This background:
+Now, when you post a password-protected file, solr returns 500 server error.
+Solr catches the error in ExtractingDocumentLoader and throws TikException.
+
+I use ManifoldCF.
+If the solr server responds 500, ManifoldCF judge is that "this
+document should be retried because I have absolutely no idea what
+happened".
+And it attempts to retry posting many times without getting the password.
+
+In the other case, my customer posts the files with embedded images.
+Sometimes it seems that solr throws TikaException of unknown cause.
+He wants to post just metadata without extracting text, but makes him stop posting by the exception.

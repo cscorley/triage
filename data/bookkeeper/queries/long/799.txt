@@ -1,0 +1,7 @@
+The algorithm now be used to check if all quorums are being covered when sending a read lac or fencing message is broken when writeQuorum >= ackQuorum.
+
+The purpose of the algorithm is to tell us when we have heard a response from enough nodes, that an ack quorum could not possibly have been formed without at least one of the nodes that we have heard responses from.
+
+The current algorithm works when writeQuorum == ackQuorum, as we consider all quorums covered if the first |ackQuorum| nodes in the writeQuorum are covered. However, this doesn't work in the case that it's the middle node in the quorum that we have heard.
+
+Take the example, e:4, w:3, a:2, and we've heard from node 0, and node 2. In this case, it is possible for the write quorum, 1,2,3 to get an ack quorum if 1 and 3 response. 

@@ -1,0 +1,1 @@
+REGRESSION ReturnFields incorrect parse fields with hyphen - breaks existing "fl=my-field-name" type usecases

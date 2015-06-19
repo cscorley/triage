@@ -1,0 +1,3 @@
+The SpatialPrefixTree Cell (formerly known as "Node") was refactored in LUCENE-4794 which made it into Lucene 4.2.  It introduced an explicit internal "leaf" flag that was formerly computed by examining shapeRel.  However, reset() doesn't reset this new flag.
+
+The bug affects SpatialRecursivePrefixTreeStrategy on non-point indexed shapes.

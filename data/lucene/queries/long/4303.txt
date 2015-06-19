@@ -1,0 +1,3 @@
+This affects SnowballPorterFilterFactory and PhoneticFilterFactory.
+
+In Solr I encountered this problem when I specified an encoder and I was forced to put the library in WEB-INF/lib instead of /solr/lib/.

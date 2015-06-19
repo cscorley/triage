@@ -1,0 +1,23 @@
+SOLR-2058 subtly changed how phrase queries, created through the pf, pf2 and pf3 parameters, are merged into the main user query.
+
+For the query: 'term1 term2' with pf2:[field1, field2, field3] we now get (omitting the non phrase query section for clarity):
+
+
+
+<main query>
+DisjunctionMaxQuery((field1:"term1 term2"^1.0)~0.1)
+DisjunctionMaxQuery((field2:"term1 term2"^1.0)~0.1)
+DisjunctionMaxQuery((field3:"term1 term2"^1.0)~0.1)
+
+
+
+Prior to this change, we had:
+
+
+
+<main query> 
+DisjunctionMaxQuery((field1:"term1 term2"^1.0 | field2:"term1 term2"^1.0 | field3:"term1 term2"^1.0)~0.1)
+
+
+
+The upshot being that if the phrase query "term1 term2" appears in multiple fields, it will get a significant boost over the previous implementation.

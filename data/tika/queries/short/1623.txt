@@ -1,0 +1,1 @@
+Expose Translation Interface from Tika Server

@@ -1,0 +1,1 @@
+dir lock error if reopening cores to fast?

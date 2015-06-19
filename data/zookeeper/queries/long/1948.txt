@@ -1,0 +1,1 @@
+The zooker server start up script includes the option to enable jmx monitoring but only locally. Can we update the script so that remote monitoring can also be enabled which will help in data collection and monitoring through a centralized monitoring tool.

@@ -1,0 +1,1 @@
+analysis consumers should use reusable tokenstreams

@@ -1,0 +1,1 @@
+LimitTokenPositionFilter: don't emit tokens with positions that exceed the configured limit

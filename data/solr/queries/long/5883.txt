@@ -1,0 +1,2 @@
+I noticed that many tests create multiple HttpSolrServer but never call the shutdown. I created a Jira for BasicDistributedZk2Test and BasicDistributedZkTest some time ago but didn’t check for all tests (SOLR-5684). I added the missing shutdowns that I found in other tests now. 
+I’m also wondering if it makes sense to add some kind of check in the tests, in a similar way that open/close of IndexSearchers is checked (probably, not blocking or falling the test if open/close doesn’t much, but maybe to output a warning to the logs?)

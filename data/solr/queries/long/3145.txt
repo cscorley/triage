@@ -1,0 +1,1 @@
+After SOLR-1889 was committed, the default for DisMax "mm" parameter changes depending on q.op. Since defaultOperator=OR in example schema.xml, and no "mm" parameter is specified in the "/browse" request handler, DisMax will fallback to mm=0%. To be consistent with 3.x behavior, we should add mm=100% for "/browse" config.

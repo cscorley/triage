@@ -1,0 +1,6 @@
+When creating the database schema for MySQL databases, OpenJPA refuses to define foreign key constraints for composite keys. Warning message is: openjpa.jdbc.Schema - The foreign key "<foreignkey>" was not added to table "[...]" The reason for this is that composite foreign key support is explicitly disabled in MySQLDictionary.
+
+However, composite foreign keys seem to work flawlessly in recent MySQL versions (such as 5.0.51a). Probably this limitation in MySQLDictionary thus is historic and can be removed.
+
+For the corresponding mailing list discussion, see here:
+http://n2.nabble.com/Composite-foreign-keys-with-MySQL-tc2772257.html

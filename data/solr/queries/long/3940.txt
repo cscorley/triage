@@ -1,0 +1,3 @@
+A rejoin may happen when a node decides it may not be the best leader candidate.
+
+This means that in certain fail over situations, the new leader election may wait until a timeout expires before proceeding - instead, there should be no wait because the we should not expect that the leader that went down is coming back anytime soon.

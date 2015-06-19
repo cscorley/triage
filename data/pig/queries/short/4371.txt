@@ -1,0 +1,1 @@
+Duplicate snappy.version in libraries.properties

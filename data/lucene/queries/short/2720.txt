@@ -1,0 +1,1 @@
+IndexWriter should throw IndexFormatTooOldExc on open, not later during optimize/getReader/close

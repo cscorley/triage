@@ -1,0 +1,14 @@
+Following pages have hyphen in some urls which cause a 404 not found error:
+
+
+	https://mahout.apache.org/users/clustering/latent-dirichlet-allocation.html
+	https://mahout.apache.org/developers/how-to-release.html
+
+
+
+This can be verified using W3C link check as below:
+
+
+	http://validator.w3.org/checklink?uri=https%3A%2F%2Fmahout.apache.org%2Fusers%2Fclustering%2Flatent-dirichlet-allocation.html&summary=on&hide_type=all&depth=&check=Check#d1code_404
+
+

@@ -1,0 +1,1 @@
+Make HighFreqTerms.TermStats class public

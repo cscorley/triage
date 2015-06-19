@@ -1,0 +1,57 @@
+Steps to reproduce:
+1. Download solr 4.6.0, unzip twice in different directories.
+2. Start a two-shard cluster based on default example
+
+
+dir1/example> java -Dbootstrap_confdir=./solr/collection1/conf -Dcollection.configName=myconf -DzkRun -DnumShards=2 -jar start.jar
+
+dir2/example> java -Djetty.port=7574 -DzkHost=localhost:9983 -jar start.jar
+
+3. Visit http://localhost:8983/solr/query?q=author:a&stats=true&stats.field=last_modified
+
+This causes a nullpointer (given that the index is empty or the query returns 0 rows)
+
+Stacktrace:
+
+
+1111190 [qtp290025410-11] INFO  org.apache.solr.core.SolrCore  – [collection1] webapp=/solr path=/query params={stats.field=last_modified&stats=true&q=author:a} hits=0 status=500 QTime=8 
+1111191 [qtp290025410-11] ERROR org.apache.solr.servlet.SolrDispatchFilter  – null:java.lang.NullPointerException
+        at org.apache.solr.handler.component.DateStatsValues.updateTypeSpecificStats(StatsValuesFactory.java:409)
+        at org.apache.solr.handler.component.AbstractStatsValues.accumulate(StatsValuesFactory.java:109)
+        at org.apache.solr.handler.component.StatsComponent.handleResponses(StatsComponent.java:113)
+        at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:311)
+        at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:135)
+        at org.apache.solr.core.SolrCore.execute(SolrCore.java:1859)
+        at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:710)
+        at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:413)
+        at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:197)
+        at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+        at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+        at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+        at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+        at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+        at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+        at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+        at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+        at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+        at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+        at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+        at org.eclipse.jetty.server.Server.handle(Server.java:368)
+        at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+        at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53)
+        at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942)
+        at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004)
+        at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640)
+        at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+        at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72)
+        at org.eclipse.jetty.server.bio.SocketConnector$ConnectorEndPoint.run(SocketConnector.java:264)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+        at java.lang.Thread.run(Thread.java:744)
+
+ 
+
+
+

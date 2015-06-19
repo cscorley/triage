@@ -1,0 +1,5 @@
+We no longer allow seeking in IndexOutput, so there is no need to use RandomAccessFile. We can change this with a < 1 KiB patch.
+
+Further improvements would be to merge this with OutputStreamIndexOutput, so we get many simplifications.
+
+There is also no reason anymore to separate DataOutput from IndexOutput. The only additional thing is IndexOutput#getFilePointer(), which is handled by  an internal counter (does not use getFilePointer of the underlying RAF) and checksums.

@@ -1,0 +1,1 @@
+"job" file dependent jars in lib/ aren't found by Hadoop?

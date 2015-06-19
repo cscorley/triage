@@ -1,0 +1,1 @@
+See OPENJPA-1604 for background. 

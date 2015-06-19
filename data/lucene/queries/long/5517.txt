@@ -1,0 +1,5 @@
+I was trying to debug why a hunspell dictionary (an updated version fixes the bug!) used so much ram, and the reason is the dictionary was buggy and didnt have FLAG NUM (so each digit was treated as its own flag, leading to chaos).
+
+In many situations in the hunspell file (e.g. affix rule), the flag should only be a single one. But today we don't detect this, we just take the first one.
+
+We should throw exception here: in most cases hunspell itself is doing this for the impacted dictionaries. In these cases the dictionary is buggy and in some cases you do in fact get an error from hunspell commandline. We should throw exception instead of emitting chaos...

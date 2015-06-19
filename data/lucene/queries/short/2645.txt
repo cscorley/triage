@@ -1,0 +1,1 @@
+False assertion of >0 position delta in StandardPostingsWriterImpl

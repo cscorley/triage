@@ -1,0 +1,20 @@
+While trying to import data from db on cloud, it shows this in logs:
+
+SEVERE: Full Import failed:org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to PropertyWriter implementation:ZKPropertiesWriter 
+        at org.apache.solr.handler.dataimport.DataImporter.createPropertyWriter(DataImporter.java:336) 
+        at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:418) 
+        at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:487) 
+        at org.apache.solr.handler.dataimport.DataImporter$1.run(DataImporter.java:468) 
+Caused by: org.apache.solr.common.cloud.ZooKeeperException: ZkSolrResourceLoader does not support getConfigDir() - likely, what you are trying to do is not supported in ZooKeeper mode 
+        at org.apache.solr.cloud.ZkSolrResourceLoader.getConfigDir(ZkSolrResourceLoader.java:100) 
+        at org.apache.solr.handler.dataimport.SimplePropertiesWriter.init(SimplePropertiesWriter.java:91) 
+        at org.apache.solr.handler.dataimport.ZKPropertiesWriter.init(ZKPropertiesWriter.java:45) 
+        at org.apache.solr.handler.dataimport.DataImporter.createPropertyWriter(DataImporter.java:334) 
+        ... 3 more 
+
+Exception in thread "Thread-306" java.lang.NullPointerException 
+        at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:427) 
+        at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:487) 
+        at org.apache.solr.handler.dataimport.DataImporter$1.run(DataImporter.java:468) 
+
+

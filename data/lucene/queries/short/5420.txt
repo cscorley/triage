@@ -1,0 +1,1 @@
+'ant get-maven-poms' should support custom version formats

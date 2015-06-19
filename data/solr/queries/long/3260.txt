@@ -1,0 +1,1 @@
+This came up on the user-list.  ScriptTransformer logs the same "need a >=1.6 jre" message for several problems, making debugging difficult for users.

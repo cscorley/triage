@@ -1,0 +1,1 @@
+"numberToKeep" backups doesn't ever keep more than 1

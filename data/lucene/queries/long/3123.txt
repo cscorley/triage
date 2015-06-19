@@ -1,0 +1,5 @@
+Recreate with this line:
+
+ant test -Dtestcase=TestIndexWriter -Dtestmethod=testBackgroundOptimize -Dtests.seed=-3981504507637360146:51354004663342240
+
+Might be related to LUCENE-2873 ?

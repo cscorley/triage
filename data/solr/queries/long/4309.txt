@@ -1,0 +1,5 @@
+Three problems with current autosuggest JavaScript behavior in Velocity /browse:
+
+1. The first entry in the list is pre-selected, so hitting ENTER searches the first suggestion instead of what the user entered
+2. jQuery autosuggest's built-in cache is buggy, rendering funny suggestion lists 2nd time
+3. Using the arrow buttons and hitting ENTER only fills in the selected item into the search box, does not perform the search

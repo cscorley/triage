@@ -1,0 +1,1 @@
+SloppyPhraseScorer calls DocsAndPositionsEnum.advance with target = -1 although the behavior of this method is undefined in such cases.

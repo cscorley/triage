@@ -1,0 +1,1 @@
+POM dependencies not all there yet for solr-test-framework

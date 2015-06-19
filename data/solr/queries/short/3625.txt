@@ -1,0 +1,1 @@
+Solr conf class loader does not find indirect jars - regression

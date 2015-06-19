@@ -1,0 +1,1 @@
+currently we create term queries with new TermQuery(..) directly in CommonTermsQuery I'd like to extend the creation of the term query just like you can do that in the the query parser.

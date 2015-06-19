@@ -1,0 +1,1 @@
+Our ngram tokenizers/filters could use some love.  EG, they output ngrams in multiple passes, instead of "stacked", which messes up offsets/positions and requires too much buffering (can hit OOME for long tokens).  They clip at 1024 chars (tokenizers) but don't (token filters).  The split up surrogate pairs incorrectly.

@@ -1,0 +1,1 @@
+User set PIG_CLASSPATH entries must be prepended to the CLASSPATH, not appended

@@ -1,0 +1,3 @@
+I'm seeing a memory leakage when using the "aget" method.
+
+It leaks tuples and dicts, both containing "stats".

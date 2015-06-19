@@ -1,0 +1,1 @@
+A "/" in the ID itself throws an ArrayIndexOutOfBoundsException when using the composite id router

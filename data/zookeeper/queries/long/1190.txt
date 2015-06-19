@@ -1,0 +1,1 @@
+run "ant package" and look in the build/zookeeper-<version>/bin directory. many of the bin scripts are missing.

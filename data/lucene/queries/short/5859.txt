@@ -1,0 +1,1 @@
+Remove Version from Analyzer constructors

@@ -1,0 +1,17 @@
+The ElisionFilterFactory is useful for removing french articles from words (e.g. l'avion -> avion, see its tests).
+
+But the factory itself isnt very friendly, you need to provide an actual text file listing these, which is sorta overkill
+Such a text file would look like:
+
+# below are my articles
+l
+m
+t
+...
+
+
+
+I propose instead of throwing a RuntimeException if you dont provide the articles param, to just use the default set
+already in ElisionFilter: (l, m, t, qu, n, s, j)
+
+It wont backwards break anyone as if they weren't providing it, they were getting RuntimeException before.

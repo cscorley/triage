@@ -1,0 +1,1 @@
+4.4 RC0 still had <luceneMatchVersion>LUCENE_43</luceneMatchVersion> ... the build should fail in a situation like this.

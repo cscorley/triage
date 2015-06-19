@@ -1,0 +1,27 @@
+I've been experimenting with caching filter data per segment in Solr using a CachingWrapperFilter & FilteredQuery within a custom query parser (as suggested by Yonik Seeley in SOLR-3763) and encountered situations where the value of getCoreCacheKey() on the AtomicReader for each segment can change for a given segment on disk when the searcher is reopened. As CachingWrapperFilter uses the value of the segment's getCoreCacheKey() as the key in the cache, there are situations where the data cached on that segment is not reused when the segment on disk is still part of the index. This affects the Lucene field cache and field value caches as well as they are cached per segment.
+
+When Solr first starts it opens the searcher's underlying DirectoryReader in StandardIndexReaderFactory.newReader by calling DirectoryReader.open(indexDir, termInfosIndexDivisor), and the reader is subsequently reopened in SolrCore.openNewSearcher by calling DirectoryReader.openIfChanged(currentReader, writer.get(), true). The act of reopening the reader with the writer when it was first opened without a writer results in the value of getCoreCacheKey() changing on each of the segments even though some of the segments have not changed. Depending on the role of the Solr server, this has different effects:
+
+
+	On a SolrCloud node or free-standing index and search server the segment cache is invalidated during the first DirectoryReader reopen - subsequent reopens use the same IndexWriter instance and as such the value of getCoreCacheKey() on each segment does not change so the cache is retained.
+
+
+
+
+	For a master-slave replication set up the segment cache invalidation occurs on the slave during every replication as the index is reopened using a new IndexWriter instance which results in the value of getCoreCacheKey() changing on each segment when the DirectoryReader is reopened using a different IndexWriter instance.
+
+
+
+I can think of a few approaches to alter the re-opening behavior to allow reuse of segment level caches in both cases, and I'd like to get some input on other ideas before digging in:
+
+
+	To change the cloud node/standalone first commit issue it might be possible to create the UpdateHandler and IndexWriter before the DirectoryReader, and use the writer to open the reader. There is a comment in the SolrCore constructor by Yonik Seeley that the searcher should be opened before the update handler so that may not be an acceptable approach.
+
+
+
+
+	To change the behavior of a slave in a replication set up, one solution would be to not open a writer from the SnapPuller when the new index is retrieved if the core is enabled as a slave only. The writer is needed on a server configured as a master & slave that is functioning as a replication repeater so downstream slaves can see the changes in the index and retrieve them.
+
+
+
+I'll attach a unit test that demonstrates the behavior of reopening the DirectoryReader and it's effects on the value of getCoreCacheKey. My assumption is that the behavior of Lucene during the various reader reopen operations is correct and that the changes are necessary on the Solr side of things.

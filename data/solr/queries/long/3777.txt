@@ -1,0 +1,1 @@
+The checkboxes for 'verbose', 'clean', 'optimize', 'commit' are only sent as arguments when checked.  Clearing the checkbox has no effect, so unintended operations are conducted.

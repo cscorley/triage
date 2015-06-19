@@ -1,0 +1,1 @@
+Enhance CoreAdmin api to split a route key's documents from an index

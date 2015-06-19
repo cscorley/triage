@@ -1,0 +1,1 @@
+Add a target to recalculate SHA1 checksums for JAR

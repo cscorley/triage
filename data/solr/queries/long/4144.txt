@@ -1,0 +1,58 @@
+Recent versions of SolrCloud require a very high heap size vs. older versions. Another cluster of 5.0.0.2012.10.09.19.29.59 (~4GB per core) can restore an empty node without taking a lot of heap (xmx=256m). Recent versions and current trunk fail miserably even with a higher heap (750m). Both clusters have 10 nodes, 10 shards and 2 cores per node. One note to add is that the cluster on which this fails has only about 1.5GB per core due to changing in the Lucene codec such as compression.
+
+After start up everything goes fine...
+
+
+
+2012-12-04 15:05:35,013 INFO [solr.cloud.RecoveryStrategy] - [RecoveryThread] - : Begin buffering updates. core=shard_c
+2012-12-04 15:05:35,013 INFO [solr.cloud.RecoveryStrategy] - [RecoveryThread] - : Begin buffering updates. core=shard_b
+2012-12-04 15:05:35,013 INFO [solr.update.UpdateLog] - [RecoveryThread] - : Starting to buffer updates. FSUpdateLog{state=ACTIVE, tlog=null}
+2012-12-04 15:05:35,013 INFO [solr.update.UpdateLog] - [RecoveryThread] - : Starting to buffer updates. FSUpdateLog{state=ACTIVE, tlog=null}
+2012-12-04 15:05:35,013 INFO [solr.cloud.RecoveryStrategy] - [RecoveryThread] - : Attempting to replicate from http://178.21.118.190:8080/solr/shard_b/. core=shard_b
+2012-12-04 15:05:35,013 INFO [solr.cloud.RecoveryStrategy] - [RecoveryThread] - : Attempting to replicate from http://178.21.118.192:8080/solr/shard_c/. core=shard_c
+2012-12-04 15:05:35,014 INFO [solrj.impl.HttpClientUtil] - [RecoveryThread] - : Creating new http client, config:maxConnections=128&maxConnectionsPerHost=32&followRedirects=false
+2012-12-04 15:05:35,014 INFO [solrj.impl.HttpClientUtil] - [RecoveryThread] - : Creating new http client, config:maxConnections=128&maxConnectionsPerHost=32&followRedirects=false
+2012-12-04 15:05:35,052 INFO [solr.handler.ReplicationHandler] - [RecoveryThread] - : Commits will be reserved for  10000
+2012-12-04 15:05:35,052 INFO [solr.handler.ReplicationHandler] - [RecoveryThread] - : Commits will be reserved for  10000
+2012-12-04 15:05:35,053 INFO [solrj.impl.HttpClientUtil] - [RecoveryThread] - : Creating new http client, config:connTimeout=5000&socketTimeout=20000&allowCompression=false&maxConnections=10000&maxConnectionsPerHost=10000
+2012-12-04 15:05:35,060 INFO [solr.handler.SnapPuller] - [RecoveryThread] - :  No value set for 'pollInterval'. Timer Task not started.
+2012-12-04 15:05:35,060 INFO [solr.handler.SnapPuller] - [RecoveryThread] - :  No value set for 'pollInterval'. Timer Task not started.
+2012-12-04 15:05:35,069 INFO [solr.handler.SnapPuller] - [RecoveryThread] - : Master's generation: 48
+2012-12-04 15:05:35,069 INFO [solr.handler.SnapPuller] - [RecoveryThread] - : Slave's generation: 1
+2012-12-04 15:05:35,069 INFO [solr.handler.SnapPuller] - [RecoveryThread] - : Starting replication process
+2012-12-04 15:05:35,069 INFO [solr.handler.SnapPuller] - [RecoveryThread] - : Master's generation: 47
+2012-12-04 15:05:35,069 INFO [solr.handler.SnapPuller] - [RecoveryThread] - : Slave's generation: 1
+2012-12-04 15:05:35,070 INFO [solr.handler.SnapPuller] - [RecoveryThread] - : Starting replication process
+2012-12-04 15:05:35,078 INFO [solr.handler.SnapPuller] - [RecoveryThread] - : Number of files in latest index in master: 235
+2012-12-04 15:05:35,079 INFO [solr.handler.SnapPuller] - [RecoveryThread] - : Number of files in latest index in master: 287
+2012-12-04 15:05:35,084 WARN [solr.core.CachingDirectoryFactory] - [RecoveryThread] - : No lockType configured for NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/opt/solr/cores/shard_c/data/index.20121204150535080 lockFactory=org.apache.lucene.store.NativeFSLockFactory@57530551; maxCacheMB=48.0 maxMergeSizeMB=4.0) assuming 'simple'
+2012-12-04 15:05:35,085 INFO [solr.core.CachingDirectoryFactory] - [RecoveryThread] - : return new directory for /opt/solr/cores/shard_c/data/index.20121204150535080 forceNew:false
+2012-12-04 15:05:35,085 INFO [solr.core.CachingDirectoryFactory] - [RecoveryThread] - : Releasing directory:/opt/solr/cores/shard_c/data
+2012-12-04 15:05:35,085 WARN [solr.core.CachingDirectoryFactory] - [RecoveryThread] - : No lockType configured for NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/opt/solr/cores/shard_b/data/index.20121204150535079 lockFactory=org.apache.lucene.store.NativeFSLockFactory@512fb063; maxCacheMB=48.0 maxMergeSizeMB=4.0) assuming 'simple'
+2012-12-04 15:05:35,085 INFO [solr.core.CachingDirectoryFactory] - [RecoveryThread] - : return new directory for /opt/solr/cores/shard_b/data/index.20121204150535079 forceNew:false
+2012-12-04 15:05:35,085 INFO [solr.core.CachingDirectoryFactory] - [RecoveryThread] - : Releasing directory:/opt/solr/cores/shard_b/data
+2012-12-04 15:05:35,088 INFO [solr.handler.SnapPuller] - [RecoveryThread] - : Starting download to NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/opt/solr/cores/shard_c/data/index.20121204150535080 lockFactory=org.apache.lucene.store.SimpleFSLockFactory@3bd48043; maxCacheMB=48.0 maxMergeSizeMB=4.0) fullCopy=true
+2012-12-04 15:05:35,089 INFO [solr.handler.SnapPuller] - [RecoveryThread] - : Starting download to NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/opt/solr/cores/shard_b/data/index.20121204150535079 lockFactory=org.apache.lucene.store.SimpleFSLockFactory@67fc9fee; maxCacheMB=48.0 maxMergeSizeMB=4.0) fullCopy=true
+
+
+
+
+until suddenly
+
+
+
+2012-12-03 16:14:58,862 INFO [solr.core.CachingDirectoryFactory] - [RecoveryThread] - : Releasing directory:/opt/solr/cores/shard_b/data/index
+2012-12-03 16:15:06,357 INFO [solr.handler.SnapPuller] - [RecoveryThread] - : removing temporary index download directory files NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/opt/solr/cores/shard_b/data/index.20121203161342097 lockFactory=org.apache.lucene.store.SimpleFSLockFactory@424c2849; maxCacheMB=48.0 maxMergeSizeMB=4.0)
+2012-12-03 16:14:58,610 INFO [solr.core.CachingDirectoryFactory] - [RecoveryThread] - : Releasing directory:/opt/solr/cores/shard_c/data/index
+2012-12-03 16:15:06,128 INFO [solr.core.SolrCore] - [http-8080-exec-2] - : [shard_c] webapp=/solr path=/admin/system params={wt=json} status=0 QTime=11498 
+2012-12-03 16:15:07,644 ERROR [solr.servlet.SolrDispatchFilter] - [http-8080-exec-5] - : null:java.lang.OutOfMemoryError: Java heap space
+
+2012-12-03 16:15:07,644 INFO [solr.handler.SnapPuller] - [RecoveryThread] - : removing temporary index download directory files NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/opt/solr/cores/shard_c/data/index.20121203161342096 lockFactory=org.apache.lucene.store.SimpleFSLockFactory@7a67f797; maxCacheMB=48.0 maxMergeSizeMB=4.0)
+2012-12-03 16:15:39,655 ERROR [solr.servlet.SolrDispatchFilter] - [http-8080-exec-4] - : null:java.lang.RuntimeException: java.lang.OutOfMemoryError: Java heap space
+
+
+
+Just now it succeeded with Xmx=850m and NewRatio=1. Another test failed with Xmx=750m and NewRatio=1. We can reproduce this behaviour rather easy by purging the data directories and simply starting the node with less heap than it today requires for replication.
+
+Please also see:
+http://mail-archives.apache.org/mod_mbox/lucene-solr-user/201211.mbox/%3Czarafa.5093d4ee.58d7.528aacd34e1627b6@mail.openindex.io%3E

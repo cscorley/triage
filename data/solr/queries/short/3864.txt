@@ -1,0 +1,1 @@
+Spatial maxDetailDist doesn't follow degrees standardization

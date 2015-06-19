@@ -1,0 +1,6 @@
+the last fake maven release to nuke.
+
+don't know how exactly yet: Chris is going through some process (LUCENE-3930)
+but this is all dependent and at the whim of an arbitrary company (Sonatype).
+
+We need a less ideal backup plan that doesn't involve a fake maven release.

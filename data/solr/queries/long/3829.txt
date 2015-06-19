@@ -1,0 +1,27 @@
+The Solr Admin page does not show any log events. There are Javascript errors
+
+
+TypeError: doc.logger.esc is not a function
+... '<abbr title="' + doc.logger.esc() + '">' + doc.logger.split( '.' ).pop().esc()...
+
+
+
+This is because the response of the LoggingHandler added unexpected [ ... ] characters around the values for time, level, logger and message:
+
+
+...
+"history":{"numFound":2,"start":0,"docs":[{"time":["2012-09-11T15:07:05.453Z"],"level":["WARNING"],"logger":["org.apache.solr.core.SolrCore"],"message":["New index directory detected: ...
+
+
+
+This is caused by the way the JSON is created. org.apache.solr.logging.LogWatcher#toSolrDocument creates a SolrDocument which is then formatted with a org.apache.solr.response.JSONResponseWriter.
+But the JSONResponseWriter uses the index schema to decide how to format the JSON. We have the following field declaration in schema.xml:
+
+
+    <dynamicField name="*" type="ignored" />
+
+
+
+The field type "ignored" has the attribute multiValued set to true. Because of this JSONResponseWriter adds [] characters in org.apache.solr.response.JSONWriter#writeSolrDocument
+
+The formatting should be independent from schema.xml

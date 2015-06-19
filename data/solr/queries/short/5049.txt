@@ -1,0 +1,1 @@
+switch to using <luceneMatchVersion> X.Y in example configs instead of LUCENE_XY

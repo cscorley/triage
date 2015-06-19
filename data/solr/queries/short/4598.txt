@@ -1,0 +1,1 @@
+The Core Admin unload command's option 'deleteDataDir', should use the DirectoryFactory API to remove the data dir.

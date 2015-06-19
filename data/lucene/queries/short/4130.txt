@@ -1,0 +1,1 @@
+CompoundFileDirectory.listAll is broken

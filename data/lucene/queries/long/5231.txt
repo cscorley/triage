@@ -1,0 +1,9 @@
+A few things i noticed, while trying to work on e.g. integration of this with solr and just playing around:
+
+
+	No way for a custom Bindings to currently bind the score, as the necessary stuff is package private. This adds a simple protected method to Bindings to enable this.
+	Expression.getValueSource() cannot in general be used easily by other things (e.g. interoperate with function queries and so on), because it expects you pass it this "custom cache". This is an impl detail, its easy to remove this restriction and still compute subs only once.
+	if you try to bind the score and don't have the scorer setup, you should get a clear exception: not NPE.
+	Each binding is looked up per-segment, which is bad. we should minimize the lookups to only in the CTOR.
+	This makes validation considerably simpler and less error-prone, so easy that I don't think we need it in the base class either, I moved this to just a simple helper method on SimpleBindings. It also found a bug in the equals() test.
+

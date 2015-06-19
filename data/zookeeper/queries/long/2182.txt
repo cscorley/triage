@@ -1,0 +1,5 @@
+In build.xml, the <junit> task definition uses an include pattern of **/*${test.category}Test.java.  This is important so that we don't accidentally try to run utility classes like PortAssignment or TestableZooKeeper as if they were JUnit suites.  However, several test suites are misnamed so that they don't satisfy this pattern, and therefore pre-commit hasn't been running them.
+
+ClientRetry
+ReconfigFailureCases
+WatchEventWhenAutoReset

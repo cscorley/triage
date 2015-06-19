@@ -1,0 +1,1 @@
+TestBuiltIn testValueListOutputSchemaComplexType and testValueSetOutputSchemaComplexType tests create bags whose inner schema is not a tuple

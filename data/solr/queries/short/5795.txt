@@ -1,0 +1,1 @@
+Option to periodically delete docs based on an expiration field -- or ttl specified when indexed.

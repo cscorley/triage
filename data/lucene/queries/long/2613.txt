@@ -1,0 +1,14 @@
+
+java.lang.IllegalArgumentException: null iterator
+	at org.apache.lucene.search.FilteredDocIdSetIterator.<init>(FilteredDocIdSetIterator.java:38)
+	at org.apache.lucene.search.FilteredDocIdSet$1.<init>(FilteredDocIdSet.java:72)
+	at org.apache.lucene.search.FilteredDocIdSet.iterator(FilteredDocIdSet.java:72)
+	at org.apache.lucene.search.IndexSearcher.searchWithFilter(IndexSearcher.java:241)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:216)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:168)
+	at org.apache.lucene.spatial.tier.TestCartesian.testGeoHashRange(TestCartesian.java:542)
+
+
+
+plug in seed of -6954859807298077232L to newRandom to reproduce.
+didnt test to see if it affected 3x also.

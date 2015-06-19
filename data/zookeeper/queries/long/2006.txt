@@ -1,0 +1,6 @@
+When clientPort is specified in the new format, using "server.x=host:port1:port2;clientPort" in either static or dynamic file and without a "clientPort = xxxx" statement, a standalone mode server doesn't set up client port. 
+
+A second problem is that zkServer.sh looks for the client port in both static and dynamic files, but when looking in the static files it only looks for the "clientPort" statement, so if its specified in the new format the port will be missed and commands such as "zkServer.sh status" will not work. This is a problem for standalone mode, but also in distributed mode when the server is still LOOKING (once a leader is established and the server is LEADING/FOLLOWING/OBSERVING, a dynamic file is created and the client port will be found by the script).
+
+Review Board:
+https://reviews.apache.org/r/24786/

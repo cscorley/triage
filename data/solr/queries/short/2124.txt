@@ -1,0 +1,1 @@
+SEVERE exceptions are being logged for expected PingRequestHandler SERVICE_UNAVAILABLE exceptions

@@ -1,0 +1,10 @@
+In test environment, our zookeeper version is old that our requirement version. Not use solr default 3.3.6 version.
+
+The overseer collection processor stop work. Trace the dump, the overseer wait for LatchChildWatcher.await. 
+Check the zookeeper /overseer/collection-queue-work, block a lot of operation for collection. 
+
+Check the logic, suspect the zookeeper client doesn't call back the watchevent that register the path "/overseer/collection-queue-work", unlucky the log level is debug. 
+
+This case doesn't happen often, very little. But if it happen, it is fatal, we have to stop the leader server.
+
+Suggest the compensate solution, that doesn't await until notify. Only wait some time that maybe it is ten minutes or a half of hour or other value to recheck the queue again. Of cause if get the notify, that can direct work normal.

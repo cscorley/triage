@@ -1,0 +1,16 @@
+Here it fails because -verbose is not set:
+
+$ java -cp ./lucene-core-4.4-SNAPSHOT.jar org.apache.lucene.index.IndexUpgrader ./INDEX
+Exception in thread "main" java.lang.IllegalArgumentException: printStream must not be null
+	at org.apache.lucene.index.IndexWriterConfig.setInfoStream(IndexWriterConfig.java:514)
+	at org.apache.lucene.index.IndexUpgrader.<init>(IndexUpgrader.java:126)
+	at org.apache.lucene.index.IndexUpgrader.main(IndexUpgrader.java:109)
+
+Here it works with -verbose set:
+
+$ java -cp ./lucene-core-4.4-SNAPSHOT.jar org.apache.lucene.index.IndexUpgrader -verbose ./INDEX
+IFD 0 [Mon Sep 16 18:25:53 PDT 2013; main]: init: current segments file is "segments_5"; deletionPolicy=org.apache.lucene.index.KeepOnlyLastCommitDeletionPolicy@42698403
+
+...
+
+IW 0 [Mon Sep 16 18:25:53 PDT 2013; main]: at close: _2(4.4):C4

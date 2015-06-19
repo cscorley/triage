@@ -1,0 +1,5 @@
+This compression is used in lucene for monotonically increasing offsets, e.g. stored fields index, dv BINARY/SORTED_SET offsets, OrdinalMap (used for merging and faceting dv) and so on.
+
+Today this stores a +/- deviation from an expected line of y=mx + b, where b is the minValue for the block and m is the average delta from the previous value. Because it can be negative, we have to do some additional work to zigzag-decode.
+
+Can we just instead waste a bit for every value explicitly (lower the minValue by the min delta) so that deltas are always positive and we can have a simpler decode? Maybe If we do this, the new guy should assert that values are actually monotic at write-time. The current one supports "mostly monotic" but do we really need that flexibility anywhere? If so it could always be kept...

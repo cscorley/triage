@@ -1,0 +1,1 @@
+PathHierarchyTokenizerFactory needs better docs, tests, and example config

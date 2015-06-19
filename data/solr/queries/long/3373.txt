@@ -1,0 +1,39 @@
+i've been watching for changes, in the meantime i requested /admin/ping for the first time after starting the instance. 
+
+The stream.body-Property of the POST-Request to /admin/mbeans contains this for the ping-handler:
+
+
+<lst name="org.apache.solr.handler.PingRequestHandler">
+	<str name="class">org.apache.solr.handler.PingRequestHandler</str>
+	<str name="version">4.0.0.2012.04.16.10.12.28</str>
+	<str name="description">Reports application health to a load-balancer</str>
+	<str name="src">$URL: https://svn.apache.org/repos/asf/lucene/dev/trunk/solr/core/src/java/org/apache/solr/handler/PingRequestHandler.java $</str>
+	<lst name="stats">
+		<long name="handlerStart">1334564025566</long>
+		<long name="requests">0</long>
+		<long name="errors">0</long>
+		<long name="timeouts">0</long>
+		<long name="totalTime">0</long>
+		<float name="avgTimePerRequest">NaN</float>
+		<float name="avgRequestsPerSecond">0.0</float>
+	</lst>
+</lst>
+
+
+The diff-output contains the following:
+
+
+"/admin/ping":{
+	"class":"org.apache.solr.handler.PingRequestHandler",
+	"version":"4.0.0.2012.04.16.10.12.28",
+	"description":"Reports application health to a load-balancer",
+	"src":"$URL: https://svn.apache.org/repos/asf/lucene/dev/trunk/solr/core/src/java/org/apache/solr/handler/PingRequestHandler.java $",
+	"stats":{
+		"handlerStart":1334564025566,
+		"requests":"Was: 0, Now: 1, Delta: 1",
+		"errors":0,
+		"timeouts":0,
+		"totalTime":"Was: 0, Now: 207, Delta: 207",
+		"avgTimePerRequest":"Was: NaN, Now: 207.0, Delta: �"
+	}
+}

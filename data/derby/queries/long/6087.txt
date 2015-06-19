@@ -1,0 +1,1 @@
+We set these library properties to get better compile time checking of old level source using too new  library contents. We should be able to build the Javadoc without unsetting them. It works with a JDK 1.7.

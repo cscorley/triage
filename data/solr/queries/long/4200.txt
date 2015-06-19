@@ -1,0 +1,13 @@
+The following line in CachingDirectoryFactory is resulting in a lot of noise in my branch_4x logs.  It was added by Yonik's recent major sync from trunk to branch_4x, r1420992.
+
+log.info("Releasing directory:" + cacheValue.path);
+
+This was probably added to debug a problem, but it seems to get called a lot.  The specific thing that led me to bring it up is that it is logged four times for every call to /admin/mbeans.  When you've got seven cores and you hit them all, it increases the logging from 7 lines to 35.  IMHO, it should be moved to debug instead of info.
+
+INFO  - 2012-12-15 13:36:01.674; org.apache.solr.core.CachingDirectoryFactory; Releasing directory:/index/solr4/cores/s0_0/../../data/s0_0
+INFO  - 2012-12-15 13:36:01.676; org.apache.solr.core.CachingDirectoryFactory; Releasing directory:/index/solr4/cores/s0_0/../../data/s0_0/index
+INFO  - 2012-12-15 13:36:01.676; org.apache.solr.core.CachingDirectoryFactory; Releasing directory:/index/solr4/cores/s0_0/../../data/s0_0
+INFO  - 2012-12-15 13:36:01.678; org.apache.solr.core.CachingDirectoryFactory; Releasing directory:/index/solr4/cores/s0_0/../../data/s0_0/index
+INFO  - 2012-12-15 13:36:01.679; org.apache.solr.core.SolrCore; [s0build] webapp=/solr path=/admin/mbeans params=
+{qt.path=/admin/mbeans&wt=javabin&stats=true&version=2}
+ status=0 QTime=6

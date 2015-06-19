@@ -1,0 +1,1 @@
+setFlushPending fails if we concurrently hit a aborting exception

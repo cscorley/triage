@@ -1,0 +1,1 @@
+FacetConfig doesn't add drill-down terms for facet associations

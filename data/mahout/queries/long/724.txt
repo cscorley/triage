@@ -1,0 +1,5 @@
+Having gotten away with merging two modules, I am emboldened to try another.
+
+Right now, we have a module for Eclipse settings, and another tiny module called buildtools that seems to support Clover in the Jenkins build. buildtools only has about one thing: checkstyle rules. And they are duplicates of what's in the Eclipse module. And "Eclipse" is a build tool.
+
+So... what if I merged these two guys into the buildtools module?

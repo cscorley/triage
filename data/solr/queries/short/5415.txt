@@ -1,0 +1,1 @@
+A core that failed to load should not unregister from ZK

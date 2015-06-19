@@ -1,0 +1,11 @@
+We added IS.searchAfter(Query, Filter) but we don't support Sort yet with this API.
+
+I think it might be overkill at least at first to try to implement 12 collector variants for this.
+I put the following idea on SOLR-1726:
+
+One idea would be to start with one or two implementations (maybe in/out of order) for the sorting case, and dont overspecialize it yet.
+
+
+	for page 1, the ScoreDoc (FieldDoc really) will be null, so we just return the normal impl anyway.
+	even if our searchAfter isnt huper-duper fast, the user can always make the tradeoff like with page-by-score. they can always just pass null until like page 10 or something if they compute that it only starts to 'help' then.
+

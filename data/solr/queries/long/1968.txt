@@ -1,0 +1,1 @@
+Seeking with a term enumerator is expensive... we should reuse the enum to generate the cached doc set when possible.

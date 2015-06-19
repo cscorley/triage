@@ -1,0 +1,3 @@
+The existing subclasses of BaseDistributedSearchTestCase all skip QTime. I can't see any way in which those numbers will ever match. Why not make this the default, or only, behavior?
+
+(This is really a question, in that I will provide a patch if no one tells me that it is a bad idea.)

@@ -1,0 +1,1 @@
+to remove hadoop20.jar from lib and use hadoop from the apache maven repo.

@@ -1,0 +1,3 @@
+This problem first reported in Solr:
+
+http://lucene.472066.n3.nabble.com/range-query-on-TrieLongField-strange-result-tt970974.html#a970974

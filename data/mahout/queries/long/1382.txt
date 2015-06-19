@@ -1,0 +1,2 @@
+a) Upgrade Guava to Guava 16.0
+b) Upgrade Carrot Randomized-runner to 2.0.15

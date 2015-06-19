@@ -1,0 +1,3 @@
+When calling /solr-4.8.1/example/scripts/cloud-scripts/zkcli.sh the org.apache.solr.cloud.ZkCLI class is not found
+
+The cause is that /opt/solr-4.8.1/example/solr-webapp is empty

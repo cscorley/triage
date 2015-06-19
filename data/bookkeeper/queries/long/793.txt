@@ -1,0 +1,1 @@
+Oracle ended support for java 6 last march. We should follow their lead. As an added bonus we can start to use async io apis with 7.

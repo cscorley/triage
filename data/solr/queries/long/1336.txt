@@ -1,0 +1,7 @@
+SmartChineseAnalyzer was contributed to lucene, it indexes simplified chinese text as words.
+
+if the factories for the tokenizer and word token filter are added to solr it can be used, although there should be a sample config or wiki entry showing how to apply the built-in stopwords list.
+this is because it doesn't contain actual stopwords, but must be used to prevent indexing punctuation... 
+
+note: we did some refactoring/cleanup on this analyzer recently, so it would be much easier to do this after the next lucene update.
+it has also been moved out of -analyzers.jar due to size, and now builds in its own smartcn jar file, so that would need to be added if this feature is desired.

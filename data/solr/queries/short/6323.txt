@@ -1,0 +1,1 @@
+ReRankingQParserPlugin cleaner paging and fix bug with fuzzy, range and other queries that need to be re-written.

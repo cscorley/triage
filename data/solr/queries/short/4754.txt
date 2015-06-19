@@ -1,0 +1,1 @@
+solrcloud does not detect an implicit "host" and does not provide clear error using 4x example

@@ -1,0 +1,8 @@
+Followup from LUCENE-5161:
+In former times we added the OOM cactching in NIOFSDir and SimpleFSDir because nobody understand why the OOM could happen on FileChannel.read() or SimpleFSDir.read(). By reading the Java code its easy to understand (it allocates direct buffers with same size as the requested length to read). As we have chunking now reduce to a few kilobytes it cannot happen anymore that we get spurious OOMs.
+
+In fact we might hide a real OOM! So we should remove it.
+
+I am also not sure if we should make chunk size configureable in FSDirectory at all! It makes no sense to me (it was in fact only added for people that hit the OOM to fine-tune).
+
+In my opinion we should remove the setter in trunk and keep it deprecated in 4.x. The buf size is then in trunk equal to the defaults from LUCENE-5161.

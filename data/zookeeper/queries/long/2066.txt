@@ -1,0 +1,8 @@
+Updates to README.txt
+
+	first reference should be to Apache ZooKeeper
+	fix obsolete ibiblio-rsync-repository url
+	better describe the release process
+	minor grammar and punctuation changes
+
+

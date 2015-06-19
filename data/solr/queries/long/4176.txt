@@ -1,0 +1,26 @@
+attempting to input values containing "%" in the analysis UI causes errors.
+
+Example of the bug, using the solr example configs...
+
+1) load http://localhost:8983/solr/#/collection1/analysis in a browser
+2) select field type "text_general"
+3) enter into either text box: {foo%bar
+4) click the "Analyze Values" button.
+
+results...
+
+
+	Window location is updated to be: http://localhost:8983/solr/#/collection1/analysis?analysis.fieldvalue=foo%25bar&analysis.query=&analysis.fieldtype=text_general&verbose_output=1
+	
+		Note: "%" has been properly encoded in URL
+	
+	
+	page does not display any analyis, and text areas are now empty (although text_general field type is still selected)
+	web dev error console indicates...
+
+Error: URIError: malformed URI sequence
+Source File: http://localhost:8983/solr/js/scripts/analysis.js
+Line: 132
+
+
+

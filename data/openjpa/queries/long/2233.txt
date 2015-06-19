@@ -1,0 +1,40 @@
+It failed to invoke pcGetIDOwningClass method on an embeddable entity which has the ID annotation. here is the exception:
+
+java.lang.NoSuchMethodError: com/xxx/xxx/entity/MyClass.pcGetIDOwningClass()Ljava/lang/Class;
+at com.xxx.xxx.entity.MyClass.pcNewObjectIdInstance(MyClass.java)
+at org.apache.openjpa.enhance.PCRegistry.newObjectId(PCRegistry.java:137)
+at org.apache.openjpa.meta.MetaDataRepository.processRegisteredClass(MetaDataRepository.java:1661)
+at org.apache.openjpa.meta.MetaDataRepository.processRegisteredClasses(MetaDataRepository.java:1615)
+at org.apache.openjpa.meta.ClassMetaData.getPCSubclasses(ClassMetaData.java:365)
+at org.apache.openjpa.jdbc.meta.MappingRepository.findBaseClassMapping(MappingRepository.java:1510)
+at org.apache.openjpa.jdbc.meta.MappingRepository.prepareMapping(MappingRepository.java:403)
+at org.apache.openjpa.meta.MetaDataRepository.preMapping(MetaDataRepository.java:736)
+at org.apache.openjpa.meta.MetaDataRepository.resolve(MetaDataRepository.java:625)
+at org.apache.openjpa.meta.MetaDataRepository.getMetaDataInternal(MetaDataRepository.java:385)
+at org.apache.openjpa.meta.MetaDataRepository.getMetaData(MetaDataRepository.java:358)
+at org.apache.openjpa.meta.MetaDataRepository.resolveAll(MetaDataRepository.java:1923)
+at org.apache.openjpa.meta.MetaDataRepository.getQueryMetaDataInternal(MetaDataRepository.java:1901)
+at org.apache.openjpa.meta.MetaDataRepository.getQueryMetaData(MetaDataRepository.java:1888)
+at org.apache.openjpa.persistence.EntityManagerImpl.createNamedQuery(EntityManagerImpl.java:1013)
+
+This is because it uses different condition to add and invoke pcNewObjectIdInstance method in PCEnhancer.
+
+here is the section it adds pcNewObjectIdInstance in PCEnhancer.addPCMethods
+
+            if (_meta.hasAbstractPKField() == true) 
+{ 
+                addGetIDOwningClass();
+            }
+
+here is the section it invokes pcNewObjectIdInstance in PCEnhancer.addNewObjectIdInstanceMethod
+
+          if(_meta.isEmbeddedOnly() || _meta.hasAbstractPKField() == true) 
+{
+                code.aload().setThis();
+                code.invokevirtual().setMethod(PRE + "GetIDOwningClass",
+                    Class.class, null);
+            }
+ else 
+{
+                code.classconstant().setClass(getType(_meta));
+            }

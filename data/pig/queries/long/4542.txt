@@ -1,0 +1,3 @@
+Certain operators may buffer the output. We need to flush the last set of records from such operators, when we encounter the last input record, before calling getNextTuple() for the last time.
+
+Currently, to flush the last set of records, we compute RDD.count() and compare the count with a running counter to determine if we have reached the last record. This is an unnecessary and inefficient.

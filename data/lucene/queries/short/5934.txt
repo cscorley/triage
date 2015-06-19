@@ -1,0 +1,1 @@
+4.10 broke backwards compatibility for 4.0 beta & 4.0-release indexes

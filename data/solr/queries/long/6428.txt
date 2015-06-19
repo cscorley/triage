@@ -1,0 +1,4 @@
+
+ERROR   4.32s J1 | OverseerTest.testOverseerFailure <<<
+   [junit4]    > Throwable #1: org.apache.zookeeper.KeeperException$NoNodeException: KeeperErrorCode = NoNode for /collections/collection1/leader_elect/shard1/election
+

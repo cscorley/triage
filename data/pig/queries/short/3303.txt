@@ -1,0 +1,1 @@
+add hadoop h2 artifact to publications in ivy.xml

@@ -1,0 +1,7 @@
+In general, using CurrencyField with FunctionQueries doesn't work
+
+In particular, as originally reported...
+
+Filtering using 
+{!frange}
+ syntax isn't work properly. (rather at all)

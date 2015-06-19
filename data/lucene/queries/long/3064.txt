@@ -1,0 +1,2 @@
+we can enforce things like consumer properly iterates through tokenstream lifeycle
+via MockTokenizer. this could catch bugs in consumers that don't call reset(), etc.

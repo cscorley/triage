@@ -1,0 +1,8 @@
+All URLs should generated using a call out to the zk state reader:
+
+
+zkStateReader.getBaseUrlForNodeName(nodeName);
+
+
+
+This is because the url scheme is stored in the clusterprops.json file and is necessary to properly build the correct URL to propagate the request. Please note that if the base_url is available, that should be used since it does have the properly built schemed url without the need to check zk.

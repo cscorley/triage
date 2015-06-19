@@ -1,0 +1,8 @@
+Rick noted in DERBY-6648 that if you wanted to grant both SystemPermission("engine", "monitor") and SystemPermission("engine", "usederbyinternals") to a code base, the following would work:
+
+permission org.apache.derby.security.SystemPermission "engine", "monitor,usederbyinternals";
+
+However, the following does not work:
+
+permission org.apache.derby.security.SystemPermission "engine", "usederbyinternals";
+permission org.apache.derby.security.SystemPermission "engine", "monitor";

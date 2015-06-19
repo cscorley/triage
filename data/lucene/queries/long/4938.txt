@@ -1,0 +1,3 @@
+It does this without a sort though.
+
+This caused TestFunctionQuerySort.testSearchAfterWhenSortingByFunctionValues to OOM (why only sometimes?)

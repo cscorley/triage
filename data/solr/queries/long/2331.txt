@@ -1,0 +1,1 @@
+CoreContainer has enough code in it - I'd like to factor out the solr.xml serialization code into SolrXMLSerializer or something - which should make testing it much easier and lightweight.

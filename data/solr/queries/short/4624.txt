@@ -1,0 +1,1 @@
+CachingDirectoryFactory does not need to support forceNew any longer and it may be causing a missing close directory bug.

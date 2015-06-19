@@ -1,0 +1,8 @@
+Setting threads parameter in DIH handler, every add outputs to the log in INFO level.
+The only current solution is to set the following in log4j.properties:
+
+log4j.rootCategory=INFO, logfile
+log4j.logger.org.apache.solr.handler.dataimport.DocBuilder=FATAL
+log4j.logger.org.apache.solr.handler.dataimport.ThreadedEntityProcessorWrapper=FATAL
+
+These 2 log messages need to be changed to DEBUG.

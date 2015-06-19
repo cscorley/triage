@@ -1,0 +1,1 @@
+[zebra] HDFS meta queries are issued by all mappers; Pig Loader serialize all JobConf contents including those unused by zebra

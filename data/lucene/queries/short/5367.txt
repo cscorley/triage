@@ -1,0 +1,1 @@
+NoSuchElementException occurs when org.apache.lucene.facet.index.FacetFields is used.

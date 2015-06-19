@@ -1,0 +1,1 @@
+Add a useful intblock postings format (eg, FOR, PFOR, PFORDelta, Simple9/16/64, etc.)

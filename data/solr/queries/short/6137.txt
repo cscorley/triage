@@ -1,0 +1,1 @@
+Managed Schema / Schemaless and SolrCloud concurrency issues

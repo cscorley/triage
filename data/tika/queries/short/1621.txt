@@ -1,0 +1,1 @@
+TikaResource should log errors determining ContentDisposition

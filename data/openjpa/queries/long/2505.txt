@@ -1,0 +1,224 @@
+When I try to get an object from my database via entity manager that includes a further object that is annotated with @OneToMany and the parameter "fetch = FetchType.EAGER", I got the following exception (below are more Information about my entities and testcases):
+
+[ERROR 15:50:40] projectNameRestController.catchEmAll(75) | general error occurred
+<openjpa-2.2.2-r422266:1468616 nonfatal general error> org.apache.openjpa.persistence.PersistenceException: org.apache.openjpa.util.LongId cannot be cast to de.projectName.domain.test.Parent
+FailedObject: select p from Parent p [java.lang.String]
+    at org.apache.openjpa.kernel.BrokerImpl.find(BrokerImpl.java:1027)
+    at org.apache.openjpa.kernel.BrokerImpl.find(BrokerImpl.java:926)
+    at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.load(JDBCStoreManager.java:1033)
+    at org.apache.openjpa.jdbc.sql.AbstractResult.load(AbstractResult.java:280)
+    at org.apache.openjpa.jdbc.sql.SelectImpl$SelectResult.load(SelectImpl.java:2381)
+    at org.apache.openjpa.jdbc.meta.strats.RelationToManyInverseKeyFieldStrategy.loadElement(RelationToManyInverseKeyFieldStrategy.java:90)
+    at org.apache.openjpa.jdbc.meta.strats.RelationCollectionInverseKeyFieldStrategy.loadElement(RelationCollectionInverseKeyFieldStrategy.java:76)
+    at org.apache.openjpa.jdbc.meta.strats.StoreCollectionFieldStrategy.processEagerParallelResult(StoreCollectionFieldStrategy.java:313)
+    at org.apache.openjpa.jdbc.meta.strats.StoreCollectionFieldStrategy.loadEagerParallel(StoreCollectionFieldStrategy.java:247)
+    at org.apache.openjpa.jdbc.meta.FieldMapping.loadEagerParallel(FieldMapping.java:916)
+    at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.load(JDBCStoreManager.java:1106)
+    at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.load(JDBCStoreManager.java:1059)
+    at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.load(JDBCStoreManager.java:636)
+    at org.apache.openjpa.kernel.DelegatingStoreManager.load(DelegatingStoreManager.java:117)
+    at org.apache.openjpa.kernel.ROPStoreManager.load(ROPStoreManager.java:78)
+    at org.apache.openjpa.kernel.StateManagerImpl.loadFields(StateManagerImpl.java:3108)
+    at org.apache.openjpa.kernel.StateManagerImpl.load(StateManagerImpl.java:446)
+    at org.apache.openjpa.kernel.BrokerImpl.find(BrokerImpl.java:963)
+    at org.apache.openjpa.kernel.BrokerImpl.find(BrokerImpl.java:926)
+    at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.load(JDBCStoreManager.java:1033)
+    at org.apache.openjpa.jdbc.sql.AbstractResult.load(AbstractResult.java:280)
+    at org.apache.openjpa.jdbc.sql.SelectImpl$SelectResult.load(SelectImpl.java:2381)
+    at org.apache.openjpa.jdbc.sql.AbstractResult.load(AbstractResult.java:274)
+    at org.apache.openjpa.jdbc.kernel.InstanceResultObjectProvider.getResultObject(InstanceResultObjectProvider.java:60)
+    at org.apache.openjpa.lib.rop.EagerResultList.<init>(EagerResultList.java:36)
+    at org.apache.openjpa.kernel.QueryImpl.toResult(QueryImpl.java:1251)
+    at org.apache.openjpa.kernel.QueryImpl.execute(QueryImpl.java:1007)
+    at org.apache.openjpa.kernel.QueryImpl.execute(QueryImpl.java:863)
+    at org.apache.openjpa.kernel.QueryImpl.execute(QueryImpl.java:794)
+    at org.apache.openjpa.kernel.DelegatingQuery.execute(DelegatingQuery.java:542)
+    at org.apache.openjpa.persistence.QueryImpl.execute(QueryImpl.java:286)
+    at org.apache.openjpa.persistence.QueryImpl.getResultList(QueryImpl.java:302)
+    at de.projectName.dao.impl.AccountingDaoImpl.getDistributionsByProvider(AccountingDaoImpl.java:217)
+    at de.projectName.dao.impl.AccountingDaoImpl.getDistributionsByProvider(AccountingDaoImpl.java:171)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:483)
+    at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+    at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98)
+    at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262)
+    at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+    at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207)
+    at com.sun.proxy.$Proxy27.getDistributionsByProvider(Unknown Source)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:483)
+    at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+    at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98)
+    at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262)
+    at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95)
+    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+    at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207)
+    at com.sun.proxy.$Proxy28.getDistributionsByProvider(Unknown Source)
+    at de.projectName.controller.rest.AccountingprojectNameRestController.getAllUnaccountedDistributions(AccountingprojectNameRestController.java:96)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke(Method.java:483)
+    at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:215)
+    at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+    at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+    at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:749)
+    at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)
+    at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)
+    at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:938)
+    at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870)
+    at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961)
+    at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:618)
+    at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837)
+    at javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:301)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    at com.opensymphony.module.sitemesh.filter.PageFilter.parsePage(PageFilter.java:118)
+    at com.opensymphony.module.sitemesh.filter.PageFilter.doFilter(PageFilter.java:52)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:88)
+    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:108)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:108)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+    at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+    at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+    at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+    at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+    at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+    at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+    at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+    at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+    at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+    at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+    at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+    at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+    at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+    at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+    at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:503)
+    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:136)
+    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:74)
+    at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:610)
+    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:526)
+    at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1017)
+    at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:652)
+    at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:222)
+    at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1575)
+    at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1533)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+    at java.lang.Thread.run(Thread.java:744)
+Caused by: java.lang.ClassCastException: org.apache.openjpa.util.LongId cannot be cast to de.projectName.domain.test.Parent
+    at de.projectName.domain.test.Child.pcReplaceField(Child.java)
+    at org.apache.openjpa.kernel.StateManagerImpl.replaceField(StateManagerImpl.java:3213)
+    at org.apache.openjpa.kernel.StateManagerImpl.storeObjectField(StateManagerImpl.java:2643)
+    at org.apache.openjpa.kernel.StateManagerImpl.storeObject(StateManagerImpl.java:2633)
+    at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.setMappedBy(JDBCStoreManager.java:478)
+    at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.initializeState(JDBCStoreManager.java:404)
+    at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.initialize(JDBCStoreManager.java:306)
+    at org.apache.openjpa.kernel.DelegatingStoreManager.initialize(DelegatingStoreManager.java:112)
+    at org.apache.openjpa.kernel.ROPStoreManager.initialize(ROPStoreManager.java:57)
+    at org.apache.openjpa.kernel.BrokerImpl.initialize(BrokerImpl.java:1046)
+    at org.apache.openjpa.kernel.BrokerImpl.find(BrokerImpl.java:1004)
+    ... 126 more 
+________________________________________________
+
+I created 2 new entities for my tests, they look like this:
+
+@Entity
+@Table(name = "parent")
+public class Parent {
+
+@Id
+@GeneratedValue(strategy = GenerationType.TABLE, generator = "parentGen")
+@TableGenerator(name = "parentGen", table = "jpa_sequence", pkColumnName = "ID",
+        pkColumnValue = "parent", valueColumnName = "SEQUENCE_VALUE", allocationSize = 1)
+public long oid;
+
+@OneToMany(mappedBy = "parent", fetch = FetchType.EAGER)
+private List<Child> children;
+
+
+public long getOid() 
+{
+    return oid;
+}
+
+public void setOid(long oid) {
+    this.oid = oid;
+}
+
+public List<Child> getChildren() {
+    return children;
+}
+
+public void setChildren(List<Child> children) {
+    this.children = children;
+}
+_______________________________________
+
+@Entity
+@Table(name = "child")
+public class Child {
+
+@Id
+@GeneratedValue(strategy = GenerationType.TABLE, generator = "childGen")
+@TableGenerator(name = "childGen", table = "jpa_sequence", pkColumnName = "ID",
+        pkColumnValue = "child", valueColumnName = "SEQUENCE_VALUE")
+public long oid;
+
+@ManyToOne
+private Parent parent;
+
+
+public long getOid() {
+    return oid;
+}
+
+public void setOid(long oid) 
+{
+    this.oid = oid;
+}
+
+public Parent getParent() 
+{
+    return parent;
+}
+
+public void setParent(Parent parent) 
+{
+    this.parent = parent;
+}
+____________________________________
+
+Further information:
+
+    My jpql: select p from Parent p
+    If I change the FetchType to "LAZY" (or leave it just out) I got my result normaly and the children object (the list) is null of course, but if I call the getter of the list now (in the transaction), the object will be filled normaly without this exception.
+    Furthermore this exception does not occur when I have just 1 parent with child objects. I can have several parents and children in my tables, but when more than 1 parent have children referenced in the database, this exception will be thrown.
+    Also if I change the type of "oid" from "long" to "int" the exception will change, too: "...LongId cannot be cast... -> ...IntId cannot be cast..."
+    I used: Java 8 with jpa 2.1.0 and 2.2.2, Java 6 with jpa 2.2.2
+    MySQL Database
+    Apache Tomcat

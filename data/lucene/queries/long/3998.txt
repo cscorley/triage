@@ -1,0 +1,7 @@
+currently facets depends on analyzers-common, but this is unnecessary.
+
+additionally it has a nice examples/ package (even with javadocs! are they actually seen anywhere?!),
+as well as tests for those examples.
+
+I think instead it would be better if facet/ had no dependencies,
+and if examples+examples tests were in demo/.

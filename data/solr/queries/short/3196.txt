@@ -1,0 +1,1 @@
+partialResults response header not propagated in distributed search

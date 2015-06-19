@@ -1,0 +1,1 @@
+ClassCastException when passing non-textual field for clustering

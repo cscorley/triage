@@ -1,0 +1,15 @@
+StemmerUtil.deleteN calls to delete(), but in some cases, it may delete too many characters. E.g. if you execute this code:
+
+
+
+char[] buf = "abcd".toCharArray();
+int len = StemmerUtil.deleteN(buf, buf.length, buf.length, 3);
+System.out.println(new String(buf, 0, len));
+
+
+
+You get "a", even though no character should have been deleted (not according to the javadocs nor common logic).
+
+The problem is in delete(), which always returns len-1, even if no character is actually deleted.
+
+I'll post a patch that fixes it shortly.

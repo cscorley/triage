@@ -1,0 +1,5 @@
+We had a hack since LUCENE-5385 in our build, because svnkit 1.8.0 - 1.8.3 were not able to read svn 1.7 checkouts. Because of this the user had to choose the right svnkit version when executing ant check-svn-working-copy.
+
+Since svnkit 1.8.4 we can read all svn working copy formats again, so our checks will work on any checkout without forcefully choosing svnkit version.
+
+This patch removes the extra warnings and error messages and update to 1.8.4.

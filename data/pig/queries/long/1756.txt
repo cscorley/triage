@@ -1,0 +1,6 @@
+Pig 080 doc patch includes updates for:
+
+> PigUnit
+> Getting Started 
+> Pig Latin1 (skewed join)
+> Pig Latin 2 (limit, mapreduce, distinct)

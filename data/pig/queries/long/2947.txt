@@ -1,0 +1,1 @@
+User documentation for recently released Rank operator, with some basic explanation of usage and examples

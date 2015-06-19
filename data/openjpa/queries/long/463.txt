@@ -1,0 +1,9 @@
+End user should be able to do:
+
+$ java -jar /path/to/openjpa.jar
+
+To get a self-description of OpenJPA
+
+Currently, org.apache.openjpa.conf.OpenJPAVersion does output useful information. 
+
+This enhancement request is to mark org.apache.openjpa.conf.OpenJPAVersion as the Main-Class in manifest.

@@ -1,0 +1,49 @@
+OpenJPA 1.x does not support JPA 2.0, but there are runtime environments
+where applications using OpenJPA 1.x must run with the JPA 2.0 jar
+present in the classpath.
+
+Although JPA 2.0 is upwardly compatible with JPA 1.0, JPA 2.0 introduced
+some methods to existing JPA interfaces that conflict with existing
+signatures in OpenJPA interfaces.  These conflicts arise because
+the OpenJPA interfaces extend the JPA interfaces that picked up the new 
+methods.
+
+To avoid the linkage errors that would result from no changes to
+OpenJPA, when applications using the offending methods run in such an
+environment, the two offending methods should be changed in the OpenJPA
+interfaces.
+
+Applications deployed in such environments should be recompiled to avoid
+any possibility of using the old methods.
+
+The offending methods are 
+
+    public <T> T OpenJPAEntityManager.detach(T pc)
+    public Properties OpenJPAEntityManagerFactory.getProperties()
+
+The proposed fixes are designed to make recompilation and correction of
+such applications as simple as possible. Such applications will compile
+with either the JPA 2.0 or JPA 1.0 jar, but they should be compiled with
+the JPA 1.0 jar to avoid mistakenly using interfaces or methods found
+only in JPA 2.0. Any such coding mistakes will result in linkage errors
+when the methods or interfaces are used at runtime.
+
+The proposed fixes:
+
+    public <T> T OpenJPAEntityManager.detachCopy(T pc)
+    public Map<String, Object) OpenJPAEntityManagerFactory.getProperties()
+
+    public Properties OpenJPAEntityManagerFactory.getPropertiesAsProperties()
+
+The first two fixes follow the changes made in OpenJPA 2.x to address
+these same conflicts.
+
+The getPropertiesAsProperties method is provided as a convenience to
+application developers who do not want to accept the different return
+type of the redesigned getProperties method. However, the method
+getPropertiesAsProperties is not currently found in the OpenJPA 2.x
+interface.
+
+It is estimated that a large proportion of OpenJPA 1.x enabled
+applications are using the old detach method and that a small proportion
+are using the old getProperties method.

@@ -1,0 +1,12 @@
+Our 10 node test cluster (10 shards, 20 cores) blocks incoming queries briefly when a node is stopped gracefully and again blocks queries for at least a few seconds when the node is started again.
+
+We're using siege to send roughly 10 queries per second to a pair a load balancers. Those load balancers ping (admin/ping) each node every few hundres milliseconds. The ping queries continue to operate normally while the requests to our main request handler is blocked. A manual request directly to a live Solr node is also blocked for the same duration.
+
+There are no errors logged. But it is clear that the the entire cluster blocks queries as soon as the starting node is reading its config from Zookeeper, likely even slightly earlier.
+
+The blocking time when stopping a node varies between 1 or 5 seconds. The blocking time when starting a node varies between 10 up to 30 seconds. The blocked queries come rushing in again after a queue of ping requests are served. The ping request sets the main request handler via the qt parameter.
+
+
+
+UPDATE:
+Since SOLR-3655 queries are no longer blocked when starting a node, only for a few seconds when a stopping node using Solr 5.0.0.2013.02.15.13.26.04

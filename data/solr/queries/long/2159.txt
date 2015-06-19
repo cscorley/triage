@@ -1,0 +1,92 @@
+CloudStateUpdateTest.testCoreRegistration failed in Hudson, with:
+
+expected:<2> but was:<3>
+
+Here is the stacktrace:
+
+    [junit] Testsuite: org.apache.solr.cloud.CloudStateUpdateTest
+    [junit] Testcase: testCoreRegistration(org.apache.solr.cloud.CloudStateUpdateTest):	FAILED
+    [junit] expected:<2> but was:<3>
+    [junit] junit.framework.AssertionFailedError: expected:<2> but was:<3>
+    [junit] 	at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:795)
+    [junit] 	at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:768)
+    [junit] 	at org.apache.solr.cloud.CloudStateUpdateTest.testCoreRegistration(CloudStateUpdateTest.java:203)
+    [junit] 
+    [junit] 
+    [junit] Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 18.254 sec
+    [junit] 
+    [junit] ------------- Standard Output ---------------
+    [junit] NOTE: reproduce with: ant test -Dtestcase=CloudStateUpdateTest -Dtestmethod=testCoreRegistration -Dtests.seed=3315086210462004965:6080191299009105620
+    [junit] NOTE: test params are: codec=Standard, locale=bg_BG, timezone=CNT
+    [junit] ------------- ---------------- ---------------
+    [junit] ------------- Standard Error -----------------
+    [junit] 2010-10-15 2:01:28 org.apache.solr.core.CoreContainer register
+    [junit] SEVERE: 
+    [junit] org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /collections/collection1/shards/127.0.0.1:1662_solr_
+    [junit] 	at org.apache.zookeeper.KeeperException.create(KeeperException.java:90)
+    [junit] 	at org.apache.zookeeper.KeeperException.create(KeeperException.java:42)
+    [junit] 	at org.apache.zookeeper.ZooKeeper.create(ZooKeeper.java:637)
+    [junit] 	at org.apache.solr.common.cloud.SolrZkClient.makePath(SolrZkClient.java:348)
+    [junit] 	at org.apache.solr.common.cloud.SolrZkClient.makePath(SolrZkClient.java:309)
+    [junit] 	at org.apache.solr.common.cloud.SolrZkClient.makePath(SolrZkClient.java:371)
+    [junit] 	at org.apache.solr.cloud.ZkController.addZkShardsNode(ZkController.java:155)
+    [junit] 	at org.apache.solr.cloud.ZkController.register(ZkController.java:474)
+    [junit] 	at org.apache.solr.core.CoreContainer.register(CoreContainer.java:515)
+    [junit] 	at org.apache.solr.core.CoreContainer.load(CoreContainer.java:408)
+    [junit] 	at org.apache.solr.core.CoreContainer.load(CoreContainer.java:289)
+    [junit] 	at org.apache.solr.core.CoreContainer$Initializer.initialize(CoreContainer.java:213)
+    [junit] 	at org.apache.solr.cloud.CloudStateUpdateTest.setUp(CloudStateUpdateTest.java:124)
+    [junit] 	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+    [junit] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.lang.reflect.Method.invoke(Method.java:616)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+    [junit] 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:27)
+    [junit] 	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+    [junit] 	at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:795)
+    [junit] 	at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:768)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+    [junit] 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+    [junit] 	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:39)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:743)
+    [junit] 2010-10-15 2:01:29 org.apache.log4j.Category error
+    [junit] SEVERE: Unexpected Exception: 
+    [junit] java.nio.channels.CancelledKeyException
+    [junit] 	at sun.nio.ch.SelectionKeyImpl.ensureValid(SelectionKeyImpl.java:73)
+    [junit] 	at sun.nio.ch.SelectionKeyImpl.interestOps(SelectionKeyImpl.java:77)
+    [junit] 	at org.apache.zookeeper.server.NIOServerCnxn.sendBuffer(NIOServerCnxn.java:417)
+    [junit] 	at org.apache.zookeeper.server.NIOServerCnxn.sendResponse(NIOServerCnxn.java:1508)
+    [junit] 	at org.apache.zookeeper.server.FinalRequestProcessor.processRequest(FinalRequestProcessor.java:367)
+    [junit] 	at org.apache.zookeeper.server.SyncRequestProcessor.flush(SyncRequestProcessor.java:161)
+    [junit] 	at org.apache.zookeeper.server.SyncRequestProcessor.run(SyncRequestProcessor.java:98)
+    [junit] 2010-10-15 2:01:29 org.apache.log4j.Category error
+    [junit] SEVERE: Unexpected Exception: 
+    [junit] java.nio.channels.CancelledKeyException
+    [junit] 	at sun.nio.ch.SelectionKeyImpl.ensureValid(SelectionKeyImpl.java:73)
+    [junit] 	at sun.nio.ch.SelectionKeyImpl.interestOps(SelectionKeyImpl.java:77)
+    [junit] 	at org.apache.zookeeper.server.NIOServerCnxn.sendBuffer(NIOServerCnxn.java:417)
+    [junit] 	at org.apache.zookeeper.server.NIOServerCnxn.sendResponse(NIOServerCnxn.java:1508)
+    [junit] 	at org.apache.zookeeper.server.FinalRequestProcessor.processRequest(FinalRequestProcessor.java:171)
+    [junit] 	at org.apache.zookeeper.server.SyncRequestProcessor.run(SyncRequestProcessor.java:135)
+    [junit] 2010-10-15 2:01:29 org.apache.log4j.Category error
+    [junit] SEVERE: Unexpected Exception: 
+    [junit] java.nio.channels.CancelledKeyException
+    [junit] 	at sun.nio.ch.SelectionKeyImpl.ensureValid(SelectionKeyImpl.java:73)
+    [junit] 	at sun.nio.ch.SelectionKeyImpl.interestOps(SelectionKeyImpl.java:77)
+    [junit] 	at org.apache.zookeeper.server.NIOServerCnxn.sendBuffer(NIOServerCnxn.java:417)
+    [junit] 	at org.apache.zookeeper.server.NIOServerCnxn.sendResponse(NIOServerCnxn.java:1508)
+    [junit] 	at org.apache.zookeeper.server.FinalRequestProcessor.processRequest(FinalRequestProcessor.java:171)
+    [junit] 	at org.apache.zookeeper.server.SyncRequestProcessor.run(SyncRequestProcessor.java:135)
+    [junit] ------------- ---------------- ---------------
+    [junit] TEST org.apache.solr.cloud.CloudStateUpdateTest FAILED
+

@@ -1,0 +1,7 @@
+Same scanario as SOLR-3561 - deleting shards/cores using CoreAdmin/UNLOAD command.
+
+I have noticed that when doing CoreAdmin/UNLOAD, the data-folder on disk belonging to the shard/core that has been unloaded is not deleted. I might be ok since the operation is called UNLOAD, but I basically want to delete a shard/core and all data related to it (including its data-folder).
+
+Dont we have a delete shard/core operation? Or what do I need to do? Do I have to manually delete the data-folder myself after having unloaded?
+
+A delete-shard/core or even a delete-collection operation would be very nice!

@@ -1,0 +1,1 @@
+CompoundWordTokenFilterBase and its children DictionaryCompoundWordTokenFilter and HyphenationCompoundWordTokenFilter update offsets. This can make OffsetAttributeImpl trip an exception when chained with other filters that group tokens together such as ShingleFilter, see http://www.gossamer-threads.com/lists/lucene/java-dev/196376?page=last.

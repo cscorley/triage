@@ -1,0 +1,1 @@
+FieldCacheImpl.SortedDocValuesImpl should compress addresses to term bytes more efficiently

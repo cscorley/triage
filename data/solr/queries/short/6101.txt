@@ -1,0 +1,1 @@
+Shard splitting doesn't work in legacyCloud=false mode

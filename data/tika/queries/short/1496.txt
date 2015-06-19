@@ -1,0 +1,1 @@
+Upgrade slf4j-log4j12 to version 1.7.7

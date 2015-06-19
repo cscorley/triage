@@ -1,0 +1,1 @@
+SolrRequestParserTest.testStreamURL test failure

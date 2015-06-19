@@ -1,0 +1,1 @@
+This patch includes modifications for raising both HTTP, and Solr errors during the handling of a request.  A unit test is included.

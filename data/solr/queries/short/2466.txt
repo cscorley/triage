@@ -1,0 +1,1 @@
+CommonsHttpSolrServer will retry a query even if _maxRetries is 0

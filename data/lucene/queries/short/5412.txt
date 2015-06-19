@@ -1,0 +1,1 @@
+SI.files should strip segment names

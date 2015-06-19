@@ -1,0 +1,10 @@
+Nightly build hit OOME with this
+
+
+ant test  -Dtestcase=Test2BPostings -Dtests.method=test -Dtests.seed=33378E77AE43B10B -Dtests.multiplier=2 -Dtests.nightly=true -Dtests.slow=true -Dtests.linedocsfile=/home/hudson/lucene-data/enwiki.random.lines.txt -Dtests.locale=sl -Dtests.timezone=America/Argentina/ComodRivadavia -Dtests.file.encoding=UTF-8
+
+
+
+The test was using NRTCachingDirectory, but the OOME happens because CompoundFileWriter's getOutput fails to pass down the incoming IOContext.
+
+IndexWriter has properly set up the IOContext for flush, put a huge file size in there, but by the time NRTCachingDirectory saw it, it was 0 bytes, and then many 100s of MB proceeded to be written into the RAMFile.

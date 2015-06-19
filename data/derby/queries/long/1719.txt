@@ -1,0 +1,74 @@
+Here's the diff:
+
+	
+	
+		
+		
+			Start: autoincrement jdk1.4.2_07 derbylang:derbylang 2006-08-17 13:50:01 ***
+285 del
+< ij> – should see 20.
+285a285
+> ij> – should see 0.
+Test Failed.
+			End:   autoincrement jdk1.4.2_07 derbylang:derbylang 2006-08-17 13:50:29 ***
+		
+		
+	
+	
+
+
+
+From the public test results here are a few examples of the problem:
+http://www.multinet.no/~solberg/public/Apache/Derby-10.1/testlog/CYGWIN_NT-5.2_i686-unknown/430740-derbyall_diff.txt
+http://www.multinet.no/~solberg/public/Apache/Derby-10.1/testlog/Linux-2.6.9-34.ELsmp_x86_64-x86_64/430740-derbyall_diff.txt
+
+It looks like it came in with one the following 3 changes:
+http://www.multinet.no/~solberg/public/Apache/Derby-10.1/UpdateInfo/430740.txt
+Changes from 426767/430334 to 430740:
+------------------------------------------------------------------------
+r430381 | kmarsden | 2006-08-10 15:43:20 +0200 (Thu, 10 Aug 2006) | 11 lines
+
+DERBY-353 It is desirable to have IDENTITY_VAL_LOCAL() function return last recent user specified value or system generated value for BY DEFAULT identity columns.
+
+Merged from trunk 267331, contributed by V.Narayanan
+
+DERBY-1554 IDENTITY_VAL_LOCAL() returned value is modified incorrectly by a multi-row INSERT statement.
+
+Merged from trunk 429425, contributed by Yip Ng
+
+
+
+
+------------------------------------------------------------------------
+r430534 | kmarsden | 2006-08-10 23:20:52 +0200 (Thu, 10 Aug 2006) | 6 lines
+
+DERBY-1456 Network Server agentError calls log only to console and are hard to diagnose
+
+merge from trunk (svn 428012)
+
+Contributed by Sunitha Kambhampati 
+
+------------------------------------------------------------------------
+r430539 | kmarsden | 2006-08-10 23:29:00 +0200 (Thu, 10 Aug 2006) | 7 lines
+
+DERBY-1466 Network Server should flush the PrintWriter after console output
+
+merge from trunk (svn 422826)
+
+Contributed by Sunitha Kambhampati
+
+
+------------------------------------------------------------------------
+
+U    java/engine/org/apache/derby/impl/sql/execute/InsertResultSet.java
+U    java/engine/org/apache/derby/iapi/jdbc/DRDAServerStarter.java
+U    java/drda/org/apache/derby/impl/drda/NetworkServerControlImpl.java
+U    java/drda/org/apache/derby/impl/drda/DRDAProtocolException.java
+U    java/testing/org/apache/derbyTesting/functionTests/tests/lang/autoincrement.sql
+U    java/testing/org/apache/derbyTesting/functionTests/tests/derbynet/DerbyNetNewServer.java
+Updated to revision 430740.
+430740 URL: https://svn.apache.org/repos/asf/db/derby/code/branches/10.1
+
+
+To me it looks like the current result is right and the master is wrong, but would appreciate it if someone
+associated with the change could verify.  

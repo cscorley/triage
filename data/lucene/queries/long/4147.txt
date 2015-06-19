@@ -1,0 +1,5 @@
+found by http://jenkins.sd-datasolutions.de/job/Lucene-Solr-4.x-Windows-Java7-64/70/
+
+rollback should never throw this exception, as it documents it clears any pendingcommits.
+
+but it calls closeInternal outside of any sync block, so it looks like there is a race here.

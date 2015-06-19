@@ -1,0 +1,1 @@
+We have 'addrole' and 'removerole' APIs but no way to return the roles. I think we should add this information to the 'clusterstatus' API.

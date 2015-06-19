@@ -1,0 +1,5 @@
+The following example in the JS udf doc throws an error, which is embarrassing-
+
+
+complex.outputSchema = "word:chararray,num:long";
+

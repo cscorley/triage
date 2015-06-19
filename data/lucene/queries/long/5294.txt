@@ -1,0 +1,15 @@
+It would be nice to have a Suggester Dictionary implementation that could compute the weights of the terms consumed by the suggester based on an user-defined expression (using lucene's expression module).
+
+It could be an extension of the existing DocumentDictionary (which takes terms, weights and (optionally) payloads from the stored documents in the index). The only exception being that instead of taking the weights for the terms from the specified weight fields, it could compute the weights using an user-defn expression, that uses one or more NumicDocValuesField from the document.
+
+Example:
+  let the document have
+
+	product_id
+	product_name
+	product_popularity
+	product_profit
+
+
+
+  Then this implementation could be used with an expression of     "0.2*product_popularity + 0.8*product_profit" to determine the weights of the terms for the corresponding documents (optionally along with a payload (product_id))

@@ -1,0 +1,1 @@
+User docs refer to OpenJPAEntityManager.getExtent(..), but it looks like the method was renamed to OpenJPAEntityManager.createExtent(..).

@@ -1,0 +1,22 @@
+Currently there is a lot of shared codec implementations for things like
+field infos, segment infos, stored fields, term vectors under the .codecs 
+package with the name Default*
+
+I think actually the .codecs package should be our abstract codec apis,
+and the implementations should be under the respective codecs.
+
+Also, lots of these implementations are still 'shared' across the 3.x and 4.x
+formats, but shouldn't be: the 4.x versions should be "clean", and the 3.x 
+versions should have all the backwards cruft.
+
+Additionally, the "PreFlexRW" should be writing this stuff in 3.x format,
+but today it does not (it writes a 3.x index repackaged in a 4.x "container").
+
+Really PreFlexRW needs to write indexes that are exactly like the 3.x format
+(if you opened them up in lucene 3.x you could read them!). When this works
+then we know that codecs will actually work for our backwards compatibility needs
+and we know that we have good index backwards compatibility testing. 
+
+For starters we could just pick some 3.x version of lucene and wire PreFlexRW
+to it... in the future maybe the writer should take a version param so it
+can actually simulate different minor versions.

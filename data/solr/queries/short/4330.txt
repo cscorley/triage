@@ -1,0 +1,1 @@
+group.sort is ignored when using truncate and ex/tag local params

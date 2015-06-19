@@ -1,0 +1,1 @@
+Solr Core Admin view is not visible unless multiple cores already exist

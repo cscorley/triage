@@ -1,0 +1,1 @@
+IndexFormatTooOldException and IndexFormatTooNewException both extend from CorruptIndexException.  But this is not a corruption, it is simply an unsupported version of an index.  They should just extend IOException.

@@ -1,0 +1,3 @@
+This is the parent task for OpenJPA iteration 8. The iteration 8 development period is from June 1st - July 3rd. Features to be completed during this iteration must be assigned as a subtask to this task. The JPA 2.0 Roadmap [1] will contain iteration 8 features and tracking information.
+
+[1] http://cwiki.apache.org/confluence/display/openjpa/JPA+2.0+Roadmap

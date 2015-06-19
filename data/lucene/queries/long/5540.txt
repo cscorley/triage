@@ -1,0 +1,3 @@
+forbidden-apis was released in version 1.4.1 (with support for final java 8). This also contains some additional unsafe signatures (added by Robert Muir), we need to fix.
+
+Also this updates some other tools versions: groovy, pegdown

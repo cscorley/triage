@@ -1,0 +1,3 @@
+If any failure during zk Startup (myid file does not exist), then still zk startup returns as successful (STARTED).
+
+ZK startup failure should be handled with proper error message

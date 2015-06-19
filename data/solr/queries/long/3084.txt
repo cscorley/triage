@@ -1,0 +1,14 @@
+This is from issue SOLR-2718 and came up after backporting that issue to branch_3x.
+After that backport I get a SolrException.
+
+Jan 31, 2012 1:50:15 PM org.apache.solr.core.SolrCore initListeners
+INFO: [] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[
+{q=*:*,start=0,rows=10,spellcheck.build=true}
+, .....
+Jan 31, 2012 2:00:10 PM org.apache.solr.common.SolrException log
+SEVERE: org.apache.solr.common.SolrException: QueryResponseWriter init failure
+    at org.apache.solr.core.SolrCore.initWriters(SolrCore.java:1499)
+    at org.apache.solr.core.SolrCore.<init>(SolrCore.java:557)
+    at org.apache.solr.core.CoreContainer.create(CoreContainer.java:466)
+    at org.apache.solr.core.CoreContainer.load(CoreContainer.java:319)
+... 

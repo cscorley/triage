@@ -1,0 +1,1 @@
+Simplify configuration API of contrib Query Parser

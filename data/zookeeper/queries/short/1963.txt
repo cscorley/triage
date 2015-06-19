@@ -1,0 +1,1 @@
+Make JDK 7 the minimum requirement for Zookeeper

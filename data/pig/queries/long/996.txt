@@ -1,0 +1,3 @@
+Zebra build script does not have findbugs and clover targets, leading hudson build process to fail on Zebra.
+
+This jira is to fix this by adding these two targets.

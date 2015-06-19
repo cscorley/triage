@@ -1,0 +1,1 @@
+CompressingStoredFieldsFormat's bulk merge should be disabled when reader and writer don't have the same chunk size

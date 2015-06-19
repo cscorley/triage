@@ -1,0 +1,3 @@
+Mike wrote a prototype of a FacetsCollector which reads ordinals from a CachedInts structure on LUCENE-4609. I ported it to the new facets API, as a FacetsAggregator. I think we should offer users the means to use such a cache, even if it consumes more RAM. Mike tests show that this cache consumed x2 more RAM than if the DocValues were loaded into memory in their raw form. Also, a PackedInts version of such cache took almost the same amount of RAM as straight int[], but the gains were minor.
+
+I will post the patch shortly.

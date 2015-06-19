@@ -1,0 +1,1 @@
+Currency types do not support range queries when multiValued

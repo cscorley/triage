@@ -1,0 +1,1 @@
+Combining -Dpig.additional.jars.uris with -useHCatalog breaks due to combination with colon instead of comma

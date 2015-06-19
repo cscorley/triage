@@ -1,0 +1,8 @@
+Can you please verify if this issue is simply due to improper implementation, or if it's a bug in Solr?
+
+http://stackoverflow.com/questions/12412040/solr-dataimporthandler-when-attempting-to-use-column-values-as-field-names-m
+
+Also, I should note that a static reference to fieldB does handle multiple values correctly.
+Example: <field name="fieldB" column="VALUE_COLUMN" clob="true" />
+
+It only fails when I try to set the field names dynamically.

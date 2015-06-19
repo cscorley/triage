@@ -1,0 +1,1 @@
+ReadToEndLoader does not close the record reader for the last input split

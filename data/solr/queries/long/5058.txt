@@ -1,0 +1,6 @@
+Log entry appears on Solr Admin Logging interface:
+WARN 	PeerSync 	no frame of reference to tell of we've missed updates
+
+There is a typo, this looks like it should read "to tell if we've"
+
+PeerSync expands to org.apache.solr.update.PeerSync

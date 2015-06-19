@@ -1,0 +1,1 @@
+ConcurrentUpdateSolrServer#blockUntilFinished may wait forever if the executor service is shutdown.

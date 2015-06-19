@@ -1,0 +1,25 @@
+    [junit] Tests run: 1, Failures: 0, Errors: 1, Time elapsed: 3.031 sec
+    [junit] 
+    [junit] ------------- Standard Output ---------------
+    [junit] NOTE: reproduce with: ant test -Dtestcase=TestQueryTemplateManager -Dtestmethod=testFormTransforms -Dtests.seed=-3178590569335578120:-7726718235997875276
+    [junit] NOTE: test params are: codec=SimpleText, locale=tr_TR, timezone=America/Rainy_River
+    [junit] ------------- ---------------- ---------------
+    [junit] ------------- Standard Error -----------------
+    [junit] java.lang.RuntimeException: Instruction unknown: load?nstruction
+    [junit] 	at com.sun.org.apache.bcel.internal.util.InstructionFinder.mapName(InstructionFinder.java:138)
+    [junit] 	at com.sun.org.apache.bcel.internal.util.InstructionFinder.compilePattern(InstructionFinder.java:170)
+    [junit] 	at com.sun.org.apache.bcel.internal.util.InstructionFinder.search(InstructionFinder.java:218)
+    [junit] 	at com.sun.org.apache.bcel.internal.util.InstructionFinder.search(InstructionFinder.java:264)
+    [junit] 	at com.sun.org.apache.xalan.internal.xsltc.compiler.Mode.peepHoleOptimization(Mode.java:1444)
+    [junit] 	at com.sun.org.apache.xalan.internal.xsltc.compiler.Mode.compileApplyTemplates(Mode.java:1058)
+    [junit] 	at com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet.compileModes(Stylesheet.java:615)
+    [junit] 	at com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet.translate(Stylesheet.java:730)
+    [junit] 	at com.sun.org.apache.xalan.internal.xsltc.compiler.XSLTC.compile(XSLTC.java:354)
+    [junit] 	at com.sun.org.apache.xalan.internal.xsltc.compiler.XSLTC.compile(XSLTC.java:429)
+    [junit] 	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl.newTemplates(TransformerFactoryImpl.java:797)
+    [junit] 	at org.apache.lucene.xmlparser.QueryTemplateManager.getTemplates(QueryTemplateManager.java:208)
+    [junit] 	at org.apache.lucene.xmlparser.QueryTemplateManager.addQueryTemplate(QueryTemplateManager.java:75)
+    [junit] 	at org.apache.lucene.xmlparser.TestQueryTemplateManager.testFormTransforms(TestQueryTemplateManager.java:74)
+...
+    [junit] ERROR:  'Instruction unknown: load?nstruction'
+    [junit] FATAL ERROR:  'Could not compile stylesheet'

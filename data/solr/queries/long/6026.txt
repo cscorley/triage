@@ -1,0 +1,10 @@
+REQUESTSTATUS API call should check for the following:
+
+	work-queue (submitted task)
+	running-map (running task/in progress)
+	completed-map
+	failure-map
+
+
+
+Right now it checks everything but the work-queue. Add that.

@@ -1,0 +1,1 @@
+Enforce TokenStream impl / Analyzer finalness by an assertion

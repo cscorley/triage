@@ -1,0 +1,3 @@
+The Lucene classifier implementations are now near onlines if they get a near realtime reader. It is good for the users whoes have a continously changing dataset, but slow for not changing datasets.
+
+The idea is: What if we implement a cache and speed up the results where it is possible.

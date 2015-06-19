@@ -1,0 +1,1 @@
+Collection in ZK not deleted when all shards has been unloaded

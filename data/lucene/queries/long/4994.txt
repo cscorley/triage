@@ -1,0 +1,3 @@
+I tried to write a test for LUCENE-4993 but recognized that a copy'n'paste error made the ctor of this filter protected.
+
+The sister SetKeywordMarkerFilter has public ctor.

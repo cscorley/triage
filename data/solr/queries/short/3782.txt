@@ -1,0 +1,1 @@
+A leader going down while updates are coming in can cause shard inconsistency.

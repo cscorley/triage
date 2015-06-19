@@ -1,0 +1,59 @@
+I have seen variations of the following error twice in the past 2 days: once on the 10.12 trunk while testing the fix to derby-6692 and then again on the 10.11.1.1 release candidate while running the tests without the Lucene jar files.
+
+
+1) testRunTests(org.apache.derbyTesting.functionTests.tests.derbynet.RuntimeInfoTest)junit.framework.ComparisonFailure: Output doesn't match expected:<...-----
+Sessionnummer:[8
+
+
+-------------------------------------------------------------
+Anzahl Verbindungsthreads: 4
+Anzahl aktive Sessions: 1]
+Anzahl wartende Ses...> but was:<...-----
+Sessionnummer:[5
+Datenbank:singleUse/oneuse5
+Benutzer:APP
+Anzahl Anweisungen:2
+Informationen zur vorbereiteten Anweisung: 
+	Anwsg-ID		SQL-Text
+	-------------	-----------
+	null
+	null
+
+
+
+Sessionnummer:8
+
+
+-------------------------------------------------------------
+Anzahl Verbindungsthreads: 4
+Anzahl aktive Sessions: 2]
+Anzahl wartende Ses...>
+	at org.apache.derbyTesting.functionTests.tests.derbynet.RuntimeInfoTest.x_testRuntimeInfoAfterConnClose(RuntimeInfoTest.java:192)
+	at org.apache.derbyTesting.functionTests.tests.derbynet.RuntimeInfoTest.testRunTests(RuntimeInfoTest.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.apache.derbyTesting.junit.BaseTestCase.runBare(BaseTestCase.java:118)
+	at org.apache.derbyTesting.junit.BaseJDBCTestCase.runBareOverridable(BaseJDBCTestCase.java:440)
+	at org.apache.derbyTesting.junit.BaseJDBCTestCase.runBare(BaseJDBCTestCase.java:457)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at org.apache.derbyTesting.junit.BaseTestSetup.run(BaseTestSetup.java:57)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at org.apache.derbyTesting.junit.BaseTestSetup.run(BaseTestSetup.java:57)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+	at junit.extensions.TestDecorator.basicRun(TestDecorator.java:24)
+	at junit.extensions.TestSetup$1.protect(TestSetup.java:21)
+	at junit.extensions.TestSetup.run(TestSetup.java:25)
+

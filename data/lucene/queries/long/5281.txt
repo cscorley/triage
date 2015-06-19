@@ -1,0 +1,19 @@
+Reproduces 100% for me on trunk and on branch_4x - below is from branch_4x:
+
+
+   [junit4] Suite: org.apache.lucene.facet.taxonomy.directory.TestDirectoryTaxonomyReader
+   [junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=TestDirectoryTaxonomyReader -Dtests.method=testGetChildren -Dtests.seed=B94C5192B4851C12 -Dtests.slow=true -Dtests.locale=es_UY -Dtests.timezone=America/Santa_Isabel -Dtests.file.encoding=US-ASCII
+   [junit4] ERROR   0.48s | TestDirectoryTaxonomyReader.testGetChildren <<<
+   [junit4]    > Throwable #1: java.lang.NullPointerException
+   [junit4]    > 	at __randomizedtesting.SeedInfo.seed([B94C5192B4851C12:D5BAEB4F58AE9D94]:0)
+   [junit4]    > 	at org.apache.lucene.facet.taxonomy.directory.TestDirectoryTaxonomyReader.testGetChildren(TestDirectoryTaxonomyReader.java:508)
+   [junit4]    > 	at java.lang.Thread.run(Thread.java:724)
+   [junit4]   2> NOTE: test params are: codec=Lucene40, sim=RandomSimilarityProvider(queryNorm=false,coord=crazy): {}, locale=es_UY, timezone=America/Santa_Isabel
+   [junit4]   2> NOTE: Mac OS X 10.8.5 x86_64/Oracle Corporation 1.7.0_25 (64-bit)/cpus=8,threads=1,free=83697144,total=119537664
+   [junit4]   2> NOTE: All tests run in this JVM: [TestDirectoryTaxonomyReader]
+   [junit4] Completed in 1.06s, 1 test, 1 error <<< FAILURES!
+   [junit4] 
+   [junit4] 
+   [junit4] Tests with failures:
+   [junit4]   - org.apache.lucene.facet.taxonomy.directory.TestDirectoryTaxonomyReader.testGetChildren
+

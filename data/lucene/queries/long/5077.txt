@@ -1,0 +1,3 @@
+Lucene42DVConsumer's ctor takes acceptableOverheadRatio, so that you can tradeoff time/space, and we pass PackedInts.FASTEST so we always use 8 bits per value.
+
+But the class is package private, so if I want to make my own NormsFormat and pass e.g. PackedInts.COMPACT, I can't ... I think we should make this class public / @experimental?

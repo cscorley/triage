@@ -1,0 +1,1 @@
+FinderCache contains incorrectly cached query with a NULL for a Primary Key.

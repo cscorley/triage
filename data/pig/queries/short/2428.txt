@@ -1,0 +1,1 @@
+In pig9, can't have limit(order by) without getting a null error

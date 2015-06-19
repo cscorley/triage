@@ -1,0 +1,3 @@
+Currently the socket parameters for UpdateShardHandler are configurable, but there's nothing in the log to tell you (like it happens with HttpShardHandlerFactory) what parameters are actually being used and if your configuration did what was supposed to.
+
+Attaching a one-liner to do that.

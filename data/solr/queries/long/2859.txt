@@ -1,0 +1,1 @@
+Solr's remote streaming feature is useful but represents a security risk.  It can be enabled or disabled which is all or nothing. I propose that the solrconfig.xml file clearly indicate which handler(s) may use remote streaming.  Presently, the only way to truly know is to look through the source of each handler to figure out which ones use it.

@@ -1,0 +1,16 @@
+The spellcheck links, AKA "Did you mean", aren't rendered correctly.
+
+Instead of just having the corrected words, they have some .toString gibberish because the object being serialized is too high up in the tree.
+
+This breaks both the link text displayed to the user, and the href used for the anchor tag.
+
+Example:
+Search for "electronicss OR monitor" and you get:
+Did you mean {collationQuery=electronics OR monitor,hits=14,misspellingsAndCorrections={electronicss=electronics,monitor=monitor}}?
+
+But you should just see:
+Did you mean electronics OR monitor?   (with hyperlinked "electronics OR monitor")
+
+The actual query submitted by those links is similarly broken.  Possibly the templates were developed before collation was added and/or enabled by default.
+
+To see this bug at all with the example configs and docs you'll need to have applied SOLR-4680 or SOLR-4681 against 4.2 or trunk.

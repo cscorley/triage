@@ -1,0 +1,39 @@
+There are multiple test failures on jenkins for this test:
+
+
+
+1 tests failed.
+REGRESSION:  org.apache.solr.cloud.TestRequestStatusCollectionAPI.testDistribSearch
+
+Error Message:
+Task 1001 not found in completed tasks. expected:<found 1001 in [comple]ted tasks> but was:<found 1001 in [submit]ted tasks>
+
+Stack Trace:
+org.junit.ComparisonFailure: Task 1001 not found in completed tasks. expected:<found 1001 in [comple]ted tasks> but was:<found 1001 in [submit]ted tasks>
+        at __randomizedtesting.SeedInfo.seed([4E83F1A0A40742E0:CF657FB8D35822DC]:0)
+        at org.junit.Assert.assertEquals(Assert.java:125)
+        at org.apache.solr.cloud.TestRequestStatusCollectionAPI.doTest(TestRequestStatusCollectionAPI.java:125)
+        at org.apache.solr.BaseDistributedSearchTestCase.testDistribSearch(BaseDistributedSearchTestCase.java:865)
+        at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at com.carrotsearch.randomizedtesting.RandomizedRunner.invoke(RandomizedRunner.java:1618)
+        at com.carrotsearch.randomizedtesting.RandomizedRunner$6.evaluate(RandomizedRunner.java:827)
+        at com.carrotsearch.randomizedtesting.RandomizedRunner$7.evaluate(RandomizedRunner.java:863)
+        at com.carrotsearch.randomizedtesting.RandomizedRunner$8.evaluate(RandomizedRunner.java:877)
+        at com.carrotsearch.randomizedtesting.rules.SystemPropertiesRestoreRule$1.evaluate(SystemPropertiesRestoreRule.java:53)
+        at org.apache.lucene.util.TestRuleSetupTeardownChained$1.evaluate(TestRuleSetupTeardownChained.java:50)
+        at org.apache.lucene.util.TestRuleFieldCacheSanity$1.evaluate(TestRuleFieldCacheSanity.java:51)
+        at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:46)
+        at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+        at org.apache.lucene.util.TestRuleThreadAndTestName$1.evaluate(TestRuleThreadAndTestName.java:49)
+        at org.apache.lucene.util.TestRuleIgnoreAfterMaxFailures$1.evaluate(TestRuleIgnoreAfterMaxFailures.java:65)
+        at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+        at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+        at com.carrotsearch.randomizedtesting.ThreadLeakControl$StatementRunner.run(ThreadLeakControl.java:360)
+        at com.carrotsearch.randomizedtesting.ThreadLeakControl.forkTimeoutingTask(ThreadLeakControl.java:793)
+        at com.carrotsearch.randomizedtesting.ThreadLeakControl$3.evaluate(ThreadLeakControl.java:453)
+        at com.carrotsearch.randomizedtesting.RandomizedRunner.runSingleTest(RandomizedRunner.java:836)
+        at com.carrotsearch.randomizedtesting.RandomizedRunner$3.evaluate(RandomizedRunner.java:738)
+        at com.carrotsearch.randomizedtesting.RandomizedRunner$4.evaluate(RandomizedRunner.java:772)
+

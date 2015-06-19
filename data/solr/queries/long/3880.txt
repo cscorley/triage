@@ -1,0 +1,10 @@
+The /browse UI, after indexing the example docs (java -jar post.jar *.xml), shows:
+
+
+
+In Stock: true
+jEOE: software search 
+
+
+
+That "jEOE" is errant, originating from example/solr/example/collection1/conf/velocity/product-doc.vm and should be "Cat" or "Category" instead.

@@ -1,0 +1,1 @@
+If you using the new global hdfs block cache option, you can end up reading corrupt files on file name reuse.

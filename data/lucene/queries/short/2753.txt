@@ -1,0 +1,1 @@
+IndexReader.listCommits should return a List and not an abstract Collection

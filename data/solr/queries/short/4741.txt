@@ -1,0 +1,1 @@
+Deleting a collection should set DELETE_DATA_DIR to true.

@@ -1,0 +1,1 @@
+Schemaless example does not contain a solr.xml

@@ -1,0 +1,12 @@
+This is a regression from "PIG-3629-reopen-1.patch". I see tasks failing with the following error-
+
+
+Caused by: java.lang.IllegalStateException: Could not initialize interpreter (from file system or classpath) with /tmp/pig7551540624891944125tmp/nflx_common_datetime.py
+	at org.apache.pig.scripting.ScriptEngine.getScriptAsStream(ScriptEngine.java:163)
+	at org.apache.pig.scripting.jython.JythonScriptEngine$Interpreter.init(JythonScriptEngine.java:158)
+	at org.apache.pig.scripting.jython.JythonScriptEngine.getFunction(JythonScriptEngine.java:388)
+	at org.apache.pig.scripting.jython.JythonFunction.<init>(JythonFunction.java:55)
+	... 72 more
+
+
+Looks like the local path of a shipped script file on the slave nodes is not correct.

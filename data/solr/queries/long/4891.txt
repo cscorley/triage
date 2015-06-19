@@ -1,0 +1,5 @@
+JSON content streams carry some basic type information for their field values, as parsed by Noggit: LONG, NUMBER, BIGNUMBER, and BOOLEAN.  JsonLoader should set field value object types in the SolrInputDocument according to the content stream's data types. 
+
+Currently JsonLoader converts all non-String-typed field values to String-s.
+
+There is a comment in JsonLoader.parseSingleFieldValue(), where the convert-everything-to-string logic happens, that says "for legacy reasons, single values s are expected to be strings", but other content streams' type information is not flattened like this, e.g. JavabinLoader.

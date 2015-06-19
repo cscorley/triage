@@ -1,0 +1,18 @@
+It would be convenient if all PackedInts had a super-class with the long get(long index) method. Maybe this super-class could even be NumericDocValues so that doc values formats don't need to wrap eg. BlockPackedReader into this kind of construct:
+
+
+        final BlockPackedReader reader = new BlockPackedReader(data, entry.packedIntsVersion, entry.blockSize, entry.count, true);
+        return new LongNumericDocValues() {
+          @Override
+          public long get(long id) {
+            return reader.get(id);
+          }
+        };
+
+
+
+Instead, they could just
+
+
+        return new BlockPackedReader(data, entry.packedIntsVersion, entry.blockSize, entry.count, true);
+

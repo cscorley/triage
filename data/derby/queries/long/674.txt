@@ -1,0 +1,1 @@
+Footprint is one of the key principles of Derby.  We should have a regression test that looks at the size of the various jar files and compares them against a high-water-mark and report an error or warning if the size exceeds the water mark.

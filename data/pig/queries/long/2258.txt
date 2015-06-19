@@ -1,0 +1,11 @@
+On a fresh checkout:
+
+
+$ svn co http://svn.apache.org/repos/asf/pig/branches/branch-0.9/ .
+$ ant
+$ ant rpm
+....
+....
+$ [rpm] Building the RPM based on the pig.spec file
+  [rpm] error: line 221: second %prep
+

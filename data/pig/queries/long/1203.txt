@@ -1,0 +1,1 @@
+In load-store-redesign branch, two test suits, TestHBaseStorage and TestCounters always fail. TestHBaseStorage depends on https://issues.apache.org/jira/browse/PIG-1200, TestCounters depends on future version of hadoop. We disable these two test suits temporarily, and will enable them once the dependent issues are solved.

@@ -1,0 +1,3 @@
+Currently this can only highlight a single field at once.
+
+But you might want to highlight body+title at the same time.

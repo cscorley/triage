@@ -1,0 +1,5 @@
+You can define the currency type as multiValued. However, if you do (and have more than one value), range queries, at least, do not work. See the thread titled "Filtering a query by range returning unexpected results".
+
+I'm not at all sure that currency type should support multivalued. For instance, how would one handle storing multiple values for a currency type in different currencies (e.g. USD and EUR)? I don't know enough about the internals to understand if it's possible, this JIRA is the result of a question on the users list.
+
+If we decide that currency should not support multiValued, it seems a check at startup is in order on the "fail early, fail loudly" principle.

@@ -1,0 +1,1 @@
+DirectoryReader ignores NRT SegmentInfos in #isOptimized()

@@ -1,0 +1,8 @@
+As noted by Jørgen Trosby on the solr mailing list (subj: "SolrEventListeners are instantiated twice", "Mon, 11 Oct 2010 18:11:07 +0200") there is a problem with how SolrEventListeners are being created and initialized
+
+the bug is two fold: 
+
+
+	the UpdatedHandler and the SolrCore both independently loop over all SolrEventListeners looking for the two classes of use cases they directly care about (postCommit/postOptimize vs newSearcher/firstSearcher) – in both cases they construct every declared listener even if it is not a type they care about
+	even when UpdatedHandler is finding a postCommit it cared about, it throws it away and constructing it again.
+

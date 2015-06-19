@@ -1,0 +1,3 @@
+Allow a user to send a query or update to Solr in a character set other than UTF-8 and inform Solr what charset to use with an "ie" parameter, for input encoding.  This was discussed in SOLR-4265 and SOLR-4283.
+
+Changing the default charset is a bad idea because distributed search (SolrCloud) relies on UTF-8.

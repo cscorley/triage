@@ -1,0 +1,1 @@
+I refactored MultiDocValues.OrdinalMap, removing one unused parameter and renaming some methods to more clearly communicate what they do. Also I renamed subIndex references to segmentIndex.

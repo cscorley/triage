@@ -1,0 +1,1 @@
+Move POSimpleTezLoad under tez package

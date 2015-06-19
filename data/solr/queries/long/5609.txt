@@ -1,0 +1,13 @@
+In SolrCloud, it is possible for a core to come up in any node , and register itself with an arbitrary slice/coreNodeName. This is a legacy requirement and we would like to make it only possible for Overseer to initiate creation of slice/replicas
+
+We plan to introduce cluster level properties at the top level
+
+/cluster-props.json
+
+
+{
+"noSliceOrReplicaByCores":true"
+}
+
+
+If this property is set to true, cores won't be able to send STATE commands with unknown slice/coreNodeName . Those commands will fail at Overseer. This is useful for SOLR-5310 / SOLR-5311 where a core/replica is deleted by a command and  it comes up later and tries to create a replica/slice

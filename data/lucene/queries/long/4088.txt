@@ -1,0 +1,3 @@
+this is because we bogusly set FieldInfo.indexOptions to DOCS_AND_FREQS_AND_POSITIONS if the field is stored-only.
+
+I don't think we should do that: the indexOptions should be null.

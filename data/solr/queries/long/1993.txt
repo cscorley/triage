@@ -1,0 +1,45 @@
+Solr server is unable to unmarshall a binary update request where the commitWithin property is set on the UpdateRequest class.
+
+The client marshalls the request with the following code
+if (updateRequest.getCommitWithin() != -1) 
+{
+      params.add("commitWithin", updateRequest.getCommitWithin());
+}
+
+The property is an int and when the server unmarshalls, the following error happens (can't cast to List<String> due to an Integer element)
+
+SEVERE: java.lang.ClassCastException: java.lang.Integer cannot be cast to java.util.List
+        at org.apache.solr.client.solrj.request.JavaBinUpdateRequestCodec.namedListToSolrParams(JavaBinUpdateRequestCodec.java:213)
+        at org.apache.solr.client.solrj.request.JavaBinUpdateRequestCodec.access$100(JavaBinUpdateRequestCodec.java:40)
+        at org.apache.solr.client.solrj.request.JavaBinUpdateRequestCodec$2.readOuterMostDocIterator(JavaBinUpdateRequestCodec.java:131)
+        at org.apache.solr.client.solrj.request.JavaBinUpdateRequestCodec$2.readIterator(JavaBinUpdateRequestCodec.java:126)
+        at org.apache.solr.common.util.JavaBinCodec.readVal(JavaBinCodec.java:210)
+        at org.apache.solr.client.solrj.request.JavaBinUpdateRequestCodec$2.readNamedList(JavaBinUpdateRequestCodec.java:112)
+        at org.apache.solr.common.util.JavaBinCodec.readVal(JavaBinCodec.java:175)
+        at org.apache.solr.common.util.JavaBinCodec.unmarshal(JavaBinCodec.java:101)
+        at org.apache.solr.client.solrj.request.JavaBinUpdateRequestCodec.unmarshal(JavaBinUpdateRequestCodec.java:141)
+        at org.apache.solr.handler.BinaryUpdateRequestHandler.parseAndLoadDocs(BinaryUpdateRequestHandler.java:68)
+        at org.apache.solr.handler.BinaryUpdateRequestHandler.access$000(BinaryUpdateRequestHandler.java:46)
+        at org.apache.solr.handler.BinaryUpdateRequestHandler$1.load(BinaryUpdateRequestHandler.java:55)
+        at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:54)
+        at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:131)
+        at org.apache.solr.core.SolrCore.execute(SolrCore.java:1316)
+        at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:338)
+        at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:241)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+        at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:567)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+        at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:849)
+        at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:583)
+        at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:454)
+        at java.lang.Thread.run(Thread.java:619)
+
+Workaround is to set the parameter manually as a string value instead of setting using the property on the UpdateRequest class.
+
+

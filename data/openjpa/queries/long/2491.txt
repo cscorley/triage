@@ -1,0 +1,5 @@
+When running with Java 8, we're experiencing the following test error.
+
+Failed tests: testWithCollectionParamOfDifferentSizeNoParentheses(org.apache.openjpa.persistence.jdbc.sqlcache.TestInExpressionParamaterBinding)
+
+Looked at the surefire report and it's a simple test assertion failure.  We've had some recent issues with parameter bindings, but this only fails with Java 8...

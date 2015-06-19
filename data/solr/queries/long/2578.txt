@@ -1,0 +1,1 @@
+It would be nice when performing backups if there was an easy way to tell ReplicationHandler to only keep so many and then delete the older ones.

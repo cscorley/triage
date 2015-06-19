@@ -1,0 +1,1 @@
+Allow edismax stopword filter factory implementation to be specified

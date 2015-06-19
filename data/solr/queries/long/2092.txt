@@ -1,0 +1,2 @@
+Deep paging into facets can be improved via use of a native priority queue.
+Comparisons will be faster, and there will be less GC.

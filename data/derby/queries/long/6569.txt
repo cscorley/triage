@@ -1,0 +1,36 @@
+The SQL standard doesn't allow non-deterministic function calls in the operands of NULLIF. Derby does however allow such calls, but the results may not be as one might expect.
+
+Take an expression such as NULLIF(expr, 1). It shouldn't ever return 1. If expr is 1, it should return NULL, and if expr is not 1, it should return expr.
+
+If expr contains a call to a non-deterministic function, it may actually end up returning 1 sometimes:
+
+
+ij> SELECT NULLIF(INT(RANDOM()*2), 1) FROM SYS.SYSTABLES;
+1          
+-----------
+1          
+1          
+1          
+NULL       
+NULL       
+NULL       
+NULL       
+0          
+1          
+NULL       
+NULL       
+0          
+0          
+NULL       
+0          
+1          
+0          
+NULL       
+1          
+0          
+NULL       
+NULL       
+NULL       
+
+23 rows selected
+

@@ -1,0 +1,5 @@
+Currently this is pretty crazy stuff.
+
+Additionally its duplicated in like 3 or 4 places in our codebase (i noticed it doing LUCENE-5259)
+
+We can solve that duplication, and make it easy to simply create queries from an analyzer (its been asked on the user list), as well as make it easier to build new queryparsers.

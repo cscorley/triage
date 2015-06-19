@@ -1,0 +1,1 @@
+trappy ignoreCase behavior with StopFilter/ignoreCase

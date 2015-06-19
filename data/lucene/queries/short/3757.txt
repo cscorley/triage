@@ -1,0 +1,1 @@
+Change AtomicReaderContext.leaves() to return itsself as only leave to simplify code and remove an otherwise unneeded ReaderUtil method

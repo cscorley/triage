@@ -1,0 +1,5 @@
+Mahout builds produce multiple and relatively large artifacts.
+Before being uploaded to Apache snapshots repository they get installed into Jenkins node local repository.
+Mahout-Examples-Cluster-Reuters-II job often runs on Apache Jenkins nodes with little free disk space, and fails in package phase when trying to create new artifacts.
+
+We can be little bit better users of Apache infrastructure, and in build jobs on Apache Jenkins nodes, before producing new artifacts, cleanup previously built and installed Apache Mahout artifacts from CI server node local repository.

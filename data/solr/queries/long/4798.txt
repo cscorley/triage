@@ -1,0 +1,1 @@
+Lowest level shard splitting code needs to somehow use the router for the collection.

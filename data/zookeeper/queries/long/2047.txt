@@ -1,0 +1,1 @@
+The calls to delete the log file on windows are failing, so the test ends up failing. The fix is to close the db before deleting.

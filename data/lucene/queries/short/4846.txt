@@ -1,0 +1,1 @@
+PostingsHighlighter should allow [expert] customization on how the field values are loaded

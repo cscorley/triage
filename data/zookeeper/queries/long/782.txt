@@ -1,0 +1,10 @@
+ The C API Doxygen documentation states:
+
+" .... If the client is ever disconnected from the service, even if the
+  disconnection is temporary, the watches of the client will be removed from
+  the service, so a client must treat a disconnect notification as an implicit
+  trigger of all outstanding watches."
+
+This is incorrect as of v.3. Watches are only lost and need to be re-registered when a session times out. When a normal disconnection occurs watches are reset automatically on reconnection.
+
+The documentation in zookeeper.h needs to be updated to correct this explanation.

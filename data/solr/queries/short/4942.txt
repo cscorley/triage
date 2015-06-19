@@ -1,0 +1,1 @@
+Add randomized testing of compound file format - use xml include file to make adding more indexConfig randomization easy

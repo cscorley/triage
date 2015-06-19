@@ -1,0 +1,1 @@
+extend LevenshteinAutomata to support transpositions as primitive edits

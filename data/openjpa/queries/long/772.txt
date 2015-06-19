@@ -1,0 +1,1 @@
+Its fairly standard in apache projects to use the apache pom as the parent.  Among other things it specifies the apache snapshot repo as one of the repositories which will be needed until the 2.0 spec jar is finalized.

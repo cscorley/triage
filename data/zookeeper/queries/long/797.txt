@@ -1,0 +1,1 @@
+c client source with AI_ADDRCONFIG cannot be compiled with early glibc (before 2.3.3)

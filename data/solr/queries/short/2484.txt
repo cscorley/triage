@@ -1,0 +1,1 @@
+Make SynonymFilterFactory more extendable

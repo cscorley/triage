@@ -1,0 +1,1 @@
+core creation UI screen should redirect browser to details about newly created core

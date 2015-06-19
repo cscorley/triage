@@ -1,0 +1,1 @@
+CollectionsHandler.handleCreateAction() doesn't validate parameter count and type. numShards's type doesn't checked and parameter count maybe less than required 

@@ -1,0 +1,1 @@
+Publishing flushed segments is single threaded and too costly

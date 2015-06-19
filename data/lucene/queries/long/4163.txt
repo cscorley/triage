@@ -1,0 +1,5 @@
+Followup issue from SOLR-3566:
+
+Whenever you clone the TermIndex, it also creates a clone of the underlying IndexInputs. In high cocurrent environments, the clone method of MMapIndexInput is a bottleneck (it has heavy work to do to manage the weak references in a synchronized block).
+
+Everywhere else in Lucene we use my new WeakIdentityMap for managing concurrent weak maps. For this case I did not do this, as the WeakIdentityMap has no iterators (it doe snot implement Map interface). This issue will add a key and values iterator (the key iterator will not return GC'ed keys), so MMapIndexInput can use WeakIdentityMap backed by ConcurrentHashMap and needs no synchronization. ConcurrentHashMap has better concurrency because it distributes the hash keys in different buckets per thread.

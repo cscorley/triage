@@ -1,0 +1,12 @@
+SOLR-5208 added the functionality that allows the setting of variables (core.properties) on Collections API CREATE command.
+
+I wanted to create a collection using the collection API and set a different instanceDir.
+
+So if I try out the following API call, property.instanceDir will not be used because of the logic in CoreAdminHandler.buildCoreDescriptor()
+
+
+http://localhost:8983/solr/admin/collections?action=CREATE&name=foo&numShards=1&property.instanceDir=/foo
+
+
+
+There might be other similar cases I guess.

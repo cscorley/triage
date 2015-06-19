@@ -1,0 +1,1 @@
+I've found myself wanting an ASCIIFoldingFilter that emits both the folded tokens and the original, unfolded tokens.

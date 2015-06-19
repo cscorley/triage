@@ -1,0 +1,1 @@
+When doing peer sync, we should only count sync attempt that cannot reach the given host as success when the candidate leader is syncing with the replicas - not when replicas are syncing to the leader.

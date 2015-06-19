@@ -1,0 +1,5 @@
+As reported by "bernd" on the user list, a query like this
+
+q=(name:test)
+
+will yield 0 hits in 3.6 while it worked in 3.5. It works without the parens.

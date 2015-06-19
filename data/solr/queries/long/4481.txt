@@ -1,0 +1,1 @@
+Inspired by a conversation i had with someone on IRC a while back about using "append" fq params + local params to create custom request params, it occurred to me that it would be handy to have a "switch" qparser that could be configured with some set of fixed "switch case" localparams that it would delegate too based on it's input string.

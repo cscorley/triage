@@ -1,0 +1,1 @@
+Allow ExternalFileField caches to be reloaded on newSearcher and firstSearcher events

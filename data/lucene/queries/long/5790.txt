@@ -1,0 +1,5 @@
+On the solr-user mailing list, Ebisawa & Alex both commented that they've noticed bugs in the grouping code when some documents don't have values in the grouping field.
+
+In Ebisawa's case, he tracked this down to what appears to be some bugs in the logic of the "compareSameType" method of some of the MutableValue implementations.
+
+Thread: https://mail-archives.apache.org/mod_mbox/lucene-solr-user/201406.mbox/%3C84f86fce4b8f42268048aecfb2806a8c@SIXPR04MB045.apcprd04.prod.outlook.com%3E

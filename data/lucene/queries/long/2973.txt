@@ -1,0 +1,1 @@
+Instead of picking and choosing which stuff to include from a local working copy, Lucene's dist-src/package-tgz-src target and Solr's package-src target should simply perform "svn export" with the same revision and URL as the local working copy.

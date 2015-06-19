@@ -1,0 +1,1 @@
+Trie* fields should support sortMissingLast=true, and deprecate Sortable* Field Types

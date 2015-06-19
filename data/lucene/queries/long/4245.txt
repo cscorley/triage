@@ -1,0 +1,1 @@
+Currently, there is no safe way to close a directory after closing the writer without causing an exception in a merge thread if the #close call is interrupted.

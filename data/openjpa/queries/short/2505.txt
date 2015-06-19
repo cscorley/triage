@@ -1,0 +1,1 @@
+OpenJPA PersistenceException: LongId cannot be cast to MyEntityClass… @OneToMany in combination with FetchType.EAGER

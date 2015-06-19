@@ -1,0 +1,1 @@
+For indented xmls with multiline content (e.g. wikipedia) XMLLoader cuts out the begining of every line

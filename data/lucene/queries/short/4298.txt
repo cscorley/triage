@@ -1,0 +1,1 @@
+Infinite recursion in MultiFields.getTermDocsEnum(IndexReader r, Bits liveDocs, String field, BytesRef term)

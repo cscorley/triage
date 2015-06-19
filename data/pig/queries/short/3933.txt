@@ -1,0 +1,1 @@
+PigRecordWriter throws exception in Tez mode

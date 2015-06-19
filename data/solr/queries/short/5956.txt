@@ -1,0 +1,1 @@
+SnapShooter is using getRawInstanceDir, which is sometimes not a valid directory

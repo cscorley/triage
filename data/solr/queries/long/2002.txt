@@ -1,0 +1,3 @@
+we are working on improving some functionality in lucene's build/tests, it would be good to improve the solr side to take advantage of it.
+currently its only sorta-kinda integrated and a bit messy.
+i'd like to do some incremental improvements piece-by-piece on this issue.

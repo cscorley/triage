@@ -1,0 +1,1 @@
+e2e tests for Spark can not work in hadoop env

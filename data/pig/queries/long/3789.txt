@@ -1,0 +1,11 @@
+Similar to the comments in POSimpleTezLoad:
+
+
+    /**
+     * Previously, we reused the same Result object for all results, but we found
+     * certain operators (e.g. POStream) save references to the Result object and
+     * expect it to be constant.
+     */
+
+
+Tuples put into binaryInputQueue get changed when it is actually processed. Not exactly sure why, but make a copy of the tuple solves the issue.

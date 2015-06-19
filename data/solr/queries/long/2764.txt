@@ -1,0 +1,1 @@
+We need a simple light-weight stemmer and a minimal stemmer for plural/singlular only in Norwegian

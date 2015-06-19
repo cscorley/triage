@@ -1,0 +1,1 @@
+On reconnect, ZkController cancels election on first context rather than latest

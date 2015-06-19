@@ -1,0 +1,1 @@
+I found it while working on LUCENE-5189. I'll attach a patch with a simple testcase which reproduces the problem and a fix.

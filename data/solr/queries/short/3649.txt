@@ -1,0 +1,1 @@
+The javabin update request handler does not seem to be working properly when calling solrj method*HttpSolrServer.deleteById(List<String> ids).

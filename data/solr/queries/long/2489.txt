@@ -1,0 +1,3 @@
+In the distribution, docs/who.html is old - refers to the old Solr committers list at http://lucene.apache.org/solr/who
+
+Fix would be to simply delete the old page

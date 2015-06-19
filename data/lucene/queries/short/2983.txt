@@ -1,0 +1,1 @@
+FieldInfos should be read-only if loaded from disk

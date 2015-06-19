@@ -1,0 +1,4 @@
+This is an approach to indexing bounding boxes using 4 numeric fields (xmin,ymin,xmax,ymax) and a flag to say if it crosses the dateline.
+
+This is a modification from the Apache 2.0 code from the ESRI Geoportal:
+http://geoportal.svn.sourceforge.net/svnroot/geoportal/Geoportal/trunk/src/com/esri/gpt/catalog/lucene/SpatialClauseAdapter.java

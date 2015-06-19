@@ -1,0 +1,1 @@
+Some version of Hadoop does not take HADOOP_OPTS, it only takes HADOOP_CLIENT_OPTS. That's why Accumulator_5/UdfDistributedCache_1 fail.

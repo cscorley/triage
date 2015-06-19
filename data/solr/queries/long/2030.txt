@@ -1,0 +1,12 @@
+
+	remove the following FragmentsBuilder wrappers
+	
+		MultiColoredScoreOrderFragmentsBuilder.java
+		MultiColoredSimpleFragmentsBuilder.java
+	
+	
+	use Encoder
+	enable 
+{Simple|ScoreOrder}
+FragmentsBuilder wrappers to be set pre/postTags via parameters
+

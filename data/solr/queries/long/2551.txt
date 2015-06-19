@@ -1,0 +1,3 @@
+A common mistake is that the /conf (respectively the dataimport.properties) file is not writable for solr. It would be great if that were detected on starting a dataimport job. 
+
+Currently and import might grind away for days and fail if it can't write its timestamp to the dataimport.properties file.

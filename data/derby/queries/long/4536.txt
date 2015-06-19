@@ -1,0 +1,16 @@
+In the IBM nightly test runs there's a failure in two tests with IBM 1.6, e.g. in http://people.apache.org/~myrnavl/derby_test_results/v10_3/linux/testlog/ibm16/904714-derbyall_diff.txt:
+derbyall failures *************************************************************
+derbyall/derbynetclientmats/derbynetmats.fail:derbynet/sysinfo_withproperties.java
+derbyall/derbynetclientmats/derbynetmats.fail:derbynet/testProperties.java
+
+I'll attach the test output in a file.
+
+The only difference between earlier runs is that this is with IBM 1.6 SR7 whereas before this was run with IBM 1.6 SR6. The windows run showed no problems, but is still at IBM 1.6 SR6.
+
+We ran into a similar situation with trunk, backported to 10.5, with the junit tests ServerPropertiesTest and SysinfoTest. I reopened DERBY-858 and adjusted the non-deterministic aspects of these tests.
+
+Apparently, the hash table ordering changed between IBM 1.6 SR6 and IBM 1.6 SR7, but the ordering isn't guaranteed.
+
+I think the right thing to do here is to backport the conversions to junit of these tests, and then backport the changes for DERBY-858. Possibly other junit framework changes also need to get backported to support that.
+
+I also think the same problem will manifest for 10.4.

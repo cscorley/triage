@@ -1,0 +1,3 @@
+The 'mm' param for the dismax parser has always defaulted to 100%, but many first time users seem to expect that the default behavior of dismax should work similar to the standard QParser, and be influenced by the schema configured default query op, or the q.op query param.
+
+we should change the default value for "mm" to be equivalent to 100% if the derived value of "q.op" would be AND, and to be 1 if the derived value of "q.op" would be OR.  We should document this in CHANGES.txt so people who are upgrading know that if they have q.op=OR, but they still want a default mm value of 100%, they should add it as a configured default for their request handlers.

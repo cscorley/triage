@@ -1,0 +1,1 @@
+It appears we have a searcher leak where SolrIndexSearcher instances are sometimes not being closed.

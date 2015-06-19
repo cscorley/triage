@@ -1,0 +1,3 @@
+PagedBytes.PagedBytesData
+{In,Out}
+put.getPosition overflow when there are more than Integer.MAX_VALUE bytes.

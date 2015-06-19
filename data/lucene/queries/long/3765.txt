@@ -1,0 +1,12 @@
+Spinoff from LUCENE-3751:
+
+
+
+* If <code>stopWords</code> is an instance of {@link CharArraySet} (true if
+* <code>makeStopSet()</code> was used to construct the set) it will be
+* directly used and <code>ignoreCase</code> will be ignored since
+* <code>CharArraySet</code> directly controls case sensitivity.
+
+
+
+This is really confusing and trappy... we need to change something here.

@@ -1,0 +1,1 @@
+its 0, the freq() is then calculated as a side effect of score()... we should at least document this or throw UOE for freq() instead.

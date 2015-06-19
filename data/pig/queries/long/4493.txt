@@ -1,0 +1,1 @@
+POSplit subplans were not being cloned when the plans were cloned for pushing up in UnionOptimizer. This caused input plans being detached for one of them and they processed and produced 0 records.

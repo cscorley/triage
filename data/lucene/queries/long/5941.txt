@@ -1,0 +1,14 @@
+IndexWriter.forceMerge documents that it requires up to 3X FREE space in order to run successfully. We even go further with it and test it in TestIWForceMerge.testForceMergeTempSpaceUsage(). But I think that's wrong. I cannot think of a situation where we consume 3X additional space during merge:
+
+
+	1X - that's the source segments to be merged
+	2X - that's the result non-CFS merged segment
+	3X - that's the CFS creation
+
+
+
+At no point do we publish the non-CFS merged segment, therefore the merge, as I understand it, only consumes up to 2X additional space during that merge.
+
+And anyway, we only require 2X of additional space of the largest merge (or total batch of running merges, depends on your MergeScheduler), not the whole index size. This is an important observation, since if you e.g. have a 500GB index, users shouldn't think they need to reserve an additional 1TB for merging, since most of their big segments won't be merged by default anyway (TieredMP defaults to 5GB largest segment).
+
+I'll post a patch which fixes the documentation and the test. If anyone can think of a scenario where we consume up to 3X additional space, please chime, and I'll only modify IW.forceMerge documentation to explain that.

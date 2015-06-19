@@ -1,0 +1,1 @@
+Overseer does not check if core has already been assigned an shardId before assigning it a new shardId -> same core could end up having multiple shardIds in CloudState.

@@ -1,0 +1,2 @@
+Current assembly descriptors for binary and source distribution archives include *.properties and other files from any directory looking from root of the project, but exclude only target directory of the parent/aggregator module.
+This results in Maven's target directories from submodules being included in distribution archives with e.g. pom.properties files in them.

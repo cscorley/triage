@@ -1,0 +1,5 @@
+There is a small but quite nasty oversight in TestLibService class:
+
+assertNotNull("could not find the reference from " + bName + "'s volunteer status back to " + bName, volunteer.getBorrower() == borrower);
+
+I suspect the intention was to have assertTrue(...).  The above compiles because of autoboxing creating a Boolean but the assertion is always true, even if volunteer.getBorrower() != borrower.

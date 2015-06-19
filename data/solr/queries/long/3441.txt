@@ -1,0 +1,3 @@
+The ElisionFilterFactory (which removes l' from l'avion) is not MultiTermAware - which includes release 3.6. I wanted to use a wildcard such as: (l'aub*).
+
+Seems simple enough to address. I'll attach a patch.

@@ -1,0 +1,1 @@
+FieldInfos.Builder failed to catch adding field with different DV type under some circumstances

@@ -1,0 +1,1 @@
+etc/logging.properties in example should be removed

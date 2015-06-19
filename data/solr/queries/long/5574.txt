@@ -1,0 +1,1 @@
+The first publish and wait doesn't really serve any purpose.

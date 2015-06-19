@@ -1,0 +1,1 @@
+Just an issue for tracking https://github.com/apache/lucene-solr/pull/43.patch

@@ -1,0 +1,1 @@
+GenericStatementContext.cleanupOnError() needs protection from later errors during statement cleanup

@@ -1,0 +1,1 @@
+As the subject says, but I'll also make it a singleton + add some unit tests, as well as some documentation. I'll post a patch hopefully today.

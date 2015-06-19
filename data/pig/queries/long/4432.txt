@@ -1,0 +1,35 @@
+To reproduce:
+testValueList.txt
+
+['a'#('foo')]
+['b'#('bar')]
+
+
+
+testValueList.pig
+
+a = load 'testValueList.txt' as (map[(chararray)]);
+b = foreach a generate VALUELIST($0); -- or use VALUESET (same problem)
+describe b;
+
+
+
+Run the Pig script:
+
+
+pig testValueList.pig
+
+
+
+Expected:
+
+
+b: {{(val_0: chararray)}}
+
+
+
+Actual:
+
+
+b: {{()}}
+

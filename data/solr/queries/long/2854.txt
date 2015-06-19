@@ -1,0 +1,5 @@
+I think the remote streaming feature should be limited to update request processors. I'm not sure if there is even any use of using it on a /select, but even if there is, it's an unintended security risk.  Observe this URL that is roughly the equivalent of an SQL injection attack:
+
+http://localhost:8983/solr/select?q=*:*&indent=on&wt=ruby&rows=2&stream.url=http%3A%2F%2Flocalhost%3A8983%2Fsolr%2Fupdate%3Fcommit%3Dtruetream.body%3D%3Cdelete%3E%3Cquery%3E*%3A*%3C%2Fquery%3E%3C%2Fdelete%3E
+
+Yep; that's right – this search deletes all the data in your Solr instance! If you blocked off access to /update* based on IP then that isn't good enough.

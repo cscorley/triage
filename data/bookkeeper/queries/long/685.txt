@@ -1,0 +1,12 @@
+I discovered a race in the algorithm when I was forward porting to trunk.
+
+1) Thread1: flushed.set(false)
+2) Thread2: onRotateEntryLog() // flushed.set(true)
+3) Thread1: entryLogger addEntry L123-E456
+4) Thread1: offsets > max, waits for flushed, flushed is true(as set in 2), L123-E456 updated in ledger cache
+5) T2: L123 flushed out of ledger cache
+6) Crash
+
+This will possible lose 1 entry. I've only reasoned this, not observed it, but it can happen.
+
+The fix is pretty easy. EntryLoggerListener should notify with the point offset in the entry log it has synced as far as. 

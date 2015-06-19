@@ -1,0 +1,3 @@
+On issue i could writing the tutorial is that when you open a ledger in non-recovery mode, it's not possible to check if the ledger you opened has been closed or is still been written too. This complicates things when you get to the end of the ledger, as you don't know whether to try for more entries in the same ledger, or to look at the next ledger is the list.
+
+This jira is to expose this information (it's in the metadata). This method only makes sense for reading. For writing a ledger, you really should know if you closed the ledger or not, and if you don't then you shouldn't be touching it again.

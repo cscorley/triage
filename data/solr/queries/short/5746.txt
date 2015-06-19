@@ -1,0 +1,1 @@
+solr.xml parsing of "str" vs "int" vs "bool" is brittle; fails silently; expects odd type for "shareSchema"   

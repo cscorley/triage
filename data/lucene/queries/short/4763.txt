@@ -1,0 +1,1 @@
+Fix Java version detection in common-build.xml, use correct source version for javadocs, fail build on unsupported java version when documentation linting is enabled

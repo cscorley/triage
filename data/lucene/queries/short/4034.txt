@@ -1,0 +1,1 @@
+improve functionquery tests, fix some minor bugs

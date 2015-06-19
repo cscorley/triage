@@ -1,0 +1,63 @@
+In solr 4.10.0 queries that request dynamic fields by passing in a fl=*_exact parameter do not return any fields.  This appears to only be a problem when requesting wildcarded fields via SolrJ (BinaryResponseWriter).  Looks like this may have been introduced via https://issues.apache.org/jira/browse/SOLR-5968
+
+With Solr 4.10.0 - I downloaded the binary and set up the example:
+
+cd example
+java -jar start.jar
+java -jar post.jar solr.xml monitor.xml
+
+In a browser, if I request 
+
+http://localhost:8983/solr/collection1/select?q=*:*&wt=json&indent=true&fl=*d
+
+All is well with the world:
+
+
+{
+"responseHeader": {
+"status": 0,
+"QTime": 1,
+"params": {
+"fl": "*d",
+"indent": "true",
+"q": "*:*",
+"wt": "json"
+}
+},
+"response": {
+"numFound": 2,
+"start": 0,
+"docs": [
+{
+"id": "SOLR1000"
+},
+{
+"id": "3007WFP"
+}
+]
+}
+}
+
+
+
+However if I do the same query with SolrJ (groovy script)
+
+
+
+@Grab(group = 'org.apache.solr', module = 'solr-solrj', version = '4.10.0')
+
+import org.apache.solr.client.solrj.SolrQuery
+import org.apache.solr.client.solrj.impl.HttpSolrServer
+
+HttpSolrServer solrServer = new HttpSolrServer("http://localhost:8983/solr/collection1")
+SolrQuery q = new SolrQuery("*:*")
+q.setFields("*d")
+println solrServer.query(q)
+
+
+
+No fields are returned:
+
+
+{responseHeader={status=0,QTime=0,params={fl=*d,q=*:*,wt=javabin,version=2}},response={numFound=2,start=0,docs=[SolrDocument{}, SolrDocument{}]}}
+

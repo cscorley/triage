@@ -1,0 +1,3 @@
+Tracking issue for commits, etc for the 10.9.2 relese
+Release wiki will be at:
+http://wiki.apache.org/db-derby/DerbyTenNineTwoRelease

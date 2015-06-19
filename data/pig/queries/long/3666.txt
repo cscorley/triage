@@ -1,0 +1,24 @@
+Several e2e test fail share the following pattern:
+
+.....
+store into 'afile';
+a = load 'afile';
+......
+
+Stack:
+Caused by: java.lang.NullPointerException
+        at org.apache.pig.impl.plan.OperatorPlan.checkInPlan(OperatorPlan.java:435)
+        at org.apache.pig.impl.plan.OperatorPlan.connect(OperatorPlan.java:173)
+        at org.apache.pig.backend.hadoop.executionengine.tez.TezCompiler.compile(TezCompiler.java:328)
+        at org.apache.pig.backend.hadoop.executionengine.tez.TezCompiler.compile(TezCompiler.java:337)
+        at org.apache.pig.backend.hadoop.executionengine.tez.TezCompiler.compile(TezCompiler.java:337)
+        at org.apache.pig.backend.hadoop.executionengine.tez.TezCompiler.compile(TezCompiler.java:215)
+        at org.apache.pig.backend.hadoop.executionengine.tez.TezLauncher.compile(TezLauncher.java:152)
+        at org.apache.pig.backend.hadoop.executionengine.tez.TezLauncher.launchPig(TezLauncher.java:72)
+        at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.launchPig(HExecutionEngine.java:344)
+        ... 16 more
+
+
+It needs to break into two DAGs since the second DAG expect hdfs input produced by the first DAG.
+
+Example of such e2e test failures are: Casts_[1-6]

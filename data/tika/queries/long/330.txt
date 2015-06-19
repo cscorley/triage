@@ -1,0 +1,3 @@
+The current magic byte pattern we have for the HWP (Hangul Word Processor, application/x-hwp) file format matches also the test-outlook.msg test file we have. I looked for a better detection pattern and found one from OpenOffice.org.
+
+The hwpfilter/source/hwpfile.cpp file suggests that all HWP files start with the signature string "HWP Document File V", so I'll change the detection pattern accordingly.

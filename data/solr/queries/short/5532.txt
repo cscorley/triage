@@ -1,0 +1,1 @@
+SolrJ Content-Type validation is too strict for some webcontainers / proxies, breaks on equivilent content types

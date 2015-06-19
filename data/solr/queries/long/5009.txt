@@ -1,0 +1,3 @@
+Windows fails to delete files when they are open. CoreContainer opens a second SolrResourceLoader (implicit) when calling ConfigSolr.fromFile(). It should not do this and use the main loader, whcih is closed on shutdown.
+
+This will remove the support for implicit ResourceLoader in ConfigSolr, preventing multiple classloaders for the same solr home.

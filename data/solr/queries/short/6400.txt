@@ -1,0 +1,1 @@
+SolrCloud tests are not properly testing session expiration.

@@ -1,0 +1,1 @@
+Real-time /get handler is required when using Solr Cloud

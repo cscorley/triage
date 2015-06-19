@@ -1,0 +1,3 @@
+Hotspot was unhappy with the changes in LUCENE-5487, e.g.: http://people.apache.org/~mikemccand/lucenebench/OrHighHigh.html
+
+But it looks like we can get the performance back by making a dedicated BulkScorer for TermQuery.

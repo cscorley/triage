@@ -1,0 +1,1 @@
+Add top-down version of BlockJoinQuery

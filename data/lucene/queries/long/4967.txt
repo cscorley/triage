@@ -1,0 +1,9 @@
+I think NRTManager can be drastically simplified by moving all of its
+logic into a new reopen thread class.  All logic for waiting for a
+specific generation and reopening at different rates would live in
+this class.
+
+This would fully decouple the "wait for generation X to be visible"
+from which particular ReferenceManager impl you're using, which would
+make it possible to use the controlled consistency approach of
+NRTManager with any managers (e.g. SearcherTaxonomyManager).

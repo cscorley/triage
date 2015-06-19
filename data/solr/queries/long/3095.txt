@@ -1,0 +1,2 @@
+
+many types of plugins in Solr allow you to specify an "enabled" boolean when configuring them, so you can use system properties in the configuration file to determine at run time if they are actually used – we should add low level support for this type of setting on the individual processor declarations in the UpdateRequestProcessorChain as well, so individual update processor factories don't have to deal with this.

@@ -1,0 +1,1 @@
+The {tika trunk}/src/site directory seems to old and unused. It does not correspond to the site currently on apache.tika.org (http://svn.apache.org/repos/asf/tika/site/).

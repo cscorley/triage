@@ -1,0 +1,5 @@
+Currently our javadocs point to using SimpleFSDirectory "to avoid ClosedByInterruptException".
+
+But this is really bogus. If you interrupt() a thread doing i/o, then you need to be prepared for the consequences. Its just that RAF is broken and not interruptible at all, but that shouldnt justify us continuing to use it.
+
+SimpleFSDirectory should be "the most portable", so it should use Files.newByteChannel. And we should remove the javadocs/warnings about ClosedByInterrupt

@@ -1,0 +1,1 @@
+A node can be a master and a slave - we should return more details in the replication details request if they exist, eg a master that has what are currently slave only details should return those.

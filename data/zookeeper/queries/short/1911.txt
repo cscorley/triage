@@ -1,0 +1,1 @@
+REST contrib module does not include all required files when packaged

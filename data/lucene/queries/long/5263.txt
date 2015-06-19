@@ -1,0 +1,46 @@
+This case is tricky to handle, yet I think realistic: disk fills up
+temporarily, causes an exception in writeLiveDocs, and then the app
+keeps using the IW instance.
+
+Meanwhile disk later frees up again, IW is closed "successfully".  In
+certain cases, we can silently lose deletes in this case.
+
+I had already committed
+TestIndexWriterDeletes.testNoLostDeletesOnDiskFull, and Jenkins seems
+happy with it so far, but when I added fangs to the test (cutover to
+RandomIndexWriter from IndexWriter, allow IOE during getReader, add
+randomness to when exc is thrown, etc.), it uncovered some real/nasty
+bugs:
+
+
+	ReaderPool.dropAll was suppressing any exception it hit, because
+    
+
+if (priorE != null)
+
+ should instead be 
+
+if (priorE == null)
+
+
+
+
+
+	After a merge, we have to write deletes before committing the
+    segment, because an exception when writing deletes means we need
+    to abort the merge
+
+
+
+
+	Several places that were directly calling deleter.checkpoint must
+    also increment the changeCount else on close IW thinks there are
+    no changes and doesn't write a new segments file.
+
+
+
+
+	closeInternal was dropping pooled readers after writing the
+    segments file, which would lose deletes still buffered due to a
+    previous exc.
+

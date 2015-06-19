@@ -1,0 +1,1 @@
+Improve performance of CharTermAttribute(Impl) and also fully implement Appendable

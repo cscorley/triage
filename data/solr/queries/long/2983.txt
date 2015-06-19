@@ -1,0 +1,16 @@
+As part of a recent upgrade to Solr 3.5.0 we encountered an error related to our use of LinkedIn's ZoieMergePolicy.
+
+It seems the code that loads a custom MergePolicy was at some point moved into SolrIndexConfig.java from SolrIndexWriter.java, but as this code was copied verbatim it now contains a bug:
+
+    try {
+      policy = (MergePolicy) schema.getResourceLoader().newInstance(mpClassName, null, new Class[]
+{IndexWriter.class}
+, new Object[]
+{this}
+);
+    } catch (Exception e) 
+{
+      policy = (MergePolicy) schema.getResourceLoader().newInstance(mpClassName);
+    }
+
+'this' is no longer an IndexWriter but a SolrIndexConfig, therefore the call to newInstance will always throw an exception and the catch clause will be executed. If the custom MergePolicy does not have a default constructor (which is the case of ZoieMergePolicy), the second attempt to create the MergePolicy will also fail and Solr won't start.

@@ -1,0 +1,1 @@
+DuplicateFilter currently works by building a single doc ID set, without taking into account that getDocIdSet() will be called once per segment and only with each segment's local reader.

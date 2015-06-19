@@ -1,0 +1,1 @@
+Solr Admin Unload with deleteInstanceDir=true fails unless the path is absolute.

@@ -1,0 +1,1 @@
+In servlet2.5, we should call HttpRequestServlet.setCharacterEncoding("UTF-8") to get a UTF-8 character sequence via request.getParameter() in JSP.

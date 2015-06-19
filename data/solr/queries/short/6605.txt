@@ -1,0 +1,1 @@
+make ShardHandlerFactory maxConnections configurable

@@ -1,0 +1,19 @@
+When trying to monitor our Solr instances with JMXtrans (https://github.com/lookfirst/jmxtrans), we discovered that all the Mbeans were identifying themselves as java.lang.String.   This breaks the GangliaWriter in JMXtrans because the software decides it's a string instead of a numeric values and you can't graph a string.   Other software we are monitoring with JMXtrans (e.g. Kafka) correctly identify their numeric values as numbers (doubles in this case).
+
+For example, avgTimePerRequest in Solr is identified as a string which makes no sense.  This behavior makes Solr less interoperable with the rest of the Java ecosystem.
+
+The problem code is in JmxMonitoredMap.java
+
+NamedList dynamicStats = infoBean.getStatistics();
+if (dynamicStats != null) {
+  for (int i = 0; i < dynamicStats.size(); i++) 
+{
+    String name = dynamicStats.getName(i);
+    if (!staticStats.contains(name))
+      attrInfoList.add(new MBeanAttributeInfo(dynamicStats.getName(i),
+              String.class.getName(), null, true, false, false));
+  }
+
+I will try to attach a screenshot. 
+
+Thanks for Solr!  We use the heck out of it, it's awesome.

@@ -1,0 +1,44 @@
+    derbynetclientmats/derbynetmats/derbynetmats.fail:lang/forupdate.sql
+    derbynetclientmats/derbynetmats/derbynetmats.fail:lang/holdCursorIJ.sql
+    derbynetclientmats/derbynetmats/derbynetmats.fail:store/holdCursorJDBC30.sql
+    derbynetclientmats/derbynetmats/derbynetmats.fail:jdbcapi/LOBTest.java
+    derbynetclientmats/derbynetmats/derbynetmats.fail:jdbcapi/blobclob4BLOB.java
+    derbynetclientmats/derbynetmats/derbynetmats.fail:jdbcapi/parameterMapping.java
+    derbynetclientmats/derbynetmats/derbynetmats.fail:jdbcapi/setTransactionIsolation.java
+    derbynetclientmats/derbynetmats/derbynetmats.fail:jdbcapi/metadataJdbc20.java
+    derbynetclientmats/derbynetmats/derbynetmats.fail:jdbcapi/connectionJdbc20.java
+
+Sample diff :
+
+	
+	
+		
+		
+			Start: forupdate jdk1.5.0_02 DerbyNetClient derbynetmats:derbynetmats 2006-02-23 07:30:19 ***
+23 del
+< ERROR 42X01: Syntax error: Encountered "<EOF>" at line 1, column 23.
+23a23
+> ERROR 42X01: Syntax error: Encountered "<EOF>" at line 3, column 23.
+59 del
+< ERROR (no SQLState): Invalid cursor name "C1" in the Update/Delete statement.
+59a59
+> ERROR 42X30: Cursor 'SQL_CURLH000C1' not found. Verify that autocommit is OFF.
+132 del
+< ERROR (no SQLState): Invalid cursor name "C4" in the Update/Delete statement.
+132a132
+> ERROR 42X30: Cursor 'SQL_CURLH000C1' not found. Verify that autocommit is OFF.
+135 del
+< ERROR (no SQLState): Invalid cursor name "C4" in the Update/Delete statement.
+135a135
+> ERROR 42X30: Cursor 'SQL_CURLH000C1' not found. Verify that autocommit is OFF.
+180 del
+< ERROR 42X01: Syntax error: Encountered "." at line 1, column 34.
+180a180
+> ERROR 42X01: Syntax error: Encountered "." at line 3, column 34.
+Test Failed.
+			End:   forupdate jdk1.5.0_02 DerbyNetClient derbynetmats:derbynetmats 2006
+		
+		
+	
+	
+

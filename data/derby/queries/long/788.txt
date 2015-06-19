@@ -1,0 +1,6 @@
+The 'store/encryptionKey.sql' test fails on Solaris 10.
+Investigation revealed that the failure is caused by a difference in behavior between the 'SunPCKS11-Solaris' provider and other providers (tested with 'SunJCE' and 'IBMJCE').
+
+The initialization of the DES cipher fails because the 16 byte key (specified in the test) is not translated to a 8 byte DES key by SecretKeyFactory.translateKey(). This might be a bug in the provider (I don't know the spec). Enquiries are being made.
+
+The exception is being thrown from the constructor of 'impl.services.jce.JCECipherProvider'.

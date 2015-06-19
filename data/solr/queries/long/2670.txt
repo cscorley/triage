@@ -1,0 +1,1 @@
+When trying to diagnose a users mmap failure, I noticed that there is no longer a way to specify NIOFSDirectoryFactory (IIRC there was a system property one could set in the past).

@@ -1,0 +1,7 @@
+This is similar to issue 5981, the Evaluator class is declared as abstract, yet the parseParams method is package private?  Surely this is an oversight, as I wouldn't expect everyone writing their own evaluators to have to deal with parsing the parameters.
+
+Similarly, I needed to refactor DateFormatEvaluator because I need to do some custom date math/parsing and it wasn't written in a way that I can extend it.
+
+Please review/apply my attached patch to the next version of Solr, ie: 4.8 or 4.9 if I must wait.
+
+Thanks!

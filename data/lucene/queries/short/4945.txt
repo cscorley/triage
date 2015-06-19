@@ -1,0 +1,1 @@
+CustomScoreQuery's should have getters for its fields

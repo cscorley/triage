@@ -1,0 +1,24 @@
+Using the 3.5 example this query...
+
+q = bogus:xxx AND text_t:yak
+http://localhost:8983/solr/select/?debugQuery=true&qf=a_t+b_t&defType=edismax&mm=0&q=bogus:xxx+AND+text_t:yak
+
+parses as...
+
++(DisjunctionMaxQuery((a_t:bogus:xxx | b_t:bogus:xxx)) DisjunctionMaxQuery((a_t:and | b_t:and)) text_t:yak)
+
+
+
+(Note that "AND" is considered a term and is searched for in the qf fields)
+
+But this query...
+q = foo_s:xxx AND text_t:yak
+http://localhost:8983/solr/select/?debugQuery=true&qf=a_t+b_t&defType=edismax&mm=0&q=foo_s:xxx+AND+text_t:yak
+
+parses correctly treating AND as an explicit operator...
+
++(+foo_s:xxx +text_t:yak)
+
+
+
+(this problem also seems to affect trunk circa 2012-03-20)

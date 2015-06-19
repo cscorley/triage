@@ -1,0 +1,3 @@
+Timezone needs to be taken into account when doing date math. Currently it isn't. DateMathParser instances created are always being constructed with UTC. This is a huge issue when it comes to faceting. Depending on your timezone day-light-savings changes the length of a month. A facet gap of +1MONTH is different depending on the timezone and the time of the year.
+
+I believe the issue is very simple to fix. There are three places in the code DateMathParser is created. All three are configured with the timezone being UTC. If a user could specify the TimeZone to pass into DateMathParser this faceting issue would be resolved.

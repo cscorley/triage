@@ -1,0 +1,1 @@
+multivalued field with offsets makes corrumpt index 

@@ -1,0 +1,2 @@
+1. Add &wt=csv to a query
+2. You get columns for non-stored fields

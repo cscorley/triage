@@ -1,0 +1,1 @@
+Need an UpdateProcessor which can copy and move fields

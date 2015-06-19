@@ -1,0 +1,5 @@
+To make it easy to use some of the new ranking algorithms, we should add factories to solr:
+
+	for parametric models like LM and BM25 so that parameters can be set from schema.xml
+	for framework models like DFR and IB, so that different basic models/normalizations/lambdas can be chosen
+

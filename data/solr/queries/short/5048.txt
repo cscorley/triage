@@ -1,0 +1,1 @@
+fail the build if the example solrconfig.xml files don't have an up to date luceneMatchVersion

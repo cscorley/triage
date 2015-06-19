@@ -1,0 +1,3 @@
+While working on LUCENE-3166, I started thinking we should remove the PDF files from the docs/website.
+
+just another thing to simplify life.

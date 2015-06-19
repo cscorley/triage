@@ -1,0 +1,1 @@
+validate per-segment delete counts on write

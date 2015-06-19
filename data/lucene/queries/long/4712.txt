@@ -1,0 +1,7 @@
+NullPointer Exceptions when searching on an index with a query that has a field that's not in the index.
+
+The NullPointer is thrown at line 1141:
+
+public DocValues normValues(String field) {
+      if (fieldInfos.get(field).omitsNorms())  <---- //If fieldInfos doesn't contain the field then a NullPointer is thrown.
+        return null;

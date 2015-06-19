@@ -1,0 +1,1 @@
+This JIRA to discuss about admin tool for changing the bookie's IP to hostname.

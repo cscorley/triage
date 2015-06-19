@@ -1,0 +1,1 @@
+Only labeled (with 'class' field) documents should be used during training and therefore each classifier should filter (and not fail when run against) them.

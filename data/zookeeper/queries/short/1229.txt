@@ -1,0 +1,1 @@
+C client hashtable_remove redundantly calls hash function

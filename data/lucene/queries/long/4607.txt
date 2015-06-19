@@ -1,0 +1,2 @@
+this is essentially a spinnoff from LUCENE-4236
+We currently have no way to make any decsision on how costly a DISI is neither when we apply filters nor when we build conjunctions in BQ. Yet we have most of the information already and can easily expose them via a cost API such that BS and FilteredQuery can apply optimizations on per segment basis.

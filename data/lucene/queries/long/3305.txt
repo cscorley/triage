@@ -1,0 +1,13 @@
+Atilika Inc. (アティリカ株式会社) would like to donate the Kuromoji Japanese morphological analyzer to the Apache Software Foundation in the hope that it will be useful to Lucene and Solr users in Japan and elsewhere.
+
+The project was started in 2010 since we couldn't find any high-quality, actively maintained and easy-to-use Java-based Japanese morphological analyzers, and these become many of our design goals for Kuromoji.
+
+Kuromoji also has a segmentation mode that is particularly useful for search, which we hope will interest Lucene and Solr users.  Compound-nouns, such as 関西国際空港 (Kansai International Airport) and 日本経済新聞 (Nikkei Newspaper), are segmented as one token with most analyzers.  As a result, a search for 空港 (airport) or 新聞 (newspaper) will not give you a for in these words.  Kuromoji can segment these words into 関西 国際 空港 and 日本 経済 新聞, which is generally what you would want for search and you'll get a hit.
+
+We also wanted to make sure the technology has a license that makes it compatible with other Apache Software Foundation software to maximize its usefulness.  Kuromoji has an Apache License 2.0 and all code is currently owned by Atilika Inc.  The software has been developed by my good friend and ex-colleague Masaru Hasegawa and myself.
+
+Kuromoji uses the so-called IPADIC for its dictionary/statistical model and its license terms are described in NOTICE.txt.
+
+I'll upload code distributions and their corresponding hashes and I'd very much like to start the code grant process.  I'm also happy to provide patches to integrate Kuromoji into the codebase, if you prefer that.
+
+Please advise on how you'd like me to proceed with this.  Thank you.

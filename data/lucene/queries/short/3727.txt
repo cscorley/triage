@@ -1,0 +1,1 @@
+fix assertions/checks that use File.length() to use getFilePointer()

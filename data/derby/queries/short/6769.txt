@@ -1,0 +1,1 @@
+sane.derbyTesting.jar.lastcontents can be "out of date" but no build error results

@@ -1,0 +1,1 @@
+CachedItem's comments and code are inconsistent wrt. syncronization

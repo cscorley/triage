@@ -1,0 +1,1 @@
+Switch LuceneTestCaseRunner to RandomizedRunner. Enforce Random sharing contracts. Enforce thread leaks.

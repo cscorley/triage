@@ -1,0 +1,2 @@
+Today it does the "first docID" trick to guess the cost of the
+baseQuery, which is silly now that we have cost API.

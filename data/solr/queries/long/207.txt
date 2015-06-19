@@ -1,0 +1,9 @@
+snapinstaller (and snappuller) do the following to find the latest snapshot:
+name=`find $
+{data_dir}
+ -name snapshot.* -print|grep -v wip|sort -r|head -1`
+
+This recurses into all of the snapshot directories, doing much more disk-io than is necessary.
+I think it is the cause of bloated kernel memory usage we have seen on some of our Linux boxes, caused
+by kernel dentry and inode caches.   Those caches compete with buffer cache (caching the actual data of the index)
+and can thus decrease performance.

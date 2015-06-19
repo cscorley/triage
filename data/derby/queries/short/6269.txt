@@ -1,0 +1,1 @@
+Misleading warning text if you create an index duplicating a constraint.

@@ -1,0 +1,1 @@
+edismax support for negative boost with "bq" parameter

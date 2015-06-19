@@ -1,0 +1,1 @@
+Fix a couple of ugly issues around SolrIndexWriter close and rollback as well as how SolrIndexWriter manages it's ref counted directory instance.

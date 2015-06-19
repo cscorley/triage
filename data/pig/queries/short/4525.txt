@@ -1,0 +1,1 @@
+Clarify "Scalar has more than one row in the output."

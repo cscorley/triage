@@ -1,0 +1,3 @@
+Two reasons:
+1. parentPlan for PORank is not set
+2. In attachInputs, we didn't set this.conf when object is cached.

@@ -1,0 +1,4 @@
+When you type an accent (in french language for example) in the console query tester, there's no charset conversion (servlet request charset conversion)
+Eg.: "même" is converted into it's ISO-8859-1 representation ==> fail
+
+The reason : getCharacterEncoding from HTTPRequest is not tested. Il it's null, il will assume to convert an UTF-8 encoding charset.

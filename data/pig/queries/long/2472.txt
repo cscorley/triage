@@ -1,0 +1,1 @@
+Unlike the pig unit tests, java.io.tmpdir does not point to a test run specific directory. This causes CI failures if previous runs leave behind artifacts.

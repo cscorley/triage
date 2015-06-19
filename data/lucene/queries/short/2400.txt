@@ -1,0 +1,1 @@
+ShingleFilter: don't output all-filler shingles/unigrams; also, convert from TermAttribute to CharTermAttribute

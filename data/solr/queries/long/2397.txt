@@ -1,0 +1,3 @@
+the main solconfig.xml example file has gotten cluttered, doesn't use consistent indenting, lists various things in a haphazard order, and contains relics of outdated/deprecated plugins/terminology.  this really needs to be dealt with prior to 3.1 since most people reuse this example as the basis for their own configs.
+
+rather then trying to opening individual issues for little one off changes (which is how a lot of the haphazard came about) i'm going to take a stab at one big cleanup here and seek feedback on the end result

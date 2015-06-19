@@ -1,0 +1,12 @@
+The following piece of code would hang there because TezLauncher thread is not deamon thread. 
+
+
+
+  public static void main(String[] args) throws IOException,
+      InterruptedException {
+    FileSystem fs = FileSystem.get(new Configuration());
+    fs.delete(new Path("/tmp/output"), true);
+    PigServer pig = new PigServer(new TezExecType());
+    pig.registerScript("scripts/test.pig");
+  }
+

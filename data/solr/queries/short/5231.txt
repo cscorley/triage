@@ -1,0 +1,1 @@
+When a boolean field is missing from a doc it is sometimes treated as "true" by the "if" function (based on other docs in segment?)

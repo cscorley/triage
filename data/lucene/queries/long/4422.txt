@@ -1,0 +1,1 @@
+With the fr_FR locale, javadoc 1.6.0_26 fails to generate correct HTML output for the class-use files.

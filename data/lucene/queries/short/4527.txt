@@ -1,0 +1,1 @@
+CompressingStoredFieldsFormat: encode numStoredFields more efficiently

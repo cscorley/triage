@@ -1,0 +1,1 @@
+StringIndex doesn't exists any more in the trunk, so the name DocTermsIndex should be used and this is also what it is using.

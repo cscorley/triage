@@ -1,0 +1,8 @@
+Found while testing PIG-4526
+
+contrib/piggybank/java/src/main/java/org/apache/pig/piggybank/evaluation/IsInt.java 
+
+contains
+
+- * Note this function checks for Integer range <E2><88><92>2,147,483,648 to 2,147,483,647.
+

@@ -1,0 +1,1 @@
+Overhaul Lucene spatial's "distErrPct"

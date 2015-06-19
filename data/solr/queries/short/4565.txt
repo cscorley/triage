@@ -1,0 +1,1 @@
+Extend NorwegianMinimalStemFilter to handle "nynorsk"

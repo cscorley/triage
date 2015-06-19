@@ -1,0 +1,1 @@
+Now that we're on Java 7, we can use try-with-resources everywhere we open/close SolrCores.

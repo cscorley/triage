@@ -1,0 +1,1 @@
+make admin area search work without javascript

@@ -1,0 +1,1 @@
+zookeeper.async causes python to segfault

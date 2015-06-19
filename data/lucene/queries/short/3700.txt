@@ -1,0 +1,1 @@
+optionally support naist-jdic for kuromoji

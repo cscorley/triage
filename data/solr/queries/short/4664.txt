@@ -1,0 +1,1 @@
+ZkStateReader should update aliases on construction.

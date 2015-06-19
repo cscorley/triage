@@ -1,0 +1,12 @@
+In LUCENE-3079 I've uploaded a userguide for the faceting module. I'd like to discuss where is the best place to include the module. We include it with the code (in our SVN), so that it's always attached to some branch (or in other words a release). That way we can have versions of it per releases that reflect API changes.
+
+This document is like the file format document, or any other document we put under site-versioned. So we have two places:
+
+	facet/docs
+	site/userguides
+
+
+
+Unlike the site, which its PDFs are built automatically by Forrest, we cannot convert ODT to PDF with it, so it's a challenge to put it there. What we do today (in our SVN) is whoever updates the userguide, creates a PDF too, that's easy from OpenOffice.
+
+I'll upload the file later when I'm in front of it.

@@ -1,0 +1,1 @@
+AvroMapWrapper leaks Avro data types when the map values are complex avro records

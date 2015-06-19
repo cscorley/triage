@@ -1,0 +1,10 @@
+Solr throws a "java.lang.IllegalArgumentException: Map size must not be negative exception" when using the PHP Serialized response writer with sharded queries. 
+To reproduce the issue start your preferred example and try the following query:
+
+http://localhost:8983/solr/select/?q=*:*&wt=phps&shards=localhost:8983/solr,localhost:8983/solr
+
+It is caused by the JSONWriter implementation of writeSolrDocumentList and writeSolrDocument. Overriding this two methods in the PHPSerializedResponseWriter to handle the SolrDocument size seems to solve the issue.
+Attached my patch made against trunk rev 1055588.
+
+cheers,
+Antonio

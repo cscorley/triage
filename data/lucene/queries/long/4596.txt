@@ -1,0 +1,27 @@
+Mike tripped this error while running some benchmarks:
+
+{no format}
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 130
+        at org.apache.lucene.facet.taxonomy.directory.DirectoryTaxonomyWriter.getParent(DirectoryTaxonomyWriter.java:835)
+        at org.apache.lucene.facet.index.streaming.CategoryParentsStream.incrementToken(CategoryParentsStream.java:106)
+        at org.apache.lucene.facet.index.streaming.CountingListTokenizer.incrementToken(CountingListTokenizer.java:63)
+        at org.apache.lucene.facet.index.streaming.CategoryTokenizer.incrementToken(CategoryTokenizer.java:48)
+        at org.apache.lucene.index.DocInverterPerField.processFields(DocInverterPerField.java:177)
+        at org.apache.lucene.index.DocFieldProcessor.processDocument(DocFieldProcessor.java:272)
+        at org.apache.lucene.index.DocumentsWriterPerThread.updateDocument(DocumentsWriterPerThread.java:250)
+        at org.apache.lucene.index.DocumentsWriter.updateDocument(DocumentsWriter.java:376)
+        at org.apache.lucene.index.IndexWriter.updateDocument(IndexWriter.java:1455)
+        at org.apache.lucene.index.IndexWriter.addDocument(IndexWriter.java:1130)
+        at org.apache.lucene.index.IndexWriter.addDocument(IndexWriter.java:1111)
+        at perf.IndexThreads$IndexThread.run(IndexThreads.java:335)
+
+
+
+
+At first we thought this might be related to LUCENE-4565, but he reverted to before that commit and still hit the exception. I modified TestDirTaxoWriter.testConcurrency to index hierarchical categories, thinking that's the cause, but failed to reproduce.
+
+Eventually I realized that the test doesn't call getParent(), because it tests DirTaxoWriter concurrency, not concurrent indexing. As soon as I added a call to getParent, I hit this exception too.
+
+Adding 'synchronized' to DirTaxoWriter.addCategory seems to avoid that ex.
+
+I'll upload a patch with the modifications to the test and dig.

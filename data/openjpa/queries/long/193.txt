@@ -1,0 +1,1 @@
+The JPA TCK was automatically run when executing "mvn install", which would then fail is the TCK was not installed locally. There should be a flag or profile that enables the TCK to be run, but which will be excluded when it is absent.

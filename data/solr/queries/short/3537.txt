@@ -1,0 +1,1 @@
+TermVectorComponent should support globs in fl and tv.fl combined with per-field overrides of other params

@@ -1,0 +1,1 @@
+Distributed spellcheck with WordBreakSpellchecker can lose suggestions

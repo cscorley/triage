@@ -1,0 +1,1 @@
+TestManagedResourceStorage fails on Jenkins with SolrCore.getOpenCount()==2

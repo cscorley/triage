@@ -1,0 +1,3 @@
+As noted by Shai on the dev @lucene list, SimplePostToolTest is ridiculously slow when he ran from ant, but only takes 1 second in his IDE.
+
+problem seems to be relate to the URL class attempting to response "example.com"

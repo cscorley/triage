@@ -1,0 +1,1 @@
+Test lang/updatableResultSet.java fails on wctme5.7_foundation

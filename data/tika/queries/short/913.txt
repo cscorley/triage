@@ -1,0 +1,1 @@
+MagicMime detection of msdos executables does not work

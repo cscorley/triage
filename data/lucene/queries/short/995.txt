@@ -1,0 +1,1 @@
+Add open ended range query syntax to QueryParser

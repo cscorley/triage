@@ -1,0 +1,1 @@
+I was unable to get a stacktrace before. This time I succeeded.

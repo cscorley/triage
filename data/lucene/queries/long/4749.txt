@@ -1,0 +1,1 @@
+As per request on http://markmail.org/thread/4hcibusueckk6osi so that a UIMATokenizer can be initialized with proper configuration parameters to e.g. point to custom resources or put non-default settings.

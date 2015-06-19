@@ -1,0 +1,1 @@
+Invalid manifest files due to bogus revision property value

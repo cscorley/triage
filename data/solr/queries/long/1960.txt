@@ -1,0 +1,17 @@
+Non-English users get generic MoinMoin page instead of the desired information when accessing http://wiki.apache.org/solr/.
+
+To reproduce :
+
+1- Configure the Web Browser to send a language code other then English (e.g. French).
+
+For example, in Firefox, do the following :
+ a) Edit -> Preferences;
+ b) Click on the "Content" tab;
+ c) Click on the "Choose" button next to "Choose your preferred languages for displaying pages";
+ d) Click "Select language to add", choose "French", then click "Add";
+ e) Click on the newly added item "French [fr]" in the list and click "Move Up" until the item is at the top of the list;
+ f) Click "Ok" then "Close"
+
+2- Vist the Solr wiki : http://lucene.apache.org/solr/
+
+3- Notice that instead of showing the proper content, MoinMoin displays generic instructions about the wiki content, in French.

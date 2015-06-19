@@ -1,0 +1,35 @@
+While processing a bunch of PDFs off the web, I ran into a ClassNotFoundException thrown inside of PDFBox:
+
+java.lang.NoClassDefFoundError: org/bouncycastle/jce/provider/BouncyCastleProvider
+	at org.apache.pdfbox.pdmodel.PDDocument.openProtection(PDDocument.java:1092)
+	at org.apache.pdfbox.pdmodel.PDDocument.decrypt(PDDocument.java:573)
+	at org.apache.pdfbox.util.PDFTextStripper.writeText(PDFTextStripper.java:235)
+	at org.apache.pdfbox.util.PDFTextStripper.getText(PDFTextStripper.java:180)
+	at org.apache.tika.parser.pdf.PDF2XHTML.process(PDF2XHTML.java:56)
+	at org.apache.tika.parser.pdf.PDFParser.parse(PDFParser.java:69)
+	at org.apache.tika.parser.CompositeParser.parse(CompositeParser.java:120)
+	at org.apache.tika.parser.AutoDetectParser.parse(AutoDetectParser.java:101)
+	at org.apache.tika.parser.AutoDetectParser.parse(AutoDetectParser.java:114)
+	at bixo.parser.SimpleParser.parse(SimpleParser.java:153)
+Caused by: java.lang.ClassNotFoundException: org.bouncycastle.jce.provider.BouncyCastleProvider
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:303)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:248)
+
+I believe the issue is that the PDFBox pom.xml declares the dependency on the missing BouncyCastleProvider jar as "optional".
+
+   <dependency>
+     <groupId>bouncycastle</groupId>
+     <artifactId>bcprov-jdk14</artifactId>
+     <version>136</version>
+     <optional>true</optional>
+   </dependency>
+
+As explained in the Maven documentation, this means that Tika needs to explicitly include the jar:
+
+http://maven.apache.org/guides/introduction/introduction-to-optional-and-excludes-dependencies.html
+
+I see a few other optional dependencies in the PDFBox pom.xml, but perhaps the only one that's really critical is the above.

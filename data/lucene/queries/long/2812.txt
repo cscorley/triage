@@ -1,0 +1,1 @@
+If you open a writer on a new dir and prepareCommit but don't finish the commit, IndexReader.indexExists incorrectly returns true, because it just checks for whether a segments_N file is present and not whether it can be successfully read.

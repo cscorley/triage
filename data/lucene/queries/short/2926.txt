@@ -1,0 +1,1 @@
+The "init" target in contrib-build.xml should cause the lucene-core jar to be created

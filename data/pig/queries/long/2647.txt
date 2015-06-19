@@ -1,0 +1,20 @@
+in:
+org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil#getCombinePigSplits
+which is used by PigInputFormat
+
+There is an assumption that every split's getLocations() will return a non-empty array.
+If the following criteria are met:
+1) Split combining is turned on
+2) There is more than one split
+3) There is at least one split that is smaller than the maxCombineSplitSize
+
+splits with empty getLocations() will simply be dropped (ignored) without warning.
+
+The hadoop API does not specify that all splits must return a location and there are cases where a split may want to return no locations (if the data is not in HDFS for example, or if the data is a directory full of HDFS files in which case there's not much gained by having locality)
+
+This is due to the implementation of org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil#getCombinePigSplits
+scans all splits eligible for combining and creates a map of Nodes -> splits, then laster iterates through the MAP (not the splits) to do the combining.
+
+One solution would be to inject a dummy "empty node" into the map.
+
+Overall the logic in getCombinePigSplits is very complicated and has a lot of edge cases, it might be worth cleaning up.

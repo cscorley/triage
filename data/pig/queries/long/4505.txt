@@ -1,0 +1,1 @@
+  If the cluster is big and can launch many containers, Tez can try to create more threads to talk to the nodes and that can cause java.lang.OutOfMemoryError: unable to create new native thread as there is only 512MB of native memory (4GB limit due to 32-bit jvm) to create threads. 

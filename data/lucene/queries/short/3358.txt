@@ -1,0 +1,1 @@
+StandardTokenizer disposes of Hiragana combining mark dakuten instead of attaching it to the character it belongs to

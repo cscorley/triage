@@ -1,0 +1,1 @@
+A new IndexWriter must be opened on SolrCore reload when the index directory has changed and the previous SolrCore's state should not be propagated.

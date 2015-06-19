@@ -1,0 +1,1 @@
+See the discussion at SOLR-4196. Under ridiculous loads (i.e. every request causes a core to close and another one to open) Solr can lock up. This is only a problem if you are using transient cores (see SOLR-1028) with a limited cache size. Simply lazily loading cores that are NOT transient shouldn't have this problem, you need to be closing cores to get here.

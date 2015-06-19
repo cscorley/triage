@@ -1,0 +1,1 @@
+LengthFilter and other TokenFilters that skip tokens ignore relative positionIncrement

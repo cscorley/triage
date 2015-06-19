@@ -1,0 +1,26 @@
+Looks like a typo in the code. SpellCheckCollatorTest.testContextSensitiveCollate() has:
+
+��
+
+
+    //                     DirectSolrSpellChecker   IndexBasedSpellChecker
+    String[] dictionary = {"direct",                "default_teststop" };
+    for(int i=0 ; i<1 ; i++) {
+    ... test stuff using dictionary[i]...
+    }
+
+
+where it should be
+
+��
+
+
+    //                     DirectSolrSpellChecker   IndexBasedSpellChecker
+    String[] dictionary = {"direct",                "default_teststop" };
+    for(int i=0 ; i<=1 ; i++) {
+    ... test stuff using dictionary[i]...
+    }
+
+
+
+due to this, the tests are not being run with a IndexBasedSpellChecker.

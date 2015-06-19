@@ -1,0 +1,1 @@
+core dump using zoo_get_acl() 

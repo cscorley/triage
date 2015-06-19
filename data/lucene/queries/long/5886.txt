@@ -1,0 +1,7 @@
+It seems the version we are using has bugs that are tripped by this test.
+We are using 3.7.2, I think we should upgrade to 4.4?
+It seems to solve the issue for me.
+
+We should also update our build files to make ecj also be executed on Java 8, but not on Java 9.
+
+So we need to add checks for Java 9.

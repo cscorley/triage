@@ -1,0 +1,1 @@
+in one of our use cases, we might encounter slow network on some bookies. we'd like it to be timeout quickly so the bookkeeper client could do ensemble change to replace good bookies. so we'd like the ability to configure tcp connection timeout.

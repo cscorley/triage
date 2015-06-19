@@ -1,0 +1,3 @@
+It is a pain to keep the file up-to-date. As it is pure XML we can use a template to produce it automatically. The same trikc like for creating index.html in the docs is used.
+
+The patch will produce it automatically from filesets/dirsets in ant. It is still a pain with the duplicate JARs, but maybe we can fix that later.

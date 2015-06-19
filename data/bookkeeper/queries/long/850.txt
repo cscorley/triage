@@ -1,0 +1,3 @@
+When using group commit to reduce the number of fsync operations in the bookie journal, the timeout is rounded to the next millisecond. 
+
+If the group commit is set to 1ms, that would mean that the effective wait time will be closer to 2ms.

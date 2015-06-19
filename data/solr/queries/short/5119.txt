@@ -1,0 +1,1 @@
+Managed schema problems after adding fields via Schema Rest API 

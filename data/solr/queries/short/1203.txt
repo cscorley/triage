@@ -1,0 +1,1 @@
+We should add an example of setting the update.processor for a given RequestHandler

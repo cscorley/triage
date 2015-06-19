@@ -1,0 +1,5 @@
+As noted in SOLR-3879, Mike's new check in the smoketester found out that Lucene's binary release ships with a servlet-api.jar file in the Lucene demo module. This file is an interface-only file and is provided by the servlet container where you would run the webapp.
+
+This file should be removed from the binary release (the License is also questionable, because the "original" Sun License of servlet-api.jar was CDDL, although thats unimportant because it is an API definition file and not a implementation with actual program code. Shipping any binary code with servlet-api.jar is as wrong as shipping a Java project with JDK's rt.jar bundled).
+
+In general we should (in another issue) restructure our lib folders and differentiate (using IVY configs) between compile-time dependencies and run-time dependencies. Servlet-api.jar is a typical example for a pure-compile-time dep.

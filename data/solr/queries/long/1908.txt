@@ -1,0 +1,39 @@
+Dedupe removes all documents from the index if overwriteDupes=true and the schema's signature field has indexed=false. The maxDoc value does grow as it always does but numDocs is always zero.
+
+solrconfig.xml
+    <bool name="overwriteDupes">true</bool>
+    <str name="signatureField">sig</str>
+
+schema.xml
+    <field name="sig" type="string" stored="true" indexed="false" multiValued="true" />
+
+mailinglist
+http://lucene.472066.n3.nabble.com/Dedupe-and-overwriteDupes-setting-td809320.html
+
+log entries
+
+May 12, 2010 2:35:34 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1                        
+        commit{dir=/opt/apache/solr/data/index,segFN=segments_1,version=1273667628292,generation=1,filenames=[segments_1]
+May 12, 2010 2:35:34 PM org.apache.solr.core.SolrDeletionPolicy updateCommits                                            
+INFO: newest commit = 1273667628292                                                                                      
+May 12, 2010 2:35:35 PM org.apache.solr.update.processor.LogUpdateProcessor finish                                       
+INFO: 
+{add=[<ID's WERE HERE>, ... (8 added)]}
+ 0 1097                                                                                         
+May 12, 2010 2:35:35 PM org.apache.solr.core.SolrCore execute                                                                                                         
+INFO: [] webapp=/solr path=/update params=
+{wt=javabin&version=2.2}
+ status=0 QTime=1097                                                                                
+May 12, 2010 2:35:35 PM org.apache.solr.update.DirectUpdateHandler2 commit                                                                                            
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)                                                                              
+May 12, 2010 2:35:35 PM org.apache.solr.core.SolrDeletionPolicy onCommit                                                                                              
+INFO: SolrDeletionPolicy.onCommit: commits:num=2                                                                                                                      
+        commit{dir=/opt/apache/solr/data/index,segFN=segments_1,version=1273667628292,generation=1,filenames=[segments_1]                                             
+        commit{dir=/opt/apache/solr/data/index,segFN=segments_2,version=1273667628293,generation=2,filenames=[_0.tis, _0.nrm, _0.fnm, _0.tvd, _0_1.del, _0.tvf, _0.tii, _0.tvx, _0.frq, segments_2, _0.fdx, _0.prx, _0.fdt]                                                                                                                 
+May 12, 2010 2:35:35 PM org.apache.solr.core.SolrDeletionPolicy updateCommits                                                                                         
+INFO: newest commit = 1273667628293                                                                                                                                   
+May 12, 2010 2:35:35 PM org.apache.solr.search.SolrIndexSearcher <init>                                                                                               
+INFO: Opening Searcher@8ae59a main                                                                                                                                    
+May 12, 2010 2:35:35 PM org.apache.solr.update.DirectUpdateHandler2 commit                                                                                            
+INFO: end_commit_flush       

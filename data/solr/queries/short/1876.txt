@@ -1,0 +1,1 @@
+Convert all tokenstreams and tests to use CharTermAttribute

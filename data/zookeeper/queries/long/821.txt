@@ -1,0 +1,1 @@
+Since installing and using ZooKeeper I've built and installed no less than four versions of the zkpython bindings.  It would be really helpful if the module had a '_version_' attribute to easily tell which version is currently in use.

@@ -1,0 +1,14 @@
+It seems like spellchecker using solr.DirectSolrSpellChecker doesn't work when grouping results.
+
+/select?q=mispeled
+Gives me correct spellingsuggestions
+
+but..
+/select?q=mispeled&group=true&group.main=true&group.field=title
+don't give any suggestions.
+
+It worked in 3.5 with indexbased spellchecker.
+
+It seems like if i mispell something that returns 0 results i dont get any suggestions. If i misspell something that genereate a result i get suggestions on it.
+It should come up with proper suggestions even if there are no results to be displayed (But there is things that should be suggested).
+Long story short. Same functionality as in 3.5 

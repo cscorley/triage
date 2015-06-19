@@ -1,0 +1,1 @@
+bump version in the C library as we prepare for 3.5.0 release

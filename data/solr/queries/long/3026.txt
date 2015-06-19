@@ -1,0 +1,3 @@
+We need a way to specify exactly what fields should be available to the end user as fielded search.
+
+In the original SOLR-1553, there's a patch implementing "user fields", but it was never committed even if that issue was closed.

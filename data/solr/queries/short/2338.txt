@@ -1,0 +1,1 @@
+improved per-field similarity integration into schema.xml

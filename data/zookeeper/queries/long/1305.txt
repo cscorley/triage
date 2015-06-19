@@ -1,0 +1,13 @@
+All the callers of the function prepend_string make a call to prepend_string before checking that zhandle_t *zh is not null. At the top of prepend_string, zh is dereferenced without checking for a null ptr:
+
+static char* prepend_string(zhandle_t zh, const char client_path) {
+    char *ret_str;
+    if (zh->chroot == NULL)
+        return (char *) client_path;
+
+I propose fixing this by adding the check here in prepend_string:
+
+static char* prepend_string(zhandle_t zh, const char client_path) {
+    char *ret_str;
+    if (zh==NULL || zh->chroot == NULL)
+        return (char *) client_path;

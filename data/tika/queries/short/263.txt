@@ -1,0 +1,1 @@
+Core parser classes duplicated in the tika-parser and tika-core jar files.

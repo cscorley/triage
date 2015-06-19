@@ -1,0 +1,21 @@
+As suggested by Chris Hostetter:
+
+diff orig/README.txt hoss/README.txt
+67a68,70
+> This will created a ./target/ directory containing the Apache Tika
+> binary JAR file.
+>
+70a74,86
+> Documentation
+> =============
+>
+> You can build a local copy of the Tika documentation including
+> JavaDocs using the following Maven 2 command in the Tika source
+> directory:
+>
+>     mvn site
+>
+> You can then open the Tika Documentation in a web browser:
+>
+>     ./target/site/documentation.html
+>

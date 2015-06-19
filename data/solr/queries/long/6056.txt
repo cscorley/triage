@@ -1,0 +1,8 @@
+Some errors"org.apache.solr.common.SolrException: Error opening new searcher. exceeded limit of maxWarmingSearchers=2, try again later", that occur distributedupdateprocessor trig the core admin recover process.
+That means every update request will send the core admin recover request.
+(see the code DistributedUpdateProcessor.java doFinish())
+
+The terrible thing is CoreAdminHandler will start a new thread to publish the recover status and start recovery. Threads increase very quickly, and stack OOM , Overseer can't handle a lot of status update , zookeeper node for  /overseer/queue/qn-0000125553 increase more than 40 thousand in two minutes.
+
+At the last zookeeper crash. 
+The worse thing is queue has too much nodes in the zookeeper, the cluster can't publish the right status because only one overseer work, I have to start three threads to clear the queue nodes. The cluster doesn't work normal near 30 minutes...

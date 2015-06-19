@@ -1,0 +1,8 @@
+Failure from nightly build:
+
+https://builds.apache.org/job/Lucene-Solr-tests-only-trunk-java7/2022/testReport/junit/org.apache.lucene.search.grouping/GroupFacetCollectorTest/testRandom/
+
+It reproduces for me with:
+
+ ant test -Dtestcase=GroupFacetCollectorTest -Dtestmethod=testRandom -Dtests.seed=7d227aa075b7bfb8:550d2a0828ce2537:-3553c99f6a4d293e -Dtests.multiplier=3 -Dargs="-Dfile.encoding=US-ASCII"
+

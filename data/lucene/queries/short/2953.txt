@@ -1,0 +1,1 @@
+PriorityQueue is inheriently broken if subclass attempts to use "heap" w/generic T bound to anything other then "Object"

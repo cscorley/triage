@@ -1,0 +1,1 @@
+OOME when running ConstraintCharacteristicsTest with smaller heap

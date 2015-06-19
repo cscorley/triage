@@ -1,0 +1,1 @@
+Rename StringIndexDocValues to DocTermsIndexDocValues

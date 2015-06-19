@@ -1,0 +1,3 @@
+SegmentInfoPerCommit continues to list updates files even if they are unneeded anymore. For example, if you update the values of documents of field 'f', it creates a gen'd .fnm (FieldInfos) file. If you commit/reopen and update the field again (maybe now a different set of documents), it creates another gen'd .fnm, but continues to list both gens, even though only the latest one is needed.
+
+To solve this, SIPC would need to know then dvGen of each FieldInfo, so that it can correctly list only the updates files that are truly needed. I'll work on a testcase and fix.

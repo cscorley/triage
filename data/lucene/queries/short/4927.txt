@@ -1,0 +1,1 @@
+Prevent underflow in NB classifier likelihood calculation

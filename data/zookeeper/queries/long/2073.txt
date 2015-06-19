@@ -1,0 +1,1 @@
+When running valgrind against a zookeeper client using the C API, I noticed an occasional memory leak on zookeeper_close.  I traced the issue to a regression added by fix ZOOKEEPER-804.  The attached patch fixes the regression and the associated memory leak.

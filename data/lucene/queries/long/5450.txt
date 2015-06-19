@@ -1,0 +1,50 @@
+There are problems with the handling of wrapped span multiterms that don't have any matches.  
+
+1) In the test framework, when AssertingIndexSearcher does a rewrite and then checks for equality, there's an NPE for SpanNear and SpanOr:
+
+java.lang.NullPointerException
+	at __randomizedtesting.SeedInfo.seed([8E96A398C89A703B:338EB53A2EDBE8CC]:0)
+	at org.apache.lucene.search.spans.SpanOrQuery.addClause(SpanOrQuery.java:57)
+	at org.apache.lucene.search.spans.SpanOrQuery.<init>(SpanOrQuery.java:49)
+	at org.apache.lucene.search.spans.SpanOrQuery.clone(SpanOrQuery.java:86)
+	at org.apache.lucene.search.spans.SpanOrQuery.clone(SpanOrQuery.java:39)
+	at org.apache.lucene.search.QueryUtils.checkHashEquals(QueryUtils.java:57)
+	at org.apache.lucene.search.QueryUtils.check(QueryUtils.java:52)
+	at org.apache.lucene.search.AssertingIndexSearcher.rewrite(AssertingIndexSearcher.java:80)
+	at org.apache.lucene.search.IndexSearcher.createNormalizedWeight(IndexSearcher.java:675)
+	at org.apache.lucene.search.AssertingIndexSearcher.createNormalizedWeight(AssertingIndexSearcher.java:59)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:273)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:261)
+	at org.apache.lucene.search.spans.TestSpanMultiTermQueryWrapper.testNoSuchMultiTermsInOr(TestSpanMultiTermQueryWrapper.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.carrotsearch.randomizedtesting.RandomizedRunner.invoke(RandomizedRunner.java:1559)
+...
+
+
+
+
+2) The same issue is causing a "Clauses must have same field" illegal argument exception in a SpanNotQuery.
+
+java.lang.IllegalArgumentException: Clauses must have same field.
+	at __randomizedtesting.SeedInfo.seed([779E5DD7E7523C72:4C2ECAAB938038F9]:0)
+	at org.apache.lucene.search.spans.SpanNotQuery.<init>(SpanNotQuery.java:66)
+	at org.apache.lucene.search.spans.SpanNotQuery.clone(SpanNotQuery.java:99)
+	at org.apache.lucene.search.spans.SpanNotQuery.clone(SpanNotQuery.java:36)
+	at org.apache.lucene.search.QueryUtils.checkHashEquals(QueryUtils.java:57)
+	at org.apache.lucene.search.QueryUtils.check(QueryUtils.java:52)
+	at org.apache.lucene.search.AssertingIndexSearcher.rewrite(AssertingIndexSearcher.java:80)
+	at org.apache.lucene.search.IndexSearcher.createNormalizedWeight(IndexSearcher.java:675)
+	at org.apache.lucene.search.AssertingIndexSearcher.createNormalizedWeight(AssertingIndexSearcher.java:59)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:273)
+	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:261)
+	at org.apache.lucene.search.spans.TestSpanMultiTermQueryWrapper.testNoSuchMultiTermsInNotNear(TestSpanMultiTermQueryWrapper.java:144)
+...
+
+
+
+The basic problem is that an empty SpanQuery (SpanOrQuery with zero clauses) does not have a field, and much of our code assumes that the field is not null.
+
+Test case and patch on way.

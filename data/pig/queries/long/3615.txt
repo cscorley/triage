@@ -1,0 +1,3 @@
+It's a common (and good) convention to quote fixed point numbers when storing them as json. The reason being that majority of json libraries will implicitly load any number value as a floating point number and if you care about data integrity this will make you very sad.
+
+This update makes JsonLoader able to load BigDecimal values from quoted values (the old jackson library that we're using doesn't support this through the current approach) as well as making JsonStorage store BigDecimal values as quoted strings.

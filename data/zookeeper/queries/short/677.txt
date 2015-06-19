@@ -1,0 +1,1 @@
+c client doesn't allow ipv6 numeric connect string

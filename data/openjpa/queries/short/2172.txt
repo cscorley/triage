@@ -1,0 +1,1 @@
+openjpa-all jar is missing slf4j runtime dependency

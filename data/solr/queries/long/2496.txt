@@ -1,0 +1,39 @@
+The following is the current Solr 3.1 format for sending multiple documents by JSON. It's not analogous to the XML method, and isn't easily generated and serialized from a hash in Perl, Python, Ruby, et al to JSON, because it has duplicate keys for "add".
+
+It's cited at this page: http://wiki.apache.org/solr/UpdateJSON
+Near the text: "Here's a simple example of adding more than one document at once:"
+
+
+{
+    "add": {"doc": {"id" : "TestDoc1", "title" : "test1"} },
+    "add": {"doc": {"id" : "TestDoc2", "title" : "another test"} }
+}'
+
+
+
+Here's a better format that's analogous to the XML method of submission, and is easily serialized from a hash to JSON:
+
+
+{
+    "add": {
+        "doc": [
+            {"id" : "TestDoc1", "title" : "test1"},
+            {"id" : "TestDoc2", "title" : "another test"},
+        ],
+    },
+}
+
+
+
+The original XML method:
+
+
+<add>
+    <doc>
+       <field name="id">TestDoc1<field><field name="title">"test1"</field>
+    </doc>
+    <doc>
+       <field name="id">TestDoc2<field><field name="title">"test2"</field></field>
+    </doc>
+</add>
+

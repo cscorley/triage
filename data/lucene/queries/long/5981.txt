@@ -1,0 +1,3 @@
+Instead it asks you nicely to "not do that".
+
+Due to the way this is implemented, if you choose to drop corrupt segments, it should obtain the lock before actually doing any reads too, or it might lose more than you think or do other strange stuff.

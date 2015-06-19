@@ -1,0 +1,2 @@
+I was surprised when writing a test, and forgetting to close my directory,
+that it didnt fail the test.

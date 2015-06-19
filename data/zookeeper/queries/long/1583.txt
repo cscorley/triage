@@ -1,0 +1,3 @@
+It is silly that maxClientCnxns being set to the default, and that default being too low, is the number one issue for users (according to some: https://raw.github.com/strangeloop/strangeloop2012/master/slides/sessions/Ting-BuildingAnImpenetrableZooKeeper.pdf).
+
+It seems to me that this can be resolved by an extremely simple documentation change: add a commented-out configuration line in conf/zoo_sample.cfg that shows the default, but more importantly, shows users that the configuration option exists.

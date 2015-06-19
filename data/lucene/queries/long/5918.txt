@@ -1,0 +1,7 @@
+We used this folder in older times to place older JAR files from previous Lucene version there to run our tests against those (to detect binary backwards breaks).
+
+We no longer do this since Lucene 4, so let's remove the whole folder. Currently it only contains a README.txt.
+
+This issue will remove the folder and fix smoker to not expect this directory in source tree.
+
+Any comments before I do this change?

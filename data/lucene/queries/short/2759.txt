@@ -1,0 +1,1 @@
+We should never open an IndexInput when an IndexOutput is still open

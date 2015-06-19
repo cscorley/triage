@@ -1,0 +1,13 @@
+With the vast array of new suggester, It would be nice to have a dictionary implementation that could feed the suggesters terms, weights and (optionally) payloads from the lucene index.
+
+The idea of this dictionary implementation is to grab stored documents from the index and use user-configured fields for terms, weights and payloads.
+
+use-case: If you have a document with three fields 
+
+	product_id
+	product_name
+	product_popularity_score
+
+
+
+then using this implementation would enable you to have a suggester for product_name using the weight of product_popularity_score and return you the payload of product_id, with which you can do further processing on (example: construct a url etc).  

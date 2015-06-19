@@ -1,0 +1,1 @@
+don't reuse byte[] in IndexInput/Output for read/writeString

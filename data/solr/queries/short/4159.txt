@@ -1,0 +1,1 @@
+When we are starting a shard from rest, a leader should not consider it's last published state when deciding if it can be the new leader.

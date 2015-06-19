@@ -1,0 +1,1 @@
+avoid building jar files unless necessary in build

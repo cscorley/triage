@@ -1,0 +1,1 @@
+Improve transaction log replay speed on HDFS.

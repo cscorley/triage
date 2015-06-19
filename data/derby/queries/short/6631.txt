@@ -1,0 +1,1 @@
+FileMonitor can be used to elevate an application's privileges

@@ -1,0 +1,17 @@
+An IOException raised during analysis is swallowed by JavabinLoader, so the underlying cause is not visible in the logs, or to the client.  Proposed fix is to change
+
+
+
+throw new SolrException(SolrException.ErrorCode.SERVER_ERROR, "ERROR adding document " + document);
+
+
+
+to
+
+
+
+throw new SolrException(SolrException.ErrorCode.SERVER_ERROR, "ERROR adding document " + document, e);
+
+
+
+on line 99 in JavaBinLoader.java

@@ -1,0 +1,1 @@
+Include formatted Changes.html for release

@@ -1,0 +1,1 @@
+SolrCore reload can fail because it tries to remove the index write lock while already holding it.

@@ -1,0 +1,32 @@
+If a client program does some operations using a ledger handle opened by openLedgerNoRecovery(), the program is not terminated after the handle and bookkeeper object is closed.
+
+Here is a sample code. 
+
+
+import java.util.Enumeration;
+
+import org.apache.bookkeeper.client.BookKeeper;
+import org.apache.bookkeeper.client.LedgerEntry;
+import org.apache.bookkeeper.client.LedgerHandle;
+
+public class BkClient {
+  public static void main(String[] args) {
+    try {
+      BookKeeper bk = new BookKeeper("localhost:2181");
+
+      // 9 is a ledger id of an existing ledger
+      LedgerHandle lh = bk.openLedgerNoRecovery(9, BookKeeper.DigestType.CRC32, "passwd".getBytes());
+
+      Enumeration<LedgerEntry> entries = lh.readEntries(0, 0);
+
+      lh.close();
+      bk.close();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+
+
+Thread dump of this program shows that non-daemon thread "ZkLedgerManagerScheduler-0"  is alive, after bk.close() is called. 

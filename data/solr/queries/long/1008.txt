@@ -1,0 +1,5 @@
+stats.jsp gave this error:
+
+Line Number 1327, Column 48:        <stat name="item_attrFacet_Size_&_Shape"
+
+stat names are not XML escaped.

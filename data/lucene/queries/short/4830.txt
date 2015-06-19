@@ -1,0 +1,1 @@
+Sorter API: use an abstract doc map instead of an array

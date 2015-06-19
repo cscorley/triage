@@ -1,0 +1,14 @@
+This part has a bug:
+
+
+
+// normalize path
+      if (path == null) {
+        path = "/";
+      } else {
+        path.trim();
+        if (path.length() == 0) {
+          path = "/";
+        }
+      }
+

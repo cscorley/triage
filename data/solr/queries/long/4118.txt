@@ -1,0 +1,2 @@
+replicationFactor should be the number of different nodes that have a document.
+See discussion in SOLR-4114

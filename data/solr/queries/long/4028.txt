@@ -1,0 +1,5 @@
+I think this would make it easier to test and develop with SolrCloud, in order to start with a fresh ZK directory now the approach is to delete ZK data, with this improvement one could just add a chroot to the zkHost like:
+
+java -DzkHost=localhost:2181/testXYZ -jar start.jar
+
+Right now this is possible but you have to manually create the initial path. 

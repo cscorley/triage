@@ -1,0 +1,5 @@
+This is a special case in some of the code, but its currently very rare (e.g. typically untested).
+
+We should add a test just for these corner cases:
+see https://builds.apache.org/job/Lucene-Solr-Clover-4.x/34/clover-report/org/apache/lucene/codecs/block/BlockPostingsReader.html#BlockPostingsReader
+and https://builds.apache.org/job/Lucene-Solr-Clover-4.x/34/clover-report/org/apache/lucene/codecs/block/BlockSkipReader.html#BlockSkipReader

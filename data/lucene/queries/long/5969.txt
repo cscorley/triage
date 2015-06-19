@@ -1,0 +1,13 @@
+Spinoff from LUCENE-5952:
+
+
+	Fix .si to write Version as 3 ints, not a String that requires parsing at read time.
+
+
+
+
+	Lucene42TermVectorsFormat should not use the same codecName as Lucene41StoredFieldsFormat
+
+
+
+It would also be nice if we had a "bumpCodecVersion" script so rolling a new codec is not so daunting.

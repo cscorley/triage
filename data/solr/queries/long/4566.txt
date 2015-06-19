@@ -1,0 +1,3 @@
+I'm not sure I really like this getSlices vs getAllSclies - it's kind of easy to get in trouble right now I think. Some spots that we clearly want to call getAllSlices got left with getSlices. It's almost surprising that getSlices only returns active replicas - it should probably at least be called getSlicesWithActive or something more explicit. But for the first step, we should just fix the various mis calls.
+
+There are a couple problems around the mis calls, the most severe probably being that you can lose shards that are not active from the clusterstate.json given the right races.

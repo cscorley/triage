@@ -1,0 +1,1 @@
+add checks to MockTokenizer to enforce proper consumption

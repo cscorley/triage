@@ -1,0 +1,1 @@
+MappingCharFilter could be improved by switching to an FST.

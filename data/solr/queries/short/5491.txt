@@ -1,0 +1,1 @@
+Testing for extra properties should use startsWith rather than indexOf

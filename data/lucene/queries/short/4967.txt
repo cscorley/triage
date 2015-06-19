@@ -1,0 +1,1 @@
+Absorb NRTManager entirely into a separate reopen thread class

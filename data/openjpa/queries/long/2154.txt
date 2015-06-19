@@ -1,0 +1,12 @@
+openjpa-examples, openjpa-integration and openjpa-tools modules has 2 level deep. Building using test-dynamic-enhancer profile failed with the following exception:
+
+ [INFO] Surefire report directory: /root/TeamCity/buildAgent/work/be6440991bd1f943/openjpa-tools/openjpa-maven-plugin/target/surefire-reports
+ Forking command line: /bin/sh -c cd /root/TeamCity/buildAgent/work/be6440991bd1f943/openjpa-tools/openjpa-maven-plugin && /opt/java/ibm/jdk6-sr9/jre/bin/java -Djava.security.manager -Djava.security.policy=/root/TeamCity/buildAgent/work/be6440991bd1f943/openjpa-tools/openjpa-maven-plugin/../openjpa-persistence-jdbc/src/test/resources/j2.security.test.policy -Dtest.basedir=/root/TeamCity/buildAgent/work/be6440991bd1f943/openjpa-tools/openjpa-maven-plugin/.. -Xmx1024m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -jar /root/TeamCity/buildAgent/temp/buildTmp/surefirebooter6037852198870421265.jar /root/TeamCity/buildAgent/temp/buildTmp/surefire2725633924036419124tmp /root/TeamCity/buildAgent/temp/buildTmp/surefire5635214270772122697tmp
+ java.security.AccessControlException: Access denied (java.io.FilePermission /root/TeamCity/buildAgent/temp/buildTmp/surefire5635214270772122697tmp read)
+ at java.security.AccessController.checkPermission(AccessController.java:108)
+ at java.lang.SecurityManager.checkPermission(SecurityManager.java:544)
+ at java.lang.SecurityManager.checkRead(SecurityManager.java:883)
+ at java.io.File.exists(File.java:742)
+ at org.apache.maven.surefire.booter.SurefireBooter.loadProperties(SurefireBooter.java:803)
+ at org.apache.maven.surefire.booter.SurefireBooter.setSystemProperties(SurefireBooter.java:822)
+ at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:922)

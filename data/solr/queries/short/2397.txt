@@ -1,0 +1,1 @@
+main example solrconfig.xml needs cleanup before 3.1

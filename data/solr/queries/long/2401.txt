@@ -1,0 +1,25 @@
+When running the package-src target I see some strange things in the zip.
+Somehow we have to get the excludes correct:
+
+     0  03-04-11 07:52   apache-solr-4.0-SNAPSHOT/solr/build/apache-solr-4.0-SNAPSHOT/
+     0  03-04-11 07:52   apache-solr-4.0-SNAPSHOT/solr/build/apache-solr-4.0-SNAPSHOT/lucene/
+     0  03-04-11 07:52   apache-solr-4.0-SNAPSHOT/solr/build/apache-solr-4.0-SNAPSHOT/lucene/contrib/
+     0  03-04-11 07:52   apache-solr-4.0-SNAPSHOT/solr/build/apache-solr-4.0-SNAPSHOT/lucene/contrib/lucli/
+     0  03-04-11 07:52   apache-solr-4.0-SNAPSHOT/solr/build/apache-solr-4.0-SNAPSHOT/solr/
+     0  03-04-11 07:52   apache-solr-4.0-SNAPSHOT/solr/build/apache-solr-4.0-SNAPSHOT/solr/example/
+     0  03-04-11 07:52   apache-solr-4.0-SNAPSHOT/solr/build/apache-solr-4.0-SNAPSHOT/solr/example/exampledocs/
+     0  03-04-11 07:52   apache-solr-4.0-SNAPSHOT/solr/build/apache-solr-4.0-SNAPSHOT/solr/example/solr/
+...
+       0  03-04-11 07:43   apache-solr-4.0-SNAPSHOT/solr/example/work/Jetty_0_0_0_0_8983_solr.war__solr__k1kf17/
+       0  03-04-11 07:43   apache-solr-4.0-SNAPSHOT/solr/example/work/Jetty_0_0_0_0_8983_solr.war__solr__k1kf17/jsp/
+       0  03-04-11 07:43   apache-solr-4.0-SNAPSHOT/solr/example/work/Jetty_0_0_0_0_8983_solr.war__solr__k1kf17/jsp/org/
+       0  03-04-11 07:43   apache-solr-4.0-SNAPSHOT/solr/example/work/Jetty_0_0_0_0_8983_solr.war__solr__k1kf17/jsp/org/apache/
+       0  03-04-11 07:43   apache-solr-4.0-SNAPSHOT/solr/example/work/Jetty_0_0_0_0_8983_solr.war__solr__k1kf17/jsp/org/apache/jsp/
+       0  03-04-11 07:43   apache-solr-4.0-SNAPSHOT/solr/example/work/Jetty_0_0_0_0_8983_solr.war__solr__k1kf17/jsp/org/apache/jsp/admin/
+       0  03-04-11 07:44   apache-solr-4.0-SNAPSHOT/solr/example/work/Jetty_0_0_0_0_8983_solr.war__solr__k1kf17/webapp/
+       0  03-04-11 07:43   apache-solr-4.0-SNAPSHOT/solr/example/work/Jetty_0_0_0_0_8983_solr.war__solr__k1kf17/webapp/META-INF/
+       0  03-04-11 07:43   apache-solr-4.0-SNAPSHOT/solr/example/work/Jetty_0_0_0_0_8983_solr.war__solr__k1kf17/webapp/WEB-INF/
+       0  03-04-11 07:43   apache-solr-4.0-SNAPSHOT/solr/example/work/Jetty_0_0_0_0_8983_solr.war__solr__k1kf17/webapp/WEB-INF/lib/
+       0  03-04-11 07:44   apache-solr-4.0-SNAPSHOT/solr/example/work/Jetty_0_0_0_0_8983_solr.war__solr__k1kf17/webapp/admin/
+       0  03-04-11 07:43   apache-solr-4.0-SNAPSHOT/solr/example/work/Jetty_0_0_0_0_8983_solr.war__solr__k1kf17/webapp/admin/replication/
+

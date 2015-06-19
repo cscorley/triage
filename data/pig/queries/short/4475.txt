@@ -1,0 +1,1 @@
+Keys in AvroMapWrapper are not proper Pig types

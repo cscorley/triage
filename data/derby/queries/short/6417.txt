@@ -1,0 +1,1 @@
+Dropping a column in 10.7 release when there is a trigger with REFERENCING OLD clause defined on the table gives error "ERROR 42X05: Table/View 'OLD' does not exist.".

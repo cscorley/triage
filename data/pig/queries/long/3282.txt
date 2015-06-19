@@ -1,0 +1,3 @@
+http://search.maven.org/remotecontent?filepath=org/apache/pig/pig/0.11.1/pig-0.11.1.pom
+
+From the maven repo, pig does not bring in joda-time as a dependency in pom.xml. This is causing unit test failures from hcatalog.

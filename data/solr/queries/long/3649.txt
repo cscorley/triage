@@ -1,0 +1,5 @@
+A single Id gets deleted from the index as opposed to the full list. It
+appears properly in the logs - shows delete of all Ids sent, although all
+but one remain in the index.
+
+As reported on the mailing list http://lucene.472066.n3.nabble.com/Solr-4-Alpha-SolrJ-Indexing-Issue-tp3995781p3996074.html

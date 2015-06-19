@@ -1,0 +1,5 @@
+Limited join functionality for Solr, mapping one set of IDs matching a query to another set of IDs, based on the indexed tokens of the fields.
+Example:
+fq=
+{!join  from=parent_ptr to:parent_id}
+child_doc:query

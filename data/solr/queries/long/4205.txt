@@ -1,0 +1,383 @@
+I had to kill ASF Jenkins Clover builds two times after several 10 hours of inactivity in a random Solr test. I requested a stack trace before killing the only running JVM (clover runs with one JVM only, because clover does not like multiple processes writing the same clover metrics file).
+
+In both cases (4.x and trunk) the stack trace was looking identical after sending kill -3...
+
+https://builds.apache.org/job/Lucene-Solr-Clover-trunk/76/consoleFull (yesterday):
+
+[junit4:junit4] HEARTBEAT J0 PID(81884@lucene.zones.apache.org): 2012-12-16T13:01:00, stalled for 28447s at: TestFunctionQuery.testBooleanFunctions
+[junit4:junit4] HEARTBEAT J0 PID(81884@lucene.zones.apache.org): 2012-12-16T13:02:00, stalled for 28507s at: TestFunctionQuery.testBooleanFunctions
+[junit4:junit4] HEARTBEAT J0 PID(81884@lucene.zones.apache.org): 2012-12-16T13:03:00, stalled for 28567s at: TestFunctionQuery.testBooleanFunctions
+[junit4:junit4] JVM J0: stdout was not empty, see: /usr/home/hudson/hudson-slave/workspace/Lucene-Solr-Clover-trunk/solr/build/solr-core/test/temp/junit4-J0-20121216_044733_583.sysout
+[junit4:junit4] >>> JVM J0: stdout (verbatim) ----
+[junit4:junit4] 2012-12-16 13:03:49
+[junit4:junit4] Full thread dump OpenJDK 64-Bit Server VM (20.0-b12 mixed mode):
+[junit4:junit4] 
+[junit4:junit4] "searcherExecutor-2577-thread-1" prio=5 tid=0x000000085eb67000 nid=0x61c105b waiting on condition [0x00007ffff0b0d000]
+[junit4:junit4]    java.lang.Thread.State: WAITING (parking)
+[junit4:junit4] 	at sun.misc.Unsafe.park(Native Method)
+[junit4:junit4] 	- parking to wait for  <0x00000008178c9c40> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+[junit4:junit4] 	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+[junit4:junit4] 	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+[junit4:junit4] 	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:386)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1043)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1103)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+[junit4:junit4] 	at java.lang.Thread.run(Thread.java:679)
+[junit4:junit4] 
+[junit4:junit4] "RMI TCP Accept-0" daemon prio=5 tid=0x0000000840ce2800 nid=0x61c0aa2 runnable [0x00007ffff9496000]
+[junit4:junit4]    java.lang.Thread.State: RUNNABLE
+[junit4:junit4] 	at java.net.PlainSocketImpl.socketAccept(Native Method)
+[junit4:junit4] 	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:375)
+[junit4:junit4] 	at java.net.ServerSocket.implAccept(ServerSocket.java:470)
+[junit4:junit4] 	at java.net.ServerSocket.accept(ServerSocket.java:438)
+[junit4:junit4] 	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:387)
+[junit4:junit4] 	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:359)
+[junit4:junit4] 	at java.lang.Thread.run(Thread.java:679)
+[junit4:junit4] 
+[junit4:junit4] "RMI Scheduler(0)" daemon prio=5 tid=0x0000000840ce1000 nid=0x61c0969 waiting on condition [0x00007ffff0f11000]
+[junit4:junit4]    java.lang.Thread.State: WAITING (parking)
+[junit4:junit4] 	at sun.misc.Unsafe.park(Native Method)
+[junit4:junit4] 	- parking to wait for  <0x0000000814f12f88> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+[junit4:junit4] 	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+[junit4:junit4] 	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+[junit4:junit4] 	at java.util.concurrent.DelayQueue.take(DelayQueue.java:189)
+[junit4:junit4] 	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:688)
+[junit4:junit4] 	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:681)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1043)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1103)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+[junit4:junit4] 	at java.lang.Thread.run(Thread.java:679)
+[junit4:junit4] 
+[junit4:junit4] "GC Daemon" daemon prio=5 tid=0x0000000840ce0000 nid=0x61c0949 in Object.wait() [0x00007ffff6d6f000]
+[junit4:junit4]    java.lang.Thread.State: TIMED_WAITING (on object monitor)
+[junit4:junit4] 	at java.lang.Object.wait(Native Method)
+[junit4:junit4] 	at sun.misc.GC$Daemon.run(GC.java:117)
+[junit4:junit4] 	- locked <0x0000000814f1c428> (a sun.misc.GC$LatencyLock)
+[junit4:junit4] 
+[junit4:junit4] "RMI Reaper" prio=5 tid=0x0000000840cdf800 nid=0x61c0947 in Object.wait() [0x00007ffff7577000]
+[junit4:junit4]    java.lang.Thread.State: WAITING (on object monitor)
+[junit4:junit4] 	at java.lang.Object.wait(Native Method)
+[junit4:junit4] 	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:133)
+[junit4:junit4] 	- locked <0x0000000814f1ad08> (a java.lang.ref.ReferenceQueue$Lock)
+[junit4:junit4] 	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:149)
+[junit4:junit4] 	at sun.rmi.transport.ObjectTable$Reaper.run(ObjectTable.java:350)
+[junit4:junit4] 	at java.lang.Thread.run(Thread.java:679)
+[junit4:junit4] 
+[junit4:junit4] "RMI TCP Accept-0" daemon prio=5 tid=0x0000000840cde800 nid=0x61c0936 runnable [0x00007ffff6e70000]
+[junit4:junit4]    java.lang.Thread.State: RUNNABLE
+[junit4:junit4] 	at java.net.PlainSocketImpl.socketAccept(Native Method)
+[junit4:junit4] 	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:375)
+[junit4:junit4] 	at java.net.ServerSocket.implAccept(ServerSocket.java:470)
+[junit4:junit4] 	at java.net.ServerSocket.accept(ServerSocket.java:438)
+[junit4:junit4] 	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:387)
+[junit4:junit4] 	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:359)
+[junit4:junit4] 	at java.lang.Thread.run(Thread.java:679)
+[junit4:junit4] 
+[junit4:junit4] "RMI TCP Accept-0" daemon prio=5 tid=0x0000000840cde000 nid=0x61c0934 runnable [0x00007ffff494b000]
+[junit4:junit4]    java.lang.Thread.State: RUNNABLE
+[junit4:junit4] 	at java.net.PlainSocketImpl.socketAccept(Native Method)
+[junit4:junit4] 	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:375)
+[junit4:junit4] 	at java.net.ServerSocket.implAccept(ServerSocket.java:470)
+[junit4:junit4] 	at java.net.ServerSocket.accept(ServerSocket.java:438)
+[junit4:junit4] 	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:387)
+[junit4:junit4] 	at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:359)
+[junit4:junit4] 	at java.lang.Thread.run(Thread.java:679)
+[junit4:junit4] 
+[junit4:junit4] "TimeLimitedCollector timer thread" daemon prio=5 tid=0x0000000848e69800 nid=0x61c096d waiting on condition [0x00007ffff3a3c000]
+[junit4:junit4]    java.lang.Thread.State: TIMED_WAITING (sleeping)
+[junit4:junit4] 	at java.lang.Thread.sleep(Native Method)
+[junit4:junit4] 	at org.apache.lucene.search.TimeLimitingCollector$TimerThread.run(TimeLimitingCollector.java:267)
+[junit4:junit4] 
+[junit4:junit4] "metrics-meter-tick-thread-2" daemon prio=5 tid=0x000000084c8c6800 nid=0x61c087d runnable [0x00007ffffdfe1000]
+[junit4:junit4]    java.lang.Thread.State: TIMED_WAITING (parking)
+[junit4:junit4] 	at sun.misc.Unsafe.park(Native Method)
+[junit4:junit4] 	- parking to wait for  <0x0000000811568070> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+[junit4:junit4] 	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+[junit4:junit4] 	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2081)
+[junit4:junit4] 	at java.util.concurrent.DelayQueue.take(DelayQueue.java:193)
+[junit4:junit4] 	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:688)
+[junit4:junit4] 	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:681)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1043)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1103)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+[junit4:junit4] 	at java.lang.Thread.run(Thread.java:679)
+[junit4:junit4] 
+[junit4:junit4] "metrics-meter-tick-thread-1" daemon prio=5 tid=0x000000084c8c5000 nid=0x61c087b runnable [0x00007ffffe1e3000]
+[junit4:junit4]    java.lang.Thread.State: TIMED_WAITING (parking)
+[junit4:junit4] 	at sun.misc.Unsafe.park(Native Method)
+[junit4:junit4] 	- parking to wait for  <0x0000000811568070> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+[junit4:junit4] 	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+[junit4:junit4] 	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2081)
+[junit4:junit4] 	at java.util.concurrent.DelayQueue.take(DelayQueue.java:193)
+[junit4:junit4] 	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:688)
+[junit4:junit4] 	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:681)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1043)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1103)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+[junit4:junit4] 	at java.lang.Thread.run(Thread.java:679)
+[junit4:junit4] 
+[junit4:junit4] "Low Memory Detector" daemon prio=5 tid=0x00000008011c4800 nid=0x61c0876 runnable [0x0000000000000000]
+[junit4:junit4]    java.lang.Thread.State: RUNNABLE
+[junit4:junit4] 
+[junit4:junit4] "C2 CompilerThread1" daemon prio=5 tid=0x00000008011c3800 nid=0x61c0875 waiting on condition [0x0000000000000000]
+[junit4:junit4]    java.lang.Thread.State: RUNNABLE
+[junit4:junit4] 
+[junit4:junit4] "C2 CompilerThread0" daemon prio=5 tid=0x00000008011c3000 nid=0x61c0874 waiting on condition [0x0000000000000000]
+[junit4:junit4]    java.lang.Thread.State: RUNNABLE
+[junit4:junit4] 
+[junit4:junit4] "Signal Dispatcher" daemon prio=5 tid=0x00000008011c2000 nid=0x61c0873 waiting on condition [0x0000000000000000]
+[junit4:junit4]    java.lang.Thread.State: RUNNABLE
+[junit4:junit4] 
+[junit4:junit4] "Finalizer" daemon prio=5 tid=0x00000008011c1800 nid=0x61c0872 in Object.wait() [0x00007ffffebed000]
+[junit4:junit4]    java.lang.Thread.State: WAITING (on object monitor)
+[junit4:junit4] 	at java.lang.Object.wait(Native Method)
+[junit4:junit4] 	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:133)
+[junit4:junit4] 	- locked <0x0000000810cec8f8> (a java.lang.ref.ReferenceQueue$Lock)
+[junit4:junit4] 	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:149)
+[junit4:junit4] 	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:177)
+[junit4:junit4] 
+[junit4:junit4] "Reference Handler" daemon prio=5 tid=0x00000008011c0800 nid=0x61c0871 in Object.wait() [0x00007ffffecee000]
+[junit4:junit4]    java.lang.Thread.State: WAITING (on object monitor)
+[junit4:junit4] 	at java.lang.Object.wait(Native Method)
+[junit4:junit4] 	at java.lang.Object.wait(Object.java:502)
+[junit4:junit4] 	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:133)
+[junit4:junit4] 	- locked <0x0000000810ce8b80> (a java.lang.ref.Reference$Lock)
+[junit4:junit4] 
+[junit4:junit4] "main" prio=5 tid=0x00000008011c0000 nid=0x61c0672 runnable [0x00007fffffbfd000]
+[junit4:junit4]    java.lang.Thread.State: RUNNABLE
+[junit4:junit4] 	at java.io.FileInputStream.readBytes(Native Method)
+[junit4:junit4] 	at java.io.FileInputStream.read(FileInputStream.java:236)
+[junit4:junit4] 	at java.io.BufferedInputStream.read1(BufferedInputStream.java:273)
+[junit4:junit4] 	at java.io.BufferedInputStream.read(BufferedInputStream.java:334)
+[junit4:junit4] 	- locked <0x0000000810ce22e0> (a java.io.BufferedInputStream)
+[junit4:junit4] 	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:282)
+[junit4:junit4] 	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:324)
+[junit4:junit4] 	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:176)
+[junit4:junit4] 	- locked <0x0000000810ce22c8> (a java.io.InputStreamReader)
+[junit4:junit4] 	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+[junit4:junit4] 	at java.io.BufferedReader.fill(BufferedReader.java:153)
+[junit4:junit4] 	at java.io.BufferedReader.readLine(BufferedReader.java:316)
+[junit4:junit4] 	- locked <0x0000000810ce22c8> (a java.io.InputStreamReader)
+[junit4:junit4] 	at java.io.BufferedReader.readLine(BufferedReader.java:379)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.slave.StdInLineIterator.computeNext(StdInLineIterator.java:31)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.slave.StdInLineIterator.computeNext(StdInLineIterator.java:13)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.dependencies.com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.dependencies.com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.dependencies.com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.slave.SlaveMain.execute(SlaveMain.java:150)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.slave.SlaveMain.main(SlaveMain.java:255)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.slave.SlaveMainSafe.main(SlaveMainSafe.java:12)
+[junit4:junit4] 
+[junit4:junit4] "VM Thread" prio=5 tid=0x000000080121e800 nid=0x61c0870 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#0 (ParallelGC)" prio=5 tid=0x0000000801215800 nid=0x61c0863 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#1 (ParallelGC)" prio=5 tid=0x0000000801216800 nid=0x61c0864 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#2 (ParallelGC)" prio=5 tid=0x0000000801217000 nid=0x61c0865 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#3 (ParallelGC)" prio=5 tid=0x0000000801217800 nid=0x61c0866 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#4 (ParallelGC)" prio=5 tid=0x0000000801218000 nid=0x61c0867 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#5 (ParallelGC)" prio=5 tid=0x0000000801219000 nid=0x61c0868 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#6 (ParallelGC)" prio=5 tid=0x0000000801219800 nid=0x61c0869 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#7 (ParallelGC)" prio=5 tid=0x000000080121a000 nid=0x61c086a runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#8 (ParallelGC)" prio=5 tid=0x000000080121a800 nid=0x61c086b runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#9 (ParallelGC)" prio=5 tid=0x000000080121b800 nid=0x61c086c runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#10 (ParallelGC)" prio=5 tid=0x000000080121c000 nid=0x61c086d runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#11 (ParallelGC)" prio=5 tid=0x000000080121c800 nid=0x61c086e runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#12 (ParallelGC)" prio=5 tid=0x000000080121d000 nid=0x61c086f runnable 
+[junit4:junit4] 
+[junit4:junit4] "VM Periodic Task Thread" prio=5 tid=0x000000080121f000 nid=0x61c0877 waiting on condition 
+[junit4:junit4] 
+[junit4:junit4] JNI global references: 1183
+[junit4:junit4] 
+[junit4:junit4] Heap
+[junit4:junit4]  PSYoungGen      total 212224K, used 110789K [0x0000000830220000, 0x000000083d1c0000, 0x0000000840220000)
+[junit4:junit4]   eden space 211840K, 52% used [0x0000000830220000,0x0000000836e516f0,0x000000083d100000)
+[junit4:junit4]   from space 384K, 0% used [0x000000083d160000,0x000000083d160000,0x000000083d1c0000)
+[junit4:junit4]   to   space 384K, 0% used [0x000000083d100000,0x000000083d100000,0x000000083d160000)
+[junit4:junit4]  PSOldGen        total 524288K, used 127127K [0x0000000810220000, 0x0000000830220000, 0x0000000830220000)
+[junit4:junit4]   object space 524288K, 24% used [0x0000000810220000,0x0000000817e45ef0,0x0000000830220000)
+[junit4:junit4]  PSPermGen       total 83968K, used 83967K [0x000000080b020000, 0x0000000810220000, 0x0000000810220000)
+[junit4:junit4]   object space 83968K, 99% used [0x000000080b020000,0x000000081021fd98,0x0000000810220000)
+[junit4:junit4] <<< JVM J0: EOF ----
+
+
+
+https://builds.apache.org/job/Lucene-Solr-Clover-4.x/77/consoleFull (today):
+
+[junit4:junit4] HEARTBEAT J0 PID(2916@lucene.zones.apache.org): 2012-12-16T22:11:23, stalled for 13809s at: QueryEqualityTest (suite)
+[junit4:junit4] HEARTBEAT J0 PID(2916@lucene.zones.apache.org): 2012-12-16T22:12:23, stalled for 13869s at: QueryEqualityTest (suite)
+[junit4:junit4] HEARTBEAT J0 PID(2916@lucene.zones.apache.org): 2012-12-16T22:13:23, stalled for 13929s at: QueryEqualityTest (suite)
+[junit4:junit4] HEARTBEAT J0 PID(2916@lucene.zones.apache.org): 2012-12-16T22:14:23, stalled for 13989s at: QueryEqualityTest (suite)
+[junit4:junit4] JVM J0: stdout was not empty, see: /usr/home/hudson/hudson-slave/workspace/Lucene-Solr-Clover-4.x/solr/build/solr-core/test/temp/junit4-J0-20121216_175857_638.sysout
+[junit4:junit4] >>> JVM J0: stdout (verbatim) ----
+[junit4:junit4] 2012-12-16 22:14:25
+[junit4:junit4] Full thread dump OpenJDK 64-Bit Server VM (20.0-b12 mixed mode):
+[junit4:junit4] 
+[junit4:junit4] "TimeLimitedCollector timer thread" daemon prio=5 tid=0x00000008460dc800 nid=0x61c9fa3 waiting on condition [0x00007ffffd8da000]
+[junit4:junit4]    java.lang.Thread.State: TIMED_WAITING (sleeping)
+[junit4:junit4] 	at java.lang.Thread.sleep(Native Method)
+[junit4:junit4] 	at org.apache.lucene.search.TimeLimitingCollector$TimerThread.run(TimeLimitingCollector.java:267)
+[junit4:junit4] 
+[junit4:junit4] "metrics-meter-tick-thread-2" daemon prio=5 tid=0x000000084b749800 nid=0x61c9f96 runnable [0x00007ffffe0e2000]
+[junit4:junit4]    java.lang.Thread.State: TIMED_WAITING (parking)
+[junit4:junit4] 	at sun.misc.Unsafe.park(Native Method)
+[junit4:junit4] 	- parking to wait for  <0x0000000810dd3f20> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+[junit4:junit4] 	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+[junit4:junit4] 	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2081)
+[junit4:junit4] 	at java.util.concurrent.DelayQueue.take(DelayQueue.java:193)
+[junit4:junit4] 	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:688)
+[junit4:junit4] 	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:681)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1043)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1103)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+[junit4:junit4] 	at java.lang.Thread.run(Thread.java:679)
+[junit4:junit4] 
+[junit4:junit4] "metrics-meter-tick-thread-1" daemon prio=5 tid=0x000000084b749000 nid=0x61c9f95 runnable [0x00007ffffe1e3000]
+[junit4:junit4]    java.lang.Thread.State: TIMED_WAITING (parking)
+[junit4:junit4] 	at sun.misc.Unsafe.park(Native Method)
+[junit4:junit4] 	- parking to wait for  <0x0000000810dd3f20> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+[junit4:junit4] 	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+[junit4:junit4] 	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2081)
+[junit4:junit4] 	at java.util.concurrent.DelayQueue.take(DelayQueue.java:193)
+[junit4:junit4] 	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:688)
+[junit4:junit4] 	at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:681)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1043)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1103)
+[junit4:junit4] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+[junit4:junit4] 	at java.lang.Thread.run(Thread.java:679)
+[junit4:junit4] 
+[junit4:junit4] "Low Memory Detector" daemon prio=5 tid=0x00000008011c4800 nid=0x61c9f90 runnable [0x0000000000000000]
+[junit4:junit4]    java.lang.Thread.State: RUNNABLE
+[junit4:junit4] 
+[junit4:junit4] "C2 CompilerThread1" daemon prio=5 tid=0x00000008011c3800 nid=0x61c9f8f waiting on condition [0x0000000000000000]
+[junit4:junit4]    java.lang.Thread.State: RUNNABLE
+[junit4:junit4] 
+[junit4:junit4] "C2 CompilerThread0" daemon prio=5 tid=0x00000008011c3000 nid=0x61c9f8e waiting on condition [0x0000000000000000]
+[junit4:junit4]    java.lang.Thread.State: RUNNABLE
+[junit4:junit4] 
+[junit4:junit4] "Signal Dispatcher" daemon prio=5 tid=0x00000008011c2000 nid=0x61c9f8d waiting on condition [0x0000000000000000]
+[junit4:junit4]    java.lang.Thread.State: RUNNABLE
+[junit4:junit4] 
+[junit4:junit4] "Finalizer" daemon prio=5 tid=0x00000008011c1800 nid=0x61c9f8c in Object.wait() [0x00007ffffebed000]
+[junit4:junit4]    java.lang.Thread.State: WAITING (on object monitor)
+[junit4:junit4] 	at java.lang.Object.wait(Native Method)
+[junit4:junit4] 	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:133)
+[junit4:junit4] 	- locked <0x00000008109642d8> (a java.lang.ref.ReferenceQueue$Lock)
+[junit4:junit4] 	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:149)
+[junit4:junit4] 	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:177)
+[junit4:junit4] 
+[junit4:junit4] "Reference Handler" daemon prio=5 tid=0x00000008011c0800 nid=0x61c9f8b in Object.wait() [0x00007ffffecee000]
+[junit4:junit4]    java.lang.Thread.State: WAITING (on object monitor)
+[junit4:junit4] 	at java.lang.Object.wait(Native Method)
+[junit4:junit4] 	at java.lang.Object.wait(Object.java:502)
+[junit4:junit4] 	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:133)
+[junit4:junit4] 	- locked <0x0000000810967160> (a java.lang.ref.Reference$Lock)
+[junit4:junit4] 
+[junit4:junit4] "main" prio=5 tid=0x00000008011c0000 nid=0x61c9d83 runnable [0x00007fffffbfd000]
+[junit4:junit4]    java.lang.Thread.State: RUNNABLE
+[junit4:junit4] 	at java.io.FileInputStream.readBytes(Native Method)
+[junit4:junit4] 	at java.io.FileInputStream.read(FileInputStream.java:236)
+[junit4:junit4] 	at java.io.BufferedInputStream.read1(BufferedInputStream.java:273)
+[junit4:junit4] 	at java.io.BufferedInputStream.read(BufferedInputStream.java:334)
+[junit4:junit4] 	- locked <0x000000081098f1f8> (a java.io.BufferedInputStream)
+[junit4:junit4] 	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:282)
+[junit4:junit4] 	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:324)
+[junit4:junit4] 	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:176)
+[junit4:junit4] 	- locked <0x000000081098f1e0> (a java.io.InputStreamReader)
+[junit4:junit4] 	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+[junit4:junit4] 	at java.io.BufferedReader.fill(BufferedReader.java:153)
+[junit4:junit4] 	at java.io.BufferedReader.readLine(BufferedReader.java:316)
+[junit4:junit4] 	- locked <0x000000081098f1e0> (a java.io.InputStreamReader)
+[junit4:junit4] 	at java.io.BufferedReader.readLine(BufferedReader.java:379)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.slave.StdInLineIterator.computeNext(StdInLineIterator.java:31)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.slave.StdInLineIterator.computeNext(StdInLineIterator.java:13)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.dependencies.com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.dependencies.com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.dependencies.com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.slave.SlaveMain.execute(SlaveMain.java:150)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.slave.SlaveMain.main(SlaveMain.java:255)
+[junit4:junit4] 	at com.carrotsearch.ant.tasks.junit4.slave.SlaveMainSafe.main(SlaveMainSafe.java:12)
+[junit4:junit4] 
+[junit4:junit4] "VM Thread" prio=5 tid=0x000000080121e800 nid=0x61c9f8a runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#0 (ParallelGC)" prio=5 tid=0x0000000801215800 nid=0x61c9f7d runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#1 (ParallelGC)" prio=5 tid=0x0000000801216800 nid=0x61c9f7e runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#2 (ParallelGC)" prio=5 tid=0x0000000801217000 nid=0x61c9f7f runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#3 (ParallelGC)" prio=5 tid=0x0000000801217800 nid=0x61c9f80 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#4 (ParallelGC)" prio=5 tid=0x0000000801218000 nid=0x61c9f81 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#5 (ParallelGC)" prio=5 tid=0x0000000801219000 nid=0x61c9f82 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#6 (ParallelGC)" prio=5 tid=0x0000000801219800 nid=0x61c9f83 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#7 (ParallelGC)" prio=5 tid=0x000000080121a000 nid=0x61c9f84 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#8 (ParallelGC)" prio=5 tid=0x000000080121a800 nid=0x61c9f85 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#9 (ParallelGC)" prio=5 tid=0x000000080121b800 nid=0x61c9f86 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#10 (ParallelGC)" prio=5 tid=0x000000080121c000 nid=0x61c9f87 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#11 (ParallelGC)" prio=5 tid=0x000000080121c800 nid=0x61c9f88 runnable 
+[junit4:junit4] 
+[junit4:junit4] "GC task thread#12 (ParallelGC)" prio=5 tid=0x000000080121d000 nid=0x61c9f89 runnable 
+[junit4:junit4] 
+[junit4:junit4] "VM Periodic Task Thread" prio=5 tid=0x000000080121f000 nid=0x61c9f91 waiting on condition 
+[junit4:junit4] 
+[junit4:junit4] JNI global references: 1271
+[junit4:junit4] 
+[junit4:junit4] Heap
+[junit4:junit4]  PSYoungGen      total 229120K, used 170968K [0x0000000830220000, 0x000000083eb60000, 0x0000000840220000)
+[junit4:junit4]   eden space 228992K, 74% used [0x0000000830220000,0x000000083a8fe360,0x000000083e1c0000)
+[junit4:junit4]   from space 128K, 75% used [0x000000083eb40000,0x000000083eb58000,0x000000083eb60000)
+[junit4:junit4]   to   space 384K, 0% used [0x000000083eaa0000,0x000000083eaa0000,0x000000083eb00000)
+[junit4:junit4]  PSOldGen        total 524288K, used 179710K [0x0000000810220000, 0x0000000830220000, 0x0000000830220000)
+[junit4:junit4]   object space 524288K, 34% used [0x0000000810220000,0x000000081b19fa98,0x0000000830220000)
+[junit4:junit4]  PSPermGen       total 83968K, used 83967K [0x000000080b020000, 0x0000000810220000, 0x0000000810220000)
+[junit4:junit4]   object space 83968K, 99% used [0x000000080b020000,0x000000081021fc68,0x0000000810220000)
+[junit4:junit4] <<< JVM J0: EOF ----
+
+
+
+To me it looks like there is something wrong with the test runner. In other cases this totally-hanging threads were caused by permgen-errors, but nothing like this in the logs. It looks like the slave is waiting forever to get some messages from the master or vice versa.
+
+You can imitate clover tests on ASF Jenkins by running:
+
+ANT_OPTS="-Xmx1536M" ant -Dtests.jettyConnector=Socket jenkins-clover
+
+
+
+(the ANT_OPTS are just for the generate-clover-task using lots of memory - totally unrelated. This is just needed after the tests ran successfully). jenkins-clover calls run-clover task which automatically gives more memory to the child JVMs, so maybe this is related and needs more memory. You can find that in the main common-build.xml file, where you will find a property definition if="run.clover" giving more heap and code cache to childs:
+
+
+
+  <condition property="tests.heapsize" value="768M">
+    <isset property="run.clover"/>
+  </condition>
+  <property name="tests.heapsize" value="512M"/>
+  
+  <condition property="tests.clover.args" value="-XX:ReservedCodeCacheSize=128m">
+    <isset property="run.clover"/>
+  </condition>
+  <property name="tests.clover.args" value=""/>
+
+
+
+(maybe tweak that if Solr needs more memory - Lucene clover passes fine).
+
+I disabled clover tests for now.

@@ -1,0 +1,5 @@
+I thought it would be very useful to display the distinct values (and the count) of a field among other statistics. Attached a patch implementing this in StatsComponent.
+
+Added results  :
+"distinctValues" - list of all distnict values
+"countDistinct" -  distnict values count.

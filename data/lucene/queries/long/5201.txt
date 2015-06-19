@@ -1,0 +1,1 @@
+LZ4.compressHC sometimes fails at compressing highly compressible inputs when the start offset is > 0.

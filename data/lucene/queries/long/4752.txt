@@ -1,0 +1,1 @@
+It would be awesome if Lucene could write the documents out in a segment based on a configurable order.  This of course applies to merging segments to. The benefit is increased locality on disk of documents that are likely to be accessed together.  This often applies to documents near each other in time, but also spatially.

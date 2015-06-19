@@ -1,0 +1,1 @@
+for better interoperability, javabin should use standard UTF-8 instead of modified UTF-8 (http://www.unicode.org/reports/tr26/)

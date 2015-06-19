@@ -1,0 +1,1 @@
+PayloadTermQuery's explain is broken when span score is not included

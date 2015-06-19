@@ -1,0 +1,1 @@
+FastVectorHighlighter: add a method to set an arbitrary char that is used when concatenating multiValued data

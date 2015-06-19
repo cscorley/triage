@@ -1,0 +1,5 @@
+To fix LUCENE-5222, it currently returns true with // TODO: optimize.
+
+this is needed for e.g. IndexSearcher with executorService search to merge results from the different segments.
+
+ideally we should only return this if it really does need it, not if its essentially just a computed field.

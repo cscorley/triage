@@ -1,0 +1,12 @@
+I would like to see more detailed query statistics from the admin GUI.  This is what you can get now:
+
+requests : 809
+errors : 0
+timeouts : 0
+totalTime : 70053
+avgTimePerRequest : 86.59209
+avgRequestsPerSecond : 0.8148785 
+
+I'd like to see more data on the time per request - median, 95th percentile, 99th percentile, and any other statistical function that makes sense to include.  In my environment, the first bunch of queries after startup tend to take several seconds each.  I find that the average value tends to be useless until it has several thousand queries under its belt and the caches are thoroughly warmed.  The statistical functions I have mentioned would quickly eliminate the influence of those initial slow queries.
+
+The system will have to store individual data about each query.  I don't know if this is something Solr does already.  It would be nice to have a configurable count of how many of the most recent data points are kept, to control the amount of memory the feature uses.  The default value could be something like 1024 or 4096.

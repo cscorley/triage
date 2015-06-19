@@ -1,0 +1,8 @@
+The c client can flood the server with pings if the tcp queue is filled.
+
+Say the cluster is overloaded and shuts down the recv processing
+
+a c client can send a ping, but since last_send is only updated on successful pushing of data into the 
+socket, if flush_send_queue fails to send any data (send_buffer returns 0) then last_send is not updated
+and zookeeper_interest will again send a ping the next time it is woken - which could be 0 if recv_to is close
+to 0, easily could happen if server is not sending data to the client.

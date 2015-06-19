@@ -1,0 +1,1 @@
+rsyncd-start and snappuller should exit with different exit code when disabled

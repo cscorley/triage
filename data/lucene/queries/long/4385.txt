@@ -1,0 +1,1 @@
+The Eclipse and Maven builds don't share their output directories with Ant.  The IntelliJ build should follow suit and put its build output in directories dedicated to that purpose and no other.

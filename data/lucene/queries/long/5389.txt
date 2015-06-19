@@ -1,0 +1,1 @@
+There are more useful things to tell would-be authors of tokenizers. Let's tell them.

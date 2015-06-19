@@ -1,0 +1,1 @@
+add checks/asserts if you search across a closed reader

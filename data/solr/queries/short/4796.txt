@@ -1,0 +1,1 @@
+zkcli.sh should honor JAVA_HOME

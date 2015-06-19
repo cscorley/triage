@@ -1,0 +1,29 @@
+For some documents/search strings, the SpellCheckComponent throws StringIndexOutOfBoundsException
+See: http://www.lucidimagination.com/search/document/3be6555227e031fc/
+
+Replication
+
+
+	Save attached schema.xml and solrconfig.xml in apache-solr-1.4.0/example/solr/conf
+	Start Solr
+	Index attached bug.xml
+	Query http://localhost:8983/solr/select/?q=awehjse-wjkekw
+
+
+
+It throws a StringIndexOutOfBoundsException
+
+ String index out of range: -7
+
+java.lang.StringIndexOutOfBoundsException: String index out of range: -7
+	at java.lang.AbstractStringBuilder.replace(Unknown Source)
+	at java.lang.StringBuilder.replace(Unknown Source)
+	at org.apache.solr.handler.component.SpellCheckComponent.toNamedList(SpellCheckComponent.java:248)
+	at org.apache.solr.handler.component.SpellCheckComponent.process(SpellCheckComponent.java:143)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:195)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:131)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:1316)
+	at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:338)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:241)
+
+ 

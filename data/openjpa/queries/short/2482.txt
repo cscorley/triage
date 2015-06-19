@@ -1,0 +1,1 @@
+java.sql.SQLException when processing a query result

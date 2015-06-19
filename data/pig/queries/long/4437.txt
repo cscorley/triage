@@ -1,0 +1,1 @@
+This is introduced by PIG-4410. For the special tuple, a normal tuple is piggybacked so the memSize should not be 0. It should deduct the size of the mark though (in theory, also need to deduct the cost of 1 field in tuple array, but that is very minor).

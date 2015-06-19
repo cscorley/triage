@@ -1,0 +1,1 @@
+[zebra] temp files are not cleaned.

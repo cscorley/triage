@@ -1,0 +1,1 @@
+Maven build should never download internal dependencies' artifacts from Apache snapshot repository

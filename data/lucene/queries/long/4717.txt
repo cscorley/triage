@@ -1,0 +1,12 @@
+I committed the following commented out check in CheckIndex:
+
+      if (seenOrds.cardinality() != sortedValues.getValueCount()) {
+        // TODO: find the bug here and figure out a workaround (we can implement in LUCENE-4547's back compat layer maybe)
+        // basically ord 0 is unused by any docs: so the sortedbytes ords are all off-by-one
+        // does it always happen? e.g. maybe only if there are missing values? or a bug in its merge optimizations?
+        // throw new RuntimeException("dv for field: " + fieldName + " has holes in its ords, valueCount=" + sortedValues.getValueCount() + " but only used: " + seenOrds.cardinality());
+      }
+
+
+
+I'd really like to have this check in CheckIndex, and so it would be great to understand the conditions when the bug happens, and if we can correct it on-the-fly in Lucene40DocValuesReader in LUCENE-4547 branch... otherwise we will have to conditionalize the check based on when the segment was written (it will ultimately be corrected on merge, just annoying)

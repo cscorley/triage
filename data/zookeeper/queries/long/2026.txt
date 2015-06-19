@@ -1,0 +1,3 @@
+NIOServerCnxnFactory and NettyServerCnxnFactory startup method implementations are binding ZooKeeperServer too late, so in ZooKeeperServer in its startup can fail to register appropriate JMX MBean.
+
+See this post on ZK user mailing list for more details.

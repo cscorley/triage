@@ -1,0 +1,5 @@
+This is just another instantiation of SOLR-3587.
+
+Because the IndexWriter is kept open, the Codec still uses the old schema, and when asked to index for the field, doesn't know about it and returns an error.
+
+We could dodge the problem for now by turning off per-field codec support by default, requiring users to turn it on explicitly in solrconfig.xml (like similarity), knowing they are making a tradeoff by doing that (same goes for Similarity if you are using a per-field configuration).

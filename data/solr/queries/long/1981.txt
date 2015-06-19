@@ -1,0 +1,10 @@
+As noted in email a while back...
+
+http://search.lucidimagination.com/search/document/674bf5dfbbb349bc/multiple_cores_w_same_name_in_solr_xml
+
+
+but there is currently no assertion that every core have a name, or that the
+names be unique before the SolrCore is constructed ... it's not until the core is registered that an error will be
+generated if the core name is null, or that the previous core with an identicle name will be close()ed.
+
+I think we should fail fast if solr.xml specifies the same name more then once

@@ -1,0 +1,1 @@
+Remove unnecessary array wrapping when calling varargs methods

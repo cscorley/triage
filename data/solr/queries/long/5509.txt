@@ -1,0 +1,19 @@
+
+   [junit4]   2> 41386 T28 C21 P57194 oasup.LogUpdateProcessor.finish [collection1] webapp= path=/update params={wt=javabin&CONTROL=TRUE&version=2} {add=[50086 (1452880907553734656)]} 0 142
+
+   [junit4]   2> 42009 T133 C27 P60411 oasup.LogUpdateProcessor.finish [collection1] webapp= path=/update params={wt=javabin&version=2} {add=[50086 (1452880908206997504)]} 0 254
+
+   [junit4]   2> 42323 T27 C21 P57194 oasup.LogUpdateProcessor.finish [collection1] webapp= path=/update params={wt=javabin&CONTROL=TRUE&version=2} {delete=[50086 (-1452880908537298944)]} 0 2
+
+   [junit4]   2> 42327 T131 C27 P60411 oasup.LogUpdateProcessor.finish [collection1] webapp= path=/update params={wt=javabin&version=2} {delete=[50086 (-1452880908542541824)]} 0 1
+
+   [junit4]   2> 42622 T132 C27 P60411 oasup.LogUpdateProcessor.finish [collection1] webapp= path=/update params={update.distrib=TOLEADER&wt=javabin&version=2} {add=[50086 (1452880908850823168)]} 0 1
+
+   [junit4]   2> 42623 T48 C22 P57136 oasup.LogUpdateProcessor.finish [collection1] webapp= path=/update params={wt=javabin&version=2} {add=[50086]} 0 1223
+
+   [junit4]   2> ###### Only in cloudDocList: [{id=50086}]
+
+   [junit4]   2> 		cloudClient :{numFound=1,start=0,docs=[SolrDocument{id=50086, _version_=1452880908850823168}]}
+
+h
+

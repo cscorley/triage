@@ -1,0 +1,1 @@
+Show changes in plugin statistics across multiple requests

@@ -1,0 +1,1 @@
+Lucene needs to ship the JUnit jar for testing

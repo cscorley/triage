@@ -1,0 +1,1 @@
+NPE when POStream is not in the leaf vertex

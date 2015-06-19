@@ -1,0 +1,1 @@
+wrong context class loader in org.apache.openjpa.enhance.PCClassFileTransformer#transform0

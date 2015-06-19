@@ -1,0 +1,1 @@
+Added hadoop home to build classpath for build pig with unit test on windows

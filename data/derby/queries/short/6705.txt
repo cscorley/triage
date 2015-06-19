@@ -1,0 +1,1 @@
+Triggers should not allow MERGE statements that reference temporary tables

@@ -1,0 +1,3 @@
+In SOLR-3092, solr.TypeTokenFilterFactory from Lucene has been exposed. One of the parameter documented is useWhiteList. However the code uses useWhitelist instead (small 'l'). This makes the examples using the boolean property set to true not work. 
+
+The documentation and code need to match. It would be also good to include at least a basic description of this in the Wiki.

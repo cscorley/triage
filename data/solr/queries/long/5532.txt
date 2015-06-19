@@ -1,0 +1,36 @@
+due to SOLR-3530, HttpSolrServer now does a string equivilence check between the "Content-Type" returned by the server, and a getContentTYpe() method declared by the ResponseParser .. but string equivilence is too strict, and can result in errors like this one reported by a user....
+
+
+
+I just upgraded my Solr instance and with it I also upgraded the solrj library in our custom application which sends diverse requests and queries to Solr.
+
+I use the "ping" method to determine whether Solr started correctly under the configured address. Since the upgrade the ping response results in an error:
+
+
+Cause: org.apache.solr.client.solrj.impl.HttpSolrServer$RemoteSolrException: Expected content type application/xml; charset=UTF-8 but got application/xml;charset=UTF-8.
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+<lst name="responseHeader"><int name="status">0</int><int name="QTime">0</int><lst name="params"><str name="df">searchtext</str><str name="echoParams">all</str><str name="rows">10</str><str name="echoParams">all</str><str name="wt">xml</str><str name="version">2.2</str><str name="q">solrpingquery</str><str name="distrib">false</str></lst></lst><str name="status">OK</str>
+</response>
+
+
+
+The Solr application itself works fine.
+Using an older version of the solrj library than solr-solrj-4.6.0.jar (e.g. solr-solrj-4.5.1.jar) in the custom application does not produce this error.
+
+The Exception is produced in a Code block (HttpSolrServer.java, method request(...), around. line 140) which has been introduced with version 4.6.0.
+
+Code to reproduce the error:
+
+
+try {
+	HttpSolrServer solrServer = new HttpSolrServer("http://localhost:8080/Solr/collection");
+	solrServer.setParser(new XMLResponseParser()); // this line is making all the difference
+	solrServer.ping();
+} catch (Exception e) {
+	e.printStackTrace();
+}
+
+
+
+A global search for "charset=UTF-8" on the source code of solrj indicates that other functions besides "ping" might be affected as well, because there are several places where "application/xml; charset=UTF-8" is spelled without a space after the semicolon.

@@ -1,0 +1,1 @@
+using sort option only returns numFound=1 even if there are many more matching

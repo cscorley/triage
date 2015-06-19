@@ -1,0 +1,1 @@
+Return HTTP error on POST requests with no Content-Type

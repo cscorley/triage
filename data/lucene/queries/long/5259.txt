@@ -1,0 +1,16 @@
+Most of these consumers' exception handling is questionable at best.
+
+if you do it with try-with-resources, then its obvious its correct:
+
+
+try (TokenStream stream = analyzer.tokenStream("body", "testing")) {
+  stream.reset();
+  while (stream.incrementToken()) {
+    ...
+  }
+  stream.end();
+}
+
+
+
+For trunk we should change the consumers to work this way. For 4.x we can simulate it with IOUtils

@@ -1,0 +1,32 @@
+example
+
+curl localhost:8983/update/json/docs?split=/batters/batter&f=recipeId:/id&f=recipeType:/type&f=id:/batters/batter/id&f=type:/batters/batter/type -d '
+{
+		"id": "0001",
+		"type": "donut",
+		"name": "Cake",
+		"ppu": 0.55,
+		"batters": {
+				"batter":
+					[
+						{ "id": "1001", "type": "Regular" },
+						{ "id": "1002", "type": "Chocolate" },
+						{ "id": "1003", "type": "Blueberry" },
+						{ "id": "1004", "type": "Devil's Food" }
+					]
+			}
+}'
+
+
+
+should produce the following output docs
+
+
+{ "recipeId":"001", "recipeType":"donut", "id":"1001", "type":"Regular" }
+{ "recipeId":"001", "recipeType":"donut", "id":"1002", "type":"Chocolate" }
+{ "recipeId":"001", "recipeType":"donut", "id":"1003", "type":"Blueberry" }
+{ "recipeId":"001", "recipeType":"donut", "id":"1004", "type":"Devil's food" }
+
+
+
+the split param is the element in the tree where it should be split into multiple docs. The 'f' are field name mappings

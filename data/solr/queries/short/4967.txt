@@ -1,0 +1,1 @@
+Frequent test fails in org.apache.solr.cloud.SyncSliceTest

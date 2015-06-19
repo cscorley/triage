@@ -1,0 +1,6 @@
+Need to modify web.xml to increase the speed of container startup time. The header also appears to need to be modified...
+
+http://mostlywheat.wordpress.com/2012/03/10/speeding-up-slow-jetty-8-startups/
+http://www.javabeat.net/articles/print.php?article_id=100
+
+Adding 'metadata-complete="true"' to our web.xml's web-app restored our startup time to 8 seconds.

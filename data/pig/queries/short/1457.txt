@@ -1,0 +1,1 @@
+Pig will run complete zebra test even we give -Dtestcase=xxx

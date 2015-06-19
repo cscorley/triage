@@ -1,0 +1,1 @@
+Bundle dependent jars in distribution in %PIG_HOME%/lib folder

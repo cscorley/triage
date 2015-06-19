@@ -1,0 +1,1 @@
+If fl contains only pseudo fields, BinaryResponseWriter will load unnecessary stored fields before discarding them. The call to SolrIndexSearcher#doc(int i, Set<String> fields) can be skipped for this case.

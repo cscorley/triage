@@ -1,0 +1,3 @@
+james mentioned on the dev list that TestMaxFailuresRule fails reliable for him on multiple platforms when using -Dtests.seed=3FACDC7EBD23CB80:3D65D783617F94F1
+
+I was able to reproduce on my linux box as of trunk r1420486.

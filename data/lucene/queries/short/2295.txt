@@ -1,0 +1,1 @@
+Create a MaxFieldLengthAnalyzer to wrap any other Analyzer and provide the same functionality as MaxFieldLength provided on IndexWriter

@@ -1,0 +1,3 @@
+The compiler bug in JDK 8EA let me look at the code again. I opened bug report with simple test case at Oracle, but the code on our side is still too complicated to understand.
+
+The attached path for 4.x removes the nested try-finaly block and simpliefies success=true handling (which was in fact broken). It uses a more try-with-resources like approach with only one finally block.

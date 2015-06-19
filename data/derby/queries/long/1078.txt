@@ -1,0 +1,3 @@
+Currently, the 1.4 compiler is used to build most of Derby. We use the 1.6 compiler to (optionally) build the JDBC4 support. If you try to build Derby in a shell window with a 1.6 JAVA_HOME, the 1.4 bits will fail to build. This is because those bits do not satisfy the JDBC4 contract. In addition, even if you could build those bits under 1.6, the 1.6 class files would fail to load on a 1.4 vm.
+
+We need to be able to use 1.6 as our default build environment but still generate jar files which run on 1.4 and 1.5. There may be compiler switches which allow this. If not, building in a 1.6 environment could fault in the 1.4 compiler as necessary.

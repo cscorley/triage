@@ -1,0 +1,3 @@
+As noted on the mailing list, when an XInclude in a config files refrences a relative path, it's resolved relative the CWD of the servlet container, and not the instanceDir of the core...
+
+ http://old.nabble.com/using-Xinclude-with-multi-core-to26548400.html#a26548400

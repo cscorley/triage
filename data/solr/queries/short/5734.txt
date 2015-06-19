@@ -1,0 +1,1 @@
+We should use System.nanoTime rather than System.currentTimeMillis when calculating elapsed time. 

@@ -1,0 +1,1 @@
+Currently the automaton can be saved only to a Directory instance (IndexInput/ IndexOutput).

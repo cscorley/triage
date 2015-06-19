@@ -1,0 +1,1 @@
+Solr Admin UI dosent work in IE 10

@@ -1,0 +1,1 @@
+LBHttpSolrServer exception handling improvement and small test improvements

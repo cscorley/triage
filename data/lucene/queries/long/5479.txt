@@ -1,0 +1,34 @@
+Now it is hardcoded to DEFAULT_DIM_CONFIG. This may be useful for most standard approaches. 
+
+However, I use lots of facets. These facets can be multivalued, I do not know that on beforehand. So what I would like to do is to change the default config to mulitvalued = true. 
+
+Currently I have a working, but rather ugly workaround that subclasses FacetConfig, like this:
+
+CustomFacetConfig.java
+
+public class CustomFacetsConfig extends FacetsConfig
+{
+	public final static DimConfig DEFAULT_D2A_DIM_CONFIG = new DimConfig();
+	static
+	{
+		DEFAULT_D2A_DIM_CONFIG.multiValued = true;
+	}
+
+	@Override
+	public synchronized DimConfig getDimConfig( String dimName )
+	{
+		DimConfig ft = super.getDimConfig( dimName );
+
+		if ( DEFAULT_DIM_CONFIG.equals( ft ) )
+		{
+			return DEFAULT_D2A_DIM_CONFIG;
+		}
+		return ft;
+	}
+}
+
+
+
+I created a patch to illustrate what I would like to change. By making a protected method it is easier to create a custom subclass of FacetConfig. 
+
+Also, maybe there are better way to accomplish my goal (easy default to multivalue?)

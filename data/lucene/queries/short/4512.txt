@@ -1,0 +1,1 @@
+Additional memory savings in CompressingStoredFieldsIndex.MEMORY_CHUNK

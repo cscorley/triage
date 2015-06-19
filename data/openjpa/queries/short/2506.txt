@@ -1,0 +1,1 @@
+StoreCache interface doesn't work for many ID types

@@ -1,0 +1,1 @@
+RamUsageEstimator.NUM_BYTES_ARRAY_HEADER and other constants are incorrect

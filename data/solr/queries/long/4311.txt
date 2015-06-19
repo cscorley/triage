@@ -1,0 +1,16 @@
+  Although both the luke and core admin handlers set http caching to false in the response headers** I believe the Cache-Control settings are ignored during ajax requests in certain browsers. This can be a problem if you're refreshing admin to get the latest do count. It can also be a problem when you compare the count of "Num Docs" on the main index page (/solr/#/CORE) vs the count on the core admin page (/solr/#/~cores/CORE). Consider that if you first visit the main index page, add and commit 100 docs, and then visit core admin the doc count will be off by 100.
+
+  If this is an issue the ajax requests can explictly set caching to false ( http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings ) ... for example, inserting 'cache: false,' after line 91 here: https://github.com/apache/lucene-solr/blob/branch_4x/solr/webapp/web/js/scripts/dashboard.js#L91
+
+
+	
+	
+		https://github.com/apache/lucene-solr/blob/branch_4x/solr/core/src/java/org/apache/solr/handler/admin/LukeRequestHandler.java#L167
+		https://github.com/apache/lucene-solr/blob/branch_4x/solr/core/src/java/org/apache/solr/handler/admin/CoreAdminHandler.java#L216
+	
+	
+
+
+
+
+  Tested using Chrome Version 24.0.1312.52

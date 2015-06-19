@@ -1,0 +1,13 @@
+DirectoryReader  only takes shared (with IW) SegmentInfos into account in DirectoryReader#isOptimized(). This can return true even if the actual realtime reader sees more than one segments. 
+
+
+
+public boolean isOptimized() {
+    ensureOpen();
+   // if segmentsInfos changes in IW this can return false positive
+    return segmentInfos.size() == 1 && !hasDeletions();
+  }
+
+
+
+DirectoryReader should check if this reader has a non-nul segmentInfosStart and use that instead

@@ -1,0 +1,1 @@
+mvn signanddeploy target broken for pigunit, pigsmoke and piggybank

@@ -1,0 +1,1 @@
+[Hedwig CPP Client] Delay resolving default host until necessary.

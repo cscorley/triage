@@ -1,0 +1,10 @@
+One of the users encountered
+
+
+Unexpected internal error. Pig Internal Error. Invalid preprocessor command
+specified : %DECLARE
+
+
+
+ Changing the %DECLARE to %declare, it can pass the preprocessor's
+operations.

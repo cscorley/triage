@@ -1,0 +1,1 @@
+PostingsHighlighter's formatter sometimes doesnt highlight matched terms

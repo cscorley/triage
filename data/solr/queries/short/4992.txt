@@ -1,0 +1,1 @@
+Solr queries don't propagate Java OutOfMemoryError back to the JVM

@@ -1,0 +1,1 @@
+Rework of the TermInfosReader class to remove the Terms[], TermInfos[], and the index pointer long[] and create a more memory efficient data structure.

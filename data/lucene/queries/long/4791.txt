@@ -1,0 +1,3 @@
+As discovered by John Wang, it looks like a bug was introduced when ConjunctionTermScorer was first introduced in 7/2011 that causes scanning instead of skipping on the lowest frequency term. 
+
+http://markmail.org/message/wuukqzbhe7zgkfmf

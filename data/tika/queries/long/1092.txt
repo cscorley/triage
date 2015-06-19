@@ -1,0 +1,25 @@
+I found an issue with the parse method of org.apache.tika.parser.microsoft.OfficeParser. This parser generates a Tika Exception when it try to parse very old file of Microsoft Word.
+
+I think this issue is not a priority because the files that cause the exception belong to an obsolete format/structure that even new Microsoft Office versions don't support them, but it's important to know that something wrong about these outdated types can happen.
+
+I report two links about old types (Microsoft support perspective):
+http://support.microsoft.com/?kbid=922850
+http://support.microsoft.com/kb/922849/it
+
+For example, the message of TikaException is below:
+
+Exception in thread "main" org.apache.tika.exception.TikaException: TIKA-198: Illegal IOException from org.apache.tika.parser.microsoft.OfficeParser@789ab21d
+	at org.apache.tika.parser.CompositeParser.parse(CompositeParser.java:248)
+	at org.apache.tika.parser.CompositeParser.parse(CompositeParser.java:242)
+	at org.apache.tika.parser.AutoDetectParser.parse(AutoDetectParser.java:120)
+	at org.apache.tika.cli.TikaCLI$OutputType.process(TikaCLI.java:139)
+	at org.apache.tika.cli.TikaCLI.process(TikaCLI.java:415)
+	at org.apache.tika.cli.TikaCLI.main(TikaCLI.java:109)
+Caused by: java.io.IOException: Invalid header signature; read 0x0410401F002DA5DB, expected 0xE11AB1A1E011CFD0
+	at org.apache.poi.poifs.storage.HeaderBlock.<init>(HeaderBlock.java:140)
+	at org.apache.poi.poifs.storage.HeaderBlock.<init>(HeaderBlock.java:115)
+	at org.apache.poi.poifs.filesystem.NPOIFSFileSystem.<init>(NPOIFSFileSystem.java:198)
+	at org.apache.poi.poifs.filesystem.NPOIFSFileSystem.<init>(NPOIFSFileSystem.java:184)
+	at org.apache.tika.parser.microsoft.OfficeParser.parse(OfficeParser.java:156)
+	at org.apache.tika.parser.CompositeParser.parse(CompositeParser.java:242)
+	... 5 more

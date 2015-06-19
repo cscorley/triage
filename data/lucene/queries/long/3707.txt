@@ -1,0 +1,1 @@
+we still don't have a Lucene3x & preflex version of segment infos format. we need this before we release 4.0

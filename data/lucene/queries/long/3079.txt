@@ -1,0 +1,35 @@
+Faceting is a hugely important feature, available in Solr today but
+not [easily] usable by Lucene-only apps.
+
+We should fix this, by creating a shared faceting module.
+
+Ideally, we factor out Solr's faceting impl, and maybe poach/merge
+from other impls (eg Bobo browse).
+
+Hoss describes some important challenges we'll face in doing this
+(http://markmail.org/message/5w35c2fr4zkiwsz6), copied here:
+
+
+To look at "faceting" as a concrete example, there are big the reasons 
+faceting works so well in Solr: Solr has total control over the 
+index, knows exactly when the index has changed to rebuild caches, has a 
+strict schema so it can make sense of field types and 
+pick faceting algos accordingly, has multi-phase distributed search 
+approach to get exact counts efficiently across multiple shards, etc...
+(and there are still a lot of additional enhancements and improvements 
+that can be made to take even more advantage of knowledge solr has because 
+it "owns" the index that we no one has had time to tackle)
+
+
+
+This is a great list of the things we face in refactoring.  It's also
+important because, if Solr needed to be so deeply intertwined with
+caching, schema, etc., other apps that want to facet will have the
+same "needs" and so we really have to address them in creating the
+shared module.
+
+I think we should get a basic faceting module started, but should not
+cut Solr over at first.  We should iterate on the module, fold in
+improvements, etc., and then, once we can fully verify that cutting
+over doesn't hurt Solr (ie lose functionality or performance) we can
+later cutover.

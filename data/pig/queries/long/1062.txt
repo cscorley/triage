@@ -1,0 +1,6 @@
+This is part of the effort to implement new load store interfaces as laid out in http://wiki.apache.org/pig/LoadStoreRedesignProposal .
+PigStorage and BinStorage are now working.
+
+SampleLoader and subclasses -RandomSampleLoader, PoissonSampleLoader need to be changed to work with new LoadFunc interface.  
+Fixing SampleLoader and RandomSampleLoader will get order-by queries working.
+PoissonSampleLoader is used by skew join. 

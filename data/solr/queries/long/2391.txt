@@ -1,0 +1,1 @@
+There are some more W3C "deprecated" mime types in Solr's ResponseWriters. Also the XSLTResponseWriter incorrectly parses media-type + encoding <xsl:output> properties (exaples are not 100% correct). 100% correct examples would set media-type to application/xml and encoding to UTF-8 in xsl:output.

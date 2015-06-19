@@ -1,0 +1,1 @@
+SloppyPhraseScorer returns non-deterministic results for queries with many repeats

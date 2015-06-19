@@ -1,0 +1,9 @@
+I have a stress test, where 100 clients add 100 1MB docs and then call commit in the end.  It's a falldown test (try to make Solr fall down) and nowhere near "actual" usage.
+
+But, after some initial commits that succeed, I'm seeing later commits always time out (client side timeout @ 10 minutes).  Watching Solr's logging, no commit ever runs.
+
+Looking at the stack traces in the threads, this is not deadlock: the add/update calls are running, and new segments are being flushed to the index.
+
+Digging in the code a bit, we use ReentrantReadWriteLock, with add/update acquiring the readLock and commit acquiring the writeLock.  But, according to the jdocs, the writeLock isn't given any priority over the readLock (unless you set fairness, which we don't).  So I think this explains the starvation?
+
+However, this is not a real world use case (most apps would/should call commit less often, and from on client).  Also, we could set fairness, but it seems to have some performance penalty, and I'm not sure we should penalize the "normal" case for this unusual one.  EG see here (thanks Mark): http://www.javaspecialists.eu/archive/Issue165.html.

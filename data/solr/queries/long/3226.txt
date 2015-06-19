@@ -1,0 +1,3 @@
+When using for example XMLUpdateRequestProcessor, the signature is calculated correctly since all field values are strings. But when one uses DataImportHandler or BinaryUpdateRequestHandler, the signature generation will ignore any field values that are ints, longs, dates etc. 
+
+This might result in overwriting non-similar documents, as it happened in my case while importing some db data through DIH.

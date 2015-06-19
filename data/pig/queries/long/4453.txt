@@ -1,0 +1,1 @@
+As tez local mode becomes stable, and most local mode tests are migrated to run in tez local mode, I will remove test-tez-local target and merge it into test-tez.

@@ -1,0 +1,1 @@
+In multicore, lib directives in solrconfig.xml cause conflict and clobber directives from earlier cores

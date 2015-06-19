@@ -1,0 +1,9 @@
+When you use the admin interface and select a trie field (e.g. tint) and enter nothing into the field, the tokenizer should normally return no tokens. TrieTokenizer instead gets and SIOOBE because read() into the charbuffer returns -1 (end of stream). This is used to initialize the string's length...
+
+The problem is mostly affecting the analysis request handler and query parsing, but while indexing the values, Solr uses NumericField and not the tokenizer directly. The solr admin UI has the additional problem that you get a strange exception if you fill in the number on the left, but leave the query (right empty).
+
+The fix is to modify the tokenizer to behave like a real tokenizer:
+
+	correct the read loop to look like the one from KeywordTokenizer. The current loop is not guaranteed to work with unbuffered readers (Solr always uses StringReaders so this is no issue, but who knows)
+	if the resulting string is empty (total len == 0), set a boolean to false and make the incrementToken/close/end methods not delegate and return false.
+

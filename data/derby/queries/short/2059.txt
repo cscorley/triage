@@ -1,0 +1,1 @@
+derbynetmats/derbynetmats.fail:jdbcapi/resultset.java,derbynetmats/derbynetmats.fail:jdbcapi/LOBTest.java,derbynetmats/derbynetmats.fail:jdbcapi/parameterMapping.java are failing with JCC 2.8.47 with IBM JVM 142 and 15 on 10.1

@@ -1,0 +1,1 @@
+BooleanScorer.nextDoc should also delegate to sub-scorer's bulk scoring method

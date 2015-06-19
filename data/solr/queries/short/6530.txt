@@ -1,0 +1,1 @@
+Commits under network partition can put any node in down state

@@ -1,0 +1,1 @@
+test-patch.sh is shared across hadoop projects through svn:externals, which needs to be removed so that we can have project specific test-patch process.  

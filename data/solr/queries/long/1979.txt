@@ -1,0 +1,5 @@
+Language identification from document fields, and mapping of field names to language-specific fields based on detected language.
+
+Wrap the Tika LanguageIdentifier in an UpdateProcessor.
+
+See user documentation at http://wiki.apache.org/solr/LanguageDetection

@@ -1,0 +1,6 @@
+After Pig submits a job to Spark cluster, we need to report to user the:
+
+	job progress
+	spark specific stats for the jobs
+	spark error log  (if there is an error) and/or stacktrace
+

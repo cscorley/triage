@@ -1,0 +1,1 @@
+Allow ExpandComponent to accept query and filter query parameters

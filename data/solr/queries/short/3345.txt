@@ -1,0 +1,1 @@
+BaseDistributedSearchTestCase should always ignore QTime

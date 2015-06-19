@@ -1,0 +1,1 @@
+AttributeSource's methods for accessing attributes should be final, else its easy to corrupt the internal states

@@ -1,0 +1,11 @@
+We saw an occurrence where we had some ZK connection blip and the OverseerCollectionProcessor thread stopped but the ClusterStateUpdater output some error but kept running, and the node didn't lose its leadership. this caused our collection work queue to back up.
+
+Right now OverseerCollectionProcessor's run method has on trunk:
+
+
+344           if (e.code() == KeeperException.Code.SESSIONEXPIRED
+345	              || e.code() == KeeperException.Code.CONNECTIONLOSS) {
+346	            log.warn("Overseer cannot talk to ZK");
+347	            return;
+348	          }
+I think this if statement should only be for SESSIONEXPIRED. If it just experiences a connection loss but then reconnect before the session expired, it'll keep being the leader.

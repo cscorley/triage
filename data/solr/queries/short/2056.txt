@@ -1,0 +1,1 @@
+pom files need to include velocity reference

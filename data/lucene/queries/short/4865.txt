@@ -1,0 +1,1 @@
+BytesRefArray#append returns wrong index (off by one)

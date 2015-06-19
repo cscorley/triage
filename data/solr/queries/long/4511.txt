@@ -1,0 +1,5 @@
+Related to SOLR-4471. I have a master-repeater-2slaves architecture. The replication between master and repeater is working fine but slaves aren't able to replicate because their master (repeater node) is returning an old index version, but in admin UI the version that repeater have is correct.
+
+When I do http://localhost:17045/solr/replication?command=indexversion response is: <long name="generation">29037</long> when the version should be 29042
+
+If I restart the repeater node this URL returns the correct index version, but after a while it fails again.

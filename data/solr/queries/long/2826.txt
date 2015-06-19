@@ -1,0 +1,3 @@
+Processor which analyzes a URL and outputs to other fields: length, #levels, isTopLevel true/false, host part, path part, canonicalized URL etc.
+
+Kindly donated by Oslo University

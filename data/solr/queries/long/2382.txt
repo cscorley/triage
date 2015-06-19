@@ -1,0 +1,71 @@
+Functionality:
+ 1. Provide a pluggable caching framework for DIH so that users can choose a cache implementation that best suits their data and application.
+
+ 2. Provide a means to temporarily cache a child Entity's data without needing to create a special cached implementation of the Entity Processor (such as CachedSqlEntityProcessor).
+
+ 3. Provide a means to write the final (root entity) DIH output to a cache rather than to Solr.  Then provide a way for a subsequent DIH call to use the cache as an Entity input.  Also provide the ability to do delta updates on such persistent caches.
+
+ 4. Provide the ability to partition data across multiple caches that can then be fed back into DIH and indexed either to varying Solr Shards, or to the same Core in parallel.
+
+
+Use Cases:
+ 1. We needed a flexible & scalable way to temporarily cache child-entity data prior to joining to parent entities.
+
+	Using SqlEntityProcessor with Child Entities can cause an "n+1 select" problem.
+	CachedSqlEntityProcessor only supports an in-memory HashMap as a Caching mechanism and does not scale.
+	There is no way to cache non-SQL inputs (ex: flat files, xml, etc).
+
+
+
+ 2. We needed the ability to gather data from long-running entities by a process that runs separate from our main indexing process.
+
+ 3. We wanted the ability to do a delta import of only the entities that changed.
+
+	Lucene/Solr requires entire documents to be re-indexed, even if only a few fields changed.
+	Our data comes from 50+ complex sql queries and/or flat files.
+	We do not want to incur overhead re-gathering all of this data if only 1 entity's data changed.
+	Persistent DIH caches solve this problem.
+
+
+
+ 4. We want the ability to index several documents in parallel (using 1.4.1, which did not have the "threads" parameter).
+
+ 5. In the future, we may need to use Shards, creating a need to easily partition our source data into Shards.
+
+
+Implementation Details:
+ 1. De-couple EntityProcessorBase from caching.  
+
+	Created a new interface, DIHCache & two implementations:
+	SortedMapBackedCache - An in-memory cache, used as default with CachedSqlEntityProcessor (now deprecated).
+	BerkleyBackedCache - A disk-backed cache, dependent on bdb-je, tested with je-4.1.6.jar
+	NOTE: the existing Lucene Contrib "db" project uses je-3.3.93.jar.  I believe this may be incompatible due to Generic Usage.
+	NOTE: I did not modify the ant script to automatically get this jar, so to use or evaluate this patch, download bdb-je from http://www.oracle.com/technetwork/database/berkeleydb/downloads/index.html
+
+
+
+ 2. Allow Entity Processors to take a "cacheImpl" parameter to cause the entity data to be cached (see EntityProcessorBase & DIHCacheProperties).
+
+ 3. Partially De-couple SolrWriter from DocBuilder
+
+	Created a new interface DIHWriter, & two implementations:
+	SolrWriter (refactored)
+	DIHCacheWriter (allows DIH to write ultimately to a Cache).
+
+
+
+ 4. Create a new Entity Processor, DIHCacheProcessor, which reads a persistent Cache as DIH Entity Input.
+
+ 5. Support a "partition" parameter with both DIHCacheWriter and DIHCacheProcessor to allow for easy partitioning of source entity data.
+
+ 6. Change the semantics of entity.destroy()
+
+	Previously, it was being called on each iteration of DocBuilder.buildDocument().
+	Now it is does one-time cleanup tasks (like closing or deleting a disk-backed cache) once the entity processor is completed.
+	The only out-of-the-box entity processor that previously implemented destroy() was LineEntitiyProcessor, so this is not a very invasive change.
+
+
+
+
+General Notes:
+We are near completion in converting our search functionality from a legacy search engine to Solr.  However, I found that DIH did not support caching to the level of our prior product's data import utility.  In order to get our data into Solr, I created these caching enhancements.  Because I believe this has broad application, and because we would like this feature to be supported by the Community, I have front-ported this, enhanced, to Trunk.  I have also added unit tests and verified that all existing test cases pass.  I believe this patch maintains backwards-compatibility and would be a welcome addition to a future version of Solr.

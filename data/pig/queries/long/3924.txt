@@ -1,0 +1,16 @@
+Port following test cases
+
+TestFilterUDF.java
+TestFinish.java
+TestForEachNestedPlan.java
+TestLoad.java
+TestLocalRearrange.java
+TestMapReduce.java
+TestMapReduce2.java
+TestSample.java
+TestSchema.java
+TestScriptLanguageJavaScript.java
+TestScriptUDF.java
+TestStoreOld.java
+TestStreaming.java
+TestUDF.java

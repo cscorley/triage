@@ -1,0 +1,1 @@
+Update builds to add build date/time, branch version/revision and copyright to docs title area, so we can tell what version is being used on the public site.

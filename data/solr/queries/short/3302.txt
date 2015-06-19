@@ -1,0 +1,1 @@
+Upgrade SLF4J to 1.6.4

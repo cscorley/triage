@@ -1,0 +1,1 @@
+Split up IndexInput and IndexOutput into DataInput and DataOutput

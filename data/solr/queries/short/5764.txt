@@ -1,0 +1,1 @@
+Fix recently added tests to *not* use absolute paths to load resources, use SolrTestCaseJ4.getFile() and getResource() instead; fix morphlines/map-reduce to not duplicate test resources and fix dependencies among them

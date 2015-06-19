@@ -1,0 +1,1 @@
+Logging UI (and LogLevelHandler) should support Log4j

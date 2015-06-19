@@ -1,0 +1,1 @@
+Pig 0.6 doc updates and changes

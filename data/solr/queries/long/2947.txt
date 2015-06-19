@@ -1,0 +1,4 @@
+My intention is fix multithread import with SQL cache. Here is the 2nd stage. If I enable DocBuilder.EntityRunner flow even for single thread, it breaks the pretty basic functionality: parent-child join.
+the reason is line 473 entityProcessor.destroy(); breaks children entityProcessor.
+
+see attachement comments for more details. 

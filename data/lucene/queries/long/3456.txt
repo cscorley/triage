@@ -1,0 +1,3 @@
+While converting consumers over to using reusableTokenStream, I notice many don't call end() or close() on TokenStreams.
+
+Even if they are test TSs only created once, we should follow the defined usage pattern.

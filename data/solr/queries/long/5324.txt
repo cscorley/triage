@@ -1,0 +1,5 @@
+Currently the shard split command waits for all replicas of all sub shards to recover and then switches the state of parent to inactive and sub-shards to active.
+
+The problem is that shard split (ab)uses the CoreAdmin WaitForState action to ask the sub shard leader to wait until the replica states are active. This action is prone to timeout.
+
+We should make the shard state switching asynchronous. Once all replicas of all sub-shards are 'active', the shard states should be switched automatically.

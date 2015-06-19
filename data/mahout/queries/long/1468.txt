@@ -1,0 +1,1 @@
+Separate page required on Streaming K Means algorithm description and overview, explaining the various parameters can be used in streamingkmeans, strategy for parallelization, link to this paper: http://papers.nips.cc/paper/3812-streaming-k-means-approximation.pdf

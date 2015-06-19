@@ -1,0 +1,20 @@
+
+
+ * <code>HighFreqTerms</code> class extracts the top n most frequent terms
+ * (by document frequency) from an existing Lucene index and reports their
+ * document frequency.
+ * <p>
+ * If the -t flag is given, both document frequency and total tf (total
+ * number of occurrences) are reported, ordered by descending total tf.
+
+
+
+Problem #1:
+Its tricky what happens with -t: if you ask for the top-100 terms, it requests the top-100 terms (by docFreq), then resorts the top-N by totalTermFreq.
+
+So its not really the top 100 most frequently occurring terms.
+
+Problem #2: 
+Using the -t option can be confusing and slow: the reported docFreq includes deletions, but totalTermFreq does not (it actually walks postings lists if there is even one deletion).
+
+I think this is a relic from 3.x days when lucene did not support this statistic. I think we should just always output both TermsEnum.docFreq() and TermsEnum.totalTermFreq(), and -t just determines the comparator of the PQ.

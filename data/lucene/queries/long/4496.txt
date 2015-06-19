@@ -1,0 +1,1 @@
+TermsEnum.docs() has an expert flag to specify you don't require frequencies. This is currently set by some things that don't need it: we should call ForUtil.skipBlock instead of ForUtil.readBlock in this case.

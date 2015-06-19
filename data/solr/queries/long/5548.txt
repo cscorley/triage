@@ -1,0 +1,3 @@
+I want to write a test case based around my own custom request handler using AbstractFullDistribZkTestBase.  The issue I'm running into is that for my request handler to work properly, it requires a custom filter to set some properties on the HttpServletRequest.
+
+AbstractFullDistribZkTestBase allows one to specify extra servlets, but not extra filters on the root servlet.  It would be useful to allow the user to specify extra filters that run before the SolrDispatchFilter.

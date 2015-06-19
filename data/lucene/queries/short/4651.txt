@@ -1,0 +1,1 @@
+Use generics for the type of assigned class in Classifier

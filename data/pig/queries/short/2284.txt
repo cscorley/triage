@@ -1,0 +1,1 @@
+Add pig-setup-conf.sh script

@@ -1,0 +1,1 @@
+I found this useful while working with spans recently. It's simple and straightforward. I'll add a patch shortly.

@@ -1,0 +1,77 @@
+RubyUDFs e2e scrip is on the line 3818 of nightly.conf : 
+
+
+                    'num' => 13,
+                    'java_params' => ['-Dpig.accumulative.batchsize=5'],
+                    'pig' => q\
+register ':SCRIPTHOMEPATH:/ruby/morerubyudfs.rb' using jruby as myfuncs;
+a = load ':INPATH:/singlefile/studenttab10k' using PigStorage() as (name, age:int, gpa:double);
+b = foreach (group a all) generate FLATTEN(myfuncs.AppendIndex(a));
+store b into ':OUTPATH:';\,
+                    'verify_pig_script' => q\
+register :FUNCPATH:/testudf.jar;
+a = load ':INPATH:/singlefile/studenttab10k' using PigStorage() as (name, age:int, gpa:double);
+b = foreach (group a all) generate FLATTEN(org.apache.pig.test.udf.evalfunc.AppendIndex(a));
+store b into ':OUTPATH:';\,
+                    },
+                ]
+            },
+
+
+RubyUDFs_13.pig tests ruby udf "AppendIndex" in "morerubyudfs.rb".  The output is compared with verified script which use java udf "org.apache.pig.test.udf.evalfunc.AppendIndex". The output of "RubyUDFs_13.pig" is like following:
+
+If test file “studemttab10k” is 
+
+tom thompson	42	0.53
+nick johnson	34	0.47
+priscilla falkner	55	1.16
+
+the result in spark engine will be:
+tom thompson	42	0.53   1
+nick johnson	34	0.47   2
+priscilla falkner	55	1.16  3
+
+
+the result in mapreduce engine which verified script uses  will be 
+priscilla falkner	55	1.16  1
+nick johnson	34	0.47  2
+tom thompson	42	0.53  3
+
+The difference between the result in spark and mapreduce engine cause RubyUDFs_13 e2e test failure .
+The root cause of the difference is because “group a all” has  different result in different engines. 
+ In Spark engine, “group a all” :
+all 
+{ (tom thompson	42	0.53),( nick johnson	34	0.47),( priscilla falkner	55	1.16)}
+In mapreduce engine , “group a all”:
+all 
+{( priscilla falkner	55	1.16), ( nick johnson	34	0.47),(tom thompson	42	0.53)}
+
+Using PIG-4345.patch, RubyUDF_13 e2e test passes.
+
+
+{
+                    'num' => 13,
+                    'java_params' => ['-Dpig.accumulative.batchsize=5'],
+                    'pig' => q\
+register ':SCRIPTHOMEPATH:/ruby/morerubyudfs.rb' using jruby as myfuncs;
+a = load ':INPATH:/singlefile/studenttab10k' using PigStorage() as (name, age:int, gpa:double);
+a1 = filter a by name == 'nick johnson';
+a2 = filter a1 by age == 34;
+b =  foreach (group a2 all) generate FLATTEN(myfuncs.AppendIndex(a2));
+store b into ':OUTPATH:';\,
+                    'verify_pig_script' => q\
+register :FUNCPATH:/testudf.jar;
+a = load ':INPATH:/singlefile/studenttab10k' using PigStorage() as (name, age:int, gpa:double);
+a1 = filter a by name == 'nick johnson';
+a2 = filter a1 by age == 34;
+b =  foreach (group a2 all) generate FLATTEN(org.apache.pig.test.udf.evalfunc.AppendIndex(a2));
+store b into ':OUTPATH:';\,
+                    },
+                ]
+            },
+
+
+
+using PIG-4345.patch, the result in spark and mapreduce engine will be:
+
+nick johnson	34	0.47  1

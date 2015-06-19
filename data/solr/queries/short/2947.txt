@@ -1,0 +1,1 @@
+DIH caching bug - EntityRunner destroys child entity processor

@@ -1,0 +1,1 @@
+Remaining TODOs of LUCENE-2858: Finalize AtomicReader/CompositeReader API

@@ -1,0 +1,1 @@
+Investigate Rewriting Constant Scoring MultiTermQueries per segment

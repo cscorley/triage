@@ -1,0 +1,1 @@
+e2e test "RubyUDFs_13" fails because of the different result of "group a all" in different engines like "spark", "mapreduce"

@@ -1,0 +1,13 @@
+We run a performance/endurance test on a 7 Solr instance SolrCloud setup and eventually Solrs lose ZK connections and go into recovery. BTW the recovery often does not ever succeed, but we are looking into that. While doing that I noticed that, according to logs, multiple recoveries are in progress at the same time for the same shard. That cannot be intended and I can certainly imagine that it will cause some problems.
+It is just the logs that are wrong, did I make some mistake, or is this a real bug?
+
+See attached grep from log, grepping only on "Finished recovery" and "Starting recovery" logs.
+
+
+grep -B 1 "Finished recovery\|Starting recovery" solr9.log solr8.log solr7.log solr6.log solr5.log solr4.log solr3.log solr2.log solr1.log solr0.log > recovery_start_finish.log
+
+
+
+It can be hard to get an overview of the log, but I have generated a graph showing (based alone on "Started recovery" and "Finished recovery" logs) how many recoveries are in progress at any time for the different shards. See attached recovery_in_progress.png. The graph is also a little hard to get an overview of (due to the many shards) but it is clear that for several shards there are multiple recoveries going on at the same time, and that several recoveries never succeed.
+
+Regards, Per Steffensen

@@ -1,0 +1,1 @@
+AssertionFailedError with Java 8 and TestInExpressionParamaterBinding

@@ -1,0 +1,1 @@
+Admin UI - Reloading System-Information on Dashboard does not work anymore

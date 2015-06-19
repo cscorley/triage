@@ -1,0 +1,5 @@
+While looking into SOLR-3734 i noticed that the LukeRequestHandler is blindly putting arrays of CopyField and SchemaField objects in the response, when returning copy from/to info, which are then getting written out using their toString.
+
+steffkes seems to have done a great job of parsing the field name out of the SchemaField.toString, but the CopyField.toString info is useless – and clients shouldn't have to do special string parsing to pull out this info.
+
+I think we should just fix both of these arrays to just be the simple string values that they were most likely intended to be

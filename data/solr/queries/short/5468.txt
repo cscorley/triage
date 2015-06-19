@@ -1,0 +1,1 @@
+Option to notify client when desired replication factor not achieved for an update request.

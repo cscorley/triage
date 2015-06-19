@@ -1,0 +1,3 @@
+when use code 
+SynonymFilter filter=new SynonymFilter(new WhitespaceTokenizer(Version.LUCENE_42, new StringReader("aa bb")), new SynonymMap.Builder(true).build(), true);
+create a filter,it throw NullPointerException but not IllegalArgumentException("fst must be non-null");

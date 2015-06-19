@@ -1,0 +1,3 @@
+Pig needs to upgrade junit version to at least 4.8. Otherwise, one gets following warnings.
+
+  [javadoc] org/apache/hadoop/hbase/mapreduce/TestWALPlayer.class(org/apache/hadoop/hbase/mapreduce:TestWALPlayer.class): warning: Cannot find annotation method 'value()' in type 'org.junit.experimental.categories.Category': class file for org.junit.experimental.categories.Category not found

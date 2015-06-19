@@ -1,0 +1,1 @@
+Spatial RecursivePrefixTreeFilter has some bugs with indexing non-point shapes

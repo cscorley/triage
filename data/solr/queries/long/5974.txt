@@ -1,0 +1,1 @@
+ShardDoc.score is hiding ScoreDoc.score, it’s confusing and as it is package private it doesn’t allow custom components to read the scores of the resultIds after merge which can be useful

@@ -1,0 +1,1 @@
+The FieldAnalysisRequest now gives an error if you don't send a field name AND a field type – it should only error if neither is sent

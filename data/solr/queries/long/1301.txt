@@ -1,0 +1,22 @@
+This patch contains  a contrib module that provides distributed indexing (using Hadoop) to Solr EmbeddedSolrServer. The idea behind this module is twofold:
+
+
+	provide an API that is familiar to Hadoop developers, i.e. that of OutputFormat
+	avoid unnecessary export and (de)serialization of data maintained on HDFS. SolrOutputFormat consumes data produced by reduce tasks directly, without storing it in intermediate files. Furthermore, by using an EmbeddedSolrServer, the indexing task is split into as many parts as there are reducers, and the data to be indexed is not sent over the network.
+
+
+
+Design
+----------
+
+Key/value pairs produced by reduce tasks are passed to SolrOutputFormat, which in turn uses SolrRecordWriter to write this data. SolrRecordWriter instantiates an EmbeddedSolrServer, and it also instantiates an implementation of SolrDocumentConverter, which is responsible for turning Hadoop (key, value) into a SolrInputDocument. This data is then added to a batch, which is periodically submitted to EmbeddedSolrServer. When reduce task completes, and the OutputFormat is closed, SolrRecordWriter calls commit() and optimize() on the EmbeddedSolrServer.
+
+The API provides facilities to specify an arbitrary existing solr.home directory, from which the conf/ and lib/ files will be taken.
+
+This process results in the creation of as many partial Solr home directories as there were reduce tasks. The output shards are placed in the output directory on the default filesystem (e.g. HDFS). Such part-NNNNN directories can be used to run N shard servers. Additionally, users can specify the number of reduce tasks, in particular 1 reduce task, in which case the output will consist of a single shard.
+
+An example application is provided that processes large CSV files and uses this API. It uses a custom CSV processing to avoid (de)serialization overhead.
+
+This patch relies on hadoop-core-0.19.1.jar - I attached the jar to this issue, you should put it in contrib/hadoop/lib.
+
+Note: the development of this patch was sponsored by an anonymous contributor and approved for release under Apache License.

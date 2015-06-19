@@ -1,0 +1,1 @@
+Date faceting should support configuration for controlling how edge boundaries are dealt with.

@@ -1,0 +1,1 @@
+After silently swallowing SecurityExceptions, Derby can leak class loaders

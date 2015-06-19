@@ -1,0 +1,1 @@
+The goal of this jira is make TestAccumulator pass in Tez mode.

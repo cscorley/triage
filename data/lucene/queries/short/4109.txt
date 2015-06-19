@@ -1,0 +1,1 @@
+BooleanQueries are not parsed correctly with the flexible query parser

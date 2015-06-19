@@ -1,0 +1,16 @@
+The MANIFEST.MF for derby.jar file has some support details for OSGI. However, there are some issues with it:
+
+	the Bundle-version number does not change with each build.
+  This would not be a problem if we'd never publish an intermediate build,
+  but as we do (snapshots), the Bundle-version number should change.
+  Having the same bundle-version over different builds can cause trouble 
+  updating to the next (snapshot) and may cause confusion over what is 
+  exactly in the bundle.
+  We could add the buildnumber into the Bundle-version number.
+	Import-Package does not need java.sql
+  Derby does need java.sql to function, but as it's in the java namespace,
+  it will be loaded (if present) into every bundle that needs it even if
+  not specified in the import package entry. 
+
+
+

@@ -1,0 +1,1 @@
+in debian, sh is dash. so the tests fail.

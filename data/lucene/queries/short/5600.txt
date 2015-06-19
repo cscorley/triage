@@ -1,0 +1,1 @@
+HttpReplicator does not properly handle server failures

@@ -1,0 +1,1 @@
+Needs to be treated same as OLD_HADOOP_HOME.

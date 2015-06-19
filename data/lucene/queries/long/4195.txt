@@ -1,0 +1,1 @@
+The Codec package.html is pretty basic.  Add some overview information.

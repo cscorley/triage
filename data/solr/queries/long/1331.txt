@@ -1,0 +1,1 @@
+There should be a provision to merge one core with another. It should be possible to create a core, add documents to it and then just merge it into the main core which is serving requests. This way, the user will not need to know the filesystem as it is needed for SOLR-1051

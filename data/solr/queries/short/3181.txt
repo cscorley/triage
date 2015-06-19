@@ -1,0 +1,1 @@
+New Admin UI, allow user to somehow cut/paste all the old "Zookeeper" info.

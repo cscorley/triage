@@ -1,0 +1,3 @@
+Currently, because of updatable docvalues, ancient codecs are not really read-only... this is a real problem because we can get confused about backwards compatibility or even introduce bugs.
+
+Its only necessary to make BINARY and NUMERIC work here, we should throw UOE every other possible place and prevent use of old codecs to the greatest extent possible.

@@ -1,0 +1,7 @@
+Create a CLI driver to import data in a flexible manner, create an IndexedDataset with BiMap ID translation dictionaries, call the Spark CooccurrenceAnalysis with the appropriate params, then write output with external IDs optionally reattached.
+
+Ultimately it should be able to read input as the legacy mr does but will support reading externally defined IDs and flexible formats. Output will be of the legacy format or text files of the user's specification with reattached Item IDs. 
+
+Support for legacy formats is a question, users can always use the legacy code if they want this. Internal to the IndexedDataset is a Spark DRM so pipelining can be accomplished without any writing to an actual file so the legacy sequence file output may not be needed.
+
+Opinions?

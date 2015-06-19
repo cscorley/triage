@@ -1,0 +1,3 @@
+there is a lot of sprinkled arround checks in unrelated to ensure that indexConfig option parsing picks up the correct merge policy and merge schedulre and what not.
+
+as part of switching all of these tests to use randomized indexConfig options, we need to ensure that this kind of testing for explicitly specified config is rock solid.

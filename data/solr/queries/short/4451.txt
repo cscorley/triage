@@ -1,0 +1,1 @@
+Upgrade to httpclient 4.2.x and take advantage of SystemDefaultHttpClient

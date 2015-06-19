@@ -1,0 +1,1 @@
+Maven xxx-src.jar files do not contain resources

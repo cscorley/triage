@@ -1,0 +1,39 @@
+Running the following program on 10.1 latest and then switching to  10.1.3.2 - (580531)  and running it again causes the exception :
+C:/kmarsden/repro/10447] java GetSchemas
+xception in thread "main" java.lang.NoSuchMethodError: org.apache.derby.iapi.sql.execute.ResultSetFactory.getBulkTableS
+anResultSet(Lorg/apache/derby/iapi/sql/Activation;JILorg/apache/derby/iapi/services/loader/GeneratedMethod;ILorg/apache
+derby/iapi/services/loader/GeneratedMethod;ILorg/apache/derby/iapi/services/loader/GeneratedMethod;IZ[[Lorg/apache/derb
+/iapi/store/access/Qualifier;Ljava/lang/String;Ljava/lang/String;ZZIIIZIIZDDLorg/apache/derby/iapi/services/loader/Gene
+atedMethod;)Lorg/apache/derby/iapi/sql/execute/NoPutResultSet;
+       at org.apache.derby.exe.ac05550069x011dx254bxcb49x000000134c780.fillResultSet(Unknown Source)
+       at org.apache.derby.exe.ac05550069x011dx254bxcb49x000000134c780.execute(Unknown Source)
+       at org.apache.derby.impl.sql.GenericActivationHolder.execute(GenericActivationHolder.java:326)
+       at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:377)
+       at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1123)
+       at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeStatement(EmbedPreparedStatement.java:1335)
+       at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeQuery(EmbedPreparedStatement.java:244)
+       at org.apache.derby.impl.jdbc.EmbedDatabaseMetaData.getSimpleQuery(EmbedDatabaseMetaData.java:3086)
+       at org.apache.derby.impl.jdbc.EmbedDatabaseMetaData.getSchemas(EmbedDatabaseMetaData.java:1641)
+       at GetSchemas.main(GetSchemas.java:9)
+
+
+import java.sql.*;
+
+public class GetSchemas {
+
+    public static void main(String[] args) throws Exception{
+	Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+	Connection conn = DriverManager.getConnection("jdbc:derby:wombat;create=true");
+	DatabaseMetaData dbmd = conn.getMetaData();
+	ResultSet rs = dbmd.getSchemas();
+	while (rs.next()) 
+{
+	    System.out.println(rs.getString(1));
+	}
+
+
+    }
+
+}
+
+Apparently the method signature changed but I thought the stored prepared statements recompiled whenever you changed versions so would not have such problems. 

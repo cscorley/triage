@@ -1,0 +1,3 @@
+I was running some tests and was surprised that IndexWriter.forceMerge caused the index to be merged even when the index contains a single segment with no deletions.
+
+This is due to MergePolicy.isMerged which always returns false with the default configuration although merge policies rely on it to know whether a single-segment index should be merged.

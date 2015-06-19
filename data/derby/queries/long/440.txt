@@ -1,0 +1,14 @@
+The derby.jar is correctly created by the top-level buil.xml with the attribute filesonly=true.
+However the subsequent update of the jar file to add the locale files, partially extracted here, does not include the filesonly attribute, so the directory entries are added in.
+
+around line 757 
+
+   <jar destfile="$
+{derby.jar.dir}
+/derby.jar"
+        update="true"
+        compress="true">
+
+Adding    filesonly="true" to this target solved the problem.
+
+Similar changes are probably needed for the other derby jar files and should be addressed with this bug

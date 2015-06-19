@@ -1,0 +1,1 @@
+Concurrency issues in SegmentInfo.files() could lead to ConcurrentModificationException

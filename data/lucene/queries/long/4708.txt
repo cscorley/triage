@@ -1,0 +1,1 @@
+Currently LZ4 compressors instantiate their own hash table for every byte sequence they need to compress. These can be large (256KB for LZ4 HC) so we should try to reuse them across calls.

@@ -1,0 +1,5 @@
+BeiderMorseFilter inserts sometimes additional phonetic tokens for the same source token. Currently it calls clearAttributes before doing this and sets the new token's term, positionIncrement=0 and the original offset.
+
+This leads to problems if the TokenStream contains other attributes inserted before (like KeywordAttribute, FlagsAttribute,...). Those are all reverted to defaults for the inserted tokens.
+
+The TokenFilter should remove the special case done for preserving offsets and instead to captureState() and restoreState().

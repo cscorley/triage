@@ -1,0 +1,5 @@
+For demos and prototyping, it would be nice if we could add documents via the admin UI.
+
+Various things to support:
+1. Uploading XML, JSON, CSV, etc.
+2. Optionally also do file upload

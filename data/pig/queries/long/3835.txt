@@ -1,0 +1,12 @@
+PIG-3743 implements union using VertexGroup. But there are a couple of optimizations that we can apply to it.
+
+
+	Union followed by store
+Union is a blocking operator meaning that a new vertex is added for its succeeding operators. But if there is only one store in the succeeding vertex, MROutput could be directly attached to VertexGroup instead of adding a new vertex for it. Then, each union source vertex will write directly to the destination, and therefore, it will be faster.
+
+
+
+
+	Replace POLocalRearrangeTez with POValueOutputTez
+Union uses POLocalRearrange by setting the whole record as key. But since union only needs to partition records evenly across tasks, it might make more sense to use POValueOutputTez with RR partitioner instead.
+

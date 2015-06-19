@@ -1,0 +1,42 @@
+Solr JMX MBeans do not survive core reloads
+
+"Steps to reproduce"
+sh> cd example
+sh> vi multicore/core0/conf/solrconfig.xml # enable jmx
+sh> java -Dcom.sun.management.jmxremote -Dsolr.solr.home=multicore -jar start.jar
+sh> echo 'open 8842 # 8842 is java pid
+> domain solr/core0
+> beans
+> ' | java -jar jmxterm-1.0-alpha-4-uber.jar
+....
+solr/core0:id=core0,type=core
+solr/core0:id=org.apache.solr.handler.StandardRequestHandler,type=org.apache.solr.handler.StandardRequestHandler
+solr/core0:id=org.apache.solr.handler.StandardRequestHandler,type=standard
+solr/core0:id=org.apache.solr.handler.XmlUpdateRequestHandler,type=/update
+solr/core0:id=org.apache.solr.handler.XmlUpdateRequestHandler,type=org.apache.solr.handler.XmlUpdateRequestHandler
+...
+solr/core0:id=org.apache.solr.search.SolrIndexSearcher,type=searcher
+solr/core0:id=org.apache.solr.update.DirectUpdateHandler2,type=updateHandler
+sh> curl 'http://localhost:8983/solr/admin/cores?action=RELOAD&core=core0'
+sh> echo 'open 8842 # 8842 is java pid
+> domain solr/core0
+> beans
+> ' | java -jar jmxterm-1.0-alpha-4-uber.jar
+# there's only one bean left after Solr core reload
+solr/core0:id=org.apache.solr.search.SolrIndexSearcher,type=Searcher@2e831a91 main
+
+
+
+The root cause of this is Solr core reload behavior:
+
+	create new core (which overwrites existing registered MBeans)
+	register new core and close old one (we remove/un-register MBeans on oldCore.close)
+
+
+
+The correct sequence is:
+
+	unregister MBeans from old core
+	create and register new core
+	close old core without touching MBeans
+

@@ -1,0 +1,14 @@
+I recently observed a problem caused by malformed packets. ZK server crashed because of OutOfMemoryError.
+
+The reason is BinaryInputArchive didn't check the length before allocating memory in readString():
+
+
+  public String readString(String tag) throws IOException {
+    	int len = in.readInt();
+    	if (len == -1) return null;
+    	byte b[] = new byte[len];
+        ...
+
+
+
+I suggest to add the same check as in readBuffer.

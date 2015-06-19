@@ -1,0 +1,1 @@
+Missing BOOKIE_PID_DIR and BOOKIE_STOP_TIMEOUT in env variables list

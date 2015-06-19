@@ -1,0 +1,1 @@
+Use benchmarks for Windows Pig e2e tests. Currently in the Pig system test for windows, we do not use benchmarks. Due to this, each test run twice to verify if its a pass. Using benchmark will save a lot of time, in the windows run.

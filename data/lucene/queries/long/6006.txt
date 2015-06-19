@@ -1,0 +1,17 @@
+I came across this precursor while working on LUCENE-6005:
+
+I think FieldInfo.normsType can only be null (field did not index
+norms) or DocValuesType.NUMERIC (it did).  I'd like to simplify to
+just boolean hasNorms.
+
+This is a strange boolean, though: in theory it should be derived from
+indexed && omitNorms == false, but we have it for the exceptions
+case where every document in a segment hit an exception and never
+added norms.  I think this is the only reason it exists?  (In theory,
+such cases should result in 100% deleted segments, which IW should
+then drop ... but seems dangerous to "rely" on that).
+
+So I changed the indexing chain to just fill in the default (0) norms
+for all documents in such exceptional cases; this way going forward
+(starting with 5.0 indices) we really don't need this hasNorms.  But
+we still need it for pre-5.0 indices...

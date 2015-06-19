@@ -1,0 +1,1 @@
+it would be good to have detail metrics about latency and bytes on bookie operations. it would help on investigating performance issues.

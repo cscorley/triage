@@ -1,0 +1,1 @@
+ReplicationHandler doesn't return master details unless it's also configured as a slave

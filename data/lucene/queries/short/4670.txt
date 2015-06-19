@@ -1,0 +1,1 @@
+Add TermVectorsWriter.finish{Doc,Field,Term} to make development of new formats easier

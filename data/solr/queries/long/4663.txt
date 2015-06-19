@@ -1,0 +1,5 @@
+In large multi-core setups, having mistakes whereby two or more cores point to the same data dir seems quite possible. We should at least complain very loudly in the logs if this is detected.
+
+Should be a very straightforward check at core discovery time.
+
+Is this serious enough to keep Solr from coming up at all?

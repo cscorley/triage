@@ -1,0 +1,1 @@
+As suggested on users@ by Kevin Milburn, it would be useful if the Tika bundles set the Bundle-ActivationPolicy manifest entry to lazy for smoother integration with the Eclipse platform.

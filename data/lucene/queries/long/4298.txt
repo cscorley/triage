@@ -1,0 +1,8 @@
+The function calls itself:
+
+public static DocsEnum getTermDocsEnum(IndexReader r, Bits liveDocs, String field, BytesRef term) throws IOException 
+{
+    return getTermDocsEnum(r, liveDocs, field, term);
+  }
+
+The more conservative approach is to pass DocsEnum.FLAG_FREQS as last parameter so we can call the getTermDocsEnum(IndexReader r, Bits liveDocs, String field, BytesRef term, int flags).

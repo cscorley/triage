@@ -1,0 +1,1 @@
+SpanMultiTermQueryWrapper with Prefix Query issue

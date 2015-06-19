@@ -1,0 +1,1 @@
+Missing terms in a boolean query "disappear" (i.e. they don't even affect the coord factor).

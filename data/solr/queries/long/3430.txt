@@ -1,0 +1,5 @@
+A couple of people have mentioned on the users' list that 3.6 changes break CachedSqlEntityProcessor.  Part of the problem is the current DIH tests are not realistic:  they mostly test 1 class at a time and not the full end-to-end interactions between components.
+
+This is a test of (Cached) SqlEntityProcessor using an in-memory Derby database.  This hopefully is a first step in creating a series of new, more-rigorous DIH tests, which is needed in order to make changes without worry.
+
+This also revealed a bug in SortedMapBackedCache, which is fixed also.  I'm not sure this is the same bug causing problems for the 2 users but once committed I will post a reply on the users' list to see if they can try it.

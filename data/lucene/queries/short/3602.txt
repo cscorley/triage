@@ -1,0 +1,1 @@
+Add join query to Lucene

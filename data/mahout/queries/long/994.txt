@@ -1,0 +1,1 @@
+Mahout should follow the Pig and Hive example and not rely explicitly on HADOOP_HOME and HADOOP_CONF_DIR

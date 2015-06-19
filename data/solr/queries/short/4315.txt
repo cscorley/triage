@@ -1,0 +1,1 @@
+Remove useless shardId param in DistributedUpdateProcessor#defensiveChecks

@@ -1,0 +1,12 @@
+An addition to each segment which stores a Bloom filter for selected fields in order to give fast-fail to term searches, helping avoid wasted disk access.
+
+Best suited for low-frequency fields e.g. primary keys on big indexes with many segments but also speeds up general searching in my tests.
+
+Overview slideshow here: http://www.slideshare.net/MarkHarwood/lucene-bloomfilteredsegments
+
+Benchmarks based on Wikipedia content here: http://goo.gl/X7QqU
+
+Patch based on 3.6 codebase attached.
+There are no 3.6 API changes currently - to play just add a field with "_blm" on the end of the name to invoke special indexing/querying capability. Clearly a new Field or schema declaration would need adding to APIs to configure the service properly.
+
+Also, a patch for Lucene4.0 codebase introducing a new PostingsFormat

@@ -1,0 +1,1 @@
+The use case we have is that logging full requests in each shard is just 'too much' but at the same time we wish to be able to tie together requests across shards. In certain circumstances we also wish to fully log some requests.

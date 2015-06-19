@@ -1,0 +1,1 @@
+CurrencyField needs better errors when encountering a currency that java.util.Currency doesn't support

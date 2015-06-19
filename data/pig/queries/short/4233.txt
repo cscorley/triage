@@ -1,0 +1,1 @@
+Package pig along with dependencies into a fat jar while job submission to Spark cluster

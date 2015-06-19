@@ -1,0 +1,1 @@
+Use maven-jar-plugin to create a o-p-j-tests.jar to share base TestCase classes across modules

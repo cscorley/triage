@@ -1,0 +1,59 @@
+Detected by Mike Matrigali.  This is most likely related to the change I made where I fixed the chaining of exceptions for SqlException.  I fixed the output for jdk14 but need to do so for jdk13
+
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file
+derbyall/derbynetclientmats/DerbyNetClient/derbynetmats/jdbcapi/Stream.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: Stream jdk1.3.1_15 DerbyNetClient derbynetmats:jdbcapi
+2006-02-05 06:06:34 ***
+5,6d4
+< Caused by: org.apache.derby.client.am.SqlException: Stream of column
+value in result cannot be retrieved twice
+< 	... 4 more
+11,12d8
+< Caused by: org.apache.derby.client.am.SqlException: Stream of column
+value in result cannot be retrieved twice
+< 	... 4 more
+17,18d12
+< Caused by: org.apache.derby.client.am.SqlException: Stream of column
+value in result cannot be retrieved twice
+< 	... 4 more
+16 del
+< Caused by: org.apache.derby.client.am.SqlException: Stream of column
+value in result cannot be retrieved twice
+< 	... 4 more
+Test Failed.
+			End:   Stream jdk1.3.1_15 DerbyNetClient derbynetmats:jdbcapi
+2006-02-05 06:07:21 ***
+		
+		
+	
+	
+

@@ -1,0 +1,2 @@
+A statement cache in the JDBC client driver will help increase performance in certain scenarios, for instance some multi-tier systems using connection pooling.
+Please consult the comments and documents attached to this issue for more information.

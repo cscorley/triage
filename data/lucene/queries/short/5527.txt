@@ -1,0 +1,1 @@
+Make the Collector API work per-segment

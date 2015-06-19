@@ -1,0 +1,1 @@
+Rename getUnique[Field/Terms]Count() into size()

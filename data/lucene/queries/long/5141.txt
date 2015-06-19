@@ -1,0 +1,1 @@
+CheckIndex.fixIndex takes a codec as an argument although it doesn't need one.

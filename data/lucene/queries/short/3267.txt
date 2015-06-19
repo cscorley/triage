@@ -1,0 +1,1 @@
+check-legal-lucene always checks contrib/queries/lib

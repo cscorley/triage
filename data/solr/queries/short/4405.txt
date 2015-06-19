@@ -1,0 +1,1 @@
+Admin UI - admin-extra files are not rendered into the core-menu

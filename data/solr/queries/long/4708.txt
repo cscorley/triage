@@ -1,0 +1,1 @@
+In the past, the ClusteringComponent used to rely on 3rd party JARs not available from a Solr distro.  This is no longer the case, but the /browse UI and other references still had the clustering component disabled in the example with an awkward system property way to enable it.  Let's remove all of that unnecessary stuff and just enable it as it works out of the box now.

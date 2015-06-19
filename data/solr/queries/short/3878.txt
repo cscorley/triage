@@ -1,0 +1,1 @@
+NPE in CurrencyValue.parse() while issuing wildcard range query on a CurrencyField

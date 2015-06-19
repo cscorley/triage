@@ -1,0 +1,1 @@
+When a SolrCore registers in zk there may be stale leader state in the clusterstate.json.

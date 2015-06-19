@@ -1,0 +1,6 @@
+OverseerCollectionProcessor class for collectionCmd method has thread safe issue.
+The major issue is ModifiableSolrParams params instance will deliver into other thread use(HttpShardHandler.submit). Modify parameter will affect the other threads the correct parameter.
+
+In the method collectionCmd , change the value params.set(CoreAdminParams.CORE, node.getStr(ZkStateReader.CORE_NAME_PROP)); , that occur send the http request thread will get the wrong core name. The result is that can't delete/reload the right core.
+
+The easy fix is clone the ModifiableSolrParams for every request.

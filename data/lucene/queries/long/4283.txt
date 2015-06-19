@@ -1,0 +1,5 @@
+This change works on the new bulk branch.
+
+Currently, our BlockPostingsFormat only supports skipInterval==blockSize. Every time the skipper reaches the last level 0 skip point, we'll have to decode a whole block to read doc/freq data. Also,  a higher level skip list will be created only for those df>blockSize^k, which means for most terms, skipping will just be a linear scan. If we increase current blockSize for better bulk i/o performance, current skip setting will be a bottleneck. 
+
+For ForPF, the encoded block can be easily splitted if we set skipInterval=32*k. 

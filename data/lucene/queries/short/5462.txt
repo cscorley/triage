@@ -1,0 +1,1 @@
+Lucene 3.x producers shouldn't use RamUsageEstimator to estimate size

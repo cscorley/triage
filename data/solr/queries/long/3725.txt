@@ -1,0 +1,25 @@
+package-local-src-tgz generates a 141M archive which contains a bunch of non-source jars:
+
+
+
+tar tfz apache-solr-4.0-SNAPSHOT-src.tgz  | grep -E '(war|jar)$' | wc -l
+134
+
+
+
+It looks like we're expecting dist/** and package/** to be excluded:
+
+
+
+<tarfileset dir="." prefix="${fullnamever}/solr"
+                    excludes="build ${package.dir}/** ${dist}/**
+                             example/webapps/*.war example/exampledocs/post.jar
+                             lib/README.committers.txt **/data/ **/logs/*
+                             **/*.sh **/bin/ scripts/
+                             .idea/ **/*.iml **/pom.xml" />
+
+
+
+The issue is that package.dir and dist refer to absolute paths; excludes assumes relative paths.
+
+It's also pulling in all the contrib/**/lib/ and example/lib/ jars.

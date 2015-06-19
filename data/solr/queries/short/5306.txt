@@ -1,0 +1,1 @@
+can not create collection when have over one config

@@ -1,0 +1,1 @@
+Add support for Clob.setCharacterStream(), Clob.setAsciiStream()and Blob.setBinaryStream in embedded, it is already supported in client.

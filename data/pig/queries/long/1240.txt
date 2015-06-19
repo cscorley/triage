@@ -1,0 +1,2 @@
+
+Zebra jars' manifest file sld  have zebra manifest file contain version and svn-revision etc.

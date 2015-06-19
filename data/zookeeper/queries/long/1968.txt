@@ -1,0 +1,1 @@
+Should we make the jetty/jackson libraries optional in ivy.xml given that Jetty Server is itself optional (an uses reflection to boot).

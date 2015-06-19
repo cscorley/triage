@@ -1,0 +1,3 @@
+See LUCENE-5527 for more context: several of us seem to prefer Leaf to Atomic.
+
+Talking from my experience, I was a bit confused in the beginning that this thing is named AtomicReader, since Atomic is otherwise used in Java in the context of concurrency. So maybe renaming it to Leaf would help remove this confusion and also carry the information that these readers are used as leaves of top-level readers?

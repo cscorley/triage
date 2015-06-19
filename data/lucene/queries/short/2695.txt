@@ -1,0 +1,1 @@
+DisjunctionMaxScorer allocates 2 arrays per scored doc

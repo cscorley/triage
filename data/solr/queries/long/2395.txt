@@ -1,0 +1,5 @@
+In 1.4.x branch, the download link to NNI.jar (LGPL) points to Carrot2.org which sometimes used to cause build errors and is generally not
+as reliable as Maven Central. It would make sense to replace this link if further releases from that branch are ever to be made (just in case).
+
+The Solr branch applicable to this patch is here (right?)
+https://svn.apache.org/repos/asf/lucene/solr/branches/branch-1.4

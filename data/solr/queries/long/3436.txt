@@ -1,0 +1,13 @@
+The count of groups in distributed grouping environment only show results from shards used in the second pass.
+
+How to reproduce :
+
+Ask for only 1 document (ROWS=1) in a 2 shards environnement with GROUPS.NGOURP=true and of course with GROUPS.FIELD=fieldA.
+
+Results :
+
+It will only display the total of a shard (the one used for the second pass)
+
+Expected results :
+
+Sum all groups count from ALL shards.

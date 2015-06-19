@@ -1,0 +1,1 @@
+TestCoreContainer Fail: AlreadyClosedException: this IndexWriter is closed

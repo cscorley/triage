@@ -1,0 +1,130 @@
+The version we are running is a bit older (10.8.2.2), but I have tried latest version of Derby @ 10.11.1.1 with it's JDBC drivers that are included with it.  I am having problems with CLOB after moving the cursor forward/backwards. The CLOB(s) themselves are roughly 500000+ characters each. 
+
+Sample Code: 
+------------------------------------------------------------------------------------------- 
+import java.sql.Clob; 
+import java.sql.Connection; 
+import java.sql.DriverManager; 
+import java.sql.ResultSet; 
+import java.sql.Statement; 
+
+public class testZ { 
+        private static String dbURL = "jdbc:derby://9.42.11.34:1527/TestDB;create=true;user=test;password=test"; 
+
+        public static void main(String[] args) { 
+                try 
+{ 
+                        Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance(); 
+                        Connection conn = DriverManager.getConnection(dbURL); 
+                        conn.setAutoCommit(false); 
+                        Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY); 
+                        ResultSet rs = stmt.executeQuery("select * from TESTCLOB where EVENTID=30266");	
+                        rs.last(); 
+                        System.out.println(rs.getRow()); 
+                        rs.first(); 
+                        
+                        Clob clob = rs.getClob("GROUPASC"); 
+                        int len = (int) ((java.sql.Clob) clob).length(); 
+                        String clobData = ((java.sql.Clob) clob).getSubString(1, len); 
+                        System.out.println("Clob Data: " + clobData);	
+                }
+ catch (Exception e) 
+{ 
+                        e.printStackTrace(); 
+                } 
+        } 
+} 
+--------------------------------------------------------------------------------------------- 
+
+Notice I am moving the cursor around. I wanted to get the size of the result set prior to getting the Clob data. So I do a rs.last() and rs.getNum() to get the size of the result set. I then move the cursor back to the first row and obtain the Clob data for first row. If I remove the rs.first() statement and get the Clob data of the rs.last() row, it works fine.  It seems as long as I go forward (not backwards), the CLOB data is retrievable. Note from the code, I am using ResultSet.TYPE_SCROLL_SENSITIVE. I have tried TYPE_SCROLL_INSENSITIVE, but with the same problem.  I also tried enabling/disabling the auto commit, also still have this error. For this code, I am getting the following error: 
+
+java.sql.SQLException: You cannot invoke other java.sql.Clob/java.sql.Blob methods after calling the free() method or after the Blob/Clob's transaction has been committed or rolled back. 
+        at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source) 
+        at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source) 
+        at org.apache.derby.client.am.ClientClob.length(Unknown Source) 
+        at testZ.main(testZ.java:25) 
+Caused by: ERROR XJ215: You cannot invoke other java.sql.Clob/java.sql.Blob methods after calling the free() method or after the Blob/Clob's transaction has been committed or rolled back. 
+        at org.apache.derby.client.am.CallableLocatorProcedures.handleInvalidLocator(Unknown Source) 
+        at org.apache.derby.client.am.CallableLocatorProcedures.clobGetLength(Unknown Source) 
+        at org.apache.derby.client.am.ClientClob.getLocatorLength(Unknown Source) 
+        at org.apache.derby.client.am.Lob.sqlLength(Unknown Source) 
+        ... 2 more 
+Caused by: ERROR 38000: The exception 'java.sql.SQLException: The locator that was supplied for this CLOB/BLOB is invalid' was thrown while evaluating an expression. 
+        at org.apache.derby.client.am.ClientStatement.completeExecute(Unknown Source) 
+        at org.apache.derby.client.net.NetStatementReply.parseEXCSQLSTTreply(Unknown Source) 
+        at org.apache.derby.client.net.NetStatementReply.readExecuteCall(Unknown Source) 
+        at org.apache.derby.client.net.StatementReply.readExecuteCall(Unknown Source) 
+        at org.apache.derby.client.net.NetStatement.readExecuteCall_(Unknown Source) 
+        at org.apache.derby.client.am.ClientStatement.readExecuteCall(Unknown Source) 
+        at org.apache.derby.client.am.ClientPreparedStatement.flowExecute(Unknown Source) 
+        at org.apache.derby.client.am.ClientPreparedStatement.executeX(Unknown Source) 
+        ... 5 more 
+Caused by: ERROR XJ217: The locator that was supplied for this CLOB/BLOB is invalid 
+        at org.apache.derby.client.am.SqlException.<init>(Unknown Source) 
+        at org.apache.derby.client.am.SqlException.<init>(Unknown Source) 
+        ... 13 more 
+
+On a related note, when a result set contains a CLOB, when doing a rs.last()/rs.first(), and then calling rs.next(), we get a "Container has been closed." SQL exception. 
+
+Sample class: 
+---------------------------------------------------------------------------------------------- 
+import java.sql.Connection; 
+import java.sql.DriverManager; 
+import java.sql.ResultSet; 
+import java.sql.Statement; 
+
+public class testZ { 
+        private static String dbURL = "jdbc:derby://9.42.11.34:1088/TestDB;create=true;user=test;password=derbypass";     
+        
+        public static void main(String[] args) { 
+                try { 
+                        Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance(); 
+                        Connection conn = DriverManager.getConnection(dbURL); 
+                        
+                        Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY); 
+                        //GROUPASC is column with CLOBS 
+                        ResultSet rs = stmt.executeQuery("select GROUPASC from RE_EVENTGROUPASC where EVENTID=5 OR EVENTID=6"); 
+                        //ResultSet rs = stmt.executeQuery("select EVENTID from RELATEDEVENTS.RE_EVENTGROUPASC where EVENTID=29419 OR EVENTID=29420"); 
+                        
+                        rs.last(); 
+                        rs.first();	
+                        
+                        if (!rs.next()) { 
+                        //exception here	
+                        } 
+                        
+                        rs.close(); 
+                        stmt.close(); 
+                        conn.close(); 
+                } catch (Exception e) { 
+                        e.printStackTrace(); 
+                }
+ 
+        } 
+} 
+---------------------------------------------------------------------------------------------- 
+
+Note there are two queries (one is commented out). The GROUPASC is the column with the CLOB data type. When I call the second one (without the CLOB column), it works fine. Only happens with CLOBs! 
+
+java.sql.SQLTransactionRollbackException: Container has been closed. 
+        at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source) 
+        at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source) 
+        at org.apache.derby.client.am.ClientResultSet.next(Unknown Source) 
+        at testZ.main(testZ.java:23) 
+Caused by: ERROR 40XD0: Container has been closed. 
+        at org.apache.derby.client.am.ClientResultSet.completeSqlca(Unknown Source) 
+        at org.apache.derby.client.net.NetResultSetReply.parseFetchError(Unknown Source) 
+        at org.apache.derby.client.net.NetResultSetReply.parseCNTQRYreply(Unknown Source) 
+        at org.apache.derby.client.net.NetResultSetReply.readScrollableFetch(Unknown Source) 
+        at org.apache.derby.client.net.ResultSetReply.readScrollableFetch(Unknown Source) 
+        at org.apache.derby.client.net.NetResultSet.readScrollableFetch_(Unknown Source) 
+        at org.apache.derby.client.am.ClientResultSet.flowGetRowset(Unknown Source) 
+        at org.apache.derby.client.am.ClientResultSet.getNextRowset(Unknown Source) 
+        at org.apache.derby.client.am.ClientResultSet.nextX(Unknown Source) 
+        ... 2 more 
+
+
+See posting on derby user forums:
+http://apache-database.10148.n7.nabble.com/CLOB-data-errors-after-moving-cursor-around-td142101.html
+
+I tried searching the forums and the existing defects, and couldn't find this issue is already being tracked. Thanks!

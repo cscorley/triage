@@ -1,0 +1,3 @@
+The SpatialStrategy.makeQuery() at the moment uses the distance as the score (although some strategies – TwoDoubles if I recall might not do anything which would be a bug).  The distance is a poor value to use as the score because the score should be related to relevancy, and the distance itself is inversely related to that.  A score of 1/distance would be nice.  Another alternative is earthCircumference/2 - distance, although I like 1/distance better.  Maybe use a different constant than 1.
+
+Credit: this is Chris Male's idea.

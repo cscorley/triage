@@ -1,0 +1,1 @@
+Adds a wexists command and also improves the stdout (type string rather than just the number). Granted wexists is more for testing purposes than strictly necessary (we have exists already) but but still worthwhile to add imo.

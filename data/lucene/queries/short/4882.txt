@@ -1,0 +1,1 @@
+FacetsAccumulator.java:185 throws NullPointerException if it's given an empty CategoryPath.

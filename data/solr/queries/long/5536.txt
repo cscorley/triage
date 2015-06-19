@@ -1,0 +1,32 @@
+It would be useful for the CollapsingQParserPlugin to support ValueSource collapse criteria.
+
+Proposed syntax:
+
+
+
+fq={!collapse field=collapse_field max=value_source}
+
+
+
+This ticket will also introduce a function query called "cscore",  which will return the score of the current document being collapsed. This will allow score to be incorporated into collapse criteria functions.
+
+A simple example of the cscore usage:
+
+
+
+fq={!collapse field=collapse_field max=sum(cscore(), field(x))}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

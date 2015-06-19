@@ -1,0 +1,24 @@
+Reproduce:
+1. Use default Solr example build (with JDK logging)
+2. Run example C on http://wiki.apache.org/solr/SolrCloud
+3. You get Exception:
+   java.lang.NoClassDefFoundError: org/apache/log4j/jmx/HierarchyDynamicMBean
+       at org.apache.zookeeper.jmx.ManagedUtil.registerLog4jMBeans(ManagedUtil.java:51)
+       at org.apache.zookeeper.server.quorum.QuorumPeerMain.runFromConfig(QuorumPeerMain.java:114)
+       at org.apache.solr.cloud.SolrZkServer$1.run(SolrZkServer.java:111)
+
+Probable reason:
+Zookeeper depends on log4j
+
+Quickfix:
+Switch to log4j logging (as you cannot include both log4j bridge and log4j):
+
+	Remove log4j-over-slf4j-1.5.5.jar and slf4j-jdk14-1.5.5.jar
+	Add slf4j-logj12.jar and log4j-1.2.16.jar
+
+
+
+Document the shortcoming in release notes
+
+Long term fix:
+Vote for the resolution of ZOOKEEPER-850 which switches ZK to slf4j logging

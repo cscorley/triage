@@ -1,0 +1,13 @@
+I'm hitting this Jetty issue when running Solr's tests that spawn a Jetty:
+
+    http://jira.codehaus.org/browse/JETTY-331
+
+It seems to be caused by this root cause:
+
+    http://bugs.sun.com/view_bug.do?bug_id=6202721
+
+Whereby, somehow, Jetty is trying to use cryptographically secure source of randomness to seed seed its HashSessionIdManager.  My box doesn't have enough entropy so the read blocks for sometimes 10s of seconds!
+
+If I forcefully symlink /dev/random -> /dev/urandom, that fixes the hang.  Likewise, if I edit the JRE's java.security to  set securerandom.source=file:/dev/./urandom, that also fixes it.  But I think we can workaround this more "generally" by doing the workaround suggested in the Jetty issue (pass java.util.Random not java.security.SecureRandom).
+
+However, it's still not clear how widespread / what evns this issue really affects (besides mine)...

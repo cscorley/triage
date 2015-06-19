@@ -1,0 +1,5 @@
+We have encountered a use case in our system where we have a few fields (Severity. Risk etc) with a closed set of values, where the sort order for these values is pre-determined but not lexicographic (Critical is higher than High). Generically this is very close to how enums work.
+
+To implement, I have prototyped a new type of field: EnumField where the inputs are a closed predefined  set of strings in a special configuration file (similar to currency.xml).
+
+The code is based on 4.2.1.

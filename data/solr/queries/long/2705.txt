@@ -1,0 +1,5 @@
+dug up by Yury Kats in SOLR-2326
+
+The IWP needs to be updated to ref the new core on reload - else if some settings have changed (eg newIndexDir change caused by replication), the IndexWriter will be incorrectly reopened.
+
+This should really only be an issue when replication and core reloads are involved for the most part.

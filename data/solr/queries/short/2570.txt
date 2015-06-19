@@ -1,0 +1,1 @@
+randomize indexwriter settings in solr tests

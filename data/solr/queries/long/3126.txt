@@ -1,0 +1,1 @@
+just more efficient - especially on cluster shutdown/start where the replicas may all be up to date and match anway.

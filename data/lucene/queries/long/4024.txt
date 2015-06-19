@@ -1,0 +1,3 @@
+Edit distance 1 and 2 are now very very fast compared to 3.x (100X-200X faster) ... but edit distance 3 will fallback to the super-slow scan all terms in 3.x, which is not graceful degradation.
+
+Not sure how to fix it ... mabye we have a SlowFuzzyQuery?  And FuzzyQuery throws exc if you try to ask it to be slow?  Or, we add boolean (off by default) that you must turn on to allow slow one..?

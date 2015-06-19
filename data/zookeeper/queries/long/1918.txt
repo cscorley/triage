@@ -1,0 +1,9 @@
+Change this line:
+
+Win32 is supported as a development platform only for both server and client.
+
+to:
+
+Win32 and Win64 are supported as a development platform only for both server and client.
+
+http://zookeeper.apache.org/doc/trunk/zookeeperAdmin.html#sc_supportedPlatforms

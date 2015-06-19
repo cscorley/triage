@@ -1,0 +1,1 @@
+UIMAUpdateRequestProcessor currently holds a reference to a SolrCore but only the core name is used during initialization therefore the core reference should be removed and only the core name should be passed.

@@ -1,0 +1,6 @@
+Bryan reported this issue after the change to print thread dumps on 10.3 with stress.multi when he didn't have jdk16 set.  The build of ThreadDump should not occur if jdk16 is not set.
+
+/home2/bpendleton/src/derby/10_3/10.3/java/testing/build.xml:62: The following error occurred while executing this line:
+/home2/bpendleton/src/derby/10_3/10.3/java/testing/org/apache/derbyTesting/functionTests/util/build.xml:104: Error running $
+{jdk16}
+/bin/javac compiler

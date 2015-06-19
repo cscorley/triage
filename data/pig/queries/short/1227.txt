@@ -1,0 +1,1 @@
+[zebra] Missing column group meta file should not be allowed at query time

@@ -1,0 +1,17 @@
+This PATCH introduces a new query parameter that tells a (typically, but not necessarily) remote server what time to use as 'NOW' when calculating date facets for a query (and, for the moment, date facets only) - overriding the default behaviour of using the local server's current time.
+
+This gets 'round a problem whereby an explicit time range is specified in a query (e.g. timestamp:[then0 TO then1]), and date facets are required for the given time range (in fact, any explicit time range). 
+Because DateMathParser performs all its calculations from 'NOW', remote callers have to work out how long ago 'then0' and 'then1' are from 'now', and use the relative-to-now values in the facet.date.xxx parameters. If a remote server has a different opinion of NOW compared to the caller, the results will be skewed (e.g. they are in a different time-zone, not time-synced etc.).
+This becomes particularly salient when performing distributed date faceting (see SOLR-1709), where multiple shards may all be running with different times, and the faceting needs to be aligned.
+
+The new parameter is called 'facet.date.now', and takes as a parameter a (stringified) long that is the number of milliseconds from the epoch (1 Jan 1970 00:00) - i.e. the returned value from a System.currentTimeMillis() call. This was chosen over a formatted date to delineate it from a 'searchable' time and to avoid superfluous date parsing. This makes the value generally a programatically-set value, but as that is where the use-case is for this type of parameter, this should be ok.
+
+NOTE: This parameter affects date facet timing only. If there are other areas of a query that rely on 'NOW', these will not interpret this value. This is a broader issue about setting a 'query-global' NOW that all parts of query analysis can share.
+
+Source files affected:
+FacetParams.java   (holds the new constant FACET_DATE_NOW)
+SimpleFacets.java  getFacetDateCounts() NOW parameter modified
+
+This PATCH is mildly related to SOLR-1709 (Distributed Date Faceting), but as it's a general change for date faceting, it was deemed deserving of its own patch. I will be updating SOLR-1709 in due course to include the use of this new parameter, after some rfc acceptance.
+
+A possible enhancement to this is to detect facet.date fields, look for and match these fields in queries (if they exist), and potentially determine automatically the required time skew, if any. There are a whole host of reasons why this could be problematic to implement, so an explicit facet.date.now parameter is the safest route.

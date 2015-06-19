@@ -1,0 +1,6 @@
+Pig Docs
+> piglatin_ref2.xml - Update PigStorage function to include information about '/r' delimiter
+
+
+Zebra Docs
+> zebra_pig.xml - Add new section, Sorting Data: Zebra only supports tables sorted in ascending (ASC) order; tables sorted in descending (DESC) order are treated as unsorted tables

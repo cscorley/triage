@@ -1,0 +1,1 @@
+If something like the replication handler gets a directory after the factory has been closed, it may not be closed.

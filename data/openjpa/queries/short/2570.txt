@@ -1,0 +1,1 @@
+Allow an Informix user the option to disable the 'RETAINUPDATELOCKS' SQL.

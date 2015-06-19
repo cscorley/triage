@@ -1,0 +1,1 @@
+Today we have no choice that if pos_inc is > 1 there will be a `_` inserted in between the tokens. We should have the ability to change this character and the char[] that holds it should not be public static since it's mutable.

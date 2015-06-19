@@ -1,0 +1,1 @@
+the "ant rat-sources" target currently only analyzes src/java ... we can do better then this.

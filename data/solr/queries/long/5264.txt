@@ -1,0 +1,3 @@
+In the FieldMutatingUpdateProcessorFactory is a method called "oneOrMany" that takes all of the entries in a NamedList and pulls them out into a Collection.  I'd like to use that in a custom update processor I'm building.
+
+It seems as though this functionality would be right at home as part of NamedList itself.  Here's a patch that moves the method.

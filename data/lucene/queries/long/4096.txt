@@ -1,0 +1,9 @@
+I noticed TestCustomNorms had the checkIndexOnClose disabled, but
+I think this is a real problem.
+
+If someone wants to use e.g. float[] norms, they should be able to run
+CheckIndex.
+
+CheckIndex is fine with validating any norm type, the problem is that it sometimes creates an IndexSearcher and fires off TermQueries for some calculations. This causes it to (wrongly) fail, because DefaultSimilarity expects single byte norms.
+
+I don't think CheckIndex needs to use TermQuery here, we can do this differently so it doesnt use IndexSearcher or TermQuery but just the postings apis.

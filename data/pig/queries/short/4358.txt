@@ -1,0 +1,1 @@
+Add test cases for utf8 chinese in Pig

@@ -1,0 +1,1 @@
+After reloading a core, indexing will fail on any newly added fields to the schema.

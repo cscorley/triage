@@ -1,0 +1,1 @@
+Issuing an atomic update which includes the uniqueKey field itself will cause Solr to insert a second document with the same uniqueKey thereby violating uniqueness. A non-atomic update will "correct" the document. Attached is a JUnit test case that demonstrates the issue against the collection1 core in the standard Solr download.

@@ -1,0 +1,1 @@
+Allow applications using OpenJPA 1.x to run with the JPA 2.0 jar on the classpath

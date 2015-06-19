@@ -1,0 +1,21 @@
+Looking at our forrested site, and trying to think about how we could move our versioned site
+away from it, I think as a first step we should look at what really needs to be there.
+
+I think it easily becomes out of date and we don't have good centralized documentation since
+stuff is split between javadocs and forrest.
+
+Couldn't queryparsersyntax.xml simply be in the overview/package for the queryparser?
+We could just link to that page from the forrest docs menu, then we could link to the syntax from
+other places in the javadocs. 
+Furthermore, in that case we could link to other queryparser impls documentations (e.g. complexphrase)
+so it would probably be more useful.
+
+demo/demo2.xml could just be overview for the demo contrib? currently that one is useless:
+https://builds.apache.org/job/Lucene-trunk/javadoc/demo/index.html
+
+scoring.xml could be added to the package documentation of search or similarities or somewhere that 
+makes more sense? currently its "almost javadocs" already, except harder to validate none of these
+links are actually out of date: my best bet is a ton of them already are!
+
+i'll leave fileformats.xml aside for now, but with many different codec implementations its something
+to think about for later too.

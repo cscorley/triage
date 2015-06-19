@@ -1,0 +1,14 @@
+The docs incorrectly state the max client timeout as 60 seconds.
+http://hadoop.apache.org/zookeeper/docs/r3.0.1/zookeeperProgrammers.html#ch_zkSessions
+
+the current server code has the following logic:
+        if (sessionTimeout < zk.tickTime * 2) 
+{
+            sessionTimeout = zk.tickTime * 2;
+        }
+        if (sessionTimeout > zk.tickTime * 20) 
+{
+            sessionTimeout = zk.tickTime * 20;
+        }
+
+So really the docs should say max is 20*tickTime

@@ -1,0 +1,1 @@
+Pig streaming ship fails for relative paths on Tez

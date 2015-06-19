@@ -1,0 +1,1 @@
+PigContext.connect() currently connects to the jobtracker and creates a JobClient - this causes issue in POMergeJoin/POFRJoin wherein these connections to the jobtracker are made from each map task. The creation of the JobClient is not necessary in PigContext.connect() and a JobClient should be created on demand where it is needed instead.

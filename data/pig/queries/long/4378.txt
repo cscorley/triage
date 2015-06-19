@@ -1,0 +1,1 @@
+As discussed in TEZ-1928, it's better to fix tez local mode hanging by setting "tez.am.dag.scheduler.class" in general rather than setting "tez.am.inline.task.execution.max-tasks" only in tests.

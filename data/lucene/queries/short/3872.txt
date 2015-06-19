@@ -1,0 +1,1 @@
+Index changes are lost if you call prepareCommit() then close()

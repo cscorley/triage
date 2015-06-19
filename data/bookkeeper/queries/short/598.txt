@@ -1,0 +1,1 @@
+Fails to compile - RESUBSCRIBE_EXCEPTION conflict

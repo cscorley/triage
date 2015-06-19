@@ -1,0 +1,15 @@
+We should rename the class and also fix some bugs:
+
+	Class/ClassLoader.getResourceAsStream() returns null when resource not found (which is a Java bug in my opinion) and does not throw IOException. SolrResourceLoader throws IOException, the Lucene "example" one should do the same. This prevents NPEs everywhere.
+
+
+
+Improvements:
+
+	Add no-arg CTOR that uses context class loader instead a given class. This is more what users want. Resource names must then include package name, of course.
+
+
+
+We should also provide a second implementation that allows resource names to be full filesystem paths. I think for loading the resources like custom word list, this is the most wanted implementation. Loading of classes would be delegated to ClassLoader (of course).
+
+I dont like ResourceLoader also supplying newInstance(), can we remove this for analysis?

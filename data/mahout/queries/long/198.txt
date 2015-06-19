@@ -1,0 +1,3 @@
+This patch cleans up the poms to not do install.  It removes the core/lib directory.  I have published the necessary artifacts to our Mahout Maven repo already, so they should be publicly available.
+
+See http://cwiki.apache.org/confluence/display/MAHOUT/ThirdPartyDependencies and http://www.lucidimagination.com/search/document/6f026182150f0f50/dependencies_outside_maven_central_was_oh_joy

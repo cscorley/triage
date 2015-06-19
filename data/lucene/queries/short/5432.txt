@@ -1,0 +1,1 @@
+EliasFanoEncoder number of index entry bits is off by 1 for powers of 2 of max index entry

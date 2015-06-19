@@ -1,0 +1,1 @@
+Fix hanging threads on FreeBSD in JettySolrRunner by making connector configureable through sysprop

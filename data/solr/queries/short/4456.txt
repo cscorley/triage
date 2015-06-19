@@ -1,0 +1,1 @@
+Admin UI: Displays dashboard even if Solr is down

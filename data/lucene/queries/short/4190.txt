@@ -1,0 +1,1 @@
+IndexWriter deletes non-Lucene files

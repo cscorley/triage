@@ -1,0 +1,1 @@
+Solr::Response::Base.make_response raises misleading exception when response class exists but raises an exception on creation

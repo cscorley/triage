@@ -1,0 +1,1 @@
+It looks like this started with either the recent distrib commit fix or the fix to wait to reconnect to zk forever, not 30 seconds. If that turns out to be the case, this is probably exposing an existing issue rather than anything new.

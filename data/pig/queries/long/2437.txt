@@ -1,0 +1,1 @@
+Is there a reason we have automaton.jar checked in svn rather than use Ivy to download it like all the other dependencies?

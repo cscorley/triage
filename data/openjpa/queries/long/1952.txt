@@ -1,0 +1,3 @@
+The TestQueryMultithreaded testcase for Slice will occasionally hang during a build. The problem appears more frequently with multi-core CPUs and with the Hudson builds which deploy to the Apache Snapshot repository.
+
+In any event the testcase cannot be reliably executed - with a likely root cause being in the openjpa.Multithreaded configuration option. 

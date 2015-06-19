@@ -1,0 +1,1 @@
+PigCombiner.sJobContext and PhysicalOperator.reporter hold references to the WrappedReducer$Context which in turn holds TezOutputContextImpl which holds references to the buffers in DefaultSorter. This was causing OOM after the container was reused 2 or 3 times. Debugged this with L17.pig in pigmix. 

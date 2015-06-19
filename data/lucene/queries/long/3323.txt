@@ -1,0 +1,8 @@
+TestJmxIntegration.testJmxOnCoreReload(), a new test committed as part of SOLR-2623, fails on both trunk and branch_3x.
+
+Example output:
+
+
+java.lang.RuntimeException: Can't find resource 'solrconfig.xml' in classpath or 'solr/solr/conf/', cwd=/usr/home/hudson/hudson-slave/workspace/Lucene-Solr-Maven-3.x/checkout/solr/build/solr-maven/classes/test
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:268)
+        ...

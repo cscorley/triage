@@ -1,0 +1,23 @@
+There have been a few failures on jenkins.
+
+
+
+3 tests failed.
+REGRESSION:  org.apache.solr.handler.TestReplicationHandler.doTestReplicateAfterCoreReload
+
+Error Message:
+expected:<[{indexVersion=1406477990053,generation=2,filelist=[_bta.fdt, _bta.fdx, _bta.fnm, _bta.si, _bta_Lucene41_0.doc, _bta_Lucene41_0.tim, _bta_Lucene41_0.tip, _bta_nrm.cfe, _bta_nrm.cfs, _nik.cfe, _nik.cfs, _nik.si, _yok.cfe, _yok.cfs, _yok.si, _yp3.cfe, _yp3.cfs, _yp3.si, _yp4.cfe, _yp4.cfs, _yp4.si, _yp5.cfe, _yp5.cfs, _yp5.si, _yp6.cfe, _yp6.cfs, _yp6.si, _yp7.cfe, _yp7.cfs, _yp7.si, _yp8.cfe, _yp8.cfs, _yp8.si, _yp9.cfe, _yp9.cfs, _yp9.si, _ypa.cfe, _ypa.cfs, _ypa.si, _ypu.cfe, _ypu.cfs, _ypu.si, _ypv.cfe, _ypv.cfs, _ypv.si, _ypw.cfe, _ypw.cfs, _ypw.si, _ypx.cfe, _ypx.cfs, _ypx.si, _ypy.cfe, _ypy.cfs, _ypy.si, segments_2]}]> but was:<[{indexVersion=1406477990053,generation=2,filelist=[_bta.fdt, _bta.fdx, _bta.fnm, _bta.si, _bta_Lucene41_0.doc, _bta_Lucene41_0.tim, _bta_Lucene41_0.tip, _bta_nrm.cfe, _bta_nrm.cfs, _nik.cfe, _nik.cfs, _nik.si, _yok.cfe, _yok.cfs, _yok.si, _yp3.cfe, _yp3.cfs, _yp3.si, _yp4.cfe, _yp4.cfs, _yp4.si, _yp5.cfe, _yp5.cfs, _yp5.si, _yp6.cfe, _yp6.cfs, _yp6.si, _yp7.cfe, _yp7.cfs, _yp7.si, _yp8.cfe, _yp8.cfs, _yp8.si, _yp9.cfe, _yp9.cfs, _yp9.si, _ypa.cfe, _ypa.cfs, _ypa.si, _ypu.cfe, _ypu.cfs, _ypu.si, _ypv.cfe, _ypv.cfs, _ypv.si, _ypw.cfe, _ypw.cfs, _ypw.si, _ypx.cfe, _ypx.cfs, _ypx.si, _ypy.cfe, _ypy.cfs, _ypy.si, segments_2]}, {indexVersion=1406477990053,generation=3,filelist=[_bta.fdt, _bta.fdx, _bta.fnm, _bta.si, _bta_Lucene41_0.doc, _bta_Lucene41_0.tim, _bta_Lucene41_0.tip, _bta_nrm.cfe, _bta_nrm.cfs, _nik.cfe, _nik.cfs, _nik.si, _ypc.cfe, _ypc.cfs, _ypc.si, _ypu.cfe, _ypu.cfs, _ypu.si, _ypv.cfe, _ypv.cfs, _ypv.si, _ypw.cfe, _ypw.cfs, _ypw.si, _ypx.cfe, _ypx.cfs, _ypx.si, _ypy.cfe, _ypy.cfs, _ypy.si, segments_3]}]>
+
+Stack Trace:
+java.lang.AssertionError: expected:<[{indexVersion=1406477990053,generation=2,filelist=[_bta.fdt, _bta.fdx, _bta.fnm, _bta.si, _bta_Lucene41_0.doc, _bta_Lucene41_0.tim, _bta_Lucene41_0.tip, _bta_nrm.cfe, _bta_nrm.cfs, _nik.cfe, _nik.cfs, _nik.si, _yok.cfe, _yok.cfs, _yok.si, _yp3.cfe, _yp3.cfs, _yp3.si, _yp4.cfe, _yp4.cfs, _yp4.si, _yp5.cfe, _yp5.cfs, _yp5.si, _yp6.cfe, _yp6.cfs, _yp6.si, _yp7.cfe, _yp7.cfs, _yp7.si, _yp8.cfe, _yp8.cfs, _yp8.si, _yp9.cfe, _yp9.cfs, _yp9.si, _ypa.cfe, _ypa.cfs, _ypa.si, _ypu.cfe, _ypu.cfs, _ypu.si, _ypv.cfe, _ypv.cfs, _ypv.si, _ypw.cfe, _ypw.cfs, _ypw.si, _ypx.cfe, _ypx.cfs, _ypx.si, _ypy.cfe, _ypy.cfs, _ypy.si, segments_2]}]> but was:<[{indexVersion=1406477990053,generation=2,filelist=[_bta.fdt, _bta.fdx, _bta.fnm, _bta.si, _bta_Lucene41_0.doc, _bta_Lucene41_0.tim, _bta_Lucene41_0.tip, _bta_nrm.cfe, _bta_nrm.cfs, _nik.cfe, _nik.cfs, _nik.si, _yok.cfe, _yok.cfs, _yok.si, _yp3.cfe, _yp3.cfs, _yp3.si, _yp4.cfe, _yp4.cfs, _yp4.si, _yp5.cfe, _yp5.cfs, _yp5.si, _yp6.cfe, _yp6.cfs, _yp6.si, _yp7.cfe, _yp7.cfs, _yp7.si, _yp8.cfe, _yp8.cfs, _yp8.si, _yp9.cfe, _yp9.cfs, _yp9.si, _ypa.cfe, _ypa.cfs, _ypa.si, _ypu.cfe, _ypu.cfs, _ypu.si, _ypv.cfe, _ypv.cfs, _ypv.si, _ypw.cfe, _ypw.cfs, _ypw.si, _ypx.cfe, _ypx.cfs, _ypx.si, _ypy.cfe, _ypy.cfs, _ypy.si, segments_2]}, {indexVersion=1406477990053,generation=3,filelist=[_bta.fdt, _bta.fdx, _bta.fnm, _bta.si, _bta_Lucene41_0.doc, _bta_Lucene41_0.tim, _bta_Lucene41_0.tip, _bta_nrm.cfe, _bta_nrm.cfs, _nik.cfe, _nik.cfs, _nik.si, _ypc.cfe, _ypc.cfs, _ypc.si, _ypu.cfe, _ypu.cfs, _ypu.si, _ypv.cfe, _ypv.cfs, _ypv.si, _ypw.cfe, _ypw.cfs, _ypw.si, _ypx.cfe, _ypx.cfs, _ypx.si, _ypy.cfe, _ypy.cfs, _ypy.si, segments_3]}]>
+        at __randomizedtesting.SeedInfo.seed([E4FFCDCA8EC968BC:C128D6FAFE8166BF]:0)
+        at org.junit.Assert.fail(Assert.java:93)
+        at org.junit.Assert.failNotEquals(Assert.java:647)
+        at org.junit.Assert.assertEquals(Assert.java:128)
+        at org.junit.Assert.assertEquals(Assert.java:147)
+        at org.apache.solr.handler.TestReplicationHandler.doTestReplicateAfterCoreReload(TestReplicationHandler.java:1190)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+
+
+https://builds.apache.org/job/Lucene-Solr-NightlyTests-4.x/585/

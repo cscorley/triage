@@ -1,0 +1,1 @@
+Run store locking  tests with network server and investigate locking behaviour

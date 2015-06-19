@@ -1,0 +1,1 @@
+If the NRT reader hasn't changed then IndexReader.openIfChanged should return null

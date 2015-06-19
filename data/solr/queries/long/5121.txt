@@ -1,0 +1,9 @@
+After the patch for SOLR-4972 was introduced, the usage for zkcli.sh -cmd makepath changed to
+
+zkcli.sh -zkhost localhost:9983 -cmd makepath /apache/solr/data.txt 'config data'
+
+Yet that is not what the command expects, it expects just a single path to create, no data can be supplied.
+
+"put" is the new way to create an actual file in ZK.
+
+Am assuming makepath should have stayed as it was (so command is correct, but usage is wrong), alternatively usage might be right and makepath could be a superset of PUT (but that seems unlikely)

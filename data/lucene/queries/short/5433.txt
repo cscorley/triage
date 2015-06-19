@@ -1,0 +1,1 @@
+Double boosting in BooleanQuery.rewrite

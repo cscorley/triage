@@ -1,0 +1,21 @@
+Setup e2e tests for pig on spark like that pig on map-reduce and pig on tez.
+
+Steps to setup e2e tests:
+
+1. Initialize Variables
+export HADOOP_HOME=/path/to/hadoop
+export HADOOP_CONF_DIR=$HADOOP_HOME/conf
+export HADOOP_BIN=$HADOOP_HOME/bin/hadoop
+
+2. Generate Data
+ant -Dharness.cluster.conf=$HADOOP_CONF_DIR -Dharness.cluster.bin=$HADOOP_BIN -Dharness.hadoop.home=$HADOOP_HOME test-e2e-deploy-local
+(You might want to install necessary cpan modules incase of any dependency errors https://cwiki.apache.org/confluence/display/PIG/HowToTest#HowToTest-End-to-endTesting)
+
+3. Copy data to hdfs to use with Spark
+hadoop fs -put test/e2e/pig/testdist/data ./
+
+4. Run particular test
+ant -Dharness.cluster.conf=$HADOOP_CONF_DIR -Dharness.cluster.bin=$HADOOP_BIN -Dharness.hadoop.home=$HADOOP_HOME -Dtests.to.run="-t Checkin_1" test-e2e-spark
+
+5. Run all tests
+ant -Dharness.cluster.conf=$HADOOP_CONF_DIR -Dharness.cluster.bin=$HADOOP_BIN -Dharness.hadoop.home=$HADOOP_HOME test-e2e-spark

@@ -1,0 +1,1 @@
+Replication should log when index is stale

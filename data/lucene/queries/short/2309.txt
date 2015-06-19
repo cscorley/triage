@@ -1,0 +1,1 @@
+Fully decouple IndexWriter from analyzers

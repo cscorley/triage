@@ -1,0 +1,1 @@
+If index has more than Integer.MAX_VALUE terms, seeking can it AIOOBE due to long/int overflow

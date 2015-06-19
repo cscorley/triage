@@ -1,0 +1,1 @@
+I noticed many typos have crept into the example app's Solrconfig.xml.  I will attach a patch.

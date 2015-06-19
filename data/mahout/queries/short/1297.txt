@@ -1,0 +1,1 @@
+New module for linear algebra scala DSL (in-core operators support only to start with)

@@ -1,0 +1,28 @@
+Diff the outputs between ant 1.8.2 and ant 1.7.1.
+
+Target         Windows   Ubuntu    Mac   Jenkins
+------------------------------------------------
+/
+  ivy-bootstrap  OK        OK      OK       ?
+  jar-checksums  OK        OK      OK       ?
+  validate       OK        OK      OK       ?
+  test           OK        OK      OK      OK
+lucene/
+  prepare-relea* OK        OK      OK       ?
+solr/
+  prepare-relea* OK        OK      OK       ?
+
+
+
+Check consistency with release instructions: http://wiki.apache.org/lucene-java/ReleaseTodo and http://wiki.apache.org/solr/HowToRelease
+
+Differences log:
+
+	ant 1.8.x creates empty package-info.class where ant 1.7.x would fail to do so. This is documented at http://ant.apache.org/manual/Tasks/javac.html and is the expected behavior.
+	manifest timestamps are slightly different (Created-By - jvm version is formatted differently, I think more human-friendly in 1.8).
+
+1.7: Created-By: 22.1-b02 (Oracle Corporation)
+1.8: Created-By: 1.7.0_03-b05 (Oracle Corporation)
+
+
+

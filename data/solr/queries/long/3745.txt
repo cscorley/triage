@@ -1,0 +1,1 @@
+Basic SolrCloud consistency requires there to be a version field in the schema.xml, but nothing currently enforces this.  We need a clear and straight forward error in this case so users attempting to upgrade from existing single node Solr setups to multinode SolrCloud setups know they need to modify their configs.

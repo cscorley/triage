@@ -1,0 +1,1 @@
+Deprecate scripts in frameworks directory

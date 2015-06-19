@@ -1,0 +1,1 @@
+When a core is registering in ZooKeeper it may not wait long enough to find the leader due to how long the potential leader waits to see replicas.

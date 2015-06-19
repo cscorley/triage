@@ -1,0 +1,1 @@
+In MAHOUT-798, build-asf-email.sh was added and it checks to see if certains tasks are already done in order to skip costly calculations.  The problem is, the checking is not HDFS aware, so in a Hadoop cluster, it repeats some unnecessary tasks (such as conversion to vectors)

@@ -1,0 +1,1 @@
+along the lines of LUCENE-2239, we cannot use interrupt unfortunetly.

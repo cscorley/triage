@@ -1,0 +1,1 @@
+IndexWriterConfig has setFlushPolicy but the class is package private

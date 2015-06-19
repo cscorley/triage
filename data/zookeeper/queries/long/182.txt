@@ -1,0 +1,7 @@
+Please, add this test to src/c/tests/TestZookeeperInit.cc to reproduce this:
+
+    void testEmptyAddressString()
+    {
+        zh=zookeeper_init("",0,0,0,0,0);
+        CPPUNIT_ASSERT(zh==0);
+    }

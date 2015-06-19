@@ -1,0 +1,20 @@
+Here is the exception I get:
+
+java.lang.NullPointerException
+	at java.lang.String.compareTo(String.java:1167)
+	at java.lang.String.compareTo(String.java:92)
+	at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POMergeJoin.getNextTuple(POMergeJoin.java:489)
+	at org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator.processInput(PhysicalOperator.java:300)
+	at org.apache.pig.backend.hadoop.executionengine.tez.POStoreTez.getNextTuple(POStoreTez.java:90)
+	at org.apache.pig.backend.hadoop.executionengine.tez.PigProcessor.runPipeline(PigProcessor.java:231)
+	at org.apache.pig.backend.hadoop.executionengine.tez.PigProcessor.run(PigProcessor.java:155)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:307)
+	at org.apache.hadoop.mapred.YarnTezDagChild$5.run(YarnTezDagChild.java:562)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:394)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1495)
+	at org.apache.hadoop.mapred.YarnTezDagChild.main(YarnTezDagChild.java:551)
+
+The problem is after exhausted all the records, we return a STATUS_NULL and keep the pipeline running, and eventually result a NPE.
+
+The patch fix the issue by outputing EOP when everything is done in POMergeJoin. Previously we did wrong, however, test do pass before PIG-3568 (didn't spend time to figure out why). 

@@ -1,0 +1,1 @@
+Remove FST.Builder.FreezeTail interface

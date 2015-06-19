@@ -1,0 +1,1 @@
+PigStorage fails parsing empty map.

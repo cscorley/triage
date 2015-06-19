@@ -1,0 +1,8 @@
+Here is a list of tests covered:
+TestAutoLocalMode
+TestEvalPipelineLocal
+TestFetch
+TestPigRunner
+TestPigServerWithMacros
+
+I separate TestPigServerWithMacros into TestPigServerWithMacros and TestPigServerWithMacrosRemote due to TEZ-1802.

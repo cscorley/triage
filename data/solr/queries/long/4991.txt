@@ -1,0 +1,5 @@
+QParserPlugins currently cannot be seen externally as official plugins*.  Let's register them as SolrInfoMBeans so they can be seen remotely.
+
+
+	Yes, solrconfig.xml itself could be retrieved and parsed, but many other similar plugins are available as MBeans and so should be query parsers.
+

@@ -1,0 +1,1 @@
+TestIndexAndConfigAliasReplication commonly fails because it tries to get a lock for a locked index.

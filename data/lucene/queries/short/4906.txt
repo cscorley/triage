@@ -1,0 +1,1 @@
+PostingsHighlighter's PassageFormatter should allow for rendering to arbitrary objects

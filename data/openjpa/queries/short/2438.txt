@@ -1,0 +1,1 @@
+EmbedFieldStrategy.containsEmbeddedResult() optimization fails under certain native sql query conditions

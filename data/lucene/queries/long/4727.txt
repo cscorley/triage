@@ -1,0 +1,1 @@
+Currently common terms query accepts an integer as minimumNumShouldMatch which is kind of odd since the number of low freq terms is determined during rewrite. We should make this extendable and use a float by default that works similar to the cutoff frequency we use where a range between [0..1) means a fraction of the actual count and a num >= 1.0 an absolute value.

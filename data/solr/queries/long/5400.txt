@@ -1,0 +1,35 @@
+I want write tests for some of our own components which internally use a SolrCore. As SolrCore is defined final, I cannot mock it and instead have to create an instance of it. Therefore I came across the following constructor:
+
+public SolrCore(String name, CoreDescriptor cd) {
+    this.setName(name);
+    coreDescriptor = cd;
+    this.schema = null;
+    this.dataDir = null;
+    this.solrConfig = null;
+    this.startTime = System.currentTimeMillis();
+    this.maxWarmingSearchers = 2;  // we don't have a config yet, just pick a number.
+    this.resourceLoader = null;
+    this.updateHandler = null;
+    this.isReloaded = true;
+    this.reqHandlers = null;
+    this.searchComponents = null;
+    this.updateProcessorChains = null;
+    this.infoRegistry = null;
+    this.codec = null;
+
+    solrCoreState = null;
+}
+
+
+
+When calling this constructor there will always be a NullPointerException, because of the call of setName(...) before coreDescriptor is set. In setName this.coreDescriptor (which was not yet set) is being used:
+
+
+public void setName(String v) {
+    this.name = v;
+    this.logid = (v==null)?"":("["+v+"] ");
+    this.coreDescriptor = new CoreDescriptor(v, this.coreDescriptor);
+}
+
+
+The fix probably is to set the coreDesciptor first and then call setName.

@@ -1,0 +1,34 @@
+If you try to create an index on a column which defines a unique constraint, the index is not created. That's fine. But you get a misleading warning suggesting that the index was created. We should correct the warning text so that it says that an index was not created. We should also consider making this situation an error, not a warning.
+
+This issue is probably related to DERBY-655 and DERBY-1343.
+
+Here is a script which shows this problem:
+
+ij version 10.11
+ij> connect 'jdbc:derby:memory:db;create=true';
+ij> create table t( a int unique, b int );
+0 rows inserted/updated/deleted
+ij> – raises a warning suggesting that a new index has been created
+create index t_1 on t( a );
+0 rows inserted/updated/deleted
+WARNING 01504: The new index is a duplicate of an existing index: SQL130618085719940.
+ij> – only the heap and the constraint exist
+select isIndex, conglomerateName, conglomerateID from sys.sysconglomerates c, sys.systables t
+where t.tableid = c.tableid and t.tablename = 'T';
+ISIN&|CONGLOMERATENAME                                                                                                                |CONGLOMERATEID                      
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+false|45b300a8-013f-5801-226b-000003b53310                                                                                            |0ddd00a9-013f-5801-226b-000003b53310
+true |SQL130618085719940                                                                                                              |f55fc0a6-013f-5801-226b-000003b53310
+
+2 rows selected
+ij> – fails because a new index wasn't really created
+drop index t_1;
+ERROR 42X65: Index 'T_1' does not exist.
+ij> select isIndex, conglomerateName, conglomerateID from sys.sysconglomerates c, sys.systables t
+where t.tableid = c.tableid and t.tablename = 'T';
+ISIN&|CONGLOMERATENAME                                                                                                                |CONGLOMERATEID                      
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+false|45b300a8-013f-5801-226b-000003b53310                                                                                            |0ddd00a9-013f-5801-226b-000003b53310
+true |SQL130618085719940                                                                                                              |f55fc0a6-013f-5801-226b-000003b53310
+
+2 rows selected

@@ -1,0 +1,1 @@
+Build artifact openjpa-project\target\site\downloads\apache-openjpa-2..-SNAPSHOT-binary.zip is missing depending lib\asm-3.2.jar, which was introduced in OPENJPA-2085.

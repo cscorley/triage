@@ -1,0 +1,3 @@
+Currently this is hardcoded to a space. But in some situations for a multi-valued field (e.g. authors field), its convenient to treat each value discretely. See LUCENE-2603 for example.
+
+So for such a field its nice if you can override and specify something else like U+2029 PARAGRAPH SEPARATOR.

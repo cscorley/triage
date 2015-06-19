@@ -1,0 +1,1 @@
+EmbedConnection.getContextManager() is a public method. Exposing internals like the ContextManager is a security risk.

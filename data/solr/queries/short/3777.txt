@@ -1,0 +1,1 @@
+dataimporthandler interface does not send 'false' for unchecked checkboxes.  Index is 'clean'ed every time

@@ -1,0 +1,1 @@
+LUCENE-5189 was a great move toward. I wish to continue. The reason for having this feature is to have "join-index" - to write children docnums into parent's binaryDV. I can try to proceed the implementation, but I'm not so experienced in such deep Lucene internals. Shai Erera, any hint to begin with is much appreciated. 

@@ -1,0 +1,1 @@
+When registering as the leader, if an existing ephemeral registration exists, wait a short time to see if it goes away.

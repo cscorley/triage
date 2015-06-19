@@ -1,0 +1,1 @@
+UIMA UpdateRequestProcessor is sometimes too verbose, also it'd be better to use log.method(String,Object[]) instead of log.method(String) with a dynamically built String.

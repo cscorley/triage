@@ -1,0 +1,42 @@
+) 
+testclientij(org.apache.derbyTesting.functionTests.tests.derbyne
+t.NetIjTest)j
+unit.framework.ComparisonFailure: Output at line 1 
+expected:<ij version 10.3> bu
+t was:<@?????@??K?^U??n@``>
+        at 
+org.apache.derbyTesting.functionTests.util.CanonTestCase.compare
+Canon
+(CanonTestCase.java:100)
+        at 
+org.apache.derbyTesting.functionTests.util.IjTestCase.runTest(Ij
+TestC
+ase.java:114)
+        at 
+org.apache.derbyTesting.junit.BaseTestCase.runBare(BaseTestCase.
+java:
+88)
+        at 
+junit.extensions.TestDecorator.basicRun(TestDecorator.java:22)
+        at 
+junit.extensions.TestSetup$1.protect(TestSetup.java:19)
+        at junit.extensions.TestSetup.run(TestSetup.java:23)
+        at 
+org.apache.derbyTesting.junit.BaseTestSetup.run(BaseTestSetup.ja
+va:57
+)
+        at 
+junit.extensions.TestDecorator.basicRun(TestDecorator.java:22)
+        at 
+junit.extensions.TestSetup$1.protect(TestSetup.java:19)
+        at junit.extensions.TestSetup.run(TestSetup.java:23)
+        at 
+junit.extensions.TestDecorator.basicRun(TestDecorator.java:22)
+        at 
+junit.extensions.TestSetup$1.protect(TestSetup.java:19)
+        at junit.extensions.TestSetup.run(TestSetup.java:23)
+
+I can reproduce on Windows by running with Sun jdk 1.5 or 1.6 and using 
+-Dfile.encoding="UTF-16"
+
+The same test passes on trunk.  

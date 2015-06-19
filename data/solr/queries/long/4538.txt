@@ -1,0 +1,39 @@
+When using the "lucene" QParser, term queries on date fields cause the field value portion of the query clause to be truncated at 32 characters. This can cause visible errors about invalid date math expressions, or may result in silently returning incorrect results if the truncation results in a valid (but incomplete) date math expression.
+
+For example...
+
+
+Example...
+
+last_modified:"2013-03-08T00:46:15Z/DAY+6MONTHS+3DAYS"
+...truncates to...
+last_modified:"2013-03-08T00:46:15Z/DAY+6MONTHS"
+(silently incorrect)
+
+foo_tdt:"2013-03-10T08:00:00.1Z/MINUTE+6MONTHS"
+...truncates to...
+foo_tdt:2013-03-10T08:00:00.1Z/MINUTE+6M
+("Invalid Date Math String" error msg)
+
+
+
+This problem does not affect range queries, or queries using either the term or field qparsers...
+
+
+Examples that work fine even though the math is longer then 32 chars...
+
+foo_tdt:[2013-03-10T08:00:00.1Z/MINUTE+6MONTHS TO 2013-03-10T08:00:00.1Z/MINUTE+6MONTHS]
+
+{!term f=bday}1976-07-04T12:08:56.45Z/SECOND+235MILLIS
+foo_tdt:"2013-03-10T08:00:00.1Z/MINUTE+6MONTHS"
+
+
+
+Original problem report
+DateMathParser doesn't work correctly.
+http://lucene.apache.org/solr/4_1_0/solr-core/org/apache/solr/util/DateMathParser.html
+
+fq=last_modified:"2013-03-08T00:46:15Z/DAY+6MONTHS+3DAYS"
+
+expected; last_modified:2013-09-11T00:00:00Z
+actual; last_modified:2013-09-08T00:00:00Z

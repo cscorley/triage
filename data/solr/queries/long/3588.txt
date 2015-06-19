@@ -1,0 +1,5 @@
+It would be nice to enable the data import handler to connect to a AMQP queue and pull messages for importing into Solr.
+
+The queue name, exchange name, host, and message delivery timeout should be configurable via the data config file.
+
+Since a queue message can be of any type, for the initial release, the data source should expect JSON.

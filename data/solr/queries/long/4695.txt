@@ -1,0 +1,3 @@
+The core admin SPLIT action assumes that the core being split is zookeeper aware. It will throw a NPE if invoked against a non-cloud solr setup.
+
+It should be fixed to work with non-cloud setups and documents in such an index should be distributed alternately into sub-indexes instead of using hashes.

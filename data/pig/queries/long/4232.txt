@@ -1,0 +1,1 @@
+UDFContext is used in lot of features across pig code base. For example its used in PigStorage to pass columns information between the frontend and the backend code. https://github.com/apache/pig/blob/spark/src/org/apache/pig/builtin/PigStorage.java#L246-L247

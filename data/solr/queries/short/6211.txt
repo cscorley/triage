@@ -1,0 +1,1 @@
+TrieDateField doesn't default to omitNorms=true

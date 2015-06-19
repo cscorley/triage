@@ -1,0 +1,1 @@
+Make Scorer.freq() well defined: number of matches in doc

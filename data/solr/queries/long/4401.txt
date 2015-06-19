@@ -1,0 +1,1 @@
+As part of SOLR-4196, I created a stress test proces for rapidly opening and closing cores. It'd probably be useful to make this into a junit test that ran nightly (it needs some time in order to show anything, as in minutes). Typical failures are 20 minutes into the run, but occasionally they're faster.

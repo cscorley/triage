@@ -1,0 +1,1 @@
+I think we should harden the overseer loops a bit so that they try and push forward for most exceptions. I've seen an Overseer loop stop when it should not have and there was little evidence as to why.

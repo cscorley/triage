@@ -1,0 +1,3 @@
+In a multisharded node environment we were seeing forward-to-leader hops when using CloudSolrServer directUpdate (with the hop being on the same node) . Consequently, there was no improvement in indexing performance over non-directUpdate. 
+
+Changing buildUrlMap to use getCoreUrl eliminated the extra hop and now we see a dramatic improvement in performance.

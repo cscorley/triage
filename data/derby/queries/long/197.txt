@@ -1,0 +1,53 @@
+In the section 3.2, step 2, where the user is instructed to add the j14lib and j13lib properties to the ant.properties file, it would be worth reminding the user that on windows, the file seperators need to be escaped.  This is something most windows users will know, but it can be easily forgotten, especially when in other parts of the instructions you don't need to escape paths (e.g. when setting the path).
+
+For example, the following works:
+
+j14lib=C:\\j2sdk1.4.2_06\\jrelib
+j13lib=C:\\jdk1.3.1_14\\jrelib
+
+The following doesn't:
+
+j14lib=C:\j2sdk1.4.2_06\jre\lib
+j13lib=C:\jdk1.3.1_14\jre\lib
+
+and causes the following errors:
+
+compile_reference:
+    [javac] Compiling 9 source files to D:\OpenSourceJava\derby_trunk\trunk\classes
+
+    [javac] Found 2 system errors:
+
+    [javac] *** Error: Could not find package "java/util" in:
+    [javac]                 D:\OpenSourceJava\derby_trunk\trunk\tools\java\tools\java\empty.jar
+    [javac]                 C:\j2sdk1.4.2_06\jre\lib\ext\dnsns.jar
+    [javac]                 C:\j2sdk1.4.2_06\jre\lib\ext\ldapsec.jar
+    [javac]                 C:\j2sdk1.4.2_06\jre\lib\ext\localedata.jar
+    [javac]                 C:\j2sdk1.4.2_06\jre\lib\ext\sunjce_provider.jar
+    [javac]                 D:\OpenSourceJava\derby_trunk\trunk\classes
+    [javac]                 D:\OpenSourceJava\derby_trunk\trunk\tools\java\jdbc2_0-stdext.jar
+    [javac]                 D:\OpenSourceJava\derby_trunk\trunk\java\engine
+    [javac]                 .
+
+
+
+    [javac] *** Error: Could not find package "java/lang" in:
+    [javac]                 D:\OpenSourceJava\derby_trunk\trunk\tools\java\tools\java\empty.jar
+    [javac]                 C:\j2sdk1.4.2_06\jre\lib\ext\dnsns.jar
+    [javac]                 C:\j2sdk1.4.2_06\jre\lib\ext\ldapsec.jar
+    [javac]                 C:\j2sdk1.4.2_06\jre\lib\ext\localedata.jar
+    [javac]                 C:\j2sdk1.4.2_06\jre\lib\ext\sunjce_provider.jar
+    [javac]                 D:\OpenSourceJava\derby_trunk\trunk\classes
+    [javac]                 D:\OpenSourceJava\derby_trunk\trunk\tools\java\jdbc2_0-stdext.jar
+    [javac]                 D:\OpenSourceJava\derby_trunk\trunk\java\engine
+    [javac]                 .
+
+
+
+
+BUILD FAILED
+D:\OpenSourceJava\derby_trunk\trunk\build.xml:256: Following error occured while executing this line
+D:\OpenSourceJava\derby_trunk\trunk\java\engine\build.xml:57: Following error occured while executing this line
+D:\OpenSourceJava\derby_trunk\trunk\java\engine\org\apache\derby\iapi\reference\build.xml:32: Compile failed; see the compiler error
+ output for details.
+
+Total time: 3 seconds

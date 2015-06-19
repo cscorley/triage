@@ -1,0 +1,3 @@
+The Solr-specific jdk1.5-compiled version of the carrot2-core jar (in solr/contrib/clustering/lib/) was not part of the 3.4.0 release - there should be a 3.4.0/ directory here but there is not: http://repo1.maven.org/maven2/org/apache/solr/solr-carrot2-core/.  This artifact was part of the 3.3.0 release.  The build system changes under SOLR-2452 are the cause.
+
+Dawid Weiss indicated on SOLR-2428 that this Solr-specific jdk1.5-compiled artifact will continue to be required for the remainder of the 3.X release line.

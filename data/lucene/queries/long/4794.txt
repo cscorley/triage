@@ -1,0 +1,3 @@
+In the process of implementing algorithms on the SpatialPrefixTree indexed field like "Within" or some variations of Intersects that say collect the distance as side-effect, I find that I need near-copies of the code in RecursivePrefixTreeFilter.  RPTF is pretty intense with lots of optimizations.  So I refactored out the algorithm such that it makes implementing new algorithms much easier yet benefits from the logic in there.
+
+Patch to follow...

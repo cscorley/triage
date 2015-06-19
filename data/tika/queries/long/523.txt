@@ -1,0 +1,4 @@
+Today the only mapping for the tnef format is today the official application/vnd.ms-tnef
+However, the mime type application/ms-tnef is also frequently in use, and we should support this as an alias.
+
+Even the Wikipedia article uses the shorthand alias form: http://en.wikipedia.org/wiki/Transport_Neutral_Encapsulation_Format

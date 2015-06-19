@@ -1,0 +1,17 @@
+This is what looks like the relevant piece of the failure.
+
+
+   [junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=CollectionsAPIDistributedZkTest -Dtests.method=testDistribSearch -Dtests.seed=45A6C046A15FD121 -Dtests.slow=true -Dtests.locale=it_IT -Dtests.timezone=America/Creston -Dtests.file.encoding=US-ASCII
+   [junit4] FAILURE  179s | CollectionsAPIDistributedZkTest.testDistribSearch <<<
+   [junit4]    > Throwable #1: java.lang.AssertionError
+   [junit4]    >        at __randomizedtesting.SeedInfo.seed([45A6C046A15FD121:C4404E5ED600B11D]:0)
+   [junit4]    >        at org.apache.solr.cloud.CollectionsAPIDistributedZkTest.deleteCollectionWithDownNodes(CollectionsAPIDistributedZkTest.java:390)
+   [junit4]    >        at org.apache.solr.cloud.CollectionsAPIDistributedZkTest.doTest(CollectionsAPIDistributedZkTest.java:203)
+   [junit4]    >        at org.apache.solr.BaseDistributedSearchTestCase.testDistribSearch(BaseDistributedSearchTestCase.java:849)
+   [junit4]    >        at java.lang.Thread.run(Thread.java:724)
+
+
+
+This jenkins failure looks like it may be similar:
+
+http://jenkins.thetaphi.de/job/Lucene-Solr-4.x-Linux/8868/

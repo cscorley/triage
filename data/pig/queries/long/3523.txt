@@ -1,0 +1,1 @@
+Pig on Tez targets Hadoop 2.2.0.

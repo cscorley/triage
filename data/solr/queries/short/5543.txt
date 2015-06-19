@@ -1,0 +1,1 @@
+solr.xml duplicat eentries after SWAP 4.6

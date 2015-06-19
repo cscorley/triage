@@ -1,0 +1,1 @@
+AvroMapWrapper could contain utf8 keys, which are not supported by Pig. Pig expects keys to be of type String.

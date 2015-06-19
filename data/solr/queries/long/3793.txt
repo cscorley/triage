@@ -1,0 +1,13 @@
+Günter Hipler reported on the solr-user mailing list that he was seeing inconsistencies in facet counts compared to the numFound when drilling down onto those facets (using "fq") - in particular: when adding an "fq" such as `fq=
+{!term+f%3DnavNetwork}
+nebis`, the resulting numFound was higher then the number of docs reported by the facet constraint for nebis in the base request.
+
+I've been able to trivially reproduce this using the example data from Solr 4.0-BETA, trunk@r1381400, and branch_4x@r1381400 (details in comment to follow)
+
+Important things to note from Günter's email thread with his assessment of the problem...
+
+https://mail-archives.apache.org/mod_mbox/lucene-solr-user/201208.mbox/%3CCAM_U7jfDpNrGfmWmNtNACHCDCJw4YB-rLBBvRW_WP_jdOb_cgw@mail.gmail.com%3E
+
+The behaviour is not consistent. Some of the facets provide the correct result, some not.  What I can't say for sure: The behaviour was correct (if I'm not wrong) once the whole index was newly created. After running some updates I got these results.
+
+I'm going to setup a new index with the Lucene 4.0 version from March (to be more exactly: it's version 4.0-2012-03-09_11-29-20) to see what are the results even in case of frequent updates ... the version deployed in march doesn't contain the error I now come across in Beta4.0 

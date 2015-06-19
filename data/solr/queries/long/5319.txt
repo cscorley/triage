@@ -1,0 +1,44 @@
+In ZkController.createCollectionZkNode, the doc router is determined by this code snippet:
+
+if (collectionProps.get(DocCollection.DOC_ROUTER) == null) {
+            Object numShards = collectionProps.get(ZkStateReader.NUM_SHARDS_PROP);
+            if (numShards == null) 
+{
+              numShards = System.getProperty(ZkStateReader.NUM_SHARDS_PROP);
+            }
+            if (numShards == null) 
+{
+              collectionProps.put(DocCollection.DOC_ROUTER, ImplicitDocRouter.NAME);
+            }
+ else 
+{
+              collectionProps.put(DocCollection.DOC_ROUTER, DocRouter.DEFAULT_NAME);
+            }
+          }
+
+Since OverseerCollectionProcessor never passes on any params prefixed with "collection" other than "collection.configName" in its create core commands, collectionProps.get(DocCollection.DOC_ROUTER) will never be non-null. Thus, it needs to figure out if the router is implicit or compositeID based on if numShards is passed in. However, collectionProps.get(ZkStateReader.NUM_SHARDS_PROP) will also always be null for the same reason collectionProps.get(DocCollection.DOC_ROUTER) is null, and it isn't explicitly set in the code above, so the only way for numShards not to be null is if it's passed in as a system property.
+
+As an example, here's a cluster state that's created as compositeId router, but the collection ZK node says it's implicit:
+
+in clusterstate.json:
+
+"example":{
+    "shards":{"shard1":{
+        "range":"80000000-7fffffff",
+        "state":"active",
+        "replicas":{"core_node1":{
+            "state":"active",
+            "core":"example_shard1_replica1",
+            "node_name":"localhost:8983_solr",
+            "base_url":"http://localhost:8983/solr",
+            "leader":"true"}}}},
+    "router":"compositeId"},
+
+in /collections/example data:
+{
+  "configName":"myconf",
+  "router":"implicit"}
+
+I've not sure if the collection ZK node router info is actually used anywhere, so it may not matter, but it's confusing.
+
+I think the best fix is for OverseerCollectionProcessor to pass on params prefixed with "collection." to the core creation requests. Otherwise, ZkController.createCollectionZkNode can explicitly set the numShards collectionProps by cd.getNumShards() too.

@@ -1,0 +1,21 @@
+The SolrJ HttpSolrServer implementation does not seem to handle errors properly and seems capable of leaking HttpClient connections.  See the request() method in org.apache.solr.client.solrj.impl.HttpSolrServer.  The issue is that exceptions thrown from within this method do not necessarily consume the stream when an exception is thrown.  There is a try/finally block which reads (in part):
+
+
+
+    } finally {
+      if (respBody != null && processor!=null) {
+        try {
+          respBody.close();
+        } catch (Throwable t) {} // ignore
+      }
+    }
+
+
+
+But, in order to always guarantee consumption of the stream, it should include:
+
+
+
+method.abort();
+
+

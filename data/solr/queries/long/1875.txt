@@ -1,0 +1,2 @@
+A little stepping stone to NRT:
+Per-segment single-valued string faceting using the Lucene FieldCache.

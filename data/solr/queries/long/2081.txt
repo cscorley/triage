@@ -1,0 +1,1 @@
+I noticed while working on the slew of Geo issues that there was another bug in BaseResponseWriter.java. Basically if you have isStreamingDocs set to true (causing writeDoc to be called), you get 2 calls of SIngleResponseWriter.end(), which is bad (I was getting two </channel></rss> endings in the GeoRssResponseWriter). This patch fixes the issue.

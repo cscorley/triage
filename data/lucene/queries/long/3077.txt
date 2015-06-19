@@ -1,0 +1,1 @@
+DW does not push infostream changes to DWPT since DWPT#infoStream is final and initialized on DWPTPool initialization (at least for initial DWPT) we should push changes to infostream to DWPT too

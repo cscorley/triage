@@ -1,0 +1,15 @@
+Including admin-extra.html file in conf directory works - shows up on that core's admin page.
+
+Doing that for the other two files admin-extra.menu-top.html and admin-extra.menu-bottom.html fails:
+Uncaught Error: HIERARCHY_REQUEST_ERR: DOM Exception 3 require.js:8424
+jQuery.extend.clean require.js:8424
+jQuery.buildFragment require.js:8176
+jQuery.fn.extend.domManip require.js:8003
+jQuery.fn.extend.prepend require.js:7822
+(anonymous function) dashboard.js:62
+fire require.js:3099
+self.fireWith require.js:3217
+done require.js:9454
+callback require.js:10235
+
+I tried file content with "<li>....</li>" and with <h1>...</h1>

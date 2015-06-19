@@ -1,0 +1,1 @@
+The capability added by SOLR-4302 could be used to speed up loading the UI, by not gathering full information from the core admin.

@@ -1,0 +1,1 @@
+Version should not be encoded as a String in the index

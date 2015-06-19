@@ -1,0 +1,1 @@
+Admin UI - Show address bar on top for Schema + Config

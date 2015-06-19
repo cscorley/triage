@@ -1,0 +1,1 @@
+add logParamsList parameter to support reduced logging

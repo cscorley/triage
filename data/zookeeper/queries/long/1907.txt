@@ -1,0 +1,23 @@
+Server has many critical threads running and co-ordinating each other like  RequestProcessor chains et. When going through each threads, most of them having the similar structure like:
+
+
+public void run() {
+        try {
+              while(running)
+                   // processing logic
+              }
+        } catch (InterruptedException e) {
+            LOG.error("Unexpected interruption", e);
+        } catch (Exception e) {
+            LOG.error("Unexpected exception", e);
+        }
+        LOG.info("...exited loop!");
+}
+
+
+
+From the design I could see, there could be a chance of silently leaving the thread by swallowing the exception. If this happens in the production, the server would get hanged forever and would not be able to deliver its role. Now its hard for the management tool to detect this.
+
+The idea of this JIRA is to discuss and imprv.
+
+Reference: Community discussion thread

@@ -1,0 +1,1 @@
+upgrade jQuery to latest (1.4.3)

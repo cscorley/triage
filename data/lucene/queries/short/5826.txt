@@ -1,0 +1,1 @@
+Support proper hunspell case handling and related options

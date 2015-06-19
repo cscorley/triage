@@ -1,0 +1,1 @@
+'ant jar', 'ant compile' and 'ant compile-test' should recurse

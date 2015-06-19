@@ -1,0 +1,1 @@
+update log4j dependency from 1.2.15 to 1.2.16 in branch 3.4

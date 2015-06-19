@@ -1,0 +1,1 @@
+Remove @author tags in Lucene/Solr sources

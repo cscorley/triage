@@ -1,0 +1,1 @@
+SimpleTextCodec needs SimpleText DocValues impl

@@ -1,0 +1,1 @@
+Changes in hedwig server to support JMS spec

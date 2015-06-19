@@ -1,0 +1,1 @@
+smoketester to check war files have the same contents

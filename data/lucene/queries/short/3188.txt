@@ -1,0 +1,1 @@
+The class from cotrub directory org.apache.lucene.index.IndexSplitter creates a non correct index

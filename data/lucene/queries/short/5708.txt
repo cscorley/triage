@@ -1,0 +1,1 @@
+Remove IndexWriterConfig.clone

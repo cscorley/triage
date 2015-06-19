@@ -1,0 +1,1 @@
+Pig script throws error when searching for hcatalog jars in latest hive

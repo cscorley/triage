@@ -1,0 +1,49 @@
+"Signature":
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file xa/xa/xaSimplePositive.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: xaSimplePositive jdk1.5.0_04 xa:xa 2006-02-14 03:03:46 ***
+97 del
+< Transaction 1 : (1,FILTERED,FILTERED)
+98 del
+< Transaction 2 : (2,FILTERED,FILTERED)
+98a97,98
+> Transaction 1 : (2,FILTERED,FILTERED)
+> Transaction 2 : (1,FILTERED,FILTERED)
+Test Failed.
+			End:   xaSimplePositive jdk1.5.0_04 xa:xa 2006-02-14 03:03:50 ***
+		
+		
+	
+	
+
+
+
+http://www.multinet.no/~solberg/public/Apache/TinderBox_Derby/Limited/testSummary-377554.html

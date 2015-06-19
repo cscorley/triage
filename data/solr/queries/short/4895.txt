@@ -1,0 +1,1 @@
+Throw an error when a rollback is attempted in SolrCloud mode.

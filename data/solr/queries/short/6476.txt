@@ -1,0 +1,1 @@
+Create a bulk mode for schema API

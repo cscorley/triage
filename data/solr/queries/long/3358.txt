@@ -1,0 +1,2 @@
+The UI should be able to show the last few log messages.  To support this, we will need to register an Appender (log4j) or Handler
+(JUL) and keep a buffer of recent log events.

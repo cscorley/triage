@@ -1,0 +1,1 @@
+Allow to control how payloads are merged

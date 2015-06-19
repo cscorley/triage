@@ -1,0 +1,1 @@
+Logs are currently piped to a file. However, if a test is hanging, its useful to get the logs sent to stdout in as they happen, to see where the test is hanging. We should enable this with a mvn profile, instead of requiring the person to edit out the <redirectOutputToFile> flag.

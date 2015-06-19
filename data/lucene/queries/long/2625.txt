@@ -1,0 +1,1 @@
+TermDocs object returned by indexReader.termDocs() retrieves no documents, howerver, the documents are retrieved correctly when using indexReader.termDocs(Term), indexReader.termDocs(null) and indexSearcher.search(Query).

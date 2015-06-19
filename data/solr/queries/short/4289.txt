@@ -1,0 +1,1 @@
+Admin UI - JVM memory bar - dark grey "used" width is too small

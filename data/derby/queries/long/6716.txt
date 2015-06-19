@@ -1,0 +1,5 @@
+I noticed two typos in SystemPrivilegesPermissionTest that reduces the test coverage ever so slightly.
+
+1) assertEquivalentPermissions() checks if two permissions, p1 and p2, are equal. One of the checks is supposed to be that p1 implies p2 and p2 implies p1. Instead of checking that both holds, it checks that p1 implies p2 twice.
+
+2) testSystemPermission() does some work to reorder expected actions to match the canonical action order before calling assertEquals(). However, assertEquals() is only called if the actions didn't have to be reordered. The assert could have been called unconditionally.

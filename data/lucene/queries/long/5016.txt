@@ -1,0 +1,8 @@
+When sampling FacetResults, the TopKInEachNodeHandler is used to get the FacetResults.
+
+This is my case:
+A FacetResult is returned (which matches a FacetRequest) from the StandardFacetAccumulator. The facet has 0 results. The labelling of the root-node seems incorrect. I know, from the StandardFacetAccumulator, that the rootnode has a label, so I can use that one.
+
+Currently the recursivelyLabel method uses the taxonomyReader.getPath() to retrieve the label. I think we can skip that for the rootNode when there are no children (and gain a little performance on the way too?)
+
+

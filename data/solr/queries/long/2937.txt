@@ -1,0 +1,1 @@
+Currently, if carrot.produceSummary = true, always one snippet is generated. For more flexibility, the clustering component could use the hl.snippets parameter, overridden if needed by carrot.summarySnippets.

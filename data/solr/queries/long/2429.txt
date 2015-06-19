@@ -1,0 +1,3 @@
+A user should be able to add 
+{!cache=false}
+ to a query or filter query.

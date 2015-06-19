@@ -1,0 +1,3 @@
+When using the WordDelimiterFilter and setting termOffsets to true the highlighting breaks in certain cases. This did not happen in the 1.3 release.
+For example, if I index the term "PowerShot.com" and search for pow* the highlighting snippet contains <em>Power</em><em>PowerShot.com</em>.
+I will attach a patch which adds tests to the highlighter unittest to demonstrate the issue.

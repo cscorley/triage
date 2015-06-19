@@ -1,0 +1,1 @@
+Build updates for openjpa-examples and openjpa-integration/examples

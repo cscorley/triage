@@ -1,0 +1,41 @@
+Pig script to count the number of rows in a studenttab10k file which contains 10k records.
+
+
+studenttab = LOAD 'studenttab10k' AS (name:chararray, age:int,gpa:float);
+
+X2 = GROUP studenttab ALL;
+
+describe X2;
+
+Y2 = FOREACH X2 GENERATE COUNT(*);
+
+explain Y2;
+
+DUMP Y2;
+
+
+
+
+returns the following error
+================================================================
+ERROR org.apache.pig.tools.grunt.Grunt - ERROR 1066: Unable to open iterator for alias Y2
+Details at logfile: /homes/viraj/pig-svn/trunk/pig_1242783700970.log
+================================================================
+
+If you look at the log file:
+================================================================
+Caused by: java.lang.ClassCastException
+        at org.apache.pig.builtin.COUNT$Initial.exec(COUNT.java:76)
+        at org.apache.pig.builtin.COUNT$Initial.exec(COUNT.java:68)
+        at org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POUserFunc.getNext(POUserFunc.java:201)
+        at org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POUserFunc.getNext(POUserFunc.java:235)
+        at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach.processPlan(POForEach.java:254)
+        at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach.getNext(POForEach.java:204)
+        at org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator.processInput(PhysicalOperator.java:231)
+        at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLocalRearrange.getNext(POLocalRearrange.java:223)
+        at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapBase.runPipeline(PigMapBase.java:245)
+        at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapBase.map(PigMapBase.java:236)
+        at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapReduce$Map.map(PigMapReduce.java:88)
+        at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:47)
+        at org.apache.hadoop.mapred.MapTask.run(MapTask.java:227)
+================================================================

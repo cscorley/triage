@@ -1,0 +1,3 @@
+Spin-off from the discussion in SOLR-4619.
+
+Instead of using a PreAnalyzedField type we can use an UpdateRequestProcessor that converts any input field values to StorableField-s, using the PreAnalyzedParser-s, and then directly passes StorableField-s to DocumentBuilder for indexing.

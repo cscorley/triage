@@ -1,0 +1,3 @@
+I'm doing some facet performance tests, and I tried using the CachedOrdsCountingFacetsAggregator to cache the decoded ords per doc X field ... but noticed it was generating way too many cache entries, because it's currently using the NDV instance as the cache key.
+
+NDV instances are thread-private so this results in way too many entries in the cache.

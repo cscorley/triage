@@ -1,0 +1,40 @@
+as noted by sundar...
+
+http://www.nabble.com/Unlock-on-startup-to18836276.html#a18836276
+
+... <unlockOnStartup>true</unlockOnStartup> does not work (with <lockType>simple</lockType> which is the default)
+
+regardless of the value of lockType, or wether there is an existing lock, setting unlockOnStartup to true causes this error to be logged on startup (and if there is a lock file on disk, it is left where it is)...
+
+SEVERE: java.lang.NoSuchMethodError: org.apache.lucene.index.IndexWriter.isLocked(Lorg/apache/lucene/store/Directory;)Z
+        at org.apache.solr.core.SolrCore.initIndex(SolrCore.java:271)
+        at org.apache.solr.core.SolrCore.<init>(SolrCore.java:416)
+        at org.apache.solr.servlet.SolrDispatchFilter.init(SolrDispatchFilter.java:89)
+        at org.mortbay.jetty.servlet.FilterHolder.doStart(FilterHolder.java:99)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:40)
+        at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.java:594)
+        at org.mortbay.jetty.servlet.Context.startContext(Context.java:139)
+        at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1218)
+        at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:500)
+        at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:448)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:40)
+        at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:147)
+        at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:161)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:40)
+        at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:147)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:40)
+        at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:117)
+        at org.mortbay.jetty.Server.doStart(Server.java:210)
+        at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:40)
+        at org.mortbay.xml.XmlConfiguration.main(XmlConfiguration.java:929)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+        at java.lang.reflect.Method.invoke(Method.java:585)
+        at org.mortbay.start.Main.invokeMain(Main.java:183)
+        at org.mortbay.start.Main.start(Main.java:497)
+        at org.mortbay.start.Main.main(Main.java:115)
+
+
+
+...how exactly the class is compiling, but the method isn't being found at run time, boggles me at the moment ... i haven't had time to investigate fully

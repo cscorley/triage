@@ -1,0 +1,1 @@
+Remove VcsDirectoryMappings from idea configuration vcs.xml

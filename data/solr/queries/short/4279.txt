@@ -1,0 +1,1 @@
+Wrong exception message if version field is multivalued

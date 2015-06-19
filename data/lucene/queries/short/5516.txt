@@ -1,0 +1,1 @@
+Forward information that trigger a merge to MergeScheduler

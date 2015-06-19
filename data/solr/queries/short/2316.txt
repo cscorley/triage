@@ -1,0 +1,1 @@
+SynonymFilterFactory should ensure synonyms argument is provided.

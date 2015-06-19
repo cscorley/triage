@@ -1,0 +1,5 @@
+Today IndexReader#ReaderClosedListener might not be called if the last IndexReader#decRef() call runs into an exception on IndexReader#doClose(). Today we just reset the refCount and never go and call the listeners. There seem to be a bunch of problems here along the same lines but IMO if we close a reader it should close all resources no matter what exception it runs into. What this should do is call the close listeners in a finally block and then rethrow the exception. The real problem here for apps relying on the listener to release resources is that you might leak memory or file handles or whatnot which I think is a bug how we handle closing the IR. As a side-note I think we should never reset the reference here to be honest.  
+
+Along the same lines I think we need to fix the loop in IndexReader#notifyReaderClosedListeners() to make sure we call all of them in the case any of them throws an exception. It also seems that SegmentCoreReaders#decRef() has a similar problem where for instance a fieldsReader can throw an exception on close and we never call the core listeners.
+
+IMO we need to fix this for 4.7.1 

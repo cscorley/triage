@@ -1,0 +1,1 @@
+It seems there's a bug in overseer where it removes a work item from the primary queue before inserting it to the work queue. This can cause messages to be lost if overseer is killed in between removing and adding the message. 

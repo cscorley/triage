@@ -1,0 +1,1 @@
+testRecoveryMultipleLogs(org.apache.solr.search.TestRecovery)

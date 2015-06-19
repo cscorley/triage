@@ -1,0 +1,1 @@
+If you have syn rule a -> x y and input a then output is a/x y but... what should y's offsets be?  Right now we set to 0/0.

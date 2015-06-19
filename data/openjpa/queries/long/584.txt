@@ -1,0 +1,11 @@
+The changes made for OPENJPA-149 included committing compiled classes into openjpa-kernel/src/main/resources. We're using these compiled classes (mainly interfaces) to avoid reflection in the WASRegistryManagedRuntime class. The classes aren't shipped with OpenJPA and are expected to be present only in a WebSphere environment. 
+
+The maven build process copies these class files into the target directory before compiling the source code. Unfortunately this approach causes problems with many IDEs (I tested Eclipse & IDEA).
+
+The ideal solution is to pick up the UOW interfaces from a central maven repository, but currently they're unavailable and the license agreement with IBM prevents us from distributing the jar file ourselves - it can't be made available outside of our build environment. 
+
+To resolve the problem I created an internal repository which can be checked in to SVN. The repository is local to the openjpa-kernel module but could be moved elsewhere in the build tree. Openjpa-kernel/pom.xml has been modified to use this repository and pick up the websphere jar as a "provided" dependency. Provided scope dependencies are not transitive and will not affect downstream projects. 
+
+In addition the jar file and the internal repository will be included in the source archive, but will not be present in the binary archive. 
+
+Using the internal repository should resolve many of the problems with IDEs (although I've only tested the fix with Eclipse). Some manual configuration may still be needed but this approach seems to work better than what we had before. 

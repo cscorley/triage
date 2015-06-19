@@ -1,0 +1,1 @@
+Specialize FixedBitSet.xor(DocIdSetIterator) like and/or/andNot

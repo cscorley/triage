@@ -1,0 +1,1 @@
+velocity / Solritas is throwing NumberFormatException if using Range Facets for Price

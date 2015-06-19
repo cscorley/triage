@@ -1,0 +1,1 @@
+Add CloudSolrServer helper method to connect to a ZK ensemble

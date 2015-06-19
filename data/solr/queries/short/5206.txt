@@ -1,0 +1,1 @@
+OpenExchangeRatesOrgProvider never refreshes the rates

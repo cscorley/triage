@@ -1,0 +1,3 @@
+per declaration. 
+
+A need for these has been encountered while implementing proprietary bigram co-occurrence analysis  (directed and undirected occurrences).

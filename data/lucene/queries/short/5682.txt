@@ -1,0 +1,1 @@
+NPE in QueryRescorer when Scorer is null

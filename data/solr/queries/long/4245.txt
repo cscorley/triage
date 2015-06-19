@@ -1,0 +1,1 @@
+The sub calls to get the leader had a 30 second wait which effectively short circuits the top level timeout with regards to waiting for an initial leader. Not a big deal in smaller clusters, but can end up as problem with larger clusters where a node might timeout and need to be restarted.

@@ -1,0 +1,3 @@
+Investigate and provide a fix for MultiThreadedOCPTest failures due to leaked parallelCoreAdminExecutor threads.
+
+http://jenkins.thetaphi.de/job/Lucene-Solr-trunk-Linux/10490/

@@ -1,0 +1,1 @@
+testDefaultBootup fails because it cannot find "pig.properties"

@@ -1,0 +1,1 @@
+make it possible to use searchermanager with distributed stats

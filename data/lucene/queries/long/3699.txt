@@ -1,0 +1,5 @@
+Reading thru the ipadic documentation, i realized we are storing a lot of redundant information,
+for example the connection costs for bigram weights are based on POS+inflection data, so its redundant 
+to also separately encode POS and inflection data for each entry.
+
+With the patch the dictionary access is also faster and simpler, and TokenInfoDictionary is 1.5MB smaller.

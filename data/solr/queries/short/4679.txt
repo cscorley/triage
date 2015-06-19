@@ -1,0 +1,1 @@
+HTML line breaks (<br>) are removed during indexing; causes wrong search results

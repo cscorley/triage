@@ -1,0 +1,5 @@
+As noted in solr-user:
+
+http://www.mail-archive.com/solr-user@lucene.apache.org/msg82650.html
+
+SOLR-3329 removed the sourceId from SolrInfoMBean but it wasn't removed from the dynamic stats. This leads to exceptions on access.

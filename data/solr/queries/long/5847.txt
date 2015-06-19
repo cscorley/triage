@@ -1,0 +1,5 @@
+With the changes introduced in 4.7.0 Release by SOLR-5517 (Return HTTP error on POST requests with no Content-Type), the jquery invocation to abort a running dataimport fails with HTTP error code 415.
+
+The method POST should have some content in the body
+
+See comments in SOLR-5517

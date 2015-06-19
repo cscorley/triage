@@ -1,0 +1,1 @@
+tests should be able to use RAMDirectory

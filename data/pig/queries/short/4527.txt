@@ -1,0 +1,1 @@
+NON-ASCII Characters in Javadoc break 'ant docs'

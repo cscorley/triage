@@ -1,0 +1,5 @@
+Currently you can set a null CategoryAssociation to a CategoryPath, but alas, it's just dropped by AssociationFacetFields. The history behind this break is that in the past, category associations were indexed twice, with and without the association value. In the move to 4.2 I guess with all the transitions the code went through, this behavior was nuked (as it doesn't make sense in general to index these categories twice), but AssociationFacetFields has a comment that these categories are added anyway – this is of course wrong.
+
+Instead of supporting null category associations, which is not so trivial in AssociationFacetFields, I think that we should just prevent it (throw a hard exception). If a user wants to add a category such as Category/Computer Science=0.74 (i.e. with weight 0.74) and be able to aggregate Category/ with and without associations, he should either write a special FacetsAggregator which ignores the associated value, or add the category twice, once using FacetFields (counting) and second time with AssociationFacetFields.
+
+I'll post a patch soon.

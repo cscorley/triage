@@ -1,0 +1,7 @@
+When a union alias is referred by another operator such as FRJoin, it causes NPE. Here is an example-
+
+
+Caused by: java.lang.NullPointerException
+    at org.apache.pig.backend.hadoop.executionengine.tez.TezCompiler.visitFRJoin(TezCompiler.java:651)
+    ... 26 more
+

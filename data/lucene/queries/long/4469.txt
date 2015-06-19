@@ -1,0 +1,9 @@
+for some reason (I guess debugging) these explicitly disable checkindex on MDW and call checkindex themselves.
+
+but they dont check its return value!
+
+So these tests could currently all be failing and we wouldnt know (since If i remember right, checkindex catches throwable and records it inside its status)
+
+These tests should be changed to just let MDW run the checkindex, or use _TestUtil.checkIndex.
+
+We should also search the codebase for any other tests doing this.

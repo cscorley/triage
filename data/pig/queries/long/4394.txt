@@ -1,0 +1,9 @@
+Fails with 
+
+
+
+Caused by: java.lang.NullPointerException
+        at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POReservoirSample.getNextTuple(POReservoirSample.java:111)
+        at org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator.processInput(PhysicalOperator.java:307)
+        at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach.getNextTuple(POForEach.java:246)
+

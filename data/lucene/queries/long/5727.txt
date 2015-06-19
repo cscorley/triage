@@ -1,0 +1,3 @@
+This has been deprecated / unused for a few years, and several things assume append-only functionality: checksumming in the index format, HDFS integration in solr, etc.
+
+I think its time to remove it. We can continue to test 3.x codec with a simple hack in PreFlexRW.

@@ -1,0 +1,12 @@
+Looking back at the tests for the Lucene Spatial Module, they seem half-baked.  (At least Spatial4j is well tested).  I've started working on some improvements:
+
+	Some tests are in an abstract base class which have a subclass that provides a SpatialContext. The idea was that the same tests could test other contexts (such as geo vs not or different distance calculators (haversine vs vincenty) but this can be done using RandomizedTesting's nifty parameterized test feature, once there is a need to do this.
+	Port the complex geohash recursive prefix tree test that was developed on the Solr side to the Lucene side where it belongs.
+
+
+
+And some things are not tested or aren't well tested:
+
+	Distance order as the query score
+	Indexing shapes other than points (i.e. shapes with area / regions)
+

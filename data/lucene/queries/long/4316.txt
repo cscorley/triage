@@ -1,0 +1,14 @@
+Spinoff from LUCENE-4315.
+
+This was my comment there:
+
+we should consider Fields.getUniqueTermCount,
+which has a default implementation that sums across fields (preflex overrides).
+
+This was necessary to have some way to access the segment-level unique term count for 3.x indexes,
+which do not actually know this information per-field and override this method to provide it.
+
+But there is no need to have this on AtomicReader (I think its way too expert, just get the Fields
+and get it from there), and we can consider deprecating this in 4.x and removing it in trunk
+alltogether as then someone can just use the field-level statistics.
+

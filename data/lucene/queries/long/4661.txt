@@ -1,0 +1,20 @@
+I think our current defaults (maxThreadCount=#cores/2,
+maxMergeCount=maxThreadCount+2) are too high ... I've frequently found
+merges falling behind and then slowing each other down when I index on
+a spinning-magnets drive.
+
+As a test, I indexed all of English Wikipedia with term-vectors (=
+heavy on merging), using 6 threads ... at the defaults
+(maxThreadCount=3, maxMergeCount=5, for my machine) it took 5288 sec
+to index & wait for merges & commit.  When I changed to
+maxThreadCount=1, maxMergeCount=2, indexing time sped up to 2902
+seconds (45% faster).  This is on a spinning-magnets disk... basically
+spinning-magnets disk don't handle the concurrent IO well.
+
+Then I tested an OCZ Vertex 3 SSD: at the current defaults it took
+1494 seconds and at maxThreadCount=1, maxMergeCount=2 it took 1795 sec
+(20% slower).  Net/net the SSD can handle merge concurrency just fine.
+
+I think we should change the defaults: spinning magnet drives are hurt
+by the current defaults more than SSDs are helped ... apps that know
+their IO system is fast can always increase the merge concurrency.

@@ -1,0 +1,1 @@
+file.gz is correctly handled as gzip, but file.GZ handled as text which is wrong.

@@ -1,0 +1,1 @@
+Add stats and error reporting for Spark

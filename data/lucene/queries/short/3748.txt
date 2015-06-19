@@ -1,0 +1,1 @@
+EnglishPossessiveFilter should work with Unicode right single quotation mark

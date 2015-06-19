@@ -1,0 +1,3 @@
+Today DocIdSetIterator.docID() can either return -1 or NO_MORE_DOCS when the enum is not positioned. I would like to only allow it to return -1 so that we can have better assertions.
+
+(This proposal is for trunk only.)

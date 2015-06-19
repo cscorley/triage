@@ -1,0 +1,1 @@
+Crazy checkout paths break TestXPathEntityProcessor

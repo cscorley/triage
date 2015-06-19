@@ -1,0 +1,5 @@
+The message XJ073 says:
+
+ ERROR XJ073: The data in this BLOB or CLOB is no longer available.  The BLOB/CLOB's transaction may be committed, or its connection is closed.
+
+but the lob might also not be available because it has been freed. It would be good to include that possibility in the error message.

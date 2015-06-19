@@ -1,0 +1,5 @@
+Hi all my build environment is a little weird for legacy reasons, one of these is that checkouts from version control for my build server have {} in the path.
+
+This causes the process-webapps target to fail since XSL rejects none URI characters.
+
+I have a patch that fixes this by escaping the paths first

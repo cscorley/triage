@@ -1,0 +1,1 @@
+POStream will upload log files to the output directory of the job. In MR, every job dump to a output directory (permanent or temporary), in Tez, intermediate vertex does not have an output directory. Thus, HadoopExecutableManager.close throw NPE.

@@ -1,0 +1,1 @@
+Range faceting should use O(log(N)) search per hit

@@ -1,0 +1,46 @@
+I'd like to explore simplifications to the facet module's APIs: I
+think the current APIs are complex, and the addition of a new feature
+(sparse faceting, LUCENE-5333) threatens to add even more classes
+(e.g., FacetRequestBuilder).  I think we can do better.
+
+So, I've been prototyping some drastic changes; this is very
+early/exploratory and I'm not sure where it'll wind up but I think the
+new approach shows promise.
+
+The big changes are:
+
+
+	Instead of *FacetRequest/Params/Result, you directly instantiate
+    the classes that do facet counting (currently TaxonomyFacetCounts,
+    RangeFacetCounts or SortedSetDVFacetCounts), passing in the
+    SimpleFacetsCollector, and then you interact with those classes to
+    pull labels + values (topN under a path, sparse, specific labels).
+
+
+
+
+	At index time, no more FacetIndexingParams/CategoryListParams;
+    instead, you make a new SimpleFacetFields and pass it the field it
+    should store facets + drill downs under.  If you want more than
+    one CLI you create more than one instance of SimpleFacetFields.
+
+
+
+
+	I added a simple schema, where you state which dimensions are
+    hierarchical or multi-valued.  From this we decide how to index
+    the ordinals (no more OrdinalPolicy).
+
+
+
+Sparse faceting is just another method (getAllDims), on both taxonomy
+& ssdv facet classes.
+
+I haven't created a common base class / interface for all of the
+search-time facet classes, but I think this may be possible/clean, and
+perhaps useful for drill sideways.
+
+All the new classes are under oal.facet.simple.*.
+
+Lots of things that don't work yet: drill sideways, complements,
+associations, sampling, partitions, etc.  This is just a start ...

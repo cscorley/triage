@@ -1,0 +1,1 @@
+Missing sync in IndexWriter.addIndexes(IndexReader[])

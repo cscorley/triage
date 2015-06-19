@@ -1,0 +1,1 @@
+The merge from trunk for branch_5x remove the backcompat support in StandardTokenizer for previous unicode versions.  With 5x, we only need to add support back for 4.0-4.6 (unicode 6.1).

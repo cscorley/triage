@@ -1,0 +1,12 @@
+The optional custom tokenizerFactory in SlowSynonymFilterFactory and FSTSynonymFilterFactory might require the ResourceLoader information. Thus inform(ResourceLoader) should be called if the specified tokenizerFactory is an instance of ResourceLoaderAware.
+
+
+private static TokenizerFactory loadTokenizerFactory(ResourceLoader loader, String cname, Map<String, String> args) {
+  TokenizerFactory tokFactory = (TokenizerFactory) loader.newInstance(cname);
+  tokFactory.init(args);
+  if (tokFactory instanceof ResourceLoaderAware) {
+    ((ResourceLoaderAware) tokFactory).inform(loader);
+  }
+  return tokFactory;
+}
+

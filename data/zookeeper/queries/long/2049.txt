@@ -1,0 +1,250 @@
+recordio.h defines htonll which conflicts with Apple's equally named implementation from within arpa/inet.h.
+
+
+
+ gcc -DHAVE_CONFIG_H -I. -I. -I. -I./include -I./tests -I./generated -Wall -Werror -g -O2 -D_GNU_SOURCE -MT zk_log.lo -MD -MP -MF .deps/zk_log.Tpo -c src/zk_log.c  -fno-common -DPIC -o zk_log.o
+In file included from src/recordio.c:19:
+./include/recordio.h:76:9: error: expected ')'
+int64_t htonll(int64_t v);
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:30: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+                             ^
+./include/recordio.h:76:9: note: to match this '('
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:5: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+    ^
+In file included from src/recordio.c:19:
+./include/recordio.h:76:9: error: conflicting types for '__builtin_constant_p'
+int64_t htonll(int64_t v);
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:6: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+     ^
+./include/recordio.h:76:9: note: '__builtin_constant_p' is a builtin with type 'int ()'
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:6: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+     ^
+In file included from generated/zookeeper.jute.c:20:
+In file included from ./generated/zookeeper.jute.h:21:
+./include/recordio.h:76:9: error: expected ')'
+int64_t htonll(int64_t v);
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:30: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+                             ^
+./include/recordio.h:76:9: note: to match this '('
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:5: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+    ^
+In file included from generated/zookeeper.jute.c:20:
+In file included from ./generated/zookeeper.jute.h:21:
+./include/recordio.h:76:9: error: conflicting types for '__builtin_constant_p'
+int64_t htonll(int64_t v);
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:6: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+     ^
+./include/recordio.h:76:9: note: '__builtin_constant_p' is a builtin with type 'int ()'
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:6: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+     ^
+In file included from src/zookeeper.c:27:
+In file included from ./include/zookeeper.h:34:
+./include/recordio.h:76:9: error: expected ')'
+int64_t htonll(int64_t v);
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:30: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+                             ^
+./include/recordio.h:76:9: note: to match this '('
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:5: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+    ^
+In file included from src/zookeeper.c:27:
+In file included from ./include/zookeeper.h:34:
+./include/recordio.h:76:9: error: conflicting types for '__builtin_constant_p'
+int64_t htonll(int64_t v);
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:6: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+     ^
+./include/recordio.h:76:9: note: '__builtin_constant_p' is a builtin with type 'int ()'
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:6: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+     ^
+In file included from src/zk_hashtable.c:19:
+In file included from src/zk_hashtable.h:22:
+In file included from ./include/zookeeper.h:34:
+./include/recordio.h:76:9: error: expected ')'
+int64_t htonll(int64_t v);
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:30: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+                             ^
+./include/recordio.h:76:9: note: to match this '('
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:5: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+    ^
+In file included from src/zk_hashtable.c:19:
+In file included from src/zk_hashtable.h:22:
+In file included from ./include/zookeeper.h:34:
+./include/recordio.h:76:9: error: conflicting types for '__builtin_constant_p'
+int64_t htonll(int64_t v);
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:6: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+     ^
+./include/recordio.h:76:9: note: '__builtin_constant_p' is a builtin with type 'int ()'
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:6: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+     ^
+src/recordio.c:83:9: error: expected ')'
+int64_t htonll(int64_t v)
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:30: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+                             ^
+src/recordio.c:83:9: note: to match this '('
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:5: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+    ^
+src/recordio.c:83:9: error: conflicting types for '__builtin_constant_p'
+int64_t htonll(int64_t v)
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:6: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+     ^
+./include/recordio.h:76:9: note: '__builtin_constant_p' is a builtin with type 'int ()'
+int64_t htonll(int64_t v);
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:6: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+     ^
+src/recordio.c:83:9: error: definition of builtin function '__builtin_constant_p'
+int64_t htonll(int64_t v)
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:6: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+     ^
+In file included from src/zk_log.c:23:
+In file included from ./include/zookeeper_log.h:22:
+In file included from ./include/zookeeper.h:34:
+./include/recordio.h:76:9: error: expected ')'
+int64_t htonll(int64_t v);
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:30: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+                             ^
+./include/recordio.h:76:9: note: to match this '('
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:5: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+    ^
+In file included from src/zk_log.c:23:
+In file included from ./include/zookeeper_log.h:22:
+In file included from ./include/zookeeper.h:34:
+./include/recordio.h:76:9: error: conflicting types for '__builtin_constant_p'
+int64_t htonll(int64_t v);
+        ^
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:6: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+     ^
+./include/recordio.h:76:9: note: '__builtin_constant_p' is a builtin with type 'int ()'
+/usr/include/sys/_endian.h:141:25: note: expanded from macro 'htonll'
+#define htonll(x)       __DARWIN_OSSwapInt64(x)
+                        ^
+/usr/include/libkern/_OSByteOrder.h:78:6: note: expanded from macro '__DARWIN_OSSwapInt64'
+    (__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt64(x) : _OSSwapInt64(x))
+     ^
+2 errors generated.
+5 errors generated.
+2 errors generated.
+make[5]: *** [recordio.lo] Error 1
+make[5]: *** Waiting for unfinished jobs....
+2 errors generated.
+make[5]: *** [zookeeper.jute.lo] Error 1
+make[5]: *** [zk_hashtable.lo] Error 1
+make[5]: *** [zk_log.lo] Error 1
+2 errors generated.
+make[5]: *** [zookeeper.lo] Error 1
+make[4]: *** [all] Error 2
+make[3]: *** [zookeeper-3.4.5/src/c/libzookeeper_mt.la] Error 2
+make[3]: *** Waiting for unfinished jobs....
+ln -fs libleveldb.dylib.1.4 libleveldb.dylib
+ln -fs libleveldb.dylib.1.4 libleveldb.dylib.1
+make[2]: *** [all-recursive] Error 1
+make[1]: *** [all] Error 2
+make: *** [all-recursive] Error 1
+

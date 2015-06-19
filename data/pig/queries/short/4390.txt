@@ -1,0 +1,1 @@
+Fix the NPE of  System.getenv("SPARK_MASTER") in SparkLauncher.java

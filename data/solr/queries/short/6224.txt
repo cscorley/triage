@@ -1,0 +1,1 @@
+Post soft-commit callbacks are called before soft commit actually happens

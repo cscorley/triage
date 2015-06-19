@@ -1,0 +1,1 @@
+package-local-src-tgz target is pulling in non-source jars, dist/** and package/**

@@ -1,0 +1,1 @@
+TermVectorComponent does not return terms in distributed search

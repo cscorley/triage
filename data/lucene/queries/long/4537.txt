@@ -1,0 +1,1 @@
+Currently the RateLimiter only applies to FSDirectory which is fine in general but always requires casts and other dir. impls (custom ones could benefit from this too.) We are also only able to rate limit merge operations which limits the functionality here a lot. Since we have the context information what the IndexOutput is used for we can use that for rate limiting.

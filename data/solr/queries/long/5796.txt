@@ -1,0 +1,36 @@
+I'm doing some testing with a 4-node SolrCloud cluster against the latest rev in branch_4x having many collections, 150 to be exact, each having 4 shards with rf=3, so 450 cores per node. Nodes are decent in terms of resources: -Xmx6g with 4 CPU - m3.xlarge's in EC2.
+
+The problem occurs when rebooting one of the nodes, say as part of a rolling restart of the cluster. If I kill one node and then wait for an extended period of time, such as 3 minutes, then all of the leaders on the downed node (roughly 150) have time to failover to another node in the cluster. When I restart the downed node, since leaders have all failed over successfully, the new node starts up and all cores assume the replica role in their respective shards. This is goodness and expected.
+
+However, if I don't wait long enough for the leader failover process to complete on the other nodes before restarting the downed node, 
+then some bad things happen. Specifically, when the dust settles, many of the previous leaders on the node I restarted get stuck in the "conflicting" state seen in the ZkController, starting around line 852 in branch_4x:
+
+
+852       while (!leaderUrl.equals(clusterStateLeaderUrl)) {
+853         if (tries == 60) 
+Unknown macro: {
+854           throw new SolrException(ErrorCode.SERVER_ERROR,
+855               "There is conflicting information about the leader of shard} 
+859         Thread.sleep(1000);
+860         tries++;
+861         clusterStateLeaderUrl = zkStateReader.getLeaderUrl(collection, shardId,
+862             timeoutms);
+863         leaderUrl = getLeaderProps(collection, cloudDesc.getShardId(), timeoutms)
+864             .getCoreUrl();
+865       }
+
+As you can see, the code is trying to give a little time for this problem to work itself out, 1 minute to be exact. Unfortunately, that doesn't seem to be long enough for a busy cluster that has many collections. Now, one might argue that 450 cores per node is asking too much of Solr, however I think this points to a bigger issue of the fact that a node coming up isn't aware that it went down and leader election is running on other nodes and is just being slow. Moreover, once this problem occurs, it's not clear how to fix it besides shutting the node down again and waiting for leader failover to complete.
+
+It's also interesting to me that /clusterstate.json was updated by the healthy node taking over the leader role but the /collections/<coll>leaders/shard# was not updated? I added some debugging and it seems like the overseer queue is extremely backed up with work.
+
+Maybe the solution here is to just wait longer but I also want to get some feedback from the community on other options? I know there are some plans to help scale the Overseer (i.e. SOLR-5476) so maybe that helps and I'm trying to add more debug to see if this is really due to overseer backlog (which I suspect it is).
+
+In general, I'm a little confused by the keeping of leader state in multiple places in ZK. Is there any background information on why we have leader state in /clusterstate.json and in the leader path znode?
+
+Also, here are some interesting side observations:
+
+a. If I use rf=2, then this problem doesn't occur as leader failover happens more quickly and there's less overseer work? 
+May be a red herring here, but I can consistently reproduce it with RF=3, but not with RF=2 ... suppose that is because there are only 300 cores per node versus 450 and that's just enough less work to make this issue work itself out.
+
+b. To support that many cores, I had to set -Xss256k to reduce the stack size as Solr uses a lot of threads during startup (high point was 800'ish)              
+Might be something we should recommend on the mailing list / wiki somewhere.

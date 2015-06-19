@@ -1,0 +1,1 @@
+Fix rawtypes warnings for Java 7 compiler

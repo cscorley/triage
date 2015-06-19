@@ -1,0 +1,1 @@
+Change all FilteredTermsEnum impls into TermsEnum decorators

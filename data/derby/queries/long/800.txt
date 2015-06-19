@@ -1,0 +1,112 @@
+I have seen ConcurrentImplicitCreateSchema.java get a lock timeout  periodically and it occurred in the posted sun tests for build 365391
+
+http://www.multinet.no/~solberg/public/Apache/Derby/testlog/CYGWIN_NT-5.2_i686-unknown/365391-derbylang_diff.txt
+(I don't know how long this link will last. Below is the diff)
+
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbylang/derbylang/ConcurrentImplicitCreateSchema.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: ConcurrentImplicitCreateSchema jdk1.5.0_04 derbylang:derbylang 2006-01-02 20:03:09 ***
+2 del
+< Closed connection
+3 del
+< Test ConcurrentImplicitCreateSchema PASSED
+3 add
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requestedSQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> 	at org.apache.derby.impl.jdbc.EmbedStatement.execute(EmbedStatement.java:480)SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> 	at org.apache.derby.impl.jdbc.EmbedStatement.execute(EmbedStatement.java:550)SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> 	at org.apache.derby.impl.store.access.btree.index.B2IRowLocking3._lockScan(B2IRowLocking3.java:135)SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requestedSQL Exception: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> 	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:301)SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> 	at org.apache.derby.impl.store.access.btree.BTreeScan.next(BTreeScan.java:1696)SQL Exception: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requestedSQL Exception: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> 	at org.apache.derby.impl.store.access.btree.BTreeScan.positionAtStartForForwardScan(BTreeScan.java:441)SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> 	at org.apache.derby.impl.sql.catalog.DataDictionaryImpl.getColumnDescriptorsScan(DataDictionaryImpl.java:2259)SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> SQL Exception: A lock could not be obtained within the time requested
+> ERROR 40XL1: A lock could not be obtained within the time requested
+> Closed connection
+> Test ConcurrentImplicitCreateSchema FAILED
+Test Failed.
+		
+		
+	
+	
+

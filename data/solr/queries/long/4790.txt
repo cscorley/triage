@@ -1,0 +1,3 @@
+When you define a core with the same name as another core (discovery mode definitely, old-style xml probably), last one wins. Which means it's very hard to track down what caused the problem.
+
+What's worse, the last-encountered core replaces the first one, leading to cores that change an unexpected index.

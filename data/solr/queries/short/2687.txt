@@ -1,0 +1,1 @@
+Add new Solr book 'Apache Solr 3.1 Cookbook' to selection of Solr books and news.

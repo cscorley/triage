@@ -1,0 +1,1 @@
+Idea's settings for modules/queries and modules/queryparser refer to lucene/contrib instead of modules.

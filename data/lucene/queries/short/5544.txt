@@ -1,0 +1,1 @@
+exceptions during IW.rollback can leak files and locks

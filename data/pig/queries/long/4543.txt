@@ -1,0 +1,1 @@
+Hadoop 1 local mode does not support multiple reducers. So testRankWithEmptyReduce should test with Minicluster.

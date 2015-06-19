@@ -1,0 +1,1 @@
+Updating org.apache.httpcomponents above 4.2.2 causes tests using SSL to fail.

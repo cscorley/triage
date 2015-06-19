@@ -1,0 +1,1 @@
+Optimize runs forever if you keep deleting docs at the same time

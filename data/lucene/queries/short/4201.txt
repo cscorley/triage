@@ -1,0 +1,1 @@
+Add Japanese character filter to normalize iteration marks

@@ -1,0 +1,38 @@
+In a scenario where brand new entity instances of the same class get inserted concurrently, we noticed sporadic failures like this:
+
+Caused by: <openjpa-2.3.0-r422266:1540826 fatal store error> org.apache.openjpa.persistence.EntityNotFoundException: The transaction has been rolled back.  See the nested exceptions for details on the errors that occurred.
+	at org.apache.openjpa.kernel.BrokerImpl.newFlushException(BrokerImpl.java:2370)
+	at org.apache.openjpa.kernel.BrokerImpl.flush(BrokerImpl.java:2207)
+	at org.apache.openjpa.kernel.BrokerImpl.flushSafe(BrokerImpl.java:2105)
+	at org.apache.openjpa.kernel.BrokerImpl.beforeCompletion(BrokerImpl.java:2023)
+	at org.apache.openjpa.kernel.LocalManagedRuntime.commit(LocalManagedRuntime.java:81)
+	at org.apache.openjpa.kernel.BrokerImpl.commit(BrokerImpl.java:1528)
+	at org.apache.openjpa.kernel.DelegatingBroker.commit(DelegatingBroker.java:933)
+	at org.apache.openjpa.persistence.EntityManagerImpl.commit(EntityManagerImpl.java:570)
+	... 2 more
+Caused by: <openjpa-2.3.0-r422266:1540826 nonfatal store error> org.apache.openjpa.persistence.EntityNotFoundException: The instance of type "class ..." with oid "ec2cfaa9e2f04b628d7e1991e65751dc" no longer exists in the data store.  This may mean that you deleted the instance in a separate transaction, but this context still has a cached version.
+	at org.apache.openjpa.kernel.StateManagerImpl.loadFields(StateManagerImpl.java:3109)
+	at org.apache.openjpa.kernel.StateManagerImpl.loadField(StateManagerImpl.java:3188)
+	at org.apache.openjpa.kernel.StateManagerImpl.fetchStringField(StateManagerImpl.java:2474)
+	at org.apache.openjpa.kernel.StateManagerImpl.fetchString(StateManagerImpl.java:2464)
+	at org.apache.openjpa.jdbc.meta.strats.StringFieldStrategy.insert(StringFieldStrategy.java:105)
+	at org.apache.openjpa.jdbc.meta.FieldMapping.insert(FieldMapping.java:623)
+	at org.apache.openjpa.jdbc.kernel.AbstractUpdateManager.insert(AbstractUpdateManager.java:238)
+	at org.apache.openjpa.jdbc.kernel.AbstractUpdateManager.populateRowManager(AbstractUpdateManager.java:165)
+	at org.apache.openjpa.jdbc.kernel.AbstractUpdateManager.flush(AbstractUpdateManager.java:96)
+	at org.apache.openjpa.jdbc.kernel.AbstractUpdateManager.flush(AbstractUpdateManager.java:77)
+	at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.flush(JDBCStoreManager.java:732)
+	at org.apache.openjpa.kernel.DelegatingStoreManager.flush(DelegatingStoreManager.java:131)
+	... 9 more
+
+The primary ID of each entity is set manually by the app prior to insertion.
+
+Debugging led me to ClassMetaData.getPkAndNonPersistentManagedFmdIndexes() which is called from StateManagerImpl.initialize() to set up the _loaded bit set. When the above exception occurs, all bits in that set are zero. This ultimately caused the erroneous loadField() call that fails the insertion.
+
+The following line in getPkAndNonPersistentManagedFmdIndexes() disturbs the thread-safety:
+
+_pkAndNonPersistentManagedFmdIndexes = new int[idsSize];
+
+Once this has executed, another thread which executes the if (_pkAndNonPersistentManagedFmdIndexes == null) in line 2778 can read the array before the first thread has finished the loop that initializes its values.
+
+The line following "// Default to FALSE, until proven true." in hasPKFieldsFromAbstractClass() looks equally troublesome, setting an instance variable to a temp value. Somebody whose more familar with the codebase might want to check for more occurrences of this pattern.

@@ -1,0 +1,5 @@
+By calling ContextService.getContextOrNull() (and its relatives), application code can get its hands on all sorts of internal Derby contexts, factories, and managers. This allows application code to bypass SQL authorization checks and perform sensitive or data-corrupting actions.
+
+For instance, right now an application can use this method to get its hands on the language connection context. From the lcc, the application can get its hands on the data dictionary and the execution transaction. Armed with those objects, the application can bypass authorization checks and create schema objects, users, and permissions.
+
+Only Derby code should be able to call this powerful method.

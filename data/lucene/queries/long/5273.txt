@@ -1,0 +1,3 @@
+As mentioned in various issues (e.g. LUCENE-3655, LUCENE-3885, SOLR-4766), we release multiple versions of the same artifact: binary Maven artifacts are not identical to the ones in the Lucene and Solr binary distributions, and the Lucene jars in the Solr binary distribution, including within the war, are not identical to the ones in the Lucene binary distribution.  This is bad.
+
+It's (probably always?) not horribly bad, since the differences all appear to be caused by the build re-creating manifests and re-building jars and the Solr war from their constituents at various points in the release build process; as a result, manifest timestamp attributes, as well as archive metadata (at least constituent timestamps, maybe other things?), differ each time a jar is rebuilt.

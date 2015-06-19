@@ -1,0 +1,21 @@
+(first of all Solr Rocks!)
+iam runnig an e-comerce application with dynamic filteset, depend on selected categories.
+everything works fine and stable but today i found out that ther is a strange case:
+
+i guess around 5000 strings in my app used as facet filter. There is one String "transluzentes Acryl" and even the english  translation "Translucent acrylics" are not working.
+
+QUERY:
+http://ff01:8983/solr/core1/select/?q=*:*&fq=shop_id:10 AND language:2 AND category_1:"Badewannen" AND material:"transluzentes Acryl"&facet=on&facet.limit=400&facet.field=category_1&facet.field=category_2&facet.field=manu&facet.field=length&facet.field=width&facet.field=height&facet.field=color&facet.field=material&facet.field=delivery&facet.field=attributes&facet.mincount=1&facet.sort=lex&facet.method=fc&stats=true&stats.field=price&start=0&rows=50&sort=sort+desc&fl=name,model_nr,image,url,manu,delivery,in_stock,serie,price,uvp,nav_id,template,option,name,model_nr,image,url,manu,delivery,in_stock,serie,price,uvp,nav_id,template,option&wt=phps&V=1.0&version=2.2
+
+RESPONSE: as xml and php works fine! but json , phps ends up like this.
+.....s:2:"fq";s:79:"shop_id:10 AND language:2 AND category_1:"Badewannen" AND material:"transluzentes Acryl"";......
+see that double qoutes at the end.
+
+That happens only on this strings or Docs because even the english Docs fails. I though its may be a matter of encoding, so i added a transformer in the DIH which  replaced these strings with "Hello World".
+Faces on "Hello Wolrd" fails. Other Facet Strings with white spaces, special chars and so on never fail. 
+
+if i add brackets on the fq 
+...q=:&fq=shop_id:10 AND language:2 AND category_1:"Badewannen" AND material:"transluzentes Acryl"&facet=on&...
+it ends up with a double }}
+s:2:"fq";s:79:"shop_id:20 AND language:2 AND category_1:"Badewannen" AND material:"Hallo Welt"";}}
+

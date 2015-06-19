@@ -1,0 +1,1 @@
+I built a Wikipedia index w/ 9 dimensions but I don't know how many ords each child contributes / how many immediate children under each dim / etc.

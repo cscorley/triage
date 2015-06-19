@@ -1,0 +1,1 @@
+On 10.4 branch JMX tests fail with security exceptions when run against classes 

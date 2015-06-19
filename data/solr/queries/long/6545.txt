@@ -1,0 +1,80 @@
+Downloaded 4.10.0, unpacked, and setup a solrcloud 2-node cluster by running: 
+  bin/solr -e cloud 
+
+Accepting all the default options and you will have a 2 node cloud running with replication factor of 2.  
+
+Now add 2 documents by going to example/exampledocs, creating the following file named my_test.xml:
+
+<add>
+ <doc>
+  <field name="id">1000</field>
+  <field name="name">test 1</field>
+  <field name="desc_t">Text about test 1.</field>
+  <field name="cat_A_s">Category A</field>
+ </doc>
+ <doc>
+  <field name="id">1001</field>
+  <field name="name">test 2</field>
+  <field name="desc_t">Stuff about test 2.</field>
+  <field name="cat_B_s">Category B</field>
+ </doc>
+</add>
+
+Then import these documents by running:
+  java -Durl=http://localhost:7574/solr/gettingstarted/update -jar post.jar my_test.xml
+
+Verify the docs are there by hitting:
+  http://localhost:8983/solr/gettingstarted/select?q=*:*
+
+Now run a query and ask for only the id and cat_*_s fields:
+  http://localhost:8983/solr/gettingstarted/select?q=*:*&fl=id,cat_*
+
+You will only get the id fields back.  Change the query a little to include a third field:
+  http://localhost:8983/solr/gettingstarted/select?q=*:*&fl=id,name,cat_*
+
+You will now get the following exception:
+java.lang.NullPointerException
+	at org.apache.solr.handler.component.QueryComponent.returnFields(QueryComponent.java:1257)
+	at org.apache.solr.handler.component.QueryComponent.handleRegularResponses(QueryComponent.java:720)
+	at org.apache.solr.handler.component.QueryComponent.handleResponses(QueryComponent.java:695)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:324)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:135)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:1967)
+	at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:777)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:418)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:207)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72)
+	at org.eclipse.jetty.server.bio.SocketConnector$ConnectorEndPoint.run(SocketConnector.java:264)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+
+I believe SOLR-6501 partially fixes the issue.  After downloading build 607 (4.11.0-2014-09-11_22-31-51 1624413 - jenkins - 2014-09-11 22:32:47) which contains the fix for SOLR-6501 and going through the same setup as above, I still see some issues but no exceptions are thrown.
+
+With build 607, running a query for id and a wild card field still does't work:
+ http://localhost:8983/solr/gettingstarted/select?q=*:*&fl=id,cat_*
+
+It returns only the id field.  If I add another field into the list it finally works:
+ http://localhost:8983/solr/gettingstarted/select?q=*:*&fl=id,name,cat_*
+
+Returns id, name, and the cat_*_s fields.

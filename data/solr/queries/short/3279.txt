@@ -1,0 +1,1 @@
+Upgrade Carrot2 to minimize the possibility of dependency clashes

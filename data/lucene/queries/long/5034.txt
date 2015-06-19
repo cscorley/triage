@@ -1,0 +1,1 @@
+Depending on the data, it might be interesting to use smaller or larger page sizes.

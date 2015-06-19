@@ -1,0 +1,1 @@
+Shade protobuf library to avoid incompatible versions

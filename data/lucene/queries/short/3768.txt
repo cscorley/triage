@@ -1,0 +1,1 @@
+Typo in some of the .alg files: ForcMerge instead of ForceMerge

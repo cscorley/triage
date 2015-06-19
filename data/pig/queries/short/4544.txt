@@ -1,0 +1,1 @@
+Upgrade Hbase to 0.98.12

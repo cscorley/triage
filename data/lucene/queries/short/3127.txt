@@ -1,0 +1,1 @@
+pull CoreReaders out of SegmentReader

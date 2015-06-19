@@ -1,0 +1,5 @@
+The ReplicationHandler should have an option to throttle the speed of replication.
+
+It is useful for people who want bring up nodes in their SolrCloud cluster or when have a backup-restore API and not eat up all their network bandwidth while replicating.
+
+I am writing a test case and will attach a patch shortly.

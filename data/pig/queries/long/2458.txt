@@ -1,0 +1,7 @@
+I believe that there is a regression. We can no longer do the following:
+
+bin/pig -x local -p THING="other thing"
+
+as is, I can't seem to escape this to make it work, either, which is worse than in the other issue.
+
+I am testing a patch that should fix this.

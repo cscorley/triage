@@ -1,0 +1,1 @@
+Right now log record serialization is synchronized.  We can improve concurrency by serializing to a ram buffer outside synchronization.  The cost will be RAM usage for buffering, and more complex concurrency in the tlog itself (i.e. we must ensure that a close does not happen without flushing all in-RAM buffers)

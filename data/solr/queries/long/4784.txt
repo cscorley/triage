@@ -1,0 +1,3 @@
+Ref http://search-lucene.com/m/DNSHiv7adQ1
+
+The class LuceneQParser should be public to allow subclassing from different namespace and from plugins outside the war.

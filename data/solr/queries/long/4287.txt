@@ -1,0 +1,6 @@
+For the solr artifact, the war file name has the format "solr-X.Y.Z.war".
+http://search.maven.org/#artifactdetails%7Corg.apache.solr%7Csolr%7C4.0.0%7Cwar
+
+However, when building from source or downloading the dist/ built war file, it is named "apache-solr-X.Y.Z.war".  This should really be the same...
+
+Preferably the "apache-" could just be removed, since the lucene build does not appear to use the same convention.

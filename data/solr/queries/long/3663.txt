@@ -1,0 +1,1 @@
+I've got a more explicit sync test and a fix.

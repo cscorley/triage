@@ -1,0 +1,1 @@
+DWStallControl can deadlock IW if no flushes are running / pending

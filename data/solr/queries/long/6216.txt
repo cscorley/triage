@@ -1,0 +1,11 @@
+There are two ways to have faceting on values ranges in Solr right now: “Range Faceting” and “Query Faceting” (doing range queries). They both end up doing something similar:
+
+
+searcher.numDocs(rangeQ , docs)
+
+
+The good thing about this implementation is that it can benefit from caching. The bad thing is that it may be slow with cold caches, and that there will be a query for each of the ranges.
+
+A different implementation would be one that works similar to regular field faceting, using doc values and validating ranges for each value of the matching documents. This implementation would sometimes be faster than Range Faceting / Query Faceting, specially on cases where caches are not very effective, like on a high update rate, or where ranges change frequently.
+
+Functionally, the result should be exactly the same as the one obtained by doing a facet query for every interval

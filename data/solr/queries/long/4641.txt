@@ -1,0 +1,3 @@
+Currently FieldType does this correctly, but SchemaField does not.
+
+so for example simple typos like (one from solr's test configs itself) omitOmitTermFrequencyAndPositions=true... on the field elements themselves are silently ignored.

@@ -1,0 +1,3 @@
+Support the syntax 
+
+INTERSECT [ALL | DISTINCT] and EXCEPT [ALL | DISTINCT]

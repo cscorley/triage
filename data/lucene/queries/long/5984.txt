@@ -1,0 +1,1 @@
+I would like to suggest removing ChainedFilter. It is currently only used in Solr's CurrencyField but could easily be replaced with a BooleanFilter and my understanding of this filter is that it can generally be replaced with a BooleanFilter. So let's drop it and suggest using BooleanFilter instead?

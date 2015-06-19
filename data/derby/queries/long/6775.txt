@@ -1,0 +1,1 @@
+rather than check absolute number of free pages after looping abort, change test to sleep for awhile after all the inserts and then insert same number of rows and verify that it uses all the reclaimed free pages.  This check is better than the currently commented out check of absolute free pages which is timing dependent on machines/hardware.

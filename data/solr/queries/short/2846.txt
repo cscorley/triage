@@ -1,0 +1,1 @@
+SolrTestCaseJ4 bug get "udate/json" Json update handler

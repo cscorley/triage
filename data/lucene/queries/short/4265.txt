@@ -1,0 +1,1 @@
+Name eclipse project after the branch:  lucene_solr_branch_3x, lucene_solr_branch_4x, lucene_solr_trunk instead of all the same.

@@ -1,0 +1,1 @@
+OpenJPA jar should self-describe its build information

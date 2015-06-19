@@ -1,0 +1,1 @@
+PigStorageSchema initializes schema and PigContext for every tuple

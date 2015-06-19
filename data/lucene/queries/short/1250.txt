@@ -1,0 +1,1 @@
+Some equals methods do not check for null argument

@@ -1,0 +1,18 @@
+While working on DERBY-6383, wrote a junit test case to test the impact of DROP COLUMN on the triggers, found following incorrect behavior with 10.7 release. The behavior is correct on 10.8 and higher releases
+
+CREATE TABLE DERBY_6368_TAB1 (X INTEGER, Y INTEGER);
+CREATE TABLE DERBY_6368_TAB2 (X INTEGER, Y INTEGER);
+INSERT INTO  DERBY_6368_TAB1 VALUES(1, 2);
+
+CREATE TRIGGER t3 AFTER UPDATE ON DERBY_6368_TAB1 REFERENCING old table AS old INSERT INTO DERBY_6368_TAB2 SELECT * FROM old;
+
+--1 row
+UPDATE DERBY_6368_TAB1 SET x = x + 1;
+select count from DERBY_6368_TAB2;
+
+ALTER TABLE DERBY_6368_TAB1 DROP COLUMN Y;
+
+The ALTER TABLE above gives correct warning in 10.8 and higher as shown below
+WARNING 01502: The trigger T3 on table DERBY_6368_TAB1 has been dropped.
+but 10.7 gives following error
+ERROR 42X05: Table/View 'OLD' does not exist.

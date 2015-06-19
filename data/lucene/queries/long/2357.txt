@@ -1,0 +1,5 @@
+We allocate this int[] to remap docIDs due to compaction of deleted ones.
+
+This uses alot of RAM for large segment merges, and can fail to allocate due to fragmentation on 32 bit JREs.
+
+Now that we have packed ints, a simple fix would be to use a packed int array... and maybe instead of storing abs docID in the mapping, we could store the number of del docs seen so far (so the remap would do a lookup then a subtract).  This may add some CPU cost to merging but should bring down transient RAM usage quite a bit.

@@ -1,0 +1,9 @@
+While looking at LUCENE-4123, i thought about this:
+
+I don't like how mmap creates a separate mapping for each CFS slice, to me this is way too many mmapings.
+
+Instead I think its slicer should map the .CFS file, and then when asked for an offset+length slice of that, it should be using .duplicate()d buffers of that single master mapping.
+
+then when you close the .CFS it closes that one mapping.
+
+this is probably too scary for 4.0, we should take our time, but I think we should do it.

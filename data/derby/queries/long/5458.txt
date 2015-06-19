@@ -1,0 +1,2 @@
+Add an ant target that builds the JavaDocs and then zips them up into a bundle.
+Introduced to achieve a higher degree of platform independence when pulling JavaDocs from ci and build systems. In this specific case, it allows Hudson to invoke an ant target instead of relying on a shell script or similar.

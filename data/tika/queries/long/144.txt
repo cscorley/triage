@@ -1,0 +1,1 @@
+New versions of the CyberNeko HTML parser are ALv2 and have better Maven metadata.

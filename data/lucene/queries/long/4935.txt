@@ -1,0 +1,7 @@
+CustomScoreQuery wrongly applies boost^2 instead of boost.
+
+It wrongly incorporates its boost into the normalization factor passed down to subquery (like booleanquery does) and also multiplies it directly in its scorer.
+
+The only reason the test passes today is because it compares raw score magnitudes when querynorm is on, which normalizes this away.
+
+Changing the test to use newSearcher() demonstrates the brokenness.

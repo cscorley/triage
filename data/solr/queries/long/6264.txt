@@ -1,0 +1,9 @@
+Regardless of whether one agrees with optimizing, when you execute an optimize request using waitSearcher=true, the requests from the controller node are sent to each replica in the collection serially. 
+
+You can send the optimize command to the update handler for a collection to any node in the cluster. For instance, if I had a collection named "foo":
+
+curl -i -v http://localhost:8984/solr/foo/update --data-binary '<optimize maxSegments="1" waitSearcher="true"/>' -H 'Content-type:application/xml'
+
+The node that receives this request will collect the URL for all "live" replicas in the collection (not just leaders) (see DistributedUpdateProcessor#getCollectionUrls) and then forward the commit request to each of them. On the surface, the code looks like it forwards the request asynchronously to all replicas. However, this is not actually what happens; the commit requests to each replica in the collection will be processed serially when using waitSearcher=true (because ConcurrentUpdateSolrServer's background queue processing is by-passed for commits).
+
+Bottom-line, if you request the collection to be optimized, the request gets forwarded around as you'd expect but is done synchronously so can take a long time. 

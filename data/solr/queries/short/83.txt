@@ -1,0 +1,1 @@
+DOCU: Quickstart note about how to make the example working in src version

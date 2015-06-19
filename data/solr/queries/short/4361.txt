@@ -1,0 +1,1 @@
+DIH request parameters with dots throws UnsupportedOperationException

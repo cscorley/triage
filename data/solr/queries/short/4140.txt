@@ -1,0 +1,1 @@
+Collection API: CloudSolrServer cannot be used to create collection without referencing an existing collection

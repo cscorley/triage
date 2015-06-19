@@ -1,0 +1,3 @@
+For example when one uses xml and specifies fl to contain [explain style=nl] parser currently cannot handle the response.
+
+I also noticed that the example tests are not run with xml (that would have caught this earlier).

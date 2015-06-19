@@ -1,0 +1,1 @@
+Turn asserts in I/O related code into hard checks

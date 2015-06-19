@@ -1,0 +1,18 @@
+after upgrading to lucene 3.1+, I see this in my log:
+
+
+java.lang.AssertionError: TokenStream implementation classes or at least their incrementToken() implementation must be final
+        at org.apache.lucene.analysis.TokenStream.assertFinal(TokenStream.java:117)
+        at org.apache.lucene.analysis.TokenStream.<init>(TokenStream.java:92)
+
+
+Turns out I derived TokenStream and my class was not declared final.
+
+This silently breaks backward compatibility via reflection, scary...
+
+I think doing this sort of check is fine, but throwing an java.lang.AssertionError in this case is too stringent. 
+
+This is a style check against lucene clients, a error log would be fine, but throwing an Error is too much.
+
+See constructor implementation for: http://svn.apache.org/viewvc/lucene/dev/branches/branch_3x/lucene/src/java/org/apache/lucene/analysis/TokenStream.java?view=markup
+

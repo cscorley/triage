@@ -1,0 +1,19 @@
+The explicit mechanisms to start the network server make no mention of if they install a default security manager and policy or not.
+
+These are at least:
+
+NetworkServerControl javadoc
+   summary - start command on command line
+   main() method
+   start() method
+
+derby.drda.startNetworkServerProperty
+
+Each start mechanism should clearly state if they install or do not install the default security manager and policy.
+
+(Other starts commands are)
+
+java -jar derbynet.jar
+java -jar derbyrun.jar server start
+
+I didn't look to see if these document the default policy or not, not sure where they are documented.

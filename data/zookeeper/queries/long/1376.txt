@@ -1,0 +1,8 @@
+It will always include it even if not defined, although not much harm.
+
+if [ "x$SERVER_JVMFLAGS" ]
+then
+JVMFLAGS="$SERVER_JVMFLAGS $JVMFLAGS"
+fi
+
+should use the std idiom.

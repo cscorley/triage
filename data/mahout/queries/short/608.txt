@@ -1,0 +1,1 @@
+Collect various data directories in Mahout dir structure

@@ -1,0 +1,3 @@
+This is trappy today: every time you open a new reader, you must create a new SSDVReaderState (this computes the seg -> global ord mapping), and pass that to SSDVA.
+
+But if this gets messed up (e.g. you pass an old SSDVReaderState) it will result in confusing AIOOBE, or silently invalid results.

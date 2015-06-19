@@ -1,0 +1,1 @@
+Use the Velocity UI as the default tutorial example

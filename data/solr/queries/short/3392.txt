@@ -1,0 +1,1 @@
+searcher leak when openSearcher=false

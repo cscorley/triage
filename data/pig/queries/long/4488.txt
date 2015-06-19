@@ -1,0 +1,7 @@
+Set "tez.queue.name" does not work, however, set "mapreduce.job.queuename" works on tez. The reason is we mask tez.queue.name with mapreduce.job.queuename in MRToTezHelper:
+
+
+        String queueName = tezConf.get(JobContext.QUEUE_NAME,
+                YarnConfiguration.DEFAULT_QUEUE_NAME);
+        dagAMConf.setIfUnset(TezConfiguration.TEZ_QUEUE_NAME, queueName);
+

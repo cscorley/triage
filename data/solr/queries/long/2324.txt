@@ -1,0 +1,1 @@
+Parameters like solr/@zkHost and solr/cores/@hostPort are ignored.

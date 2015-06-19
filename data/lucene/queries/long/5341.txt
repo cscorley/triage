@@ -1,0 +1,5 @@
+In the 4.6 RC1, The "File Formats” link from the generated Lucene Documentation page leads to the 4.5 format doc, rather than the 4.6 format doc (Lucene46Codec was introduced by LUCENE-5215). 
+
+Updating this is not automated now - it’s hard-coded in lucene/site/xsl/index.xsl - the default codec doesn’t change in every release.
+
+The default codec could be extracted from o.a.l.codecs.Codec#defaultCodec [ = Codec.forName(“Lucene46”)] and inserted into the URL to the index file format documentation.

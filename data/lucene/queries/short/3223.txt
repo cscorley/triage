@@ -1,0 +1,1 @@
+SearchWithSortTask ignores sorting by Doc

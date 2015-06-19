@@ -1,0 +1,11 @@
+Currently, all Lucene tests open directories with newDirectory() [and soon-to-be added newFSDirectory() which always ensures the directory returned is an FSDir subclass, see LUCENE-2804 for this]. Additionally the directory is wrapped with MockDirectoryWrapper.
+
+This has a number of advantages:
+
+	By default the directory implementation is random, but you can easily specify a specific impl e.g. -Dtests.directory=MMapDirectory. When proposing a change to one of our directory implementations, we can run all tests with it this way... it would be good for Solr tests to respect this too.
+	The test framework (LuceneTestCase before/afterclass) ensures that these directories are properly closed, if not, it causes the test to fail with a stacktrace of where you
+first opened the directory.
+	MockDirectoryWrapper.close() then ensures that there are no resource leaks by default, when you open a file they save the stacktrace of where you opened it from. If you try to close the directory without say, closing an IndexReader, it fails with the stacktrace of where you opened the reader from. This is helpful for tracking down resource leaks. Currently Solr warns if it cannot delete its test temporary directory, but this is better since you know exactly where the resource leak came from. This can be disabled with an optional setter which we should probably expose for some tests that have known leaks like SpellCheck.
+	MockDirectoryWrapper enforce consistent test behavior on any operating system, as it won't be dependent on the return value of FSDirectory.open
+	MockDirectoryWrapper has a number of other checks and features, such as simulating a crash, simulating disk full, emulating windows (where you can't delete open files), etc.
+

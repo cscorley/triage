@@ -1,0 +1,5 @@
+Put two @Column(unique = true) annotations on two different fields in an Entity.
+
+Set up OpenJPA to synchronize mappings (i.e. generate DDL).
+
+Observe that when the DDL is created it attempts to create two unique constraints, one for each column.  This is good.  However, also observe that both unique constraints are named "UNQ_".  This causes the H2 database (and probably others) to reject the DDL as invalid (correctly).

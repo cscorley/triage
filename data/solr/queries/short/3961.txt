@@ -1,0 +1,1 @@
+LimitTokenCountFilterFactory config parsing is totally broken

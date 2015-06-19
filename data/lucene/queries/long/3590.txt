@@ -1,0 +1,6 @@
+Setting this as blocker for 4.0, as this class is used in every API there.
+
+Currently this API is a little of a everything, sometimes its like a stringbuffer, it
+does numeric conversions, all kinds of stuff.
+
+We need this to be a ref to a byte[], nothing else. This other stuff can go somewhere else.

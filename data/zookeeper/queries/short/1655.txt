@@ -1,0 +1,1 @@
+Make jline dependency optional in maven pom

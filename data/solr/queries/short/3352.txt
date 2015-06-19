@@ -1,0 +1,1 @@
+eDismax: pf2 should kick in for a query with 2 terms

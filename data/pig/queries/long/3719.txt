@@ -1,0 +1,8 @@
+There are two sets of skewed join e2e tests-
+
+	tez.conf: Join7 and 8
+	nightly.conf: SkewedJoin
+
+
+
+We need to get both passing.

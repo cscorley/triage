@@ -1,0 +1,24 @@
+The parser in JsonLoader does not handle null fields when adding a document over http+json.
+
+Given this document:
+
+
+
+[{
+  "timestamp":"2011-08-17T14:11:49.201Z",
+  "correlationId":"N44YFGSQNC",
+  "logType":"event",
+  "short":"Invalidating session: 4zy6cvdtmvu1erlay0sn6rhz",
+  "long":null
+}]
+
+
+
+I'm getting a response code=400 and the error message "should finish doc first" in the logs.
+
+It seems that JsonLoader is missing case for JSONParser.NULL in the parser even switch.
+
+
+	https://svn.apache.org/repos/asf/lucene/dev/trunk/solr/core/src/java/org/apache/solr/handler/JsonLoader.java
+	https://svn.apache.org/repos/asf/labs/noggit/src/main/java/org/apache/noggit/JSONParser.java
+

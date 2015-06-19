@@ -1,0 +1,44 @@
+The Stempel stemmer appears to be broken under Solr in v4.0.0-BETA, very likely related to LUCENE-2510 / LUCENE-4044.
+
+When I add the following to the example, I get the below-listed exception on start-up:
+
+solrconfig.xml
+
+<lib dir="../../../contrib/analysis-extras/lucene-libs/" regex=".*\.jar"/>
+
+
+schema.xml
+
+<fields>
+  <field name="content" type="text_pl" indexed="true" stored="false" multiValued="true"/>
+[...]
+<types>
+  <fieldType name="text_pl" class="solr.TextField" positionIncrementGap="100">
+    <analyzer>
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.StempelPolishStemFilterFactory"/>
+    </analyzer>
+  </fieldType>
+
+
+
+Solr console output
+[...]
+INFO: Adding 'file:/C:/temp/apache-solr-4.0.0-BETA/contrib/analysis-extras/lucene-libs/lucene-analyzers-stempel-4.0.0-BETA.jar' to classloader
+[...]
+SEVERE: null:java.lang.RuntimeException: java.io.IOException: Can't find resource '/org/apache/lucene/analysis/pl/stemmer_20000.tbl' in classpath or 'solr\collection1\conf/', cwd=C:\temp\apache-solr-4.0.0-BETA\example
+        at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:116)
+        at org.apache.solr.core.CoreContainer.create(CoreContainer.java:850)
+        at org.apache.solr.core.CoreContainer.load(CoreContainer.java:539)
+        at org.apache.solr.core.CoreContainer.load(CoreContainer.java:360)
+        at org.apache.solr.core.CoreContainer$Initializer.initialize(CoreContainer.java:309)
+        at org.apache.solr.servlet.SolrDispatchFilter.init(SolrDispatchFilter.java:106)
+[...]
+Caused by: java.io.IOException: Can't find resource '/org/apache/lucene/analysis/pl/stemmer_20000.tbl' in classpath or 'solr\collection1\conf/', cwd=C:\temp\apache-solr-4.0.0-BETA\example
+        at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:314)
+        at org.apache.lucene.analysis.stempel.StempelPolishStemFilterFactory.inform(StempelPolishStemFilterFactory.java:42)
+        at org.apache.solr.core.SolrResourceLoader.inform(SolrResourceLoader.java:613)
+        at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:114)
+        ... 44 more
+

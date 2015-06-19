@@ -1,0 +1,1 @@
+selckin reported on IRC that if you run ant test -Dtestcase=TestLockFactory -Dtestmethod=testNativeFSLockFactoryPrefix -Dtests.directory=FSDirectory the test fails. Since FSDirectory is an abstract class it can not be instantiated so our code falls back to FSDirector.open. yet we miss to set the given lockFactory though.

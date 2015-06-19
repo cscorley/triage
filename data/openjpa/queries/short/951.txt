@@ -1,0 +1,1 @@
+Javadoc jar file does not contain legal files

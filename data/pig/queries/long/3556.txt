@@ -1,0 +1,1 @@
+PIG-3541 broke the -Dhadoopversion=20 build of tez branch. It's because ControlledJob that I added to PigStats is not available in Hadoop 1.0.0.

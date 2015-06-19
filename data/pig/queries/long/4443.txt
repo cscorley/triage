@@ -1,0 +1,3 @@
+Pig sets the input split information in user payload and when running against a table with 10s of 1000s of partitions, DAG submission fails with
+java.io.IOException: Requested data length 305844060 is longer than maximum
+configured RPC length 67108864

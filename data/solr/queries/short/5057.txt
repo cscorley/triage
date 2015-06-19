@@ -1,0 +1,1 @@
+queryResultCache should not related with the order of fq's list

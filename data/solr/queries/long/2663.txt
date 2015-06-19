@@ -1,0 +1,3 @@
+I have a use case where i'd like to be able to programmaticly "test" if a (single) arbitrary FieldType configuration is valid, but this is currently impossibly because the code to parse/init FieldTypes is buried deep inside IndexSchema.readSchema using anonymous inner-subclasses of AbstractPluginLoader.
+
+I'd like to refactor this out into a concrete public class.  Regardless of my usecase, i think this is a good idea in general since it makes IndexSchema a lot easier to read/maintain and helps make it more obvious exactly what info is being used when initializing the FieldTypes+Analyzers

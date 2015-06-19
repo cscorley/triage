@@ -1,0 +1,1 @@
+Document STARTSWITH and ENDSWITH UDFs

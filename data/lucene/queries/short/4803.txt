@@ -1,0 +1,1 @@
+DrillDownQuery should rewrite to FilteredQuery?

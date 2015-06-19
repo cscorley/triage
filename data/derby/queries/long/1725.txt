@@ -1,0 +1,1 @@
+This is a placeholder for recording merges from the trunk to the 10.2 branch.

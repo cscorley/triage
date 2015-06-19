@@ -1,0 +1,3 @@
+Observed OutOfMemoryError in NIOServerFactory, but it didnt bring down the bookie and it continued to run without serving. 
+
+On OOME in any thread, bookie should shutdown.

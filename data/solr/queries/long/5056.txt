@@ -1,0 +1,1 @@
+Makes ConfigSolr a bit more typesafe, and pushes a bunch of cloud-specific config into ZkController.

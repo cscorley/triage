@@ -1,0 +1,1 @@
+Converted "visited" to a BitSet and sized it correctly in AnalyzingSuggester.topoSortStates(Automaton). This avoids dynamic resizing of the set.

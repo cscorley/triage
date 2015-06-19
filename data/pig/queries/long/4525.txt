@@ -1,0 +1,3 @@
+The exception "Scalar has more than one row in the output." is correct yet is reason for many (starting) pig developers to search the internet for a solution.
+
+I propose (and I'll include a patch) to simply extend the exception message with a hint towards the right solution.

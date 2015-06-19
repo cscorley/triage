@@ -1,0 +1,1 @@
+It would be convenient to have "preservePositionIncrements" in the suggesters constructor, rather than having a setPreservePositionIncrements method. That way it could be nicely used with the factory model already used by Solr.

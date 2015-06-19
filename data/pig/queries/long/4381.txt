@@ -1,0 +1,13 @@
+When user executes a define command from the grunt shell and if the command spans across multiple lines the following exception is thrown:
+
+
+
+2014-12-23 11:29:32,637 [main] ERROR org.apache.pig.tools.grunt.Grunt - ERROR 1000: Error during parsing. Lexical error at line 2, column 0. Encountered: <EOF> after : "" 
+Details at logfile: /home/demo/hdp-datascience-demo/demo/pig_1419334148891.log 
+grunt> DEFINE preprocess(year_str, airport_code) returns data 
+2014-12-23 11:29:43,802 [main] ERROR org.apache.pig.tools.grunt.Grunt - ERROR 1000: Error during parsing. Lexical error at line 2, column 0. Encountered: <EOF> after : "" 
+Details at logfile: /home/demo/hdp-datascience-demo/demo/pig_1419334148891.log 
+
+
+
+The same command works fine with a Pig script file.

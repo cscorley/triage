@@ -1,0 +1,1 @@
+ARJ and UC2 archives are detected as application/octet-stream

@@ -1,0 +1,6 @@
+Hacking/debugging/extending Solr with one's own ResponseWriter one might want to inherit functionality from XMLWriter. A trivial example is overriding writeDate(..) to use a different calendar/format.
+
+I asked about why it's made final on the mailing list[1].
+
+
+[1] http://mail-archives.apache.org/mod_mbox/lucene-solr-user/201105.mbox/%3CBANLkTin4mXiyBZW3CK-K4Gwq4O6nnC2gWQ@mail.gmail.com%3E 

@@ -1,0 +1,9 @@
+Currently a user can instantiate a SortedDocValuesTermsEnum(SortedDocValues). 
+
+This is a generic termsenum, implementing all operations by lookupOrd().
+
+I think instead this should be the default implementation, and we should have e.g. SortedDocValues.termsEnum() that returns it (codec can implement something fancier).
+
+For example the default codec implements lookupOrd as an FST binary search, which means next() on this termsenum is much slower than it needs to be for the places where this enum is actually used (segment merging, OrdinalMap used for faceting in SOLR-4490 and LUCENE-4795) 
+
+So instead, it can override this method and use an FSTEnum, and these operations are significantly faster (3x faster for me with a simple benchmark with 10M terms).

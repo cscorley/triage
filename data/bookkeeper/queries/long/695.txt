@@ -1,0 +1,26 @@
+Some entry logs appear to be truncated (possible at a momemnt when the bookie
+was shut down) and the compaction is never getting rid of them:
+
+
+
+00:00:06.448 [GarbageCollectorThread] INFO o.a.b.bookie.GarbageCollectorThread - Extracting entry log meta from entryLogId: 1497
+00:00:07.140 [GarbageCollectorThread] WARN  o.a.b.bookie.GarbageCollectorThread - Premature exception when processing 1497 recovery will take care of the problem
+java.io.IOException: Short read for ledger entry from entryLog 1497@718702792(31356!=32840)
+        at org.apache.bookkeeper.bookie.EntryLogger.scanEntryLog(EntryLogger.java:514) ~[bookkeeper-server-4.2.1.15.jar:4.2.2-SNAPSHOT]
+        at org.apache.bookkeeper.bookie.GarbageCollectorThread.extractMetaFromEntryLog(GarbageCollectorThread.java:572) [bookkeeper-server-4.2.1.15.jar:4.2.2-SNAPSHOT]
+        at org.apache.bookkeeper.bookie.GarbageCollectorThread.extractMetaFromEntryLogs(GarbageCollectorThread.java:549) [bookkeeper-server-4.2.1.15.jar:4.2.2-SNAPSHOT]
+        at org.apache.bookkeeper.bookie.GarbageCollectorThread.run(GarbageCollectorThread.java:268) [bookkeeper-server-4.2.1.15.jar:4.2.2-SNAPSHOT]
+
+
+
+These entry logs are not being removed: 
+
+
+$ ll -h *.log
+-rw-r--r-- 1 yahoo users 686M Jul 17 10:45 5d9.log
+-rw-r--r-- 1 yahoo users 634M Jul 27 19:31 b2d.log
+-rw-r--r-- 1 yahoo users 1.5G Jul 28 15:22 b35.log
+-rw-r--r-- 1 yahoo users 2.0G Aug  4 04:57 dbd.log
+-rw-r--r-- 1 yahoo users 2.0G Aug  4 04:58 dbe.log
+.....
+

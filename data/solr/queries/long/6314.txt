@@ -1,0 +1,440 @@
+I am trying to work with multi-threaded faceting on SolrCloud and in the process i was hit by some issues.
+
+I am currently running the below upstream test on different SolrCloud configurations and i am getting a different result set per configuration.
+https://github.com/apache/lucene-solr/blob/trunk/solr/core/src/test/org/apache/solr/request/TestFaceting.java#L654
+
+Setup:
+
+	Indexed 50 docs into SolrCloud.
+
+
+
+
+	If the SolrCloud has only 1 shard, the facet field query has the below output (which matches with the expected upstream test output - # facet fields ~ 50).
+
+
+
+
+
+$ curl  "http://localhost:8983/solr/collection1/select?facet=true&fl=id&indent=true&q=id%3A*&facet.limit=-1&facet.threads=1000&facet.field=f0_ws&facet.field=f0_ws&facet.field=f0_ws&facet.field=f0_ws&facet.field=f0_ws&facet.field=f1_ws&facet.field=f1_ws&facet.field=f1_ws&facet.field=f1_ws&facet.field=f1_ws&facet.field=f2_ws&facet.field=f2_ws&facet.field=f2_ws&facet.field=f2_ws&facet.field=f2_ws&facet.field=f3_ws&facet.field=f3_ws&facet.field=f3_ws&facet.field=f3_ws&facet.field=f3_ws&facet.field=f4_ws&facet.field=f4_ws&facet.field=f4_ws&facet.field=f4_ws&facet.field=f4_ws&facet.field=f5_ws&facet.field=f5_ws&facet.field=f5_ws&facet.field=f5_ws&facet.field=f5_ws&facet.field=f6_ws&facet.field=f6_ws&facet.field=f6_ws&facet.field=f6_ws&facet.field=f6_ws&facet.field=f7_ws&facet.field=f7_ws&facet.field=f7_ws&facet.field=f7_ws&facet.field=f7_ws&facet.field=f8_ws&facet.field=f8_ws&facet.field=f8_ws&facet.field=f8_ws&facet.field=f8_ws&facet.field=f9_ws&facet.field=f9_ws&facet.field=f9_ws&facet.field=f9_ws&facet.field=f9_ws&rows=1&wt=xml"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+<lst name="responseHeader">
+  <int name="status">0</int>
+  <int name="QTime">21</int>
+  <lst name="params">
+    <str name="facet">true</str>
+    <str name="fl">id</str>
+    <str name="indent">true</str>
+    <str name="q">id:*</str>
+    <str name="facet.limit">-1</str>
+    <str name="facet.threads">1000</str>
+    <arr name="facet.field">
+      <str>f0_ws</str>
+      <str>f0_ws</str>
+      <str>f0_ws</str>
+      <str>f0_ws</str>
+      <str>f0_ws</str>
+      <str>f1_ws</str>
+      <str>f1_ws</str>
+      <str>f1_ws</str>
+      <str>f1_ws</str>
+      <str>f1_ws</str>
+      <str>f2_ws</str>
+      <str>f2_ws</str>
+      <str>f2_ws</str>
+      <str>f2_ws</str>
+      <str>f2_ws</str>
+      <str>f3_ws</str>
+      <str>f3_ws</str>
+      <str>f3_ws</str>
+      <str>f3_ws</str>
+      <str>f3_ws</str>
+      <str>f4_ws</str>
+      <str>f4_ws</str>
+      <str>f4_ws</str>
+      <str>f4_ws</str>
+      <str>f4_ws</str>
+      <str>f5_ws</str>
+      <str>f5_ws</str>
+      <str>f5_ws</str>
+      <str>f5_ws</str>
+      <str>f5_ws</str>
+      <str>f6_ws</str>
+      <str>f6_ws</str>
+      <str>f6_ws</str>
+      <str>f6_ws</str>
+      <str>f6_ws</str>
+      <str>f7_ws</str>
+      <str>f7_ws</str>
+      <str>f7_ws</str>
+      <str>f7_ws</str>
+      <str>f7_ws</str>
+      <str>f8_ws</str>
+      <str>f8_ws</str>
+      <str>f8_ws</str>
+      <str>f8_ws</str>
+      <str>f8_ws</str>
+      <str>f9_ws</str>
+      <str>f9_ws</str>
+      <str>f9_ws</str>
+      <str>f9_ws</str>
+      <str>f9_ws</str>
+    </arr>
+    <str name="wt">xml</str>
+    <str name="rows">1</str>
+  </lst>
+</lst>
+<result name="response" numFound="50" start="0">
+  <doc>
+    <float name="id">0.0</float></doc>
+</result>
+<lst name="facet_counts">
+  <lst name="facet_queries"/>
+  <lst name="facet_fields">
+    <lst name="f0_ws">
+      <int name="zero_1">25</int>
+      <int name="zero_2">25</int>
+    </lst>
+    <lst name="f0_ws">
+      <int name="zero_1">25</int>
+      <int name="zero_2">25</int>
+    </lst>
+    <lst name="f0_ws">
+      <int name="zero_1">25</int>
+      <int name="zero_2">25</int>
+    </lst>
+    <lst name="f0_ws">
+      <int name="zero_1">25</int>
+      <int name="zero_2">25</int>
+    </lst>
+    <lst name="f0_ws">
+      <int name="zero_1">25</int>
+      <int name="zero_2">25</int>
+    </lst>
+    <lst name="f1_ws">
+      <int name="one_1">33</int>
+      <int name="one_3">17</int>
+    </lst>
+    <lst name="f1_ws">
+      <int name="one_1">33</int>
+      <int name="one_3">17</int>
+    </lst>
+    <lst name="f1_ws">
+      <int name="one_1">33</int>
+      <int name="one_3">17</int>
+    </lst>
+    <lst name="f1_ws">
+      <int name="one_1">33</int>
+      <int name="one_3">17</int>
+    </lst>
+    <lst name="f1_ws">
+      <int name="one_1">33</int>
+      <int name="one_3">17</int>
+    </lst>
+    <lst name="f2_ws">
+      <int name="two_1">37</int>
+      <int name="two_4">13</int>
+    </lst>
+    <lst name="f2_ws">
+      <int name="two_1">37</int>
+      <int name="two_4">13</int>
+    </lst>
+    <lst name="f2_ws">
+      <int name="two_1">37</int>
+      <int name="two_4">13</int>
+    </lst>
+    <lst name="f2_ws">
+      <int name="two_1">37</int>
+      <int name="two_4">13</int>
+    </lst>
+    <lst name="f2_ws">
+      <int name="two_1">37</int>
+      <int name="two_4">13</int>
+    </lst>
+    <lst name="f3_ws">
+      <int name="three_1">40</int>
+      <int name="three_5">10</int>
+    </lst>
+
+    <lst name="f3_ws">
+      <int name="three_1">40</int>
+      <int name="three_5">10</int>
+    </lst>
+    <lst name="f3_ws">
+      <int name="three_1">40</int>
+      <int name="three_5">10</int>
+    </lst>
+    <lst name="f3_ws">
+      <int name="three_1">40</int>
+      <int name="three_5">10</int>
+    </lst>
+    <lst name="f3_ws">
+      <int name="three_1">40</int>
+      <int name="three_5">10</int>
+    </lst>
+    <lst name="f4_ws">
+      <int name="four_1">41</int>
+      <int name="four_6">9</int>
+    </lst>
+    <lst name="f4_ws">
+      <int name="four_1">41</int>
+      <int name="four_6">9</int>
+    </lst>
+    <lst name="f4_ws">
+      <int name="four_1">41</int>
+      <int name="four_6">9</int>
+    </lst>
+    <lst name="f4_ws">
+      <int name="four_1">41</int>
+      <int name="four_6">9</int>
+    </lst>
+    <lst name="f4_ws">
+      <int name="four_1">41</int>
+      <int name="four_6">9</int>
+    </lst>
+    <lst name="f5_ws">
+      <int name="five_1">42</int>
+      <int name="five_7">8</int>
+    </lst>
+    <lst name="f5_ws">
+      <int name="five_1">42</int>
+      <int name="five_7">8</int>
+    </lst>
+    <lst name="f5_ws">
+      <int name="five_1">42</int>
+      <int name="five_7">8</int>
+    </lst>
+    <lst name="f5_ws">
+      <int name="five_1">42</int>
+      <int name="five_7">8</int>
+    </lst>
+    <lst name="f5_ws">
+      <int name="five_1">42</int>
+      <int name="five_7">8</int>
+    </lst>
+    <lst name="f6_ws">
+      <int name="six_1">43</int>
+      <int name="six_8">7</int>
+
+    </lst>
+    <lst name="f6_ws">
+      <int name="six_1">43</int>
+      <int name="six_8">7</int>
+    </lst>
+    <lst name="f6_ws">
+      <int name="six_1">43</int>
+      <int name="six_8">7</int>
+    </lst>
+    <lst name="f6_ws">
+      <int name="six_1">43</int>
+      <int name="six_8">7</int>
+    </lst>
+    <lst name="f6_ws">
+      <int name="six_1">43</int>
+      <int name="six_8">7</int>
+    </lst>
+    <lst name="f7_ws">
+      <int name="seven_1">44</int>
+      <int name="seven_9">6</int>
+    </lst>
+    <lst name="f7_ws">
+      <int name="seven_1">44</int>
+      <int name="seven_9">6</int>
+    </lst>
+    <lst name="f7_ws">
+      <int name="seven_1">44</int>
+      <int name="seven_9">6</int>
+    </lst>
+    <lst name="f7_ws">
+      <int name="seven_1">44</int>
+      <int name="seven_9">6</int>
+    </lst>
+    <lst name="f7_ws">
+      <int name="seven_1">44</int>
+      <int name="seven_9">6</int>
+    </lst>
+    <lst name="f8_ws">
+      <int name="eight_1">45</int>
+      <int name="eight_10">5</int>
+    </lst>
+    <lst name="f8_ws">
+      <int name="eight_1">45</int>
+      <int name="eight_10">5</int>
+    </lst>
+    <lst name="f8_ws">
+      <int name="eight_1">45</int>
+      <int name="eight_10">5</int>
+    </lst>
+    <lst name="f8_ws">
+      <int name="eight_1">45</int>
+      <int name="eight_10">5</int>
+    </lst>
+    <lst name="f8_ws">
+      <int name="eight_1">45</int>
+      <int name="eight_10">5</int>
+    </lst>
+    <lst name="f9_ws">
+      <int name="nine_1">45</int>
+      <int name="nine_11">5</int>
+    </lst>
+    <lst name="f9_ws">
+      <int name="nine_1">45</int>
+      <int name="nine_11">5</int>
+    </lst>
+
+    <lst name="f9_ws">
+      <int name="nine_1">45</int>
+      <int name="nine_11">5</int>
+    </lst>
+    <lst name="f9_ws">
+      <int name="nine_1">45</int>
+      <int name="nine_11">5</int>
+    </lst>
+    <lst name="f9_ws">
+      <int name="nine_1">45</int>
+      <int name="nine_11">5</int>
+    </lst>
+  </lst>
+  <lst name="facet_dates"/>
+  <lst name="facet_ranges"/>
+</lst>
+</response> 
+
+
+
+
+
+	Now, if a create a new collection with 2 shards (>1 shard SolrCloud), the same above query results in a different output. (# facet fields ~ 10 ;  Expected 50)
+
+
+
+
+
+$ curl  "http://localhost:8983/solr/collection1/select?facet=true&fl=id&indent=true&q=id%3A*&facet.limit=-1&facet.threads=1000&facet.field=f0_ws&facet.field=f0_ws&facet.field=f0_ws&facet.field=f0_ws&facet.field=f0_ws&facet.field=f1_ws&facet.field=f1_ws&facet.field=f1_ws&facet.field=f1_ws&facet.field=f1_ws&facet.field=f2_ws&facet.field=f2_ws&facet.field=f2_ws&facet.field=f2_ws&facet.field=f2_ws&facet.field=f3_ws&facet.field=f3_ws&facet.field=f3_ws&facet.field=f3_ws&facet.field=f3_ws&facet.field=f4_ws&facet.field=f4_ws&facet.field=f4_ws&facet.field=f4_ws&facet.field=f4_ws&facet.field=f5_ws&facet.field=f5_ws&facet.field=f5_ws&facet.field=f5_ws&facet.field=f5_ws&facet.field=f6_ws&facet.field=f6_ws&facet.field=f6_ws&facet.field=f6_ws&facet.field=f6_ws&facet.field=f7_ws&facet.field=f7_ws&facet.field=f7_ws&facet.field=f7_ws&facet.field=f7_ws&facet.field=f8_ws&facet.field=f8_ws&facet.field=f8_ws&facet.field=f8_ws&facet.field=f8_ws&facet.field=f9_ws&facet.field=f9_ws&facet.field=f9_ws&facet.field=f9_ws&facet.field=f9_ws&rows=1&wt=xml"
+ 
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+<lst name="responseHeader">
+  <int name="status">0</int>
+  <int name="QTime">31</int>
+  <lst name="params">
+    <str name="facet">true</str>
+    <str name="fl">id</str>
+    <str name="indent">true</str>
+    <str name="q">id:*</str>
+    <str name="facet.limit">-1</str>
+    <str name="facet.threads">1000</str>
+    <arr name="facet.field">
+      <str>f0_ws</str>
+      <str>f0_ws</str>
+      <str>f0_ws</str>
+      <str>f0_ws</str>
+      <str>f0_ws</str>
+      <str>f1_ws</str>
+      <str>f1_ws</str>
+      <str>f1_ws</str>
+      <str>f1_ws</str>
+      <str>f1_ws</str>
+      <str>f2_ws</str>
+      <str>f2_ws</str>
+      <str>f2_ws</str>
+      <str>f2_ws</str>
+      <str>f2_ws</str>
+      <str>f3_ws</str>
+      <str>f3_ws</str>
+      <str>f3_ws</str>
+      <str>f3_ws</str>
+      <str>f3_ws</str>
+      <str>f4_ws</str>
+      <str>f4_ws</str>
+      <str>f4_ws</str>
+      <str>f4_ws</str>
+      <str>f4_ws</str>
+      <str>f5_ws</str>
+      <str>f5_ws</str>
+      <str>f5_ws</str>
+      <str>f5_ws</str>
+      <str>f5_ws</str>
+      <str>f6_ws</str>
+      <str>f6_ws</str>
+      <str>f6_ws</str>
+      <str>f6_ws</str>
+      <str>f6_ws</str>
+      <str>f7_ws</str>
+      <str>f7_ws</str>
+      <str>f7_ws</str>
+      <str>f7_ws</str>
+      <str>f7_ws</str>
+      <str>f8_ws</str>
+      <str>f8_ws</str>
+      <str>f8_ws</str>
+      <str>f8_ws</str>
+      <str>f8_ws</str>
+      <str>f9_ws</str>
+      <str>f9_ws</str>
+      <str>f9_ws</str>
+      <str>f9_ws</str>
+      <str>f9_ws</str>
+    </arr>
+    <str name="wt">xml</str>
+    <str name="rows">1</str>
+  </lst>
+</lst>
+<result name="response" numFound="50" start="0" maxScore="1.0">
+  <doc>
+    <float name="id">2.0</float></doc>
+</result>
+<lst name="facet_counts">
+  <lst name="facet_queries"/>
+  <lst name="facet_fields">
+    <lst name="f0_ws">
+      <int name="zero_1">25</int>
+      <int name="zero_2">25</int>
+    </lst>
+    <lst name="f1_ws">
+      <int name="one_1">33</int>
+      <int name="one_3">17</int>
+    </lst>
+    <lst name="f2_ws">
+      <int name="two_1">37</int>
+      <int name="two_4">13</int>
+    </lst>
+    <lst name="f3_ws">
+      <int name="three_1">40</int>
+      <int name="three_5">10</int>
+    </lst>
+    <lst name="f4_ws">
+      <int name="four_1">41</int>
+      <int name="four_6">9</int>
+    </lst>
+    <lst name="f5_ws">
+      <int name="five_1">42</int>
+      <int name="five_7">8</int>
+    </lst>
+    <lst name="f6_ws">
+      <int name="six_1">43</int>
+      <int name="six_8">7</int>
+    </lst>
+    <lst name="f7_ws">
+      <int name="seven_1">44</int>
+      <int name="seven_9">6</int>
+    </lst>
+    <lst name="f8_ws">
+      <int name="eight_1">45</int>
+      <int name="eight_10">5</int>
+    </lst>
+    <lst name="f9_ws">
+      <int name="nine_1">45</int>
+      <int name="nine_11">5</int>
+    </lst>
+  </lst>
+  <lst name="facet_dates"/>
+  <lst name="facet_ranges"/>
+</lst>
+</response>
+
+
+
+This behavior is quite strange as it is being dependent on the number of shards in SolrCloud. It would be great if someone can shed some light on this?

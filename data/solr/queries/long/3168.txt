@@ -1,0 +1,5 @@
+On SOLR-2578, Neil Hooey pointed out a silly mistake in SnapShooter.java in that I forgot to increment a counter variable in the case the user wants to keep more than 1 backup.
+
+I will attach a patch for this 1-line fix.  I do not intend to amend the unit test as this fix is easy to understand.  Also, the test case is already very complex and long-running.
+
+I will commit shortly.

@@ -1,0 +1,2 @@
+Don't estimate the size of the fieldCache entries, even on "insanity" (which can happen from perfectly sane Solr uses)
+http://search.lucidimagination.com/search/document/afdb2f0002fb8866/solr_1_4_stats_page_slow

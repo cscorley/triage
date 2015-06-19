@@ -1,0 +1,1 @@
+TermsFilter.getDocIdSet(context) NPE on missing field

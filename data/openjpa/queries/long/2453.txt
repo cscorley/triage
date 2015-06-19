@@ -1,0 +1,40 @@
+Take the following Entity:
+
+public class TemporalEntity {
+@Id
+private Integer id;
+
+@Temporal(TemporalType.TIMESTAMP)
+private java.util.Date testDate;
+.....
+
+Take this row in the DB (Timestamp is used in the DB):
+
+ID            TESTDATE
+1        2010-01-01 12:00:00.687701
+
+
+Using a Date, I can not directly get the fractional seconds (i.e. .687701).  However, I can use a formatter as follows and the milliseconds will be printed:
+
+TemporalEntity t = em.find(TemporalEntity.class, 1);
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+System.out.println("sdf.format(t.getTestDate()) = " + sdf.format(t.getTestDate()).toString());
+
+E.g:
+sdf.format(t.getTestDate()) = 2010-01-01 12:00:00.688
+
+Notice that the milliseconds are rounded.  OpenJPA rounds the milliseconds by default.  This rounding was not desirable by some users.  For example, take the insert of this data:
+
+INSERT INTO TemporalEntity (Id, testDate) VALUES(1, '9999-12-31 23:59:59.9999')
+
+The Date inserted into the DB is .1 milliseconds from the next day of the next year.  When a query is performed on this row, OpenJPA rounds the Date to the nearest millisecond which means the Date seen by the user represents the next day and year.  A while back we added a system property ('roundTimeToMillisec', via OPENJPA-2159) to OpenJPA to allow the milliseconds to be stripped off and thus avoid the rounding.  So we avoid rounding, but in doing so the milliseconds are completely removed when the property is set.   For example, when roundTimeToMillisec=false, the above date of '9999-12-31 23:59:59.9999' will not be rounded up.  HOWEVER, the .999 will be stripped off.  So, take our String format example above, the output would be:
+
+sdf.format(t.getTestDate()) = 2010-01-01 12:00:00.000
+
+A user may find it desirable to avoid the rounding, but may not like the fact that .688 is removed.
+
+This JIRA will be used to allow a user to avoid rounding of milliseconds, but will allow the milliseconds to be retained.
+
+Thanks,
+
+Heath Thomann

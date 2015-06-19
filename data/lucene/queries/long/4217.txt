@@ -1,0 +1,3 @@
+When clover granted use the license for their clover-2.6.3.jar file they allowed us to ship this license file to every developer. Currently clover setup is very hard for users, so this issue will make it simple.
+
+If you want to run tests with clover, just pass -Drun.clover=true to ant clean test. ANT will then download clover via IVY and point it to the license file in our tools folder. The license is supplemented by the original mail from Atlassian, that everybody is allowed to use it with code in the org.apache. java package.

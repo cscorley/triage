@@ -1,0 +1,1 @@
+Custom Carrot2 tokenizer and stemmer factories overwritten by defaults

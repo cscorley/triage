@@ -1,0 +1,1 @@
+We are on java7, if we cannot delete a file, this one returns a real exception as to why.

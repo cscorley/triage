@@ -1,0 +1,9 @@
+If you have more than 256 flags, you run out of 8-bit characters, so you have to use another flag type to get 64k:
+
+	UTF-8: 16-bit BMP flags
+	long: two-character flags like 'AB'
+	num: decimal numbers like '10234'
+
+
+
+But our implementation for 'long' is wrong, it encodes as 'A+B', which means it cant distinguish between 'AB' and 'BA' and causes overgeneration.

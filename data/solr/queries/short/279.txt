@@ -1,0 +1,1 @@
+System Properties for Testing are now in Java code AND Ant build.xml

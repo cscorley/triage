@@ -1,0 +1,1 @@
+Document updates to SolrCloud can cause a distributed deadlock.

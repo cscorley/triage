@@ -1,0 +1,1 @@
+On session expiration, we should explicitly wait some time before running the leader sync process so that we are sure every node participates.

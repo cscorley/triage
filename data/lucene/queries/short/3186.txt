@@ -1,0 +1,1 @@
+DocValues type should be recored in FNX file to early fail if user specifies incompatible type

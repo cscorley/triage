@@ -1,0 +1,7 @@
+The forbidden API checker currently uses ASM 4.0 to do checks for calls to APIs, the Lucene developers don't like (those with default charsets).
+
+The Lucene classes are of course compiled with old (JDK 1.6) class file format, but the checker has to load also classes from rt.jar, shipped with the JDK. Unfortunately JDK 8 build 65 changed the class format (new version is 52.0), so the checker fails with an IllegalArgumentException while loading platform classes; see their bug tracker.
+
+The bug is not yet fixed in ASM 4.0 or 4.1, so I will disable the forbidden API checker in JDK 8 (until an update is released). I will keep this issue open until this is solved.
+
+I will also commit an update to version 4.1 of ASM.

@@ -1,0 +1,16 @@
+A 3.2 user recently asked if something was wrong because CheckIndex was reporting his (newly built) index version as...
+
+
+Segments file=segments_or numSegments=1 version=FORMAT_3_1 [Lucene 3.1]
+
+
+
+It seems like there are two very confusing pieces of information here...
+
+1) the variable name of SegmentInfos.FORMAT_3_1 seems like poor choice.  All other FORMAT_* constants in SegmentInfos are descriptive of the actual change made, and not specific to the version when they were introduced.
+
+2) whatever the name of the FORMAT_* variable, CheckIndex is labeling it "Lucene 3.1", which is missleading since that format is alwasy used in 3.2 (and probably 3.3, etc...).  
+
+I suggest:
+a) rename FORMAT_3_1 to something like "FORMAT_SEGMENT_RECORDS_VERSION"
+b) change CheckIndex so that the label for the "newest" format always ends with " and later" (ie: "Lucene 3.1 and later") so when we release versions w/o a format change we don't have to remember to manual list them in CheckIndex.  when we do make format changes and update CheckIndex " and later" can be replaced with " to X.Y" and the new format can be added

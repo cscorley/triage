@@ -1,0 +1,1 @@
+Repeater doesn't return correct index version to slaves

@@ -1,0 +1,11 @@
+Since version 3.6.0, Solr does not start up when no cores are defined in solr.xml. The problematic code is in CoresContainer.java, lines 171-173.
+
+org.apache.solr.common.SolrException: No cores were created, please check the logs for errors
+	at org.apache.solr.core.CoreContainer$Initializer.initialize(CoreContainer.java:172) ~[solr-core-3.6.0.jar:3.6.0 1310449 - rmuir - 2012-04-06 11:34:38]
+	at org.apache.solr.servlet.SolrDispatchFilter.init(SolrDispatchFilter.java:96) ~[solr-core-3.6.0.jar:3.6.0 1310449 - rmuir - 2012-04-06 11:34:38]
+...
+
+
+In our case, this is however a valid situation, because we create the cores programatically by calling the webservices to register new cores. The server is initially started with no cores defined, and depending on the configuration of our application, cores are then created dynamically.
+
+For the time being, we have to stick with version 3.5, which did not have this problem (or feature).

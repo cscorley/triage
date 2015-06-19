@@ -1,0 +1,7 @@
+This is a sub-task of DERBY-210 which covers the following;
+
+1. Eliminates the references to statement classes in the client driver. This allows the statement objects to be garbage-collected once they are not referenced in the application.
+2. Clean up the finalizer in the statement classes to avoid synchronized operations.
+3. Add the test in the repro derbyStress.java to regression test.
+
+This sub-task solves the memory leak mentioned in the repro "derbyStress.java". 

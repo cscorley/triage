@@ -1,0 +1,1 @@
+big decimal error diff in derbyall lang/procedure test run in the DerbyNetClient - jdk1.3 specific

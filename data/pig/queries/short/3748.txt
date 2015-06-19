@@ -1,0 +1,1 @@
+Support for multiquery off in Tez

@@ -1,0 +1,1 @@
+TestNullSafeConcurrentHashMap fails when running on Oracle Java 8 

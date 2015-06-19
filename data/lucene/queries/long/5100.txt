@@ -1,0 +1,1 @@
+As Robert said on LUCENE-5081, we would benefit from having common testing infrastructure for our DocIdSet implementations.

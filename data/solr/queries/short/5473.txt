@@ -1,0 +1,1 @@
+Split clusterstate.json per collection and watch states selectively 

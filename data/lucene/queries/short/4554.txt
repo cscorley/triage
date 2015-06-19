@@ -1,0 +1,1 @@
+CompressingStoredFieldsFormat: don't write the original length at the beginning of the chunk

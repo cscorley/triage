@@ -1,0 +1,29 @@
+When running Solr on WebLogic application server 10.3.2, the dataimport for CLOB fields are failing. Line 109 in FieldReaderDataSource.java illustrates the problem:
+
+Method m = clob.getClass().getDeclaredMethod("getCharacterStream");
+
+Since getDeclaredMethod instead of getMethod is used, the getCharacterStream() method will not be found if it is defined in a superclass of clob. This is exactly what
+happens in e.g. WebLogic 10.3.2, since the object returned is a dynamically created wrapper class called Clob_oracle_sql_CLOB. This class does not define
+getCharacterStream(), but it inherits from another class that does. This problem will also occur in other places where getDeclaredMethod used in conjunction with the CLOB
+or BLOB datatypes.
+
+Stacktrace:
+
+org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to get reader from clob Processing Document # 1
+        at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:72)
+        at org.apache.solr.handler.dataimport.FieldReaderDataSource.readCharStream(FieldReaderDataSource.java:118)
+        at org.apache.solr.handler.dataimport.ClobTransformer.readFromClob(ClobTransformer.java:69)
+        at org.apache.solr.handler.dataimport.ClobTransformer.transformRow(ClobTransformer.java:61)
+        at org.apache.solr.handler.dataimport.EntityProcessorWrapper.applyTransformer(EntityProcessorWrapper.java:195)
+        at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextRow(EntityProcessorWrapper.java:241)
+        at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:357)
+        at org.apache.solr.handler.dataimport.DocBuilder.buildDocument(DocBuilder.java:383)
+        at org.apache.solr.handler.dataimport.DocBuilder.doFullDump(DocBuilder.java:242)
+        at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:180)
+        at org.apache.solr.handler.dataimport.DataImporter.doFullImport(DataImporter.java:331)
+        at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:389)
+        at org.apache.solr.handler.dataimport.DataImporter$1.run(DataImporter.java:370)
+Caused by: java.lang.NoSuchMethodException: weblogic.jdbc.wrapper.Clob_oracle_sql_CLOB.getCharacterStream()
+        at java.lang.Class.getDeclaredMethod(Class.java:1937)
+        at org.apache.solr.handler.dataimport.FieldReaderDataSource.readCharStream(FieldReaderDataSource.java:109)
+        ... 11 more

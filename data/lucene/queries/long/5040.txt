@@ -1,0 +1,12 @@
+The problem appears in version 4.3.0 and in revision 1490286.  I
+attached a two-line patch that fixes it.
+
+In method "Lucene40TermVectorsWriter.finishTerm", the loop over
+"offsetStartBuffer" should not be executed when "offsets" is "false".
+When "offsets" is "false" the loop produces no results.  The patch
+just flips the order of the "if" and "for" statements.
+
+Method "collect" in class "MultiComparatorNonScoringCollector" has a
+similar loop (the last loop in the method over "comparators"), and
+this loop is not executed when "queueFull" is false, just like in the
+proposed patch.

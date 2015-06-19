@@ -1,0 +1,9 @@
+If a ledger is fenced while the write is still writing to it, some of the writes will fail to ever complete.
+
+I've attached the log of this happening along with a test case that will trigger the behaviour.
+
+What appears to be happening is that when the fence occurs, the first write after the fence gets an unrecoverable error, so tries to close the ledger. Closing the ledger sets the closed flag on the ledger metadata, and tries to write it, which fails as the metadata in zookeeper was modified by the fencing operation, so the close op fails, resets the closed status for a moment, a write operation gets through, which then fails with a fencing error, so we try to close the ledger, but the other close operation has since closed the ledger in our metadata, so nothing happens, and the write hangs forever.
+
+There's a number of issues here, but foremost, the ledger metadata that the handle is using should only ever represent what is actually in zookeeper. Having various parts of the code flipping bits just explodes the state space. The LedgerMetadata object itself should be immutable, and should only be modified, as a local variable, using a builder, before writing to zookeeper. Only when the zookeeper operation succeeds should we update the reference which LedgerHandle has access to.
+
+There's also a problem in how we handle pendingaddops when we close. Really it shouldn't be possible for a write op to get through after a closure, but we should be defensive here and error out anything that has gotten through, adding a big old log message to alert us that this cases that shouldn't happen, is happening.

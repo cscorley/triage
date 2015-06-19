@@ -1,0 +1,1 @@
+Allow Zookeeper version string to have underscore '_'

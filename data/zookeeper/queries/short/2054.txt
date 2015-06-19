@@ -1,0 +1,1 @@
+test-patch.sh: don't set ulimit -n

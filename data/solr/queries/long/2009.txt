@@ -1,0 +1,1 @@
+Very annoying using these props with core tests unless you use the junit target rather than test. Also would be nice if they worked regardless for future dev.

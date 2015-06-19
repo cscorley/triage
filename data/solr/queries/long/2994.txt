@@ -1,0 +1,11 @@
+Running the "ant idea" target no longer creates an IntelliJ environment that is consistent, I'm getting "package org.apache.lucene.analysis.phonetic does not exist". It looks like the phonetic package moved from lucene to contrib?
+
+Note that command-line ant task continues to work just fine.
+
+I'll attach a patch that fixes it for me, but I'd really like someone who understands Idea (Steve, are you listening?) system take a look to see if it's OK. It's a magnificent single line in solr.iml.
+
+I'm assuming this is also a problem for 4.x, I'll probably be in that environment later today and see.
+
+I have no idea whether Eclipse suffers from the same problem.
+
+I've assigned it to myself just for tracking, anyone who can glance at it and say "yeah, that's right" please feel free to just check it in for 3x and 4x if applicable.

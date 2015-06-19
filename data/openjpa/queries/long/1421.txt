@@ -1,0 +1,1 @@
+When testing on a high end machine, we found a bottleneck in calling JDBCStoreManager.getCacheMapFromQuerySQLCache(...). To fix the problem, had each caller will hold onto the cacheMap that is returned from getCacheMapFromQuerySQLCache(...) rather than call it multiple times.

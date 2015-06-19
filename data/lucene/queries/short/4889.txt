@@ -1,0 +1,1 @@
+UnicodeUtil.codePointCount microbenchmarks (wtf)

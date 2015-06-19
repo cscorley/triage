@@ -1,0 +1,1 @@
+DERBY-6764 is the result of poodle security alert in SSLv3 and SSLv2Hello protocols. For future, it will be good to know the protocols that are enabled on the server side so it is easier to know if the product may be impacted by a security issue with any specific protocol. To achieve this, at the server boot up time, we should list these enabled protocols in derby.log

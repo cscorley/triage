@@ -1,0 +1,27 @@
+Currently in trunk, there are 8 demo (sub)directories in the demo/programs directory scheduled to be included in -bin distributions, each containing one or more demo or sample applications:
+
+  localcal/
+  nserverdemo/
+  scores/
+  simple/
+  simplemobile/
+  toursdb/
+  vtis/
+  workingwithderby/
+
+With a -bin distribution of Derby, a user should be able to get an overview of the included demo program offering by opening demo/programs/readme.html in a web browser (there is a link to this from the top-level index.html file). In trunk, we are currently missing short descriptions of and links to:
+
+
+	localcal (see DERBY-1936) [also in 10.3]
+	scores (see DERBY-1993) [also in 10.3]
+	vtis (see DERBY-3129)
+
+
+
+Each of these demos have a README file in their respective subdirectories, that could easily be linked to.*
+
+The remaining 5 demos are accessible from and described by the readme.html file (readme.html is a frameset; the actual references and descriptions are in navbar.html and demo.html. These files are placed in the java/demo directory in the source tree).
+
+
+*)
+Also, one should make sure that the README files and other instructions are suitable for -bin distributions, not only -src distributions or SVN working copies. Otherwise, these particular demos should not be included in -bin distributions. For example both localcal/README, scores/README and vtis/README currently refer to build scripts that are not scheduled for inclusion in -bin distros.

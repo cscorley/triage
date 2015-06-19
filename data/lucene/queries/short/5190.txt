@@ -1,0 +1,1 @@
+Consistent failure of TestCheckIndex.testLuceneConstantVersion in jenkins trunk clover build

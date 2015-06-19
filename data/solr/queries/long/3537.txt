@@ -1,0 +1,1 @@
+TermVectorComponent should be improved so that it fields can be specified in tv.fl (or fl) using globs ala the ReturnFields helper class.  per field overrides for the various options TVC supports should work will all fields, even if specified as part of a glob.

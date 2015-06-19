@@ -1,0 +1,1 @@
+TestTezCompiler#testReplicatedJoinInReducer is broken because of PIG-3759. We need to fix it.

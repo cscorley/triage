@@ -1,0 +1,1 @@
+I found spelling mistakes in the Solr java source files viz. recieved instead of received.

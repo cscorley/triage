@@ -1,0 +1,1 @@
+ManagedIndexSchema not persist uniqueKey tag after calling addFields method.

@@ -1,0 +1,3 @@
+Frequently, people who try to use solr cloud in a differnet servlet container (or in a jetty other then the preconfigured one supplied) they can be easily confused as to why/how/where solr is trying to hostContext=solr and hostPort=8983.
+
+these can be explicitly overridden in solr.xml, and the defaults are setup to read from system properties, but we should eliminate the hardcoded defaults from the java code (where most users can't even grep for them) and instead specify defaults for the sys properties in the example configs.

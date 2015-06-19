@@ -1,0 +1,1 @@
+The e2e test harness will need to be deployed in a number of different ways.  For example, we will most likely want to be able to deploy it to a local cluster, to a cloud based cluster (via a tool like whirr), and to a pseudo-cluster on a single box.  To enable this a deployment interface should be built.

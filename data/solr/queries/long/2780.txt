@@ -1,0 +1,20 @@
+Dear All ,
+Kindly note that I am using Solr 4.0 and Kindly note that group.truncate=true calculates facet counts that based on the most relevant document of each group matching the query.
+
+But when I used Multi-Select Faceting [Tagging and excluding Filters] , the solr can't calculate the facet after grouping the results and select multi facet.
+
+http://127.0.0.1:8983/solr/select/?facet=true&sort=score+desc,+rate+desc,total_of_reviews+desc&facet.limit=-1&bf=sum%28product%28atan%28total_of_reviews%29,50%29,product%28rate,10%29%29^4&group.field=place_id&facet.field=
+{!ex%3Dce}cat_en&facet.field={!ex%3Dce}
+cat_ar&facet.field=
+{!ex%3Dir}iregion&facet.field={!ex%3Dir}
+region_en&facet.field=
+{!ex%3Dir}
+region_ar&facet.field=
+{!ex%3Drr}
+rrate&facet.field=place_status&facet.field=theme_en&facet.field=icity&facet.field=
+{!ex%3Dce}
+icat&facet.field=
+{!ex%3Dsce}isubcat&facet.field={!ex%3Dsce}
+subcat_en&facet.field=
+{!ex%3Dsce}
+subcat_ar&qt=/spell&fq=place_status:1&fq=icity:1&fq=cat_en:%28%22Restaurants%22%29&group.format=simple&group.ngroups=true&facet.mincount=1&qf=title_ar^24+title_en^24+cat_ar^10+cat_en^10++review^20&hl.fl=review&json.nl=map&wt=json&defType=edismax&rows=10&spellcheck.accuracy=0.6&start=0&q=smart&group.truncate=true&group=true&indent=on 

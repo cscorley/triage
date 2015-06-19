@@ -1,0 +1,1 @@
+Trie-based autocomplete API has two methods, store(File) and load(File) to persist the trie representation on disk, but in the committed code (SOLR-1316) these methods were not implemented. This issue adds an implementation for both TSTLookup and JaspellLookup.

@@ -1,0 +1,9 @@
+For traditional lucene access which is mostly sequential, occasional advance(), I think this method gets drowned out in noise.
+
+But for access like docvalues, its important. Unfortunately seek() is complex today because of mapping multiple buffers.
+
+However, the very common case is that only one map is used for a given clone or slice.
+
+When there is the possibility to use only a single mapped buffer, we should instead take advantage of ByteBuffer.slice(), which will adjust the internal mmap address and remove the offset calculation. furthermore we don't need the shift/mask or even the negative check, as they are then all handled with the ByteBuffer api: seek is a one-liner (with try/catch of course to convert exceptions).
+
+This makes docvalues access 20% faster, I havent tested conjunctions or anyhting like that.

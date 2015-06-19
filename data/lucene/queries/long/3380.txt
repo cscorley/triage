@@ -1,0 +1,3 @@
+Looks like FileSwitchDirectory has the same bugs in it as LUCENE-3374.
+
+We should randomly enable this guy in tests and flush them all out the same way.

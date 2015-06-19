@@ -1,0 +1,1 @@
+The code in the scritps to determine the elapsed time does not work on Solaris because the date command there does not support the %s output format.

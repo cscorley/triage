@@ -1,0 +1,18 @@
+I was trying to beef up TestBackwardsCompatibility (LUCENE-4085) but i accidentally made a corrupt index due to a typo:
+
+
+// a field with both offsets and term vectors for a cross-check
+FieldType customType3 = new FieldType(TextField.TYPE_STORED);
+customType3.setStoreTermVectors(true);
+customType3.setStoreTermVectorPositions(true);
+customType3.setStoreTermVectorOffsets(true);    customType3.setIndexOptions(IndexOptions.DOCS_AND_FREQS_AND_POSITIONS_AND_OFFSETS);
+doc.add(new Field("content3", "here is more content with aaa aaa aaa", customType3));
+// a field that omits only positions
+FieldType customType4 = new FieldType(TextField.TYPE_STORED);
+customType4.setStoreTermVectors(true);
+customType4.setStoreTermVectorPositions(false);
+customType4.setStoreTermVectorOffsets(true);
+customType4.setIndexOptions(IndexOptions.DOCS_AND_FREQS);
+// check out the copy-paste typo here! i forgot to change this to content4
+ doc.add(new Field("content3", "here is more content with aaa aaa aaa", customType3));
+

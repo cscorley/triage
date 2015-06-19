@@ -1,0 +1,5 @@
+Call URL :
+http://localhost:8983/solr/admin/cores?action=UNLOAD&deleteInstanceDir=true&core=mycollection1&qt=/admin/cores
+
+Check the disk path:
+folder: /apache-solr-4.0.0/example3/solr/mycollection1 still exist, but caller response is success.

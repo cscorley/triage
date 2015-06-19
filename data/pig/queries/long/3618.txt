@@ -1,0 +1,3 @@
+Previously, I implemented union using OnFileUnorderedKVOutput + broadcast edge. But this is a misuse of broadcast edge since union will create duplicate records when parallel is set to more than 1. We should replace them with ShuffledMergedInput + scatter/gather edge having the entire record as key.
+
+Ideally, we should implement union using OnFileUnorderedKVOutput + scatter/gather edge with a round robin partitioner. For now, this is not supported by Tez (TEZ-661).

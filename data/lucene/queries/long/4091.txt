@@ -1,0 +1,9 @@
+This patch introduces getter-methods for 
+
+
+	FieldFragList.WeightedFragInfo and
+	FieldPhraseList.WeightedPhraseInfo
+
+
+
+in order to make FieldFragList "plugable" (see LUCENE-3440).  

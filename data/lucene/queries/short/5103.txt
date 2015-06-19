@@ -1,0 +1,1 @@
+join on single-valued field with deleted docs scores too few docs

@@ -1,0 +1,1 @@
+ConjunctionTermScorer scans instead of skips on first scorer

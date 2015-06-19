@@ -1,0 +1,17 @@
+After upgrade of the IBM 1.5 jvm from SR10 to SR11 FP1, the 10.1 stress.multi test is failing (out of 6 runs over the last 4 weeks, it failed 5 times) .
+
+This is from the .diff file; there are 8 different heapdumps, this is the first (path has been simplified):
+< ...running last checks via final.sql
+7 add
+> JVMDUMP006I Processing dump event "systhrow", detail "java/lang/OutOfMemoryError" - please wait.
+> JVMDUMP032I JVM requested Snap dump using 'C:\ibm15_derbyall\Snap.20100714.092914.6192.0001.trc' in response to an event
+> UTE001: Error starting trace thread for "Snap Dump Thread": -1
+> JVMDUMP010I Snap dump written to C:\ibm15_derbyall\Snap.20100714.092914.6192.0001.trc
+> JVMDUMP032I JVM requested Heap dump using 'C:\ibm15_derbyall\heapdump.20100714.092914.6192.0002.phd' in response to an event
+> JVMDUMP010I Heap dump written to C:\ibm15_derbyall\heapdump.20100714.092914.6192.0002.phd
+> JVMDUMP032I JVM requested Java dump using 'C:\ibm15_derbyall\javacore.20100714.092914.6192.0003.txt' in response to an event
+> JVMDUMP010I Java dump written to C:\ibm15_derbyall\javacore.20100714.092914.6192.0003.txt
+
+I'll add a set of dump files.
+
+Logging here for reference, could still be a so-far hidden derby problem or test problem, although I suspect the jvm.

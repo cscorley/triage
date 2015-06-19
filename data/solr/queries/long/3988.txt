@@ -1,0 +1,1 @@
+Discovered while writing a test for SOLR-3981. I intend to commit the fix as part of that issue, but creating a subtask to track it as a distinct bug since it may be affecting other users of the test-framework

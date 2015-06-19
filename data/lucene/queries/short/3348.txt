@@ -1,0 +1,1 @@
+IndexWriter applies wrong deletes during concurrent flush-all

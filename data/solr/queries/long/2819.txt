@@ -1,0 +1,13 @@
+In org.apache.solr.analysis HTMLStripCharFilter use a wrong isHex()-method that return characters like 'X', 'Y' as valid hex chars:
+
+
+
+  private boolean isHex(int ch) {
+    return (ch>='0' && ch<='9') ||
+           (ch>='A' && ch<='Z') ||
+           (ch>='a' && ch<='z');
+  }
+
+
+
+If only characters from [0-9a-zA-Z] are allowed, the readNumericEntity method will detect faster a mismatch.

@@ -1,0 +1,1 @@
+update c unit tests to ensure "zombie" java server processes don't cause failure

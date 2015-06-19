@@ -1,0 +1,1 @@
+SolrSchemalessExampleTests never runs, and is currently broken

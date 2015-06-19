@@ -1,0 +1,1 @@
+Backport FilteredQuery/IndexSearcher changes to 3.x: Remove filter logic from IndexSearcher and delegate to FilteredQuery

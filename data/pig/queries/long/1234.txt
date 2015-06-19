@@ -1,0 +1,11 @@
+Tried to load har:// files
+
+grunt> a = LOAD 'har://hdfs-namenode/user/tsz/t20.har/t20' USING PigStorage('\n') AS (line);
+grunt> dump 
+
+
+but pig says
+
+2010-02-10 18:42:20,750 [main] ERROR org.apache.pig.tools.grunt.Grunt - ERROR 2118:
+ Unable to create input slice for: har://hdfs-namenode/user/tsz/t20.har/t20
+

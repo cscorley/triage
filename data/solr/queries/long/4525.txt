@@ -1,0 +1,7 @@
+It's apparent that some different environments are giving me fits, I'll try to clean them up all at once.
+
+OpenCloseCoreStressTest is failing on 32-bit JVMs
+TestSolrProperties fails (Windows) with:
+Unable to delete file: .\org.apache.solr.core.TestSolrProperties\solrHome\solr.properties
+
+Test fails part of the time in that environment. Attached patch will turn on some verbose logging to try to understand what's going on.

@@ -1,0 +1,1 @@
+Highlighter doesn't support ConstantScoreQuery

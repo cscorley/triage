@@ -1,0 +1,43 @@
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbyall/jdbcapi/ScrollResultSetTest.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: ScrollResultSetTest jdk1.3.1 subset - 2.1 derbyall:jdbcapi 2006-06-12 09:30:31 ***
+0 add
+> .E.E
+> There were 2 errors:
+> FAILURES!!!
+> Tests run: 2,  Failures: 0,  Errors: 2
+Test Failed.
+			End:   ScrollResultSetTest jdk1.3.1 subset - 2.1 derbyall:jdbcapi 2006-06-12 09:30:39 ***
+		
+		
+	
+	
+

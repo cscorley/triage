@@ -1,0 +1,1 @@
+allow an alg file to specify the default codec

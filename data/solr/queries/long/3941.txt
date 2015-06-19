@@ -1,0 +1,1 @@
+As part of the recovery process, the replica can force a hard commit on the leader of the shard. This is only used for replication, so there is no need to open a searcher for this. 

@@ -1,0 +1,1 @@
+If you added 'mvn deploy' to the jenkins job, the nightly snapshots would push to repository.apache.org as snapshots, where maven could get them without having to manually download and deploy them. Please?

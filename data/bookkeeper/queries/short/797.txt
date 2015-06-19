@@ -1,0 +1,1 @@
+IllegalArgumentException when calling CodahaleOpStatsLogger#toOpStatsData()

@@ -1,0 +1,5 @@
+In trunk, the check-legal-lucene ant target is not checking any lucene/contrib/**/lib/ directories; the modules/**/lib/ directories are not being checked; and check-legal-solr can't be checking solr/example/lib/**/*.jar, because there are currently .jar files in there that don't have a license.
+
+These targets are set up to take in a full list of lib/ directories in which to check, but modules move around, and these lists are not being kept up-to-date.
+
+Instead, check-legal-* should run for each module, if the module has a lib/ directory, and it should be specialized for modules that have more than one (solr/core/) or that have a lib/ directory in a non-standard place (lucene/core/).

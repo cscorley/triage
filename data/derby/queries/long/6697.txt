@@ -1,0 +1,49 @@
+Some test cases have been failing in the code coverage tests at https://builds.apache.org/job/Derby-JaCoCo/ since Jul 28. The failing tests are:
+
+org.apache.derbyTesting.functionTests.tests.lang.DBOAccessTest.test_6616
+org.apache.derbyTesting.functionTests.tests.lang.DBOAccessTest$NoAuthorization.test_6616
+org.apache.derbyTesting.unitTests.junit.MissingPermissionsTest.testMissingFilePermission
+
+The first two fail with the following message: SQLJ.INSTALL_JAR should have succeeded: 46001 Exception while accessing jar file using URL 'foo'.
+
+The last one fails with this stack trace:
+
+
+subprocess run failed: :Spawned MPT exitCode=134
+STDERR:
+java.security.AccessControlException: access denied ("java.io.FilePermission" "/x1/jenkins/jenkins-slave/workspace/Derby-JaCoCo/trunk/junit_20140806_1917" "read")
+	at java.security.AccessControlContext.checkPermission(AccessControlContext.java:372)
+	at java.security.AccessController.checkPermission(AccessController.java:559)
+	at java.lang.SecurityManager.checkPermission(SecurityManager.java:549)
+	at java.lang.SecurityManager.checkRead(SecurityManager.java:888)
+	at java.io.File.exists(File.java:770)
+	at java.io.File.mkdirs(File.java:1263)
+	at org.jacoco.agent.rt.internal_9dd1198.output.FileOutput.startup(FileOutput.java:46)
+	at org.jacoco.agent.rt.internal_9dd1198.Agent.startup(Agent.java:126)
+	at org.jacoco.agent.rt.internal_9dd1198.Agent.getInstance(Agent.java:56)
+	at org.jacoco.agent.rt.internal_9dd1198.PreMain.premain(PreMain.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:382)
+	at sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:397)
+Exception in thread "main" java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:382)
+	at sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:397)
+Caused by: java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "shutdownHooks")
+	at java.security.AccessControlContext.checkPermission(AccessControlContext.java:372)
+	at java.security.AccessController.checkPermission(AccessController.java:559)
+	at java.lang.SecurityManager.checkPermission(SecurityManager.java:549)
+	at java.lang.Runtime.addShutdownHook(Runtime.java:209)
+	at org.jacoco.agent.rt.internal_9dd1198.Agent.getInstance(Agent.java:57)
+	at org.jacoco.agent.rt.internal_9dd1198.PreMain.premain(PreMain.java:45)
+	... 6 more
+
+STDOUT:
+FATAL ERROR in native method: processing of -javaagent failed
+

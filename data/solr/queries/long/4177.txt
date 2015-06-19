@@ -1,0 +1,28 @@
+Mark first pointed this out on dev...
+
+
+[junit4:junit4] ERROR   0.07s J7 | TestFunctionQuery.testTotalTermFreq <<<
+[junit4:junit4]    > Throwable #1: java.lang.RuntimeException: Exception during query
+[junit4:junit4]    >     at __randomizedtesting.SeedInfo.seed([EDF4E35C4021020F:7F7A789F22B0EA06]:0)
+
+
+
+This specific seed reproduces identically for me.  the tests is expecting the function to produce a score of 7, but it's returning -1...
+
+
+[junit4:junit4]   2> 1717 T10 oas.SolrTestCaseJ4.assertQ SEVERE REQUEST FAILED: xpath=//float[@name='score']='7.0'
+[junit4:junit4]   2> 		xml response was: <?xml version="1.0" encoding="UTF-8"?>
+[junit4:junit4]   2> 	<response>
+[junit4:junit4]   2> 	<lst name="responseHeader"><int name="status">0</int><int name="QTime">33</int></lst><result name="response" numFound="1" start="0" maxScore="-1.0"><doc><float name="id">6.0</float><str name="a_t">cow cow cow cow cow</str><float name="score">-1.0</float></doc></result>
+[junit4:junit4]   2> 	</response>
+[junit4:junit4]   2> 	
+[junit4:junit4]   2> 		request was:fl=*,score&q={!func}totaltermfreq('a_t','cow')&fq=id:6
+
+
+...
+
+[junit4:junit4]   2> NOTE: test params are: codec=Lucene3x, sim=DefaultSimilarity, locale=ms, timezone=Asia/Kathmandu
+[junit4:junit4]   2> NOTE: Linux 3.2.0-36-generic amd64/Sun Microsystems Inc. 1.6.0_24 (64-bit)/cpus=4,threads=3,free=216388728,total=247726080
+[junit4:junit4]   2> NOTE: All tests run in this JVM: [TestFunctionQuery]
+[junit4:junit4] Completed in 2.20s, 1 test, 1 error <<< FAILURES!
+

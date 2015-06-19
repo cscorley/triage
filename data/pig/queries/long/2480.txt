@@ -1,0 +1,10 @@
+I'm seeing one remaining test failure against hadoop 23 – TestUDFContext, run as:
+
+ant -Dhadoopversion=23 -Dtestcase=TestUDFContext clean test
+
+it fails with the following using 0.9.2 rc1
+
+Failed to read data from "/home/phunt/Downloads/p/pig-0.9.2/a.txt"
+Failed to read data from "/home/phunt/Downloads/p/pig-0.9.2/b.txt"
+
+Looks like a test setup issue to me but it's not entirely clear what the test is shooting for.

@@ -1,0 +1,1 @@
+CollapsingQParserPlugin should make elevated documents the group head

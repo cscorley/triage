@@ -1,0 +1,1 @@
+create a simple test that indexes and searches byte[] terms

@@ -1,0 +1,1 @@
+FunctionValues.exist(int) isn't returning false in cases where it should for many "math" based value sources

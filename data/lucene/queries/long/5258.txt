@@ -1,0 +1,1 @@
+Adding this static function makes it really easy to incorporate distance with the score or other signals in arbitrary ways, e.g. score / (1 + log(distance)) or whatever.

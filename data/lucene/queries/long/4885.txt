@@ -1,0 +1,3 @@
+This is cheap to compute, since the TopKFRH already must visit all non-zero-count ords under the FacetRequest.categoryPath.
+
+This can be useful to a front end, eg to know whether to present a "More..." under that dimension or not, whether to use a suggester like LinkedIn's facet UI, etc.

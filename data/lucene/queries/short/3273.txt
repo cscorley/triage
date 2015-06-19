@@ -1,0 +1,1 @@
+Convert Lucene Core tests over to a simple MockQueryParser

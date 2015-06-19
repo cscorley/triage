@@ -1,0 +1,43 @@
+I have the following input:
+
+
+
+one two
+three
+ four
+
+
+
+I run this code
+
+
+Lines =
+    LOAD 'test.log' USING PigStorage(' ') 
+    AS ( First:chararray , Second:chararray );
+
+DUMP Lines;
+
+STORE Lines INTO 'Lines'
+USING org.apache.pig.piggybank.storage.CSVExcelStorage('\t', 'NO_MULTILINE', 'WINDOWS', 'WRITE_OUTPUT_HEADER');
+
+
+
+The output from the DUMP is correct:
+
+
+(one,two)
+(three,)
+(,four)
+
+
+The output from the CSVExcelStorage is incorrect:
+
+
+First   Second
+one     two
+three   three
+        four
+
+
+
+The problem is that if the last field is a null then the previous value is repeated incorrectly (in this case 'three').

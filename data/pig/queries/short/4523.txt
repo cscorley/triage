@@ -1,0 +1,1 @@
+Tez engine should use tez config rather than mr config whenever possible

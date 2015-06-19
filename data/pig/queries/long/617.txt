@@ -1,0 +1,43 @@
+SUM is an aggregate function that expects a bag as an argument. When basic types are used as arguments to SUM, Pig fails during run time. The typechecker should catch this error and fail earlier.
+
+An example is given below:
+
+
+grunt> a = load 'one' as (i: int);
+grunt> b = foreach a generate SUM(i);
+grunt> dump b;
+
+2009-01-12 14:11:47,595 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 0% complete
+2009-01-12 14:12:12,617 [main] ERROR org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Map reduce job failed
+2009-01-12 14:12:12,618 [main] ERROR org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Job failed!
+2009-01-12 14:12:12,623 [main] ERROR org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.Launcher - Error message from task (map) task_200812151518_9683_m_000000java.lang.ClassCastException: java.lang.Integer cannot be cast to org.apache.pig.data.DataBag
+
+2009-01-12 14:12:12,623 [main] ERROR org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.Launcher - Error message from task (map) task_200812151518_9683_m_000000java.lang.ClassCastException: java.lang.Integer cannot be cast to org.apache.pig.data.DataBag
+        at org.apache.pig.builtin.IntSum.sum(IntSum.java:141)
+        at org.apache.pig.builtin.IntSum.exec(IntSum.java:41)
+        at org.apache.pig.builtin.IntSum.exec(IntSum.java:36)
+        at org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POUserFunc.getNext(POUserFunc.java:185)
+        at org.apache.pig.backend.hadoop.executionengine.physicalLayer.expressionOperators.POUserFunc.getNext(POUserFunc.java:247)
+        at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach.processPlan(POForEach.java:265)
+        at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach.getNext(POForEach.java:197)
+        at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapBase.runPipeline(PigMapBase.java:187)
+        at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapBase.map(PigMapBase.java:175)
+        at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapOnly$Map.map(PigMapOnly.java:65)
+        at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:47)
+        at org.apache.hadoop.mapred.MapTask.run(MapTask.java:227)
+        at org.apache.hadoop.mapred.TaskTracker$Child.main(TaskTracker.java:2207)
+...
+
+2009-01-12 14:12:12,629 [main] ERROR org.apache.pig.tools.grunt.Grunt - ERROR 1066: Unable to open iterator for alias b
+2009-01-12 14:12:12,629 [main] ERROR org.apache.pig.tools.grunt.Grunt - org.apache.pig.impl.logicalLayer.FrontendException: Unable to open iterator for alias b
+        at org.apache.pig.PigServer.openIterator(PigServer.java:425)
+        at org.apache.pig.tools.grunt.GruntParser.processDump(GruntParser.java:271)
+        at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:178)
+        at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:84)
+        at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:72)
+        at org.apache.pig.Main.main(Main.java:302)
+Caused by: java.io.IOException: Job terminated with anomalous status FAILED
+        at org.apache.pig.PigServer.openIterator(PigServer.java:419)
+        ... 5 more
+
+

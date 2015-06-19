@@ -1,0 +1,1 @@
+QueryElevationComponent needlessly looks up document ids

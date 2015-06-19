@@ -1,0 +1,1 @@
+Refactor CharFilter to be a java.io.FilterReader

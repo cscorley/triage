@@ -1,0 +1,29 @@
+The TikaEntityProcessor does not find the correct document parser by default.
+This is in a two-level DIH config file. I have attached pdflist-data-config.xml and pdflist.xml, the XML file list supplying. To test this, you will need the current 3.x branch or 4.0 trunk.
+
+	Set up a Tika-enabled Solr
+	copy any PDF file to /tmp/testfile.pdf
+	copy the pdflist-data-config.xml to your solr/conf
+	and add this snippet to your solrconfig.xml
+
+
+<requestHandler name="/pdflist"
+      class="org.apache.solr.handler.dataimport.DataImportHandler">
+  <lst name="defaults">
+              <str name="config">pdflist-data-config.xml</str>
+      </lst>
+</requestHandler>
+
+
+
+
+
+http://localhost:8983/solr/pdflist?command=full-import will make one document with the id and text fields populated. If you remove this line:
+
+
+ parser="org.apache.tika.parser.pdf.PDFParser"
+
+
+from the TikaEntityProcessor entity, the parser will not be found and you will get a document with the "id" field and nothing else.
+
+

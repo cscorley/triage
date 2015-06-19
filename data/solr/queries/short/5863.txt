@@ -1,0 +1,1 @@
+Asserts wrong way around in TestSolrXml

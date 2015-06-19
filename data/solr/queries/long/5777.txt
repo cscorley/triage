@@ -1,0 +1,15 @@
+while working on a test for SOLR-5183 i discovered a bug in the way field values are ordered when the fieldname key is repeated.
+
+ie, these two docs should wind up having identical values for the field "f", but currently the order of the values gets swapped in doc #2...
+
+
+{"add":[
+   {"id":"1", 
+    "f":[45,67]
+   },
+   {"id":"2", 
+    "f":45,
+    "f":67
+   }
+]}
+

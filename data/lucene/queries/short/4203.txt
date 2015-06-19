@@ -1,0 +1,1 @@
+Add IndexWriter.tryDeleteDocument, to delete by document id when possible

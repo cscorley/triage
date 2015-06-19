@@ -1,0 +1,10 @@
+The velocity template layout.vm that includes jquery refers to an older 1.2.3 version of jquery:
+
+http://svn.apache.org/repos/asf/lucene/dev/branches/branch_3x/solr/example/solr/conf/velocity/layout.vm
+
+
+Checked in is a new 1.4.3 version: http://svn.apache.org/repos/asf/lucene/dev/branches/branch_3x/solr/src/webapp/web/admin/
+
+The line that says: <script type="text/javascript" src="#
+{url_for_solr}/admin/jquery-1.2.3.min.js"></script> should be changed to <script type="text/javascript" src="#{url_for_solr}
+/admin/jquery-1.4.3.min.js"></script>

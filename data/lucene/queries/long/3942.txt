@@ -1,0 +1,12 @@
+Tokenizers/Filters can now produce graphs instead of a single linear
+chain of tokens, by setting the PositionLengthAttribute, expressing
+where (how many positions ahead) this token "ends".
+
+The default is 1, meaning it ends at the next position, to be
+backwards compatible.
+
+SynonymFilter produces graph output tokens, as long as the output is a
+single token, but currently never sets the pos length to express this.
+EG for the rule "wifi network -> hotspot", the hotspot token should
+have pos length = 2.  With LUCENE-3940 this will allow us to verify
+that the offsets for such tokens are correct...

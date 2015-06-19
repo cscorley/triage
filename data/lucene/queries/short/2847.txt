@@ -1,0 +1,1 @@
+Support all of unicode in StandardTokenizer

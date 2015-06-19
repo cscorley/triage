@@ -1,0 +1,22 @@
+Currently Solr makes it easy to use english stopwords for StopFilter or CommonGramsFilter.
+Recently in lucene, we added stopwords lists (mostly, but not all from snowball) to all the language analyzers.
+
+So it would be nice if a user can easily specify that they want to use a french stopword list, and use it for StopFilter or CommonGrams.
+
+The ones from snowball, are however formatted in a different manner than the others (although in Lucene we have parsers to deal with this).
+Additionally, we abstract this from Lucene users by adding a static getDefaultStopSet to all analyzers.
+
+There are two approaches, the first one I think I prefer the most, but I'm not sure it matters as long as we have good examples (maybe a foreign language example schema?)
+
+1. The user would specify something like:
+
+ <filter class="solr.StopFilterFactory" fromAnalyzer="org.apache.lucene.analysis.FrenchAnalyzer" .../>
+ This would just grab the CharArraySet from the FrenchAnalyzer's getDefaultStopSet method, who cares where it comes from or how its loaded.
+
+2. We add support for snowball-formatted stopwords lists, and the user could something like:
+
+<filter class="solr.StopFilterFactory" words="org/apache/lucene/analysis/snowball/french_stop.txt" format="snowball" ... />
+The disadvantage to this is they have to know where the list is, what format its in, etc. For example: snowball doesn't provide Romanian or Turkish
+stopword lists to go along with their stemmers, so we had to add our own.
+
+Let me know what you guys think, and I will create a patch.

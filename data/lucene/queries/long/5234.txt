@@ -1,0 +1,1 @@
+Spinoff from this thread: http://lucene.markmail.org/thread/wxs6bzf2ul6go4pg. FieldCache (and friends) API javadocs need some improvements.

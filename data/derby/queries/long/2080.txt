@@ -1,0 +1,72 @@
+dml160 fails for wctme5.7 max libraries and foundation. 
+
+dml119.sql and dcl.sql fail on wctme5.7 max libraries with diffs related to license header stuff. 
+
+
+	
+	
+		
+		
+			Start: dml160 jdkJ2ME Foundation Specification v1.0 derbyall:nist 2006-11-11 14:22:54 ***
+1 del
+< ij> –
+2 del
+< –   Licensed to the Apache Software Foundation (ASF) under one or more
+3 del
+< –   contributor license agreements.  See the NOTICE file distributed with
+4 del
+< –   this work for additional information regarding copyright ownership.
+5 del
+< –   The ASF licenses this file to You under the Apache License, Version 2.0
+6 del
+< –   (the "License"); you may not use this file except in compliance with
+7 del
+< –   the License.  You may obtain a copy of the License at
+8 del
+< –
+9 del
+< –      http://www.apache.org/licenses/LICENSE-2.0
+10 del
+< –
+11 del
+< –   Unless required by applicable law or agreed to in writing, software
+12 del
+< –   distributed under the License is distributed on an "AS IS" BASIS,
+13 del
+< –   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14 del
+< –   See the License for the specific language governing permissions and
+15 del
+< –   limitations under the License.
+16 del
+< –
+17 del
+< AUTOCOMMIT OFF;
+17a1
+> ij> AUTOCOMMIT OFF;
+293 del
+< ij> – Changed to create individual procedures so that this will work with JSR169. 
+293a277,293
+> ij> –
+> –   Licensed to the Apache Software Foundation (ASF) under one or more
+> –   contributor license agreements.  See the NOTICE file distributed with
+> –   this work for additional information regarding copyright ownership.
+> –   The ASF licenses this file to You under the Apache License, Version 2.0
+> –   (the "License"); you may not use this file except in compliance with
+> –   the License.  You may obtain a copy of the License at
+> –
+> –      http://www.apache.org/licenses/LICENSE-2.0
+> –
+> –   Unless required by applicable law or agreed to in writing, software
+> –   distributed under the License is distributed on an "AS IS" BASIS,
+> –   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+> –   See the License for the specific language governing permissions and
+> –   limitations under the License.
+> –
+> – Changed to create individual procedures so that this will work with JSR169. 
+Test Failed.
+		
+		
+	
+	
+

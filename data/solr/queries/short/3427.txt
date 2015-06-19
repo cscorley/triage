@@ -1,0 +1,1 @@
+Faceting under some conditions throws NPE

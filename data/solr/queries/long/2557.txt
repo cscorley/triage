@@ -1,0 +1,3 @@
+All Solr configuration test configs are always in sync based on build.xml, but the examples should always be up to speed.
+
+I think also we should add this to the HowToRelease so its not forgotten when versions are bumped, we need to bump these versions in the example solrconfig.xml and multicore configs

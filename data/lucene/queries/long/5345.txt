@@ -1,0 +1,3 @@
+With LUCENE-5297 we generalized range faceting to accept a ValueSource.
+
+But, when I tried to use this to facet by distance (< 1 km, < 2 km, etc.), it's not working ... the problem is that the RangeAccumulator always uses .longVal and assumes this was a double encoded as a long (via DoubleField).

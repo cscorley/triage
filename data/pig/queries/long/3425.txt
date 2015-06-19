@@ -1,0 +1,7 @@
+When pig CLI is run with -useHCatalog flag it complains about the following:
+
+
+ls: cannot access /usr/lib/hive/lib/jdo2-api-*-ec.jar: No such file or directory
+
+
+Basically it relies on a jdo-api library that used to be called jdo2-api-2.3-ec.jar which now in the latest hive is jdo-api-3.0.1.jar.

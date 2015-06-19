@@ -1,0 +1,15 @@
+I'm working on a custom suggester derived from the AnalyzingInfix. I require what is called a "blended score" (//TODO ln.399 in AnalyzingInfixSuggester) to transform the suggestion weights depending on the position of the searched term(s) in the text.
+
+Right now, I'm using an easy solution :
+If I want 10 suggestions, then I search against the current ordered index for the 100 first results and transform the weight :
+a) by using the term position in the text (found with TermVector and DocsAndPositionsEnum)
+or
+b) by multiplying the weight by the score of a SpanQuery that I add when searching
+and return the updated 10 most weighted suggestions.
+
+Since we usually don't need to suggest so many things, the bigger search + rescoring overhead is not so significant but I agree that this is not the most elegant solution.
+We could include this factor (here the position of the term) directly into the index.
+
+So, I can contribute to this if you think it's worth adding it.
+
+Do you think I should tweak AnalyzingInfixSuggester, subclass it or create a dedicated class ?

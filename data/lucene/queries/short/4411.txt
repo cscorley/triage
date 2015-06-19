@@ -1,0 +1,1 @@
+Depth requested in a facetRequest is reset when Sampling is in effect

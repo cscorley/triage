@@ -1,0 +1,1 @@
+Add a new update processor factory that will dynamically add fields to the schema if an input document contains unknown fields

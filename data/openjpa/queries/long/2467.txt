@@ -1,0 +1,6 @@
+Suppose having an entity class with fields like tStart, tEnd, tModify (with second letter in upper case). The corresponding getter and setter are gettStart and settStart, gettEnd, ... and not getTStart or setTStart.
+
+Inside class PersistenceMetaDataDefaults use of StringUtils.capitalize in method isDefaultPersistent generate the mistake.
+
+Look at this pdf, section 8.8
+http://download.oracle.com/otn-pub/jcp/7224-javabeans-1.01-fr-spec-oth-JSpec/beans.101.pdf

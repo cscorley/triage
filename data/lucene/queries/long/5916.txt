@@ -1,0 +1,1 @@
+An example of a thing breaking this rule is FaultyIndexInput – its internal 'count' field is incremented at the class level; if a test is reiterated, any counter-based events will happen across the same test's reiterations (instead of being consistent and local to a test).

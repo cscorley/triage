@@ -1,0 +1,19 @@
+The bin/solr script supports a -d parameter for specifying the directory containing the webapp, resources, etc, lib ... In most cases, these binaries are reusable (and will eventually be in a server directory SOLR-3619) even if you want to have multiple solr.solr.home directories on the same server. In other words, it is more common/better to do:
+
+
+
+bin/solr start -d server -s home1
+bin/solr start -d server -s home2
+
+
+
+than to do:
+
+
+
+bin/solr start -d server1
+bin/solr start -d server2
+
+
+
+Basically, the start script needs to support a -s option that allows you to share binaries but have different Solr home directories for running multiple Solr instances on the same host.

@@ -1,0 +1,11 @@
+SolrJ's ClientUtils.appendMap method can suffer NPE if either map1 or map2 are null:
+
+
+
+  public static void appendMap(String collection, Map<String,Slice> map1, Map<String,Slice> map2) {
+      Set<Entry<String,Slice>> entrySet = map2.entrySet(); // NPE on map2
+      for (Entry<String,Slice> entry : entrySet) {
+        map1.put(collection + "_" + entry.getKey(), entry.getValue()); // NPE on map1
+      }
+  }
+

@@ -1,0 +1,28 @@
+When using result grouping, sorting by distance with geodist() fails because of missing weights for sorts.
+
+A an example of a failing query on an index with standard schema.xml looks like this:
+
+
+
+q=*:*&group=true&group.field=user.uniqueId_s&group.main=true&group.format=grouped&sfield=user.location_p&pt=48.20927,16.3728&sort=geodist() asc
+
+
+
+The exception thrown is:
+
+
+
+Caused by: org.apache.solr.common.SolrException: Unweighted use of sort geodist(latlon(user.location_p),48.20927,16.3728)
+	at org.apache.solr.search.function.ValueSource$1.newComparator(ValueSource.java:106)
+	at org.apache.lucene.search.SortField.getComparator(SortField.java:413)
+	at org.apache.lucene.search.grouping.AbstractFirstPassGroupingCollector.<init>(AbstractFirstPassGroupingCollector.java:81)
+	at org.apache.lucene.search.grouping.TermFirstPassGroupingCollector.<init>(TermFirstPassGroupingCollector.java:56)
+	at org.apache.solr.search.Grouping$CommandField.createFirstPassCollector(Grouping.java:587)
+	at org.apache.solr.search.Grouping.execute(Grouping.java:256)
+	at org.apache.solr.handler.component.QueryComponent.process(QueryComponent.java:237)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:194)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:129)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:1368)
+	at org.apache.solr.client.solrj.embedded.EmbeddedSolrServer.request(EmbeddedSolrServer.java:140)
+	... 39 more
+

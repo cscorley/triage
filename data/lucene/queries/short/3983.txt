@@ -1,0 +1,1 @@
+HTMLCharacterEntities.jflex uses String.toUpperCase without Locale

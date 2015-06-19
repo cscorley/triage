@@ -1,0 +1,5 @@
+Because Windows does not support forking processes I created a patch that uses the Win32 api to create and destroy a process to control the test solr server.
+
+I have attached two files: 1) the patch and 2) the results from running 'rake test'  In my environment I have two failures.
+
+My approach was to still support the including/requiring of the single file test/functional/test_solr_server.rb and have it further require the platform dependent start/stop api.

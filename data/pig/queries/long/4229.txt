@@ -1,0 +1,5 @@
+Currently we export PIG_CLASSPATH to include all libraries fetched from ivy
+i.e.
+export PIG_CLASSPATH=$PIG_HOME/build/ivy/lib/Pig/*
+
+Will need to copy these dependencies to lib directory instead.

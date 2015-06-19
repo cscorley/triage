@@ -1,0 +1,10 @@
+With a schema that includes a dynamic field that matches 'score' (e.g. s* or even just *) text response writers (json, python, etc...) will return score as an array, e.g.:
+"score": [
+17.522964
+]
+
+For now, a workaround (courtesy of hoss) is adding a non-indexed, non-stored, non-multivalued 'score' field to schema.xml, e.g.:
+<field name="score" type="string" indexed="false" stored="false" multiValued="false"/>
+
+Note that this will happen for anybody following the current (or older) example schema.xml where "*" was used to ignore undesired fields (from: SOLR-217):
+https://github.com/apache/lucene-solr/blob/trunk/solr/example/solr/collection1/conf/schema.xml#L214

@@ -1,0 +1,1 @@
+bulk postings should be codec private

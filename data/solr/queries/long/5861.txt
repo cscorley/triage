@@ -1,0 +1,1 @@
+RecoveryStrategy.sendPrepRecoveryCmd should exclude slices in 'recovery' state in addition to 'construction' state when setting the onlyIfLeaderActive parameter.

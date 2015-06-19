@@ -1,0 +1,1 @@
+Refactor CoreContainer's SolrXML serialization code and improve testing

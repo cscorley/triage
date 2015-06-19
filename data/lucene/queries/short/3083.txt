@@ -1,0 +1,1 @@
+MockRandomMergePolicy optimizes segments not in the Set passed in

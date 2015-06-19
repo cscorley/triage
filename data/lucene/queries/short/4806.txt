@@ -1,0 +1,1 @@
+change FacetIndexingParams.DEFAULT_FACET_DELIM_CHAR to U+001F

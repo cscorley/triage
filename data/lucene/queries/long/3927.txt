@@ -1,0 +1,6 @@
+This is currently not possible because of how the SPI loader works,
+we cannot simulate Lucene3x codec with PreFlexRWCodec.
+
+But we should still allow basic testing (even though we cannot test preflex).
+
+After hacking around the issue, I get interesting fails with this JRE so I think its worth it.

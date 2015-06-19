@@ -1,0 +1,1 @@
+No lockType configured for NRTCachingDirectory

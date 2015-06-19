@@ -1,0 +1,1 @@
+This means you can't try and create the collection again as it will appear to already exist.

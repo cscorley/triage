@@ -1,0 +1,1 @@
+Re-add SorterTemplate and use it to provide fast ArraySorting and replace BytesRefHash sorting

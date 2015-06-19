@@ -1,0 +1,7 @@
+Recent versions of ant have a typedef syntax that allows definition of a number of ant tasks all in one typedef call, and some sort of URI scoping of tasks. The syntax looks something like this:
+
+  <typedef resource="my/package/antlib.xml" classpathref="my.package.classpath" uri="urn:my-package" />
+
+It seems like this would be more convenient than requiring developers to use taskdef for each task they want to use. We should implement this for OpenJPA.
+
+More details about typedefs: http://ant.apache.org/manual/CoreTasks/typedef.html

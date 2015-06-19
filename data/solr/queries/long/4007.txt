@@ -1,0 +1,50 @@
+The Polish Morfologik type does not find its dictionaries when used in Solr. To demonstrate:
+
+1) Add this to example/solr/collection1/conf/schema.xml:
+
+    <!-- Polish -->
+    <fieldType name="text_pl" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.MorfologikFilterFactory" dictionary="MORFOLOGIK" />
+      </analyzer>
+    </fieldType>
+
+
+
+2) Add this to example/solr/collection1/conf/solrconfig.xml:
+
+
+  <lib dir="../../../../lucene/build/analysis/morfologik/" regex=".*\.jar" />
+  <lib dir="../../../contrib/analysis-extras/lib" regex=".*\.jar" />
+  <lib dir="../../../dist/" regex="apache-solr-analysis-extras-\d.*\.jar" />
+
+
+
+3) Test 'text_pl' in the analysis page. You will get an exception.
+
+Oct 28, 2012 8:27:19 PM org.apache.solr.core.SolrCore execute
+INFO: [collection1] webapp=/solr path=/analysis/field params={analysis.showmatch=true&analysis.query=&wt=json&analysis.fieldvalue=blah+blah&analysis.fieldtype=text_pl} status=500 QTime=26 
+Oct 28, 2012 8:27:19 PM org.apache.solr.common.SolrException log
+SEVERE: null:java.lang.RuntimeException: Default dictionary resource for language 'plnot found.
+	at morfologik.stemming.Dictionary.getForLanguage(Dictionary.java:163)
+	at morfologik.stemming.PolishStemmer.<init>(PolishStemmer.java:64)
+	at org.apache.lucene.analysis.morfologik.MorfologikFilter.<init>(MorfologikFilter.java:70)
+	at org.apache.lucene.analysis.morfologik.MorfologikFilterFactory.create(MorfologikFilterFactory.java:63)
+	at org.apache.solr.handler.AnalysisRequestHandlerBase.analyzeValue(AnalysisRequestHandlerBase.java:125)
+	at org.apache.solr.handler.FieldAnalysisRequestHandler.analyzeValues(FieldAnalysisRequestHandler.java:220)
+	at org.apache.solr.handler.FieldAnalysisRequestHandler.handleAnalysisRequest(FieldAnalysisRequestHandler.java:181)
+	at org.apache.solr.handler.FieldAnalysisRequestHandler.doAnalysis(FieldAnalysisRequestHandler.java:100)
+	at 
+
+[...........]
+
+Caused by: java.io.IOException: Could not locate resource: morfologik/dictionaries/pl.dict
+	at morfologik.util.ResourceUtils.openInputStream(ResourceUtils.java:56)
+	at morfologik.stemming.Dictionary.getForLanguage(Dictionary.java:156)
+	... 38 more
+
+
+
+
+morfologik-polish-1.5.3.jar has morfologik/dictionaries/pl.dict.

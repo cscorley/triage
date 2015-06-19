@@ -1,0 +1,3 @@
+JavaBinCodec currently requires use of the concrete "FastInputStream" when unmarshalling a record. A JavaBinCodec API that takes an interface or abstract implementation would allow greater reuse.
+
+In my particular case I am trying to use JavaBinCodec to marshal/unmarshal from an data source that doesn't allow buffering. The semantics are such that I can read only a single record from the input source. The buffering in FastInputStream is reading information contained in the second record. No state other than the input data source itself is available to "cache" the FastInputStream between calls. As a result I'm losing the second record. I would like to provide an InputStream/DataInput that doesn't do any buffering.

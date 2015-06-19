@@ -1,0 +1,6 @@
+Investigate why ShardSplitTest if failing sporadically.
+
+Some recent failures:
+http://jenkins.thetaphi.de/job/Lucene-Solr-trunk-Windows/3328/
+http://jenkins.thetaphi.de/job/Lucene-Solr-trunk-Linux/7760/
+http://jenkins.thetaphi.de/job/Lucene-Solr-4.x-MacOSX/861/

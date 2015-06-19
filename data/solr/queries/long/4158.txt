@@ -1,0 +1,1 @@
+Rather than waiting just 30 seconds, we must wait at least as long as the current wait a potential leader does on cluster startup.

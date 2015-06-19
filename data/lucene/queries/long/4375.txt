@@ -1,0 +1,3 @@
+SpatialOperation has two special BBoxIntersects and BBoxWithin choices.  I assumed these where the bounding boxes of the query shape but Ryan McKinley informed me these are supposed to be for the indexed shape.  There is no strategy in Lucene spatial that could use this but there is one externally – JtsGeoStrategy.  Javadocs should be added to clarify, and various places like SpatialArgs.getShape() should be fixed to not use it incorrectly.
+
+This does remove a feature from the Solr adapters side; the test there will need to change.

@@ -1,0 +1,1 @@
+Wrong jars copied into lib directory in e2e tests when invoked from top level

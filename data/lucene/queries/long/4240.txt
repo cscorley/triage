@@ -1,0 +1,13 @@
+From LUCENE-3151 (Robert Muir's comments): there is no need for the Analyzer to take in an IndexableField object.  We can simplify this API:
+
+Hey Grant: I know it sounds silly but can we split out the getOffsetGap API change into a separate issue?
+This would be nice to fix ASAP.
+
+I dont understand why it takes IndexableField or took Fieldable. All the other methods here like
+getPositionIncrementGap take "String fieldName". I think this one should too.
+
+I dont think it needs a boolean for tokenized either: returning a 0 for NOT_ANALYZED fields. 
+If you choose NOT_ANALYZED, that should mean the Analyzer is not invoked!
+
+If you want to do expert stuff control the offset gaps between values for NOT_ANALYZED fields, 
+then just analyze it instead, with keyword tokenizer!

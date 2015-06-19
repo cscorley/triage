@@ -1,0 +1,1 @@
+messages_pt_BR.properties file  should not translate Network Server "start" and "shutdown" commands

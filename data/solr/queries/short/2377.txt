@@ -1,0 +1,1 @@
+Fix all example/test configs that still use <dataDir>${solr.data.dir:./solr/data}</dataDir>

@@ -1,0 +1,1 @@
+Modify ParallelMultiSearcher to use a CompletionService instead of slowly polling for results

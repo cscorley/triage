@@ -1,0 +1,1 @@
+The hdfs block cache BLOCKCACHE_WRITE_ENABLED is not defaulting to false like it should.

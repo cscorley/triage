@@ -1,0 +1,1 @@
+Remove JakarteRegExCapabilities shim to access package protected field

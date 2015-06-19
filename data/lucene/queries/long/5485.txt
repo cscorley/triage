@@ -1,0 +1,3 @@
+when the affix file has CIRCUMFIX <flag>, prefixes and suffixes with this flag really represent a single affix around the word, and must agree.
+
+in practice i've only seen this in the german dictionary (i unzipped a ton and looked).

@@ -1,0 +1,11 @@
+Typically the symptom with jenkins is strange socket failures (because sockets are files too).
+
+On my machine though i got the nice too many open files from lucene because it just happened to fail that way.
+
+In addition to holding thousands of open files, this test creates 90 megabytes of logging output!
+
+Can we tone down the test? I havent looked at all: but it doesn't seem necessary to have huge numbers of cores/indexes to test the functionality, we should be able to do this with relatively small numbers. 
+
+Additionally i dont think its good to use random merge/IW buffering parameters here, we should set ones that won't make tons of files, force the use of compound file format, etc.
+
+The massive amounts of logging should be addressed too.

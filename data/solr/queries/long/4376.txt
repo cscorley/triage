@@ -1,0 +1,84 @@
+Hi
+
+In:
+org.apache.solr.handler.dataimport.DocBuilder#getVariableResolver
+
+
+ 
+      private static final Date EPOCH = new Date(0);
+
+      if (persistedProperties.get(LAST_INDEX_TIME) != null) {
+        // String added to map
+        indexerNamespace.put(LAST_INDEX_TIME, persistedProperties.get(LAST_INDEX_TIME));
+      } else  {
+        // Date added to map
+        indexerNamespace.put(LAST_INDEX_TIME, EPOCH);
+      }
+
+
+ 
+
+
+
+
+	When LAST_INDEX_TIME is found in the data-import.properties, the value in the map is a String.
+	When LAST_INDEX_TIME is not found, we use timestamp = 0, but the value is a Date
+
+
+
+
+
+
+
+
+
+	When using full-import it works fine because basically we don't need this LAST_INDEX_TIME.
+	When doing delta import after a full import it also works fine.
+	But when doing a first delta import on a clean configuration, without any data-import.properties present, I have an SQL exception because of this query:
+
+
+SELECT xxx 
+FROM BATCH_JOB_EXECUTION yyy 
+WHERE last_updated > 'Thu Jan 01 01:00:00 CET 1970'
+
+
+ 
+
+
+
+While normally the query is:
+
+
+SELECT xxx 
+FROM BATCH_JOB_EXECUTION yyy 
+WHERE last_updated > '1970-01-01 01:00:00'
+
+
+ 
+
+For a configured query being:
+
+
+deltaQuery="SELECT bje.job_execution_id as JOB_EXECUTION_ID
+FROM BATCH_JOB_EXECUTION bje
+WHERE last_updated > '${dih.last_index_time}'"
+
+
+ 
+
+
+
+I think in any case, the value associated to the key in the map must be consistent and either be String or Date, but not both. 
+
+Personally I would expect it to be stored as String, and the EPOCH date being formatted in the exact same format the date properties are persisted in the file, which is:
+org.apache.solr.handler.dataimport.SimplePropertiesWriter#dateFormat
+
+
+
+
+This doesn't have a real impact on our code but it is just that an integration test "test_delta_import_when_never_indexed" was unexpectedly failing while all others were ok, after a Solr 1.4 to Solr 4.1 migration. 
+Thus it seems to be a minor regression.
+
+
+
+Thanks

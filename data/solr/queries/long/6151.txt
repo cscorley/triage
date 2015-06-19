@@ -1,0 +1,55 @@
+
+
+[junit4]   2> 4236563 T14503 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4236567 T14502 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=backup&name=cphlpigzwamrxxekj} status=0 QTime=5 
+   [junit4]   2> 4236567 T14511 oash.SnapShooter.createSnapshot Creating backup snapshot...
+   [junit4]   2> 4236682 T14505 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4237270 T14503 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4237275 T14502 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=backup&name=zviqwpynhbjdbiqofwa} status=0 QTime=4 
+   [junit4]   2> 4237277 T14513 oash.SnapShooter.createSnapshot Creating backup snapshot...
+   [junit4]   2> 4237390 T14504 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4237508 T14500 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4237626 T14505 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=1 
+   [junit4]   2> 4237743 T14503 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4237861 T14502 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4237979 T14504 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4238097 T14500 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4238214 T14505 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4238332 T14503 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4238450 T14502 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=1 
+   [junit4]   2> 4238567 T14504 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4238686 T14500 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4238804 T14505 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4238922 T14503 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=1 
+   [junit4]   2> 4239039 T14502 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4239158 T14504 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4239276 T14500 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4239394 T14505 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=1 
+   [junit4]   2> 4239511 T14503 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4239629 T14502 C3403 oasc.SolrCore.execute [collection1] webapp=/solr path=/replication params={command=details} status=0 QTime=0 
+   [junit4]   2> 4239747 T14496 oas.SolrTestCaseJ4.tearDown ###Ending doTestBackup
+   [junit4]   2> 4239756 T14496 oasc.CoreContainer.shutdown Shutting down CoreContainer instance=5885809
+   [junit4]   2> 4239757 T14496 oasc.SolrCore.close [collection1]  CLOSING SolrCore org.apache.solr.core.SolrCore@16f7ab1
+   [junit4]   2> 4239757 T14496 oasu.DirectUpdateHandler2.close closing DirectUpdateHandler2{commits=1,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=78,cumulative_deletesById=0,cumulative_deletesByQuery=1,cumulative_errors=0}
+   [junit4]   2> 4239757 T14496 oasu.SolrCoreState.decrefSolrCoreState Closing SolrCoreState
+   [junit4]   2> 4239757 T14496 oasu.DefaultSolrCoreState.closeIndexWriter SolrCoreState ref count has reached 0 - closing IndexWriter
+   [junit4]   2> 4239757 T14496 oasu.DefaultSolrCoreState.closeIndexWriter closing IndexWriter with IndexWriterCloser
+   [junit4]   2> 4239758 T14496 oasc.SolrCore.closeSearcher [collection1] Closing main searcher on request.
+   [junit4]   2> 4239758 T14496 oasc.CachingDirectoryFactory.close Closing MockDirectoryFactory - 2 directories currently being tracked
+   [junit4]   2> 4239758 T14496 oasc.CachingDirectoryFactory.closeCacheValue looking to close C:\Users\JenkinsSlave\workspace\Lucene-Solr-trunk-Windows\solr\build\solr-core\test\J0\.\temp\solr.handler.TestReplicationHandlerBackup-DCCC360504A48D2D-001\solr-instance-001\collection1\data\index [CachedDir<<refCount=0;path=C:\Users\JenkinsSlave\workspace\Lucene-Solr-trunk-Windows\solr\build\solr-core\test\J0\.\temp\solr.handler.TestReplicationHandlerBackup-DCCC360504A48D2D-001\solr-instance-001\collection1\data\index;done=false>>]
+   [junit4]   2> 4239758 T14496 oasc.CachingDirectoryFactory.close Closing directory: C:\Users\JenkinsSlave\workspace\Lucene-Solr-trunk-Windows\solr\build\solr-core\test\J0\.\temp\solr.handler.TestReplicationHandlerBackup-DCCC360504A48D2D-001\solr-instance-001\collection1\data\index
+   [junit4]   2> 4239758 T14496 oasc.CachingDirectoryFactory.closeCacheValue looking to close C:\Users\JenkinsSlave\workspace\Lucene-Solr-trunk-Windows\solr\build\solr-core\test\J0\.\temp\solr.handler.TestReplicationHandlerBackup-DCCC360504A48D2D-001\solr-instance-001\collection1\data\ [CachedDir<<refCount=0;path=C:\Users\JenkinsSlave\workspace\Lucene-Solr-trunk-Windows\solr\build\solr-core\test\J0\.\temp\solr.handler.TestReplicationHandlerBackup-DCCC360504A48D2D-001\solr-instance-001\collection1\data\;done=false>>]
+   [junit4]   2> 4239758 T14496 oasc.CachingDirectoryFactory.close Closing directory: C:\Users\JenkinsSlave\workspace\Lucene-Solr-trunk-Windows\solr\build\solr-core\test\J0\.\temp\solr.handler.TestReplicationHandlerBackup-DCCC360504A48D2D-001\solr-instance-001\collection1\data\
+   [junit4]   2> 4239761 T14496 oejsh.ContextHandler.doStop stopped o.e.j.s.ServletContextHandler{/solr,null}
+   [junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=TestReplicationHandlerBackup -Dtests.method=doTestBackup -Dtests.seed=DCCC360504A48D2D -Dtests.slow=true -Dtests.locale=it_CH -Dtests.timezone=Asia/Jerusalem -Dtests.file.encoding=ISO-8859-1
+   [junit4] FAILURE 3.64s | TestReplicationHandlerBackup.doTestBackup <<<
+   [junit4]    > Throwable #1: java.lang.AssertionError: Backup success not detected:<?xml version="1.0" encoding="UTF-8"?>
+   [junit4]    > <response>
+   [junit4]    > <lst name="responseHeader"><int name="status">0</int><int name="QTime">0</int></lst><lst name="details"><str name="indexSize">3.1 KB</str><str name="indexPath">C:\Users\JenkinsSlave\workspace\Lucene-Solr-trunk-Windows\solr\build\solr-core\test\J0\.\temp\solr.handler.TestReplicationHandlerBackup-DCCC360504A48D2D-001\solr-instance-001\collection1\data\index/</str><arr name="commits"><lst><long name="indexVersion">1402224615148</long><long name="generation">2</long><arr name="filelist"><str>_0.cfe</str><str>_0.cfs</str><str>_0.si</str><str>segments_2</str></arr></lst></arr><str name="isMaster">true</str><str name="isSlave">false</str><long name="indexVersion">1402224615148</long><long name="generation">2</long><lst name="master"><str name="confFiles">schema-replication2.xml:schema.xml</str><arr name="replicateAfter"><str>commit</str></arr><str name="replicationEnabled">true</str><long name="replicableVersion">1402224615148</long><long name="replicableGeneration">2</long></lst><lst name="backup"><str name="startTime">Sun Jun 08 13:50:15 IDT 2014</str><int name="fileCount">4</int><str name="status">success</str><str name="snapshotCompletedAt">Sun Jun 08 13:50:15 IDT 2014</str></lst></lst><str name="WARNING">This response format is experimental.  It is likely to change in the future.</str>
+   [junit4]    > </response>
+   [junit4]    > 	at __randomizedtesting.SeedInfo.seed([DCCC360504A48D2D:9D471660231A7E62]:0)
+   [junit4]    > 	at org.apache.solr.handler.TestReplicationHandlerBackup.doTestBackup(TestReplicationHandlerBackup.java:171)
+   [junit4]    > 	at java.lang.Thread.run(Thread.java:745)
+   [junit4]   2> 4239841 T14496 oas.SolrTestCaseJ4.deleteCore ###deleteCore
+   [junit4]   2> NOTE: leaving temporary files on disk at: C:\Users\JenkinsSlave\workspace\Lucene-Solr-trunk-Windows\solr\build\solr-core\test\J0\.\temp\solr.handler.TestReplicationHandlerBackup-DCCC360504A48D2D-001
+

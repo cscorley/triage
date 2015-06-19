@@ -1,0 +1,1 @@
+Running on HDFS does work correctly with NRT search.

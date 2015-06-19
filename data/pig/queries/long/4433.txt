@@ -1,0 +1,17 @@
+The parsing of BigDecimal data types in a nested tuple, as implemented by Utf8StorageConverter.java, does not work. There's a "break;" missing from a switch statement.
+
+Code example that demonstrates the problem:
+
+=== input.txt ===
+(17,1234567890.0987654321)
+
+=== pig_script ===:
+inp = LOAD 'input.txt' AS (foo:tuple(bar:long, baz:bigdecimal));
+STORE inp INTO 'output';
+
+=== output ===
+(17,)
+
+
+With patch, the output becomes the expected:
+(17,1234567890.0987654321)

@@ -1,0 +1,9 @@
+Found while working on LUCENE-4765:
+
+FieldCache.getDocTermOrds unsafely "bakes in" liveDocs into its structure.
+
+This means in cases if you have readers at two points in time (r1, r2), and you happen to call getDocTermOrds first on r2, then call it on r1, the results will be incorrect.
+
+Simple fix is to make DocTermOrds uninvert take liveDocs explicitly: FieldCacheImpl always passes null, Solr's UninvertedField just keeps doing what its doing today (since its a top-level reader, and cached somewhere else).
+
+Also DocTermOrds had a telescoping ctor that was uninverting twice. 

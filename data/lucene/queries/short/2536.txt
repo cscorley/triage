@@ -1,0 +1,1 @@
+Rollback doesn't preserve integrity of original index

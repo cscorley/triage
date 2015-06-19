@@ -1,0 +1,1 @@
+For some cases it is useful to be able to print a date in a specific timezone, such as UTC. This support should be added to the formatDate function.

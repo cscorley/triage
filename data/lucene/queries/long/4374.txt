@@ -1,0 +1,3 @@
+TwoDoubles isn't necessarily appropriate since it could be two floats, once it is enhanced to make that configurable.  I like PointVector because it's clear it indexes points.  Eventually I could imagine a CircleVectorStrategy in the same package.
+
+This does suggest BBoxStrategy should be RectVectorStrategy in the vector package.

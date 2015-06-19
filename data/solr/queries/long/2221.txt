@@ -1,0 +1,17 @@
+Currently, debug option for full-import/delta-import accepts only "on" for true:
+
+
+
+if ("on".equals(requestParams.get("debug"))) {
+  debug = true;
+  rows = 10;
+  // Set default values suitable for debug mode
+  commit = false;
+  clean = false;
+  verbose = "true".equals(requestParams.get("verbose"))
+          || "on".equals(requestParams.get("verbose"));
+}
+
+
+
+and other boolean options uses Boolean.parseBoolean(String). We would like to use StrUtils.parseBool() that accepts true, on and yes for true, and false, off and no for false.

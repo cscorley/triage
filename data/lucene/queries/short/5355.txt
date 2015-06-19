@@ -1,0 +1,1 @@
+Add more support to validate the -Dbootclasspath given for javadocs generate

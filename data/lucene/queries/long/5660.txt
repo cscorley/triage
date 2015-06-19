@@ -1,0 +1,7 @@
+Issues like LUCENE-5628 LUCENE-5659 are hacks around the problem that the AnalyzingSuggester allows automata to "explode".
+
+I don't think we should try to hack up the automata lib to the point its un-understandable to support this, since its designed for smaller automata such as queries and is appropriate for that.
+
+We should instead just set appropriate limits out of box so AnalyzingSuggester doesnt blow up.
+
+Remember this is a suggester, it needs to be fast. The fact that the automata lib blows up on stupid unit tests or whatever are doing this, instead of being silently slow, is a good thing.

@@ -1,0 +1,21 @@
+A somewhat rare fail on jenkins. An overseer was available to service requests but even after waiting for 60 seconds, none of the designates were the overseer.
+
+
+
+Build: http://jenkins.thetaphi.de/job/Lucene-Solr-4.x-Windows/4081/
+Java: 32bit/jdk1.8.0_20-ea-b21 -client -XX:+UseSerialGC
+
+1 tests failed.
+REGRESSION:  org.apache.solr.cloud.RollingRestartTest.testDistribSearch
+
+Error Message:
+No overseer designate as leader found after restart #3: 127.0.0.1:60996_
+
+Stack Trace:
+java.lang.AssertionError: No overseer designate as leader found after restart #3: 127.0.0.1:60996_
+        at __randomizedtesting.SeedInfo.seed([5263BF570390CF79:D385314F74CFAF45]:0)
+        at org.junit.Assert.fail(Assert.java:93)
+        at org.apache.solr.cloud.RollingRestartTest.restartWithRolesTest(RollingRestartTest.java:100)
+        at org.apache.solr.cloud.RollingRestartTest.doTest(RollingRestartTest.java:61)
+        at org.apache.solr.BaseDistributedSearchTestCase.testDistribSearch(BaseDistributedSearchTestCase.java:865)
+

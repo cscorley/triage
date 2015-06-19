@@ -1,0 +1,29 @@
+In trunk, these apis let you easily create a field, but my concern is this:
+
+
+public NumericField(String name, int value)
+public NumericField(String name, long value)
+..
+public Field(String name, int value, FieldType type)
+public Field(String name, long value, FieldType type)
+..
+public void setValue(int value)
+public void setValue(long value)
+..
+public DocValuesField(String name, int value, DocValues.Type docValueType)
+public DocValuesField(String name, long value, DocValues.Type docValueType)
+
+
+
+I really don't like overloaded ctors/setters where the compiler can type-promote you,
+I think it makes the apis hard to use.
+
+Instead for the setters I think we sohuld have setIntValue, setLongValue, ...
+For the ctors, I see two other options:
+
+	factories like DocValuesField.newIntField()
+	subclasses like IntField
+
+
+
+I don't have any patch for this, but I think we should discuss and fix before these apis are released.

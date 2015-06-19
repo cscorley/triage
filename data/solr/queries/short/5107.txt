@@ -1,0 +1,1 @@
+LukeRequestHandler throws NullPointerException when numTerms=0

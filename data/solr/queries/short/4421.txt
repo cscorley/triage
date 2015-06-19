@@ -1,0 +1,1 @@
+On CoreContainer shutdown, all SolrCores should publish their state as DOWN

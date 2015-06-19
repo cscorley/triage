@@ -1,0 +1,1 @@
+Fix logging in AvroStorage* classes and SchemaTuple class

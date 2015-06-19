@@ -1,0 +1,1 @@
+It looks like SortedVIntList only referenced by its test case, maybe we should just remove it?

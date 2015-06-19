@@ -1,0 +1,15 @@
+https://builds.apache.org/job/Lucene-Solr-NightlyTests-trunk/556/console
+
+
+[LockStressTest1] Exception in thread "main" java.nio.file.FileSystemException: /usr/home/hudson/hudson-slave/workspace/Lucene-Solr-NightlyTests-trunk/lucene/build/core/lockfactorytest/test-test.lock: Too many open files in system
+[LockStressTest1] 	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:91)
+[LockStressTest1] 	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+[LockStressTest1] 	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+[LockStressTest1] 	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:176)
+[LockStressTest1] 	at java.nio.channels.FileChannel.open(FileChannel.java:287)
+[LockStressTest1] 	at java.nio.channels.FileChannel.open(FileChannel.java:334)
+[LockStressTest1] 	at org.apache.lucene.store.NativeFSLock.obtain(NativeFSLockFactory.java:149)
+[LockStressTest1] 	at org.apache.lucene.store.VerifyingLockFactory$CheckedLock.obtain(VerifyingLockFactory.java:65)
+[LockStressTest1] 	at org.apache.lucene.store.Lock.obtain(Lock.java:77)
+[LockStressTest1] 	at org.apache.lucene.store.LockStressTest.main(LockStressTest.java:114)
+

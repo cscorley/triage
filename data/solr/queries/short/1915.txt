@@ -1,0 +1,1 @@
+DebugComponent should use NamedList to output Explanations instead of Explanation.toString()

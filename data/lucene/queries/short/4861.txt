@@ -1,0 +1,1 @@
+can we use a single PostingsHighlighter for both whole and snippet highlighting?

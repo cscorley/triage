@@ -1,0 +1,2 @@
+Our code is full with broken JavaDocs. I already removed @return statements without any further description. 
+We should also get rid of @param without any comments and wrong @param declarations. We have about 500 such issues and JavaDoc is totally freaking out. 

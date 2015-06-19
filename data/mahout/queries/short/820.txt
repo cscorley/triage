@@ -1,0 +1,1 @@
+Dependency on sjl4j-jcl should not have compile scope

@@ -1,0 +1,1 @@
+Added AppendingPackedLongBuffer & extended AbstractAppendingLongBuffer family (customizable compression ratio + bulk retrieval)

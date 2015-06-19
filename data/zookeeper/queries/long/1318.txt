@@ -1,0 +1,11 @@
+In Python binding, get_children (and get and exists, and probably others) with expired session doesn't raise exception properly.
+
+
+>>> zookeeper.state(h)
+-112
+>>> zookeeper.get_children(h, '/')
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+SystemError: error return without exception set
+
+Let me know if you'd like me to work on a patch.

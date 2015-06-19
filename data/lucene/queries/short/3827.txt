@@ -1,0 +1,1 @@
+Make term offsets work in MemoryIndex

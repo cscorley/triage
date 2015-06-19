@@ -1,0 +1,21 @@
+While working on BIGTOP-870, I found out that Pig doesn't compile on certain rpm based systems and fails with an error like:
+
+
+04:27:41  compile:
+04:27:41       [echo]  *** Compiling Pig UDFs ***
+04:27:41      [javac] /mnt/jenkins/workspace/Bigtop-trunk-Pig/label/centos6/build/pig/rpm/BUILD/pig-0.11.0/contrib/piggybank/java/build.xml:93: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+04:27:41      [javac] Compiling 158 source files to /mnt/jenkins/workspace/Bigtop-trunk-Pig/label/centos6/build/pig/rpm/BUILD/pig-0.11.0/contrib/piggybank/java/build/classes
+04:27:41      [javac] /mnt/jenkins/workspace/Bigtop-trunk-Pig/label/centos6/build/pig/rpm/BUILD/pig-0.11.0/contrib/piggybank/java/src/main/java/org/apache/pig/piggybank/evaluation/IsInt.java:31: unmappable character for encoding ASCII
+04:27:41      [javac]  * Note this function checks for Integer range ???2,147,483,648 to 2,147,483,647.
+04:27:41      [javac]                                                ^
+04:27:41      [javac] /mnt/jenkins/workspace/Bigtop-trunk-Pig/label/centos6/build/pig/rpm/BUILD/pig-0.11.0/contrib/piggybank/java/src/main/java/org/apache/pig/piggybank/evaluation/IsInt.java:31: unmappable character for encoding ASCII
+04:27:41      [javac]  * Note this function checks for Integer range ???2,147,483,648 to 2,147,483,647.
+04:27:41      [javac]                                                 ^
+04:27:41      [javac] /mnt/jenkins/workspace/Bigtop-trunk-Pig/label/centos6/build/pig/rpm/BUILD/pig-0.11.0/contrib/piggybank/java/src/main/java/org/apache/pig/piggybank/evaluation/IsInt.java:31: unmappable character for encoding ASCII
+04:27:41      [javac]  * Note this function checks for Integer range ???2,147,483,648 to 2,147,483,647.
+04:27:41      [javac]                                                  ^
+04:27:42      [javac] 3 errors
+
+
+
+This seems to be related to encoding not being set for Javac in the build.xml file.

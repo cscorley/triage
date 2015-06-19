@@ -1,0 +1,1 @@
+When SolrDocumentList used instead of DocList in the response, (unlike XMLWriter), JSONWriter prints all existing fields of a SolrDocument.

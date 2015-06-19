@@ -1,0 +1,1 @@
+dataimporthandler-extras depends on Tika but doesn't have it in it's ivy deps

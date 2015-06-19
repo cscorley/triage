@@ -1,0 +1,1 @@
+When defining a core with the same name (discovery mode or not), CoreContainer should throw an error

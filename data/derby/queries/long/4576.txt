@@ -1,0 +1,1 @@
+DERBY-4550 introduced qualified identifiers for cursor statements in ij. But cursors obtained by a GET CURSOR statement are always created in the current connection.

@@ -1,0 +1,20 @@
+When those two tests are run at same time one of them is going to fail with error like this: 
+
+
+
+java.lang.AssertionError
+at __randomizedtesting.SeedInfo.seed([B44AE18D746BCD54:3062FA7EBBB8C061]:0)
+at org.apache.solr.update.TransactionLog.<init>(TransactionLog.java:163)
+at org.apache.solr.update.TransactionLog.<init>(TransactionLog.java:133)
+at org.apache.solr.update.UpdateLog.ensureLog(UpdateLog.java:636)
+
+
+
+This is reproducible with:
+
+
+ant -Dtests.jvms=14 test  "-Dtests.class=org.apache.solr.client.solrj.embedded.*"
+
+
+
+Looks like this is because they share the directory example/multicore/core0/data/

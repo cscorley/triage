@@ -1,0 +1,7 @@
+We discovered a long leader election time today in one of our prod ensemble.
+
+Here is the description of the event. 
+
+Before the old leader goes down, it is able to announce notification message. So 3 out 5 (including the old leader) elected the old leader to be a new leader for the next epoch. While, the old leader is being rebooted, 2 other machines are trying to connect to the old leader.  So the quorum couldn't form until those 2 machines give up and move to the next round of leader election.
+
+This is because Learner.connectToLeader() use a simple retry logic. The contract for this method is that it should never spend longer that initLimit trying to connect to the leader.  In our outage, each sock.connect() is probably blocked for initLimit and it is called 5 times.

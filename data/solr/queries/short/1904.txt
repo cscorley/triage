@@ -1,0 +1,1 @@
+Use HashDocSet when random access is needed in faceting

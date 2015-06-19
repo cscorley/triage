@@ -1,0 +1,1 @@
+Having a separate file is annoying, plus the print stream option doesn't rollover on size or date, doesn't have custom formatting options, etc.  Exactly what the logging lib is meant to handle.

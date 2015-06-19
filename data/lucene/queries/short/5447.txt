@@ -1,0 +1,1 @@
+StandardTokenizer should break at consecutive chars matching Word_Break = MidLetter, MidNum and/or MidNumLet

@@ -1,0 +1,3 @@
+For example, today if you index "i love lucy" and "isla de muerta", and then you ask for suggestions for "i" and for "i " (space after the i) you'll get the same results.
+
+But if we use the ending offset, we can determine (I think?) that there were non-token characters after the last token, so that "i " would only suggest "i love lucy".

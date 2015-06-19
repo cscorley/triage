@@ -1,0 +1,1 @@
+SyncSliceTest fails on jenkins with no live servers available error

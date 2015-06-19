@@ -1,0 +1,25 @@
+Copying  ZkCli.sh help examples doesn't work:
+
+$ ./zkcli.sh -cmd bootstrap -solrhome /path/to/home/
+usage: ZkCLI
+ -c,--collection <arg>   for linkconfig: name of the collection
+ -cmd                    cmd to run: bootstrap, upconfig, downconfig,
+                         linkconfig, makepath, clear
+ -d,--confdir <arg>      for upconfig: a directory of configuration files
+ -h,--help               bring up this help page
+ -n,--confname <arg>     for upconfig, linkconfig: name of the config set
+ -r,--runzk <arg>        run zk internally by passing the solr run port -
+                         only for clusters on one machine (tests, dev)
+ -s,--solrhome <arg>     for bootstrap, runzk: solrhome location
+ -z,--zkhost <arg>       ZooKeeper host address
+Examples:
+zkcli.sh -cmd bootstrap -solrhome /opt/solr
+zkcli.sh -cmd upconfig -confdir /opt/solr/collection1/conf -confname myconf
+zkcli.sh -cmd downconfig -confdir /opt/solr/collection1/conf -confname myconf
+zkcli.sh -cmd linkconfig -collection collection1 -confname myconf
+zkcli.sh -cmd makepath /apache/solr
+zkcli.sh -cmd clear /solr
+
+
+
+The parameter "zkhost" is mandatory for all commands.

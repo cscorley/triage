@@ -1,0 +1,14 @@
+We had the same problem as someone described in http://mail-archives.apache.org/mod_mbox/lucene-solr-user/201001.mbox/%3c222A518D-DDF5-4FC8-A02A-74D4F232B339@snooth.com%3e. A partial copy of that message:
+
+We're using the new replication and it's working pretty well. There's  
+one detail I'd like to get some more information about.
+
+As the replication works, it creates versions of the index in the data  
+directory. Originally we had index/, but now there are dated versions  
+such as index.20100127044500/, which are the replicated versions.
+
+Each copy is sized in the vicinity of 65G. With our current hard drive  
+it's fine to have two around, but 3 gets a little dicey. Sometimes  
+we're finding that the replication doesn't always clean up after  
+itself. I would like to understand this better, or to not have this  
+happen. It could be a configuration issue.

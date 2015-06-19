@@ -1,0 +1,1 @@
+The 'clusterstatus' API should return 'roles' information

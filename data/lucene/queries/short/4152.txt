@@ -1,0 +1,1 @@
+add one-syllable method to IndexReader enumerate subreaders

@@ -1,0 +1,1 @@
+In the modern world, Tokenizers are intended to be reusable, with input supplied via #setReader. The constructors that take Reader are a vestige. Worse yet, they invite people to make mistakes in handling the reader that tangle them up with the state machine in Tokenizer. The sensible thing is to eliminate these ctors, and force setReader usage.

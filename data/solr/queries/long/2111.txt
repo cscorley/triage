@@ -1,0 +1,2 @@
+Right now, faceting on a non-existent field will just add an "exception" to the facet_counts.
+In distrib mode, it will cause the whole request to fail.

@@ -1,0 +1,1 @@
+Collect stats with sub-milliseconds precision

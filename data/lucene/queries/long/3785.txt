@@ -1,0 +1,12 @@
+ant-junit4 is an ANT task for running tests in parallel (on slave JVMs). Its advantages over the current macros:
+
+	dynamic load balancing based on historical test runs and current execution (job-stealing),
+	jvm-crash resilience (I wrote tests that actually crash a slave jvms to make sure such an event is reported appropriately),
+	nicer console reporting (no need for syserrs on LuceneTestCase level).
+
+
+
+More documentation and info will follow as I roll out a patch.
+
+NOTE. The code for this issue is being developed at:
+https://github.com/dweiss/lucene_solr/tree/LUCENE-3785

@@ -1,0 +1,34 @@
+I'm seeing the following exception during indexing:
+
+
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 14
+at org.apache.lucene.index.ByteBlockPool.allocSlice(ByteBlockPool.java:118)
+at org.apache.lucene.index.TermsHashPerField.writeByte(TermsHashPerField.java:490)
+at org.apache.lucene.index.TermsHashPerField.writeVInt(TermsHashPerField.java:511)
+at org.apache.lucene.index.FreqProxTermsWriterPerField.writeProx(FreqProxTermsWriterPerField.java:104)
+at org.apache.lucene.index.FreqProxTermsWriterPerField.newTerm(FreqProxTermsWriterPerField.java:120)
+at org.apache.lucene.index.TermsHashPerField.add(TermsHashPerField.java:468)
+at org.apache.lucene.index.DocInverterPerField.processFields(DocInverterPerField.java:174)
+at org.apache.lucene.index.DocFieldProcessorPerThread.processDocument(DocFieldProcessorPerThread.java:246)
+at org.apache.lucene.index.DocumentsWriter.updateDocument(DocumentsWriter.java:774)
+at org.apache.lucene.index.DocumentsWriter.updateDocument(DocumentsWriter.java:757)
+at org.apache.lucene.index.IndexWriter.updateDocument(IndexWriter.java:2085)
+... 37 more
+
+
+
+
+This seems to be caused by the following code:
+
+
+    final int level = slice[upto] & 15;
+    final int newLevel = nextLevelArray[level];
+    final int newSize = levelSizeArray[newLevel];
+
+
+
+this can result in "level" being a value between 0 and 14
+the array nextLevelArray is only of size 10
+
+i suspect the solution would be to either max the level to 10, or to add more entries to the nextLevelArray so it has 15 entries
+however, i don't know if something more is going wrong here and this is just where the exception hits from a deeper issue

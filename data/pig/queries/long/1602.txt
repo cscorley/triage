@@ -1,0 +1,1 @@
+The .classpath of eclipse template still use hbase-0.20.0, it should be updated to hbase-0.20.6

@@ -1,0 +1,1 @@
+Remove CESU-Hack from PHPSerializedResponseWriter

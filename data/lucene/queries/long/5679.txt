@@ -1,0 +1,1 @@
+Spinoff from here: http://markmail.org/message/7kjlaizqdh7kst4d. We should consolidate the various IW.deleteDocuments().

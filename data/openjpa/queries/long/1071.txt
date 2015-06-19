@@ -1,0 +1,11 @@
+See dev discussion thread - http://n2.nabble.com/Derby-test-suit-speed-up-td2548968.html
+
+Adding the following systemProperties will speed up the default testing on Derby -
+                        <property>
+                            <name>derby.locks.deadlockTimeout</name>
+                            <value>5</value>
+                        </property>
+                        <property>
+                            <name>derby.locks.waitTimeout</name>
+                            <value>6</value>
+                        </property>

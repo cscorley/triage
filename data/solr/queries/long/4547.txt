@@ -1,0 +1,3 @@
+When an index commit is done (at least with MMap/NRT, haven't checked other Directory implementations), all of the filenames in the index are logged three times at INFO.  I think the information has value to someone if they are debugging, but not to most users.
+
+I propose that we move this part of the log to DEBUG and provide text that allows the person/program viewing the log to link the smaller INFO log entry with the new one, probably the directory path.

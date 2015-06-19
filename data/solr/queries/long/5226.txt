@@ -1,0 +1,2 @@
+Recently a method was implemented in Lucene to estimate the index heap usage
+(https://issues.apache.org/jira/browse/LUCENE-5197). It would be very helpful to display this information in the admin UI.

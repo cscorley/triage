@@ -1,0 +1,1 @@
+language detection uses this in a very simple way: we can just the 1.2.7 jsonic, it works fine.

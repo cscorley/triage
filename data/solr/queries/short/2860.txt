@@ -1,0 +1,1 @@
+In solr-test-framework, SolrTestCaseJ4 tracking of SolrIndexWriter opens / closes is incorrect

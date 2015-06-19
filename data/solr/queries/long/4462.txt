@@ -1,0 +1,11 @@
+The httpcomponents project, which hosts both the httpclient and the httpcore modules, uses Maven as its build system, so when the httpclient POM declares a dependency, it's authoritative (since that's how httpclient is built and tested).
+
+httpclient's httpcore dependency version doesn't always match the httpclient version.  Recent examples (look for <httpcore.version> under <properties>) (these are POMs for httpcomponents-client, which is the parent module for httpclient, and declares its submodules' dependencies' versions):
+
+https://svn.apache.org/repos/asf/httpcomponents/httpclient/tags/4.2.3/pom.xml
+http://svn.apache.org/repos/asf/httpcomponents/httpclient/tags/4.1.3/pom.xml
+http://svn.apache.org/repos/asf/httpcomponents/httpclient/tags/4.1.1/pom.xml
+
+I'm fairly certain that these versions-out-of-sync incidents are not mistakes - I read this email exchange as describing intentionally versioning httpclient separately from httpcore: http://markmail.org/thread/ippp4gbxwwnt6aws.
+
+SolrJ should separately version its httpclient and httpcore dependencies, and should draw the httpcore version from the httpcomponents-client POM.

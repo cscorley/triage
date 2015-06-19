@@ -1,0 +1,1 @@
+Do mvn-build, pig-h2.jar does not contains tez classes. This result the published pig-h2.jar wrong.

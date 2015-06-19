@@ -1,0 +1,1 @@
+The fix for OPENJPA-542 obtains the classloader directly, without using a doPriv. This can cause problems if Java 2 security is enabled. 

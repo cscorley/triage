@@ -1,0 +1,1 @@
+Update the documentation, version number, and one test in the zkperl contrib module to match 3.2.0.  The only code change here involves changing one authorization test to use the 'ip' instead of the now-removed 'host' scheme.

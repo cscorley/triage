@@ -1,0 +1,26 @@
+in current code, there are following class in mapreduce and tez package.
+mapreduce:
+MRCompiler
+MROperPlan  MROpPlanVisitor
+MapReduceOper
+
+tez:
+TezCompiler
+TezOperPlan  TezOpPlanVisitor
+TezOperator
+
+Following class needs to be added in spark package:
+SparkCompiler
+SparkOperPlan  SparkOpPlanVisitor
+SparkOperator
+
+Current code need to be refactored because of above adding classes. Some unit tests like TestStoreInstances fail because of it.
+
+following are the error of unit test TestStoreInstances:
+Error Message
+
+num jobs expected:<1> but was:<0>
+Stacktrace
+
+junit.framework.AssertionFailedError: num jobs expected:<1> but was:<0>
+	at org.apache.pig.test.TestStoreInstances.testBackendStoreCommunication(TestStoreInstances.java:122)

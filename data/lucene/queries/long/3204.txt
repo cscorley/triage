@@ -1,0 +1,1 @@
+Currently, running ant generate-maven-artifacts requires the user to have maven-ant-tasks-*.jar in their Ant classpath, e.g. in ~/.ant/lib/.  The build should instead rely on a copy of this jar included in the source tree.

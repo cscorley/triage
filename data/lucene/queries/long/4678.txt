@@ -1,0 +1,3 @@
+The single byte[] we use today has several limitations, eg it limits us to < 2.1 GB FSTs (and suggesters in the wild are getting close to this limit), and it causes big RAM spikes during building when a the array has to grow.
+
+I took basically the same approach as LUCENE-3298, but I want to break out this patch separately from changing all int -> long for > 2.1 GB support.

@@ -1,0 +1,1 @@
+Add a Solr contrib that allows for building Solr indexes via Hadoop's Map-Reduce.

@@ -1,0 +1,1 @@
+Add function queries for relevancy factors such as tf, idf, etc.

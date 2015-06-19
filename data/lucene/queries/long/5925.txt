@@ -1,0 +1,13 @@
+Our commit logic is strange, we write corrupted commit points and only on the last phase of commit do we "correct them".
+
+This means the logic to get the latest commit is always scary and awkward, since it must deal with partial commits, and try to determine if it should fall back to segments_N-1 or actually relay an exception. 
+
+This logic is incomplete/sheisty as we, e.g. i think we only fall back so far (at most one).
+
+If we somehow screw up in all this logic do the wrong thing, then we lose data (e.g. LUCENE-4870 wiped entire index because of TooManyOpenFiles).
+
+We now require java 7, i think we should expore instead writing pending_segments_N and then in finishCommit() doing an atomic rename to segments_N. 
+
+We could then remove all the complex fallback logic completely, since we no longer have to deal with "ignoring partial commits", instead simply delivering any exception we get when trying to read the commit and sleep better at night.
+
+In java 7, we have the apis for this (ATOMIC_MOVE).

@@ -1,0 +1,8 @@
+see parent issue about the problem, here short description:
+
+I am currently doing tests with Java 9 build 26. It looks like everything works, but the TIKA Language Processor Test Suite throws a SecurityException because of:
+http://hg.openjdk.java.net/jdk9/jdk9/jdk/rev/48af79ee59bb
+
+This issue forbids to look inside the Class class using reflection (because all the fields in it are JVM generated and do not really "exist" outside and should not be accessible). Because of this, the Class class does not allow its fields (especially "classLoader") to be reflected.
+
+I fixed the RAMUsageTester in test-framework. But carrot's RandomizedTesting has the same issue.

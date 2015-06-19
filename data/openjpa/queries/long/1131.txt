@@ -1,0 +1,1 @@
+Upgrade from maven-jar-plugin 2.1 to 2.2, which will allow us to use the test-jar and includes/excludes to create a o-p-j-tests.jar in OPENJPA-1130.

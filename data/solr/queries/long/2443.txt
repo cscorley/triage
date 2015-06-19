@@ -1,0 +1,3 @@
+DocValues has all versions of intVal, floatVal, strVal, but there is no general way to know what the raw type is.
+
+We should add a general objetVal( int doc )

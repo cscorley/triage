@@ -1,0 +1,1 @@
+We see large jobs time out because the default triple replication is used. Would be good to be able to customize the replication factor and default to mapreduce staging directory replication 10.

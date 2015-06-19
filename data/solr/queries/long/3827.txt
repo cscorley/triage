@@ -1,0 +1,2 @@
+Even using the property "shareSchema=true" in the solr.xml, Solr would use a new schema for every core when creating new ones, even if those use the same schema.xml file.
+It looks like this was introduced with the changes for SolrCloud.

@@ -1,0 +1,4 @@
+We're in the process of releasing some updated Geronimo Specs, which have required OSGi updates included.
+For OpenJPA, this includes -
+  geronimo-jpa_2.0_spec-1.0 --> 1.1
+  geronimo-validation_1.0_spec-1.0 --> 1.1

@@ -1,0 +1,1 @@
+remove LuceneTestCase.PREFLEX_IMPERSONATION_IS_ACTIVE

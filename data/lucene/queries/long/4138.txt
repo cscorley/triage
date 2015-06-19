@@ -1,0 +1,1 @@
+Just released. Updates to the dictionary but most of all – it comes with a clean BSD license (including dictionary data).

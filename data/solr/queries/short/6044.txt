@@ -1,0 +1,1 @@
+Cluster Status API should return live_nodes as well

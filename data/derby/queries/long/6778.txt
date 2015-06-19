@@ -1,0 +1,1 @@
+DERBY-6764(analyze impact of poodle security alert on Derby client - server ssl support) was fixed in 10.12 codeline. The backport of the fix to 10.8(other codelines do not have this issue) has caused SSL related tests to fail on 10.8 codeline with IBM jdk 1.4.2. This jira is created to provide a fix on 10.8 codeline for IBM jdk 1.4.2

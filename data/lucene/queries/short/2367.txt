@@ -1,0 +1,1 @@
+CartesianPolyFilterBuilder has problems around the poles

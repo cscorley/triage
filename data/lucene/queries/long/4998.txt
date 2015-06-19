@@ -1,0 +1,9 @@
+Set the context as IOContext.READ / IOContext.READONCE where applicable
+
+
+
+Motivation:
+
+Custom PostingsFormat may want to check the context on SegmentReadState and branch differently, but for this to work properly the context has to be specified correctly up the stack.
+
+For example, DirectPostingsFormat only loads postings into memory if the context != MERGE. However a better condition would be context == Context.READ && !context.readOnce.

@@ -1,0 +1,1 @@
+Allow to plug in a Cache Eviction Listener to IndexReader to eagerly clean custom caches that use the IndexReader (getFieldCacheKey)

@@ -1,0 +1,1 @@
+Add common terms query to gracefully handle very high frequent terms dynamically

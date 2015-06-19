@@ -1,0 +1,1 @@
+Fix 2.9 contrib builds to succeed when JDK 1.4 is used (leaving out contribs that require 1.5)

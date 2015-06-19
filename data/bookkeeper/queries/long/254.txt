@@ -1,0 +1,1 @@
+We use zookeeper 3.4.0, in which there are serverside errors, so as a whole it's not recommended for use. We should use 3.4.x where x is the latest bug release.

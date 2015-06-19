@@ -1,0 +1,26 @@
+When opening a new CloudSolrServer against an unavailable zookeeper ensemble, the following exception messages are logged:
+
+
+INFO  [hybrisHTTP28-SendThread(localhost:2181)] [ClientCnxn] Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+WARN  [hybrisHTTP28-SendThread(localhost:2181)] [ClientCnxn] Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1068)
+INFO  [hybrisHTTP28-SendThread(localhost:2181)] [ClientCnxn] Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+WARN  [hybrisHTTP28-SendThread(localhost:2181)] [ClientCnxn] Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:692)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1068)
+
+This is consistent with the behaviour of zkCli.sh - however, it does never timeout. zkCli.sh stops connecting after 30 seconds, but the zookeeper connection attempts by CloudSolrServer show the above messages forever, regardless of ZkClientTimeout and ZkConnectTimeout. 
+
+Calls to e.g. isAlive() do indeed time out, but that does not stop the underlying CloudSolrServer instance from connecting. 
+
+It does not seem to be possible to set a different zkHost for an existing CloudSolrServer instance either, so once an instance is created with a bad/wrong zkHost string it seems impossible to destroy. 
+Even if the zkHost were correct and just the ensemble down one has to keep around the CloudSolrService and not dismiss it after a failed connection attempt - otherwise each try will generate a new ZkClient that then attempts to conncet forever, leading to more and more client attempts, as the clients never stop and are never garbage collected.
+
+I believe the CloudSolrService/ZkClient should stop trying to connect altogether after a timeout and be garbage collected. 

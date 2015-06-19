@@ -1,0 +1,1 @@
+coreRootDirectory requires trailing slash, or SolrCloud cores are created in wrong location

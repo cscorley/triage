@@ -1,0 +1,56 @@
+Normalizer+Stemmer+Stopwords for Sorani kurdish (written in the arabic script).
+
+The most important piece is the normalization: this varies wildly in practice.
+The stemmer is a light stemmer, very simple and not aggressive at all.
+
+I tested against the pewan test collection, see:
+
+	http://eng.uok.ac.ir/esmaili/research/klpp/downloads/publications/AICCSA2013.pdf
+	http://eng.uok.ac.ir/esmaili/research/klpp/en/downloads.htm
+
+
+
+baseline is StandardAnalyzer.
+
+
+
+short queries (T)
+TFIDF
+BM25
+I(ne)B2
+
+
+baseline
+0.2355
+0.2473
+0.2702
+
+
+patch
+0.2930 (+24%)
+0.3163 (+28%)
+0.3309 (+22%)
+
+
+
+
+
+
+long queries (D)
+TFIDF
+BM25
+I(ne)B2
+
+
+baseline
+0.3111
+0.3185
+0.3547
+
+
+patch
+0.4060 (+31%)
+0.4422 (+39%)
+0.4800 (+35%)
+
+

@@ -1,0 +1,3 @@
+DebugComponent currently uses Explanation.toString() to "format" score explanations for each document as plain text with whitespace indenting to denote the hierarchical relationship, and then adds those explanations to the SolrQueryResponse.
+
+Instead DebugComponent should transform the Explanation objects into NamedLists so that the full structure can be formatted in a logical way by the ResponseWriter

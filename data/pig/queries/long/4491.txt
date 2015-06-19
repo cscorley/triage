@@ -1,0 +1,17 @@
+While using a streaming python udf that returned a byte array we hit a couple of bugs.
+
+The first was: 
+
+
+org.apache.pig.impl.streaming.StreamingUDFException: LINE : UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 0: ordinal not in range(128)
+
+
+and the second (after fixing the first) was a null pointer exception.
+
+I traced the problem to two issues:
+
+1. In the python controller the output from the udf was being logged as a unicode string which can fail for bytearrays.
+
+2. Newlines in the data at the start of a response weren't being handled properly on the Java side.
+
+I'm attaching a patch w/ tests that fix these two issues.

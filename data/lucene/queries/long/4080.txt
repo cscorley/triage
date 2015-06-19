@@ -1,0 +1,8 @@
+At merge time, SegmentReader sometimes gives an incorrect value for numDeletedDocs.
+
+From LUCENE-2357:
+As far as I know, [SegmenterReader.numDeletedDocs() is] only unreliable in this context (SegmentReader passed to SegmentMerger for merging); this is because we allow newly marked deleted docs to happen concurrently up until the moment we need to pass the SR instance to the merger (search for "// Must sync to ensure BufferedDeletesStream" in IndexWriter.java) ... but it would be nice to fix that, so I think open a new issue (it won't block this one)? We should be able to make a new SR instance, sharing the same core as the current one but using the correct delCount...
+
+It would be cleaner (but I think hairier) to create a new SR for merging that holds the correct delCount, but let's do that under the separate issue.
+
+it would be best if the SegmentReader's numDeletedDocs were always correct, but, fixing that in IndexWriter is somewhat tricky. Ie, the fix could be hairy but the end result ("SegmentReader.numDeletedDocs can always be trusted") would be cleaner...

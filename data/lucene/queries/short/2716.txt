@@ -1,0 +1,1 @@
+Improve automaton's MinimizeOperations.minimizeHopcroft() to not create so many objects

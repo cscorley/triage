@@ -1,0 +1,3 @@
+Documentation and default config suggest /var/zookeeper as a value for dataDir. This practice is, strictly speaking, incompatible with UNIX/Linux filesystem layout standards (e.g. http://www.s-gms.ms.edus.si/cgi-bin/man-cgi?filesystem+5 , http://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/index.html  ). 
+
+Even though Zookeeper use is not limited to UNIX-like OSes I'd recommend that we change references to /var/zookeeper to /var/lib/zookeeper

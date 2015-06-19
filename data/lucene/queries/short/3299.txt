@@ -1,0 +1,1 @@
+refactoring of Similarity.sloppyFreq() and Similarity.scorePayload

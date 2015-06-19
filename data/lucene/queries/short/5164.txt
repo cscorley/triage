@@ -1,0 +1,1 @@
+Remove the OOM catching in SimpleFSDirectory and NIOFSDirectory

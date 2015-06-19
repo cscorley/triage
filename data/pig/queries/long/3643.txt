@@ -1,0 +1,7 @@
+Was checking out PIG-3000. 
+
+A = load 'data' as (a:chararray);
+B = foreach A 
+{ c = UPPER(a); generate ((c eq 'TEST') ? 1 : 0), ((c eq 'DEV') ? 1 : 0); }
+
+This now throws "Invalid field projection. Projected field [c] does not exist in schema".  Works fine in 0.11. Broken in trunk. Haven't checked 0.12. 

@@ -1,0 +1,5 @@
+JDK 6 stopped receiving public updates in early 2013:
+
+http://www.oracle.com/technetwork/java/eol-135779.html
+
+I propose making JDK 7 the minimum for Zookeeper going forward.  One patch that I've personally submitted already would have been a good fit for Java 7's try-with-resources statement, and another pending patch fails to build on versions of Java prior to 7 because a unit test in it uses InetAddress.getLoopbackAddress(), which would be awkward to replace.  I'm sure there are many other examples.

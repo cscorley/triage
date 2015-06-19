@@ -1,0 +1,5 @@
+If you want to create an entire dist target but leave out slf4j bindings, you must currently use this:
+
+ant dist-solrj, dist-core, dist-test-framework, dist-contrib dist-war-excl-slf4j
+
+It would be better to have a single target.  Attaching a patch against branch_4x for this.

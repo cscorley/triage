@@ -1,0 +1,1 @@
+There's some debugging <echo> tags in the pom.xml script for generating the protobuf scripts. They should be removed.

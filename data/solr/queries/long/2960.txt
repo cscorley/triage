@@ -1,0 +1,14 @@
+I can't confidently say I completeley understand all that these classes so boldy tackle (that is, XPathEntityProcessor and XPathRecordReader) , but there may be someone who does. Nonetheless, I think I've got some or most of this right, and more likely there are more someones like that. So, I won't qualify everything I say with a maybe – lets this be the refactoring of those. 
+
+Whenever mapping an XML file into a Solr Index, within the XPathRecordReader, (used by the XPathEntityProcessor within the DataImportHandler), if (A) a field is perceived to be null and is multivalued, it is pushed a value of null (on top of any other values it previously had). Otherwise (B) for multivalued fields, any found value is pushed onto its existing list of values, and the field is marked as found within the frame (a.k.a record). 
+
+In general, when the end-tag of a record is seen, (C) the XPathRecordReader clears all of the field's values which have been marked as found, as tidiness is a value and they are supposedly no longer useful. 
+However, suppose that for a given record and multivalued field, a value is never found (though it may have been found for other fields in the record), only (A) will have occurred, never will (B) have occurred, the field will never have been marked as found, and thus (C) never will have occurred for the field. 
+
+So, the field will remain, with its list of nulls. 
+This list of nulls will grow until either the last record or a non-null value is seen. 
+And so, (1) an out-of-memory error may occur, given sufficiently many records and a mortal computer. 
+Moreover, (2), a transformer cannot reliably depend on the number of nulls in the field (and this information cannot be guaranteed to be determined by some other value). 
+
+I will try to provide more information, if this seems an issue and if there doesn't seem to be an answer. 
+At this point, if I understand the problem correctly, it seems the answer is to 'mark' those null fields, considering 'null' and added value. 

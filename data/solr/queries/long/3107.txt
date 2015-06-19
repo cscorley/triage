@@ -1,0 +1,1 @@
+The language-detection library used by LangDetectLanguageIdentifierUpdateProcessor uses a random sampling feature enabled by default as a means of avoiding local noise in input.  The feature has its merits, but it can also be confusing to users who aren't aware of it since it may give different on the same input.  I recommend turning it off to prevent confusion.

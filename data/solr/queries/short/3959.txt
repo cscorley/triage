@@ -1,0 +1,1 @@
+csv output is invalid csv if there is a currency field

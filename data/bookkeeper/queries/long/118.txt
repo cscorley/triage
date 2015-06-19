@@ -1,0 +1,3 @@
+Currently we found that hedwig cpp client doesn't kill and remove old subscription channels after redirection, so there is lots of unused channels.
+
+Not sure whether hedwig java client has the same issue, need to check it.

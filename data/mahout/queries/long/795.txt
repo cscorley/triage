@@ -1,0 +1,1 @@
+I've turned off access to my old storage of the ASF archives in favor of using the publicly hosted data set (http://aws.amazon.com/datasets/7791434387204566).  So, instead of downloading the files, one should just point the script at the location of the untarred files.

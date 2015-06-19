@@ -1,0 +1,1 @@
+Initial attempt at backporting the work done for Solr-1431 into the 3.x series

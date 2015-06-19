@@ -1,0 +1,4 @@
+See Shawn's comment on SOLR-1028. Problem is this line (611 currently) in CoreContainer.xml (4x)
+
+ if (!p.isSwappable() && p.isLoadOnStartup())
+Should be || instead I think.

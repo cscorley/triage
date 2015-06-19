@@ -1,0 +1,19 @@
+I've worked out the start at a new postings format that should have
+less overhead for fixed-int[] encoders (For,PFor)... using ideas from
+the old bulk branch, and new ideas from Robert.
+
+It's only a start: there's no payloads support yet, and I haven't run
+Lucene's tests with it, except for one new test I added that tries to
+be a thorough PostingsFormat tester (to make it easier to create new
+postings formats).  It does pass luceneutil's performance test, so
+it's at least able to run those queries correctly...
+
+Like Lucene40, it uses two files (though once we add payloads it may
+be 3).  The .doc file interleaves doc delta and freq blocks, and .pos
+has position delta blocks.  Unlike sep, blocks are NOT shared across
+terms; instead, it uses block encoding if there are enough ints to
+encode, else the same Lucene40 vInt format.  This means low-freq terms
+(< 128 = current default block size) are always vInts, and high-freq
+terms will have some number of blocks, with a vInt final block.
+
+Skip points are only recorded at block starts.

@@ -1,0 +1,1 @@
+On SpatialStrategy, I think the presence of isPolyField() and the single-field createField(shape) is a but much.  They were probably copied from Solr's FieldType design without really thinking much if they were really needed.

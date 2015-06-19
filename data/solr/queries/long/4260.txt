@@ -1,0 +1,7 @@
+After wiping all cores and reindexing some 3.3 million docs from Nutch using CloudSolrServer we see inconsistencies between the leader and replica for some shards.
+
+Each core hold about 3.3k documents. For some reason 5 out of 10 shards have a small deviation in then number of documents. The leader and slave deviate for roughly 10-20 documents, not more.
+
+Results hopping ranks in the result set for identical queries got my attention, there were small IDF differences for exactly the same record causing a record to shift positions in the result set. During those tests no records were indexed. Consecutive catch all queries also return different number of numDocs.
+
+We're running a 10 node test cluster with 10 shards and a replication factor of two and frequently reindex using a fresh build from trunk. I've not seen this issue for quite some time until a few days ago.

@@ -1,0 +1,1 @@
+Expression SortField has crappy toString/bad equals/hashcode

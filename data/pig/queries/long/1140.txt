@@ -1,0 +1,1 @@
+Currently, Zebra is still using already deprecated Hadoop 1.8 APIs. Need to upgrade to its 2.0 APIs.

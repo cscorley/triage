@@ -1,0 +1,20 @@
+When searching using the term vector components and setting fl=*,score the result is a http 400 error 'undefined field: *'. If you disable the tvc the search works properly.
+
+Example bad request...
+
+http://localhost:8983/solr/select/?qt=tvrh&q=includes:[*+TO+*]&fl=*
+
+
+3.1 stack trace:
+
+SEVERE: org.apache.solr.common.SolrException: undefined field: *
+   at org.apache.solr.handler.component.TermVectorComponent.process(TermVectorComponent.java:142)
+...
+
+
+
+The work around is to explicitly use the tv.fl param when using psuedo-fields in the fl...
+
+
+http://localhost:8983/solr/select/?qt=tvrh&q=includes:[*+TO+*]&fl=*&tv.fl=includes
+

@@ -1,0 +1,1 @@
+fix support for DEFAULT_DEFAULT_CORE_NAME

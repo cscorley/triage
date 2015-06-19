@@ -1,0 +1,1 @@
+Small improvements to Lucene Spatial Module for v4

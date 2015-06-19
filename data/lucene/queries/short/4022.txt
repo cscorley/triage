@@ -1,0 +1,1 @@
+Offline Sorter wrongly uses MIN_BUFFER_SIZE if there is more memory available

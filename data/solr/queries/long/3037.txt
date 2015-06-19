@@ -1,0 +1,1 @@
+There's a bug in JavaBinUpdateRequestCodec when it serializes the params. So you cannot use params (like overwrite=false) when using the binary wire format. 

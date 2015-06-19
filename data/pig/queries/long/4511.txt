@@ -1,0 +1,11 @@
+Currently pluckTuple returns all columns in relation that match a prefix predicate. This patch allows a boolean flag 'false' to specify that columns NOT matching this prefix should be retained.
+
+Example:
+
+<source>
+a = load 'a' as (x:int,y:chararray,z:long)
+b = load 'b' as (x:int,y:chararray,z:long)
+c = join a by x, b by x;
+Define pluck PluckTuple('a::','false')
+– returns b
+</source>

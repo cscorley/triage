@@ -1,0 +1,1 @@
+refactor JavaBinCodec input stream definition to enhance reuse

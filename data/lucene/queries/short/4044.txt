@@ -1,0 +1,1 @@
+Add NamedSPILoader support to TokenizerFactory, TokenFilterFactory and CharFilterFactory

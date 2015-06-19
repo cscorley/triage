@@ -1,0 +1,1 @@
+Place link to Solr wiki in a more prominent place

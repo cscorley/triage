@@ -1,0 +1,1 @@
+ToParentBlockJoinCollector.getTopGroups returns empty Groups

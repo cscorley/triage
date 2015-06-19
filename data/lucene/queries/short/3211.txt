@@ -1,0 +1,1 @@
+Switch Maven build from poorly maintained per-Solr-contrib tests.luceneMatchVersion constant values to Solr-wide LUCENE_CURRENT

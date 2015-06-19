@@ -1,0 +1,1 @@
+TestIndexWriter.testBackgroundOptimize fails with too many open files

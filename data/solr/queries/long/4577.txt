@@ -1,0 +1,3 @@
+This is when the command itself is successful on the node, but then we need a report of the sub command result on each node.
+
+There is some code that sort of attempts to do this that came in with the collection api response contribution, but it's not really working currently.

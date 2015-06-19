@@ -1,0 +1,1 @@
+Query scorers should not use MultiFields

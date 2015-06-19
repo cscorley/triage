@@ -1,0 +1,3 @@
+Unreleased bug due to switching to log4j. Tracking here to put it on the radar for trunk users.
+
+Need to add to the classpath to find the logging jars.

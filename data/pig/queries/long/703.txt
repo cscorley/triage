@@ -1,0 +1,9 @@
+Add src/docs directory folders and files to trunk branch. 
+
+Patch includes:
+src/docs ... forrrest.properties
+src/docs/src/documentation ...  skinconf.xml
+src/docs/src/documentation/content/xdocs ... doc files
+src/docs/src/documentation/content/xdocs/images ... image files 
+
+Please review.

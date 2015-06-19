@@ -1,0 +1,4 @@
+Payloads are extra-costly today because when pulling a
+DocsAndPositionsEnum, the codec has no way to know if you need access
+to the payloads.  Tracking the payloads, even if the app never
+retrieves them, is often costly...

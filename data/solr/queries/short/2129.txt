@@ -1,0 +1,1 @@
+Provide a Solr module for dynamic metadata extraction/indexing with Apache UIMA

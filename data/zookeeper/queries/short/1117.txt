@@ -1,0 +1,1 @@
+zookeeper 3.3.3 fails to build with gcc >= 4.6.1 on Debian/Ubuntu

@@ -1,0 +1,1 @@
+This issue will track the initial creation of the tika-example module. Subtasks will be used for the first few examples.

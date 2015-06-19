@@ -1,0 +1,1 @@
+FST.BYTE2 should save as fixed 2 byte not as vInt

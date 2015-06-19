@@ -1,0 +1,6 @@
+The distance-error-percent of a query shape in Lucene spatial is, in a nutshell, the percent of the shape's area that is an error epsilon when considering search detail at its edges.  The default is 2.5%, for reference.  However, as configured, it is read in as a fraction:
+
+
+    <fieldType name="location_2d_trie" class="solr.SpatialRecursivePrefixTreeFieldType"
+               distErrPct="0.025" maxDetailDist="0.001" />
+

@@ -1,0 +1,31 @@
+Distributed queries which are short circuited and executed locally do not return a shards.info section even when requested.
+
+Steps to reproduce:
+
+	cd solr; ant example; cp -r example example2
+	cd example; java -Dbootstrap_confdir=./solr/collection1/conf -Dcollection.configName=conf1 -DzkRun -DnumShards=2 -jar start.jar
+	cd example2; java -Djetty.port=7574 -DzkHost=localhost:9983 -jar start.jar
+	curl http://localhost:8983/solr/admin/collections?action=CREATE&collection=test1&name=test1&numShards=2&collection.configName=conf1&maxShardsPerNode=3
+	Add two docs:
+
+
+<add>
+  <doc>
+    <field name="id">a!1</field>
+    <field name="name">xyz</field>
+    <field name="price">2.00</field>
+  </doc>
+  <doc>
+    <field name="id">b!1</field>
+    <field name="name">abc</field>
+    <field name="price">5.00</field>
+  </doc>
+</add>
+
+
+	curl http://localhost:8983/admin/cores?name=test1_shard2_replica2&collection=test1&shard=shard2
+	curl http://localhost:8983/solr/test1_shard2_replica1/select?_route_=b!&fl=*&start=0&q=*:*&shards.info=true&collection=test1&rows=10
+	The above will not return shards.info
+	curl http://localhost:7574/solr/test1/select?_route_=b!&fl=*&start=0&q=*:*&shards.info=true&collection=test1&rows=10
+	The above will return shards.info
+

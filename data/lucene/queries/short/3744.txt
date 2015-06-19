@@ -1,0 +1,1 @@
+Add support for type whitelist in TypeTokenFilter

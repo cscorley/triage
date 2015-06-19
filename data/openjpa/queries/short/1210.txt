@@ -1,0 +1,1 @@
+Specify derby timeouts via properties.

@@ -1,0 +1,1 @@
+Allow more than 2.1B "tail nodes" when building FST

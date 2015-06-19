@@ -1,0 +1,1 @@
+It would be good to have a way to create double vectors/arrays from doc terms (using frequencies), this would allow to visualize / plot documents better and also better interact with other classification / learning frameworks (e.g. for comparison).

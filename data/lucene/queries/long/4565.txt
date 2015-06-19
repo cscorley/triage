@@ -1,0 +1,23 @@
+TaxoReader exposes two structures which provide information about a categories parent/childs/siblings: ParentArray and ChildrenArrays. ChildrenArrays are derived (i.e. created) from ParentArray.
+
+I propose to consolidate all that into one API ParentInfo, or CategoryTreeInfo (a better name?) which will provide the same information, only from one object. So instead of making these calls:
+
+
+
+int[] parents = taxoReader.getParentArray();
+int[] youngestChilds = taxoReader.getChildrenArrays().getYoungestChildArray();
+int[] olderSiblings = taxoReader.getChildrenArrays().getOlderSiblingArray();
+
+
+
+one would make these calls:
+
+
+
+int[] parents = taxoReader.getParentInfo().parents();
+int[] youngestChilds = taxoReader.getParentInfo().youngestChilds();
+int[] olderSiblings = taxoReader.getParentInfo().olderSiblings();
+
+
+
+Not a big change, just consolidate more code into one logical place. All of these arrays will continue to be lazily allocated.

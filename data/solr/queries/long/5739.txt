@@ -1,0 +1,40 @@
+I've tried to use the SPLITSHARD command from the Solr collection-Api.
+A JUnit test successfully runs before the split, but fails after splitting the shard, stopping and restarting Solr. It won't fail if Solr isn't restarted after splitting.
+
+I found some entries in files "solr.log" and "core.properties" which may give hints. 
+
+After split:
+org.apache.solr.update.UpdateLog; Starting to buffer updates. FSUpdateLog{state=ACTIVE, tlog=null
+ is logged for both newly created shards in "solr.log"
+
+"clusterstate.json" from Solr Cloud admin page shows: 
+shard1 state: inactive (replica: active)
+shard1_0 state: active parent shard1 (replica active)
+shard1_1 state: active parent shard1 (replica active)
+
+Both "core.properties" files of the newly created shards have
+shardState=construction and shardParent=shard1
+entries.
+The "core.properties" file of the parent shard is not changed.
+When restarting Solr
+ and running the JUnit again these entries are logged:
+org.apache.solr.update.processor.DistributedUpdateProcessor; Ignoring commit while not ACTIVE - state: BUFFERING replay:0
+ in "solr.log"
+
+I mainly I followed the steps of this tutorial http://architects.dzone.com/articles/solr-43-shard-splitting-quick. 
+
+	(install solr-4.6.1)
+	create a small cluster:
+java -Dbootstrap_confdir=./solr/portalse/conf -Dcollection.configName=portalse -DzkRun -DnumShards=1 -DmaxShardsPerNode=2 -DreplicationFactor=1 -jar start.jar
+	Run the unit test (after termination only one document exists).
+	Split the only shard:
+curl 'http://localhost:8983/solr/admin/collections?action=SPLITSHARD&collection=portalse&shard=shard1'
+shard "collection1_shard1_0_replica1" created (1 document)
+shard "collection1_shard1_1_replica1" created (0 documents)
+	commit index:
+curl 'http://localhost:8983/solr/portalse/update' --data-binary '<commit/>' -H 'Content-type:application/xml'
+	stop Solr by pressing Ctl-C.
+	restart Solr:
+java -DzkRun -jar start.jar
+	Run the unit test from step 2 again.
+

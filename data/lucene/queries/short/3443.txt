@@ -1,0 +1,1 @@
+Port 3.x FieldCache.getDocsWithField() to trunk

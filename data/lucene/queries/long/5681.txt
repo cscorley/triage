@@ -1,0 +1,1 @@
+After LUCENE-4371, we still have a non-optimal implementation of IndexInput#slice() in RAMDirectory. We should fix that to use the cloning approach like other directories do

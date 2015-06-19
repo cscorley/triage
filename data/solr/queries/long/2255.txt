@@ -1,0 +1,7 @@
+...&facet=true&facet.pivot=
+{!ex=category}category_id,subcategory_id&fq={!tag=category}category_id=42
+
+generates the following error : "undefined field {!ex=category}
+category_id"
+
+If you filter on subcategory_id, the facet.pivot result will contain only results from this subcategory. It's a loss of function since you can't alter this behavior with local params.

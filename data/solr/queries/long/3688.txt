@@ -1,0 +1,68 @@
+The Java 8 builds of trunk and branch4x fail >50% of all times with:
+
+
+java.lang.RuntimeException: mismatch: '0'!='2' @ spellcheck/suggestions/bar/startOffset
+	at __randomizedtesting.SeedInfo.seed([9B1635CDE22895EA:5C18C165EA4480A2]:0)
+	at org.apache.solr.SolrTestCaseJ4.assertJQ(SolrTestCaseJ4.java:573)
+	at org.apache.solr.SolrTestCaseJ4.assertJQ(SolrTestCaseJ4.java:521)
+	at org.apache.solr.handler.component.SpellCheckComponentTest.testPerDictionary(SpellCheckComponentTest.java:102)
+
+
+
+I am scared by JSONTestUtil so I have no idea what causes this. As a lot of other JSON-related things were buggy with Java 8, I think this has same cause. The JSONTestUtil seems to depend on the order of some HashMap/HashSet created by noggit. The order of hashed collections changed in Java 8 in an incompatible way. Later versions of Java 7 (u6+) will do the same with larger collections:
+
+
+From: Mike Duigou <mike.duigou@oracle.com>
+Date: Sat, Jul 14, 2012 at 1:09 AM
+Subject: Update on alternative hashing for String keys with hash-based Maps
+To: core-libs-dev Libs <core-libs-dev@openjdk.java.net>, jdk7u-dev@openjdk.java.net
+
+
+Hello all;
+
+About a month ago a significant change was made to the Java SE 7 and 8 hash based Map implementations. This change was previously proposed and discussed on this list[1]. The change affects all of the hashing based Map implementations (HashMap, Hashtable, WeakHashMap, LinkedHashMap, ConcurrentHashMap), the derived Set implementations (HashSet, LinkedHashSet,
+etc.) and other classes which depend upon these classes (Properties, UIDefaults). The change to hash based Maps improves performance when a large number of key hash code collisions are encountered. This is accomplished by altering the handling of String keys to use a different (better) hash function.
+
+As initially proposed, the alternative hashing behaviour was planned to apply to all hash based Maps larger than 512 elements. Smaller maps would continue to use the existing hashing approach.
+ConcurrentHashMap, because reasons related to the complexity of it's implementation, would always use the improved approach regardless of map capacity. Providing capacity based triggering of the alternative hashing is intended to improve compatibility by ensuring that the order in which elements are iterated does not change. Specifically, at less than the threshold capacity Map elements will be iterated in the same order as today.
+At or above the threshold, the iteration order will be different than the current order. Testing and evaluation of existing Java applications has shown us that some applications have explicit or implicit dependence upon the order that keys, values or entries will be iterated. The vast majority of iteration order dependent cases involve small maps--once a map contains hundreds of elements generally incorrect assumptions about iteration order will have already been found and resolved. We believed that triggering the alternative hashing behaviour at 512 element capacity would protect iteration order in cases which depended upon the existing iteration order.
+Java SE 7 and Java SE 8 have different policies. Java SE 8 is intended to always use alternative hashing of String keys regardless of the capacity of the Map.
+
+After  integration a number of cases of iteration order dependence were encountered within the OpenJDK code itself, in tests and in user code. Some of these faults were easily diagnosed and correct. Some other cases, because iteration order is not consistent from run-to-run under alternative hashing, proved difficult to isolate and resolve.
+
+Following this testing and and consultation with Java licensees and developers it was decided disable the alternative hashing behaviour for Java SE 7.  To ensure the greatest degree of compatibility with existing applications it seems best to only enable alternative hashing by explicit control. In Java SE 7u6 it will be necessary to set the system property jdk.map.althashing.threshold in order to enable alternative hashing. It is also still possible that the feature may be enabled by default in future Java SE 7 releases but this will only happen if further testing indicates compatibility can be reasonably assured.
+
+Because Java 8 is unreleased and we still wish to shake out iteration order dependencies alternative hashing remains enabled in Java SE 8.
+Alternative hashing is very likely to be enabled by default in Java SE 8.
+Doug Lea has been investigating further improvements to handling of key hash code collisions and his design is extremely likely to be the basis for all Java SE 8 hash based Map implementations.[2]
+
+Developers and deployers are strongly encouraged to test their applications by enabling the alternative String key hashing feature in Java SE 7u6 or later and/or testing with Java SE 8 builds. BE WARNED:
+it will probably not be possible to disable alternative hashing in Java SE 8. Applications MUST remove dependencies upon iteration order before they can be deployed with Java SE 8.
+
+Thanks,
+
+Mike
+
+TL;DR:
+
+	Java SE 7 and 8 both now support alternative hashing for String keys with hash based Maps
+	Alternative hashing improves performance when many String key hash codes collide
+	Alternative hashing impacts key, value and element iteration order
+	Alternative hashing is currently DISABLED by default for Java SE 7
+	Future Java SE 7 releases may enable alternative hashing for "large"
+(>512 capacity) maps
+	Developers can enable the eature in Java SE 7 for testing and deployment with a system property
+	Alternative hashing is ENABLED for all maps in Java SE 8
+	It will probably not be possible to disable alternative hashing in Java SE
+8
+	Hash map key, value and element iteration order WILL be different and unpredictable in Java SE 8
+	Different implementation approaches are still being investigated for Java SE 8 and remain subject to change
+
+
+
+[1] http://mail.openjdk.java.net/pipermail/core-libs-dev/2012-May/010238.html
+[2] http://cs.oswego.edu/pipermail/concurrency-interest/2012-June/009505.html
+
+If this is not the case, spellchecker has a problem with Java 8.
+
+There is nothing I am able to do because of the complexity of this test framework for JSON, but I really would like to fix this bug! So please: Somebody please, please, please give me a hint, I can then try to provide a patch!

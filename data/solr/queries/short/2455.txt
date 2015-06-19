@@ -1,0 +1,1 @@
+admin/index.jsp double submit on IE

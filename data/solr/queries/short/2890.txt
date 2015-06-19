@@ -1,0 +1,1 @@
+omitTermFreqAndPositions and omitNorms don't work properly when used on fieldTypes

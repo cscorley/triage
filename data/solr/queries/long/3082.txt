@@ -1,0 +1,1 @@
+The result is that you might see version 0 as the latest commit version when it's really not.

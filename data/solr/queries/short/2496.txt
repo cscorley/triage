@@ -1,0 +1,1 @@
+JSON Update Handler doesn't handle multiple docs properly

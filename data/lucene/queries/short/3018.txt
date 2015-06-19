@@ -1,0 +1,1 @@
+Lucene Native Directory implementation need automated build

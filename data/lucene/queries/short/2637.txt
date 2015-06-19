@@ -1,0 +1,1 @@
+FSDirectory.copyBytes isn't safe for SimpleFSDirectory

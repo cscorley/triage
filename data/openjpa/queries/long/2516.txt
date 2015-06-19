@@ -1,0 +1,6 @@
+Per manual:
+ openjpa.ConnectionProperties: If the listed driver is an instance of java.sql.Driver, this string will be parsed into a Properties instance, which will then be used to obtain database connections through the Driver.connect(String url, Properties props) method. If, on the other hand, the listed driver is a javax.sql.DataSource, the string will be treated as a plugin properties string, and matched to the bean setter methods of the DataSource instance. 
+
+However setting property
+openjpa.ConnectionProperties=sslConnection=true,sslTrustStoreLocation=C:\db_certs,sslTrustStorePassword=password
+is not being used during driver.connect() and failed due to connection refusal.

@@ -1,0 +1,8 @@
+
+
+org.junit.ComparisonFailure: expected:<[in]active> but was:<[]active>
+	at __randomizedtesting.SeedInfo.seed([C27BE35BC5D6502D:12196E179B038AA9]:0)
+	at org.junit.Assert.assertEquals(Assert.java:125)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at org.apache.solr.cloud.SliceStateUpdateTest.testSliceStateUpdate(SliceStateUpdateTest.java:183)
+

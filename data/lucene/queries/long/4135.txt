@@ -1,0 +1,4 @@
+http://jenkins.sd-datasolutions.de/job/Lucene-Solr-4.x-Linux-Java7-64/49/
+
+Seed reproduces on branch-4x for me on linux as well:
+ant test  -Dtestcase=TestNumericQueryParser -Dtests.seed=E6EC0E1871B28E1E -Dtests.multiplier=3 -Dtests.locale=es_PE -Dtests.timezone=Africa/Tunis -Dargs="-Dfile.encoding=UTF-8"

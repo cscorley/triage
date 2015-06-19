@@ -1,0 +1,65 @@
+According to Ivan’s email, I did a check of the build history. Seems recently failing is with this stack:
+java.io.IOException: Unable to delete directory /tmp/bkTest3561939033223584760.dir/current/0.
+	at org.apache.commons.io.FileUtils.deleteDirectory(FileUtils.java:1337)
+	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:1910)
+	at org.apache.commons.io.FileUtils.cleanDirectory(FileUtils.java:1399)
+	at org.apache.commons.io.FileUtils.deleteDirectory(FileUtils.java:1331)
+	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:1910)
+	at org.apache.commons.io.FileUtils.cleanDirectory(FileUtils.java:1399)
+	at org.apache.commons.io.FileUtils.deleteDirectory(FileUtils.java:1331)
+	at org.apache.bookkeeper.test.BookKeeperClusterTestCase.cleanupTempDirs(BookKeeperClusterTestCase.java:186)
+	at org.apache.bookkeeper.test.BookKeeperClusterTestCase.tearDown(BookKeeperClusterTestCase.java:114)
+
+This may be caused by an error in ForceWriteThread::run(), which leaked “logFile.close()” when interrupt comes.
+
+
+
+private class ForceWriteThread {
+     public void run() {
+            LOG.info("ForceWrite Thread started");
+            boolean shouldForceWrite = true;
+            int numReqInLastForceWrite = 0;
+            while(running) {
+                ForceWriteRequest req = null;
+                try {
+                           …
+                } catch (IOException ioe) {
+                    LOG.error("I/O exception in ForceWrite thread", ioe);
+                    running = false;
+                } catch (InterruptedException e) {
+                    LOG.error("ForceWrite thread interrupted", e);
+                    if (null != req) {
+                        req.closeFileIfNecessary();        < ==== 2, when interrupt, “shouldClose” not set properly, so file not close
+                    }
+                    running = false;
+                }
+            }
+            // Regardless of what caused us to exit, we should notify the
+            // the parent thread as it should either exit or be in the process
+            // of exiting else we will have write requests hang
+            threadToNotifyOnEx.interrupt();
+        }
+        // shutdown sync thread
+        void shutdown() throws InterruptedException {
+            running = false;
+            this.interrupt();               < ====  1, call interrupt
+            this.join();
+        }
+}
+
+        public void closeFileIfNecessary() {
+            // Close if shouldClose is set
+            if (shouldClose) {         < ==== 3, “shouldClose” is false here.
+                // We should guard against exceptions so its
+                // safe to call in catch blocks
+                try {
+                    logFile.close();
+                    // Call close only once
+                    shouldClose = false;
+                }
+                catch (IOException ioe) {
+                    LOG.error("I/O exception while closing file", ioe);
+                }
+            }
+        }
+

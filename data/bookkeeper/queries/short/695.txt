@@ -1,0 +1,1 @@
+Some entry logs are not removed from the bookie storage

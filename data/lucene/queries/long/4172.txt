@@ -1,0 +1,1 @@
+examples are things like ctors that list throws XYZException but actually dont, and things like 'throws CorruptIndex, LockObtainedFailed, IOException' when all of these are actually IOException.

@@ -1,0 +1,11 @@
+this came up in an elasticsearch issue that if you pull #ramBytesUsed() while docvalues are loaded in a seperate thread you see a ConcurrentModificationException here is an example:
+
+
+Caused by: java.util.ConcurrentModificationException
+        at java.util.HashMap$HashIterator.nextEntry(HashMap.java:926)
+        at java.util.HashMap$ValueIterator.next(HashMap.java:954)
+        at org.apache.lucene.codecs.lucene45.Lucene45DocValuesProducer.ramBytesUsed(Lucene45DocValuesProducer.java:291)
+        at org.apache.lucene.codecs.perfield.PerFieldDocValuesFormat$FieldsReader.ramBytesUsed(PerFieldDocValuesFormat.java:308)
+        at org.apache.lucene.index.SegmentDocValues.ramBytesUsed(SegmentDocValues.java:103)
+        at org.apache.lucene.index.SegmentReader.ramBytesUsed(SegmentReader.java:555)
+

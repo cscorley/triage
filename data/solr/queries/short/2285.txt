@@ -1,0 +1,1 @@
+excess SolrEventListeners created and then thrown away

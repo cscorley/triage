@@ -1,0 +1,7 @@
+I found a couple of places in the code base that duplicate the logic of SlowCompositeReaderWrapper.wrap. I think SlowCompositeReaderWrapper.wrap (vs. new SlowCompositeReaderWrapper) is what users need so we should probably make SlowCompositeReaderWrapper constructor private to enforce usage of wrap.
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+http://code.google.com/p/googletest/
+
+It looks a lot nicer to run tests with than cppunit which we are using now.

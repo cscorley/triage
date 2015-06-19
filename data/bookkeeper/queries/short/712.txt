@@ -1,0 +1,1 @@
+bookkeeper script should use 'java' from JAVA_HOME

@@ -1,0 +1,1 @@
+FileSwitchDirectory should uniqueify the String file names returned by listAll

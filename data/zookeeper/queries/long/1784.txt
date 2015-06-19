@@ -1,0 +1,20 @@
+If you look at Learner#syncWithLeader:
+
+
+            while (self.isRunning()) {
+                readPacket(qp);
+                switch(qp.getType()) {
+.......
+
+                case Leader.INFORM:
+                case Leader.INFORMANDACTIVATE:
+                    PacketInFlight packet = new PacketInFlight();
+                    packet.hdr = new TxnHeader();
+
+                    if (qp.getType() == Leader.COMMITANDACTIVATE) {
+
+
+
+I guess "qp.getType() == Leader.COMMITANDACTIVATE" is a typo that should read "qp.getType() == Leader.INFORMANDACTIVATE".
+
+Assigning to Alexander for now since this is part of ZOOKEEPER-107.

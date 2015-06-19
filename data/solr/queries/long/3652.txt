@@ -1,0 +1,11 @@
+Executing the following query will lock up the java process running solr.
+
+facet=true&facet.range=item_search_creation_event_facet_range_ftm&f.item_searchcreation_event_facet_range_ftm.facet.range.start=100000000000.0&f.item_searchcreation_event_facet_range_ftm.facet.range.end=100000086200.0&f.item_search_creation_event_facet_range_ftm.facet.range.gap=2160.0&q=%2A%3A%2A
+
+But decreasing the size of the min and max works fine
+
+facet=true&facet.range=item_search_creation_event_facet_range_ftm&f.item_searchcreation_event_facet_range_ftm.facet.range.start=10000000000.0&f.item_searchcreation_event_facet_range_ftm.facet.range.end=10000086200.0&f.item_search_creation_event_facet_range_ftm.facet.range.gap=2160.0&q=%2A%3A%2A
+
+And so does increasing the range gap
+
+facet=true&facet.range=item_search_creation_event_facet_range_ftm&f.item_searchcreation_event_facet_range_ftm.facet.range.start=100000000000.0&f.item_searchcreation_event_facet_range_ftm.facet.range.end=100000086200.0&f.item_search_creation_event_facet_range_ftm.facet.range.gap=21600.0&q=%2A%3A%2A

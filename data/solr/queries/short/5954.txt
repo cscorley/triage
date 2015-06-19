@@ -1,0 +1,1 @@
+Slower dataimport process caused by not reusing jdbc connections

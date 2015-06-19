@@ -1,0 +1,1 @@
+DB2 CAST VARCHAR type missing LENGTH

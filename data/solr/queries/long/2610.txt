@@ -1,0 +1,1 @@
+Right now, one can unload a Solr Core but the index files are left behind and consume disk space. We should have an option to delete the index when unloading a core.

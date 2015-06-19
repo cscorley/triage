@@ -1,0 +1,1 @@
+Preserve multi-value fields during hit highlighting

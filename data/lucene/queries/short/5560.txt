@@ -1,0 +1,1 @@
+Cleanup charset handling for Java 7

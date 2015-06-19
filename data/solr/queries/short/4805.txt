@@ -1,0 +1,1 @@
+SolrCloud - RELOAD on collections or cores leaves collection offline and unusable till restart

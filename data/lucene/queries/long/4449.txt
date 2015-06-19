@@ -1,0 +1,7 @@
+TestPostingsFormat is designed to fail if you have a bug in your postings format.
+
+But today we just pick a random PF (or mix) and test that: I think instead we should factor this into a base class in test-framework.
+
+So this way each codec would extend this test and force their codec to be used to ensure basic coverage.
+
+We could still have the "TestPostingsFormat" in core/ that uses the random mix of PFs too.

@@ -1,0 +1,27 @@
+It would be great if there was a clean simple approach to plugin custom analytics to Solr.
+
+This ticket introduces the AnalyticsQuery class which makes this possible.
+
+To add a custom analytic query you extend AnalyticsQuery and implement:
+
+
+  public abstract DelegatingCollector getAnalyticsCollector(ResponseBuilder rb, IndexSearcher searcher);
+
+
+
+This method returns a custom DelegatingCollector which handles the collection of the analytics.
+
+The DelegatingCollector.finish() method can be used to conveniently finish your analytics and place the output onto the response.
+
+The AnalyticsQuery also has a nifty constructor that allows you to pass in a MergeStrategy (see SOLR-5973). So, when you extend AnalyticsQuery you can pass in a custom MergeStrategy to handle merging of analytic output from the shards during a distributed search.
+
+This design is a natural extension of the PostFilter framework. So you can plugin your AnalyticsQuery with a custom QParserPlugin, for example:
+
+
+q=*:*&fq={!myanalytic param1=p1}
+
+
+
+Just like PostFilters, AnalyticsQueries can be ordered using the "cost" parameter. This allows for analytic pipe-lining, where the result of one AnalyticsQuery can be pipe-lined to another AnalyticsQuery. 
+
+

@@ -1,0 +1,1 @@
+Remove BaseResponseWriter, GenericBinaryResponseWriter, and GenericTextResponseWriter

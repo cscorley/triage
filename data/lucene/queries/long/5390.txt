@@ -1,0 +1,19 @@
+Sometimes the assert in the IW is tripped due to pending merge events. Those events can always happen but they are meaningless since we close / rollback the IW anyway. I suggest we loosen the assert here to not fail if there are only pending merge events.
+
+<noformat>
+1 tests failed.
+REGRESSION:  org.apache.lucene.index.TestIndexWriterWithThreads.testRollbackAndCommitWithThreads
+
+Error Message:
+Captured an uncaught exception in thread: Thread[id=288, name=Thread-222, state=RUNNABLE, group=TGRP-TestIndexWriterWithThreads]
+
+Stack Trace:
+com.carrotsearch.randomizedtesting.UncaughtExceptionError: Captured an uncaught exception in thread: Thread[id=288, name=Thread-222, state=RUNNABLE, group=TGRP-TestIndexWriterWithThreads]
+Caused by: java.lang.RuntimeException: java.lang.AssertionError: [org.apache.lucene.index.DocumentsWriter$MergePendingEvent@67ef293b]
+        at __randomizedtesting.SeedInfo.seed([98DFB1602D9F9A2A]:0)
+        at org.apache.lucene.index.TestIndexWriterWithThreads$1.run(TestIndexWriterWithThreads.java:619)
+Caused by: java.lang.AssertionError: [org.apache.lucene.index.DocumentsWriter$MergePendingEvent@67ef293b]
+        at org.apache.lucene.index.IndexWriter.rollback(IndexWriter.java:2026)
+        at org.apache.lucene.index.TestIndexWriterWithThreads$1.run(TestIndexWriterWithThreads.java:575)
+
+</noformat>

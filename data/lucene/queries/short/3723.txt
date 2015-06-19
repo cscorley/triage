@@ -1,0 +1,1 @@
+Remove FieldMaskingSpanQuery (or fix its scoring)

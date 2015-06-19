@@ -1,0 +1,1 @@
+When solr.xml is persisted, you lose all system property substitution that was used. 

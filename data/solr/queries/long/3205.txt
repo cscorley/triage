@@ -1,0 +1,18 @@
+The new analysis UI does not behave well with invalid input.  To reproduce, from /#/singlecore/analysis
+
+	Select a number field (int)
+	put in invalid text (hello)
+	click Analyse Values
+
+
+
+The UI will have a red banner, but not say anything useful.  The log file will say:
+
+
+SEVERE: org.apache.solr.common.SolrException: Invalid Number: hello
+	at org.apache.solr.analysis.TrieTokenizer.reset(TrieTokenizerFactory.java:113)
+	at org.apache.solr.analysis.TrieTokenizer.<init>(TrieTokenizerFactory.java:76)
+
+
+
+Hopefully we can get the UI to say "Invalid Number: hello"

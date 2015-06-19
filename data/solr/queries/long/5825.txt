@@ -1,0 +1,3 @@
+In order to implement some custom behaviors I split the request() method in HttpSolrServer into 2 distinct method createMethod() and executeMethod(). This allows for customization of either/both of these phases vs having it in a single function.
+
+In my use case I extended HttpSolrServer to support client side timeouts (so_timeout, connectTimeout and request timeout).. without duplicating the code in request() I couldn't accomplish..

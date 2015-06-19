@@ -1,0 +1,1 @@
+Logs too noisy on NIOServerFactory when client drops a connection

@@ -1,0 +1,1 @@
+Use IOContext.READONCE in VarGapTermsIndexReader to load FST

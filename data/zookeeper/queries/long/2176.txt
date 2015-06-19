@@ -1,0 +1,31 @@
+Hi Alexander Shraer,
+
+Looking at the CI output of ZOOKEEPER-2163 I see this:
+
+
+ [exec]     [junit] 2015-04-17 17:36:23,750 [myid:] - ERROR [QuorumPeer[myid=4](plain=/0:0:0:0:0:0:0:0:11235)(secure=disabled):QuorumPeer@1394] - writeToDisk == true but configFilename == null
+
+
+
+Though looking at QuorumPeer#setQuorumVerifier I see:
+
+
+            if (configFilename != null) {
+                try {
+                    String dynamicConfigFilename = makeDynamicConfigFilename(
+                            qv.getVersion());
+                    QuorumPeerConfig.writeDynamicConfig(
+                            dynamicConfigFilename, qv, false);
+                    QuorumPeerConfig.editStaticConfig(configFilename,
+                            dynamicConfigFilename,
+                            needEraseClientInfoFromStaticConfig());
+                } catch (IOException e) {
+                    LOG.error("Error closing file: ", e.getMessage());
+                }
+            } else {
+                LOG.error("writeToDisk == true but configFilename == null");
+            }
+
+
+
+there's no proper error handling so I guess maybe we should just make it a warning? Thoughts?

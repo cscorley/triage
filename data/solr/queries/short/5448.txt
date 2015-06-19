@@ -1,0 +1,1 @@
+ShowFileRequestHandler treats everything as Directory, when in Cloud-Mode

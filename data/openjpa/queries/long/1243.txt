@@ -1,0 +1,7 @@
+The following JIRAs need to be migrated back to the 1.0 line so that Informix can be used.  These fixes went into 1.2.0 and are stable.
+
+https://issues.apache.org/jira/browse/OPENJPA-605
+https://issues.apache.org/jira/browse/OPENJPA-606
+https://issues.apache.org/jira/browse/OPENJPA-629
+
+I have combined the 3 JIRA's into one patch to make the update easier.

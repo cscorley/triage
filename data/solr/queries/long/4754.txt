@@ -1,0 +1,17 @@
+Testing out the 4.3.0 RC3, I tried to run through the SolrCloud examples.
+
+Following the steps for "Example A: Simple two shard cluster" my two nodes started up w/o any obvious problem, however the I noticed the cluster graph was empty, and attempts to index documents failed with invalid url errors when trying to forward the distributed updates.  Closer inspection of the cluster state lead me to discover that the URLs for the nodes as registered with ZK did not include any host information at all.  (details to follow in comment)
+
+Apparently, the logic for implicitly detecting a hostname to use with SolrCloud failed to work, and did not cause any sort of startup error.
+
+Important things to note:
+
+
+	java clearly did know what the current configured hostname was for my machine, because it appeared correctly in the <title/> tag of the admin UI (pulled from "/admin/system") so i don't think this probablem is specific to any sort of glitch in my hostname configuration.
+	explicitly setting the "host" sys prop (as used in the example solr.xml) worked around the problem
+	I could not reproduce this problem with Solr 4.2.1 (using the 4.2.1 example configs)
+
+
+
+
+We should try to make the hostname/url detection logic smarter (i'm not sure why it isn't working as well as the SystemInfoHandler) and it should fail loudly on startup as last resort rather then registering the node with ZK using an invalid URL.

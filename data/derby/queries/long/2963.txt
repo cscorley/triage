@@ -1,0 +1,13 @@
+I start the server using an ipv4 address
+
+java derbyrun.jar server start -h x.x.x.x
+
+Then I connect from a remote client  and hit an AccessControlException
+
+The ip in the exception is that of the client, not the server.
+
+This setup works in 10.2.2.0.
+
+Same problem if the hostname is in derby.properties
+
+Problem can be worked around by using -noSecurityManager when starting the server

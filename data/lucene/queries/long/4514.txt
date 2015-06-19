@@ -1,0 +1,14 @@
+Today Scorer.freq() is somewhat useless: because in general it returns the number of matches, but other times it returns a strange floating point value (essentially an intermediate score).
+
+I think it should just return the number of matches in the document. This makes it well-defined and useful to consumers (e.g. if they are going to iterate over the positions or whatever in the future).
+
+
+   /** Returns number of matches for the current document.
+-   *  This returns a float (not int) because
+-   *  SloppyPhraseScorer discounts its freq according to how
+-   *  "sloppy" the match was.
+    *
+    * @lucene.experimental */
+-  public abstract float freq() throws IOException;
++  public abstract int freq() throws IOException;
+

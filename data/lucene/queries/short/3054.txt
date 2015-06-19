@@ -1,0 +1,1 @@
+SorterTemplate.quickSort stack overflows on broken comparators that produce only few disticnt values in large arrays

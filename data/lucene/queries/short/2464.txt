@@ -1,0 +1,1 @@
+FastVectorHighlighter: add a FragmentBuilder to return entire field contents

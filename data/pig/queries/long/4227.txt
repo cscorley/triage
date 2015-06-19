@@ -1,0 +1,28 @@
+I have a udf that generates different outputs when running as jython and streaming python.
+jython
+
+{([[BBC Worldwide]])}
+
+ 
+streaming python
+
+{(BC Worldwid)}
+
+
+The problem is that streaming python encodes a bag output incorrectly. For this particular example, it serializes the output string as follows-
+
+
+|{_[[BBC Worldwide]]|}_
+
+
+where '|' and '_' wrap bag delimiters '{' and '}'. i.e. '{' => '|{_' and '}' => '|}_'.
+
+But this is wrong because bag must contain tuples not chararrays. i.e. the correct encoding is as follows-
+
+
+|{_|(_[[BBC Worldwide]]|)_|}_
+
+
+where '|' and '_' wrap tuple delimiters '(' and ')' as well as bag delimiters.
+
+This results in truncated outputs.

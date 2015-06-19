@@ -1,0 +1,1 @@
+ExternalFileFields fail if valType='float', and valType should be optional

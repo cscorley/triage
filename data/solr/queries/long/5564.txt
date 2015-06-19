@@ -1,0 +1,4 @@
+For a customer we use f.body.hl.alternateField=teaser&hl.maxAlternateFieldLength=100
+But some articles do not have the teaser field filled at all, so for queries that do not match the body, we get the full huge body returned in the frontend.
+
+If the highlighter has tried to fallback to the alternateField, then hl.maxAlternateFieldLength should always apply, even to text from the original field if alternateFIeld does not exist.

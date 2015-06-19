@@ -1,0 +1,1 @@
+Upgrade benchmark from commons-compress-1.0 to commons-compress-1.1 for 15 times faster gzip decompression

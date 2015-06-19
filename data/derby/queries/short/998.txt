@@ -1,0 +1,1 @@
+tests jdbcapi/SURTest.junit and jdbcapi/SURQueryMixTest.junit run twice in derbynetclientmats

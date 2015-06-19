@@ -1,0 +1,1 @@
+The current approach was never the best for SolrCloud - it was designed for a pre SolrCloud Solr - it also uses too many connections and threads - nailing that down is likely wasted effort when we should really move away from explicitly buffering docs and sending small batches per thread as we have been doing.

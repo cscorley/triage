@@ -1,0 +1,24 @@
+This came up from dicussions on IRC.  I'm summarizing here...
+
+Today when you make a Field to add to a document you can set things
+index or not, stored or not, analyzed or not, details like omitTfAP,
+omitNorms, index term vectors (separately controlling
+offsets/positions), etc.
+
+I think we should factor these out into a new class (FieldType?).
+Then you could re-use this FieldType instance across multiple fields.
+
+The Field instance would still hold the actual value.
+
+We could then do per-field analyzers by adding a setAnalyzer on the
+FieldType, instead of the separate PerFieldAnalzyerWrapper (likewise
+for per-field codecs (with flex), where we now have
+PerFieldCodecWrapper).
+
+This would NOT be a schema!  It's just refactoring what we already
+specify today.  EG it's not serialized into the index.
+
+This has been discussed before, and I know Michael Busch opened a more
+ambitious (I think?) issue.  I think this is a good first baby step.  We could
+consider a hierarchy of FIeldType (NumericFieldType, etc.) but maybe hold
+off on that for starters...

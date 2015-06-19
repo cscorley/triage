@@ -1,0 +1,1 @@
+ShingleAnalyzerWrapper should expose the delegated analyzer as a public final

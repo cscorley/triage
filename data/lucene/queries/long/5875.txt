@@ -1,0 +1,8 @@
+We are building some fairly big FSTs (the biggest one having about 500M terms with an average of 20 characters per term) and that works very well so far.
+The problem is just that we can use neither the "doShareSuffix" nor the "doPackFST" option from the builder since both would cause us to get exceptions. One beeing an OOM and the other an IllegalArgumentException for a negative array size in ArrayUtil.
+
+The thing here is that we in theory still have far more than enough memory available but it seems that java for some reason cannot allocate byte or long arrays of the size the NodeHash needs (maybe fragmentation?).
+
+Reducing the constant in the NodeHash from 1<<30 to e.g. 27 seems to fix the issue mostly. Could e.g. the Builder pass through its bytesPageBits to the NodeHash or could we get a custom parameter for that?
+
+The other problem we run into was a NegativeArraySizeException when we try to pack the FST. It seems that we overflowed to 0x80000000. Unfortunately I accidentally overwrote that exception but I remember it was triggered by the GrowableWriter for the inCounts in line 728 of the FST. If it helps I can try to reproduce it.

@@ -1,0 +1,7 @@
+A spin off from LUCENE-3079. We should define few benchmarks for faceting scenarios, so we can evaluate the new faceting module as well as any improvement we'd like to consider in the future (such as cutting over to docvalues, implement FST-based caches etc.).
+
+Toke attached a preliminary test case to LUCENE-3079, so I'll attach it here as a starting point.
+
+We've also done some preliminary job for extending Benchmark for faceting, so I'll attach it here as well.
+
+We should perhaps create a Wiki page where we clearly describe the benchmark scenarios, then include results of 'default settings' and 'optimized settings', or something like that.

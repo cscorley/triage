@@ -1,0 +1,1 @@
+Document JPQL Query updates

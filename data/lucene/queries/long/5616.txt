@@ -1,0 +1,5 @@
+The current behavior is sheisty: it always returns null for negative field numbers (without consulting the map).
+
+This means if a field number somehow became negative, there would be silent data loss.
+
+Instead, we should throw exception on negative numbers.

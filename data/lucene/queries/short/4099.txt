@@ -1,0 +1,1 @@
+Remove generics from SpatialStrategy and remove SpatialFieldInfo

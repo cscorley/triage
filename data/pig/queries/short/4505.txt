@@ -1,0 +1,1 @@
+[Pig on Tez] Auto adjust AM memory can hit OOM with 3.5GXmx

@@ -1,0 +1,7 @@
+Historically, you had to invert fields (indexed=true) to do any queries against them.
+
+But now its possible to build a forward index for the field (docValues=true).
+I think in many cases (e.g. a string field you only sort and match on), its unnecessary and wasteful
+to force the user to also invert if they don't need scoring.
+
+So I think solr should support match-only semantics in this case for term,wildcard,range,etc.

@@ -1,0 +1,5 @@
+Currently, DISTINCT is implemented in a straightforward manner per https://issues.apache.org/jira/browse/PIG-3538.
+
+However, we can implement two types of combiner optimizations for DISTINCT, just as the MRCompiler does for map-reduce:
+1. A simple DistinctCombiner that throws away the duplicate tuples
+2. An optimizer that transforms certain uses of DISTINCT into an algebraic udf form

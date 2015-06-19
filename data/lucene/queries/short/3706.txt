@@ -1,0 +1,1 @@
+add offsets into lucene40 postings

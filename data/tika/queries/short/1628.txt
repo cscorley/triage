@@ -1,0 +1,1 @@
+ExternalParser.check should return false if it hits SecurityException

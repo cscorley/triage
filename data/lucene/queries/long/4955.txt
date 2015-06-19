@@ -1,0 +1,3 @@
+NGramTokenFilter increments positions for each gram rather for the actual token which can lead to rather funny problems especially with highlighting. if this filter should be used for highlighting is a different story but today this seems to be a common practice in many situations to highlight sub-term matches.
+
+I have a test for highlighting that uses ngram failing with a StringIOOB since tokens are sorted by position which causes offsets to be mixed up due to ngram token filter.

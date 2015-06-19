@@ -1,0 +1,1 @@
+It should really work much more like the code path when you do create an indexwriter if it doesn't already exist, and it cannot count on just checking the refCntWriter as null, because it can lag the indexWriter variable.

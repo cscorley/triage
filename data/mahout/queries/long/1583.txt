@@ -1,0 +1,3 @@
+Another R-like operator, cbind (stitching two matrices together). Seems to come up now and then. 
+
+Just like with elementwise operations, and, perhaps some other, it will have two physical implementation paths, one is zip for identically distributed operators, and another one is full join in case they are not.

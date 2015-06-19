@@ -1,0 +1,1 @@
+MoreLikeThis should support distributed search

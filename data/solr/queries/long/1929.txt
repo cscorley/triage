@@ -1,0 +1,1 @@
+SolrCell should be able to index encrypted files (pdfs, word docs).

@@ -1,0 +1,1 @@
+deleteInstanceDir is added to CoreAdminHandler but can't be passed with solrj

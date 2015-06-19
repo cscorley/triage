@@ -1,0 +1,1 @@
+Separate test and compile scope dependencies in the Solrj and Solr contrib ivy.xml files, so that the derived Maven dependencies get filled out properly in the corresponding POMs

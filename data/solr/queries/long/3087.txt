@@ -1,0 +1,60 @@
+I want to use XML XInclude mechanism (http://en.wikipedia.org/wiki/XInclude) to include parts of schema.xml.
+When I try to include a fieldType, I get this exception :
+
+java.lang.RuntimeException: schema fieldtype string2(org.apache.solr.schema.StrField) invalid arguments:
+{xml:base=solrres:/schema_integration.xml}
+	at org.apache.solr.schema.FieldType.setArgs(FieldType.java:168)
+	at org.apache.solr.schema.IndexSchema$1.init(IndexSchema.java:467)
+	at org.apache.solr.schema.IndexSchema$1.init(IndexSchema.java:435)
+	at org.apache.solr.util.plugin.AbstractPluginLoader.load(AbstractPluginLoader.java:175)
+	at org.apache.solr.schema.IndexSchema.readSchema(IndexSchema.java:480)
+	at org.apache.solr.schema.IndexSchema.<init>(IndexSchema.java:125)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:461)
+	at org.apache.solr.core.CoreContainer.load(CoreContainer.java:316)
+	at org.apache.solr.core.CoreContainer.load(CoreContainer.java:207)
+	at org.apache.solr.core.CoreContainer$Initializer.initialize(CoreContainer.java:130)
+	at org.apache.solr.servlet.SolrDispatchFilter.init(SolrDispatchFilter.java:94)
+	at org.mortbay.jetty.servlet.FilterHolder.doStart(FilterHolder.java:97)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.java:713)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:152)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.xml.XmlConfiguration.main(XmlConfiguration.java:985)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mortbay.start.Main.invokeMain(Main.java:194)
+	at org.mortbay.start.Main.start(Main.java:534)
+	at org.mortbay.start.Main.start(Main.java:441)
+	at org.mortbay.start.Main.main(Main.java:119)
+	at org.mortbay.jetty.win32service.JettyServiceWrapperListener.start(JettyServiceWrapperListener.java:47)
+	at org.tanukisoftware.wrapper.WrapperManager$12.run(WrapperManager.java:2788)
+
+I include 'schema_integration.xml' like this :
+
+schema.xml ->
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema name="default" version="1.1">
+  <types>
+     <!-- Stuff -->
+     <xi:include href="schema_integration.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  </types>
+
+  <!-- Stuff -->
+</schema>
+
+schema_integration.xml ->
+<?xml version="1.0" encoding="UTF-8" ?>
+<fieldType name="string2" class="solr.StrField" sortMissingLast="true" omitNorms="true"/>

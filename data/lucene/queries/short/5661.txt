@@ -1,0 +1,1 @@
+LiveIndexWriterConfig has setters that require magical order

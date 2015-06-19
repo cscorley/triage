@@ -1,0 +1,1 @@
+Solr test failure when running under Java 1.5

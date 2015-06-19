@@ -1,0 +1,1 @@
+FacetComponent throws NPE when doing distributed query

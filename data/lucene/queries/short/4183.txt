@@ -1,0 +1,1 @@
+Simplify CompoundFileDirectory opening in 4.x

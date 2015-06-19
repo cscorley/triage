@@ -1,0 +1,1 @@
+migrate solr analysis factories to analyzers module

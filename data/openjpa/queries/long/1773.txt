@@ -1,0 +1,1 @@
+Create a JIRA for the OpenTrader example, so we'll have it listed in the Release Notes.

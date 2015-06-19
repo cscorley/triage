@@ -1,0 +1,1 @@
+use same data dir in core reload

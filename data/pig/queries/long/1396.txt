@@ -1,0 +1,1 @@
+With PIG-1390 checked in, ant eclipse-files does only the ivy-download part but does not compile and generate the necessary classes in src-gen.

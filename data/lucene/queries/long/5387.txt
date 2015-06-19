@@ -1,0 +1,32 @@
+FacetConfig.build() takes an IndexDocument and returns a new instance of IndexDocument. This forces you to write code like this:
+
+
+
+Document doc = new Document();
+doc.add(new StringField("id", "someID", Store.NO));
+doc.add(new FacetField("author", "john"));
+IndexDocument facetDoc = facetConfig.build(doc);
+indexWriter.addDocument(facetDoc);
+
+
+
+Technically, you don't need to declare 'facetDoc', you could just indexWriter.addDocument(facetConfig.build(doc)), but it's weird:
+
+
+	After you call facetConfig.build(), you cannot add any more fields to the document (since you get an IndexDoc), so you must call it last.
+
+
+
+
+	Nothing suggests you should call facetConfig.build() at all - I can already see users trapped by the new API, thinking that adding a FacetField is enough. We should at least document on FacetField that you should call FacetConfig.build().
+
+
+
+
+	Nothing suggests that you shouldn't ignore the returned IndexDoc from FC.build() - we should at least document that.
+
+
+
+I think that if FacetConfig.build() took an IndexDocument but returned a Document, that will at least allow you to call it in whatever stage of the pipeline that you want (after adding all FacetFields though)...
+
+I'll post a patch later.

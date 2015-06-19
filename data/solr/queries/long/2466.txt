@@ -1,0 +1,3 @@
+The HttpClient library used by CommonsHttpSolrServer will retry by default 3 times a request that failed on the server side, even if the _maxRetries field of  CommonsHttpSolrServer is set to 0.
+The retry count should be managed in just one place and CommonsHttpSolrServer seems to be the right one. 
+CommonsHttpSolrServer should override that HttpClient default to 0 retries, and manage the retry count with the value of the field _maxRetries.

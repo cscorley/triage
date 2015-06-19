@@ -1,0 +1,1 @@
+Core listeners are very helpful when managing per-segment caches (filters, uninverted doc values, etc.) yet this API is only exposed on SegmentReader. If you want to use it today, you need to do instanceof checks, try to unwrap in case of a FilterAtomicReader and finally fall back to a reader closed listener if every other attempt to get the underlying SegmentReader failed.

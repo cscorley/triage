@@ -1,0 +1,1 @@
+We tried jumping all kinds of hoops (unsuccessfully anyway) to really really close an IndexWriter in the past, but Lucene wouldn't let you. Now that is fixed in Lucene and we should update our close/rollback code.

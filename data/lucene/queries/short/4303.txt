@@ -1,0 +1,1 @@
+Analysis factories should use ResourceLoader, not Class.forName

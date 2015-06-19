@@ -1,0 +1,9 @@
+SpatialOperation (which I wish was named SpatialPredicate) is a bunch of predicates – methods that return true/false based on a pair of shapes.  Some of them don't seem to be defined in a way consistent with their definitions on ESRI's site:
+http://edndoc.esri.com/arcsde/9.1/general_topics/understand_spatial_relations.htm  (which is linked as a reference, and is in turn equivalent to OGC spec definitions, I believe).
+
+Problems:
+
+	the definitions make no mention of needing to have area or not, yet some of our predicates are defined as to require area on either the indexed or query shape.
+	the definitions make a distinction of the boundary of a shape, yet in Lucene-spatial, there is none.  That suggests our predicates are wrongly chosen since there are official predicates that are boundary-neutral – namely "Covers" and "CoveredBy" in lieu of Contains and Within, respectively.  If we don't rename our predicates, we should at least support the correct predicates names!
+	Overlaps appears totally wrong. It should be defined as indexedShape.relate(queryShape) == Intersects  (and thus not Within or Contains or Disjoint).  It's presently defined as the same as Intersects plus the query shape needing area.
+

@@ -1,0 +1,1 @@
+The trunk build has been red for a while because of this (and ZOOKEEPER-2000 and ZOOKEEPER-2080). We should fix this sooner than later.

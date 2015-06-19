@@ -1,0 +1,1 @@
+Wrong value inserted by INSERT INTO with multiple subselects

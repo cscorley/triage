@@ -1,0 +1,3 @@
+It seems the issue is an IWC cannot be used across 2 different indexwriters, because the DWPTThreadPool is created on the IndexWriterConfig, and you hit a SetOnce exception... seems like the exception is correct and it would be bad to have two indexwriters sharing the same DWPTThreadPool?
+
+stacktrace to follow in a comment.

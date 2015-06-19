@@ -1,0 +1,1 @@
+EnwikiContentSource silently swallows the last wiki doc

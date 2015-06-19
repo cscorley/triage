@@ -1,0 +1,32 @@
+DirectUpdateHandler2 has the following code:
+
+
+if (!cmd.softCommit) {
+          synchronized (solrCoreState.getUpdateLock()) { // sync is currently needed to prevent preCommit
+                                // from being called between preSoft and
+                                // postSoft... see postSoft comments.
+            if (ulog != null) ulog.preCommit(cmd);
+          }
+          
+          // SolrCore.verbose("writer.commit() start writer=",writer);
+
+          if (writer.hasUncommittedChanges()) {
+            final Map<String,String> commitData = new HashMap<>();
+            commitData.put(SolrIndexWriter.COMMIT_TIME_MSEC_KEY,
+                String.valueOf(System.currentTimeMillis()));
+            writer.setCommitData(commitData);
+            writer.commit();
+          } else {
+            log.info("No uncommitted changes. Skipping IW.commit.");
+          }
+
+          // SolrCore.verbose("writer.commit() end");
+          numDocsPending.set(0);
+          callPostCommitCallbacks();
+        } else {
+          callPostSoftCommitCallbacks();
+        }
+
+
+
+As evident in the code above, if cmd.softCommit is true then the post soft commit hooks are called first and the actual soft commit happens in a block of code after it.

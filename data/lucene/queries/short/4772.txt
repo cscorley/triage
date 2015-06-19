@@ -1,0 +1,1 @@
+Move Facet associations to new FacetsAggregator API

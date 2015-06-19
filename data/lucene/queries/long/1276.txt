@@ -1,0 +1,3 @@
+Build.xml for Highlighter does not work when compilation is triggered by clean core dist call.
+
+Patch has changes to fix this by updating build.xml to follow xml-query-parser build.xml

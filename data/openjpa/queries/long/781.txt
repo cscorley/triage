@@ -1,0 +1,24 @@
+just need to add <scope>provided</scope> to the postgres sql dependency.
+
+
+Index: openjpa-jdbc/pom.xml
+===================================================================
+— openjpa-jdbc/pom.xml        (revision 720348)
++++ openjpa-jdbc/pom.xml        (working copy)
+@@ -47,12 +47,13 @@
+         <dependency>
+             <groupId>hsqldb</groupId>
+             <artifactId>hsqldb</artifactId>
+
+	<scope>compile</scope>
++            <scope>provided</scope>
+         </dependency>
+         <dependency>
+             <groupId>postgresql</groupId>
+             <artifactId>postgresql</artifactId>
+             <version>8.1-407.jdbc3</version>
++            <scope>provided</scope>
+         </dependency>
+     </dependencies>
+     <build>
+

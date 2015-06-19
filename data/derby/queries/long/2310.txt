@@ -1,0 +1,1 @@
+Improve the README.txt files so the tests can be run 'out of the box'. They need to get adjusted for the location of the resource.jar, and derby.properties. 

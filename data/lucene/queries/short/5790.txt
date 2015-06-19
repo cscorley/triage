@@ -1,0 +1,1 @@
+broken compareTo in MutableValueDouble and MutableValueBool - affects grouping when exists==false

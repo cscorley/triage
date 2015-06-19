@@ -1,0 +1,1 @@
+Shard splitting should support collections configured with a hash router and routeField.

@@ -1,0 +1,1 @@
+Support updateDocument() with DWPTs

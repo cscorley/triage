@@ -1,0 +1,1 @@
+post.jar can be used to push reasonable amounts of content to Solr. It can be useful to know how long a post took if evaluating simple index time performance improvements when new to using Solr.

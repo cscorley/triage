@@ -1,0 +1,1 @@
+OpenJPA build process enhances Entity classes even when testing is deactivated via -Dtest=false

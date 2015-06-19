@@ -1,0 +1,1 @@
+e2e tests ComputeSpec_1, ComputeSpec_2 and StreamingPerformance_3 produce different result on Windows

@@ -1,0 +1,1 @@
+error: blank undefined field IndexSchema.getDynamicFieldType

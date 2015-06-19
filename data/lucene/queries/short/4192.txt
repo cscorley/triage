@@ -1,0 +1,1 @@
+SpatialStrategy: Remove isPolyField() and createField(shape)

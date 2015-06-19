@@ -1,0 +1,13 @@
+I can not operation a node with ACL by "addauth" when using cli_st. I have fixed this bug: 
+original：else if (startsWith(line, "addauth ")) {
+      char *ptr;
+      line += 8;
+      ptr = strchr(line, ' ');
+      if (ptr) 
+{
+        *ptr = '\0';
+        ptr++;
+      }
+      zoo_add_auth(zh, line, ptr, ptr ? strlen(ptr) -1 : 0, NULL, NULL);
+now: zoo_add_auth(zh, line, ptr, ptr ? strlen(ptr) : 0, NULL, NULL);
+strlen(ptr) is just ok.

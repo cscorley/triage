@@ -1,0 +1,3 @@
+on some inputs, the java breakiterator support will internally crash.
+
+for example: ant test -Dtestcase=TestThaiAnalyzer -Dtestmethod=testRandomStrings -Dtests.seed=-8005471002120855329:-2517344653287596566 -Dtests.multiplier=3

@@ -1,0 +1,9 @@
+Attached file is detected as "audio/x-ms-wma" instead of "video/x-ms-wmv".
+
+Expected result:
+$ java -jar tika-app-1.1.jar -d test.wmv 
+video/x-ms-wmv
+
+Actual result:
+$ java -jar tika-app-1.1.jar -d test.wmv 
+audio/x-ms-wma

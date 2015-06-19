@@ -1,0 +1,1 @@
+solr query parser should use multiplicative boosts and not apply phase slop to nested queries from a different qparser

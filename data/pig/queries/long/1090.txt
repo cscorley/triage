@@ -1,0 +1,1 @@
+There have been some changes (as recorded in the Changes Section, Nov 2 2009 sub section of http://wiki.apache.org/pig/LoadStoreRedesignProposal) in the load/store interfaces - this jira is to track the task of making those changes under src. Changes under test will be addresses in a different jira.

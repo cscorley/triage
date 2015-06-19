@@ -1,0 +1,14 @@
+The following line in UpdateShardHandler.java looks incorrect to me:
+
+
+
+clientConnectionManager.setDefaultMaxPerRoute(cfg.getMaxUpdateConnections());
+
+
+
+I think it should be:
+
+
+
+clientConnectionManager.setMaxTotal(cfg.getMaxUpdateConnections());
+

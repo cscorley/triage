@@ -1,0 +1,1 @@
+Improve exit log messsage of EventThread and SendThread by adding SessionId

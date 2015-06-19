@@ -1,0 +1,1 @@
+Allow Directory.copy() to accept a collection of file names to be copied

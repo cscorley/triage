@@ -1,0 +1,1 @@
+It doesnt override initReader (nor would it be able to) since it doesnt have fieldName. this gives unexpected behavior.

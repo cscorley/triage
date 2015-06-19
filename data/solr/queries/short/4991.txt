@@ -1,0 +1,1 @@
+Register QParserPlugin's as SolrInfoMBean's, allowing them to be visible externally like other plugins

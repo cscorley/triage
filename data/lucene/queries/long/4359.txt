@@ -1,0 +1,5 @@
+Lucene trunk currently forces DocValues to be stored:
+
+	FieldType.setDocValueType sets stored to true,
+	DocFieldProcessor.processDocument handles DocValues in a for (StorableField field: docState.doc.storableFields()) loop, meaning that DocValues won't be consumed if they are not stored.
+

@@ -1,0 +1,1 @@
+derby.jar has directory (package) entries in it which are not required

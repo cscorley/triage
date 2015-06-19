@@ -1,0 +1,11 @@
+On some platform, Pig build fail with the message:
+[ivy:resolve] 		::::::::::::::::::::::::::::::::::::::::::::::
+[ivy:resolve] 		::              FAILED DOWNLOADS            ::
+[ivy:resolve] 		:: ^ see resolution messages for details  ^ ::
+[ivy:resolve] 		::::::::::::::::::::::::::::::::::::::::::::::
+[ivy:resolve] 		:: org.mortbay.jetty#jetty;6.1.26!jetty.zip
+[ivy:resolve] 		::::::::::::::::::::::::::::::::::::::::::::::
+
+For some reason ivy is trying to pull jetty.zip instead of jetty.jar, and fail with the zip file is not there.
+
+When I examining the ivy.xml, I also find we put jetty twice. Fix that as well.

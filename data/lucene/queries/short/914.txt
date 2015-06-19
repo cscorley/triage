@@ -1,0 +1,1 @@
+Scorer.skipTo(current) remains on current for some scorers

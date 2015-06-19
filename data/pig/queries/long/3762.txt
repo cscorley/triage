@@ -1,0 +1,1 @@
+In TezDagBuilder, we are creating new Confs for the edges and vertices without considering properties that have been set. The effect of this is that you can't set tuning parameters, e.g. sort buffer size.

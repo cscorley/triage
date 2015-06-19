@@ -1,0 +1,1 @@
+Remove old byte[] norms api from IndexReader

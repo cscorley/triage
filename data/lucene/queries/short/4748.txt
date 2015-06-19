@@ -1,0 +1,1 @@
+Add DrillSideways helper class to Lucene facets module

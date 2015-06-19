@@ -1,0 +1,1 @@
+SolrCloud view should default to cluster graphical view rather than zk nodes

@@ -1,0 +1,1 @@
+Reduce wasted bytes in FST due to array arcs

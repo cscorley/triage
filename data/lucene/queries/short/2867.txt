@@ -1,0 +1,1 @@
+Change contrib QP API that uses CharSequence as string identifier

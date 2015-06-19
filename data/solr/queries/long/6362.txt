@@ -1,0 +1,3 @@
+I stumbled on a case where TestSqlEntityProcessorDelta#testChildEntities will fail.  Test bug.
+
+-Dtests.seed=B387DA5FC73441ED

@@ -1,0 +1,1 @@
+IntelliJ classpath doesn't include phonetic and morfologik resources/ directories

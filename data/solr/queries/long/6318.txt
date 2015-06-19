@@ -1,0 +1,8 @@
+Some applications require filtering documents by a large number of terms.  It's often related to security filtering.  Naively this is done this way:
+
+    fq={!df=myfield q.op=OR}code1 code2 code3 code4 code5...
+
+
+And this ends up being a BooleanQuery.  Users then wind up hitting BooleaQuery.maxClauseCount (sometimes in production, sadly) and they up it to a huge number to get the job done.
+
+Solr should offer a QParser based on TermsFilter.  I propose it be named "terms" (plural of term), and have a "separator" option defaulting to a space.  When it's a space, the values also get trimmed, which wouldn't otherwise happen.  The analysis logic should be the same as that for "term" QParser which is to call FieldType.readableToIndexed.

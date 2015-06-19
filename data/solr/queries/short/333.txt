@@ -1,0 +1,1 @@
+distributiondump.jsp gets the path to logs wrong

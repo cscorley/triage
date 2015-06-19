@@ -1,0 +1,1 @@
+SolrCloud leader election on single node stucks the initialization

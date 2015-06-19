@@ -1,0 +1,1 @@
+currently the index entry position is combined with log id and entry offset inside a log. so it means that log id and entry log file size shouldn't be larger than Integer.MAX_VALUE. otherwise, it would cause trouble.

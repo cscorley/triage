@@ -1,0 +1,1 @@
+Give HttpSolrServer the ability to send PUT requests

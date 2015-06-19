@@ -1,0 +1,9 @@
+We made TestRandomChains in LUCENE-3919, which reflects all
+analysis components from the classpath and builds analyzers from them,
+then checks consistency.
+
+but currently it only supports some tokenizers/tokenfilters/charfilters,
+because it hardcodes at certain ctors e.g. Tokenizer(Reader) and Tokenizer(Version+Reader).
+
+Instead we should use all ctors, just filling them in with random data of
+whatever argument type they take.

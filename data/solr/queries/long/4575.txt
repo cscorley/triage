@@ -1,0 +1,10 @@
+solr.core.name
+solr.core.instanceDir
+solr.core.dataDir
+solr.core.configName
+solr.core.schemaName
+
+all are introduced (without necessarily reading them from the environment) so they can be referenced in various config files (e.g. solrconfig.xml) or passed through as system vars.
+
+Shawn:
+Thans for pointing at that specific revision, made it much easier for me to pinpoint.

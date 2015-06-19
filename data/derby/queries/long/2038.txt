@@ -1,0 +1,85 @@
+These tests fail on all platforms with JDK 1.6 when run against an insane build of Derby. They don't fail when run against a sane build. See for instance http://dbtg.thresher.com/derby/test/Daily/jvm1.6/testing/testlog/sparc/469556-derbyall_diff.txt
+
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbyall/derbylang/closed.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: closed jdk1.6.0-rc derbyall:derbylang 2006-11-01 05:42:42 ***
+17 del
+< 	... 10 more
+17a17
+> 	... 11 more
+25 del
+< 	... 10 more
+25a25
+> 	... 11 more
+Test Failed.
+			End:   closed jdk1.6.0-rc derbyall:derbylang 2006-11-01 05:42:55 ***
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbyall/derbylang/releaseCompileLocks.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: releaseCompileLocks jdk1.6.0-rc derbyall:derbylang 2006-11-01 06:11:35 ***
+50 del
+< 	... 28 more
+50a50
+> 	... 29 more
+70 del
+< 	... 28 more
+70a70
+> 	... 29 more
+Test Failed.
+		
+		
+	
+	
+
+
+
+The problem seems to be that the number of stack trace elements printed is different for sane and insane builds.

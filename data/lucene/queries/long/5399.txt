@@ -1,0 +1,7 @@
+PagingFieldCollector (sort comparator) is significantly slower with string fields, because of how its "seen on a previous page" works: it calls compareDocToValue(int doc, T t) first to check this. (its the only user of this method)
+
+This is very slow with String, because no ordinals are used. so each document must lookup ord, then lookup bytes, then compare bytes.
+
+I think maybe we should replace this method with an 'after' slot, and just have compareDocToAfter or something.
+
+Otherwise we could use a hack-patch like the one i will upload (i did this just to test the performance, although tests do pass).

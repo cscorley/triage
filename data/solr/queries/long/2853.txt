@@ -1,0 +1,4 @@
+Class SpellCheckCollator creates a new possibility iterator based on the spellcheck results.  The iterator is created with: 
+PossibilityIterator possibilityIter = new PossibilityIterator(result.getSuggestions(), maxTries, maxEvaluations);
+
+The issue is maxTries, should be maxCollations.  Correct me if I'm wrong.

@@ -1,0 +1,1 @@
+UIMAToSolrMapper wrongly instantiates Type with reflection

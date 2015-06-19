@@ -1,0 +1,1 @@
+ant generate-maven-artifacts fails on windows

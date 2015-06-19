@@ -1,0 +1,4 @@
+Implement class RAMDirectoryFactory to make possible using RAMDirectory by adding the next configuration in solrconfig.xml:
+
+
+<directoryFactory class="org.apache.solr.core.RAMDirectoryFactory"/>

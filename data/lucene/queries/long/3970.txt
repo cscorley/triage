@@ -1,0 +1,5 @@
+Like Robert Muir said in LUCENE-3109:
+Also I think there are other improvements we can do here that would be more natural:
+Fields.getUniqueFieldCount() -> Fields.size()
+Terms.getUniqueTermCount() -> Terms.size()
+I believe this dramatically improves understandability (way less 'scary', actually beautiful).

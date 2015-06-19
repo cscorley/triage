@@ -1,0 +1,1 @@
+MS Money files wrongly detected as True Type Font

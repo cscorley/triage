@@ -1,0 +1,10 @@
+see parent issue for context
+
+
+	if CoreAdminHandler STATUS returns "core init failures" the admin UI should indicate those failures in some way
+	failures should be indicated not only for core names that don't currently exist, but also for core names that do (indicating that a reload attempt failed)
+	
+		failures related to existing cores should probably be visually incorporated into the existing status info panels for those cores
+	
+	
+

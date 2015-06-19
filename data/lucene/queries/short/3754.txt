@@ -1,0 +1,1 @@
+Store generated archive manifests in per-module output directories

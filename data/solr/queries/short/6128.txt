@@ -1,0 +1,1 @@
+SolrResourceLoader Error messages: deprecated fieldTypes in schema.xml

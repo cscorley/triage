@@ -1,0 +1,23 @@
+As summary.
+
+
+I found next exception in derby.log.
+
+[main] FAIL - org.apache.derbyTesting.unitTests.harness.T_Fail: Test failed - DiagnosticUtil.toDiagString() failed, got: (T_DiagTestClass1.toString(): object with diag interface), expected: (D_T_DiagTestClass1: object with diag interface).
+org.apache.derbyTesting.unitTests.harness.T_Fail: Test failed - DiagnosticUtil.toDiagString() failed, got: (T_DiagTestClass1.toString(): object with diag interface), expected: (D_T_DiagTestClass1: object with diag interface).
+	at org.apache.derbyTesting.unitTests.harness.T_Fail.testFailMsg(T_Fail.java:95)
+	at org.apache.derbyTesting.unitTests.services.T_Diagnosticable.t_001(T_Diagnosticable.java:105)
+	at org.apache.derbyTesting.unitTests.services.T_Diagnosticable.runTestSet(T_Diagnosticable.java:207)
+	at org.apache.derbyTesting.unitTests.harness.T_MultiIterations.runTests(T_MultiIterations.java:94)
+	at org.apache.derbyTesting.unitTests.harness.T_Generic.Execute(T_Generic.java:117)
+	at org.apache.derbyTesting.unitTests.harness.BasicUnitTestManager.runATest(BasicUnitTestManager.java:183)
+	at org.apache.derbyTesting.unitTests.harness.BasicUnitTestManager.runTests(BasicUnitTestManager.java:245)
+	at org.apache.derbyTesting.unitTests.harness.BasicUnitTestManager.boot(BasicUnitTestManager.java:92)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1996)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:290)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1834)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startServices(BaseMonitor.java:966)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.runWithState(BaseMonitor.java:398)
+	at org.apache.derby.impl.services.monitor.FileMonitor.<init>(FileMonitor.java:57)
+	at org.apache.derby.iapi.services.monitor.Monitor.startMonitor(Monitor.java:288)
+	at org.apache.derbyTesting.unitTests.harness.UnitTestMain.main(UnitTestMain.java:50)

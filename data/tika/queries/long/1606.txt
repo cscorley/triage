@@ -1,0 +1,25 @@
+I've run into one problem while testing Tika 1.8-rc2 with Bixo
+
+It involves a dependency issue involving (of course) Guava, since that project loves to break their API 
+
+The bixo-core jar has these transitive dependencies on various versions of Guava:
+
+Hadoop - 11.0.2
+Cascading - 14.0.1
+Tika-parsers - 10.0.1
+	cdm - 17.0
+
+Everyone winds up using version 10.0.1 (note that Tika has a dependency on cdm, which wants to use 17.0)
+
+The problem is that Hadoop (for any recent version) uses an API from Guava's cache implementation that no longer exists:
+
+com.google.common.cache.CacheBuilder.build(Lcom/google/common/cache/CacheLoader;)Lcom/google/common/cache/LoadingCache;
+java.lang.NoSuchMethodError: com.google.common.cache.CacheBuilder.build(Lcom/google/common/cache/CacheLoader;)Lcom/google/common/cache/LoadingCache;
+	at org.apache.hadoop.io.compress.CodecPool.createCache(CodecPool.java:62)
+	at org.apache.hadoop.io.compress.CodecPool.<clinit>(CodecPool.java:74)
+	at org.apache.hadoop.io.SequenceFile$Writer.close(SequenceFile.java:1272)
+	at org.apache.hadoop.mapred.SequenceFileOutputFormat$1.close(SequenceFileOutputFormat.java:79)
+
+So what this means is that anyone trying to use Tika with Hadoop will need to play games with the class loader to get the older version of Guava - though that can cause other issues if Hadoop (or Cascading, etc) rely on anything that's only in the newer Guava API.
+
+Guava 10.0.1 was released about 3.5 years ago; 11.0.2 was from about 3 years ago. So it seems like we should upgrade to at least 11.0.2

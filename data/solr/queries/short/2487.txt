@@ -1,0 +1,1 @@
+Do not include slf4j-jdk14 jar in WAR

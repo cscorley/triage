@@ -1,0 +1,1 @@
+BOOKIE_EXTRA_OPTS are added twice

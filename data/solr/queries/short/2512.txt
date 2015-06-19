@@ -1,0 +1,1 @@
+uima: add an ability to skip runtime error in AnalysisEngine

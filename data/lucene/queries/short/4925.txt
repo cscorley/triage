@@ -1,0 +1,1 @@
+IndexSearcher.search is broken when IndexSearcher.executor != null and the sort contains SortField.FIELD_SCORE

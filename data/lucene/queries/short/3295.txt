@@ -1,0 +1,1 @@
+BitVector never skips fully populated bytes when writing ClearedDgaps

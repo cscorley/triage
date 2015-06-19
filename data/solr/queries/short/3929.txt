@@ -1,0 +1,1 @@
+support configuring IndexWriter max thread count in solrconfig

@@ -1,0 +1,24 @@
+While parsing embedded documents, currently, if a parser hits an EncryptedDocumentException or anything wrapped in a TikaException, the Exception is swallowed by ParsingEmbeddedDocumentExtractor:
+
+            DELEGATING_PARSER.parse(
+                                    newStream,
+                                    new EmbeddedContentHandler(new BodyContentHandler(handler)),
+                                    metadata, context);
+        } catch (EncryptedDocumentException ede) {
+            // TODO: can we log a warning that we lack the password?
+            // For now, just skip the content
+        } catch (TikaException e) {
+            // TODO: can we log a warning somehow?
+            // Could not parse the entry, just skip the content
+        } finally {
+            tmp.close();
+        }
+
+
+
+
+For some applications, it might be better to store the stack trace of the attachment that caused an exception.
+
+The proposal would be to include the stack trace in the metadata object for that particular attachment.
+
+The user will be able to specify whether or not to store stack traces, and the default will be to store stack traces.  This will be a small change to the legacy behavior.

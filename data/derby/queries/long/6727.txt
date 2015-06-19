@@ -1,0 +1,3 @@
+DERBY-5165 reflects a problem where after shutdown of a database with an open XA transaction with update changes uncommitted, it appears as if the locks are released when the database is available again. Instead, locks should be kept and subsequent reads should time-out.
+
+It would be nice to have a test case that tests the behavior of an open XA transaction when the jvm/thread with the transaction is killed/interrupted, rather than it doing an (orderly) database shutdown.

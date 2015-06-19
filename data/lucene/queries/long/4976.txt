@@ -1,0 +1,3 @@
+Today it creates a single-document Lucene index, and calls commit() after each snapshot/release.
+
+I think we can just use a single file instead, and remove Closeable.

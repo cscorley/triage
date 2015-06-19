@@ -1,0 +1,1 @@
+Tez 0.6 offers Tez UI which will greatly facilitate the debugging. Let's switch to use it.

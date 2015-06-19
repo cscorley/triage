@@ -1,0 +1,3 @@
+BaseDataFileFactory has a public constructor and a public boot() method. Arbitrary code running in the JVM may be able to instantiate a BaseDataFileFactory outside of Derby's authentication mechanisms and so acquire the ability to read/update Derby-managed data with the privileges granted to Derby.  Arbitrary code may be able to interfere with the normal operation of Derby and may be able to corrupt data.
+
+This is just an observation based on casual code inspection. It may be that there are mechanisms in place which frustrate these attacks. I have not tried to exploit these potential vulnerabilities myself.

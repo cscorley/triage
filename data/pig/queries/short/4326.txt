@@ -1,0 +1,1 @@
+AvroStorageSchemaConversionUtilities does not properly convert schema for maps of arrays of records

@@ -1,0 +1,1 @@
+Shard split action should use soft commits instead of hard commits to make sub shard data visible

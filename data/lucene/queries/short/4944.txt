@@ -1,0 +1,1 @@
+changes2html.pl does not detect duplicate sections in the changes.txt

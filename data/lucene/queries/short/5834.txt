@@ -1,0 +1,1 @@
+Make empty doc values impls singletons

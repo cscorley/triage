@@ -1,0 +1,1 @@
+The Mahout command script doesn't properly run when Hadoop is installed but $MAHOUT_JOB is not set or found in standard locations

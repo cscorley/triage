@@ -1,0 +1,44 @@
+I encountered a problem today that the Zookeeper C Client (version 3.2.0) core dump when reconnected and did some operations on the zookeeper server which just restarted. The gdb infomation is like:
+
+(gdb) bt
+#0  0x000000302af71900 in memcpy () from /lib64/tls/libc.so.6
+#1  0x000000000047bfe4 in ia_deserialize_string (ia=Variable "ia" is not available.) at src/recordio.c:270
+#2  0x000000000047ed20 in deserialize_CreateResponse (in=0x9cd870, tag=0x50a74e "reply", v=0x409ffe70) at generated/zookeeper.jute.c:679
+#3  0x000000000047a1d0 in zookeeper_process (zh=0x9c8c70, events=Variable "events" is not available.) at src/zookeeper.c:1895
+#4  0x00000000004815e6 in do_io (v=Variable "v" is not available.) at src/mt_adaptor.c:310
+#5  0x000000302b80610a in start_thread () from /lib64/tls/libpthread.so.0
+#6  0x000000302afc6003 in clone () from /lib64/tls/libc.so.6
+#7  0x0000000000000000 in ?? ()
+(gdb) f 1
+#1  0x000000000047bfe4 in ia_deserialize_string (ia=Variable "ia" is not available.) at src/recordio.c:270
+270     in src/recordio.c
+(gdb) info locals
+priv = (struct buff_struct *) 0x9cd8d0
+len = -1
+rc = Variable "rc" is not available.
+
+According to the source code,
+int ia_deserialize_string(struct iarchive *ia, const char *name, char **s)
+{
+    struct buff_struct *priv = ia->priv;
+    int32_t len;
+    int rc = ia_deserialize_int(ia, "len", &len);
+    if (rc < 0)
+        return rc;
+    if ((priv->len - priv->off) < len) 
+{
+        return -E2BIG;
+    }
+    *s = malloc(len+1);
+    if (!*s) 
+{
+        return -ENOMEM;
+    }
+    memcpy(*s, priv->buffer+priv->off, len);
+    (*s)[len] = '\0';
+    priv->off += len;
+    return 0;
+}
+
+the variable len is set by ia_deserialize_int, and the returned len doesn't been checked, so the client segment fault when trying to memcpy -1 byte data.
+In the source file recordio.c, there are many functions which don't check the returned len. They all might cause segment fault in some kind of  situations.

@@ -1,0 +1,12 @@
+org.apache.solr.client.solrj.impl.StreamingUpdateSolrServer line 112 is:
+  OutputStreamWriter writer = new OutputStreamWriter(out, "UTF-8");
+and then we call
+  req.writeXML( writer ); 
+Because the writer is not buffered, this causes the XML writer to call the UTF-8 encoder for each atom being written, like in org.apache.solr.common.util.XML.writeXML:
+  out.write('<');
+This causes the stream encoder to allocate a char array to hold it, and 
+sun.nio.cs.StreamEncoder.implWrite allocates a CharBuffer to wrap it.  All just for one character.
+
+This is particularly a problem when you have a lot of threads (100?) writing to the SOLR server, they rapidly eat up all the CPU.
+
+It would be helpful to allocate the writer as a BufferedWriter, so encoding only happens when you flush.  JavaDoc for OutputStreamWriter recommends this: "For top efficiency, consider wrapping an OutputStreamWriter within a BufferedWriter so as to avoid frequent converter invocations."

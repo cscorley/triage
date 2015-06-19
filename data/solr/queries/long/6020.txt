@@ -1,0 +1,11 @@
+Currently it is not possible to use the schema-less example if my data does not have an "id" field.
+
+I was indexing data where the unique field name was "url" in schema-less mode. This requires one to first change unique key name in the schema and then start solr and then index docs. If one had already started solr, one'd first need to remove managed-schema, rename schema.xml.bak to schema.xml and then make the necessary changes in schema.xml. I don't think we should fail on such simple things.
+
+Here's what I propose:
+
+	We remove "id" and uniqueKey from the managed schema example
+	If there's a field named "id" in the document,  we use that as the uniqueKey
+	Else we fallback on generating a UUID or a signature field via an update processor and store it as the unique key field. We can name it as "id" or "_id"
+	But if a uniqueKey is already present in original schema.xml then we should expect the incoming data to have that field and we should preserve the current behavior of failing loudly.
+

@@ -1,0 +1,68 @@
+Recently (LUCENE-4765) we added multi-valued DocValues field
+(SortedSetDocValuesField), and this can be used for faceting in Solr
+(SOLR-4490).  I think we should also add support in the facet module?
+
+It'd be an option with different tradeoffs.  Eg, it wouldn't require
+the taxonomy index, since the main index handles label/ord resolving.
+
+There are at least two possible approaches:
+
+
+	On every reopen, build the seg -> global ord map, and then on
+    every collect, get the seg ord, map it to the global ord space,
+    and increment counts.  This adds cost during reopen in proportion
+    to number of unique terms ...
+
+
+
+
+	On every collect, increment counts based on the seg ords, and then
+    do a "merge" in the end just like distributed faceting does.
+
+
+
+The first approach is much easier so I built a quick prototype using
+that.  The prototype does the counting, but it does NOT do the top K
+facets gathering in the end, and it doesn't "know" parent/child ord
+relationships, so there's tons more to do before this is real.  I also
+was unsure how to properly integrate it since the existing classes
+seem to expect that you use a taxonomy index to resolve ords.
+
+I ran a quick performance test.  base = trunk except I disabled the
+"compute top-K" in FacetsAccumulator to make the comparison fair; comp
+= using the prototype collector in the patch:
+
+
+                    Task    QPS base      StdDev    QPS comp      StdDev                Pct diff
+               OrHighLow       18.79      (2.5%)       14.36      (3.3%)  -23.6% ( -28% -  -18%)
+                HighTerm       21.58      (2.4%)       16.53      (3.7%)  -23.4% ( -28% -  -17%)
+               OrHighMed       18.20      (2.5%)       13.99      (3.3%)  -23.2% ( -28% -  -17%)
+                 Prefix3       14.37      (1.5%)       11.62      (3.5%)  -19.1% ( -23% -  -14%)
+                 LowTerm      130.80      (1.6%)      106.95      (2.4%)  -18.2% ( -21% -  -14%)
+              OrHighHigh        9.60      (2.6%)        7.88      (3.5%)  -17.9% ( -23% -  -12%)
+             AndHighHigh       24.61      (0.7%)       20.74      (1.9%)  -15.7% ( -18% -  -13%)
+                  Fuzzy1       49.40      (2.5%)       43.48      (1.9%)  -12.0% ( -15% -   -7%)
+         MedSloppyPhrase       27.06      (1.6%)       23.95      (2.3%)  -11.5% ( -15% -   -7%)
+                 MedTerm       51.43      (2.0%)       46.21      (2.7%)  -10.2% ( -14% -   -5%)
+                  IntNRQ        4.02      (1.6%)        3.63      (4.0%)   -9.7% ( -15% -   -4%)
+                Wildcard       29.14      (1.5%)       26.46      (2.5%)   -9.2% ( -13% -   -5%)
+        HighSloppyPhrase        0.92      (4.5%)        0.87      (5.8%)   -5.4% ( -15% -    5%)
+             MedSpanNear       29.51      (2.5%)       27.94      (2.2%)   -5.3% (  -9% -    0%)
+            HighSpanNear        3.55      (2.4%)        3.38      (2.0%)   -4.9% (  -9% -    0%)
+              AndHighMed      108.34      (0.9%)      104.55      (1.1%)   -3.5% (  -5% -   -1%)
+         LowSloppyPhrase       20.50      (2.0%)       20.09      (4.2%)   -2.0% (  -8% -    4%)
+               LowPhrase       21.60      (6.0%)       21.26      (5.1%)   -1.6% ( -11% -   10%)
+                  Fuzzy2       53.16      (3.9%)       52.40      (2.7%)   -1.4% (  -7% -    5%)
+             LowSpanNear        8.42      (3.2%)        8.45      (3.0%)    0.3% (  -5% -    6%)
+                 Respell       45.17      (4.3%)       45.38      (4.4%)    0.5% (  -7% -    9%)
+               MedPhrase      113.93      (5.8%)      115.02      (4.9%)    1.0% (  -9% -   12%)
+              AndHighLow      596.42      (2.5%)      617.12      (2.8%)    3.5% (  -1% -    8%)
+              HighPhrase       17.30     (10.5%)       18.36      (9.1%)    6.2% ( -12% -   28%)
+
+
+
+I'm impressed that this approach is only ~24% slower in the worst
+case!  I think this means it's a good option to make available?  Yes
+it has downsides (NRT reopen more costly, small added RAM usage,
+slightly slower faceting), but it's also simpler (no taxo index to
+manage).

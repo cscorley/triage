@@ -1,0 +1,1 @@
+An ephemeral directory implementation should cause the transaction log to be ignored on startup.

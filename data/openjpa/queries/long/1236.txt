@@ -1,0 +1,3 @@
+OPENJPA-1052 and OPENJPA-1115 provide 2.0 spec support for delimited identifiers. The spec requires support for double-quotes as the delimiter. Since a number of databases support other delimiters, either different than double quotes or in addition to them, it was decided to extend support to these. This was done by allowing the delimiter being used to be specified in the database specific DBDictionary.
+
+However, in fixing OPENJPA-1189, it is necessary to initially hard-code some double quotes in 2 Table methods, getColumn() and containsColumn(). This will be spec-compliant. Supporting other delimiters involves changing multiple chains of methods to pass in the DBDictionary. This will be handled in this JIRA.

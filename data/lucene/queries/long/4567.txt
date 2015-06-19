@@ -1,0 +1,1 @@
+the fst Builder.finish() returns null when nothing is accepted, this then results in NPE in lookup(), see patch for extra nullchecks

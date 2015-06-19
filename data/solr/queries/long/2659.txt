@@ -1,0 +1,9 @@
+SOLR-2452 split the solrj & common tests and test-files out from under solr/src/test{,-files} and placed them under solr/solrj/.
+
+Because IntelliJ's dependency scheme can't directly support the dependencies among the core/, solrj/, and test-framework/ internal modules, IntelliJ runs core/ and solrj/ tests under the monolithic IntelliJ "solr" module, 
+
+As a result, when IntelliJ copies core/src/test-files/** and solrj/src/test-files/** to solr/build/solr-idea/classes/test/ (the test output directory), only one file from each same-named file pair can reside in the target directory, e.g. solr/conf/schema.xml.  When same-named files differ between the two test-files/ directories, tests will fail.  E.g.: LUCENE-2048 introduced a nopositions fieldType and a nopositionstext field into core/src/test-files/solr/conf/schema.xml, but not into the same-named file under solrj/src/test-files/, so when IntelliJ chooses the solrj version when copying resources, the core test that depends on the nopositionstext field (TestOmitPositions) will fail.
+
+I propose adding an extra directory level under solrj/src/test-files/: solrj/src/test-files/solrj/.  That way, files from core/src/test-files/ can have the same names, but still co-exist when copied to the test output directory by IntelliJ.
+
+To maintain consistency, as well as avoid future naming conflicts, all other solr modules except core should switch to the same layout: src/test-files/<module-name>/*.  Currently all contribs' solr homes are named src/test-files/solr-<module-name>/ - these directories should be renamed to src/test-files/<module-name>/solr.

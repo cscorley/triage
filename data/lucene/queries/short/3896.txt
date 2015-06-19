@@ -1,0 +1,1 @@
+CharTokenizer has bugs for large documents.

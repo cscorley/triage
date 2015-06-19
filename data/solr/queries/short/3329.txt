@@ -1,0 +1,1 @@
+Don't use svn:properties Id or Revision in SolrInfoMBean

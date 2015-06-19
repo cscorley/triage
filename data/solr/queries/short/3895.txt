@@ -1,0 +1,1 @@
+For several reasons, disabling the resolving of external entities within the Solr UpdateRequestHandler for XML would be good.

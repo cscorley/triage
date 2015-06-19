@@ -1,0 +1,90 @@
+Problem from the user's list, cut/pasted below. Robert Muir hacked out a quick patch he pasted on the dev list, I'll append it shortly.
+
+I am working at implementing solr to work as the search backend for our web
+system.  So far things have been going well, but today I made some schema
+changes and now things have broken.
+
+I updated the schema.xml file and reloaded the core (via the admin
+interface).  No errors were reported in the logs.
+
+I then pushed 100 records to be indexed.  A call to Commit afterwards
+seemed fine, however my next call for Optimize caused the following errors:
+
+java.io.IOException: background merge hit exception:
+_2n(4.4):C4263/154 _30(4.4):C134 _32(4.4):C10 _31(4.4):C10 into _37
+[maxNumSegments=1]
+
+null:java.io.IOException: background merge hit exception:
+_2n(4.4):C4263/154 _30(4.4):C134 _32(4.4):C10 _31(4.4):C10 into _37
+[maxNumSegments=1]
+
+
+Unfortunately, googling for background merge hit exception came up
+with 2 thing: a corrupt index or not enough free space.  The host
+machine that's hosting solr has 227 out of 229GB free (according to df
+-h), so that's not it.
+
+
+I then ran CheckIndex on the index, and got the following results:
+http://apaste.info/gmGU
+
+
+As someone who is new to solr and lucene, as far as I can tell this
+means my index is fine. So I am coming up at a loss. I'm somewhat sure
+that I could probably delete my data directory and rebuild it but I am
+more interested in finding out why is it having issues, what is the
+best way to fix it, and what is the best way to prevent it from
+happening when this goes into production.
+
+
+Does anyone have any advice that may help?
+
+I helped Matthew find the logs and he posted this stack trace:
+
+1691103929 [http-bio-8080-exec-3] INFO  org.apache.solr.update.UpdateHandler  â start commit
+{,optimize=true,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+1691104153 [http-bio-8080-exec-3] INFO  org.apache.solr.update.processor.LogUpdateProcessor  â [dbqItems] webapp=/solr path=/update params=
+{optimize=true&_=1382999386564&wt=json&waitFlush=true}
+ {} 0 224
+1691104154 [http-bio-8080-exec-3] ERROR org.apache.solr.core.SolrCore  â java.io.IOException: background merge hit exception: _2n(4.4):C4263/154 _30(4.4):C134 _32(4.4):C10 _31(4.4):C10 into _39 [maxNumSegments=1]
+        at org.apache.lucene.index.IndexWriter.forceMerge(IndexWriter.java:1714)
+        at org.apache.lucene.index.IndexWriter.forceMerge(IndexWriter.java:1650)
+        at org.apache.solr.update.DirectUpdateHandler2.commit(DirectUpdateHandler2.java:530)
+        at org.apache.solr.update.processor.RunUpdateProcessor.processCommit(RunUpdateProcessorFactory.java:95)
+        at org.apache.solr.update.processor.UpdateRequestProcessor.processCommit(UpdateRequestProcessor.java:64)
+        at org.apache.solr.update.processor.DistributedUpdateProcessor.doLocalCommit(DistributedUpdateProcessor.java:1240)
+        at org.apache.solr.update.processor.DistributedUpdateProcessor.processCommit(DistributedUpdateProcessor.java:1219)
+        at org.apache.solr.update.processor.LogUpdateProcessor.processCommit(LogUpdateProcessorFactory.java:157)
+        at org.apache.solr.handler.RequestHandlerUtils.handleCommit(RequestHandlerUtils.java:69)
+        at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:68)
+        at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:135)
+        at org.apache.solr.core.SolrCore.execute(SolrCore.java:1904)
+        at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:659)
+        at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:362)
+        at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:158)
+        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+        at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+        at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1023)
+        at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+        at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+        at java.lang.Thread.run(Thread.java:679)
+Caused by: java.lang.IllegalArgumentException: no such field what
+        at org.apache.solr.core.SchemaCodecFactory$1.getPostingsFormatForField(SchemaCodecFactory.java:59)
+        at org.apache.lucene.codecs.lucene42.Lucene42Codec$1.getPostingsFormatForField(Lucene42Codec.java:59)
+        at org.apache.lucene.codecs.perfield.PerFieldPostingsFormat$FieldsWriter.addField(PerFieldPostingsFormat.java:102)
+        at org.apache.lucene.codecs.FieldsConsumer.merge(FieldsConsumer.java:71)
+        at org.apache.lucene.index.SegmentMerger.mergeTerms(SegmentMerger.java:365)
+        at org.apache.lucene.index.SegmentMerger.merge(SegmentMerger.java:98)
+        at org.apache.lucene.index.IndexWriter.mergeMiddle(IndexWriter.java:3772)
+        at org.apache.lucene.index.IndexWriter.merge(IndexWriter.java:3376)
+        at org.apache.lucene.index.ConcurrentMergeScheduler.doMerge(ConcurrentMergeScheduler.java:405)
+        at org.apache.lucene.index.ConcurrentMergeScheduler$MergeThread.run(ConcurrentMergeScheduler.java:482)

@@ -1,0 +1,1 @@
+Some contribs depend on core tests to be compiled and fail when ant clean was done before

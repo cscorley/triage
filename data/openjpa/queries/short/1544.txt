@@ -1,0 +1,1 @@
+Remove WebSphere version number from org/apache/ee/localizer.properties

@@ -1,0 +1,14 @@
+Hello!
+
+I want to use Apache Tika in server mode.
+I downloaded tika-server-1.6.jar from http://mirror.vorboss.net/apache/tika/
+When I try to start the server, I get
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+So I go to the link you direct me to (http://www.slf4j.org/codes.html#StaticLoggerBinder), download other slfj4 jar-files, but what next? I can't put them to the "class path", since I don't have a project. I can't change dependencies in pom.xml for the same reason. Whant should I do?
+I tried downloading the whole source code, but couldn't build it using Maven, still haven't figured out why. Previous discussion see here:
+https://issues.apache.org/jira/browse/TIKA-1470
+
+Thank you!
+
+Best regards,
+Darya Arbuzova

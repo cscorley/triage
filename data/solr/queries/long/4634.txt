@@ -1,0 +1,20 @@
+the new Java 8 builds have replaced "Mozilla Rhino" JavaScript engine with "Nashorn" (http://openjdk.java.net/projects/nashorn/). The tests assume that a specific java type is returned, which is not guaranteed and Rhino-specific. Instead it should only cast to java.lang.Number and not to a specific type. The reason for the difference: Javascript is typeless, it only knows numbers, but not double/integer/...
+
+The other bug is not explainable to me, I think its some other problem. Il will fix the first one.
+
+
+The following tests fail, mostly with "java.lang.Integer cannot be casted to java.lang.Double":
+
+
+	org.apache.solr.update.processor.ScriptEngineTest.testEvalText
+	org.apache.solr.update.processor.ScriptEngineTest.testPut
+	org.apache.solr.update.processor.ScriptEngineTest.testEvalReader
+
+
+
+Those fail with some assert problem (method not found, I think the javascript is bogus):
+
+
+	org.apache.solr.update.processor.StatelessScriptUpdateProcessorFactoryTest.testSingleScript
+	org.apache.solr.update.processor.StatelessScriptUpdateProcessorFactoryTest.testMultipleScripts
+

@@ -1,0 +1,5 @@
+The migrate collection API fails trying to create a replica of the temp collection. It should use the addreplica API instead of core admin create.
+
+Relevant error from the API response:
+
+org.apache.solr.client.solrj.impl.HttpSolrServer$RemoteSolrException:Error CREATEing SolrCore 'split_shard1_0_0_temp_shard1_shard1_replica2': non legacy mode coreNodeName missing shard=shard1&name=split_shard1_0_0_temp_shard1_shard1_replica2&action=CREATE&collection=split_shard1_0_0_temp_shard1&wt=javabin&qt=/admin/cores&version=2

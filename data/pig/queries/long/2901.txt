@@ -1,0 +1,17 @@
+This is a patch to fix errors and lacks in document "Pig Latin Basics".
+
+
+	States that COGROUP groups records with a null key from different relations separately.
+	"A map key must be a scalar chararray "
+	Removes a statement which says that a star expression is a tuple expression (it seems incorrect)
+	Fixes a subject confusion of a sentence "When two bytearrays are used in arithmetic expressions..."
+	Updates a link to Java API documentation.
+	Fixes a tuple example: "LOAD 'data' as..." -> "A = LOAD 'data' as..."
+	"the asterisk (*) is used to project all tuples fields "
+	A result of COGROUP with two relations contains three fields, not two
+	Removes an example of COGROUP INNER, which is deprecated
+	Removes a sentence which says "JOIN operator always performs an inner join". Actually, JOIN also perform an outer join.
+	JOIN "Performs an outer join of two ore more relations"
+	Replaces an example of "-Dpig.additional.jars" with a jar file on HDFS. The current version incorrectly shows an example of a Pig script on HDFS.
+	Fixes typos, lack of hyperlinks, inappropriate indentation, and incorrect chaptering.
+

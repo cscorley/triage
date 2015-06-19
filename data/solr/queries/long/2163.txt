@@ -1,0 +1,23 @@
+SolrRequestParserTest.testStreamURL failed, with this error:
+
+this test only works if you have a network connection.
+
+Here is the stacktrace:
+
+    [junit] Testsuite: org.apache.solr.servlet.SolrRequestParserTest
+    [junit] Testcase: testStreamURL(org.apache.solr.servlet.SolrRequestParserTest):	FAILED
+    [junit] this test only works if you have a network connection.
+    [junit] junit.framework.AssertionFailedError: this test only works if you have a network connection.
+    [junit] 	at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:795)
+    [junit] 	at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:768)
+    [junit] 	at org.apache.solr.servlet.SolrRequestParserTest.testStreamURL(SolrRequestParserTest.java:123)
+    [junit] 
+    [junit] 
+    [junit] Tests run: 4, Failures: 1, Errors: 0, Time elapsed: 5.7 sec
+    [junit] 
+    [junit] ------------- Standard Output ---------------
+    [junit] NOTE: reproduce with: ant test -Dtestcase=SolrRequestParserTest -Dtestmethod=testStreamURL -Dtests.seed=-8541875173831339371:8132050756643567111
+    [junit] NOTE: test params are: codec=MockVariableIntBlock(baseBlockSize=110), locale=en_IN, timezone=Pacific/Samoa
+    [junit] ------------- ---------------- ---------------
+    [junit] TEST org.apache.solr.servlet.SolrRequestParserTest FAILED
+

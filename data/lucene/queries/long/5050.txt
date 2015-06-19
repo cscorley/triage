@@ -1,0 +1,3 @@
+Although CompressingStoredFieldsReader loads the stored fields index into memory, it only closes the index file in close(). Closing at the end of the constructor should help save file descriptors.
+
+The same idea applies to CompressingTermVectorsReader.

@@ -1,0 +1,14 @@
+attempting to use the "literal" function in the fl param causes a parse error...
+
+Example queries with functions that works fine...
+
+http://localhost:8983/solr/collection1/select?q=*:*&fl=foo:sum%284,5%29
+http://localhost:8983/solr/collection1/select?fl=score&q={!func}strdist%28%22foo%22,%22fo%22,edit%29
+
+
+
+Examples using literal function that fails...
+
+http://localhost:8983/solr/collection1/select?q=*:*&fl=foo:literal%28%22foo%22%29
+http://localhost:8983/solr/collection1/select?fl=score&q={!func}strdist%28%22foo%22,literal%28%22fo%22%29,edit%29
+

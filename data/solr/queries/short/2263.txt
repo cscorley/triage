@@ -1,0 +1,1 @@
+RawResponseWriter should properly stream binary as well as textual files

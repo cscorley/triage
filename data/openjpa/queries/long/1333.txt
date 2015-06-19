@@ -1,0 +1,1 @@
+The org.apache.openjpa.persistence.kernel.TestProxies2 jUnit test fails with an OptimisticLockException when using the 10.2.0.4 Oracle JDBC driver.  The source of the failure is that one of the batched insert operations is returning an update count that is less than expected.  There is are no SQL exception or SQL warnings.

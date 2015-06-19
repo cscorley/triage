@@ -1,0 +1,1 @@
+edismax throws exception with q having just whitespace

@@ -1,0 +1,11 @@
+I am not sure why but e2e tests set PERL5LIB like this:
+
+
+<env key="PERL5LIB" value="./libexec"/>
+
+
+
+This overrides any env variable, so there is no way to use custom Perl installations.
+
+This patch just removes the line, thus we will rely on the user to configure PERL5LIB appropriately.
+With this modification I am able to use my custom Perl installation.

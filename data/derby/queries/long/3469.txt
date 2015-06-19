@@ -1,0 +1,28 @@
+Depending on the state of the Clob, the method length gives two different SQL states when the underlying connection has been closed.
+According to BlobClob4BlobTest.testClobAfterConnectionClose, it should throw 08003 (no current connection), but it might also throw XJ215 (invalid lob).
+
+I think this is caused indirectly by the following method in Lob:
+    long sqlLength() throws SqlException 
+    {
+        if (lengthObtained_) return sqlLength_;
+
+        if (isLocator()) 
+{
+            sqlLength_ = getLocatorLength();
+            lengthObtained_ = true;
+        }
+ else if (willBeLayerBStreamed()) 
+{
+            throw new SqlException(agent_.logWriter_,
+                                   LOB_OBJECT_LENGTH_UNKNOWN_YET);
+        }
+ else 
+{
+            materializeStream();  // Will set sqlLength_
+        }
+
+        return sqlLength_;
+    }
+
+In this method, getLocatorLength will check for a closed connection (somewhere down in prepareCallX i believe), whereas the cached length is returned if it has already been determined. Clob.length does not check for a closed connection.
+There are multiple fixes, but I think a proper investigation should be carried out before a solution is chosen. 

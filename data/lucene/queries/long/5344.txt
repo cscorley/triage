@@ -1,0 +1,36 @@
+AnalyzerQueryNodeProcessor creates a BooleanQueryNode instead of a MultiPhraseQueryNode for some circumstances.
+
+Classic query parser output: +content:a +content:320  (correct)
+
+
+QueryParser classicQueryParser;
+classicQueryParser = new QueryParser(Version.LUCENE_45, "content", anaylzer);
+classicQueryParser.setDefaultOperator(Operator.AND);
+classicQueryParser.parse("a320"));
+
+
+
+Flexible query parser output: content:a content:320 (wrong)
+
+
+StandardQueryParser flexibleQueryParser;
+flexibleQueryParser = new StandardQueryParser(anaylzer);
+flexibleQueryParser.setDefaultOperator(Operator.AND);
+flexibleQueryParser.parse("a320", "content"));
+
+
+
+The used analyzer:
+
+
+Analyzer anaylzer = return new Analyzer() {
+  protected TokenStreamComponents createComponents(String field, Reader in) {
+  Tokenizer   src = new WhitespaceTokenizer(Version.LUCENE_45, in);
+  TokenStream tok = new WordDelimiterFilter(src,
+     WordDelimiterFilter.SPLIT_ON_NUMERICS |
+     WordDelimiterFilter.GENERATE_WORD_PARTS |
+     WordDelimiterFilter.GENERATE_NUMBER_PARTS,
+     CharArraySet.EMPTY_SET); 
+  return new TokenStreamComponents(src, tok);
+};
+

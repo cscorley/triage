@@ -1,0 +1,1 @@
+Don't let cores create slices/named replicas

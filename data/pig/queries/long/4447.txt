@@ -1,0 +1,54 @@
+Here's an example of an avro schema containing nullable values in a map
+
+{
+    "name" : "nullableRecordInMap",
+    "namespace" : "org.apache.pig.test.builtin",
+    "type" : "record",
+    "fields" : [
+        {"name" : "key", "type" : "string"},
+        {"name" : "value", "type" : "int"},
+        {
+            "name" : "parameters",
+            "type": [
+                "null",
+                {
+                    "type": "map",
+                    "values": [
+                        "null",
+                        {
+                            "type": "record",
+                            "name": "nullable_record",
+                            "fields": [
+                                {
+                                    "name": "id",
+                                    "type": [
+                                        "null",
+                                        "string"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+
+
+Here's the corresponding Pig resource schema on running it through org.apache.pig.impl.util.avro.AvroStorageSchemaConversionUtilities
+
+key:chararray,value:int,parameters:[nullable_record:(union:(id:chararray))]
+
+
+
+Note that Pig should unpack the underlying schema from the nullable union and the Pig schema should be
+
+key:chararray,value:int,parameters:[nullable_record:(id:chararray)]
+
+
+
+There's similar behavior if the nullal map value is of type array
+
+I've created a patch with a few testcases written.

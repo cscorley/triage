@@ -1,0 +1,71 @@
+When running a specific test like:
+
+ant test -Dtestcase=BasicFunctionalityTest
+
+at the end of the test there is a NPE.
+
+
+
+[junit4:junit4]   2> 13384 T10 oasc.SolrException.log SEVERE java.lang.NullPointerException
+[junit4:junit4]   2> 		at org.apache.solr.handler.component.HttpShardHandlerFactory.close(HttpShardHandlerFactory.java:165)
+[junit4:junit4]   2> 		at org.apache.solr.core.CoreContainer.shutdown(CoreContainer.java:786)
+[junit4:junit4]   2> 		at org.apache.solr.util.TestHarness.close(TestHarness.java:449)
+[junit4:junit4]   2> 		at org.apache.solr.SolrTestCaseJ4.deleteCore(SolrTestCaseJ4.java:415)
+[junit4:junit4]   2> 		at org.apache.solr.SolrTestCaseJ4.afterClass(SolrTestCaseJ4.java:95)
+[junit4:junit4]   2> 		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[junit4:junit4]   2> 		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+[junit4:junit4]   2> 		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[junit4:junit4]   2> 		at java.lang.reflect.Method.invoke(Method.java:601)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.RandomizedRunner.invoke(RandomizedRunner.java:1559)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.RandomizedRunner.access$600(RandomizedRunner.java:79)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.RandomizedRunner$5.evaluate(RandomizedRunner.java:700)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.SystemPropertiesRestoreRule$1.evaluate(SystemPropertiesRestoreRule.java:53)
+[junit4:junit4]   2> 		at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:46)
+[junit4:junit4]   2> 		at org.apache.lucene.util.TestRuleStoreClassName$1.evaluate(TestRuleStoreClassName.java:42)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+[junit4:junit4]   2> 		at org.apache.lucene.util.TestRuleAssertionsRequired$1.evaluate(TestRuleAssertionsRequired.java:43)
+[junit4:junit4]   2> 		at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+[junit4:junit4]   2> 		at org.apache.lucene.util.TestRuleIgnoreAfterMaxFailures$1.evaluate(TestRuleIgnoreAfterMaxFailures.java:70)
+[junit4:junit4]   2> 		at org.apache.lucene.util.TestRuleIgnoreTestSuites$1.evaluate(TestRuleIgnoreTestSuites.java:55)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.ThreadLeakControl$StatementRunner.run(ThreadLeakControl.java:358)
+[junit4:junit4]   2> 		at java.lang.Thread.run(Thread.java:722)
+[junit4:junit4]   2> 	
+[junit4:junit4]   2> 13389 T10 oasc.SolrException.log SEVERE java.lang.NullPointerException
+[junit4:junit4]   2> 		at org.apache.solr.handler.component.HttpShardHandlerFactory.close(HttpShardHandlerFactory.java:170)
+[junit4:junit4]   2> 		at org.apache.solr.core.CoreContainer.shutdown(CoreContainer.java:786)
+[junit4:junit4]   2> 		at org.apache.solr.util.TestHarness.close(TestHarness.java:449)
+[junit4:junit4]   2> 		at org.apache.solr.SolrTestCaseJ4.deleteCore(SolrTestCaseJ4.java:415)
+[junit4:junit4]   2> 		at org.apache.solr.SolrTestCaseJ4.afterClass(SolrTestCaseJ4.java:95)
+[junit4:junit4]   2> 		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[junit4:junit4]   2> 		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+[junit4:junit4]   2> 		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[junit4:junit4]   2> 		at java.lang.reflect.Method.invoke(Method.java:601)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.RandomizedRunner.invoke(RandomizedRunner.java:1559)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.RandomizedRunner.access$600(RandomizedRunner.java:79)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.RandomizedRunner$5.evaluate(RandomizedRunner.java:700)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.SystemPropertiesRestoreRule$1.evaluate(SystemPropertiesRestoreRule.java:53)
+[junit4:junit4]   2> 		at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:46)
+[junit4:junit4]   2> 		at org.apache.lucene.util.TestRuleStoreClassName$1.evaluate(TestRuleStoreClassName.java:42)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.NoShadowingOrOverridesOnMethodsRule$1.evaluate(NoShadowingOrOverridesOnMethodsRule.java:39)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+[junit4:junit4]   2> 		at org.apache.lucene.util.TestRuleAssertionsRequired$1.evaluate(TestRuleAssertionsRequired.java:43)
+[junit4:junit4]   2> 		at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+[junit4:junit4]   2> 		at org.apache.lucene.util.TestRuleIgnoreAfterMaxFailures$1.evaluate(TestRuleIgnoreAfterMaxFailures.java:70)
+[junit4:junit4]   2> 		at org.apache.lucene.util.TestRuleIgnoreTestSuites$1.evaluate(TestRuleIgnoreTestSuites.java:55)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.rules.StatementAdapter.evaluate(StatementAdapter.java:36)
+[junit4:junit4]   2> 		at com.carrotsearch.randomizedtesting.ThreadLeakControl$StatementRunner.run(ThreadLeakControl.java:358)
+[junit4:junit4]   2> 		at java.lang.Thread.run(Thread.java:722)
+[junit4:junit4]   2> 	
+
+
+
+
+This doesn't make the test fail. For some reason, I don't see this exception when running from Eclipse.

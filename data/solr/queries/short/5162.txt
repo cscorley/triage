@@ -1,0 +1,1 @@
+Implicit core properties are no longer available

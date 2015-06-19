@@ -1,0 +1,1 @@
+jdbcapi/blobclob4BLOB.java fails with JCC drivers

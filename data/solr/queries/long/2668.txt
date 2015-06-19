@@ -1,0 +1,1 @@
+If the EntityProcessor of a subentity throws an Exception in its init() Method, DocBuilder logs "Import completed successfully" and calls commit instead of calling rollback.

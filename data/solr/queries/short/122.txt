@@ -1,0 +1,1 @@
+Add optional support for Ruby-libxml2 (vs. REXML)

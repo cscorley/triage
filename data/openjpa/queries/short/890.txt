@@ -1,0 +1,1 @@
+Typos and inconsistent method signature styles in the user manual

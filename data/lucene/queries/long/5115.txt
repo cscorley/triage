@@ -1,0 +1,1 @@
+DocIdSetIterator.cost() accuracy can be important for the performance of some queries (eg.ConjunctionScorer). Since WAH8DocIdSet is immutable, we could compute its cardinality at building time and use it for the cost function.

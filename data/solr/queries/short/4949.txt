@@ -1,0 +1,1 @@
+UI Analysis page dropping characters from input box

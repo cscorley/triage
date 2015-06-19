@@ -1,0 +1,1 @@
+VALUELIST and VALUESET outputSchema does not match actual schema of data returned when map value schema is complex

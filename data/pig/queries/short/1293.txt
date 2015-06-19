@@ -1,0 +1,1 @@
+pig wrapper script tends to fail if pig is in the path and PIG_HOME isn't set

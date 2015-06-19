@@ -1,0 +1,7 @@
+In NettyServerCnxnFactory, high throughput triggers a deadlock.
+
+This is caused by a channel-buffer-dumping debug statement in NettyServerCnxnFactory.java that is executed regardless of log level.
+
+This code path only executes when the server is throttling, but when it does it encounters a race and occasional deadlock between the channel buffer and NettyServerCnxn (jstack attached).
+
+The proposed fix adds the debug logging guard to this statement, similar to other existing statements.

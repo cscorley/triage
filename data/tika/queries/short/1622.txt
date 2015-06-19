@@ -1,0 +1,1 @@
+Expose Tika LanguageIdentifier via Tika Server

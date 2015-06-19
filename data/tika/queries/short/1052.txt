@@ -1,0 +1,1 @@
+Duplicated items in tika-mimetypes.xml

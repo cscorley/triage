@@ -1,0 +1,1 @@
+Make DocIdSetIterator.docID() return -1 when not positioned

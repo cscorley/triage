@@ -1,0 +1,1 @@
+HdfsLockFactory should create the lock parent directory if necessary like SimpleLockFactory does.

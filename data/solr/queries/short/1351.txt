@@ -1,0 +1,1 @@
+facet on same field different ways

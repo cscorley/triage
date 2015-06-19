@@ -1,0 +1,7 @@
+The admin UI fails to load on trunk with the following message:
+
+
+Unable to load environment info from /solr/admin/info/system?wt=json.
+This interface requires that you activate the admin request handlers in all SolrCores by adding the following configuration to your solrconfig.xml:
+<!-- Admin Handlers - This will register all the standard admin RequestHandlers. -->
+<requestHandler name="/admin/" class="solr.admin.AdminHandlers" />

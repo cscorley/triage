@@ -1,0 +1,1 @@
+ConcurrentMergeScheduler has a List<MergeThread> member to track the running merging threads, so IndexWriterConfig.clone should clone the merge scheduler so that both IndexWriterConfig instances are independant.

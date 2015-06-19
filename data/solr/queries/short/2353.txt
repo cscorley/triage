@@ -1,0 +1,1 @@
+SpellCheckCollator uses org.mortbay.log.Log for logging

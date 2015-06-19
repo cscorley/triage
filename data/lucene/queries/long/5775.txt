@@ -1,0 +1,30 @@
+I hit this when trying to run LookupBenchmarkTest for LUCENE-5752:
+
+
+   [junit4]   2> NOTE: reproduce with: ant test  -Dtestcase=LookupBenchmarkTest -Dtests.method=testStorageNeeds -Dtests.seed=EA0FADB2EE37D385 -Dtests.locale=es_ES -Dtests.timezone=Etc/Greenwich -Dtests.file.encoding=UTF-8
+   [junit4] ERROR   1.89s | LookupBenchmarkTest.testStorageNeeds <<<
+   [junit4]    > Throwable #1: java.lang.StackOverflowError
+   [junit4]    > 	at __randomizedtesting.SeedInfo.seed([EA0FADB2EE37D385:DF8106BCB29C472F]:0)
+   [junit4]    > 	at java.lang.Class.getMethod0(Class.java:2774)
+   [junit4]    > 	at java.lang.Class.isCheckMemberAccessOverridden(Class.java:2214)
+   [junit4]    > 	at java.lang.Class.checkMemberAccess(Class.java:2233)
+   [junit4]    > 	at java.lang.Class.getDeclaredFields(Class.java:1805)
+   [junit4]    > 	at org.apache.lucene.util.RamUsageEstimator.shallowSizeOfInstance(RamUsageEstimator.java:351)
+   [junit4]    > 	at org.apache.lucene.util.RamUsageEstimator.shallowSizeOf(RamUsageEstimator.java:329)
+   [junit4]    > 	at org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie$TSTNode.ramBytesUsed(JaspellTernarySearchTrie.java:100)
+   [junit4]    > 	at org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie$TSTNode.ramBytesUsed(JaspellTernarySearchTrie.java:103)
+   [junit4]    > 	at org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie$TSTNode.ramBytesUsed(JaspellTernarySearchTrie.java:103)
+   [junit4]    > 	at org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie$TSTNode.ramBytesUsed(JaspellTernarySearchTrie.java:103)
+   [junit4]    > 	at org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie$TSTNode.ramBytesUsed(JaspellTernarySearchTrie.java:103)
+   [junit4]    > 	at org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie$TSTNode.ramBytesUsed(JaspellTernarySearchTrie.java:103)
+   [junit4]    > 	at org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie$TSTNode.ramBytesUsed(JaspellTernarySearchTrie.java:103)
+   [junit4]    > 	at org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie$TSTNode.ramBytesUsed(JaspellTernarySearchTrie.java:103)
+   [junit4]    > 	at org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie$TSTNode.ramBytesUsed(JaspellTernarySearchTrie.java:103)
+   [junit4]    > 	at org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie$TSTNode.ramBytesUsed(JaspellTernarySearchTrie.java:103)
+   [junit4]    > 	at org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie$TSTNode.ramBytesUsed(JaspellTernarySearchTrie.java:103)
+   [junit4]    > 	at org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie$TSTNode.ramBytesUsed(JaspellTernarySearchTrie.java:103)
+   [junit4]    > 	at org.apache.lucene.search.suggest.jaspell.JaspellTernarySearchTrie$TSTNode.ramBytesUsed(JaspellTernarySearchTrie.java:103)
+
+
+
+I think we should just remove/deprecate this suggester?  The FST based suggesters are far more RAM efficient...

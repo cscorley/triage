@@ -1,0 +1,1 @@
+NRTCachingDirectoryFactory currently hard-codes the values for maxMergeSizeMB and maxCachedMB it uses when creating a new NRTCachingDirectory instance.  These values should be configurable in the usual way via solrconfig.xml.

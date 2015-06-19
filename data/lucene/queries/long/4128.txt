@@ -1,0 +1,5 @@
+Currently the one-time-upgrade depends on whether the upgraded .si file exists. And the writing is done in a try/finally so its removed if ioexception happens.
+
+but I think there could be a power-loss or something else in the middle of this, the upgraded .si file could be bogus, then the user would have to manually remove it (they probably wouldnt know).
+
+i think instead we should just have a marker file on completion, that we create after we successfully fsync the upgraded .si file. this way if something happens we just rewrite the thing.

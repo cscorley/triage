@@ -1,0 +1,1 @@
+Expose buffer size in BufferedIndexOutput

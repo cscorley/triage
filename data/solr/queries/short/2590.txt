@@ -1,0 +1,1 @@
+javadoc.link.lucene property value in solr/common-build.xml is obsolete

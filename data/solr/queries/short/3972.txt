@@ -1,0 +1,1 @@
+Missing admin-extra files result in SEVERE log entries with giant stacktrace

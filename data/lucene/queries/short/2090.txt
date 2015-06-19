@@ -1,0 +1,1 @@
+convert automaton to char[] based processing and TermRef / TermsEnum api

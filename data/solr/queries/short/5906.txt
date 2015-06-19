@@ -1,0 +1,1 @@
+core.properties values may get ignored in some cases when using the Collection API

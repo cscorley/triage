@@ -1,0 +1,1 @@
+QueryParserUtil.escape() and QueryParser.escape() have different implementations. Most important, the former omit escaping forward slash ("/"). This again caused errors in the queryparser when a query ended with forward slash. 

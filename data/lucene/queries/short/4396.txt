@@ -1,0 +1,1 @@
+BooleanScorer should sometimes be used for MUST clauses

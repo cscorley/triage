@@ -1,0 +1,27 @@
+Several proxy tests are failing in the openjpa-persistence-jdbc bucket related to the delayed collection tests.  Most likely this is due to the Map interface changes introduced by Java 8.  List of failed tests:
+
+Failed tests:
+testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.hset.TestDelayedHashSetProxyDetachLite)
+  testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.hset.TestDelayedHashSetProxy)
+  testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.pqueue.TestDelayedPriorityQueueProxyDetachLite)
+  testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.llist.TestDelayedLinkedListProxyDetachLite)
+  testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.llist.TestDelayedLinkedListProxy)
+  testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.tset.TestDelayedTreeSetProxy)
+  testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.lhset.TestDelayedLinkedHashSetProxyDetachLite)
+  testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.lhset.TestDelayedLinkedHashSetProxy)
+  testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.vec.TestDelayedVectorProxy)
+  testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.tset.TestDelayedTreeSetProxyDetachLite)
+  testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.alist.TestDelayedArrayListProxyDetachLite)
+  testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.alist.TestDelayedArrayListProxy)
+  testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.pqueue.TestDelayedPriorityQueueProxy)
+  testProxyMethods(org.apache.openjpa.persistence.proxy.delayed.vec.TestDelayedVectorProxyDetachLite)
+
+I took a quick look at the surefire report and the error makes no sense why Java 8 would affect this outcome:
+
+    <failure message="Expected regular expression <SELECT .* DC_EMPLOYEE .* >
+ to be contained in SQL statements: 
+SELECT t0.id FROM DC_DEPARTMENT t0 WHERE t0.id = ?
+SELECT t0.awdName, t0.awdType FROM DC_DEP_AWD t0 WHERE t0.DEPARTMENT_ID = ?
+SELECT t1.id, t1.name FROM DC_DEP_PRD t0 INNER JOIN Product t1 ON t0.PRODUCTS_ID = t1.id WHERE t0.DEPARTMENT_ID = ?
+
+We will need to resolve this before claiming support for Java 8.

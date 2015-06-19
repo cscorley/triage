@@ -1,0 +1,74 @@
+Since Lucene 4.5, you can see how much memory lucene is using at a basic level by looking at SegmentReader.ramBytesUsed()
+
+In 4.11 its already improved, you can pull the codec producers and get ram usage split out by postings, norms, docvalues, stored fields, term vectors, etc.
+
+Unfortunately most toString's are fairly useless, so you don't have any insight further than that, even though behind the scenes its mostly just adding up other Accountables.
+
+So instead if we can improve the toString's, and if an Accountable can return its children, we can connect all the dots and you can easily diagnose/debug issues and see what is going on. I know i've been frustrated with having to hack up tons of System.out.printlns during development to see this stuff.
+
+So I think we should add this method to Accountable:
+
+
+  /**
+   * Returns nested resources of this class. 
+   * The result should be a point-in-time snapshot (to avoid race conditions).
+   * @see Accountables
+   */
+  // TODO: on java8 make this a default method returning emptyList
+  Iterable<? extends Accountable> getChildResources();
+
+
+
+We can also add a simple helper method for quick debugging Accountables.toString(Accountable) to print the "tree", example output for a lucene segment:
+
+_5f(5.0.0):C8330469: 36.4 MB
+|-- postings [PerFieldPostings(formats=1)]: 8 MB
+    |-- format 'Lucene41_0' [BlockTreeTermsReader(fields=6,delegate=Lucene41PostingsReader(positions=true,payloads=false))]: 8 MB
+        |-- field 'alternatenames' [BlockTreeTerms(terms=3360242,postings=13779349,positions=17102250,docs=2876726)]: 945.2 KB
+            |-- term index [FST(input=BYTE1,output=ByteSequenceOutputs,packed=false,nodes=23318,arcs=66497)]: 945.1 KB
+        |-- field 'asciiname' [BlockTreeTerms(terms=2451266,postings=16849659,positions=16891234,docs=8329981)]: 686.1 KB
+            |-- term index [FST(input=BYTE1,output=ByteSequenceOutputs,packed=false,nodes=12976,arcs=44103)]: 686 KB
+        |-- field 'geonameid' [BlockTreeTerms(terms=8363399,postings=33321876,positions=-1,docs=8330469)]: 1.3 MB
+            |-- term index [FST(input=BYTE1,output=ByteSequenceOutputs,packed=false,nodes=528,arcs=66225)]: 1.3 MB
+        |-- field 'latitude' [BlockTreeTerms(terms=8714542,postings=33321876,positions=-1,docs=8330469)]: 1.7 MB
+            |-- term index [FST(input=BYTE1,output=ByteSequenceOutputs,packed=false,nodes=854,arcs=77300)]: 1.7 MB
+        |-- field 'longitude' [BlockTreeTerms(terms=11557222,postings=33321876,positions=-1,docs=8330469)]: 2.6 MB
+            |-- term index [FST(input=BYTE1,output=ByteSequenceOutputs,packed=false,nodes=1577,arcs=114570)]: 2.6 MB
+        |-- field 'name' [BlockTreeTerms(terms=2598879,postings=16833071,positions=16874267,docs=8330325)]: 771.5 KB
+            |-- term index [FST(input=BYTE1,output=ByteSequenceOutputs,packed=false,nodes=13790,arcs=46514)]: 771.3 KB
+        |-- delegate [Lucene41PostingsReader(positions=true,payloads=false)]: 32 bytes
+|-- norms [Lucene49NormsProducer(fields=3,active=3)]: 15.9 MB
+    |-- field 'alternatenames' [byte array]: 7.9 MB
+    |-- field 'asciiname' [table compressed [Packed64SingleBlock4(bitsPerValue=4,size=8330469,blocks=520655)]]: 4 MB
+    |-- field 'name' [table compressed [Packed64SingleBlock4(bitsPerValue=4,size=8330469,blocks=520655)]]: 4 MB
+|-- docvalues [PerFieldDocValues(formats=1)]: 12.1 MB
+    |-- format 'Lucene410_0' [Lucene410DocValuesProducer(fields=5)]: 12.1 MB
+        |-- addresses field 'alternatenames' [MonotonicBlockPackedReader(blocksize=16384,size=407026,avgBPV=16)]: 808.5 KB
+        |-- addresses field 'asciiname' [MonotonicBlockPackedReader(blocksize=16384,size=330528,avgBPV=17)]: 698.6 KB
+        |-- addresses field 'name' [MonotonicBlockPackedReader(blocksize=16384,size=335020,avgBPV=17)]: 703.7 KB
+        |-- ord index field 'alternatenames' [MonotonicBlockPackedReader(blocksize=16384,size=8330470,avgBPV=9)]: 9.8 MB
+        |-- reverse index field 'alternatenames' [ReverseTermsIndex(size=6360)]: 77.9 KB
+            |-- term bytes [PagedBytes(blocksize=32768)]: 67.7 KB
+            |-- term addresses [MonotonicBlockPackedReader(blocksize=16384,size=6360,avgBPV=13)]: 10.2 KB
+        |-- reverse index field 'asciiname' [ReverseTermsIndex(size=5165)]: 60.1 KB
+            |-- term bytes [PagedBytes(blocksize=32768)]: 53 KB
+            |-- term addresses [MonotonicBlockPackedReader(blocksize=16384,size=5165,avgBPV=11)]: 7 KB
+        |-- reverse index field 'name' [ReverseTermsIndex(size=5235)]: 61.2 KB
+            |-- term bytes [PagedBytes(blocksize=32768)]: 54.1 KB
+            |-- term addresses [MonotonicBlockPackedReader(blocksize=16384,size=5235,avgBPV=11)]: 7.1 KB
+|-- stored fields [CompressingStoredFieldsReader(mode=FAST,chunksize=16384)]: 216.3 KB
+    |-- stored field index [CompressingStoredFieldsIndexReader(blocks=65)]: 216.3 KB
+        |-- doc base deltas: 55.8 KB
+        |-- start pointer deltas: 158.9 KB
+|-- term vectors [CompressingTermVectorsReader(mode=FAST,chunksize=4096)]: 224 KB
+    |-- term vector index [CompressingStoredFieldsIndexReader(blocks=67)]: 224 KB
+        |-- doc base deltas: 65.6 KB
+        |-- start pointer deltas: 156.8 KB
+
+
+
+Note this works for any accountable, so also e.g. NRTCachingDirectory, OrdinalMap, Suggesters, FSTs, and so on. You can also e.g. traverse the graph yourself and output whatever you want.
+
+To be safe, I define that the graph returned is "point in time snapshot" and free of race conditions, and the Accountable helper methods provide this and also prevent access (even via cast) to datastructures you shouldn't be able to get to, just provide information.
+
+Since we aren't on java 8 yet (and cannot provide a simple default method), instead I think we should just add the method to Accountable, but add default emptyList() implementations to impacted datastructures such as DocIDSet and Suggester. For codec APIs, these are lower level, and there I think its best to leave the method abstract since they should really be providing useful information.

@@ -1,0 +1,14 @@
+FAILED:  junit.framework.TestSuite.org.apache.solr.rest.TestManagedResourceStorage
+
+Error Message:
+SolrCore.getOpenCount()==2
+
+Stack Trace:
+java.lang.RuntimeException: SolrCore.getOpenCount()==2
+        at __randomizedtesting.SeedInfo.seed([A491D1FD4CEF5EF8]:0)
+        at org.apache.solr.util.TestHarness.close(TestHarness.java:332)
+        at org.apache.solr.SolrTestCaseJ4.deleteCore(SolrTestCaseJ4.java:620)
+        at org.apache.solr.SolrTestCaseJ4.afterClass(SolrTestCaseJ4.java:183)
+        at sun.reflect.GeneratedMethodAccessor30.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:484)

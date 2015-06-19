@@ -1,0 +1,1 @@
+new statistics results to StatsComponent - distinctValues and countDistinct

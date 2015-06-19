@@ -1,0 +1,11 @@
+Solr has added support for taking childDocs as input ( only XML till now ). It's currently used for BlockJoinQuery. 
+
+I feel that if a user indexes a document with child docs, even if he isn't using the BJQ features and is just searching which results in a hit on the parentDoc, it's childDocs should be returned in the response format.
+
+Chris Hostetter on IRC suggested that the DocTransformers would be the place to add childDocs to the response.
+
+Now given a docId one needs to find out all the childDoc id's. A couple of approaches which I could think of are 
+1. Maintain the relation between a parentDoc and it's childDocs during indexing time in maybe a separate index?
+2. Somehow emulate what happens in ToParentBlockJoinQuery.nextDoc() - Given a parentDoc it finds out all the childDocs but this requires a childScorer.
+
+Am I missing something obvious on how to find the relation between a parentDoc and it's childDocs because none of the above solutions for this look right.

@@ -1,0 +1,1 @@
+Cleanup & deprecate Token class / Improve default AttributeFactory to no longer use reflection

@@ -1,0 +1,1 @@
+Noticed while working on SOLR-5615, https://github.com/apache/lucene-solr/pull/15 for a patch.

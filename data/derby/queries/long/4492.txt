@@ -1,0 +1,27 @@
+When I change the locale to one of the languages for which we have localized tools messages, either by changing the system locale or by setting the derby.ui.locale property, the output from derbyrun.jar is garbled:
+
+$ java -Dderby.ui.locale=zh_TW -jar derbyrun.jar
+Áî®Ê≥ïÔºö
+java -jar derbyrun.jar ij [-p propertiesfile] [sql script]
+java -jar derbyrun.jar sysinfo [-cp ...] [-cp help] 
+java -jar derbyrun.jar dblook [args] (ÊàñÊòØ‰∏çÂä†ÂºïÊï∏‰ª•Êü•ÁúãÁî®Ê≥ï)
+java -jar derbyrun.jar server [args] (ÊàñÊòØ‰∏çÂä†ÂºïÊï∏‰ª•Êü•ÁúãÁî®Ê≥ï)
+$ java -Dderby.ui.locale=de_DE -jar derbyrun.jar
+Syntax:
+java -jar derbyrun.jar ij [-p Merkmaldatei] [sql Script]
+java -jar derbyrun.jar sysinfo [-cp ...] [-cp help] 
+java -jar derbyrun.jar dblook [Argumente] (oder ohne Argumente f√ºr Syntaxinformationen)
+java -jar derbyrun.jar server [Argumente] (oder ohne Argumente f√ºr Syntaxinformationen)
+
+Only the help message from derbyrun.jar is garbled. The other tools appear to produce fine output, even when invoked via derbyrun.jar:
+
+$ java -Dderby.ui.locale=zh_TW -jar derbyrun.jar sysinfo
+------------------ Java 資訊 ------------------
+Java 版本：       1.6.0_17
+Java 供應商：     Sun Microsystems Inc.
+Java 首頁：       /usr/jdk/instances/jdk1.6.0/jre
+Java 類別路徑：   derbyrun.jar
+OS 名稱：         SunOS
+.
+.
+.

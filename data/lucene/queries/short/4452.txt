@@ -1,0 +1,1 @@
+Need to test BlockPostings when payloads/offsets are indexed, but D&PEnum flags=0

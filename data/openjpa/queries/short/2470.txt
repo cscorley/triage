@@ -1,0 +1,1 @@
+DataCacheManagerImpl infinite loop for checking if classes are cachable

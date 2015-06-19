@@ -1,0 +1,1 @@
+Based on the performance measurements of PackedInts.Mutable's in LUCENE-4062, a new version of Packed64 has been created that is consistently faster than the old Packed64 for both get and set.

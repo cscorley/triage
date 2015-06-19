@@ -1,0 +1,1 @@
+Give Version parsing exceptions more descriptive error messages

@@ -1,0 +1,8 @@
+The implementation of CodahaleOpStatsLogger#toOpStatsData() passes incorrect parameters to codahale's Snapshot#getValue method, resulting in the following runtime exception:
+
+java.lang.IllegalArgumentException: 10.0 is not in [0..1]
+	at com.codahale.metrics.Snapshot.getValue(Snapshot.java:52)
+	at org.apache.bookkeeper.stats.CodahaleOpStatsLogger.toOpStatsData(CodahaleOpStatsLogger.java:64)
+...
+
+In order to pass quantiles as [0..1] values, as expected by codahale metrics library, we must divide parameters by 100 before passing them.

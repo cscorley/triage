@@ -1,0 +1,1 @@
+Documentation inaccurate regarding Pig Properties in trunk

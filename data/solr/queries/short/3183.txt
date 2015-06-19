@@ -1,0 +1,1 @@
+remove legacy forrest site from solr release

@@ -1,0 +1,1 @@
+Allow custom naming of nodes so that a new host:port combination can take over for a previous shard.

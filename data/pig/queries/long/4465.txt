@@ -1,0 +1,23 @@
+DEFINE MyScript `python script.py` ship('script.py'); causes
+
+
+
+Caused by: java.io.FileNotFoundException: File
+/home/username/pig/ script.py does not exist
+    at
+org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:534)
+    at
+org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:747)
+    at
+org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:524)
+    at
+org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:416)
+    at org.apache.hadoop.fs.FileUtil.copy(FileUtil.java:337)
+    at org.apache.hadoop.fs.FileSystem.copyFromLocalFile(FileSystem.java:1934)
+    at org.apache.hadoop.fs.FileSystem.copyFromLocalFile(FileSystem.java:1902)
+    at org.apache.hadoop.fs.FileSystem.copyFromLocalFile(FileSystem.java:1867)
+    at
+org.apache.pig.backend.hadoop.executionengine.tez.TezResourceManager.addTezResource(TezResourceManager.java:83)
+    at
+org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler.getJob(TezJobCompiler.java:95)
+

@@ -1,0 +1,5 @@
+currently the integration started out very simple (as custom highlighter class with minimal options, mostly not query-time or per-field).
+
+But recently we made this a lot more flexible in lucene (e.g. added various per-field options), so i'd like to add a better/more powerful mapping to more of the existing highlighting parameters.
+
+I still plan to keep it a custom highlighter rather than tossed into the crazy bipolar DefaultSolrHighlighter mess, but this will make it easier to use.

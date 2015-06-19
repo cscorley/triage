@@ -1,0 +1,1 @@
+drop java 5 "support"

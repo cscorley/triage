@@ -1,0 +1,91 @@
+Solr currently does not have a way to run long running computational tasks across the cluster. We can piggyback on the mapreduce paradigm so that users have smooth learning curve.
+
+
+	The mapreduce component will be written as a RequestHandler in Solr
+	Works only in SolrCloud mode. (No support for standalone mode)
+	Users can write MapReduce programs in Javascript or Java. First cut would be JS ( ? )
+
+
+
+sample word count program
+
+how to invoke?
+
+http://host:port/solr/collection-x/mapreduce?map=<map-script>&reduce=<reduce-script>&sink=collectionX
+
+params 
+
+	map :  A javascript implementation of the map program
+	reduce : a Javascript implementation of the reduce program
+	sink : The collection to which the output is written. If this is not passed , the request will wait till completion and respond with the output of the reduce program and will be emitted as a standard solr response. . If no sink is passed the request will be redirected to the "reduce node" where it will wait till the process is complete. If the sink param is passed ,the rsponse will contain an id of the run which can be used to query the status in another command.
+	reduceNode : Node name where the reduce is run . If not passed an arbitrary node is chosen
+
+
+
+
+The node which received the command would first identify one replica from each slice where the map program is executed . It will also identify one another node from the same collection where the reduce program is run. Each run is given an id and the details of the nodes participating in the run will be written to ZK (as an ephemeral node). 
+
+map script 
+
+
+
+var res = $.streamQuery($.param(“q"));//this is not run across the cluster. //Only on this index
+while(res.hasMore()){
+  var doc = res.next();
+  map(doc);
+}
+
+function  map(doc) {
+  var txt = doc.get(“txt”);//the field on which word count is performed
+  var words = txt.split(" ");
+   for(i = 0; i < words.length; i++){
+	$.emit(words[i],{‘count’:1});// this will send the map over to //the reduce host
+    }
+}
+
+
+
+Essentially two threads are created in the 'map' hosts . One for running the program and the other for co-ordinating with the 'reduce' host . The maps emitted are streamed live over an http connection to the reduce program
+
+reduce script
+
+This script is run in one node . This node accepts http connections from map nodes and the 'maps' that are sent are collected in a queue which will be polled and fed into the reduce program. This also keeps the 'reduced' data in memory till the whole run is complete. It expects a "done" message from all 'map' nodes before it declares the tasks are complete. After  reduce program is executed for all the input it proceeds to write out the result to the 'sink' collection or it is written straight out to the response.
+
+
+
+var pair = $.nextMap();
+var reduced = $.getCtx().getReducedMap();// a hashmap
+var count = reduced.get(pair.key());
+if(count === null) {
+  count = {“count”:0};
+  reduced.put(pair.key(), count);
+}
+count.count += pair.val().count ;
+
+
+
+example output
+
+
+{
+“result”:[
+“wordx”:{ 
+         “count”:15876765
+         },
+“wordy” : {
+           “count”:24657654
+          }
+ 
+  ]
+}
+
+
+
+TBD
+
+	The format in which the output is written to the target collection, I assume the reducedMap will have values mapping to the schema of the collection
+
+
+
+
+

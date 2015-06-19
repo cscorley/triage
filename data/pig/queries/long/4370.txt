@@ -1,0 +1,2 @@
+We have a case where writing "deletes" to HBase would be very useful in Pig. There is a precedent for delete operations - https://issues.apache.org/jira/browse/CASSANDRA-5867
+so I think it's a valid use case for Pig especially considering that in HBase a delete is really a write of a tombstone marker

@@ -1,0 +1,1 @@
+non-contiguous LogMergePolicy should be careful to not select merges already running

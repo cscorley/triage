@@ -1,0 +1,3 @@
+I think FilteredTermsEnum, SingleTermsEnum should move?
+
+I left TermRangeTermsEnum and FuzzyTermsEnum and PrefixTermsEnum since they seemed search specific.

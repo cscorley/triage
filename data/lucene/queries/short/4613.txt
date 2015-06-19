@@ -1,0 +1,1 @@
+CompressingStoredFieldsWriter ignores the segment suffix if writing aborted

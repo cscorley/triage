@@ -1,0 +1,1 @@
+In ij, GET CURSOR does not honor qualified identifiers

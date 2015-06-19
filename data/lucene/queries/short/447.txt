@@ -1,0 +1,1 @@
+Make "ant -projecthelp" show the javadocs and docs targets as well

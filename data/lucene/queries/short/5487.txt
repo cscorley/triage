@@ -1,0 +1,1 @@
+Can we separate "top scorer" from "sub scorer"?

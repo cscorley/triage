@@ -1,0 +1,1 @@
+The Lucene ICUTokenizer provides many benefits for multilingual tokenizing.   There should be a ICUFilterFactory so that it can be used from Solr.   There are probably some issues in terms of passing configuration parameters.

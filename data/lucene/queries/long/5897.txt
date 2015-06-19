@@ -1,0 +1,21 @@
+There seem to be some conditions (I don't know how rare or what conditions) that cause StandardTokenizer to essentially hang on input: I havent looked hard yet, but as its essentially a DFA I think something wierd might be going on.
+
+An easy way to reproduce is with 1MB of underscores, it will just hang forever.
+
+
+  public void testWorthyAdversary() throws Exception {
+    char buffer[] = new char[1024 * 1024];
+    Arrays.fill(buffer, '_');
+    int tokenCount = 0;
+    Tokenizer ts = new StandardTokenizer();
+    ts.setReader(new StringReader(new String(buffer)));
+    ts.reset();
+    while (ts.incrementToken()) {
+      tokenCount++;
+    }
+    ts.end();
+    ts.close();
+    assertEquals(0, tokenCount);
+  }
+
+ 

@@ -1,0 +1,20 @@
+This adds more verboseness to the output – should this be optional (overrideable using local properties but defaulting to 'off')?
+
+
+
+   [junit4] [11:54:50.259] Suite: org.apache.lucene.index.TestDeletionPolicy
+   [junit4] [11:54:53.706] Completed in 3.45s, 6 tests
+   [junit4]  
+   [junit4] [11:54:53.709] Suite: org.apache.lucene.util.TestVirtualMethod
+   [junit4] [11:54:53.725] Completed in 0.02s, 2 tests
+   [junit4]  
+   [junit4] [11:54:53.728] Suite: org.apache.lucene.index.TestRollingUpdates
+   [junit4] [11:54:55.700] Completed in 1.97s, 2 tests
+   [junit4]  
+   [junit4] [11:54:55.721] Suite: org.apache.lucene.index.TestIndexWriterExceptions
+   [junit4] [11:55:02.394] Completed in 6.67s, 24 tests
+   [junit4]  
+   [junit4] [11:55:02.398] Suite: org.apache.lucene.index.TestNoDeletionPolicy
+   [junit4] [11:55:02.548] Completed in 0.15s, 4 tests
+...
+

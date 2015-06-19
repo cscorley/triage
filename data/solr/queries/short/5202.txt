@@ -1,0 +1,1 @@
+Support easier overrides of Carrot2 clustering attributes via XML data sets exported from the Workbench.

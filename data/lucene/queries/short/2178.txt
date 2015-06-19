@@ -1,0 +1,1 @@
+Benchmark contrib should allow multiple locations in ext.classpath

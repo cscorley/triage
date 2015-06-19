@@ -1,0 +1,3 @@
+We originally added this clone to allow a single IWC to be re-used against more than one IndexWriter, but I think this is a mis-feature: it adds complexity to hairy classes (merge policy/scheduler, DW thread pool, etc.), I think it's buggy today.
+
+I think we should just disallow sharing: you must make a new IWC for a new IndexWriter.

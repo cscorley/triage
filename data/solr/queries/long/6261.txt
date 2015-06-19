@@ -1,0 +1,3 @@
+Currently checking for leadership (due to the leader's ephemeral node going away) happens in ZK's event thread. If there are many cores and all of them are due leadership, then they would have to serially go through the two-way sync and leadership takeover.
+
+For tens of cores, this could mean 30-40s without leadership before the last in the list even gets to start the leadership process. If the leadership process happens in a separate thread, then the cores could all take over in parallel.

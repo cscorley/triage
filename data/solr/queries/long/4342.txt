@@ -1,0 +1,83 @@
+Not sure which Component fits for this?!
+
+Calling /admin/mbeans?stats=true&wt=json normally gives this for an entry:
+
+
+"/admin/mbeans": {
+  "class": "org.apache.solr.handler.admin.SolrInfoMBeanHandler",
+  "version": "5.0.0.2013.01.22.17.57.48",
+  "description": "Get Info (and statistics) for registered SolrInfoMBeans",
+  "src": "$URL: https://svn.apache.org/repos/asf/lucene/dev/trunk/solr/core/src/java/org/apache/solr/handler/admin/SolrInfoMBeanHandler.java $",
+  "stats": {
+    "handlerStart": 1358960935983,
+    "requests": 16,
+    "errors": 0,
+    "timeouts": 0,
+    "totalTime": 238.636824,
+    "avgRequestsPerSecond": 0.0010339617096334008,
+    "5minRateReqsPerSecond": 0.009435751279543023,
+    "15minRateReqsPerSecond": 0.008764046777884586,
+    "avgTimePerRequest": 15.909121599999999,
+    "medianRequestTime": 15.43261,
+    "75thPcRequestTime": 16.544159,
+    "95thPcRequestTime": 24.570421,
+    "99thPcRequestTime": 24.570421,
+    "999thPcRequestTime": 24.570421
+  }
+},
+
+
+but for instances of DataImportHandler it looks like this:
+
+
+"/dataimport": {
+  "class": "org.apache.solr.handler.dataimport.DataImportHandler",
+  "version": "5.0.0.2013.01.12.19.48.17",
+  "description": "Manage data import from databases to Solr",
+  "src": "$URL: https://svn.apache.org/repos/asf/lucene/dev/trunk/solr/contrib/dataimporthandler/src/java/org/apache/solr/handler/dataimport/DataImportHandler.java $",
+  "stats": [
+    "Status",
+    "IDLE",
+    "Total Documents Processed",
+    "java.util.concurrent.atomic.AtomicLong:0",
+    "Total Requests made to DataSource",
+    "java.util.concurrent.atomic.AtomicLong:0",
+    "Total Rows Fetched",
+    "java.util.concurrent.atomic.AtomicLong:0",
+    "Total Documents Deleted",
+    "java.util.concurrent.atomic.AtomicLong:0",
+    "Total Documents Skipped",
+    "java.util.concurrent.atomic.AtomicLong:0",
+    "handlerStart",
+    1358960935773,
+    "requests",
+    1,
+    "errors",
+    0,
+    "timeouts",
+    0,
+    "totalTime",
+    0.946654,
+    "avgRequestsPerSecond",
+    0.00006892979803330725,
+    "5minRateReqsPerSecond",
+    8.281462403544473e-23,
+    "15minRateReqsPerSecond",
+    3.2421452678347006e-10,
+    "avgTimePerRequest",
+    0.946654,
+    "medianRequestTime",
+    0.946654,
+    "75thPcRequestTime",
+    0.946654,
+    "95thPcRequestTime",
+    0.946654,
+    "99thPcRequestTime",
+    0.946654,
+    "999thPcRequestTime",
+    0.946654
+  ]
+},
+
+
+if i recall another issue correctly, that has something to do with using (or otherwise not using) SimpleOrderedMap oO

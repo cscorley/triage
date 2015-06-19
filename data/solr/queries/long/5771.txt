@@ -1,0 +1,5 @@
+Currently, as of 4.7, solr test-framework classes can no longer be used by downstream projects, because ssl configuration will fail (and it expects this stuff from outside the source code tree in example/ etc, which makes it impossible).
+
+There is a boolean to disable SSL, but it cannot work correctly unless you set it in a static initializer (to "beat" the SolrTestCaseJ4.beforeClass to the punch). Then the problem is afterClass turns it off, so if you have e.g. a base class run by 2 tests in the same jvm, boom.
+
+An alternative way, so people can use test-framework again, is to just have an annotation to do this. Thats how e.g. codecs and so on are disabled in lucene. 

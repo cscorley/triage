@@ -1,0 +1,7 @@
+Currently the stop command looks for all running Solr instances and stops those. I feel this is a bit dangerous.
+
+When starting a process with the start command we could write out a pid file of the solr process that it started. Then the stop script should stop that process.
+
+It could error out if the pid file is not present.
+
+We could still keep the feature of stopping all solr nodes by passing passing -all ?

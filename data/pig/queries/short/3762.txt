@@ -1,0 +1,1 @@
+Properties aren't propagated to edges or vertices in Tez

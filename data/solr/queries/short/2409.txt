@@ -1,0 +1,1 @@
+edismax unescaped colon returns no results

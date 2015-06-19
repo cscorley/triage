@@ -1,0 +1,1 @@
+generate-maven-artifacts target should include all non-Mavenized Lucene & Solr dependencies

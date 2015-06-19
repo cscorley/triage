@@ -1,0 +1,1 @@
+For instance OpenBitSet is not used anymore in our code. Let's take advantage of the major version bump to remove unused code.

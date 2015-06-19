@@ -1,0 +1,1 @@
+CloudSolrServer tries to connect to zookeeper forever when ensemble is unavailable

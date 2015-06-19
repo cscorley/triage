@@ -1,0 +1,1 @@
+ArrayIndexOutOfBoundException in ToChildBlockJoinQuery when there's a deleted parent without any children

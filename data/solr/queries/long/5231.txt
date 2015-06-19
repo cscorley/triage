@@ -1,0 +1,9 @@
+This issue is hard to explain with out a long example.
+
+crux of the problem is that the behavior of the if function, wrapped arround a boolean field (ie: "if(fieldName,x,y)" ) is not consistent for documents that do not have any value for that functio – the behavior seems to  depend on whether or not other documents in the same segment have a value for that field.
+
+for brevity, details will follow in a comment - but i've been able to reproduce on trunk, 4.3, and 4.3 (didn't look back farther then that)
+
+the work around is to explicitly use the exists() function in the if condition (ie: "if(exists(fieldName),x,y)" )
+
+(Thanks to Elodie Sannier for reporting the initial symptoms of this on the mailing list)

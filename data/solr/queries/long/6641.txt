@@ -1,0 +1,1 @@
+There's no good way to get the zkHost from a running server. I've resorted to parsing the ZooKeeper host out of the command-line args, but that doesn't help when users set the zkHost in solr.xml. So it should be exposed in the /solr/admin/info/system metadata.

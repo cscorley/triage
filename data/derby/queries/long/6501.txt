@@ -1,0 +1,6 @@
+As part of changes backported from trunk to 10.10, CastingTest.java no longer runs in jsr169.  Changes have been made to testing framework to not run the test in jsr169 - see change #1574618.
+
+In order to get this test to run again some java code needs be written 
+to replace the following java interface not available in jsr169:
+
+String.replace(CharSequence target, CharSequence replacement)

@@ -1,0 +1,1 @@
+The example for solr.TypeTokenFilterFactory uses wrong case for useWhitelist parameter - breaks examples

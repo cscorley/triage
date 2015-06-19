@@ -1,0 +1,1 @@
+Make CorruptIndexException require 'resource' like TooOld/TooNew do

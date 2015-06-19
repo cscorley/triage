@@ -1,0 +1,1 @@
+remove boolean useCache param from TermsEnum.seekCeil/Exact

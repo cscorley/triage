@@ -1,0 +1,1 @@
+In some cases of exporting from a DB to CSV, the only "unique id" you have is the rowid.  This issue is to add an optional (off by default) rowid field to the document which simply contains the line number of the row.

@@ -1,0 +1,100 @@
+Cleaning up the following clustering examples:
+
+=====================================
+https://mahout.apache.org/users/clustering/clustering-of-synthetic-control-data.html
+
+
+Introduction
+
+This example will demonstrate clustering of time series data, specifically control charts. [Control charts : http://en.wikipedia.org/wiki/Control_chart] are tools used to determine whether a manufacturing or business process is in a state of statistical control. Such control charts are generated / simulated repeatedly at equal time intervals. A simulated dataset is available for use in UCI machine learning repository. The data is described [here : http://archive.ics.uci.edu/ml/databases/synthetic_control/synthetic_control.data.html].
+
+Problem Description
+
+A time series of control charts needs to be clustered into their close knit groups. The data set we use is synthetic and is meant to resemble real world information in an anonymized format. It contains six different classes: Normal, Cyclic, Increasing trend, Decreasing trend, Upward shift, Downward shift. In this example we will use Mahout to cluster the data into corresponding class buckets. 
+
+At the end of this example
+
+
+
+	You will have clustered data using mahout.
+	You will see how to analyse the clusters produced by mahout.
+	You will have a starting point for incorporating clustering into your own software.
+
+
+
+Setup
+
+We need to do some initial setup before we are able to run the example. 
+
+
+  1. Start out by downloading the input dataset (to be clustered) from the UCI Machine Learning Repository: http://archive.ics.uci.edu/ml/databases/synthetic_control/synthetic_control.data
+  2. Make sure the data consists of 600 rows and 60 columns. The first 100 rows contains Normal data followed by 100 rows of Cyclic data and so on with a total of 6 classes.
+  3. This example assumes that you have already set up Mahout/Hadoop. If you have not done so yet:
+  4. 
+
+	Hadoop: Follow the instructions on http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleNodeSetup.html to set up Hadoop.
+	Mahout: Follow the instructions on the [Quickstart: https://mahout.apache.org/users/basics/quickstart.html] page.
+  5. Make sure the Hadoop daemons are running if you are running Hadoop in distributed mode. 
+  6. Create a directory on your local machine called « testdata » and place the input dataset in this directory.
+  7. Run the following command to copy the input data into HDFS:
+
+
+
+
+	Create a directory called « testdata »  on HDFS:
+
+
+
+                         $HADOOP_HOME/bin/hadoop fs -mkdir testdata
+
+
+	Copy the directory named « testdata » from your local filesystem to HDFS:
+                         $HADOOP_HOME/bin/hadoop fs -put testdata
+  8. The final setup step is to build Mahout by going to the $MAHOUT_HOME directory and running one of the following commands: 
+  9. 
+	For a full build: mvn clean install
+	For a build without unit tests: mvn -DskipTests clean install
+  10. You should see a build successful message once the build script has completed.
+  11. Finally make sure that the examples have compiled successfully. You should find the compiled jar in the /examples/target directory under the name mahout-examples-
+{version}
+.job.jar
+  12. This concludes all the setup required to run the examples.
+
+
+
+
+Clustering Examples
+
+There are examples available for three clustering algorithms:
+
+
+
+	Canopy Clustering: https://mahout.apache.org/users/clustering/canopy-clustering.html
+	k-Means Clustering: https://mahout.apache.org/users/clustering/k-means-clustering.html
+	Fuzzy k-Means Clustering: https://mahout.apache.org/users/clustering/fuzzy-k-means.html
+
+
+
+Depending on the example you want to run the following command can be used:
+
+
+
+	Canopy Clustering: $MAHOUT_HOME/bin/mahout org.apache.mahout.clustering.syntheticcontrol.canopy.Job
+	k-Means Clustering: $MAHOUT_HOME/bin/mahout org.apache.mahout.clustering.syntheticcontrol.kmeans.Job
+	Fuzzy k-Means Clustering: $MAHOUT_HOME/bin/mahout org.apache.mahout.clustering.syntheticcontrol.fuzzykmeans.Job
+
+
+
+The clustering output will be produced in the « output » directory on HDFS. The output should be copied to your local filesystem since it is overwritten on each run.
+
+Use the following command to copy out the data to your local filesystem:
+
+$HADOOP_HOME/bin/hadoop fs -get output $MAHOUT_HOME/examples
+
+This creates an output folder inside examples directory. The output data points are in vector format. In order to read/analyze the output, you can use [clusterdump: https://mahout.apache.org/users/clustering/cluster-dumper.html] utility provided by Mahout.
+
+The source code for these examples is located under the examples project.
+
+
+=====================================
+https://mahout.apache.org/users/clustering/clustering-seinfeld-episodes.html

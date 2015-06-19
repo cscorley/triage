@@ -1,0 +1,1 @@
+Since TIKA-175 we've been supporting clients that still need to run on Java 1.4 environments. I guess nobody is on Java 1.4 anymore, so it should be safe to drop the retrotranslator settings.

@@ -1,0 +1,1 @@
+Detect the test thread by reference, not by name.

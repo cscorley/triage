@@ -1,0 +1,1 @@
+Create a Collections API for SolrCloud

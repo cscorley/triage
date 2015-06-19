@@ -1,0 +1,1 @@
+Queries with a sort clause returns fewer entries than the same query that does not have a sort clause

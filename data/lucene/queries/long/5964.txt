@@ -1,0 +1,2 @@
+Reading the file READ_BEFORE_REGENERATING.txt from analysis/common/src/java/org/apache/lucene/analysis/standard tells me to use jflex trunk.
+ant regenerate already uses ivy to get current jflex (1.6) which should be used - does the text still apply or is it obsolete?

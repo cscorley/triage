@@ -1,0 +1,1 @@
+When using binary format in solrj the codec screws up parameters

@@ -1,0 +1,36 @@
+Similar to this issue https://issues.apache.org/jira/browse/ZOOKEEPER-1334, the MANIFEST.MF is still flawed. When using in OSGi, I got this exception:
+
+java.lang.NoClassDefFoundError: org/ietf/jgss/GSSException
+        at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1063)[168:org.apache.hadoop.zookeeper:3.5.01]
+        at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1114)[168:org.apache.hadoop.zookeeper:3.5.01]
+Caused by: java.lang.ClassNotFoundException: org.ietf.jgss.GSSException not found by org.apache.hadoop.zookeeper [168]
+        at org.apache.felix.framework.BundleWiringImpl.findClassOrResourceByDelegation(BundleWiringImpl.java:1532)[org.apache.felix.framework-4.2.1.jar:]
+        at org.apache.felix.framework.BundleWiringImpl.access$400(BundleWiringImpl.java:75)[org.apache.felix.framework-4.2.1.jar:]
+        at org.apache.felix.framework.BundleWiringImpl$BundleClassLoader.loadClass(BundleWiringImpl.java:1955)[org.apache.felix.framework-4.2.1.jar:]
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:356)[:1.7.0_15]
+        ... 2 more
+
+Looking at the bundle headers, it doesn't have the package org.ietf.jgss imported:
+
+Import-Package =
+        javax.management;resolution:=optional,
+        javax.security.auth.callback,
+        javax.security.auth.login,
+        javax.security.sasl,
+        org.slf4j;version="[1.6,2)",
+        org.jboss.netty.buffer;resolution:=optional;version="[3.2,4)",
+        org.jboss.netty.channel;resolution:=optional;version="[3.2,4)",
+        org.jboss.netty.channel.group;resolution:=optional;version="[3.2,4)",
+        org.jboss.netty.channel.socket.nio;resolution:=optional;version="[3.2,4)",
+        org.osgi.framework;resolution:=optional;version="[1.5,2)",
+        org.osgi.util.tracker;resolution:=optional;version="[1.4,2)"
+Export-Package =
+        org.apache.zookeeper;version=3.5.01,
+        org.apache.zookeeper.client;version=3.5.01,
+        org.apache.zookeeper.data;version=3.5.01,
+        org.apache.zookeeper.version;version=3.5.01,
+        org.apache.zookeeper.server;version=3.5.01,
+        org.apache.zookeeper.server.auth;version=3.5.01,
+        org.apache.zookeeper.server.persistence;version=3.5.01,
+        org.apache.zookeeper.server.quorum;version=3.5.01,
+        org.apache.zookeeper.common;version=3.5.01

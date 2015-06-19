@@ -1,0 +1,7 @@
+In response to the current discussion about raising attribution for
+contributors, I suggest we introduce a CHANGELOG file similar to the one
+used in GIRAPH. For every commit, we add a single line with the id
+and name of the jira, the name of the committer and potentially the name
+of the contributor, e.g.
+
+MAHOUT-1234: Fixed bug in some class (john-doe via ssc)

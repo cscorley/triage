@@ -1,0 +1,27 @@
+The following script fail on 0.8:
+
+
+A = load '1.txt' as (tracking_id, day:chararray);
+B = load '2.txt' as (tracking_id, timestamp:chararray);
+C = JOIN A by (tracking_id, day) LEFT OUTER, B by (tracking_id,  STRSPLIT(timestamp, ' ').$0);
+explain C;
+
+
+
+Error stack:
+Caused by: java.lang.ArrayIndexOutOfBoundsException: -1
+        at java.util.ArrayList.get(ArrayList.java:324)
+        at org.apache.pig.newplan.logical.expression.ProjectExpression.findReferent(ProjectExpression.java:207)
+        at org.apache.pig.newplan.logical.expression.ProjectExpression.getFieldSchema(ProjectExpression.java:121)
+        at org.apache.pig.newplan.logical.optimizer.FieldSchemaResetter.execute(SchemaResetter.java:193)
+        at org.apache.pig.newplan.logical.expression.AllSameExpressionVisitor.visit(AllSameExpressionVisitor.java:53)
+        at org.apache.pig.newplan.logical.expression.ProjectExpression.accept(ProjectExpression.java:75)
+        at org.apache.pig.newplan.ReverseDependencyOrderWalker.walk(ReverseDependencyOrderWalker.java:70)
+        at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:50)
+        at org.apache.pig.newplan.logical.optimizer.SchemaResetter.visit(SchemaResetter.java:83)
+        at org.apache.pig.newplan.logical.relational.LOJoin.accept(LOJoin.java:149)
+        at org.apache.pig.newplan.DependencyOrderWalker.walk(DependencyOrderWalker.java:75)
+        at org.apache.pig.newplan.PlanVisitor.visit(PlanVisitor.java:50)
+        at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.compile(HExecutionEngine.java:262)
+
+This is not a problem on 0.9, trunk, since LogicalExpPlanMigrationVistor is dropped in 0.9.

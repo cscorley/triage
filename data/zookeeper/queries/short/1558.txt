@@ -1,0 +1,1 @@
+Leader should not snapshot uncommitted state

@@ -1,0 +1,1 @@
+Should allow to control this through environment setting so that it is easy to run the harness as part of automation and have parallel runs on same cluster.

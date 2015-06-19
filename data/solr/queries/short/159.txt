@@ -1,0 +1,1 @@
+DisMax request class' sorting mungs the query

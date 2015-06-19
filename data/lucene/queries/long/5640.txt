@@ -1,0 +1,13 @@
+We should remove code duplication in the Token class:
+
+	copy constructors
+	reinit() shit
+	non-default clone()
+
+
+
+This is too bugy. Most of the methods can be simply removed.
+
+This issue will also factor out the basic attributes to a separate implementation class (without the Token extra stuff). Token then just extends this class (in the tokenattributes package) and adds the additional stuff not needed for an Attribute. Token itsself will get deprecated.
+
+Also part of the slowdown in the parent issue is caused by ineffective DefaultAttributeFactory, which uses reflection to instantiate new attributes. As we are on Java 7 now, we can use MethodHandle to do this. MethodHandle does access checks only once on creating the factory or when the attribute is seen first. Later invocations are done without any result type conversions and parameter conversions as a statically linked constructor call. This greatly improves performance with Java 8, Java 7 is approx as fast, unless its completely static.

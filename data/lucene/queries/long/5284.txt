@@ -1,0 +1,1 @@
+It's sometimes useful to use only a certain subset of the whole index to train the classifier with. To do that we can pass a Query to be used during the training phase.

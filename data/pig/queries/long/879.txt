@@ -1,0 +1,13 @@
+ Due to multiquery optimization, Pig always converts the filenames to absolute URIs (see http://wiki.apache.org/pig/PigMultiQueryPerformanceSpecification - section about Incompatible Changes - Path Names and Schemes). This is necessary since the script may have "cd .." statements between load or store statements and if the load statements have relative paths, we would need to convert to absolute paths to know where to load/store from. To do this QueryParser.massageFilename() has the code below[1] which basically gives the fully qualified hdfs path
+
+However the issue with this approach is that if the filename string is something like "hdfs://localhost.localdomain:39125/user/bla/1,hdfs://localhost.localdomain:39125/user/bla/2", the code below[1] actually translates this to hdfs://localhost.localdomain:38264/user/bla/1,hdfs://localhost.localdomain:38264/user/bla/2 and throws an exception that it is an incorrect path.
+
+Some loaders may want to interpret the filenames (the input location string in the load statement) in any way they wish and may want Pig to not make absolute paths out of them.
+
+There are a few options to address this:
+1)    A command line switch to indicate to Pig that pathnames in the script are all absolute and hence Pig should not alter them and pass them as-is to Loaders and Storers. 
+2)    A keyword in the load and store statements to indicate the same intent to pig
+3)    A property which users can supply on cmdline or in pig.properties to indicate the same intent.
+4)    A method in LoadFunc - relativeToAbsolutePath(String filename, String curDir) which does the conversion to absolute - this way Loader can chose to implement it as a noop.
+
+Thoughts?

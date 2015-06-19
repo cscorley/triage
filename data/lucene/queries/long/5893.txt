@@ -1,0 +1,1 @@
+Came across the TODO in the code and now it's possible to use Files.createTempDirectory since 4x is also on Java 7. 

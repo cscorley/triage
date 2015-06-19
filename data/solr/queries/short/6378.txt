@@ -1,0 +1,1 @@
+Tika DIH example configuration points to a file that does not exist in binary releases

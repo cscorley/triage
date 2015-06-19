@@ -1,0 +1,18 @@
+To run as a Solr Client, you need slf4j actually configured in your classpath, because HttpSolrServer hardly depends on it, also the used libs like Commons Httpclient (and others)
+
+In SOLR-3706 all of the slf4j JARs were made optional, but because we did not exclude the dependencies of httpclient and others explicitely, the dependency was still included by maven automatically for a user that used SolrJ - so effectively the "optional" was never working.
+
+In 4.7, Steve Rowe now explicitely excluded all dependencies of all deps included via IVY. By that the implicit dependency by httpclient was killed.
+
+When I updated a project from SolrJ 4.6 to SolrJ 4.7, it suddenly failed to run, because it failed with a classnotfound ex directly after starting. Not even the default logging to console was enabled (which is provided by slf4j). This is bad for users of SolrJ, because they have to explicitely add a dependency for something that really required to use SolrJ.
+
+The reason for excluding slf4j-api was that we don't want to have it in the WAR file, so it was made optional. But that is wrong:
+
+	In trunk we no longer have a WAR file
+	The primary user of SolrJ via Maven is not somebody who wants to install Solr in his appserver, its the user needing the client.
+
+
+
+So we should restore the state from Solr 4.6, where the dep was implicitely included, by making it non-optional in Maven.
+
+When building the WAR file in 4.x we should exclude it somehow via Maven Magic(tm).

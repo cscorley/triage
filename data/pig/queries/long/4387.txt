@@ -1,0 +1,1 @@
+  When setting yarn.timeline-service.enabled=true in tez-site.xml, the value was still taken as false. This was because yarn.timeline-service.enabled=false in yarn-site.xml went into PigContext properties in Utils.recomputeProperties(jc, properties); and that took more precedence. 

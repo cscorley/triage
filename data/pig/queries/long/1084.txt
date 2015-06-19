@@ -1,0 +1,16 @@
+Hi all,
+ We have a host of Join optimizations that have been implemented recently in Pig to improve performance. These include:
+
+http://hadoop.apache.org/pig/docs/r0.5.0/piglatin_reference.html#JOIN
+
+1) Merge Join
+2) Skewed Join
+
+It would be nice to mention the Merge Join and Skewed join in the following section on the PigCookBook
+
+http://hadoop.apache.org/pig/docs/r0.5.0/cookbook.html#Take+Advantage+of+Join+Optimization
+
+Can we update this release 0.6??
+
+Thanks
+Viraj

@@ -1,0 +1,7 @@
+For reasons discussed on the openjpa-user MailingList I need to use a custom BrokerFactory in an OSGi environment.
+
+My custom BrokerFactory is obviously in my own OSGi bundle, not in the official OpenJPA bundle. Now, due to OPENJPA-1491 org.apache.openjpa.kernel.Bootstrap (in connection with {{org.apache.openjpa.persistence.PersistenceProviderImpl.createContainerEntityManagerFactory(PersistenceUnitInfo, Map) and org.apache.openjpa.persistence.osgi.PersistenceActivator.getBundleClassLoader()), my BrokerFactories can only live in the official OpenJPA bundle, so that my custom BrokerFactory is not found.
+
+In my opinion it would be better if org.apache.openjpa.persistence.osgi.PersistenceActivator.getBundleClassLoader() would return a ClassLoader not only delegating to openjpa´s bundle but in addition (as a fallback) to the PersistenceUnitInfo´s bundle.
+
+That way one would be able to use arbitrary BrokerFactories by importing them if required to the bundle where persistence.xml is defined.

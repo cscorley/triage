@@ -1,0 +1,1 @@
+SumScoreFacetsAggregator incorrectly indexes into the scores array

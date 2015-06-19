@@ -1,0 +1,1 @@
+ExitableDirectoryReader tests are failing as they enumerate over the terms in less than 1ms (min timeAllowed value that case be set). Need to fix this.

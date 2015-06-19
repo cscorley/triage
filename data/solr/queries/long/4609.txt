@@ -1,0 +1,1 @@
+We don't want to send accidentally send reload command to a node that is recovering, so it seems best to limit this to nodes that are currently seen as ACTIVE.

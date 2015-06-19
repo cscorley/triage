@@ -1,0 +1,3 @@
+Similar to LUCENE-5580: its scary we just copy bytes and dont verify anything. we should at least verify in the bulk merge case.
+
+This is just a quick hack: it would be nice, though scary to remove the clone() of the index input... 

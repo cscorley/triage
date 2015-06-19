@@ -1,0 +1,1 @@
+we configured our bookie to use indexDirectory, which is supposed to store the index files on it. but when we use BookieShell tool to inspect a ledger's entries, it ends up failing to read any ledger. it seems that the BookieShell doesn't handle indexDirectory correctly.

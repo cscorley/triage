@@ -1,0 +1,43 @@
+Script `zkServer.sh` stops zookeeper by sending the java process a `kill -9` (SIGKILL). As there seems to be no technical reasons to use such a radical signal rather than the default SIGTERM (-15), I would propose to just use `kill` rather than `kill -9`.
+
+My use case is for Systemd service files for Zookeeper which always consider Zookeeper java process as failing when a clean `stop` is issued.
+
+Systemd output showing this "fail":
+--------------8<--------------
+
+	sudo systemctl status zookeeper.service
+● zookeeper.service - Highly reliable distributed coordination server
+   Loaded: loaded (/usr/lib/systemd/system/zookeeper.service; disabled)
+   Active: failed (Result: signal) since Wed 2014-11-05 11:23:29 CET; 2s ago
+  Process: 656 ExecStop=/usr/bin/zkServer.sh stop (code=exited,
+status=0/SUCCESS)
+  Process: 406 ExecStart=/usr/bin/zkServer.sh start (code=exited,
+status=0/SUCCESS)
+ Main PID: 414 (code=killed, signal=KILL)
+
+
+
+Nov 05 11:23:29 magenta zookeeper[656]: Stopping zookeeper ... STOPPED
+Nov 05 11:23:29 magenta systemd[1]: zookeeper.service: main process
+exited, code=killed, status=9/KILL
+Nov 05 11:23:29 magenta systemd[1]: Unit zookeeper.service entered failed state.
+--------------8<--------------
+
+There is no way to make this `status=9/KILL` to be recognized by
+Systemd as a regular exit code, even with `SuccessExitStatus=9 KILL
+SIGKILL`. On the other hand, turning this `kill -9` into a regular
+`kill` (-15 implied) makes it:
+
+--------------8<--------------
+
+	sudo systemctl status zookeeper.service
+● zookeeper.service - Highly reliable distributed coordination server
+   Loaded: loaded (/usr/lib/systemd/system/zookeeper.service; disabled)
+   Active: inactive (dead)
+
+
+
+Nov 05 11:14:27 magenta zookeeper[30032]: Using config:
+/usr/share/zookeeper/bin/../conf/zoo.cfg
+Nov 05 11:14:27 magenta zookeeper[30032]: Stopping zookeeper ... STOPPED
+--------------8<--------------

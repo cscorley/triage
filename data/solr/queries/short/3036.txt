@@ -1,0 +1,1 @@
+XMLoader should support setting overwrite=false in request params

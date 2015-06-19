@@ -1,0 +1,14 @@
+I have a scenario (see attached .test file) where an extra alias is generated for a query created by CriteriaBuilder.  For the given test, this SQL is generated:
+
+SELECT t0.empl_cnt FROM
+T_FACT_WORK_ASGNMT t0, T_DIM_DAY t1, T_DIM_DAY t3 
+WHERE (t0.CLNT_OBJ_ID = ? AND t1.ROLL_13_MNTH_IND = ? AND t0.pers_obj_id IN (
+   SELECT t2.pers_obj_id FROM T_FACT_WORK_ASGNMT t2 WHERE    
+   (t2.CLNT_OBJ_ID = ? AND t3.MNTH_STRT_DAY_KY >= ?))) 
+
+Notice that T_DIM_DAY is aliased twice.  
+If I do a 'toString' on the CriteriaQuery which the test creates, and then create/execute a query using the string, the generated query is exactly like the above SQL, minus the 'T_DIM_DAY t3'.  This would seem to tell me that we take a different path when creating/executing a query with a 'CriteriaQuery' as opposed to just a JPQL string.
+
+Thanks,
+
+Heath

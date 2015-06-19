@@ -1,0 +1,1 @@
+NullPointException in bookie server when using twitter-ostrich-provider

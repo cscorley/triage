@@ -1,0 +1,51 @@
+It should be possible to reconfigure Solr plugins' resources and init params without directly editing the serialized schema or solrconfig.xml (see Hoss's arguments about this in the context of the schema, which also apply to solrconfig.xml, in the description of SOLR-4658)
+
+The RESTManager should allow plugins declared in either the schema or in solrconfig.xml to register one or more REST endpoints, one endpoint per reconfigurable resource, including init params.  To allow for multiple plugin instances, registering plugins will need to provide a handle of some form to distinguish the instances.
+
+This RESTManager should also be able to create new instances of plugins that it has been configured to allow.  The RESTManager will need its own serialized configuration to remember these plugin declarations.
+
+Example endpoints:
+
+
+	SynonymFilterFactory
+	
+		init params: /solr/collection1/config/syns/myinstance/options
+		synonyms resource: /solr/collection1/config/syns/myinstance/synonyms-list
+	
+	
+	"/select" request handler
+	
+		init params: /solr/collection1/config/requestHandlers/select/options
+	
+	
+
+
+
+We should aim for full CRUD over init params and structured resources.  The plugins will bear responsibility for handling resource modification requests, though we should provide utility methods to make this easy.
+
+However, since we won't be directly modifying the serialized schema and solrconfig.xml, anything configured in those two places can't be invalidated by configuration serialized elsewhere.  As a result, it won't be possible to remove plugins declared in the serialized schema or solrconfig.xml.  Similarly, any init params declared in either place won't be modifiable.  Instead, there should be some form of init param that declares that the plugin is reconfigurable, maybe using something like "managed" - note that request handlers already provide a "handle" - the request handler name - and so don't need that to be separately specified:
+
+
+
+<requestHandler name="/select" class="solr.SearchHandler">
+   <managed/>
+</requestHandler>
+
+
+
+and in the serialized schema - a handle needs to be specified here:
+
+
+
+<fieldType name="text_general" class="solr.TextField" positionIncrementGap="100">
+...
+  <analyzer type="query">
+    <tokenizer class="solr.StandardTokenizerFactory"/>
+    <filter class="solr.SynonymFilterFactory" managed="english-synonyms"/>
+...
+
+
+
+All of the above examples use the existing plugin factory class names, but we'll have to create new RESTManager-aware classes to handle registration with RESTManager.
+
+Core/collection reloading should not be performed automatically when a REST API call is made to one of these RESTManager-mediated REST endpoints, since for batched config modifications, that could take way too long.  But maybe reloading could be a query parameter to these REST API calls. 

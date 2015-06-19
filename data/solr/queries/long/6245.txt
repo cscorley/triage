@@ -1,0 +1,29 @@
+I spent time debugging our HttpSolrServer and HttpClient. We construct our HttpClient (we have some requirement regarding about connectionTimeout, soTimeout, etc.) and then pass it to HttpSolrServer. I found out that all our socket level and connection level configuration are ignored when creating a http connection. 
+
+The problem is in HttpClient 4.3.X, they allow overriding of these parameters per request i.e. one request can have socketTimeout=100ms and another request can have socketTimeout=200ms. The logic[1] to check whether to make it per-request base config or not depending on whether any of these parameters is set. 
+
+
+
+ protected NamedList<Object> executeMethod(HttpRequestBase method, final ResponseParser processor) throws SolrServerException {
+// XXX client already has this set, is this needed?
+method.getParams().setParameter(ClientPNames.HANDLE_REDIRECTS,
+followRedirects);
+method.addHeader("User-Agent", AGENT);
+
+
+In HttpSolrServer.java, only one parameter (HANDLE_REDIRECTS) is set but that trigger the logic in HttpClient to initialize a default per-request base config, which eventually override any socket and connection configuration, we did via HttpClientBuilder.
+
+
+To conclude, a solution would be to remove these line
+
+
+// XXX client already has this set, is this needed?
+method.getParams().setParameter(ClientPNames.HANDLE_REDIRECTS,
+followRedirects);
+
+
+
+[1] - http://svn.apache.org/viewvc/httpcomponents/httpclient/trunk/httpclient/src/main/java/org/apache/http/impl/client/InternalHttpClient.java?revision=1603745&view=markup [LINE:172]
+
+
+

@@ -1,0 +1,1 @@
+[Pig on Tez] NPE in UnionOptimizer with multiple levels of union

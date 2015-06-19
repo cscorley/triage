@@ -1,0 +1,1 @@
+spin off from SOLR-1607. To fix ExternalFileField bug described SOLR-1607, I'd propose introducing reloadCache feature over using proper key other than IndexReader.

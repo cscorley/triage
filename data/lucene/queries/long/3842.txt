@@ -1,0 +1,25 @@
+Since we added shortest-path wFSA search in LUCENE-3714, and generified the comparator in LUCENE-3801,
+I think we should look at implementing suggesters that have more capabilities than just basic prefix matching.
+
+In particular I think the most flexible approach is to integrate with Analyzer at both build and query time,
+such that we build a wFST with:
+input: analyzed text such as ghost0christmas0past <-- byte 0 here is an optional token separator
+output: surface form such as "the ghost of christmas past"
+weight: the weight of the suggestion
+
+we make an FST with PairOutputs<weight,output>, but only do the shortest path operation on the weight side (like
+the test in LUCENE-3801), at the same time accumulating the output (surface form), which will be the actual suggestion.
+
+This allows a lot of flexibility:
+
+	Using even standardanalyzer means you can offer suggestions that ignore stopwords, e.g. if you type in "ghost of chr...",
+  it will suggest "the ghost of christmas past"
+	we can add support for synonyms/wdf/etc at both index and query time (there are tradeoffs here, and this is not implemented!)
+	this is a basis for more complicated suggesters such as Japanese suggesters, where the analyzed form is in fact the reading,
+  so we would add a TokenFilter that copies ReadingAttribute into term text to support that...
+	other general things like offering suggestions that are more "fuzzy" like using a plural stemmer or ignoring accents or whatever.
+
+
+
+According to my benchmarks, suggestions are still very fast with the prototype (e.g. ~ 100,000 QPS), and the FST size does not
+explode (its short of twice that of a regular wFST, but this is still far smaller than TST or JaSpell, etc).

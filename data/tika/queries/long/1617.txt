@@ -1,0 +1,1 @@
+Currently the testDetection test does not actually use the OSGi service created within the OSGi Framework.  I've changed the test to use the service defined in the tika-bundle

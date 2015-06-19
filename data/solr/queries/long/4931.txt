@@ -1,0 +1,4 @@
+LUCENE-4876 changed the IndexDeletionPolicy to an abstract class. The SolrDeletionPolicy extends this class but overrides the onInit and onCommit methods with non generic parameters. This makes people who extend SolrDeletionPolicy (even though we don't recommend doing that) run into a Java6 bug:
+http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6775192
+
+The workaround is to use reflection to call the parent class's method.  I propose  that we change SolrDeletionPolicy to override parent's methods with the exact signature.

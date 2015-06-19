@@ -1,0 +1,28 @@
+I hit this when running a ToParentBlockJoinCollector/Query under
+DrillSideways ... the problem is ToParentBlockJoinCollector.collect
+expects that all sub-scorers are positioned on the docID being
+collected, but DrillSideways sometimes scores with a in-order
+BooleanScorer-like scorer that advances each sub-scorer in chunks
+... this breaks ToParentBlockJoinCollector.
+
+This is the same issue as LUCENE-2686, where apps that want to peek at
+the sub-scorers from their collector need those sub-scorers to all be
+"on" the current docID being collected...
+
+One way to "fix" this would be to switch based on
+Collector.acceptsDocsOutOfOrder() ... but that's really a hack ... it
+only "works" for BooleanQuery because BooleanScorer is an out-of-order
+scorer (well and because we fixed all BS2s to keep sub-scorers
+positioned on the doc being collected in LUCENE-3505).
+
+But if for example we added MUST clauses back into BooleanScorer
+(which I think we should!) then it could easily score those queries
+in-order.  Really we need another boolean (scoreSubDocsAtOnce or
+something) to Weight.scorer... but that's a big change...
+
+I think for this issue I'll just add an expert protected method to
+DrillSideways that returns this boolean, and an app could subclass to
+override.  Apps that "know" they are using queries/collectors like
+ToParentBlockJoinQuery/Collector must subclass and override
+... DrillSideways already has other expert methods that you subclass &
+override.

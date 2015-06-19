@@ -1,0 +1,3 @@
+These are accessed sequentially when e.g. faceting, and can be a fairly large amount of data (based on # of docs and # of unique terms). 
+
+I think this was done so that conceptually "random" access to a specific docid would be faster than eg. stored fields, but I think we should instead target the DV datastructures towards real use cases (faceting,sorting,grouping,...)

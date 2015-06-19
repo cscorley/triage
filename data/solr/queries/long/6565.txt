@@ -1,0 +1,1 @@
+Today, queryParams (sending params via the queryString) is only supported at the HttpSolrServer level.  In an effort to make SolrRequests more generally useful (a la SOLR-6543), it would be nice if you could set the queryParams on a per-request basis.

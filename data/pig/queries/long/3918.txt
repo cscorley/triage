@@ -1,0 +1,11 @@
+Currently, no event notifications are sent from Pig to PPNL in Tez mode. For example,
+
+
+emitInitialPlanNotification
+emitLaunchStartedNotification
+emitJobsSubmittedNotification
+etc.
+
+
+
+In addition, Pig should expose progress status information to PPNL.

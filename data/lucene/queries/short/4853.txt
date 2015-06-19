@@ -1,0 +1,1 @@
+PostingsHighlighter should let you pass in docids directly [expert]

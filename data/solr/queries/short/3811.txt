@@ -1,0 +1,1 @@
+Search Form does not set defType when dismax/edismax boxes are checked

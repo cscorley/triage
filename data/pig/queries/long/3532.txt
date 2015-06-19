@@ -1,0 +1,13 @@
+Currently run a Pig script with empty plan fail:
+a = load 'input.txt';
+b = group a by a0;
+store b into 'ooo';
+
+Non empty plan works:
+a = load 'input.txt' as (a0:chararray);
+b = group a by a0;
+c = foreach b generate group, COUNT(a) as count;
+d = group c by count;
+store d into 'ooo';
+
+Put a simple patch contains the fix.

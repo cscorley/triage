@@ -1,0 +1,1 @@
+AddUpdateCommand reverses children documents that causes failure of BJQParserTest.testGrandChildren() discussed in SOLR-5168  

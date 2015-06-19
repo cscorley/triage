@@ -1,0 +1,3 @@
+When reading the segment infos, we already check if the delCount is out of bounds for a segment (< 0 or > docCount) and throw CorruptIndexException if so.
+
+I think we should catch this when writing as well, in case there are Lucene bugs that mess up the delete counts.  We have just an assert today...

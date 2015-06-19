@@ -1,0 +1,1 @@
+Add bumpVersion script to increment version after release branch creation

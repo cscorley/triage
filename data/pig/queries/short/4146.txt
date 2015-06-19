@@ -1,0 +1,1 @@
+Create a target to run mr and tez unit test in one shot

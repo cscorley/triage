@@ -1,0 +1,1 @@
+Remove code duplication in MultiReader/DirectoryReader, make everything inside final

@@ -1,0 +1,1 @@
+Pig startup script prints out a wrong version of hadoop when using fat jar

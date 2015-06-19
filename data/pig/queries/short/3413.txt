@@ -1,0 +1,1 @@
+JsonLoader fails the pig job in case of malformed json input

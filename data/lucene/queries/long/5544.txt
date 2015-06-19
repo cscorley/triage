@@ -1,0 +1,5 @@
+Today, rollback() doesn't always succeed: if it does, it closes the writer nicely. otherwise, if it hits exception, it leaves you with a half-broken writer, still potentially holding file handles and write lock.
+
+This is especially bad if you use Native locks, because you are kind of hosed, the static map prevents you from forcefully unlocking (e.g. IndexWriter.unlock) so you have no real course of action to try to recover.
+
+If rollback() hits exception, it should still deliver the exception, but release things (e.g. like IOUtils.close).

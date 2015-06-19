@@ -1,0 +1,1 @@
+Use the SOLR-86 client in examples of the Solr tutorial

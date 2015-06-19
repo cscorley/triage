@@ -1,0 +1,1 @@
+e2e tests containing "perl -e "print $_;" fails on Hadoop 2

@@ -1,0 +1,45 @@
+We're integrated openjpa into our latest software delivery and in the last three months we're ran two times into this issue. First time it was not investigated at all, but the last time we've had the chance to grab extra information out of the system.
+
+At that point in time, we've had one of our processes not getting response back from the application that was using openjpa.
+
+All the connection threads were running the same calls:
+
+2014-01-07 07:21:37,716 - INFO  "ClientConnection - 9" prio=10 tid=0x00007f33d400e000 nid=0x8d9 runnable [0x00007f32db1ef000]
+2014-01-07 07:21:37,716 - INFO     java.lang.Thread.State: RUNNABLE
+2014-01-07 07:21:37,716 - INFO  	at java.util.HashMap.getEntry(Unknown Source)
+2014-01-07 07:21:37,716 - INFO  	at java.util.HashMap.get(Unknown Source)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.datacache.DataCacheManagerImpl.isCachable(DataCacheManagerImpl.java:145)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.datacache.DataCacheManagerImpl.selectCache(DataCacheManagerImpl.java:128)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.datacache.DataCacheStoreManager.initialize(DataCacheStoreManager.java:358)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.kernel.DelegatingStoreManager.initialize(DelegatingStoreManager.java:112)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.kernel.ROPStoreManager.initialize(ROPStoreManager.java:57)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.kernel.BrokerImpl.initialize(BrokerImpl.java:1027)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.kernel.BrokerImpl.find(BrokerImpl.java:985)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.kernel.BrokerImpl.find(BrokerImpl.java:907)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.load(JDBCStoreManager.java:1041)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.jdbc.sql.AbstractResult.load(AbstractResult.java:280)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.jdbc.sql.SelectImpl$SelectResult.load(SelectImpl.java:2381)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.jdbc.meta.strats.RelationToManyInverseKeyFieldStrategy.loadElement(RelationToManyInverseKeyFieldStrategy.java:90)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.jdbc.meta.strats.RelationCollectionInverseKeyFieldStrategy.loadElement(RelationCollectionInverseKeyFieldStrategy.java:76)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.jdbc.meta.strats.StoreCollectionFieldStrategy.load(StoreCollectionFieldStrategy.java:558)
+2014-01-07 07:21:37,716 - INFO  	at org.apache.openjpa.jdbc.meta.FieldMapping.load(FieldMapping.java:934)
+2014-01-07 07:21:37,717 - INFO  	at org.apache.openjpa.jdbc.kernel.JDBCStoreManager.load(JDBCStoreManager.java:702)
+2014-01-07 07:21:37,717 - INFO  	at org.apache.openjpa.kernel.DelegatingStoreManager.load(DelegatingStoreManager.java:117)
+2014-01-07 07:21:37,717 - INFO  	at org.apache.openjpa.datacache.DataCacheStoreManager.load(DataCacheStoreManager.java:461)
+2014-01-07 07:21:37,717 - INFO  	at org.apache.openjpa.kernel.DelegatingStoreManager.load(DelegatingStoreManager.java:117)
+2014-01-07 07:21:37,717 - INFO  	at org.apache.openjpa.kernel.ROPStoreManager.load(ROPStoreManager.java:78)
+2014-01-07 07:21:37,717 - INFO  	at org.apache.openjpa.kernel.StateManagerImpl.loadFields(StateManagerImpl.java:3061)
+2014-01-07 07:21:37,717 - INFO  	at org.apache.openjpa.kernel.StateManagerImpl.loadField(StateManagerImpl.java:3136)
+2014-01-07 07:21:37,717 - INFO  	at org.apache.openjpa.kernel.StateManagerImpl.beforeAccessField(StateManagerImpl.java:1606)
+2014-01-07 07:21:37,717 - INFO  	at org.apache.openjpa.kernel.StateManagerImpl.accessingField(StateManagerImpl.java:1591)
+....
+
+
+We've narrowed this down to the fact that a HashMap is used in the org.apache.openjpa.datacache.DataCacheManagerImpl to globally serv our all the threads. So multiple threads can add and get information from the _cacheable at the same time.
+
+HashMaps are not thread safe and can get corrupted with eating the entire CPU. The problem is better described here (but you can find it in a lot of places):
+http://mailinator.blogspot.com/2009/06/beautiful-race-condition.html
+
+I could not find this bug logged yet and I'm surprised that nobody has ran into this yet. 
+
+Our plan for now is to just switch to ConcurrentHashMap instantiation for the _cacheable Map.

@@ -1,0 +1,35 @@
+TestStreaming.java  line 495
+
+
+  // Perl script
+	    String[] script =
+	        new String[] {
+	                      "#!/usr/bin/perl",
+                          "open(OUTFILE, \">\", $ARGV[0]) or die \"Can't open \".$ARGV[1].\"!: $!\";",
+                          "open(OUTFILE2, \">\", $ARGV[1]) or die \"Can't open \".$ARGV[2].\"!: $!\";",
+                          "while (<STDIN>) {",
+                          "  print OUTFILE \"$_\n\";",
+                          "  print STDERR \"STDERR: $_\n\";",
+                          "  print OUTFILE2 \"A,10\n\";",
+                          "}",
+	                     };
+
+
+this script has some problem when dealing with the input arguments. made some modifications:
+
+
+  // Perl script
+	    String[] script =
+	        new String[] {
+	                      "#!/usr/bin/perl",
+                          "open(OUTFILE, \">\", $ARGV[0]) or die \"Can't open \".$ARGV[0].\"!: $!\";",
+                          "open(OUTFILE2, \">\", $ARGV[1]) or die \"Can't open \".$ARGV[1].\"!: $!\";",
+                          "while (<STDIN>) {",
+                          "  print OUTFILE \"$_\n\";",
+                          "  print STDERR \"STDERR: $_\n\";",
+                          "  print OUTFILE2 \"A,10\n\";",
+                          "}",
+	                     };
+
+
+The same problem happens in line 554.

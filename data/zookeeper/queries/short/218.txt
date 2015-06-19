@@ -1,0 +1,1 @@
+error in barrier recipe example code

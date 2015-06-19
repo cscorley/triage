@@ -1,0 +1,1 @@
+Docs for IDENTITY_VAL_LOCAL needs to be updated to indicate that the return value will be impacted by single row UPDATE of identity column

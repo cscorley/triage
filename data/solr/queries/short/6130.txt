@@ -1,0 +1,1 @@
+solr-cell dependencies weren't fully upgraded with the Tika 1.4->1.5 upgrade

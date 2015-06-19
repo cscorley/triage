@@ -1,0 +1,1 @@
+Tomás Fernández Löbbe reported on SOLR-3033 that when specifying the init parameter combination "maxNumberOfBackups" with "backupAfter"=commit, the backups do not get cleaned up.  

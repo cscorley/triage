@@ -1,0 +1,1 @@
+For the Double Barriers example in the "ZooKeeper Recipes and Solutions" page, the P should be L in line 4 of the Leave pseudo code.

@@ -1,0 +1,9 @@
+See SOLR-6137 for more details.
+
+The basic issue is that Schema API changes return success when the first core is updated, but other cores asynchronously read the updated schema from ZooKeeper.
+
+So a client application could make a Schema API change and then index some documents based on the new schema that may fail on other nodes.
+
+Possible fixes:
+1) Make the Schema API calls synchronous
+2) Give the client some ability to track the state of the schema.  They can already do this to a certain extent by checking the Schema API on all the replicas and verifying that the field has been added, though this is pretty cumbersome.  Maybe it makes more sense to do this sort of thing on the collection level, i.e. Schema API changes return the zk version to the client.  We add an API to return the current zk version.  On a replica, if the zk version is >= the version the client has, the client knows that replica has at least seen the schema change.  We could also provide an API to do the distribution and checking across the different replicas of the collection so that clients don't need ot do that themselves.

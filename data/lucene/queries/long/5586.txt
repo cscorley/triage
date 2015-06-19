@@ -1,0 +1,3 @@
+BufferedChecksumIndexInput implements Cloneable, yet its close method would return a shallow copy that still wraps the same IndexInput and Checksum. This is trappy, because reading on the clone would also read on the original instance and update the checksum.
+
+Since Checksum are not cloneable, I think ChecksumIndexInput.clone should just throw an UOE.

@@ -1,0 +1,1 @@
+Pig on Tez output statistics shows storing to same directory twice for union

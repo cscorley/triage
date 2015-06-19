@@ -1,0 +1,2 @@
+The Term constructor from BytesRef javadoc indicates that a clone needs to be made of the BytesRef.
+But the clone() method of BytesRef is not what is meant, a deep copy needs to be made.

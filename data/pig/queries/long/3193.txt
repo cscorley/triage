@@ -1,0 +1,1 @@
+I see many warnings every time when I run "ant clean docs". They don't break build, but it would be nice if we could clean them if possible.

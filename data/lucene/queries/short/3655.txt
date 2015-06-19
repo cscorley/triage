@@ -1,0 +1,1 @@
+Add Maven artifact checks to dev-tools/scripts/smokeTestRelease.py

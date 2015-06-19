@@ -1,0 +1,1 @@
+Spatial- rename vector.TwoDoublesStrategy to vector.PointVectorStrategy

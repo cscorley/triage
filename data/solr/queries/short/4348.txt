@@ -1,0 +1,1 @@
+Make the lock type configurable by system property by default.

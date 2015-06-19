@@ -1,0 +1,1 @@
+We currently allow dots in "variable" names in expressions, so that we can fake out object access.  We should extend this to allow array access as well (both integer and string keys).  This would allow faking out full object nesting through bindings.

@@ -1,0 +1,1 @@
+zk needs to prevent export of any symbol not listed in their api

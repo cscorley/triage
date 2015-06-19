@@ -1,0 +1,18 @@
+Many Databases do not natively support the SQL-99 BOOLEAN datatype. Boolean and boolean fields in JPA entities will thus get represented as another type in the database. OpenJPA currently has a hardcoded mapping to int 1/0 in the base DBDictionary.
+
+But many existing databases don't use NUMBER(1) as column type but e.g. CHAR(1) (because it uses less space in the index). 
+There are also all sorts of possible representations where one of those is usually consistently used throughout a customer application:
+
+
+	Native Boolean -> PreparedStatement#setBoolean
+	Int 0/1 -> PreparedStatement#setInt
+	String "Y"/"N" -> PreparedStatement#setString
+	String "T"/"F" -> PreparedStatement#setString
+	String "y"/"n" -> PreparedStatement#setString
+	String "t"/"f" -> PreparedStatement#setString
+
+
+
+And I've also seen translated ones: "J"/"N" in german apps for "Ja"/ "Nein" (yes/no).
+
+So it should be possible to even add your own custom BooleanRepresentation.

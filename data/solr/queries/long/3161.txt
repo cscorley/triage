@@ -1,0 +1,12 @@
+I haven't yet looked at the code involved for suggestions here; I'm speaking based on how I think things should work and not work, based on intuitiveness and security. In general I feel it is best practice to use '/' leading request handler names and not use "qt", but I don't hate it enough when used in limited (search-only) circumstances to propose its demise. But if someone proposes its deprecation that then I am +1 for that.
+
+Here is my proposal:
+
+Solr should error if the parameter "qt" is supplied with a leading '/'. (trunk only)
+Solr should only honor "qt" if the target request handler extends solr.SearchHandler.
+The new admin UI should only use 'qt' when it has to. For the query screen, it could present a little pop-up menu of handlers to choose from, including "/select?qt=mycustom" for handlers that aren't named with a leading '/'. This choice should be positioned at the top.
+And before I forget, me or someone should investigate if there are any similar security problems with the shards.qt parameter. Perhaps shards.qt can abide by the same rules outlined above.
+
+Does anyone foresee any problems with this proposal?
+
+On a related subject, I think the notion of a default request handler is bad - the default="true" thing. Honestly I'm not sure what it does, since I noticed Solr trunk redirects '/solr/' to the new admin UI at '/solr/#/'. Assuming it doesn't do anything useful anymore, I think it would be clearer to use <requestHandler name="/select" class="solr.SearchHandler"> instead of what's there now. The delta is to put the leading '/' on this request handler name, and remove the "default" attribute.

@@ -1,0 +1,3 @@
+They should be using random() etc, and if they create one, it should pass in a seed.
+
+Otherwise, they probably won't reproduce.

@@ -1,0 +1,1 @@
+Rename ResourceAsStreamReasourceLoader to ClasspathResourceLoader, supply simple FilesystemResourceLoader

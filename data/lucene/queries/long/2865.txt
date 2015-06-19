@@ -1,0 +1,1 @@
+Weight#scorer(AtomicReaderContext, boolean, boolean) is hard to extend if another boolean like "needsScoring" or similar flags / information need to be passed to Scorers. An immutable struct would make such an extension trivial / way easier. 

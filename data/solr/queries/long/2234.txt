@@ -1,0 +1,4 @@
+When using Solr analysis panel with a custom filter that uses TermAttribute an error is output:
+
+"java.lang.IllegalArgumentException: This AttributeSource contains AttributeImpl of type org.apache.lucene.analysis.tokenattributes.CharTermAttributeImpl that is not in the target"
+

@@ -1,0 +1,13 @@
+In 4.0 livedocs are passed down to the enums, thus deleted docs are not so special.
+
+So I think checkindex should not pass the livedocs down to the enums when checking,
+it should pass livedocs=null and check all the postings. It already does this separately to 
+collect stats i think to compare against the term/collection statistics? But we should
+just clean this up and only use one enum.
+
+For example LUCENE-3876 is a case where we were actually making a corrumpt index,
+(a position was negative) but because the document in question was deleted, CheckIndex 
+didn't detect this.
+
+This could have caused problems if someone just passed null for livedocs (maybe they 
+are doing something where its not so important to take deletions into account)

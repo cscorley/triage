@@ -1,0 +1,1 @@
+As the title says, make BK use zookeeper from a snapshot maven repo. This should be removed before pushing out the release, but for now it will allow us to use Jenkins to sanity check the builds.

@@ -1,0 +1,1 @@
+There are some minor bugs in the Collections API error handling.

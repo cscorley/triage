@@ -1,0 +1,2 @@
+FacetRequest can be set a Depth parameter, which controls the depth of the result tree to be returned.
+When Sampling is enabled (and actually used) the Depth parameter gets reset to its default (1).

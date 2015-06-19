@@ -1,0 +1,13 @@
+DistributedUpdateProcessor has the following code:
+
+
+
+boolean isReplayOrPeersync = (cmd.getFlags() & (UpdateCommand.REPLAY | UpdateCommand.REPLAY)) != 0;
+
+
+
+It should be replaced by:
+
+
+boolean isReplayOrPeersync = (cmd.getFlags() & (UpdateCommand.REPLAY | UpdateCommand.PEER_SYNC)) != 0;
+

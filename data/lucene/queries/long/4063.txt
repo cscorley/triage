@@ -1,0 +1,2 @@
+FrenchLightStemmer performs aggressive deletions on repeated character sequences, even on numbers.
+This might be unexpected during full text search.

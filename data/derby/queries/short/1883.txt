@@ -1,0 +1,1 @@
+I18N tests fail on Linux/JVM 1.4.2 when derbyclient.jar is the first element of the classpath

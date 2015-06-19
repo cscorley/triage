@@ -1,0 +1,6 @@
+The "IsDisjointTo" SpatialOperation is not implemented for RecursivePrefixTreeStrategy and some/all others. It has been very low priority because it is simply the inverse of "Intersects" which is universally implemented on the SpatialStrategy implementations.  
+
+
+	Should spatial "disjoint" count documents that have no spatial data?
+	Arguably, there should be one implementation amongst the SpatialStrategies implemented in terms of "Intersects"; this way each strategy need not deal with it.
+

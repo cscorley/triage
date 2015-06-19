@@ -1,0 +1,9 @@
+While updating the findbugs configuration to account for a change in log4j versions I noticed findbugs complaining about access to the netty and slf4j classes.
+
+Steps to reproduce:
+
+
+	install findbugs to $FINDBUGS_HOME
+	run ant -Dfindbugs.home="$FINDBUGS_HOME" findbugs
+
+

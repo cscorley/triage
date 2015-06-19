@@ -1,0 +1,7 @@
+I was just looking through the ConnectionManager and want to jot these down before I forget them.  I'm happy to make a patch if someone thinks it's valuable as well.
+
+
+	"clientConnected" doesn't seem to be read, can be eliminated
+	"state" is a private volatile variable, but only used in one function – seems unlikely private volatile is what is wanted
+	A comment explaining why disconnected() is not called in the case of Expired would be helpful (Expired means we have already waited the timeout period so we want to reject updates right away)
+

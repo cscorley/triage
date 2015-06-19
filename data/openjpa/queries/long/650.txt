@@ -1,0 +1,5 @@
+The openjpa.RuntimeUnenhancedClasses configuration property (which supports the values of 'unsupported' & 'warn' that I learnt about on the mailing list, may be more) is missing documentation.
+
+A good place in the doc to say something about this very very useful and important to know about property may be the "2.4. Omitting the OpenJPA enhancer" chapter?
+
+PS, clarification: OPENJPA-651 is an Improvement suggesting making this the default; this one (OPENJPA-650) is "only" a Bug report ranting that documentation for openjpa.RuntimeUnenhancedClasses is missing - this doc should be provided whatever the decision on OPENJPA-651 turns out to be.

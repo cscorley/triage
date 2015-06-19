@@ -1,0 +1,3 @@
+Currently PFPF just records the name in the metadata, which matches up to the segment suffix. But this isnt enough, e.g. someone can use Pulsing(1) on one field and Pulsing(2) on another field.
+
+See Mark Harwood's examples struggling with this on LUCENE-4069.

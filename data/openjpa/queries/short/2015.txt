@@ -1,0 +1,1 @@
+ClassCastException when base entity class has InheritanceType.SINGLE_TABLE base with multiple entity subclasses

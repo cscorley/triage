@@ -1,0 +1,1 @@
+function runLeaderProcess(boolean) of calss ShardLeaderElectionContext contains a  rejionLeaderElection() invoke with wrong parameter rejoinLeaderElection(coreName, core). the parameter should be rejoinLeaderElection(leaderSeqPath, core)

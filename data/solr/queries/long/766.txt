@@ -1,0 +1,3 @@
+see solr-dev thread:
+
+http://mail-archives.apache.org/mod_mbox/lucene-solr-dev/200809.mbox/%3cF5467D92-D5DB-4A8E-808C-3C7159B2EEC5@gmail.com%3e

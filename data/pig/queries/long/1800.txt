@@ -1,0 +1,4 @@
+Maven Staging Signature Validation failed with following message:
+
+    -Missing Signature: '/org/apache/pig/pig/0.8.0/pig-0.8.0-sources.jar.asc' does not exist for 'pig-0.8.0-sources.jar'.
+    -Missing Signature: '/org/apache/pig/pig/0.8.0/pig-0.8.0-javadoc.jar.asc' does not exist for 'pig-0.8.0-javadoc.jar'.

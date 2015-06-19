@@ -1,0 +1,1 @@
+Make discard-punctuation feature in Kuromoji configurable from JapaneseTokenizerFactory

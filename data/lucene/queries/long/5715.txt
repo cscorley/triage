@@ -1,0 +1,5 @@
+LUCENE-5442 added functionality to the check-lib-versions ant task to fail the build if a direct dependency's version conflicts with that of a transitive dependency.
+
+ivy-ignore-conflicts.properties contains a list of 19 transitive dependencies with versions that are newer than direct dependencies' versions: https://issues.apache.org/jira/browse/LUCENE-5442?focusedCommentId=14012220&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14012220
+
+We should try to keep that list small.  It's likely that upgrading most of those dependencies will require little effort.

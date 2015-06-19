@@ -1,0 +1,1 @@
+remove field param from computeNorm, scorePayload ; remove UOE'd lengthNorm, switch SweetSpot to per-field 

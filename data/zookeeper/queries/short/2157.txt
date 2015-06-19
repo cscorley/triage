@@ -1,0 +1,1 @@
+Upgrade option should be removed from zkServer.sh usage

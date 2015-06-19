@@ -1,0 +1,1 @@
+DocIdSet in Elias-Fano encoding

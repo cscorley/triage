@@ -1,0 +1,1 @@
+Throw a more specific exception when SLF4J logging jars cannot be found on the classpath.

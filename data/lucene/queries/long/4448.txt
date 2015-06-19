@@ -1,0 +1,3 @@
+just some optimizations to the TokenStreamToAutomaton/escape workflow.
+
+I still don't understand whats going on with the escaping: this might be suboptimal.

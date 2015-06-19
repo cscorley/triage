@@ -1,0 +1,8 @@
+Spinoff from several dev@lao issues:
+
+	http://mail-archives.apache.org/mod_mbox/lucene-dev/201112.mbox/%3C001001ccbf1c%2471845830%24548d0890%24%40thetaphi.de%3E
+	issue LUCENE-3653
+
+
+
+The use cases for RAMDirectory are very limited and to prevent users from using it for e.g. loading a 50 Gigabyte index from a file on disk, we should improve the javadocs.

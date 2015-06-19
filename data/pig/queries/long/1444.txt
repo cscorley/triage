@@ -1,0 +1,1 @@
+Zebra build should have a test-smoke target that should atleast use minicluster for its test-cases

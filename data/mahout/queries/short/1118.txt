@@ -1,0 +1,1 @@
+SLF4J Log4j bindings are messed up causing examples to fail

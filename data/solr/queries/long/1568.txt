@@ -1,0 +1,25 @@
+Given an index with spatial information (either as a geohash, SpatialTileField (see SOLR-1586) or just two lat/lon pairs), we should be able to pass in a filter query that takes in the field name, lat, lon and distance and produces an appropriate Filter (i.e. one that is aware of the underlying field type for use by Solr. 
+
+The interface could look like:
+
+
+&fq={!sfilt dist=20}location:49.32,-79.0
+
+
+or it could be:
+
+
+&fq={!sfilt lat=49.32 lat=-79.0 f=location dist=20}
+
+
+or:
+
+
+&fq={!sfilt p=49.32,-79.0 f=location dist=20}
+
+
+or:
+
+
+&fq={!sfilt lat=49.32,-79.0 fl=lat,lon dist=20}
+

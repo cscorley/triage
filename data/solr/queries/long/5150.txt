@@ -1,0 +1,7 @@
+Patrick Hunt noticed that our HdfsDirectory code was a bit behind Blur here - the read call we are using may not read all of the requested bytes - it returns the number of bytes actually written - which we ignore.
+
+Blur moved to using a seek and then readFully call - synchronizing across the two calls to deal with clones.
+
+We have seen that really kills performance, and using the readFully call that lets you pass the position rather than first doing a seek, performs much better and does not require the synchronization.
+
+I also noticed that the seekInternal impl should not seek but be a no op since we are seeking on the read.

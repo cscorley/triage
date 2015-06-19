@@ -1,0 +1,32 @@
+From profiling of monitor contention, as well as observations of the
+95th and 99th response times for nodes that perform distributed search
+(or ‟aggregator‟ nodes) it would appear that the HttpShardHandler code
+currently does a suboptimal job of managing outgoing shard level
+requests.
+
+Presently the code contained within lucene 3.5's SearchHandler and
+Lucene trunk / 3x's ShardHandlerFactory create arbitrary threads in
+order to service distributed search requests. This is done presently to
+limit the size of the threadpool such that it does not consume resources
+in deployment configurations that do not use distributed search.
+
+This unfortunately has two impacts on the response time if the node
+coordinating the distribution is under high load.
+
+The usage of the MaxConnectionsPerHost configuration option results in
+aggressive activity on semaphores within HttpCommons, it has been
+observed that the aggregator can have a response time far greater than
+that of the searchers. The above monitor contention would appear to
+suggest that in some cases its possible for liveness issues to occur and
+for simple queries to be starved of resources simply due to a lack of
+attention from the viewpoint of context switching.
+
+With, as mentioned above the http commons connection being hotly
+contended
+
+The fair, queue based configuration eliminates this, at the cost of
+throughput.
+
+This patch aims to make the threadpool largely configurable allowing for
+those using solr to choose the throughput vs latency balance they
+desire.

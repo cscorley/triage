@@ -1,0 +1,10 @@
+Currently since LUCENE-2236, we can enable Similarity per-field, but in schema.xml there is only a 'global' factory
+for the SimilarityProvider.
+
+In my opinion this is too low-level because to customize Similarity on a per-field basis, you have to set your own
+CustomSimilarityProvider with <similarity class=.../> and manage the per-field mapping yourself in java code.
+
+Instead I think it would be better if you just specify the Similarity in the FieldType, like after <analyzer>.
+
+As far as the example, one idea from LUCENE-1360 was to make a "short_text" or "metadata_text" used by the
+various metadata fields in the example that has better norm quantization for its shortness...

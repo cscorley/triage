@@ -1,0 +1,3 @@
+This hashCode is implemented based on  #states and #transitions.
+
+These methods use getNumberedStates() though, which may oversize itself during construction and then "size down" when its done. But numberedStates is prematurely set (before its "ready"), which can cause a hashCode call from another thread to see a corrupt state... causing things like NPEs from null states and other strangeness. I don't think we should set this variable until its "finished".

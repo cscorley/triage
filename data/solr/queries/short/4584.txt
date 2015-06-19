@@ -1,0 +1,1 @@
+Request proxy mechanism not work if rows param is equal to zero

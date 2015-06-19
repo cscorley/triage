@@ -1,0 +1,1 @@
+Before I move the XML QueryParser to the queryparser module, I want to pass over it and bring it up to module standards.

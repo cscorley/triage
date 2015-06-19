@@ -1,0 +1,1 @@
+The edismax query parser should behave OK when a colon is in the query, but does not refer to a field name.

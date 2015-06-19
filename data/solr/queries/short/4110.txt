@@ -1,0 +1,1 @@
+Configurable Content-Type headers for PHPResponseWriters and PHPSerializedResponseWriter

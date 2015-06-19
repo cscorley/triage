@@ -1,0 +1,57 @@
+It appears that the versions in the pom for pig 0.10.0 are inconsistent with the versions specified in the ivy file used to build pig.  I am building a separate project, and I am getting pig and its dependencies using ivy.  
+
+Looking in ivy.xml in the pig 0.10.0 release:
+
+    <dependency org="org.apache.avro" name="avro" rev="$
+{avro.version}
+"
+      conf="compile->default;checkstyle->master"/>
+
+...
+
+    <dependency org="org.codehaus.jackson" name="jackson-mapper-asl" rev="$
+{jackson.version}"
+      conf="compile->master"/>
+    <dependency org="org.codehaus.jackson" name="jackson-core-asl" rev="${jackson.version}
+"
+      conf="compile->master"/>
+
+Where avro.version is avro.version=1.5.3 and jackson.version=1.7.3.
+
+However, in the pom.xml for pig 0.10.0:
+
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>avro</artifactId>
+      <version>1.3.2</version>
+
+And when I look up the pom for org.apache.hadoop's avro 1.3.2 in the central repository, I see a version of jackson inconsistent with what pig was compiled with:
+
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>1.4.2</version>
+      <scope>compile</scope>
+    </dependency>
+
+It's 1.4.2, not 1.7.3. 
+
+Below is my ivy.xml.  It's the same as what I used for 0.9.0 but I changed the pig version to 0.10.0.
+
+<ivy-module version="2.0">
+    <info organisation="datafu" module="datafu"/>
+    <dependencies>
+        <dependency org="org.apache.pig" name="pig" rev="0.10.0"/>
+        <dependency org="it.unimi.dsi" name="fastutil" rev="6.3"/>
+        <dependency org="joda-time" name="joda-time" rev="1.6"/>
+        <dependency org="org.apache.commons" name="commons-math" rev="2.1"/>
+        <dependency org="commons-io" name="commons-io" rev="1.4"/>
+        <dependency org="org.apache.hadoop" name="hadoop-core" rev="0.20.2"/>
+        <dependency org="org.testng" name="testng" rev="6.2"/>
+        <dependency org="com.google.guava" name="guava" rev="r06" />
+
+        <!-- needed for pigunit to work -->
+        <dependency org="log4j" name="log4j" rev="1.2.14" />
+        <dependency org="jline" name="jline" rev="0.9.94" />
+        <dependency org="org.antlr" name="antlr" rev="3.2" />
+    </dependencies>
+</ivy-module>

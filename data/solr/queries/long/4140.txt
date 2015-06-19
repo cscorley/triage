@@ -1,0 +1,12 @@
+CloudSolrServer needs an existing collection to be able to forward requests. For some requests it is not logical that you ned to have or reference an existing collection. E.g. if you want to use CloudSolrServer to create a collection - especially:
+
+	If you have no collections already and want to create your first collection
+	If you like to create your CloudSolrServer once and for all, and want to set default-collection on it to point to your favorite collection, but also use this CloudSolrServer to create this favorite collection
+
+
+
+Yes, HttpSolrServer can be used, but
+
+	Some of us like to use CloudSolrServer for everything
+	Using HttpSolrServer you need to check youself which nodes are running, in order to send the create-request to one of them
+

@@ -1,0 +1,1 @@
+Updating the nightly-upload profile and openjpa-project/upload.xml to use a key/passphrase.

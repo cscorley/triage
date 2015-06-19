@@ -1,0 +1,1 @@
+Lucene 3.1.0 added the ability to configure the IndexWriter's previously fixed internal thread limit by calling setMaxThreadStates. This parameter should be exposed through Solr configuration.

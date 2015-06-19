@@ -1,0 +1,7 @@
+Hunspell stemmer requires gigantic (for the task) amounts of memory to load dictionary/rules files. 
+For example loading a 4.5 MB polish dictionary (with empty index!) will cause whole core to crash with various out of memory errors unless you set max heap size close to 2GB or more.
+By comparison Stempel using the same dictionary file works just fine with 1/8 of that (and possibly lower values as well).
+
+Sample error log entries:
+http://pastebin.com/fSrdd5W1
+http://pastebin.com/Lmi0re7Z

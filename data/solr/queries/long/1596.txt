@@ -1,0 +1,3 @@
+anecdotal evidence of "SEVERE: SolrIndexWriter was not closed prior to finalize" messages seen in the wild.  May be related to using  the "rollback" command...
+
+http://old.nabble.com/SEVERE%3A-SolrIndexWriter-was-not-closed-prior-to-finalize-to26217896.html#a26217896

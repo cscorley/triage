@@ -1,0 +1,5 @@
+There is no API today to query BytesRefHash for the existence of a certain BytesRef. Rather, you should use .add(), which looks up the given bytes, and hashes them if they are not found, or returns their ord if they are found.
+
+I would like to add a simple getOrd API which will return the ord of a given BytesRef, or -1 if not found. I would like to use that API in the facet module, and I need to be able to query the hash without necessarily adding elements to it.
+
+I have a simple patch, will post shortly.

@@ -1,0 +1,16 @@
+
+
+ERROR 2087: Unexpected problem during optimization. Found index:0 in multiple LocalRearrange operators.
+
+org.apache.pig.impl.plan.optimizer.OptimizerException: ERROR 2087: Unexpected problem during optimization. Found index:0 in multiple LocalRearrange operators.
+    at org.apache.pig.backend.hadoop.executionengine.tez.plan.TezPOPackageAnnotator$LoRearrangeDiscoverer.visitLocalRearrange(TezPOPackageAnnotator.java:170)
+    at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLocalRearrange.visit(POLocalRearrange.java:185)
+    at org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLocalRearrange.visit(POLocalRearrange.java:52)
+    at org.apache.pig.impl.plan.DepthFirstWalker.depthFirst(DepthFirstWalker.java:69)
+    at org.apache.pig.impl.plan.DepthFirstWalker.depthFirst(DepthFirstWalker.java:71)
+    at org.apache.pig.impl.plan.DepthFirstWalker.depthFirst(DepthFirstWalker.java:71)
+    at org.apache.pig.impl.plan.DepthFirstWalker.walk(DepthFirstWalker.java:52)
+    at org.apache.pig.impl.plan.PlanVisitor.visit(PlanVisitor.java:46)
+    at org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhyPlanVisitor.visitSplit(PhyPlanVisitor.java:168)
+
+

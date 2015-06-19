@@ -1,0 +1,3 @@
+It's easy: go to https://reviews.apache.org/ and submit a review by clicking "new review request", then picking the project to be "mahout", base directory to be "trunk", and upload your patch.  Add "mahout" to the reviewer group of your reviewboard, pick some people you want to aim the review at (if you think you know the "owner" of the code area you're hitting), set the "bug number" in the appropriate field so that JIRA and RB will magically communicate, and don't forget to click the "publish" button when you're ready for people to look at it.  You can also look at your review directly for sanity checking before doing so by clicking on the "view diff" button.
+
+ReviewBoard can be slow and clunky, but inline comments in the diff are A+ goodness.

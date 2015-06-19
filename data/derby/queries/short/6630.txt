@@ -1,0 +1,1 @@
+Applications can use JCECipherFactory to elevate their privileges to those granted to Derby

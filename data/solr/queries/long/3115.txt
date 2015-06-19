@@ -1,0 +1,1 @@
+As discussed in SOLR-3056, the description in the default Japanese stopwords.txt should be improved to describe case- and width-handling.

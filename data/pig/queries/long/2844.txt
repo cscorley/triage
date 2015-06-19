@@ -1,0 +1,1 @@
+Currently we manually maintain a pom. We should use the ant makepom target for this

@@ -1,0 +1,23 @@
+Spinoff from: http://lucene.markmail.org/thread/ww6mhfi3rfpngmc5
+
+The text fieldType in schema.xml is unusable for non-whitespace
+languages, because it has the dangerous auto-phrase feature (of
+Lucene's QP – see LUCENE-2458) enabled.
+
+Lucene leaves this off by default, as does ElasticSearch
+(http://http://www.elasticsearch.org/).
+
+Furthermore, the "text" fieldType uses WhitespaceTokenizer when
+StandardTokenizer is a better cross-language default.
+
+Until we have language specific field types, I think we should fix
+the "text" fieldType to work well for all languages, by:
+
+
+	Switching from WhitespaceTokenizer to StandardTokenizer
+
+
+
+
+	Turning off auto-phrase
+

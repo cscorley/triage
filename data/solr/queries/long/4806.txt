@@ -1,0 +1,1 @@
+The SPLITSHARD collection api relies on the core admin WaitForState (actually PRERECOVERY) command to know when to move forward to the next step. But if the call times out (i.e. state is not visible in two minutes), it does not abort the splitshard action.

@@ -1,0 +1,1 @@
+FilterIndexReader in trunk does not implement getSequentialSubReaders() correctly

@@ -1,0 +1,15 @@
+Now that Unicode 6.1.0 has been released, Lucene/Solr should support it.
+
+JFlex trunk now supports Unicode 6.1.0.
+
+Tasks include:
+
+
+	Upgrade ICU4J to v49 (after it's released, on 2012-03-21, according to http://icu-project.org).
+	Use icu module tools to regenerate the supplementary character additions to JFlex grammars.
+	Version the JFlex grammars: copy the current implementations to *Impl3<X>; cause the versioning tokenizer wrappers to instantiate this version when the Version c-tor param is in the range 3.1 to the version in which these changes are released (excluding the range endpoints); then change the specified Unicode version in the non-versioned JFlex grammars from 6.0 to 6.1.
+	Regenerate JFlex scanners, including StandardTokenizerImpl, UAX29URLEmailTokenizerImpl, and HTMLStripCharFilter.
+	Using generateJavaUnicodeWordBreakTest.pl, generate and then run WordBreakTestUnicode_6_1_0.java  under modules/analysis/common/src/test/org/apache/lucene/analysis/core/
+
+
+

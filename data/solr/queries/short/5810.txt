@@ -1,0 +1,1 @@
+State of external collections not displayed in cloud graph panel

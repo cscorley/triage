@@ -1,0 +1,14 @@
+zkServer.sh is good at starting zookeeper and figuring out the right options to pass along.
+
+unfortunately if you want to wrap zookeeper startup/shutdown in any significant way, you have to reimplement a bunch of the logic there.
+
+the attached patch addresses a couple simple issues:
+1. add a 'start-foreground' option to zkServer.sh - this allows things that expect to manage a foregrounded process (daemontools, launchd, etc) to use zkServer.sh instead of rolling their own to launch zookeeper
+
+2. add a 'print-cmd' option to zkServer.sh - rather than launching zookeeper from the script, just give me the command you'd normally use to exec zookeeper.  I found this useful when writing automation to start/stop zookeeper as part of smoke testing zookeeper-based applications
+
+3. Deal more gracefully with supplying alternate configuration files to zookeeper - currently the script assumes all config files reside in $ZOOCFGDIR - also useful for smoke testing
+
+4. communicate extra info ("JMX enabled") about zookeeper on STDERR rather than STDOUT (necessary for #2)
+
+5. fixes an issue on macos where readlink doesn't have the '-f' option.

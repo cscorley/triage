@@ -1,0 +1,3 @@
+There are cons to raising this too high - right now we default to 10s - perhaps we should go a little safer with 15s?
+
+Probably the largest issue here is GC and load - I think on a well tuned setup, 10s is probably fine, but 15 should not hurt much and will give us a bit more breathing room?

@@ -1,0 +1,6 @@
+The information in Derby's JDBC implementation notes needs to be in the documentation.
+http://db.apache.org/derby/papers/JDBCImplementation.html
+
+At least one approach is to add it to the published Javadoc in the package.html for org.apache.derby.jdbc.
+
+This will make it easier for people to update and ensures that users of Derby have the information with a release.

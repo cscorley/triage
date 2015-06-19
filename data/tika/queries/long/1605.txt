@@ -1,0 +1,1 @@
+There are a handful of places in our codebase where we assume that getMessage() will return a non-null value.  We need to fix these to check for nulls.

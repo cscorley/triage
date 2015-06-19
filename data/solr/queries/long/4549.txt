@@ -1,0 +1,3 @@
+We're seeing a series of errors in different environments, a number of them look related to SOLR-4196 & etc. This is an omnibus bug to keep track of any commits for the record to track.
+
+I expect to accumulate revisions in this bug until the tests stabilize..

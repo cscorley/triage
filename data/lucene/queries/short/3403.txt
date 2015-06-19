@@ -1,0 +1,1 @@
+Term vectors missing after addIndexes + optimize

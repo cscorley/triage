@@ -1,0 +1,27 @@
+Running cluster-reuters.sh in examples/bin results in this:
+
+[snip]
+INFO: Number of Centroids: 0
+Jan 22, 2014 1:52:22 AM org.apache.hadoop.mapred.LocalJobRunner$Job run
+WARNING: job_local23982482_0001
+java.lang.IllegalArgumentException: Must have nonzero number of training and test vectors. Asked for %.1f %% of %d vectors for test [10.000000149011612, 0]
+        at com.google.common.base.Preconditions.checkArgument(Preconditions.java:120)
+        at org.apache.mahout.clustering.streaming.cluster.BallKMeans.splitTrainTest(BallKMeans.java:176)
+        at org.apache.mahout.clustering.streaming.cluster.BallKMeans.cluster(BallKMeans.java:192)
+        at org.apache.mahout.clustering.streaming.mapreduce.StreamingKMeansReducer.getBestCentroids(StreamingKMeansReducer.java:107)
+        at org.apache.mahout.clustering.streaming.mapreduce.StreamingKMeansReducer.reduce(StreamingKMeansReducer.java:73)
+        at org.apache.mahout.clustering.streaming.mapreduce.StreamingKMeansReducer.reduce(StreamingKMeansReducer.java:37)
+        at org.apache.hadoop.mapreduce.Reducer.run(Reducer.java:177)
+        at org.apache.hadoop.mapred.ReduceTask.runNewReducer(ReduceTask.java:649)
+        at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:418)
+        at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:398)
+
+[snip]
+
+WARNING: No qualcluster.props found on classpath, will use command-line arguments only
+Num clusters: 0; maxDistance: 0.000000
+[Dunn Index] First: Infinity
+[Davies-Bouldin Index] First: NaN
+Jan 22, 2014 1:52:24 AM org.slf4j.impl.JCLLoggerAdapter info
+INFO: Program took 535 ms (Minutes: 0.008916666666666666)
+cluster,distance.mean,distance.sd,distance.q0,distance.q1,distance.q2,distance.q3,distance.q4,count,is.train

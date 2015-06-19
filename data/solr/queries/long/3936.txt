@@ -1,0 +1,58 @@
+When I use elevation together with grouping I got not the expected result order.
+
+
+I tried it with the standard solr example:
+
+http://localhost:8983/solr/elevate?enableElevation=true&fl=score%2C[elevated]%2Cid%2Cname&forceElevation=true&group.field=manu&group=on&indent=on&q=ipod&wt=json 
+
+
+but the results ignored the elevation: 
+
+{ 
+  "responseHeader":{ 
+    "status":0, 
+    "QTime":2, 
+    "params":{ 
+      "enableElevation":"true", 
+      "fl":"score,[elevated],id,name", 
+      "indent":"on", 
+      "q":"ipod", 
+      "forceElevation":"true", 
+      "group.field":"manu", 
+      "group":"on", 
+      "wt":"json"}}, 
+  "grouped":{ 
+    "manu":{ 
+      "matches":2, 
+      "groups":[{ 
+          "groupValue":"belkin", 
+          "doclist":{"numFound":1,"start":0,"maxScore":0.7698604,"docs":[ 
+              
+{ 
+                "id":"F8V7067-APL-KIT", 
+                "name":"Belkin Mobile Power Cord for iPod w/ Dock", 
+                "score":0.7698604, 
+                "[elevated]":false}
+] 
+          }}, 
+        { 
+          "groupValue":"inc", 
+          "doclist":{"numFound":1,"start":0,"maxScore":0.28869766,"docs":[ 
+              
+{ 
+                "id":"MA147LL/A", 
+                "name":"Apple 60 GB iPod with Video Playback Black", 
+                "score":0.28869766, 
+                "[elevated]":true}
+] 
+          }}]}}}
+
+
+the elevate.xml defines the following rules :
+
+<query text="ipod">
+   <doc id="MA147LL/A" />  <!-- put the actual ipod at the top -->
+   <doc id="IW-02" exclude="true" /> <!-- exclude this cable -->
+ </query>
+
+</elevate>

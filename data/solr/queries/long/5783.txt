@@ -1,0 +1,18 @@
+I've been thinking recently about how/when we re-open searchers – and what the overhead of that is in terms of caches and what not – even if the underlying index hasn't changed.  
+
+The particular real world case that got me thinking about this recently is when a deleteByQuery gets forwarded to all shards in a collection, and then the subsequent (soft)Commit (either auto or explicit) opens a new searcher – even if that shard was completley uneffected by the delete.
+
+It got me wondering: why don't re-use the same searcher when the index is unchanged?
+
+From what I can tell, we're basically 99% of the way there (in <nrtMode/>)...
+
+
+	IndexWriter.commit is already smart enough to short circut if there's nothing to commit
+	SolrCore.openNewSearcher already uses DirectoryReader.openIfChanged to see if the reader can be re-used.
+	for "realtime" purposes, SolrCore.openNewSearcher will return the existing searcher if it exists and the DirectoryReader hasn't changed
+
+
+
+...The only reason I could think of for not always re-using the same searcher when the underlying DirectoryReader is identical (ie: that last bullet above) is in the situation where the "live" schema has changed – but that seems pretty trivial to account for.
+
+Is there any other reason why this wouldn't be a good idea for improving performance?

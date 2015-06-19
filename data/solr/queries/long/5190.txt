@@ -1,0 +1,6 @@
+As noted by users on the mailing list and elsewhere, SolrEntityProcessor cannot be used in a child entity because it substitutes variables only once.
+
+http://www.mail-archive.com/solr-user@lucene.apache.org/msg88002.html
+http://stackoverflow.com/questions/15734308/solrentityprocessor-is-called-only-once-for-sub-entities?lq=1
+
+SOLR-3336 attempted to fix the problem by moving variable substitution to the doQuery method but that fix is not complete because the doQuery method is called only once.

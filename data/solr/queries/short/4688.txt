@@ -1,0 +1,1 @@
+add tests related to reporting core init failures and lazy loaded cores

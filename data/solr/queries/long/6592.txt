@@ -1,0 +1,47 @@
+HttpPartitionTest is failing due to a ThreadLeakError, which I believe is because the re-try loop in ZkController.waitForLeaderToSeeDownState is coded to take upwards of 12 minutes to fail (2 minutes socket timeout, 6 max retries). The code should be improved to stop trying if the leader is gone, which seems to be the case here (maybe). At the very least, need to figure out how to avoid this ThreadLeakError.
+
+Build: http://jenkins.thetaphi.de/job/Lucene-Solr-5.x-Linux/11234/
+Java: 64bit/jdk1.8.0_40-ea-b04 -XX:+UseCompressedOops -XX:+UseG1GC
+
+2 tests failed.
+FAILED:  junit.framework.TestSuite.org.apache.solr.cloud.HttpPartitionTest
+
+Error Message:
+1 thread leaked from SUITE scope at org.apache.solr.cloud.HttpPartitionTest:     1) Thread[id=8655, name=Thread-2764, state=RUNNABLE, group=TGRP-HttpPartitionTest]         at java.net.SocketInputStream.socketRead0(Native Method)         at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)         at java.net.SocketInputStream.read(SocketInputStream.java:170)         at java.net.SocketInputStream.read(SocketInputStream.java:141)         at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)         at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)         at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)         at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)         at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)         at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)         at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)         at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)         at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:197)         at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)         at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)         at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:682)         at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)         at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)         at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)         at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)         at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)         at org.apache.solr.client.solrj.impl.HttpSolrServer.executeMethod(HttpSolrServer.java:466)         at org.apache.solr.client.solrj.impl.HttpSolrServer.request(HttpSolrServer.java:215)         at org.apache.solr.client.solrj.impl.HttpSolrServer.request(HttpSolrServer.java:211)         at org.apache.solr.cloud.ZkController.waitForLeaderToSeeDownState(ZkController.java:1623)         at org.apache.solr.cloud.ZkController.registerAllCoresAsDown(ZkController.java:422)         at org.apache.solr.cloud.ZkController.access$100(ZkController.java:93)         at org.apache.solr.cloud.ZkController$1.command(ZkController.java:261)         at org.apache.solr.common.cloud.ConnectionManager$1$1.run(ConnectionManager.java:166)
+
+Stack Trace:
+com.carrotsearch.randomizedtesting.ThreadLeakError: 1 thread leaked from SUITE scope at org.apache.solr.cloud.HttpPartitionTest:
+   1) Thread[id=8655, name=Thread-2764, state=RUNNABLE, group=TGRP-HttpPartitionTest]
+        at java.net.SocketInputStream.socketRead0(Native Method)
+        at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+        at java.net.SocketInputStream.read(SocketInputStream.java:170)
+        at java.net.SocketInputStream.read(SocketInputStream.java:141)
+        at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+        at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+        at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+        at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+        at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+        at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+        at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+        at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+        at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:197)
+        at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+        at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+        at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:682)
+        at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486)
+        at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+        at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+        at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+        at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+        at org.apache.solr.client.solrj.impl.HttpSolrServer.executeMethod(HttpSolrServer.java:466)
+        at org.apache.solr.client.solrj.impl.HttpSolrServer.request(HttpSolrServer.java:215)
+        at org.apache.solr.client.solrj.impl.HttpSolrServer.request(HttpSolrServer.java:211)
+        at org.apache.solr.cloud.ZkController.waitForLeaderToSeeDownState(ZkController.java:1623)
+        at org.apache.solr.cloud.ZkController.registerAllCoresAsDown(ZkController.java:422)
+        at org.apache.solr.cloud.ZkController.access$100(ZkController.java:93)
+        at org.apache.solr.cloud.ZkController$1.command(ZkController.java:261)
+        at org.apache.solr.common.cloud.ConnectionManager$1$1.run(ConnectionManager.java:166)
+        at __randomizedtesting.SeedInfo.seed([BE8A2D1EED13DDED]:0)
+
+
+FAILED:  junit.framework.TestSuite.org.apache.solr.cloud.HttpPartitionTest

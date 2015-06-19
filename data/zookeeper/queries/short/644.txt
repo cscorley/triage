@@ -1,0 +1,1 @@
+Nightly build failed on hudson.

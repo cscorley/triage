@@ -1,0 +1,7 @@
+Discussed in this thread: http://www.mail-archive.com/solr-user@lucene.apache.org/msg100870.html
+
+Currently the ReRankingQParserPlugin requires the client to drop the re-rank parameter during paging if it only wants the top N documents to be re-ranked and is getting past that N. This also requires that the N must fall on page borders. 
+
+ReRankingQParserPlugin should provide transparency for the client by returning results beyond N in their regular (non-reranked) order.
+
+NOTE: This ticket also fixed a bug when the main query contained fuzzy, range and other queries that need to rewritten. 

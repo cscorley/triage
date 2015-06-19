@@ -1,0 +1,5 @@
+If an existing message needs to have an adjustment of the number of parameters, the matching translated messages should either be also adjusted, or if the contributor doesn't know those languages, the message should be removed from the translated message files.
+
+A note of caution could be added to messages.xml, as that's where the change will be made.
+
+(Another possible place was the webpage http://db.apache.org/derby/manuals/messages.html, but the actual changes could be made while the developer is off-line, and thus the actual source file is a better location.)

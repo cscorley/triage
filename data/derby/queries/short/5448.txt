@@ -1,0 +1,1 @@
+In the 10.8 branch, back out the concurrency improvements introduced by using SequenceUpdaters to allocate identity values.

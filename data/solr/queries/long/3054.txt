@@ -1,0 +1,1 @@
+Create a TypeTokenFilterFactory to make the TypeTokenFilter (filtering tokens depending on token types, see LUCENE-3671) available in Solr too.

@@ -1,0 +1,1 @@
+Proper maven pluginManagement and use ianal-maven-plugin for enforcing legal files

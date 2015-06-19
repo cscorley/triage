@@ -1,0 +1,3 @@
+i just noticed that poll-mirrors.pl is setup to look for the KEYS file in the release dir on each mirror – Infra (wisely) tweaked the way mirroring happens recently to ensure that KEYS files are not mirrored anymore (presumably to help catch bad links advising people to download untrusted KEYS files)
+
+we're going to need to updated poll-mirrors.pl to look for something else in each release dir ... changes/Changes.html perhaps?

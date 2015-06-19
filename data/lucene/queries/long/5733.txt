@@ -1,0 +1,1 @@
+The PackedInts API has quite some history now and some of its methods are not used anymore, eg. PackedInts.Reader.hasArray. I'd like to remove them.

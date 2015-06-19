@@ -1,0 +1,1 @@
+TestRandomChains failure caused by incorrect delegation in CharReader/CharFilter/CharStream API

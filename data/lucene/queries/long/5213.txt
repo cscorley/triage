@@ -1,0 +1,9 @@
+We currently use the <script/> task to execute groovy script while building (SVN working copy tests, determining javadocs URL,...), which works perfectly fine.
+
+The backside is that the groovy classpath is passed as separate classpath to ANT every time a <script/> task is executed. This leads to the problem that we get the usual ANT permgen problems, especially when we execute such tasks on sub.modules (we currently don't do this).
+
+This is one reason why I did not yet port over the "svnversion" calls to svnkit, because its executed on every module. The license checker may have the same problem, once I port it over to be a simple groovy macro (see LUCENE-5210).
+
+This patch uses the <groovy/> taskdef. The taskdef is only loaded once and can be inherited to subants.
+
+There is currently one task/macro that does not use the <groovy/> task: pegdown, because its implemented as a <scriptfilter/>: It is used to filter the markdown and convert to HTML when copying the main web page. There is no replacement with groovy's taskdef unless I refactor it to not be a <filter/> inside a <copy/> task.

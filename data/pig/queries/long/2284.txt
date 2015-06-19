@@ -1,0 +1,1 @@
+For setting up pig to work with Hadoop and HBase, it would be nice if there is a post installation script to configure the location of Java, Hadoop, and HBase to setup the system properly for interacting with Hadoop related software.

@@ -1,0 +1,1 @@
+PeerSync doesn't count all connect failures as success.

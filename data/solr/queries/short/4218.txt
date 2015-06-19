@@ -1,0 +1,1 @@
+SolrTestCaseJ4 throws NPE when closing the core (on the afterClass method)

@@ -1,0 +1,4 @@
+Recently, a security weakness was found in SSLv3, POODLE: SSLv3 vulnerability (CVE-2014-3566)
+Derby supports ssl between the client and network server.
+
+We should investigate this and decide if we need to change our product, e.g. to eliminate support for SSL in favor of its successor TLS.

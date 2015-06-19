@@ -1,0 +1,1 @@
+Missing dictionary properties in OpenJPA docs

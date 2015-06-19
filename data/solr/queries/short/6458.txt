@@ -1,0 +1,1 @@
+SolrCellMorphlineTest.testSolrCellDocumentTypes2 fail: ignored_creation_date expected:<[2007-10-01T16:13:56Z]> but was:<[1464-10-01T16:13:56Z]>

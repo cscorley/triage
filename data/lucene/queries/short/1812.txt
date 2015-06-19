@@ -1,0 +1,1 @@
+Static index pruning by in-document term frequency (Carmel pruning)

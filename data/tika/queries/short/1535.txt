@@ -1,0 +1,1 @@
+Inheritance modification for the class MIMETypes

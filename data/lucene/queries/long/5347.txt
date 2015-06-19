@@ -1,0 +1,8 @@
+Forbidden-apis 1.4 is out, new features are:
+
+	upgrade to ASM 5.0_BETA
+	Improved Java 8 support: support for invokedynamic to methodhandles of static methods (used by "::"  closures)
+	Reduce memory usage (see LUCENE-4753)
+	some Maven improvements
+	fix signatures of commons-io (thanks Robert Muir)
+

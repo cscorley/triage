@@ -1,0 +1,1 @@
+TestIndexWriterExceptions threw this today, and its reproducable

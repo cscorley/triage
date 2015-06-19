@@ -1,0 +1,1 @@
+The START and STOP scripts for Network Server in the frameworks\bin directory fail if there is a space in the filepath of JAVA_HOME

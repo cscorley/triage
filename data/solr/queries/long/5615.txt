@@ -1,0 +1,17 @@
+The sequence of events which might trigger this is as follows:
+
+
+	Leader of a shard, say OL, has a ZK expiry
+	The new leader, NL, starts the election process
+	NL, through Overseer, clears the current leader (OL) for the shard from the cluster state
+	OL reconnects to ZK, calls onReconnect from event thread (main-EventThread)
+	OL marks itself down
+	OL sets up watches for cluster state, and then retrieves it (with no leader for this shard)
+	NL, through Overseer, updates cluster state to mark itself leader for the shard
+	OL tries to register itself as a replica, and waits till the cluster state is updated
+   with the new leader from event thread
+	ZK sends a watch update to OL, but it is blocked on the event thread waiting for it.
+
+
+
+Oops. This finally breaks out after trying to register itself as replica times out after 20 mins.

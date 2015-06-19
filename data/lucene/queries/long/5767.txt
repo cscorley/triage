@@ -1,0 +1,5 @@
+OrdinalMap does its best to store a mapping from segment to global ordinals with as little memory as possible using MonotonicAppendingLongBuffer. In the low-cardinality case, there are things that could be optimized though:
+
+	on large segments, it's quite likely that the segment ordinals will perfectly match the global ordinals. In that case there is nothing to do, we can just return the segment ordinal as-is.
+	even if they don't, it might be that storing the global ordinals directly in a PackedInts.Mutable only takes slightly more memory while removing the overhead of the monotonic encoding.
+

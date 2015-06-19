@@ -1,0 +1,1 @@
+DrillSidewaysScorer should use Scorer.cost instead of its own heuristic

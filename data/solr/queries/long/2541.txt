@@ -1,0 +1,6 @@
+As of version 3.1 Plugininfo adds all nodes whose types are not "lst","str","int","bool","arr","float" or "double" to the children list.
+
+The type "long" is missing in the NL_TAGS set.
+I assume this a bug because DOMUtil recognizes this type, so I consider it a valid tag in solrconfig.xml
+Maybe it's time for a dtd? Or one may define SolrConfig.nodetypes somewhere.
+I'll add a patch, that extends the NL_TAGS Set.

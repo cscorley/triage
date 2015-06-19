@@ -1,0 +1,1 @@
+Rename Sorter, NumericDocValuesSorter, and fix javadocs

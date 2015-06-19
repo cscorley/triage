@@ -1,0 +1,1 @@
+OpenExchangeRates.Org Exchange Rate Provider

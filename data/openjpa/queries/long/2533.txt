@@ -1,0 +1,44 @@
+Take this simple entity:
+
+@Entity
+@javax.persistence.NamedQuery(name = "TableNameInXmlEntity.findAll", query = "SELECT t FROM TableNameInXmlEntity t")
+public class TableNameInXmlEntity implements Serializable {
+    @Id
+    private int myid;
+.......
+
+Take this simple XML mapping entry:
+
+<entity-mappings..........
+    <entity class="org.apache.openjpa.persistence.xml.TableNameInXmlEntity">
+        <table name="TableNameInXml"/>
+    </entity>
+</entity-mappings>
+
+With this code, take the following test to execute the named query:
+
+        Query q = em.createNamedQuery("TableNameInXmlEntity.findAll");
+        q.getResultList();
+
+The following SQL will be generated:
+
+SELECT t0.myid FROM TableNameInXmlEntity t0
+
+Notice that 'TableNameInXmlEntity' is used, rather than 'TableNameInXml' (i.e. the name defined in the XML mapping file).
+
+Rather than executing a named query, if we execute a query like the following:
+
+Query q = em.createQuery("SELECT t FROM TableNameInXmlEntity t");
+q.getResultList();
+
+The following (correct) SQL will be executed:
+
+SELECT t0.myid FROM TableNameInXml t0
+
+Finally, if we executed the above query, and THEN execute the named query, all will work as expected.
+
+I have a test I'll upload shortly which recreates the issue.
+
+Thanks,
+
+Heath

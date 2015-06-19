@@ -1,0 +1,1 @@
+OptimizerTracer.unloadTool() could be used to write garbage over Derby data files.

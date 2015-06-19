@@ -1,0 +1,5 @@
+If you create say a stopwords list with windows notepad or other editors and save as UTF-8, 
+some of these editors will insert a byte-order marker (zero-width no-break space) as the first 
+character of the file.
+
+http://www.lucidimagination.com/search/document/5101871231fc95af/is_this_a_bug_of_the_ressourceloader

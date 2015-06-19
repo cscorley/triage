@@ -1,0 +1,6 @@
+Implement optimizations for LIMIT when other parts of Pig-on-Tez are more mature. Some of the optimizations mentioned by Daniel include:
+
+1. If the previous stage using 1 reduce, no need to add one more vertex
+2. If the limitplan is null (ie, not the "limited order by" case), we might not need a shuffle edge, a pass through edge should be enough if possible
+3. Similar to PIG-1270, we can push limit to InputHandler
+4. We also need to think through the "limited order by" case once "order by" is implemented

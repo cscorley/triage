@@ -1,0 +1,1 @@
+AnalyzerWrapper doesn't work with CharFilters.

@@ -1,0 +1,1 @@
+Fields in an Entity which contain a DBCS character are quoted in generated SQL, unlike SBCS, which can cause case-sensitivity issues.

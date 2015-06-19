@@ -1,0 +1,7 @@
+Various vulnerabilities in FileMonitor allow applications to perform security-sensitive operations with the elevated privileges granted to Derby:
+
+getDaemonThread() - The application can call this method in order to create threads, using Derby's elevated privileges.
+
+getJVMProperty() -  The application can call this in order to read system properties using Derby's elevated privileges.
+
+setThreadPriority() - The application can call this method to change the priority of a daemon thread it has created. This call will execute with Derby's elevated privileges.

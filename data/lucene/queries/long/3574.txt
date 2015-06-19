@@ -1,0 +1,2 @@
+Preparation for LUCENE-3235:
+This adds constants to quickly detect Java6 and Java7 to Constants.java. It also deprecated and removes the outdated historical Java versions.

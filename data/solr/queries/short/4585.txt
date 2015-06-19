@@ -1,0 +1,1 @@
+The Collections API validates numShards with < 0 but should use <= 0.

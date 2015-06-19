@@ -1,0 +1,13 @@
+The following Pig script fails if the records within the file are corrupted.
+
+
+
+DEFINE AvroLoader org.apache.pig.piggybank.storage.avro.AvroStorage('ignore_bad_files');
+ DH_RAW = LOAD 'bad_data*' USING AvroLoader();
+STORE DH_RAW INTO 'output' USING PigStorage();
+
+
+
+Here is the stack trace:
+
+java.lang.ArrayIndexOutOfBoundsException: -49 at org.apache.pig.piggybank.storage.avro.PigAvroRecordReader.getCurrentValue(PigAvroRecordReader.java:230) at org.apache.pig.piggybank.storage.avro.AvroStorage.getNext(AvroStorage.java:407) ... 12 more Caused by: java.lang.ArrayIndexOutOfBoundsException: -49 at org.apache.avro.io.parsing.Symbol$Alternative.getSymbol(Symbol.java:364) at org.apache.avro.io.ResolvingDecoder.doAction(ResolvingDecoder.java:229) at org.apache.avro.io.parsing.Parser.advance(Parser.java:88) at org.apache.avro.io.ResolvingDecoder.readIndex(ResolvingDecoder.java:206) at org.apache.avro.generic.GenericDatumReader.read(GenericDatumReader.java:152) at org.apache.pig.piggybank.storage.avro.PigAvroDatumReader.readMap(PigAvroDatumReader.java:89) at org.apache.avro.generic.GenericDatumReader.read(GenericDatumReader.java:151) at org.apache.pig.piggybank.storage.avro.PigAvroDatumReader.readRecord(PigAvroDatumReader.java:73) at org.apache.avro.generic.GenericDatumReader.read(GenericDatumReader.java:148) at org.apache.pig.piggybank.storage.avro.PigAvroDatumReader.readRecord(PigAvroDatumReader.java:73) at org.apache.avro.generic.GenericDatumReader.read(GenericDatumReader.java:148) at org.apache.avro.generic.GenericDatumReader.read(GenericDatumReader.java:139) at org.apache.avro.file.DataFileStream.next(DataFileStream.java:233) at org.apache.avro.file.DataFileStream.next(DataFileStream.java:220) at org.apache.pig.piggybank.storage.avro.PigAvroRecordReader.getCurrentValue(PigAvroRecordReader.java:198) ..

@@ -1,0 +1,13 @@
+I'm using SolrCloud. When I'm trying to create index snapshot - exception occurs:
+INFO: [test] webapp=/solr path=/replication params=
+{command=backup&numberToKeep=1}
+ status=0 QTime=1
+Dec 07, 2012 6:00:02 PM org.apache.solr.handler.SnapShooter createSnapshot
+SEVERE: Exception while creating snapshot
+java.io.FileNotFoundException: File /solr/cores/test/data/index/segments_g does not exist
+        at org.apache.solr.handler.SnapShooter$FileCopier.copyFile(SnapShooter.java:194)
+        at org.apache.solr.handler.SnapShooter$FileCopier.copyFiles(SnapShooter.java:185)
+        at org.apache.solr.handler.SnapShooter.createSnapshot(SnapShooter.java:105)
+        at org.apache.solr.handler.SnapShooter$1.run(SnapShooter.java:78)
+
+Issue occurs randomly. Reloading core usually helps, but sometimes core has to be reloaded couple of times to make snapshot possible.

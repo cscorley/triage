@@ -1,0 +1,1 @@
+e2e test harness needs to be able to mark certain tests as ignored

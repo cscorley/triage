@@ -1,0 +1,1 @@
+Deprecate defaultSearchField and defaultOperator defined in schema.xml

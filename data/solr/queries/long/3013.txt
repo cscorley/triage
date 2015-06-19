@@ -1,0 +1,2 @@
+Add UIMA based tokenizers / filters that can be declared and used directly inside the schema.xml.
+Thus instead of using the UIMA UpdateRequestProcessor one could directly define per-field NLP capable tokenizers / filters.

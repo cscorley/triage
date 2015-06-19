@@ -1,0 +1,1 @@
+'ant javadocs' should fail if a package is missing a package.html

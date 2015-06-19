@@ -1,0 +1,1 @@
+localParams syntax for standard query parser

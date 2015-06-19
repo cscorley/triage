@@ -1,0 +1,19 @@
+Suppose we have an entity "Employee" and we have the following properties specified in persistence.xml:
+
+<property name='openjpa.jdbc.SynchronizeMappings'  value='buildSchema(ForeignKeys=true)' />
+<property name='openjpa.jdbc.Schema' value='jpa' />
+
+OpenJPA  should create table "jpa:employee" if it does not exist in the database, and do nothing if the table already exists.
+
+But in MySQL, it tries to create the table when the table already exists in database, and we will get the following exception because of this:
+
+<openjpa-1.1.0-SNAPSHOT-r422266:647033 nonfatal general error> 
+org.apache.openjpa.persistence.PersistenceException: Table 'employee' already exists 
+{stmnt 7294825 CREATE TABLE jpa.employee (id BIGINT NOT NULL, PRIMARY KEY (id)) TYPE = innodb}
+ [code=1050, state=42S01]
+at  org.apache.openjpa.jdbc.meta.MappingTool.record(MappingTool.java:553)
+at org.apache.openjpa.jdbc.meta.MappingTool.record(MappingTool.java:453)
+at org.apache.openjpa.jdbc.kernel.JDBCBrokerFactory.synchronizeMappings(JDBCBrokerFactory.java:159)
+...
+
+This is because MySQL doesn't have concept of schema, and the column metadata from MySQL doesn't contain schema information. Hence OpenJPA fails to find the table although the table exists in database.

@@ -1,0 +1,1 @@
+Stopwords and stoptags lists for Japanese needs to be developed, tested and integrated into Lucene.

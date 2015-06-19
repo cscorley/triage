@@ -1,0 +1,1 @@
+Remove support for pre-3.0 indexes

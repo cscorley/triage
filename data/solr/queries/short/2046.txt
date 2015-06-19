@@ -1,0 +1,1 @@
+add a function to set curl_url in scripts-util

@@ -1,0 +1,1 @@
+BinaryUpdateRequestHandler should be able to accept multiple update requests from a stream

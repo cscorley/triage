@@ -1,0 +1,1 @@
+Performance issue with large number of fields and values when using copyFields

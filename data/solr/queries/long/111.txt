@@ -1,0 +1,9 @@
+Similar to Solr::Request::* a Solr::Response::* hierarchy was created as well as a Solr::Response::Base which has a factory method for creating the appropriate response based on the request type and the raw response.
+
+Also added delete(), delete_by_query(), add(), update() and query() methods to Solr::Connection. This gets a bit closer to a DSL type of syntax which doesn't require the user to know the inner workings of solrb. I adjusted README accordingly.
+
+Solr::Connection also operates with autocommit turned on so commit() messages are not required when doing add(), update(), delete() calls. It can be turned off if the user doesn't want they extra http traffic.
+
+Added the ability to iterate over search results. Although need to add the ability to iterate over complete results, fetching data behind the scenes as necessary.
+
+Unit tests have been added and functional tests improved.

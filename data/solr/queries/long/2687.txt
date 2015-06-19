@@ -1,0 +1,10 @@
+Find below the news of the new Solr book. I can provide an image when prompted. Below is a news item and I've included the URL for the new book. The text is as follows:
+
+
+Rafał Kuć is proud to introduce a new book on Solr, "Apache Solr 3.1 Cookbook" from Packt Publishing.
+
+The Solr 3.1 Cookbook will make your everyday work easier by using real-life examples that show you how to deal with the most common problems that can arise while using the Apache Solr search engine. 
+
+This cookbook will show you how to get the most out of your search engine. Each chapter covers a different aspect of working with Solr from analyzing your text data through querying, performance improvement, and developing your own modules. The practical recipes will help you to quickly solve common problems with data analysis, show you how to use faceting to collect data and to speed up the performance of Solr. You will learn about functionalities that most newbies are unaware of, such as sorting results by a function value, highlighting matched words, and computing statistics to make your work with Solr easy and stress free.
+
+Click here to read more about the Apache Solr 3.1 Cookbook. (http://www.packtpub.com/solr-3-1-enterprise-search-server-cookbook/book)

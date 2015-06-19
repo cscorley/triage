@@ -1,0 +1,17 @@
+The scripts under the /bin directory of the distribution does not have the execute permission.  
+
+Here is the dir listing:
+rw-rr- 1 rajeshk RD 1153 2006-09-15 12:12 dblook
+rw-rr- 1 rajeshk RD 1353 2006-09-15 12:20 dblook.bat
+rw-rr- 1 rajeshk RD 2348 2006-09-15 12:12 derby_common.bat
+rw-rr- 1 rajeshk RD 4853 2006-09-15 12:56 derby_common.sh
+rw-rr- 1 rajeshk RD 1241 2006-09-15 12:12 ij
+rw-rr- 1 rajeshk RD 1345 2006-09-15 12:20 ij.bat
+..
+..
+
+
+The issue was raised in the list earlier
+http://www.nabble.com/Questions-on-the-scripts-in--bin--directory-of-Derby-install-p6271633.html
+
+but  looks it is not fully resolved.

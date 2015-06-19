@@ -1,0 +1,5 @@
+I've always been surprised to see the <defaultSearchField> element and <solrQueryParser defaultOperator="OR"/> defined in the schema.xml file since the first time I saw them.  They just seem out of place to me since they are more query parser related than schema related. But not only are they misplaced, I feel they shouldn't exist. For query parsers, we already have a "df" parameter that works just fine, and explicit field references. And the default lucene query operator should stay at OR – if a particular query wants different behavior then use q.op or simply use "OR".
+
+<similarity> Seems like something better placed in solrconfig.xml than in the schema. 
+
+In my opinion, defaultSearchField and defaultOperator configuration elements should be deprecated in Solr 3.x and removed in Solr 4.  And <similarity> should move to solrconfig.xml. I am willing to do it, provided there is consensus on it of course.

@@ -1,0 +1,2 @@
+The replication factor for a collection as of now is not persisted and used while adding replicas.
+We should save the replication factor at collection factor as well as shard level.

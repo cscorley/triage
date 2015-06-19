@@ -1,0 +1,1 @@
+for any core registry.jsp (aka: "INFO" link) incorrectly lists info about last core declared

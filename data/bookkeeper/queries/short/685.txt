@@ -1,0 +1,1 @@
+Race in compaction algorithm from BOOKKEEPER-664

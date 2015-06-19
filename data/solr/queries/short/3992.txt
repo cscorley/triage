@@ -1,0 +1,1 @@
+QuerySenderListener doesn't populate document cache

@@ -1,0 +1,1 @@
+Missing AgentClass attribute in openjpa-all-xxx.jar manifest.mf

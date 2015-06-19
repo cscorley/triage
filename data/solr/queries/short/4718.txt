@@ -1,0 +1,1 @@
+Allow solr.xml to be stored in zookeeper

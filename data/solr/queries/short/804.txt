@@ -1,0 +1,1 @@
+include lucene misc jar in solr distro

@@ -1,0 +1,1 @@
+remove some per-term waste in SimpleFacets

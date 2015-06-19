@@ -1,0 +1,1 @@
+amend example's schema.xml and solrconfig.xml for blockjoin support

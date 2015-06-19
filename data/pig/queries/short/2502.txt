@@ -1,0 +1,1 @@
+Make "hcat.bin" configurable in e2e test

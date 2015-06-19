@@ -1,0 +1,3 @@
+noticed that within org/apache/tika/tika-config.xml the mime type application/xhtml+xml is missing or is there any reason why this hasn't been set?
+
+We should include the mime type application/xhtml+xml as a trigger for the XMLParser.

@@ -1,0 +1,19 @@
+Just saw this on my private jenkins:
+
+
+
+Error Message
+
+Task 20140128 not found in completed tasks. expected:<found 20140128 in [completed] tasks> but was:<found 20140128 in [running] tasks>
+Stacktrace
+
+org.junit.ComparisonFailure: Task 20140128 not found in completed tasks. expected:<found 20140128 in [completed] tasks> but was:<found 20140128 in [running] tasks>
+	at __randomizedtesting.SeedInfo.seed([531157FE6D39FBB:84D79B67918CFF87]:0)
+	at org.junit.Assert.assertEquals(Assert.java:125)
+	at org.apache.solr.cloud.AsyncMigrateRouteKeyTest.checkAsyncRequestForCompletion(AsyncMigrateRouteKeyTest.java:61)
+	at org.apache.solr.cloud.AsyncMigrateRouteKeyTest.invokeMigrateApi(AsyncMigrateRouteKeyTest.java:78)
+	at org.apache.solr.cloud.MigrateRouteKeyTest.multipleShardMigrateTest(MigrateRouteKeyTest.java:202)
+	at org.apache.solr.cloud.AsyncMigrateRouteKeyTest.doTest(AsyncMigrateRouteKeyTest.java:46)
+	at org.apache.solr.BaseDistributedSearchTestCase.testDistribSearch(BaseDistributedSearchTestCase.java:865)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+

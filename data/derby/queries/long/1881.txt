@@ -1,0 +1,17 @@
+Release notes look good in general, like the build environment section.
+
+Under admin it says:
+  "System procedures have been added for access to diagnostic information ..."
+Should be "System tables", not "System procedures"
+
+Under SQL suppport it says:
+  " Standard datatypes including BLOB and CLOB"
+would be good to change to
+  " Standard datatypes including XML, BLOB and CLOB"
+
+Under JDBC 4.0 Support it has
+  "If you compile Derby code ... . This Restriction is imposed ..."
+I don't believe we should have these two sentences in here. It's not a restriction imposed by the ASF, so it's not relevant.
+Also trying to summarize the terms of a licence is always fraught with danger, I don't believe the summary here is correct'.
+
+The release notes for DERBY-501 and DERBY-1314 are very similar, could they be combined?

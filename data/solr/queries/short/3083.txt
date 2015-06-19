@@ -1,0 +1,1 @@
+all JMX Mbeans are identified as java.lang.String even if numeric

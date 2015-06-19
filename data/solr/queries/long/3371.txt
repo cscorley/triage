@@ -1,0 +1,3 @@
+If you make a core with the name "logging" or "threads" the UI gets confused with the logging or threads page.
+
+It seems like the ~threads and ~logging should be enough to distinguish

@@ -1,0 +1,1 @@
+Make SlowMultiReaderWrapper wrap always so close() is safe

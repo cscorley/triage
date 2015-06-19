@@ -1,0 +1,1 @@
+It would be convenient to have support for zig-zag-encoded integers in DataInput/DataOutput. There are not many places that use that feature today but I think it's quite common to need to read/write small signed values.

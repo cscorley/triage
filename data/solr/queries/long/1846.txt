@@ -1,0 +1,3 @@
+Setting abortOnConfigurationError==false has not worked for some time, and based on a POLL of existing users, no one seems to need/want it, so we should remove support for it completely to make error handling and reporting work more cleanly.
+
+http://n3.nabble.com/POLL-Users-of-abortOnConfigurationError-tt484030.html#a484030

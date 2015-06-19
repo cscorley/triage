@@ -1,0 +1,1 @@
+Modify derbynet/testProperties.java test to run with 10.1client/10.2 server

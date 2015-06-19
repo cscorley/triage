@@ -1,0 +1,55 @@
+storetests/st_derby715.java fails in J2ME in 10.1 branch with following diff:
+
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									Diff file derbyall/storeall/storetests/st_derby715.diff
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+			Start: st_derby715 jdkJ2ME Foundation Specification v1.0 storeall:storetests 2006-02-11 23:42:11 ***
+1 del
+< Got a Deadlock.
+2 del
+< Got a Deadlock.
+3 del
+< Got a Deadlock.
+4 del
+< Got a Deadlock.
+5 del
+< Got a Deadlock.
+5 add
+> Exception in thread "main" SQL Exception: Database 'wombat' not found.
+Test Failed.
+			End:   st_derby715 jdkJ2ME Foundation Specification v1.0 storeall:storetests 2006-02-11 23:42:12 ***
+		
+		
+	
+	
+
+
+
+The database used by this test is created by the first test run in storetests suite (st_schema.sql). This test is excluded from J2ME. I'll submit a patch to enable this test in a short while.

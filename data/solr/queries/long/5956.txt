@@ -1,0 +1,7 @@
+Ran into an issue where the getRawInstanceDir method on CoreDescriptor returns an invalid directory on the server. Need to track down where this bad value comes from and fix it. I suspect this has to do with me using symlinks
+e.g.
+I have server with solr.solr.home set to
+/home/ec2-user/lucene-solr/solr/cloud87/solr, which in reality is:
+/vol0/cloud87/solr as /home/ec2-user/lucene-solr/solr/cloud87 is a symlink to /vol0/cloud87
+getRawInstanceDir was returning /vol0/cloud87/demo_shard1_replica1 which is missing the /solr part of the directory path, should be:
+/vol0/cloud87/solr/demo_shard1_replica1

@@ -1,0 +1,1 @@
+Lucene FST is not immutable

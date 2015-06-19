@@ -1,0 +1,3 @@
+This seems to happen when we stop a jetty instance and then get a port in use exception when trying to start-up again. Old, old issue, never been able to prevent it from happening 100%.
+
+Oddly, it doesn't seem to happen in ChaosMonkeySafeLeaderTest.

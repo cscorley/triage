@@ -1,0 +1,7 @@
+Suggested by Yonik on solr-user:
+http://www.mail-archive.com/solr-user@lucene.apache.org/msg95045.html
+
+
+Although it seems like it should be relatively simple to make it work
+with other fields as well, by passing down the complete "fl" requested
+if some optional parameter is set (distrib.singlePass?)

@@ -1,0 +1,1 @@
+AnalyzingSuggester should use end() offset to decide if last token ended or not

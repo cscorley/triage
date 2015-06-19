@@ -1,0 +1,5 @@
+Currently, this outputs way too much, e.g. including all test output for every passing run (because this is the behavior when -Dtestcase is set).
+
+Especially with tests.verbose, this is really annoying as you have output from say 200 runs that you don't care about.
+
+I think ant beast should only show the interesting output for the failing run and try to suppress unnecessary output as much as possible for passing ones (it should be JUST enough to know your test ran and passed and not ignored, e.g. you didnt screw up).

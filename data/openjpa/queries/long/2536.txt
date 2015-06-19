@@ -1,0 +1,36 @@
+I have found an issue with FetchGroups not returning 'lazy' fields.  To describe, take this entity:
+
+@Entity
+@FetchGroup(name = "HardwareSimple", attributes = 
+{ @FetchAttribute(name = "status"),
+    @FetchAttribute(name = "statusActive") }
+)
+public class HardwareStatus implements Serializable {
+
+    @Id
+    private String status;
+    private String statusActive;
+    private String condition;
+    private int connection;
+...............
+
+
+With this Entity, take the following scenario:
+
+OpenJPAEntityManager openJpaEm = OpenJPAPersistence.cast(em);
+openJpaEm.getFetchPlan().resetFetchGroups().removeFetchGroup("default").addFetchGroups("HardwareSimple");
+
+HardwareStatus h1 = em.find(HardwareStatus.class, "Lost");
+//h1.status contains "Lost" in the db.
+assertEquals("Lost",h1.getStatus());  //this assert passes
+//h1.connection contains '2' in the db.        
+assertEquals(2, h1.getConnection());  //this assert fails, 0 is returned by the getter.
+//h1.condition contains "Used" in the db.
+assertEquals("Used", h1.getCondition());  //this assert fails, null is returned by the getter.
+
+The latter two h1.get* do not return the correct values.  These fields are 'lazy' (i.e. not part of the FetchGroup) but should be fetched when requested.  See the attached test for full details.
+
+Thanks,
+
+Heath
+

@@ -1,0 +1,14 @@
+If you use the core admin handler to create core and reference system properties and index files without restarting Solr, your files are indexed to the wrong place.
+
+Say for instance I define a sys prop EOE=/Users/Erick/tmp and create a core with this request
+localhost:8983/solr/admin/cores?action=CREATE&name=coreZ&instanceDir=coreZ&dataDir=%24%7BEOE%7D
+
+where %24%7BEOE%7D is really $
+{EOE} after URL escaping. What gets preserved in solr.xml is correct, dataDir is set to ${EOE}
+. And if I restart Solr, then index documents, they wind up in /Users/Erick/tmp. This is as it should be.
+
+HOWEVER, if rather than immediately restart Solr I index some documents to CoreZ, they go in <solr_home>/CoreZ/$
+{EOE}. The literal path is ${EOE}
+, dollar sign, curly braces and all.
+
+How important is this to fix for 4.4?

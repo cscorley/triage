@@ -1,0 +1,1 @@
+lang/releaseCompileLocks.sql and lang/closed.java fail under JDK 1.6 in insane mode

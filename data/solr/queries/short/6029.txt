@@ -1,0 +1,1 @@
+CollapsingQParserPlugin throws ArrayIndexOutOfBoundsException if elevated doc has been deleted from a segment

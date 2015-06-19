@@ -1,0 +1,1 @@
+PhoneticFilterFactory threadsafety bug

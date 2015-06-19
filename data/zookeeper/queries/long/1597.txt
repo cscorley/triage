@@ -1,0 +1,161 @@
+Seems to be related to C client changes done for ZK-1355.
+We're not sure why these build failures happen on Windows.
+
+###################################################################################
+
+	
+	
+		
+		
+			
+			
+				
+				
+					
+					
+						
+						
+							
+							
+								
+								
+									
+									
+										
+										
+											
+											
+												
+												
+													
+													
+														
+														
+															
+															
+																
+																
+																	
+																	
+																		
+																		
+																			
+																			
+																				
+																				
+																					
+																					
+																						
+																						
+																							
+																							
+																								
+																								
+																									
+																									
+																										LAST 60 LINES OF THE CONSOLE ###########################
+[...truncated 376 lines...]
+  .\src\zookeeper.c(768): error C2224: left of '.count' must have struct/union type
+  .\src\zookeeper.c(768): error C2065: 'i' : undeclared identifier
+  .\src\zookeeper.c(770): error C2065: 'resolved' : undeclared identifier
+  .\src\zookeeper.c(770): error C2224: left of '.data' must have struct/union type
+  .\src\zookeeper.c(770): error C2065: 'i' : undeclared identifier
+  .\src\zookeeper.c(773): error C2065: 'rc' : undeclared identifier
+  .\src\zookeeper.c(774): error C2065: 'rc' : undeclared identifier
+  .\src\zookeeper.c(780): error C2065: 'rc' : undeclared identifier
+  .\src\zookeeper.c(781): error C2065: 'rc' : undeclared identifier
+  .\src\zookeeper.c(788): error C2143: syntax error : missing ';' before 'type'
+  .\src\zookeeper.c(789): error C2143: syntax error : missing ';' before 'type'
+  .\src\zookeeper.c(792): error C2065: 'num_old' : undeclared identifier
+  .\src\zookeeper.c(792): error C2065: 'num_new' : undeclared identifier
+  .\src\zookeeper.c(794): error C2065: 'found_current' : undeclared identifier
+  .\src\zookeeper.c(797): error C2065: 'num_old' : undeclared identifier
+  .\src\zookeeper.c(797): error C2065: 'num_new' : undeclared identifier
+  .\src\zookeeper.c(814): error C2065: 'found_current' : undeclared identifier
+  .\src\zookeeper.c(819): error C2065: 'num_old' : undeclared identifier
+  .\src\zookeeper.c(819): error C2065: 'num_old' : undeclared identifier
+  .\src\zookeeper.c(819): error C2065: 'num_new' : undeclared identifier
+  .\src\zookeeper.c(819): error C2065: 'num_old' : undeclared identifier
+  .\src\zookeeper.c(819): error C2065: 'num_new' : undeclared identifier
+  .\src\zookeeper.c(819): error C2065: 'num_old' : undeclared identifier
+  .\src\zookeeper.c(825): error C2065: 'resolved' : undeclared identifier
+  .\src\zookeeper.c(825): error C2440: '=' : cannot convert from 'int' to 'addrvec_t'
+  .\src\zookeeper.c(843): error C2065: 'resolved' : undeclared identifier
+  .\src\zookeeper.c(843): error C2224: left of '.data' must have struct/union type
+  .\src\zookeeper.c(845): error C2065: 'resolved' : undeclared identifier
+  .\src\zookeeper.c(848): error C2065: 'hosts' : undeclared identifier
+  .\src\zookeeper.c(849): error C2065: 'hosts' : undeclared identifier
+  .\src\zookeeper.c(850): error C2065: 'hosts' : undeclared identifier
+  .\src\zookeeper.c(853): error C2065: 'rc' : undeclared identifier
+  .\src\zookeeper.c(1177): error C2143: syntax error : missing ';' before 'const'
+  .\src\zookeeper.c(1179): error C2065: 'endpoint_info' : undeclared identifier
+  .\src\zookeeper.c(1883): error C2143: syntax error : missing ';' before 'type'
+  .\src\zookeeper.c(1884): error C2065: 'rc' : undeclared identifier
+  .\src\zookeeper.c(1885): error C2065: 'rc' : undeclared identifier
+  .\src\zookeeper.c(1916): error C2143: syntax error : missing ';' before 'type'
+  .\src\zookeeper.c(1920): error C2143: syntax error : missing ';' before 'type'
+  .\src\zookeeper.c(1927): error C2065: 'ssoresult' : undeclared identifier
+  .\src\zookeeper.c(1927): error C2065: 'enable_tcp_nodelay' : undeclared identifier
+  .\src\zookeeper.c(1927): error C2065: 'enable_tcp_nodelay' : undeclared identifier
+  .\src\zookeeper.c(1928): error C2065: 'ssoresult' : undeclared identifier
+  .\src\zookeeper.c(1944): error C2065: 'rc' : undeclared identifier
+  .\src\zookeeper.c(1949): error C2065: 'rc' : undeclared identifier
+  .\src\zookeeper.c(1962): error C2065: 'rc' : undeclared identifier
+  .\src\zookeeper.c(1963): error C2065: 'rc' : undeclared identifier
+  .\src\zookeeper.c(2004): error C2065: 'rc' : undeclared identifier
+  .\src\zookeeper.c(2004): fatal error C1003: error count exceeds 100; stopping compilation
+																									
+																									
+																								
+																								
+																							
+																							
+																						
+																						
+																					
+																					
+																				
+																				
+																			
+																			
+																		
+																		
+																	
+																	
+																
+																
+															
+															
+														
+														
+													
+													
+												
+												
+											
+											
+										
+										
+									
+									
+								
+								
+							
+							
+						
+						
+					
+					
+				
+				
+			
+			
+		
+		
+	
+	
+
+
+
+    38 Warning(s)
+    102 Error(s)

@@ -1,0 +1,3 @@
+The Javadoc for org.apache.lucene.analysis.pattern.PatternCaptureGroupFilterFactory shows the analyzer usage snippet.
+
+The snippet incorrectly uses underlying PatternCaptureGroupTokenFilter - which would not work. This needs to be changed to the factory name itself.

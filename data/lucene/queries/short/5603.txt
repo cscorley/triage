@@ -1,0 +1,1 @@
+fix hunspell to use FST efficiently

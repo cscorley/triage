@@ -1,0 +1,1 @@
+Bin scripts don't work on Mac

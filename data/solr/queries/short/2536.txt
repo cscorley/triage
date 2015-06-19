@@ -1,0 +1,1 @@
+add reloadCache feature to ExternalFileField

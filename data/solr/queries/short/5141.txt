@@ -1,0 +1,1 @@
+the VelocityResponseWriter can't find lucene.IOUtils from within IntelliJ

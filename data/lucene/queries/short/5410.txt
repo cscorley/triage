@@ -1,0 +1,1 @@
+Add fuzziness support to SimpleQueryParser

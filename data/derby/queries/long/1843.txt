@@ -1,0 +1,3 @@
+The new dblook.bat script  (when you unzip the beta bin distribution it's under %DERBY_HOME%\bin) does not pass on arguments, so it always returns the usage message.
+
+see discussion http://article.gmane.org/gmane.comp.apache.db.derby.devel/29373

@@ -1,0 +1,1 @@
+Add some more Adobe file formats to the mimetype list

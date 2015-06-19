@@ -1,0 +1,1 @@
+AvroMapWrapper still leaks Avro data types and AvroStorageDataConversionUtilities do not handle Pig maps

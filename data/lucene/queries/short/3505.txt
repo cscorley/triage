@@ -1,0 +1,1 @@
+BooleanScorer2.freq() doesnt work unless you call score() first.

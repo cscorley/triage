@@ -1,0 +1,5 @@
+This has baked for some time: no crazy fails in hudson or anything.
+
+The code (in my opinion) is actually a lot simpler than the current postings format, its faster, the indexes are smaller, and so on.
+
+We should probably spend some time just going over the code and adding some more tests and such but I think its time to start looking at cutting over.

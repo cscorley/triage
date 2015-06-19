@@ -1,0 +1,3 @@
+This tokenizer segments sentences into words, but doesnt have a test for multiple sentences.
+
+Since its not yet released, it would be good to fix for 4.8 so no user sees the bug.

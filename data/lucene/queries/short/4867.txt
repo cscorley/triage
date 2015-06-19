@@ -1,0 +1,1 @@
+SorterTemplate.merge is slow

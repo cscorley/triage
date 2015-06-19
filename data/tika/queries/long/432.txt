@@ -1,0 +1,16 @@
+As described on legal-discsuss [1], to use the NetCDF lib in Tika, we need to update our NOTICE and LICENSE files per Henri Yandell's comments that mention:
+
+<snip>
+In terms of NOTICE.txt; I go with the following:
+
+
+	If putting in your own source code, then add the 3rd party license
+text to the end of your LICENSE file and put in the NOTICE:
+
+
+
+"Copyright 1993-2010 University Corporation for Atmospheric Research/Unidata
+This software contains code derived from UCAR/Unidata's NetCDF library."
+</snip>
+
+[1] http://mail-archives.apache.org/mod_mbox/www-legal-discuss/201005.mbox/ajax/%3cC8196C96.1379F%25Chris.A.Mattmann@jpl.nasa.gov%3e

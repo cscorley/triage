@@ -1,0 +1,1 @@
+CoreDescriptor attempts to use the name before checking if it is null

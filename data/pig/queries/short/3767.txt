@@ -1,0 +1,1 @@
+Work with TEZ-668 which allows starting and closing of inputs and outputs

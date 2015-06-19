@@ -1,0 +1,8 @@
+Right now there is little to no information exposed about the overseer from SolrCloud.
+
+I propose that we have an API for overseer status which can return:
+
+	Past N commands executed (grouped by command type)
+	Status (queue-size, current overseer leader node)
+	Overseer log
+

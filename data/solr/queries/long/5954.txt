@@ -1,0 +1,19 @@
+Hi, 
+SOLR-5734 introduced a regression that causes that the connections used in the dataimport process were closed and reopen in every sql.
+
+The change to nanoTime in the method getConnection of JdbcDataSource.java forgot to convert the timeout used to reuse the connection.
+
+The constant CONN_TIME_OUT must be changed to nanos to be compared. (*1000*1000)
+
+private Connection getConnection() throws Exception {
+long currTime = System.nanoTime();
+if (currTime - connLastUsed > CONN_TIME_OUT) {<<<<<<<<<<<<<<<
+synchronized (this)
+{ Connection tmpConn = factory.call(); closeConnection(); connLastUsed = System.nanoTime(); return conn = tmpConn; }
+} else
+{ connLastUsed = currTime; return conn; }
+}
+
+private static final long CONN_TIME_OUT = 10 * 1000; // 10 seconds
+
+Regards

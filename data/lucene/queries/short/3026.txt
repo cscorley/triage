@@ -1,0 +1,1 @@
+smartcn analyzer throw NullPointer exception when the length of analysed text over 32767

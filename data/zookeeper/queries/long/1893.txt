@@ -1,0 +1,1 @@
+automake switched to run tests in parallel by default in 1.13, but zktest-st and zktest-mt can't run in parallel. We can use the serial-tests option to run tests serially but this option was introduced in automake 1.12. I don't know which version of automake buidbot has. I'll upload the patch and see.

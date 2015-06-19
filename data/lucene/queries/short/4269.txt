@@ -1,0 +1,1 @@
+TestBalancedSegmentMergePolicy.setUp hang

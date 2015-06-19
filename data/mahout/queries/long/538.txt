@@ -1,0 +1,3 @@
+The profile structure for the POMS is error prone, as the distribution module is conditional, and so can be left out when it needs to be in.
+
+Switch to a structure where all the modules are in, but slow plugin executions are disabled when we don't want them.

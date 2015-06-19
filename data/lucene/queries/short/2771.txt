@@ -1,0 +1,1 @@
+Remove norms() support from non-atomic IndexReaders

@@ -1,0 +1,1 @@
+basetokenstreamtestcase should fail if tokenstream starts with posinc=0

@@ -1,0 +1,3 @@
+AvroStorageSchemaConversionUtilities and SchemaTuple use org.mortbay.log as their logger.
+
+I've removed that with common logging like the rest of the Pig code

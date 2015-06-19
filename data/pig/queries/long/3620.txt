@@ -1,0 +1,36 @@
+Here is a simplest example that reproduces the issue-
+test.pig
+
+a = LOAD 'foo' AS (x:int, y:chararray);
+b = GROUP a BY x;
+c = FOREACH b GENERATE a.x;
+STORE c INTO 'c';
+d = FOREACH b GENERATE a.y;
+STORE d INTO 'd';
+
+
+If you run pig -x tez_local -e 'explain -script test.pig', you will see two vertices that contains the following sub-plan- 
+
+
+Tez vertex scope-27
+# Plan on vertex
+b: Local Rearrange[tuple]{int}(false) - scope-10
+|   |
+|   Project[int][0] - scope-11
+|
+|---a: New For Each(false,false)[bag] - scope-7
+    |   |
+    |   Cast[int] - scope-2
+    |   |
+    |   |---Project[bytearray][0] - scope-1
+    |   |
+    |   Cast[chararray] - scope-5
+    |   |
+    |   |---Project[bytearray][1] - scope-4
+    |
+    |---a: Load(file:///Users/cheolsoop/workspace/pig/foo:org.apache.pig.builtin.PigStorage) - scope-0
+
+
+What's happening is that since there are 2 stores (and thus 2 data flows, i.e. a=>c and a=>d), Pig generates two physical plans. Now TezCompile compiles them into a single tez plan but adds the same sub-plan twice.
+
+This is an issue with any blocking operators (join, union, etc) followed by split.

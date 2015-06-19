@@ -1,0 +1,1 @@
+Extend geodist() to support MultiValued lat long field

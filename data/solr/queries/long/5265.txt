@@ -1,0 +1,1 @@
+Since Solr guarantees backward compatibility of JavaBinCodec's format between releases, we should have tests for it.

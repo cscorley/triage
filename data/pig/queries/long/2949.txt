@@ -1,0 +1,12 @@
+I'm trying to load a vendor file that's json ecoded into pig. One of the fields is an array of strings. The builtin JsonLoader only reads arrays composed of json objects
+
+
+{"object_array}
+:[
+{"element":"value1"}
+,
+{"element":"value2"}
+]} works
+but
+{"string_array"}
+:["value1","value2"] does not

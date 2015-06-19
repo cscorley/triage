@@ -1,0 +1,20 @@
+In LUCENE-4258 we started to work on incremental field updates, however the amount of changes are immense and hard to follow/consume. The reason is that we targeted postings, stored fields, DV etc., all from the get go.
+
+I'd like to start afresh here, with numeric-dv-field updates only. There are a couple of reasons to that:
+
+
+	NumericDV fields should be easier to update, if e.g. we write all the values of all the documents in a segment for the updated field (similar to how livedocs work, and previously norms).
+
+
+
+
+	It's a fairly contained issue, attempting to handle just one data type to update, yet requires many changes to core code which will also be useful for updating other data types.
+
+
+
+
+	It has value in and on itself, and we don't need to allow updating all the data types in Lucene at once ... we can do that gradually.
+
+
+
+I have some working patch already which I'll upload next, explaining the changes.

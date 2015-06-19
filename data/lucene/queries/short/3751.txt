@@ -1,0 +1,1 @@
+Align default Japanese configurations for Lucene and Solr

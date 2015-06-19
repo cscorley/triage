@@ -1,0 +1,10 @@
+I've ran this tool (does the job): http://code.google.com/p/versioncheck/ on the checkout of branch_3x. To my surprise there is a JAR which contains Java 1.6 code:
+
+
+Major.Minor Version : 50.0             JAVA compatibility : Java 1.6 platform: 45.3-50.0
+Number of classes : 60
+
+Classes are : 
+c:\Work\lucene-solr\.\solr\contrib\extraction\lib\netcdf-4.2-min.jar [:] ucar/unidata/geoloc/Bearing.class
+...
+

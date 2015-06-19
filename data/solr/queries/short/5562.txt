@@ -1,0 +1,1 @@
+ConcurrentUpdateSolrServer constructor ignores supplied httpclient

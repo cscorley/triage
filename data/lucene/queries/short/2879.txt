@@ -1,0 +1,1 @@
+MultiPhraseQuery sums its own idf instead of Similarity.

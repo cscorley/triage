@@ -1,0 +1,1 @@
+CMS setters cannot work unless you setMaxMergeCount before you setMaxThreadCount

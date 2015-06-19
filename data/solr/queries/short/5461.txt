@@ -1,0 +1,1 @@
+Request proxying should only set con.setDoOutput(true) if the request is a post.

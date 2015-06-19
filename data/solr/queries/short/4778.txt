@@ -1,0 +1,1 @@
+Move LogWatcher initialization code out of CoreContainer

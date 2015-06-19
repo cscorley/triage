@@ -1,0 +1,1 @@
+IndexWriter currently uses Version from IndexWriterConfig to determine the semantics of close().  This is a trapdoor for users, as they often default to just sending Version.LUCENE_CURRENT since they don't understand what it will be used for.  Instead, we should make the semantics of close a direction option in IWC.

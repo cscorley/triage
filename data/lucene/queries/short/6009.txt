@@ -1,0 +1,1 @@
+Remove redundant == NO_MORE_DOCS checks

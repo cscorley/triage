@@ -1,0 +1,1 @@
+FieldBoostMapAttribute in contrib/qp is broken.

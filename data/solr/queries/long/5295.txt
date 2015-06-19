@@ -1,0 +1,20 @@
+As reported by Brett Hoerner on solr-user:
+http://www.mail-archive.com/solr-user@lucene.apache.org/msg89545.html
+
+
+It seems that changes in 4.5 collection configuration now require users to
+set a maxShardsPerNode (or it defaults to 1).
+
+Maybe this was the case before, but with the new CREATESHARD API it seems a
+very restrictive. I've just created a very simple test collection on 3
+machines where I set maxShardsPerNode at collection creation time to 1, and
+I made 3 shards. Everything is good.
+
+Now I want a 4th shard, it seems impossible to create because the cluster
+"knows" I should only have 1 shard per node. Yet my problem doesn't require
+more hardware, I just my new shard to exist on one of the existing servers.
+
+So I try again – I create a collection with 3 shards and set
+maxShardsPerNode to 1000 (just as a silly test). Everything is good.
+
+Now I add shard4 and it immediately tries to add 1000 replicas of shard4...

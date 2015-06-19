@@ -1,0 +1,1 @@
+Implement a Solr specific naming service (using Zookeeper)

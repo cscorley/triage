@@ -1,0 +1,1 @@
+Use do priv for to get CL for Oracle empty blob/clob

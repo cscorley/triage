@@ -1,0 +1,1 @@
+Mahout dependencies are unified under dependency management in parent pom

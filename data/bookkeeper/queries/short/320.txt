@@ -1,0 +1,1 @@
+Let hedwig cpp client could publish messages using Message object instead of string.

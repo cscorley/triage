@@ -1,0 +1,1 @@
+I propose that we rework the LoadFunc, StoreFunc, and Slice/r interfaces significantly.  See http://wiki.apache.org/pig/LoadStoreRedesignProposal for full details

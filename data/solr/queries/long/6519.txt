@@ -1,0 +1,7 @@
+Because of NIO2 changes and the corresponding workaround, it is impossible now to create a Directory and "hope" that the lock factory directory is not created. Especially if you want some non-standard lock factory, this blows up.
+
+The problem is: The lock dir is now created in ctor. As workaround I made all factories set NoLockFactory initially through ctor (see SOLR-6518), but this is just a workaround for incorrect API design.
+
+In fact the main problem is just stupid: Why does protected CachingDirectoryFactory.create() not take the lock factory? I think its because of backwards compatibility, but with Solr 5.0 we can change this.
+
+In future we want to make the lock factory non-mutable in Directory, so this is an important change. In addition, injectLockFactory looks horrible, this code is a häckidy-hick-hack!

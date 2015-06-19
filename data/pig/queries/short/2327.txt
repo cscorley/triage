@@ -1,0 +1,1 @@
+bin/pig doesn't have any hooks for picking up ZK installation deployed from tarballs

@@ -1,0 +1,1 @@
+Widen some access level modifiers to allow the load balancer to be extended and plugged into an HttpShardHandler instance using an extended HttpShardHandlerFactory.

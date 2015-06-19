@@ -1,0 +1,76 @@
+I've found that PigStorage doesn't parse empty maps properly.
+I'm using pig-0.11.0-cdh4.4.0, but reading the source code, it would be reproduced in the later versions.
+
+An empty map in a field of a tuple is parsed as null.
+test.txt
+
+empty []
+nonempty [foo#bar]
+
+
+test.pig
+
+A = LOAD '/tmp/test.txt' USING PigStorage(' ') AS (a:chararray, b:map[chararray]);
+DUMP A;
+
+
+
+
+$ pig test.pig
+...
+(empty,)
+(nonempty,[foo#bar])
+
+
+
+Moreover, if the empty map is nested in a parent field, the entire field is interpreted as null.
+test-nested.txt
+
+empty (f1,[])
+nonempty (f1,[foo#bar])
+
+
+test.pig
+
+A = LOAD '/tmp/test.txt' USING PigStorage(' ') AS (a:chararray, (b:chararray, b:map[chararray]));
+DUMP A;
+
+
+
+
+$ pig test.pig
+...
+(empty,)
+(nonempty,(f1,[foo#bar]))
+
+
+
+Investigating this, I've found it is because Utf8StorageConverter#consumeMap throws IOException when it receives empty map as string '[]'. It seems like always assuming there should be a content of map, more specifically '#' character.
+
+
+    private Map<String, Object> consumeMap(PushbackInputStream in, ResourceFieldSchema fieldSchema) throws IOException {
+        int buf;
+        
+        while ((buf=in.read())!='[') {
+            if (buf==-1) {
+                throw new IOException("Unexpect end of map");
+            }
+        }
+        HashMap<String, Object> m = new HashMap<String, Object>();
+        ByteArrayOutputStream mOut = new ByteArrayOutputStream(BUFFER_SIZE);
+        while (true) {
+            // Read key (assume key can not contains special character such as #, (, [, {, }, ], )
+            while ((buf=in.read())!='#') {
+                if (buf==-1) {
+                    throw new IOException("Unexpect end of map");
+                }
+                mOut.write(buf);
+            }
+            String key = bytesToCharArray(mOut.toByteArray());
+            if (key.length()==0)
+                throw new IOException("Map key can not be null");
+
+
+
+I would appreciate if you could fix this problem.
+Thanks.

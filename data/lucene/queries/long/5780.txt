@@ -1,0 +1,15 @@
+Robert found a case when the ordinal map can be quite wasteful in terms of memory usage: in order to be able to resolve values given a global ordinals, it stores two things:
+
+	an identifier of the segment where the value is
+	the difference between the ordinal on the segment and the global ordinal
+
+
+
+The issue is that OrdinalMap currently picks any of the segments that contain the value but we can do better: we can pick the first segment that has the value. This will help for two reasons:
+
+	it will potentially require fewer bits per value to store the segment ids if NRT segments don't introduce new values
+	if all values happen to appear in the first segment, then the map from global ords to deltas only stores zeros.
+
+
+
+I just tested on an index where all values are in the first segment and this helped reduce memory usage of the ordinal map by 4x (from 3.5MB to 800KB).

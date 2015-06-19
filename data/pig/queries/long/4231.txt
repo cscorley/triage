@@ -1,0 +1,19 @@
+Rank does not work with Spark since PORank and POCounter have  not been implemented yet.
+
+Pig Stack Trace
+---------------
+ERROR 0: java.lang.IllegalArgumentException: Spork unsupported PhysicalOperator: (Name: DATA: POCounter[tuple] - scope-146 Operator Key: scope-146)
+
+org.apache.pig.backend.executionengine.ExecException: ERROR 0: java.lang.IllegalArgumentException: Spork unsupported PhysicalOperator: (Name: DATA: POCounter[tuple] - scope-146 Operator Key: scope-146)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.launchPig(HExecutionEngine.java:285)
+	at org.apache.pig.PigServer.launchPlan(PigServer.java:1378)
+	at org.apache.pig.PigServer.executeCompiledLogicalPlan(PigServer.java:1363)
+	at org.apache.pig.PigServer.execute(PigServer.java:1352)
+	at org.apache.pig.PigServer.executeBatch(PigServer.java:403)
+	at org.apache.pig.PigServer.executeBatch(PigServer.java:386)
+	at org.apache.pig.tools.grunt.GruntParser.executeBatch(GruntParser.java:170)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:233)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:204)
+	at org.apache.pig.tools.grunt.Grunt.exec(Grunt.java:81)
+	at org.apache.pig.Main.run(Main.java:482)
+	at org.apache.pig.Main.main(Main.java:164)

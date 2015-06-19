@@ -1,0 +1,1 @@
+test lang/floattypes fails with jdk 1.3 based jvms

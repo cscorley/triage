@@ -1,0 +1,8 @@
+Some Java source files contain mixed CRLF and LF line breaks.
+
+This causes trouble in our tool chain, but may also introduce unnecessary noise when committers use editors that normalize line breaks.
+
+Possible solution: Require a specific eol-style for Java source files.
+
+Example:
+http://svn.apache.org/repos/asf/tika/tags/1.8/tika-batch/src/main/java/org/apache/tika/batch/ParallelFileProcessingResult.java

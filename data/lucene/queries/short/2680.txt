@@ -1,0 +1,1 @@
+Improve how IndexWriter flushes deletes against existing segments

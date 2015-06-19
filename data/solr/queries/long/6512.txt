@@ -1,0 +1,30 @@
+This is a sub-task for SOLR-6491, but seems generally useful. 
+
+Since this is in support of the "preferredLeader" functionality, I've run into some considerations that I wanted some feedback on how to handle.
+
+"preferredLeader" has the restriction that there should only be one per slice, so setting this for a particular node means removing the property for all the other replicas on the slice. Not a problem to do, my question is more whether this is something reasonable to enforce on an arbitrary property based on what that property is? Perfectly do-able, but "semantically challenged". Currently, this is never a node with "preferedLeader" set to "false", it is forcibly removed from other nodes in the slice when this property is assigned.
+
+The problem here is that there's nothing about assigning an arbitrary property to a node that would reasonably imply this kind of behavior. One could always control this with secondary flags on the command, e.g. "shardExclusive=true|false" for instance, perhaps with safety checks in for known one-per-shard properties like "preferredLeader".
+
+"preferredLeader" seems to fit more naturally into a "role", but currently ADDROLE and DELTEROLE have nothing to do with the notion of setting a role for a particular node relative to a collection/shard. Easy enough to add, but enforcing the "only one node per slice may have this role" rule there is similarly arbitrary and overloads the ADDROLE/DELETEROLE in a way that seems equally confusing. Plus, checking whether the required collection/shard/node params are present becomes based on the value of the property being set, which is all equally arbitrary.
+
+The other interesting thing is that setting an arbitrary property on a node would allow one to mess things up royally by, say, changing properties like "core", or "base_url" or node_name at will. Actually this is potentially useful, but very, very dangerous and I'm not particularly interested in supporting it .  I suppose we could require a prefix, say the only settable properties are "property.whatever".
+
+We could also add something specific to nodes, something like ADDREPLICAROLE/DELETEREPLICAROLE, perhaps with sub-params like "onlyOneAllowedPerShard", but this gets messy and relies on the users "doing the right thing". I prefer enforcing rules like this  based on the role I think. Or at least enforcing these kinds of requirements on the "preferredLeader" role if we go that way.
+
+What are people's thoughts here? I think I'm tending towards the ADDREPLICAROLE/DELETEREPLICAROLE way of doing this, but it's not set in stone. I have code locally for arbitrary properties that I can modify for the role bits.
+
+So, if I'm going to summarize the points I'd like feedback on:
+1> Is setting arbitrary properties on a node desirable? If so, should we require a prefix like "property" to prevent resetting values SolrCloud depends on?
+
+2> Is it better to piggyback on ADDROLE/DELETEROLE? Personally I'm not in favor of this one. Too messy with requiring additional parameters to work right in this case
+
+3> Is the best option to create new collections API calls for ADDREPLICAROLE/DELETEREPLICAROLE that
+3.1> require collection/slice/node parameters
+3.2> enforces the "onlyOnePerShard" rule for certain known roles
+3.3 v1> allows users to specify arbitrary roles something like "onlyOnePerShard" as an optional T|F parameter, otherwise is totally open.
+or
+3.3 v2> No support other than "preferredLeader", only roles that are pre-defined are allowed, in which case the "onlyOnePerShard" is implicit in the role.
+
+
+

@@ -1,0 +1,1 @@
+remove MoreLikeThis's default analyzer

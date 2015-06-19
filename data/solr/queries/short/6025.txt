@@ -1,0 +1,1 @@
+StreamingUpdateSolrServer is mentioned in various schema.xml files

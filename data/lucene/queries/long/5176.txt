@@ -1,0 +1,5 @@
+The few tests that need to test something here can use the index-writer pkg-private method.
+
+Other tests (like QueryUtils) can use a FilterAtomicReader to do their crazy tests.
+
+Otherwise, we risk lots of stupid false test failures.

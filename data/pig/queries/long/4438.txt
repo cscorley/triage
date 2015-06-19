@@ -1,0 +1,25 @@
+when pig script executes "order" before "limit" in spark mode, the results will be wrong.
+cat testlimit.txt
+1	orange
+3	coconut
+5	grape
+6	pear
+2	apple
+4	mango
+
+testlimit.pig:
+a = load './testlimit.txt' as (x:int, y:chararray);
+b = order a by x;
+c = limit b 1;
+store c into './testlimit.out';
+
+the result:
+1	orange
+2	apple
+3	coconut
+4	mango
+5	grape
+6	pear
+
+the correct result should be:
+1	orange

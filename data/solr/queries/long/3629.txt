@@ -1,0 +1,3 @@
+If a custom config filename is set CoreContainer persists it as `conf` but attempts to read it as `config`.  This results in an exception saying that solrconfig.xml cannot be found--as it has reverted to searching for the default.  The work-around is to not set a custom config filename.
+
+I noticed this both in trunk and branch_4x on the GitHub mirror.

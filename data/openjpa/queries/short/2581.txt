@@ -1,0 +1,1 @@
+openjpa-maven-plugin: drop and create schema regardless of the current database state

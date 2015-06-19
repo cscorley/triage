@@ -1,0 +1,23 @@
+Mike added a cool script to dev-tools (checkJavadocLinks.py) that checks 
+all local links in our documentation.
+
+I think we really need to check this in hudson and fail on any errors, for these reasons:
+
+	javadocs external linking is really broken, so 'ant javadocs' doesnt find all errors.
+  for example you can do this:
+  
+  {@link java.lang.JavaDocsSucks}
+  
+
+  and nothing will ever give you any warning: just a broken link. thats because javadocs
+  external linking is fundamentally package-driven, broken by design for compile-time
+  verification of correctness.
+	some documentation files have internal href links which should be checked to be correct.
+	this checker finds broken html links like unescaped slashes that we currently don't catch.
+	this checker finds real API bugs that javadocs won't warn about, such as protected methods
+  returning package-private classes and so on.
+
+
+
+Once we fix the broken links we should be able to enforce all of this stuff in hudson, helping
+to prevent our documentation from growing wildly out of date.

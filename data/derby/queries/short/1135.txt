@@ -1,0 +1,1 @@
+Run upgrade test using a security manager

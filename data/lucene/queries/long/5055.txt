@@ -1,0 +1,1 @@
+The check for copyright notices in files isn't checking all files, only source/test files.  A couple modules xml files are missing this (join, spatial, and custom-tasks.xml).

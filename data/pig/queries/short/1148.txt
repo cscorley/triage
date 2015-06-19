@@ -1,0 +1,1 @@
+Move splitable logic from pig latin to InputFormat

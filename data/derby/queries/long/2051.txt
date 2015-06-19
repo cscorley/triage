@@ -1,0 +1,1 @@
+The javadoc comment for CachedItem says that the state should only be accessed by the CacheManager, and that no synchronization is required. But a subset of the accessors/mutators are declared synchronized. If synchronization is unnecessary it should be removed to improve performance. If it is required, this should be properly explained in the comments.

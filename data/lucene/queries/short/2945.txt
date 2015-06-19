@@ -1,0 +1,1 @@
+Surround Query doesn't properly handle equals/hashcode

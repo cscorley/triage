@@ -1,0 +1,22 @@
+This filter is an augmentation of output from ASCIIFoldingFilter,
+it discriminate against double vowels aa, ae, ao, oe and oo, leaving just the first one.
+
+blåbærsyltetøj == blåbärsyltetöj == blaabaarsyltetoej == blabarsyltetoj
+räksmörgås == ræksmørgås == ræksmörgaos == raeksmoergaas == raksmorgas
+
+Caveats:
+Since this is a filtering on top of ASCIIFoldingFilter äöåøæ already has been folded down to aoaoae when handled by this filter it will cause effects such as:
+
+bøen -> boen -> bon
+åene -> aene -> ane
+
+I find this to be a trivial problem compared to not finding anything at all.
+
+Background:
+Swedish åäö is in fact the same letters as Norwegian and Danish åæø and thus interchangeable in when used between these languages. They are however folded differently when people type them on a keyboard lacking these characters and ASCIIFoldingFilter handle ä and æ differently.
+
+When a Swedish person is lacking umlauted characters on the keyboard they consistently type a, a, o instead of å, ä, ö. Foreigners also tend to use a, a, o.
+
+In Norway people tend to type aa, ae and oe instead of å, æ and ø. Some use a, a, o. I've also seen oo, ao, etc. And permutations. Not sure about Denmark but the pattern is probably the same.
+
+This filter solves that problem, but might also cause new.

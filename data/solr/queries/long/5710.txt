@@ -1,0 +1,1 @@
+Mark Miller reported SOLR-5644 on the splitshard action. The 'migrate' action also suffers from the same bug and uses replica.getLeader instead of the more robust zkStateReader.getLeaderRetry method.

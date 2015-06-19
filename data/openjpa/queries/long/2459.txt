@@ -1,0 +1,1 @@
+Now that we have created the 2.3.0 release and 2.3.x branch, we need to move trunk up to Java 7 in preparation for JPA 2.1 development.

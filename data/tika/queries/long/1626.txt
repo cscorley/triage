@@ -1,0 +1,1 @@
+Apache POI folks are about to release new version. We can upgrade to it and make regression test on govdocs

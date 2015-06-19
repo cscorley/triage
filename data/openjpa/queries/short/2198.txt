@@ -1,0 +1,1 @@
+Query return OptimisticLockExceptions when openjpa.Optimistic is turned off

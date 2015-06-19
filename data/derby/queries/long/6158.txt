@@ -1,0 +1,6 @@
+The mailjdbc test uses a hardcoded string 'mailsdb' for the databasename in the compress call in org.apache.derbyTesting.system.mailjdbc.utils.DbTasks:compressTable.
+
+Thus, if one decides to start the network server in a different directory than the client, the compress calls fail.
+
+At least the README.txt should be modified to clarify this.
+Alternatively, the test could be modified to create the desired directory structure and start network server if needed.

@@ -1,0 +1,1 @@
+Conflicting versions of jline is present in trunk 

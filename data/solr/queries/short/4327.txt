@@ -1,0 +1,1 @@
+SolrJ code review indicates potential for leaked HttpClient connections

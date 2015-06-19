@@ -1,0 +1,1 @@
+A missing column group meta file may indicate an unfinished or interrupted data publish process and should not be allowed at query time. Currently for sorted tables, an exception is thrown; but query on an unsorted table goes through.

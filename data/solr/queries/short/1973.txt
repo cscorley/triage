@@ -1,0 +1,1 @@
+Empty fields in update messages confuse DataImportHandler

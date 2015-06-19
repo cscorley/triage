@@ -1,0 +1,1 @@
+CollapsingQParserPlugin scores incorrectly when multiple sort criteria are used

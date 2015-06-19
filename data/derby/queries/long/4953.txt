@@ -1,0 +1,4 @@
+The Network Server is started in Windows. 
+A java program which is running in Linux trying to access the DB in Windows (using derbyclient.jar). Taking too much time to fetch the records.
+
+Vice versa also

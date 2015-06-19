@@ -1,0 +1,1 @@
+Old <ciManagement/> info on root POM

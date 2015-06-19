@@ -1,0 +1,3 @@
+Revision: 1431169
+
+ant test  -Dtestcase=TestNRTManager -Dtests.method=testThreadStarvationNoDeleteNRTReader -Dtests.seed=925ECD106FBFA3FF -Dtests.slow=true -Dtests.locale=fr_CA -Dtests.timezone=America/Kentucky/Louisville -Dtests.file.encoding=US-ASCII -Dtests.dups=500

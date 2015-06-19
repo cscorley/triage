@@ -1,0 +1,1 @@
+Spatial BBoxIntersects and BBoxWithin are used incorrectly

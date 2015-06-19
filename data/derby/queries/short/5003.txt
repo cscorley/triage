@@ -1,0 +1,1 @@
+NPE in ReplicationRun_Local_3_p5 when stopping slave after purposefully crashing master

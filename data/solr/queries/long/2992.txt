@@ -1,0 +1,1 @@
+Expose Lucene's prepareCommit to Solr update handlers.

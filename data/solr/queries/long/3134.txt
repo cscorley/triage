@@ -1,0 +1,3 @@
+For distributed search where each shard represents a logically different index (or physical location), it would be great to know the hit count for each shard.
+
+In addition, it would be nice to get error info for each shard rather then aborting the whole request when something fails.

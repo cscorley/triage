@@ -1,0 +1,16 @@
+Currently IW fails late and inconsistent if field metadata like an already defined DocValues type or "un"-omitting norms.
+
+
+we can approach this similar to how we handle consistent field number and:
+
+
+	throw exception if indexOptions conflict (e.g. omitTF=true versus
+false) instead of silently dropping positions on merge
+	same with omitNorms
+	same with norms types and docvalues types
+	still keeping field numbers consistent
+
+
+
+this way we could eliminate all these traps and just give an
+exception instead.

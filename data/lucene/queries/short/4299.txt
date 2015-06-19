@@ -1,0 +1,1 @@
+No way to find term vectors options at read time

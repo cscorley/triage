@@ -1,0 +1,1 @@
+when child entity is the root in nested entities, delta-import doesn't work

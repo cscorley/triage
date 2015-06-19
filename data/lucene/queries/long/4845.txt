@@ -1,0 +1,12 @@
+Our current suggester impls do prefix matching of the incoming text
+against all compiled suggestions, but in some cases it's useful to
+allow infix matching.  E.g, Netflix does infix suggestions in their
+search box.
+
+I did a straightforward impl, just using a normal Lucene index, and
+using PostingsHighlighter to highlight matching tokens in the
+suggestions.
+
+I think this likely only works well when your suggestions have a
+strong prior ranking (weight input to build), eg Netflix knows
+the popularity of movies.

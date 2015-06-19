@@ -1,0 +1,1 @@
+Switch min(a,b) function to min(a,b,...)

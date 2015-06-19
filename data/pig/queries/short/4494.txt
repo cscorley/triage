@@ -1,0 +1,1 @@
+Pig's htrace version conflicts with that of hadoop 2.6.0

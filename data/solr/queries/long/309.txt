@@ -1,0 +1,1 @@
+A solr.StrField that has analyzers configured in schema.xml should emit a warning/error to the log. As I understand StrFields never get tokenized.

@@ -1,0 +1,1 @@
+The published javadoc creates a copyright with the old copyright statement, should be replaced with the collected works copyright,.

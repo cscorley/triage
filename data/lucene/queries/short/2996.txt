@@ -1,0 +1,1 @@
+addIndexes(IndexReader) incorrectly applies existing deletes

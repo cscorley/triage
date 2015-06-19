@@ -1,0 +1,9 @@
+I'm looking at an admittedly pathological case of many, many entries in a multiValued field, and trying to implement a way to limit the number examined, analogous to maxAnalyzedChars, see the patch.
+
+Along the way, I noticed that we do what looks like unnecessary copying of the fields to be examined. We call Document.getFields, which copies all of the fields and values to the returned array. Then we copy all of those to another array, converting them to Strings. Then we actually examine them. a> this doesn't seem very efficient and b> reduces the benefit from limiting the number of mv values examined.
+
+So the attached does two things:
+1> attempts to fix this
+2> implements hl.maxMultiValuedToExamine
+
+I'd really love it if someone who knows the highlighting code takes a peek at the fix to see if I've messed things up, the changes are actually pretty minimal.

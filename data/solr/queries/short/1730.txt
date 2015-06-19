@@ -1,0 +1,1 @@
+Solr fails to start if QueryElevationComponent config is missing

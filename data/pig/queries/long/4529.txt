@@ -1,0 +1,23 @@
+See the following stack in test:
+
+
+org.apache.hadoop.mapreduce.counters.LimitExceededException: Too many counters: 131 max=130
+	at org.apache.hadoop.mapreduce.counters.Limits.checkCounters(Limits.java:101)
+	at org.apache.hadoop.mapreduce.counters.Limits.incrCounters(Limits.java:108)
+	at org.apache.hadoop.mapreduce.counters.AbstractCounterGroup.addCounter(AbstractCounterGroup.java:78)
+	at org.apache.hadoop.mapreduce.counters.AbstractCounterGroup.addCounterImpl(AbstractCounterGroup.java:95)
+	at org.apache.hadoop.mapreduce.counters.AbstractCounterGroup.addCounter(AbstractCounterGroup.java:87)
+	at org.apache.hadoop.mapred.Counters$Group.addCounter(Counters.java:354)
+	at org.apache.pig.tools.pigstats.tez.TezDAGStats.covertToHadoopCounters(TezDAGStats.java:276)
+	at org.apache.pig.tools.pigstats.tez.TezDAGStats.accumulateStats(TezDAGStats.java:192)
+	at org.apache.pig.tools.pigstats.tez.TezPigScriptStats.accumulateStats(TezPigScriptStats.java:181)
+	at org.apache.pig.backend.hadoop.executionengine.tez.TezJob.run(TezJob.java:198)
+	at org.apache.pig.backend.hadoop.executionengine.tez.TezLauncher$1.run(TezLauncher.java:174)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Actually I've set tez.counters.max to a much higher value, TezLauncher should not be limited by MR limits.

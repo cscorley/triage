@@ -1,0 +1,1 @@
+SolrIndexSearcher.name should include core name

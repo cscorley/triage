@@ -1,0 +1,1 @@
+NoClassDefFoundError when using Apache Log4J2

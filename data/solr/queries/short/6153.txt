@@ -1,0 +1,1 @@
+ReplicationHandler backup response format should contain backup name

@@ -1,0 +1,7 @@
+
+	Load the example data
+	Load a URL that uses "stats.facet" on multiple fields, ie: http://localhost:8983/solr/select?q=*:*&stats=true&stats.field=price&stats.field=popularity&stats.twopass=true&rows=00&indent=true&stats.facet=inStock&stats.facet=manu_id_s
+
+
+
+Response will include two identical "facets" lists for each stats field (ie both "facets" blocks will contain the faceted stats for both of the stats.facet fields)

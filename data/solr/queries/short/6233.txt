@@ -1,0 +1,1 @@
+Provide basic command line tools for checking Solr status and health.

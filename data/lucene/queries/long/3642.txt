@@ -1,0 +1,1 @@
+A user reported this because it was causing his highlighting to throw an error.

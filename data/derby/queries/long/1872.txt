@@ -1,0 +1,14 @@
+Investigations relating to DERBY-1564 ("wisconsin.java test failed in DerbyNet or DerbyNetClient frameworks, VM for network server got OutOfMemoryError") revealed that comparing memory usage for the lang/wisconsin.[java|sql] test in 10.1.x versus 10.2.x was like comparing apples and oranges. After the 10.1 branch was created, several updates were made to the wisconsin test in trunk that were not backported to 10.1, e.g:
+
+
+	giving the optimizer unlimited time to choose query plans
+	compressing the tables to avoid the instabilities reported in DERBY-937
+
+
+
+Backporting the test will make it less unfair to compare 10.1 vs. 10.2 (or trunk) test results and memory usage, and it will make it easier to determine if failures (such as DERBY-1564) are regressions or not. On the other hand, other differences between the branches that may influence the test will remain, so this will not be a wonder cure.
+
+The failures seen in DERBY-1564 were mainly caused by bugs (DERBY-1091, DERBY-1614) in the test harness, causing the wisconsin test for the 10.2.0.4 snapshot to run with low memory settings. These issues have been fixed.
+
+The most practical backporting approach will probably be to take the wisconsin test as it was in the 10.2.0.4-snapshot (SVN revision 423199), and port it to the current 10.1 branch. Other changes have been made to the wisconsin test in trunk/10.2 after 10.2.0.4, but to avoid various dependencies (e.g. DERBY-1609), these should not be backported.
+

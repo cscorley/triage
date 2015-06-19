@@ -1,0 +1,27 @@
+Content-based mime type detection is one of the popular approaches to detect mime type, there are others based on file extension and magic numbers ; And currently Tika has implemented 3 approaches in detecting mime types; 
+They are :
+1) file extensions
+2) magic numbers (the most trustworthy in tika)
+3) content-type(the header in the http response if present and available) 
+
+Content-based mime type detection however analyses the distribution of the entire stream of bytes and find a similar pattern for the same type and build a function that is able to group them into one or several classes so as to classify and predict; It is believed this feature might broaden the usage of Tika with a bit more security enforcement for mime type detection. Because we want to build a model that is etched with the patterns it has seen, in some situations we may not trust those types which have not been trained/learned by the model. In some situations, magic numbers imbedded in the files can be copied but the actual content could be a potentially detrimental Troy program. By enforcing the trust on byte frequency patterns, we are able to enhance the security of the detection.
+
+The proposed content-based mime detection to be integrated into Tika is based on the machine learning algorithm i.e. neural network with back-propagation. 
+
+The input: 0-255 bins each of which represent a byte, and and each of which stores the count of occurrences for each byte, and the byte frequency histograms are normalized to fall in the range between 0 and 1, they then are passed to a companding function to enhancement the infrequent bytes.
+The output of the neural network is a binary decision 1 or 0;
+
+Notice BTW, the proposed feature will be implemented with GRB file type as one example.
+
+In this example, we build a model that is able to classify GRB file type from non-GRB file types, notice the size of non-GRB files is huge and cannot be easily defined, so there need to be as many negative training example as possible to form this non-GRB types decision boundary.
+
+The Neural networks is considered as two stage of processes.
+Training and classification.
+
+The training can be done in any programming language, in this feature /research, the training of neural network is implemented in R and the source can be found in my github repository i.e. https://github.com/LukeLiush/filetypeDetection; i am also going to post a document that describe the use of the program, the syntax/ format of the input and output.
+
+After training, we need to export the model and import it to Tika; in Tika, we create a TrainedModelDetector that reads this model file with one or more model parameters or several model files,so it can detect the mime types with the model of those mime types. Details of the research and usage with this proposed feature will be posted on my github shortly.
+
+It is worth noting again that in this research we only worked out one model - GRB as one example to demonstrate the use of this content-based mime detection. One of the challenges again is that the non-GRB file types cannot be clearly defined unless we feed our model with some example data for all of the existing file types in the world, but this seems to be too utopian and a bit less likely, so it is better that the set of class/types is given and defined in advance to minimize the problem domain. 
+
+Another challenge is the size of the training data; even if we know the types we want to classify, getting enough training data to form a model can be also one of the main factors of success. In our example model, grb data are collected from ftp://hydro1.sci.gsfc.nasa.gov/data/; and we find out that the grb data from that source all exhibit a similar pattern, a simple neural network structure is able to predict well, even a linear logistic regression is able to do a good job; However, if we pass the GRB files collected from other source to the model for prediction, then we find out that the model predict poorly and unexpectedly, so this bring up the aspect of whether we need to include all training data or those are of interest, including all data is very expensive so it is necessary to introduce some domain knowledge to minimize the problem domain; we believe users should know what types they want to classify and they should be able to get enough training data, although getting the training data can be a tedious and expensive process. Again it is better to have that domain knowledge with the set of types present in users' database and train a model with some examples for every type in the database.

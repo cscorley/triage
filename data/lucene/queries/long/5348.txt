@@ -1,0 +1,1 @@
+Allow to define MLT minDocFreq and minTermFreq for KNearestNeighborClassifier to tweak recall of MoreLikeThis queries.

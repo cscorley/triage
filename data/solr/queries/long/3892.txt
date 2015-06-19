@@ -1,0 +1,1 @@
+CDF is locking on "this" while RAMDirectoryFactory and MockDirectoryFactory are locking on "DirectoryFactory.class".

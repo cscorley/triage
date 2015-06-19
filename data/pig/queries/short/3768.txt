@@ -1,0 +1,1 @@
+TezCompiler.visitUnion() doesn't add compiled TezOp to phyToTezOpMap 

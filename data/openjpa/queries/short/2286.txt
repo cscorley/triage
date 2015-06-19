@@ -1,0 +1,1 @@
+SELECT COUNT with date litteral,used more than once, provokes ArgumentException: Attempt to compare incompatible types class java.util.Date and class org.apache.openjpa.jdbc.sql.Raw

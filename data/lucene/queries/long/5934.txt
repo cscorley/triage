@@ -1,0 +1,3 @@
+As reported by Ian on the user list:
+
+Its trying to treat them as 3.x

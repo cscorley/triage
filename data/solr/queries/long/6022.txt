@@ -1,0 +1,1 @@
+We have separate index/query analyzer chains, but the access methods for the analyzers do not match up with the names.  This can lead to unknowingly using the wrong analyzer chain (as it did in SOLR-6017).  We should do this renaming in trunk, and deprecate the old getAnalyzer function in 4x.

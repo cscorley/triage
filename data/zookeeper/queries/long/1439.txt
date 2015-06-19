@@ -1,0 +1,8 @@
+Man of getpwuid_r "return a pointer to a passwd structure, or NULL if the matching entry is not found or an error occurs",
+"The getpwnam_r() and getpwuid_r() functions return zero on success.", it means entry may not be found when getpwuid_r success.
+
+In log_env of zookeeper.c in c sdk:
+  if (!getpwuid_r(uid, &pw, buf, sizeof(buf), &pwp)) {
+    LOG_INFO(("Client environment:user.home=%s", pw.pw_dir));
+  }
+pwp is not checked to ensure entry is found, pw.pw_dir is not initialized in this case, core happens in LOG_INFO.

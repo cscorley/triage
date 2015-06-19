@@ -1,0 +1,2 @@
+JapaneseTokenizer, Kuromoji doesn't provide configuration option to preserve punctuation in Japanese text, although It has a parameter to change this behavior.  JapaneseTokenizerFactory always set third parameter, which controls this behavior, to true to remove punctuation.
+I would like to have an option I can configure this behavior by fieldtype definition in schema.xml.

@@ -1,0 +1,1 @@
+Criteria Builder query generates extra alias when using multiselect.

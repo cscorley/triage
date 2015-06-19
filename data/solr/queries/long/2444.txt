@@ -1,0 +1,1 @@
+The ReturnFields parsing needs to be improved.  It should also support wildcards

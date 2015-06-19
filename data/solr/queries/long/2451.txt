@@ -1,0 +1,11 @@
+Attached is a patch that adds the following method to SolrTestCaseJ4:  (just javadoc & signature shown)
+
+
+  /**
+   * Validates that the document at the specified index in the results has the specified score, within 0.0001.
+   */
+  public static void assertQScore(SolrQueryRequest req, int docIdx, float targetScore) {
+
+
+
+This is especially useful for geospatial in which slightly different precision deltas might occur when trying different geospatial indexing strategies are used, assuming the score is some geospatial distance.  This patch makes a simple modification to DistanceFunctionTest to use it.

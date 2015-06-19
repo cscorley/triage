@@ -1,0 +1,1 @@
+Adds optional "phrase slop" to edismax "pf2", "pf3" and "pf" parameters with field~slop^boost syntax

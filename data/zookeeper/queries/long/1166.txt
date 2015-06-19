@@ -1,0 +1,5 @@
+Please add a couple svn:ignore properties to make dealing with the code slightly easier.
+
+At the root, please add an svn:ignore property for "build" so that the default build directory for eclipse is excluded.
+
+At src/java/lib, please add an svn:ignore property for "*.jar" so that jars acquired by ivy are ignored.

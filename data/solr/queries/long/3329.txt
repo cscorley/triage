@@ -1,0 +1,12 @@
+In solr, use use svn:keywords haphazardly
+
+We have lots of places with:
+
+
+svn propset svn:keywords "Date Author Id Revision HeadURL" *.java
+
+
+
+In LUCENE-3923, there is a suggestion to get rid of many of these.
+
+The MBeans interface often exposes HeadURL, but we likely want to get rid of the rest

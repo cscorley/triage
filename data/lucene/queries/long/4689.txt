@@ -1,0 +1,1 @@
+Just updating the eclipse project name from lucene_solr_branch_4x to lucene_solr_4_1 on the new branch.

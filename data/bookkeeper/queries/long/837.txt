@@ -1,0 +1,13 @@
+Review comment : Using AbstractFuture is too tight with guava's internal implementation. Instead it would be good to use a variable for the settable future.
+
+
+
+ class Read... implements GenericCallback {
+
+ SettableFuture future = ...;
+  public void operationComplete(..) {
+    future.set(null); 
+    // future.setException(..)
+  }
+}
+

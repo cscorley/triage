@@ -1,0 +1,1 @@
+As noted on the mailing list, LimitTokenCountFilterFactory throws a NumberFormatException because it tries to use the value of it's config param as a key to look up another param that it parses as an integer ... totally ridiculous.

@@ -1,0 +1,1 @@
+Avoid NPE for distributed request when shards.tolerant=true

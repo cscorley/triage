@@ -1,0 +1,1 @@
+the MoreLikeThisHandler supports almost all of the underlying MoreLikeThis options except for MAX_DOC_FREQ, which seems important in preventing terms from being selected for the query which are present in "too many" documents.

@@ -1,0 +1,1 @@
+SimplePostTool: move getProperty(type) out of postData()

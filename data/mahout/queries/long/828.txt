@@ -1,0 +1,1 @@
+This is a trivial change, but it changes the user experience.  Anybody care to keep the current (very) verbose output?

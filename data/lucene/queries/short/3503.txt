@@ -1,0 +1,1 @@
+DisjunctionSumScorer gives slightly (float iotas) different scores when you .nextDoc vs .advance

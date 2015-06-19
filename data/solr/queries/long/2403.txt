@@ -1,0 +1,26 @@
+I tested this on a recent trunk snapshot (2/25), haven't verified with 3.1 or 1.4.1.  I can if necessary and update.
+
+Solr is not returning the proper number of facet values when sorting alphabetically, using distributed search, and using a facet.mincount that excludes some of the values in the first facet.limit values.
+
+Easiest explained by example.  Sorting alphabetically, the first 20 values for my "subject_facet" field have few documents.  19 facet values have only 1 document associated, and 1 has 2 documents.  There are plenty after that have more than 2.
+
+
+http://localhost:8082/solr/select?q=*:*&facet=true&facet.field=subject_facet&facet.limit=20&facet.sort=lex&facet.mincount=2
+
+
+comes back with the expected 20 facet values with >= 2 documents associated.
+
+If I add a shards parameter that points back to itself, the result is different.
+
+
+http://localhost:8082/solr/select?q=*:*&facet=true&facet.field=subject_facet&facet.limit=20&facet.sort=lex&facet.mincount=2&shards=localhost:8082/solr
+
+
+comes back with only 1 facet value: the single value in the first 20 that had more than 1 document.  
+
+It appears to me that mincount is ignored when doing the original query to the shards, then applied afterwards.
+
+Let me know if you need any more info.  
+
+Thanks,
+Peter

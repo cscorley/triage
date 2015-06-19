@@ -1,0 +1,60 @@
+Hi
+
+I am trying to test Solr 1.4 Java replication. It works fine with this configuration on slave and data is sync from master with out any issue
+
+<requestHandler name="/replication" class="solr.ReplicationHandler" >
+    <lst name="slave">
+                <str name="masterUrl">http://IP:PORT/SolrSmartPriceSS/replication</str>
+                <str name="compression">internal</str>        
+                <str name="httpConnTimeout">5000</str>
+                <str name="httpReadTimeout">10000</str>        
+     </lst>
+</requestHandler>
+
+We need to setup repeater on this slave. We have this configuration on slave. With this configuration, it's throwing a null pointer exception. Please see error log
+
+<requestHandler name="/replication" class="solr.ReplicationHandler" >
+ <lst name="master">
+        <str name="replicateAfter">commit</str>       
+        <str name="confFiles">schema.xml</str>      
+    </lst>
+    <lst name="slave">
+                <str name="masterUrl">http://IP:PORT/SolrSmartPriceSS/replication</str>
+                <str name="compression">internal</str>        
+                <str name="httpConnTimeout">5000</str>
+                <str name="httpReadTimeout">10000</str>        
+     </lst>
+</requestHandler>
+
+Error log
+
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Feb 9, 2010 10:27:55 PM org.apache.solr.handler.ReplicationHandler doFetch
+SEVERE: SnapPull failed
+org.apache.solr.common.SolrException: Index fetch failed :
+        at org.apache.solr.handler.SnapPuller.fetchLatestIndex(SnapPuller.java:329)
+        at org.apache.solr.handler.ReplicationHandler.doFetch(ReplicationHandler.java:264)
+        at org.apache.solr.handler.ReplicationHandler$1.run(ReplicationHandler.java:146)
+Caused by: java.lang.NullPointerException
+        at org.apache.solr.handler.ReplicationHandler$4.postCommit(ReplicationHandler.java:922)
+        at org.apache.solr.update.UpdateHandler.callPostCommitCallbacks(UpdateHandler.java:78)
+        at org.apache.solr.update.DirectUpdateHandler2.commit(DirectUpdateHandler2.java:411)
+        at org.apache.solr.handler.SnapPuller.doCommit(SnapPuller.java:467)
+        at org.apache.solr.handler.SnapPuller.fetchLatestIndex(SnapPuller.java:319)
+
+Please let us know how can we resolve this issue
+
+Regards
+Deepak
+
+
+
+
+
+
+
+
+
+
+
+

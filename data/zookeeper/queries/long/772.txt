@@ -1,0 +1,1 @@
+When utilizing the zkpython async get children api with a watch, i consistently get segfaults when the watcher is invoked to process events. 

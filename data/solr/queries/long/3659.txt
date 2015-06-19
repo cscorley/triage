@@ -1,0 +1,10 @@
+Since getting my new laptop, i've noticed some sporadic failures from RecoveryZkTest, so last night tried running 100 iterations againts trunk (r1363555), and got 5 errors/failures...
+
+
+	3 asertion failures from NRTCachingDirectory.deleteFile
+	1 node recovery assertion from AbstractDistributedZkTestCase.waitForRecoveriesToFinish caused by OOM
+	1 searcher leak assertion: opens=1658 closes=1652 (possibly lingering affects from OOM?)
+
+
+
+see comments/attachments for details

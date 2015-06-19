@@ -1,0 +1,18 @@
+Today the facet module indexes a term for each facet added to a
+document, and DrillDown/SidewaysQuery assume this by creating a
+TermQuery, or OR of TermQuery, for each dimension the app drills down
+on.
+
+I think we should relax this and allow an [expert] arbitrary query to
+drill down on a given dimension ... e.g., this can enable future
+dynamic faceting methods, or custom app drill-down methods.
+
+It's easy for DrillDownQuery to do this, but requires generalization
+in DrillSideways, basically just reviving the first approach on
+LUCENE-4748.  This approach is somewhat slower, but more general
+... it will keep using the current method as an optimization when it
+applies.
+
+This should also fix the possible performance regression from
+LUCENE-4952 when scoreSubDocsAtOnce is true, by using the
+MinShouldMatchSumScorer in that case.

@@ -1,0 +1,1 @@
+IndexReader and friends should check ref count when incrementing

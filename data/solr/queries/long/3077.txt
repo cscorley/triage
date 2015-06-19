@@ -1,0 +1,68 @@
+Seems to be an issue parsing the query string, as the parser is trying to lookup a blank field?
+
+
+
+2012-01-29 09:15:50,320 ERROR org.apache.solr.core.SolrCore - org.apache.solr.common.SolrException: undefined field ￼￼￼
+	at org.apache.solr.schema.IndexSchema.getDynamicFieldType(IndexSchema.java:1028)
+	at org.apache.solr.schema.IndexSchema.getFieldType(IndexSchema.java:980)
+	at org.apache.solr.search.SolrQueryParser.getRegexpQuery(SolrQueryParser.java:216)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.handleBareTokenQuery(QueryParserBase.java:1045)
+	at org.apache.lucene.queryparser.classic.QueryParser.Term(QueryParser.java:358)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:257)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:212)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:170)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:118)
+	at org.apache.solr.search.ExtendedDismaxQParser.parse(ExtendedDismaxQParserPlugin.java:284)
+	at org.apache.solr.search.QParser.getQuery(QParser.java:143)
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:121)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:173)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:129)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:1471)
+	at org.apache.solr.servlet.SolrDispatchFilter.execute(SolrDispatchFilter.java:353)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:248)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:228)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+
+
+
+In the code:
+
+
+    throw new SolrException( SolrException.ErrorCode.BAD_REQUEST,"undefined field " + fieldName );
+
+
+So it does print out the field name, but in my case it's blank. I got this error maybe 20 times, over 260,000 requests over the weekend.
+
+Initially, I would submit this patch, to clarify:
+
+
+
+diff --git a/solr/core/src/java/org/apache/solr/schema/IndexSchema.java b/solr/core/src/java/org/apache/solr/schema/IndexSchema.java
+index 1325397..3dd51c3 100644
+--- a/solr/core/src/java/org/apache/solr/schema/IndexSchema.java
++++ b/solr/core/src/java/org/apache/solr/schema/IndexSchema.java
+@@ -1025,7 +1025,7 @@ public final class IndexSchema {
+      for (DynamicField df : dynamicFields) {
+       if (df.matches(fieldName)) return df.prototype.getType();
+     }
+-    throw new SolrException( SolrException.ErrorCode.BAD_REQUEST,"undefined field "+fieldName);
++    throw new SolrException( SolrException.ErrorCode.BAD_REQUEST,"undefined field: " + "\"" + fieldName + "\".");
+   }
+ 
+   private FieldType dynFieldType(String fieldName) {
+

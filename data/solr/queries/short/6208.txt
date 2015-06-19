@@ -1,0 +1,1 @@
+JettySolrRunner QueuedThreadPool's configuration code is never executed

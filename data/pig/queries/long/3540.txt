@@ -1,0 +1,1 @@
+Need to add e2e tests for tez. Should be able to compare the tez run with mapreduce run.

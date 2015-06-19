@@ -1,0 +1,3 @@
+Hi all, whilst I am aware that maven support is best effort, there is a small issue with the ant clean target in that it will not delete maven artefacts from the dist folder
+
+Patch attached to fix this.

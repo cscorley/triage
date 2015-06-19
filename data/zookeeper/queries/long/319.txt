@@ -1,0 +1,3 @@
+Looking over the zookeeper.c code it appears to me that the zoo_add_auth() function may be called at any time by the user in their "main" thread.  This function alters the elements of the auth_info structure in the zhandle_t structure.
+
+Meanwhile, the IO thread may read those elements at any time in such functions as send_auth_info() and auth_completion_func().  It seems important, then, to add a lock which prevents data being read by the IO thread while only partially changed by the user's thread.  The attached patch add such a lock.

@@ -1,0 +1,1 @@
+Lucene's nightly Hudson builds don't have svn version in MANIFEST.MF

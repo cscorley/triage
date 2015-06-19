@@ -1,0 +1,1 @@
+DefaultSolrCoreState#getIndexWriter(null) is a way to avoid creating the IndexWriter earlier than necessary, but it's not implemented quite right.

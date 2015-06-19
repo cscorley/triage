@@ -1,0 +1,1 @@
+make it easier to plugin different bitset implementations to CachingWrapperFilter

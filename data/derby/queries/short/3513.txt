@@ -1,0 +1,1 @@
+NullPointerException in newBrokeredStatement in app server environment

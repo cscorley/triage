@@ -1,0 +1,1 @@
+DELETEALIAS command prints CREATEALIAS in logs

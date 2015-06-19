@@ -1,0 +1,1 @@
+Currently maxConnectionsPerHost is configurable but maxConnections overall is hard-coded to 10000.

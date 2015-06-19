@@ -1,0 +1,1 @@
+SolrDispatchFilter#sendError can get a SolrCore that it does not close.

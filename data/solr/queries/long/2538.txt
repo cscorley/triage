@@ -1,0 +1,58 @@
+In the classes LongRangeEndpointCalculator and DoubleRangeEndpointCalculator, in the method "parseAndAddGap", there is a loss of precision:
+
+1318  private static class DoubleRangeEndpointCalculator
+1319	    extends RangeEndpointCalculator {
+1320	 
+1321	    public DoubleRangeEndpointCalculator(final SchemaField f) 
+{ super(f); }
+1322	    @Override
+1323	    protected Double parseVal(String rawval) {
+1324	      return Double.valueOf(rawval);
+1325	    }
+1326	    @Override
+1327	    public Double parseAndAddGap(Double value, String gap) {
+1328 --->      return new Double(value.floatValue() + Double.valueOf(gap).floatValue()); <------
+1329	    }
+1330	
+
+[..]
+
+1344	  private static class LongRangeEndpointCalculator
+1345	    extends RangeEndpointCalculator {
+1346	 
+1347	    public LongRangeEndpointCalculator(final SchemaField f) { super(f); }
+1348	    @Override
+1349	    protected Long parseVal(String rawval) 
+{
+1350	      return Long.valueOf(rawval);
+1351	    }
+1352	    @Override
+1353	    public Long parseAndAddGap(Long value, String gap) 
+{
+1354 ---->     return new Long(value.intValue() + Long.valueOf(gap).intValue()); <-------
+1355	    }
+1356	  }
+
+As result, the following code is detecting a data overflow because the long number is being treated as an integer:
+
+1068	    while (low.compareTo(end) < 0) {
+1069	      T high = calc.addGap(low, gap);
+1070	      if (end.compareTo(high) < 0) {
+1071	        if (params.getFieldBool(f,FacetParams.FACET_RANGE_HARD_END,false)) 
+{
+1072	          high = end;
+1073	        }
+ else 
+{
+1074	          end = high;
+1075	        }
+1076	      }
+1077	      if (high.compareTo(low) < 0) 
+{
+1078	        throw new SolrException
+1079	          (SolrException.ErrorCode.BAD_REQUEST,
+1080	           "range facet infinite loop (is gap negative? did the math overflow?)");
+1081	      }
+1082	       
+
+Changing the 'intValue()' by a 'longValue()' and  the 'floatValue()' by 'doubleValue()' should work. We have detected this bug when faceting a very long start and end values. We have tested edge values (the transition from 32 to 64 bits) and any value below the threshold works fine. Any value greater than 2^32 doesn't work. We have not tested the 'double' version, but seems that can suffer from the same problem.

@@ -1,0 +1,1 @@
+ToParentBlockJoinCollector provides no way to access computed scores and the maxScore

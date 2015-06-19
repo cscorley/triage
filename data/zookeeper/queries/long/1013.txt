@@ -1,0 +1,7 @@
+currently the "Usage" message for zkServer shows:
+
+  echo "Usage: $0 
+{start|stop|restart|status}
+" 
+
+But it seems to me that it should show the other startup options as well, which are currently: start-foreground, upgrade, print-cmd.

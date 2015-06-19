@@ -1,0 +1,11 @@
+org.apache.solr.client.solrj.impl.LBHttpSolrServer
+line 442
+      int count = counter.incrementAndGet();      
+      ServerWrapper wrapper = serverList[count % serverList.length];
+
+when counter overflows, the mod operation of 
+"count % serverList.length" will start trying to use negative numbers as array indexes.
+
+suggess to fixup it ,eg:
+//keep count is greater than 0
+int count = counter.incrementAndGet() & 0x7FFFFFF;  

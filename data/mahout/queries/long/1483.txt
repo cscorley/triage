@@ -1,0 +1,5 @@
+Some links in the drop-down menus in the navigation bar are inconsistent.
+
+Under "Basics", there are some links whose path starts with '/users/basics', one that starts with '/users/dim-reduction', one that starts with '/users/clustering', and one that starts with '/users/sparkbindings'.  These inconsistencies aren't terrible but are a little confusing for maintaining the site.
+
+Under "Classification", there are some that start with '/users/classification', some that start with '/users/stuff', and there's a clustering example (20 newsgroups example).

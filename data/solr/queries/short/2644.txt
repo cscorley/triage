@@ -1,0 +1,1 @@
+DIH handler - when using threads=2 the default logging is set too high

@@ -1,0 +1,1 @@
+On the official web site there is written that OpenOffice files will not be scanned or to be more accurate "TODO", but if i scan a tar.gz / zip archive with open office files their contents will be extracted. So I think the web site should be updated to document the correct state of code.

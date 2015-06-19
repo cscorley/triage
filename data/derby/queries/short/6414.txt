@@ -1,0 +1,1 @@
+Incorrect handling when using an UPDATE to SET an identity column to DEFAULT

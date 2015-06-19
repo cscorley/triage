@@ -1,0 +1,1 @@
+/browse request handler fails in example if you don't specify a field in the query with "no default specified via 'df' param"

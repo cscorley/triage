@@ -1,0 +1,1 @@
+Wrong logging level on message issued by the fix to OPENJPA-2233

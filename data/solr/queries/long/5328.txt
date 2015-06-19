@@ -1,0 +1,1 @@
+Another bug introduced by the recent re factoring in this area.

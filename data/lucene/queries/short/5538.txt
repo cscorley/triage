@@ -1,0 +1,1 @@
+FastVectorHighlighter fails with booleans of phrases

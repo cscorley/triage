@@ -1,0 +1,1 @@
+FastVectorHighlighter: out of alignment when the first value is empty in multiValued field
