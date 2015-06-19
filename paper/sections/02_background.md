@@ -1,8 +1,32 @@
 # Background & Related Work
 
-As noted by @Shokripour-etal_2013, there are two broad categories of work in
-this area: activity-based approaches and location-based approaches. In this
-section, we will discuss each of these approaches and review related works.
+In this
+section, we will first discuss the developer identification problem and 
+then review related works for the two categories.
+
+## Developer identification
+
+Software features are functionalities defined by requirements and are
+accessible to developers and users. Software change is continual, because
+revised requirements lead to new features, increasing expectations lead to
+feature enhancements, achieving intended behavior leads to removal of defective
+features (i.e., bugs). Users and developers propose change requests to the
+project issue tracker. Change requests are sometimes called issue reports, and
+specific kinds of change requests include feature requests, enhancement
+requests, and bug reports.
+
+Triaging a change request involves steps completed either by one or more
+people. How triage occurs differs from
+team to team, but the general steps required are as follows. First, the
+triager(s) must see if the request has enough information for consideration.
+The triager marks the request as a duplicate if the request already exists
+elsewhere in the tracker or was previously completed. After confirming that the
+request is new and has enough information, the triager decides whether the
+request will be completed, and how soon it will be completed, based on its
+severity, frequency, risk, and other factors. Finally, the triager assigns a
+request to the developer. Ultimately, the goal of triage is deciding priority
+of the request and assignment to the developer that is best suited to complete
+the change request.
 
 
 ## Location-based approaches

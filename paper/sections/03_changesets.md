@@ -11,11 +11,11 @@
 ![Developer identification using changesets\label{fig:changeset-triage}](changeset-triage.pdf)
 -->
 
-The changeset approach requires two types of document extraction: one for the
-every changeset in the source code history and a developer profile of the words
-each individual developer used in those changesets. The left side of Figure
+Our activity-based approach relies on modeling changeset topics. This changeset
+approach requires two types of document extraction: one for the every changeset
+in the source code history and a developer profile of the words each individual
+developer used in those changesets. The left side of Figure
 \ref{fig:changeset-triage} illustrates the dual-document extraction approach.
-
 
 The document extraction process for the developer corpus is straightforward.
 Following @Matter-etal_2009, each developer will have their own document

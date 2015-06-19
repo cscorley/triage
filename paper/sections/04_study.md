@@ -82,3 +82,5 @@ of the difference between the two rankings.
 
 ## Results and Discussion
 
+
+\input{tables/rq1_lda.tex}
