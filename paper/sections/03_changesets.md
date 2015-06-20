@@ -25,12 +25,10 @@ each individual developer used in those changesets. The left side of Figure
 \ref{fig:changeset-triage} illustrates the dual-document extraction approach.
 
 The document extraction process for the developer corpus is straightforward.
-Following @Matter-etal_2009, each developer will have their own document
-consisting of an aggregation of changesets they have committed to the source
-code repository. That is, a document representing a developer consists of only
-words that developer has changed. There may be weighting schemes to this
-[@Shokripour-etal_2013], such as only considering words which they have added
-or removed, while ignoring context words.
+Following @Matter-etal_2009, each developer has their own document consisting
+of an aggregation of changesets they have committed to the source code
+repository. That is, a document representing a developer consists of only words
+that developer has changed.
 
 The right side of Figure \ref{fig:changeset-triage} illustrates the retrieval
 process. The key intuition to our methodology is that a topic model such as LDA

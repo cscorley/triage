@@ -1,7 +1,7 @@
 # Background & Related Work
 
 As noted by @Shokripour-etal_2013, there are broadly two categories of
-approaches for developer-identification: location-based and activity-based.
+approaches for developer identification: location-based and activity-based.
 In this section, we will discuss background and related works of each.
 
 
@@ -9,9 +9,8 @@ In this section, we will discuss background and related works of each.
 
 Location-based techniques are a common developer identification technique and
 build upon feature location techniques. Location-based approaches resemble a
-feature location technique in that they rely on source code entity information
-to derive a developer, e.g., which developer has worked on the related classes
-in the past?
+FLT in that they rely on source code entity information to derive a developer,
+e.g., which developer has worked on the related classes in the past?
 
 For example, we can use an FLT to identify a ranked list of source code
 entities related to a particular task. Using ownership knowledge about the

@@ -39,7 +39,7 @@ consideration of several factors. However, many of these approaches are
 location-based, and as such must rely on a feature location technique (FLT) to
 locate relevant source code entities before a developer can be identified with
 the mined information. Hence, their accuracy is heavily influenced by the
-accuracy of the underlying FLT.
+accuracy of the underlying FLT to locate the correct source code entities.
 
 In this paper, we propose an activity-based developer identification technique
 (DIT) that uses changeset topic modeling to determine appropriate developers by
@@ -47,6 +47,5 @@ the words they have changed. The preliminary evaluation compares the approach
 to a location-based technique, both using latent Dirichlet allocation (LDA)
 [@Blei-etal_2003] as a topic modeler. Our benchmark consists of over 1300
 issues from 7 Apache open source Java systems. Our results shows improvements
-when using an activity-based approach for developer identification. We discuss
-future direction in adding heterogeneous information to supplement the
-approach.
+when using an activity-based approach for developer identification. Finally, we
+conclude and give direction for future work.

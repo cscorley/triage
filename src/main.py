@@ -508,6 +508,7 @@ def merge_first_rels(a, b, ignore=False):
 def do_science(prefix, changeset_first_rels, release_first_rels, ignore=False):
     # Build a dictionary with each of the results for stats.
     x, y = merge_first_rels(changeset_first_rels, release_first_rels, ignore=ignore)
+    print(len(x), len(y))
 
     print(prefix+' changeset mrr:', utils.calculate_mrr(x))
     print(prefix+' release mrr:', utils.calculate_mrr(y))

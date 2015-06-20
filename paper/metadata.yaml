@@ -8,11 +8,11 @@ classoption:
 graphics: yes
 numbersections: yes
 
-citecolor: black 
-linkcolor: black 
-urlcolor: black 
+citecolor: black
+linkcolor: black
+urlcolor: black
 
-title: "An Activity-based Approach for Developer Identification" 
+title: "An Activity-based Approach for Developer Identification"
 
 author:
     - name: Christopher S. Corley
@@ -22,12 +22,12 @@ author:
 
 keyword:
     - developer identification
-    - triage 
+    - triage
     - change requests
     - topic modeling
     - mining software repositories
     - changesets
- 
+
 abstract: |
     Developer identification is a prerequisite for assigning developers to tasks
     (e.g., bug reports, feature requests, or code reviews). Many state-of-the

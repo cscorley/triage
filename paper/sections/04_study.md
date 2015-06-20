@@ -27,12 +27,10 @@ dataset.
 \input{tables/subjects}
 \end{table}
 
-The attentive reader will notice that all of the systems are projects
-supported by the Apache Software Foundation. We chose these systems for our
-preliminary work because developers use descriptive commit messages that allow
-for easy traceability linking to issue reports. Further, all projects use JIRA
-as an issue tracker, which has been found to encourage more accurate linking
-[@Bissyande-etal_2013].
+We chose these systems for our preliminary work because developers use
+descriptive commit messages that allow for easy traceability linking to issue
+reports. Further, all projects use JIRA as an issue tracker, which has been
+found to encourage more accurate linking [@Bissyande-etal_2013].
 
 To build our dataset we mine the Git repository for information about each
 commit: the committer, message, and files changed. We use the files changed
@@ -130,7 +128,7 @@ effectiveness measures. We use the Wilcoxon signed-rank test with Holm
 correction to determine the statistical significance of the difference between
 the two rankings.
 
-## Results and Discussion
+## Results
 
 \input{tables/rq1_lda.tex}
 
@@ -141,14 +139,13 @@ Of those 6 systems in favor of the activity-based approach, 5 are statistically
 significant with $p < 0.01$. Overall, the activity-based approach performs
 slightly better with statistical significance.
 
+
+<!--
 The results of Pig deserve some qualitative discussion. It could be possible
 that the quality of the queries differs from other systems. However, the
 average issue report in Pig contains 79 words in total. Systems like Tika and
 ZooKeeper share that characteristic, respectively with 72 and 79 words on
-average.
-
-Another possibility is that the developers of Pig have stronger ownership over
+average. It could be that the developers of Pig have stronger ownership over
 files and share a common vocabulary than other systems. However, we cannot
 confirm this hypothesis without further experimentation.
-\todo{go derper -- can look at dev sims}
-
+-->
