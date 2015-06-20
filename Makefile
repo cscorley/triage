@@ -21,7 +21,7 @@ test:
 	nosetests tests/ || true
 	find src tests -name '*.pyc' -exec rm {} \;
 
-clean: clean-web clean-corpora clean-models
+clean: clean-web clean-models clean-results
 	find src tests -name '*.pyc' -exec rm {} \;
 
 clean-corpora: clean-taser

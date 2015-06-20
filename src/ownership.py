@@ -68,7 +68,7 @@ def read_ownership(project):
     with smart_open(os.path.join(project.full_path, 'ownership.csv.gz')) as f:
         reader = csv.reader(f)
         for path, committer, count in reader:
-            committer = to_unicode(committer)
+            committer = to_unicode(committer.replace(" ", "_"))
             path = to_unicode(path)
 
             if path not in ownership:

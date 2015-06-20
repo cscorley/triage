@@ -336,6 +336,7 @@ def rank2owner(ranks, ownership):
             best_score = 0
             bests = list()
             for owner, score in owners:
+                # get the owner, including all ties.
                 if best_score and score < best_score:
                     break
 
@@ -343,6 +344,18 @@ def rank2owner(ranks, ownership):
                 bests.append((distance, (owner, score)))
 
             owner_ranks[qid].extend(bests)
+
+        # only allow a dev to be recommended once
+        owner_ranks[qid].sort()
+        new_ranks = list()
+        seen = set()
+        for dist, meta in owner_ranks[qid]:
+            owner, score = meta
+            if owner not in seen:
+                new_ranks.append((dist, meta))
+                seen.add(owner)
+        owner_ranks[qid] = new_ranks
+
 
     return owner_ranks
 
