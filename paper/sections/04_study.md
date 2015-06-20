@@ -54,8 +54,8 @@ code snapshot and query the model for files related to the issue report. Once
 we determine the relevant documents, we need to determine which developer is
 the *owner* of those documents. To accomplish this, we turn to the source code
 history. Following @Bird-etal_2011, we identify which developer has changed the
-documents the most. This implies that the snapshot approach is *dependent* on
-the performance of the snapshot-based FLT.
+documents the most. This implies that the location-based approach is
+*dependent* on the performance of the FLT.
 
 For our proposed activity-based approach, the approach will not necessarily be
 dependent on an FLT. First, we train a model of the changeset corpus using
@@ -97,7 +97,7 @@ topic models that may not be best-suited for feature location on a particular
 subject system. However, this constraint gives us confidence that the
 measurements collected are fair and that the results are not influenced by
 selective parameter tweaking. Again, our goal is to show the performance of the
-changeset-based DIT against snapshot-based DIT under the same conditions.
+activity-based DIT against location-based DIT under the same conditions.
 
 Gensim's LDA implementation is based on an online LDA by @Hoffman-etal_2010 and
 uses variational inference instead of a collapsed Gibbs sampler.  Unlike Gibbs
@@ -122,11 +122,11 @@ measure allows evaluating the DIT by using the mean reciprocal rank (MRR)
 where $Q$ is the set of queries and $e_i$ is the effectiveness measure for some
 query $Q_i$.
 
-We run the experiment on the snapshot and changeset corpora as outlined in
-Section \ref{methodology}. We then calculate the MRR between the two sets of
-effectiveness measures. We use the Wilcoxon signed-rank test with Holm
-correction to determine the statistical significance of the difference between
-the two rankings.
+We run the experiment on the for the activity- and location-based approaches as
+outlined in Section \ref{methodology}. We then calculate the MRR between the
+two sets of effectiveness measures. We use the Wilcoxon signed-rank test with
+Holm correction to determine the statistical significance of the difference
+between the two rankings.
 
 ## Results
 
