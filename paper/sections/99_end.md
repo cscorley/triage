@@ -4,6 +4,4 @@
 thanks everyone
 -->
 
-# References
-
 \small

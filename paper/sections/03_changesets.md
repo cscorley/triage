@@ -11,25 +11,27 @@
 ![Developer identification using changesets\label{fig:changeset-triage}](changeset-triage.pdf)
 -->
 
-Our activity-based approach relies on modeling changeset topics. This changeset
-approach requires two types of document extraction: one for the every changeset
-in the source code history and a developer profile of the words each individual
-developer used in those changesets. The left side of Figure
-\ref{fig:changeset-triage} illustrates the dual-document extraction approach.
+Our activity-based approach relies on modeling changeset topics
+[@Corley-etal_2014], a technique that has shown useful for feature location
+[@Corley-etal_2015]. The changeset approach requires two types of document
+extraction: one for the every changeset in the source code history and a
+developer profile of the words each individual developer used in those
+changesets. The left side of Figure \ref{fig:changeset-triage} illustrates the
+dual-document extraction approach.
 
 The document extraction process for the developer corpus is straightforward.
 Following @Matter-etal_2009, each developer will have their own document
 consisting of an aggregation of changesets they have committed to the source
-code repository. That is, a developer document consists of only words they have
-changed. There may be weighting schemes to this [@Shokripour-etal_2013], such
-as only considering words which they have added or removed, while ignoring
-context words.
+code repository. That is, a document representing a developer consists of only
+words that developer has changed. There may be weighting schemes to this
+[@Shokripour-etal_2013], such as only considering words which they have added
+or removed, while ignoring context words.
 
 The right side of Figure \ref{fig:changeset-triage} illustrates the retrieval
 process. The key intuition to our methodology is that a topic model such as LDA
 or LSI can infer *any* document's topic proportions regardless of the documents
-used to train the model.  In our approach, the seen documents are changesets
-and the unseen documents are the developer profiles.
+used to train the model.  In our approach, the documents seen during training
+are changesets and the unseen documents are the developer profiles.
 
 Hence, we train a topic model on the changeset corpus and use the model to
 index the developer profiles.  Note that we never construct an index of the

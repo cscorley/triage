@@ -57,7 +57,7 @@ HEADER="""\\begin{table}[t]
 \\renewcommand{\\arraystretch}{1.3}
 \\footnotesize
 \\centering"""
-INNER_HEADER="""\\caption{{\\bf %s}: MRR and $p$-values}
+INNER_HEADER="""\\caption{MRR and $p$-values}
 \\begin{tabular}{l|ll|ll}
 \\toprule
 Subject System & %s & %s & $p$-value  \\\\
@@ -65,19 +65,19 @@ Subject System & %s & %s & $p$-value  \\\\
 INNER_FOOTER= "\\bottomrule\n\\end{tabular}\n\\label{table:%s:%s:%s}"
 FOOTER="\\end{table}"
 
-projects = src.main.load_projects({"level": "file", "num_topics": 500})
 ex = ["solr", "lucene"]
 
 for kind in ['lda']: # 'lsi']:
     alldict = dict()
     with open('paper/tables/rq1_%s.tex' % kind, 'w') as f:
         print(HEADER, file=f)
-        for level in ['class', 'method']:
+        for level in ['file']:
+            projects = src.main.load_projects({"level": level, "num_topics": 500})
             rname = 'release_' + kind
             cname = 'changeset_' + kind
             alldict[rname] = list()
             alldict[cname] = list()
-            print(INNER_HEADER % ('RQ1', 'Snapshot', 'Changeset'), file=f)
+            print(INNER_HEADER % ('Location', 'Activity'), file=f)
             for project in projects:
                 if project.name in ex:
                     continue

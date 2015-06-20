@@ -1,29 +1,31 @@
 # Study
 
-In this section we describe the design of a study in which we compare our
-activity-based approach with a location-based approach.
-
-## Evaluation
+In this section we describe the design and results of a study in which we
+compare our activity-based approach with a location-based approach.
 
 ## Subject Systems and Dataset
 
+\todo{add table describing the systems/goldset sizes}
 
-The 9 subjects of our study vary in size and application domain.
+The 7 subjects of our study vary in size and application domain.
 BookKeeper is a distributed logging service\footnote{\url{http://zookeeper.apache.org/bookkeeper/}}.
 Derby is a relational database management system\footnote{\url{http://db.apache.org/derby/}}.
-Lucene is an information retrieval library\footnote{\url{http://lucene.apache.org/core/}}.
+<!--Lucene is an information retrieval
+library\footnote{\url{http://lucene.apache.org/core/}}.-->
 Mahout is a tool for scalable machine learning\footnote{\url{https://mahout.apache.org/}}.
 OpenJPA is object/relational mapping tool\footnote{\url{http://openjpa.apache.org/}}.
 Pig is a platform for analyzing large datasets\footnote{\url{http://pig.apache.org/}}.
-Solr is a search platform\footnote{\url{http://lucene.apache.org/solr/}}.
+<!--Solr is a search
+platform\footnote{\url{http://lucene.apache.org/solr/}}.-->
 Tika is a toolkit for extracting metadata and text from various types of files\footnote{\url{http://tika.apache.org/}}.
 ZooKeeper is a tool that works as a coordination service to help build distributed applications\footnote{\url{http://zookeeper.apache.org/bookkeeper/}}.
-However, the attentive reader will notice that all of the systems are projects
-supported by the Apache Software Foundation.
-We chose these systems for our preliminary work because developers use
-descriptive commit messages that allow for easy traceability linking to issue
-reports. Further, Apache provides Git mirrors for all projects using
-Subversion.
+
+The attentive reader will notice that all of the systems are projects
+supported by the Apache Software Foundation. We chose these systems for our
+preliminary work because developers use descriptive commit messages that allow
+for easy traceability linking to issue reports. Further, all projects use JIRA
+as an issue tracker, which has been found to encourage more accurate linking
+[@Bissyande-etal_2013].
 
 To build our dataset we mine the Git repository for information about each
 commit: the committer, message, and files changed. We use the files changed
@@ -39,17 +41,16 @@ developers that committed changes linked to the issue report. We use this map
 as our goldset for identifying the developer most apt to handle the issue
 report.
 
-
 ## Methodology
 
 For a location-based approach, the process is straightforward, but requires two
-separate steps. First, we need to build a topic model for searching over the
-source code snapshot. Once we determine the relevant documents, we need to
-determine which developer is the *owner* of those documents. To accomplish
-this, we turn to the source code history. Following @Bird-etal_2011, we
-identify which developer has changed the documents the most. This implies that
-the snapshot approach is *dependent* on the performance of the snapshot-based
-FLT.
+separate steps. First, we build a topic model for searching over the source
+code snapshot and query the model for files related to the issue report. Once
+we determine the relevant documents, we need to determine which developer is
+the *owner* of those documents. To accomplish this, we turn to the source code
+history. Following @Bird-etal_2011, we identify which developer has changed the
+documents the most. This implies that the snapshot approach is *dependent* on
+the performance of the snapshot-based FLT.
 
 For our proposed activity-based approach, the approach will not necessarily be
 dependent on an FLT. First, we train a model of the changeset corpus using
@@ -61,26 +62,74 @@ developer profiles index with pairwise comparisons.
 
 ## Setting
 
+Our document extraction process is shown on the left side of
+Figure \ref{fig:changeset-triage}. We implemented our document extractor in
+Python v2.7 using the Dulwich library^[<http://www.samba.org/~jelmer/dulwich/>]
+for interacting with the source code repository. We extract documents from both
+a snapshot of the repository at a tagged snapshot and each commit reachable
+from that tag's commit. The same preprocessing steps are employed on all
+documents extracted.
+
+For our document extraction from a snapshot, we simply use each text file in
+the source code repository as documents. To extract text from the changesets,
+we use `git diff` between two commits. In our changeset text extractor, we
+extract all text related to the change, e.g., context, removed, and added
+lines; metadata lines are ignored. Note that we do not consider where the text
+originates from, only that it is text changed by the commit.
+
+After extracting tokens, we split the tokens based on camel case, underscores,
+and non-letters. We only keep the split tokens; original tokens are discarded.
+We normalize to lower case before filtering non-letters, English stop
+words [@Fox_1992], Java keywords, and words shorter than three characters
+long. We do not stem words.
+
+We implemented our modeling using the Python library Gensim
+[@Rehurek-Sojk_2010], version 0.11.1. We use the same configurations on each
+subject system.  We do not try to adjust parameters between the different
+systems to attempt to find a better, or best, solution; rather, we leave them
+the same to reduce confounding variables.  We do realize that this may lead to
+topic models that may not be best-suited for feature location on a particular
+subject system. However, this constraint gives us confidence that the
+measurements collected are fair and that the results are not influenced by
+selective parameter tweaking. Again, our goal is to show the performance of the
+changeset-based DIT against snapshot-based DIT under the same conditions.
+
+Gensim's LDA implementation is based on an online LDA by @Hoffman-etal_2010 and
+uses variational inference instead of a collapsed Gibbs sampler.  Unlike Gibbs
+sampling, in order to ensure that the model converges for each document, we
+allow LDA to see each mini-batch $5$ times by setting Gensim's initialization
+parameter `passes` to this value and allowing the inference step $1000$
+iterations over a document.  We set the following LDA parameters for all
+systems: $500$ topics ($K$), a symmetric $\alpha=1/K$, and a symmetric
+$\eta=1/K$.  These are default values for $\alpha$ and $\eta$ in Gensim.
+
 ## Data Collection and Analysis
 
-To evaluate the performance of a topic-modeling-based FLT we cannot use
-measures such as precision and recall. This is because the FLT creates the
-rankings pairwise, causing every entity to appear in the rankings. Again,
+To evaluate the performance of a topic-modeling-based DIT or FLT we cannot use
+measures such as precision and recall. This is because the techniques create
+rankings pairwise, causing every document to appear in the rankings.
 @Poshyvanyk-etal_2007 define an effectiveness measure for topic-modeling-based
-FLTs, which is usable for a DIT. The effectiveness measure is the rank
-of the first relevant document and represents the number of developers the
-triager would have to assign before choosing the right developer. The
-effectiveness measure allows evaluating the FLT by using the mean reciprocal
-rank (MRR). We can also look at only the top-k recommendations in the list,
-giving us the measures of precision@k and recall@k.
+FLTs, which is usable for a DIT. Here, the effectiveness measure is the rank of
+the first relevant document and represents the number of developers the triager
+would have to assign before choosing the right developer. The effectiveness
+measure allows evaluating the DIT by using the mean reciprocal rank (MRR)
+[@Voorhees_1999]: $MRR = \frac{1}{|Q|} \sum_{i=1}^{|Q|} \frac{1}{e_i}$
+where $Q$ is the set of queries and $e_i$ is the effectiveness measure for some
+query $Q_i$.
 
-To answer our research question, we run the experiment on the snapshot and
-changeset corpora as outlined in Section \ref{methodology}. We then calculate
-the MRR between the two sets of effectiveness measures. We use the Wilcoxon
-signed-rank test with Holm correction to determine the statistical significance
-of the difference between the two rankings.
+We run the experiment on the snapshot and changeset corpora as outlined in
+Section \ref{methodology}. We then calculate the MRR between the two sets of
+effectiveness measures. We use the Wilcoxon signed-rank test with Holm
+correction to determine the statistical significance of the difference between
+the two rankings.
 
 ## Results and Discussion
 
+Table \ref{table:rq1:file:lda} shows the MRR and Wilcoxon signed-rank $p$-value
+for each subject system. We can see that for all systems with the exception of
+Pig, that the activity-based approach outperforms the location-based approach.
+Of those 6 systems in favor of the activity-based approach, 5 are statistically
+significant with $p < 0.01$. Overall, the activity-based approach performs
+slightly better with statistical significance.
 
 \input{tables/rq1_lda.tex}

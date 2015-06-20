@@ -1,8 +1,8 @@
 # Background & Related Work
 
-In this
-section, we will first discuss the developer identification problem and 
+In this section, we will first discuss the developer identification problem and
 then review related works for the two categories.
+\todo{what two cats}
 
 ## Developer identification
 
@@ -32,26 +32,26 @@ the change request.
 ## Location-based approaches
 
 Location-based techniques are a common developer identification technique and
-build upon feature location techniques.
-Location-based approaches resemble a feature location technique in that they
-rely on source code entity information to derive a developer, e.g., which
-developer has worked on the related classes in the past?
+build upon feature location techniques. Location-based approaches resemble a
+feature location technique in that they rely on source code entity information
+to derive a developer, e.g., which developer has worked on the related classes
+in the past?
 
-\todo{FLT blah blah}
+For example, we can use an FLT to identify a ranked list of source code
+entities related to a particular task. Using ownership knowledge about the
+identified entities, we can choose an appropriate developer to complete the
+task. For example, if the FLT identifies the file `foo.py` as the most related
+entity, then we would want to know about the maintainer, or owner, of `foo.py`.
+There are multiple ways to determine the ownership of a source code entity
+[@Bird-etal_2011; @Kagdi-etal_2012; @Corley-etal_2012; @Hossen-etal_2014].
 
-We use an FLT to identify a ranked list of source code entities related to a
-particular task. Using ownership knowledge about the identified entities, we
-can choose an appropriate developer to complete the task. For example, if the
-FLT identifies the file `foo.py` as the most related entity, then we would want
-to know about the maintainer, or owner, of `foo.py`. There are multiple ways to
-determine the ownership of a source code entity [@Bird-etal_2011;
-@Kagdi-etal_2012; @Corley-etal_2012; @Hossen-etal_2014].
+An example ownership metric is the number of times a developer has committed
+changes to a file. That is, if over the software history Johanna modified
+`foo.py` 20 times, while Heather only has 5 modifications to `foo.py`, then we
+consider Johanna as the owner of `foo.py`. Here, we assign all tasks related to
+`foo.py` to Johanna.
 
-A simple, example ownership metric is the number of times a developer has
-committed changes to a file. That is, if over the software history Johanna
-modified `foo.py` 20 times, while Heather only has 5 modifications to `foo.py`,
-then we consider Johanna as the owner of `foo.py`. Here, we assign all tasks
-related to `foo.py` to Johanna.
+\todo{cite something lol}
 
 <!--
 @McDonald-Ackerman_2000 present a heuristic-based recommender system named
@@ -122,6 +122,9 @@ using a term weighting scheme increases the accuracy of an DIT.
 
 An activity-based approach uses information gained from a developers
 *activity*, e.g., which change requests they have worked on in the past.
+
+
+\todo{cite something lol}
 
 <!--
 @Mockus-Herbsleb_2002 present Expertise Browser to locate expertise. The

@@ -34,11 +34,17 @@ be feasible given the amount of contextual knowledge required for triage.
 Recent advancements in automating triage often involve a range of heterogeneous
 information mined from many sources [@Kagdi-etal_2012;
 @Linares-Vasquez-etal_2012; @Hossen-etal_2014; @Zanjani-etal_2015]. The need
-for heterogeneous sources is intuitive given that human triagers must also
-consider many different factors. However, these are location-based approaches,
+for heterogeneous sources is intuitive given that manual triage also requires
+consideration of several factors. However, these are location-based approaches,
 and as such must rely on a feature location technique (FLT) to locate relevant
 source code entities before a developer can be identified with the mined
-information.
+information. Hence, their accuracy is heavily influenced by the accuracy of the
+underlying FLT.
 
-In this paper, we propose an activity-based approach that uses changeset topic
-modeling to determine appropriate developers by the words they have changed.
+In this paper, we propose an activity-based developer identification technique
+(DIT) that uses changeset topic modeling to determine appropriate developers by
+the words they have changed. The preliminary evaluation compares the approach
+to a location-based technique. Our benchmark consists of \attn{XXX} issues from
+7 Apache open source Java systems. Our results shows improvements when using an
+activity-based approach for developer identification. We discuss future
+direction in adding heterogeneous information to supplement the approach.
