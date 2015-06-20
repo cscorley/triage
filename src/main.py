@@ -329,6 +329,7 @@ def rank2owner(ranks, ownership):
         for distance, meta in dist:
             d_name, d_repo = meta
             if d_name not in ownership:
+                logger.debug('Could not find %s in ownership')
                 continue
 
             owners = list(reversed(sorted(ownership[d_name].items(), key=lambda x: x[1])))
@@ -531,7 +532,7 @@ def get_frms(goldsets, ranks):
             for idx, rank in enumerate(ranks[g_id]):
                 dist, meta = rank
                 d_name, d_repo = meta
-                logger.debug(meta)
+                d_name = d_name.replace(' ', '_')
                 if d_name in goldset:
                     subfrms.append((idx+1, int(g_id), d_name))
                     break

@@ -4,4 +4,4 @@
 thanks everyone
 -->
 
-\small
+\footnotesize

@@ -6,5 +6,3 @@ openjpa,OpenJPA,v2.3.0,refs/tags/2.3.0,http://archive.apache.org/dist/openjpa/2.
 pig,Pig,v0.14.0,refs/tags/release-0.14.0,http://archive.apache.org/dist/pig/pig-0.14.0/pig-0.14.0-src.tar.gz
 tika,Tika,v1.8,refs/tags/1.8,http://archive.apache.org/dist/tika/apache-tika-1.8-src.zip
 zookeeper,ZooKeeper,v3.5.0,refs/tags/release-3.5.0,http://archive.apache.org/dist/zookeeper/zookeeper-3.5.0/zookeeper-3.5.0.tar.gz
-solr,Solr,v4.10.1,refs/tags/lucene_solr_4_10_1,http://archive.apache.org/dist/lucene/solr/4.10.1/solr-4.10.1-src.tgz
-lucene,Lucene,v4.10.1,refs/tags/lucene_solr_4_10_1,http://archive.apache.org/dist/lucene/java/4.10.1/lucene-4.10.1-src.tgz

@@ -8,6 +8,10 @@ classoption:
 graphics: yes
 numbersections: yes
 
+citecolor: black 
+linkcolor: black 
+urlcolor: black 
+
 title: "An Activity-based Approach for Developer Identification" 
 
 author:

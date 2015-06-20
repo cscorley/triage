@@ -1,7 +1,7 @@
-# Study
+# Preliminary Study
 
-In this section we describe the design and results of a study in which we
-compare our activity-based approach with a location-based approach.
+In this section we describe the design and results of a preliminary study in
+which we compare our activity-based approach with a location-based approach.
 
 ## Subject Systems and Dataset
 
@@ -140,4 +140,15 @@ Pig, that the activity-based approach outperforms the location-based approach.
 Of those 6 systems in favor of the activity-based approach, 5 are statistically
 significant with $p < 0.01$. Overall, the activity-based approach performs
 slightly better with statistical significance.
+
+The results of Pig deserve some qualitative discussion. It could be possible
+that the quality of the queries differs from other systems. However, the
+average issue report in Pig contains 79 words in total. Systems like Tika and
+ZooKeeper share that characteristic, respectively with 72 and 79 words on
+average.
+
+Another possibility is that the developers of Pig have stronger ownership over
+files and share a common vocabulary than other systems. However, we cannot
+confirm this hypothesis without further experimentation.
+\todo{go derper -- can look at dev sims}
 

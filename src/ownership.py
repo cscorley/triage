@@ -74,7 +74,7 @@ def read_ownership(project):
             if path not in ownership:
                 ownership[path] = dict()
 
-            ownership[path][committer] = count
+            ownership[path][committer] = int(count)
 
     return ownership
 
