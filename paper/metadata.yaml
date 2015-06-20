@@ -5,6 +5,9 @@ biblio-style: IEEEtranN-nourl # custom BST to ignore URLs in papers.bib
 classoption:
     - conference
 
+graphics: yes
+numbersections: yes
+
 title: "An Activity-based Approach for Developer Identification" 
 
 author:
