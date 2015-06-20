@@ -5,8 +5,6 @@ compare our activity-based approach with a location-based approach.
 
 ## Subject Systems and Dataset
 
-\todo{add table describing the systems/goldset sizes}
-
 The 7 subjects of our study vary in size and application domain.
 BookKeeper is a distributed logging service\footnote{\url{http://zookeeper.apache.org/bookkeeper/}}.
 Derby is a relational database management system\footnote{\url{http://db.apache.org/derby/}}.
@@ -19,6 +17,15 @@ Pig is a platform for analyzing large datasets\footnote{\url{http://pig.apache.o
 platform\footnote{\url{http://lucene.apache.org/solr/}}.-->
 Tika is a toolkit for extracting metadata and text from various types of files\footnote{\url{http://tika.apache.org/}}.
 ZooKeeper is a tool that works as a coordination service to help build distributed applications\footnote{\url{http://zookeeper.apache.org/bookkeeper/}}.
+Table \ref{table:subjects} summarizes the sizes of each system's corpora and
+dataset.
+
+\begin{table}
+\centering
+\caption{Subject system corpora and dataset sizes}
+\label{table:subjects}
+\input{tables/subjects}
+\end{table}
 
 The attentive reader will notice that all of the systems are projects
 supported by the Apache Software Foundation. We chose these systems for our
@@ -125,6 +132,8 @@ the two rankings.
 
 ## Results and Discussion
 
+\input{tables/rq1_lda.tex}
+
 Table \ref{table:rq1:file:lda} shows the MRR and Wilcoxon signed-rank $p$-value
 for each subject system. We can see that for all systems with the exception of
 Pig, that the activity-based approach outperforms the location-based approach.
@@ -132,4 +141,3 @@ Of those 6 systems in favor of the activity-based approach, 5 are statistically
 significant with $p < 0.01$. Overall, the activity-based approach performs
 slightly better with statistical significance.
 
-\input{tables/rq1_lda.tex}

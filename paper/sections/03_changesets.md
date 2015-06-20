@@ -29,9 +29,9 @@ or removed, while ignoring context words.
 
 The right side of Figure \ref{fig:changeset-triage} illustrates the retrieval
 process. The key intuition to our methodology is that a topic model such as LDA
-or LSI can infer *any* document's topic proportions regardless of the documents
-used to train the model.  In our approach, the documents seen during training
-are changesets and the unseen documents are the developer profiles.
+can infer *any* document's topic proportions regardless of the documents used
+to train the model.  In our approach, the documents seen during training are
+changesets and the unseen documents are the developer profiles.
 
 Hence, we train a topic model on the changeset corpus and use the model to
 index the developer profiles.  Note that we never construct an index of the
