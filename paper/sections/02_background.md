@@ -68,7 +68,7 @@ based on previously fixed bugs.
 <!-- -->
 @Jeong-etal_2009 use a Markov chain-based learning algorithm that considers bug
 reassignment information and reduce the possibility of a bug reassignment by
-ensuring the bug is assigned to the correct developer the first time.
+assigning the bug to the correct developer the first time.
 @Bhattacharya-etal_2012 further employ this idea using different learning
 algorithms incrementally improves triaging bugs the first time.
 

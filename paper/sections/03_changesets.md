@@ -15,7 +15,7 @@ Our activity-based approach relies on modeling changeset topics
 [@Corley-etal_2014], a technique that has shown useful for feature location
 [@Corley-etal_2015]. We choose to train the model on changesets, rather than
 another source of information, because they also represent what we are
-primarily interested in: language being used by committers.  While a snapshot
+primarily interested in: language used by committers.  While a snapshot
 corpus of source code has documents that represent a program, a changeset
 corpus has documents that represent programming.
 

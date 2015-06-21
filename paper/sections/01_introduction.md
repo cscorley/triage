@@ -37,9 +37,9 @@ information mined from many sources [@Kagdi-etal_2012;
 for heterogeneous sources is intuitive given that manual triage also requires
 consideration of several factors. However, many of these approaches are
 location-based, and as such must rely on a feature location technique (FLT) to
-locate relevant source code entities before a developer can be identified with
-the mined information. Hence, their accuracy is heavily influenced by the
-accuracy of the underlying FLT to locate the correct source code entities.
+locate relevant source code entities before identifying a developer with the
+mined information. Hence, their accuracy is heavily influenced by the accuracy
+of the underlying FLT to locate the correct source code entities.
 
 In this paper, we propose an activity-based developer identification technique
 (DIT) that uses changeset topic modeling to determine appropriate developers by

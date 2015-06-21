@@ -39,8 +39,8 @@ the traceability links to issues in JIRA with the regular expression: `%s-\d+`,
 where `%s` is the project's name (e.g., BookKeeper). This matches for
 JIRA-based issue identifiers, such as `BOOKKEEPER-439` or `TIKA-42`.
 
-From the issue reports, we extract the version the issue marked as fixed in. If
-the issue does not list a fixed version, it is ignored. We also extract the
+From the issue reports, we extract the version the issue marked as fixed in. We
+ignore issues that are not marked with a fixed version. We also extract the
 title and description of the issue. We then construct a map between the
 developers that committed changes linked to the issue report. We use this map
 as our goldset for identifying the developer most apt to handle the issue
@@ -67,23 +67,22 @@ developer profiles index with pairwise comparisons.
 
 ## Setting
 
-Our document extraction process is shown on the left side of
-Figure \ref{fig:changeset-triage}. We implemented our document extractor in
-Python v2.7 using the Dulwich library^[<http://www.samba.org/~jelmer/dulwich/>]
-for interacting with the source code repository. We extract documents from both
-a snapshot of the repository at a tagged snapshot and each commit reachable
-from that tag's commit. The same preprocessing steps are employed on all
-documents extracted.
+The left side of Figure \ref{fig:changeset-triage} shows our document
+extraction process. We implemented our document extractor in Python v2.7 using
+the Dulwich library^[<http://www.samba.org/~jelmer/dulwich/>] for interacting
+with the source code repository. We extract documents from both a snapshot of
+the repository at a tagged snapshot and each commit reachable from that tag's
+commit. We use the same preprocessing steps on all extracted documents.
 
 For our document extraction from a snapshot, we simply use each text file in
 the source code repository as documents. To extract text from the changesets,
 we use `git diff` between two commits. In our changeset text extractor, we
 extract all text related to the change, e.g., context, removed, and added
-lines; metadata lines are ignored. Note that we do not consider where the text
+lines; we ignore metadata lines. Note that we do not consider where the text
 originates from, only that it is text changed by the commit.
 
 After extracting tokens, we split the tokens based on camel case, underscores,
-and non-letters. We only keep the split tokens; original tokens are discarded.
+and non-letters. We only keep the split tokens; we discard original tokens.
 We normalize to lower case before filtering non-letters, English stop
 words [@Fox_1992], Java keywords, and words shorter than three characters
 long. We do not stem words.
@@ -99,9 +98,9 @@ measurements collected are fair and that the results are not influenced by
 selective parameter tweaking. Again, our goal is to show the performance of the
 activity-based DIT against location-based DIT under the same conditions.
 
-Gensim's LDA implementation is based on an online LDA by @Hoffman-etal_2010 and
+Gensim's LDA implementation originates from the online LDA by @Hoffman-etal_2010 and
 uses variational inference instead of a collapsed Gibbs sampler.  Unlike Gibbs
-sampling, in order to ensure that the model converges for each document, we
+sampling, to ensure that the model converges for each document, we
 allow LDA to see each mini-batch $5$ times by setting Gensim's initialization
 parameter `passes` to this value and allowing the inference step $1000$
 iterations over a document.  We set the following LDA parameters for all
