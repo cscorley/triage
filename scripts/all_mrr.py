@@ -28,12 +28,15 @@ def print_em(desc, a, b, ignore=False, file=None):
 
     changeset = round(src.utils.calculate_mrr(x), acc)
     snapshot = round(src.utils.calculate_mrr(y), acc)
+
     if changeset >= snapshot:
-        changeset = "{\\bf %f }" % changeset
-        snapshot = "%f" % snapshot
+        spread = "+%.4f" % (changeset - snapshot)
+        changeset = "{\\bf %.4f }" % changeset
+        snapshot = "%.4f" % snapshot
     else:
-        snapshot = "{\\bf %f }" % snapshot
-        changeset = "%f" % changeset
+        spread = "%.4f" % (changeset - snapshot)
+        snapshot = "{\\bf %.4f }" % snapshot
+        changeset = "%.4f" % changeset
 
     if len(x) < 10:
         star = "^{*}"
@@ -48,6 +51,7 @@ def print_em(desc, a, b, ignore=False, file=None):
 
     l = [desc,
         snapshot, changeset,
+        spread,
         p
         ]
 
@@ -58,9 +62,9 @@ HEADER="""\\begin{table}[t]
 \\footnotesize
 \\centering"""
 INNER_HEADER="""\\caption{MRR and $p$-values}
-\\begin{tabular}{l|ll|ll}
+\\begin{tabular}{l|llr|l}
 \\toprule
-Subject System & %s & %s & $p$-value  \\\\
+Subject System & %s & %s & Spread & $p$-value  \\\\
 \\midrule"""
 INNER_FOOTER= "\\bottomrule\n\\end{tabular}\n\\label{table:%s:%s:%s}"
 FOOTER="\\end{table}"
@@ -83,8 +87,11 @@ for kind in ['lda']: # 'lsi']:
                     continue
                 desc = ' '.join([project.printable_name, project.version])
 
-                a = ap(project, rname)
-                b = ap(project, cname)
+                try:
+                    a = ap(project, rname)
+                    b = ap(project, cname)
+                except IOError:
+                    continue
 
                 alldict[rname] += a
                 alldict[cname] += b
