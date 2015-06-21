@@ -55,7 +55,8 @@ we determine the relevant documents, we need to determine which developer is
 the *owner* of those documents. To accomplish this, we turn to the source code
 history. Following @Bird-etal_2011, we identify which developer has changed the
 documents the most. This implies that the location-based approach is
-*dependent* on the performance of the FLT.
+*dependent* on the performance of the FLT. For each file recommended by the
+FLT, we take the developer with the highest ownership.
 
 For our proposed activity-based approach, the approach will not necessarily be
 dependent on an FLT. First, we train a model of the changeset corpus using
@@ -68,10 +69,8 @@ developer profiles index with pairwise comparisons.
 ## Setting
 
 The left side of Figure \ref{fig:changeset-triage} shows our document
-extraction process. We implemented our document extractor in Python v2.7 using
-the Dulwich library^[<http://www.samba.org/~jelmer/dulwich/>] for interacting
-with the source code repository. We extract documents from both a snapshot of
-the repository at a tagged snapshot and each commit reachable from that tag's
+extraction process.  We extract documents from both a snapshot of the
+repository at a tagged snapshot and each commit reachable from that tag's
 commit. We use the same preprocessing steps on all extracted documents.
 
 For our document extraction from a snapshot, we simply use each text file in
@@ -87,16 +86,16 @@ We normalize to lower case before filtering non-letters, English stop
 words [@Fox_1992], Java keywords, and words shorter than three characters
 long. We do not stem words.
 
-We implemented our modeling using the Python library Gensim
-[@Rehurek-Sojk_2010], version 0.11.1. We use the same configurations on each
-subject system.  We do not try to adjust parameters between the different
-systems to attempt to find a better, or best, solution; rather, we leave them
-the same to reduce confounding variables.  We do realize that this may lead to
-topic models that may not be best-suited for feature location on a particular
-subject system. However, this constraint gives us confidence that the
-measurements collected are fair and that the results are not influenced by
-selective parameter tweaking. Again, our goal is to show the performance of the
-activity-based DIT against location-based DIT under the same conditions.
+We implement our modeling with Gensim [@Rehurek-Sojk_2010] v0.11.1, a Python
+topic modeling library. We use the same configurations on each subject system.
+We do not try to adjust parameters between the different systems to attempt to
+find a better, or best, solution; rather, we leave them the same to reduce
+confounding variables.  We do realize that this may lead to topic models that
+may not be best-suited for feature location on a particular subject system.
+However, this constraint gives us confidence that the measurements collected
+are fair and that the results are not influenced by selective parameter
+tweaking. Again, our goal is to show the performance of the activity-based DIT
+against location-based DIT under the same conditions.
 
 Gensim's LDA implementation originates from the online LDA by @Hoffman-etal_2010 and
 uses variational inference instead of a collapsed Gibbs sampler.  Unlike Gibbs
@@ -131,20 +130,22 @@ between the two rankings.
 
 \input{tables/rq1_lda.tex}
 
+![Effectiveness measures of all systems\label{fig:all_em}](all_em.pdf)
+
 Table \ref{table:rq1:file:lda} shows the MRR and Wilcoxon signed-rank $p$-value
-for each subject system. We can see that for all systems with the exception of
-Pig, that the activity-based approach outperforms the location-based approach.
-Of those 6 systems in favor of the activity-based approach, 5 are statistically
-significant with $p < 0.01$. Overall, the activity-based approach performs
+for each subject system. Figure \ref{fig:all_em} shows the effectiveness
+measure across all systems for each approach.
+
+We can see that for all systems with the exception of Pig, that the
+activity-based approach outperforms the location-based approach. Of those 6
+systems in favor of the activity-based approach, 5 are statistically
+significant with $p < 0.01$. Overall, the location-based approach performs
 slightly better with statistical significance.
 
-
-<!--
-The results of Pig deserve some qualitative discussion. It could be possible
-that the quality of the queries differs from other systems. However, the
-average issue report in Pig contains 79 words in total. Systems like Tika and
-ZooKeeper share that characteristic, respectively with 72 and 79 words on
-average. It could be that the developers of Pig have stronger ownership over
-files and share a common vocabulary than other systems. However, we cannot
-confirm this hypothesis without further experimentation.
--->
+The results of Pig deserve some discussion. It could be possible that the
+quality of the queries differs from other systems. However, the average issue
+report in Pig contains 79 words in total. Systems like Tika and ZooKeeper share
+that characteristic, respectively with 72 and 79 words on average. It could
+also be that the developers of Pig have stronger ownership over files while
+also share a common vocabulary than other systems. However, we cannot confirm
+this hypothesis without further experimentation.
