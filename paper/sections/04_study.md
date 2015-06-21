@@ -134,13 +134,10 @@ between the two rankings.
 
 Table \ref{table:rq1:file:lda} shows the MRR and Wilcoxon signed-rank $p$-value
 for each subject system. Figure \ref{fig:all_em} shows the effectiveness
-measure across all systems for each approach.
-
-We can see that for all systems with the exception of Pig, that the
-activity-based approach outperforms the location-based approach. Of those 6
-systems in favor of the activity-based approach, 5 are statistically
-significant with $p < 0.01$. Overall, the location-based approach performs
-slightly better with statistical significance.
+measure across all systems for each approach. We can see that for all systems
+with the exception of Pig and ZooKeeper, that the activity-based approach
+outperforms the location-based approach. Overall, the location-based approach
+performs slightly better with statistical significance.
 
 The results of Pig deserve some discussion. It could be possible that the
 quality of the queries differs from other systems. However, the average issue
