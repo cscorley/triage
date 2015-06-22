@@ -73,12 +73,12 @@ extraction process.  We extract documents from both a snapshot of the
 repository at a tagged snapshot and each commit reachable from that tag's
 commit. We use the same preprocessing steps on all extracted documents.
 
-For our document extraction from a snapshot, we simply use each text file in
-the source code repository as documents. To extract text from the changesets,
-we use `git diff` between two commits. In our changeset text extractor, we
-extract all text related to the change, e.g., context, removed, and added
-lines; we ignore metadata lines. Note that we do not consider where the text
-originates from, only that it is text changed by the commit.
+For our document extraction from a snapshot, we use each text file in the
+source code repository as documents. To extract text from the changesets, we
+use `git diff` between two commits. In our changeset text extractor, we extract
+all text related to the change, e.g., context, removed, and added lines; we
+ignore metadata lines. Note that we do not consider where the text originates
+from, only that it is text changed by the commit.
 
 After extracting tokens, we split the tokens based on camel case, underscores,
 and non-letters. We only keep the split tokens; we discard original tokens.

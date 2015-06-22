@@ -1,5 +1,5 @@
+<!--
 # Threats to Validity
-
 
 Our study has limitations that impact the validity of our findings, as well as
 our ability to generalize them. We describe some of these limitations and their
@@ -30,3 +30,4 @@ Java, so we cannot generalize our results to systems implemented in other
 languages. However, the systems are of different sizes, are from different
 domains, and have characteristics in common with those of systems developed in
 industry.
+-->

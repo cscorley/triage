@@ -1,3 +1,11 @@
+<!-- lol latex -->
+\begin{figure*}[ht]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/changeset-triage.pdf}
+\caption{Developer identification using a changeset topic model}
+\label{fig:changeset-triage}
+\end{figure*}
+
 # Background & Related Work
 
 As noted by @Shokripour-etal_2013, there are broadly two categories of
@@ -7,10 +15,10 @@ In this section, we will discuss background and related works of each.
 
 ## Location-based approaches
 
-Location-based techniques are a common developer identification technique and
-build upon feature location techniques. Location-based approaches resemble a
-FLT in that they rely on source code entity information to derive a developer,
-e.g., which developer has worked on the related classes in the past?
+Location-based techniques are a developer identification technique and build
+upon feature location techniques. Location-based approaches resemble a FLT in
+that they rely on source code entity information to derive a developer, e.g.,
+which developer has worked on the related classes in the past?
 
 For example, we can use an FLT to identify a ranked list of source code
 entities related to a particular task. Using ownership knowledge about the
@@ -43,7 +51,7 @@ location-based technique.
 ## Activity-based Approaches
 
 An activity-based approach uses information gained from a developers
-*activity*, e.g., which change requests they have worked on in the past.
+*activity*, i.e., what they have worked on in the past.
 Activity-based approaches use the developer's previous contributions in
 aggregate to determine which is best fit to work on a particular task.
 

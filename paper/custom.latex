@@ -29,7 +29,7 @@
   breaklines=true,                 % sets automatic line breaking
   columns=fixed,
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
-  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
   numbersep=10pt,                   % how far the line-numbers are from the code
   numberstyle=\tiny, % the style that is used for the line-numbers
   showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
