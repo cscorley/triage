@@ -1,0 +1,115 @@
+Dear Christopher,
+
+We regret to inform you that your paper entitled "An Activity-based Approach for Developer Identification" (submission number 53) has not
+been accepted for the Early Research Achievements (ERA) track of the IEEE International Conference on
+Software Maintenance and Evolution (ICSME) 2015.
+
+We received 48 submissions, from which 17 submissions have been accepted. All submissions were
+reviewed by at least three members of the program committee and an online discussion was held for all
+cases where there is not a clear consensus.
+
+Please find at the end of this email your paper's reviews. We hope that they will help you improve your
+paper for a future submission, possibly for a full paper submission to ICSME 2016.
+
+We would like to thank you again for your submission and for your interest in ICSME ERA 2015, and we
+look forward to seeing you in Bremen, Germany for a very attractive conference program.
+
+Best regards,
+Lin Tan and Serge Demeyer
+ICSME ERA 2015 Co-Chairs
+
+
+----------------------- REVIEW 1 ---------------------
+PAPER: 53
+TITLE: An Activity-based Approach for Developer Identification
+AUTHORS: Christopher Corley
+
+
+----------- REVIEW -----------
+Summary:
+
+The paper presents an approach that recommends developers to a change request. The proposed approach creates a topic model from a changeset corpus. The inferred topic model is then used to index a developer corpus. Given a new change request the index is used to rank developers that are predicted to be the most suitable to work on the new change request. The proposed approach has been evaluated on 7 subject systems (BookKeeper, Derby, Mahout, OpenJPA, Pig, Tika and ZooKeeper) with 5 to 38 developers and 40 to 359 issues. The experiment results show that the proposed approach can achieve an average mean reciprocal rank (MRR) of 0.4149. The proposed approach has been compared against a baseline approach that has two separate steps: first, it uses a topic model to locate files relevant to a given change request; second, the owners of those files (i.e., the developer who has changed the documents the most) are identified and recommended. The experiment results show that the prop!
+ osed approach is statistically significantly better than the baseline approach for 5 out of the 7 subject programs. However, it is statistically significantly worse than the baseline approach for the other two of the subject programs. Overall, the proposed approach is statistically significantly worse than the baseline approach.
+
+Pros:
+
++ The paper proposes the first approach that uses a topic model built from changesets for developer identification.
++ The proposed approach has been evaluated on 7 subject programs with 5 to 38 developers and 40 to 359 issues.
++ The experiment results show that for 5 out of the 7 subject programs, the proposed approach achieves a higher MRR than a baseline approach.
+
+Cons:
+
+The intuition why it is good to build a topic model from change request is not clearly presented in the paper. Why not build a topic model directly from source code? Will the result be worse if we build the topic model from source code (e.g., change ChangeSet Corpus in Figure 1 with Source Code Corpus)? The first paragraph of section III does not satisfactorily answers these questions. Also, the paper mentions that the proposed approach wants to "forgoes the dependency on an FLT" but why is it good to forgo such dependency? If FLT is a good solution for developer recommendation then why don't we use it?
+
+Many parts of the paper that describe the proposed approach and the baseline approach are unclear. This makes it difficult to fully assess the contribution of the work. First, the description of the main content of the paper is only Section III (which is less than 1/2 a page). The description does not make clear how "the [topic] model" is used "to index the developer profiles". To the best of my knowledge, a topic model is not an indexing algorithm. Next, the paper does not clearly describe whether the baseline returns only one developer or a list of developers. The paper states that "we identify which developer has changed the documents the most" (it seems only one developer is returned); however, it also states that "For each file recommended by the FLT, we take the developer with the highest ownership" (it seems a set of developers is returned). If a set is returned, it is not clear how developers in the set is ordered into a list.
+
+The description of the experiment setup is also vague to me. It is not described whether ten-fold cross validation is used or whether a sliding-window-based evaluation setting is used. Is training data kept separate from test data? Do you use future data to predict past data (this will happen for the ten-fold cross validation setting) ? Without these pieces of information, it is hard to fully assess whether the evaluation setting is reasonable.
+
+Unfortunately, the current result of comparing the proposed approach with the current baseline that uses a FLT (Feature Location Technique)  based on a topic model is rather weak. Overall, the proposed approach is statistically significantly worse than the current baseline. I think there is a need to improve the proposed approach further and demonstrate that it can achieve a higher MRR.
+
+Furthermore, FLT using topic model has not been shown to be the most accurate ones (please refer to [A]). Indeed the latest study that uses FLT for developer recommendation (e.g., [11]) uses a vector space model instead of a topic model. Thus, rather than comparing with the current baseline that uses a topic model for FLT, why not compare directly with reference [11] and show that the approach works better than reference [11] at least on a small dataset (I do not expect a large dataset for an ERA paper).
+
+[A] Shivani Rao, Avinash C. Kak: Retrieval from software libraries for bug localization: a comparative study of generic and composite text models. MSR 2011: 43-52
+
+Minor issues:
+
++ "all cases but one" => "all cases but two"
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 53
+TITLE: An Activity-based Approach for Developer Identification
+AUTHORS: Christopher Corley
+
+
+----------- REVIEW -----------
+The paper presents an approach to identify developers to resolve a reported bug.  The idea is building a topic model from the source-code changeset history and then uses this model to index the developer profiles.  It addresses a well-established problem; however, the solution offered is (very) incremental, at best.  Also, it is not clear how much the approach differs from what has been already done before, especially with regard to the following publications (which use LDA/source code changes):
+
+Linstead, E.; Rigor, P.; Bajracharya, Sushil; Lopes, C.; Baldi, P., "Mining Eclipse Developer Contributions via Author-Topic Models," Mining Software Repositories, 2007. ICSE Workshops MSR '07. Fourth International Workshop on , vol., no., pp.30,30, 20-26 May 2007
+
+Matter, D.; Kuhn, A.; Nierstrasz, O., "Assigning bug reports using a vocabulary-based expertise model of developers," Mining Software Repositories, 2009. MSR '09. 6th IEEE International Working Conference on , vol., no., pp.131,140, 16-17 May 2009
+
+Other comments:
+Why not compare with another acitvity-based technique? Why compare with a location-based technique and the one particualary picked (is it the state of the art)?
+
+Why precision and recall numbers were not reported?  (The MRR results are mixed, is there a substaintial gain)?
+
+How does the vocabulary of bug report compare to source code vocabulary?
+
+Overall, it is not clear what would be the potential contribution of the approach, both in terms of the offered solution and results.
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 53
+TITLE: An Activity-based Approach for Developer Identification
+AUTHORS: Christopher Corley
+
+
+----------- REVIEW -----------
+This paper presents a study of applying a topic model based on source code diff to developer identification. The method of building a topic model from source code diffs is proposed in the authors' previous paper. The current paper combines the previous model with the developer corpus to recommend an appropriate developer in the context of triaging. The preliminary study compares the proposed method to a feature location based method. The result shows that the proposed method can provide better recommendation for several subject systems.
+
+The proposed method adopts a source code diff based topic model to developer identification. Judging from the experiment result, the proposed method has a potential to replace the existing method based on feature location techniques for some subject systems. Although the overall experiment shows that the location-based approach is slightly better than the proposed one, the proposed method and the experiment would meet interests of ICSME's participants. However, this work's motivation and contribution are not presented clearly and it has a limited discussion on the experimental result. Therefore, I strongly recommend revising in terms of those points.
+
+In Abstract, the authors claim "Using an activity-based approach, we can recommend developers directly from the topic model without needing to mine additional information like a location-based approach." What does mean "to mine additional information"? This paper does not compare required information for the proposed method and the existing ones. Therefore, I couldn't estimate whether the proposed method outperforms existing methods in terms of the mining targets. Section II does not present the point, either. Moreover, Section IV is devoted to the evaluation in terms of ranking. Given the former claim, the paper should include an evaluation of reduction of the information to be mined and performance improvement based on it. All in all, the claim and the contributions of this paper are not presented clearly. I recommend writing them obviously in Section I.
+
+Section II is not very effective to let readers know importance of this research because a most part of the section just explains existing methods without comparison to the proposed method.
+
+Section III is very hard to follow for readers who have not read the cited papers ([22], [23]). Please explain the whole of the proposed approach depicted in Figure 1 clearly, especially, how the developer search engine works.
+
+Section IV-C:
+Are these experimental settings (e.g., using git diff command, tokenizing, no-stemming) not included in the proposed method? Please consider moving those explanations to Section III.
+
+Section IV-E:
+When we focus on the significant results (significance level = 0.01), the activity-based approach outperforms only for Derby. Does Derby have some distinctive characteristics?
+
+Minor points:
+
+Section I, 4th paragraph, "identification and selection": What are the problems regarding identification and selection?
+Section IV-D, 2nd paragraph, typo: "on the for the"
+
+Pros and cons:
+
++ Proposed method (diff-based developer identification) is interesting.
++ Experimental result.
+- Study background and contribution are not clearly presented.
+- Limited discussion of experimental results.
