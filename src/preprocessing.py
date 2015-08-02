@@ -1,15 +1,12 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
-"""
-Code for splitting the terms.
-"""
-
-import string
+from __future__ import print_function
 
 import logging
-logger = logging.getLogger('cfl.preprocessing')
+logger = logging.getLogger('preprocessing')
 
+import string
 
 def tokenize(s):
     return s.split()

@@ -4,7 +4,7 @@
 from __future__ import print_function
 
 import logging
-logger = logging.getLogger('triage')
+logger = logging.getLogger('feature_location')
 
 from common import *
 
@@ -38,26 +38,23 @@ def run_experiment(project):
 
     # get corpora
     changeset_corpus = create_corpus(project, repos, ChangesetCorpus, use_level=False)
-    developer_corpus = create_developer_corpus(project, repos, changeset_corpus)
     release_corpus = create_release_corpus(project, repos)
 
     collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
 
-    ownership_results = run_ownership(project, release_corpus,
-                                      ownership, queries, goldsets,
-                                      'Release')
+    release_results = run_basic(project, release_corpus, release_corpus,
+                                queries, goldsets, 'Release')
 
-    changeset_results = run_basic(project, changeset_corpus,
-                                  developer_corpus, queries, goldsets,
-                                  'Changeset')
+    changeset_results = run_basic(project, changeset_corpus, release_corpus,
+                                  queries, goldsets, 'Changeset')
 
     results = dict()
 
     if project.temporal:
         try:
             temporal_lda, temporal_lsi = run_temporal(project, repos,
-                                                    changeset_corpus, queries,
-                                                    goldsets)
+                                                      changeset_corpus, queries,
+                                                      goldsets)
         except IOError:
             logger.info("Files needed for temporal evaluation not found. Skipping.")
         else:
@@ -72,50 +69,6 @@ def run_experiment(project):
 
     if project.lsi:
         results['basic_lsi'] = do_science(changeset_results['lsi'], ownership_results['lsi'])
-
-    return results
-
-
-def run_ownership(project, corpus, ownership, queries, goldsets, kind, use_level=False):
-    logger.info("Running ownership-based evaluation on the %s", kind)
-    results = dict()
-    if project.lda:
-        try:
-            lda_owners = read_ranks(project, kind.lower() + '_lda')
-            logger.info("Sucessfully read previously written %s LDA ranks", kind)
-            exists = True
-        except IOError:
-            exists = False
-
-        if project.force or not exists:
-            lda_model, _ = create_lda_model(project, corpus, corpus.id2word, kind, use_level=use_level)
-            lda_query_topic = get_topics(lda_model, queries)
-            lda_doc_topic = get_topics(lda_model, corpus)
-
-            lda_ranks = get_rank(lda_query_topic, lda_doc_topic)
-            lda_owners = rank2owner(lda_ranks, ownership)
-            write_ranks(project, kind.lower() + '_lda', lda_owners)
-
-        results['lda'] = get_frms(lda_owners, goldsets)
-
-    if project.lsi:
-        try:
-            lsi_owners = read_ranks(project, kind.lower() + '_lsi')
-            logger.info("Sucessfully read previously written %s LSI ranks", kind)
-            exists = True
-        except IOError:
-            exists = False
-
-        if project.force or not exists:
-            lsi_model, _ = create_lsi_model(project, corpus, corpus.id2word, kind, use_level=use_level)
-            lsi_query_topic = get_topics(lsi_model, queries)
-            lsi_doc_topic = get_topics(lsi_model, other_corpus)
-
-            lsi_ranks = get_rank(lsi_query_topic, lsi_doc_topic)
-            lsi_owners = rank2owner(lsi_ranks, ownership)
-            write_ranks(project, kind.lower() + '_lsi', lsi_owners)
-
-        results['lsi'] = get_frms(lsi_owners, goldsets)
 
     return results
 
@@ -175,12 +128,16 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
         for qid in git2issue[sha]:
             logger.info('Getting ranks for query id %s', qid)
             # build a developer corpus of items *at this commit*
-            developer_corpus = create_developer_corpus(project, repos, corpus, until_ref=sha)
+            # build a snapshot corpus of items *at this commit*
+            try:
+                other_corpus = create_release_corpus(project, repos, forced_ref=sha)
+            except TaserError:
+                continue
 
             # do LDA magic
             if project.lda:
                 lda_query_topic = get_topics(lda, queries, by_ids=[qid])
-                lda_doc_topic = get_topics(lda, developer_corpus)
+                lda_doc_topic = get_topics(lda, other_corpus)
                 lda_subranks = get_rank(goldsets, lda_query_topic, lda_doc_topic)
                 if qid in lda_subranks:
                     if qid not in lda_ranks:
@@ -194,7 +151,7 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
             # do LSI magic
             if project.lsi:
                 lsi_query_topic = get_topics(lsi, queries, by_ids=[qid])
-                lsi_doc_topic = get_topics(lsi, developer_corpus)
+                lsi_doc_topic = get_topics(lsi, other_corpus)
                 lsi_subranks = get_rank(goldsets, lsi_query_topic, lsi_doc_topic)
                 if qid in lsi_subranks:
                     if qid not in lsi_ranks:
@@ -220,56 +177,6 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
     return lda_rels, lsi_rels
 
 
-def rank2owner(ranks, ownership):
-    logger.info("Getting owner ranks from %d ranks over %d ownerships", len(ranks), len(ownership))
-    owner_ranks = dict()
-
-    for qid, rank in ranks.items():
-        if qid not in owner_ranks:
-            owner_ranks[qid] = list()
-
-        for idx, distance, d_name in rank:
-            if d_name not in ownership:
-                logger.debug('Could not find %s in ownership')
-                continue
-
-            owners = list(sorted(ownership[d_name].items(), key=lambda x: x[1], reverse=True))
-            best_score = 0
-            bests = list()
-            for owner, score in owners:
-                # get the owner, including all ties.
-                if best_score and score < best_score:
-                    break
-
-                best_score = score
-                bests.append((distance, (owner, score)))
-
-            owner_ranks[qid].extend(bests)
-
-        # only allow a dev to be recommended once
-        owner_ranks[qid].sort()
-        new_ranks = list()
-        seen = set()
-        for dist, meta in owner_ranks[qid]:
-            owner, score = meta
-            if owner not in seen:
-                new_ranks.append((dist, meta))
-                seen.add(owner)
-        owner_ranks[qid] = new_ranks
-
-
-    return_ranks = dict()
-    for qid, rank in owner_ranks.items():
-        l = list()
-        for idx, data in enumerate(rank):
-            dist, meta = data
-            owner, score = meta
-            l.append((idx+1, dist, owner))
-
-        return_ranks[qid] = l
-
-    logger.info("Returning %d owner ranks", len(return_ranks))
-    return return_ranks
 
 def create_goldsets(project):
     logger.info("Loading goldsets for project: %s", str(project))
@@ -288,60 +195,8 @@ def create_goldsets(project):
                     if id_ not in goldsets:
                         goldsets[id_] = set()
 
-                    # goldsets[id_].extend([item for kind, item in changes])
-                    # need to underscore because gensim corpus funtime
-                    committer = to_unicode(commit.committer.replace(" ", "_"))
-                    goldsets[id_].add(committer)
-
+                    goldsets[id_].extend([item for kind, item in changes])
 
     logger.info("Returning %d goldsets", len(goldsets))
     return goldsets
 
-def create_developer_corpus(project, repos, changesets, until_ref=None):
-    corpus_fname_base = project.full_path + 'Developer'
-    if until_ref:
-        corpus_fname_base += '-' + until_ref
-
-    corpus_fname = corpus_fname_base + '.mallet.gz'
-    dict_fname = corpus_fname_base + '.dict.gz'
-
-
-    dev_words = dict()
-    if not os.path.exists(corpus_fname):
-        changesets.metadata = True
-        for doc, meta in changesets:
-            cid, label = meta
-
-            commit = None
-            for repo in repos:
-                if cid in repo:
-                    commit = repo[str(cid)]
-                    break
-
-            if commit:
-                if until_ref and until_ref == commit.id:
-                    break
-
-                dev = to_unicode(commit.committer)
-                dev = dev.replace(" ", "_") # mallet cant have spaces in ids
-                if dev not in dev_words:
-                    dev_words[dev] = list()
-
-                dev_words[dev].extend(doc)
-
-
-        changesets.metadata = False
-        dev_words = [(v, (k, 'dev')) for k, v in dev_words.items()]
-
-        MalletCorpus.serialize(corpus_fname, dev_words, id2word=changesets.id2word,
-                            metadata=True)
-
-        changesets.id2word.save(dict_fname)
-
-    id2word = None
-    if os.path.exists(dict_fname):
-        id2word = Dictionary.load(dict_fname)
-
-    corpus = MalletCorpus(corpus_fname, id2word=id2word)
-
-    return corpus

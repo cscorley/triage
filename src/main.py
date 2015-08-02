@@ -6,6 +6,8 @@ from __future__ import print_function
 import logging
 logger = logging.getLogger('main')
 
+from pprint import pprint
+
 import click
 
 import common
@@ -47,7 +49,11 @@ def cli(debug, verbose, name, version, goldset,  *args, **kwargs):
 
     # load project info
     projects = common.load_projects(kwargs)
+    results = dict()
     for project in projects:
+        logging.basicConfig(format='%(asctime)s : %(levelname)s : ' +
+                            project.name + " " + project.version +
+                            '%(name)s : %(funcName)s : %(message)s')
         if name:
             name = name.lower()
 
@@ -58,17 +64,24 @@ def cli(debug, verbose, name, version, goldset,  *args, **kwargs):
                 if goldset:
                     build_goldset(project)
                 else:
-                    run_experiments(project)
+                    results[project] = run_experiments(project)
 
-                return # done, boom shakalaka
+                break # done, boom shakalaka
         elif goldset:
             build_goldset(project)
         else:
-            run_experiments(project)
+            results[project] = run_experiments(project)
+
+
+    pprint(results)
 
 def run_experiments(project):
+    results = dict()
+
     if project.triage:
-        print(triage.run_experiment(project))
+        results['triage'] = triage.run_experiment(project)
 
     if project.feature_location:
-        print(feature_location.run_experiment(project))
+        results['feature location'] = feature_location.run_experiment(project)
+
+    return results

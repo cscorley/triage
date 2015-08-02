@@ -232,34 +232,41 @@ def get_frms(ranks, goldsets):
 def get_rels(ranks, goldset=None):
     rels = list()
 
-    for idx, rank in enumerate(ranks):
-        dist, meta = rank
-        d_name, d_repo = meta
-        if goldset:
-            if d_name in goldset:
-                rels.append((idx+1, dist, d_name))
-        else:
-            rels.append((idx+1, dist, d_name))
+    if goldset:
+        dists = list()
+        for name in goldset:
+            if name in ranks:
+                dists.append((ranks[name], name))
 
+        for dist, name in dists:
+            idx = len([1 for x in ranks.values() if x < dist])
+            rels.append((idx+1, dist, name ))
+
+    else:
+        # without the goldset, we have to sort and enumerate all items :(
+        sorted_ranks = sorted(ranks.items(), key=lambda x: x[1])
+        for idx, rank in enumerate(sorted_ranks):
+            dist, meta = rank
+            d_name, d_repo = meta
+            rels.append((idx+1, dist, d_name))
 
     rels.sort()
 
     return rels
 
 
-def get_rank(query_topic, doc_topic, goldsets=None, distance_measure=utils.cosine_distance):
+def get_rank(query_topic, doc_topic, goldsets=None, distance_measure=utils.hellinger_distance):
     logger.info('Getting ranks between %d query topics and %d doc topics',
                 len(query_topic), len(doc_topic))
     ranks = dict()
     for q_meta, query in query_topic:
         qid, _ = q_meta
-        q_dist = list()
+        q_dist = dict()
 
         for d_meta, doc in doc_topic:
-            distance = distance_measure(query, doc)
-            q_dist.append((distance, d_meta))
+            d_name, _ = d_meta
+            q_dist[d_name] = distance_measure(query, doc)
 
-        q_dist.sort()
         if goldsets and qid in goldsets:
             goldset = goldsets[qid]
         else:

@@ -4,7 +4,7 @@
 from __future__ import print_function
 
 import logging
-logger = logging.getLogger('cfl.')
+logger = logging.getLogger('goldsets')
 
 from StringIO import StringIO
 from subprocess import Popen, PIPE

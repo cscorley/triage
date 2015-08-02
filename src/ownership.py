@@ -4,7 +4,7 @@
 from __future__ import print_function
 
 import logging
-logger = logging.getLogger('cfl.goldsets')
+logger = logging.getLogger('ownership')
 
 import codecs
 import csv

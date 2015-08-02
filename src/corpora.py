@@ -1,9 +1,10 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
-"""
-Code for generating the corpora.
-"""
+from __future__ import print_function
+
+import logging
+logger = logging.getLogger('corpora')
 
 from StringIO import StringIO
 import re
@@ -22,9 +23,6 @@ import dulwich.patch
 
 import preprocessing
 from errors import TaserError
-
-import logging
-logger = logging.getLogger('cfl.corpora')
 
 
 class GeneralCorpus(gensim.interfaces.CorpusABC):
