@@ -240,14 +240,13 @@ def get_rels(ranks, goldset=None):
 
         for dist, name in dists:
             idx = len([1 for x in ranks.values() if x < dist])
-            rels.append((idx+1, dist, name ))
+            rels.append((idx+1, dist, name))
 
     else:
         # without the goldset, we have to sort and enumerate all items :(
         sorted_ranks = sorted(ranks.items(), key=lambda x: x[1])
         for idx, rank in enumerate(sorted_ranks):
-            dist, meta = rank
-            d_name, d_repo = meta
+            d_name, dist = rank
             rels.append((idx+1, dist, d_name))
 
     rels.sort()
