@@ -19,7 +19,7 @@ import re
 
 from blocks import Block, File
 from corpora import GitCorpus
-import main
+import common
 import utils
 
 def build_ownership(project, repos):
@@ -27,7 +27,7 @@ def build_ownership(project, repos):
         return read_ownership(project)
 
     print(project)
-    repos = main.load_repos(project)
+    repos = common.load_repos(project)
 
     # use the gitcorpus cause it'll do all the dulwich setup stuff for us
     # also i am lazy, so...

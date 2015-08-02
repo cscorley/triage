@@ -29,7 +29,7 @@ import whatthepatch as wtp
 
 from blocks import Block, File
 from corpora import GitCorpus
-import main
+import common
 import utils
 
 def get_refs(repo):
@@ -97,7 +97,7 @@ def build_goldset(project):
         return
 
     print(project)
-    repos = main.load_repos(project)
+    repos = common.load_repos(project)
     issue2git = list()
 
     matcher = re.compile("%s-(\d+)" % project.name, flags=re.IGNORECASE)
