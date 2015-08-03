@@ -12,6 +12,7 @@ import click
 
 import common
 import triage
+import feature_location
 
 
 @click.command()

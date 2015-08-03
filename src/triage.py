@@ -45,11 +45,11 @@ def run_experiment(project):
 
     ownership_results = run_ownership(project, release_corpus,
                                       ownership, queries, goldsets,
-                                      'Release')
+                                      'Release-triage')
 
     changeset_results = run_basic(project, changeset_corpus,
                                   developer_corpus, queries, goldsets,
-                                  'Changeset')
+                                  'Changeset-triage')
 
     results = dict()
 

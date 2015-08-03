@@ -34,8 +34,6 @@ def run_experiment(project):
     goldsets = create_goldsets(project)
     ids = load_ids(project)
 
-    ownership = build_ownership(project, repos)
-
     # get corpora
     changeset_corpus = create_corpus(project, repos, ChangesetCorpus, use_level=False)
     release_corpus = create_release_corpus(project, repos)
@@ -43,10 +41,10 @@ def run_experiment(project):
     collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
 
     release_results = run_basic(project, release_corpus, release_corpus,
-                                queries, goldsets, 'Release')
+                                queries, goldsets, 'Release-feature_location')
 
     changeset_results = run_basic(project, changeset_corpus, release_corpus,
-                                  queries, goldsets, 'Changeset')
+                                  queries, goldsets, 'Changeset-feature_location')
 
     results = dict()
 
@@ -65,10 +63,10 @@ def run_experiment(project):
 
     # do this last so that the results are printed together
     if project.lda:
-        results['basic_lda'] = do_science(changeset_results['lda'], ownership_results['lda'])
+        results['basic_lda'] = do_science(changeset_results['lda'], release_results['lda'])
 
     if project.lsi:
-        results['basic_lsi'] = do_science(changeset_results['lsi'], ownership_results['lsi'])
+        results['basic_lsi'] = do_science(changeset_results['lsi'], release_results['lsi'])
 
     return results
 
@@ -195,7 +193,7 @@ def create_goldsets(project):
                     if id_ not in goldsets:
                         goldsets[id_] = set()
 
-                    goldsets[id_].extend([item for kind, item in changes])
+                    goldsets[id_].update([item for kind, item in changes])
 
     logger.info("Returning %d goldsets", len(goldsets))
     return goldsets
