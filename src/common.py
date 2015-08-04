@@ -7,6 +7,7 @@ import logging
 logger = logging.getLogger('common')
 
 import csv
+import os
 import os.path
 from collections import namedtuple
 
@@ -392,29 +393,35 @@ def load_issue2git(project, ids):
 
 def load_projects(config):
     projects = list()
-    with open("projects.csv", 'r') as f:
-        reader = csv.reader(f)
-        header = next(reader)
-        customs = ['data_path', 'full_path', 'src_path']
-        Project = namedtuple('Project',  ' '.join(header + customs + config.keys()))
+    refpaths = list()
+    for dirpath, dirname, filenames in os.walk('data'):
+        for filename in filenames:
+            if filename == 'ref':
+                refpaths.append(os.path.join(dirpath, filename))
+
+    for refpath in refpaths:
+        with open(refpath) as f:
+            ref = f.read().strip()
+
+        # extract project info based on path, weeee
+        full_path, _ = os.path.split(refpath)
+        data_path, project_version = os.path.split(full_path)
+        _, project_name = os.path.split(data_path)
+        src_path = os.path.join(full_path, 'src')
+
+        Project = namedtuple('Project',  ' '.join(['name', 'printable_name', 'version', 'ref', 'data_path', 'full_path', 'src_path']
+                                                  + config.keys()))
         # figure out which column index contains the project name
-        name_idx = header.index("name")
-        version_idx = header.index("version")
 
         # find the project in the csv, adding it's info to config
-        for row in reader:
-            # built the data_path value
-            row += (os.path.join('data', row[name_idx], ''),)
+        # do the os.path.join to force a trailing slash
+        row = [project_name, project_name, project_version, ref,
+               os.path.join(data_path, ''),
+               os.path.join(full_path, ''),
+               os.path.join(src_path, '')]
+        row += config.values()
 
-            # build the full_path value
-            row += (os.path.join('data', row[name_idx], row[version_idx], ''),)
-
-            # build the src_path value
-            row += (os.path.join('data', row[name_idx], row[version_idx], 'src'),)
-
-            row += config.values()
-
-            projects.append(Project(*row))
+        projects.append(Project(*row))
 
     return projects
 

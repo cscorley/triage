@@ -1,8 +1,0 @@
-name,printable_name,version,ref,src_url
-bookkeeper,BookKeeper,v4.3.0,refs/tags/release-4.3.0,http://archive.apache.org/dist/zookeeper/bookkeeper/bookkeeper-4.3.0/bookkeeper-4.3.0-src.tar.gz
-derby,Derby,v10.11.1.1,refs/tags/10.11.1.1,http://archive.apache.org/dist/db/derby/db-derby-10.11.1.1/db-derby-10.1.1.1-src.tar.gz
-mahout,Mahout,v0.10.0,refs/tags/mahout-0.10,http://archive.apache.org/dist/mahout/0.10.0/mahout-distribution-0.10.0-src.tar.gz
-openjpa,OpenJPA,v2.3.0,refs/tags/2.3.0,http://archive.apache.org/dist/openjpa/2.3.0/apache-openjpa-2.3.0-source.zip
-pig,Pig,v0.14.0,refs/tags/release-0.14.0,http://archive.apache.org/dist/pig/pig-0.14.0/pig-0.14.0-src.tar.gz
-tika,Tika,v1.8,refs/tags/1.8,http://archive.apache.org/dist/tika/apache-tika-1.8-src.zip
-zookeeper,ZooKeeper,v3.5.0,refs/tags/release-3.5.0,http://archive.apache.org/dist/zookeeper/zookeeper-3.5.0/zookeeper-3.5.0.tar.gz
