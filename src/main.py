@@ -57,25 +57,22 @@ def cli(debug, verbose, name, version, *args, **kwargs):
 
     # load project info
     projects = common.load_projects(kwargs)
+
+    if name:
+        name = name.lower()
+        projects = [x for x in projects if x.name == name]
+
+    if version:
+        version = version.lower()
+        projects = [x for x in projects if x.version == version]
+
     results = dict()
     for project in projects:
         logging.basicConfig(format='%(asctime)s : %(levelname)s : ' +
-                            project.name + " " + project.version +
+                            project.printable_name +
                             '%(name)s : %(funcName)s : %(message)s')
-        if name:
-            name = name.lower()
 
-            if name == project.name:
-                if version and version != project.version:
-                    continue
-
-                if project.goldset:
-                    build_goldset(project)
-                else:
-                    results[project.printable_name] = run_experiments(project)
-
-                break # done, boom shakalaka
-        elif project.goldset:
+        if project.goldset:
             build_goldset(project)
         else:
             results[project.printable_name] = run_experiments(project)
