@@ -415,7 +415,7 @@ def load_projects(config):
 
         # find the project in the csv, adding it's info to config
         # do the os.path.join to force a trailing slash
-        row = [project_name, project_name, project_version, ref,
+        row = [project_name, project_name + ' ' + project_version, project_version, ref,
                os.path.join(data_path, ''),
                os.path.join(full_path, ''),
                os.path.join(src_path, '')]

@@ -16,28 +16,22 @@ import feature_location
 
 
 @click.command()
-@click.option('--verbose', is_flag=True)
-@click.option('--debug', is_flag=True)
-@click.option('--force', is_flag=True)
-@click.option('--temporal', is_flag=True)
-@click.option('--optimize', is_flag=True)
-@click.option('--triage', is_flag=True)
-@click.option('--feature_location', is_flag=True)
-@click.option('--goldset', is_flag=True)
-@click.option('--lda', is_flag=True)
-@click.option('--lsi', is_flag=True)
-@click.option('--name', help="Name of project to run experiment on")
-@click.option('--version', help="Version of project to run experiment on")
-@click.option('--level', default="file", help="Granularity level of project to run experiment on")
-@click.option('--num_topics', default=500, type=click.INT)
-@click.option('--chunksize', default=2000, type=click.INT)
-@click.option('--passes', default=1, type=click.INT)
-@click.option('--iterations', default=1000, type=click.INT)
-@click.option('--decay', default=0.5, type=click.FLOAT)
-@click.option('--offset', default=1.0, type=click.FLOAT)
-@click.option('--eta', type=click.FLOAT)
-@click.option('--alpha', default='symmetric')
-def cli(debug, verbose, name, version, goldset,  *args, **kwargs):
+@click.option('--verbose',          help="Enable verbose output",                             is_flag=True)
+@click.option('--debug',            help="Enable debug output (very verbose)",                is_flag=True)
+@click.option('--force',            help="Overwrite existing data instead of reloading",      is_flag=True)
+@click.option('--optimize',         help="Find an optimal configuration for experiment",      is_flag=True)
+@click.option('--triage',           help="Run feature location experiment",                   is_flag=True)
+@click.option('--feature_location', help="Run feature location experiment",                   is_flag=True)
+@click.option('--goldset',          help="Build a goldset (overrides other parameters)",      is_flag=True)
+@click.option('--lda',              help="Evaluate using LDA",                                is_flag=True)
+@click.option('--hdp',              help="Evaluate using HDP",                                is_flag=True)
+@click.option('--hpyp',             help="Evaluate using HPYP",                               is_flag=True)
+@click.option('--lsi',              help="Evaluate using LSI",                                is_flag=True)
+@click.option('--temporal',         help="Run historical simulation",                         is_flag=True)
+@click.option('--name',             help="Name of project to run experiment on")
+@click.option('--version',          help="Version of project to run experiment on")
+@click.option('--level',            help="Granularity level of project to run experiment on", default="file")
+def cli(debug, verbose, name, version, *args, **kwargs):
     logging.basicConfig(format='%(asctime)s : %(levelname)s : ' +
                         '%(name)s : %(funcName)s : %(message)s')
 
@@ -47,6 +41,19 @@ def cli(debug, verbose, name, version, goldset,  *args, **kwargs):
         logging.root.setLevel(level=logging.INFO)
     else:
         logging.root.setLevel(level=logging.ERROR)
+
+    lda_defaults = {
+        'num_topics': 500,
+        'chunksize': 2000,
+        'passes': 1,
+        'iterations': 1000,
+        'decay': 0.5,
+        'offset': 1.0,
+        'eta': None,
+        'alpha': 'symmetric',
+    }
+
+    kwargs.update(lda_defaults)
 
     # load project info
     projects = common.load_projects(kwargs)
@@ -62,16 +69,16 @@ def cli(debug, verbose, name, version, goldset,  *args, **kwargs):
                 if version and version != project.version:
                     continue
 
-                if goldset:
+                if project.goldset:
                     build_goldset(project)
                 else:
-                    results[project] = run_experiments(project)
+                    results[project.printable_name] = run_experiments(project)
 
                 break # done, boom shakalaka
-        elif goldset:
+        elif project.goldset:
             build_goldset(project)
         else:
-            results[project] = run_experiments(project)
+            results[project.printable_name] = run_experiments(project)
 
 
     pprint(results)
