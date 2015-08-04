@@ -24,6 +24,7 @@ def do_science(a_first_rels, b_first_rels, ignore=False):
     #print(prefix+' mann-whitney:', scipy.stats.mannwhitneyu(x, y))
     #print('friedman:', scipy.stats.friedmanchisquare(x, y, x2, y2))
 
+
 def run_experiment(project):
     logger.info("Running project on %s", str(project))
 
