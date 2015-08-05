@@ -10,6 +10,7 @@ from pprint import pprint
 
 import click
 import optunity
+import numpy
 
 import common
 import triage
@@ -80,7 +81,14 @@ def cli(verbose, name, version, *args, **kwargs):
             build_goldset(project)
         elif project.optimize:
             # fix params here
-            s = optunity.solvers.GridSearch(num_topics=[100, 500])
+            # panichella-etal_2013a uses:
+            K = numpy.arange(50, 501, 50)
+            alpha = numpy.arange(0.1, 1.1, 0.1)
+            eta = numpy.arange(0.1, 1.1, 0.1)
+            # we use the +1 on the bound because range is [a, jerk)
+
+            s = optunity.solvers.GridSearch(num_topics=K, alpha=alpha, eta=eta)
+            print(s.parameter_tuples)
             pars, opt = s.maximize(wrap(project))
             print(pars)
             print(opt)
