@@ -42,10 +42,10 @@ def run_experiment(project):
     collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
 
     release_results = run_basic(project, release_corpus, release_corpus,
-                                queries, goldsets, 'Release-feature_location')
+                                queries, goldsets, 'Release', 'Feature_location')
 
     changeset_results = run_basic(project, changeset_corpus, release_corpus,
-                                  queries, goldsets, 'Changeset-feature_location')
+                                  queries, goldsets, 'Changeset', 'Feature_location')
 
     results = dict()
 
@@ -57,16 +57,16 @@ def run_experiment(project):
         except IOError:
             logger.info("Files needed for temporal evaluation not found. Skipping.")
         else:
-            if project.lda:
+            if project.model == "lda":
                 results['temporal_lda'] = do_science(temporal_lda, changeset_lda, ignore=True)
-            if project.lsi:
+            if project.model == "lsi":
                 results['temporal_lsi'] = do_science(temporal_lsi, changeset_lsi, ignore=True)
 
     # do this last so that the results are printed together
-    if project.lda:
+    if project.model == "lda":
         results['basic_lda'] = do_science(changeset_results['lda'], release_results['lda'])
 
-    if project.lsi:
+    if project.model == "lsi":
         results['basic_lsi'] = do_science(changeset_results['lsi'], release_results['lsi'])
 
     return results
@@ -83,13 +83,13 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
 
     logger.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
 
-    if project.lda:
+    if project.model == "lda":
         lda, lda_fname = create_lda_model(project, None, corpus.id2word,
-                                        'Temporal', use_level=False, force=True)
+                                          'Temporal', use_level=False, force=True)
 
-    if project.lsi:
+    if project.model == "lsi":
         lsi, lsi_fname = create_lsi_model(project, None, corpus.id2word,
-                                        'Temporal', use_level=False, force=True)
+                                          'Temporal', use_level=False, force=True)
 
     indices = list()
     lda_ranks = dict()
@@ -116,12 +116,12 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
         for i in xrange(start, end):
             docs.append(corpus[i])
 
-        if project.lda:
+        if project.model == "lda":
             lda.update(docs,
                     #chunksize=project.chunksize,
                     offset=project.offset,
                     decay=project.decay)
-        if project.lsi:
+        if project.model == "lsi":
             lsi.add_documents(docs)
 
         for qid in git2issue[sha]:
@@ -134,7 +134,7 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
                 continue
 
             # do LDA magic
-            if project.lda:
+            if project.model == "lda":
                 lda_query_topic = get_topics(lda, queries, by_ids=[qid])
                 lda_doc_topic = get_topics(lda, other_corpus)
                 lda_subranks = get_rank(goldsets, lda_query_topic, lda_doc_topic)
@@ -148,7 +148,7 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
                     logger.info('Couldnt find qid %s', qid)
 
             # do LSI magic
-            if project.lsi:
+            if project.model == "lsi":
                 lsi_query_topic = get_topics(lsi, queries, by_ids=[qid])
                 lsi_doc_topic = get_topics(lsi, other_corpus)
                 lsi_subranks = get_rank(goldsets, lsi_query_topic, lsi_doc_topic)
@@ -162,13 +162,13 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
                     logger.info('Couldnt find qid %s', qid)
 
     lda_rels = list()
-    if project.lda:
+    if project.model == "lda":
         lda.save(lda_fname)
         write_ranks(project, 'temporal', lda_ranks)
         lda_rels = get_frms(lda_ranks, goldsets)
 
     lsi_rels = list()
-    if project.lsi:
+    if project.model == "lsi":
         lsi.save(lsi_fname)
         write_ranks(project, 'temporal_lsi', lsi_ranks)
         lsi_rels = get_frms(lsi_ranks, goldsets)

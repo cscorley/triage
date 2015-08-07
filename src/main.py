@@ -18,23 +18,18 @@ import feature_location
 
 
 @click.command()
-@click.option('-v', '--verbose',    help="Enable verbose output",                        count=True)
-@click.option('--force',            help="Overwrite existing data instead of reloading", is_flag=True)
-@click.option('--optimize',         help="Find an optimal configuration for experiment", is_flag=True)
-@click.option('--triage',           help="Run feature location experiment",              is_flag=True)
-@click.option('--feature_location', help="Run feature location experiment",              is_flag=True)
-@click.option('--goldset',          help="Build a goldset (overrides other parameters)", is_flag=True)
-@click.option('--lda',              help="Evaluate using LDA",                           is_flag=True)
-@click.option('--hdp',              help="Evaluate using HDP",                           is_flag=True)
-@click.option('--hpyp',             help="Evaluate using HPYP",                          is_flag=True)
-@click.option('--lsi',              help="Evaluate using LSI",                           is_flag=True)
-@click.option('--temporal',         help="Run historical simulation",                    is_flag=True)
-@click.option('--release',          help="Run release evaluation",                       is_flag=True)
-@click.option('--changeset',        help="Run changeset evaluation",                     is_flag=True)
-@click.option('--name',             help="Name of project to run experiment on")
-@click.option('--version',          help="Version of project to run experiment on")
-@click.option('--level',            help="Granularity level to run experiment on",
-              default="file",       type=click.Choice(["file", "class", "method"]))
+@click.option('-v', '--verbose', help="Enable verbose output", count=True)
+@click.option('--force',         help="Overwrite existing data instead of reloading", is_flag=True)
+@click.option('--optimize',      help="Find an optimal configuration for experiment", is_flag=True)
+@click.option('--goldset',       help="Build a goldset for project (overrides other parameters)", is_flag=True)
+@click.option('--release',       help="Run release evaluation", is_flag=True)
+@click.option('--changeset',     help="Run changeset evaluation", is_flag=True)
+@click.option('--temporal',      help="Run historical simulation", is_flag=True)
+@click.option('--name',          help="Name of project to run experiment on")
+@click.option('--version',       help="Version of project to run experiment on")
+@click.option('--level',         help="Granularity level to run experiment on", default="file",    type=click.Choice(["file", "class", "method"]))
+@click.option('--experiment',    help="Run selected experiment", default="triage",  type=click.Choice(["triage", "feature_location"]))
+@click.option('--model',         help="Evaluate using selected model", default="lda",     type=click.Choice(["lsi", "lda", "hdp", "hpyp"]))
 def cli(verbose, name, version, *args, **kwargs):
     logging.basicConfig(format='%(asctime)s : %(levelname)s : ' +
                         '%(name)s : %(funcName)s : %(message)s')
@@ -46,18 +41,19 @@ def cli(verbose, name, version, *args, **kwargs):
     elif verbose == 0:
         logging.root.setLevel(level=logging.ERROR)
 
-    lda_defaults = {
-        'num_topics': 500,
+    lda_config = {
+        'alpha': 'auto',
         'chunksize': 2000,
-        'passes': 1,
-        'iterations': 1000,
         'decay': 0.5,
-        'offset': 1.0,
         'eta': None,
-        'alpha': 'symmetric',
+        'iterations': 1000,
+        'num_topics': 500,
+        'offset': 1.0,
+        'passes': 1,
     }
 
-    kwargs.update(lda_defaults)
+    kwargs.update({'lda_config': lda_config})
+    kwargs.update({'lda_config_string': '-'.join([unicode(v) for k, v in sorted(lda_config.items())])})
 
     # load project info
     projects = common.load_projects(kwargs)
@@ -82,14 +78,14 @@ def cli(verbose, name, version, *args, **kwargs):
         elif project.optimize:
             # fix params here
             # panichella-etal_2013a uses:
-            K = numpy.arange(50, 501, 50)
-            alpha = numpy.arange(0.1, 1.1, 0.1)
-            eta = numpy.arange(0.1, 1.1, 0.1)
+            K = numpy.arange(50, 101, 50) #501, 50)
+            alpha = numpy.arange(0.1, 1.1, 0.4) # 0.1)
+            eta = numpy.arange(0.1, 1.1, 0.4) # 0.1)
             # we use the +1 on the bound because range is [a, jerk)
 
             s = optunity.solvers.GridSearch(num_topics=K, alpha=alpha, eta=eta)
-            print(s.parameter_tuples)
             pars, opt = s.maximize(wrap(project))
+            print(s.parameter_tuples)
             print(pars)
             print(opt)
         else:
@@ -113,7 +109,9 @@ def wrap(project):
 
     def inner(*args, **kwargs):
         results = dict()
-        p = project._replace(**kwargs)
+
+        project.lda_config.update(kwargs)
+        p = project._replace(lda_config_string='-'.join([unicode(v) for k, v in sorted(project.lda_config.items())]))
 
         results['feature location'] = feature_location.run_experiment(p)
 

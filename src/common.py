@@ -27,16 +27,17 @@ from errors import TaserError
 from goldsets import build_goldset, load_goldset
 from ownership import build_ownership
 
-def run_basic(project, corpus, other_corpus, queries, goldsets, kind, use_level=False):
+def run_basic(project, corpus, other_corpus, queries, goldsets, kind, experiment, use_level=False):
     """
     This function runs the experiment in one-shot. It does not evaluate the
     changesets over time.
     """
     logger.info("Running basic evaluation on the %s", kind)
     results = dict()
-    if project.lda:
+    if project.model == "lda":
+        rank_name = '-'.join([kind, experiment, 'lda', project.lda_config_string]).lower()
         try:
-            lda_ranks = read_ranks(project, kind.lower() + '_lda')
+            lda_ranks = read_ranks(project, rank_name)
             logger.info("Sucessfully read previously written %s LDA ranks", kind)
             exists = True
         except IOError:
@@ -48,13 +49,14 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, kind, use_level=
             lda_doc_topic = get_topics(lda_model, other_corpus)
 
             lda_ranks = get_rank(lda_query_topic, lda_doc_topic, goldsets)
-            write_ranks(project, kind.lower() + '_lda', lda_ranks)
+            write_ranks(project, rank_name, lda_ranks)
 
         results['lda'] = get_frms(lda_ranks, goldsets)
 
-    if project.lsi:
+    if project.model == "lsi":
+        rank_name = '-'.join([kind, experiment, 'lsi', project.lda_config_string]).lower()
         try:
-            lsi_ranks = read_ranks(project, kind.lower() + '_lsi')
+            lsi_ranks = read_ranks(project, rank_name)
             logger.info("Sucessfully read previously written %s LSI ranks", kind)
             exists = True
         except IOError:
@@ -66,7 +68,7 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, kind, use_level=
             lsi_doc_topic = get_topics(lsi_model, other_corpus)
 
             lsi_ranks = get_rank(lsi_query_topic, lsi_doc_topic, goldsets)
-            write_ranks(project, kind.lower() + '_lsi', lsi_ranks)
+            write_ranks(project, rank_name, lsi_ranks)
 
         results['lsi'] = get_frms(lsi_ranks, goldsets)
 
@@ -137,7 +139,7 @@ def collect_helper(project, corpus, name):
             writer.writerow(row)
 
 def write_ranks(project, prefix, ranks):
-    with smart_open(os.path.join(project.full_path, '-'.join([prefix, project.level, str(project.num_topics), 'ranks.csv.gz'])), 'w') as f:
+    with smart_open(os.path.join(project.full_path, '-'.join([prefix, project.level, 'ranks.csv.gz'])), 'w') as f:
         writer = csv.writer(f)
         writer.writerow(['id', 'rank', 'distance', 'item'])
 
@@ -147,7 +149,7 @@ def write_ranks(project, prefix, ranks):
 
 def read_ranks(project, prefix):
     ranks = dict()
-    with smart_open(os.path.join(project.full_path, '-'.join([prefix, project.level, str(project.num_topics), 'ranks.csv.gz']))) as f:
+    with smart_open(os.path.join(project.full_path, '-'.join([prefix, project.level, 'ranks.csv.gz']))) as f:
         reader = csv.reader(f)
         next(reader)  # skip header
         for g_id, idx, dist, d_name in reader:
@@ -166,11 +168,11 @@ def run_temporal(project, repos, corpus, queries, goldsets):
     lda_rels = list()
     lsi_rels = list()
     try:
-        if project.lda:
+        if project.model == "lda":
             lda_ranks = read_ranks(project, 'temporal')
             lda_rels = get_frms(lda_ranks, goldsets)
 
-        if project.lsi:
+        if project.model == "lsi":
             lsi_ranks = read_ranks(project, 'temporal_lsi')
             lsi_rels = get_frms(lsi_ranks, goldsets)
 
@@ -494,7 +496,7 @@ def create_queries(project):
 
 
 def create_lda_model(project, corpus, id2word, name, use_level=True, force=False):
-    model_fname = project.full_path + name + str(project.num_topics)
+    model_fname = project.full_path + name.lower() + '-' + project.lda_config_string
     if use_level:
         model_fname += project.level
 
@@ -509,12 +511,12 @@ def create_lda_model(project, corpus, id2word, name, use_level=True, force=False
 
         model = LdaModel(corpus=corpus,
                          id2word=id2word,
-                         alpha=project.alpha,
-                         eta=project.eta,
-                         chunksize=project.chunksize,
-                         passes=project.passes,
-                         num_topics=project.num_topics,
-                         iterations=project.iterations,
+                         num_topics=project.lda_config['num_topics'],
+                         alpha=project.lda_config['alpha'],
+                         eta=project.lda_config['eta'],
+                         passes=project.lda_config['passes'],
+                         chunksize=project.lda_config['chunksize'],
+                         iterations=project.lda_config['iterations'],
                          eval_every=None, # disable perplexity tests for speed
                          update_every=update_every,
                          )
