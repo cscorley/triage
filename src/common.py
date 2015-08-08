@@ -485,7 +485,7 @@ def create_queries(project):
 
 
 def create_lda_model(project, corpus, id2word, name, use_level=True, force=False):
-    model_fname = project.full_path + name.lower() + '-' + project.lda_config_string
+    model_fname = project.full_path + name.lower() + '-' + project.model_config_string
     if use_level:
         model_fname += project.level
 
@@ -498,17 +498,13 @@ def create_lda_model(project, corpus, id2word, name, use_level=True, force=False
         else:
             update_every=1
 
-        model = LdaModel(corpus=corpus,
-                         id2word=id2word,
-                         num_topics=project.lda_config['num_topics'],
-                         alpha=project.lda_config['alpha'],
-                         eta=project.lda_config['eta'],
-                         passes=project.lda_config['passes'],
-                         chunksize=project.lda_config['chunksize'],
-                         iterations=project.lda_config['iterations'],
-                         eval_every=None, # disable perplexity tests for speed
-                         update_every=update_every,
-                         )
+        params = dict(project.model_config) # make copy of config
+        params['corpus'] = corpus
+        params['id2word'] = id2word
+        params['update_every'] = update_every
+        params['eval_every'] = None # disable perplexity tests for speed
+
+        model = LdaModel(**params)
 
         if corpus:
             model.save(model_fname)
@@ -525,10 +521,12 @@ def create_lsi_model(project, corpus, id2word, name, use_level=True, force=False
     model_fname += '.lsi.gz'
 
     if not os.path.exists(model_fname) or project.force or force:
-        model = LsiModel(corpus=corpus,
-                         id2word=id2word,
-                         num_topics=project.num_topics,
-                         )
+
+        params = dict(project.model_config) # make copy of config
+        params['corpus'] = corpus
+        params['id2word'] = id2word
+
+        model = LsiModel(**params)
 
         if corpus:
             model.save(model_fname)

@@ -51,7 +51,7 @@ def run_ownership(project, corpus, ownership, queries, goldsets, kind, experimen
     logger.info("Running ownership-based evaluation on the %s", kind)
     results = dict()
     if project.model == "lda":
-        rank_name = '-'.join([kind, experiment, 'lda', project.lda_config_string]).lower()
+        rank_name = '-'.join([kind, experiment, 'lda', project.model_config_string]).lower()
         try:
             lda_owners = read_ranks(project, rank_name)
             logger.info("Sucessfully read previously written %s LDA ranks", kind)

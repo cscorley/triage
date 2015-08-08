@@ -19,15 +19,25 @@ def run_experiment(project):
     # check if ranks exist first -- save time by not loading corpora, etc
     if project.release:
         ranks, rr_name = common.check_ranks(project, 'release', 'feature_location')
-        results['release'] = get_frms(ranks, goldsets)
+        if ranks:
+            results['release'] = get_frms(ranks, goldsets)
+        else:
+            results['release'] = None
+
 
     if project.changeset:
         ranks, cr_name = common.check_ranks(project, 'changeset', 'feature_location')
-        results['changeset'] = get_frms(ranks, goldsets)
+        if ranks:
+            results['changeset'] = get_frms(ranks, goldsets)
+        else:
+            results['changeset'] = None
 
     if project.temporal:
         ranks, tr_name = common.check_ranks(project, 'temporal', 'feature_location')
-        results['temporal'] = get_frms(ranks, goldsets)
+        if ranks:
+            results['temporal'] = get_frms(ranks, goldsets)
+        else:
+            results['temporal'] = None
 
     if any([x is None for x in results.values()]):
         repos = load_repos(project)
@@ -37,8 +47,8 @@ def run_experiment(project):
         ids = load_ids(project)
 
         # get corpora
-        changeset_corpus = create_corpus(project, repos, ChangesetCorpus, use_level=False)
         release_corpus = create_release_corpus(project, repos)
+        changeset_corpus = create_corpus(project, repos, ChangesetCorpus, use_level=False)
 
         collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
 
