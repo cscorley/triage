@@ -6,6 +6,8 @@ from __future__ import print_function
 import logging
 logger = logging.getLogger('main')
 
+import os
+import os.path
 from pprint import pprint
 
 import click
@@ -45,7 +47,7 @@ def cli(verbose, name, version, *args, **kwargs):
     elif verbose == 0:
         logging.root.setLevel(level=logging.ERROR)
 
-    lda_config = {
+    model_config = {
         'alpha': 'auto',
         'chunksize': 2000,
         'decay': 0.5,
@@ -56,8 +58,8 @@ def cli(verbose, name, version, *args, **kwargs):
         'passes': 1,
     }
 
-    kwargs.update({'lda_config': lda_config})
-    kwargs.update({'lda_config_string': '-'.join([unicode(v) for k, v in sorted(lda_config.items())])})
+    kwargs.update({'model_config': model_config})
+    kwargs.update({'model_config_string': '-'.join([unicode(v) for k, v in sorted(model_config.items())])})
 
     # load project info
     projects = common.load_projects(kwargs)
@@ -88,10 +90,15 @@ def cli(verbose, name, version, *args, **kwargs):
             # we use the +1 on the bound because range is [a, jerk)
 
             s = optunity.solvers.GridSearch(num_topics=K, alpha=alpha, eta=eta)
-            pars, aux = s.maximize(wrap(project))
+            f = wrap(project)
+            pars, aux = s.maximize(f)
             print("Parameters explored:", s.parameter_tuples)
             print("Optimal parameters:", pars)
             print("Aux info:", aux)
+            print("Call log:", f.call_log)
+            log_dict = f.call_log.to_dict()
+            with open(os.path.join(project.full_path, 'optimize.log'), 'w') as f:
+                print(log_dict, file=f)
         else:
             results[project.printable_name] = run_experiments(project)
 
@@ -111,15 +118,14 @@ def run_experiments(project):
 def wrap(project):
     """Take in a project and configuration, return function that runs experiment with that config"""
 
+    @optunity.functions.logged
     def inner(*args, **kwargs):
-        results = dict()
+        project.model_config.update(kwargs)
+        p = project._replace(model_config_string='-'.join([unicode(v) for k, v in sorted(project.model_config.items())]))
 
-        project.lda_config.update(kwargs)
-        p = project._replace(lda_config_string='-'.join([unicode(v) for k, v in sorted(project.lda_config.items())]))
+        results = feature_location.run_experiment(p)
 
-        results['feature location'] = feature_location.run_experiment(p)
-
-        return utils.calculate_mrr(num for num, _, _ in results['feature location']['release']['lda'])
+        return utils.calculate_mrr(num for num, _, _ in results['release'])
 
     return inner
 
@@ -132,10 +138,4 @@ def do_science(a_first_rels, b_first_rels, ignore=False):
              'b_mrr': utils.calculate_mrr(y),
              'wilcoxon': scipy.stats.wilcoxon(x, y),
            }
-    #print(prefix+' changeset mrr:', )
-    #print(prefix+' release mrr:', )
-    #print(prefix+' wilcoxon signedrank:', )
-    #print(prefix+' ranksums:', scipy.stats.ranksums(x, y))
-    #print(prefix+' mann-whitney:', scipy.stats.mannwhitneyu(x, y))
-    #print('friedman:', scipy.stats.friedmanchisquare(x, y, x2, y2))
 

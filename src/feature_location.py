@@ -6,56 +6,56 @@ from __future__ import print_function
 import logging
 logger = logging.getLogger('feature_location')
 
+import common
 from common import *
-
-def do_science(a_first_rels, b_first_rels, ignore=False):
-    # Build a dictionary with each of the results for stats.
-    x, y = merge_first_rels(a_first_rels, b_first_rels, ignore=ignore)
-    print(len(x), len(y))
-
-    return { 'a_mrr': utils.calculate_mrr(x),
-             'b_mrr': utils.calculate_mrr(y),
-             'wilcoxon': scipy.stats.wilcoxon(x, y),
-           }
-    #print(prefix+' changeset mrr:', )
-    #print(prefix+' release mrr:', )
-    #print(prefix+' wilcoxon signedrank:', )
-    #print(prefix+' ranksums:', scipy.stats.ranksums(x, y))
-    #print(prefix+' mann-whitney:', scipy.stats.mannwhitneyu(x, y))
-    #print('friedman:', scipy.stats.friedmanchisquare(x, y, x2, y2))
 
 
 def run_experiment(project):
     logger.info("Running project on %s", str(project))
-
-    repos = load_repos(project)
-
-    # create/load document lists
-    queries = create_queries(project)
-    goldsets = create_goldsets(project)
-    ids = load_ids(project)
-
-    # get corpora
-    changeset_corpus = create_corpus(project, repos, ChangesetCorpus, use_level=False)
-    release_corpus = create_release_corpus(project, repos)
-
-    collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
-
     results = dict()
+
+    goldsets = create_goldsets(project)
+
+    # check if ranks exist first -- save time by not loading corpora, etc
     if project.release:
-        results['release'] = run_basic(project, release_corpus, release_corpus,
-                                       queries, goldsets, 'Release', 'Feature_location')
+        ranks, rr_name = common.check_ranks(project, 'release', 'feature_location')
+        results['release'] = get_frms(ranks, goldsets)
 
     if project.changeset:
-        results['changeset'] = run_basic(project, changeset_corpus, release_corpus,
-                                         queries, goldsets, 'Changeset', 'Feature_location')
+        ranks, cr_name = common.check_ranks(project, 'changeset', 'feature_location')
+        results['changeset'] = get_frms(ranks, goldsets)
 
     if project.temporal:
-        try:
-            results['temporal'] = run_temporal(project, repos, changeset_corpus,
-                                               queries, goldsets)
-        except IOError:
-            logger.info("Files needed for temporal evaluation not found. Skipping.")
+        ranks, tr_name = common.check_ranks(project, 'temporal', 'feature_location')
+        results['temporal'] = get_frms(ranks, goldsets)
+
+    if any([x is None for x in results.values()]):
+        repos = load_repos(project)
+
+        # create/load document lists
+        queries = create_queries(project)
+        ids = load_ids(project)
+
+        # get corpora
+        changeset_corpus = create_corpus(project, repos, ChangesetCorpus, use_level=False)
+        release_corpus = create_release_corpus(project, repos)
+
+        collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
+
+        if project.release and results['release'] is None:
+            results['release'] = run_basic(project, release_corpus, release_corpus,
+                                           queries, goldsets, 'release', rr_name)
+
+        if project.changeset and results['changeset'] is None:
+            results['changeset'] = run_basic(project, changeset_corpus, release_corpus,
+                                             queries, goldsets, 'changeset', cr_name)
+
+        if project.temporal and results['temporal'] is None:
+            try:
+                results['temporal'] = run_temporal(project, repos, changeset_corpus,
+                                                   queries, goldsets, tr_name)
+            except IOError:
+                logger.info("Files needed for temporal evaluation not found. Skipping.")
 
     return results
 

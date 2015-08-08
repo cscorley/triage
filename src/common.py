@@ -27,52 +27,37 @@ from errors import TaserError
 from goldsets import build_goldset, load_goldset
 from ownership import build_ownership
 
-def run_basic(project, corpus, other_corpus, queries, goldsets, kind, experiment, use_level=False):
+def check_ranks(project, kind, experiment):
+    if project.force:
+        return None
+
+    rank_name = '-'.join([kind, experiment, project.model, project.model_config_string]).lower()
+
+    try:
+        return read_ranks(project, rank_name), rank_name
+    except IOError:
+        return None, rank_name
+
+def run_basic(project, corpus, other_corpus, queries, goldsets, kind, rank_name, use_level=False):
     """
     This function runs the experiment in one-shot. It does not evaluate the
     changesets over time.
     """
     logger.info("Running basic evaluation on the %s", kind)
-    results = dict()
+
     if project.model == "lda":
-        rank_name = '-'.join([kind, experiment, 'lda', project.lda_config_string]).lower()
-        try:
-            lda_ranks = read_ranks(project, rank_name)
-            logger.info("Sucessfully read previously written %s LDA ranks", kind)
-            exists = True
-        except IOError:
-            exists = False
-
-        if project.force or not exists:
-            lda_model, _ = create_lda_model(project, corpus, corpus.id2word, kind, use_level=use_level)
-            lda_query_topic = get_topics(lda_model, queries)
-            lda_doc_topic = get_topics(lda_model, other_corpus)
-
-            lda_ranks = get_rank(lda_query_topic, lda_doc_topic, goldsets)
-            write_ranks(project, rank_name, lda_ranks)
-
-        results['lda'] = get_frms(lda_ranks, goldsets)
+        model, _ = create_lda_model(project, corpus, corpus.id2word, kind, use_level=use_level)
 
     if project.model == "lsi":
-        rank_name = '-'.join([kind, experiment, 'lsi', project.lda_config_string]).lower()
-        try:
-            lsi_ranks = read_ranks(project, rank_name)
-            logger.info("Sucessfully read previously written %s LSI ranks", kind)
-            exists = True
-        except IOError:
-            exists = False
+        model, _ = create_lsi_model(project, corpus, corpus.id2word, kind, use_level=use_level)
 
-        if project.force or not exists:
-            lsi_model, _ = create_lsi_model(project, corpus, corpus.id2word, kind, use_level=use_level)
-            lsi_query_topic = get_topics(lsi_model, queries)
-            lsi_doc_topic = get_topics(lsi_model, other_corpus)
+    query_topic = get_topics(model, queries)
+    doc_topic = get_topics(model, other_corpus)
 
-            lsi_ranks = get_rank(lsi_query_topic, lsi_doc_topic, goldsets)
-            write_ranks(project, rank_name, lsi_ranks)
+    ranks = get_rank(query_topic, doc_topic, goldsets)
+    write_ranks(project, rank_name, ranks)
 
-        results['lsi'] = get_frms(lsi_ranks, goldsets)
-
-    return results
+    return get_frms(ranks, goldsets)
 
 def collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus):
     logger.info("Collecting corpus metdata info")
@@ -139,7 +124,9 @@ def collect_helper(project, corpus, name):
             writer.writerow(row)
 
 def write_ranks(project, prefix, ranks):
-    with smart_open(os.path.join(project.full_path, '-'.join([prefix, project.level, 'ranks.csv.gz'])), 'w') as f:
+    path = os.path.join(project.full_path, '-'.join([prefix, project.level, 'ranks.csv.gz']))
+    logger.info("Attempting to write ranks to: %s", path)
+    with smart_open(path, 'w') as f:
         writer = csv.writer(f)
         writer.writerow(['id', 'rank', 'distance', 'item'])
 
@@ -148,8 +135,10 @@ def write_ranks(project, prefix, ranks):
                 writer.writerow([gid, idx, dist, to_utf8(d_name)])
 
 def read_ranks(project, prefix):
+    path = os.path.join(project.full_path, '-'.join([prefix, project.level, 'ranks.csv.gz']))
+    logger.info("Attempting to read ranks from: %s", path)
     ranks = dict()
-    with smart_open(os.path.join(project.full_path, '-'.join([prefix, project.level, 'ranks.csv.gz']))) as f:
+    with smart_open(path) as f:
         reader = csv.reader(f)
         next(reader)  # skip header
         for g_id, idx, dist, d_name in reader:
