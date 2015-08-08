@@ -8,21 +8,6 @@ logger = logging.getLogger('triage')
 
 from common import *
 
-def do_science(a_first_rels, b_first_rels, ignore=False):
-    # Build a dictionary with each of the results for stats.
-    x, y = merge_first_rels(a_first_rels, b_first_rels, ignore=ignore)
-    print(len(x), len(y))
-
-    return { 'a_mrr': utils.calculate_mrr(x),
-             'b_mrr': utils.calculate_mrr(y),
-             'wilcoxon': scipy.stats.wilcoxon(x, y),
-           }
-    #print(prefix+' changeset mrr:', )
-    #print(prefix+' release mrr:', )
-    #print(prefix+' wilcoxon signedrank:', )
-    #print(prefix+' ranksums:', scipy.stats.ranksums(x, y))
-    #print(prefix+' mann-whitney:', scipy.stats.mannwhitneyu(x, y))
-    #print('friedman:', scipy.stats.friedmanchisquare(x, y, x2, y2))
 
 def run_experiment(project):
     logger.info("Running project on %s", str(project))
@@ -43,35 +28,21 @@ def run_experiment(project):
 
     collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
 
-    ownership_results = run_ownership(project, release_corpus,
-                                      ownership, queries, goldsets,
-                                      'Release', 'Triage')
-
-    changeset_results = run_basic(project, changeset_corpus,
-                                  developer_corpus, queries, goldsets,
-                                  'Changeset', 'Triage')
-
     results = dict()
+    if project.release:
+        results['release'] = run_ownership(project, release_corpus, ownership,
+                                          queries, goldsets, 'Release', 'Triage')
+
+    if project.changeset:
+        results['changeset'] = run_basic(project, changeset_corpus, release_corpus,
+                                         queries, goldsets, 'Changeset', 'Feature_location')
 
     if project.temporal:
         try:
-            temporal_lda, temporal_lsi = run_temporal(project, repos,
-                                                    changeset_corpus, queries,
-                                                    goldsets)
+            results['temporal'] = run_temporal(project, repos, changeset_corpus,
+                                               queries, goldsets)
         except IOError:
             logger.info("Files needed for temporal evaluation not found. Skipping.")
-        else:
-            if project.model == "lda":
-                results['temporal_lda'] = do_science(temporal_lda, changeset_lda, ignore=True)
-            if project.model == "lsi":
-                results['temporal_lsi'] = do_science(temporal_lsi, changeset_lsi, ignore=True)
-
-    # do this last so that the results are printed together
-    if project.model == "lda":
-        results['basic_lda'] = do_science(changeset_results['lda'], ownership_results['lda'])
-
-    if project.model == "lsi":
-        results['basic_lsi'] = do_science(changeset_results['lsi'], ownership_results['lsi'])
 
     return results
 

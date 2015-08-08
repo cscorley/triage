@@ -41,33 +41,21 @@ def run_experiment(project):
 
     collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
 
-    release_results = run_basic(project, release_corpus, release_corpus,
-                                queries, goldsets, 'Release', 'Feature_location')
-
-    changeset_results = run_basic(project, changeset_corpus, release_corpus,
-                                  queries, goldsets, 'Changeset', 'Feature_location')
-
     results = dict()
+    if project.release:
+        results['release'] = run_basic(project, release_corpus, release_corpus,
+                                       queries, goldsets, 'Release', 'Feature_location')
+
+    if project.changeset:
+        results['changeset'] = run_basic(project, changeset_corpus, release_corpus,
+                                         queries, goldsets, 'Changeset', 'Feature_location')
 
     if project.temporal:
         try:
-            temporal_lda, temporal_lsi = run_temporal(project, repos,
-                                                      changeset_corpus, queries,
-                                                      goldsets)
+            results['temporal'] = run_temporal(project, repos, changeset_corpus,
+                                               queries, goldsets)
         except IOError:
             logger.info("Files needed for temporal evaluation not found. Skipping.")
-        else:
-            if project.model == "lda":
-                results['temporal_lda'] = do_science(temporal_lda, changeset_lda, ignore=True)
-            if project.model == "lsi":
-                results['temporal_lsi'] = do_science(temporal_lsi, changeset_lsi, ignore=True)
-
-    # do this last so that the results are printed together
-    if project.model == "lda":
-        results['basic_lda'] = do_science(changeset_results['lda'], release_results['lda'])
-
-    if project.model == "lsi":
-        results['basic_lsi'] = do_science(changeset_results['lsi'], release_results['lsi'])
 
     return results
 

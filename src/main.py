@@ -12,6 +12,7 @@ import click
 import optunity
 import numpy
 
+import utils
 import common
 import triage
 import feature_location
@@ -27,9 +28,12 @@ import feature_location
 @click.option('--temporal',      help="Run historical simulation", is_flag=True)
 @click.option('--name',          help="Name of project to run experiment on")
 @click.option('--version',       help="Version of project to run experiment on")
-@click.option('--level',         help="Granularity level to run experiment on", default="file",    type=click.Choice(["file", "class", "method"]))
-@click.option('--experiment',    help="Run selected experiment", default="triage",  type=click.Choice(["triage", "feature_location"]))
-@click.option('--model',         help="Evaluate using selected model", default="lda",     type=click.Choice(["lsi", "lda", "hdp", "hpyp"]))
+@click.option('--level',         help="Granularity level to run experiment on",
+              default="file",    type=click.Choice(["file", "class", "method"]))
+@click.option('--experiment',    help="Run selected experiment",
+              default="triage",  type=click.Choice(["triage", "feature_location"]))
+@click.option('--model',         help="Evaluate using selected model",
+              default="lda",     type=click.Choice(["lsi", "lda", "hdp", "hpyp"]))
 def cli(verbose, name, version, *args, **kwargs):
     logging.basicConfig(format='%(asctime)s : %(levelname)s : ' +
                         '%(name)s : %(funcName)s : %(message)s')
@@ -78,16 +82,16 @@ def cli(verbose, name, version, *args, **kwargs):
         elif project.optimize:
             # fix params here
             # panichella-etal_2013a uses:
-            K = numpy.arange(50, 101, 50) #501, 50)
-            alpha = numpy.arange(0.1, 1.1, 0.4) # 0.1)
-            eta = numpy.arange(0.1, 1.1, 0.4) # 0.1)
+            K = numpy.arange(50, 501, 50)
+            alpha = numpy.arange(0.1, 1.1, 0.1)
+            eta = numpy.arange(0.1, 1.1, 0.1)
             # we use the +1 on the bound because range is [a, jerk)
 
             s = optunity.solvers.GridSearch(num_topics=K, alpha=alpha, eta=eta)
-            pars, opt = s.maximize(wrap(project))
-            print(s.parameter_tuples)
-            print(pars)
-            print(opt)
+            pars, aux = s.maximize(wrap(project))
+            print("Parameters explored:", s.parameter_tuples)
+            print("Optimal parameters:", pars)
+            print("Aux info:", aux)
         else:
             results[project.printable_name] = run_experiments(project)
 
@@ -115,6 +119,23 @@ def wrap(project):
 
         results['feature location'] = feature_location.run_experiment(p)
 
-        return results['feature location']['basic_lda']['b_mrr']
+        return utils.calculate_mrr(num for num, _, _ in results['feature location']['release']['lda'])
 
     return inner
+
+def do_science(a_first_rels, b_first_rels, ignore=False):
+    # Build a dictionary with each of the results for stats.
+    x, y = merge_first_rels(a_first_rels, b_first_rels, ignore=ignore)
+    print(len(x), len(y))
+
+    return { 'a_mrr': utils.calculate_mrr(x),
+             'b_mrr': utils.calculate_mrr(y),
+             'wilcoxon': scipy.stats.wilcoxon(x, y),
+           }
+    #print(prefix+' changeset mrr:', )
+    #print(prefix+' release mrr:', )
+    #print(prefix+' wilcoxon signedrank:', )
+    #print(prefix+' ranksums:', scipy.stats.ranksums(x, y))
+    #print(prefix+' mann-whitney:', scipy.stats.mannwhitneyu(x, y))
+    #print('friedman:', scipy.stats.friedmanchisquare(x, y, x2, y2))
+
