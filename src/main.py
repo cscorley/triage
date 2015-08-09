@@ -21,24 +21,41 @@ import feature_location
 
 
 @click.command()
-@click.option('-v', '--verbose', help="Enable verbose output", count=True)
-@click.option('--force',         help="Overwrite existing data instead of reloading", is_flag=True)
-@click.option('--optimize',      help="Find an optimal configuration for experiment", is_flag=True)
-@click.option('--goldset',       help="Build a goldset for project (overrides other parameters)", is_flag=True)
-@click.option('--release',       help="Run release evaluation", is_flag=True)
-@click.option('--changeset',     help="Run changeset evaluation", is_flag=True)
-@click.option('--temporal',      help="Run historical simulation", is_flag=True)
-@click.option('--name',          help="Name of project to run experiment on")
-@click.option('--version',       help="Version of project to run experiment on")
-@click.option('--level',         help="Granularity level to run experiment on",
-              default="file",    type=click.Choice(["file", "class", "method"]))
-@click.option('--experiment',    help="Run selected experiment",
-              default="triage",  type=click.Choice(["triage", "feature_location"]))
-@click.option('--model',         help="Evaluate using selected model",
-              default="lda",     type=click.Choice(["lsi", "lda", "hdp", "hpyp"]))
+@click.option('--verbose', '-v',
+              help="Enable verbose output",
+              count=True)
+@click.option('--force',
+              help="Overwrite existing data instead of reloading",
+              is_flag=True)
+@click.option('--optimize',
+              help="Find an optimal configuration for experiment",
+              is_flag=True)
+@click.option('--goldset',
+              help="Build a goldset for project (overrides other parameters)",
+              is_flag=True)
+@click.option('--name',
+              help="Name of project to run experiment on")
+@click.option('--version',
+              help="Version of project to run experiment on")
+@click.option('--source',
+              help="Run experiment on selected source",
+              type=click.Choice(["release", "changeset", "temporal"]),
+              default="release",
+              multiple=True)
+@click.option('--level',
+              help="Granularity level to run experiment on",
+              type=click.Choice(["file", "class", "method"]),
+              default="file")
+@click.option('--experiment',
+              help="Run selected experiment",
+              type=click.Choice(["triage", "feature_location"]),
+              default="triage")
+@click.option('--model',
+              help="Evaluate using selected model",
+              type=click.Choice(["lsi", "lda", "hdp", "hpyp"]),
+              default="lda")
 def cli(verbose, name, version, *args, **kwargs):
-    logging.basicConfig(format='%(asctime)s : %(levelname)s : ' +
-                        '%(name)s : %(funcName)s : %(message)s')
+    logging.basicConfig(format='%(asctime)s : %(levelname)s : %(name)s : %(funcName)s : %(message)s')
 
     if verbose > 1:
         logging.root.setLevel(level=logging.DEBUG)
@@ -47,16 +64,29 @@ def cli(verbose, name, version, *args, **kwargs):
     elif verbose == 0:
         logging.root.setLevel(level=logging.ERROR)
 
-    model_config = {
-        'alpha': 'auto',
-        'chunksize': 2000,
-        'decay': 0.5,
-        'eta': None,
-        'iterations': 1000,
-        'num_topics': 500,
-        'offset': 1.0,
-        'passes': 1,
-    }
+    if kwargs['model'] == 'lda':
+        model_config = {
+            'alpha': 'auto',
+            'chunksize': 2000,
+            'decay': 0.5,
+            'eta': None,
+            'iterations': 1000,
+            'num_topics': 500,
+            'offset': 1.0,
+            'passes': 10,
+        }
+    elif kwargs['model'] == 'hdp':
+        model_config = {
+            'K': 15,
+            'T': 150,
+            'alpha': 1,
+            'chunksize': 256,
+            'eta': 0.01,
+            'gamma': 1,
+            'kappa': 1.0,
+            'scale': 1.0,
+            'tau': 64.0,
+        }
 
     kwargs.update({'model_config': model_config})
     kwargs.update({'model_config_string': '-'.join([unicode(v) for k, v in sorted(model_config.items())])})
@@ -83,22 +113,32 @@ def cli(verbose, name, version, *args, **kwargs):
             build_goldset(project)
         elif project.optimize:
             # fix params here
-            # panichella-etal_2013a uses:
-            K = numpy.arange(50, 501, 50)
-            alpha = numpy.arange(0.1, 1.1, 0.1)
-            eta = numpy.arange(0.1, 1.1, 0.1)
-            # we use the +1 on the bound because range is [a, jerk)
+            params = dict()
+            if project.model == 'lda':
+                # panichella-etal_2013a uses:
+                params = {
+                    'num_topics': list(range(50, 501, 50)),
+                    'alpha': [float(x) / 10 for x in range(1, 11, 1)] + ['auto', 'symmetric'],
+                    'eta': [float(x) / 10 for x in range(1, 11, 1)],
+                }
+            elif project.model == 'hdp':
+                params = {
+                    'K': [15, 20],
+                    'T': [150, 200],
+                }
 
-            s = optunity.solvers.GridSearch(num_topics=K, alpha=alpha, eta=eta)
+            s = optunity.solvers.GridSearch(**params)
             f = wrap(project)
             pars, aux = s.maximize(f)
             print("Parameters explored:", s.parameter_tuples)
             print("Optimal parameters:", pars)
             print("Aux info:", aux)
-            print("Call log:", f.call_log)
+            # print("Call log:", f.call_log)
             log_dict = f.call_log.to_dict()
-            with open(os.path.join(project.full_path, 'optimize.log'), 'w') as f:
-                print(log_dict, file=f)
+            path = os.path.join(project.full_path, 'optimize.log')
+            print("Writing full call log to", path)
+            with open(path, 'w') as output:
+                print(log_dict, file=output)
         else:
             results[project.printable_name] = run_experiments(project)
 

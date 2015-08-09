@@ -12,32 +12,22 @@ from common import *
 
 def run_experiment(project):
     logger.info("Running project on %s", str(project))
-    results = dict()
 
     goldsets = create_goldsets(project)
 
     # check if ranks exist first -- save time by not loading corpora, etc
-    if project.release:
-        ranks, rr_name = common.check_ranks(project, 'release', 'feature_location')
-        if ranks:
-            results['release'] = get_frms(ranks, goldsets)
-        else:
-            results['release'] = None
 
+    results = dict()
+    names = dict()
 
-    if project.changeset:
-        ranks, cr_name = common.check_ranks(project, 'changeset', 'feature_location')
-        if ranks:
-            results['changeset'] = get_frms(ranks, goldsets)
-        else:
-            results['changeset'] = None
+    for each in project.source:
+        ranks, name = common.check_ranks(project, each, 'feature_location')
+        names[each] = name
 
-    if project.temporal:
-        ranks, tr_name = common.check_ranks(project, 'temporal', 'feature_location')
         if ranks:
-            results['temporal'] = get_frms(ranks, goldsets)
+            results[each] = get_frms(ranks, goldsets)
         else:
-            results['temporal'] = None
+            results[each] = None
 
     if any([x is None for x in results.values()]):
         repos = load_repos(project)
@@ -52,18 +42,18 @@ def run_experiment(project):
 
         collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
 
-        if project.release and results['release'] is None:
+        if 'release' in project.source and results['release'] is None:
             results['release'] = run_basic(project, release_corpus, release_corpus,
-                                           queries, goldsets, 'release', rr_name)
+                                           queries, goldsets, 'release', names['release'])
 
-        if project.changeset and results['changeset'] is None:
+        if 'changeset' in project.source and results['changeset'] is None:
             results['changeset'] = run_basic(project, changeset_corpus, release_corpus,
-                                             queries, goldsets, 'changeset', cr_name)
+                                             queries, goldsets, 'changeset', names['changeset'])
 
-        if project.temporal and results['temporal'] is None:
+        if 'temporal' in project.source and results['temporal'] is None:
             try:
                 results['temporal'] = run_temporal(project, repos, changeset_corpus,
-                                                   queries, goldsets, tr_name)
+                                                   queries, goldsets, names['temporal'])
             except IOError:
                 logger.info("Files needed for temporal evaluation not found. Skipping.")
 
