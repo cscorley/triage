@@ -49,13 +49,6 @@ clean-results:
 install: requirements
 	pip install --editable .
 
-init:
-	virtualenv --python=python2 env
-	. env/bin/activate && pip install numpy
-	. env/bin/activate && pip install -r requirements.txt
-	. env/bin/activate && pip install --editable .
-
 requirements:
 	pip install numpy
 	pip install -r requirements.txt
-
