@@ -1,6 +1,6 @@
 FROM python:2.7 
 
-RUN apt-get update -y && apt-get install -y libatlas-base-dev gfortran cython 
+RUN apt-get update -y && apt-get install -y build-essentials python-dev libatlas-base-dev gfortran cython 
 ADD . /app
 RUN pip install -r /app/requirements.txt
 RUN pip install --editable /app
