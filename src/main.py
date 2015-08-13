@@ -6,6 +6,7 @@ from __future__ import print_function
 import logging
 logger = logging.getLogger('main')
 
+import csv
 import os
 import os.path
 from pprint import pprint
@@ -70,10 +71,13 @@ def cli(verbose, name, version, *args, **kwargs):
             'chunksize': 2000,
             'decay': 0.5,
             'eta': None,
+            'eval_every': 1, # special
             'iterations': 1000,
+            'max_em_iterations': 1000, # special
             'num_topics': 500,
             'offset': 1.0,
-            'passes': 10,
+            'passes': 1,
+            'update_every': 0, # special
         }
     elif kwargs['model'] == 'hdp':
         model_config = {
@@ -112,33 +116,7 @@ def cli(verbose, name, version, *args, **kwargs):
         if project.goldset:
             build_goldset(project)
         elif project.optimize:
-            # fix params here
-            params = dict()
-            if project.model == 'lda':
-                # panichella-etal_2013a uses:
-                params = {
-                    'num_topics': list(range(50, 501, 50)),
-                    'alpha': [float(x) / 10 for x in range(1, 11, 1)] + ['auto', 'symmetric'],
-                    'eta': [float(x) / 10 for x in range(1, 11, 1)],
-                }
-            elif project.model == 'hdp':
-                params = {
-                    'K': [15, 20],
-                    'T': [150, 200],
-                }
-
-            s = optunity.solvers.GridSearch(**params)
-            f = wrap(project)
-            pars, aux = s.maximize(f)
-            print("Parameters explored:", s.parameter_tuples)
-            print("Optimal parameters:", pars)
-            print("Aux info:", aux)
-            # print("Call log:", f.call_log)
-            log_dict = f.call_log.to_dict()
-            path = os.path.join(project.full_path, 'optimize.log')
-            print("Writing full call log to", path)
-            with open(path, 'w') as output:
-                print(log_dict, file=output)
+            run_optimization(project)
         else:
             results[project.printable_name] = run_experiments(project)
 
@@ -147,25 +125,66 @@ def cli(verbose, name, version, *args, **kwargs):
 def run_experiments(project):
     results = dict()
 
-    if project.triage:
-        results['triage'] = triage.run_experiment(project)
-
-    if project.feature_location:
-        results['feature location'] = feature_location.run_experiment(project)
+    if project.experiment == 'triage':
+        results = triage.run_experiment(project)
+    elif project.experiment == 'feature_location':
+        results = feature_location.run_experiment(project)
 
     return results
 
-def wrap(project):
+def run_optimization(project):
+    # fix params here
+    params = dict()
+    if project.model == 'lda':
+        # panichella-etal_2013a uses:
+        params = {
+            'num_topics': list(range(50, 501, 50)),
+            'alpha': [float(x) / 10 for x in range(1, 11, 1)] + ['auto', 'symmetric'],
+            'eta': [float(x) / 10 for x in range(1, 11, 1)] + ['auto', None], # here, none is the same as 'symmetric'
+        }
+    elif project.model == 'hdp':
+        params = {
+            'K': [15, 20],
+            'T': [150, 200],
+        }
+
+
+    for each in project.source:
+        s = optunity.solvers.GridSearch(**params)
+        f = wrap(project, each)
+        pars, aux = s.maximize(f)
+        print("Parameters explored:", s.parameter_tuples)
+        print("Optimal parameters:", pars)
+        print("Aux info:", aux)
+        # print("Call log:", f.call_log)
+        log_dict = f.call_log.to_dict()
+        path = os.path.join(project.full_path, 'optimized-%s.csv' % each)
+        print("Writing full call log to", path)
+
+        header = ['score'] + list(log_dict['args'].keys())
+        items = list(zip(log_dict['values'], *log_dict['args'].values()))
+
+        with open(path, 'w') as output:
+            writer = csv.writer(output)
+            writer.writerow(header)
+            writer.writerows(items)
+
+
+def wrap(project, source):
     """Take in a project and configuration, return function that runs experiment with that config"""
 
     @optunity.functions.logged
     def inner(*args, **kwargs):
         project.model_config.update(kwargs)
         p = project._replace(model_config_string='-'.join([unicode(v) for k, v in sorted(project.model_config.items())]))
+        results = dict()
 
-        results = feature_location.run_experiment(p)
+        if project.experiment == 'triage':
+            results = triage.run_experiment(p)
+        elif project.experiment == 'feature_location':
+            results = feature_location.run_experiment(p)
 
-        return utils.calculate_mrr(num for num, _, _ in results['release'])
+        return utils.calculate_mrr(num for num, _, _ in results[source])
 
     return inner
 

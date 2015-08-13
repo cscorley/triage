@@ -72,16 +72,13 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
     logger.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
 
     if project.model == "lda":
-        lda, lda_fname = create_lda_model(project, None, corpus.id2word,
-                                          'Temporal', use_level=False, force=True)
+        model, model_fname = create_lda_model(project, None, corpus.id2word, 'temporal', use_level=False, force=True)
 
     if project.model == "lsi":
-        lsi, lsi_fname = create_lsi_model(project, None, corpus.id2word,
-                                          'Temporal', use_level=False, force=True)
+        model, model_fname = create_lsi_model(project, None, corpus.id2word, 'temporal', use_level=False, force=True)
 
     indices = list()
-    lda_ranks = dict()
-    lsi_ranks = dict()
+    ranks = dict()
     docs = list()
     corpus.metadata = True
     prev = 0
@@ -105,12 +102,12 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
             docs.append(corpus[i])
 
         if project.model == "lda":
-            lda.update(docs,
+            model.update(docs,
                     #chunksize=project.chunksize,
                     offset=project.offset,
                     decay=project.decay)
         if project.model == "lsi":
-            lsi.add_documents(docs)
+            model.add_documents(docs)
 
         for qid in git2issue[sha]:
             logger.info('Getting ranks for query id %s', qid)
@@ -121,48 +118,21 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
             except TaserError:
                 continue
 
-            # do LDA magic
-            if project.model == "lda":
-                lda_query_topic = get_topics(lda, queries, by_ids=[qid])
-                lda_doc_topic = get_topics(lda, other_corpus)
-                lda_subranks = get_rank(goldsets, lda_query_topic, lda_doc_topic)
-                if qid in lda_subranks:
-                    if qid not in lda_ranks:
-                        lda_ranks[qid] = list()
+            query_topic = get_topics(model, queries, by_ids=[qid])
+            doc_topic = get_topics(model, other_corpus)
+            subranks = get_rank(goldsets, query_topic, doc_topic)
+            if qid in subranks:
+                if qid not in ranks:
+                    ranks[qid] = list()
 
-                    rank = lda_subranks[qid]
-                    lda_ranks[qid].extend(rank)
-                else:
-                    logger.info('Couldnt find qid %s', qid)
+                rank = subranks[qid]
+                ranks[qid].extend(rank)
+            else:
+                logger.info('Couldnt find qid %s', qid)
 
-            # do LSI magic
-            if project.model == "lsi":
-                lsi_query_topic = get_topics(lsi, queries, by_ids=[qid])
-                lsi_doc_topic = get_topics(lsi, other_corpus)
-                lsi_subranks = get_rank(goldsets, lsi_query_topic, lsi_doc_topic)
-                if qid in lsi_subranks:
-                    if qid not in lsi_ranks:
-                        lsi_ranks[qid] = list()
 
-                    rank = lsi_subranks[qid]
-                    lsi_ranks[qid].extend(rank)
-                else:
-                    logger.info('Couldnt find qid %s', qid)
-
-    lda_rels = list()
-    if project.model == "lda":
-        lda.save(lda_fname)
-        write_ranks(project, 'temporal', lda_ranks)
-        lda_rels = get_frms(lda_ranks, goldsets)
-
-    lsi_rels = list()
-    if project.model == "lsi":
-        lsi.save(lsi_fname)
-        write_ranks(project, 'temporal_lsi', lsi_ranks)
-        lsi_rels = get_frms(lsi_ranks, goldsets)
-
-    return lda_rels, lsi_rels
-
+    model.save(model_fname)
+    return ranks
 
 
 def create_goldsets(project):

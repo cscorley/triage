@@ -150,30 +150,22 @@ def read_ranks(project, prefix):
     return ranks
 
 
-def run_temporal(project, repos, corpus, queries, goldsets):
+def run_temporal(project, repos, corpus, queries, goldsets, rank_name):
     logger.info("Running temporal evaluation")
 
     force = project.force
-    lda_rels = list()
-    lsi_rels = list()
     try:
-        if project.model == "lda":
-            lda_ranks = read_ranks(project, 'temporal')
-            lda_rels = get_frms(lda_ranks, goldsets)
-
-        if project.model == "lsi":
-            lsi_ranks = read_ranks(project, 'temporal_lsi')
-            lsi_rels = get_frms(lsi_ranks, goldsets)
+        ranks = read_ranks(project, rank_name)
 
         logger.info("Sucessfully read previously written Temporal ranks")
     except IOError:
         force = True
 
     if force:
-        lda_rels, lsi_rels = run_temporal_helper(project, repos, corpus, queries, goldsets)
+        ranks = run_temporal_helper(project, repos, corpus, queries, goldsets)
+        write_ranks(project, rank_name, ranks)
 
-
-    return {'lda': lda_rels, 'lsi': lsi_rels}
+    return get_frms(ranks, goldets)
 
 
 def merge_first_rels(a, b, ignore=False):
@@ -501,8 +493,6 @@ def create_lda_model(project, corpus, id2word, name, use_level=True, force=False
         params = dict(project.model_config) # make copy of config
         params['corpus'] = corpus
         params['id2word'] = id2word
-        params['update_every'] = update_every
-        params['eval_every'] = None # disable perplexity tests for speed
 
         model = LdaModel(**params)
 

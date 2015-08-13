@@ -6,91 +6,80 @@ from __future__ import print_function
 import logging
 logger = logging.getLogger('triage')
 
+import common
 from common import *
 
 
 def run_experiment(project):
     logger.info("Running project on %s", str(project))
 
-    repos = load_repos(project)
-
-    # create/load document lists
-    queries = create_queries(project)
     goldsets = create_goldsets(project)
-    ids = load_ids(project)
 
-    ownership = build_ownership(project, repos)
-
-    # get corpora
-    changeset_corpus = create_corpus(project, repos, ChangesetCorpus, use_level=False)
-    developer_corpus = create_developer_corpus(project, repos, changeset_corpus)
-    release_corpus = create_release_corpus(project, repos)
-
-    collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
+    # check if ranks exist first -- save time by not loading corpora, etc
 
     results = dict()
-    if project.release:
-        results['release'] = run_ownership(project, release_corpus, ownership,
-                                          queries, goldsets, 'Release', 'Triage')
+    names = dict()
 
-    if project.changeset:
-        results['changeset'] = run_basic(project, changeset_corpus, release_corpus,
-                                         queries, goldsets, 'Changeset', 'Feature_location')
+    for each in project.source:
+        ranks, name = common.check_ranks(project, each, 'triage')
+        names[each] = name
 
-    if project.temporal:
-        try:
-            results['temporal'] = run_temporal(project, repos, changeset_corpus,
-                                               queries, goldsets)
-        except IOError:
-            logger.info("Files needed for temporal evaluation not found. Skipping.")
+        if ranks:
+            results[each] = get_frms(ranks, goldsets)
+        else:
+            results[each] = None
+
+    if any([x is None for x in results.values()]):
+        repos = load_repos(project)
+
+        # create/load document lists
+        queries = create_queries(project)
+        ids = load_ids(project)
+
+        ownership = build_ownership(project, repos)
+
+        # get corpora
+        changeset_corpus = create_corpus(project, repos, ChangesetCorpus, use_level=False)
+        developer_corpus = create_developer_corpus(project, repos, changeset_corpus)
+        release_corpus = create_release_corpus(project, repos)
+
+        collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
+
+        if 'release' in project.source and results['release'] is None:
+            results['release'] = run_ownership(project, release_corpus, ownership,
+                                          queries, goldsets, 'release', names['release'])
+
+        if 'changeset' in project.source and results['changeset'] is None:
+            results['changeset'] = run_basic(project, changeset_corpus, release_corpus,
+                                             queries, goldsets, 'changeset', names['changeset'])
+
+        if 'temporal' in project.source and results['temporal'] is None:
+            try:
+                results['temporal'] = run_temporal(project, repos, changeset_corpus,
+                                                   queries, goldsets, names['temporal'])
+            except IOError:
+                logger.info("Files needed for temporal evaluation not found. Skipping.")
 
     return results
 
 
 def run_ownership(project, corpus, ownership, queries, goldsets, kind, experiment, use_level=False):
     logger.info("Running ownership-based evaluation on the %s", kind)
-    results = dict()
+
     if project.model == "lda":
-        rank_name = '-'.join([kind, experiment, 'lda', project.model_config_string]).lower()
-        try:
-            lda_owners = read_ranks(project, rank_name)
-            logger.info("Sucessfully read previously written %s LDA ranks", kind)
-            exists = True
-        except IOError:
-            exists = False
-
-        if project.force or not exists:
-            lda_model, _ = create_lda_model(project, corpus, corpus.id2word, kind, use_level=use_level)
-            lda_query_topic = get_topics(lda_model, queries)
-            lda_doc_topic = get_topics(lda_model, corpus)
-
-            lda_ranks = get_rank(lda_query_topic, lda_doc_topic)
-            lda_owners = rank2owner(lda_ranks, ownership)
-            write_ranks(project, rank_name, lda_owners)
-
-        results['lda'] = get_frms(lda_owners, goldsets)
+        model, _ = create_lda_model(project, corpus, corpus.id2word, kind, use_level=use_level)
 
     if project.model == "lsi":
-        rank_name = '-'.join([kind, experiment, 'lsi', project.lda_config_string]).lower()
-        try:
-            lsi_owners = read_ranks(project, rank_name)
-            logger.info("Sucessfully read previously written %s LSI ranks", kind)
-            exists = True
-        except IOError:
-            exists = False
+        model, _ = create_lsi_model(project, corpus, corpus.id2word, kind, use_level=use_level)
 
-        if project.force or not exists:
-            lsi_model, _ = create_lsi_model(project, corpus, corpus.id2word, kind, use_level=use_level)
-            lsi_query_topic = get_topics(lsi_model, queries)
-            lsi_doc_topic = get_topics(lsi_model, other_corpus)
+    query_topic = get_topics(model, queries)
+    doc_topic = get_topics(model, corpus)
 
-            lsi_ranks = get_rank(lsi_query_topic, lsi_doc_topic)
-            lsi_owners = rank2owner(lsi_ranks, ownership)
-            write_ranks(project, rank_name, lsi_owners)
+    ranks = get_rank(query_topic, doc_topic, goldsets)
+    owners = rank2owner(ranks, ownership)
+    write_ranks(project, rank_name, owners)
 
-        results['lsi'] = get_frms(lsi_owners, goldsets)
-
-    return results
+    return get_frms(owners, goldsets)
 
 
 def run_temporal_helper(project, repos, corpus, queries, goldsets):
@@ -105,16 +94,13 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
     logger.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
 
     if project.model == "lda":
-        lda, lda_fname = create_lda_model(project, None, corpus.id2word,
-                                          'Temporal', use_level=False, force=True)
+        model, model_fname = create_lda_model(project, None, corpus.id2word, 'temporal', use_level=False, force=True)
 
     if project.model == "lsi":
-        lsi, lsi_fname = create_lsi_model(project, None, corpus.id2word,
-                                          'Temporal', use_level=False, force=True)
+        model, model_fname = create_lsi_model(project, None, corpus.id2word, 'temporal', use_level=False, force=True)
 
     indices = list()
-    lda_ranks = dict()
-    lsi_ranks = dict()
+    ranks = dict()
     docs = list()
     corpus.metadata = True
     prev = 0
@@ -138,12 +124,12 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
             docs.append(corpus[i])
 
         if project.model == "lda":
-            lda.update(docs,
+            model.update(docs,
                     #chunksize=project.chunksize,
                     offset=project.offset,
                     decay=project.decay)
         if project.model == "lsi":
-            lsi.add_documents(docs)
+            model.add_documents(docs)
 
         for qid in git2issue[sha]:
             logger.info('Getting ranks for query id %s', qid)
@@ -152,45 +138,22 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
 
             # do LDA magic
             if project.model == "lda":
-                lda_query_topic = get_topics(lda, queries, by_ids=[qid])
-                lda_doc_topic = get_topics(lda, developer_corpus)
-                lda_subranks = get_rank(goldsets, lda_query_topic, lda_doc_topic)
-                if qid in lda_subranks:
-                    if qid not in lda_ranks:
-                        lda_ranks[qid] = list()
+                query_topic = get_topics(model, queries, by_ids=[qid])
+                doc_topic = get_topics(model, developer_corpus)
+                subranks = get_rank(goldsets, query_topic, doc_topic)
+                if qid in subranks:
+                    if qid not in ranks:
+                        ranks[qid] = list()
 
-                    rank = lda_subranks[qid]
-                    lda_ranks[qid].extend(rank)
+                    rank = subranks[qid]
+                    ranks[qid].extend(rank)
                 else:
                     logger.info('Couldnt find qid %s', qid)
 
-            # do LSI magic
-            if project.model == "lsi":
-                lsi_query_topic = get_topics(lsi, queries, by_ids=[qid])
-                lsi_doc_topic = get_topics(lsi, developer_corpus)
-                lsi_subranks = get_rank(goldsets, lsi_query_topic, lsi_doc_topic)
-                if qid in lsi_subranks:
-                    if qid not in lsi_ranks:
-                        lsi_ranks[qid] = list()
 
-                    rank = lsi_subranks[qid]
-                    lsi_ranks[qid].extend(rank)
-                else:
-                    logger.info('Couldnt find qid %s', qid)
+    model.save(model_fname)
 
-    lda_rels = list()
-    if project.model == "lda":
-        lda.save(lda_fname)
-        write_ranks(project, 'temporal', lda_ranks)
-        lda_rels = get_frms(lda_ranks, goldsets)
-
-    lsi_rels = list()
-    if project.model == "lsi":
-        lsi.save(lsi_fname)
-        write_ranks(project, 'temporal_lsi', lsi_ranks)
-        lsi_rels = get_frms(lsi_ranks, goldsets)
-
-    return lda_rels, lsi_rels
+    return ranks
 
 
 def rank2owner(ranks, ownership):
