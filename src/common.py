@@ -125,7 +125,7 @@ def collect_helper(project, corpus, name):
 
 def write_ranks(project, prefix, ranks):
     path = os.path.join(project.full_path, '-'.join([prefix, project.level, 'ranks.csv.gz']))
-    logger.info("Attempting to write ranks to: %s", path)
+    logger.info("Attempting to write %d ranks to: %s", len(ranks), path)
     with smart_open(path, 'w') as f:
         writer = csv.writer(f)
         writer.writerow(['id', 'rank', 'distance', 'item'])
@@ -146,6 +146,8 @@ def read_ranks(project, prefix):
                 ranks[g_id] = list()
 
             ranks[g_id].append((int(idx), float(dist), to_unicode(d_name)))
+
+    logger.info("Read %d ranks", len(ranks))
 
     return ranks
 

@@ -29,6 +29,7 @@ def run_experiment(project):
         else:
             results[each] = None
 
+
     if any([x is None for x in results.values()]):
         repos = load_repos(project)
 
@@ -63,7 +64,7 @@ def run_experiment(project):
     return results
 
 
-def run_ownership(project, corpus, ownership, queries, goldsets, kind, experiment, use_level=False):
+def run_ownership(project, corpus, ownership, queries, goldsets, kind, rank_name, use_level=False):
     logger.info("Running ownership-based evaluation on the %s", kind)
 
     if project.model == "lda":
