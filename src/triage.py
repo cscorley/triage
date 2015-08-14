@@ -76,7 +76,7 @@ def run_ownership(project, corpus, ownership, queries, goldsets, kind, rank_name
     query_topic = get_topics(model, queries)
     doc_topic = get_topics(model, corpus)
 
-    ranks = get_rank(query_topic, doc_topic, goldsets)
+    ranks = get_rank(query_topic, doc_topic)
     owners = rank2owner(ranks, ownership)
     write_ranks(project, rank_name, owners)
 
