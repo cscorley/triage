@@ -38,7 +38,7 @@ def check_ranks(project, kind, experiment):
     except IOError:
         return None, rank_name
 
-def run_basic(project, corpus, other_corpus, queries, goldsets, kind, rank_name, use_level=False):
+def run_basic(project, corpus, other_corpus, queries, goldsets, kind, rank_name):
     """
     This function runs the experiment in one-shot. It does not evaluate the
     changesets over time.
@@ -46,10 +46,10 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, kind, rank_name,
     logger.info("Running basic evaluation on the %s", kind)
 
     if project.model == "lda":
-        model, _ = create_lda_model(project, corpus, corpus.id2word, kind, use_level=use_level)
+        model, _ = create_lda_model(project, corpus, corpus.id2word, kind)
 
     if project.model == "lsi":
-        model, _ = create_lsi_model(project, corpus, corpus.id2word, kind, use_level=use_level)
+        model, _ = create_lsi_model(project, corpus, corpus.id2word, kind)
 
     query_topic = get_topics(model, queries)
     doc_topic = get_topics(model, other_corpus)
@@ -182,10 +182,10 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
     logger.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
 
     if project.model == "lda":
-        model, model_fname = create_lda_model(project, None, corpus.id2word, 'temporal', use_level=False, force=True)
+        model, model_fname = create_lda_model(project, None, corpus.id2word, 'temporal', force=True)
 
     if project.model == "lsi":
-        model, model_fname = create_lsi_model(project, None, corpus.id2word, 'temporal', use_level=False, force=True)
+        model, model_fname = create_lsi_model(project, None, corpus.id2word, 'temporal', force=True)
 
     indices = list()
     ranks = dict()
@@ -548,10 +548,8 @@ def create_queries(project):
     return corpus
 
 
-def create_lda_model(project, corpus, id2word, name, use_level=True, force=False):
+def create_lda_model(project, corpus, id2word, name, force=False):
     model_fname = project.full_path + name.lower() + '-' + project.model_config_string
-    if use_level:
-        model_fname += project.level
 
     model_fname += '.lda.gz'
 
@@ -575,10 +573,8 @@ def create_lda_model(project, corpus, id2word, name, use_level=True, force=False
 
     return model, model_fname
 
-def create_lsi_model(project, corpus, id2word, name, use_level=True, force=False):
+def create_lsi_model(project, corpus, id2word, name, force=False):
     model_fname = project.full_path + name + str(project.num_topics)
-    if use_level:
-        model_fname += project.level
 
     model_fname += '.lsi.gz'
 

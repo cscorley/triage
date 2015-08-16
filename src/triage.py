@@ -47,8 +47,9 @@ def run_experiment(project):
         collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
 
         if 'release' in project.source and results['release'] is None:
+            fn = 'release-%s' % project.level
             results['release'] = run_ownership(project, release_corpus, ownership,
-                                               queries, goldsets, 'release', names['release'], use_level=True)
+                                               queries, goldsets, fn, names['release'])
 
         if 'changeset' in project.source and results['changeset'] is None:
             results['changeset'] = run_basic(project, changeset_corpus, release_corpus,
@@ -64,14 +65,14 @@ def run_experiment(project):
     return results
 
 
-def run_ownership(project, corpus, ownership, queries, goldsets, kind, rank_name, use_level=False):
+def run_ownership(project, corpus, ownership, queries, goldsets, kind, rank_name):
     logger.info("Running ownership-based evaluation on the %s", kind)
 
     if project.model == "lda":
-        model, _ = create_lda_model(project, corpus, corpus.id2word, kind, use_level=use_level)
+        model, _ = create_lda_model(project, corpus, corpus.id2word, kind)
 
     if project.model == "lsi":
-        model, _ = create_lsi_model(project, corpus, corpus.id2word, kind, use_level=use_level)
+        model, _ = create_lsi_model(project, corpus, corpus.id2word, kind)
 
     query_topic = get_topics(model, queries)
     doc_topic = get_topics(model, corpus)

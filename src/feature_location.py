@@ -43,8 +43,9 @@ def run_experiment(project):
         collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
 
         if 'release' in project.source and results['release'] is None:
+            fn = 'release-%s' % project.level
             results['release'] = run_basic(project, release_corpus, release_corpus,
-                                           queries, goldsets, 'release', names['release'], use_level=True)
+                                           queries, goldsets, fn, names['release'])
 
         if 'changeset' in project.source and results['changeset'] is None:
             results['changeset'] = run_basic(project, changeset_corpus, release_corpus,
