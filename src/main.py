@@ -17,6 +17,7 @@ import numpy
 
 import utils
 import common
+import goldsets
 import triage
 import feature_location
 
@@ -114,7 +115,7 @@ def cli(verbose, name, version, *args, **kwargs):
                             '%(name)s : %(funcName)s : %(message)s')
 
         if project.goldset:
-            build_goldset(project)
+            goldsets.build_goldset(project)
         elif project.optimize:
             run_optimization(project)
         else:
@@ -158,7 +159,7 @@ def run_optimization(project):
         print("Aux info:", aux)
         # print("Call log:", f.call_log)
         log_dict = f.call_log.to_dict()
-        path = os.path.join(project.full_path, 'optimized-%s.csv' % each)
+        path = os.path.join(project.full_path, 'optimized-%s-%s.csv' % (each, project.experiment))
         print("Writing full call log to", path)
 
         header = ['score'] + list(log_dict['args'].keys())
