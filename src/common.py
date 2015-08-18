@@ -167,7 +167,7 @@ def run_temporal(project, repos, corpus, create_other_corpus, queries, goldsets,
         ranks = run_temporal_helper(project, repos, corpus, create_other_corpus, queries, goldsets)
         write_ranks(project, rank_name, ranks)
 
-    return get_frms(ranks, goldets)
+    return get_frms(ranks, goldsets)
 
 
 def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, goldsets):
@@ -218,7 +218,7 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
         if project.model == "lsi":
             model.add_documents(docs)
 
-        for qid in git2issue[sha]:
+        for qid in set(git2issue[sha]):
             logger.info('Getting ranks for query id %s', qid)
             try:
                 other_corpus = create_other_corpus(project, repos, changesets=corpus, ref=sha)
