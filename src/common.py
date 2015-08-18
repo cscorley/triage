@@ -152,7 +152,7 @@ def read_ranks(project, prefix):
     return ranks
 
 
-def run_temporal(project, repos, corpus, queries, goldsets, rank_name):
+def run_temporal(project, repos, corpus, create_other_corpus, queries, goldsets, rank_name):
     logger.info("Running temporal evaluation")
 
     force = project.force
@@ -164,20 +164,20 @@ def run_temporal(project, repos, corpus, queries, goldsets, rank_name):
         force = True
 
     if force:
-        ranks = run_temporal_helper(project, repos, corpus, queries, goldsets)
+        ranks = run_temporal_helper(project, repos, corpus, create_other_corpus, queries, goldsets)
         write_ranks(project, rank_name, ranks)
 
     return get_frms(ranks, goldets)
 
 
-def run_temporal_helper(project, repos, corpus, queries, goldsets):
+def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, goldsets):
     """
     This function runs the experiment in over time. That is, it stops whenever
     it reaches a commit linked with an issue/query. Will not work on all
     projects.
     """
     ids = load_ids(project)
-    issue2git, git2issue = load_issue2git(project, ids)
+    issue2git, git2issue = load_issue2git(project, ids, filter_ids=True)
 
     logger.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
 
@@ -192,6 +192,8 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
     docs = list()
     corpus.metadata = True
     prev = 0
+
+    logger.info("Partitioning corpus")
 
     # let's partition the corpus first
     for idx, docmeta in enumerate(corpus):
@@ -219,13 +221,13 @@ def run_temporal_helper(project, repos, corpus, queries, goldsets):
         for qid in git2issue[sha]:
             logger.info('Getting ranks for query id %s', qid)
             try:
-                other_corpus = create_other_corpus(project, repos, forced_ref=sha)
+                other_corpus = create_other_corpus(project, repos, changesets=corpus, ref=sha)
             except TaserError:
                 continue
 
             query_topic = get_topics(model, queries, by_ids=[qid])
             doc_topic = get_topics(model, other_corpus)
-            subranks = get_rank(goldsets, query_topic, doc_topic)
+            subranks = get_rank(query_topic, doc_topic, goldsets)
             if qid in subranks:
                 if qid not in ranks:
                     ranks[qid] = list()
@@ -334,13 +336,19 @@ def get_rank(query_topic, doc_topic, goldsets=None, distance_measure=utils.helli
 
 
 def get_topics(model, corpus, by_ids=None, full=True):
-    logger.info('Getting doc topic for corpus with length %d', len(corpus))
+    logger.info('Getting doc topic for corpus with length %d, by ids %s', len(corpus), str(by_ids))
     doc_topic = list()
     corpus.metadata = True
     old_id2word = corpus.id2word
     corpus.id2word = model.id2word
 
+    if by_ids:
+        by_ids = set(by_ids)
+        by_ids.update([str(x) for x in by_ids])
+    logger.debug("BYIDS:%s", by_ids)
+
     for doc, metadata in corpus:
+        logger.debug("METADATA:%s", str(metadata))
         if by_ids is None or metadata[0] in by_ids:
             # get a vector where low topic values are zeroed out.
             topics = model[doc]
@@ -370,7 +378,7 @@ def load_ids(project):
 
 
 
-def load_issue2git(project, ids):
+def load_issue2git(project, ids, filter_ids=False):
     logger.info("Loading issue2git.csv")
     dest_fn = os.path.join(project.data_path, 'issue2git.csv')
     if os.path.exists(dest_fn):
@@ -426,6 +434,13 @@ def load_issue2git(project, ids):
     if len(ignore):
         logger.info("Ignoring evaluation for the following issues:\n\t%s",
                     '\n\t'.join(ignore))
+
+    # clean up by ids if needed:
+    if filter_ids:
+        for issue in i2g.keys():
+            if issue not in ids:
+                del i2g[issue]
+
 
     # build reverse mapping
     g2i = dict()
@@ -675,7 +690,7 @@ def create_corpus(project, repos, Kind, use_level=True, forced_ref=None):
     return corpus
 
 
-def create_release_corpus(project, repos, forced_ref=None):
+def create_release_corpus(project, repos, changesets=None, ref=None):
     if project.level == 'file':
         RC = ReleaseCorpus
         SC = SnapshotCorpus
@@ -683,13 +698,13 @@ def create_release_corpus(project, repos, forced_ref=None):
         RC = TaserReleaseCorpus
         SC = TaserSnapshotCorpus
 
-    return create_corpus(project, repos, SC, forced_ref=forced_ref)
+    return create_corpus(project, repos, SC, forced_ref=ref)
 
     # not using this just yet
     if forced_ref:
-        return create_corpus(project, repos, SC, forced_ref=forced_ref)
+        return create_corpus(project, repos, SC, forced_ref=ref)
     else:
         try:
             return create_corpus(project, [None], RC)
         except TaserError:
-            return create_corpus(project, repos, SC, forced_ref=forced_ref)
+            return create_corpus(project, repos, SC, forced_ref=ref)

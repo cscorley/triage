@@ -54,6 +54,7 @@ def run_experiment(project):
         if 'temporal' in project.source and results['temporal'] is None:
             try:
                 results['temporal'] = run_temporal(project, repos, changeset_corpus,
+                                                   create_release_corpus,
                                                    queries, goldsets, names['temporal'])
             except IOError:
                 logger.info("Files needed for temporal evaluation not found. Skipping.")
@@ -83,5 +84,3 @@ def create_goldsets(project):
     logger.info("Returning %d goldsets", len(goldsets))
     return goldsets
 
-
-create_other_corpus = create_release_corpus

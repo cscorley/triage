@@ -58,6 +58,7 @@ def run_experiment(project):
         if 'temporal' in project.source and results['temporal'] is None:
             try:
                 results['temporal'] = run_temporal(project, repos, changeset_corpus,
+                                                   create_developer_corpus,
                                                    queries, goldsets, names['temporal'])
             except IOError:
                 logger.info("Files needed for temporal evaluation not found. Skipping.")
@@ -160,10 +161,10 @@ def create_goldsets(project):
     logger.info("Returning %d goldsets", len(goldsets))
     return goldsets
 
-def create_developer_corpus(project, repos, changesets, until_ref=None):
+def create_developer_corpus(project, repos, changesets, ref=None):
     corpus_fname_base = project.full_path + 'Developer'
-    if until_ref:
-        corpus_fname_base += '-' + until_ref
+    if ref:
+        corpus_fname_base += '-' + ref
 
     corpus_fname = corpus_fname_base + '.mallet.gz'
     dict_fname = corpus_fname_base + '.dict.gz'
@@ -182,7 +183,7 @@ def create_developer_corpus(project, repos, changesets, until_ref=None):
                     break
 
             if commit:
-                if until_ref and until_ref == commit.id:
+                if ref and ref == commit.id:
                     break
 
                 dev = to_unicode(commit.committer)
@@ -209,4 +210,3 @@ def create_developer_corpus(project, repos, changesets, until_ref=None):
 
     return corpus
 
-create_other_corpus = create_developer_corpus
