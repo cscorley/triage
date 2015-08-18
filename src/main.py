@@ -108,7 +108,8 @@ def cli(verbose, name, version, *args, **kwargs):
         projects = [x for x in projects if x.version == version]
 
 
-    results = dict()
+    mrr = dict()
+    firstrels = dict()
     for project in projects:
         logging.basicConfig(format='%(asctime)s : %(levelname)s : ' +
                             project.printable_name +
@@ -119,9 +120,12 @@ def cli(verbose, name, version, *args, **kwargs):
         elif project.optimize:
             run_optimization(project)
         else:
-            results[project.printable_name] = run_experiments(project)
+            firstrels[project.printable_name] = run_experiments(project)
 
-    pprint(results)
+        for source in project.source:
+            mrr[project.printable_name][source] = utils.calculate_mrr(num for num, _, _ in firstrels[project.printable_name][source]))
+
+    pprint(mrr)
 
 def run_experiments(project):
     results = dict()

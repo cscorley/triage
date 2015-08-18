@@ -366,10 +366,12 @@ class ChangesetCorpus(GitCorpus):
     def __init__(self, repo, project=None, remove_stops=True, split=True,
                  lower=True, min_len=3, max_len=40, id2word=None,
                  lazy_dict=False, label=None, ref=None, include_removals=True,
-                 include_additions=True, include_context=True):
+                 include_additions=True, include_context=True,
+                 include_message=False):
         self.include_removals = include_removals
         self.include_additions = include_additions
         self.include_context = include_context
+        self.include_message = include_message
         super(ChangesetCorpus, self).__init__(repo,
                                               project=project,
                                               remove_stops=remove_stops,
@@ -474,10 +476,13 @@ class ChangesetCorpus(GitCorpus):
 
             lines = [line[1:] for line in lines]  # remove unified markers
 
+            # append the message
+            if self.include_message:
+                lines.append(commit.message)
 
             document = ' '.join(lines)
 
-            # call the tokenizer
+            # do the preprocessing steps
             words = self.preprocess(document,
                                     [commit, str(parent), diff_lines[0]])
             low.extend(words)
