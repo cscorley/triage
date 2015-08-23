@@ -15,7 +15,7 @@ import dulwich.repo
 import scipy.stats
 import numpy
 from gensim.corpora import MalletCorpus, Dictionary
-from gensim.models import LdaModel, LsiModel
+from gensim.models import LdaModel, LsiModel, HdpModel
 from gensim.matutils import sparse2full
 from gensim.utils import smart_open, to_unicode, to_utf8
 
@@ -38,18 +38,20 @@ def check_ranks(project, kind, experiment):
     except IOError:
         return None, rank_name
 
-def run_basic(project, corpus, other_corpus, queries, goldsets, kind, rank_name):
+def run_basic(project, corpus, other_corpus, queries, goldsets, eval_name, rank_name):
     """
     This function runs the experiment in one-shot. It does not evaluate the
     changesets over time.
     """
-    logger.info("Running basic evaluation on the %s", kind)
+    logger.info("Running basic evaluation on the %s", eval_name)
 
     if project.model == "lda":
-        model, _ = create_lda_model(project, corpus, corpus.id2word, kind)
+        model, _ = create_model(project, corpus, corpus.id2word, LdaModel, eval_name)
+    elif project.model == "hdp":
+        model, _ = create_model(project, corpus, corpus.id2word, HdpModel, eval_name)
+    elif project.model == "lsi":
+        model, _ = create_model(project, corpus, corpus.id2word, LsiModel, eval_name)
 
-    if project.model == "lsi":
-        model, _ = create_lsi_model(project, corpus, corpus.id2word, kind)
 
     query_topic = get_topics(model, queries)
     doc_topic = get_topics(model, other_corpus)
@@ -563,48 +565,23 @@ def create_queries(project):
     return corpus
 
 
-def create_lda_model(project, corpus, id2word, name, force=False):
+
+def create_model(project, corpus, id2word, Kind, name, force=False):
     model_fname = project.full_path + name.lower() + '-' + project.model_config_string
-
-    model_fname += '.lda.gz'
+    model_fname += '.' + project.model + '.gz'
 
 
     if not os.path.exists(model_fname) or project.force or force:
-        if corpus:
-            update_every=None # run in batch if we have a pre-supplied corpus
-        else:
-            update_every=1
-
         params = dict(project.model_config) # make copy of config
         params['corpus'] = corpus
         params['id2word'] = id2word
 
-        model = LdaModel(**params)
+        model = Kind(**params)
 
         if corpus:
             model.save(model_fname)
     else:
-        model = LdaModel.load(model_fname)
-
-    return model, model_fname
-
-def create_lsi_model(project, corpus, id2word, name, force=False):
-    model_fname = project.full_path + name + str(project.num_topics)
-
-    model_fname += '.lsi.gz'
-
-    if not os.path.exists(model_fname) or project.force or force:
-
-        params = dict(project.model_config) # make copy of config
-        params['corpus'] = corpus
-        params['id2word'] = id2word
-
-        model = LsiModel(**params)
-
-        if corpus:
-            model.save(model_fname)
-    else:
-        model = LsiModel.load(model_fname)
+        model = Kind.load(model_fname)
 
     return model, model_fname
 

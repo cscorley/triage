@@ -92,6 +92,8 @@ def cli(verbose, name, version, *args, **kwargs):
             'scale': 1.0,
             'tau': 64.0,
         }
+    else:
+        model_config = {}
 
     changeset_config = {
         'include_additions': True,
