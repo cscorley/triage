@@ -631,13 +631,23 @@ def create_mallet_model(project, corpus, name, use_level=True):
 
 
 def create_corpus(project, repos, Kind, use_level=True, forced_ref=None):
-    corpus_fname_base = project.full_path + Kind.__name__
+    names = [Kind.__name__]
+    args = {
+        'project': project,
+        'lazy_dict': True,
+    }
 
     if use_level:
-        corpus_fname_base += project.level
+        names.append(project.level)
+
+    if Kind is ChangesetCorpus:
+        names.append(project.changeset_config_string)
+        args.update(project.changeset_config)
 
     if forced_ref:
-        corpus_fname_base += forced_ref[:8]
+        names.append(forced_ref[:8])
+
+    corpus_fname_base = project.full_path + '-'.join(names)
 
     corpus_fname = corpus_fname_base + '.mallet.gz'
     dict_fname = corpus_fname_base + '.dict.gz'
@@ -649,13 +659,11 @@ def create_corpus(project, repos, Kind, use_level=True, forced_ref=None):
         for repo in repos:
             try:
                 if repo or forced_ref:
-                    corpus = Kind(project=project,
-                                  repo=repo,
-                                  lazy_dict=True,
-                                  ref=forced_ref,
-                                  )
-                else:
-                    corpus = Kind(project=project, lazy_dict=True)
+                    args.update({
+                        'repo': repo,
+                        'ref': forced_ref,
+                    })
+                corpus = Kind(**args)
 
             except KeyError:
                 continue

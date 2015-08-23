@@ -93,6 +93,16 @@ def cli(verbose, name, version, *args, **kwargs):
             'tau': 64.0,
         }
 
+    changeset_config = {
+        'include_additions': True,
+        'include_context': True,
+        'include_message': False,
+        'include_removals': True,
+    }
+
+    kwargs.update({'changeset_config': changeset_config})
+    kwargs.update({'changeset_config_string': '-'.join([unicode(v) for k, v in sorted(changeset_config.items())])})
+
     kwargs.update({'model_config': model_config})
     kwargs.update({'model_config_string': '-'.join([unicode(v) for k, v in sorted(model_config.items())])})
 
