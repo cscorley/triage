@@ -122,8 +122,8 @@ def cli(verbose, name, version, *args, **kwargs):
         else:
             firstrels[project.printable_name] = run_experiments(project)
 
-        for source in project.source:
-            mrr[project.printable_name][source] = utils.calculate_mrr(num for num, _, _ in firstrels[project.printable_name][source]))
+            for source in project.source:
+                mrr[project.printable_name][source] = utils.calculate_mrr(num for num, _, _ in firstrels[project.printable_name][source])
 
     pprint(mrr)
 
