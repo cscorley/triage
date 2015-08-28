@@ -577,7 +577,7 @@ def create_model(project, corpus, id2word, Kind, name, force=False):
         params['id2word'] = id2word
 
         if corpus:
-            parms['chunksize'] = len(corpus)
+            params['chunksize'] = len(corpus)
 
         model = Kind(**params)
 
