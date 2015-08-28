@@ -69,7 +69,7 @@ def cli(verbose, name, version, *args, **kwargs):
     if kwargs['model'] == 'lda':
         model_config = {
             'alpha': 'auto',
-            'chunksize': 2000,
+            'chunksize': 'len', # special
             'decay': 0.5,
             'eta': None,
             'eval_every': 1, # special
@@ -155,9 +155,12 @@ def run_optimization(project):
     if project.model == 'lda':
         # panichella-etal_2013a uses:
         params = {
-            'num_topics': list(range(50, 501, 50)),
-            'alpha': [float(x) / 10 for x in range(1, 11, 1)] + ['auto', 'symmetric'],
-            'eta': [float(x) / 10 for x in range(1, 11, 1)] + ['auto', None], # here, none is the same as 'symmetric'
+            'alpha': [1.0/pow(2, x) for x in range(11)] + ['auto'],
+            'eta': [1.0/pow(2, x) for x in range(11)] + ['auto'],
+            'num_topics': [int(pow(2, x)) for x in range(3, 10)],
+            #'num_topics': list(range(50, 501, 50)),
+            #'alpha': [float(x) / 10 for x in range(1, 11, 1)] + ['auto', 'symmetric'],
+            #'eta': [float(x) / 10 for x in range(1, 11, 1)] + ['auto', None], # here, none is the same as 'symmetric'
         }
     elif project.model == 'hdp':
         params = {
