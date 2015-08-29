@@ -29,7 +29,6 @@ def run_experiment(project):
         else:
             results[each] = None
 
-
     if any([x is None for x in results.values()]):
         repos = load_repos(project)
 
@@ -52,8 +51,9 @@ def run_experiment(project):
                                                queries, goldsets, fn, names['release'])
 
         if 'changeset' in project.source and results['changeset'] is None:
-            results['changeset'] = run_basic(project, changeset_corpus, release_corpus,
-                                             queries, goldsets, 'changeset', names['changeset'])
+            fn = 'changeset-%s' % project.changeset_config_string
+            results['changeset'] = run_basic(project, changeset_corpus, developer_corpus,
+                                             queries, goldsets, fn, names['changeset'])
 
         if 'temporal' in project.source and results['temporal'] is None:
             try:

@@ -409,7 +409,7 @@ class ChangesetCorpus(GitCorpus):
                         self.repo.object_store, None, commit.tree
                 ):
                     diff = self._get_diff(changes)
-                    yield commit.id, None, diff
+                    yield commit, None, diff
 
             for parent in commit.parents:
                 # do I need to know the parent id?
@@ -418,7 +418,7 @@ class ChangesetCorpus(GitCorpus):
                     self.repo.object_store, self.repo[parent].tree, commit.tree
                 ):
                     diff = self._get_diff(changes)
-                    yield commit.id, parent, diff
+                    yield commit, parent, diff
 
     def get_texts(self):
         length = 0
@@ -434,9 +434,9 @@ class ChangesetCorpus(GitCorpus):
             # this is over all parents and all files of the commit
             if current is None:
                 # set current for the first commit, clear low
-                current = commit
+                current = commit.id
                 low = list()
-            elif current != commit:
+            elif current != commit.id:
                 # new commit seen, yield the collected low
                 if self.metadata:
                     yield low, (current, self.label)
@@ -444,7 +444,7 @@ class ChangesetCorpus(GitCorpus):
                     yield low
 
                 length += 1
-                current = commit
+                current = commit.id
                 low = list()
 
             # to process out whitespace only changes, the rest of this
@@ -484,7 +484,7 @@ class ChangesetCorpus(GitCorpus):
 
             # do the preprocessing steps
             words = self.preprocess(document,
-                                    [commit, str(parent), diff_lines[0]])
+                                    [commit.id, str(parent), diff_lines[0]])
             low.extend(words)
 
         length += 1

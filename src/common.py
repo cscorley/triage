@@ -31,7 +31,10 @@ def check_ranks(project, kind, experiment):
     if project.force:
         return None
 
-    rank_name = '-'.join([kind, experiment, project.model, project.model_config_string]).lower()
+    if set(project.source) & set(['changeset', 'temporal']):
+        rank_name = '-'.join([kind, experiment, project.model, project.changeset_config_string, project.model_config_string]).lower()
+    else:
+        rank_name = '-'.join([kind, experiment, project.model, project.model_config_string]).lower()
 
     try:
         return read_ranks(project, rank_name), rank_name

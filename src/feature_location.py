@@ -48,8 +48,9 @@ def run_experiment(project):
                                            queries, goldsets, fn, names['release'])
 
         if 'changeset' in project.source and results['changeset'] is None:
+            fn = 'changeset-%s' % project.changeset_config_string
             results['changeset'] = run_basic(project, changeset_corpus, release_corpus,
-                                             queries, goldsets, 'changeset', names['changeset'])
+                                             queries, goldsets, fn, names['changeset'])
 
         if 'temporal' in project.source and results['temporal'] is None:
             try:

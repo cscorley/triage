@@ -153,11 +153,11 @@ def run_optimization(project):
     # fix params here
     params = dict()
     if project.model == 'lda':
-        # panichella-etal_2013a uses:
         params = {
             'alpha': [1.0/pow(2, x) for x in range(11)] + ['auto'],
             'eta': [1.0/pow(2, x) for x in range(11)] + ['auto'],
             'num_topics': [int(pow(2, x)) for x in range(3, 10)],
+        # panichella-etal_2013a uses:
             #'num_topics': list(range(50, 501, 50)),
             #'alpha': [float(x) / 10 for x in range(1, 11, 1)] + ['auto', 'symmetric'],
             #'eta': [float(x) / 10 for x in range(1, 11, 1)] + ['auto', None], # here, none is the same as 'symmetric'
@@ -170,6 +170,14 @@ def run_optimization(project):
 
 
     for each in project.source:
+        if each == 'changeset' or each == 'temporal':
+            params.update({
+                'changeset_include_message': [True, False],
+                'changeset_include_additions': [True, False],
+                'changeset_include_removals': [True, False],
+                'changeset_include_context': [True, False],
+            })
+
         s = optunity.solvers.GridSearch(**params)
         f = wrap(project, each)
         pars, aux = s.maximize(f)
@@ -195,8 +203,14 @@ def wrap(project, source):
 
     @optunity.functions.logged
     def inner(*args, **kwargs):
-        project.model_config.update(kwargs)
+        for arg, value in kwargs.items():
+            if arg.startswith('changeset_'):
+                project.changeset_config[arg[len('changeset_'):]] = value
+            else:
+                project.model_config[arg] = value
+
         p = project._replace(model_config_string='-'.join([unicode(v) for k, v in sorted(project.model_config.items())]))
+        p = project._replace(changeset_config_string='-'.join([unicode(v) for k, v in sorted(project.changeset_config.items())]))
         results = dict()
 
         if project.experiment == 'triage':
