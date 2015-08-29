@@ -74,7 +74,7 @@ def cli(verbose, name, version, *args, **kwargs):
             'eta': None,
             'eval_every': 1, # special
             'iterations': 1000,
-            'max_em_iterations': 1000, # special
+            'max_bound_iterations': 1000, # special
             'num_topics': 500,
             'offset': 1.0,
             'passes': 1,
@@ -205,12 +205,18 @@ def wrap(project, source):
     def inner(*args, **kwargs):
         for arg, value in kwargs.items():
             if arg.startswith('changeset_'):
-                project.changeset_config[arg[len('changeset_'):]] = value
+                new_arg = arg[len('changeset_'):]
+                project.changeset_config[new_arg] = value
             else:
                 project.model_config[arg] = value
 
-        p = project._replace(model_config_string='-'.join([unicode(v) for k, v in sorted(project.model_config.items())]))
-        p = project._replace(changeset_config_string='-'.join([unicode(v) for k, v in sorted(project.changeset_config.items())]))
+        if not any(project.changeset_config.values()):
+            return 0.0
+
+        p = project._replace(model_config_string='-'.join([unicode(v) for k, v in sorted(project.model_config.items())]),
+                             changeset_config_string='-'.join([unicode(v) for k, v in sorted(project.changeset_config.items())]))
+
+        assert p.model_config_string != project.model_config_string or p.changeset_config_string != project.changeset_config_string 
         results = dict()
 
         if project.experiment == 'triage':
