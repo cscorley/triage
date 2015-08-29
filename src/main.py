@@ -68,17 +68,12 @@ def cli(verbose, name, version, *args, **kwargs):
 
     if kwargs['model'] == 'lda':
         model_config = {
-            'alpha': 'auto',
-            'chunksize': 'len', # special
-            'decay': 0.5,
-            'eta': None,
-            'eval_every': 1, # special
-            'iterations': 1000,
-            'max_bound_iterations': 1000, # special
             'num_topics': 500,
+            'alpha': 'auto',
+            'eta': 'auto',
+            'decay': 0.5,
             'offset': 1.0,
-            'passes': 1,
-            'update_every': 0, # special
+            'iterations': 1000,
         }
     elif kwargs['model'] == 'hdp':
         model_config = {

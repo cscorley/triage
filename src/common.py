@@ -579,8 +579,19 @@ def create_model(project, corpus, id2word, Kind, name, force=False):
         params['corpus'] = corpus
         params['id2word'] = id2word
 
-        if params['chunksize'] == 'len':
-            params['chunksize'] = len(corpus)
+        if corpus:
+            params.update({
+                'algorithm': 'batch', # special
+                'max_bound_iterations': 1000, # special
+                'passes': 1,
+            })
+        else:
+            params.update({
+                'algorithm': 'online', # special
+                'chunksize': 256,
+                'passes': 10,
+                'eval_every': None
+            })
 
         model = Kind(**params)
 
