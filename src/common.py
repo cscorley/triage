@@ -187,10 +187,11 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
     logger.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
 
     if project.model == "lda":
-        model, model_fname = create_lda_model(project, None, corpus.id2word, 'temporal', force=True)
-
-    if project.model == "lsi":
-        model, model_fname = create_lsi_model(project, None, corpus.id2word, 'temporal', force=True)
+        model, model_fname = create_model(project, None, corpus.id2word, LdaModel, 'temporal', force=True)
+    elif project.model == "hdp":
+        model, model_fname = create_model(project, None, corpus.id2word, HdpModel, 'temporal', force=True)
+    elif project.model == "lsi":
+        model, model_fname = create_model(project, None, corpus.id2word, LsiModel, 'temporal', force=True)
 
     indices = list()
     ranks = dict()
@@ -219,7 +220,7 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
             docs.append(corpus[i])
 
         if project.model == "lda":
-            model.update(docs)
+            model.update(docs) # this will work better with a much higher decay
         if project.model == "lsi":
             model.add_documents(docs)
 
@@ -570,6 +571,22 @@ def create_queries(project):
 
 
 def create_model(project, corpus, id2word, Kind, name, force=False):
+    if Kind is LdaModel and corpus is None:
+        params.update({
+            'algorithm': 'online', # special
+            'alpha': None,
+            'eta': None,
+            'chunksize': 1,
+            'passes': 10,
+            'eval_every': 0,
+            'decay': 1.0,
+            'offset': 1024,
+        })
+
+        p = project._replace(model_config_string='-'.join([unicode(v) for k, v in sorted(project.model_config.items())]))
+    else:
+        p = project
+
     model_fname = project.full_path + name.lower() + '-' + project.model_config_string
     model_fname += '.' + project.model + '.gz'
 
@@ -578,20 +595,6 @@ def create_model(project, corpus, id2word, Kind, name, force=False):
         params = dict(project.model_config) # make copy of config
         params['corpus'] = corpus
         params['id2word'] = id2word
-
-        if corpus:
-            params.update({
-                'algorithm': 'batch', # special
-                'max_bound_iterations': 1000, # special
-                'passes': 1,
-            })
-        else:
-            params.update({
-                'algorithm': 'online', # special
-                'chunksize': 256,
-                'passes': 10,
-                'eval_every': None
-            })
 
         model = Kind(**params)
 

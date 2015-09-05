@@ -74,6 +74,9 @@ def cli(verbose, name, version, *args, **kwargs):
             'decay': 0.5,
             'offset': 1.0,
             'iterations': 1000,
+            'passes': 1,
+            'max_bound_iterations': 1000, # special
+            'algorithm': 'batch', # special
         }
     elif kwargs['model'] == 'hdp':
         model_config = {
@@ -127,10 +130,13 @@ def cli(verbose, name, version, *args, **kwargs):
         elif project.optimize:
             run_optimization(project)
         else:
-            firstrels[project.printable_name] = run_experiments(project)
+            pn = project.printable_name
+            firstrels[pn] = run_experiments(project)
+            if pn not in mrr:
+                mrr[pn] = dict()
 
             for source in project.source:
-                mrr[project.printable_name][source] = utils.calculate_mrr(num for num, _, _ in firstrels[project.printable_name][source])
+                mrr[pn][source] = utils.calculate_mrr(num for num, _, _ in firstrels[pn][source])
 
     pprint(mrr)
 
@@ -149,9 +155,13 @@ def run_optimization(project):
     params = dict()
     if project.model == 'lda':
         params = {
-            'alpha': [1.0/pow(2, x) for x in range(11)] + ['auto'],
-            'eta': [1.0/pow(2, x) for x in range(11)] + ['auto'],
-            'num_topics': [int(pow(2, x)) for x in range(3, 10)],
+            'model_base_alpha': [1, 2, 5],
+            'model_base_eta': [1, 2, 5],
+            'num_topics': [100, 200, 500],
+        # campbell-etal
+            #'alpha': [1.0/pow(2, x) for x in range(11)] + ['auto'],
+            #'eta': [1.0/pow(2, x) for x in range(11)] + ['auto'],
+            #'num_topics': [int(pow(2, x)) for x in range(3, 10)],
         # panichella-etal_2013a uses:
             #'num_topics': list(range(50, 501, 50)),
             #'alpha': [float(x) / 10 for x in range(1, 11, 1)] + ['auto', 'symmetric'],
@@ -202,6 +212,10 @@ def wrap(project, source):
             if arg.startswith('changeset_'):
                 new_arg = arg[len('changeset_'):]
                 project.changeset_config[new_arg] = value
+            elif arg.startswith('model_base_'):
+                new_arg = arg[len('model_base_'):]
+                assert 'num_topics' in kwargs
+                project.model_config[new_arg] = float(value) / float(kwargs['num_topics'])
             else:
                 project.model_config[arg] = value
 
