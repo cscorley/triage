@@ -6,6 +6,9 @@ from __future__ import print_function
 import logging
 logger = logging.getLogger('main')
 
+import coloredlogs
+coloredlogs.install()
+
 import csv
 import os
 import os.path
@@ -57,14 +60,13 @@ import feature_location
               type=click.Choice(["lsi", "lda", "hdp", "hpyp"]),
               default="lda")
 def cli(verbose, name, version, *args, **kwargs):
-    logging.basicConfig(format='%(asctime)s : %(levelname)s : %(name)s : %(funcName)s : %(message)s')
 
     if verbose > 1:
-        logging.root.setLevel(level=logging.DEBUG)
+        coloredlogs.set_level(level=logging.DEBUG)
     elif verbose == 1:
-        logging.root.setLevel(level=logging.INFO)
+        coloredlogs.set_level(level=logging.INFO)
     elif verbose == 0:
-        logging.root.setLevel(level=logging.ERROR)
+        coloredlogs.set_level(level=logging.ERROR)
 
     if kwargs['model'] == 'lda':
         model_config = {
@@ -121,10 +123,6 @@ def cli(verbose, name, version, *args, **kwargs):
     mrr = dict()
     firstrels = dict()
     for project in projects:
-        logging.basicConfig(format='%(asctime)s : %(levelname)s : ' +
-                            project.printable_name +
-                            '%(name)s : %(funcName)s : %(message)s')
-
         if project.goldset:
             goldsets.build_goldset(project)
         elif project.optimize:
@@ -225,7 +223,7 @@ def wrap(project, source):
         p = project._replace(model_config_string='-'.join([unicode(v) for k, v in sorted(project.model_config.items())]),
                              changeset_config_string='-'.join([unicode(v) for k, v in sorted(project.changeset_config.items())]))
 
-        assert p.model_config_string != project.model_config_string or p.changeset_config_string != project.changeset_config_string 
+        assert p.model_config_string != project.model_config_string or p.changeset_config_string != project.changeset_config_string
         results = dict()
 
         if project.experiment == 'triage':
@@ -246,4 +244,3 @@ def do_science(a_first_rels, b_first_rels, ignore=False):
              'b_mrr': utils.calculate_mrr(y),
              'wilcoxon': scipy.stats.wilcoxon(x, y),
            }
-

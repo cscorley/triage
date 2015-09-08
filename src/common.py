@@ -572,7 +572,7 @@ def create_queries(project):
 
 def create_model(project, corpus, id2word, Kind, name, force=False):
     if Kind is LdaModel and corpus is None:
-        params.update({
+        project.model_config.update({
             'algorithm': 'online', # special
             'alpha': None,
             'eta': None,
@@ -582,6 +582,7 @@ def create_model(project, corpus, id2word, Kind, name, force=False):
             'decay': 1.0,
             'offset': 1024,
         })
+        del project.model_config['max_bound_iterations']
 
         p = project._replace(model_config_string='-'.join([unicode(v) for k, v in sorted(project.model_config.items())]))
     else:
