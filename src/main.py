@@ -174,12 +174,15 @@ def run_optimization(project):
 
     for each in project.source:
         if each == 'changeset' or each == 'temporal':
+            pass
+            """
             params.update({
                 'changeset_include_message': [True, False],
                 'changeset_include_additions': [True, False],
                 'changeset_include_removals': [True, False],
                 'changeset_include_context': [True, False],
             })
+            """
 
         s = optunity.solvers.GridSearch(**params)
         f = wrap(project, each)
