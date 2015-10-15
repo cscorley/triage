@@ -32,8 +32,11 @@ import feature_location
 @click.option('--force',
               help="Overwrite existing data instead of reloading",
               is_flag=True)
-@click.option('--optimize',
+@click.option('--optimize_model',
               help="Find an optimal configuration for experiment",
+              is_flag=True)
+@click.option('--optimize_corpus',
+              help="Find an optimal corpus for experiment",
               is_flag=True)
 @click.option('--goldset',
               help="Build a goldset for project (overrides other parameters)",
@@ -125,8 +128,10 @@ def cli(verbose, name, version, *args, **kwargs):
     for project in projects:
         if project.goldset:
             goldsets.build_goldset(project)
-        elif project.optimize:
-            run_optimization(project)
+        elif project.optimize_model:
+            optimize_model(project)
+        elif project.optimize_corpus:
+            optimize_corpus(project)
         else:
             pn = project.printable_name
             firstrels[pn] = run_experiments(project)
@@ -148,13 +153,27 @@ def run_experiments(project):
 
     return results
 
-def run_optimization(project):
+def set_optimized_params(project, params):
+    for each in project.source:
+        path = os.path.join(project.full_path, 'optimized-model-%s-%s.csv' % (each, project.experiment))
+        if os.path.exists(path):
+            with open(path) as f:
+                best_score = 0.0
+                for row in csv.reader(f):
+                    score, alpha_base, eta_base, num_topics = row
+                    if score > best_score:
+                        params['num_topics'] = num_topics
+                        params['alpha'] = alpha_base / num_topics
+                        params['eta'] = eta_base / num_topics
+
+
+def optimize_model(project):
     # fix params here
     params = dict()
     if project.model == 'lda':
         params = {
-            'model_base_alpha': [1, 2, 5],
-            'model_base_eta': [1, 2, 5],
+            'model_base_alpha': ['auto', 1, 2, 5],
+            'model_base_eta': ['auto', 1, 2, 5],
             'num_topics': [100, 200, 500],
         # campbell-etal
             #'alpha': [1.0/pow(2, x) for x in range(11)] + ['auto'],
@@ -173,17 +192,6 @@ def run_optimization(project):
 
 
     for each in project.source:
-        if each == 'changeset' or each == 'temporal':
-            pass
-            """
-            params.update({
-                'changeset_include_message': [True, False],
-                'changeset_include_additions': [True, False],
-                'changeset_include_removals': [True, False],
-                'changeset_include_context': [True, False],
-            })
-            """
-
         s = optunity.solvers.GridSearch(**params)
         f = wrap(project, each)
         pars, aux = s.maximize(f)
@@ -192,7 +200,35 @@ def run_optimization(project):
         print("Aux info:", aux)
         # print("Call log:", f.call_log)
         log_dict = f.call_log.to_dict()
-        path = os.path.join(project.full_path, 'optimized-%s-%s.csv' % (each, project.experiment))
+        path = os.path.join(project.full_path, 'optimized-model-%s-%s.csv' % (each, project.experiment))
+        print("Writing full call log to", path)
+
+        header = ['score'] + list(log_dict['args'].keys())
+        items = list(zip(log_dict['values'], *log_dict['args'].values()))
+
+        with open(path, 'w') as output:
+            writer = csv.writer(output)
+            writer.writerow(header)
+            writer.writerows(items)
+
+def optimize_corpus(project):
+    # fix params here
+    params = {'changeset_include_message': [True, False],
+              'changeset_include_additions': [True, False],
+              'changeset_include_removals': [True, False],
+              'changeset_include_context': [True, False],
+    }
+
+    for each in project.source:
+        s = optunity.solvers.GridSearch(**params)
+        f = wrap(project, each)
+        pars, aux = s.maximize(f)
+        print("Parameters explored:", s.parameter_tuples)
+        print("Optimal parameters:", pars)
+        print("Aux info:", aux)
+        # print("Call log:", f.call_log)
+        log_dict = f.call_log.to_dict()
+        path = os.path.join(project.full_path, 'optimized-corpus-%s-%s.csv' % (each, project.experiment))
         print("Writing full call log to", path)
 
         header = ['score'] + list(log_dict['args'].keys())
@@ -216,7 +252,10 @@ def wrap(project, source):
             elif arg.startswith('model_base_'):
                 new_arg = arg[len('model_base_'):]
                 assert 'num_topics' in kwargs
-                project.model_config[new_arg] = float(value) / float(kwargs['num_topics'])
+                if value == 'auto':
+                    project.model_config[new_arg] = value
+                else:
+                    project.model_config[new_arg] = float(value) / float(kwargs['num_topics'])
             else:
                 project.model_config[arg] = value
 
@@ -226,7 +265,6 @@ def wrap(project, source):
         p = project._replace(model_config_string='-'.join([unicode(v) for k, v in sorted(project.model_config.items())]),
                              changeset_config_string='-'.join([unicode(v) for k, v in sorted(project.changeset_config.items())]))
 
-        assert p.model_config_string != project.model_config_string or p.changeset_config_string != project.changeset_config_string
         results = dict()
 
         if project.experiment == 'triage':

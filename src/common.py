@@ -31,8 +31,10 @@ def check_ranks(project, kind, experiment):
     if project.force:
         return None
 
-    if set(project.source) & set(['changeset', 'temporal']):
+    if kind == 'changeset':
         rank_name = '-'.join([kind, experiment, project.model, project.changeset_config_string, project.model_config_string]).lower()
+    elif kind == 'temporal':
+        rank_name = '-'.join([kind, experiment, project.model, project.changeset_config_string]).lower()
     else:
         rank_name = '-'.join([kind, experiment, project.model, project.model_config_string]).lower()
 
@@ -193,58 +195,51 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
     elif project.model == "lsi":
         model, model_fname = create_model(project, None, corpus.id2word, LsiModel, 'temporal', force=True)
 
-    indices = list()
     ranks = dict()
-    docs = list()
     corpus.metadata = True
-    prev = 0
 
-    logger.info("Partitioning corpus")
-
-    # let's partition the corpus first
     for idx, docmeta in enumerate(corpus):
         doc, meta = docmeta
         sha, _ = meta
+
+        sha_model_fname = model_fname % sha
+        if os.path.exists(sha_model_fname):
+            # need to be super careful that the way this one was built matches what we expect
+            # e.g., didn't come from a different run with a different update pattern
+            model = model.load(sha_model_fname)
+        else:
+            #docs = list()
+            #for i in xrange(start, end):
+                #docs.append(corpus[i])
+            if project.model == "lda":
+                model.update([doc])
+                #model.update(docs) #, chunksize=len(docs)) # this will work better with a much higher decay
+            if project.model == "lsi":
+                model.add_documents(docs)
+
+            model.save(sha_model_fname) # thanks, gensim!
+
+
         if sha in git2issue:
-            indices.append((prev, idx+1, sha))
-            prev = idx
+            for qid in set(git2issue[sha]):
+                logger.info('Getting ranks for query id %s', qid)
+                try:
+                    other_corpus = create_other_corpus(project, repos, changesets=corpus, ref=sha)
+                except TaserError:
+                    continue
 
-    logger.info('Created %d partitions of the corpus', len(indices))
-    corpus.metadata = False
+                query_topic = get_topics(model, queries, by_ids=[qid])
+                doc_topic = get_topics(model, other_corpus)
+                subranks = get_rank(query_topic, doc_topic, goldsets)
+                if qid in subranks:
+                    if qid not in ranks:
+                        ranks[qid] = list()
 
-    for counter, index  in enumerate(indices):
-        logger.info('At %d of %d partitions', counter, len(indices))
-        start, end, sha = index
-        docs = list()
-        for i in xrange(start, end):
-            docs.append(corpus[i])
+                    rank = subranks[qid]
+                    ranks[qid].extend(rank)
+                else:
+                    logger.info('Couldnt find qid %s', qid)
 
-        if project.model == "lda":
-            model.update(docs) # this will work better with a much higher decay
-        if project.model == "lsi":
-            model.add_documents(docs)
-
-        for qid in set(git2issue[sha]):
-            logger.info('Getting ranks for query id %s', qid)
-            try:
-                other_corpus = create_other_corpus(project, repos, changesets=corpus, ref=sha)
-            except TaserError:
-                continue
-
-            query_topic = get_topics(model, queries, by_ids=[qid])
-            doc_topic = get_topics(model, other_corpus)
-            subranks = get_rank(query_topic, doc_topic, goldsets)
-            if qid in subranks:
-                if qid not in ranks:
-                    ranks[qid] = list()
-
-                rank = subranks[qid]
-                ranks[qid].extend(rank)
-            else:
-                logger.info('Couldnt find qid %s', qid)
-
-
-    model.save(model_fname)
     return ranks
 
 
@@ -568,8 +563,6 @@ def create_queries(project):
 
     return corpus
 
-
-
 def create_model(project, corpus, id2word, Kind, name, force=False):
     if Kind is LdaModel and corpus is None:
         project.model_config.update({
@@ -579,21 +572,21 @@ def create_model(project, corpus, id2word, Kind, name, force=False):
             'chunksize': 1,
             'passes': 10,
             'eval_every': 0,
-            'decay': 1.0,
-            'offset': 1024,
+            'decay': 1.0, #2.0
+            'offset': 1024, #1.0
         })
         del project.model_config['max_bound_iterations']
 
-        p = project._replace(model_config_string='-'.join([unicode(v) for k, v in sorted(project.model_config.items())]))
+        p = project._replace(model_config_string='-'.join(["%s"] + [unicode(v) for k, v in sorted(project.model_config.items())]))
     else:
         p = project
 
-    model_fname = project.full_path + name.lower() + '-' + project.model_config_string
-    model_fname += '.' + project.model + '.gz'
+    model_fname = p.full_path + name.lower() + '-' + p.model_config_string
+    model_fname += '.' + p.model + '.gz'
 
 
-    if not os.path.exists(model_fname) or project.force or force:
-        params = dict(project.model_config) # make copy of config
+    if not os.path.exists(model_fname) or p.force or force:
+        params = dict(p.model_config) # make copy of config
         params['corpus'] = corpus
         params['id2word'] = id2word
 

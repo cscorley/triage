@@ -29,6 +29,8 @@ def run_experiment(project):
         else:
             results[each] = None
 
+    logger.info("NAMES %s", str(names))
+
     if any([x is None for x in results.values()]):
         repos = load_repos(project)
 
@@ -70,10 +72,10 @@ def run_ownership(project, corpus, ownership, queries, goldsets, kind, rank_name
     logger.info("Running ownership-based evaluation on the %s", kind)
 
     if project.model == "lda":
-        model, _ = create_lda_model(project, corpus, corpus.id2word, kind)
+        model, _ = create_model(project, corpus, corpus.id2word, LdaModel, kind)
 
     if project.model == "lsi":
-        model, _ = create_lsi_model(project, corpus, corpus.id2word, kind)
+        model, _ = create_model(project, corpus, corpus.id2word, LsiModel, kind)
 
     query_topic = get_topics(model, queries)
     doc_topic = get_topics(model, corpus)
