@@ -1,0 +1,17 @@
+score,changeset_include_additions,changeset_include_context,changeset_include_message,changeset_include_removals
+0.26017909061437411,True,True,True,True
+0.30350055626551065,True,True,False,True
+0.20719387112150831,True,False,True,True
+0.20792373315863572,True,False,False,True
+0.21173585997688882,True,True,True,False
+0.2182538330859555,True,True,False,False
+0.36866752830880556,True,False,True,False
+0.24832592303659345,True,False,False,False
+0.13815477992256647,False,True,True,True
+0.20431727887813417,False,True,False,True
+0.1449156338416687,False,False,True,True
+0.098636717211433661,False,False,False,True
+0.16560448404705502,False,True,True,False
+0.11012281165379272,False,True,False,False
+0.23272179743577101,False,False,True,False
+0.0,False,False,False,False
