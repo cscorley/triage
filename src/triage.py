@@ -58,12 +58,9 @@ def run_experiment(project):
                                              queries, goldsets, fn, names['changeset'])
 
         if 'temporal' in project.source and results['temporal'] is None:
-            try:
-                results['temporal'] = run_temporal(project, repos, changeset_corpus,
-                                                   create_developer_corpus,
-                                                   queries, goldsets, names['temporal'])
-            except IOError:
-                logger.info("Files needed for temporal evaluation not found. Skipping.")
+            results['temporal'] = run_temporal(project, repos, changeset_corpus,
+                                                create_developer_corpus,
+                                                queries, goldsets, names['temporal'])
 
     return results
 
