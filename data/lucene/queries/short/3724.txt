@@ -1,1 +1,0 @@
-SimpleText sumTotalTermFreq is wrong if only positions are omitted

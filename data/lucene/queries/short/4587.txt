@@ -1,1 +1,0 @@
-WordBreakSpellChecker treats bytes as chars

@@ -1,1 +1,0 @@
-The source release files should contain the *.pom.template files, otherwise it is not possible to build the maven artifacts using "ant generate-maven-artifacts" from official release files.

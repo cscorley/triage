@@ -1,1 +1,0 @@
-Facet count problem : Multi-Select Faceting After grouping results 

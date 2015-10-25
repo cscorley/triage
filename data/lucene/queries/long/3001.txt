@@ -1,3 +1,0 @@
-The solr support for numeric fields writes the stored value as binary vs the lucene NumericField
-
-We should move this logic to a helper class in lucene core so that libraries that do not depend on solr can write TrieFields that solr can read.

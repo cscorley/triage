@@ -1,1 +1,0 @@
-TokenFilters with a null value in the constructor fail

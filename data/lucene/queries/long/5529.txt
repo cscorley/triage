@@ -1,3 +1,0 @@
-When searching for indexed non-point shapes (such as polygons), there are redundant cells which can be skipped at the bottom "detail level" of the search.  This won't be a problem once LUCENE-4942 is fixed since there then won't be any but it's easy to fix now.
-
-This affects all predicates RecursivePrefixTreeStrategy uses except Contains.

@@ -1,1 +1,0 @@
-Document boost fail if a field copy omit the norms

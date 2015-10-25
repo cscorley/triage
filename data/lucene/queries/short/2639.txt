@@ -1,1 +1,0 @@
-remove random juggling in tests, add -Dtests.seed

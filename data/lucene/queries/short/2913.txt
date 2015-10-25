@@ -1,1 +1,0 @@
-Add missing getter methods to NumericField, NumericTokenStream, NumericRangeQuery, NumericRangeFilter

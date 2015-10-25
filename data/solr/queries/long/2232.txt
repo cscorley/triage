@@ -1,3 +1,0 @@
-I've occasionally gone to demo multicore and stubbed my toe on how to fire it up...  Such a little thing, but I check the ./example/multicore/README.txt file and there aren't any directions!   And off to the wiki I go!
-
-This tiny little patch just says what the -Dsolr.solr.home parameter should be!   

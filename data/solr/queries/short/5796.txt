@@ -1,1 +1,0 @@
-With many collections, leader re-election takes too long when a node dies or is rebooted, leading to some shards getting into a "conflicting" state about who is the leader.

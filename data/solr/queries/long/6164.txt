@@ -1,1 +1,0 @@
-I took a closer look at the tests added in SOLR-6145, and the copy fields aren't being distributed – it just looks that way b/c we are adding the same copy field directive multiple times to random servers and by chance, they'll be added to all the servers.

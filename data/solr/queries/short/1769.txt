@@ -1,1 +1,0 @@
-Solr 1.4 Replication - Repeater throwing NullPointerException

@@ -1,1 +1,0 @@
-Eg if you set maxMergeCount to 2, as soon as a 3rd merge need to kick off, we stall incoming segment-creating threads.  Then we wait ... and we are supposed to resume the threads when the merge count drops back to 2, but instead we are only resuming when merge count gets to 1.  Ie, we stall for too long (= unexpected hysteresis).

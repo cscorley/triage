@@ -1,1 +1,0 @@
-QueryScorer and SpanRegexQuery are incompatible.

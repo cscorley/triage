@@ -1,1 +1,0 @@
-VectorValueSource returnes floatVal of DocValues is wrong

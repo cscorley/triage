@@ -1,1 +1,0 @@
-facet.mincount ignored in range faceting using distributed search

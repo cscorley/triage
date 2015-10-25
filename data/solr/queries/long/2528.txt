@@ -1,1 +1,0 @@
-After 3.1 released, highlight snippets that include non ascii characters are encoded to character references by HtmlEncoder if it is set in solrconfig.xml. Because solr example config has it, not a few users got confused by the output.

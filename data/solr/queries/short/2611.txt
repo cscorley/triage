@@ -1,1 +1,0 @@
-Typos in /example solrconfig.xml

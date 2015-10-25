@@ -1,1 +1,0 @@
-Improve how ConcurrentMergeScheduler handles too-many-merges case

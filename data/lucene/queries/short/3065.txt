@@ -1,1 +1,0 @@
-NumericField should be stored in binary format in index (matching Solr's format)

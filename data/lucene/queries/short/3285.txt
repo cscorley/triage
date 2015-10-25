@@ -1,1 +1,0 @@
-Move QueryParsers from contrib/queryparser to queryparser module

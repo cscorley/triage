@@ -1,1 +1,0 @@
-Teach fast FastVectorHighlighter to highlight "child fields" with parent fields

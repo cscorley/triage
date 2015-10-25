@@ -1,1 +1,0 @@
-IW should safeguard against token streams returning invalid offsets for multi-valued fields

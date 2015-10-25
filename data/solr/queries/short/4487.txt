@@ -1,1 +1,0 @@
-SolrException usage in solrj client code can't handle all possible http error codes returned by servers -- example "413 Request Entity Too Large"

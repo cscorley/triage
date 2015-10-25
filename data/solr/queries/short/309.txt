@@ -1,1 +1,0 @@
-A solr.StrField that has analyzers configured should emit warning to log

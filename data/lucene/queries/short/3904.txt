@@ -1,1 +1,0 @@
-Similarity javadocs look ugly if created with java7's javadoc

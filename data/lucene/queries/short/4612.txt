@@ -1,1 +1,0 @@
-ant nightly-smoke leaves a dirty checkout

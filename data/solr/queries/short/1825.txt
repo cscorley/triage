@@ -1,1 +1,0 @@
-SolrQuery.addFacetQuery should call setFacet(true)

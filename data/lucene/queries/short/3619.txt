@@ -1,1 +1,0 @@
-in trunk if you switch up omitNorms while indexing, you get a corrumpt norms file

@@ -1,1 +1,0 @@
-if we only have high freq terms we move to a pure conjunction and ignore the min must match entirely if it is > 0.

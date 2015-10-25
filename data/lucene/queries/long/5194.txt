@@ -1,3 +1,0 @@
-Spinoff from LUCENE-3069, where Billy discovered this ...
-
-For some reason it's currently testing a Pulsing41 index (at least index.41.cfs.zip), but we do not guarantee back compat for PulsingPF.

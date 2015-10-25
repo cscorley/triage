@@ -1,1 +1,0 @@
-Eclipse settings - prevent automatic code reformatting on save

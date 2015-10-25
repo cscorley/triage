@@ -1,1 +1,0 @@
-SolrJ maven dependencies are faulty; needless dependency on lucene-core

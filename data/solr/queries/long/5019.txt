@@ -1,2 +1,0 @@
-ConcurrentModificationException with spell check component
-http://markmail.org/message/bynajxhgzi2wyhx5

@@ -1,1 +1,0 @@
-Change Aggregator and CategoryListIterator to be per-segment

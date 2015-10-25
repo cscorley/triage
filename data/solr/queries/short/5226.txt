@@ -1,1 +1,0 @@
-Add Lucene index heap size usage in the Solr admin UI

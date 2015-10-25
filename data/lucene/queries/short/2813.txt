@@ -1,1 +1,0 @@
-TestIndexWriterDelete fails randomly

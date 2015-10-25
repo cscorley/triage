@@ -1,1 +1,0 @@
-It would be nice to add support for the new BlendedInfixSuggester in Lucene to Solr. The new suggester is similar to AnalyzingInfixSuggester but enables changing the weight of suggesters at query-time depending on the position of the first matching word.

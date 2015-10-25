@@ -1,3 +1,0 @@
-SOLR-5265 added these asserts to check equality of SolrDocument, SolrInputDocument and SolrInputField instead of adding a compare method to any of these classes.
-
-But these are actually compare methods. So we should rename them to compareSolrDocument() etc. and in TestJavaBinCodec fix the usage. Currently in TestJavaBinCodec the backcompat test is broken.

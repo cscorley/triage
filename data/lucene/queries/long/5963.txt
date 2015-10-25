@@ -1,1 +1,0 @@
-Reworked AnalyzingSuggester.replaceSep() to use Automaton.Builder instead of Automaton. This avoids most of the unnecessary allocation of memory via grow*().

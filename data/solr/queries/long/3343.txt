@@ -1,3 +1,0 @@
-When doing some unrelated refactoring, I found myself making changes to a class in solrj's org.apache.solr.common which surprised me.  Under closer examination the class was only used inside Solr core and DIH.  
-
-I think common in solrj should only contain those classes which are shared between solrj and other modules.  Anything thats not used by solrj should go into solr core (or whatever other module actually makes use of it). 

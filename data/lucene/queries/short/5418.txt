@@ -1,1 +1,0 @@
-Don't use .advance on costly (e.g. distance range facets) filters

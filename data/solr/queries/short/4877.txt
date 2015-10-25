@@ -1,1 +1,0 @@
-SolrIndexSearcher#getDocSetNC should check for null return in AtomicReader#fields()

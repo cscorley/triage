@@ -1,7 +1,0 @@
-As noted by Gerald Blank on the mailing list, CurrencyField queries treat documents w/o any value the same as documents wit ha value of 0.0f.
-
-observe that using the example solr schema, with any number of docs indexed, this query matches all docs even though no docs have any values at all for hte specified field...
-
-
-http://localhost:8983/solr/select?q=hoss_c:[*%20TO%20*]
-

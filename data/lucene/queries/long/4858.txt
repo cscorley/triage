@@ -1,3 +1,0 @@
-Spin-off of LUCENE-4752, see https://issues.apache.org/jira/browse/LUCENE-4752?focusedCommentId=13606565&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13606565 and https://issues.apache.org/jira/browse/LUCENE-4752?focusedCommentId=13607282&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13607282
-
-When an index is sorted per-segment, queries that sort according to the index sort order could be early terminated.

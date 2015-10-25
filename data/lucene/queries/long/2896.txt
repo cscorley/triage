@@ -1,4 +1,0 @@
-There are TODO's about this in the code everywhere, and this was part of
-Mike speeding up ExactPhraseScorer.
-
-I think the codec should do this.

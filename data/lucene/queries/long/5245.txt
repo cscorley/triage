@@ -1,1 +1,0 @@
-ConstantScoreAutoRewrite rewrites prefix queryies that don't match anything before query weight is calculated.  This dramatically changes the resulting score which is bad when comparing scores across different Lucene indexes/shards/whatever.

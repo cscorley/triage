@@ -1,3 +1,0 @@
-thanks to all the awesomeness Uwe did in SOLR-96, some hard coded limitations/assumptions in the simple post.jar provided for the example files can be cleaned up.
-
-notably: it use to deal with Readers/Writers, and warned people there data had to be UTF-8 (because that's all Solr supported) and now it can deal with raw streams

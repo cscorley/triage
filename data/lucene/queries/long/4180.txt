@@ -1,5 +1,0 @@
-Constants.LUCENE_MAIN_VERSION is an internal number (only numbers allowed) thats written into the index, documenting the version of lucene that wrote the segment.
-
-Because we are going to support backwards compat with alpha indexes: its possible we might need to distinguish between these releases.
-
-I propose we encode beta as 4.0.0.1 and final as 4.0.0.2 and so on.

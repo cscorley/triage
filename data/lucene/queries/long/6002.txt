@@ -1,5 +1,0 @@
-The tests labelled @Monster are having a very hard time passing.  Initially, there were some real failures on tests that push the 2 billion envelope, as well as some test bugs regarding suite timeouts and the quantity of date sent to sysout.  Michael McCandless committed a fix for the real failures and the initial sysout problems.
-
-Trying to move @SuppressSysoutChecks to the definition of @Monster didn't work.  I'm also having trouble defining the suite timeouts.  One test that says it takes about 45 minutes hit the six hour timeout that I had configured for the suite, and failed.
-
-What sort of machine should we use as a "normal" machine for deciding on suite timeouts?  My machine is over four years old, but it's got three 2.5Ghz cores and 12GB of RAM.  That's certainly not a completely modern machine, but it's not exactly slow.

@@ -1,1 +1,0 @@
-Use broadword bit selection in EliasFanoDecoder

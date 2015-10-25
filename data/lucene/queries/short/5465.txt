@@ -1,1 +1,0 @@
-Solr Contrib "map-reduce" breaks Manifest of all other JAR files by adding a broken Main-Class attribute

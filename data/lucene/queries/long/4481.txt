@@ -1,9 +1,0 @@
-I hit this when working on LUCENE-4480.
-
-Because AnalyzingSuggester may prune some of the topN paths found by FST's Util.TopNSearcher, this means the queue size limit of topN makes the overall search inadmissible, ie it may incorrectly prune paths that would have lead to a competitive path.
-
-However, such pruning is rare: it happens only for graph token streams, and even then only when competitive analyzed forms share the same surface forms.
-
-The simplest way to fix this is to make the queue unbounded but this is likely a sizable performance hit ... I haven't tested yet.  It's even possible the way the dups happen (always at the "end" of the suggestion, because we tack on 0 byte followed by ord dedup byte) prevent this bug from even occurring and so this could all be a false alarm!  I have to try to make a test case showing it ...
-
-A cop-out solution would be to expose a separate queueSize or queueMultiplier (over the topN) so that if users are affected by this they could crank up the queue size or multiplier.

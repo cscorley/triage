@@ -1,5 +1,0 @@
-Technically this bug is in Lucene spatial but it's on a factory that is only really used by the Solr adapter, plus I added a mandatory attribute so I decided to file it here.
-
-The maxDetailDist attribute on SpatialRecursivePrefixTreeFieldType is interpreted as kilometers for a geospatial context.  However, for this first release of spatial, all distances are standardized on degrees.  Of course I want to support kilometers but not inconsistently and there isn't time for that right now.  Because this is likely to be a common problem of interpreting distances for this field, I decided to add a mandatory attribute "units" which must be "degrees".  When kilometers is supported then it will be added.
-
-Furthermore, the name "maxDetailDist" as a name isn't so great. As part of some renames related to this sort of thing a month back I overlooked this one.  I think "maxDistErr" is better and more consistent with attributes such as "distErr" you can put in shape query.

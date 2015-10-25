@@ -1,1 +1,0 @@
-Inner classes of FilterAtomicReader (trunk) / FilterIndexReader (3.x) do not override all methods to be filtered

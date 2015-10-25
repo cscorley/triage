@@ -1,1 +1,0 @@
-LineDocSource should assign stable IDs; docdate field should be NumericField

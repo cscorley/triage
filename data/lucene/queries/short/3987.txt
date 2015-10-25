@@ -1,1 +1,0 @@
-Ivy/maven config to pull from sonatype releases

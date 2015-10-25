@@ -1,1 +1,0 @@
-Passing non-textual data to Carrot2 does not make much sense at the moment, but it still should not result in {{ClassCastException}}s.

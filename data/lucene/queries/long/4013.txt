@@ -1,3 +1,0 @@
-So you really need to be in the o.a.l.index package anyway...
-
-Can we just make this pkg-private?

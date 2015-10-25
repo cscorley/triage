@@ -1,1 +1,0 @@
-SyncStrategy closes it's http connection manager before the executor that uses it in it's close method.

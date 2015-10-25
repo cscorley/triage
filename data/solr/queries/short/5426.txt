@@ -1,1 +1,0 @@
-org.apache.solr.common.SolrException; org.apache.solr.common.SolrException: org.apache.lucene.search.highlight.InvalidTokenOffsetsException: Token 0 exceeds length of provided text sized 840

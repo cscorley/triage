@@ -1,1 +1,0 @@
-The admin UI currently uses a stub /logging.json to display a tree.  It should use the LogLevelHandler

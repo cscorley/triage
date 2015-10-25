@@ -1,1 +1,0 @@
-ElectionContext can cancel an election when it should not if there was an exception while trying to register as the leader.

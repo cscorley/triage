@@ -1,4 +1,0 @@
-It is huge performance bottleneck and it describes huge difference between qtime and SolrJ's elapsedTime. I quickly browsed SolrIndexSearcher: it caches only (Key, DocSet/DocList <Lucene Ids>) key-value pairs and it does not have cache for (Query, FacetFieldList).
-filterCache stores DocList for each 'filter' and is used for constant recalculations...
-
-This would be significant performance improvement.

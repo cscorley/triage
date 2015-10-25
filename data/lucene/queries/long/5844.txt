@@ -1,3 +1,0 @@
-Today if the growth it wants would exceed Integer.MAX_VALUE, it returns Integer.MAX_VALUE, but you can't actually allocate arrays this large; the actual limit is JVM dependent and varies across JVMs ...
-
-It would be nice if we could somehow "introspect" the JVM to find out what its  actual limit is and use that.  http://stackoverflow.com/questions/3038392/do-java-arrays-have-a-maximum-size seems to imply that using Integer.MAX_VALUE - 8 may be "safe" (it's what ArrayList.java apparently uses).

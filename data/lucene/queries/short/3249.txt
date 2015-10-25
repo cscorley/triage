@@ -1,1 +1,0 @@
-Move Solr's FunctionQuery impls to Queries Module

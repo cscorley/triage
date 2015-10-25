@@ -1,1 +1,0 @@
-phps and json outputs illegal numeric values for NaN and +/- Infinity

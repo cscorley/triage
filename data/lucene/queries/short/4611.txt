@@ -1,1 +1,0 @@
-remove duplicate 3rd party versioning from build.xmls

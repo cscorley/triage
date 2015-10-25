@@ -1,1 +1,0 @@
-When fields with the same name are added more than once to MemoryIndex, the offsets of the previous additions of the field do not seem to be taken into account. As a result, MemoryIndex cannot be used for example with the vector highlighter. 

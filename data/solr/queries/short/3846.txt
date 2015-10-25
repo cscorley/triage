@@ -1,1 +1,0 @@
-TestReplicationHandler.test always (?) takes many minutes on OS X (lion)

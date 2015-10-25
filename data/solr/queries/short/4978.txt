@@ -1,1 +1,0 @@
-Time is stripped from datetime column when imported into Solr date field

@@ -1,3 +1,0 @@
-See http://www.lucidimagination.com/search/document/2ca3fe953038a54f/problem_with_pdf_upgrading_cell#22360c8261801f24
-
-It appears that since the upgrade to Tika 0.7, Tika is now selecting an EmptyParser when uploading docs, which then outputs an empty XHTML representation.  Still, it's strange that the tests pass.

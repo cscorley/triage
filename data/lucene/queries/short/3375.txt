@@ -1,1 +1,0 @@
-processing a synonym in a token stream will remove the following token from the stream

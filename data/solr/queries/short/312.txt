@@ -1,1 +1,0 @@
-create solrj javadoc in build.xml

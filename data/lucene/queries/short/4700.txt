@@ -1,1 +1,0 @@
-OrdinalPolicy and PathPolicy should be per-CategoryListParams

@@ -1,9 +1,0 @@
-It look like JDK7 change the design for max_array_length logic, it isn't max_jint, and it should be  max_jint - header_size(type).
-
-If you deliver the Integer.MaxValue to create the PriorityQueue and have enough memory, you will find it is ok in JVM6 but not work in JVM7.
-
-JVM7 will throw OOM error while do array rang checking.
-
-It should the compatible issue between JVM6 and JVM7.
-
-Maybe need protect in the code logic, throw OOM look like big issues for customer.

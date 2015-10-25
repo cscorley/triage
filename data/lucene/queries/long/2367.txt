@@ -1,1 +1,0 @@
-Test Lat/Lon: 89.9, 50 and 89.9, -130.0.  Try a point near those two points, like 89.8,50 and a distance of 200.

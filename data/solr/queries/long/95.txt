@@ -1,4 +1,0 @@
-solr_start() was using a system call to start solr, which resulted in three separate processes that needed to be killed with a process group id. This required solr_start() to disassociate itself from the parent process with setsid, and lookup the subprocesses' parent id.
-
-using exec() instead of system() makes this complexity go away fortunately. Also the solr_server.rb was renamed to test_helper.rb as it is likely to contain other methods/classes for clearing the index, etc...
-

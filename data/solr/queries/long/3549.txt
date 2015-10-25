@@ -1,9 +1,0 @@
-Running the DIH db example import (on 4x and trunk) gives this error:
-
-
-    WARNING: Error creating document : SolrInputDocument[includes=null, popularity=6, price=92.0, nameSort=Samsung SpinPoint P120 SP2514N - hard drive - 250 GB - ATA-133, name=Samsung SpinPoint P120 SP2514N - hard drive - 250 GB - ATA-133, alphaNameSort=Samsung SpinPoint P120 SP2514N - hard drive - 250 GB - ATA-133, weight=0.0, manu=Samsung Electronics Co. Ltd., id=SP2514N, features=[7200RPM, 8MB cache, IDE Ultra ATA-133, NoiseGuard, SilentSeek technology, Fluid Dynamic Bearing (FDB) motor]]
-org.apache.solr.common.SolrException: ERROR: [doc=SP2514N] multiple values encountered for non multiValued copy field nameSort: Samsung SpinPoint P120 SP2514N - hard drive - 250 GB - ATA-133
-
-
-
-The issue is that Solr was made more particular about multiValued, which points out something wrong with the DIH config file, creating fields for nameSort and alphaNameSort when copyField is already in place.

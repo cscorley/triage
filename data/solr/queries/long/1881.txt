@@ -1,1 +1,0 @@
-The SearchHandler component automagically prepends "http://" to all distributed searches, preventing HTTPS communication with remote shards/cores.  This feels unnecessary and is trivia to fix (I'll attach a two-line patch shortly).

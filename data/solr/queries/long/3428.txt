@@ -1,6 +1,0 @@
-A few problems with SolrCmdDistributor.flushAdds/flushDeletes
-
-	If number of AddRequests/DeleteRequests in alist/dlist is below limit for a specific node the method returns immediately and doesnt flush for subsequent nodes
-	When returning immediately because there is below limit requests for a given node, then previous nodes that have already been flushed/submitted are not removed from adds/deletes maps (causing them to be flushed/submitted again the next time flushAdds/flushDeletes is executed)
-	The idea about just combining params does not work for SEEN_LEADER params (and probably others as well). Since SEEN_LEADER cannot be expressed (unlike commitWithin and overwrite) for individual operations in the request, you need to sent two separate submits. One containing requests with SEEN_LEADER=true and one with SEEN_LEADER=false.
-

@@ -1,1 +1,0 @@
-SearchComponents may throw NPE when using shards.tolerant and there is a failure in the “GET_FIELDS/GET_HIGHLIGHTS/GET_DEBUG” phase

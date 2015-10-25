@@ -1,3 +1,0 @@
-DocValues fields can be very wasteful if you are storing dates (like solr's TrieDateField does if you enable docvalues) and don't actually need all the precision: e.g. "date-only" fields like date of birth with no time component, time fields without milliseconds precision, and so on.
-
-Ideally we'd compute GCD of all the values to save space (numberOfTrailingZeros is not really enough here), but i think we should at least look for values like 86400000, 3600000, and 1000 to be practical.

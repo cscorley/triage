@@ -1,6 +1,0 @@
-http://www.mail-archive.com/solr-user@lucene.apache.org/msg05734.html
-
-> latest snapshot /opt/solr/data/temp-snapshot.20070816120113 already
-> installed
-
-A directory in the Solr data directory is causing snapinstaller to fail.  Snapinstaller should be improved to ignore any much non-snapshot as possible.  It can use a regular expression to look for snapshot.dddddddddddddd where d is a digit.

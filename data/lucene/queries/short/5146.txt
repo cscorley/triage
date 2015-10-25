@@ -1,1 +1,0 @@
-AnalyzingSuggester sort order doesn't respect the actual weight

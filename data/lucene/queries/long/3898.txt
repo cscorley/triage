@@ -1,1 +1,0 @@
-See https://builds.apache.org/job/Lucene-trunk/1867/consoleText (no seed)

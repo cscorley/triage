@@ -1,3 +1,0 @@
-These sometimes come across as errors today, though they are valid. Examples include newer Dutch, Romanian, Kannada dictionaries.
-
-Previously there was stuff like 'strictAffixParsing' option, but that was just a hack around some of this.

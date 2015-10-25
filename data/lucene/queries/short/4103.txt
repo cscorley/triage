@@ -1,1 +1,0 @@
-AnalyzerQueryNodeProcessor throws a class cast exception with the RegexpQueryNode

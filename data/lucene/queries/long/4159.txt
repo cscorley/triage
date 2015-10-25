@@ -1,1 +1,0 @@
-Before the 4.0 release I think it makes sense to plan for a (Lucene and Solr) comprehensive code review in order to improve APIs, performance and code style.

@@ -1,1 +1,0 @@
-Commit logging - move index filenames to DEBUG.

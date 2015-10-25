@@ -1,1 +1,0 @@
-prepareCommit command omits commitData

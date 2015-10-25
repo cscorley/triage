@@ -1,1 +1,0 @@
-Solr::Request::Standard doesn't process facet.offset

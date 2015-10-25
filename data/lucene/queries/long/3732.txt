@@ -1,4 +1,0 @@
-When you open javadocs, this is the very first thing you see (index.html).
-
-It has a bunch of sample code and links that are broken. In some situations I can see it was updated here and there,
-but others (like javadocs links) link to java 1.2 javadocs no longer online, etc.

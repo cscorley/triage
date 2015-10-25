@@ -1,1 +1,0 @@
-We do not show ZooKeeper data in the UI for a node that has children.

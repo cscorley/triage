@@ -1,5 +1,0 @@
-in TokenStream there is a reset() method, but the method in Tokenizer used to set a new Reader is called reset(Reader).
-
-in my opinion this name overloading creates a lot of confusion, and we see things like reset(Reader) calling reset() even in StandardTokenizer...
-
-So I think this would be some work to fulfill all the backwards compatibility, but worth it because when you look at the existing reset(Reader) and reset() code in various tokenizers, or the javadocs for Tokenizer, its pretty confusing and inconsistent.

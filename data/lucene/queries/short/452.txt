@@ -1,1 +1,0 @@
-PrefixQuery is missing the equals() method

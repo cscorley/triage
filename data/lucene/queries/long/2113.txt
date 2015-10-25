@@ -1,1 +1,0 @@
-singletermsenum for flex (like the existing singletermenum, it is a filteredtermSenum that only matches one term, to preserve multitermquery semantics)

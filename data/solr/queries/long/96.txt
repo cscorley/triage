@@ -1,8 +1,0 @@
-At the moment, the XML messages sent to solr to add/delete documents must be in UTF-8.  The imput processing should be changed to determine the charset based on the HTTP header info, or the XML contents.
-
-Background and refrence material...
-
-http://www.nabble.com/double-curl-calls-in-post.sh--tf2287469.html#a6369448
-http://www.nabble.com/wana-use-CJKAnalyzer-tf2303256.html#a6451918
-http://www.ietf.org/rfc/rfc3023.txt
-http://www.w3.org/TR/REC-xml/#sec-guessing

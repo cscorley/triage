@@ -1,5 +1,0 @@
-When reading the binary value of a stored field, a StoredFieldsReader calls StoredFieldVisitor.binaryValue(arr, offset, length).
-
-Documentation currently doesn't state whether the byte[] can be reused outside of the scope of StoredFieldVisitor.binaryValue but DocumentStoredFieldVisitor assumes (as of r1389812) that it can.
-
-So DocumentStoredFieldVisitor would break with a custom StoredFieldsFormat that would call StoredFieldVisitor.binaryValue with a slice of a reusable buffer.

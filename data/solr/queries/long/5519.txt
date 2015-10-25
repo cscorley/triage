@@ -1,3 +1,0 @@
-Creating ZK nodes should be done at overseer (as much as possible). 
-
-This also a requirement for SOLR-5473

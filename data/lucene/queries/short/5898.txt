@@ -1,1 +1,0 @@
-Cleanup version handling in build files

@@ -1,1 +1,0 @@
-There are a lot of improvements in TRUNK Velocity GUI which will work well even for 3.1

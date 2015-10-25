@@ -1,1 +1,0 @@
-We want to be able to run multiple queries at once over a MemoryIndex in luwak (see https://github.com/flaxsearch/luwak/commit/49a8fba5764020c2f0e4dc29d80d93abb0231191), but this isn't possible with the current implementation.  However, looking at the code, it seems that it would be relatively simple to make MemoryIndex thread-safe for reads/queries.

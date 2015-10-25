@@ -1,1 +1,0 @@
-Rename lucene/solr dev jar files to -SNAPSHOT.jar

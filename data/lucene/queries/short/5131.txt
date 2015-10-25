@@ -1,1 +1,0 @@
-CheckIndex is confusing for docvalues fields

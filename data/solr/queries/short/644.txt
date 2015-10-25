@@ -1,1 +1,0 @@
-Increase maximum POST size in example Jetty configuration

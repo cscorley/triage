@@ -1,1 +1,0 @@
-improve TestBackwardsCompatibility to test Lucene 4.x features

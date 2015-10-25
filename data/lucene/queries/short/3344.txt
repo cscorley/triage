@@ -1,1 +1,0 @@
-Add workaround for ICU bug in combination with Java7 to LuceneTestCase

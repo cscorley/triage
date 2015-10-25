@@ -1,1 +1,0 @@
-Change SortField types to an Enum

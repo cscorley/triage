@@ -1,1 +1,0 @@
-FilteredQuery always uses default FilterStrategy if the filtered query is rewritten

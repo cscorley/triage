@@ -1,1 +1,0 @@
-shareSchema=true is not working when creating cores.

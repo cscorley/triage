@@ -1,1 +1,0 @@
-Directory#copy leaks file handles

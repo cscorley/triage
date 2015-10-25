@@ -1,5 +1,0 @@
-Given the Data of "exampledocs", the Schema-Browser offers Links (for jumping from Top-Terms to the Query-Form) link this:
-
-.../query?q=manu_exact:Apache%20Software%20Foundation
-
-which would lead to an incorrect result because the terms are splitted.

@@ -1,1 +1,0 @@
-benchmark pkg: allow TrecContentSource not to change the docname

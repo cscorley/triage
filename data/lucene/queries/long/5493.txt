@@ -1,3 +1,0 @@
-Its not clear to users that these are for this super-expert thing of pre-sorting the index. From the names and documentation they think they should use them instead of Sort/SortField.
-
-These need to be renamed or, even better, the API fixed so they aren't public classes.

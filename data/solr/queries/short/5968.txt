@@ -1,1 +1,0 @@
-BinaryResponseWriter fetches unnecessary stored fields when only pseudo-fields are requested

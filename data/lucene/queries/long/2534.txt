@@ -1,3 +1,0 @@
-Robert found this in working on LUCENE-2352.
-
-MultiTermsEnum incorrectly shared sub-enums on two different invocation of .docs/AndPositionsEnum.

@@ -1,6 +1,0 @@
-Currently it uses the 4.0 impl..., worse the PreFlexRW writes with 4.0 impl too.
-
-This is dangerous. we changed the format even to support offsets (though 3.x 
-should be unaffacted by that), but just in general I don't even trust
-that testbackwardscompatibility has big enough indexes to ever use any skipdata
-to detect if we screw up.

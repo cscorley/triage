@@ -1,7 +1,0 @@
-we now fail the build on rat problems (LUCENE-1866),
-so we should make it easy to run rat-sources for people
-to test locally (it takes like 3 seconds total for the whole trunk)
-
-Also this is safer than putting rat in your ~/.ant/lib because that 
-adds some classes from commons to your ant classpath (which we currently
-wrongly use in compile).

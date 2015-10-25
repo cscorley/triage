@@ -1,8 +1,0 @@
-Luke (http://www.getopt.org/luke/) is a great tool to help learn / understand / debug lucene indexes.
-
-Solr already does a lot of what luke does... but it could do a bit more.  Specifically:
-
-
-	browse top terms across all fields (similar to faceting)
-	browse lucene documents / properties directly
-

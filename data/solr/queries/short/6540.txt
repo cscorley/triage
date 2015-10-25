@@ -1,1 +1,0 @@
-strdist() causes NPE if doc is missing field

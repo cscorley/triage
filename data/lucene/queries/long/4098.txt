@@ -1,9 +1,0 @@
-There are some places in Lucene code that 
-{iterate over,set}
- ranges of values of a packed integer array. Because bit-packing implementations (Packed*) tend be slower than direct implementations, this can take a lot of time.
-
-For example, under some scenarii, GrowableWriter can take most of its (averaged) set time in resizing operations.
-
-However, some bit-packing schemes, such as the one that is used by Packed64SingleBlock*, allow to implement efficient bulk operations such as get/set/fill. Implementing these bulk operations in {{PackedInts.
-{Reader,Mutable}
-}} and using them across other components instead of their single-value counterpart could help improve performance.

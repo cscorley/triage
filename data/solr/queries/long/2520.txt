@@ -1,3 +1,0 @@
-Please see http://timelessrepo.com/json-isnt-a-javascript-subset.
-
-If a stored field contains Unicode characters that are valid in Json but not valid in Javascript, and you use the query option to ask for JSONP (json.wrf), solr does not escape them, resulting in content that explodes on contact with browsers. That is, there are certain Unicode characters that are valid JSON but invalid in Javascript source, and a JSONP response is javascript source, to be incorporated in an HTML script tag. Further investigation suggests that only one character is a problem here:  U+2029 must be represented as \u2029 instead of left 'as-is'.

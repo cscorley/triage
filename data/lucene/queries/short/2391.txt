@@ -1,1 +1,0 @@
-Spellchecker uses default IW mergefactor/ramMB settings of 300/10

@@ -1,1 +1,0 @@
-MMapDirectory shouldn't pass along OOM wrapped as IOException

@@ -1,1 +1,0 @@
-Less aggressive form of Kreslins' phd thesis: A stemming algorithm for Latvian.

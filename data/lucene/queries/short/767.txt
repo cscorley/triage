@@ -1,1 +1,0 @@
-maxDoc should be explicitly stored in the index, not derived from file length

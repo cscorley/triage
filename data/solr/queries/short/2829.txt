@@ -1,1 +1,0 @@
-Filter queries have false-positive matches. Exposed by user's list titled "Regarding geodist and multiple location fields"

@@ -1,3 +1,0 @@
-For certain failures during a lucene/solr build, or if you press ctrl-c at the wrong moment during the build, ivy may leave a lockfile behind.  The next time you run a build, ivy will hang with "resolve:" on the screen.
-
-The ivy project has a fix, currently not yet released.  When it does get released, the version installed by the ivy-bootstrap target needs to be updated.

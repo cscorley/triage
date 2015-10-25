@@ -1,1 +1,0 @@
-Source distribution packaging targets should make a tarball from "svn export"

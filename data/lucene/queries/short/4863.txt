@@ -1,1 +1,0 @@
-Use FST to hold term in StemmerOverrideFilter

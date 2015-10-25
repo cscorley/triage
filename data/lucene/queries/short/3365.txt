@@ -1,1 +1,0 @@
-Create or Append mode determined before obtaining write lock

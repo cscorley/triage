@@ -1,3 +1,0 @@
-I plan on fixing both of these issues as part of my work on SOLR-3911.
-
-Most of AbstractSolrTestCase can go away.

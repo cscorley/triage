@@ -1,1 +1,0 @@
-Since PatternTokenizerFactory has its own args variable but doesn't have getArgs() method, always null is displayed for its args in analysis.jsp.

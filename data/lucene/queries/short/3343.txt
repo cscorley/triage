@@ -1,1 +1,0 @@
-Comparison operators >,>=,<,<= and = support as RangeQuery syntax in QueryParser

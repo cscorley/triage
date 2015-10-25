@@ -1,3 +1,0 @@
-We should update to 3.3.5 - there was a corruption issue fixed.
-
-http://zookeeper.apache.org/doc/r3.3.5/releasenotes.html

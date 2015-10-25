@@ -1,1 +1,0 @@
-I started up in SolrCloud mode with 2 collections, but the cluster visualization page only displayed the first collection.

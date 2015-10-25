@@ -1,1 +1,0 @@
-Clover runs on ASF Jenkins idle dead without a test or any thread running in main() loop waiting for file descriptor

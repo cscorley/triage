@@ -1,3 +1,0 @@
-If a custom IndexReaderFactory is specifiedd in solrconfig.xml, and IndexReader-s that it produces don't support IndexReader.directory() (such as is the case with ParallelReader or MultiReader) then an uncaught UnsupportedOperationException is thrown.
-
-This call is used only to retrieve the full path of the directory for informational purpose, so it shouldn't lead to a crash. Instead we could supply other available information about the reader (e.g. from its toString() method).

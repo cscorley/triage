@@ -1,5 +1,0 @@
-SOLR-4717 introduced local param support for per-field faceting, allowing the same field to be faceted in various ways.  There's a problem such that one fields local param setting will override the defaults of the next field.  For example: 
-
-http://localhost:8983/solr/query?q=*:*&facet=true&rows=0&facet.field={!facet.prefix=a}name&facet.field=features
-
- where the facet.prefix for name affects the features faceting.

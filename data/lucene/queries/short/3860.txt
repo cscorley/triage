@@ -1,1 +1,0 @@
-3.x indexes have the wrong normType set in fieldinfos

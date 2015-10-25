@@ -1,1 +1,0 @@
-Various dependencies for contrib/analysis-extras are packaged contrib/analysis-extras/lucene-libs (along with instructions in contrib/analysis-extras/README.txt that users need to include them explicitly) even though these jars are already hardcoded into the solr war file.

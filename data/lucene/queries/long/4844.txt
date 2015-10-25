@@ -1,1 +1,0 @@
-This should have been gone when we introduced .getParallelArrays(). The method simply calls getParallelArrays().parents()[ord], and that's what callers should do. Except one test, no other code in facets calls this method.

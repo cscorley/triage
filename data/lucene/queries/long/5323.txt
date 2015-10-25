@@ -1,1 +1,0 @@
-It would be nice to have a sizeInBytes() method added to Suggester.Lookup interface. This would allow users to estimate the size of the in-memory data structure created by various suggester implementation.

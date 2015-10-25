@@ -1,1 +1,0 @@
-Fail the build if ant test didn't execute any tests (everything filtered out).

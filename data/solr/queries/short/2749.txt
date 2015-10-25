@@ -1,1 +1,0 @@
-use BoundaryScanner in Solr FVH

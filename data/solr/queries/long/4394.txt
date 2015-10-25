@@ -1,1 +1,0 @@
-We should provide some examples of running Solr+Jetty with SSL enabled, and have some basic tests using jetty over SSL

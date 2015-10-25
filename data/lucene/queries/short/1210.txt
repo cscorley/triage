@@ -1,1 +1,0 @@
-IndexWriter & ConcurrentMergeScheduler deadlock case if starting a merge hits an exception

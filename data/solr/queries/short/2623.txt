@@ -1,1 +1,0 @@
-Solr JMX MBeans do not survive core reloads

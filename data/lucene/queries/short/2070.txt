@@ -1,1 +1,0 @@
-document LengthFilter wrt Unicode 4.0

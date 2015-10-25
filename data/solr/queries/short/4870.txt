@@ -1,1 +1,0 @@
-RecentUpdates.update() does not increment numUpdates counter inside loop

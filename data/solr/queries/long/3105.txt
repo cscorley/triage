@@ -1,2 +1,0 @@
-I think we should have good baseline configurations for our supported analyzers
-so that its easy for people to get started.

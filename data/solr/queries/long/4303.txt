@@ -1,3 +1,0 @@
-Doesn't affect SolrCloud since it uses the 'force' option, but a regression in Solr 4.0 from 3X it appears.
-
-See http://lucene.472066.n3.nabble.com/Solr-4-0-SnapPuller-version-vs-generation-issue-td4032347.html

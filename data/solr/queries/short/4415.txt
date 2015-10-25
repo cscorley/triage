@@ -1,1 +1,0 @@
-Read/Write shard’s state to ZooKeeper

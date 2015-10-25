@@ -1,1 +1,0 @@
-BinaryUpdateRequestHandler should accept multiple update requests from a single HTTP request's input stream. Currently it does not and that makes it very difficult for StreamingUpdateSolrServer to use Javabin format.

@@ -1,1 +1,0 @@
-Missing word "cela" in conf/lang/stopwords_fr.txt

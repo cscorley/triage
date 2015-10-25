@@ -1,1 +1,0 @@
- SOLR Admin gui works in IE9, breaks in IE10. Workaround. 

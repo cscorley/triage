@@ -1,1 +1,0 @@
-Initialization error of Junit tests with solr-test-framework with IDEs and Maven

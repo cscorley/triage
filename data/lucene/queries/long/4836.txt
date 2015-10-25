@@ -1,1 +1,0 @@
-SimpleRateLimiter#pause is supposed to return the time it actually spend sleeping but it returns the actual time in nanos it is supposed to sleep until. This cause some problems in ES due to long overflows.... here is the original issue reported by a user: https://github.com/elasticsearch/elasticsearch/issues/2785

@@ -1,1 +1,0 @@
-When a new leader syncs, we need to ask all shards to sync back, not just those that are active.

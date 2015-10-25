@@ -1,1 +1,0 @@
-IndexWriter (DocumentsWriter) forgets to reset the token state resulting in incorrect positionIncrements, payloads, and token types.

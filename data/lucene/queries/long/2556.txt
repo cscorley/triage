@@ -1,1 +1,0 @@
-The memory consumption problem with cloning a (Char)TermAttributeImpl object was raised on thread http://markmail.org/thread/bybuerugbk5w2u6z

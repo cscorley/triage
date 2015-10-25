@@ -1,1 +1,0 @@
-The lock type "none", removed in SOLR-686, is still referenced in various solrconfig.xml.

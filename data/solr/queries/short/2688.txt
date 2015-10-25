@@ -1,1 +1,0 @@
-switch solr 4.0 example to DirectSpellChecker

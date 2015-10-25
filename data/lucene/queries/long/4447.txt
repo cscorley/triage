@@ -1,3 +1,0 @@
-Currently in some places this links to / compares to the current codec.
-
-I think it should be standalone, e.g. this text about comparison could be folded into the history section of the fileformats docs, and it should contain all info (not link to Lucene40 for the .tim format and so on)

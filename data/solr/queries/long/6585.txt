@@ -1,1 +1,0 @@
-If a request handler is registered at /path , it should be able to handle /path/a or /path/x/y if it chooses to without explicitly registering those paths. This will only work if those full paths are not explicitly registered

@@ -1,1 +1,0 @@
-Admin UI - Plugins/Stats Page contains loooong Values which result in horizontal Scrollbar

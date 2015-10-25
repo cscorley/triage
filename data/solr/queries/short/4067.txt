@@ -1,1 +1,0 @@
-ZkStateReader#getLeaderProps should not return props for a leader that it does not think is live.

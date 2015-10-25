@@ -1,1 +1,0 @@
-When using the new core discovery method, cores created via CoreAdminHandler are never persisted, since they should be writing files to $INSTANCEDIR/core.properties. CoreAdminHandler should probably write core.properties files.

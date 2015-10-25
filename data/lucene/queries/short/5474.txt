@@ -1,1 +1,0 @@
-Add example for retrieving facet counts without retrieving documents

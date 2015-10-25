@@ -1,1 +1,0 @@
-Allow bootstrapping multiple config sets from multi-core setups.

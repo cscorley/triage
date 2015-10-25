@@ -1,1 +1,0 @@
-Facet counts duplicated in the response if specified more than once on the request.

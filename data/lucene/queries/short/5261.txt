@@ -1,1 +1,0 @@
-add simple API to build queries from analysis chain

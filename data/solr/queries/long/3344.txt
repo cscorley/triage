@@ -1,6 +1,0 @@
-The pom for solr-test-framework does not mention jetty, so a test case that doesn't get jetty into it's classpath otherwise fails with:
-
-
-java.lang.NoClassDefFoundError: org/eclipse/jetty/server/SessionIdManager
-
-

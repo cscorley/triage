@@ -1,1 +1,0 @@
-External collections (SOLR-5473) are not displayed in the Cloud -> graph panel, which makes it very hard to see which external collections have problems, such as after a downed node comes back online.

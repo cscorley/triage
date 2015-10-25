@@ -1,3 +1,0 @@
-In my spare time, I would like to try and make DIH into something that is a Joy to Maintain.
-
-Here's a tiny first step:  put the configuration data into immutable classes, moving state data elsewhere.

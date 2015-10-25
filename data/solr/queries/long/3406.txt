@@ -1,1 +1,0 @@
-Need the ability to support grouped range and query facets. Grouped facet fields have already been implemented in SOLR-2898 but we still need the ability to compute grouped range and query facets.

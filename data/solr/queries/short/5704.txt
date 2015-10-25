@@ -1,1 +1,0 @@
-solr.xml coreNodeDirectory is ignored when creating new cores via REST(ish) apis

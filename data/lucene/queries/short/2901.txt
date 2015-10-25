@@ -1,1 +1,0 @@
-KeywordMarkerFilter resets keyword attribute state to false for tokens not in protwords.txt

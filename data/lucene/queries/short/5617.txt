@@ -1,1 +1,0 @@
-don't rely on directory metadata for stored fields 'maxpointer', change to hard check

@@ -1,1 +1,0 @@
-IBM J9 JVM bug causes test failure in Kuromoji's TestExtended

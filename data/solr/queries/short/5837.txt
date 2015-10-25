@@ -1,1 +1,0 @@
-Add missing equals implementation for SolrDocument, SolrInputDocument and SolrInputField.

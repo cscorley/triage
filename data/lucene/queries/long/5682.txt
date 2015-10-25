@@ -1,4 +1,0 @@
-While testing out the QueryRescorer I was getting an NPE on the scorer  when using a TermQuery as the rescore query. Looks like a TermQuery will return a null Scorer if  the term is not present in the index segment.
-
-Caused by: java.lang.NullPointerException
-   [junit4]    > 	at org.apache.lucene.search.QueryRescorer.rescore(QueryRescorer.java:89)

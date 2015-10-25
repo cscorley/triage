@@ -1,1 +1,0 @@
-Overseer threads are only being interrupted and not closed.

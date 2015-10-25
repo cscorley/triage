@@ -1,1 +1,0 @@
-We should consider removing shard info from Zk when you explicitly unload a SolrCore.

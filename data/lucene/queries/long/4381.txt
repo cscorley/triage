@@ -1,5 +1,0 @@
-ICU will release a new version in about a month.
-
-They have a version for testing (http://site.icu-project.org/download/milestone) already out with some interesting features, e.g. dictionary-based CJK segmentation.
-
-This issue is just to test it out/integrate the new stuff/etc. We should try out the automation Steve did as well.

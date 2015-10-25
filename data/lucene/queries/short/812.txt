@@ -1,1 +1,0 @@
-Unable to set LockFactory implementation via ${org.apache.lucene.store.FSDirectoryLockFactoryClass}

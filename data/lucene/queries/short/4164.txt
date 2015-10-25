@@ -1,1 +1,0 @@
-Improve IndexWriter.addIndexes(IndexReader) javadocs

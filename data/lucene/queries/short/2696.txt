@@ -1,1 +1,0 @@
-TestIndexWriterDelete makes broken segments with payloads on

@@ -1,3 +1,0 @@
-There are possibly ways to improve collections of "deep paging" by passing Solr/Lucene more information about the last page of results seen, thereby saving priority queue operations.   See LUCENE-2215.
-
-There may also be better options for retrieving large numbers of rows at a time that are worth exploring.  LUCENE-2127.

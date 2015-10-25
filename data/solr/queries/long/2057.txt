@@ -1,1 +1,0 @@
-I was experimenting with custom UpdateRequestProcessor implementations and noticed that the sample LogUpdateProcessorFactory's finish method wasn't being called. I tracked this back down to the fact that SolrWriter in the data import handler never calls the finish() method on its UpdateRequestProcessor.

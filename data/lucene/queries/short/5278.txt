@@ -1,1 +1,0 @@
-MockTokenizer throws away the character right after a token even if it is a valid start to a new token

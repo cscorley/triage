@@ -1,1 +1,0 @@
-deleteByQuery is ignored when deleteById is placed prior to deleteByQuery in a <delete> 

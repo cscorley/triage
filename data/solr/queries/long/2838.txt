@@ -1,8 +1,0 @@
-langid.idField is used for logging purpose in langid. If it is not set, "id" is set as default. But if no id field is there and the parameter is likely "hidden" and therefore indiscernible for users, those users got undesirable warnings in the log:
-
-
-WARNING: Document *null* does not contain input field subject. Skipping this field.
-
-
-
-As we can access IndexSchema in initParams(), why don't we use uniqueKey field as the default.

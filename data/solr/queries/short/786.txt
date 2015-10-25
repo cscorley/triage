@@ -1,1 +1,0 @@
-refactor in DisMaxQParserPlugin and DismaxQParser to allow extending DismaxQParser

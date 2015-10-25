@@ -1,7 +1,0 @@
-Adding the following properties to junit target in build.xml
-
-
-	ant -Dtestcase - for a single test class
-	ant -Dtestpackage - for all classes in a package, including sub-packages
-	and -Dtestpackageroot - for all classes in a package, without sub-packages
-

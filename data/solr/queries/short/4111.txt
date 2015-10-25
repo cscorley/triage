@@ -1,1 +1,0 @@
-Context-Sensitive SpellCheck Collation is not really being tested on IndexBasedSpellChecker

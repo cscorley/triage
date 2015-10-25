@@ -1,1 +1,0 @@
-this bug for fixed bug SOLR-4210. proxy request for remote core 

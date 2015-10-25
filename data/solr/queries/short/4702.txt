@@ -1,1 +1,0 @@
-Velocity templates not rendering spellcheck suggestions correctly

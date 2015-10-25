@@ -1,1 +1,0 @@
-JoinQParserPlugin uses a hardcoded lucene QParser

@@ -1,5 +1,0 @@
-I noticed a randomized failure in MapReduceIndexerToolArgumentParserTest which is reproducible with any seed – all that matters is the locale.
-
-The problem sounded familiar, and a quick search verified that jenkins has in fact hit this a couple of times in the past – Uwe commented on the list that this is due to a real problem in one of the third-party dependencies (that does the argument parsing) that will affect usage on some systems.
-
-If working around the bug in the arg parsing lib isn't feasible, MapReduceIndexerTool should fail cleanly if the locale isn't one we know is "supported"

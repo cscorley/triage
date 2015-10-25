@@ -1,1 +1,0 @@
-TestRecoveryHdfs seems to be leaking a thread occasionally that ends up failing a completely different test.

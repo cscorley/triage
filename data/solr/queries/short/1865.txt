@@ -1,1 +1,0 @@
-ignore byte-order markers in SolrResourceLoader

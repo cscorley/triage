@@ -1,1 +1,0 @@
-Field specified norms in MatchAllDocumentsScorer 

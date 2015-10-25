@@ -1,1 +1,0 @@
-Division by zero in StatsComponent with date field always missing

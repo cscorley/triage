@@ -1,3 +1,0 @@
-This makes some things easier - such as external systems doing the hashing themselves (like CloudSolrServer).
-
-It will be back compat for String id types but not others. Sent an email to the list a good time back seeing if this would bother anyone too much and got no replies.

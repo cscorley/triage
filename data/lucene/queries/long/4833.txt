@@ -1,1 +1,0 @@
-Although the default merge policy is TieredMergePolicy (as documented in IndexWriterConfig constructor), setMergePolicy assumes that the default is LogByteSizeMergePolicy.

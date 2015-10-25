@@ -1,1 +1,0 @@
-We should clone the SolrInputDocument before adding locally and then send that clone to replicas.

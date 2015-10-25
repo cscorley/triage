@@ -1,1 +1,0 @@
-Maven jetty plugin is misconfigured

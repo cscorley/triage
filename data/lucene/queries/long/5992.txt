@@ -1,7 +1,0 @@
-The version is really "just" 3 (maybe 4) ints under-the-hood, but today we write it as a String which then requires spooky string tokenization/parsing when we open the index.  I think it should be encoded directly as ints.
-
-In LUCENE-5952 I had tried to make this change, but it was controversial, and got booted.
-
-Then in LUCENE-5969, I tried again, but that issue has morphed (nicely!) into fixing all sorts of things except these three ints.
-
-Maybe 3rd time's a charm 

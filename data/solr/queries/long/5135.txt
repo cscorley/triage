@@ -1,3 +1,0 @@
-Until Zk is the source of truth for the cluster, zk and local node states can get out of whack in certain situations - as a result, sometimes you cannot clean out all of the remnants of a collection to recreate it. For example, if the collection is listed in zk under /collections, but is not in clusterstate.json, you cannot remove or create the collection again due to a early exception in the collection removal chain.
-
-I think we should probably still return the error - but also delete as much as we can.

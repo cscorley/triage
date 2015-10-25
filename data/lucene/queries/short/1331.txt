@@ -1,1 +1,0 @@
-FSDirectory doesn't detect double-close nor usage after close

@@ -1,1 +1,0 @@
-ChainedFilter does not work well in the event of filters in ANDNOT

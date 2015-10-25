@@ -1,2 +1,0 @@
-I would like to rename KeywordMarkerTokenFilter to KeywordMarkerFilter.
-We havent released it yet, so its a good time to keep the name brief and consistent.

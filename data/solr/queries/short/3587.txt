@@ -1,1 +1,0 @@
-After reloading a SolrCore, the original Analyzer is still used rather than a new one.

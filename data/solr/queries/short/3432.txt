@@ -1,1 +1,0 @@
-deleteByQuery silently ignored if updateLog is enabled, but {{_version_}} field does not exist in schema 

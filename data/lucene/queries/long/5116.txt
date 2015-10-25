@@ -1,3 +1,0 @@
-at the least, this can easily create segments with maxDoc == 0.
-
-It seems buggy: elsewhere we prune these segments out, so its expected to have a commit point with no segments rather than a segment with 0 documents...

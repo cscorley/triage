@@ -1,1 +1,0 @@
-Update TypeTokenFilterFactory to handle useWhiteList parameter

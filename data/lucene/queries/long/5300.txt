@@ -1,1 +1,0 @@
-It would be nice to detect when a SORTED_SET field is single-valued in order to optimize storage.

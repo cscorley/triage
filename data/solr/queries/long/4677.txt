@@ -1,5 +1,0 @@
-Solr 4.2.1 went out with an impl version of 4.2.1 and a spec version of 4.2.0.
-
-This is because you must update the spec version in common-build.xml while the impl is set by the version you pass as a sys prop when doing prepare-release.
-
-Do we need this spec version? Does it serve any purpose? I think we should either stop dealing with it or just set it the same way as the impl...or?

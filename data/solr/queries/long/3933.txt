@@ -1,3 +1,0 @@
-Update requests that also include a commit may do adds or deletes after the commit - it's a race.
-
-This would most likely affect concurrent update server or bulk add methods - but it's still a race for a single doc update or delete that includes a commit as well.

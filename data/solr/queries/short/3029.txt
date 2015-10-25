@@ -1,1 +1,0 @@
-Poor json formatting of spelling collation info

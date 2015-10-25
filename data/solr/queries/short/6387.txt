@@ -1,1 +1,0 @@
-Solr specific work around for JDK bug #8047340: posix_spawn error with turkish locale

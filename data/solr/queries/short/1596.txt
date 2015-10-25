@@ -1,1 +1,0 @@
-rollback may be resulting ina SolrIndexWriter hat doesn't get closed properly

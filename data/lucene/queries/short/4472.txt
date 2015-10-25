@@ -1,1 +1,0 @@
-Add setting that prevents merging on updateDocument

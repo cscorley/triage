@@ -1,3 +1,0 @@
-hung in jenkins. seed is  D344294F98D3F637 (and the usual nightly flags, -Dtests.nightly=true, -Dtests.multiplier=3, -Dtests.linedocsfile=huge)
-
-Didn't try to reproduce yet.

@@ -1,3 +1,0 @@
-This has some places where things are being read into RAM (using 'data'). But they can overlap, because we synchronize on the wrong things: various maps.
-
-Instead these methods can just be synchronized...

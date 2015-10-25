@@ -1,1 +1,0 @@
-CommonGramsFilter assumes all input tokens have a length of 1

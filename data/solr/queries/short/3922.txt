@@ -1,1 +1,0 @@
-AbstractSolrTestCase duplicates a lot from SolrTestCaseJ4 and is one of the few lines of Solr test classes that do not inherit from SolrTestCaseJ4.

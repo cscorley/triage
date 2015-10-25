@@ -1,3 +1,0 @@
-Spin off of SOLR-4672 zince Erick said he would worry about this so i don't have to...
-
-we should have more tests that sanity check the behvaior of lazy loaded cores, and reporting back core init failures – both as part of CoreAdmin "STATUS" requests and in the error message returned when trying to use these cores.

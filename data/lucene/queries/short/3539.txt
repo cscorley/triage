@@ -1,1 +1,0 @@
-IndexFormatTooOld/NewExc should try to include fileName + directory when possible

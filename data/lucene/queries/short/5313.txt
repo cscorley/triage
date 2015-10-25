@@ -1,1 +1,0 @@
-Add "preservePositionIncrements" to AnalyzingSuggester and FuzzySuggester constructors

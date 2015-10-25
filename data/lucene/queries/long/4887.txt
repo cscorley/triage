@@ -1,1 +1,0 @@
-The NoOutput Object throws NotImplemented if you try to add the same input twice.  This can easily be implemented

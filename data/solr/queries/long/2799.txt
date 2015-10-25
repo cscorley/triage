@@ -1,4 +1,0 @@
-Currently solrcloud reads the entire cloud state from ZK anytime an update is scheduled which can be very inefficient with a large number of shards.
-
-see discussion on user list:
-http://www.lucidimagination.com/search/document/54fa402cf3171bc3/solr_cloud_number_of_shard_limitation

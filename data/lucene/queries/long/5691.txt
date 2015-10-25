@@ -1,8 +1,0 @@
-needs the following two conditions:
-
-	underlying termsenum supports ord()
-	the term you lookup would be inserted at the end (e.g. seek returns END)
-
-
-
-the fix is simple, it just needs to handle SeekStatus.END properly.

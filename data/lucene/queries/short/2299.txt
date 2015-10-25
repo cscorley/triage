@@ -1,1 +1,0 @@
-if you open an NRT reader while addIndexes* is running it may miss segments

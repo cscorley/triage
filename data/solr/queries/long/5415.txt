@@ -1,8 +1,0 @@
-If a core fails to load because of
-
-	a bug in a new version of Solr
-	or some config error
-
-
-
-it immediately unregisters itself from ZK. This does not give the user a chance to rectify the error and restart the core/node . So if a core fails to load  it should not be unregistered from ZK unless an explicit core unload or a DELETEREPLICA collection command is inoked

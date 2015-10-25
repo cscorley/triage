@@ -1,1 +1,0 @@
-A field comparator for sorting block join parent docs based on the a field in the associated child docs. 

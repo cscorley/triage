@@ -1,1 +1,0 @@
-DistribCursorPagingTest chewing up too much ram in nightly mode? (OutOfMemoryError: GC overhead limit exceeded)

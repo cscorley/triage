@@ -1,1 +1,0 @@
-While working on LUCENE-4985, I noticed that FacetRequest's jdocs are severely outdated. I rewrote them entirely, so prefer to commit them separately than the rest of the changes. Will post a patch shortly.

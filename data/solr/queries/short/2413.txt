@@ -1,1 +1,0 @@
-Cleanup XMLWriter, remove support for version < 2.2

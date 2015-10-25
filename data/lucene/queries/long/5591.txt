@@ -1,5 +1,0 @@
-Today we pass IOContext.DEFAULT. If DV updates are used in conjunction w/ NRTCachingDirectory, it means the latter will attempt to write the entire DV field in its RAMDirectory, which could lead to OOM.
-
-Would be good if we can build our own FlushInfo, estimating the number of bytes we're about to write. I didn't see off hand a quick way to guesstimate that - I thought to use the current DV's sizeInBytes as an approximation, but I don't see a way to get it, not a direct way at least.
-
-Maybe we can use the size of the in-memory updates to guesstimate that amount? Something like sizeOfInMemUpdates * (maxDoc/numUpdatedDocs)? Is it a too wild guess?

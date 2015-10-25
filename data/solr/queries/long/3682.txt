@@ -1,7 +1,0 @@
-Solr 3.1 stated logging a SEVERE warning if uniqueKeyField field was used, but was multiValued.  This was done only as a log message so users who upgraded and had old configs where the field was multiValued (or inherited the multiValueness from the fieldtype) would continue to work, as long as they used the field properly.
-
-But this is still causing some confusion...
-
-http://mail-archives.apache.org/mod_mbox/lucene-solr-user/201207.mbox/%3CCAN4YXvcjr5Vh9LHYUi3PeJZwDgBpd9EZ5fyWBAgHCWQ+tPsFwg@mail.gmail.com%3E
-
-...for 4.0, we should hard fail if uniqueKeyField is used nad doesn't mean the neccessary requirements to function properly.

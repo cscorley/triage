@@ -1,9 +1,0 @@
-The RecoveryStrategy has a retry wait which is exponential in nature. The first time it waits for 1 second before retrying recovery, then 2 seconds, then 4 seconds and so on.
-
-This causes problems when running a large number of collections in SolrCloud. We saw a case where there were 500 collections on 3 nodes (1 shard, 3 replicas) and after a node is restarted, many collections can't come back up from recovery because:
-
-	The overseer is slow to process events (I'll create another issue for it)
-	Because the overseer is slow, cluster state updates are delayed and therefore recovery cannot succeed (WaitForState hangs while waiting to see recovery state on replicas)
-	Because recovery can't succeed immediately, the recovery thread sleeps for larger and larger amounts of time
-	Even after the whole overseer queue is cleared up, many recovery threads have such a long sleep that they won't even attempt to recover for many minutes (upto 10 minutes).
-

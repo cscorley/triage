@@ -1,1 +1,0 @@
-As the title says, add in an example and docs on the new Join functionality added via SOLR-2272.

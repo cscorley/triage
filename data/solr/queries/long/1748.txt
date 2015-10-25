@@ -1,4 +1,0 @@
-
-
- IOUtils.copy( content.getReader(), writer );
-

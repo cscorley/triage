@@ -1,1 +1,0 @@
-branch_3x includes solr/lib/apache-solr-noggit-r730138.jar, while trunk has solr/lib/apache-solr-noggit-r944541.jar.  branch_3x should use the same version as trunk.

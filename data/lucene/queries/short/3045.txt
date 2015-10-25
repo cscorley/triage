@@ -1,1 +1,0 @@
-QueryNodeImpl.containsTag(String) should lowercase the tag key

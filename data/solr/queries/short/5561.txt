@@ -1,1 +1,0 @@
-DefaultSimilarity 'init' method is not called, if the similarity plugin is not explicitly declared in the schema

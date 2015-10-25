@@ -1,1 +1,0 @@
-BoostingTermQuery's BoostingSpanScorer class should be protected instead of package access

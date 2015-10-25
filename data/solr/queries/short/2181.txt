@@ -1,1 +1,0 @@
-Propose adding field to the admin GUI to indicate the status of HTTP caching

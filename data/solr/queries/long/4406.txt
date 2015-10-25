@@ -1,1 +1,0 @@
-The RawResponseWriter accepts a configuration value for a "base" ResponseWriter if no ContentStream can be detected. The line of code is commented out that would allow this secondary response writer to work. It would be great to uncomment the line and provide an OutputStreamWriter as the writer argument.

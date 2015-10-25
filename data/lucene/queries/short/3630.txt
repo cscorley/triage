@@ -1,1 +1,0 @@
-MultiReader and ParallelReader accidently override doOpenIfChanged(boolean readOnly) with doOpenIfChanged(boolean doClone)

@@ -1,1 +1,0 @@
-ConcurrentUpdateSolrServer will sometimes not spawn a new Runner thread even though there are updates in the queue.

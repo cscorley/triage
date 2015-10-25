@@ -1,1 +1,0 @@
-trapping overloaded ctors/setters in Field/NumericField/DocValuesField

@@ -1,1 +1,0 @@
-Test framework may fail internally under J9 (some serious JVM exclusive-section issue).

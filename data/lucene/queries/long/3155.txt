@@ -1,1 +1,0 @@
-A great example would be to add excludes to the zipping/tgzing to exclude things like DS_Store automatically.

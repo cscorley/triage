@@ -1,1 +1,0 @@
-Admin UI: Improve request handler / qt in query form

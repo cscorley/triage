@@ -1,5 +1,0 @@
-See SOLR-5287. Uwe Schindler pointed out that writing files the way 5287 is a security vulnerability and that disabling it should be the norm. Subsequent discussion came up with this idea.
-
-Writing arbitrary config files should NOT be on by default.
-
-We'll also incorporate Mark's idea of testing XML files before writing anywhere.

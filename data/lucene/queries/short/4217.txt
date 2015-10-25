@@ -1,1 +1,0 @@
-Load clover.jar from ivy-cachepath and store license key in SVN

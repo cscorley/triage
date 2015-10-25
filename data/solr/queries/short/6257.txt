@@ -1,1 +1,0 @@
-More than two "!"-s in a doc ID throws an ArrayIndexOutOfBoundsException when using the composite id router

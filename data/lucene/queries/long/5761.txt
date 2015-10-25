@@ -1,3 +1,0 @@
-I see users using this, i think they are unaware of the horrible tradeoffs it makes.
-
-We don't e.g. have codecs that have the term dictionary entirely on disk or other stupid things in lucene, so we shouldnt be stupid here either. 

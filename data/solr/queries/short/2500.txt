@@ -1,1 +1,0 @@
-TestSolrProperties sometimes fails with "no such core: core0"

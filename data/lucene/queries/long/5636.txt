@@ -1,5 +1,0 @@
-I thought I handled it in LUCENE-5246, but turns out I didn't handle it fully. I'll upload a patch which improves the test to expose the bug. I know where it is, but I'm not sure how to fix it without breaking index back-compat. Can we do that on experimental features?
-
-The problem is that if you update different fields in different gens, the FieldInfos files of older gens remain referenced (still!!). I open a new issue since LUCENE-5246 is already resolved and released, so don't want to mess up our JIRA...
-
-The severity of the bug is that unneeded files are still referenced in the index. Everything still works correctly, it's just that .fnm files are still there. But as I wrote, I'm still not sure how to solve it without requiring apps that use dv updates to reindex.

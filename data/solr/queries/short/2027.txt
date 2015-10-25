@@ -1,1 +1,0 @@
-SolrJ FacetField should never return null from getValues()

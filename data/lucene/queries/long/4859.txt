@@ -1,1 +1,0 @@
-IndexReader exposes stats like totalTermFreq(term) and docFreq(term). I'd like to add more stats from Terms, e.g. getDocCount/getSumDocFreq/getSumTotalTermFreq(field) for convenience. The implementation is very easy to do on CompositeReader, so I'll add these impls to BaseCompositeReader. I'll attach a patch shortly.

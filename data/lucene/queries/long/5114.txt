@@ -1,1 +1,0 @@
-Long ago terms dict had a cache, but it was problematic and we removed it, but the API still has a relic boolean useCache ... I think we should drop it from the API as well.

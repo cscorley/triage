@@ -1,1 +1,0 @@
-SolrCore should fail to init in SolrCloud mode if schema does not contain _version_ field

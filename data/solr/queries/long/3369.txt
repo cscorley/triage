@@ -1,1 +1,0 @@
-In a distributed environment, shards.tolerant=true allows for partial results to be returned when individual shards are down.  For group=true and facet=true queries, using this feature results in an error when shards are down.  This patch allows users to use the shard tolerance feature with facet and grouping queries. 

@@ -1,3 +1,0 @@
-https://builds.apache.org/view/G-L/view/Lucene/job/Lucene-trunk/1624/testReport/org.apache.lucene.search/TestNumericRangeQuery32/testEnum/
-
-ant test -Dtestcase=TestNumericRangeQuery32 -Dtestmethod=testEnum -Dtests.seed=-3603272894684698645:-1998239306864854687 -Dtests.multiplier=3 -Dtests.nightly=true

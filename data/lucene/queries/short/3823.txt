@@ -1,1 +1,0 @@
-Add a field-filtering FilterAtomicReader to 4.0 so ParallelReaders can be better tested (in LTC.maybeWrapReader)

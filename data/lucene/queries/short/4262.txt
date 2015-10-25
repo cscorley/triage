@@ -1,1 +1,0 @@
-add ivy sync=true, consolidate licensing, disallow conflicting dependencies

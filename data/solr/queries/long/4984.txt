@@ -1,1 +1,0 @@
-I believe this used to be used when JCL logging was the default backend.  But now with log4j being the backend, I don't think it is used. It should be removed to not clutter the example with unnecessary files.

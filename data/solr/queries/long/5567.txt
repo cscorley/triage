@@ -1,3 +1,0 @@
-The ZkController getHostAddress method will return a URL with duplicated url prefix if given an input string already including a url prefix.
-
-e.g. given the input "http://127.0.0.1", it will return "http://http://127.0.0.1"

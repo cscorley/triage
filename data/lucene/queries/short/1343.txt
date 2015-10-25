@@ -1,1 +1,0 @@
-A replacement for AsciiFoldingFilter that does a more thorough job of removing diacritical marks or non-spacing modifiers.

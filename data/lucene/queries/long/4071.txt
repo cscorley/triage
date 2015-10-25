@@ -1,3 +1,0 @@
-DWStallControl currently only checks if the net bytes used by all the DWPT and deletes exceeds the stall limit (2*MAX_RAM_BUFFER). This is generally a very good default but in certain situations we can exceed this limit even without an ongoing flush. Stalling is used to prevent IW overloading due to slow flushes etc. which should not happen too often in practice. With a smallish RAM Buffer and a bigger document we can easily get into the stage where we stall the DW without a chance to free up the memory.  
-
-I think we should make sure that a pending or running flush can free up enough memory to unstall.

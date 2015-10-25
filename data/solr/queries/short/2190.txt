@@ -1,1 +1,0 @@
-slashdot sample: xpath not match

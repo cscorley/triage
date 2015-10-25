@@ -1,1 +1,0 @@
-Just needs to be committed to 2.9 branch since hits is now removed.

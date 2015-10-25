@@ -1,1 +1,0 @@
-IndexWriter.addIndexes copies raw files but acquires no locks

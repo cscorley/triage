@@ -1,1 +1,0 @@
-Add option for tests to not randomize codec

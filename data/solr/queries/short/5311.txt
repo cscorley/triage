@@ -1,1 +1,0 @@
-Avoid registering replicas which are removed 

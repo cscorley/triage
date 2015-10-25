@@ -1,1 +1,0 @@
-The QueryElevationComponent does not fully support distributed search.  Add tests and make a fix for it.

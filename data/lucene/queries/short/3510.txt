@@ -1,1 +1,0 @@
-BooleanScorer should not limit number of prohibited clauses

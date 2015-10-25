@@ -1,1 +1,0 @@
-in some situations a query of (P1 OR PQ) returns no results, even though individually, both P1 or P2 by themselves will highlight correctly..

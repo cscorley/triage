@@ -1,1 +1,0 @@
-Jenkins trunk tests (nightly only) fail quite often with OOM in Automaton/FST tests

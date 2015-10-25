@@ -1,1 +1,0 @@
-SolrDispatchFilter no longer displays useful error message on statup when logging jars are missing

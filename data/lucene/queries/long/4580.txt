@@ -1,3 +1,0 @@
-DrillDown is a helper class which the user can use to convert a facet value that a user selected into a Query for performing drill-down or narrowing the results. The API has several static methods that create e.g. a Term or Query.
-
-Rather than creating a Query, it would make more sense to create a Filter I think. In most cases, the clicked facets should not affect the scoring of documents. Anyway, even if it turns out that it must return a Query (which I doubt), we should at least modify the impl to return a ConstantScoreQuery.

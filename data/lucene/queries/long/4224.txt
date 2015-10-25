@@ -1,3 +1,0 @@
-While looking at LUCENE-4214, i was trying to wrap my head around what this is doing... 
-
-I think the code specialization in the multivalued scorer doesn't buy us any additional speed? At least according to my benchmarks?

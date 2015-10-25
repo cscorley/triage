@@ -1,5 +1,0 @@
-I propose that ExtractingRequestHandler / SolrCell literals should take precedence over Tika-parsed metadata in all situations, including where multiValued="true". (Compare SOLR-1633?)
-
-My personal motivation is that I have several fields (e.g. "title", "date") where my own metadata is much superior to what Tika offers, and I want to throw those Tika values away. (I actually wouldn't mind throwing away all Tika-parsed values, but let's set that aside.) SOLR-1634 is one potential approach to this, but the fix here might be simpler.
-
-I'll attach a patch shortly.

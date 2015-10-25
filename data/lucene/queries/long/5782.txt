@@ -1,1 +1,0 @@
-As mentionned in LUCENE-5780, OrdinalMaps might have much better compression when the terms enums are supplied sorted by descending cardinality. When it is not the case, we could sort the enums and re-map segment indices on top of it.

@@ -1,1 +1,0 @@
-After LUCENE-1824 committed, Solr FragmentsBuilder can snip off at the "natural" boundary by nature. But to bring out the full feature, Solr should take care of arbitrary BoundaryScanner in solrconfig.xml.

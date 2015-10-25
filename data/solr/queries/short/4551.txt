@@ -1,1 +1,0 @@
-CachingDirectoryFactory needs to create CacheEntry's with the fullpath not path.

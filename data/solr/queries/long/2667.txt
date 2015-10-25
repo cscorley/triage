@@ -1,1 +1,0 @@
-In SOLR-2399, we added a new admin UI. The issue has gotten too long to follow, so this is a new issue to track remaining tasks.

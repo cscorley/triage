@@ -1,6 +1,0 @@
-Opening the Schema-Browser with the Default Configuration, switching the selection to type=int throws an error:
-
-Uncaught TypeError: Cannot call method 'esc' of undefined // schema-browser.js:893
-
-
-On the first Look, this was introduced by SOLR-3572 .. right? 

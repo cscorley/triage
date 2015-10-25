@@ -1,3 +1,0 @@
-Currently we are trying to refactor the suggest APIs in another issue...
-I think if we had lucene-level tests for these implementations in the module it
-would make things a lot easier.

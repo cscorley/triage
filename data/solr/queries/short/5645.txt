@@ -1,1 +1,0 @@
-A SolrCore reload via the CoreContainer will try and register in zk again with the new SolrCore.

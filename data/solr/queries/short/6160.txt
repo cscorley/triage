@@ -1,1 +1,0 @@
-Exception possible with group.facet, range faceting, with distributed search

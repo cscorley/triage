@@ -1,1 +1,0 @@
-TimeLimitingCollector's TimeExceededException contains useless relative docid

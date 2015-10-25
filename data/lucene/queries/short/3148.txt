@@ -1,1 +1,0 @@
-TestIndexWriterExceptions reproducible AOOBE in MockVariableIntBlockCodec

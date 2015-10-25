@@ -1,1 +1,0 @@
-make XMLWriter extend TextResponseWriter, deprecate FieldType.write(XMLWriter,...)

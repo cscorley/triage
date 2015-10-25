@@ -1,1 +1,0 @@
-Demo HTML parser doesn't work for international documents

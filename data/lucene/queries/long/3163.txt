@@ -1,3 +1,0 @@
-CHANGES.txt has no release date for 3.1.0 - although we've stopped putting dates on RCs' CHANGES.txt for the release-to-be, we should add dates to CHANGES.txt for past releases.
-
-Alternatively we could remove releases dates for past release completely.

@@ -1,5 +1,0 @@
-The documentation for SweetSpotSimilarity says that you can configure a global min/max and also a min/max per field, however at looking at the source and just trying to accomplish this it looks as though it's not possible.  Is that correct?
-
-I looked into using SchemaSimilarityFactory as a global Similarity and then using SweetSpotSimilarity on a fieldType, but was not able to configure the min and max values.  Is there a way to accomplish that without writing my own SweetSpotSimilarityFactory?
-
-Thanks.

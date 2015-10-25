@@ -1,5 +1,0 @@
-Recent work in LUCENE-3944 has changed how our generated pom.xml files are handled during release preparation, placing them in build/ instead.  However get-maven-poms still places the poms inside src/ so you can use them to drive a build.  What I think would be ideal is if we could unify the release handling of the poms and the normal building handling, so that the poms can sit outside of src and serve both purposes.  
-
-Some time ago I investigated how the ANT project handles its own Maven integration and it has its poms sitting in their own directory.  They then reference the actual src locations inside the poms.  This works for ANT but with a warning since some of their tests don't work due to how the Maven surefire plugin works, so they skip their tests.
-
-I have done some quick testing of my own and this process does seem to work for our poms and tests.  I now want to take this to a full scale POC and see if it works fully.

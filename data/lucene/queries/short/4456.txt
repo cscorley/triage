@@ -1,1 +1,0 @@
-IndexWriter makes unrefed files, and MockDir cannot detect it

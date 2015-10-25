@@ -1,1 +1,0 @@
-Change PayloadIterator to not use top-level reader API

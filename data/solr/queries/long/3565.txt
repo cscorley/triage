@@ -1,1 +1,0 @@
-We should remove the references to maxFieldLength and provide an example for LimitTokenCountFilterFactory. This latter allows length specifications on a per-field basis.

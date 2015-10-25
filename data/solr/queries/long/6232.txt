@@ -1,1 +1,0 @@
-If a core fails to init due to index corruption or something similar, it can't currently be removed with an UNLOAD command, you have to go do it manually.

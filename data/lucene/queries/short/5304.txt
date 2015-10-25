@@ -1,1 +1,0 @@
-SingletonSortedSetDocValues should allow for getting back the wrapped instance

@@ -1,1 +1,0 @@
-Rollback is not implemented quite right and can cause corner case fails in SolrCloud tests.

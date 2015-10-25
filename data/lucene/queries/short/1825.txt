@@ -1,1 +1,0 @@
-Incorrect usage of AttributeSource.addAttribute/getAttribute leads to failures when onlyUseNewAPI=true

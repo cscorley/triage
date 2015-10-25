@@ -1,5 +1,0 @@
-Currently REQUESTSTATUS Collection API call is blocked by any other call in the OCP work queue.
-Make it independent and non-blocked/non-blocking.
-
-This would be handled as a part of having the OCP multi-threaded but I'm opening this issue to explore other possible options of handling this.
-If the final fix happens via SOLR-5681, will resolve it when SOLR-5681 gets resolved.

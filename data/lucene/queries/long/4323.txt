@@ -1,5 +1,0 @@
-Our application is managing thousands of indexes ranging from a few KB to a few GB in size. To keep the number of files under control and at the same time avoid the overhead of compound file format for large segments, we would like to keep only small segments as CFS. The meaning of "small" here is in absolute byte size terms, not as a percentage of the overall index. It is ok and in fact desirable to have the entire index as CFS as long as it is below the threshold.
-
-The attached patch adds a new configuration option maxCFSSegmentSize which sets the absolute limit on the compound file segment size, in addition to the existing noCFSRatio, i.e. the lesser of the two will be used. The default is to allow any size (Long.MAX_VALUE) so that the default behavior is exactly as it was before.
-
-The patch is for the trunk as of Aug 23, 2012.

@@ -1,1 +1,0 @@
-Add hl.maxMultiValuedToExamine to limit the number of multiValued entries examined while highlighting

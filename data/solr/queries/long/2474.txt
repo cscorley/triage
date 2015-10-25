@@ -1,6 +1,0 @@
-When caching tokens, the helper TokenStreams in analysis.jsp and AnalysisRequestHandlerBase do not clear all attributes.
-The issue is tricky. The cached tokens do not contain all attributes in early stages, so copyTo() does not necessarily overwrite all attributes in "this". Calling clearAttributes ensures this.
-
-Was: LUCENE-2901 broke protected words by only setting and never clearing (that change should have been accompanied by offsetting code to clear the attribute somewhere).
-
-The problem here was, that this attribute was added later in anaylsis chain, so cached tokens don't include this. Sorry, that was my fault when rewriting analysis.jsp together with Robert 

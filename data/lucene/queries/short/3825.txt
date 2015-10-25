@@ -1,1 +1,0 @@
-Please push maven snapshots to repositories.apache.org again

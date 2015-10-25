@@ -1,1 +1,0 @@
-When building source distribution, changes-to-html uses wrong script and wrong CHANGES.txt

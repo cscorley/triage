@@ -1,1 +1,0 @@
-TestSolrEntityProcessorEndToEnd fails if you have a running Solr instance

@@ -1,1 +1,0 @@
-docvalues date compression

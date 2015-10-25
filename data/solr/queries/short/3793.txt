@@ -1,1 +1,0 @@
-duplicate (deleted) documents included in result set when using field faceting with fq

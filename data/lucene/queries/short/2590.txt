@@ -1,1 +1,0 @@
-Enable access to the freq information in a Query's sub-scorers

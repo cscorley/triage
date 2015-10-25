@@ -1,6 +1,0 @@
-Given that we now handle multiple cores via the solr.xml and the discussion around <indexDefaults> and <mainIndex> at http://www.lucidimagination.com/search/p:solr?q=mainIndex+vs.+indexDefaults
-
-We should deprecate old <indexDefaults> and <mainIndex> sections and only use a new <indexConfig> section.
-
-3.6: Deprecation warning if old section used
-4.0: If LuceneMatchVersion before LUCENE_40 then warn (so old configs will work), else fail fast

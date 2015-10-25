@@ -1,7 +1,0 @@
-The distrib update processor should do sanity checks on incoming updates - you never know what greedy routers might hang to some packets for while before letting them go.
-
-We can quickly and easily check a couple things.
-
-If the update is from a Leader we can check that we don't currently think we are the leader (using a local isLeader state).
-
-If the update is from a Leader we can check that that leader matches what is in our current ClusterState.

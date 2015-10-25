@@ -1,7 +1,0 @@
-POST to /schema/dynamicfields will add one or more new dynamic fields to the schema.
-
-PUT to /schema/dynamicfields/name will add the name'd dynamic field to the schema.
-
-Like the copyField support added to the /schema/fields REST API by SOLR-5010, it will be possible to specify copyField destinations at the point of dynamic field creation.
-
-The implementation will follow the /schema/fields REST API implementation fairly closely, with the additional restriction that the field name must follow the dynamic field name restrictions, i.e.: 1) exactly one asterisk must be present in the name; and 2) the asterisk must be the first and/or the last character of the name (first and last only if the asterisk is the entire name).

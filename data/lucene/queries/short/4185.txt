@@ -1,1 +1,0 @@
-CharFilters being added twice in Solr

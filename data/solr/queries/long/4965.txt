@@ -1,1 +1,0 @@
-We could use LUCENE-5079 to avoid calling commit if there are no changes (and the act of setting commit user data causes changes, so IW.commit can't short-circuit for us as it used to do).

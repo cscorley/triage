@@ -1,1 +1,0 @@
-Javadoc update for StreamingUpdateSolrServer stating that CHSS is a better choice when exception handling is required.

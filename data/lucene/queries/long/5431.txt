@@ -1,5 +1,0 @@
-FSLockFactory doesn't override toString, which causes Dir.toString() to print the class.name@instance. I think it would be better if it printed e.g. the lockDir.
-
-I added it but TestCrashCausesCorruptIndex failed because it declares a Directory which doesn't override getLockID(), which returns toString(). I changed that Directory to extend FilterDirectory, and fixed FilterDirectory to override getLockID() to call in.getLockID().
-
-Will attach a patch shortly.

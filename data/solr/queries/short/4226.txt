@@ -1,1 +1,0 @@
-Extract fl parsing code out of ReturnFields constructor

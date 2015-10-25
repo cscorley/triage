@@ -1,1 +1,0 @@
-You are pretty much in the dark currently when transaction logs are replaying. We should periodically log progress.

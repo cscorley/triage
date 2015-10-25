@@ -1,3 +1,0 @@
-As brought up by Trym R. Møller on the mailing list, we are responding to watcher events about connection/disconnection as if they were notifications about node changes.
-
-http://www.lucidimagination.com/search/document/e13ef390b88eeee2

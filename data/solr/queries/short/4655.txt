@@ -1,1 +1,0 @@
-The Overseer should assign node names by default.

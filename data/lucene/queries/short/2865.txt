@@ -1,1 +1,0 @@
-Pass a context struct to Weight#scorer instead of naked booleans

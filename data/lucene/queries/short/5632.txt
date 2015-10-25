@@ -1,1 +1,0 @@
-transition Version constants from LUCENE_MN to LUCENE_M_N

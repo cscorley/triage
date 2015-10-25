@@ -1,1 +1,0 @@
-The JMX stats of the core do not expose the shard name that it is hosting, which could be of use.

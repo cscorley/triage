@@ -1,1 +1,0 @@
-Log connection parameters used for UpdateShardHandler

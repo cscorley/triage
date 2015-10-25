@@ -1,1 +1,0 @@
-Scary logging from ZkControllerTest suggests test setup isn't doing what it's suppose to

@@ -1,1 +1,0 @@
-impossible to CheckIndex if you use norms other than byte[]

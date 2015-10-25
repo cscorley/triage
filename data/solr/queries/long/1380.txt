@@ -1,1 +1,0 @@
-The StatsComponent does not work on multivalued fields.

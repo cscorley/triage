@@ -1,1 +1,0 @@
-Tuning these parameters can be very useful if you want to tweak how sentences are ranked (e.g. you have a strangeish corpus like wikipedia).

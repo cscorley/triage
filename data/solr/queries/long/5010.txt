@@ -1,1 +1,0 @@
-Per SOLR-4898, adding copy field support.  Should be simply a new parameter to the PUT/POST with the name of the target to copy to.

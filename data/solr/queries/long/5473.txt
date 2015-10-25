@@ -1,3 +1,0 @@
-As defined in the parent issue, store the states of each collection under /collections/collectionname/state.json node and watches state changes selectively.
-
-https://reviews.apache.org/r/24220/

@@ -1,1 +1,0 @@
-IndexUpgrader (4.4.0) fails when -verbose is not set, or when any value of -dir-impl is specified

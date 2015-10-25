@@ -1,1 +1,0 @@
-An old transcription error from Lucene's standard stopword list to stopwords.txt caused the "a" to be dropped.

@@ -1,1 +1,0 @@
-Currently ClassifierTestBase only allows to test classifiers that implement Classifier<BytesRef> while it'd be good to ease test of other types of classifiers.

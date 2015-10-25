@@ -1,2 +1,0 @@
-Please see: http://lucene.472066.n3.nabble.com/trunk-is-unable-to-replicate-between-nodes-Unable-to-download-completely-td4017049.html and 
-http://lucene.472066.n3.nabble.com/Possible-memory-leak-in-recovery-td4017833.html

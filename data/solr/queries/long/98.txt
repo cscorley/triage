@@ -1,3 +1,0 @@
-I've had this python client lying around for almost a year,  used for various little testing scenarios.
-It really doesn't do all that much except for connection handling (persistent/non-persistent) and some protocol handling.
-Agile languages like Python and Ruby need less in any case.

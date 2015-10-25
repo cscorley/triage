@@ -1,1 +1,0 @@
-queries with zero boosts don't work

@@ -1,1 +1,0 @@
-AnalyzingInfixSuggester should expose commit()

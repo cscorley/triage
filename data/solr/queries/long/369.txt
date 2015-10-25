@@ -1,1 +1,0 @@
-EmbeddedSolrServer don't release resources associated on request. Executing req.close() after method execute(), EmbeddedSolrServer can close IndexSearch in commit() action.

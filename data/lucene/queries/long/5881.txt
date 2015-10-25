@@ -1,3 +1,0 @@
-On dev@lao we discussed about integrating a test beaster directly into google.
-
-This extra target in common-build.xml does the same like Mike's Python script using Groovy.

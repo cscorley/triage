@@ -1,1 +1,0 @@
-"commitOnLeader" on the recovery process of SolrCloud could use openSearcher=false

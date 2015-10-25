@@ -1,1 +1,0 @@
-When working with small arrays, the pending values might require substantial space. So we could allow for packing the pending values in order to save space, the drawback being that this operation will make the buffer read-only.

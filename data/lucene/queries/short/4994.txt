@@ -1,1 +1,0 @@
-PatternKeywordMarkerFilter is final and has protected ctor and cannot be instantiated by non-Lucene code

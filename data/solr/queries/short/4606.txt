@@ -1,1 +1,0 @@
-Let test-framework provide random seed to HttpShardHandlerFactory

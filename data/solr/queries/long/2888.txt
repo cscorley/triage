@@ -1,7 +1,0 @@
-This issue incorporates several problems:
-
-	utf16 was used previously to store and lookup terms, now it is utf8
-	the construction would OOM with large number of terms because of the need to sort entries. Sorter APIs have been added and an implementation of external (on-disk) sorting is also added (Robert Muir).
-	the FSTLookup class has been split and refactored into FSTCompletion and FSTCompletionBuilder, FSTCompletionLookup remains a facade connecting all the pieces and implements Lookup interface. For large inputs use FSTCompletionBuilder directly (and pre-bucket your input weights).
-	Automatic bucketing in FSTCompletionLookup has been changed from linear min/max discretization into dividing into  ranges after all values have been sorted. This empirically handles all potential distributions quite well. If somebody needs something very specific, use FSTCompletionBuilder directly (providing buckets), construct the automaton and then load it with FSTCompletionLookup.
-

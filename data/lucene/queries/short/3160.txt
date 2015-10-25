@@ -1,1 +1,0 @@
-lucene source build doesn't work correctly by itself from the src dist

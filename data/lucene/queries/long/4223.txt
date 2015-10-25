@@ -1,9 +1,0 @@
-Spin off from LUCENE-4173.  One of the most important parts of using the spatial module is deciding which Strategy fits your needs.  We should improve the package.html documentation so that it compares the Strategys, focusing on:
-
-
-	Underlying index format (lon/lat numeric fields vs grid terms vs ...)
-	Multi-value support
-	Indexable Shapes
-	Queryable Shapes
-	Query operations
-

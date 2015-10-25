@@ -1,1 +1,0 @@
-When the rsyncd-start and snappuller scripts get executed the scripts check if they are enabled or not. If they are disabled they exit with 1. The scripts exit with 1 on error as well. So you cannot decide in upstream scripts if really an error occurred or if they are only disabled.

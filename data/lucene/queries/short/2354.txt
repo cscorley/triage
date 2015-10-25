@@ -1,1 +1,0 @@
-Convert NumericUtils and NumericTokenStream to use BytesRef instead of Strings/char[]

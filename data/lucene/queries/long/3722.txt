@@ -1,3 +1,0 @@
-As noted by Yonik and Andrzej on SOLR-1632, this would be useful for distributed scoring.
-
-we can also add a sugar method add() to both of these to make it easier to sum.

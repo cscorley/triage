@@ -1,1 +1,0 @@
-Remove 3.x index support from trunk

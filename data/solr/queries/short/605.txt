@@ -1,1 +1,0 @@
-Programatically register SolrEventListeners

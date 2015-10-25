@@ -1,7 +1,0 @@
-When running "ant test" from the command line in 3.x, if you have a Solr server running then TestSolrentityProcessorEndToEnd fails since it uses the default port (stack trace with "address already in use"). This should use some other port, especially as 3.x "ant test" is taking 50+ minutes and I often open up a server to look at something else.
-
-In 4.0, some of the cloud tests also use 8983 as a port. Should these be changed too?
-
-And just to make my life especially interesting, at least one test puts the string "8983" in a document, which doesn't have to be changed <G>...
-
-Of course one can start your local server on a different port, but this seems trappy.

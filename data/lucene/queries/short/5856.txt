@@ -1,1 +1,0 @@
-remove useless & 0x3f from *BitSet.get and company

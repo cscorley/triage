@@ -1,1 +1,0 @@
-Snowball package contains BSD licensed code with ASL header

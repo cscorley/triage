@@ -1,1 +1,0 @@
-FilteredQuery should have getFilter()

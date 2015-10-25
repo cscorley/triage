@@ -1,3 +1,0 @@
-I'm working on code that needs a hash based int Set.  It will need to iterate over the values, but SentinalIntSet doesn't have this utility feature.  It should be pretty easy to add.
-
-FYI this is an out-growth of a question I posed to the dev list, examining 3 different int hash sets out there: SentinalIntSet, IntHashSet (in Lucene facet module) and the 3rd party IntOpenHashSet (HPPC) – see http://lucene.472066.n3.nabble.com/IntHashSet-SentinelIntSet-SortedIntDocSet-td4037516.html  I decided to go for SentinalIntSet because it's already in Lucene-core, adding the method I need should be easy, and it has a nice lean implementation.

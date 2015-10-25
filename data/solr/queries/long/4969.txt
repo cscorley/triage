@@ -1,1 +1,0 @@
-This test is currently marked as a @badapple - I run it on my local jenkins though, and it's behaved much better since some changes that were made today. I'd like to play around with removing @badapple from this test.

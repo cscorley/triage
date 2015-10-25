@@ -1,3 +1,0 @@
-We have more and more sources that are generated programmatically (query parsers, fuzzy levN tables from Moman, packed ints specialized decoders, etc.), and it's dangerous because developers may directly edit the generated sources and forget to edit the meta-source.  It's happened to me several times ... most recently just after landing the BlockPostingsFormat branch.
-
-I think we should re-gen all of these in our builds and fail the build if this creates a difference.  I know some generators (eg JavaCC) embed timestamps and so always create mods ... we can leave them out of this for starters (or maybe post-process the sources to remove the timestamps) ...

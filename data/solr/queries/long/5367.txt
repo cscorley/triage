@@ -1,1 +1,0 @@
-This is exposed by tests with the changes in SOLR-5223

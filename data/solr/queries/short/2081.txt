@@ -1,1 +1,0 @@
-BaseResponseWriter isStreamingDocs causes SingleResponseWriter.end to be called 2x

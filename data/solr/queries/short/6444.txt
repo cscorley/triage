@@ -1,1 +1,0 @@
-HttpPartitionTest uses real-time get to verify docs exist in replicas which gets routed to an active replica so is not actually verifying the replica recovered correctly

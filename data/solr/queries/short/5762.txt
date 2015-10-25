@@ -1,1 +1,0 @@
-SOLR-5658 broke backward compatibility of Javabin format

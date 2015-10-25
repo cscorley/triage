@@ -1,1 +1,0 @@
-Switch to BlockPostingsFormat for Lucene 4.1

@@ -1,1 +1,0 @@
-Sep codec writes insane amounts of skip data

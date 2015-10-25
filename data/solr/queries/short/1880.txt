@@ -1,1 +1,0 @@
-Performance: Distributed Search should skip GET_FIELDS stage if EXECUTE_QUERY stage gets all fields

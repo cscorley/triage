@@ -1,3 +1,0 @@
-CoreContainer.shutdown has a race condition that can lead to a closed (or closing) core being handed out to an incoming request.  This can further lead to SolrCore.close() logic being executed again when the request is finished.
-
-This bug was introduced in SOLR-4196 r1451797

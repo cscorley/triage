@@ -1,1 +1,0 @@
-IndexReader.setNorms is no op if one of the field instances omits norms

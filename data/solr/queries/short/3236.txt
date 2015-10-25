@@ -1,1 +1,0 @@
-StreamingUpdateSolrServer javadoc incomplete

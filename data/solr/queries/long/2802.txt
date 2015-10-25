@@ -1,1 +1,0 @@
-Frequently users ask about questions about things where the answer is "you could do it with an UpdateProcessor" but the number of our of hte box UpdateProcessors is generally lacking and there aren't even very good base classes for the common case of manipulating field values when adding documents

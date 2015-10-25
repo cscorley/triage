@@ -1,3 +1,0 @@
-In /SOLR-5522  the handler configuration code for the admin/fileedit request handler which would o allow modification of Solr Config files was removed from the example solrconfig.xml, but the comments were left in the example file.   New users may be confused by a warning about a possible security vulnerability which actually applies to a handler configuration that was removed from the example.
-
-Patch coming as soon as I get an issue number

@@ -1,1 +1,0 @@
-when opening the merged SegmentReader, IW attempts to open store files that were deleted

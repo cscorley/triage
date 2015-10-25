@@ -1,1 +1,0 @@
-For extremely wide shapes (> 180 degrees) distErrPct is not used correctly

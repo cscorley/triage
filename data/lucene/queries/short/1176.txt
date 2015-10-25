@@ -1,1 +1,0 @@
-TermVectors corruption case when autoCommit=false

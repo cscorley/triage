@@ -1,8 +1,0 @@
-Hi,
-
-We should add a notification that if we would use master/slave replication we should comment the SolrCloud replicationHandler in the solrConfig.xml file.
-
-<requestHandler name="/replication" class="solr.ReplicationHandler" startup="lazy" /> 
-
-
-else it will overload the replication handler.

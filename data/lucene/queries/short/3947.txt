@@ -1,1 +1,0 @@
-fix rat-sources task to work with tools/ directories

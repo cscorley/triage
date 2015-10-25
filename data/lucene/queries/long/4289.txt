@@ -1,5 +1,0 @@
-
-	highlighter uses numDocs instead of maxDoc
-	fastvectorhighlighter uses numDocs - numDeletedDocs instead of maxDoc (will go negative if more than half of docs are marked deleted)
-	fastvectorhighlighter calls docFreq and computes IDF per-position when it won't change (inefficient)
-

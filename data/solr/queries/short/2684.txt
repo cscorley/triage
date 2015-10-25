@@ -1,1 +1,0 @@
-ConcurrentModificationException from BinaryResponseWriter

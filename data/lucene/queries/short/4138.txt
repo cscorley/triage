@@ -1,1 +1,0 @@
-Update morfologik (polish stemming) to 1.5.3

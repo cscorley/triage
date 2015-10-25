@@ -1,1 +1,0 @@
-expose sub-Terms from MultiTerms

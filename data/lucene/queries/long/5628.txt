@@ -1,1 +1,0 @@
-Today it consumes one Java stack frame per transition, which when used by AnalyzingSuggester is per character in each token.  This can lead to stack overflows if you have a long suggestion.

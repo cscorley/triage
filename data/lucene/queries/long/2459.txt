@@ -1,1 +1,0 @@
-IndexWriter.addIndexes(IndexReader...) internally uses SegmentMerger to add data from input index readers. However, SegmentMerger uses the new post-flex API to do this, which bypasses the pre-flex TermEnum/TermPositions API that FilterIndexReader implements. As a result, filtering is not applied.

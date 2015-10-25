@@ -1,4 +1,0 @@
-subj.
-Also, to each remaining deprecation add release version when it first appeared.
-
-Patch incoming.

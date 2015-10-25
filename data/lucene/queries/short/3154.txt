@@ -1,1 +1,0 @@
-remove version references from the versioned website

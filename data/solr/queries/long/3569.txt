@@ -1,2 +1,0 @@
-
-If a query matches 0 documents, the "debug" information for a distributed query will be empty - ie: no information on timing, or (most importantly for many people) query parsing.

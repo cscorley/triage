@@ -1,1 +1,0 @@
-LuceneTaxonomyReader .decRef() may close the inner IR, renderring the LTR in a limbo.

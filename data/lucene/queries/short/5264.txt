@@ -1,1 +1,0 @@
-CommonTermsQuery ignores minMustMatch if only high freq terms are present.

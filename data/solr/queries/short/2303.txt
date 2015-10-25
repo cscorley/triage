@@ -1,1 +1,0 @@
-remove unnecessary (and problematic) log4j jars in contribs

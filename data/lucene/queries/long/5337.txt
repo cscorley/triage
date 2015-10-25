@@ -1,2 +1,0 @@
-It would be nice to add payload support to FileDictionary, so user can pass in associated payload with suggestion entries. 
-Currently the FileDictionary has a hard-coded field-delimiter (TAB), it would be nice to let the users configure the field delimiter as well.

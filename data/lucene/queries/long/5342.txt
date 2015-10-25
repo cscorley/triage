@@ -1,3 +1,0 @@
-LUCENE-5188 changed the way data is compressed when single documents exceed the chunk size, meaning that it is not legal anymore to bulk merge if writer and reader have different chunk sizes.
-
-This bug only happens when mixing two instances of CompressingStoredFieldsFormat that have the same compression mode but different chunk sizes, and when there are documents that exceed any of the chunk sizes. So the default codec is not impacted since it has always had the same chunk size (16KB).

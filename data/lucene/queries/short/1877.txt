@@ -1,1 +1,0 @@
-Use NativeFSLockFactory as default for new API (direct ctors & FSDir.open)

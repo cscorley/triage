@@ -1,1 +1,0 @@
-When a suite fails with zombie threads failure marker and count is not propagated properly

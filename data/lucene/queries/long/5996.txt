@@ -1,1 +1,0 @@
-I hit a non-reproducible failure that was due to the use of Collections.shuffle(List). I think we should forbid it and advise to use Collections.shuffle(List, Random) instead to make test failures reproducible?

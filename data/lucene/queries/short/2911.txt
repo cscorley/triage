@@ -1,1 +1,0 @@
-synchronize grammar/token types across StandardTokenizer, UAX29EmailURLTokenizer, ICUTokenizer, add CJK types.

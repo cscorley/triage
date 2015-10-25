@@ -1,1 +1,0 @@
-Rename contrib/queryparser project to queryparser-contrib

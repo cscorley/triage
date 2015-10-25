@@ -1,1 +1,0 @@
-LookaheadTokenFilter consumes an extra token in nextToken

@@ -1,1 +1,0 @@
-Temporary folder and file management (and cleanup facilities)

@@ -1,5 +1,0 @@
-The ref guide documents that...
-
-You can also create new managed resource using PUT/POST to the appropriate URL – before ever configuring anything that uses these resources.
-
-...however attempting to do this results in the creation of "_rest_managed.json" file that is not in the format expected by solr, and prevents solr from starting up.

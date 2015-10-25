@@ -1,3 +1,0 @@
-A key feature when using SolrCloud is the solr.hdfs.home param for the HdfsDirectoryFactory - you should be able to set this via sys param out of the box.
-
-The same goes for the hadoop config folder to use.

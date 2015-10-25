@@ -1,7 +1,0 @@
-What is needed is effectively saying: "repeat this test N times, but stop once you hit a failure".
-
-Previously it was "tests.iters.min=X" which is (still) kind of confusing to me because I don't understand how "X" is related to the original question.
-
-I propose to implement a boolean "tests.fastfail" which would ignore any tests running on the same JVM after the first failure has been hit.
-
-Those with fond memories of "tests.iters.min" speak up, please.

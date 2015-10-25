@@ -1,9 +1,0 @@
-It would be nice to add fuzzy query support to the SimpleQueryParser so that:
-
-foo~2
-
-generates a FuzzyQuery with an max edit distance of 2 and:
-
-"foo bar"~2
-
-generates a PhraseQuery with a slop of 2.

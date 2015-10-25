@@ -1,1 +1,0 @@
-AnalyzingSuggester needs reasonable limits on max suggestion length

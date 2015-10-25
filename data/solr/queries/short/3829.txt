@@ -1,1 +1,0 @@
-Admin UI Logging events broken if schema.xml defines a catch-all dynamicField with type ignored

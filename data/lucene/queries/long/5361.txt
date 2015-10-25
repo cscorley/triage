@@ -1,1 +1,0 @@
-The FVH's FieldQuery throws away some boosts when flattening queries, including DisjunctionMaxQuery and BooleanQuery queries.   Fragments generated against queries containing boosted boolean queries don't end up sorted correctly.

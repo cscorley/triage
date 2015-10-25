@@ -1,1 +1,0 @@
-Move Solr to new NumericField stored field impl of LUCENE-3065

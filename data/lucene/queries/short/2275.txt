@@ -1,1 +1,0 @@
-DocumentsWriter.applyDeletes should not create TermDocs or IndexSearcher if not needed

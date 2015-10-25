@@ -1,1 +1,0 @@
-Instead the total length should be computed by summing up the lengths of all documents in the chunk.

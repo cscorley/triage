@@ -1,3 +1,0 @@
-We are using a copy of the JDOM license BSD-like license.
-
-NetCDF is an MIT-like license, and has it's own specific version.

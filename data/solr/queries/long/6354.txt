@@ -1,9 +1,0 @@
-The majority of the logic in StatsValuesFactory for dealing with stats over fields just uses the ValueSource API.  There's very little reason we can't generalize this to support computing aggregate stats over any arbitrary function (or the scores from an arbitrary query).
-
-Example...
-
-stats.field={!func key=mean_rating mean=true}prod(user_rating,pow(editor_rating,2))
-
-
-
-...would mean that we can compute a conceptual "rating" for each doc by multiplying the user_rating field by the square of the editor_rating field, and then we'd compute the mean of that "rating" across all docs in the set and return it as "mean_rating"

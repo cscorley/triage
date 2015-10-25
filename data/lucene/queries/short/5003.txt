@@ -1,1 +1,0 @@
-ECJ javadoc linting does not work with recent Java 8

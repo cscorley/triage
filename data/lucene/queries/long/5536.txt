@@ -1,5 +1,0 @@
-Stumbled upon this by accident when I reviewed the code. The previous associations impl never rolled-up. The assumption is that association values are given to exact categories and have no hierarchical meaning. For instance if a document is associated with two categories: Category/CS/Algo and Category/CS/DataStructure with weights 0.95 and 0.43 respectively, it is not associated with Category/CS with weight 1.38! 
-
-If the app wants to association values to apply to parents in the hierarchy as well, it needs to explicitly specify that (as in passing the hierarchy categories with their own association value).
-
-I will fix the bug and also make sure the app cannot trip it by accidentally specifying hierarchical on these categories, or that if it does (cause e.g. it indexes the categories for both counting and assoc values) then we don't apply the association to all the categories in the hierarchy.

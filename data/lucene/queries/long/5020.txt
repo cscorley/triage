@@ -1,3 +1,0 @@
-DrillSidewaysResult has a package-private ctor which prevents initializing it by an app. I found that it's sometimes useful for e.g. doing some post-processing on the returned TopDocs or List<FacetResult>. Since you cannot return two values from a method, it will be convenient if  method could return a new 'processed' DSR.
-
-I would also like to make the hits member final.

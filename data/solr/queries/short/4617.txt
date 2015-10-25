@@ -1,1 +1,0 @@
-SolrCore#reload needs to pass the deletion policy to the next SolrCore through it's constructor rather than setting a field after.

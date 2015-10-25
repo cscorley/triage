@@ -1,1 +1,0 @@
-spellcheck.extendedResults returns an invalid JSON response when count > 1

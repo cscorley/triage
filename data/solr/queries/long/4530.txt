@@ -1,3 +1,0 @@
-When using TikaEntityProcessor in DIH, the default HTML Mapper strips out most of the HTML. It may make sense when the expectation is just to store the extracted content as a text blob, but DIH allows more fine-tuned content extraction (e.g. with nested XPathEntityProcessor).
-
-Recent Tika versions allow to set an alternative HTML Mapper implementation that passes all the HTML in. It would be useful to be able to set that implementation from DIH configuration.

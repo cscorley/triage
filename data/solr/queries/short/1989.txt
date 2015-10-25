@@ -1,1 +1,0 @@
-Re-Compilation of source needs to be possible in release artifacts

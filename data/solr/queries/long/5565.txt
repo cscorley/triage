@@ -1,1 +1,0 @@
-Feedback has shown that 30 seconds is a more friendly default.

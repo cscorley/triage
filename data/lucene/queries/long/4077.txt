@@ -1,5 +1,0 @@
-The constructor of ToParentBlockJoinCollector allows to turn on the tracking of parent scores and the maximum parent score, however there is no way to access those scores because:
-
-	maxScore is a private field, and there is no getter
-	TopGroups / GroupDocs does not provide access to the scores for the parent documents, only the children
-

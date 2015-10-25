@@ -1,1 +1,0 @@
-Ant clean does not remove maven artifacts

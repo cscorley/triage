@@ -1,1 +1,0 @@
-hl.maxAlternateFieldLength should apply to original field when fallback field does not exist

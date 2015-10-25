@@ -1,1 +1,0 @@
-moreLikeThis searchcomponent currently has no way to debug or see information on the process.  This means that if moreLikeThis suggests another document there is no way to actually view why it picked that to hone the searching.  Adding an explain would be extremely useful in determining the reasons why solr is recommending the items.

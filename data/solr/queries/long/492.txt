@@ -1,1 +1,0 @@
-The Solr::Request::Standard does not process the facet.offset parameter. The to_hash method needs to be modified. 

@@ -1,1 +1,0 @@
-We should share an http connection manager across most non search httpclients and ensure all http connection managers get shutdown.

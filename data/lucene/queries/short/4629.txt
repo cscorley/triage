@@ -1,1 +1,0 @@
-IndexWriter fails to delete documents if Iterator<IndexDocument> throws an exception

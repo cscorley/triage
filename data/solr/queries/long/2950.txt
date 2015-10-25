@@ -1,1 +1,0 @@
-The QueryElevationComponent needlessly instantiates a FieldCache and does look ups in it for every document.  If we flipped things around a bit and got Lucene internal doc ids on inform() we could then simply do a much smaller and faster lookup during the sort.

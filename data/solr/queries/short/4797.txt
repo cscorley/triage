@@ -1,1 +1,0 @@
-Sub shards have wrong hash range in cluster state except when using PlainIdRouter

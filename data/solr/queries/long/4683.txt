@@ -1,1 +1,0 @@
-This highlighter should accept the hl.bs.type/language/country/ for configuration

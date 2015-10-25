@@ -1,1 +1,0 @@
-Remove Int/FloatArrayAllocator from facet module?

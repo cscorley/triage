@@ -1,1 +1,0 @@
-There is still an issue after the SOLR-3826 patch was applied for 4.0 https://issues.apache.org/jira/browse/SOLR-3826 in September 2012.  When TestHarness is called from SolrTestCase4J the only available constructors ignore coreName, set coreName = null, and initialize the default 'collection1.'

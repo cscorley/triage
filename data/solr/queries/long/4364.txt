@@ -1,3 +1,0 @@
-While fixing SOLR-4225, Hoss pointed out, that a apostrophe is not the typical character for number formatting in english speaking countries - we decided to go with an generic whitespace as separator in the first place.
-
-this issue tries to "fix" this, my first idea was using the browser-language to decide how to format numbers - based on the fact, that if you're using a english setup, you're able to recognize english number formatting, the same goes for german and other languages 

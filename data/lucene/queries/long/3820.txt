@@ -1,1 +1,0 @@
-Reimplementation of PatternReplaceCharFilter to pass randomized tests (used to throw exceptions previously). Simplified code, dropped boundary characters, full input buffered for pattern matching.

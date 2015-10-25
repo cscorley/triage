@@ -1,1 +1,0 @@
-QueryNodeProcessorImpl should always return the root of the tree after processing, so it needs to make the parent is set to null before returning. Otherwise, the previous parent is leaked and never removed.

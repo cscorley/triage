@@ -1,1 +1,0 @@
-Solr Admin Query form is missing the default search field ("df") request parameter

@@ -1,1 +1,0 @@
-Improve BBox AreaSimilarity algorithm to consider lines and points

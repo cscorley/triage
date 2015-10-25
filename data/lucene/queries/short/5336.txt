@@ -1,1 +1,0 @@
-Add a simple QueryParser to parse human-entered queries.

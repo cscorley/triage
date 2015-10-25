@@ -1,1 +1,0 @@
-Add Generics to ResourceLoader.newInstance

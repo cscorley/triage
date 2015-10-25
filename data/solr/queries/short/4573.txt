@@ -1,1 +1,0 @@
-oejh.HttpGenerator:Ignoring extra content when accessing Solr HTTP Admin Console in Solr Cloud example

@@ -1,1 +1,0 @@
-IndexReader and SegmentCoreReaders blindly increments it's refcount which could already be counted down to 0 which might allow an IndexReader  to "rise from the dead" and use an already closed SCR instance. Even if that is caught we should try best effort to raise ACE asap.

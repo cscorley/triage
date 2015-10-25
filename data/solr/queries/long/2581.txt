@@ -1,1 +1,0 @@
-the UIMAToSolrMapper create a mock Type with reflection while the Type should be retrieved using the JCas.getTypeSystem().getType() method. This must be changed to allow also the deploy of annotators whose typeSystem classes have not explicitly generated (with JCasGen).

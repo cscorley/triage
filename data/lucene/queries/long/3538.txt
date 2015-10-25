@@ -1,3 +1,0 @@
-Now that oracle has fixed java7 bugs, I imagine some users will want to use it.
-
-Currently if you compile lucene's code with java7 you get a ton of warnings... lets clean this up

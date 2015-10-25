@@ -1,1 +1,0 @@
-The createshard collection API creates maxShardsPerNode number of replicas if replicationFactor is not specified

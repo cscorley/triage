@@ -1,1 +1,0 @@
-TermInfosReader in trunk already optimizes for this case... just need to do the same on flex.

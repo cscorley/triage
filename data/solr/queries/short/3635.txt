@@ -1,1 +1,0 @@
-UI should display "core init failure" info

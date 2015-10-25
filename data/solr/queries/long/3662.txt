@@ -1,1 +1,0 @@
-Reloading a core can cause the new core to have an older view of the index than the old core.

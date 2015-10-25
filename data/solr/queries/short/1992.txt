@@ -1,1 +1,0 @@
-Remove abortOnConfigurationError from example solrconfig.xml as it no longer has any affect

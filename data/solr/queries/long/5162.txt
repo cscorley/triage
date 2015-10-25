@@ -1,1 +1,0 @@
-As noted by ~elyograg on IRC, implicit property substitution doesn't work any more in 4.5.

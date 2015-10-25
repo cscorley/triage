@@ -1,1 +1,0 @@
-add highlighter support to  SurroundQParserPlugin

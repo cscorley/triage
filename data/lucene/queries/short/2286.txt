@@ -1,1 +1,0 @@
-enable DefaultSimilarity.setDiscountOverlaps by default

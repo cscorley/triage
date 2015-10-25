@@ -1,1 +1,0 @@
-DistanceUtils.parsePoint doesn't handle dimensions > 2 properly

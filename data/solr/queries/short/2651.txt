@@ -1,1 +1,0 @@
-The new SolrCore#reload method does not create a ZkSolrResourceLoader in ZooKeeper mode

@@ -1,1 +1,0 @@
-Refactoring MultiDocValues.OrdinalMap to clarify API and internal structure.

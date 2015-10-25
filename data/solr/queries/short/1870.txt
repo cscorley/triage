@@ -1,1 +1,0 @@
-Binary Update Request (javabin) fails when the field type of a multivalued SolrInputDocument field is a Set (or any type that is identified as an instance of iterable) 

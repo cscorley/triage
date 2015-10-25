@@ -1,1 +1,0 @@
-Add the ability to set shard and collection in web gui when adding a shard

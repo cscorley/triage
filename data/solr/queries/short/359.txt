@@ -1,1 +1,0 @@
-LukeResponse.FieldInfo should expose the selected flags info and the indexInfo

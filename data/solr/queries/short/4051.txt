@@ -1,1 +1,0 @@
-DIH Delta updates do not work for all locales

@@ -1,1 +1,0 @@
-The lucene jars on branch-1.4 should be upgraded to 2.9.2 in anticipation of a Solr 1.4.1 release.

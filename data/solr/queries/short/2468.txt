@@ -1,1 +1,0 @@
-TestFunctionQuery fails always on windows

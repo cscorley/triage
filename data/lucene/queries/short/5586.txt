@@ -1,1 +1,0 @@
-BufferedChecksumIndexInput is not cloneable

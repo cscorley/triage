@@ -1,1 +1,0 @@
-The 'clusterstatus' API added in SOLR-5466 does not return the live nodes in the cluster. IMO, we should add that to the output as well.

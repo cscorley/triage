@@ -1,1 +1,0 @@
-Since the readers behave this way it would be nice and handy if also this line writer would.

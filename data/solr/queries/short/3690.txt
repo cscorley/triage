@@ -1,1 +1,0 @@
-binary solr package isn't including lucene test-framework jar

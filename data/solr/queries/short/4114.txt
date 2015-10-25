@@ -1,1 +1,0 @@
-Collection API: Allow multiple shards from one collection on the same Solr server

@@ -1,3 +1,0 @@
-The FunctionValues class contains an exist(int doc) method with a default implementation that returns true - field based DocValues override this method as appropriate, but most of the "function" based subclasses in the code (typically anonymous subclasses of "FloatDocValues") don't override this method when wrapping other ValueSources.
-
-So for example: the FunctionValues returned by ProductFloatFunction.getValues() will say that a value exists for any doc, even if that ProductFloatFunction wraps two FloatFieldSources that don't exist for any docs

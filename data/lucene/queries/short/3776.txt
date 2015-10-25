@@ -1,1 +1,0 @@
-NRTManager shouldn't expose its private SearcherManager

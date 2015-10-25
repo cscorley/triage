@@ -1,1 +1,0 @@
-ToParentBlockJoinQuery don't accumulate the child doc ids and scores if ToParentBlockJoinCollector is not used

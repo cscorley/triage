@@ -1,1 +1,0 @@
-newSearcher(String name, boolean readOnly) is broken

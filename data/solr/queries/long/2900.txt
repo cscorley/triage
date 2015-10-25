@@ -1,6 +1,0 @@
-When the index format has changed on trunk, it has been neccessary to blow away the directory "solr/core/src/test-files/solr/data" because it contains indexes which will be in a format the trunk doesn't understand.  not blowing away this directory will cause TestCoreContainer and CoreAdminHandlerTest to fail.  However after deleting this directory, and running those two tests, the directory will not be recreated – but if you run all tests, then the directory is recreated. This seems to suggest:
-
-
-	Some (unknown) test is creating this directory and the index in it
-	The two test classes mentioned are using this directory if it exists, but do not require it to function – meaning there is non-deterministic logic in where/how they get their index from.
-

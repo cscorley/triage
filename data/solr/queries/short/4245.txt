@@ -1,1 +1,0 @@
-When a core is registering with ZooKeeper, the timeout to find the leader in the cluster state is 30 seconds rather than leaderVoteWait + extra time.

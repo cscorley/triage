@@ -1,3 +1,0 @@
-In this case we get a BlockDocsAndPositionsEnum just reading positions and ignoring the stuff in the .pay: but this is untested.
-
-see BlockDocsAndPositionsEnum.refillPositions in https://builds.apache.org/job/Lucene-Solr-Clover-4.x/34/clover-report/org/apache/lucene/codecs/block/BlockPostingsReader.html#BlockPostingsReader

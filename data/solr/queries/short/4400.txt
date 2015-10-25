@@ -1,1 +1,0 @@
-Rapidly opening and closing cores can lead to deadlock

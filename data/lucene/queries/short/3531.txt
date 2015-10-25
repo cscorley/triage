@@ -1,1 +1,0 @@
-Improve CachingWrapperFilter to optionally also cache acceptDocs, if identical to liveDocs

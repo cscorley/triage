@@ -1,1 +1,0 @@
-don't call SegmentInfo.sizeInBytes for the merging segments

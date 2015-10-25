@@ -1,1 +1,0 @@
-FieldValueFitler should expose the field it uses

@@ -1,1 +1,0 @@
-NPE in distributed result grouping if group.query has no results

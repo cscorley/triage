@@ -1,1 +1,0 @@
-Investigate to use FileoutputStream instead of RandomAccessFile in FSIndexOutput

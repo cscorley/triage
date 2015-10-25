@@ -1,1 +1,0 @@
-The Collections API should only send the reload command to ACTIVE cores.

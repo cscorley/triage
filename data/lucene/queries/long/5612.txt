@@ -1,5 +1,0 @@
-I was looking at this, because i wanted to remove the static map inside NativeFSLockFactory (no particular reason: it just smells bad, we require java7, and you get overlappingexception as of java6 so its unnecessary).
-
-Before changing any code, i wanted to run lockstresstest first, just to ensure it works: but it fails always. Simple works fine always.
-
-Exception in thread "main" java.lang.RuntimeException: java.lang.RuntimeException: lock was double acquired at org.apache.lucene.store.VerifyingLockFactory$CheckedLock.verify(VerifyingLockFactory.java:67)

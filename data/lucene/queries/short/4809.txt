@@ -1,1 +1,0 @@
-FuzzyLikeThisQuery fails if field does not exist or is not indexed with NPE during rewrite

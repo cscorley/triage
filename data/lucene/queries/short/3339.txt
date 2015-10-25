@@ -1,1 +1,0 @@
-TestNRTThreads hangs in nightly 3.x builds

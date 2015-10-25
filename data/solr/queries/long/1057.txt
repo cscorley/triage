@@ -1,9 +1,0 @@
-This is a Tokenizer that splits the input string into a series of paths.  For example:
-
- /aaa/bbb/ccc
-
-becomes:
-
- /aaa/
- /aaa/bbb/
- /aaa/bbb/ccc

@@ -1,3 +1,0 @@
-It's better if it's something like $
-{solr.updatelog.dir:}
- or something. That way, if you don't specify it, it will still default to the data dir (via the UpdateLog code currently). But if you want to specify it, you can independently place each dir with a sys prop out of the box.

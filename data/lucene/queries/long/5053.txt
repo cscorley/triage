@@ -1,1 +1,0 @@
-The idea is to add PagedGrowableWriter.ramBytesUsed, similarly to PackedInts.Mutable and AppendingLongBuffer.

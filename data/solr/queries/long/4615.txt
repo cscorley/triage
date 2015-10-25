@@ -1,3 +1,0 @@
-We seem to have re-thought whether deprecating Solr.xml is The Right Thing To Do or not, the consensus seems to be that we should keep solr.xml, not be able to specify solr.properties but add an attribute to the <cores> tag in solr.xml, tentatively called autoDiscover=true|false (assume false for 4.x, true for 5.0?)
-
-This really has to be done before 4.3 is cut, as in Real Soon Now.

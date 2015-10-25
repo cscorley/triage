@@ -1,3 +1,0 @@
-We should offer a standard way to force upper-case tokens.  I understand that lowercase is safer for general search quality because some uppercase characters can represent multiple lowercase ones.
-
-However, having upper-case tokens is often nice for faceting (consider normalizing to standard acronyms)

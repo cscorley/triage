@@ -1,3 +1,0 @@
-Something is wrong here in the way this generation works, I see some of the same javadocs being generated over and over and over again. 
-
-The current ant tasks seem to have a O(n!) runtime with respect to how many modules we have: its obnoxiously slow on a non-beast computer. There is a bug here...

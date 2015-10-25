@@ -1,1 +1,0 @@
-Add REST API methods to get all remaining schema information, and also to return the full live schema in json, xml, and schema.xml formats

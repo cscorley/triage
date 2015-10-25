@@ -1,9 +1,0 @@
-Since 3.0.x/3.6.x (see LUCENE-5541), Lucene has substantially removed
-its reliance on fileExists to the point where I think we can fully
-remove it now.
-
-Like the other iffy IO methods we've removed over time (touchFile,
-fileModified, seeking back during write, ...), File.exists is
-dangerous because a low level IO issue can cause it to return false
-when it should have returned true.  The fewer IO operations we rely on
-the more reliable/portable Lucene is.

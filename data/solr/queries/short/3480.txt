@@ -1,1 +1,0 @@
-Refactor httpclient impl details into a utility class

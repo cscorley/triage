@@ -1,1 +1,0 @@
-Enable the use of NoMergePolicy and NoMergeScheduler by Benchmark

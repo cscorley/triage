@@ -1,1 +1,0 @@
-TestScoredDocIDsUtils.testWithDeletions test failure

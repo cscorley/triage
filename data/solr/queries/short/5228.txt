@@ -1,1 +1,0 @@
-Deprecate <fields> and <types> tags in schema.xml

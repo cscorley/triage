@@ -1,1 +1,0 @@
-DUH2 uses _root_ field to support overwrite for block updates. I want to contribute this test, which assert the current functionality.  

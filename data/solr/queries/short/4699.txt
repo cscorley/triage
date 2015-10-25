@@ -1,1 +1,0 @@
-The System admin handler should not assume a file system based data directory location.

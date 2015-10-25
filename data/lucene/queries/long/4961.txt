@@ -1,3 +1,0 @@
-Today we document that Filter#getDocIdSet can return null if it doesn't accept documents. Infact in the code we sometimes return null and sometimes return DocIdSet.EMPTY_DOCIDSET. Conceptually there is nothing wrong with that but apparently we are not applying our optimisations accordingly ie. some parts of the code check for the EMPTY_DOCIDSET and all check for null. this is also a source of potential bugs like in LUCENE-4940 and I think there are still problems in the ToChildBlock query.
-
-Anyways, I think we should be consistent here about when to apply the optimisations and for the sake of caching in CachingWrapperFilter we should make the EMPTY_DOCIDSET and impl detail.

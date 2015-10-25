@@ -1,1 +1,0 @@
-Spinoff from SOLR-4615, breaking it out here so we can address the changes in pieces.

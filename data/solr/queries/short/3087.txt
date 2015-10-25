@@ -1,1 +1,0 @@
-XInclude not working on schema.xml

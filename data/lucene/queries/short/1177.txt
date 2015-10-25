@@ -1,1 +1,0 @@
-IW.optimize() can do too many merges at the very end

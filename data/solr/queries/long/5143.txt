@@ -1,1 +1,0 @@
-I think this might have started hapening after the block join commit.

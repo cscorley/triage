@@ -1,1 +1,0 @@
-In preparation for dynamic schema modification via REST API, add a "managed" schema facility

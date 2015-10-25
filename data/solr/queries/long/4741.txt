@@ -1,1 +1,0 @@
-Currently we remove the instance dir, which usually contains the data dir, but it won't always.

@@ -1,1 +1,0 @@
-The external file field in trunk works properly only with an optimized index.  If the index is not optimized incorrect values are used in function queries.

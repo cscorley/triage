@@ -1,1 +1,0 @@
-ZkStateReader.getReplicaProps has an unused coreName parameter

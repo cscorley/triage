@@ -1,1 +1,0 @@
-http://wiki.apache.org/solr/ : non-English users get generic MoinMoin page instead of the desired information

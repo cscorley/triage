@@ -1,2 +1,0 @@
-Support a second pass collector that counts unique field values of a field per group.
-This is just one example of group statistics that one might want.

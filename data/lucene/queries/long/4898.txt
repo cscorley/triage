@@ -1,4 +1,0 @@
-This throws an IllegalArRgumentException today, but it's easy to fix
-with a small change to DirectoryReader.  This is useful to do, if you
-have an NRT reader and want to open a reader against a previous commit
-point while sharing the SegmentReaders they have in common.

@@ -1,4 +1,0 @@
-Our System requirements page is located here on the unversioned site: 
-http://lucene.apache.org/core/systemreqs.html
-
-But its also in forrest under each release. Can we just nuke the forrested one?

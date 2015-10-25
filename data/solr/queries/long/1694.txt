@@ -1,1 +1,0 @@
-A ValueSource to expose the document frequency for a given field.

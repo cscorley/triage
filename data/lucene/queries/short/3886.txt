@@ -1,1 +1,0 @@
-MemoryIndex memory estimation in toString inconsistent with getMemorySize()

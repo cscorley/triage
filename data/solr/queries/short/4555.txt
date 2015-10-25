@@ -1,1 +1,0 @@
-When forceNew is used with CachingDirectoryFactory#get, the old CachValue should have it's path set to null.

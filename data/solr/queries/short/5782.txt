@@ -1,1 +1,0 @@
-The full MapReduceIndexer help text does not display when using --help.

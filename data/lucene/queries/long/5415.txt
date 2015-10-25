@@ -1,9 +1,0 @@
-PostingsHighlighter uses the offsets encoded in the postings lists for the terms to find query matches.
-
-As such, it isn't really suitable for stuff like wildcards for two reasons:
-1. an expensive rewrite against the term dictionary (i think other highlighters share this problem)
-2. accumulating data from potentially many terms (e.g. reading many postings)
-
-However, we could provide an option for some of these queries to work, but in a different way, that avoids these downsides.
-
-Instead we can just grab the Automaton representation of the queries, and match it against the content directly (which won't blow up).

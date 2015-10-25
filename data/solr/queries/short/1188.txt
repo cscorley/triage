@@ -1,1 +1,0 @@
-TermVectorComponent Efficiency improvements

@@ -1,1 +1,0 @@
-Spinoff from LUCENE-3846 where Simon hit this ... it's a bug in FST's Util.TopNSearcher where it fails to handle queue exhaustion properly.  I think WFSTSuggester isn't affected because by the time the queue is exhausted, the search is done (ie it never adds to the queue after it becomes exhausted).

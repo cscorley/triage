@@ -1,1 +1,0 @@
-license check fails if you previously built maven release artifacts

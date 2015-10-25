@@ -1,1 +1,0 @@
-spatial has not been released, so we can remove the deprecated classes

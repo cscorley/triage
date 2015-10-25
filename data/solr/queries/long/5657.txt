@@ -1,1 +1,0 @@
-Currently, things just fail. Ideally, the SolrCore would wait until safe mode was exited and resume loading.

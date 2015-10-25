@@ -1,1 +1,0 @@
-Spinoff of LUCENE-2111, where Uwe found this issue with the flex on non-flex emulation.

@@ -1,1 +1,0 @@
-DebugComponent should be last component of SearchHandler

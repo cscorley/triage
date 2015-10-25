@@ -1,1 +1,0 @@
-No error reported when sorting on a multiValued field

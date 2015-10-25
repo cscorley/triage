@@ -1,1 +1,0 @@
-The implementation of Map in SolrDocument doesn't provide a toString method, which makes printf-debugging defficult.

@@ -1,1 +1,0 @@
-Efficient bulk operations for packed integer arrays

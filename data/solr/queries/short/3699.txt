@@ -1,1 +1,0 @@
-SolrIndexWriter constructor leaks Directory if Exception creating IndexWriterConfig

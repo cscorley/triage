@@ -1,3 +1,0 @@
-See LUCENE-4365 for a description of the circular dependencies currently in Lucene/Solr.
-
-The IntelliJ configuration produced by ant idea should be modified similarly to the Maven configuration changes committed under LUCENE-4365: the four modules with circular dependencies involving the Solr or the Lucene test-framework should be split into main/test modules (lucene/core, lucene/codecs, solr/core, and solr/solrj), which will eliminate the circular dependencies.

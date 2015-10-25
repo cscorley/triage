@@ -1,1 +1,0 @@
-"ant eclipse" should declare .svn directories as derived

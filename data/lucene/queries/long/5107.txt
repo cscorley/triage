@@ -1,1 +1,0 @@
-Followup of LUCENE-5106: This needs to be changed and the forbidden signatures changed to disallow InputStream/OutputStream and allow Reader/Writer only.

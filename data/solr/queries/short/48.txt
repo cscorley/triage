@@ -1,1 +1,0 @@
-an empty query string in the admin interface throws an exception

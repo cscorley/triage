@@ -1,1 +1,0 @@
-Combination of a core being swappable and loading on startup doesn't actually load on startup

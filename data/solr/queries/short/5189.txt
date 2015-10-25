@@ -1,1 +1,0 @@
-Solr 4.x Web UI Log Viewer does not display 'date' column from logs

@@ -1,5 +1,0 @@
-Conversation with rmuir last night got me thinking about the fact that one thing we lose by using ivy is confidence that every user of a release is compiling against (and likely using at run time) the same dependencies as every other user.
-
-Up to 3.5, users of src and binary releases could be confident that the jars included in the release were the same jars the lucene devs vetted and tested against when voting on the release candidate, but with ivy there is now the possibility that after the source release is published, the owner of a domain where these dependencies are hosted might change the jars in some way w/o anyone knowing.  Likewise: we as developers could commit an ivy.xml file pointing to a specific URL which we then use for and test for months, and just prior to a release, the contents of the remote URL could change such that a JAR included in the binary artifacts might not match the ones we've vetted and tested leading up to that RC.
-
-So i propose that we include checksum files in svn and in our source releases that can be used by users to verify that the jars they get from ivy match the jars we tested against.

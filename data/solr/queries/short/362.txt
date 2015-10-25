@@ -1,1 +1,0 @@
-bundle junit with solr

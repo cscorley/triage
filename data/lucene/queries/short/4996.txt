@@ -1,1 +1,0 @@
-DocInverterPerField to log which field throws exceptions

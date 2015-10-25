@@ -1,8 +1,0 @@
-As far as i can tell, the "new solr.xml" changes caused the following problems...
-
-
-	DEFAULT_DEFAULT_CORE_NAME is not used at all in the "new" style solr.xml, but probably should be (at least in 4x)
-
-
-
-See also the mailing list thread "[JENKINS] Lucene-Solr-SmokeRelease-4.x - Build # 69 - Failure" where the lack of using DEFAULT_DEFAULT_CORE_NAME causes the smoke tester to fail on both 4x and trunk because many things assume collectionless URLs will work

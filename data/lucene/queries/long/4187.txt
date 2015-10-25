@@ -1,7 +1,0 @@
-I setup a jenkins while i was on vacation, it was really easy to just tell it to run an ant task.
-
-I don't like this second set of shell scripts we have: its not portable to windows and harder to setup. We should make it dead easy to setup a jenkins if someone feels inclined to run our tests.
-
-I think we should add, say two jenkins tasks 'ant jenkins' and 'ant jenkins-nightly' or something like that.
-
-For this to work we need to port some of the stuff the scripts are doing, such as nocommit checks, to ant. Any other parameters should be exposed as ordinary ant properties so they can be overridden with -D's

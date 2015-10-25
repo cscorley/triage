@@ -1,6 +1,0 @@
-StatsComponent has two different code paths for dealing with param parsing depending on wether it's a single node request of a distributed request, which results in two very differnet looking bugs (but in my opinion have the same root cause: bogus local param parsing):
-
-
-	the documented local params for stats.field don't work on distributed stats requests at all
-	per field "calcdistinct" doesn't work if localparms are used on single node request
-

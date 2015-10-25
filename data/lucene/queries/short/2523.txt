@@ -1,1 +1,0 @@
-if index is too old you should hit an exception saying so

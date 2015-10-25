@@ -1,1 +1,0 @@
-Since SOLR-1023, the response from a stats request can be Number, Date, or even string.  But FieldStatsInfo always assumes Double and will get a class cast exception.

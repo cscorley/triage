@@ -1,1 +1,0 @@
-The example in example-schemaless doesn't load libs properly

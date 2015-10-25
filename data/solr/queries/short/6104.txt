@@ -1,1 +1,0 @@
-The 'addreplica' Collection API does not support async parameter

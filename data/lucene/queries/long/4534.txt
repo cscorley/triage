@@ -1,3 +1,0 @@
-While binary terms w/ 0 bytes are rare, they are "allowed" but will cause exceptions with at least WFST/AnalyzingSuggester.
-
-I think to fix this we should pass custom Comparator to the offline sorter that decodes each BytesRef key and does the actual comparison we want, instead of using separator and relying on BytesRef.compareTo.

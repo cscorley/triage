@@ -1,3 +1,0 @@
-We can start with QueryUtils.check(query): which does some basic hashcode/equals checks.
-
-Ideally we'd strengthen the checks as we fix problems: e.g. add explanations verifications (checkExplanations) and then finally the more intense check() that does more verifications with deleted docs/next/advance.

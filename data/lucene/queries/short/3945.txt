@@ -1,1 +1,0 @@
-we should include checksums for every jar ivy fetches in svn & src releases to verify the jars are the ones we expect

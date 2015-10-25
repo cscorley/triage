@@ -1,3 +1,0 @@
-The build file tries to run svnversion when generating the jar manifest to include the revision number. This fails in Hudson however as the svnversion executable is not available.
-
-This could be addressed by installing svnversion on the build machine or using alternative means of determining the revision number.

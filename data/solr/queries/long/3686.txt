@@ -1,5 +1,0 @@
-This makes the build system hairy.
-it also prevents us from using ivy's sync=true (LUCENE-4262) 
-which totally prevents the issue of outdated jars.
-
-We should fix this so each has its own lib/

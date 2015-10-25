@@ -1,3 +1,0 @@
-When parsing the configuration for thresholdTokenFrequency", the IndexBasedSpellChecker tries to pull a Float from the DataConfig.xml-derrived NamedList.  However, this comes through as a String.  Therefore, a ClassCastException is always thrown whenever this parameter is specified.  The code ought to be doing "Float.parseFloat(...)" on the value.
-
-This looks like a nice feature to use in cases the data contains misspelled or rare words leading to spurious "correct" queries.  I would have liked to have used this with a project we just completed however this bug prevented that.  This issue came up recently in the User's mailing list so I am raising an issue now.

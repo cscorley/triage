@@ -1,3 +1,0 @@
-Currently, SolrCell is configured to map Tika "content" (the main body of a document) to the "text" field which is the indexed-only (not stored) catch-all for default queries. That searches fine, but doesn't show the document content in the results, sometimes leading users to think that something is wrong. Sure, the user can easily add the field (and this is documented), but it would be a better user experience to have such a basic feature work right out of the box without any config editing and without the need for the user to read the fine print in the documentation.
-
-I propose that we add the "content" field to the example schema in the section of fields already defined to support SolrCell metadata.

@@ -1,1 +1,0 @@
-addIndexesNoOptimize intermittantly throws incorrect "segment exists in external directory..." exception

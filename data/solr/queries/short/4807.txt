@@ -1,1 +1,0 @@
-zkcli - log4j is not configured, so no logging happens

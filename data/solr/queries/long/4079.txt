@@ -1,3 +1,0 @@
-Our data is split up over multiple cores with automatic naming, typically of the form "articles_20080101154402_20080412181644". With long names like that, the sidebar will massively overshoot its boundaries and intrude so far into the main pane that it interferes with UI inputs and controls.
-
-Fixing this issue is trivial even within the browser, by introducing a custom stylesheet.

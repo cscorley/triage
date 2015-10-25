@@ -1,1 +1,0 @@
-Add katakana stem filter to better deal with certain katakana spelling variants

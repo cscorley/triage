@@ -1,1 +1,0 @@
-add tests for JaSpell/TST/HighFrequencyDictionary to the suggest module

@@ -1,3 +1,0 @@
-Today the facet module simply gathers all hits (as a bitset, optionally with a float[] to hold scores as well, if you will aggregate them) during collection, and then at the end when you call getFacetsResults(), it makes a 2nd pass over all those hits doing the actual aggregation.
-
-We should investigate just aggregating as we collect instead, so we don't have to tie up transient RAM (fairly small for the bit set but possibly big for the float[]).

@@ -1,9 +1,0 @@
-In 1.4. it was fine to run Solr without Velocity on the classpath. However, in 3.2. SolrCore won't load because of a hard reference to the Velocity response writer in a static initializer.
-
-
-... ERROR org.apache.solr.core.CoreContainer - java.lang.NoClassDefFoundError: org/apache/velocity/context/Context
-	at org.apache.solr.core.SolrCore.<clinit>(SolrCore.java:1447)
-	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:463)
-	at org.apache.solr.core.CoreContainer.load(CoreContainer.java:316)
-	at org.apache.solr.core.CoreContainer.load(CoreContainer.java:207)
-

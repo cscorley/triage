@@ -1,1 +1,0 @@
-contrib entries in solr/CHANGES.txt should go solr/contrib/*/CHANGES.txt

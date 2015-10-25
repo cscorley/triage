@@ -1,7 +1,0 @@
-We run our junit tests without firing up a JVM each time.
-
-But some tests initialize lots of stuff in @BeforeClass and don't properly null it out in an @AfterClass, which can cause a subsequent test in the same JVM to OOM, which is difficult to debug.
-
-Inspiration for this was me committing Mike's cool TestPostingsFormat, which forgot to do this: then we were seeing OOMs in several jenkins runs.
-
-We should try to detect these leaks in LuceneTestCase with RAMUsageEstimator and fail the test.

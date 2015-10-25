@@ -1,7 +1,0 @@
-We added AssertingCodec etc and have lots of tests that consumers of the codec api follow a strict set of rules: but nothing checks the producers feeding these apis (IndexWriter, codec merge implementations, etc).
-
-We should beef up AssertingCodec to validate these things: this way the API is being followed.
-
-Simple examples of things include checking that producers are feeding terms to the consumers consistent with their comparator, that they aren't providing bogus or out of band statistics, and that they are invoking the right methods consistently (e.g. not forgetting to call finishDoc or something that might confuse someones codec).
-
-This is also nice since now we have quite a few tests (TestCodecs, TestPostingsFormat, etc) that feed these APIs directly, it could find some test bugs.

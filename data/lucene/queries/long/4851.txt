@@ -1,1 +1,0 @@
-We can use those methods now that trunk is on Java 7.

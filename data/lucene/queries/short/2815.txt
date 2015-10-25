@@ -1,1 +1,0 @@
-MultiFields not thread safe

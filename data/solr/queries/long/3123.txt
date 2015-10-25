@@ -1,1 +1,0 @@
-example/lib/jetty-LICENSE.txt is incorrectly named - it has to have the license type in its name (ASL in this case), and none of the other jar files under example/lib/ have license files (including those under example/lib/jsp-2.1/).

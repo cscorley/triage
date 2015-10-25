@@ -1,1 +1,0 @@
-Slowdown of the span queries caused by LUCENE-4946

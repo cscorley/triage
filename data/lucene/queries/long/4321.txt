@@ -1,7 +1,0 @@
-See Dawid's email: http://find.searchhub.org/document/64b0a28c53faf39
-
-Reader.java is fine, it has lots of methods like read(), read(char[]), read(CharBuffer), skip(), but these all have default implementations delegating to read(char[], int, int).
-
-Unfortunately FilterReader delegates too many unnecessary things such as read() and skip() in a broken way. It should have just left these alone.
-
-This can cause traps for someone upgrading because they have to override multiple methods, when read(char[], int, int) should be enough, and all Reader methods will then work correctly.

@@ -1,1 +1,0 @@
-PATCH: JSONResponseWriter JSON result wrapper function

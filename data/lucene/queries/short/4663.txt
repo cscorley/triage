@@ -1,1 +1,0 @@
-IndexSearcher.document() should not be final

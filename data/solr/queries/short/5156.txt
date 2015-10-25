@@ -1,1 +1,0 @@
-Provide a way to move the contents of a file to ZooKeeper with ZkCLI

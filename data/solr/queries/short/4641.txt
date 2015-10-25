@@ -1,1 +1,0 @@
-Schema should throw exception on illegal field parameters

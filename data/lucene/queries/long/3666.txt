@@ -1,5 +1,0 @@
-package.html in lucene/src/java/org/apache/lucene/analysis/ is out of date.
-
-It looks like the contents of the branch_3x version haven't changed substantially since the Lucene 2.9 release, e.g. it refers to TermAttribute instead of CharTermAttribute.
-
-The trunk version is more modern - it refers to CharTermAttribute - but it also has some issues.  E.g., I can see that the LengthFilter discussion doesn't refer to FilteringTokenFilter.

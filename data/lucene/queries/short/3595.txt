@@ -1,1 +1,0 @@
-Refactor FieldCacheRangeFilter.FieldCacheDocIdSet to be separate class and fix the dangerous matchDoc() throws AIOOBE requirement

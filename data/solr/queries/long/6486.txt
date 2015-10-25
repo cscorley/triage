@@ -1,4 +1,0 @@
-normally I would add this line to my java -jar start.jar
--agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=18983
-
-the script should take the whole string or assume the debug port to be solrPort+10000 (if all I pass is debug=true) or if debug="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=18983) use it verbatim

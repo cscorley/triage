@@ -1,5 +1,0 @@
-Its always a similar stack trace (connection refused).
-
-The problem is: nobody can reproduce it.
-
-So my idea is to have this issue open with potential fixes. I can test them by ssh'ing into the machine (only when its actually running a jenkins job, otherwise its down!) and trying to run the test with any patches/ideas.

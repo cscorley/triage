@@ -1,4 +1,0 @@
-SegmentReader.document does the check for stored fields. Codec's dont.
-SegmentReader.getTermVectors doesnt do the check for vectors. Codec does.
-
-I think we should move the vectors check out to SR, too. Codecs can have an assert if they want, but the APIs should look more consistent.

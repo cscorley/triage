@@ -1,1 +1,0 @@
-IndexSplitter that divides by primary key term

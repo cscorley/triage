@@ -1,1 +1,0 @@
-The JsonLoader should accept a single doc without wrapping in an array

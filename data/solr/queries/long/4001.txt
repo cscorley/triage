@@ -1,3 +1,0 @@
-Spotted this in the replication handler test on windows.
-
-Replication especially can hold some resources out a little after core container shutdown is called.

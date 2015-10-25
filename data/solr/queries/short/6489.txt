@@ -1,1 +1,0 @@
-morphlines-cell tests fail after upgrade to TIKA 1.6 or TIKA 1.7

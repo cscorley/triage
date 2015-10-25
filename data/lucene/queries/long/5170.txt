@@ -1,5 +1,0 @@
-If you write an Analyzer that wraps another one (but without using AnalyzerWrapper) you may need use the same reuse strategy in your wrapper. This is not possible as there is no way to get the reuse startegy (private field and no getter).
-
-An example is ES's NamedAnalyzer, see my comment: https://github.com/elasticsearch/elasticsearch/commit/b9a2fbd8741aa1b9beffb7d2922fc9b4525397e4#src/main/java/org/elasticsearch/index/analysis/NamedAnalyzer.java
-
-This would add a getter, just a 3-liner.

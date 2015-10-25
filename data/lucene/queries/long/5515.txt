@@ -1,1 +1,0 @@
-If TopDocs#merge takes from and size into account it can be optimized to create a hits ScoreDoc array equal to size instead of from+size what is now the case.

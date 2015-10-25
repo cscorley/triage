@@ -1,5 +1,0 @@
-We have a great cost API that is supposed to help make decisions about how to best execute queries. However, due to the fact that several of our filter implementations (eg. TermsFilter and BooleanFilter) return FixedBitSets, either we use the cost API and make bad decisions, or need to fall back to heuristics which are not as good such as RandomAccessFilterStrategy.useRandomAccess which decides that random access should be used if the first doc in the set is less than 100.
-
-On the other hand, we also have some nice compressed and cacheable DocIdSet implementation but we cannot make use of them because TermsFilter requires a DocIdSet that has random write access, and FixedBitSet is the only DocIdSet that we have that supports random access.
-
-I think it would be nice to replace FixedBitSet in those filters with another DocIdSet that would also support random write access but would have a better cost?

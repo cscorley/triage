@@ -1,1 +1,0 @@
-Add utitily class to manage NRT reopening

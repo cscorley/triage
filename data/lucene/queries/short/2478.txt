@@ -1,1 +1,0 @@
-CachingWrapperFilter throws NPE when Filter.getDocIdSet() returns null

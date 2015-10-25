@@ -1,1 +1,0 @@
-Set last_index_time in full-import command

@@ -1,1 +1,0 @@
-Add ability to throttle rsync based replication using rsync option --bwlimit

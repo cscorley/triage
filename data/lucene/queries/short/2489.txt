@@ -1,1 +1,0 @@
-promote TestExternalCodecs.PerFieldCodecWrapper to core

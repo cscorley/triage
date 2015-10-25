@@ -1,5 +1,0 @@
-bin/solr -c will start Solr in cloud mode. Since collection1 includes a core.properties, it will be auto-discovered and created into a collection. So the script uses:
-
--Dbootstrap_confdir=./solr/collection1/conf -Dcollection.configName=myconf
-
-However, it's not setting -DnumShards for collection1, which results in collection1 being created using the implicit router and a null range. While we have this collection1 being auto-deployed, the script should set numShards as well so that collection1 is created correctly.

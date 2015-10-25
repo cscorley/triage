@@ -1,1 +1,0 @@
-QueryTreeBuilder.getBuilder() only finds interfaces on the most derived class

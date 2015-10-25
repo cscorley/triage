@@ -1,2 +1,0 @@
-The trunk version has some methods / utilities to provide random testing.
-SOLR-2524 has a back ported random test from trunk, that needs this infrastructure.

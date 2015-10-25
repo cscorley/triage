@@ -1,3 +1,0 @@
-https://github.com/carrotsearch/randomizedtesting/issues/106
-
-I'll see what can be done about it (had some thoughts on the way back to the hotel and I think it's doable).

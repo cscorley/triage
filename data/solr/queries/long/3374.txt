@@ -1,1 +1,0 @@
-In 3.6 CommonsHttpSolrServer is deprecated in favor for HttpSolrServer however in the distribution under solrj-lib, non of the required jar files for HttpClient 4.x is included

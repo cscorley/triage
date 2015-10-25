@@ -1,4 +1,0 @@
-While using our existing System Monitoring tool with solr using JMX we noticed that the stats values for Cache is not consistence w.r.t data type. 
-decimal values are returned as string instead should be of type float/double.
-
-e.g hitratio 

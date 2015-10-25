@@ -1,1 +1,0 @@
-The removal of old admin obviously removed webapp/web/admin including "solr_small.png" and "jquery-1.4.3.min.js", used by Velocity templates.

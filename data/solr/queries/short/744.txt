@@ -1,1 +1,0 @@
-Patch to make ShingleFilter.outputUnigramsIfNoShingles (LUCENE-1370) available in Solr schema files

@@ -1,1 +1,0 @@
-Currently the DocumentExpressionDictionary does not have support for CompositeReader. It would be nice to add that support.

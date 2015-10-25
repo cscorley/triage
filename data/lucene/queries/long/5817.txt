@@ -1,5 +1,0 @@
-This only partially works today. But zero-affixes are used heavily by many dictionaries (e.g. i found a good number of bugs in czech and latvian just experimenting).
-
-The fix is easy: we just have to look for "0" in the affix portion as well as the strip portion, as indicated by the manual page:
-
-"Zero stripping or affix are indicated by zero."

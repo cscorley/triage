@@ -1,1 +1,0 @@
-MultiTermsEnum over-shares between different Docs/AndPositionsEnum

@@ -1,3 +1,0 @@
-Thank you mike for the smoketester addition. It failed because 4.10.1 was not verifying backwards compatibility against 4.10
-
-However, when i added the indexes (svn copied from branch-4x), the test fails.

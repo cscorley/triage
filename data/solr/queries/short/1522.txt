@@ -1,1 +1,0 @@
-DIH:Show proper message if <script> tag is missing 

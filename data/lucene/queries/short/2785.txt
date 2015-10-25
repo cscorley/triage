@@ -1,1 +1,0 @@
-TopFieldCollector throws AIOOBE if numHits is 0

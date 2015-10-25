@@ -1,1 +1,0 @@
-LBHttpSolrServer should not ignore specified ResponseParser

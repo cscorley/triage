@@ -1,5 +1,0 @@
-While investigating SOLR-2314 i found a bug which seems to be the opposite of the behavior described there – so i'm filing a seperate bug to track it.
-
-if ReplicationHandler is only configured as a master, "command=details" requests won't include the "master" section.  that section is only output if it is also configured as a slave.
-
-the method responsible for the details command generates the "master" details just fine, but the code to add it to the response seems to have erroneously been nested inside an if that only evaluates to true if there is a non-null SnapPuller (ie: it's also a slave)

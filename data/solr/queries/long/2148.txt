@@ -1,6 +1,0 @@
-The problem has been reported several times before:
-
-http://www.mail-archive.com/solr-user@lucene.apache.org/msg21467.html
-http://www.lucidimagination.com/search/document/1755e84f0a803a49/q_alt_and_highlights
-
-I hit this today.

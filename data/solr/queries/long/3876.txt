@@ -1,3 +1,0 @@
-The Solr Admin UI is completely dysfunctional on IE 9. See attached screen shot. I don't even see a "collection1" button. But Admin UI is working fine in Google Chrome with same running instance of Solr.
-
-Currently running 4.0 RC0, but problem existed with 4.0-BETA.

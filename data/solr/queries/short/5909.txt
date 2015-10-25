@@ -1,1 +1,0 @@
-Upgrade Carrot2 clustering dependency to 3.9.x

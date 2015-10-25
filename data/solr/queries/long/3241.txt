@@ -1,7 +1,0 @@
-After https://issues.apache.org/jira/browse/LUCENE-3796, it is not possible to set a boost to a field that has the "omitNorms" set to true. This is making Solr's document index-time boost to fail when a field that doesn't omit norms is copied (with copyField) to a field that does omit them and document boost is used. For example:
-
-<field name="author" type="text" indexed="true" stored="false" omitNorms="false"/>
-<field name="author_display" type="string" indexed="true" stored="true" omitNorms="true"/>
-<copyField source="author" dest="author_display"/>
-
-I'm attaching a possible fix.

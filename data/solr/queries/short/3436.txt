@@ -1,1 +1,0 @@
-Groups count in distributed grouping is wrong in some case

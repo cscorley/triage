@@ -1,1 +1,0 @@
-NRTCachingDirectory, to buffer small segments in a RAMDir

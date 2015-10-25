@@ -1,9 +1,0 @@
-When copying data from another BytesRef/CharSequence, these methods don't oversize. This is not an issue if this method is used only once per BytesRef instance but I just reviewed the usage of these methods and they are very frequently used in loops to do things like:
-
-	keep track of the top values in comparators
-	keep track of the previous terms in various loops over a terms enum (lucene49 DV consumer, BlockTreeTermsWriter)
-	etc.
-
-
-
-Although unlikely, it might be possible to hit a worst-case and to resize the underlying byte[] on every call to copyBytes? Should we oversize the underlying array in these methods?

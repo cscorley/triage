@@ -1,1 +1,0 @@
-hotspot bug in readvint gives wrong results

@@ -1,1 +1,0 @@
-When an overseer designate is killed and restarted move to the front of the queue 

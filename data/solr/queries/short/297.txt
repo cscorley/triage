@@ -1,1 +1,0 @@
-RequiredSolrParams.getField* don't fallback to non-field specific values

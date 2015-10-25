@@ -1,7 +1,0 @@
-It would be nice to wrap with FIR here sometimes,
-one that returns AssertingFields, etc etc.
-
-This way we could check if consumers are doing bogus things (like reading nextDoc after it returned NO_MORE_DOCS, or TermsEnum.next after its exhausted, or things like that).
-
-This would also be nice to catch tests that do this rather than doing
-crazy debugging over whats not really a bug.

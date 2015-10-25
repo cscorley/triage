@@ -1,1 +1,0 @@
-ConstantScoreQuery should directly support wrapping Query and simply strip off scores

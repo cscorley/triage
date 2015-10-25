@@ -1,1 +1,0 @@
-EnhancementsPayloadIterator has an internal list of category enhancemnets, and in getCategoryData(CategoryEnhancement) there is a lookup of the given CategoryEnhancement in the list. In order to make sure this lookup works, CategoryEnhancement must override Object.equals(Object).

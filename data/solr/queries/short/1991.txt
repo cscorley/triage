@@ -1,1 +1,0 @@
-The example target should work from a fresh checkout without running other targets first

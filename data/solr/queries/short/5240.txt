@@ -1,1 +1,0 @@
-SolrCloud node doesn't (quickly) come all the way back

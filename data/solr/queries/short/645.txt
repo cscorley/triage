@@ -1,1 +1,0 @@
-Move facet tests into own class

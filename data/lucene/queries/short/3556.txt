@@ -1,1 +1,0 @@
-Make DirectoryTaxonomyWriter's indexWriter member private

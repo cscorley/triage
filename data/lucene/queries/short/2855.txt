@@ -1,1 +1,0 @@
-Contrib queryparser should not use CharSequence as Map key

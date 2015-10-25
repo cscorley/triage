@@ -1,1 +1,0 @@
-NRT Reader close can wipe index it doesn't own

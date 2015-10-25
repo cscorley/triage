@@ -1,1 +1,0 @@
-MergeThread throws unchecked exceptions from toString()

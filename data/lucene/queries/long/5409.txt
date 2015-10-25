@@ -1,5 +1,0 @@
-A bug is observed to cause unstable results returned by the getTopGroups function of class ToParentBlockJoinCollector.
-
-In the scorer generation stage, the ToParentBlockJoinCollector will automatically rewrite all the associated ToParentBlockJoinQuery (and their subqueries), and save them into its in-memory Look-up table, namely joinQueryID (see enroll() method for detail). Unfortunately, in the getTopGroups method, the new ToParentBlockJoinQuery parameter is not rewritten (at least users are not expected to do so). When the new one is searched in the old lookup table (considering the impact of rewrite() on hashCode()), the lookup will largely fail and eventually end up with a topGroup collection consisting of only empty groups (their hitCounts are guaranteed to be zero).
-
-An easy fix would be to rewrite the original BlockJoinQuery before invoking getTopGroups method. However, the computational cost of this is not optimal. A better but slightly more complex solution would be to save unrewrited Queries into the lookup table.

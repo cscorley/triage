@@ -1,9 +1,0 @@
-The javadoc for the LB server begins:
-
-
-LBHttpSolrServer or "LoadBalanced HttpSolrServer" is a load balancing wrapper to CommonsHttpSolrServer.
-
-
-But that class is no longer in the source tree, at least under that name.
-
-What's the new theory? Is this just the class to use, all by itself? If so, I can submit a patch to the doc.

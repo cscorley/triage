@@ -1,3 +1,0 @@
-This DocIdSet claims it is cacheable although bad things could happen if it was cached since it is not thread-safe and keeps handles to open files.
-
-The fix is simple, especially given that this doc id set is cheap to create. But I'm wondering if there is a way we could protect ourselves from such bugs in the future.

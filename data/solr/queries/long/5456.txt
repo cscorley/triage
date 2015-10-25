@@ -1,1 +1,0 @@
-After we got the Possibility to modify files from SOLR-5446, we could allow to create new files from the same interface

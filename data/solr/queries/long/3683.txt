@@ -1,5 +1,0 @@
-IndexSchema should complain if someone configures an analyzer that has both an explicit class as well as nested factories.
-
-Example of confusion...
-
-https://mail-archives.apache.org/mod_mbox/lucene-solr-user/201207.mbox/%3C1343218757.79608.YahooMailClassic@web121705.mail.ne1.yahoo.com%3E

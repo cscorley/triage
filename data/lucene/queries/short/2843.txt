@@ -1,1 +1,0 @@
-Add variable-gap terms index impl.

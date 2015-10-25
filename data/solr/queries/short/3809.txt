@@ -1,1 +1,0 @@
-Replication of config files fails when using sub directories

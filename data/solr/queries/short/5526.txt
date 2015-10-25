@@ -1,1 +1,0 @@
-Query parser extends standard cause NPE on Solr startup

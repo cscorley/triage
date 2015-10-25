@@ -1,3 +1,0 @@
-I wrote a replication module which I think will be useful to Lucene users who want to replicate their indexes for e.g high-availability, taking hot backups etc.
-
-I will upload a patch soon where I'll describe in general how it works.

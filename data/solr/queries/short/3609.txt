@@ -1,1 +1,0 @@
-Pin down the Solr webapp to a specific directory rather than a unique random directory.

@@ -1,1 +1,0 @@
-match-only query support (terms,wildcards,ranges) for docvalues fields.

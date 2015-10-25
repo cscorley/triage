@@ -1,1 +1,0 @@
-Solr looks up configSets in the wrong directory

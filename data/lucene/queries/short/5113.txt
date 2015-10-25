@@ -1,1 +1,0 @@
-Allow for packing the pending values of our AppendingLongBuffers

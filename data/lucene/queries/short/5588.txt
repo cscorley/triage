@@ -1,1 +1,0 @@
-We should also fsync the directory when committing

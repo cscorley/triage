@@ -1,1 +1,0 @@
-As reported in issue SOLR-3011 the FileListEntityProcessor is not recursing through all sub-directories and files after applying SOLR-3011.patch.

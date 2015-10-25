@@ -1,1 +1,0 @@
-TestParser.testSpanTermXML fails with some sims

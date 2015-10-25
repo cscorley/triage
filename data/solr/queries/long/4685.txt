@@ -1,7 +1,0 @@
-If the field ends with "_json" allow the field to return raw JSON.
-
-For example the field,
-
-office_json – string
-
-I already put into the field raw JSON already escaped. I want it to come with no double quotes and not escaped.

@@ -1,3 +1,0 @@
-An update request handler that can accept a tr param, allowing the indexing of any XML content that is passed to solr, so long as there is an XSLT stylesheet in solr/conf/xslt that can transform it to the <add><doc/></add> format.
-
-Could be used, for example, to allow Solr to ingest docbook directly, without any preprocessing.

@@ -1,1 +1,0 @@
-DistributedQueue should ensure its full path exists in the constructor.

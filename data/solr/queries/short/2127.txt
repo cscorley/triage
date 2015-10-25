@@ -1,1 +1,0 @@
-When using the defaultCoreName attribute, after performing a swap, solr.xml no longer contains the defaultCoreName attribute, and the core which was dafult is now renamed to ""

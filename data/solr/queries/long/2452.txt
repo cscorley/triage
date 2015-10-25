@@ -1,3 +1,0 @@
-As discussed some in SOLR-2002 (but that issue is long and hard to follow), I think we should rewrite the solr build system.
-
-Its slow, cumbersome, and messy, and makes it hard for us to improve things.

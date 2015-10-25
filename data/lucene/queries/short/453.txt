@@ -1,1 +1,0 @@
-Using MultiSearcher and ParallelMultiSearcher can change the sort order.

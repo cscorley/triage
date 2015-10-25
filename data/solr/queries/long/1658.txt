@@ -1,8 +1,0 @@
-In the standard Solr example, the queries
-
-	adapter AND NOT power
-	adapter AND (NOT power)
-
-
-
-are different.  The second will never return any results.  I find this surprising.  I think the second query should be the same as the first.

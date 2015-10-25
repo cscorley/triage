@@ -1,9 +1,0 @@
-I added a maybeWrap to testDuelingCodecs and ran it a while (like 50 iterations) before committing.
-
-of course then i made an unrelated change and it randomly failed:
-
-ant test -Dtestcase=TestDuelingCodecs -Dtestmethod=testEquals -Dtests.seed=27a287947a153c89:1e9e948a14bdc1ea:5c4e1854155cfa15 -Dargs="-Dfile.encoding=UTF-8"
-
-
-
-Some kind of wrapped-reader/codec is returning unindexed fields in its FieldsEnum

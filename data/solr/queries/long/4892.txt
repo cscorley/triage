@@ -1,5 +1,0 @@
-Add FieldMutatingUpdateProcessorFactory subclasses ParseFooUpdateProcessorFactory, where Foo includes Date, Double, Long, and Boolean.
-
-These factories will have a default selector that matches all fields that either don’t match any schema field, or are in the schema with the corresponding typeClass.  They can optionally support a list of multiple format specifiers.  If they see a value that is not a CharSequence, or can't parse the value using a configured format, they ignore it and leave it as is.
-
-For multi-valued fields, these processors will not convert any values unless all are first successfully parsed.  Ordering the processors [Boolean, Long, Double, Date] will allow e.g. values [2, 5, 8.6] to be left alone by the Boolean and Long processors, but then converted by the Double processor.

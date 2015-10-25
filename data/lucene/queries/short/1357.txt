@@ -1,1 +1,0 @@
-SpanScorer does not respect ConstantScoreRangeQuery setting

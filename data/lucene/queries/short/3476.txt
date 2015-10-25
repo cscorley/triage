@@ -1,1 +1,0 @@
-SearcherManager misses to close IR if manager is closed during reopen

@@ -1,1 +1,0 @@
-NumericField throws a NotSerializableException when it is serialized, even though it implements Serializable

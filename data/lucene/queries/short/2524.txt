@@ -1,1 +1,0 @@
-when many query clases are specified in boolean or dismax query, highlighted terms are always "yellow" if multi-colored feature is used

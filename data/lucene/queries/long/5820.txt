@@ -1,1 +1,0 @@
-While trying to use the new Suggester in Solr I realized that SuggestStopFilter did not have a factory. We should add one.

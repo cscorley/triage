@@ -1,1 +1,0 @@
-Solr Replication - SnapPuller fails to clean Old Index Directories on Full Copy

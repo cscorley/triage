@@ -1,8 +1,0 @@
-This could hide real underlying bugs.
-
-Instead we can:
-
-	make it extend BaseDirectoryWrapper, which checks index on close (but thats it)
-	occasionally return BaseDirectoryWrapper from newDirectory()
-	add newMockDirectory() for those specific tests that actually use its special stuff.
-

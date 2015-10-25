@@ -1,1 +1,0 @@
-Finalize what we're going to do with solr.xml, auto-discovery, config sets.

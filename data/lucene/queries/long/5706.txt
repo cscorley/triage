@@ -1,1 +1,0 @@
-Spinoff from LUCENE-5680: we shouldn't allow unsetting values through DocValues updates, at least not until there's a real usecase for it. This will simplify a lot of the internal code, as well make the numeric update API work w/ primitive long instead of Long.

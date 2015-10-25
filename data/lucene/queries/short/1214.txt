@@ -1,1 +1,0 @@
-Possible hidden exception on SegmentInfos commit

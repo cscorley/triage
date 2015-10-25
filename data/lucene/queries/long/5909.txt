@@ -1,3 +1,0 @@
-In the past, when we were on Java 6, we ran the Smoketester on Java 6 and Java 7. As Java 8 is now officially released and supported, smoketester should now use and require JAVA8_HOME.
-
-For the nightly-smoke tests I have to install the openjdk8 FreeBSD package, but that should not be a problem.

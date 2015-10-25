@@ -1,1 +1,0 @@
-ClientUtils.escapeQueryChars escapes chars a bit aggressive

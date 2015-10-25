@@ -1,6 +1,0 @@
-Today we reference a custom updateRequestProcessorChain using the update request parameter "update.processor".
-See http://wiki.apache.org/solr/SolrConfigXml#UpdateRequestProcessorChain_section
-
-This is confusing, since what we are really referencing is not an UpdateProcessor, but an updateRequestProcessorChain.
-
-I propose that "update.processor" is renamed as "update.chain" or similar

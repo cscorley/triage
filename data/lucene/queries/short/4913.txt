@@ -1,1 +1,0 @@
-FacetResultNode.ordinal is always 0 when all facets are requested

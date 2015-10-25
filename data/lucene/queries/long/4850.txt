@@ -1,1 +1,0 @@
-We moved to Java 7 in LUCENE-4747. But Clover 2.6.3 only allows Java 6. We should upgrade clover to the latest version (at least in trunk) and make "ant run-clover" work again. We have to replace the ASF License File with a new one for this to work.

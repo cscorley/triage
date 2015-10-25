@@ -1,1 +1,0 @@
-snappuller fails when modifiedConfFiles is not empty and full copy of index is needed

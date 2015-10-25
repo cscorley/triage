@@ -1,1 +1,0 @@
-Expose the stats values as an API Context.getStats

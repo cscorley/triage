@@ -1,1 +1,0 @@
-You should be able to set the update log directory with the CoreAdmin API the same way as the data directory.

@@ -1,1 +1,0 @@
-Improve fast vector highlighter to respect field boundaries in the case for multivalued fields.

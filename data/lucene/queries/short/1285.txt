@@ -1,1 +1,0 @@
-WeightedSpanTermExtractor incorrectly treats the same terms occurring in different query types

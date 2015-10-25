@@ -1,1 +1,0 @@
-The external/readable representation is used in the CountPair, so tiebreaks won't be by index order when sorting by count.

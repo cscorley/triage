@@ -1,1 +1,0 @@
-Now that some major filters such as TermsFilter and MultiTermQueryWrapperFilter return DocIdSets that have a better cost, we should switch to the cost API.

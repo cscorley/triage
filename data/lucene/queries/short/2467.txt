@@ -1,1 +1,0 @@
-IndexWriter memory leak when large docs are indexed

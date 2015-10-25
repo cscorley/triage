@@ -1,1 +1,0 @@
-minimize bytesref to be a ref to a byte[]

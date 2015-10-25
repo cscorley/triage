@@ -1,1 +1,0 @@
-Same basic issue as SOLR-6481

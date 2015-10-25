@@ -1,1 +1,0 @@
-Return slave replication details for a master if the master has also acted like a slave.

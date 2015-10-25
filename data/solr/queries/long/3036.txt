@@ -1,1 +1,0 @@
-I checked most of the other updatehandlers and they already support this so to make the story complete why not add it to the xml one too. The other reason is that I just realized that solrj uses the xml format by default but that should go into other issue.

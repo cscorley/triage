@@ -1,3 +1,0 @@
-Currently, FieldType takes a String value and converts that to whatever it uses internally – it would be great to be able to pass an Object in directly.  For embeded solr, and for UpdateRequestProcessors that wish to reuse objects in various fields, this will avoid conversion to and from string.
-
-This is a major API change, so it should only apply to 4.0

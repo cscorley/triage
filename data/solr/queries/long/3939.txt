@@ -1,7 +1,0 @@
-When a leader core is unloaded using the core admin api, the followers in the shard go into recovery but do not come out. Leader election doesn't take place and the shard goes down.
-
-This effects the ability to move a micro-shard from one Solr instance to another Solr instance.
-
-The problem does not occur 100% of the time but a large % of the time. 
-
-To setup a test, startup Solr Cloud with a single shard. Add cores to that shard as replicas using core admin. Then unload the leader core using core admin. 

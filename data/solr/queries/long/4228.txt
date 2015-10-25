@@ -1,1 +1,0 @@
-The new PingRequestHandler in Solr 4.0 takes over what actions.jsp used to do in older versions.  Create methods in the SolrPing request object to access this capability.

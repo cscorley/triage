@@ -1,1 +1,0 @@
-StandardCodec sometimes supplies skip pointers past EOF

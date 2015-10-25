@@ -1,1 +1,0 @@
-The hdfs write cache can still cause a reader to see a corrupted state.

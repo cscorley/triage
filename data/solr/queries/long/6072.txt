@@ -1,1 +1,0 @@
-The 'deletereplica' collection API should clean up the data and instance directory automatically. Not doing that is a bug even if it's a back-compat break because if we don't do that then there is no way to free up the disk space except manual intervention.

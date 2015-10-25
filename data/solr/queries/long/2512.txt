@@ -1,1 +1,0 @@
-Currently, if AnalysisEngine throws an exception during processing a text, whole adding docs go fail. Because online NLP services are error-prone, users should be able to choose whether solr skips the text processing (but source text can be indexed) for the document or throws a runtime exception so that solr can stop adding documents entirely.

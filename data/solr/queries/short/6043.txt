@@ -1,1 +1,0 @@
-Allow internal components to add headers to the HTTP response

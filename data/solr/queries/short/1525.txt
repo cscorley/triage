@@ -1,1 +1,0 @@
-allow DIH to refer to core properties

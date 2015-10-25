@@ -1,1 +1,0 @@
-IndexCommit.getFileNames() should not return dups

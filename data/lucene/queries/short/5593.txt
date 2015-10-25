@@ -1,1 +1,0 @@
-javadocs generation in release tasks: painfully slow

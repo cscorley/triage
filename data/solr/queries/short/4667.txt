@@ -1,1 +1,0 @@
-Our logging configuration files should set ZooKeeper logging to WARN

@@ -1,1 +1,0 @@
-Today we do two hash lookups, where in most cases a single one is enough. E.g. SR.getNumericDocValues initializes the FieldInfo (first lookup in FieldInfos), however if that field was already initialized, we can simply check dvFields.get(). This can be improved in all getXXXDocValues as well as getDocsWithField.

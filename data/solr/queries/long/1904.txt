@@ -1,1 +1,0 @@
-When facet.method=enum and we have a minDf>0 (when we skip the filter cache), we iterate over documents for a term and call baseDocSet.exists(doc).  We should ensure that this base doc set is fast for .exists(), so if it's a SortedIntSet, make a HashDocSet to use.

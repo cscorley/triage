@@ -1,7 +1,0 @@
-I can't seem to get the Distribution Info page to work. 
-
-I think it is because I have a custom path to solr. My path to the logs directory looks like this: /apps/search/solr/catalog/logs (The base url to solr ends up being http://domain.com/catalog) I have to create my path like this in order to have multiple instances of solr running in the same container.
-
-distributiondump.jsp is creating the path to the status file using: cwd + "/solr/logs/snapshot.current", which ends up being wrong. 
-
-Would it be possible to make it use a rootdir variable like: rootdir + "/logs/snapshot.current"? If there is no way to determine the rootdir, perhaps it could be added to solrconfig.xml (or at least let it be overridden there.)

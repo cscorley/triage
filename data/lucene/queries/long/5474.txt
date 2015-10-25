@@ -1,4 +1,0 @@
-In the examples of facetting the FacetsCollector.search() is used. There are use cases where you do not need the documents that match the search. 
-It would be nice if there is an example showing this.
-
-Basically, it comes down to using searcher.search(query, null /* Filter */, facetCollector)

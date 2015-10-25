@@ -1,1 +1,0 @@
-DistributedUpdateProcessor#doDefensiveChecks takes the shardId parameter as while it's not using it, so that should be removed.

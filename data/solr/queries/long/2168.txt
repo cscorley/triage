@@ -1,3 +1,0 @@
-If I add fact.missing to the facet params for a field, the Veolcity output has in the facet list:
-
-$facet.name (9220)

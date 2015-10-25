@@ -1,1 +1,0 @@
-Improve response message for reloading a non-existent core

@@ -1,3 +1,0 @@
-Iterators and generics are nice!
-
-this patch adds both to NamedList.java

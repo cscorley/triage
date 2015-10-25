@@ -1,1 +1,0 @@
-ReplicationHandler should accept bool type for enable flag

@@ -1,1 +1,0 @@
-We should default ramBufferSizeMB to around 100

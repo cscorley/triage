@@ -1,1 +1,0 @@
-License of servlet-api.jar is NOT ASF, it is CDDL! We must fix and add NOTICE.txt

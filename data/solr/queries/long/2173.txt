@@ -1,3 +1,0 @@
-See also the comments here. Currently available Lookup implementations don't implement load/save - these calls always return false.
-
-This means that Lookup dictionary is lost on searcher reload (or core reload) and needs to be rebuilt. However, this breaks the semantics of spellcheck.build=true, because with this patch the dictionary will always be recreated, even if this parameter is false... Still, this may be less surprising to users than a vanishing autosuggest functionality after commit.

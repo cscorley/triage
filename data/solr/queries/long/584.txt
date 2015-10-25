@@ -1,5 +1,0 @@
-stats.xsl doesn't do anything with the <core> info from the XML, so it gets dumped unceremoniously into the middle of the page.
-
-this is particulrly disconcerting in single core mode when the value is "null"  (which should probably be changed in stats.jsp to something that seems less like an error)
-
-http://www.nabble.com/%22null%22-in-admin-page-to17486312.html

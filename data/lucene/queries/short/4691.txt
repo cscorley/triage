@@ -1,1 +1,0 @@
-Facet tests should randomly pick IntEncoder and other stuff

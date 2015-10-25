@@ -1,3 +1,0 @@
-The sharedLib attribute on <solr> tag in solr.xml stopped working in 4.3.
-
-Using old-style solr.xml with sharedLib defined on solr tag. Solr does not load any of them. Simply swapping out solr.war with the 4.2.1 one, brings sharedLib loading back.

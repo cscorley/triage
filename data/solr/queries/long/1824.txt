@@ -1,1 +1,0 @@
-When abortOnConfigurationError=false, and there is a typo in one of the filters in a chain, the field type is still created by omitting that particular filter.  This is particularly dangerous since it will result in incorrect indexing.

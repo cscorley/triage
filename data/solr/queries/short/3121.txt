@@ -1,1 +1,0 @@
-Make new admin UI work better with big indexes

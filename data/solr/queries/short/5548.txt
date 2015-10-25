@@ -1,1 +1,0 @@
-Give DistributedSearchTestCase / JettySolrRunner the ability to specify extra filters

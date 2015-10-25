@@ -1,3 +1,0 @@
-SOLR-5399 follow-on.
-
-https://github.com/apache/lucene-solr/pull/49 has the proposed change, the commit message outlines the change to JSON output, XML output is unaffected.

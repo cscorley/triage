@@ -1,1 +1,0 @@
-don't require an analyzer, if all fields are NOT_ANALYZED

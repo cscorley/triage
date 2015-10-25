@@ -1,1 +1,0 @@
-Refactor Spatial RecursivePrefixTreeFilter algorithm for extension

@@ -1,5 +1,0 @@
-HttpComponent is up to version 4.2, and included in 4.2 is a new subclass of DefaultHttpClient named SystemDefaultHttpClient, which automatically configures itself using the "standard" java system properties...
-
-http://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/SystemDefaultHttpClient.html
-
-...i think we should upgrade and start using this new class in place of DefaultHttpClient, so that SolrJ clients (and implicitly SolrCloud) can automaticly leverage system properties users may expect to work.

@@ -1,5 +1,0 @@
-On some machines that have weird network settings, it is possible that InetAddress.getLocalHost() throws an UnknownHostException in _info.jsp in the admin console.  This prevents the entire admin console from coming up.  
-
-The fix is to catch the exception and use a host string of "unknown host" or something to that effect.  
-
-Patch shortly.

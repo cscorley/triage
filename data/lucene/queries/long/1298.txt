@@ -1,1 +1,0 @@
-MoreLikeThis only allows the use of the DefaultSimilarity.  Patch shortly

@@ -1,1 +1,0 @@
-OpenCloseCoreStressTest opens too many files (causing it to fail often)

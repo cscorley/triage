@@ -1,1 +1,0 @@
-XPathEntityProcessor must ignore DOCTYPE definitions

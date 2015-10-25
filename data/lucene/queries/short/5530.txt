@@ -1,1 +1,0 @@
- ComplexPhraseQueryParser throws ParseException for fielded queries

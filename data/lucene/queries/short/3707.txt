@@ -1,1 +1,0 @@
-Add a Lucene3x private SegmentInfosFormat implemenation

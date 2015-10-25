@@ -1,3 +1,0 @@
-The method responseInputStream of HttpClientBase wraps an InputStream in order to close it when it is done reading. However, the wrapper only overwrites the single-byte read() method, every other method is delegated to its parent (java.io.InputStream). Therefore, the more efficient read-methods like read(byte[] b) are all implemented by reading one byte after the other.
-
-In my test, it took 20 minutes to copy  an index of 38 GB. With the provided small patch, this was reduced to less than 10 minutes.

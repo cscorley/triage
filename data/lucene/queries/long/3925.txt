@@ -1,1 +1,0 @@
-It appears the corrections is simply to supply IndexOptions.DOCS_ONLY

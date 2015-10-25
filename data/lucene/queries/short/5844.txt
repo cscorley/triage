@@ -1,1 +1,0 @@
-ArrayUtil.grow should not pretend you can actually allocate array[Integer.MAX_VALUE]

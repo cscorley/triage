@@ -1,6 +1,0 @@
-Currently there is 
-private static final int RECURSION_CAP = 2;
-in the code of the class HunspellStemmer. It makes using hunspell with several dictionaries almost unusable, due to bad performance (f.ex. it costs 36ms to stem long sentence in latvian for recursion_cap=2 and 5 ms for recursion_cap=1). It would be nice to be able to tune this number as needed.
-AFAIK this number (2) was chosen arbitrary.
-
-(it's a first issue in my life, so please forgive me any mistakes done).

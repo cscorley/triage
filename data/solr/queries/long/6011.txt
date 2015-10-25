@@ -1,8 +1,0 @@
-
-
-{!complexphrase}"vol* high*"
-does not match the Solr document containing "... high volume web ..." (this is correct)
-
-But adding inOrder=false still fails to make it match.
-{!complexphrase inOrder=false}"vol* high*"
-

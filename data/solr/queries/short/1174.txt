@@ -1,1 +1,0 @@
-Logging Admin Servlet broken for multicore, cannot submit form

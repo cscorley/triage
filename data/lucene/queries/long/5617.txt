@@ -1,6 +1,0 @@
-in the case of the new format:
-  its not good to use Dir.fileLength in the assert
-  assert should be a hard check
-
-in the case of the old format:
-  its really not good to use Dir.fileLength in the computation

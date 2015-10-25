@@ -1,7 +1,0 @@
-Previous ParseFooUpdateProcessorFactory-s (see SOLR-4892) in the same chain will detect, parse and convert unknown fields’ String-typed values to the appropriate Java object type.
-
-This factory will take as configuration a set of mappings from Java object type to schema field type.
-
-ManagedIndexSchema.addFields() adds new fields to the schema.
-
-If schema addition fails for any field, addition is re-attempted only for those that don’t match any schema field.  This process is repeated, either until all new fields are successfully added, or until there are no new fields (because the fields that were new when this update chain started its work were subsequently added by a different update request, possibly on a different node).

@@ -1,1 +1,0 @@
-currently the BytesRef.copy[Int,Short,Long] api is only used by IndexDocValues and it seems it is pretty unique. I think we should move this into a package private class in o.a.l.i.values we can still open this up if it is needed by other packages.

@@ -1,5 +1,0 @@
-When building src.jar files for maven deploy, they miss resources, so analyzers-sommon-src.jar is useless.
-
-The attached patch will fix this. The only downside is: The globmapper hack does not work with <jar/>, so i used the new ANT 1.7.1 attribute erroronmissingdir="no" on the <fileset>s
-
-I also upgraded BUILD.txt, which were missing even java 1.6 in trunk!

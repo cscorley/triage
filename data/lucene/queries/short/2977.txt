@@ -1,1 +1,0 @@
-WriteLineDocTask should write gzip/bzip2/txt according to the extension of specified output file name

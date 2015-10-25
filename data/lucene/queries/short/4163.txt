@@ -1,1 +1,0 @@
-Improve concurrency in MMapIndexInput.clone()

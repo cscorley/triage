@@ -1,1 +1,0 @@
-Making Term Vectors more accessible

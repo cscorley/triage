@@ -1,1 +1,0 @@
-Since rollback (see SOLR-3622) is going away from DIH, at least in SolrCloud mode, let's rename most things "rollback" to "error", such as the new onRollback handler.

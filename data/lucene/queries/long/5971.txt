@@ -1,3 +1,0 @@
-The recently created bumpVersion.py attempts to create a new backcompat index if the default codec has changed.  However, we now want to create a backcompat index for every released version, instead of just when there is a change to the default codec.
-
-We should have a separate script which creates the backcompat indexes.  It can even work directly on the released artifacts (by pulling down from mirrors once released), so that there is no possibility for generating the index from an incorrect svn/git checkout.

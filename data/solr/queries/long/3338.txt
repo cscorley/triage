@@ -1,1 +1,0 @@
-The getConfigDir() method is used for more accurate logging, but this is not going to work with ZK.

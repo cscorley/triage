@@ -1,3 +1,0 @@
-The current DistributedQueue implementation leaks ZK watches whenever it finds children or times out on finding one. OCP uses this in its event loop and can loop tight in some conditions (when exclusivity checks fail), leading to lots of watches which get triggered together on the next event (could be a while for some activities like shard splitting).
-
-This gets exposed by SOLR-6261 which spawns a new thread for every parallel watch event.

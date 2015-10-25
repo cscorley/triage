@@ -1,1 +1,0 @@
-queryParams not respected for single-stream UpdateRequests

@@ -1,1 +1,0 @@
-optimize sortfield.needsScore on expressions

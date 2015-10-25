@@ -1,1 +1,0 @@
-In trunk change Solr's DirectoryFactory.create method to take LockFactory

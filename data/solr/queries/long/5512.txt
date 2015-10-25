@@ -1,5 +1,0 @@
-This works well in the general case (esp with huge numbers of unique values), but the SortedSetDocValuesAccumulator in lucene/facets does the algorithm better for typical cases (smaller number of unique values wrt the size of the document set).
-
-In this case, it collects directly with per-segment local ords, then remaps as a second step. So this is a lot less remapping.
-
-Its too bad the code is separate at the moment, for now lets steal the heuristic.

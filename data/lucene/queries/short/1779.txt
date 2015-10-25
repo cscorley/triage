@@ -1,1 +1,0 @@
-Remove unused "numSlotsFull" from FieldComparator.setNextReader

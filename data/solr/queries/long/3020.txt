@@ -1,3 +1,0 @@
-Make HunspellStemFilterFactory not modify tokens marked as keywords by KeywordMarkerFilterFactory or StemmerOverrideFilterFactory.
-
-See PorterStemFilterFactory for example on how to handle keywordtokens.

@@ -1,1 +1,0 @@
-Integrating grouping module into Solr 4.0

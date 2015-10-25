@@ -1,1 +1,0 @@
-NegativeArraySizeException caused by  ff.addFields

@@ -1,1 +1,0 @@
-Query Elevation component boosts excluded results in markExcludes=true mode causing them to be higher on results than they should.

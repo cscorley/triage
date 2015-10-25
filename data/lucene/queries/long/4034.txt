@@ -1,9 +1,0 @@
-Currently functionqueries have basically no simple low-level tests.
-
-Found a few minor problems:
-
-	fix -1 summation (in case some, but not all segments are preflex): TotalTermFreq/SumTotalTermFreq
-	fix omitTF case (due to LUCENE-2929, docsenum will return null if you ask for freqs but the field is omitTF).
-	fix some indexedField vs field mixups
-	fix QueryUtils searcher-wrapping to also set the similarity the same as it was on the original searcher.
-

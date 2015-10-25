@@ -1,1 +1,0 @@
-Could be useful if the method DefaultSolrHighlighter.alternateField(NamedList, SolrParams, Document, String) applies configured encoding to alternate fields.

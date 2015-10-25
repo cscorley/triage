@@ -1,1 +1,0 @@
-Weak references cause extreme GC churn

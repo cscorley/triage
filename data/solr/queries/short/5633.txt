@@ -1,1 +1,0 @@
-HttpShardHandlerFactory should make its http client available to subclasses

@@ -1,7 +1,0 @@
-FacetRequest.SortBy lets you specify two sort-by: ORDINAL and VALUE. While VALUE is the default (and breaks ties by ordinal), it's not very clear what's the use of SortBy.ORDINAL.
-
-In practice, if you choose to do that, you'd get the first K categories that are the descendant of the requested one, from smallest to highest, or vice versa. But that seems quite useless ... someone could just traverse the counts array (for instance) and filter out all counts==0? Or also, someone can write a FacetResultsHandler which does that...
-
-My motivation to remove that is to reduce the number of PQ combinations we have: MinValue, MaxValue (SortBy.VALUE, SortOrder.ASCENDING/DESCENDING) and MinOrdinal, MaxOrdinal. Now there are 4 PQs and I'd like to separately split them out to PQs that handle int vs float. Because today these PQs call Double.compare(), which you need to for floating-point values, but is just a waste for integer values.
-
-So removing SortBy will both simplify the API and halve the number of PQs we need to write. Plus ... it doesn't seem such a useful option, to let the user even spend 10 seconds to read the differences between VALUE and ORDINAL.

@@ -1,8 +1,0 @@
-Today's nightly Jenkins Maven trunk build has several test failures with the error message:
-
-
-class "javax.servlet.FilterRegistration"'s signer information does not match signer information of other classes in the same package
-
-
-
-On SOLR-3260, Ryan McKinley mentioned that these errors can be caused by mixing servlet-api jar versions.

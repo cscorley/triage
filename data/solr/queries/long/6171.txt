@@ -1,1 +1,0 @@
-This doesn't appear to be used anywhere - I'm guessing it's a relic of the core aliasing code.

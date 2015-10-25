@@ -1,1 +1,0 @@
-Problem with facet.sort=lex, shards, and facet.mincount

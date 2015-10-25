@@ -1,1 +1,0 @@
-ArabicAnalyzer: Lowercase before Stopfilter

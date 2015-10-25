@@ -1,1 +1,0 @@
-Currently things just go negative and act wonky.

@@ -1,1 +1,0 @@
-Both "bf" and "bq" allow users to enter a boost value after the carrot, but only "bf" allows negative values.  Here is a minor change and unit test to allow negative values on "bq" also.  

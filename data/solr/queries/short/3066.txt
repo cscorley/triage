@@ -1,1 +1,0 @@
-SolrIndexSearcher open/close imbalance in some of the new SolrCloud tests.

@@ -1,1 +1,0 @@
-Add filter query in solr/admin/form.jsp

@@ -1,1 +1,0 @@
-FieldCache entries should be shared if segments are the same except for deletes.

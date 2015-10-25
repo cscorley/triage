@@ -1,1 +1,0 @@
-Right now, when a dictionary that doesn't exist is selected using "suggest.dictionary", or when no dictionary is selected and there is no default, the SuggestComponent throws an IllegalArgumentException, which then translate into a 500 - Service Error. This should be a 400.

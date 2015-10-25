@@ -1,1 +1,0 @@
-Allow unit test classes to specify core name during setup

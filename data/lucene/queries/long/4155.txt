@@ -1,3 +1,0 @@
-Those are used solely by the index package and are very internal (just helper classes), so they should be hidden from the user. This can be done by adding the pkg-private to index package.
-
-ReaderUtil was cleaned up in LUCENE-3866, should stay public, but is in wrong package since Lucene 2.9. We should move it to oal.index package, too. Its name suggests that.

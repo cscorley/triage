@@ -1,3 +1,0 @@
-We should check the 2 parameters carefully before entering the loop. Those checks here cost nothing.
-
-Otherwise this class must be hidden, we should not offer any public method to the users that can loop infinite without parameter checking.

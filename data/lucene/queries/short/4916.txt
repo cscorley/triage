@@ -1,1 +1,0 @@
-Spatial WithinPrefixTreeFilter can too eagerly find false-positive 

@@ -1,1 +1,0 @@
-The accuracy of these methods is important for example if you use them to estimate the memory usage of your filter cache.

@@ -1,1 +1,0 @@
-DirectoryTaxonomyWriter should throw a proper exception if it was closed

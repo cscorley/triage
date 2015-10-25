@@ -1,7 +1,0 @@
-There is a typo in  MoreLikeThisHandler.java
-
-fillInteristingTermsFromMLTQuery
-
-should read
-
-fillInterestingTermsFromMLTQuery

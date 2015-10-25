@@ -1,3 +1,0 @@
-DIH: Setting rows= on full-import has no effect
-
-http://markmail.org/thread/omzkm2x52dsuzomy

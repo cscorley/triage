@@ -1,1 +1,0 @@
-Queries with shards.tolerant=true and stats=true or spellcheck=on do not work

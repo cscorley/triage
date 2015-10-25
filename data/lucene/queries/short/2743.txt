@@ -1,1 +1,0 @@
-SimpleText is too slow

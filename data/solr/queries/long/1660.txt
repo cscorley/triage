@@ -1,3 +1,0 @@
-because arrayCopys into null.
-
-if you want a testcase i can yank it out of in-progress patch from SOLR-1657, but i think its obvious.

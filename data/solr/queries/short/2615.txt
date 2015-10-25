@@ -1,1 +1,0 @@
-Have LogUpdateProcessor log each command (add, delete, ...) at debug/FINE level

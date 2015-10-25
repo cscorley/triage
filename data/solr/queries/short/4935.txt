@@ -1,1 +1,0 @@
-persisting solr.xml preserves extraneous values like "wt=json" in <core> tags when creating cores via the admin handler

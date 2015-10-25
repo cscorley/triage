@@ -1,1 +1,0 @@
-implicit core properties are not set for single core

@@ -1,1 +1,0 @@
-Add a distrib.singlePass parameter to make EXECUTE_QUERY phase fetch all fields and skip GET_FIELDS

@@ -1,1 +1,0 @@
-pretty simple thing the returned index is incremented before returned. I will add a test and upload a patch

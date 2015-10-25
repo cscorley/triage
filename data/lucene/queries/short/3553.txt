@@ -1,1 +1,0 @@
-tweak AppendingCodec to write segments_N compatible with 'normal' Lucene

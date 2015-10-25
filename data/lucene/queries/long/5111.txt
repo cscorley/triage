@@ -1,1 +1,0 @@
-WordDelimiterFilter is documented as broken is TestRandomChains (LUCENE-4641). Given how used it is, we should try to fix it.

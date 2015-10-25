@@ -1,1 +1,0 @@
-Improve spatial package.html to compare Strategys

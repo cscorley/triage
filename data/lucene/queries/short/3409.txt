@@ -1,1 +1,0 @@
-NRT reader/writer over RAMDirectory memory leak

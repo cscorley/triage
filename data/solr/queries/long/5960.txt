@@ -1,7 +1,0 @@
-Post.jar currently doesn't support Basic Authentication if Solr is configured to use Basic Authentication.
-
-I've attached a patch that enables users to use post.jar if their Solr is configured with Basic Authentication.
-
-Here's the example usage:
-
-java -Durl="http://username:password@hostname:8080/solr/update" -jar post.jar sample.xml

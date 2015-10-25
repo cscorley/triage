@@ -1,3 +1,0 @@
-As of jira LUCENE-3977 the generation of javadocs has been cleaned up and is now set fix to 'noindex' to keep distributions small.
-
-An ant task should make this selectable to have the option for really building ALL javadocs.

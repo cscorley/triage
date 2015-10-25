@@ -1,1 +1,0 @@
-Instead of adding one facet field each -  use the overloaded function in ModifiableSolrParams (that takes all the elements) that adds facet fields en masse .. 

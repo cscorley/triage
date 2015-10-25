@@ -1,3 +1,0 @@
-working on SOLR-3522 i discovered that in some cases Solr is producing queries that aren't equals to themselves, so they can't be cached.
-
-So far the only observed problem is in func strdist, but i want to make sure we have an exhaustive test of this in case there are others

@@ -1,3 +1,0 @@
-Attached is a mapping file to provide the equivalent of ASCIIFoldingFilter through the MappingCharFilterFactory.
-
-I'm not sure where this should go in the source tree.

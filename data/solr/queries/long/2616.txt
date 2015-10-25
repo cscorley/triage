@@ -1,1 +1,0 @@
-The /example/ Jetty Solr configuration should include a basic logging configuration file.  Looking at this wiki page: http://wiki.apache.org/solr/LoggingInDefaultJettySetup  I am creating this patch. 

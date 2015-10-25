@@ -1,5 +1,0 @@
-In LUCENE-4024 there were some changes to the fuzzy query syntax.  Only the Classic QueryParser really documents its syntax, which makes it hard to know whether the changes effected other QPs.  Compounding this issue there are many classes which have no javadocs at all and I found myself quite confused when I consolidated all the QPs into their module.
-
-We should do a concerted effort to improve the documentation so that it is clear what syntax is supported by what QPs and so that at least the user facing classes have javadocs.  
-
-As part of this, I wonder whether we should give the syntax supported by the Classic QueryParser a new name (rather than just Lucene's query syntax) since other QPs can and do support other syntax, and then somehow add some typed control over this, so QPs have to declare programmatically that they support the syntax and so we can verify that by randomly plugging in implementations into tests.

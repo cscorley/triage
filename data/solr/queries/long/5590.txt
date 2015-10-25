@@ -1,5 +1,0 @@
-SolrJ depends on HttpClient 4.2.x right now, but HttpClient 4.2.x has issues that the ManifoldCF team encountered with handling of form data encoding - issues which are addressed in HttpClient 4.3.x.  We developed a local patch, but Solr will eventually need to go to the new client.  (ManifoldCF would plan to follow shortly thereafter).
-
-I tried to get Oleg (PMC chair of HttpComponents) to agree to port the fixed code to the 4.2.x stream but he did not want to do that.  So I believe that that avenue is closed.
-
-See CONNECTORS-623 for a detailed description of the problem.

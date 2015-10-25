@@ -1,5 +1,0 @@
-We need to work out a strategy for the case of:
-
-Leader and replicas can still talk to ZooKeeper, Leader cannot talk to replica.
-
-We punted on this in initial design, but I'd like to get something in.

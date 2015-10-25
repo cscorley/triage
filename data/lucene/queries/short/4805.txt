@@ -1,1 +1,0 @@
-Running tests from eclipse sometimes ignores the whole test

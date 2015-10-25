@@ -1,1 +1,0 @@
-We release the lock tmp while waiting for any outstanding directories to be returned - if that happens, the collection we are iterating on can change from another thread when an outstanding directory is released. We need to make our own collection rather than using the one shared with byDirectoryCache.

@@ -1,1 +1,0 @@
-kuromoji dictionary could be more compact

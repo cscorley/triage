@@ -1,1 +1,0 @@
-As another improvement, these two (mostly CategoryListIterator) should be per-segment. I've got a patch nearly ready, will post tomorrow.

@@ -1,5 +1,0 @@
-Add additional search provider (to existed Lucid Find) search-lucene.com.
-
-I believe it was initiated somewhere in general ML discussions.
-
-It makes sense to follow the same rationales as those in TIKA-488 and NUTCH-909, since they are applicable here too.

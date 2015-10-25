@@ -1,3 +1,0 @@
-When submitting docs to solr with the javabin wire format server responses with 200 ok even when there was an error. The exception is only logged at the server.
-
-When using the xml format error is correctly reported back

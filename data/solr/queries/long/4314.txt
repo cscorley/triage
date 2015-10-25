@@ -1,5 +1,0 @@
-Example's solrconfig.xml points to lucene 3.5 documentation for IndexDeletionPolicy javadoc.
-
-The link is dead (possibly in other places too).
-
-The fix is here: https://github.com/apache/lucene-solr/pull/6/files#diff-0 , just one line copy/paste. Though, that's lucene 4.0 link, I am not sure if there is a different one for Lucene 4.1 (catch-22...).

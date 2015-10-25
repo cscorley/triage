@@ -1,1 +1,0 @@
-move DocumentStoredFieldsVisitor to o.a.l.document

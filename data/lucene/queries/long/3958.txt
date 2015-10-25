@@ -1,2 +1,0 @@
-Linguistic corrections to the javadoc of forceMerge() in org.apache.lucene.index.IndexWriter.
-Main problem in "In general, once the this completes, the total size..."

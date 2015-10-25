@@ -1,1 +1,0 @@
-replication reserves commit-point forever if using replicateAfter=startup

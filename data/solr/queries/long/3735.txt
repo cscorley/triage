@@ -1,1 +1,0 @@
-A mime-to-extension mapping was added to VelocityResponseWriter recently.  This really belongs in the templates themselves, not in VrW, as it is specific to the example search results not meant for all VrW templates.

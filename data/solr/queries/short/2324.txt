@@ -1,1 +1,0 @@
-SolrCloud solr.xml parameters are not persisted by CoreContainer.

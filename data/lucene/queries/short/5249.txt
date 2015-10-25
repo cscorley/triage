@@ -1,1 +1,0 @@
-All Lucene/Solr modules should use the same dependency versions

@@ -1,1 +1,0 @@
-Directories that are not shutdown until DirectoryFactory#close do not have close listeners called on them.

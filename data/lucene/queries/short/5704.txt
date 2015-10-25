@@ -1,1 +1,0 @@
-Compile error in various DocValues formats with Java 8u20

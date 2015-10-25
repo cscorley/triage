@@ -1,3 +1,0 @@
-Field.java contains a inlined Keyword-TokenStream. Unfortunately this one is recreated all the time, although one reuses the same Field instance. For NumericTokenStream Field.java reuses it, but the Keyword one not.
-
-We should apply the same logic and lazy init the TokenStream with a setter for the String value and reset(). This would be looking identical to SetNumeric(xx).

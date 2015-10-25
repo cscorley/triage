@@ -1,3 +1,0 @@
-If SystemInfoHandler does not contain a core.host entry, the UI is left blank more or less, because a Javascript Exception occurs.
-
-Reported on the User-ML: http://search-lucene.com/m/NFrmpO2zCY1

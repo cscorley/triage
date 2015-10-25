@@ -1,1 +1,0 @@
-a delete-by-query of : should quickly be able to remove all documents.

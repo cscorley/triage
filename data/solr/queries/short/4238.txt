@@ -1,1 +1,0 @@
-filename pattern of jetty request log file in sample example\etc\jetty.xml is wrong

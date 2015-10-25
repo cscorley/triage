@@ -1,1 +1,0 @@
-Fix smoketester to not run checkJavadocsLinks.py across java6-generated javadocs

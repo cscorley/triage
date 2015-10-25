@@ -1,1 +1,0 @@
-Solr gives the ability to its users to select the postings format to use on a per-field basis but only Lucene40PostingsFormat is available by default (unless users add lucene-codecs to the Solr lib directory). Maybe we should add lucene-codecs to Solr libs (I mean in the WAR file) so that people can try our non-default postings formats with minimum effort?

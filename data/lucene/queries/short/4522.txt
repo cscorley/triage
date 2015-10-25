@@ -1,1 +1,0 @@
-CompressingStoredFieldsFormat: remove support for DISK_DOC

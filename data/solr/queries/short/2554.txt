@@ -1,1 +1,0 @@
-RandomSortField values are cached in the FieldCache

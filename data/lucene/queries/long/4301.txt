@@ -1,3 +1,0 @@
-Having a test timeout is great (for things like test hangs), but its going to cause a lot of failed builds until we factor in the various flags that can cause tests to run longer, or enable longer-running tests.
-
-Its hard to say what the limits should be since jenkins history is pretty limited at the moment (only 2 nightly runs history available)

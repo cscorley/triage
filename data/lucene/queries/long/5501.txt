@@ -1,1 +1,0 @@
-Collectors have the ability to declare whether or not they support out-of-order collection, but since most scorers score in order this is not well tested.

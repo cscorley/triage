@@ -1,1 +1,0 @@
-When there is only Segements in solr core, which means no any indexes, in CompositeReaderContext.build() method, the atomicReader that has no fields returned should not be added into leaves. Otherwise, in SolrIndexSearcher.getDocSetNC(Query query, DocSet filter), when execute line fields.terms(t.field()), a nullpointerexception will occur since fields variable is null.

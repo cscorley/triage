@@ -1,1 +1,0 @@
-Add a few utility commands to the DIH admin page. The commands added are: full Import, delta Import, status, reload config, ... In addition to "Return to Admin Page" link.

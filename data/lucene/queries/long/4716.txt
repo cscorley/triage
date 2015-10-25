@@ -1,1 +1,0 @@
-DrillDown provides helper methods to wrap a baseQuery with drill-down categories. All the categories are AND'ed, and it has been asked on the user list for OR support. While users can construct their own BooleanQuery, it would be useful if DrillDown helped them doing that. I think that a simple Occur additional parameter to DrillDown.query will help to some extent.

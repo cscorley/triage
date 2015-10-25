@@ -1,1 +1,0 @@
-Fix schema (scheam) typo in test configurations

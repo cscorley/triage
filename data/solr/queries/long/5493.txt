@@ -1,1 +1,0 @@
-Currently there is no log indicating that Solr found a size mismatch between index files on disk and the ones that are in the download list. I think it can be useful to report that in the logs. I think this can be a WARN level information, because we don't expect this situation to happen frequently.

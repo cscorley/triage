@@ -1,1 +1,0 @@
-Need stopwords and stoptags lists for default Japanese configuration

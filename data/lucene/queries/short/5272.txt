@@ -1,1 +1,0 @@
-OpenBitSet.ensureCapacity does not modify numBits

@@ -1,1 +1,0 @@
-Allow nested queries (sub-queries of different types) from function query syntax

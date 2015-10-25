@@ -1,7 +1,0 @@
-The whole setup should really be changed in Solr trunk, especially as we want to make the lockfactory non-mutable (set via directory ctor).
-
-As workaround to prevent SimpleFSLockFactory from creating the lock directory initially, we should pass NoLockFactory in the create method. This is possible because injectLockFactory will set the "configured one" afterwards.
-
-This change is needed in trunk, because the LockFactory creates the directory in its ctor, which leads to problems with NIO2.
-
-In addition, the SlrCore.newSolrDataDir does not cleanup and close the directory correctly if an error occurs.

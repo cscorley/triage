@@ -1,1 +1,0 @@
-There are a couple of bugs in the sync process when a leader goes down and a new leader is elected.

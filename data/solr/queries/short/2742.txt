@@ -1,1 +1,0 @@
-Add commitWithin to convenience signatures for SolrServer.add(..)

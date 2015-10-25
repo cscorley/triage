@@ -1,1 +1,0 @@
-SolrCloud reads its entire state from Zookeeper on every update instead of what has changed

@@ -1,1 +1,0 @@
-Not every IndexReader/close listener is called and this results in executors not being properly shut down/ disposed of.

@@ -1,1 +1,0 @@
-fix woodstox dependencies in solr branch_3x

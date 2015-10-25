@@ -1,6 +1,0 @@
-In SOLR-2383 the hardcoded display of some facet ranges were replaced with automatic, dynamic display.
-There were some shortcomings:
-a) Float range to-values were sometimes displayed as int
-b) Capitalizing the facet name was a mistake, sometimes looks good, sometimes not
-c) facet.range on a date did not work - dates were displayed in whatever locale formatting
-d) The deprecated facet.date syntax was used in solrconfig.xml instead of the new facet.range

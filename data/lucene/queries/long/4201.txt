@@ -1,1 +1,0 @@
-For some applications it might be useful to normalize kanji and kana iteration marks such as 々, ゞ, ゝ, ヽ and ヾ to make sure they are treated uniformly.

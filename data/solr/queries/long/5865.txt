@@ -1,9 +1,0 @@
-Today, the SolrCloud tests are based on the LuceneTestCase class hierarchy, which has a couple of issues around support for downstream projects:
-
-
-	It's difficult to test SolrCloud support in a downstream project that may have its own test framework.  For example, some projects have support for different storage backends (e.g. Solr/ElasticSearch/HBase) and want tests against each of the different backends.  This is difficult to do cleanly, because the Solr tests require derivation from LuceneTestCase, while the other don't
-	The LuceneTestCase class hierarchy is really designed for internal solr tests (e.g. it randomizes a lot of parameters to get test coverage, but a downstream project probably doesn't care about that).  It's also quite complicated and dense, much more so than a downstream project would want.
-
-
-
-Given these reasons, it would be nice to provide a simple "MiniSolrCloudCluster", similar to how HDFS provides a MiniHdfsCluster or HBase provides a MiniHBaseCluster.

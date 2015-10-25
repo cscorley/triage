@@ -1,1 +1,0 @@
-MoreLikeThisHandler doesn't work with alternate qparsers

@@ -1,1 +1,0 @@
-AddUpdateCommand.getIndexedId doesn't work with schema configured defaults/copyField - UUIDField/copyField can not be used as uniqueKey field

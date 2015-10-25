@@ -1,3 +1,0 @@
-Current likelihood calculation multiplies probabilities (whose values are between 0 and 1) thus having longish docs with unfrequent words for some class/category may lead to multiple double multiplications to return 0 even if that's not the correct value (thus assigning such a class 0 probability too).
-
-Probably using loglikelihood and/or BigDecimals may help.

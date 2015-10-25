@@ -1,1 +1,0 @@
-Attempting to use distributed grouping (using a StrField as the group.fieldname) with a UUID as the uniqueKey results in an error because the classname (java.util.UUID) is prepended to the field value during the second phase of the grouping.

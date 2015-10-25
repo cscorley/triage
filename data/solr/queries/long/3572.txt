@@ -1,1 +1,0 @@
-When a custom similarity is defined in the solr schema it is helpful to have the schema browser show the custom similarity

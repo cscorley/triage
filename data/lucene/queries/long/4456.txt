@@ -1,3 +1,0 @@
-Because MockDir calls crash() before it checks for unreferenced files, deletes are no longer allowed.
-
-this means the unreferenced files check is useless!

@@ -1,1 +1,0 @@
-Flex on non-flex emulation of TermsEnum incorrectly seeks/nexts beyond current field

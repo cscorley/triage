@@ -1,1 +1,0 @@
-As discussed on the mailing list (http://markmail.org/message/cwnyfqmet3wophec) there seems to be a bug in both the formula and in the way RIDF is calculated. The formula is missing a minus, but also the calculation uses local (in-document) term frequency instead of the total term frequency (sum of all term occurrences in a corpus).

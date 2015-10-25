@@ -1,1 +1,0 @@
-Solr requires -Dsolr.clustering.enabled=false when pointing at example config

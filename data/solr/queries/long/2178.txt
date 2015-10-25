@@ -1,1 +1,0 @@
-The /browse example in solr/example is much nicer to look at and work with, we should convert the tutorial over to use it so as to present a nicer view of Solr's capabilities.

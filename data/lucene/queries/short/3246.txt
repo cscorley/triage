@@ -1,1 +1,0 @@
-Invert IR.getDelDocs -> IR.getLiveDocs

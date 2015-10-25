@@ -1,1 +1,0 @@
-cleanup and sync analysis with lucene trunk

@@ -1,1 +1,0 @@
-Unknown query type 'func'

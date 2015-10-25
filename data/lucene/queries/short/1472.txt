@@ -1,1 +1,0 @@
-DateTools.stringToDate() can cause lock contention under load

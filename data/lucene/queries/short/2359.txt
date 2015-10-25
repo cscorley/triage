@@ -1,1 +1,0 @@
-CartesianPolyFilterBuilder doesn't handle edge case around the 180 meridian

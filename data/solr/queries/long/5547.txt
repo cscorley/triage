@@ -1,1 +1,0 @@
-Creating a collection alias using SolrJ sets the alias name and the collections to alias to the same value.  Line 200 of CollectionAdminRequest.java should likely read params.set( "collections", aliasedCollections);

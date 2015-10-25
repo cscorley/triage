@@ -1,3 +1,0 @@
-CoreContainer has some suspicious code that reads "roles" attribute from solr.xml, but doesn't ever seem to write it back.
-
-not clear to me what exactly "roles" is for, or if any code paths in CoreAdminHandler or the new collections API can modify the "roles", but if so there's a bug in there somewhere.

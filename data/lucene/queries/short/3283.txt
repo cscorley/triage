@@ -1,1 +1,0 @@
-Move core QueryParsers to queryparser module

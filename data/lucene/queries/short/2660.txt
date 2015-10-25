@@ -1,1 +1,0 @@
-Add alternative search-provider to Lucene site

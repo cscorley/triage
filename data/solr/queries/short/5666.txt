@@ -1,1 +1,0 @@
-Using the hdfs write cache can result in appearance of corrupted index.

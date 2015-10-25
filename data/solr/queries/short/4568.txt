@@ -1,1 +1,0 @@
-The lastPublished state check before becoming a leader is not working.

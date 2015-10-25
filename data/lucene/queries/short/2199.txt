@@ -1,1 +1,0 @@
-ShingleFilter skips over trie-shingles if outputUnigram is set to false

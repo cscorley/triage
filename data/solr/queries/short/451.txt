@@ -1,1 +1,0 @@
-analysis.jsp should use POST instead of GET and it would be nice to have a bigger input box

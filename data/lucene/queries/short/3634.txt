@@ -1,1 +1,0 @@
-remove old static main methods in core

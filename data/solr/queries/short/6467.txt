@@ -1,1 +1,0 @@
-solr start script puts log files in bin directory

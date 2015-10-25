@@ -1,1 +1,0 @@
-For example, a fuzzy query of foo~2 should be equal to FOO~2 on a lowercased field.

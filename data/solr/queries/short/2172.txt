@@ -1,1 +1,0 @@
-ZkController should update it's live node set after registering itself

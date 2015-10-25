@@ -1,1 +1,0 @@
-Remove JSP from solr webapp

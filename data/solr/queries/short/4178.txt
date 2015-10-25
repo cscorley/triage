@@ -1,1 +1,0 @@
-ReplicationHandler should abort any current pulls and wait for it's executor to stop during core close.

@@ -1,1 +1,0 @@
-Facet User Guide for lucene 4.2 has deleted classes/methods and needs more explanations.

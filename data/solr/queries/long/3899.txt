@@ -1,3 +1,0 @@
-SolrCore.getNewIndexDir() will always log a warning on the first run. The intention of the check was probably to see if the index dir changed between invocations.
-
-I provide a SVN patch to solve the problem.

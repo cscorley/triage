@@ -1,1 +1,0 @@
-make similarities/term/collectionstats take long (for > 2B docs)

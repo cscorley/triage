@@ -1,1 +1,0 @@
-[Patch] Get Test Solr Server working in Windows environment

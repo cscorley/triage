@@ -1,2 +1,0 @@
-When using DocValues for sort fields, "sortMissingLast=true" seems not to work - which makes sense as DocValues require a value for every document. The workaround is to use a default value which is alphanumericly sorted last. But when specifying the sort field as a dynamic field, the default value is not applied when a document does not contain that field.
-To make it work, I had to define every single sort field explicitly.

@@ -1,3 +1,0 @@
-In LUCENE-3930 we're implementing some less than ideal solutions to make available the unreleased version of commons-csv.  We could remove these solutions if we didn't rely on this lib.  So I think we should explore alternatives. 
-
-I think opencsv is an alternative to consider, I've used it in many commercial projects.  Bizarrely Commons-CSV's website says that Opencsv uses a BSD license, but this isn't the case, OpenCSV uses ASL2.

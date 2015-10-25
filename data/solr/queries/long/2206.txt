@@ -1,5 +1,0 @@
-The MailEntityProcessor spells the XML attribute processAttachement with an extra 'e'. From the archives, it appears that the two Solr fields also spelled it this way but were fixed at some point.
-
-Please make 'processAttachment' the standard spelling. The code should also check for the extra-e version but it should not appear in the wiki or other documentation.
-
-Thanks!

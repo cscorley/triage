@@ -1,1 +1,0 @@
-DIH - FileDataSource & FieldReaderDataSource should default to UTF-8 charset

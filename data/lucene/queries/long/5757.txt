@@ -1,5 +1,0 @@
-This method is "banned" already because it can crawl slowly across large object graphs. 
-
-I think it should be in the test framework. It needs enhancements for testing such as some way to filter what is crawled.
-
-Currently lots of code in lucene tries to provide accounting information but its all totally untested. We need to fix the test situation or remove Accountable and such methods completely.

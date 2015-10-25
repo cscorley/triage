@@ -1,1 +1,0 @@
-SimpleHTMLEncoder in Highlighter module breaks Unicode outside BMP

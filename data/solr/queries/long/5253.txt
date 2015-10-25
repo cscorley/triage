@@ -1,3 +1,0 @@
-Minor, but it bugs me that it's so easy to try to remove all extraneous fields from schema.xml and shoot yourself in the foot. Now and forever more we should place all the "special" fields right at the top of the example schema. Trivial to do.
-
-True, we say a nice note "* fields are internal and required", but still.

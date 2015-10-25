@@ -1,7 +1,0 @@
-
-
--Dtests.seed=75DBD696A5D72F04
--Dtestcase=TestFailIfDirectoryNotClosed
-
-
-Windows.

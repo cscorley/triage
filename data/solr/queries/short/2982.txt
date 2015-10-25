@@ -1,1 +1,0 @@
-Upgrade Apache Commons Codec to version 1.6 in order to add new Beider-Morse Phonetic Matching (BMPM) option

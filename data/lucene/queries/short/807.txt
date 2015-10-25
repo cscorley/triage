@@ -1,1 +1,0 @@
-Minor improvement to JavaDoc for ScoreDocComparator

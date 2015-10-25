@@ -1,1 +1,0 @@
-Try harder to prevent SIGSEGV on cloned MMapIndexInputs

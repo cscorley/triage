@@ -1,1 +1,0 @@
-If indexwriter hits a non-ioexception from indexExists it leaks a write.lock

@@ -1,3 +1,0 @@
-Given that the schema API has a PUT request (https://cwiki.apache.org/confluence/display/solr/Schema+API#SchemaAPI-Createonenewschemafield) it would be nice if HttpSolrServer supported sending PUTs, so it could be used for sending that type of request.  Note if we really wanted to fully support that request we'd probably want a Request/Response type in solrj as well, but that can be handled in a separate issue.
-
-Also, administrators may add arbitrary filters that require PUT requests.  In my own setup, I have a version of Hadoop's DelegationTokenAuthenticationFilter sitting in front of the dispatch filter.  Here also it would be nice if I could send all requests via HttpSolrServer.

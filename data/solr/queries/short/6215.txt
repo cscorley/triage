@@ -1,1 +1,0 @@
-TrieDateField on trunk should directly extend TrieField instead of forwarding to a wrapped TrieField

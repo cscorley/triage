@@ -1,1 +1,0 @@
-Distributed search throws NPE when using fl=score

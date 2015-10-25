@@ -1,1 +1,0 @@
-need to improve snapinstaller to ignore non-snapshots in data directory

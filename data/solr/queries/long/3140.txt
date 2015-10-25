@@ -1,3 +1,0 @@
-Today norms are enabled for all Solr field types by default, while in Lucene norms are omitted for the numeric types.
-
-Propose to make the Solr defaults the same as in Lucene, so that if someone occasionally wants index-side boost for a numeric field type they must say omitNorms="false". This lets us simplify the example schema too.

@@ -1,1 +1,0 @@
-read/write .del as d-gaps when the deleted bit vector is sufficiently sparse

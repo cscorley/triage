@@ -1,1 +1,0 @@
-Add workaround for a JDK 8 "class library bug" which is still under discussion and may *not* be fixed

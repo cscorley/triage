@@ -1,5 +1,0 @@
-If the app needs to render different fields (eg multi-valued vs single-valued) differently it's tricky now.
-
-You can do Passage[0].getMatchTerms()[0].field(), but then that doesn't work if that field hit the empty highlight.
-
-I think we should pass the fieldName to format directly?  And then maybe change getMatchTerms() to return BytesRef[] instead (the field name is redundant: they are all the same for all passages passed to format).

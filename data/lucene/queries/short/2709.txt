@@ -1,1 +1,0 @@
-If test has methods with @Ignore, we should print out a notice

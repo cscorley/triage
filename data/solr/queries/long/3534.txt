@@ -1,1 +1,0 @@
-The dismax and edismax query parsers should default to "df" when the "qf" parameter is absent.  They only use the defaultSearchField in schema.xml as a fallback now.

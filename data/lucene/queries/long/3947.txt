@@ -1,5 +1,0 @@
-Currently it fails for lucene/tools (should work though, as its a proper module),
-because it has no tests. we should just not error in this case.
-
-Additionally it doesnt look for stuff under src/tools/java (analyzers, kuromoji, icu)
-We should check those too.

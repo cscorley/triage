@@ -1,1 +1,0 @@
-HdfsUpdateLog has a race condition that can expose a closed HDFS FileSystem instance and should close it's FileSystem instance if either inherited close method is called.

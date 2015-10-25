@@ -1,1 +1,0 @@
-BytesRef.copyBytes and copyChars don't oversize

@@ -1,1 +1,0 @@
-Take out the possibility of having a solr.properties file

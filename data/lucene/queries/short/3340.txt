@@ -1,1 +1,0 @@
-Buffered deletes are not flushed by RAM or count

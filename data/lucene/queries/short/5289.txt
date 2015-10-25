@@ -1,1 +1,0 @@
-IndexWriter.hasUncommittedChanges() returns false if there are pending delete by term only

@@ -1,1 +1,0 @@
-By using a queue overseer becomes a watch free, a lot simpler and probably  less buggy too.

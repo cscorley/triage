@@ -1,1 +1,0 @@
-java.lang.AssertionError: Test Setup Failure: shard1 should have just been set up to be inconsistent - but it's still consistent. Leader:http://127.0.0.1:58076/gj_mz/in/collection1 Dead Guy:http://127.0.0.1:64555/gj_mz/in/collection1skip list:[CloudJettyRunner [url=http://127.0.0.1:18606/gj_mz/in/collection1], CloudJettyRunner [url=http://127.0.0.1:10847/gj_mz/in/collection1]]

@@ -1,1 +1,0 @@
-Decompounders based on CompoundWordTokenFilterBase cannot be used with custom attributes

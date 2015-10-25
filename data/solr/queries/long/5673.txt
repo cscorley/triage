@@ -1,4 +1,0 @@
-in setFollowRedirects(boolean newValue)
-HTTPSolr sets its internal property "followRedirects" always to true, regardless of the given parameter.
-
-Patch and tests will follow tomorrow.

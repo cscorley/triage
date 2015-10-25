@@ -1,1 +1,0 @@
-It can sometimes be useful to reconfigure the position and offset gaps of an existing analyzer. 

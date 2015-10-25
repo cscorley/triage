@@ -1,9 +1,0 @@
-Analysis.jsp gives the incorrect results if you use "protwords.txt" or "stemdict.txt" or the like.
-
-This is because this is now implemented with KeywordAttribute (so you can easily override any stemmer etc).
-
-For example, if your schema had "foobars" in protwords.txt, analysis.jsp would show it being stemmed to "foobar", even though this doesnt actually happen.
-
-The problem is that this jsp is downconverting the entire tokenstream to Token in between processing, so it silently discards KeywordAttribute and you get the wrong result.
-
-Note: this issue isnt about displaying other attributes such as KeywordAttribute (which would be a new feature). Its about not throwing them away so that the analysis actually represents what happens.

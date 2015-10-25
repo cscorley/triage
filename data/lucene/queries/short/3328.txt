@@ -1,1 +1,0 @@
-Specialize BooleanQuery if all clauses are TermQueries

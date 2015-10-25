@@ -1,3 +1,0 @@
-In LUCENE-5489 we added QueryRescorer, to rescore first-pass hits using scores from a (usually) more expensive second-pass query.
-
-I think we should also add ExpressionRescorer, to compute the second pass score using an arbitrary JS expression.

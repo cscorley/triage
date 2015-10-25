@@ -1,1 +1,0 @@
-SolrJ: Add before/after count in RangeFacet

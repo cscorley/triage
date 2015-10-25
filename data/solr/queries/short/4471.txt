@@ -1,1 +1,0 @@
-Replication occurs even when a slave is already up to date.

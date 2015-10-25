@@ -1,5 +1,0 @@
-in Solr 1.4, and the HEAD of the 3x branch, the UUIDField can be used as the uniqueKey field even if documents do not specify a value by taking advantage of the default="NEW" feature of UUIDField.
-
-Similarly, a copyField can be used to populate the uniqueKey field with data from some field with another name – multiple copyFields can even be used if there is no overlap (ie: if you have two differnet types of documents with no overlap in their id space, you can copy from companyId->id and from productId->id and use "id" as your uniqueKey field in solr)
-
-Neither of these approaches work in Solr trunk because of how AddUpdateCommand.getIndexedId is currently used by the DirectUpdateHander2 (see r1152500).

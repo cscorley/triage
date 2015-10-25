@@ -1,1 +1,0 @@
-The terms index divisor in IW should be set via IWC not via getReader

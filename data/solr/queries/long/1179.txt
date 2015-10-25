@@ -1,1 +1,0 @@
-In order to use Lucene Filtering, we need to efficiently translate top-level DocSet filters into per-segment filters.

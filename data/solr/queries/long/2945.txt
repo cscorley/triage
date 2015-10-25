@@ -1,1 +1,0 @@
-Because *.war is not included in the set of patterns of artifacts to be signed in sign-artifacts-macro in lucene/common-build.xml, the solr-X.Y.Z.war maven artifact isn't being signed by ant sign-artifacts when run under solr/.

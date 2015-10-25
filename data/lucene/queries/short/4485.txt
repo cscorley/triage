@@ -1,1 +1,0 @@
-CheckIndex's term stats should not include deleted docs

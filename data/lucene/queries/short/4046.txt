@@ -1,1 +1,0 @@
-Allows IOException in DocsEnum#freq()

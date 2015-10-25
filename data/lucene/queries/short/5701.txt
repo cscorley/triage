@@ -1,1 +1,0 @@
-Move core closed listeners to AtomicReader

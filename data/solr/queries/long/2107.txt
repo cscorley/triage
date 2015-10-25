@@ -1,1 +1,0 @@
-In the MoreLikeThisHandler, Lucene syntax is assumed, and no other query parser can be invoked.

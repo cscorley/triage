@@ -1,1 +1,0 @@
-Constants#LUCENE_MAIN_VERSION can have broken values 

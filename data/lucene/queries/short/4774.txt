@@ -1,1 +1,0 @@
-Add FieldComparator that allows sorting parent docs based on field inside the child docs

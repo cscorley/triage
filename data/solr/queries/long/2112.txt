@@ -1,5 +1,0 @@
-The solrj API should optionally support streaming documents.
-
-Rather then putting all results into a SolrDocumentList, sorlj should be able to call a callback function after each document is parsed.  This would allow someone to call query.setRows( Integer.MAX_INT ) and get each result to the client without loading them all into memory.
-
-For starters, I think the important things to stream are SolrDocuments, but down the road, this could also stream other things (consider reading all terms from the index)

@@ -1,1 +1,0 @@
-The KuromojiAnalyzer in Lucene shoud have the same default configuration as the text_ja field type introduced in schema.xml by SOLR-3056.

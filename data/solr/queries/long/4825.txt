@@ -1,1 +1,0 @@
-Cloud tests are extremelly difficult to debug without this logging - can't go back to the early days of sys outs at this point. I'll port this formatter to work with log4j as a Layout.

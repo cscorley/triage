@@ -1,6 +1,0 @@
-After the changes in SOLR-3331, the smoketester won't work on windows
-(things like path separators of : or .
-
-Not really critical, people will just have to smoketest on
-unix-like machines. But it would be more convenient for testers on
-windows machines if it worked there too.

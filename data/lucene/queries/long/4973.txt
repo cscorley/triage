@@ -1,3 +1,0 @@
-The id is unnecessary and just adds complexity: SDP can just return
-the IndexCommit, and when you want to release you pass back the
-IndexCommit.  PersistentSDP can expose release(long gen).

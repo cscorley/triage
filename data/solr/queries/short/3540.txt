@@ -1,1 +1,0 @@
-MultiCoreExampleTest and MultiCoreEmbedded test clash with each other

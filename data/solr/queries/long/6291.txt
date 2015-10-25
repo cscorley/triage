@@ -1,3 +1,0 @@
-I assume it's simply because shards is set to 16.
-
-Tests should use much lower shard counts and then boost them up for nightly.

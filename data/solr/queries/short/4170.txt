@@ -1,1 +1,0 @@
-SOLR-4170: The 'backup' ReplicationHandler command can sometimes use a stale index directory rather than the current one.

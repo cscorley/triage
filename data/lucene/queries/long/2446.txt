@@ -1,3 +1,0 @@
-It would be useful for the different files in a Lucene index to include checksums. This would make it easy to spot corruption while copying index files around; the various cloud efforts assume many more data-copying operations than older single-index implementations.
-
-This feature might be much easier to implement if all index files are created in a sequential fashion. This issue therefore depends on LUCENE-2373.

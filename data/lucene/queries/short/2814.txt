@@ -1,1 +1,0 @@
-stop writing shared doc stores across segments

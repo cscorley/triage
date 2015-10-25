@@ -1,3 +1,0 @@
-Our build process currently does not check that the JSP files in the admin webapp compile. E.g. ping.jsp is broken now.
-
-I propose to use the jasper installation shipped with jetty's JAR files in the example folder and use its <jspc> ANT task to try to compile the JSP pages. Just to test that this works.

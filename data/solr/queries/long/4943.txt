@@ -1,3 +1,0 @@
-Currently, you have to specify a core to get system information for a variety of request handlers - properties, logging, thread dump, system, etc.
-
-These should be available at a system location and not core specific location.

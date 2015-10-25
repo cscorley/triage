@@ -1,1 +1,0 @@
-Add support to write and read Solr index files and transaction log files to and from HDFS.

@@ -1,1 +1,0 @@
-If a user does not specify a locale for NumberFormatTransformer & DateFormatTransformer, it should use the Root Locale, not the machine's default Locale.

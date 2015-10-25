@@ -1,3 +1,0 @@
-Provide the ability to handle merges in one or more concurrent threads, i.e., concurrent with other IndexWriter operations.
-
-I'm factoring the code from LUCENE-847 for this.

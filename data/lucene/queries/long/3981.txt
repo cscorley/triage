@@ -1,4 +1,0 @@
-As mentioned by lance on LUCENE-2604,
-
-REGEXPTERM needs to be moved in front of WILDTERM and PREFIXTERM,
-because they greedily match operators like ".*" even inside / / blocks.

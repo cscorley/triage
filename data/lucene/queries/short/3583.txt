@@ -1,1 +1,0 @@
-benchmark tests always fail on windows because directory cannot be removed

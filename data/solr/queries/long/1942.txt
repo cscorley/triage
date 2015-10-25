@@ -1,1 +1,0 @@
-We should use PerFieldCodecWrapper to allow users to select the codec per-field.

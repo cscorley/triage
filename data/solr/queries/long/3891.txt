@@ -1,1 +1,0 @@
-CacheValue in CachingDirectoryFactory cannot be used outside of solr.core package. When implementing a new DirectoryFactory (outside of core) which is a subclass of CDF it may be necessary to use CacheValue (similar to RamDirectoryFactory).

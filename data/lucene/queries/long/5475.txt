@@ -1,1 +1,0 @@
-This makes it impossible to tag a test as a badapple without a pointer to a JIRA issue.

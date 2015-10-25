@@ -1,1 +1,0 @@
-FuzzySuggester has to operate FSTs of Unicode-letters, not UTF-8, to work correctly for 1-byte (like English) and multi-byte (non-Latin) letters

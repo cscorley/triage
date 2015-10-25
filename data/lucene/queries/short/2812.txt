@@ -1,1 +1,0 @@
-IndexReader.indexExists sometimes returns true when an index isn't present

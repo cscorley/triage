@@ -1,1 +1,0 @@
-MappingCharFilter rarely has wrong correctOffset (for finalOffset) 

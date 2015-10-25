@@ -1,1 +1,0 @@
-snapshot is created in the directory where solr was lauched

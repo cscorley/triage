@@ -1,3 +1,0 @@
-This issue is dedicated to the performance of the grouping functionality.
-
-I've noticed that the code is not really performing on large indexes. Doing a search (q=:) with grouping on an index from around 5M documents took around one second on my local development machine. We had to support grouping on an index that holds around 50M documents per machine, so we made some changes and were able to happily serve that amount of documents. Patch will follow soon.

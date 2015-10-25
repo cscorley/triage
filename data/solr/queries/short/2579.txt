@@ -1,1 +1,0 @@
-UIMAUpdateRequestProcessor ignore error fails if text.length() < 0

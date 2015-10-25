@@ -1,1 +1,0 @@
-AutomatonQuery.hashCode is not thread safe

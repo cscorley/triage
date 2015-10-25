@@ -1,8 +1,0 @@
-split off from SOLR-4942...
-
-
-	add a new RandomMergePolicy that implements MergePolicy by proxying to another instance selected at creation using one of the LuceneTestCase.new...MergePolicy methods
-	updated test configs to refer to this new MergePolicy
-	borrow the "tests.shardhandler.randomSeed" logic in SolrTestCaseJ4 to give our RandomMergePolicy a consistent seed at runtime.
-
-

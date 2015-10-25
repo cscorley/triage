@@ -1,1 +1,0 @@
-rename SegmentInfos.FORMAT_3_1 and improve description in CheckIndex

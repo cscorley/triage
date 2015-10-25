@@ -1,1 +1,0 @@
-SolrCmdDistributorTest either takes 3 seconds or 3 minutes.

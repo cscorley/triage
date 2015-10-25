@@ -1,1 +1,0 @@
-Binaries contain 1.6 classes

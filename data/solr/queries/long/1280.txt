@@ -1,1 +1,0 @@
-When dealing with highly heterogeneous documents with different fields per document, it can be very useful to know what fields are present on the result documents from a search.  For example, this could be used to determine which fields make the best facets for a given query.

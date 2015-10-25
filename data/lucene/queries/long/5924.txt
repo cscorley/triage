@@ -1,7 +1,0 @@
-This option is dangerous. It sounds so good though that people are quick to use it, but it definitely drops entire segments.
-
-The commandline flag should be someting other than -fix (e.g. -exorcise).
-
-I dont agree with the current description of the option either. True, it does have *WARNING* but I think it should read more like the scary options in 'man hdparm'.
-
-Like hdparm, we could fail if you provide it with an even more ridiculous warning, and make you run again with --yes-i-really-know-what-i-am-doing as well.

@@ -1,1 +1,0 @@
-If you call DirTaxoWriter.replaceTaxonomy with a larger taxonomy than the current one, you may hit an AIOOBE on the next add category (or getParent) call. I'll attach a testcase + fix shortly.

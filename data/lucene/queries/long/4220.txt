@@ -1,3 +1,0 @@
-Benchmark contains a javacc-based HTML parser which of course violates all specs, is huge and error prone.
-
-I can replace it by a NEKOHTML based one (approx 10 - 20 lines of code). NEKOHTML is an extension for XERCES (that we already use to read wikipedia), that produces SAX-events or DOM tree out of a HTML file usingg standard XML APIS. We could also use TIKA, but I refuse to download the Internet to get TIKA running for just parsing a HTML file.

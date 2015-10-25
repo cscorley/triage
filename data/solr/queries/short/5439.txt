@@ -1,1 +1,0 @@
-Using CloudSolrServer to delete a collection results in two attempts to remove the collection, the second of which fails because the collection is already gone.

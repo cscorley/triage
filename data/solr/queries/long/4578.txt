@@ -1,9 +1,0 @@
-
-      if (coreContainer.getZkController() != null) {
-        if (coreContainer.getCore(name) != null) {
-          log.info("Re-creating a core with existing name is not allowed in cloud mode");
-          throw new SolrException(SolrException.ErrorCode.BAD_REQUEST,
-              "Core with name '" + name + "' already exists.");
-        }
-      }
-

@@ -1,1 +1,0 @@
-DEFAULT_ATTRIBUTE_FACTORY faills to load implementation class when iterface comes from different classloader

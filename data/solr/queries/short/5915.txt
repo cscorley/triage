@@ -1,1 +1,0 @@
-Cannot set parserImpl=... with PreAnalyzedField

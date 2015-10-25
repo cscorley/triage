@@ -1,1 +1,0 @@
-Cleanup 'good' queries code

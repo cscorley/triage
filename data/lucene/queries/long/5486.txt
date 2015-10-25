@@ -1,3 +1,0 @@
-The TermsIncludingScoreQuery seems to have optimized impls when the collector can accept out-of-order docIDs.  BTW, as far as I know, besides BooleanScorer, this is the only query scorer we have that can "take advantage" of out-of-order docIDs during collection.
-
-However, its Weight class fails to override scoresDocsOutOfOrder, which then means that for the common case where apps use IndexSeacher.search to sort by score or field, these impls will never be used.

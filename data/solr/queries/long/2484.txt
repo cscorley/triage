@@ -1,5 +1,0 @@
-As is, reading rules from the ResourceLoader is baked into inform(ResourceLoader loader).  It would be nice to be able to load custom rules w/o needing to rewrite the whole thing.  This issue changes two things:
-
-	Changes List<String> to Iterable<String> because we don't really need a list
-	adds protected Iterable<String> loadRules( String synonyms, ResourceLoader loader ) – so subclasses could fill their own
-

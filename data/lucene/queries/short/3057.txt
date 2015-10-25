@@ -1,1 +1,0 @@
-LuceneTestCase#newFSDirectoryImpl misses to set LockFactory if ctor call throws exception

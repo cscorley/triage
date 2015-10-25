@@ -1,1 +1,0 @@
-The Variableresolver instance obtained from Context#getVariableResolver() does not have any current data

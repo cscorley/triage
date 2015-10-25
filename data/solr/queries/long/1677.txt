@@ -1,7 +1,0 @@
-Since Lucene 2.9, a lot of analyzers use a Version constant to keep backwards compatibility with old indexes created using older versions of Lucene. The most important example is StandardTokenizer, which changed its behaviour with posIncr and incorrect host token types in 2.4 and also in 2.9.
-
-In Lucene 3.0 this matchVersion ctor parameter is mandatory and in 3.1, with much more Unicode support, almost every Tokenizer/TokenFilter needs this Version parameter. In 2.9, the deprecated old ctors without Version take LUCENE_24 as default to mimic the old behaviour, e.g. in StandardTokenizer.
-
-This patch adds basic support for the Lucene Version property to the base factories. Subclasses then can use the luceneMatchVersion decoded enum (in 3.0) / Parameter (in 2.9) for constructing Tokenstreams. The code currently contains a helper map to decode the version strings, but in 3.0 is can be replaced by Version.valueOf(String), as the Version is a subclass of Java5 enums. The default value is Version.LUCENE_24 (as this is the default for the no-version ctors in Lucene).
-
-This patch also removes unneeded conversions to CharArraySet from StopFilterFactory (now done by Lucene since 2.9). The generics are also fixed to match Lucene 3.0.

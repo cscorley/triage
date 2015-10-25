@@ -1,1 +1,0 @@
-Make default dimension config in FacetConfig adjustable 

@@ -1,6 +1,0 @@
-MoreLikeThis has the following:
-
-
-
-public static final Analyzer DEFAULT_ANALYZER = new StandardAnalyzer(Version.LUCENE_CURRENT);
-

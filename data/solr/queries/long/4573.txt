@@ -1,9 +1,0 @@
-When running the example config included in the Solr distribution based on the instructions here:
-
-http://wiki.apache.org/solr/SolrCloud#Example_A:_Simple_two_shard_cluster
-
-Any requests to pages in the web gui cause a warning log message to be raised on Jetty's STDOUT
-
-2013-03-13 19:52:45.827:WARN:oejh.HttpGenerator:Ignoring extra content
-
-followed by the content of the file being served.

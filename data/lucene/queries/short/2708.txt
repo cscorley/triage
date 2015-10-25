@@ -1,1 +1,0 @@
-when a test Assume fails, display information

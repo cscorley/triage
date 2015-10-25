@@ -1,1 +1,0 @@
-MMapDirectory chunking is buggy

@@ -1,1 +1,0 @@
-Refactored function 'func' in MaxFloatFunction.java and MinFloatFunction.java. Removed if statement out of loop.

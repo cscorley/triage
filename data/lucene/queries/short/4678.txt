@@ -1,1 +1,0 @@
-FST should use paged byte[] instead of single contiguous byte[]

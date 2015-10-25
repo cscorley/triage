@@ -1,1 +1,0 @@
-inconsistent treatment of lucene jars & third-party deps in analysis-extras & uima (in war and in lucene-libs)

@@ -1,1 +1,0 @@
-The token types of the standard tokenizer is not accessible

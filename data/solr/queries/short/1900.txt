@@ -1,1 +1,0 @@
-move Solr to flex APIs

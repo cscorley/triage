@@ -1,1 +1,0 @@
-Have similar scoring for query time joining just like the index time block join (with the score mode).

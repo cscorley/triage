@@ -1,7 +1,0 @@
-Some codecs might be interested in using PackedInts.
-{Writer,Reader,ReaderIterator}
- to read and write fixed-size values efficiently.
-
-The problem is that the serialization format is self contained, and always writes the name of the codec, its version, its number of bits per value and its format. For example, if you want to use packed ints to store your postings list, this is a lot of overhead (at least ~60 bytes per term, in case you only use one Writer per term, more otherwise).
-
-Users should be able to externalize the storage of metadata to save space. For example, to use PackedInts to store a postings list, one should be able to store the codec name, its version and the number of bits per doc in the header of the terms+postings list instead of having to write it once (or more!) per term.

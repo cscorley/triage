@@ -1,1 +1,0 @@
-Allow the solr internal load balancer to be more easily pluggable.

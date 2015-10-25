@@ -1,1 +1,0 @@
-Allow to subclass org.apache.solr.response.XMLWriter 

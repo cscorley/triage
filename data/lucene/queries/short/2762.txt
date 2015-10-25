@@ -1,1 +1,0 @@
-Don't leak deleted open file handles with pooled readers

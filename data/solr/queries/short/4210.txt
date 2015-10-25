@@ -1,1 +1,0 @@
-Requests to a Collection that does not exist on the receiving node should be proxied to a suitable node.

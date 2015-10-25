@@ -1,1 +1,0 @@
-SnapshotDeletionPolicy.snapshot() throws NPE if no commits happened

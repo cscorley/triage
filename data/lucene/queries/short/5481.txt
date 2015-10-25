@@ -1,1 +1,0 @@
-IndexWriter.forceMerge may run unneeded merges

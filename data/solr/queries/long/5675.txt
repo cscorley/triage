@@ -1,6 +1,0 @@
-In Skript zkcli.bat this java command line is build:
-
-"%JVM%" -Dlog4j.configuration=file:%SDIR%\log4j.properties
-
-The command failes if %SDIR% contains spaces ("C:\Program Files\...").
-Quoting the hole option "-Dlog4j.configuration=file:%SDIR%\log4j.properties" solved the isssue.

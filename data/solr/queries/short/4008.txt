@@ -1,1 +1,0 @@
-If remove the absent the collection, any collection command is failed. 

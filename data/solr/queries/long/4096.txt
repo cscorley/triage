@@ -1,1 +1,0 @@
-FileDataSource & FieldReaderDataSource have optional "encoding" parameters.  When unspecified, these defaulted to the current machine's default charset.  It should default to UTF-8 instead.

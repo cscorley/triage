@@ -1,1 +1,0 @@
-Update processors before the distributed update processor are dropped in later distributed update phases.  The log update processor is hard-coded to get a pass, but we should make this more generic and allow other processors to also run.

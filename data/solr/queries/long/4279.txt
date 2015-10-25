@@ -1,1 +1,0 @@
-If one configures the version field as multi-valued, the exception thrown during startup says that "version is NOT multiValued"

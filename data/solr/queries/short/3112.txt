@@ -1,1 +1,0 @@
-after running 'ant test' solr/solrj/src/test-files/solrj/solr/shared/test-solr.xml is leftover

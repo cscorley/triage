@@ -1,1 +1,0 @@
-Check if all the packaging/ development tasks work with latest Ant 1.8.x and switch to ant 1.8.x as the "officially supported" build platform.

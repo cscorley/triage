@@ -1,1 +1,0 @@
-smokeTestRelease.py should examine the Maven artifacts in a Lucene/Solr release.

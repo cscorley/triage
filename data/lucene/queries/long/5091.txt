@@ -1,8 +1,0 @@
-With very small modifications, SpanNotQuery can act as a SpanNotNearQuery.
-
-To find "a" but not if "b" appears 3 tokens before or 4 tokens after "a":
-new SpanNotQuery("a", "b", 3, 4)
-
-Original constructor still exists and calls SpanNotQuery("a", "b", 0, 0).
-
-Patch with tests on way.

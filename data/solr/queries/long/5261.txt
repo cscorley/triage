@@ -1,1 +1,0 @@
-Seems back compat in the binary protocol was broke broke sometime after 4.4

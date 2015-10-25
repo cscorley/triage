@@ -1,1 +1,0 @@
-This is not critical I think - if they were not active, they should fail the sync round and give up anyway - but this should speed up getting to the right candidate.

@@ -1,3 +1,0 @@
-When performing a spellcheck request in distributed environment with the WordBreakSpellChecker configured, the shard response merging logic can lose some suggestions. Basically, the merging logic ensures that all shards marked the query as not being correctly spelled, which is good, but also expects all shards to return some suggestions, which isn't necessarily the case. So if shard 1 returns 10 suggestions but shard 2 returns none, the final result will contain no suggestions because the term has suggestions from only 1 of 2 shards.
-
-This isn't the case with the DirectSolrSpellChecker which works properly.

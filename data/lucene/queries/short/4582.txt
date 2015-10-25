@@ -1,1 +1,0 @@
-Fobidden API checker does not work with recent JDK 8 builds

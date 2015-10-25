@@ -1,1 +1,0 @@
-Catch exceptions in Threads created by JUnit tasks

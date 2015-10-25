@@ -1,1 +1,0 @@
-Grouping treats null values as equivalent to 0 or an empty string

@@ -1,6 +1,0 @@
-As noted by Koorosh on the solr-user list...
-
-
-I have been developing extensions to SOLR code using 4.0 truck. For JUnit testing I am extending AbstractSolrTestCase which in the ALPHA release is located in JAR apache-solr-test-framework-4.0.0-ALPHA.jar. However, this class extends LuceneTestCase which comes from JAR lucene-test-framework-4.0-SNAPSHOT.jar. In the ALPHA release the later JAR is not shipped or I can't find it.
-
-...i confirmed that Solr 4.0.0-ALPHA binary package the solr test framework is in test./dist/apache-solr-test-framework-4.0.0-ALPHA.jar but the lucene test-framework jar isn't included at all.

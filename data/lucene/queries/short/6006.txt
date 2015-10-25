@@ -1,1 +1,0 @@
-Replace FieldInfo.normsType with FieldInfo.hasNorms boolean

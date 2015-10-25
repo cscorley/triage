@@ -1,5 +1,0 @@
-See attached screenshot.  The red line shows approximately where the dark grey section should end.
-
-On the screenshot, the used memory is shown as 9.3% ... the width of the dark grey section (corresponding to used memory) should be 9.3% of the width of the full bar (max memory), but it appears that it is actually about 9.3% of the width of the mid-grey section (total memory).
-
-I am testing a potential patch right now, will attach it if it looks like it's working right.

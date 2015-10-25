@@ -1,3 +1,0 @@
-Like in the example.
-
-http://localhost:8983/solr/collection1/select?q=*%3A*&fl=price_c&wt=csv

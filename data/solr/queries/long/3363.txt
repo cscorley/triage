@@ -1,3 +1,0 @@
-Currently there is no consistent use of Exceptions in Analysis factories.  Some throw RuntimeExceptions, some throw SolrExceptions, some include information about an Exception they are wrapping, others just wrap, throw and move on.  
-
-I think a better way would be to have an InitializationException that the Factories can throw in init() or inform(ResourceLoader).  We can then tailor the Exception to meet the needs of the Factories, and it gives us a bit of future proofing if/when we improve the property validation done in the factories.

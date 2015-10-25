@@ -1,7 +1,0 @@
-This issue tracks the backporting of various issues that are related to Java 7 to 4.8.
-It will also revert "build fixes" that worked around compile failures (especially stuff like Long/Integer.compare().
-
-I will attach a patch soon (for review).
-
-Here is the vote thread: http://mail-archives.apache.org/mod_mbox/lucene-dev/201403.mbox/%3C02be01cf3ae9%24e3735090%24aa59f1b0%24%40thetaphi.de%3E
-Preliminary result: http://mail-archives.apache.org/mod_mbox/lucene-dev/201403.mbox/%3C001001cf3c45%248d2adc00%24a7809400%24%40thetaphi.de%3E

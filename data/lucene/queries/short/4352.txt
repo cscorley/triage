@@ -1,1 +1,0 @@
-only the test runner should be able to System.exit

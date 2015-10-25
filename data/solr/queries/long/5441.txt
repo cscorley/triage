@@ -1,1 +1,0 @@
-It may be useful to have the number of transaction log files and their overall size exposed via JMX for UpdateHandler.

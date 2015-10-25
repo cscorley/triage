@@ -1,3 +1,0 @@
-Currently the versioning here is a total mess, and its inconsistent across bugfix releases.
-
-We should just generate back compat indexes for every release: regardless of whether the index format changed, even for bugfix releases. This ensures at least we try to test that the back compat is working.

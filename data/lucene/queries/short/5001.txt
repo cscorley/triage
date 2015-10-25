@@ -1,1 +1,0 @@
-Constants.LUCENE_MAIN_VERSION needs updated on 4.3 branch

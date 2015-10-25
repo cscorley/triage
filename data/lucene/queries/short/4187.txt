@@ -1,1 +1,0 @@
-remove nightly/ directory under svn

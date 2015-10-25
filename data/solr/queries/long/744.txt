@@ -1,1 +1,0 @@
-See LUCENE-1370

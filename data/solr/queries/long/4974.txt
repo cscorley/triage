@@ -1,1 +1,0 @@
-Looking at Yonik's changes for SOLR-4690 suggested similar potential problems with transient and pending cores.

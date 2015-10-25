@@ -1,4 +1,0 @@
-As soon as Apache Commons Codec 1.5 is released, support new encoder "ColognePhonetic" please.
-See JIRA for CODEC-106.
-
-It is fundamental for phonetic searches if you are indexing german names. Other indexers are optimizied for english (words).

@@ -1,1 +1,0 @@
-XPathEntityProcessor fails with an xpath like /feed/entry/link[@type='text/html']/@href

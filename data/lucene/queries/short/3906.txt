@@ -1,1 +1,0 @@
-allow specifying -Dbootclasspath for javac/javadocs

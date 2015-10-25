@@ -1,1 +1,0 @@
-The fl query parameter is not honored by the CSVResponseWriter when it has globs, e.g., fl=foo* will return all fields in the document.

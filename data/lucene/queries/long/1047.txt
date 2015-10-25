@@ -1,3 +1,0 @@
-This gives us freedom to add methods with default base implementation over time w/o breaking backwards compatibility.
-
-Thanks to Hoss for raising this!

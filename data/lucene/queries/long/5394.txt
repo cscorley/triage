@@ -1,3 +1,0 @@
-In LUCENE-1888, we enabled indexing payloads into term vectors, but
-the highlighter APIs that "reconstruct" a token stream from term
-vectors fail to plumb through the payloads if they were indexed.

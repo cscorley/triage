@@ -1,1 +1,0 @@
-Alternatively, we could consolidate all solr changes into the top-level CHANGES.txt so we have less files to maintain?

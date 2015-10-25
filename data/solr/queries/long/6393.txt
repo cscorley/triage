@@ -1,1 +1,0 @@
-Replay speed is pretty slow on HDFS because we currently reopen a reader between reading each update.

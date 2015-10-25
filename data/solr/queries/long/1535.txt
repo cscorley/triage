@@ -1,3 +1,0 @@
-PreAnalyzedFieldType provides a functionality to index (and optionally store) content that was already processed and split into tokens using some external processing chain. This implementation defines a serialization format for sending tokens with any currently supported Attributes (eg. type, posIncr, payload, ...). This data is de-serialized into a regular TokenStream that is returned in Field.tokenStreamValue() and thus added to the index as index terms, and optionally a stored part that is returned in Field.stringValue() and is then added as a stored value of the field.
-
-This field type is useful for integrating Solr with existing text-processing pipelines, such as third-party NLP systems.

@@ -1,1 +1,0 @@
-Improve InfoStream class in trunk to be more consistent with logging-frameworks like slf4j/log4j/commons-logging

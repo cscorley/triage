@@ -1,1 +1,0 @@
-need the ability to also sort SpellCheck results by freq, instead of just by Edit Distance+freq

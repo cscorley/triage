@@ -1,1 +1,0 @@
-java7 as a minimum requirement for lucene 5

@@ -1,9 +1,0 @@
-Although there is code to support router.field for CompositeId, it only calculates a simple (non-compound) hash, which isn't that useful unless you don't use compound ids (this is why I changed the docs to say router.field is only supported for the implicit router).  The field value should either
-
-	be used to calculate the full compound hash
-	be used to calculate the prefix bits, and the uniqueKey will still be used for the lower bits.
-
-
-
-For consistency, I'd suggest the former.
-If we want to be able to specify a separate field that is only used for the prefix bits, then perhaps that should be "router.prefixField"

@@ -1,1 +1,0 @@
-improve arabic analyzer: light8 -> light10

@@ -1,5 +1,0 @@
-SOLR-2008 fixed a possible RejectedExecutionException by ensuring that SolrCore closed the updateHandler before the searcherExecutor.
-
-Mark Miller re-flipped this logic in r1159378, which is annotated as fixing both SOLR-2654 and SOLR-2654 (dup typo i guess) but it's not clear why - pretty sure this means that the risk of a Rejected exception is back in 4.0-BETA...
-
-https://svn.apache.org/viewvc/lucene/dev/trunk/solr/core/src/java/org/apache/solr/core/SolrCore.java?r1=1146905&r2=1159378

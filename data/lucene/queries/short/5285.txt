@@ -1,1 +1,0 @@
-FastVectorHighlighter copies segments scores when splitting segments across multi-valued fields

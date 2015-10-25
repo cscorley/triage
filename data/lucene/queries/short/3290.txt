@@ -1,1 +1,0 @@
-add FieldInvertState.numUniqueTerms, Terms.sumDocFreq

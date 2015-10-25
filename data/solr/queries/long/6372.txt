@@ -1,4 +1,0 @@
-When setting the UserGroupInformation's Configuration, HdfsDirectorFactory creates a new Configuration, see here:
-https://github.com/apache/lucene-solr/blob/44f0dd7599901ba4d3625b5da8b998858e198d67/solr/core/src/java/org/apache/solr/core/HdfsDirectoryFactory.java#L306
-
-The issue with this is when it's used to set the UserGroupInformation configuration, it can overwrite any existing configuration, which may have other (server) settings like kerberos rules. Ideally there would be separate client/servers interfaces so this wouldn't be an issue.  But lacking that, using the passed in Configuration allows the user to always specify all necessary settings.

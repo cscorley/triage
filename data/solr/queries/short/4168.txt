@@ -1,1 +1,0 @@
-In recovery, replication occurs but all files are 0 in length and trying to open an indexwriter on the index fails, causing a loop with this issue.

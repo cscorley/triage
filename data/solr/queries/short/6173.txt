@@ -1,1 +1,0 @@
-Wrong failure message in TestDistributedSearch

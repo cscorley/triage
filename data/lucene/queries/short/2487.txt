@@ -1,1 +1,0 @@
-IndexReader subclasses must implement flex APIs

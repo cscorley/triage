@@ -1,1 +1,0 @@
-Add node roles to core admin handler 'create core' and solrj.

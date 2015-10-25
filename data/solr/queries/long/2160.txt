@@ -1,3 +1,0 @@
-Several test methods in TestTrie failed in hudson, with errors such as this:
-
-Caused by: org.apache.solr.common.SolrException: Unknown query type 'func'

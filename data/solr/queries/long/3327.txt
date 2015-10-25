@@ -1,4 +1,0 @@
-The new logging UI looks great!
-http://localhost:8983/solr/#/~logging
-
-It would be nice to indicate which ones are set explicitly vs implicit – perhaps making the line bold when set=true

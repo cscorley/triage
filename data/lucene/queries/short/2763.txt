@@ -1,1 +1,0 @@
-Swap URL+Email recognizing StandardTokenizer and UAX29Tokenizer

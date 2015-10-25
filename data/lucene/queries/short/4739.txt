@@ -1,1 +1,0 @@
-FST cannot be loaded if it's larger than Integer.MAX_VALUE / 2 bytes

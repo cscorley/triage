@@ -1,9 +1,0 @@
-Spatial4j's InvalidShapeException is supposed to be for shape strings that won't parse or invalid coordinates.  TwoDoublesStrategy is using it incorrectly to indicate the strategy doesn't support the shape.
-
-Perhaps UnsupportedOperationException is more fitting.  I kind of prefer it just slightly over IllegalArgumentException because I  think of it here as the strategy not supporting that shape.
-
-The biggest point here is consistency across the strategies.
-
-FYI for context there's also UnsupportedSpatialOperation, an Exception that doesn't follow the naming convention but I'm ok with that.  Its c'tor mandates its association with an instance of SpatialOperation.  So if a strategy doesn't support an operation then it's got a special exception just for that, but not also true for shape?  Seems lopsided to me.  I think my preference is for this exception to be UnsupportedSpatialArgument that isn't locked to either the shape or operation.
-
-The attached patch doesn't go as far as UnsupportedSpatialArgument but it at least bring consistent behavior.

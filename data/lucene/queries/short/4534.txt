@@ -1,1 +1,0 @@
-WFST/AnalyzingSuggest don't handle keys containing 0 bytes correctly

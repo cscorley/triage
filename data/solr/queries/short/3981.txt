@@ -1,1 +1,0 @@
-docBoost is compounded on copyField

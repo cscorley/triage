@@ -1,1 +1,0 @@
-Multiple FacetRequest with the same path creates inconsistent results

@@ -1,1 +1,0 @@
-Json output Incorrect escaping Unicode Character 'LINE SEPARATOR' (U+2028)

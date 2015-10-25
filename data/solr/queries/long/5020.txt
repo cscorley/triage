@@ -1,7 +1,0 @@
-This issue adds a finish() method to the DelegatingCollector class so that it can be notified when collection is complete. 
-
-The current collect() method assumes that the delegating collector will either forward on the document or not with each call. The finish() method will allow DelegatingCollectors to have more sophisticated behavior.
-
-For example a Field Collapsing delegating collector could collapse the documents as the collect() method is being called. Then when the finish() method is called it could pass the collapsed documents to the delegate collectors.
-
-This would allow grouping to be implemented within the PostFilter framework.

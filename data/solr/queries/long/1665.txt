@@ -1,1 +1,0 @@
-As the title says, it would be great if we could just get back component timings w/o having to do the full boat of explains and other stuff.

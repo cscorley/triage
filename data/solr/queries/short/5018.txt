@@ -1,1 +1,0 @@
-The Overseer should avoid publishing the state for collections that do not exist under the /collections zk node.

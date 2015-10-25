@@ -1,1 +1,0 @@
-mail core's solrconfig.xml lacks lib directive for contrib/extraction/lib.

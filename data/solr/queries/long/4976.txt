@@ -1,1 +1,0 @@
-In SolrIndexConfig, constructing the merged segment warmer takes an InfoStream, but InfoStream.NO_OUTPUT is hardcoded.  Instead, the info stream should be constructed in SolrIndexConfig, instead of SolrIndexWriter where it is now, so that it can be used for the warmer.

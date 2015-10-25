@@ -1,1 +1,0 @@
-Refactor the new solr.xml and core discovery code.

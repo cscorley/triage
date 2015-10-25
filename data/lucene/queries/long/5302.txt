@@ -1,1 +1,0 @@
-StemmerOverrideFilter is configured with an FST-based map that you can build at construction time from a list of entries.  Building this FST offline and loading it directly as a bytestream makes construction a lot quicker, but you can't do that conveniently at the moment as all the methods of StemmerOverrideMap are package-private.

@@ -1,1 +1,0 @@
-rat-sources target is missing build and ivy xml files, also resources folders

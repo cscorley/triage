@@ -1,1 +1,0 @@
-Some analysis consumers (highlighter, more like this, memory index, contrib queryparser, ...) are using Analyzer.tokenStream but should be using Analyzer.reusableTokenStream instead for better performance.

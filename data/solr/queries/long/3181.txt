@@ -1,3 +1,0 @@
-When tracking down issues with ZK, the devs ask about various bits of data from the cloud pages. It would be convenient to be able to just capture all the data from the old /solr/admin/zookeeper.jsp page in the admin interface to be able to send it to anyone debugging the info. 
-
-Perhaps just a "get debug info for Apache". Or even more cool "copy debug info to clipboard" if that's possible. Is this just the raw data that the cloud view is manipulating? It doesn't have to be pretty although indentation would be nice.

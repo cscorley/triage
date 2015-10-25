@@ -1,1 +1,0 @@
-Add equals/hashCode to FieldType

@@ -1,1 +1,0 @@
-IW#nrtIsCurrent retruns true if changes are in del queue but not in bufferedDeleteStream yet

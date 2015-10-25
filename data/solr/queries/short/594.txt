@@ -1,1 +1,0 @@
-StopFilterFactory, SynonymFilterFactory and EnglishProterFilterFactory not backwards compatible because of inform

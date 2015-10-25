@@ -1,1 +1,0 @@
-Validate checksum footers for postings lists, docvalues, storedfields, termvectors on init

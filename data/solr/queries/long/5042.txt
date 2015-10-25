@@ -1,5 +1,0 @@
-The problem appears to be around the mlt.count with in the solrconfig.xml. When this value is set to 10, the 10 values that have been identified as 'most like this' are returned with the original query, however the 'score' field is missing.
-
-Changing the mlt.count to say 11 and issuing the same query then the 'score' field is returned with the same query. This appears to be the workaround. 11 was just an arbitrary value, 12 or 15 also work 
-
-The same problem was raised on stackoverflow http://stackoverflow.com/questions/16513719/solr-more-like-this-dont-return-score-while-specify-mlt-count

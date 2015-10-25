@@ -1,1 +1,0 @@
-Create a FilterBuilder for NumericRangeFilter so that it may be used with the XML query parser.

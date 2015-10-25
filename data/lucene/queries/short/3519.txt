@@ -1,1 +1,0 @@
-BlockJoinCollector only allows retrieving groups for only one BlockJoinQuery

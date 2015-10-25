@@ -1,5 +1,0 @@
-Currently its not possible to make a fieldtype plugin via the normal lib/ mechanism that hides field type impl details (e.g. you just want a no-arg IDFieldType). 
-
-This is because you cant do sheisty package-private stuff in a different classloader without extra sheisty reflection.
-
-So I think pkg-private access is not very good for things intended to be plugins, you can only make a custom war...

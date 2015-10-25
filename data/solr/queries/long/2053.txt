@@ -1,1 +1,0 @@
-Given LUCENE-2479, add support to Solr for specifying the comparator.

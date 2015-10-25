@@ -1,1 +1,0 @@
-Java-based replication doesn't properly reserve its commit point during backups

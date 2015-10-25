@@ -1,1 +1,0 @@
-DefaultIndexingChain swallows useful information from MaxBytesLengthExceededException

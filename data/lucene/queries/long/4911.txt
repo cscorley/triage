@@ -1,6 +1,0 @@
-NB: Not sure this defect is assigned to the right component.
-
-In file example/solr/collection1/conf/lang/stopwords_fr.txt,
-there is the word "celà". Though incorrect in French (cf http://fr.wiktionary.org/wiki/cel%C3%A0), it's common, but we may also add the correct spelling (e.g. "cela", whitout accent) to that stopwords list.
-
-Another thing: I noticed that "celà" is the only word of the list followed by an unbreakable space. Is that wanted?

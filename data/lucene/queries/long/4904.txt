@@ -1,1 +1,0 @@
-Today it is only able to sort in ascending order.

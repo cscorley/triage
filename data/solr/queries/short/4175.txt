@@ -1,1 +1,0 @@
-SearchComponent chain can't contain two components of the same class and use debugQuery

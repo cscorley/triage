@@ -1,3 +1,0 @@
-exposing LUCENE-4765 essentially. 
-
-I think we don't need any new options, it just means doing the right thing when someone has docValues=true and multivalued=true.

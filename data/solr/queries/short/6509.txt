@@ -1,1 +1,0 @@
-Solr start scripts interactive mode doesn't honor -z argument

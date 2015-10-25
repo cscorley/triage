@@ -1,8 +1,0 @@
-I'd like to contribute a CharFilter that Unicode-normalizes input with ICU4J.
-
-The benefit of having this process as CharFilter is that tokenizer can work on normalised text while offset-correction ensuring fast vector highlighter and other offset-dependent features do not break.
-
-The implementation is available at following repository:
-https://github.com/ippeiukai/ICUNormalizer2CharFilter
-
-Unfortunately this is my unpaid side-project and cannot spend much time to merge my work to Lucene to make appropriate patch. I'd appreciate it if anyone could give it a go. I'm happy to relicense it to whatever that meets your needs.

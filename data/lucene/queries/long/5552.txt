@@ -1,1 +1,0 @@
-JFlex 1.5.1, just released, fixes a 1.5.0 bug in the JFlex version in generated code: it included the "-SNAPSHOT" suffix.

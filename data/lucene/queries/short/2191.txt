@@ -1,1 +1,0 @@
-rename Tokenizer.reset(Reader) to Tokenizer.setReader(Reader)

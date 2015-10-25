@@ -1,1 +1,0 @@
-We should be able to index block documents in JSON format

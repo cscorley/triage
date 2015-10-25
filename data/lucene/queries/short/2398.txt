@@ -1,1 +1,0 @@
-Improve tests to work easier from IDEs

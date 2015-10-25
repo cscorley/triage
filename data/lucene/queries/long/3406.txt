@@ -1,7 +1,0 @@
-I am adding back targets that were removed in <https://issues.apache.org/jira/browse/LUCENE-2973> that are used to create source distribution packaging from a local working copy as new Ant targets.
-
-2 things to note about the patch:
-1) For package-local-src-tgz in solr/build.xml, I had to specify additional directories under solr/ that have been added since LUCENE-2973.
-2) I couldn't get the package-tgz-local-src in lucene/build.xml to generate the docs folder, which does get added by package-tgz-src. 
-
-The patch is against the trunk.

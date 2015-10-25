@@ -1,1 +1,0 @@
-Through minor modifications, SorterTemplate.mergeSort could run in linear time on sorted arrays, so I think we should do it? The idea is to modify merge so that it returns instantly when compare(pivot-1, pivot) <= 0.

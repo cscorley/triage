@@ -1,5 +1,0 @@
-There is a limitation in the current FuzzySuggester implementation: it computes edits in UTF-8 space instead of Unicode character (code point) space. 
-
-This should be fixable: we'd need to fix TokenStreamToAutomaton to work in Unicode character space, then fix FuzzySuggester to do the same steps that FuzzyQuery does: do the LevN expansion in Unicode character space, then convert that automaton to UTF-8, then intersect with the suggest FST.
-
-See the discussion here: http://lucene.472066.n3.nabble.com/minFuzzyLength-in-FuzzySuggester-behaves-differently-for-English-and-Russian-td4067018.html#none

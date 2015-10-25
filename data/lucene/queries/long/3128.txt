@@ -1,1 +1,0 @@
-The "eclipse" Ant target creates a .classpath file, but not a .project file, so the user has to create an Eclipse project in a separate step. Creating a .project file (if it doesn't exist yet) would make it easier for Eclipse users to build Lucene.

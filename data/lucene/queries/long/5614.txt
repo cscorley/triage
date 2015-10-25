@@ -1,4 +1,0 @@
-Ant has the following bug introduced in ANT 1.8.3 and 1.8.4. Unfortunately many computers are on this version (and MacOSX on 1.8.2):
-https://issues.apache.org/bugzilla/show_bug.cgi?id=53347
-
-I would like to change to minimum ANT 1.9.0, but this would make MacOSX user unhappy. The provided patch is a workaround to set the compiler version to "javac1.7" via ANT property, if the broken versions are used with Java 1.8.

@@ -1,1 +1,0 @@
-hsin function doesn't properly parse when passing in multivalue sources and flag for converting to radians

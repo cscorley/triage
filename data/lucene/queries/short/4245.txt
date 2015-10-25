@@ -1,1 +1,0 @@
-IndexWriter#close(true) should either not be interruptible or should abort background merge threads before returning

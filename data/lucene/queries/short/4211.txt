@@ -1,1 +1,0 @@
-in LuceneTestCase.maybeWrapReader: add an asserting impl

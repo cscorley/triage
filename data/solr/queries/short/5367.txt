@@ -1,1 +1,0 @@
-Unmarsheling delete by Id with JavaBin can lead to class cast exception.

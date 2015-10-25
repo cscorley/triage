@@ -1,1 +1,0 @@
-This class has to be renamed to be consistent with the new naming.

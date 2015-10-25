@@ -1,1 +1,0 @@
-PatternReplaceCharFilter assertion error

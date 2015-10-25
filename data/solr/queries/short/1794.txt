@@ -1,1 +1,0 @@
-Dataimport of CLOB fields fails when getCharacterStream() is defined in a superclass

@@ -1,1 +1,0 @@
-Storing Shapes shouldn't be Strategy dependent

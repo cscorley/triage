@@ -1,1 +1,0 @@
-There doesn't appear to be a min() function.  Also, max() only allows a value source and a constant b/c it is from before we had more flexible parsing.

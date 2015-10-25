@@ -1,1 +1,0 @@
-Hunspell very high memory use when loading dictionary

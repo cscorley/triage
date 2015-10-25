@@ -1,1 +1,0 @@
-Add support for 3.0 indexes in 2.9 branch

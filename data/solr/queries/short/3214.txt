@@ -1,1 +1,0 @@
-If you use multiple fl entries rather than a comma separated list, all but the first entry can be ignored if you are using distributed search.

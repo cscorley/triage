@@ -1,7 +1,0 @@
-Today, IntEncoder/Decoder offer a streaming API, where you can encode(int) and decode(int). Originally, we believed that this layer can be useful for other scenarios, but in practice it's used only for writing/reading the category ordinals from payload/DV.
-
-Therefore, Mike and I would like to explore a bulk API, something like encode(IntsRef, BytesRef) and decode(BytesRef, IntsRef). Perhaps the Encoder can still be streaming (as we don't know in advance how many ints will be written), dunno. Will figure this out as we go.
-
-One thing to check is whether the bulk API can work w/ e.g. facet associations, which can write arbitrary byte[], and so may decoding to an IntsRef won't make sense. This too we'll figure out as we go. I don't rule out that associations will use a different bulk API.
-
-At the end of the day, the requirement is for someone to be able to configure how ordinals are written (i.e. different encoding schemes: VInt, PackedInts etc.) and later read, with as little overhead as possible.

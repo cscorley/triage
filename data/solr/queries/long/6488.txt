@@ -1,3 +1,0 @@
-Apache TIKA 1.6 came out yesterday, we should upgrade it.
-
-The dependencies of bundled Apache POI changed (xmlbeans upgraded, already done. dom4j is obsolete). We have to carefully verify the dependency tree!!!

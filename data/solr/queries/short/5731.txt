@@ -1,1 +1,0 @@
-In ConnectionManager, we should catch and only log exceptions from BeforeReconnect.

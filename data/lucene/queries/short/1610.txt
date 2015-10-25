@@ -1,1 +1,0 @@
-Preserve whitespace in <code> sections in the Changes.html generated from CHANGES.txt by changes2html.pl

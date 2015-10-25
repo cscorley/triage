@@ -1,8 +1,0 @@
-A SpellCheckComponent enhancement, leveraging the WordBreakSpellChecker from LUCENE-3523:
-
-
-	Detect spelling errors resulting from misplaced whitespace without the use of shingle-based dictionaries.
-	Seamlessly integrate word-break suggestions with single-word spelling corrections from the existing FileBased-, IndexBased- or Direct- spell checkers.
-	Provide collation support for word-break errors including cases where the user has a mix of single-word spelling errors and word-break errors in the same query.
-	Provide shard support.
-

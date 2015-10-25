@@ -1,1 +1,0 @@
- /update/json and /update/json/docs should have the required updateprocessor chain added to the <defaults> section 

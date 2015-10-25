@@ -1,1 +1,0 @@
-Today we use int, but towards enabling > 2.1G sized FSTs, I'd like to make this vInt instead.

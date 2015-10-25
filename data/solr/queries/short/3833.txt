@@ -1,1 +1,0 @@
-When a election is started because a leader went down, the new leader candidate should decline if the last state they published was not active.

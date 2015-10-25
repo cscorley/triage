@@ -1,1 +1,0 @@
-The spellchecker accuracy specified in configuration is set only inside IndexBasedSpellChecker#init but not in FileBasedSpellChecker#init method.

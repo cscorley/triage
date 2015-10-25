@@ -1,1 +1,0 @@
-When grouping on fields like 'SortableIntField', the groupValue returned has not been externalized via indexedToReadable.

@@ -1,5 +1,0 @@
-The XML-Output (simplified example attached) is missing one small information .. which could be very useful to build an nice Analysis-Output, and that's "Token-Relation" (if there is special/correct word for this, please correct me).
-
-Meaning, that is actually not possible to "follow" the Analysis-Process (completly) while the Tokenizers/Filters will drop out Tokens (f.e. StopWord) or split it into multiple Tokens (f.e. WordDelimiter).
-
-Would it be possible to include this Information? If so, it would be possible to create an improved Analysis-Page for the new Solr Admin (SOLR-2399) - short scribble attached

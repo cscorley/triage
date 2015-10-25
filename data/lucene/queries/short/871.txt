@@ -1,1 +1,0 @@
-ISOLatin1AccentFilter a bit slow

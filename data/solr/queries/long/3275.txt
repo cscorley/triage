@@ -1,1 +1,0 @@
-Currently the latest web gui allows you to add an additional core but does not allow you to specify the shard or collection that core should be part of.  In the core admin view when adding a core we should expose options to set these values when creating a core.

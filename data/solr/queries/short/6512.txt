@@ -1,1 +1,0 @@
-Add a collections API call to add/delete arbitrary properties to a specific replica

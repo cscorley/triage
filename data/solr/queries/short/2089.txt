@@ -1,1 +1,0 @@
-Faceting: order term ords before converting to values

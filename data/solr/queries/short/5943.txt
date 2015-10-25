@@ -1,1 +1,0 @@
-SolrCmdDistributor does not distribute the openSearcher parameter

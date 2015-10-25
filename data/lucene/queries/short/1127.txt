@@ -1,1 +1,0 @@
-TokenSources.getTokenStream(Document...) 

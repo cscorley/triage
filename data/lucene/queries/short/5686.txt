@@ -1,1 +1,0 @@
-Fail smoketester if there is LUCENE_XXXX or SOLR_XXXX in Changes.txt

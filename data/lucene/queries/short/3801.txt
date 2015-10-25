@@ -1,1 +1,0 @@
-Generify FST shortestPaths() to take a comparator

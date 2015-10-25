@@ -1,1 +1,0 @@
-Fix attribute conventions for JapaneseTokenizerFactory and add important information to schema.xml

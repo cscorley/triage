@@ -1,1 +1,0 @@
-Note that solrQuery.addFacetField(name) does enable faceting automatically but addFacetQuery does not.  This is inconsistent.

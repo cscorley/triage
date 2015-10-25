@@ -1,3 +1,0 @@
-in case you e.g. want smaller summarizes for a bunch of little fields and then a bit bigger one for the body field and so on.
-
-We can do this by only changing the 'expert' methods.

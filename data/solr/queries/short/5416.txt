@@ -1,1 +1,0 @@
-CollapsingQParserPlugin breaks Tag/Exclude Faceting

@@ -1,1 +1,0 @@
-TermVectorComponent fails with "Undefined Field" errors for score, *, or any Solr 4x psuedo-fields used in the "fl" param.

@@ -1,1 +1,0 @@
-Allow reloading of codec/postings format list when classpath changes

@@ -1,1 +1,0 @@
-The Map returned by SolrDocument.getFieldValue(s)Map should have a toString method.

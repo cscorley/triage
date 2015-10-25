@@ -1,1 +1,0 @@
-In CachingDirectoryFactory#close, if there are still refs for a Directory outstanding, we need to wait for them to be released before closing.

@@ -1,1 +1,0 @@
-executable bits of shellscripts in solr source release

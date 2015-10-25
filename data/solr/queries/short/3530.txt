@@ -1,1 +1,0 @@
-better error messages / Content-Type validation in solrJ

@@ -1,1 +1,0 @@
-BytesRefSorter leaves files in /tmp and never cleans them up

@@ -1,1 +1,0 @@
-Support data importing from AMQP queue

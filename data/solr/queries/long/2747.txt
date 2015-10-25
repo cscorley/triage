@@ -1,2 +1,0 @@
-Just like when releasing Lucene, Solr should also have a html formatted changes file.
-The Lucene Perl script (lucene/src/site/changes/changes2html.pl) should be reused.

@@ -1,1 +1,0 @@
-I'm disabling this test for now; I think to fix it we need to be able to make the timer pluggable in this class, and mock a more "controllable" wall clock for the test.

@@ -1,1 +1,0 @@
-NPE if you open IW with CREATE on an index with no segments file

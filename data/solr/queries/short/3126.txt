@@ -1,1 +1,0 @@
-We should try to do a quick sync on std start up recovery before trying to do a full blown replication.

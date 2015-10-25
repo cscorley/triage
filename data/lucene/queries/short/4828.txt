@@ -1,1 +1,0 @@
-BooleanQuery.extractTerms should not recurse into MUST_NOT clauses

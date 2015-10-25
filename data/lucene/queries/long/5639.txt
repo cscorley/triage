@@ -1,1 +1,0 @@
-The Token class misses to correctly implement all clone/copy/equals/... stuff for PositionLengthAttribute.

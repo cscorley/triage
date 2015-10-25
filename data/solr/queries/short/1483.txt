@@ -1,1 +1,0 @@
-Example schema is confusing with int, tint and pint fields

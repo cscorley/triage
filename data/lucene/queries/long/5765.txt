@@ -1,1 +1,0 @@
-I noticed it doesn't take into account the shallow size of the ordDeltas array (I would not expect it to be a big deal, but still it's better to have it tested).

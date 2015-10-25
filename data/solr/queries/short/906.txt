@@ -1,1 +1,0 @@
-Buffered / Streaming SolrServer implementaion

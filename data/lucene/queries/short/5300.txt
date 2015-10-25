@@ -1,1 +1,0 @@
-SORTED_SET could use SORTED encoding when the field is actually single-valued

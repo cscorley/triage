@@ -1,7 +1,0 @@
-I was curious what the performance would be, because it might be useful option to use packedints for norms if you have lots of fields and still want good scoring: 
-
-Today the smallest norm per-field-per-doc you can use is a single byte, and if you have f fields with norms enabled and n docs, it uses f * n bytes of space in RAM.
-
-Especially if you aren't using index-time boosting (or even if you are, but not with ridiculous values), this could be wasting a ton of RAM.
-
-But then I noticed there was no clean way to allow you to do this in your Similarity: its a trivial patch.

@@ -1,1 +1,0 @@
-UpdateShardHandler not setting max connections correctly

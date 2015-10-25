@@ -1,1 +1,0 @@
-HttpClient jar not included in distribution

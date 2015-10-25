@@ -1,5 +1,0 @@
-Same as http://code.google.com/p/lucene-hunspell/issues/detail?id=3
-
-Hunspell dictionaries are by nature case sensitive. The Hunspell stemmer thus needs an option to allow case insensitive matching of the dictionaries.
-
-Imagine a query for "microsofts". It will never be stemmed to the dictionary word "Microsoft" because of the case difference. This problem cannot be fixed by putting LowercaseFilter before Hunspell.

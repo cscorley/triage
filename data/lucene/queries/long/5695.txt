@@ -1,3 +1,0 @@
-LUCENE-5463 tried to remove calls to RamUsageEstimator.sizeOf(Object) yet it was not always possible to remove the call when there was no other API to compute the memory usage of a particular class. In particular, this is the case for CachingWrapperFilter.sizeInBytes() that needs to be able to get the memory usage of any cacheable DocIdSet instance.
-
-We could add DocIdSet.ramBytesUsed in order to remove the need for RamUsageEstimator. This will also help have bounded filter caches and take the size of the cached doc id sets into account when doing evictions.

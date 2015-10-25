@@ -1,1 +1,0 @@
-Wrong javadoc on LowerCaseTokenizer.normalize

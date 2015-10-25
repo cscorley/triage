@@ -1,1 +1,0 @@
-Spellchecker should take IndexWriterConfig... deprecate old methods?

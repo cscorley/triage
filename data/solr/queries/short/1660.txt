@@ -1,1 +1,0 @@
-capitalizationfilter crashes if you use the maxWordCountOption

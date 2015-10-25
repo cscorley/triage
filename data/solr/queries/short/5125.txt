@@ -1,1 +1,0 @@
-Distributed MoreLikeThis fails with NullPointerException, shard query gives EarlyTerminatingCollectorException

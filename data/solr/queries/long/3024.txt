@@ -1,3 +1,0 @@
-As noted in SOLR-2451, (comment - 22/Dec/11 21:33) the matchObj changes made in that issue were incomplete, and the delta is not being respected.  patch attached to SOLR-2451
-
-opening a new issue to record chages as a new bug fix.

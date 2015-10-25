@@ -1,1 +1,0 @@
-Trie* fields throw exceptions on invalid input - causes DisMax parser to fail.

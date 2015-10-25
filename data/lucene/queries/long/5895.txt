@@ -1,3 +1,0 @@
-It would be useful if Lucene recorded a unique id for each segment written and each commit point.  This way, file-based replicators can use this to "know" whether the segment/commit they are looking at on a source machine and dest machine are in fact that same.
-
-I know this would have been very useful when I was playing with NRT replication (LUCENE-5438).

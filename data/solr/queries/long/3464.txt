@@ -1,3 +1,0 @@
-HttpSolrServer.commit method doesn't have softCommit option which appears to
-be an option available for the commit command:
-http://wiki.apache.org/solr/UpdateXmlMessages#A.22commit.22_and_.22optimize.22

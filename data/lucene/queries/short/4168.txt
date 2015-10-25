@@ -1,1 +1,0 @@
-Allow storing test execution statistics in an external file

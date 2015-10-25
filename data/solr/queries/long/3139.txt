@@ -1,3 +1,0 @@
-CommonsHttpSolrServer properly encodes the request's SolrParams depending on GET or POST. However, StreamingUpdateSolrServer only looks at the params to determine whether they contain optimize/commit ops, and otherwise discards them.
-
-This is unexpected - it should properly encode and send SolrParams per request, in a similar way as CommonsHttpSolrServer does. Currently this bug prevents one from e.g. selecting a different update chain per request when using the streaming server.

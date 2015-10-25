@@ -1,1 +1,0 @@
-balanced single quotes cause parse error in (new) standard QParser

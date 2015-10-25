@@ -1,1 +1,0 @@
-binary packaging: lucene modules/contribs that depend on jars are confusing 

@@ -1,1 +1,0 @@
-We should be able to speed up multi-valued faceting that sorts by count and returns many values by first sorting the term ords before converting them to a string.

@@ -1,1 +1,0 @@
-PostingsConsumer#merge does not call finishDoc

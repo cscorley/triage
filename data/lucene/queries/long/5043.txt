@@ -1,6 +1,0 @@
-The eclipse project name (created by 'ant eclipse') for most of the 4.x versions comes up as "lucene_solr_branch_4x" ... which causes a few problems.  Recently I needed to take a look at a particular class in Solr 4.2.1, 4.3.0, and branch_4x.  I couldn't load all three projects into Eclipse at the same time, because they have the same project name.  Even if I could have, it would have been very confusing.  I would like to improve this situation for the future.
-
-I have a couple of ideas right up front, both of which seem like reasonable ways to go:
-
-1) Use the directory name, similar to what IntelliJ Idea does.
-2) Use the "fakeReleaseVersion" property in the central build.xml.

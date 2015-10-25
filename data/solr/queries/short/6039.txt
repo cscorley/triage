@@ -1,1 +1,0 @@
-debug=track causes debug=query info to be suppressed when no results found

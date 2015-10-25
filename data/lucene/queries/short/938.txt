@@ -1,1 +1,0 @@
-I/O exceptions can cause loss of buffered deletes

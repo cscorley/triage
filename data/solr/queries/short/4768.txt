@@ -1,1 +1,0 @@
-The Solr war produced by generate-maven-artifacts should not contain logging jars

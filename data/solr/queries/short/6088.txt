@@ -1,1 +1,0 @@
-Add query re-ranking with the ReRankingQParserPlugin

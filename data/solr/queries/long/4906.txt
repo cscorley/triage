@@ -1,7 +1,0 @@
-as brought to my attention by jamiejackson on IRC...
-
-https://lucene.apache.org/solr/4_3_0/solr-core/org/apache/solr/update/processor/UpdateRequestProcessorChain.html#init%28org.apache.solr.core.PluginInfo%29
-
-1) example has updateRequestProcessors xml node instead of updateRequestProcessorChain
-2) no clear explanation of what the default chain is when none are specified
-3) no clear explanation of "name" attribute and how it's used.

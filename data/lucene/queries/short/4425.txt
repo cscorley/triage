@@ -1,1 +1,0 @@
-Unclear documentation of StoredFieldVisitor.binaryValue

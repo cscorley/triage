@@ -1,1 +1,0 @@
-Verbose error message when Log4j is enabled

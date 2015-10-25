@@ -1,1 +1,0 @@
-Otherwise, the leader election is likely to do publishes that race with the removal of the SolrCore from the clusterstate.

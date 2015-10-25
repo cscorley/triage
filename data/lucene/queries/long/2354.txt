@@ -1,1 +1,0 @@
-After LUCENE-2302, we should use TermToBytesRefAttribute to index using NumericTokenStream. This also should convert the whole NumericUtils to use BytesRef when converting numerics.

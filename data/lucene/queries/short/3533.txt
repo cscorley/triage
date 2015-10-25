@@ -1,1 +1,0 @@
-Nuke SpanFilters and CachingSpanFilter (maybe move to sandbox)

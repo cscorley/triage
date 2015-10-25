@@ -1,6 +1,0 @@
-e.g.
-
-http://jenkins.sd-datasolutions.de/job/Lucene-Solr-4.x-Windows-Java6-64/147/
-http://jenkins.sd-datasolutions.de/job/Lucene-Solr-trunk-Windows-Java7-64/408/
-
-this has happened a couple times... but always on Windows.

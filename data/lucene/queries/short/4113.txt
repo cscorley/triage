@@ -1,1 +1,0 @@
-FastVectorHighlighter: FieldTermStack.TermInfo should provide term-weight

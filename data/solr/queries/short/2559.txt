@@ -1,1 +1,0 @@
-All solr contrib/*/CHANGES.txt have "3.2-dev" as the release header.

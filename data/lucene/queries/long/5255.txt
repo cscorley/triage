@@ -1,1 +1,0 @@
-the DocumentWriter ref is nulled on close which seems unnecessary altogether. We can just make it final instead.

@@ -1,1 +1,0 @@
-dismax and edismax should default to "df" when "qf" is absent.

@@ -1,1 +1,0 @@
-Problem when using facet.offset with facet.sort=lex and shards

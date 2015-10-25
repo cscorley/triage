@@ -1,1 +1,0 @@
-client source needs to be included in releases

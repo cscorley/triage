@@ -1,3 +1,0 @@
-Pretty sure this is because I forgot to come around and re-run forrest... i think in the actual source tree its fixed and we just need a forrest regen.
-
-I didn't have java 5 on my mac and forgot that you can use forrest now with java 6.

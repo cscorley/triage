@@ -1,1 +1,0 @@
-Suggestion from Shawn Heisey to show an address bar (like the one we already have on the Query-Page) as well on the Pages of Schema and Config, so that it is visible where the files were loaded from.

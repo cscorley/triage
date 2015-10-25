@@ -1,1 +1,0 @@
-Cross-Core Join doesn't parse fields against joining schema

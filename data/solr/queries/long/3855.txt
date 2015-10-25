@@ -1,6 +1,0 @@
-It would be nice if Solr supported DocValues:
-
-	for ID fields (fewer disk seeks when running distributed search),
-	for sorting/faceting/function queries (faster warmup time than fieldcache),
-	better on-disk and in-memory efficiency (you can use packed impls).
-

@@ -1,1 +1,0 @@
-PhraseQuery/TermQuery/SpanQuery use IndexReader specific stats in their explains

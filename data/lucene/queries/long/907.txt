@@ -1,2 +1,0 @@
-We should include NOTICE.TXT and LICENSE.TXT not only in the core jar but also
-in the demo and contrib jars.

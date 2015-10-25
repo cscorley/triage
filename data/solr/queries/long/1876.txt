@@ -1,9 +1,0 @@
-See the improvements in LUCENE-2302.
-
-TermAttribute has been deprecated for flexible indexing, as terms can really be anything, as long as they can
-be serialized to byte[]. 
-
-For character-terms, a CharTermAttribute has been created, with a more friendly API. Additionally this attribute
-implements the CharSequence and Appendable interfaces.
-
-We should convert all Solr tokenstreams to use this new attribute.

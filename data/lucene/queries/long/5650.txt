@@ -1,3 +1,0 @@
-The recent refactoring to all the create temp file/dir functions (which is great!) has a minor regression from what existed before.  With the old LuceneTestCase.TEMP_DIR, the directory was created if it did not exist.  So, if you set java.io.tmpdir to "./temp", then it would create that dir within the per jvm working dir.  However, getBaseTempDirForClass() now does asserts that check the dir exists, is a dir, and is writeable.
-
-Lucene uses "." as java.io.tmpdir.  Then in the test security manager, the per jvm cwd has read/write/execute permissions.  However, this allows tests to write to their cwd, which I'm trying to protect against (by setting cwd to read/execute in my test security manager).

@@ -1,1 +1,0 @@
-Don't decode unnecessary freq blocks in 4.1 codec

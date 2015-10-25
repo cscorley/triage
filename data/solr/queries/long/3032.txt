@@ -1,5 +1,0 @@
-There seems to be a growing consensus (well, Muir and Hoss agree at least) that having this logOnce concept in SolrException is more trouble than it's worth. Point in case is that trunk (4x) fails to report anything useful in the log file when you define a custom component and don't have any <lib> statements going to the right place.
-
-So the proposal is to remove the whole logOnce process, supporting variables etc. The first step here will be deprecating the various bits of code in SolrException and starting to remove their usages.
-
-I'm opening this up for discussion, error reporting seems to be one of those things that generates endless discussion and I'd like them aired before putting too much work into this. My goal will be to have this in the code base by next Tuesday, so speak up.

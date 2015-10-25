@@ -1,1 +1,0 @@
-SolrException should return valid HTTP status codes.

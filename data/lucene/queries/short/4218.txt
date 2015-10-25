@@ -1,1 +1,0 @@
-contrary to documentation Document.get(field) on numeric field returns null

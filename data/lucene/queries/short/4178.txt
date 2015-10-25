@@ -1,1 +1,0 @@
-FieldType.setTokenized shoudl be true by default

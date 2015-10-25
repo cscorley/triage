@@ -1,1 +1,0 @@
-smoketester should require versions like 4.0.0 not 4.0

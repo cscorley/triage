@@ -1,1 +1,0 @@
-HTTPSolrServer doesn't set own property correctly in setFollowRedirects

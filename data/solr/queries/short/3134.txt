@@ -1,1 +1,0 @@
-Include shard Information in response

@@ -1,5 +1,0 @@
-We should support running multiple shards from one collection on the same Solr server - the run a collection with 8 shards on a 4 Solr server cluster (each Solr server running 2 shards).
-
-Performance tests at our side has shown that this is a good idea, and it is also a good idea for easy elasticity later on - it is much easier to move an entire existing shards from one Solr server to another one that just joined the cluter than it is to split an exsiting shard among the Solr that used to run it and the new Solr.
-
-See dev mailing list discussion "Multiple shards for one collection on the same Solr server"

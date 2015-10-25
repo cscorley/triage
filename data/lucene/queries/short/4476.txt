@@ -1,1 +1,0 @@
-maven deployment scripts dont work (except from the machine you made the RC from)

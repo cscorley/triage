@@ -1,9 +1,0 @@
-This constructor ignores the supplied HttpCilent parameter, passing null instead.
-
-  public ConcurrentUpdateSolrServer(String solrServerUrl,
-      HttpClient client, int queueSize, int threadCount) 
-{
-    this(solrServerUrl, null, queueSize, threadCount, Executors.newCachedThreadPool(
-        new SolrjNamedThreadFactory("concurrentUpdateScheduler")));
-    shutdownExecutor = true;
-  }

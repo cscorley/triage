@@ -1,4 +1,0 @@
-The new default DV format for binary fields has much more
-RAM-efficient encoding of the address for each document ... but it's
-also a bit slower at decode time, which affects facets because we
-decode for every collected docID.

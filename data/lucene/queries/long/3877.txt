@@ -1,5 +1,0 @@
-We seem to have accumulated a few random sops...
-
-Eg, PairOutputs.java (oal.util.fst) and MultiDocValues.java, at least.
-
-Can we somehow detect (eg, have a test failure) if we accidentally leave errant System.out.println's (leftover from debugging)...?

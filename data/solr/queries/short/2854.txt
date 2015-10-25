@@ -1,1 +1,0 @@
-Load URL content stream on-demand, rather than automatically

@@ -1,1 +1,0 @@
-GroupFacetCollectorTest nightly build failure

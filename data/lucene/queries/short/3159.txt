@@ -1,1 +1,0 @@
-lucene benchmark has some unnecessary files

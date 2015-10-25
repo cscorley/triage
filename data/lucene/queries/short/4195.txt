@@ -1,1 +1,0 @@
-Add javadocs to Codec package.html

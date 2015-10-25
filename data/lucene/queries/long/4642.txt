@@ -1,3 +1,0 @@
-All tokenizer implementations have a constructor that takes a given AttributeSource as parameter (LUCENE-1826).  These should be removed.
-
-TokenizerFactory does not provide an API to create tokenizers with a given AttributeFactory, but quite a few tokenizers have constructors that take an AttributeFactory.  TokenizerFactory should add a create(AttributeFactory) method, as should subclasses for tokenizers with AttributeFactory accepting ctors.

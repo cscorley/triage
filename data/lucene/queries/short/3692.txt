@@ -1,1 +1,0 @@
-DocumentsWriter blocks flushes when applyDeletes takes forever - memory not released

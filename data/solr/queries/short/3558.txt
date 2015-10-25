@@ -1,1 +1,0 @@
-Change SnapPuller to use Solrj

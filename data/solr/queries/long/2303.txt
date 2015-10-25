@@ -1,6 +1,0 @@
-In solr 4.0 there is log4j-over-slf4j.
-
-But if you have log4j jars also in the classpath (e.g. contrib/extraction, contrib/clustering) you can get strange errors such as:
-java.lang.NoSuchMethodError: org.apache.log4j.Logger.setAdditivity(Z)V
-
-So I think we should remove the log4j jars in these contribs, all tests pass with them removed.

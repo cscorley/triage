@@ -1,1 +1,0 @@
-The arguments for commit and optimize commands are not passed to TestHarness  by the AbstractSolrTestCase class. Fixing this problem in  AbstractSolrTestCase exposes a bug in the simpleTag method of TestHarness. 

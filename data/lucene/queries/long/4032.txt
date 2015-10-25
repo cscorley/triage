@@ -1,3 +1,0 @@
-We currently write this every skip, but we should try to avoid this (like payloads).
-
-This reduces skip data on my test corpus: .frq goes from 52354303 -> 50896066

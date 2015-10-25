@@ -1,1 +1,0 @@
-Allow deletions on Lucene3x codecs again

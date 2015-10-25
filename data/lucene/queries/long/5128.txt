@@ -1,3 +1,0 @@
-ArrayIndexOutOfBoundsException makes it harder to reason about the cause.
-
-Is there a better way to notify programmers of the cause?

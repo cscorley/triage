@@ -1,1 +1,0 @@
-CheckIndex should check deleted documents too

@@ -1,1 +1,0 @@
-Currently MemoryIndex uses BytesRef objects to represent terms and holds an int[] per term per field to represent postings. For highlighting this creates a ton of objects for each search that 1. need to be GCed and 2. can't be reused.

@@ -1,1 +1,0 @@
-queryparser makes all CJK queries phrase queries regardless of analyzer

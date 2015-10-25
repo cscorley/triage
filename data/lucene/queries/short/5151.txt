@@ -1,1 +1,0 @@
-Associations aggregators enter an infinite loop if some documents have no category associations

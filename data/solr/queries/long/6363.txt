@@ -1,1 +1,0 @@
-The embedded derby db used by DIH's JDBC tests is not getting shut down properly.  Subsequently our test runner is complaining about zombie threads.

@@ -1,1 +1,0 @@
-Missing possibility to supply custom FieldParser when sorting search results

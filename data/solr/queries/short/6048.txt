@@ -1,1 +1,0 @@
-Fix asserts for SolrDocument, SolrInputDocument and SolrInputField in SolrTestCaseJ4

@@ -1,1 +1,0 @@
-Carrot2 algorithms compute cluster scores; we could expose them on the output from Solr clustering component. Along with scores, we can output a boolean flag that marks the Other Topics groups.

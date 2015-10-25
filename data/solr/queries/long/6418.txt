@@ -1,1 +1,0 @@
-This test should use runtimes based on nightly the same way that ChaosMonkeyNothingIsSafeTest does.

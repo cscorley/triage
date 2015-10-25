@@ -1,1 +1,0 @@
-IndexWriter.addIndexes can make any incoming segment into CFS if it isn't already

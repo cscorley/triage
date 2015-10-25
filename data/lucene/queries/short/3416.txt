@@ -1,1 +1,0 @@
-Allow to pass an instance of RateLimiter to FSDirectory allowing to rate limit merge IO across several directories / instances

@@ -1,1 +1,0 @@
-The smoketest fails in testUTF-8 every time on my system.

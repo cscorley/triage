@@ -1,1 +1,0 @@
-LockStressTest fails always with NativeFSLockFactory

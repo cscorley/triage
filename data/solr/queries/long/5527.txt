@@ -1,1 +1,0 @@
-Solr logs a message saying that special fields like $docBoost do not exist in schema.xml. We should avoid such log messages for DIH's special commands.

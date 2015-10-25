@@ -1,2 +1,0 @@
-Latest Jetty is 6.1.26 and it looks like there have been quite a few bug fixes since 6.1.22
-http://svn.codehaus.org/jetty/jetty/branches/jetty-6.1/VERSION.txt

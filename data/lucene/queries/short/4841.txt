@@ -1,1 +1,0 @@
-Add SortedSetDocValuesFacetField example to SimpleFacetsExample

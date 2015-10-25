@@ -1,3 +1,0 @@
-Facet examples need some simplification and cleanup. For instance, MultiCLExample uses a Random (with fixed seed) to generate documents and categories and in general they seem to try an reuse a lot of methods.
-
-Rather, I think the example code should be concise and short, demonstrating what it needs to demonstrate, even at the expense of duplicating code. That way, a user can just look at an example class to understand how to do something...

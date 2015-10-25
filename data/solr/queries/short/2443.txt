@@ -1,1 +1,0 @@
-Solr DocValues should have objectVal(int doc)

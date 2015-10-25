@@ -1,1 +1,0 @@
-FieldCache.getDocTermOrds back to the future bug

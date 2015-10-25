@@ -1,1 +1,0 @@
-Solr replication by Solr (for windows also)

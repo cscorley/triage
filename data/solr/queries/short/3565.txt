@@ -1,1 +1,0 @@
-The example solrconfig.xml contains references to maxFieldLength which has been removed from 4x and trunk

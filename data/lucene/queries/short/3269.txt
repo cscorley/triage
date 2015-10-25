@@ -1,1 +1,0 @@
-Speed up Top-K sampling tests

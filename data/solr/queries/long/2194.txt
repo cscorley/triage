@@ -1,3 +1,0 @@
-I found a bug in this ValueSource caused by getting the docFreq only from the local Reader, not the root Reader.
-
-This patch adds a test to reproduce and fixes it.  

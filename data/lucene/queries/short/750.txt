@@ -1,1 +1,0 @@
-don't use finalizers for FSIndexInput clones

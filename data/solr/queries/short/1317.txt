@@ -1,1 +1,0 @@
-CapitalizationFilterFactory NPEs when keep parameter not specified

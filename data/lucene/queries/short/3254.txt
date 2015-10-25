@@ -1,1 +1,0 @@
-BitVector.isSparse is sometimes wrong

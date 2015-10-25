@@ -1,1 +1,0 @@
-org.apache.solr.cloud.ShardSplitTest.testDistribSearch fails often with a 500 error.

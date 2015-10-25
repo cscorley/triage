@@ -1,1 +1,0 @@
-Group Querys maybe return docList of 0 results

@@ -1,1 +1,0 @@
-This patch allows the rake test task to start a solr server before running tests, and shutting it down when the tests are complete.

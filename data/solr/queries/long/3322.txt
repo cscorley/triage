@@ -1,5 +1,0 @@
-In some situations where a custom IndexReaderFactory is used the amount of information passed to the newReader(..) call is too small. E.g. if a factory needs to access some external data that depends on schema or even on the collection name then it has no way to obtain that context.
-
-We cannot use SolrCoreAware here because this method is called before SolrCore is ready.
-
-I propose to simply change the signature and add a SolrCore argument. Even though SolrCore is not fully valid at this point, still the most useful properties there are valid (schema, descriptor, config, etc...).

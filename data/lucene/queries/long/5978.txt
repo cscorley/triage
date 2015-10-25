@@ -1,5 +1,0 @@
-When a document doesn't have the field, we fill with zero. when a segment doesn't have the field, we also fill with zero.
-
-however, when the analyzer doesn't return any terms for the field, we still call similarity.computeNorm(0)... with the default similarity this encodes infinity... -1
-
-in such a case, it doesnt really matter what the norm is, since it has no terms. But its more efficient for e.g. compression if we consistently use zero.

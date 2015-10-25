@@ -1,1 +1,0 @@
-Make changes-to-html not depend on wget or curl

@@ -1,5 +1,0 @@
-When using the new solr.xml structure. The core auto discovery mechanism trying to find core.properties. 
-But I found the core.properties cannot be create when I dynamically create a collection.
-The root issue is the CorePropertiesLocator trying to create properties before the instanceDir is created. 
-And collection creation process will done and looks fine at runtime, but it will cause issues (cores are not auto discovered after server restart).
-

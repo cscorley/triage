@@ -1,5 +1,0 @@
-Currently there are multiple classes that deal with the impl details of httpclient when setting timeouts, basic auth details, retry handling, compression etc. I am proposing that we instead move this functionality into a reusable utility class. 
-
-The ultimate goal is to be able to easily use for example https or basic auth (that can already be used in some parts of solr) throughout solr but that will require some more work.
-
-I will submit a patch shortly.

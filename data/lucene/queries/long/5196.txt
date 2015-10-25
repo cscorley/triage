@@ -1,5 +1,0 @@
-This constant is currently not used and from what I understand, it was used in the past to test 3.x stuff? Anyway, I want to revive it by renaming it to OLD_FORMAT_IMPERSONATION_IS_ACTIVE (defaults to true) and have the RWCodecs respect it by not supporting e.g. fieldsConsumer() if it's set to false. This will allow tests that want to verify e.g. old formats are not supported work.
-
-Currently it's impossible because the RWCodec gets loaded before the non-RW by SPI, and so writing segments in an old format always work. I want to test something like that in LUCENE-5189 and prevents it.
-
-Will post a patch soon.

@@ -1,7 +1,0 @@
-DrillDown is a utility class for creating drill-down queries over a base query and a bunch of categories. We've been asked to support AND, OR and AND of ORs. The latter is not so simple as a static utility method though, so instead we have some sample code ...
-
-Rather, I think that we can just create a DrillDownQuery (extends Query) which takes a baseQuery in its ctor and exposes add(CategoryPath...), such that every such group of categories is AND'ed with other groups, and internally they are OR'ed. It's very similar to how you would construct a BooleanQuery, only simpler and specific to facets.
-
-Internally, it would build a BooleanQuery and delegate rewrite, createWeight etc to it.
-
-That will remove the need for the static utility methods .. or we can keep static term() for convenience.

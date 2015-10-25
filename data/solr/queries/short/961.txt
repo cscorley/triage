@@ -1,1 +1,0 @@
-Efficient array copy in ModifiableSolrParams#add(String, String...) 

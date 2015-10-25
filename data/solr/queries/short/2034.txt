@@ -1,1 +1,0 @@
-javabin should use UTF-8, not modified UTF-8

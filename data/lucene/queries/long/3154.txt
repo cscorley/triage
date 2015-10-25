@@ -1,3 +1,0 @@
-from the website: Lucene Java 3.1 has the following minimum requirements:
-
-you already had to select the specific version to get to the versioned site, so I think we should consider removing these redundant version references to prevent the possibility they are out of date.

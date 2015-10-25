@@ -1,5 +1,0 @@
-While fiddeling with SOLR-4345, i realized that the Query-Interface does not really work in IE (at least IE10, i guess that's also valid for IE9 and maybe others)
-
-The Interface itself (including the Form on the left side, including various options) is there, but if you submit the Form, the result is always empty (as in 0 Documents returned) because of the used url:
-
-http://host:port/solr/collection1/select?

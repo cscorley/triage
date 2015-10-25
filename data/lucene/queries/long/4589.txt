@@ -1,3 +1,0 @@
-LUCENE-4220 added nekohtml as new parser for HTML files in benchamrk module. Unfortunately the nekohtml parser had the well known lowercase dotless-i bug when using the turkish locale.
-
-Version 1.9.17 of nekohtml fixes this bug and was released a few days ago (http://nekohtml.sourceforge.net/changes.html). This issue will update it and remove the workaround.

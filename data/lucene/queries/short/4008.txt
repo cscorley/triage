@@ -1,1 +1,0 @@
-Use Java Markdown provided by Ivy to transform BUILD.txt, MIGRATE.txt,.. to simple (better readable) HTML and place under documentation.

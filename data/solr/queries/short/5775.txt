@@ -1,1 +1,0 @@
-Disable constantly failing solr tests

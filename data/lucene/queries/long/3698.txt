@@ -1,1 +1,0 @@
-The FVH adds an additional ' ' (the multi value separator) to the end of the highlighted text.

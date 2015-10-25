@@ -1,1 +1,0 @@
-It would be helpful to tokenizer implementors for the analysis package overview to mention more things. I'll supply a patch.

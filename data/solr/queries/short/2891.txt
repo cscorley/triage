@@ -1,1 +1,0 @@
-InvalidTokenOffsetsException when using MappingCharFilterFactory, DictionaryCompoundWordTokenFilterFactory and Highlighting

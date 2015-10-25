@@ -1,1 +1,0 @@
-Spinoff from LUCENE-5350.

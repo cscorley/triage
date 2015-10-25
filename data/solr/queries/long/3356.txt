@@ -1,1 +1,0 @@
-The Logging UI and LogLevelHandler can work using Log4j rather then just JUL

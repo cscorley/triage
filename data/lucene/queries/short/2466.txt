@@ -1,1 +1,0 @@
-fix some more locale problems in lucene/solr

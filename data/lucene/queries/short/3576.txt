@@ -1,1 +1,0 @@
-TestBackwardsCompatibility needs terms with U+E000 to U+FFFF

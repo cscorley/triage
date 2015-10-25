@@ -1,2 +1,0 @@
-In solrcloud, one can hit a URL of /collection1/select and get a distributed search over collection1.
-If we wish to maintain this, we'll need some more flexible URL to core mapping since there may be more than one core for the collection on a node, and the "collection1" core on that node could go away altogether.

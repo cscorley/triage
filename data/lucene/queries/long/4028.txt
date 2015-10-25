@@ -1,1 +1,0 @@
-ant test -Dtestcase=TestTermsEnum -Dtests.method=testFloorBlocks -Dtests.seed=CF0DAE0D9FB42BC7 -Dtests.locale=es_DO -Dtests.timezone=America/Cancun -Dtests.multiplier=3 -Dargs="-Dfile.encoding=US-ASCII

@@ -1,1 +1,0 @@
-HttpReplicator uses a lot of CPU for large files

@@ -1,1 +1,0 @@
-Consolidate and simplify closing cores in container shutdown.

@@ -1,1 +1,0 @@
-Pattern token filter which emits a token for every capturing group

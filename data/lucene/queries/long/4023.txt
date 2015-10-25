@@ -1,7 +1,0 @@
-Scorer.visitSubScorers() is protected which make it impossible to implement it on a composite scorer in another package.
-
-I came around this issue when I tried to write a workaround for the 2nd problem of this issue: DisjunctionMaxScorer does not implement visitSubScorers():
-
-If you write a Scorer in another package than o.a.l.search and implement visit subScorers(), you may need to call the visitSubScorers method recursively on your leaves (sub-scorers). But this is not possible, as the method is protected.
-
-This issue should also fix the missing implementation of visitSubScorers in DisjMaxQuery.

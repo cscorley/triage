@@ -1,5 +1,0 @@
-SorterTemplate.mergeSort/timSort can be very slow. For example, I ran a quick benchmark that sorts an Integer[] array of 50M elements, and mergeSort was almost 4x slower than quickSort (~12.8s for quickSort, ~46.5s for mergeSort). This is even worse when the cost of a swap is higher (e.g. parallel arrays).
-
-This is due to SorterTemplate.merge. I first feared that this method might not be linear, but it is, so the slowness is due to the fact that this method needs to swap lots of values in order not to require extra memory. Could we make it faster?
-
-For reference, I hacked a SorterTemplate instance to use the usual merge routine (that requires n/2 elements in memory), and it was much faster: ~17s on average, so there is room for improvement.

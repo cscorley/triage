@@ -1,1 +1,0 @@
-This seems to be a bug recently introduced. I have no idea what's wrong. Attached is a log file, reproduces everytime.

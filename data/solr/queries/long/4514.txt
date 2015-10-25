@@ -1,5 +1,0 @@
-the schema.xml used by CurrencyFieldTest declares a fieldType named "openexchangeratesorg_currency" using OpenExchangeRatesOrgProvider pointed at a local copy of open-exchange-rates.json, but field type is completley unused, so nothing about this provider's behavior is ever really tested.
-
-We should change the test such that all of the functionality tested against the "amount" field is also tested against some new field using this OER provider based fieldType, where the copied data (and static exchange rates) are identical.
-
-(esasiest way would probably be to introduce a test variable for the field name and let a new subclass override it)

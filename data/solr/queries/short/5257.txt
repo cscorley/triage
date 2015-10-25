@@ -1,1 +1,0 @@
-confusing warning logged when unexpected xml attributes are found

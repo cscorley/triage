@@ -1,1 +1,0 @@
-fix replicationFactor to align with industry usage 

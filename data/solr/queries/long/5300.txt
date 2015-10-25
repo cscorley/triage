@@ -1,3 +1,0 @@
-Currently, shards can only be split at the mid point of their hash range. This makes it difficult to control the distribution of data in the sub shards.
-
-We should make it possible to specify ranges to be used for splitting. A ranges parameter can be added which can accept hash ranges in hexadecimal e.g. ranges=0-1f4,1f5-3e8,3e9-5dc will split a shard with range 0-1500 into three shards with ranges [0,500], [501-1000] and [1001-1500] respectively.

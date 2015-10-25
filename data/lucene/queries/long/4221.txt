@@ -1,7 +1,0 @@
-In some situations (like running shingles twice), you end out with a case where startOffset > endOffset.
-
-We prevent this in IndexWriter for postings offsets, but we never do any validation here for term vectors (at some point, maybe we should make a plan to address this?)
-
-Anyway, currently CheckIndex will wrongly fail in this situation, which some of our own analyzers even do (e.g. LUCENE-3920)...
-
-This is an overly-eager validation in checkindex (for vectors, we cannot safely do these assertions as it was/is never enforced by IndexWriter, only for postings offsets).

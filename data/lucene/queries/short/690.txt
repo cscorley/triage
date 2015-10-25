@@ -1,1 +1,0 @@
-LazyField use of IndexInput not thread safe

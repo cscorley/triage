@@ -1,1 +1,0 @@
-SLF4j should be used instead.

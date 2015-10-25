@@ -1,1 +1,0 @@
-Use of 'qt' should be restricted to searching and should not start with a '/'

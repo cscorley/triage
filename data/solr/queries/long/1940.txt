@@ -1,5 +1,0 @@
-o.a.s.h.SolrDispatchFilter can set the output Content-Type to a null pointer instead of a string. Under websphere this results in a NullPointerException. This is the offending code: 
-
-    response.setContentType(responseWriter.getContentType(solrReq, solrRsp));
-
-Suggested fix: either use a default content type, or do not set the content type and let the browser handle it. 

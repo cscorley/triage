@@ -1,1 +1,0 @@
-DirectoryTaxonomyReader.refresh misbehaves with ref counts

@@ -1,1 +1,0 @@
-add smoketester or test check that indexes are created with the correct codecs.

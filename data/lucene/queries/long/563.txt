@@ -1,1 +1,0 @@
-Current trunk has some javadoc errors in IndexReader and some more in contrib.

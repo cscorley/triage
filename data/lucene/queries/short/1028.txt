@@ -1,1 +1,0 @@
-Weight is not serializable for some of the queries

@@ -1,1 +1,0 @@
-If you want to replicate a configuration file inside a subdirectory of conf directory (eg conf/stopwords/english.txt) Solr fails because it cannot find the subdirectory.

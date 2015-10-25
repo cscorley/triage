@@ -1,5 +1,0 @@
-These source files add up to a lot of sources ... it caused problems when compiling under Maven and InteliJ.
-
-I committed a change to make separates files, but in aggregate this is still a lot ...
-
-EG maybe we don't need to specialize encode?

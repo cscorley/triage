@@ -1,1 +1,0 @@
-SloppyPhraseScorer sometimes misses documents that ExactPhraseScorer finds.

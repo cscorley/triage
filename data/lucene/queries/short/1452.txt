@@ -1,1 +1,0 @@
-Binary field content lost during optimize

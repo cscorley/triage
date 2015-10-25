@@ -1,3 +1,0 @@
-It would be nice to be able to link directly to a page that loads the right field in the analysis UI.
-
-This will also let us link the query-browser page to the analysis page

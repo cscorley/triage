@@ -1,7 +1,0 @@
-Improvements to HTMLStripHighlighter:
-
-
-	fix padding of hexadecimal entities (currently off by 1)
-	add an option not to emit padding at all. In certain applications padding emitted after entities such as ó may split words that are in fact single terms.
-	add entities that are recognized when written all in uppercase and recognized by browsers.
-

@@ -1,1 +1,0 @@
-FreqProxTermsWriter leaks file handles if exceptions are thrown during flush()

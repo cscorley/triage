@@ -1,1 +1,0 @@
-stored fields bulk merging doesn't quite work right

@@ -1,4 +1,0 @@
-Call search URL;
-select?q=test&shards=ip/solr/
-
-checkDistributed method throw null pointer exception. 

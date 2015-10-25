@@ -1,3 +1,0 @@
-Benchmark algorithms can't currently use analysis factories.  Instead, one must rely on pre-existing analyzers, or write specialized tasks to construct them.
-
-Now that all analysis components have factories, benchmark algorithms should be able to use them.

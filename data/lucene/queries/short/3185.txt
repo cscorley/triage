@@ -1,1 +1,0 @@
-NRTCachingDirectory.deleteFile always throws exception

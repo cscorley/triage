@@ -1,1 +1,0 @@
-Using rest manager endpoint to create a new (yet unused) managed resource results in corrupt file, solr can't restart

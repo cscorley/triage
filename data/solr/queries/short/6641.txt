@@ -1,1 +1,0 @@
-SystemInfoHandler should include the zkHost the node is using (when running in solrcloud mode)

@@ -1,5 +1,0 @@
-See attached patch for a failing test
-
-Basically, it's a simple point and radius scenario that works great as long as args.setDistPrecision(0.0); is called. Once the default precision is used (2.5%), it doesn't work as expected.
-
-The distance between the 2 points in the patch is 35.75 KM. Taking into account the 2.5% error the effective radius without false negatives/positives should be around 34.8 KM. This test fails with a radius of 33 KM.

@@ -1,1 +1,0 @@
-Create SearcherTaxonomyManager over Directory

@@ -1,1 +1,0 @@
-FST has hard limit max size of 2.1 GB

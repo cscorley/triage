@@ -1,9 +1,0 @@
-We can optimize PatternReplaceFilter:
-
-	don't need to create Strings since CharTermAttribute implements CharSequence, just match directly against it.
-	reuse the matcher, since CharTermAttribute is reused, too.
-	don't create Strings/waste time in replaceAll/replaceFirst if the term doesn't match the regex at all... check with find() first.
-
-
-
-There is more that could be done to make it faster for terms that do match, but this is simple and a start.

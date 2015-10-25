@@ -1,9 +1,0 @@
-    [junit] Testsuite: org.apache.solr.client.solrj.embedded.TestSolrProperties
-    [junit] Testcase: testProperties(org.apache.solr.client.solrj.embedded.TestSolrProperties): Caused an ERROR
-    [junit] No such core: core0
-    [junit] org.apache.solr.common.SolrException: No such core: core0
-    [junit]     at org.apache.solr.client.solrj.embedded.EmbeddedSolrServer.request(EmbeddedSolrServer.java:118)
-    [junit]     at org.apache.solr.client.solrj.request.AbstractUpdateRequest.process(AbstractUpdateRequest.java:105)
-    [junit]     at org.apache.solr.client.solrj.embedded.TestSolrProperties.testProperties(TestSolrProperties.java:128)
-    [junit]     at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:1260)
-    [junit]     at org.apache.lucene.util.LuceneTestCase$LuceneTestCaseRunner.runChild(LuceneTestCase.java:1189)

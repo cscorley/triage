@@ -1,1 +1,0 @@
-MultiSearcher.rewrite() incorrectly rewrites queries

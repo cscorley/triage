@@ -1,1 +1,0 @@
-The MBeans loadedby the CoreContainer resourceloader are not exposed via the MBeans API. eg:CoreAdminHandler,CollectionAdminHandler

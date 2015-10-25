@@ -1,1 +1,0 @@
-Schema Browser does not scale with large indexes

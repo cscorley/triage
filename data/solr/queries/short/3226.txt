@@ -1,1 +1,0 @@
-SignatureUpdateProcessor ignores non-string field values from the signature generation

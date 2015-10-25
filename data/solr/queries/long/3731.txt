@@ -1,1 +1,0 @@
-Currently some tests use null CoreContainer when using ZkController directly in tests and ZKController has to deal with this. I'd like to remove this possibility.

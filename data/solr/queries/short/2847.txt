@@ -1,1 +1,0 @@
-fix test bug in DistributedSpellCheckComponentTest

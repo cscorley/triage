@@ -1,1 +1,0 @@
-SolrInputDocument should preserve Field addition order

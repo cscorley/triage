@@ -1,1 +1,0 @@
-Such classes would be handy for FST serialization/deserialization.

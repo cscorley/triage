@@ -1,1 +1,0 @@
-A PeerSync attempt to it's replicas by a candidate leader should not fail on o.a.http.conn.ConnectTimeoutException

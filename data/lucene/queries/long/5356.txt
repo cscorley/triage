@@ -1,5 +1,0 @@
-I have little proposal for morfologik lucene module. Current module is tightly coupled with polish DICTIONARY enumeration.
-But other people (like me) can build own dictionaries to FSA and use it with lucene. 
-You can find proposal in attachment and also example usage in analyzer (SlovakLemmaAnalyzer).
-It uses dictionary property as String resource from classpath, not enumeration.
-One change is, that dictionary variable must be set in MofologikFilterFactory (no default value).

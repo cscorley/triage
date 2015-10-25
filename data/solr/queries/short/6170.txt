@@ -1,1 +1,0 @@
-Merge 'pre-register', 'create' and 'register' core methods in CoreContainer

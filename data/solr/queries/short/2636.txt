@@ -1,1 +1,0 @@
-Explain doesn't deal with negative only queries completely correctly

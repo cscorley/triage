@@ -1,1 +1,0 @@
-I would like to make a minor change to the SimpleQParser to use a MultiTermAnalyzer on prefix queries from TextFields.  This way terms can be  modified to be lower-cased or have accents removed from the TextField's analysis chain before creating the prefix query.

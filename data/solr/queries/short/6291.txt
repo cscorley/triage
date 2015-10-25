@@ -1,1 +1,0 @@
-RollingRestartTest is too slow.

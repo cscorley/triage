@@ -1,1 +1,0 @@
-This simplifies VariableResolver and moves each built-in Evaluator into its own class.  Compiler warnings / missing generics are fixed.  Also, the Locale bug with DateFormatEvaluator is solved.  Instead of using the machine default, the Root Locale is used by default.  An optional 3rd parameter allows users to specify whatever locale they want.

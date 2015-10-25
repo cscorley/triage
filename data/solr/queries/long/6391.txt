@@ -1,6 +1,0 @@
-Right now, a create collection call that looks like:
-
-  ?action=CREATE&name=c1&collection.configname=myconf
-
-returns an error about numShards being a 'required' parameter. We should mention in the message about it being optional in case of compositeId router.
-This would get things to be on the same page as the documentation and make it less confusing for users.

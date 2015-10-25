@@ -1,9 +1,0 @@
-Followup from LUCENE-4230
-
-Currently today to pull freq() from a docsEnum, you have to pass a boolean 'needsFreqs=true'. If the field omitsTF, then it returns null (and you need to call it again, with 'needsFreqs=false', in which case you are not supposed to call freq().
-
-We fixed this in D&PEnum in 4230: as you can tell from the fieldinfos whether they are there or not, there is no need to return null, it makes consumer code complicated.
-
-So this issue is just to have docs(Bits, reuse) which calls docs(Bits, reuse, FLAG_FREQS) by default. if they arent there, the docsenum returns 1 for freq(). 
-
-So calling docs(Bits, reuse, 0) is just an optimization hint to the codec that you never need them (same as the payload/offset flags for docsAndPositions)

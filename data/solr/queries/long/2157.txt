@@ -1,1 +1,0 @@
-If onlyMorePopular=false then results are returned in random (impl. specific) order. This is not user-friendly - in such case users expect that results should be sorted alphabetically in ascending order.

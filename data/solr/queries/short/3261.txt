@@ -1,1 +1,0 @@
-edismax ignores explicit operators when literal colon is found

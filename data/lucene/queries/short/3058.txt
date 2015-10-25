@@ -1,1 +1,0 @@
-FST should allow more than one output for the same input

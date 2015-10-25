@@ -1,3 +1,0 @@
-As noted by Alok Bhandari on the solr-user mailing list, the example configuration of PathHierarchyTokenizerFactory (in both the example schema.xml and in the factory javadocs) is not very useful to most people because it uses the tokenizer both at index and at query time.
-
-So a query like q=text_path_field:"/aaa/bbb/ccc" will not only match "/aaa/bbb/ccc" and "/aaa/bbb/ccc/ddd" but also "/aaa/" and "/aaa/xxxx" which is not likely what people expect.

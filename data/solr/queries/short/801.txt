@@ -1,1 +1,0 @@
-configurable delete query  per root-entity

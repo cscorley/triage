@@ -1,1 +1,0 @@
-Add example Query page to the example

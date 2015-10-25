@@ -1,1 +1,0 @@
-OrdinalMap's mapping from global ords to segment ords is sometimes wasteful

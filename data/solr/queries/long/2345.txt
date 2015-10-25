@@ -1,5 +1,0 @@
-Extend geodist() and 
-{!geofilt}
- to support a multiValued lat,long field without using geohash.
-
-sort=geodist() asc

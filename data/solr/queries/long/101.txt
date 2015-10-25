@@ -1,9 +1,0 @@
-Major refactoring of lib/solr/request.rb:
-
-
-	split out different classes into Solr::Request module
-	all requests inherit from Solr::Request::Base
-	added Solr::Document and Solr::Field classes
-	adjusted unit tests appropriately
-	functional tests not working currently
-

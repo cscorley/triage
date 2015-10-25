@@ -1,1 +1,0 @@
-MappingCharFilter stores an overly complex tree-like structure for matching input patterns. The input is a union of fixed strings mapped to a set of fixed strings; an fst matcher would be ideal here and provide both memory and speed improvement I bet.

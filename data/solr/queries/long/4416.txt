@@ -1,1 +1,0 @@
-Tika 1.3 was recently released with these improvements: http://www.apache.org/dist/tika/CHANGES-1.3.txt

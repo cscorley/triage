@@ -1,1 +1,0 @@
-Collections API should return a nice error when not in SolrCloud mode.

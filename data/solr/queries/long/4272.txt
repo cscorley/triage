@@ -1,5 +1,0 @@
-The JavaDoc for CountFieldValuesUpdateProcessorFactory shows a sample processor chain using the processor. 
-
-However, the example does not finish solr.RunUpdateProcessorFactory which means if somebody copies the example, they may take very long time to see why the updates are not actually happening (speaking from experience here).
-
-It would be good to update the example to include the extra line (and maybe give the processor name attribute).

@@ -1,1 +1,0 @@
-Admin UI breaks with a core named 'logging' or 'threads'

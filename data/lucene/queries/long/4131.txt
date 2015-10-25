@@ -1,1 +1,0 @@
-The new .cfs is more tricky, but I still think we can do it. we should definitely fix this for .cfe

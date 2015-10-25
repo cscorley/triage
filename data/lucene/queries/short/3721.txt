@@ -1,1 +1,0 @@
-CharFilters not being invoked in Solr

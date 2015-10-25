@@ -1,1 +1,0 @@
-We can now set thread relative priority when we run BG tasks... but if you use a negative number it's parsing it as 0.

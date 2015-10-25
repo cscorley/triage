@@ -1,7 +1,0 @@
-for the addresses in the big in-memory byte[] and disk blocks, we could save a good deal of RAM here.
-
-I think this codec just never got upgraded when we added these new packed improvements, but it might be interesting to try to use for the terms data of sorted/sortedset DV implementations.
-
-patch works, but has nocommits and currently ignores the divisor. The annoying problem there being that we have the shared interface with "get(int)" for PackedInts.Mutable/Reader, but no equivalent base class for monotonics get(long)... 
-
-Still its enough that we could benchmark/compare for now.

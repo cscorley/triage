@@ -1,1 +1,0 @@
-allow IndexWriter user to tell if there are uncommitted changes.

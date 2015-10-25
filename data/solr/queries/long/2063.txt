@@ -1,1 +1,0 @@
-Implement a single doclist format as opposed to the current doclist per group value format.

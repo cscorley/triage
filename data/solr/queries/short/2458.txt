@@ -1,1 +1,0 @@
-post.jar fails on non-XML updateHandlers

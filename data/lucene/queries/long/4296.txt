@@ -1,6 +1,0 @@
-
-	Remove appassembler-maven-plugin configurations from all POMs - these are unmaintained and bitrotting.
-	Update Hudson CI references -> Jenkins
-	Switch scm URLs to refer to property values, to simplify maintenance
-	Update README.maven to remove mention of modules/, and increase minimum Ant version from 1.7.X to 1.8.2+
-

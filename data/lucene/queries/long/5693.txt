@@ -1,7 +1,0 @@
-When we flush a new segment, sometimes some documents are "born deleted", e.g. if the app did a IW.deleteDocuments that matched some not-yet-flushed documents.
-
-We already compute the liveDocs on flush, but then we continue (wastefully) to send those known-deleted documents to all Codec parts.
-
-I started to implement this on LUCENE-5675 but it was too controversial.
-
-Also, I expect typically the number of deleted docs is 0, or small, so not writing "born deleted" docs won't be much of a win for most apps.  Still it seems silly to write them, consuming IO/CPU in the process, only to consume more IO/CPU later for merging to re-delete them.

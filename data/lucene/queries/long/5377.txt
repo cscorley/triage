@@ -1,8 +1,0 @@
-my old facet index create by Lucene version=4.2
-use indexChecker ok.
-
-now I upgrade to Lucene 4.6 and put some new records to index.
-then reopen index, some files in indexdir missing....
-no .si files.
-
-I debug into it,  new version format of segments.gen(segments_N) record bad segments info.

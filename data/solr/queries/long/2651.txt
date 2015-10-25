@@ -1,3 +1,0 @@
-this is a trunk bug
-
-reload is hard wired to simply make a SolrResourceLoader - this means that in ZooKeeper mode, changes to config are not picked up on a reload - instead you would get any local configs.

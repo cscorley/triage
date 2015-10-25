@@ -1,1 +1,0 @@
-log.error in UpdateLog missing exception in log line.

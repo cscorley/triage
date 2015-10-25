@@ -1,1 +1,0 @@
-Classpaths in lucene/classification/build.xml are not using / extending correctly the default base classpaths.

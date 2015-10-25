@@ -1,1 +1,0 @@
-TermVectorComponent does not return terms in distributed search, the distributedProcess() incorrectly uses Solr Unique Key to do subrequests, while process() expects Lucene document ids. Also, parameters are transferred in different format thus making distributed search returns no result.

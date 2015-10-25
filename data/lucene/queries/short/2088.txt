@@ -1,1 +1,0 @@
-AttributeSource.addAttribute should only accept interfaces, the missing test leads to problems with Token.TOKEN_ATTRIBUTE_FACTORY

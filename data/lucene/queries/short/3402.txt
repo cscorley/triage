@@ -1,1 +1,0 @@
-LuceneTestCase shouldn't go crazy if a test fails in an @AfterClass annotated method

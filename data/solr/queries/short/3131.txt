@@ -1,1 +1,0 @@
-"details" command fails when a replication is forced with a "fetchIndex" command on a non-slave server

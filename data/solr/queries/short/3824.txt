@@ -1,1 +1,0 @@
-Velocity: Error messages from search not displayed

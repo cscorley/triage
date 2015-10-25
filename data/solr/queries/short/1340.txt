@@ -1,1 +1,0 @@
-DocumentAnalysisRequestHandler can't tolerate analysis exceptions

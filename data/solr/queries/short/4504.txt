@@ -1,1 +1,0 @@
-CurrencyField treats docs w/o value the same as having a value of 0.0

@@ -1,1 +1,0 @@
-Provide cursor/token based "searchAfter" support that works with arbitrary sorting (ie: "deep paging")

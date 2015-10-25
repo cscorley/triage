@@ -1,1 +1,0 @@
-Originally opened as SOLR-4115.

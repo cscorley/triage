@@ -1,1 +1,0 @@
-The package org.apache.lucene.messages as introduced by flexible QueryParser but is not used by any code in core. It should move to this module / this contrib (maybe even in 3.x).

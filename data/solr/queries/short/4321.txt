@@ -1,1 +1,0 @@
-SolrCloud collection CREATE will put multiple master shards on a single node (and no shards on some)

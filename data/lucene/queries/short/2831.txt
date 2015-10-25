@@ -1,1 +1,0 @@
-Revise Weight#scorer & Filter#getDocIdSet API to pass Readers context

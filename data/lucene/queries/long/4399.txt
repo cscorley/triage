@@ -1,1 +1,0 @@
-In order AppendingCodec to follow Lucene codecs version, I think its name should include a version number (so that, for example, if we get to releave Lucene 4.3 with a new Lucene43Codec, there will also be a new Appending43Codec).

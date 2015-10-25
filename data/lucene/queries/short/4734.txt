@@ -1,1 +1,0 @@
-FastVectorHighlighter Overlapping Proximity Queries Do Not Highlight

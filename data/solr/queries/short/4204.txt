@@ -1,1 +1,0 @@
-Make SolrCloud tests more friendly to FreeBSD blackhole 2 environments.

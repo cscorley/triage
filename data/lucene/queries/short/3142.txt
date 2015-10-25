@@ -1,1 +1,0 @@
-benchmark/stats package is obsolete and unused - remove it

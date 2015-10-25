@@ -1,1 +1,0 @@
-There have been more improvements to how the new UI works, but the current open bugs are getting hard to keep straight. This is the new catch-all JIRA for continued improvements.

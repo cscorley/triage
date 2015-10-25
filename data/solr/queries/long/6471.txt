@@ -1,1 +1,0 @@
-People who do schemaless are in general not bothered by fields and they would not want to also search by a field name. Basically, they would be happy to do a search on all the fields

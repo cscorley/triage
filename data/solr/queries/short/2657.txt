@@ -1,1 +1,0 @@
-All fields returned if only psuedo fields are requested

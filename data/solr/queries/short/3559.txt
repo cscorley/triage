@@ -1,1 +1,0 @@
-handle deleteByQuery reorders in distributed indexing

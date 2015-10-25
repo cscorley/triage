@@ -1,1 +1,0 @@
-Add a parameter in UIMAUpdateRequestProcessor to avoid duplicated values on insert

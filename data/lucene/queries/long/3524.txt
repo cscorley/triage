@@ -1,4 +1,0 @@
-Spinoff from LUCENE-3518.
-
-If we had a direct PackedInts.Reader impl we could use that instead of
-the RandomAccessReaderIterator.

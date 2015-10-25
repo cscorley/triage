@@ -1,5 +1,0 @@
-If you need to index a date/time duration, then the way to do that is to have a pair of date fields; one for the start and one for the end – pretty straight-forward. But if you need to index a variable number of durations per document, then the options aren't pretty, ranging from denormalization, to joins, to using Lucene spatial with 2D as described here.  Ideally it would be easier to index durations, and work in a more optimal way.
-
-This issue implements the aforementioned feature using Lucene-spatial with a new single-dimensional SpatialPrefixTree implementation. Unlike the other two SPT implementations, it's not based on floating point numbers. It will have a Date based customization that indexes levels at meaningful quantities like seconds, minutes, hours, etc.  The point of that alignment is to make it faster to query across meaningful ranges (i.e. [2000 TO 2014]) and to enable a follow-on issue to facet on the data in a really fast way.
-
-I'll expect to have a working patch up this week.

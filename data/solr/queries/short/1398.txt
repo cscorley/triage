@@ -1,1 +1,0 @@
-PatternTokenizerFactory ignores offset corrections

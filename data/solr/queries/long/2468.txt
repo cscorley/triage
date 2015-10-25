@@ -1,1 +1,0 @@
-NOTE: reproduce with: ant test -Dtestcase=TestFunctionQuery -Dtestmethod=testExternalFieldValueSourceParser -Dtests.seed=1172323467847461017:3327452514993896990

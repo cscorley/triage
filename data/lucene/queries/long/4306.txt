@@ -1,1 +1,0 @@
-Followup from LUCENE-4152: The method is/should now only be used from CompositeReader's reader context to initialize itsself. No need to call it from anywhere else.

@@ -1,1 +1,0 @@
-NullPointerException on clustering component initialization when schema does not have a unique key field

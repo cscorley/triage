@@ -1,1 +1,0 @@
-As mentioned on the ML thread: "switch jars to ivy mechanism?".

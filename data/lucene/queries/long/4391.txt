@@ -1,1 +1,0 @@
-I think all methods but getPostingsFormatForField should be made final so that users can't create a Codec that redefines any of the formats of Lucene40 by subclassing (since the codec name can't be overriden by subclassing, Lucene will fail at loading segments that use such codecs).

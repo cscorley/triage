@@ -1,1 +1,0 @@
-Maven builds regularly fail on ASF Jenkins

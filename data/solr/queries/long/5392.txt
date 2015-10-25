@@ -1,1 +1,0 @@
-It would be useful to extend solrj APIs to cover collection management calls: https://cwiki.apache.org/confluence/display/solr/Collections+API 

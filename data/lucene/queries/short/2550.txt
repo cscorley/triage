@@ -1,1 +1,0 @@
-3.x backwards tests are using Version.LUCENE_CURRENT: aren't testing backwards!

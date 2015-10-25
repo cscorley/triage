@@ -1,1 +1,0 @@
-Make it easier to mix different kinds of FacetRequests

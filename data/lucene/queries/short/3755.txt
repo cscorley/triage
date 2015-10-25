@@ -1,1 +1,0 @@
-Add examples to javadocs of Analyzer (4.0)/ReusableAnalyzerBase(3.6)

@@ -1,1 +1,0 @@
-Add ValueSource collapse criteria to CollapsingQParsingPlugin

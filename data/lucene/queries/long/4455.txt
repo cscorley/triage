@@ -1,8 +1,0 @@
-I found this bug in 4.0-RC1 when I compared the checkindex outputs for 4.0 and 3.6.1:
-
-	The segment size is twice as big as reported by "ls -lh". The reason is that SegmentInfoPerCommit.sizeInBytes counts every file 2 times. This seems to be not so serious (it is just statistics), but: MergePolicy chooses merges because of this. On the other hand if all segments are twice as big it should not affect merging behaviour (unless absolute sizes in megabytes are used). So we should really fix this - sorry for investigating this so late!
-	The deletions in the segments are inverted. Segments that have no deleteions are reported as those with deletions but delGen=-1, and those with deletions show "no deletions", this is not serious, but should be fixed, too.
-
-
-
-There is one "bug" in sizeInBytes (which we should NOT fix), is that for 3.x indexes, if they are from 3.0 and have shared doc stores they are overestimated. But that's fine. For this case, the index was a 3.6.1 segment and a 4.0 segment, both showed double size.

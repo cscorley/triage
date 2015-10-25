@@ -1,3 +1,0 @@
-The SpatialPrefixTree/Cell API supports bytes and String encoding/decoding dually.  I want to remove the String side to keep the API simpler.  Included in this issue, I'd like to make some small refactorings to reduce assumptions the filters make of the underlying encoding such that future encodings can work a in more different ways with less impact on the filters.
-
-String encode/decode will exist for the Geohash one for now since GeohashUtils works off of Strings, but Quad could change more easily.

@@ -1,1 +1,0 @@
-Term info page under schema browser shows incorrect count of terms 

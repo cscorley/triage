@@ -1,1 +1,0 @@
-At the moment, ToParentBlockJoinQuery$BlockJoinWeight.explain throws an UnsupportedOperationException. It would be useful if it could instead return the score of parent document, even if the explanation on how that score was calculated is missing.

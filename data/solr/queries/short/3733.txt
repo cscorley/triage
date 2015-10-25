@@ -1,1 +1,0 @@
-better organization of javadocs in release

@@ -1,1 +1,0 @@
-Add utility class for getting live values for a given field during NRT indexing

@@ -1,1 +1,0 @@
-CloudSolrServer's RouteResponse and RouteException should be publicly accessible.

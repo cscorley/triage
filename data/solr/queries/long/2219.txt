@@ -1,3 +1,0 @@
-Solr's  RequestHandlers makes call to the init() of all the implementaions of SolrRequestHandler. twice during creation. Once in the If block at line number 156 and again in the Loop at 175.  
-
-http://lucene.apache.org/solr/api/org/apache/solr/request/SolrRequestHandler.html#init(org.apache.solr.common.util.NamedList)

@@ -1,5 +1,0 @@
-There are a couple of use cases I can think of where being able to get the underlying filter out of CachingWrapperFilter would be useful:
-1. You might want to introspect the filter to figure out what's in it (the use case we hit.)
-2. You might want to serialise the filter since Lucene no longer supports that itself.
-
-We currently work around this by subclassing, keeping another copy of the underlying filter reference and implementing a trivial getter, which is an easy workaround, but the trap is that a junior developer could unknowingly create a CachingWrapperFilter without knowing that the BetterCachingWrapperFilter exists, introducing a filter which cannot be introspected.

@@ -1,1 +1,0 @@
-use packed ints for the terms dict index

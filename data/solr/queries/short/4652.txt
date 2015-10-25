@@ -1,1 +1,0 @@
-Resource loader has broken behavior for solr.xml plugins (basically ShardHandlerFactory)

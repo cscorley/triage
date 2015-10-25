@@ -1,3 +1,0 @@
-"New style" core.properties auto-configuration works correctly at startup when ${coreRootDirectory} is specified in ${solr.home}/solr.xml, however it does not work if a core is later created dynamically via either (indirectly) the collection API or (directly) the core API.
-
-Core creation is always attempted in ${solr.home}.

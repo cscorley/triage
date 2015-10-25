@@ -1,1 +1,0 @@
-[solr-ruby]: Improve RDoc documentation

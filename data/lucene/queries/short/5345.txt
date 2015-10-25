@@ -1,1 +1,0 @@
-range facets don't work with float/double fields

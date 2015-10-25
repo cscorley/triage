@@ -1,1 +1,0 @@
-unindexed (stored-only) fields prevent future indexing of offsets

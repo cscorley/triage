@@ -1,1 +1,0 @@
-SOLR-3706 removes the need for the dist-excl-slf4j and dist-war-excl-slf4j targets in build.xml.  In the interests of not breaking user automation on the current major version, they should only be removed from trunk, not branch_4x.

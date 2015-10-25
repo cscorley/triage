@@ -1,1 +1,0 @@
-RefrenceManager#accquire can result in infinite loop if manager resource is abused outside of the manager

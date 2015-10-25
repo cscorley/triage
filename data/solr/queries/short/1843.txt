@@ -1,1 +1,0 @@
-JMX name collision when running multiple SOLR instances/webapps in the same ServletContainer

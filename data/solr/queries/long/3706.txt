@@ -1,9 +1,0 @@
-Currently we default to java util logging and it's terrible in my opinion.
-
-*It's simple built in logger is a 2 line logger.
-*You have to jump through hoops to use your own custom formatter with jetty - either putting your class in the start.jar or other pain in the butt solutions.
-*It can't roll files by date out of the box.
-
-I'm sure there are more issues, but those are the ones annoying me now. We should switch to log4j - it's much nicer and it's easy to get a nice single line format and roll by date, etc.
-
-If someone wants to use JUL they still can - but at least users could start with something decent.

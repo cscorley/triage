@@ -1,5 +1,0 @@
-usecase: I have many small cores (say one per user) on a single Solr box . All the cores are not be always needed . But when I need it I should be able to directly issue a search request and the core must be STARTED automatically and the request must be served.
-
-This also requires that I must have an upper limit on the no:of cores that should be loaded at any given point in time. If the limit is crossed the CoreContainer must unload a core (preferably the least recently used core)  
-
-There must be a choice of specifying some cores as fixed. These cores must never be unloaded 

@@ -1,1 +1,0 @@
-Admin-UI - DIH: Let "commit" be checked by default

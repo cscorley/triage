@@ -1,1 +1,0 @@
-UpdateLog not informed of core reload (leads to incorrect cores/update handlers being used)

@@ -1,1 +1,0 @@
-HttpSolrServer has a few fields that can be set via setters but are not volatile.

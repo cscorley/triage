@@ -1,1 +1,0 @@
-Optimize FixedStraightBytes for bytes size == 1

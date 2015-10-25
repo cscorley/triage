@@ -1,3 +1,0 @@
-This means its scoring is not really right: it only applies to term queries and exact phrase queries, but not e.g. sloppy phrase queries and spans.
-
-As far as I can tell, its had this bug all along.

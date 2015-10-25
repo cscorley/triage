@@ -1,1 +1,0 @@
-Add more context to IndexReaderFactory.newReader

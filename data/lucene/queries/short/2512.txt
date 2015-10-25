@@ -1,1 +1,0 @@
-DeleteByPercentTask hits NPE

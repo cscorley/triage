@@ -1,7 +1,0 @@
-Just like term vectors before it, it has a O seek-by-term. 
-
-But this one also advertises a seek-by-ord, only this is also O.
-
-This could cause e.g. checkindex to be very slow, because if termsenum supports ord it does a bunch of seeking tests. (Another solution would be to leave it, and add a boolean so checkindex never does seeking tests for term vectors, only real fields).
-
-However, I think its also kinda a trap, in my opinion if seek-by-ord is supported anywhere, you kinda expect it to be faster than linear time...?

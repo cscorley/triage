@@ -1,1 +1,0 @@
-Test TermsEnum.seek on term vectors

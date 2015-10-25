@@ -1,1 +1,0 @@
-Remove per-document multiply in FilteredQuery

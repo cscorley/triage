@@ -1,1 +1,0 @@
-Schema API changes return success before all cores are updated

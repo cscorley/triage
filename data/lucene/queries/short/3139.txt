@@ -1,1 +1,0 @@
-LuceneTestCase.afterClass does not print enough information if a temp-test-dir fails to delete

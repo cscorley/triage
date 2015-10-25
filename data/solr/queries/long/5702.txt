@@ -1,3 +1,0 @@
-The scenario we had was that a solr instance for an existing collection did mysteriously not use the -Dcollection.configName=<new value> specified config. This it turned out was rightly so because zookeeper already had a configName=<old value> for the already existing collection. org.apache.solr.cloud.ZkCLI linkconfig needs to be run to update the existing value if required.
-
-Solr info-logging the configName it uses would help developers in this scenario.

@@ -1,2 +1,0 @@
-See: http://jenkins.thetaphi.de/job/Lucene-Solr-trunk-Linux/10517/
-You can download all logs from there.

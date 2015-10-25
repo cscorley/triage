@@ -1,1 +1,0 @@
-full description, including sample schema and data, can be found at http://lucene.472066.n3.nabble.com/quot-Intersects-quot-spatial-query-returns-polygons-it-shouldn-t-td4008646.html

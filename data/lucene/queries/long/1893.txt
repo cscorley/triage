@@ -1,1 +1,0 @@
-violates contract - at a min, need to implement return constant.

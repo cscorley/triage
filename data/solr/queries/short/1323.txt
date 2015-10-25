@@ -1,1 +1,0 @@
-XPathEntityProcessor's $hasMore feature should reset when fetching the next URL

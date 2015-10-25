@@ -1,1 +1,0 @@
-Adding same IndexDocValuesField twice trips assert

@@ -1,1 +1,0 @@
-spinning off a discussion about LimitTokenCountFilter  and it's tests from SOLR-3961 (which was about a specific bug in the LimitTokenCountFilterFactory)

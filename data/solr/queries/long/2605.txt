@@ -1,5 +1,0 @@
-The attached XML-Files show the little difference between a defined defaultCoreName-Attribute and a non existing one.
-
-Actually the new admin ui checks for an core with empty name to set single- / multicore-settings .. it's a quick change to count the number of defined cores instead.
-
-But, will it be possible, to get the core-name (again)? One of both attributes would be enough, if that makes a difference 

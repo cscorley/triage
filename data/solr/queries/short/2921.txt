@@ -1,1 +1,0 @@
-Make any Filters, Tokenizers and CharFilters implement MultiTermAwareComponent if they should

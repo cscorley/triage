@@ -1,9 +1,0 @@
-In parseParams method of SimpleFacets, as group sort is not set after creating grouping object, member variable groupSort is always null. Because of it, AbstractAllGroupHeadsCollector with default sort (new Sort()) is created all the time.
-
-
-
-public AbstractAllGroupHeadsCollector<?> createAllGroupCollector() throws IOException {
-  Sort sortWithinGroup = groupSort != null ? groupSort : new Sort();
-  return TermAllGroupHeadsCollector.create(groupBy, sortWithinGroup);
-}
-

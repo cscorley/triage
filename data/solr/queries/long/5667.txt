@@ -1,1 +1,0 @@
-Reads are terribly slow due to what looks like a too small buffer in the buffered input. This has consequences for SOLR-1301, as we turn off the block cache when writing indexes with map-reduce.

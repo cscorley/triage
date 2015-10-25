@@ -1,1 +1,0 @@
-Make WeightedSpanTermExtractor extensible to handle custom query implemenations

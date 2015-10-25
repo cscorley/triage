@@ -1,1 +1,0 @@
-SerializedDVStrategy -- match geometries in DocValues

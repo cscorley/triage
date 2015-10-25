@@ -1,1 +1,0 @@
-It would be convenient if CustomScoreQuery provided access to all its fields, not just isStrict().  Today I found that my subclass of it was forced to store redundant fields just to access the state.

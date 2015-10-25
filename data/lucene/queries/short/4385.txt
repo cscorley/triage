@@ -1,1 +1,0 @@
-IntelliJ build output locations should not be the same as Ant's

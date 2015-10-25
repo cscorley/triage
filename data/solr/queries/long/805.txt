@@ -1,5 +1,0 @@
-I have a DisMax Search Handler set up in my solrconfig.xml to weight results based on which field a hit was found in. Results seem to be coming back fine, but the exact same query issued twice will not result in a cache hit.
-
-I have run far enough in the debugger to determine that the hashCode for the BooleanQuery object is returning a different value each time for the same query. This leads me to believe there is some random factor involved in it's calculation, such as a default Object hashCode() implementation somewhere in the chain. Non DisMax queries seem to be caching just fine.
-
-Where I see this behavior exhibited is on line 47 of the QueryResultKey constructor. I have not dug in far enough to determine exactly where the hashCode is being incorrectly calculated. I will try and dig in further tomorrow, but wanted to get some attention on the bug. 

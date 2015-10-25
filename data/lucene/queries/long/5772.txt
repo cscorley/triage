@@ -1,1 +1,0 @@
-As I reviewed SortingAtomicReader I noticed it doesn't override getSortedNumericDocValues. I think we should fix this for 4.9?

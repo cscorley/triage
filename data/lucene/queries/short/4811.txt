@@ -1,1 +1,0 @@
-*DocValuesField should extend Field not StoredField

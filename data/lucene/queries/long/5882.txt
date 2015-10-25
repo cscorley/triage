@@ -1,6 +1,0 @@
-We can improve the current format in a few ways:
-
-	speed up Sorted/SortedSet byte[] lookup by structuring the term blocks differently (allow random access, more efficient bulk i/o)
-	speed up reverse lookup by adding a reverse index (small: just every 1024'th term with useless suffixes removed).
-	use slice API for access to access to binary content, too.
-

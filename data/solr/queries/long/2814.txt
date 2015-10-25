@@ -1,1 +1,0 @@
-If you have a core with a "-" in the name, any clicks on it in the new web GUI seem to be ignored.   A core named "uspatentgrant" works fine, but a core named "us-patent-grant" isn't openable in the GUI.  Nothing is logged in the solr output either.   I will attach a screenshot.

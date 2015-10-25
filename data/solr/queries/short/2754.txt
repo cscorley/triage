@@ -1,1 +1,0 @@
-create Solr similarity factories for new ranking algorithms

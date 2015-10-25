@@ -1,3 +1,0 @@
-The BlockJoin parsers cache by default with CachingWrapperFilter, but unless the user writes some code, the parent filter will be totally discarded every commit (losing all cached segments and behaving as if it were top-level).
-
-This defeats the point... we should provide a regenerator that just copies elements over for things like this.

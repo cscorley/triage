@@ -1,1 +1,0 @@
-Spinoff from here: http://lucene.markmail.org/thread/35gw3amo53dsqsqj. I wrote a LongFixedBitSet which behaves like FixedBitSet, only allows managing more than 2.1B bits. It overcome some issues I've encountered with OpenBitSet, such as the use of set/fastSet as well the implementation of DocIdSet. I'll post a patch shortly and describe it in more detail.

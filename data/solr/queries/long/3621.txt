@@ -1,7 +1,0 @@
-When I did the first big refactor on update handler, I was trying to never close the index writer - I had to give in on this goal due to the replication handler - it requires rebooting the indexwriter. At the time, I settled for allowing a little race that didn't show up as an issue in tests - this IW reboot was always a bit of a hack in the past anyhow.
-
-Now that the dust has settled, we should make this air tight though. I'd like to make opening a new indexwriter a full class citizen rather than a hacky method only used minimally for replication to reboot things. It should be a solid API that is valid for any uses down the road.
-
-For some IW config changes, we may want to do it in 'some' cases on reload.
-
-To do this, we have to start ref counting iw use - so that we only actually open a new one and close the old one when it's not in use at all.

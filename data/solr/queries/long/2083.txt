@@ -1,1 +1,0 @@
-In DistributedSpellCheckTest, if I add 10 additional documents to the index with field "lowerfilt" containing "The quack red fox jumped over the lazy brown dogs.", then the shard'ed SpellCheckComponent wants to correct "quick" to "quack".  The control, non-shared'ed component correctly does not try to correct "quick".  The test subsequently fails.

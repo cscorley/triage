@@ -1,1 +1,0 @@
-StandardTokenizer loses Korean characters

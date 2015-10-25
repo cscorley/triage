@@ -1,1 +1,0 @@
-FacetResultNode should be a simple bin, not interface

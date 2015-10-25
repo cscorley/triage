@@ -1,1 +1,0 @@
-CloudStateUpdateTest.testCoreRegistration test failure

@@ -1,5 +1,0 @@
-Currently the facet module uses MultiFields.* to pull the D&PEnum in PayloadIterator, to access the payloads that store the facet ords.
-
-It then makes heavy use of .advance and .getPayload to visit all docIDs in the result set.
-
-I think we should get some speedup if we go segment by segment instead ...

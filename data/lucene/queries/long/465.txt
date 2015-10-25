@@ -1,4 +1,0 @@
-Attachments to follow:
-renamed BooleanQueryTest to BooleanQueryTst,
-renamed ExceptionQueryTest to ExceptionQueryTst,
-patch for the remainder of the test code to use the renamed classes.

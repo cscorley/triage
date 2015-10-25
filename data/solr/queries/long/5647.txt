@@ -1,3 +1,0 @@
-When starting the example with example-schemaless, all the "lib" directives in the config aren't working, because they are missing one "../" instance.
-
-Noticed by IRC user Pilate.

@@ -1,1 +1,0 @@
-Move the Function*Collectors from Solr (inside Grouping source file) to grouping module.

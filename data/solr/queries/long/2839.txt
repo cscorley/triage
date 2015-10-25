@@ -1,1 +1,0 @@
-based on http://code.google.com/p/language-detection (apache license), supports 53 languages.

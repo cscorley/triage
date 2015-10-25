@@ -1,1 +1,0 @@
-Restructure the Lucene build system

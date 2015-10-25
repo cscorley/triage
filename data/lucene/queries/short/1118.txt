@@ -1,1 +1,0 @@
-core analyzers should not produce tokens > N (100?) characters in length

@@ -1,1 +1,0 @@
-Callback for intercepting merging segments in IndexWriter

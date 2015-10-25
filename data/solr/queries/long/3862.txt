@@ -1,3 +1,0 @@
-Currently you can atomically "add" a value to a multivalued field. It would be useful to be able to "remove" a value from a multivalued field. 
-
-When you "set" a multivalued field to null, it destroys all values.

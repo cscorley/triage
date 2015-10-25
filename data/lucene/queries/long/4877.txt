@@ -1,3 +1,0 @@
-Currently if someone typos an argument "someParamater=xyz" instead of someParameter=xyz, they get no exception and sometimes incorrect behavior.
-
-It would be way better if these factories threw exception on unknown params, e.g. they removed the args they used and checked they were empty at the end.

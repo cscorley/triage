@@ -1,1 +1,0 @@
-Most 4.0 PostingsReaders don't obey DISI contract

@@ -1,1 +1,0 @@
-NumberFormatTransformer should have configurable locales

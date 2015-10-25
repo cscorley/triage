@@ -1,1 +1,0 @@
-SpellCheckComponent doesn't work when using group.

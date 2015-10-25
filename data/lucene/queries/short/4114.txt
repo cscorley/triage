@@ -1,1 +1,0 @@
-Large docID / docvalue size combination produces arithmetic overflow

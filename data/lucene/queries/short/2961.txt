@@ -1,1 +1,0 @@
-Remove benchmark/lib/xml-apis.jar - JVM 1.5 already contains the required JAXP 1.3 implementation

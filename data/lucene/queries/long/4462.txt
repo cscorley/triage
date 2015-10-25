@@ -1,7 +1,0 @@
-Spinoff from http://lucene.markmail.org/thread/4li6bbomru35qn7w
-
-The new TestBagOfPostings failed the build because it timed out after 2 hours ... but in digging I found that it was a starvation issue: the 4 threads were flushing segments much faster than the 1 thread could publish them.
-
-I think this is because publishing segments (DocumentsWriter.publishFlushedSegment) is actually rather costly (creates CFS file if necessary, writes .si, etc.).
-
-I committed a workaround for now, to prevent starvation (see svn diff -c 1394704 https://svn.apache.org/repos/asf/lucene/dev/trunk), but we really should address the root cause by moving these costly ops into flush() so that publishing is a low cost operation.

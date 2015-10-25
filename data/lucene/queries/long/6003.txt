@@ -1,1 +1,0 @@
-We should try to improve the performance of this one to get closer to FixedBitSet. I hacked on it a little bit last night.

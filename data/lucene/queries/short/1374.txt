@@ -1,1 +1,0 @@
-Merging of compressed string Fields may hit NPE

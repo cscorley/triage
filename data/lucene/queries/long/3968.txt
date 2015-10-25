@@ -1,3 +1,0 @@
-MockGraphTokenFilter is rather hairy... I've managed to simplify it (I think!) by breaking apart its two functions...
-
-I think LookaheadTokenFilter can be used in the future for other graph aware filters.

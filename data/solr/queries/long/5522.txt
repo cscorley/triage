@@ -1,1 +1,0 @@
-Follow up on SOLR-5518 and SOLR-5287. We need to add proper security to the ability to write config files to Solr or there is a security problem.

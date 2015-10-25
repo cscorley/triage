@@ -1,1 +1,0 @@
-org.apache.lucene.util.fst.FST should skip over outputs it is not interested in

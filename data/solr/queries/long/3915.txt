@@ -1,1 +1,0 @@
-The meaning of the used shard colors is not really clear, integrate kind of a legend fo all possible node-states.

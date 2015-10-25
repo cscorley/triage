@@ -1,4 +1,0 @@
-While working on LUCENE-3290, I noticed a readVint that i thought should be a readVLong, so I wrote a test (Test2BPostings)
-to try to catch things like this... it takes about 5 minutes to run with MemoryCodec.
-
-The problem is, it dies on some other bug in FSTs first!

@@ -1,1 +1,0 @@
-If you are using something like ram dir, you can restart a node and if no updates have come in, it will think its up to date but be empty - we should clear the update log in these cases on startup.

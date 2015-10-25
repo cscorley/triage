@@ -1,1 +1,0 @@
-Allow usage of HyphenationCompoundWordTokenFilter without dictionary

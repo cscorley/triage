@@ -1,1 +1,0 @@
-TopDocsCollector should be abstract super class that is the real "TopDocsCollector" contract, a subclass should implement the priority-queue logic. e.g. PQTopDocsCollector

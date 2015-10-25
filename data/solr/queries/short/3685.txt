@@ -1,1 +1,0 @@
-Solr Cloud sometimes skipped peersync attempt and replicated instead due to tlog flags not being cleared when no updates were buffered during a previous replication.

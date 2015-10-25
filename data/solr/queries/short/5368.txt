@@ -1,1 +1,0 @@
-Morelikethis throw EarlyTerminatingCollectorException,when the document is greater than 5

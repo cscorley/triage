@@ -1,7 +1,0 @@
-Carl Austin raised a good issue in a comment on my Lucene 4.0.0 alpha blog post: http://blog.mikemccandless.com/2012/07/lucene-400-alpha-at-long-last.html
-
-IndexWriter will now (as of 4.0) delete all foreign files from the index directory.  We made this change because Codecs are free to write to any files now, so the space of filenames is hard to "bound".
-
-But if the user accidentally uses the wrong directory (eg c:/) then we will in fact delete important stuff.
-
-I think we can at least use some simple criteria (must start with _, maybe must fit certain pattern eg _<base36>(_X).Y), so we are much less likely to delete a non-Lucene file....

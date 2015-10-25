@@ -1,1 +1,0 @@
-This means that if you get a bad item in the ZK distributed queue, it can lock up your Overseer as it continuously retries the bad command. The workaround is to manually clear the Overseer ZK queue.

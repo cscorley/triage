@@ -1,1 +1,0 @@
-PackedInts does not support structures above 256MB

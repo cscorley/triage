@@ -1,1 +1,0 @@
-multivalued dynamicField matching 'score' causes text response writers to output score as an array

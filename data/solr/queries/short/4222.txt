@@ -1,1 +1,0 @@
-create custom sharded collection via collections API

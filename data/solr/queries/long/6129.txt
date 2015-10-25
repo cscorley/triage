@@ -1,3 +1,0 @@
-The DateFormatTransformer doesn't use a VariableResolver to resolve the format, which could potentially be passed in via a dataimport request parameter.  The attached patch is tested and working.  Please include in 4.9.
-
-Thanks.

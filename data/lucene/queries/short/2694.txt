@@ -1,1 +1,0 @@
-MTQ rewrite + weight/scorer init should be single pass

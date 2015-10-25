@@ -1,1 +1,0 @@
-Add utility to convert document terms to doubles

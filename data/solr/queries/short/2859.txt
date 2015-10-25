@@ -1,1 +1,0 @@
-solrconfig should declare which request handlers can use remote streaming

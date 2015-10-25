@@ -1,3 +1,0 @@
-Reviewing the 3.1 release candidates, i've noticed that in a few places we have duplicated jars.
-
-of particular note is the "ICU4J" jar, which not only exists in two different solr contrib lib directories, but also exists in modules.

@@ -1,5 +1,0 @@
-As discussed on the dev list, it's spooky how Version.java tries to fully parse the incoming version string ... and then throw exceptions that lack details about what invalid value it received, which file contained the invalid value, etc.
-
-It also seems too low level to be checking versions (e.g. is not future proof for when 4.10 is passed a 5.x index by accident), and seems redundant with the codec headers we already have for checking versions?
-
-Should we just go back to lenient parsing?

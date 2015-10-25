@@ -1,1 +1,0 @@
-Sort and SortField does not have equals() and hashCode()

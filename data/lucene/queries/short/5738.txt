@@ -1,1 +1,0 @@
-NativeLock is release if Lock is closed after obtain failed

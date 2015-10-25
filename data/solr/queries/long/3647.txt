@@ -1,1 +1,0 @@
-This will let us easily do retries on connection loss.

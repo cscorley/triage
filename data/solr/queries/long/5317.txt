@@ -1,3 +1,0 @@
-There is a regression between 4.4 and 4.5 with the CoreAdmin API, the command doesn't save the result on solr.xml at time that is executed.
-
-The full process is describe here: https://gist.github.com/yriveiro/6883208

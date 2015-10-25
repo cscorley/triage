@@ -1,8 +1,0 @@
-This has been failing lately on trunk (e.g. on rev 1486339):
-
-
-ant test  -Dtestcase=SpatialOpRecursivePrefixTreeTest -Dtestmethod=testContains -Dtests.seed=456022665217DADF:2C2A2816BD2BA1C5 -Dtests.slow=true -Dtests.locale=nl_BE -Dtests.timezone=Poland -Dtests.file.encoding=ISO-8859-1
-
-
-
-Not sure what's up ...

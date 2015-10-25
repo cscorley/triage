@@ -1,9 +1,0 @@
-Allow setting rate limits for default,read,merge,flush.
-
-
-  <directoryFactory name="DirectoryFactory" 
-                    class="${solr.directoryFactory:solr.NRTCachingDirectoryFactory}"> 
-              <double name="maxWriteMBPerSecFlush">20</double>
-              <double name="maxWriteMBPerSecMerge">20</double>    
-  </directoryFactory>
-

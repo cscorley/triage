@@ -1,1 +1,0 @@
-In QueryComponent.doFieldSortValues, a scorer is never set on a custom comparator.  We just need to add a fake scorer that can pass through the score from the DocList.

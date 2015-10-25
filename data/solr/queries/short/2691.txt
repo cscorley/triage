@@ -1,1 +1,0 @@
-solr.xml persistence is broken for multicore (by SOLR-2331)

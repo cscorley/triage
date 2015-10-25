@@ -1,1 +1,0 @@
-Use fsync on replicated index and configuration files

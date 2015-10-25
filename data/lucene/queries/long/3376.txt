@@ -1,1 +1,0 @@
-In LUCENE-2309 it was suggested that we should make Analyzer reusability compulsory.  ReusableAnalyzerBase is a fantastic way to drive reusability so lets move it into core (so that we can then change all impls over to using it).

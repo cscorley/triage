@@ -1,1 +1,0 @@
-If two terms filters have 1) the same number of terms, 2) use the same field in all these terms and 3) term values happened to have the same hash codes, these two filter are considered to be equal as long as the first term is the same in both filters.

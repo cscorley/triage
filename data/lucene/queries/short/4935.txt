@@ -1,1 +1,0 @@
-CustomScoreQuery has broken boosting

@@ -1,1 +1,0 @@
-Passing a null fieldname to MemoryFields#terms in MemoryIndex throws a NPE

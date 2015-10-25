@@ -1,1 +1,0 @@
-The 'deleteshard' collection API should be able to delete a shard in 'construction' state

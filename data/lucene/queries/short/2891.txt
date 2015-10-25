@@ -1,1 +1,0 @@
-IndexWriterConfig does not allow readerTermsIndexDivisor to be -1, while the latest indicates the terms index should not be loaded

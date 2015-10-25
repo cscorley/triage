@@ -1,1 +1,0 @@
-When tests OOM (or run out of their permgen space) things to wild (hung runner, etc.).

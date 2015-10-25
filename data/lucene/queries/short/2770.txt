@@ -1,1 +1,0 @@
-Optimize SegmentMerger to work on atomic (Segment)Readers where possible

@@ -1,4 +1,0 @@
-The NPE described here: http://search.lucidimagination.com/search/document/a4c217d153635301
-is due to 2 issues.  An exception in a refinement request isn't checked for, and a NPE results, masking the original exception.
-The original exception is caused by Solr using local param dereferencing with a param name derived from the "key" for that facet.
-If the key is something like "a/b/c" the request fails.

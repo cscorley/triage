@@ -1,1 +1,0 @@
-offset gap should be added regardless of existence of tokens in DocInverterPerField

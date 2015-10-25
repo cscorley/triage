@@ -1,1 +1,0 @@
-Yesterday I fixed a bug (integer overflow) that only happens when a fields data (.fdt) file grows larger than 4GB. We should have a test for that.

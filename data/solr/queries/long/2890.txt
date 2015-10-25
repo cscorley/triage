@@ -1,3 +1,0 @@
-Setting omitTermFreqAndPositions="true" doesn't work when I put it on a fieldType definition for my text field.  It did work when I put it on the field definition.  I think this option and probably all options should be settable at the fieldType level.  I did some investigation and found that the value of this option was being reset on line 54 of TextField.
-
-FYI I am trying to put this on a field type for use by the SpellCheck component which has no use for term frequencies and positions from the source field.

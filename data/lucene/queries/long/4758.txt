@@ -1,9 +1,0 @@
-Right now, 'ant compile' at the top level compiles Lucene core, all non-test Solr sources, and all Lucene modules on which Solr depends.  lucene/codecs/, e.g., doesn't get compiled, because 'ant compile' is an alias for 'ant compile-core' under lucene/.
-
-Similarly for 'ant jar' (except there is no top-level target for this right now), with some problems under solr/.
-
-There is no top-level 'ant compile-test'.
-
-All these targets should recurse at all levels.
-
-Under lucene/ and solr/, 'ant jar-core' and 'ant compile-core' should be aliased to running the operation under core/.

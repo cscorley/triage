@@ -1,9 +1,0 @@
-In eclipse, its currently difficult to get a solr development environment working.
-
-One big thing that would help would be to make it easier to run the tests.
-When loading resources, if we checked the config dir + file directory from the resource path,
-then users could simply add src/test/test-files to their eclipse build classpath, and tests would just work from the IDE.
-
-I gather that this might make things easier for other IDEs too, though I'm aware that ones like Intellij
-let you configure the test 'working directory' on a project basis, but eclipse doesn't 
-(you have to make a custom run configuration every time you run the tests)

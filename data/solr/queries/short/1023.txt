@@ -1,1 +1,0 @@
-StatsComponent should support dates (and other non-numeric fields)

@@ -1,1 +1,0 @@
-In SOLR-5222 Pascal noted that he did not get the behavior expected when using sortMissingLast with a dynamicField using docValues in Solr < 4.5 – but up to Solr 4.4, docValues required a default value, so he should have gotten a hard error as soon as he tried specifying a default value on a dynamicField.

@@ -1,1 +1,0 @@
-currently we only have variable bit packed ints implementation. for flexible scoring or loading field caches it is desirable to have fixed int implementations for 8, 16, 32 and 64 bit. 

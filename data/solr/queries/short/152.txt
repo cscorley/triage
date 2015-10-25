@@ -1,1 +1,0 @@
-Dismax should not require 'q'

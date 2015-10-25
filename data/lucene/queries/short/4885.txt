@@ -1,1 +1,0 @@
-FacetsAccumulator set incorrect value for FacetResult.numValidDescendants

@@ -1,1 +1,0 @@
-While looking over BooleanQuery#rewrite, I found a couple of things confusing.  Why, in the case of a single clause, is the boost set as it is, and whats going on with the lazy initialisation of the cloned BooleanQuery.  I'm just adding a few lines of documentation to both situations to clarify this.

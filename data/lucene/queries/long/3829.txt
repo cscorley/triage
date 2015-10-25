@@ -1,4 +1,0 @@
-Our DirectSource impls hold IndexInput(s) open against the dat/idx
-files, which we then seek + read when loading a specific document's
-value.  But this is in no way protected against multiple threads
-I think...?

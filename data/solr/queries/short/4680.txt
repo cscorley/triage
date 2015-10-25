@@ -1,1 +1,0 @@
-Spellcheck broken with default config

@@ -1,1 +1,0 @@
-Add support to get number of entries a Suggester Lookup was built with and minor refactorings

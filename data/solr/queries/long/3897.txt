@@ -1,9 +1,0 @@
-The behavior of the default Solr hit highlighter on multi-value fields is to only return the values that have a hit and sort them by score.
-
-This ticket supplies a patch that adds a new highlight parameter called "preserveMulti" which can be used on a feild by field basis to return all of the values in their original order. If this parameter is used, the values that have a hit are highlighted and the ones that do not contain a hit are returned un-highlighted.
-
-The "preserveMulti" parameter works with the default standard highlighter and follows the standard highlighting conventions.
-
-Sample usage for a field called "cat":
-
-f.cat.hl.preserveMulti=true

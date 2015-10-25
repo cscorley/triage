@@ -1,1 +1,0 @@
-If the user has Eclipse globally configured to automatically reformat code or reorganize imports on save, currently these actions will be performed, because the settings created by "ant eclipse" do not have any project-specific settings to disable it.  This will add those project-specific settings.

@@ -1,1 +1,0 @@
-indexing delay due to zookeeper election

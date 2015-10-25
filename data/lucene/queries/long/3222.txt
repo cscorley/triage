@@ -1,1 +1,0 @@
-I found this while working on LUCENE-2548: when we freeze the deletes (create FrozenBufferedDeletes), when we set the bytesUsed we are failing to account for RAM required for the term bytes (and now term field).

@@ -1,1 +1,0 @@
-Do MultiTermQuery boolean rewrites per segment

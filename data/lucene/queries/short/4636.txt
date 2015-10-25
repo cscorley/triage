@@ -1,1 +1,0 @@
-Upgrade ivy for IVY-1388 - build hangs at "resolve:"

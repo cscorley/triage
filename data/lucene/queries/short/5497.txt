@@ -1,1 +1,0 @@
-hunspell doesnt handle escaping or optional conditions properly

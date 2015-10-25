@@ -1,1 +1,0 @@
-creating a collection with a existed collection name in the cluster act  wrongly

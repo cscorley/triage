@@ -1,1 +1,0 @@
-ParallelTaxonomyArrays, while appearing on TaxonomyReader, actually support only one implementation, that of DirectoryTaxonomyReader. I'd like to make it abstract (perhaps share the children/siblings arrays computation) to allow for other taxonomy reader implementations.

@@ -1,1 +1,0 @@
-TermsIncludingScoreQuery and TermsQuery should implement hashcode() and equals()

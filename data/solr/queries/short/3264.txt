@@ -1,1 +1,0 @@
-SolrResourceLoader logging about "Solr home set to" is very missleading/broken in multicore

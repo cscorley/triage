@@ -1,1 +1,0 @@
-Make CompositeReader.getSequentialSubReaders() and the corresponding IndexReaderContext methods return unmodifiable List<R extends IndexReader>

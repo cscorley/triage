@@ -1,1 +1,0 @@
-Matthias suggested I put in a bug here for me small documentation fixes which were done against http://solrstuff.org/svn/solrjs/trunk/.  Not sure if that is the latest or what is in the ASF solr contrib/javascript directory.

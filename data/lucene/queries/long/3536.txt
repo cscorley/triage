@@ -1,1 +1,0 @@
-David Smiley reported on #lucene-dev IRC that lucene-facet module was missing from the maven artifacts produced by the nightly Jenkins Maven trunk build https://builds.apache.org/job/Lucene-Solr-Maven-trunk/lastSuccessfulBuild/artifact/maven_artifacts/org/apache/lucene/.  It turns out that the lucene-join module is also missing.

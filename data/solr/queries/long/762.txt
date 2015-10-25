@@ -1,3 +1,0 @@
-RAT (http://incubator.apache.org/rat/) is a useful tool for checking we are in good shape for releases.  It has Ant support.  This patch adds it to the build.xml.
-
-In order for you to run it, you need the RAT app jar and the RAT ant tasks jar in your ant/lib.  The other tasks should still work even if those jars are not present.  

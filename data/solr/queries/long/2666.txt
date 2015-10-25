@@ -1,5 +1,0 @@
-Under solr/solrj/ on branch_3x, ant compile-test fails because of incomplete backport of the SOLR-2452 changes: TestNamedListCodec still depends on a Solr test class TestDistributedSearch.
-
-This problem is masked by the inclusion of Solr test compilation output in Solrj's test.classpath, which is inherited from solr/common-build.xml; when ant compile-test is run from solr/, the Solr core tests are compiled first, thus allowing Solrj test compilation to succeed.
-
-On trunk, ant compile-test under solr/solrj/ does not fail, because TestNamedListCodec depends on BaseDistributedSearchTestCase, located in Solr's test-framework, instead of on TestDistributedSearch.  This issue should nevertheless be addressed on trunk too, to surface future inadvertent solrj test->solr core test dependencies.

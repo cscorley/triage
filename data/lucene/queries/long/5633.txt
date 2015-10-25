@@ -1,5 +1,0 @@
-Currently there are two singletons available - MergePolicy.NO_COMPOUND_FILES and MergePolicy.COMPOUND_FILES and it's confusing to distinguish on compound files when the merge policy never merges segments. 
-
-We should have one singleton - NoMergePolicy.INSTANCE
-
-Post to the relevant discussion - http://mail-archives.apache.org/mod_mbox/lucene-java-user/201404.mbox/%3CCAOdYfZXXyVSf9%2BxYaRhr5v2O4Mc6S2v-qWuT112_CJFYhWTPqw%40mail.gmail.com%3E

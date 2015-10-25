@@ -1,1 +1,0 @@
-Ability to terminate queries on a per-segment basis

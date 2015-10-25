@@ -1,1 +1,0 @@
-new Admin UI does not allow drill-down into ZooKeeper

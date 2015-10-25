@@ -1,2 +1,0 @@
-It only check the local collection or core  when searching, doesn't look on other nodes. e.g. a cluster have 4 nodes. 1th 2th 3th contribute to "collection1". 2th 3th 4th contribute to "collection2". now send query to 4th to searching "collection1" will failed. 
-It is an imperfect feature for searching. it is a TODO part in SolrDispatchFilter-line 220.

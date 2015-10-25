@@ -1,9 +1,0 @@
-When using a custom search component in Solr I noticed that the order of the "params", "response" and "facet_counts" fields in the response changed. Normally the "response" field is included before the "facet_counts" field, but in my result it first returned "facet_counts" and then "response". This is of course a valid and semantically identical result object, but it causes SolrJ to fail with a NullPointerException.
-
-The reason for this NPE is that SolrJ in org.apache.solr.client.solrj.response.QueryResponse.setResponse(NamedList<Object> res) uses a loop through the response components and right after encountering "facet_counts" calls extractFacetInfo( _facetInfo ). That method uses _results which is null if the "response" component has not been encountered yet. (It is handled and set a few lines above the call to extractFacetInfo).
-
-The solution is to move the call to extractFacetInfo() on line 99 out of the for-loop. Please see the attached simple patch for the solution.
-
-I have also checked the three other initialization calls that are made directly after encountering a result (extractDebugInfo, extractHighlightingInfo and extractSpellCheckInfo), the problem does not apply to those because the methods don't access global fields that need to be initialized.
-
-Note: It would be great if this could be applied to a maintenance release as it saves people from running a custom build to be able to use complex search components with SolrJ.

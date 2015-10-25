@@ -1,1 +1,0 @@
-Solr configuration should log inaccessible/ non-existent relative paths <lib dir="...">

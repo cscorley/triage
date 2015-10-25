@@ -1,1 +1,0 @@
-options for dealing with range endpoints in date facets

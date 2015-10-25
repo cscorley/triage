@@ -1,6 +1,0 @@
-I think it makes sense add a term filter:
-
-	There is a TermsFilter, but no TermFilter.
-	I think it is bit a more efficient then wrapping a TermQuery in an QueryWrapperFilter.
-	Allows the usage of DocsEnum.FLAG_NONE.
-

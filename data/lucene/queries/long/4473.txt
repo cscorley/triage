@@ -1,5 +1,0 @@
-when writing a vint block. It should write these like Lucene40 does.
-
-Here is geonames (all 19 fields as textfields with offsets):
-trunk _68_Block_0.pos: 178700442
-patch _68_Block_0.pos: 155929641

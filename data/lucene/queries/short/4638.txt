@@ -1,1 +1,0 @@
-If IndexWriter is interrupted on close and is using a channel (mmap/nio), it can throw a ClosedByInterruptException and prevent you from opening a new IndexWriter in the same proceses if you are using Native locks.

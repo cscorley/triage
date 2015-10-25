@@ -1,1 +1,0 @@
-I often find myself hacking this script. It really should take a couple of params and be more flexible instead.

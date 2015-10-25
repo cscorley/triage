@@ -1,1 +1,0 @@
-Somehow we have two impersonation booleans in 4.x. I feel we should only have one. perhaps some logic in a test somewhere needs OLD_FORMAT && codec == Lucene3x instead, but having too booleans is not good.

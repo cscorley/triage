@@ -1,1 +1,0 @@
-When a SolrCore starts on HDFS, it should gracefully handle HDFS being in safe mode.

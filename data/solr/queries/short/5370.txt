@@ -1,1 +1,0 @@
-Requests to recover when an update fails should be done in background threads.

@@ -1,2 +1,0 @@
-Should be $
-{tests.luceneMatchVersion:LUCENE_CURRENT}

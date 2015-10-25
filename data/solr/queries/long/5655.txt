@@ -1,7 +1,0 @@
-A stopword filter factory could be (re)configurable via REST API by registering with the RESTManager described in SOLR-5653, and then responding to REST API calls to modify its init params and its stopwords resource file.
-
-Read-only (GET) REST API calls should also be provided, both for init params and the stopwords resource file.
-
-It should be possible to add/remove one or more entries in the stopwords resource file.
-
-We should probably use JSON for the REST request body, as is done in the Schema REST API methods.

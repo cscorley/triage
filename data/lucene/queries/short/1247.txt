@@ -1,1 +1,0 @@
-Unnecessary assert in org.apache.lucene.index.DocumentsWriterThreadState.trimFields()

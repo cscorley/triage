@@ -1,1 +1,0 @@
-FST Sorter BufferSize causes int overflow if BufferSize > 2048MB

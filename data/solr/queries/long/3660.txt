@@ -1,1 +1,0 @@
-The link to admin in the top right corner points to http://localhost:8983/solr/collection1 but that is now a dead end 404.

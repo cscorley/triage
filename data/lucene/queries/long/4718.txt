@@ -1,1 +1,0 @@
-The explanation of default search fields uses two different queries that are supposed to be semantically the same, but the query text changes between the two examples.

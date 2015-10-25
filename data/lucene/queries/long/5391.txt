@@ -1,8 +1,0 @@
-The uax29urlemailtokenizer tokenises index2.php as:
-
-<URL> index2.ph
-<ALPHANUM> p
-
-While it does not do the same for index.php
-
-Screenshot from analyser: http://postimg.org/image/aj6c98n3b/

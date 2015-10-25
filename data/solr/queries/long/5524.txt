@@ -1,6 +1,0 @@
-If you try to use the query function inside the scale function, it throws the following exception:
-org.apache.lucene.search.BooleanQuery$BooleanWeight cannot be cast to
-org.apache.lucene.queries.function.valuesource.ScaleFloatFunction$ScaleInfo
-
-Here is an example request that invokes this:
-http://localhost:8983/solr/collection1/select?q=*:*&fl=scale(query($x),0,5)&x=hello)

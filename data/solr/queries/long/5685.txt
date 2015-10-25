@@ -1,1 +1,0 @@
-There are some tests that call SolrTestCaseJ4.commit() but don't really submit the commit command (using assertU() ). This causes the commit to not really run. 

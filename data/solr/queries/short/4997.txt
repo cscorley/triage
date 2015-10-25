@@ -1,1 +1,0 @@
-The splitshard api doesn't call commit on new sub shards

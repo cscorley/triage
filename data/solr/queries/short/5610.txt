@@ -1,1 +1,0 @@
-Support cluster-wide properties with an API called CLUSTERPROP

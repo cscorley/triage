@@ -1,1 +1,0 @@
-Make CompressingTermVectorsFormat the new default term vectors format?

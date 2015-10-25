@@ -1,1 +1,0 @@
-optimize search with filter when filterCache is null

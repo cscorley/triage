@@ -1,1 +1,0 @@
-SPI: Allow fallback to default ClassLoader if Thread#getContextClassLoader fails

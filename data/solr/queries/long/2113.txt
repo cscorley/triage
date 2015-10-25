@@ -1,1 +1,0 @@
-For converting facet.field response constraints into filter queries, it would be helpful to have a QParser that generated a TermQuery using the toInternal() converted result of the raw "q" param

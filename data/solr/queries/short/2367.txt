@@ -1,1 +1,0 @@
-DataImportHandler unit tests are very noisy

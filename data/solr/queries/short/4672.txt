@@ -1,1 +1,0 @@
-requests for cores which had known startup init failures should result in 500 not 404

@@ -1,1 +1,0 @@
-Solr 4 will be a huge new release... we should take this opportunity to improve the out-of-the-box experience.

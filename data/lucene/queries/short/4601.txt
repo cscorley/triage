@@ -1,1 +1,0 @@
-ivy availability check isn't quite right

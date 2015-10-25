@@ -1,5 +1,0 @@
-I think the "standard" writer type being aliased to "xml" is unnecessary and not clear.  In the full interface screen, imagine you're new to Solr and you look at the "output type" and you see "standard".  What does that mean?  "xml" is pretty clear.
-
-Assuming it's agreed that "standard" isn't of any value, I suggest that it not necessarily go away (due to backwards compatibility) but that it's existence is removed from the full interface screen, replaced with "xml".  Furthermore, a picker list would be a better GUI element since there are a small limited fixed number of them.
-
-Perhaps this small UI change can be considered for 3.1.  I'll write a small patch if there's agreement on the idea.

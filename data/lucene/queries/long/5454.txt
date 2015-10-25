@@ -1,7 +1,0 @@
-Currently, its not possible to sort by a sortedsetdv (e.g. a multi-valued field). So the idea is to provide some comparators that let you do this: by choosing a selector (e.g. min/max/median type stuff) that picks a value from the set as a representative sort value.
-
-The implementation is pretty simple, just actually wrap the SortedSet in a SortedDV that does the selection, and re-use the existing TermOrdValComparator logic.
-
-One issue is that, with the current sortedset API only 'min' is a viable option because its the only one that can be done in constant time. So this patch adds an optional extension (RandomAccessOrds) for codecs that can support random access. I added this to the default codec, diskdv, and direct, as they can all easily support it. While this could be useful for other purposes (e.g. min/max as valuesource or whatever), i think its best to be optional because it prevents some forms of encoding/compression.
-
-Anyway I'm targeting lucene/sandbox with this change... 

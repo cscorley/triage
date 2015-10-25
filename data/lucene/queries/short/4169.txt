@@ -1,1 +1,0 @@
-Mark Spatial module classes as experimental

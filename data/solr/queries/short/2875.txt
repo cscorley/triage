@@ -1,1 +1,0 @@
-Incorrect url of tika-data-config.xml in example-DIH

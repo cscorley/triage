@@ -1,6 +1,0 @@
-CoreAdmin STATUS command returns all kinds of index info for all cores on the server, except for the index size.
-However, indexSize can be retrieved for an individual core via a /replication&command=details request.
-
-I have N Solrs servers, running M cores each. My application is monitoring the status of all cores, including their index size.
-As it stands today, I need to issue N status requests plus N*M replication requests to get all the information I need.
-If STATUS command returned indexSize, number of requests would be just N.

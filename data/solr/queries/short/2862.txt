@@ -1,1 +1,0 @@
-CarrotClusteringEngine's resource locator should log the absolute location of lexical resources

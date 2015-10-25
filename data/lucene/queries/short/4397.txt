@@ -1,1 +1,0 @@
-TestIndexWriterWithThreads.testRollbackAndCommitWithThreads is sometimes very very slow

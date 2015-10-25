@@ -1,1 +1,0 @@
-TopDocsCollector should have bounded generic <T extends ScoreDoc>

@@ -1,1 +1,0 @@
-It only turns on NRT for shard1.

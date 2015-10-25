@@ -1,1 +1,0 @@
-FilterCodec should take a delegate Codec in its ctor

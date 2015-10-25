@@ -1,3 +1,0 @@
-MemoryIndex skips tokens that have length == 0 when building the index; the result is that it does not increment the token offset (nor does it store the position offsets if that option is set) for tokens of length == 0.  A regular index (via, say, RAMDirectory) does not appear to do this.
-
-When using the ICUFoldingFilter, it is possible to have a term of zero length (the \u0640 character separated by spaces).  If that occurs in a document, the offsets returned at search time differ between the MemoryIndex and a regular index.  

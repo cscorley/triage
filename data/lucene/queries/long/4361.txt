@@ -1,7 +1,0 @@
-Because it tries to javadoc some test classes.
-
-  [javadoc] Constructing Javadoc information...
-  [javadoc] /home/rmuir/workspace/lucene-trunk/solr/build/contrib/solr-dataimporthandler/classes/test/org/apache/solr/handler/dataimport/TestDocBuilder2.class: warning: Cannot find annotation method 'value()' in type 'Ignore': class file for org.junit.Ignore not found
-  [javadoc] /home/rmuir/workspace/lucene-trunk/solr/build/contrib/solr-dataimporthandler/classes/test/org/apache/solr/handler/dataimport/TestJdbcDataSource.class: warning: Cannot find annotation method 'value()' in type 'Ignore'
-  [javadoc] Standard Doclet version 1.7.0_01
-

@@ -1,1 +1,0 @@
-Solrj does not propagate the root cause to the user for many errors.

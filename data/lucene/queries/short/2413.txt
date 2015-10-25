@@ -1,1 +1,0 @@
-Consolidate all (Solr's & Lucene's) analyzers into modules/analysis

@@ -1,1 +1,0 @@
-IOUtils.closeSafely should log suppressed Exceptions in stack trace of original Exception (a new feature of Java 7)

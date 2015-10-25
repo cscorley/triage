@@ -1,1 +1,0 @@
-CloudSolrServer doesn't propagate request params on a delete

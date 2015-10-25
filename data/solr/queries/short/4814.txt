@@ -1,1 +1,0 @@
-If a SolrCore cannot be created it should remove any information it published about itself from ZooKeeper.

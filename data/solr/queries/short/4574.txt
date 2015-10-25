@@ -1,1 +1,0 @@
-The Collections API will silently return success on an unknown ACTION parameter.

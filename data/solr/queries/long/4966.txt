@@ -1,1 +1,0 @@
-Almost all javascript and css in the Solr web app have no license. This violates ASF requirements, so it is a blocker, as we cannot do any other relaese without fixing

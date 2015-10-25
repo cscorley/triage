@@ -1,5 +1,0 @@
-Processor which reads a string field and outputs a float field with a boost value if the input string matched one of several RegEx.
-The processor reads a separate file with one RegEx per line with associated boost value.
-We used it to (de)boost web pages based on URL patterns. Could be used for many other use cases as well
-
-Kindly donated by Oslo University

@@ -1,1 +1,0 @@
-Make Term constructor javadoc refer to BytesRef.deepCopyOf

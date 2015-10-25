@@ -1,1 +1,0 @@
-Facet userguide link is broken after "ant javadocs-all"

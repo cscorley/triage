@@ -1,1 +1,0 @@
-Include noggit in set of deployed artifacts.

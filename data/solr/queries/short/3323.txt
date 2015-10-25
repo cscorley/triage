@@ -1,1 +1,0 @@
-fix solr javadocs to link to local lucene javadocs w/relative links when users build locally

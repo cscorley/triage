@@ -1,3 +1,0 @@
-Now that IndexWriter allows committing changes even if the only change is setCommitData, DirectoryTaxonomyWriter creates empty commits because whenever you call commit/close, it sets as commitData the indexEpoch, thereby creating unnecessary commit points.
-
-I think that DirTaxoWriter should track if the index is dirty ... or preferably get that from IndexWriter (i.e. getChangeCount or something). I'll create a test case exposing the bug and then fix DTW.

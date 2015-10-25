@@ -1,1 +1,0 @@
-Consolidate Near Real Time and Reopen API semantics

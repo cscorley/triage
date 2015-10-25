@@ -1,5 +1,0 @@
-Spinoff from http://mail-archives.apache.org/mod_mbox/lucene-java-user/201112.mbox/%3CCAO9cvUaZePZ3faWo==Xx7X8-5+snWLsbDqqjo_N-YCxR0LJFpQ@mail.gmail.com%3E.
-
-When javadocs-all is run, the userguide is not copied at all, and therefore the link is broken. Two options: inline the userguide in package/overview.html or fix the Ant target to copy the userguide correctly.
-
-Thanks Lukas for reporting this.

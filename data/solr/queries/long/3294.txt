@@ -1,4 +1,0 @@
-The repo contains a manually retrowoven Carrot2 JAR which does not have a corresponding artefact in Maven Central (so won't work for ivy).
-We will make a release with 1.5 backport (I hate this!).
-
-http://issues.carrot2.org/browse/CARROT-902

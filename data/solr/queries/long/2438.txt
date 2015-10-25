@@ -1,4 +1,0 @@
-This patch adds support to allow case-insensitive queries on wildcard searches for configured TextField field types.
-
-This patch extends the excellent work done Yonik and Michael in SOLR-219.
-The approach here is different enough (imho) to warrant a separate JIRA issue.

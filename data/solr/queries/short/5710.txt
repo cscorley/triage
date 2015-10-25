@@ -1,1 +1,0 @@
-Migrate collection command does not handle not finding a shard leader well

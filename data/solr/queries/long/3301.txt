@@ -1,1 +1,0 @@
-My colleague @omnifroodle and I noticed that you can't enable/disable pings in 4.0 because action.jsp doesn't run.  This patch attaches the functionality to the PingRequestHandler.  We debated creating a new HealthcheckRequestHandler as well.   We added some basic unit tests.

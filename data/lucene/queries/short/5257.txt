@@ -1,1 +1,0 @@
-Lock down centralized versioning of ivy dependencies

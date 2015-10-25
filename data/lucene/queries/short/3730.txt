@@ -1,1 +1,0 @@
-Improved Kuromoji search mode segmentation/decompounding

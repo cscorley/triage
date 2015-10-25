@@ -1,1 +1,0 @@
-There's lack of test coverage in solrj clients so it's easy to break something, like i did in SOLR-2020. This needs to be improved.

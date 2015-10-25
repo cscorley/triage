@@ -1,1 +1,0 @@
-We currently will fail sometimes because the cloud client failed sending an update while the control got the update. We should actually still pass in those cases - we just need to track our add/delete fails and make sure they match the differences with control.

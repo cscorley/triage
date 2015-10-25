@@ -1,1 +1,0 @@
-SortingAtomicReader reuses the filtered docs enums but not the wrapper. In the case of SortingAtomicReader this can be a problem because the wrappers are heavyweight (they load the whole postings list into memory), so an index with many terms with high freqs will make the JVM allocate a lot of memory when browsing the postings lists.

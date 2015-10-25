@@ -1,1 +1,0 @@
-CustomScoreQuery should support multiple ValueSourceQueries

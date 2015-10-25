@@ -1,1 +1,0 @@
-We should have codec-compressed term vectors similarly to what we have with stored fields.

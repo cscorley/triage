@@ -1,3 +1,0 @@
-These things scored implicitly on next()/advance() for historical reasons: but now that minShouldMatch is split apart we should remove this, its unnecessary.
-
-This allows us to remove the horrendous afterNext and clean things up, too.

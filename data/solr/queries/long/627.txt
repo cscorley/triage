@@ -1,5 +1,0 @@
-inside Solr::Request::Standard (/lib/solr/request/standard.rb)
-
-:shards needs to be a valid parameter and treat it as an Array that can be joined like:
-
-hash[:shards] = @params[:shards].join(',')

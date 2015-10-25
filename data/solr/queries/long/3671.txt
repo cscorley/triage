@@ -1,6 +1,0 @@
-The use case: I would like to extend DIH by providing a new writer, I have tried everything but can't accomplish it without either a) duplicating whole DIHandler or b) java reflection tricks. Almost everything inside DIH is private and the mechanism to instantiate a new writer based on the 'writerImpl' mechanism seems lacking important functionality
-
-
-It doesn't give the new class a chance to get information about the request, update processor. Also, the writer is instantiated twice (when 'writerImpl' is there), which is really unnecessary.
-
-As a solution, the existing DIHandler.getSolrWriter() should instantiate the appropriate writer and send it to DocBuilder (it is already doing that for SolrWriter). And DocBuilder doesn't need to create a second (duplicate) writer

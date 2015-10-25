@@ -1,1 +1,0 @@
-Add OrdinalPolicy.ALL_BUT_DIMENSION

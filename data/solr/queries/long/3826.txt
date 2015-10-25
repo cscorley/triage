@@ -1,1 +1,0 @@
-When creating a unit test extending SolrTestCaseJ4, the corename is forced to "collection1" which can be problematic if you want to do unit tests relying on schema/solrconfig specific to a core. Rather than hard-coding to "collection1" allow this to be specified in the initCore method.

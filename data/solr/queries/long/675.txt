@@ -1,3 +1,0 @@
-I just noticed this typo while reading the javadoc.
-
-Trivial patch attached.

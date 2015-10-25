@@ -1,1 +1,0 @@
-Clustering component does not work with external ZooKeeper

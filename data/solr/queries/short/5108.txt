@@ -1,1 +1,0 @@
-plugin loading should fail if mor then one instance of a singleton plugin is found

@@ -1,1 +1,0 @@
-Embeddable class to call solr directly

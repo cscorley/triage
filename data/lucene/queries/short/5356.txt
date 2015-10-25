@@ -1,1 +1,0 @@
-Morfologik filter can accept custom dictionary resources

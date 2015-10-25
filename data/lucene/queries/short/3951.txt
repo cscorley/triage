@@ -1,1 +1,0 @@
-get-maven-poms should depend on ivy resolve, so that non-mavenized jars are available for use by mvn -P bootstrap install

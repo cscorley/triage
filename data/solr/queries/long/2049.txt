@@ -1,1 +1,0 @@
-Incorporate LUCENE-2603.

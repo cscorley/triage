@@ -1,1 +1,0 @@
-Add ExpandComponent to expand results collapsed by the CollapsingQParserPlugin

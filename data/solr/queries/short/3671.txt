@@ -1,1 +1,0 @@
-DIH doesn't use its own interface + writerImpl has no information about the request

@@ -1,1 +1,0 @@
-MorfologikFilter shoudn't stem words marked as keyword

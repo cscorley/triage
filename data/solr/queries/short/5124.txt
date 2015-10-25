@@ -1,1 +1,0 @@
-Solr glues word´s when parsing PDFs under certan circumstances

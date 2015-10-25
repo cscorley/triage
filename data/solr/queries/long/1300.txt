@@ -1,7 +1,0 @@
-As noted by grant...
-
-http://www.nabble.com/Re%3A-cleaning-up-example-p24469638.html
-
-the build file for the clustering contrib downloads some optional jars that can't be included in the release.  Yonik/Hoss simplified the build files, but as a side effect all libs are included in the dist (even the ones that shouldn't be)
-
-we need to exclude them (one way or another) before we release 1.4.

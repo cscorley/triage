@@ -1,3 +1,0 @@
-A hard error is much more useful, and this built in solr.xml is not very good for solrcloud - with the old style solr.xml with cores in it, you won't have persistence and with the new style, it's not really ideal either.
-
-I think it makes it easier to debug solr.home to fail on this instead - but just in solrcloud mode for now due to back compat. We might want to pull the whole internal solr.xml for 5.0.

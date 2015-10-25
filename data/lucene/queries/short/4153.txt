@@ -1,1 +1,0 @@
-Fast vector highlighting should be aware of field boundaries in case of mv fields.

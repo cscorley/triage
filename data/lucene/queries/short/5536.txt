@@ -1,1 +1,0 @@
-TaxonomyFacetSumInt/FloatAssociations should not rollup()

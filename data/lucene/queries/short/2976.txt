@@ -1,1 +1,0 @@
-can't build javadocs for contrib lucli

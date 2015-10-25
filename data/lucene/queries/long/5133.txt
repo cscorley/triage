@@ -1,7 +1,0 @@
-Today it renders to an HTML string (<b>..</b> for hits) in protected
-methods that one can override to change the highlighting, but this is
-hard/inefficient to use for search servers that want to e.g. return
-JSON representation of the highlighted result.
-
-This is the same issue as LUCENE-4906 (PostingsHighlighter) but for
-AnalyzingInfixSuggester's highlights instead.

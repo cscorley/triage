@@ -1,1 +1,0 @@
-Tokenizers (which are the source of Tokens) should call AttributeSource.clearAttributes() first

@@ -1,8 +1,0 @@
-This patch allows for the use of the new option 'rsyncd_bwlimit' in scripts.conf.
-
-rsyncd_bwlimit adds  --bwlimit=XX to the rsyncd command line.  If the option is not specified bwlimit is set to 0 by default.
-
-"       --bwlimit=KBPS
-              This  option allows you to specify a maximum transfer rate in kilobytes per second. This option is most effective when using rsync with large files (several
-              megabytes and up). Due to the nature of rsync transfers, blocks of data are sent, then if rsync determines the transfer was too fast, it  will  wait  before
-              sending the next data block. The result is an average transfer rate equaling the specified limit. A value of zero specifies no limit."

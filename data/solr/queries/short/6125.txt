@@ -1,1 +1,0 @@
-add SolrConfig/updateHandler/indexWriter/closeWaitsForMerges=FALSE support

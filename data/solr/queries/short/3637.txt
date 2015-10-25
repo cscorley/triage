@@ -1,1 +1,0 @@
-The commit status of a core is allways as false at the core admin page 

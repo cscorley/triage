@@ -1,1 +1,0 @@
-wrong exception from NativeFSLockFactory (LIA2 test case)

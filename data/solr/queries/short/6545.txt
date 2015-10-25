@@ -1,1 +1,0 @@
-Query field list with wild card on dynamic field fails

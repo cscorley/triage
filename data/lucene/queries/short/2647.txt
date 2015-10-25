@@ -1,1 +1,0 @@
-Move & rename the terms dict, index, abstract postings out of oal.index.codecs.standard

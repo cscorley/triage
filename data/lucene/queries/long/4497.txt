@@ -1,1 +1,0 @@
-Its confusing and unnecessary that we compute this from docFreq for the doc/freq vint count, but write it for the positions case: its totalTermFreq % BLOCK_SIZE.

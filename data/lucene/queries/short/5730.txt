@@ -1,1 +1,0 @@
-FSDirectory.open should return mmap for 64-bit OS X

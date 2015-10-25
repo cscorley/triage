@@ -1,1 +1,0 @@
-consider refactoring slicer to indexinput.slice

@@ -1,1 +1,0 @@
-Currently all eventListeners need to be registered via solrconfig.xml – it would be nice to programatically register classes for these events too.

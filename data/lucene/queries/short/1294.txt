@@ -1,1 +1,0 @@
-Jar manifest should not contain ${user.name} of the person building

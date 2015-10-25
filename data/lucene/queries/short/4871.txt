@@ -1,1 +1,0 @@
-Sorter API: better compress positions, offsets and payloads in SortingDocsAndPositionsEnum

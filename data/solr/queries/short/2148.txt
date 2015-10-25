@@ -1,1 +1,0 @@
-Highlighter doesn't support q.alt

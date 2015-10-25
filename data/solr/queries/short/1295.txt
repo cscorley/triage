@@ -1,1 +1,0 @@
-Move javascript client from contrib to clients dir in source

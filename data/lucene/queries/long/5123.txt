@@ -1,7 +1,0 @@
-Currently FieldsConsumer/PostingsConsumer/etc is a "push" oriented api, e.g. FreqProxTermsWriter streams the postings at flush, and the default merge() takes the incoming codec api and filters out deleted docs and "pushes" via same api (but that can be overridden).
-
-It could be cleaner if we allowed for a "pull" model instead (like DocValues). For example, maybe FreqProxTermsWriter could expose a Terms of itself and just passed this to the codec consumer.
-
-This would give the codec more flexibility to e.g. do multiple passes if it wanted to do things like encode high-frequency terms more efficiently with a bitset-like encoding or other things...
-
-A codec can try to do things like this to some extent today, but its very difficult (look at buffering in Pulsing). We made this change with DV and it made a lot of interesting optimizations easy to implement...

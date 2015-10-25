@@ -1,9 +1,0 @@
-The ClosedByInterruptException will prevent the index from being unlocked in close. If you try and close again, the call will hang. If you are using native locks and try to open a new IndexWriter, it will fail to get the lock. If you try IW#forceUnlock, it wont work because the not fully closed IW will still have the lock.
-
-ideas:
-
-	On ClosedByInterruptException, IW should continue trying to close what it can and unlock the index? Generally I have see the exception trigger in commitInternal.
-	We should add a non static forceUnlock to IW that lets you remove the lock and start a new IW?
-	We should make the lock protected so IW sub classes could unlock the index in advanced use cases?
-	others?
-

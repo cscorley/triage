@@ -1,1 +1,0 @@
-Similarity.java javadocs and simplifications for 4.0

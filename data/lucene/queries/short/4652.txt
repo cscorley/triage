@@ -1,1 +1,0 @@
-highlight multiple fields with postings highlighter

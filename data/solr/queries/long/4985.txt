@@ -1,1 +1,0 @@
-I see LUCENE_43 as the match version, but it should be LUCENE_50.

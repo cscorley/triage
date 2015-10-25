@@ -1,1 +1,0 @@
-synonym filter mixes up terms from different synonyms

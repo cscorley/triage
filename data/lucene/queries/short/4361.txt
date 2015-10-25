@@ -1,1 +1,0 @@
-'ant javadocs' fails from solr-dataimporthandler-extras if you already ran 'ant test'

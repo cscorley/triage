@@ -1,1 +1,0 @@
-Bring Hunspell for Lucene into analysis module

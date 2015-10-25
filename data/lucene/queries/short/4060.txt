@@ -1,1 +1,0 @@
-DirectoryTaxonomyWriter.addTaxonomies does not work well in a multi-threaded environment

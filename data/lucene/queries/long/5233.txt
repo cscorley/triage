@@ -1,9 +1,0 @@
-the javadocs for the lucene demo say...
-
-You'll be prompted for a query. Type in a swear word and press the enter key. You'll see that the Lucene developers are very well mannered and get no results. Now try entering the word "string". That should return a whole bunch of documents. The results will page at every tenth result and ask you whether you want more results.
-
-...but thanks to files like "KStemData*.java" and "Top50KWiki.utf8" i was really hard pressed to find an (english) swear word that didn't result in a match in any of the files in the lucene code base (and i have a pretty extensive breadth of knowledge of profanity)
-
-We should change this paragraph to refer to something that is total giberish ("supercalifragilisticexpialidocious")... or maybe just "nocommit"
-
-(side note: since this para exists in the javadoc package comments, it will get picked up when they index the source – so we should include an HTML comment in the middle of whatever word is picked)

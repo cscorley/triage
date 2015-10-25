@@ -1,3 +1,0 @@
-When running the new bin/solr script, by default it runs Solr in background mode and redirects stdout/stderr to a log file.
-
-That log file is placed in the bin directory even if the command is invoked from outside. It should probably go to a log directory as defined by the configuration file.

@@ -1,1 +1,0 @@
-Flexible StandardQueryParser behaves differently than ClassicQueryParser

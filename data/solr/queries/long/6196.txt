@@ -1,3 +1,0 @@
-We don't instrument amILeader calls right now. We have a large cluster where we find that the overseer isn't processing operations as fast as it should. Since all operations are pretty fast even at the 99th percentile, the slowdown might be due to amILeader and the ZK update calls.
-
-Let's start measuring those as well.

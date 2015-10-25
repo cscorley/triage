@@ -1,6 +1,0 @@
-This one has fallen behind...
-It picks TABLE/GCD even when it won't actually save space or help, writes with BlockpackedWriter even when it won't save space, etc.
-
-Instead of comparing PackedInts.bitsRequired, factor in acceptableOverheadRatio too to determine "will save space". Check if blocking will save space along the same lines (otherwise use regular packed ints).
-
-Fix a similar bug in Lucene49 codec along these same lines (comparing PackedInts.bitsRequired instead of what would actually be written)

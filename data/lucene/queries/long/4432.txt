@@ -1,5 +1,0 @@
-The top-level ant default task runs test, which is confusing. Instead it should alias "-projecthelp". This is easily possible with a trick: invoke ant's main class with <java fork="false"/>.
-
-Solr has a good default task, it may also use the same trick, but I don't care here.
-
-Lucene's default task is jar-core... Maybe move the above task to common-build.xml and let all default targets depend on "-projecthelp" task from common-build.xml?

@@ -1,1 +1,0 @@
-Solr war maven artifact is not signed by 'ant sign-artifacts'

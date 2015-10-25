@@ -1,1 +1,0 @@
-web UI reports an error if CoreAdminHandler says there are no SolrCores

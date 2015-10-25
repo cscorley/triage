@@ -1,1 +1,0 @@
-The Replication 'index move' optimization doesn't kick in when using NRTCachingDirectory or the rate limiting option.

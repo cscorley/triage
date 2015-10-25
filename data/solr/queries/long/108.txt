@@ -1,1 +1,0 @@
-This is a slightly different approach from the one you took.  If we get a hash in, and we want a hash out, why convert it to instance variables?  This could even be taken a step further, why not create the hash that solr will need on initialization?  Anyway, it does some basic validation, and passes all tests.

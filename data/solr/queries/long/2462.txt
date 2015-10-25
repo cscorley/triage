@@ -1,5 +1,0 @@
-When using "spellcheck.collate", class SpellPossibilityIterator creates a ranked list of every possible correction combination.  But if returning several corrections per term, and if several words are misspelled, the existing algorithm uses a huge amount of memory.
-
-This bug was introduced with SOLR-2010.  However, it is triggered anytime "spellcheck.collate" is used.  It is not necessary to use any features that were added with SOLR-2010.
-
-We were in Production with Solr for 1 1/2 days and this bug started taking our Solr servers down with "infinite" GC loops.  It was pretty easy for this to happen as occasionally a user will accidently paste the URL into the Search box on our app.  This URL results in a search with ~12 misspelled words.  We have "spellcheck.count" set to 15. 

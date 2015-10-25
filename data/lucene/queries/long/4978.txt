@@ -1,5 +1,0 @@
-Given a document with indexed POINT (10 20), when a search for INTERSECTS( POINT (10 20)) is issued, no results are returned.
-
-The work-around is to not search with a point shape, use a very small-radius circle or rectangle.  (I'm marking this issue as "minor" because it's easy to do this).
-
-An unstated objective of the PrefixTree/grid approximation is that no matter what precision you use, an intersects query will find all true-positives.  Due to approximations, it may also find some close false-positives.  But in the case above, that unstated promise is violated.  But it can also happen for query shapes other than points which do in fact barely enclose the point given at index time yet the indexed point is in-effect shifted to the center point of a cell which could be outside the query shape, and ultimately leading to a false-negative.

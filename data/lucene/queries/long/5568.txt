@@ -1,1 +1,0 @@
-CreateIndexTask looks at the "default.codec" option and ultimately calls Codec.setDefault(...).  However that only applies to IndexWriterConfig's created after this point in time, but the IndexWriterConfig here was already created. This fix is to simply call iwc.setCodec(codec).

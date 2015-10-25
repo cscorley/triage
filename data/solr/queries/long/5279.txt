@@ -1,3 +1,0 @@
-The implicit properties (specifically solr.core.name) work fine for Solr startup, but on core RELOAD, they no longer exist, so configurations that use them result in the core not initializing.
-
-Problem discovered on 4.5.0 RC4, works fine in 4.4.0.

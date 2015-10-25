@@ -1,1 +1,0 @@
-The current luke.xsl uses SVG graphics to draw the histograms. This is not supported by InternetExplorer currently. I replaced the SVG graphics with some DIV/CSS tricks (inspired by the cool schema.jsp). I include the CSS of the admin area as well. So the page now looks like the other Solr admin pages.

@@ -1,1 +1,0 @@
-HyphenationCompoundWordTokenFilter fails to load DTD in Crimson parser (JDK 1.4)

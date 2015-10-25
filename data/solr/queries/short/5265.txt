@@ -1,1 +1,0 @@
-Add backward compatibility tests to JavaBinCodec's format.

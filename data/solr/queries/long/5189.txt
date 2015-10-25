@@ -1,3 +1,0 @@
-In Solr 4.3.1 (possibly greater) there is no 'date' column in the Log viewer in the Web UI.
-
-This means the user is unable to determine what day a log line occurred on without looking at the real logs, making the tool less useful for troubleshooting.

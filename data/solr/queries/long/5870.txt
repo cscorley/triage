@@ -1,1 +1,0 @@
-Christopher, friend of mine, made me realize, that the 'Reload' Button on the Core-Admin Screen doesn't show errors, if there are any - caused by a core reload.

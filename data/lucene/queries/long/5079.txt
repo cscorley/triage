@@ -1,1 +1,0 @@
-IndexWriter already currently tracks if there are uncommitted changes.  We should expose this somehow... perhaps a boolean hasUncommittedChanges()?

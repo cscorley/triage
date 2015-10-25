@@ -1,3 +1,0 @@
-LUCENE-5116 fixes addIndexes(Reader) to never write a 0-document segment (in the case you merge in empty or all-deleted stuff).
-
-I considered it just an inconsistency, but it could cause confusing exceptions to real users too if there was a "regression" here. (see solr users list:Split Shard Error - maxValue must be non-negative). 

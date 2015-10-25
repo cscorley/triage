@@ -1,1 +1,0 @@
-The box sizes on the term info page (under Schema Browser), overlaps, due to which the number of terms shown look incorrect. Screenshot attached (TermInfo.png).

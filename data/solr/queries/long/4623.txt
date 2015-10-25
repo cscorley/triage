@@ -1,3 +1,0 @@
-Each remaining schema component (after field types, fields, dynamic fields, copy fields were added by SOLR-4503) should be available from the schema REST API: name, version, default query operator, similarity, default search field, and unique key.
-
-It should be possible to get the entire live schema back with a single request, and schema.xml format should be one of the supported response formats.

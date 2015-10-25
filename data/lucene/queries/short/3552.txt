@@ -1,1 +1,0 @@
-TaxonomyReader/Writer and their Lucene* implementation

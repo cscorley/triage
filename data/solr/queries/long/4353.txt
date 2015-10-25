@@ -1,3 +1,0 @@
-I've occasionally seen people get confused about editing the "example solr.xml file" because in addition to the "real" solr.xml file for configuring solr, they also find the jetty context file which is named "solr.xml"
-
-Unlike tomcat, where the context descriptor file name determines the webapp path, jetty doesn't care what the file name is – it just globs up all the context files and looks at the "contextPath" properties on the WebAppContext objects in those files.

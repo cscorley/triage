@@ -1,1 +1,0 @@
-Case Insensitive Search for Wildcard Queries

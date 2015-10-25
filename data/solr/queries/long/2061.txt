@@ -1,3 +1,0 @@
-Follow-on to LUCENE-2609 for the solr build – it would be useful to generate and deploy a jar contaiing the test classes so other projects could write unit tests using the framework in Solr. 
-
-This may take care of SOLR-717 as well.

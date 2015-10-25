@@ -1,1 +1,0 @@
-Add fake charfilter to BaseTokenStreamTestCase to find offsets bugs

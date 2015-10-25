@@ -1,1 +1,0 @@
-FastVectorHighlighter - expose FieldFragList.fragInfo for user-customizable FragmentsBuilder

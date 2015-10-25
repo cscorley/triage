@@ -1,7 +1,0 @@
-Ive been writing lots of little unit tests for this thing, and I'm pretty positive i screwed this up in LUCENE-5468... sorry
-
-Otherwise the whole "prefix-suffix dependencies" described in the manpage won't work.
-
-Either 'words' should be changed from FST<Long> to FST<IntsRef>, or when there are duplicates we should add 'padding' that we just consume (suggester-style). The latter is a little tricky, but I think this is generally uncommon so it would keep the FST smaller.
-
-shouldnt be hard to fix.

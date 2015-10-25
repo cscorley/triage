@@ -1,1 +1,0 @@
-The files returned by listAll are not actually the files in the CFS.

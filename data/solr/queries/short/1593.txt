@@ -1,1 +1,0 @@
-reverse wildcard filter doesn't work for chars outside the BMP

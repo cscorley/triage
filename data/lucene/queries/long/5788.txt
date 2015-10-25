@@ -1,3 +1,0 @@
-See https://www.mail-archive.com/dev@lucene.apache.org/msg115216.html for the build failure and the explanation why it fails.
-
-The root reason is that FieldCache returns an empty instance instead of null when a field has no terms. This makes AssertingReader complain because doc values disagree with field infos.

@@ -1,5 +1,0 @@
-With LUCENE-2484, Lucene's trunk API changed incompatible. As the clustering contrib depends on a older carror2 jar file compoiled against an older version of Lucene (3.0), the tests failed to run (TermAttribute class removed).
-
-As we should be able to change the APIs in trunk without forcing external projects like carrot2 to update its internal stuff to work with Lucene trunk.
-
-The attached patch will simply rename "build.xml" to "build.xml.disabled", so the module is simply no loger built. After we create a release branch out of trunk, wen can simply enable it again after upgrading the carror2.jar files.

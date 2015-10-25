@@ -1,5 +1,0 @@
-The collections API lets you add, delete and modify existing collections. At the moment the API does not let you get a list of current collections or view information about a specific collection.
-
-The workaround is the use the Zookeeper API to get the list. This makes the Collections API harder to work with. 
-
-Adding an action=LIST would significantly improve the function of this API.

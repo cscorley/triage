@@ -1,3 +1,0 @@
-This seems to be obselete, and the kind of thing we might forget and would be out of date.
-
-Solr and Lucene are merged so I think we should consider just removing this line.

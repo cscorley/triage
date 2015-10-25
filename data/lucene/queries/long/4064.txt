@@ -1,5 +1,0 @@
-ContentSource is currently private to DocMaker, however if someone wants to write an AddDocTask that does not use DocMaker, he needs to initialize ContentSource by himself.
-
-It would be better if ContentSource is a shared resource on PerfRunData that is used by DocMaker, rather than owned by it.
-
-I'll post a patch shortly.

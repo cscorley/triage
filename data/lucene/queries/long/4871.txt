@@ -1,6 +1,0 @@
-SortingDocsAndPositionsEnum could easily save memory by using a Lucene40TCF-like compression method for positions, offsets and payloads:
-
-	delta-encode positions and startOffsets (with the previous end offset),
-	store the length of the tokens instead of their end offset (endOffset == startOffset + length),
-	use a single bit to say whether the token has a payload.
-

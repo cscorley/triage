@@ -1,1 +1,0 @@
-SchemaField.indexOptions() should return removed to decrease visibility of expert & experimental IndexOptions class

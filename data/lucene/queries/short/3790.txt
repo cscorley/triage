@@ -1,1 +1,0 @@
-benchmark cannot parse highlight-vs-vector-highlight.alg, but only on 3.x?!

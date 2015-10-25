@@ -1,1 +1,0 @@
-Allow cores to specify a named config set in non-SolrCloud mode

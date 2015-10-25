@@ -1,5 +1,0 @@
-When SOLR is configured in multicore mode, cores with '.' (dot) in their names are inaccessible via the admin web guy. (localhost:8983/solr). The page shows an alert with the message (test.test was my core name):
-
-404 Not Found get #/test.test
-
-To replicate: start solr in multicore mode, go to "localhost:8983/solr", via core admin create a new core "test.test", then refresh the page. "test.test" will show under the menu at the bottom left. Clicking on it causes the message, while no core menu appears.

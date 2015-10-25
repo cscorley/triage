@@ -1,1 +1,0 @@
-Its part of the equals contract, but many classes currently violate

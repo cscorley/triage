@@ -1,1 +1,0 @@
-If the node hosting a replica is not "live", then leader-initiated recovery may publish the "down" state more than once.

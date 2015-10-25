@@ -1,1 +1,0 @@
-missed this on the upgrade to Lucene trunk - Lucene no longer has autocommit - so it now has no effect in Solr - needs to be removed with a warning if its found.

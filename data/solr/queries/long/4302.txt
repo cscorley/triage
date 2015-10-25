@@ -1,6 +1,0 @@
-In large multicore environments (hundreds+ of cores), the STATUS request may take a fair amount of time.
-It seems that the majority of time is spent retrieving the index related info.
-
-The suggested improvement allows the user to specify a parameter (indexInfo) that if 'false' then index related info (such as segmentCount, sizeInBytes, numDocs, etc.) will not be retrieved. By default, the indexInfo will be 'true' (to maintain existing STATUS request behavior).
-
-For example, when tested on a given machine with 380+ solr cores, the full STATUS request took 800ms-900ms, whereas using indexInfo=false returned results in about 1ms-4ms.

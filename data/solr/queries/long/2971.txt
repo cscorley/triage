@@ -1,5 +1,0 @@
-valType has never done anything except throw an error, the underlying ValueSource has always been a FileFloatSource. To add to the confusion, the documents say use "float", which throws an exception on Solr startup every since "float" was re-defined as a TrieFloatField. "pfloat" works currently though.
-
-Since valType is never used for anything, we should make it optional until such a time as it is.
-
-Additionally, TrieFloatField (valtype="float|tfloat") types should be OK as a field type along with FloatField(valType="pfloat")

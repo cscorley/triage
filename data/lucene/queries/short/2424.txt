@@ -1,1 +1,0 @@
-FieldDoc.toString only returns super.toString

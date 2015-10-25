@@ -1,3 +1,0 @@
-The FST APIs are inconsistent now: some take a FST.BytesReader from the
-caller and some don't.  I think we should make this consistent by having
-all arc-reading APIs take the BytesReader.

@@ -1,1 +1,0 @@
-Demonstrate other faceting techniques in the /browse example: range, date, pivot, etc.

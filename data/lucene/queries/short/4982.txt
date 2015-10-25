@@ -1,1 +1,0 @@
-Make MockIndexOutputWrapper check disk full on copyBytes

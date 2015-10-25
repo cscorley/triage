@@ -1,1 +1,0 @@
-In SOLR-571 I created SolrCacheBase as a place to put some new code that i wanted to use in both LRUCache and FastLRUCache, but looking at those classes there is already quite a bit of cut/paste, and it would be nice to refactor anything that is duplicated up into the new parent class.

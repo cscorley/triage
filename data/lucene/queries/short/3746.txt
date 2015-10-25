@@ -1,1 +1,0 @@
-suggest.fst.Sort.BufferSize should not automatically fail just because of freeMemory()

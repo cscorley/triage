@@ -1,3 +1,0 @@
-We should fail the build when there are javadocs warnings, as this should not be the Release Manager's job to fix all at once right before the release.
-
-See http://www.lucidimagination.com/search/document/14bd01e519f39aff/brainstorming_on_improving_the_release_process

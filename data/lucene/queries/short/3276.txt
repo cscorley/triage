@@ -1,1 +1,0 @@
-Solr core Maven POM should include a dependency on wstx-asl stax parser

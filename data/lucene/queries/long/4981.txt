@@ -1,3 +1,0 @@
-According to the documentation (http://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#solr.PositionFilterFactory), PositionFilter is mainly useful to make query parsers generate boolean queries instead of phrase queries although this problem can be solved at query parsing level instead of analysis level (eg. using QueryParser.setAutoGeneratePhraseQueries).
-
-So given that PositionFilter corrupts token graphs (see TestRandomChains), I propose to deprecate it.

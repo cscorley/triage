@@ -1,1 +1,0 @@
-On restarting overseer designate , move itself to front of the queue 

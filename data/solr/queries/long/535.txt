@@ -1,2 +1,0 @@
-Small typo in schema.jsp:
-Tokenzied -> Tokenized (line 274)

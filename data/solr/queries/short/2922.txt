@@ -1,1 +1,0 @@
-Upgrade commons io and lang in Solr

@@ -1,1 +1,0 @@
-pulse docfreq=1 DOCS_ONLY for 4.1 codec

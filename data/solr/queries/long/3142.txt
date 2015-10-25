@@ -1,8 +1,0 @@
-By default, dataimporthandler optimizes the entire index when it commits.
-
-This is bad for performance, because it means by default its doing a very
-heavy index-wide operation even for an incremental update... essentially 
-O(n^2) indexing.
-
-All that is needed is to set optimize=false by default. If someone wants
-to optimize, they can either set optimize=true or explicitly optimize themselves.

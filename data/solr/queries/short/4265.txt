@@ -1,1 +1,0 @@
-Fix decoding of GET/POST parameters for servlet containers with non-UTF-8 URL parsing (Tomcat)

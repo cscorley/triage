@@ -1,3 +1,0 @@
-Custom sharding requires a CREATESHARD/DELETESHARD commands
-
-It may not be applicable to hash based sharding 

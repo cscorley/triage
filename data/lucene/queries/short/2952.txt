@@ -1,1 +1,0 @@
-Make license checking/maintenance easier/automated

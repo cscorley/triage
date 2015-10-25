@@ -1,1 +1,0 @@
-ConstantScoreAutoRewrite rewrites prefix queryies that don't match anything before query weight is calculated

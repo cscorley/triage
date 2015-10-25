@@ -1,1 +1,0 @@
-CachingDirectoryFactory#close can throw a concurrent modification exception.

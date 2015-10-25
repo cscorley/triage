@@ -1,1 +1,0 @@
-Remove System.out left in SpanHighlighter code

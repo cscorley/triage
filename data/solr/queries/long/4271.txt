@@ -1,1 +1,0 @@
-add solr integration for postingshighlighter, and move it out of the sandbox.

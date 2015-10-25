@@ -1,3 +1,0 @@
-A question I get periodically from people is how to automatically remove documents from a collection at a certain time (or after a certain amount of time).  
-
-Excluding from search results using a filter query on a date field is trivial, but you still have to periodically send a deleteByQuery to clean up those older "expired" documents.  And in the case where you want all documents to auto-expire some fixed amount of time when they were indexed, you still have to setup a simple UpdateProcessorto set that expiration date.  So i've been thinking it would be nice if there was a simple way to configure solr to do it all for you.

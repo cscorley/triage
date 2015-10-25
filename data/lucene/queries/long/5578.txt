@@ -1,3 +1,0 @@
-The bulk merge operation of our stored fields format is optimized in order to avoid decompressing data when not needed. In order to know the offset of the end of the current block, it either consults the stored fields index, or uses fieldsStream.length() for the last chunk.
-
-However, we just added checksums at the end of index files, so it might currently copy the current checksum in addition to the last chunk, and then write a new checksum.

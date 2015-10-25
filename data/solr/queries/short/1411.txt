@@ -1,1 +1,0 @@
-SolrJ ContentStream Update Request

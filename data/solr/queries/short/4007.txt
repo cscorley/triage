@@ -1,1 +1,0 @@
-Morfologik dictionaries not available in Solr field type

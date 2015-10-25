@@ -1,3 +1,0 @@
-Would be nice to have programmatic access to the CheckIndex tool, so that it can be used in applications like Solr.  
-
-See SOLR-566

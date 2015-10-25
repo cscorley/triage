@@ -1,1 +1,0 @@
-TestFSTs.testRandomWords throws AIOBE when "verbose"=true

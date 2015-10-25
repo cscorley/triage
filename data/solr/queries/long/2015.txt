@@ -1,1 +1,0 @@
-After committed LUCENE-2458, a hook for autoGeneratePhraseQueries will be convenient for some situation.

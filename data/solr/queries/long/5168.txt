@@ -1,7 +1,0 @@
-two recent Jenkins builds have uncovered some test seeds that cause failures in multiple test methods in BJQParserTest.  These seeds reproduce reliably (as of trunk r1514815) ...
-
-
-ant test  -Dtestcase=BJQParserTest -Dtests.seed=7A613F321CE87F5B -Dtests.multiplier=3 -Dtests.slow=true
-
-ant test  -Dtestcase=BJQParserTest -Dtests.seed=1DC8055F837E437E -Dtests.multiplier=2 -Dtests.nightly=true -Dtests.slow=true 
-

@@ -1,1 +1,0 @@
-HitRatio in mbean is of type String instead should be float/double.

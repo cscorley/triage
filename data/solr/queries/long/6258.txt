@@ -1,1 +1,0 @@
-DataImportHandler has onImportStart and onImportEnd.  An onRollback handler is a useful addition.

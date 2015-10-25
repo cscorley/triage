@@ -1,1 +1,0 @@
-Logging UI allows multiple selections staying open

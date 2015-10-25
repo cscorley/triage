@@ -1,1 +1,0 @@
-Create a Size Estimator model for Lucene and Solr

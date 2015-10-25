@@ -1,3 +1,0 @@
-in LUCENE-4278 i had to add a hack to force SimpleFSDir for CoreContainerCoreInitFailuresTest, because it doesnt close its Directory on certain errors.
-
-This might indicate a problem that leaks happen if certain errors happen (e.g. not handled in finally)

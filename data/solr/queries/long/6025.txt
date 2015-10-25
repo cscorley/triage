@@ -1,5 +1,0 @@
-schema.xml files has this in comments: 
-
- For maximum indexing performance, use the StreamingUpdateSolrServer 
-
- Since it is renamed to ConcurrentUpdateSolrServer these comments should be updated.

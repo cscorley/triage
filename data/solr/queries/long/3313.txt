@@ -1,3 +1,0 @@
-Nobody should speak of "query types" any more; it's "request handlers".  I understand we want to retain the "qt" parameter as such but I think we should change the names of it wherever we can find it.  We can leave some older API methods in place as deprecated.
-
-As an example, in SolrJ I have to call solrQuery.setQueryType("/blah") instead of setRequestHandler()

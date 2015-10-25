@@ -1,1 +1,0 @@
-Wrong trailing index calculation in PatternReplaceCharFilter

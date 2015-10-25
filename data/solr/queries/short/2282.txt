@@ -1,1 +1,0 @@
-Distributed Support for Search Result Clustering

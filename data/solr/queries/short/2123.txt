@@ -1,1 +1,0 @@
-Search Grouping: Group by query (like facet.query)

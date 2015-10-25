@@ -1,1 +1,0 @@
-SegmentInfo should explicitly track whether that segment wrote term vectors

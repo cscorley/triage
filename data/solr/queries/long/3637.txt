@@ -1,1 +1,0 @@
-Using the admin gui, the page 'Core Admin' (...solr/#/~cores/coreX) says allways that the selected core isn't optimized. The main page of the core's submenu (solr/#/coreX) shows the correct state.

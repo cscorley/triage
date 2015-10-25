@@ -1,1 +1,0 @@
-CoreContainer#register should use checkDefault to normalize the core name

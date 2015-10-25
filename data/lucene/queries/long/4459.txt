@@ -1,3 +1,0 @@
-There is either a bug, a test bug, or a jvm bug.
-
-I dont care which one it is, but lets fix the intermittent fail or disable the test.

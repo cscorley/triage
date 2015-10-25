@@ -1,1 +1,0 @@
-Refactor DWPT to pass testPoint to infostream

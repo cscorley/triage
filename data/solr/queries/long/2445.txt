@@ -1,1 +1,0 @@
-To reproduce the problem using example config, go form.jsp, use standard for qt (it is default) then click Search.

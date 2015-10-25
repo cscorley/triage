@@ -1,8 +1,0 @@
-When debugging configuration and performance, I often:
- 1. Look at stats values
- 2. run some queries
- 3. See how the stats values changed
-
-This is fine, but is often a bit clunky and you have to really know what you are looking for to see any changes.
-
-It would be great if the 'plugins' page had a button that would make this easier

@@ -1,1 +1,0 @@
-Luke.xsl doesn't process UTF-8 properly

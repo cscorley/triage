@@ -1,1 +1,0 @@
-Add FLAG_NONE to DocsEnum and DocsAndPositionsEnum

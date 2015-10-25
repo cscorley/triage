@@ -1,1 +1,0 @@
-jrebug causes porter stemmer to sigsegv

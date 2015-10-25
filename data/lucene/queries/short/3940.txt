@@ -1,1 +1,0 @@
-When Japanese (Kuromoji) tokenizer removes a punctuation token it should leave a hole

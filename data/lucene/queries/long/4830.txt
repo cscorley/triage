@@ -1,1 +1,0 @@
-The sorter API uses arrays to store the old->new and new->old doc IDs mappings. It should rather be an abstract class given that in some cases an array is not required at all (reverse mapping for example).

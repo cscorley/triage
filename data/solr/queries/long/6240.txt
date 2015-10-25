@@ -1,1 +1,0 @@
-The coreName parameter to ZkStateReader.getReplicaProps is un-used. We should audit its usages and remove it.

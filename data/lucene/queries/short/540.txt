@@ -1,1 +1,0 @@
-Merging multiple indexes does not maintain document order.

@@ -1,1 +1,0 @@
-No `hits` in SolrResp. NamedList if distrib=true

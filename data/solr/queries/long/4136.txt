@@ -1,7 +1,0 @@
-SolrCloud does not work properly with non-trivial values for "hostContext" (ie: the servlet context path).  In particular...
-
-
-	Using a hostContext containing a  "/" (ie: a servlet context with a subdir path, semi-common among people who organize webapps hierarchically for lod blanacer rules) is explicitly forbidden in ZkController because of how the hostContext is used to build a ZK nodeName
-	Using a hostContext containing a "_" causes problems in OverseerCollectionProcessor where it assumes all "_" characters should be converted to "/" to reconstitute a URL from nodeName (NOTE: this code specifically has a TODO to fix this, and then has a subsequent TODO about assuming "http://" labeled "this sucks")
-
-

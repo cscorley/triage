@@ -1,1 +1,0 @@
-Let user override Interval Faceting key with LocalParams

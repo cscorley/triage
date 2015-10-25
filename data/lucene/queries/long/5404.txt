@@ -1,2 +1,0 @@
-It would be nice to be able to tell the number of entries a suggester lookup was built with. This would let components using lookups to keep some stats regarding how many entries were used to build a lookup.
-Additionally, Dictionary could use InputIterator rather than the BytesRefIteratator, as most of the implmentations now use it.

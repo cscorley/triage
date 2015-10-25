@@ -1,1 +1,0 @@
-Improve FilteredQuery to shortcut on wrapped MatchAllDocsQuery

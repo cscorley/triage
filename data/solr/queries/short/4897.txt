@@ -1,1 +1,0 @@
-Create new example config set for schemaless mode

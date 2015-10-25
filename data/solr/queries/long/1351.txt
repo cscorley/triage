@@ -1,1 +1,0 @@
-There is a general need to facet on the same field in different ways (different prefixes, different filters).  We need a way to express this.

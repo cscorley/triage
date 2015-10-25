@@ -1,1 +1,0 @@
-SolrCmdDistributor can briefly create spikes of threads in the thousands.

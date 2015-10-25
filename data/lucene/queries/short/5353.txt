@@ -1,1 +1,0 @@
-ShingleFilter should have a way to specify FILLER_TOKEN

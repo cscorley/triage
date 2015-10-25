@@ -1,1 +1,0 @@
-add near-real-time suggest building to AnalyzingInfixSuggester

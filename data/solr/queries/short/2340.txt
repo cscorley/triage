@@ -1,1 +1,0 @@
-print out version infos in JavaBinCodec when throwing exception

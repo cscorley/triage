@@ -1,1 +1,0 @@
-SimplePostTool should show Solr error, not just HTTP code

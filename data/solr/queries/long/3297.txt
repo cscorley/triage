@@ -1,1 +1,0 @@
-We encourage people to go to CHANGES.txt for problems, but this change is nowhere in that file. To find it I had to go back to 3.x source code and see the deprecation comment.

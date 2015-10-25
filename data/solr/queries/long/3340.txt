@@ -1,1 +1,0 @@
-ant test -Dtestcase=MBeansHandlerTest -Dtestmethod=testDiff -Dtests.seed=27d371738f445cbb:2b2027ac0f5fd0bf:-32d4ecfbc56c868c -Dargs="-Dfile.encoding=UTF-8"

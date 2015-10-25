@@ -1,1 +1,0 @@
-Deprecate "standard" writer type (wt), just say "xml".

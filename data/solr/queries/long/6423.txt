@@ -1,8 +1,0 @@
-
-java.lang.AssertionError: Could not find new collection awholynewcollection_1
-	at __randomizedtesting.SeedInfo.seed([655D020D02309D33:E4BB8C15756FFD0F]:0)
-	at org.junit.Assert.fail(Assert.java:93)
-	at org.apache.solr.cloud.AbstractFullDistribZkTestBase.checkForCollection(AbstractFullDistribZkTestBase.java:1642)
-	at org.apache.solr.cloud.CollectionsAPIDistributedZkTest.testCollectionsAPI(CollectionsAPIDistributedZkTest.java:723)
-	at org.apache.solr.cloud.CollectionsAPIDistributedZkTest.doTest(CollectionsAPIDistributedZkTest.java:203)
-

@@ -1,1 +1,0 @@
-sometimes succeed but sometimes failed when request to create a collection whose name is taken in the cluster . Doesn't check the collection name before create it lead to this error(unstable).

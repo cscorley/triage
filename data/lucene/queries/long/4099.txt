@@ -1,3 +1,0 @@
-Same time ago I added SpatialFieldInfo as a way for SpatialStrategys to declare what information they needed per request.  This meant that a Strategy could be used across multiple requests.  However it doesn't really need to be that way any more, Strategies are light to instantiate and the generics are just clumsy and annoying.
-
-Instead Strategies should just define what they need in their constructor. 

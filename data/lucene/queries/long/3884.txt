@@ -1,7 +1,0 @@
-Steven Rowe noted this a while back, but I forgot to open an issue:
-
-This is generally useful for handling contractions.
-We already use this filter for french/italian/catalan. Now we also
-have a contribution for irish (LUCENE-3883) that uses it too.
-
-I think we should put this in o.a.l.analysis.util instead.

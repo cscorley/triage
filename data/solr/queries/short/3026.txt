@@ -1,1 +1,0 @@
-eDismax: Locking down which fields can be explicitly queried (user fields aka uf)

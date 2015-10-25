@@ -1,1 +1,0 @@
-Daren opened a Topic on the ML that the UI is no longer found under /solr/admin (beside some other problems he had). Should be pretty easy to redirect this one to the new startpage?

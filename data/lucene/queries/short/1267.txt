@@ -1,1 +1,0 @@
-add numDocs() and maxDoc() methods to IndexWriter; deprecate docCount()

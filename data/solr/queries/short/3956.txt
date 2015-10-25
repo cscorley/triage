@@ -1,1 +1,0 @@
-group.facet and facet.limit=-1 returns no facet counts

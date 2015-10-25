@@ -1,1 +1,0 @@
-its currently public and users can modify it. We made this class mostly immutable long ago: remember its returned by the atomicreader API!

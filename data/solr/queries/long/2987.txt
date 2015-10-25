@@ -1,3 +1,0 @@
-The current error handling in reading an external file field only catches an error when parsing the float value on a line, which then skips that line.  If the key field is a trie field, such as a TrieIntField, and the key value in the file cannot be parsed to an int, loading of the entire file fails.  
-
-Shouldn't the call to get the indexed value of the key should be in the same try/catch as the float parsing for the line?

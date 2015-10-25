@@ -1,1 +1,0 @@
-SolrPing - add methods for enable/disable

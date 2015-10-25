@@ -1,1 +1,0 @@
-I think MockRandomMergePolicy should just wrap the reader in a no-op filter reader? This better simulates the case of e.g. users upgrading lucene over an old index, some segments bulk-merge eligible, others not, etc.

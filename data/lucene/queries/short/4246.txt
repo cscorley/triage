@@ -1,1 +1,0 @@
-Fix IndexWriter.close() to not commit or wait for pending merges

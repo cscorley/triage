@@ -1,1 +1,0 @@
-IndexWriter commits unnecessarily on fresh Directory

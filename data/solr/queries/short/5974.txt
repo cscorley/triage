@@ -1,1 +1,0 @@
-Remove ShardDoc.score and use parent's ScoreDoc.score

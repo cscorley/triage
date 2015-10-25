@@ -1,1 +1,0 @@
-smokeTestRelease.checkMaven should not require a release branch

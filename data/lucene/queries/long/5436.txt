@@ -1,1 +1,0 @@
-I think I found a bug that can cause the ReferenceManager to stick in an infinite loop if the managed reference is decremented outside of the manager without a corresponding increment. I think this is pretty bad since the debugging of this is a mess and we should rather throw ISE instead.

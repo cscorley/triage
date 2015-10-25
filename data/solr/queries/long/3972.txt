@@ -1,3 +1,0 @@
-Missing admin-extra files result in SEVERE log entries with giant stacktrace.
-
-If a log entry is warranted at all, it should just be a one-line warning.

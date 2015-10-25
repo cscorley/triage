@@ -1,1 +1,0 @@
-This version of Spatial4j has various API level improvements.  It features dateline wrap for polygons.

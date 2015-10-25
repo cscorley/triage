@@ -1,1 +1,0 @@
-SolrIndexConfig parameter in SolrIndexSearcher constructor is not used

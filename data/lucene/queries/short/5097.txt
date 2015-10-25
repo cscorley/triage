@@ -1,1 +1,0 @@
-Add utility method to Analyzer: public final TokenStream tokenStream(String fieldName,String text)

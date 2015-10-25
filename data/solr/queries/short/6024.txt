@@ -1,1 +1,0 @@
-StatsComponent does not work for docValues enabled multiValued fields

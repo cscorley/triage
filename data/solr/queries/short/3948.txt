@@ -1,1 +1,0 @@
-Calculate/display deleted documents in admin interface

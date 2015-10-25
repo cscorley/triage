@@ -1,1 +1,0 @@
-The optimistic concurrency loop in ManagedIndexSchema.addFields() is the likely culprit.

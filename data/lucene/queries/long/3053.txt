@@ -1,2 +1,0 @@
-It seems like an easy win that when the test calls newSearcher(), 
-it should sometimes wrap the reader with a SlowMultiReaderWrapper.

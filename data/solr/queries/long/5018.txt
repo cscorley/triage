@@ -1,1 +1,0 @@
-In a 'stormy' env, a state might get published after a collection delete - bringing back a zombie collection into clusterstate.json. The Overseer should defend against this by refusing to publish a state if it cannot find the collection in zk.

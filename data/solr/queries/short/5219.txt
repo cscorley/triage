@@ -1,1 +1,0 @@
-Rewritten selection of the default search and document clustering algorithms

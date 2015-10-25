@@ -1,1 +1,0 @@
-I think this stuff is dead code and confusing: talking about clearing state across segments when the DWPT is not reused?

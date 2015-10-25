@@ -1,1 +1,0 @@
-slightly more efficient SolrDocument implementation

@@ -1,1 +1,0 @@
-NPE in DirectSpellChecker with alternativeTermCount and mm.

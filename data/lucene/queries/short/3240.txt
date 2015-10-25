@@ -1,1 +1,0 @@
-Move FunctionQuery, ValueSources and DocValues to Queries module

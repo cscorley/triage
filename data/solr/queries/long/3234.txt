@@ -1,3 +1,0 @@
-the contrib/dataimporthandler contains .jsp files which are copied to the main .war file using the "add-to-war" target of solr/contrib/contrib-build.xml
-
-I guess the build-target is still okay, since it may be needed that additional files are deployed to the admin-area.

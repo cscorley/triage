@@ -1,1 +1,0 @@
-Spatial distance relevancy should use score of 1/distance

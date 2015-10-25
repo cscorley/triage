@@ -1,1 +1,0 @@
-DIHCacheSupport ignores left side of where="xid=x.id" attribute

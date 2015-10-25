@@ -1,1 +1,0 @@
-Edismax highlighting query doesn't work.

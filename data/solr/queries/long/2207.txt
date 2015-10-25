@@ -1,5 +1,0 @@
-Would be great to have the following:
-
-	Paging of docs within a group via start and offset parameters such that one can drill down into a group
-	While I know we can't return a total count of all groups, it would be nice to know if there are more groups.  This could simply be done by asking for 1 more group than requested by the user.  If that group is non-empty, then set a flag indicating there are more groups.  Then, start and offset could also be applied to allow paging down the groups.  We should also think about how we can optimize this so that we can page very deep into the results without needing to increase the PQ size.
-

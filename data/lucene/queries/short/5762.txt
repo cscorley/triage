@@ -1,1 +1,0 @@
-Disable old codecs as much as possible

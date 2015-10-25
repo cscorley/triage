@@ -1,1 +1,0 @@
-SynonymFilter fails when provided with optional tokenizerFactory

@@ -1,3 +1,0 @@
-Lucene/Solr sources should not include @author tags.  See the solr-dev@l.a.o and java-dev@l.a.o threads in which this was discussed. 
-
-The Jenkins builds should fail if they are found, in the same way that nocommit's are currently handled

@@ -1,3 +1,0 @@
-At the moment, ExternalFileField caches can only be refreshed/reloaded by clearing them entirely, which forces a reload the next time they are used in a query.  If your external files are big, this can take unacceptably long.
-
-Instead, we should allow the caches to be loaded on newSearcher/firstSearcher events, running in the background.

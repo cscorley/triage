@@ -1,1 +1,0 @@
--Dtests.iters combined with -Dtestmethod never fails?

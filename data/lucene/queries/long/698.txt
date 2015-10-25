@@ -1,1 +1,0 @@
-Filtered query ignores it's own boost.

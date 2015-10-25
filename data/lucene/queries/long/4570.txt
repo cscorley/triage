@@ -1,7 +1,0 @@
-Currently there is source code in lucene/tools/src (e.g. Forbidden APIs checker ant task).
-
-It would be convenient if you could download this thing in your ant build from ivy (especially if maybe it included our definitions .txt files as resources).
-
-In general checking for locale/charset violations in this way is a pretty general useful thing for a server-side app.
-
-Can we either release lucene-tools.jar as an artifact, or maybe alternatively move this somewhere else as a standalone project and suck it in ourselves?

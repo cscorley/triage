@@ -1,1 +1,0 @@
-Cache and reuse IndexSchema

@@ -1,1 +1,0 @@
-Move NoDeletionPolicy from benchmark to core

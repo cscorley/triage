@@ -1,1 +1,0 @@
-remove /non/existent/dir/yields/warning from example to eliminate automatic warning for new users

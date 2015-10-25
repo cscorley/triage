@@ -1,1 +1,0 @@
-Bad error message when missing resource from ZK when parsing Schema

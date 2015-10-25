@@ -1,1 +1,0 @@
-ArrayIndexOutOfBoundsException while grouping via Solrj

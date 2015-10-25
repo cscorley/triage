@@ -1,5 +1,0 @@
-The UIMA tests fail frequently in hudson now.
-
-I am not sure if this is due to not being able to connect to specific sites,
-but if this is the case it would be better to use a Mock component instead
-that doesn't need to do this.

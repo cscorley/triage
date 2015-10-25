@@ -1,5 +1,0 @@
-I added "agd" as keyword using solr.KeywordMarkerFilterFactory
-I would be able to add synonyms after solr.MorfologikFilterFactory:
- agd => lodówka, zamrażarka, chłodziarka, piekarnik, etc.
-
-It's not possible right now. All words (even keywords) are threated same way.

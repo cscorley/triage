@@ -1,1 +1,0 @@
-Add a filter returning all document without a value in a field

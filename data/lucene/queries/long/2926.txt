@@ -1,1 +1,0 @@
-It would be helpful (e.g. for simplifying the demo contrib build: LUCENE-2923) if the contribs/modules could depend on the up-to-date existence of the lucene-core jar.

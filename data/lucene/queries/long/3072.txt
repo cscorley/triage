@@ -1,1 +1,0 @@
-The 3.1 fileformats is missing the change from LUCENE-2811

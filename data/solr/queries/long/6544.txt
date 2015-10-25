@@ -1,3 +1,0 @@
-There are unused arguments being passed in helper methods in DeleteReplicaTest. We should remove those to avoid confusion.
-
-Also, the test has some unwanted iterations to get an active replica, fix that.

@@ -1,1 +1,0 @@
-New Admin UI doesn't work on tomcat

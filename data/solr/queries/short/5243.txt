@@ -1,1 +1,0 @@
-killing a shard in one collection can result in leader election in a different collection

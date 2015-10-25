@@ -1,1 +1,0 @@
-Log4J watcher - setting the root logger adds a logger for the empty string

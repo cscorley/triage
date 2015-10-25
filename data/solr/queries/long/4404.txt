@@ -1,3 +1,0 @@
-It's a bit confusing. We link from CloudSolrServer to LBHttpSolrServer, where it says "do NOT use this for updates". Update LBHttpSolrServer to draw the distinction between cloud and non-cloud updates.
-
-I'll do this this weekend, just don't want to lose track.

@@ -1,4 +1,0 @@
-The example script example/exampleAnalysis/post.sh attempts to post to the path http://localhost:8983/solr/analysis
- however, SOLR-1099 changed the solrconfig.xml, so that path is disabled by default as of r767412
-
-A simple fix is to change to http://localhost:8983/solr/analysis/document

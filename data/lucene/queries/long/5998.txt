@@ -1,3 +1,0 @@
-SI and FIS formats have no state, e.g. they dont hold on to file handles or anything. neither their Readers or Writers are closeable, they each both just contain one simple read() or write() method respectively.
-
-We should remove these unnecessary abstractions.

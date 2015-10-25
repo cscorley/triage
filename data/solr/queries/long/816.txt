@@ -1,3 +1,0 @@
-In trying to clean up the configuration mess we have, I notice we have too much access to things we don't really need.
-
-The IndexSchema does not need to know about how the rest of solr is configured. 

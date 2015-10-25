@@ -1,3 +1,0 @@
-The create/delete/reload collections are asynchronous process, the client can't get the right response, only make sure the information have been saved into the OverseerCollectionQueue. The client will get the response directly that don't wait the result of behavior(create/delete/reload collection) whatever successful. 
-
-The easy solution is client wait until the asynchronous process success, the create/delete/reload collection thread will save the response into OverseerCollectionQueue, then notify client to get the response. 

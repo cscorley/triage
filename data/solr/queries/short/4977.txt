@@ -1,1 +1,0 @@
-info stream in solrconfig should have option for writing to the solr log

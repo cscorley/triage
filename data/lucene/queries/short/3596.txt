@@ -1,1 +1,0 @@
-DirectoryTaxonomyWriter extensions should be able to set internal index writer config attributes such as info stream

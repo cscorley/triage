@@ -1,3 +1,0 @@
-While working on SOLR-3788, i realized that the main/left list of cores needs/should also be updated when a new core is created / an existing core is deleted, which is right now not the fact.
-
-On a first quick look that should not be that hard, hopefully we can reuse existing functionality from app.js, which already generates a list of cores when the UI is initialized.

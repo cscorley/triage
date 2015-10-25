@@ -1,1 +1,0 @@
-don't try to cache a composite reader's MultiBits deletedDocs

@@ -1,1 +1,0 @@
-The SolrContentHandler's newDocument method does a variety of things: adds metadata, literals, content and catpured content.  We could split this out into protected methods for each that makes it easier to override.

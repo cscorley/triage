@@ -1,1 +1,0 @@
-As a result, discountOverlap is not initialized to true, and the default behavior is that multiple terms on the same position DO affect the fieldNorm. this is not the intended default.

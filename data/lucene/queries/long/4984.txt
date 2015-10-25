@@ -1,1 +1,0 @@
-ThaiWordFilter is an offender in TestRandomChains because it creates positions and updates offsets.

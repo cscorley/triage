@@ -1,5 +1,0 @@
-PostingsHighlighter (in sandbox) treats documents to be highlighted as collections of small documents (snippets).
-
-But (like the other highlighters), it uses collection-wide stats to score the snippets. It actually calls the indexsearcher method which might even result in a distributed call. I don't think its worth it to do all this. It means we have to reseek to all terms across all segments at the minimum, and it means snippets change over time and so on.
-
-I think its good enough to only use within-document stats. And it might speed up highlighting.

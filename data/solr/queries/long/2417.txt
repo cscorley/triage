@@ -1,3 +1,0 @@
-Currently explain information in displayed in the debugInfo part of the response.  This requires clients to build a Map and link results later if they want them displayed together.  It also does not nicely allow for multiple queries in one result.
-
-As part of SOLR-1566, we can add the explain info directly to the result

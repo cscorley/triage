@@ -1,1 +1,0 @@
-Fix incorrect test classpath order under the Maven build

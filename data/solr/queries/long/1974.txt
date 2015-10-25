@@ -1,1 +1,0 @@
-Add a factory for LimitTokenCountFilter that was introduced in LUCENE-2295.

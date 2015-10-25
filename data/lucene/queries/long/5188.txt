@@ -1,1 +1,0 @@
-The way CompressingStoredFieldsFormat works is that it first decompresses data and then consults the StoredFieldVisitor. This is a bit wasteful in case documents are big and only the first field of a document is of interest so maybe we could decompress and consult the StoredFieldVicitor in a more streaming fashion.

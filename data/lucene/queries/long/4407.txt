@@ -1,3 +1,0 @@
-Disallowed by spec. XML unicode characters (in Strings) produce invalid XML reports which then fail on jenkins.
-
-I think this would also be the case with regular ant/maven runners but I didn't check. It'd be interesting to see if they cater for this somehow.

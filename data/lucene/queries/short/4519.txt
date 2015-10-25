@@ -1,1 +1,0 @@
-IndexDocument methods should not use wildcards in their return types

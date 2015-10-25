@@ -1,3 +1,0 @@
-This is trivial to accomplish: when somebody (or jenkins) runs tests multiple times the execution statistics could be reused to improve load balancing on the local machine (local hardware and settings) in favor of the precached values currently version in the svn repo.
-
-At this moment we already do this, but keep the stats under build/ and every ant clean effectively removes them. I could move those stats under an svn-ignored folder elsewhere so that these stats are not lost and reused for balancing.

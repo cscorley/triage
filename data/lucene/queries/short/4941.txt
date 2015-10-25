@@ -1,1 +1,0 @@
-JoinUtil's TermsQuery should sort terms only once.

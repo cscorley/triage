@@ -1,1 +1,0 @@
-Jamie pointed out that the Cloud-View does not work if you're using Solr in Multicore-Mode

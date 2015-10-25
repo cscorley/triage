@@ -1,1 +1,0 @@
-Split out separate core/, test-framework/, and tools/ modules, each with its own build.xml, under the lucene/ directory, similar to the Solr restructuring done in SOLR-2452.

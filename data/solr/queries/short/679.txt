@@ -1,1 +1,0 @@
-Provide accessor methods on Lucene based spell checkers

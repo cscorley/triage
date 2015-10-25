@@ -1,1 +1,0 @@
-This issue adds missing checks in the FilterReader test to also check overridden methods in the enum implementations (inner classes) similar to the checks added by Shai Erea.

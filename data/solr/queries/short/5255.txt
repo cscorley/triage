@@ -1,1 +1,0 @@
-Extraneous zookeeper call in ZkStateReader cluster state watcher and setting wrong watcher

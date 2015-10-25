@@ -1,1 +1,0 @@
-If tests fail, don't report about unclosed resources

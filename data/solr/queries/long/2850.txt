@@ -1,1 +1,0 @@
-Currently there is a special case in the code to not refine facets if minCount==0.  It seems this could be extended to minCount <= 1 as there would be no need to take the extra step to refine facets if minCount is 1.

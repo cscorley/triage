@@ -1,1 +1,0 @@
-Grouping module should allow subclasses to set the group key per document

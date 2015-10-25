@@ -1,1 +1,0 @@
-Improve LuceneTestCase.defaultCodecSupportsDocsWithField to check the actual DocValuesFormat used per-field

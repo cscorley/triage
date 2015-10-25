@@ -1,1 +1,0 @@
-branch-1.4 should use Lucene 2.9.3

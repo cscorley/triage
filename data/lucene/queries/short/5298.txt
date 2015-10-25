@@ -1,1 +1,0 @@
-Allow aggregating facets by any ValueSource

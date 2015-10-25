@@ -1,1 +1,0 @@
-Optimizing the abort command in delta import

@@ -1,1 +1,0 @@
-Add create(AttributeFactory) to TokenizerFactory and subclasses with ctors taking AttributeFactory, and remove Tokenizer's and subclasses' ctors taking AttributeSource

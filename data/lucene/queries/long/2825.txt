@@ -1,1 +1,0 @@
-MMap is ~ 30% faster than NIOFS on this platform.

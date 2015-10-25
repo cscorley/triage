@@ -1,2 +1,0 @@
-foo:"" currently throws a parse exception
-foo: bar is also parsed as foo:bar (not serious since it's arguably illegal syntax)

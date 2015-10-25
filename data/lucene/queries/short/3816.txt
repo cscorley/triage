@@ -1,1 +1,0 @@
-FilteredDocIdSet does not handle a case where the inner set iterator is null

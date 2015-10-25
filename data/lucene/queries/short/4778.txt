@@ -1,1 +1,0 @@
-Add a getter for the delegate in RateLimitedDirectoryWrapper.

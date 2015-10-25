@@ -1,1 +1,0 @@
-Persisting solr.xml still adds some elements that aren't in the original

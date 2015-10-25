@@ -1,1 +1,0 @@
-Make DocumentDictionary and co more lenient to dirty documents

@@ -1,3 +1,0 @@
-After the discussion in SOLR-5287 and the commit of SOLR-5518 (which moved the ability to write conf files into a separate handler) this is the issue for UI related Todos.
-
-At first, i'm going to remove the functionality completely - since even in trunk the handler was renamed. will bring back the stuff in another issue, but sparetime is rare at the moment =/

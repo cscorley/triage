@@ -1,1 +1,0 @@
-Adding a factory to QueryParser to instantiate query instances

@@ -1,1 +1,0 @@
-Similarity can only be set per index, but I may want to adjust scoring behaviour at a field level

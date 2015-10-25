@@ -1,1 +1,0 @@
-Backport LUCENE-5284 for filtering the training set by passing a Query and performance tests for existing classifiers (except for BooleanPerceptronClassifier which is not yet ready to be backported to branch_4x)

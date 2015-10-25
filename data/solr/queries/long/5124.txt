@@ -1,4 +1,0 @@
-For some kind of PDF-documents Solr glues words at linebreaks under some circumstances. (eg the last word of line 1 and the first word of line 2 are merged into one word)
-(Stand-alone-)Tika extracts the text correct. Attached you find one sample-PDF and screenshots of tika-output and the corrupted content indexed by solr.
-(This issue does not occur with all PDF-documents. Tried to recreate the issue with new word-documents, I converted into PDF on multiple ways without success.) The attached PDF-document has a real weird internal structure. But Tika seems to do it´s work right. Even with this weird document.
-In our Solr-indices we have a good amount of this weird documents. This results in worse suggestions by the Suggester.

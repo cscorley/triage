@@ -1,1 +1,0 @@
-Support user configured doc-centric versioning rules

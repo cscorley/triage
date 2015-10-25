@@ -1,7 +1,0 @@
-We are using Solr 4.0 and run intensive performance/data-integrity/endurance tests on it. In very rare occasions the content of two concurrent requests to Solr get mixed up. We have spent a lot of time narrowing down this issue and found that it is a bug in Jetty 8.1.2. Therefore of course we have filed it as a bug with Jetty.
-Official bugzilla: https://bugs.eclipse.org/bugs/show_bug.cgi?id=392936
-Mailing list thread: http://dev.eclipse.org/mhonarc/lists/jetty-dev/threads.html#01530
-
-The reports to Jetty is very detailed so you can go and read about it there. We have found that the problem seems to be solved in Jetty 8.1.7. Therefore we are now running Solr 4.0 (plus our additional changes) on top of Jetty 8.1.7 instead of 8.1.2. You probably want to do the same upgrade on the Apache side sometime soon.
-
-Alt least now you know what to tell people if the start complaining about mixed up requests in Solr 4.0 - upgrade the Jetty underneath to 8.1.7 (or run tomcat or something)

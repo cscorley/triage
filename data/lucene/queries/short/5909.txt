@@ -1,1 +1,0 @@
-Run smoketester on Java 8

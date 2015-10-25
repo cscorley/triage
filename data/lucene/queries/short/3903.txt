@@ -1,1 +1,0 @@
-javadocs very very ugly if you generate with java7

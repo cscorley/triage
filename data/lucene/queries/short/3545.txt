@@ -1,1 +1,0 @@
-Upgrade ASF parent POM, Maven Ant Tasks, and Maven plugins to the most recent versions

@@ -1,1 +1,0 @@
-Compressor and Decompressor are currently package-private, making it impossible for users to implement their own CompressionMode.

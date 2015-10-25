@@ -1,1 +1,0 @@
-Solrj library raises MissingFormatArgumentException when comitting update requests with parameters 

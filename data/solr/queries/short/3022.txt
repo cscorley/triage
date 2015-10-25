@@ -1,1 +1,0 @@
-AbstractPluginLoader does not log caught exceptions

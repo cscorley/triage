@@ -1,3 +1,0 @@
-This optimization has been folded into the default postings format for a long time.
-
-I'd like to remove "separate pulsing", its really quite hairy (especially docsenum reuse logic and stuff like that)

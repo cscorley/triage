@@ -1,1 +1,0 @@
-A lesser issue is that we also write out properties that where not originally in the file with the defaults they picked up.

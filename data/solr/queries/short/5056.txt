@@ -1,1 +1,0 @@
-Further clean up of ConfigSolr interface and CoreContainer construction

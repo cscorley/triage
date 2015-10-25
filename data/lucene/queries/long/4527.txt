@@ -1,1 +1,0 @@
-Another interesting idea from Robert: many applications have a schema and all documents are likely to have the same number of stored fields. We could save space by using packed ints and the same kind of optimization as ForUtil (requiring only one VInt if all values are equal).

@@ -1,7 +1,0 @@
-Back in SOLR-238 we introduced ahook where forrest had access to the specversion as of the last time anyone ran an ant task in solr.
-
-the primary reason for this was because we wanted the "live site" version of the tutorial to reflect the trunk, while the tutorial included in releases would be release specific.
-
-But this process has proved incredibly tedious and error prone and in the long run shouldn't be needed anyway since we should ultimately adopt the same model for Solr Lucene-Java has been using for a while: distinct sets/directories for the live site and version specific documents (this is something that would be easiest to switch to when adopting the new Apache CMS - see LUCENE-2748)
-
-So for now i suggest we just rip it out completely.  it's already caused several problems as we prep for the 3.1.0 release.

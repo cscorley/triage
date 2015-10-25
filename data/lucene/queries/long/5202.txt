@@ -1,3 +1,0 @@
-This is a bit hard to explain except by looking at the test case. I've coded a filter that uses LookaheadTokenFilter. The incrementToken method peeks some tokens. Then, it seems, nextToken in the Lookahead class calls peekToken itself, which seems to me to consume a token so that it's not seen when the derived class sets out to process the next set of tokens.
-
-In passing, this test case can be used to demonstrate that it does not work to try to use the afterPosition method to set up attributes of the token that we're 'after'. Probably that was never intended. However, I'm hoping for some feedback as to whether the rest of the structure here is as intended for subclasses of LookaheadTokenFilter.

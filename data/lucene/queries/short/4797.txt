@@ -1,1 +1,0 @@
-Fix remaining Lucene/Solr Javadocs issue

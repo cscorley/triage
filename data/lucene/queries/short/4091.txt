@@ -1,1 +1,0 @@
-FastVectorHighlighter: Getter for FieldFragList.WeightedFragInfo and FieldPhraseList.WeightedPhraseInfo

@@ -1,1 +1,0 @@
-TestIndexWriterWithThreads hung in DocumentsWriterFlushControl.

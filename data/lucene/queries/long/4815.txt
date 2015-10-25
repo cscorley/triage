@@ -1,1 +1,0 @@
-This is a silly limitation it has today, which makes it hard if you try to build a UI showing a tree-view-like UI on a hierarchical field.

@@ -1,1 +1,0 @@
-As a side effect from LUCENE-5859, Lucene43NGramTokenizer was made not final.  This can trip an assert we have that Tokenizer need to either be final, or have their incrementToken() function be final.

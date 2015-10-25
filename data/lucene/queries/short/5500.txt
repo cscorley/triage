@@ -1,1 +1,0 @@
-SortingMergePolicy should error if the Sort refers to the score

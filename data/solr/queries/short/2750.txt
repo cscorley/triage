@@ -1,1 +1,0 @@
-Some places look for UpdateParams.UPDATE_CHAIN but not the deprecated "update.processor"

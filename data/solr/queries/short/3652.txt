@@ -1,1 +1,0 @@
-Range Faceting will infinite loop if gap is too small relative to lower bounds of range (underflow occurs on add)

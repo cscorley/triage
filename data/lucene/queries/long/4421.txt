@@ -1,6 +1,0 @@
-TermsFilter line 82 is:
-
-       if (termsEnum.seekCeil(br) == TermsEnum.SeekStatus.FOUND) {
-
-I expected use of seekExact(...) since the Filter shouldn't need to
-potentially advance to the one after.

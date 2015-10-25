@@ -1,1 +1,0 @@
-TermsFilter might return wrong results if a field is not indexed or not present in the index

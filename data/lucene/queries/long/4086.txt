@@ -1,3 +1,0 @@
-Once we fix LUCENE-4084, we should generate a 4.0 back compat index, plug it into TestBackwardsCompatibility, and remove preflex-r/rw codecs completely.
-
-we should also nuke all junit assumes, suppressCodecs, etc that dodge around 3.x-specific issues, remove the segmentinfos legacy write method, etc etc.

@@ -1,6 +1,0 @@
-Some current inconsistencies:
-
-
-	Binary/SortedDocValues.EMPTY_BYTES should be removed (BytesRef.EMPTY_BYTES should be used in its place): FieldCache.getDocsWithField should be used to determine missing. Thats fine if FC wants to "back" its Bits by some special placeholder value, but thats its impl detail not part of the API.
-	Sorting comparator of Binary should either be removed (is this REALLY useful?) or should support missingValue(): and it should support this for SortedDocValues in any case: solr does it, but lucene wont allow it accept for numerics?!
-

@@ -1,1 +1,0 @@
-follow-up from LUCENE-4857

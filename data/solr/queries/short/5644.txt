@@ -1,1 +1,0 @@
-SplitShard does not handle not finding a shard leader well.

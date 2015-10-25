@@ -1,7 +1,0 @@
-Look under 'spatial', RecursivePrefixTreeStrategyTestCase and TwoDoublesStrategyTestCase
-don't get invoked.
-
-I suspect this is something in junit4 that doesnt like the fact that these classes extend
-a base class that takes a generic type? 
-
-Because if i just click 'run tests' from this folder in my IDE, then they run.

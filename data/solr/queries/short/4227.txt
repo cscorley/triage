@@ -1,1 +1,0 @@
-StreamingUpdateSolrServer does not buffer OutputStreamWriter with BufferedWriter, causing encoding explosion

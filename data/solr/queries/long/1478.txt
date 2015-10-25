@@ -1,1 +1,0 @@
-Lucene allows sorting by docid, but Solr currently does not provide a way to specify it. 

@@ -1,3 +1,0 @@
-Initially this started out as an idea for a configuration knob on ICUTokenizer that would allow me to tell it not to tokenize on punctuation.  Through IRC discussion on #lucene, it sorta ballooned.  The committers had a long discussion about it that I don't really understand, so I'll be including it in the comments.
-
-I am a Solr user, so I would also need the ability to access the configuration from there, likely either in schema.xml or solrconfig.xml.

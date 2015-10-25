@@ -1,1 +1,0 @@
-Incorrect access core.properties in IndexSchema.java

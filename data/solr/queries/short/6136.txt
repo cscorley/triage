@@ -1,1 +1,0 @@
-ConcurrentUpdateSolrServer includes a Spin Lock

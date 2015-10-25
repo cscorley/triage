@@ -1,5 +1,0 @@
-velocity / Solritas is throwing NumberFormatException if using Range Facets for Price
-of solr-trunk/apache-solr-4.0-2011-03-01_08-08-52/example/solr/conf/velocity/.
-
-This is due to a wrong format of range query in VM_global_library.vm.
-

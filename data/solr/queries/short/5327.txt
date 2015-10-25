@@ -1,1 +1,0 @@
-SOLR-4915 "The root cause should be returned to the user when a SolrCore create call fails" was reverted.

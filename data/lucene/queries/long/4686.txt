@@ -1,1 +1,0 @@
-Today the default encoder/decoder for facets is DGap(VInt). That is a DGapEncoder wrapping a VIntEncoder. Instead of this wrapping, we can write a specialized DGapVIntEncoder which does it all in one call.

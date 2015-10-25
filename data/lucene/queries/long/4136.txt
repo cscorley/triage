@@ -1,3 +1,0 @@
-On trunk (probably affects 4.0 too, but trunk is where i hit it):
-
-ant test -Dtestcase=TestDocumentsWriterStallControl -Dtests.seed=9D5404FF4A909330

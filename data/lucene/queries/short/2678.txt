@@ -1,1 +1,0 @@
-TestCachingSpanFilter sometimes fails

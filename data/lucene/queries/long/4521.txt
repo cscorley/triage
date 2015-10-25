@@ -1,1 +1,0 @@
-Spinoff from java-user thread subject "writer.tryDeleteDocument(..) does not delete document".

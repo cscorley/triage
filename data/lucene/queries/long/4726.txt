@@ -1,1 +1,0 @@
-I had to do it for a patch for LUCENE-4609, but even if faceting doesn't end up using PackedInts, I think it would be better if encoding and decoding were byte-aligned instead of long-aligned (although encoding from/to long still needs to be long-aligned).

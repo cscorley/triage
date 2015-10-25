@@ -1,5 +1,0 @@
-If you do a negative only query, such as -author:[* TO *], explain returns NaN for the score. The query executes correctly, however.
-
-To execute negative only queries, Solr calls QueryUtils.makeQueryable, and everything works correctly. But explain doesn't call this, and coord ends up dividing by zero.
-
-One could fix this by fixing the call to explain, which is easy, or perhaps by fixing the query parser to generate the query that way in the first place. (It looks like extended dismax does the latter, and so shouldn't have problems).

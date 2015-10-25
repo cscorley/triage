@@ -1,1 +1,0 @@
-wordlistloader is inefficient

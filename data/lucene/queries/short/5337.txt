@@ -1,1 +1,0 @@
-Add Payload support to FileDictionary (Suggest) and make it more configurable

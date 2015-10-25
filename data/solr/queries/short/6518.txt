@@ -1,1 +1,0 @@
-CachingDirectoryFactory subclasses must init directory with NoLockFactory, because the real lock factory gets set later via injectLockFactory

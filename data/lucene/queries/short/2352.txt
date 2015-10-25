@@ -1,1 +1,0 @@
-Add a new TestBackwardsCompatibility index for flex backwards (a 3.0 one with also numeric fields)

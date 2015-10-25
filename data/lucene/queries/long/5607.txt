@@ -1,3 +1,0 @@
-Since Solr 4.8 will require Java 7 as a minimum, the description in the SYSTEM_REQUIREMENTS.txt need to be updated too. 
-
-Or maybe it should be merged into release notes. All it will probably have is use Java version after u56 (or whatever) and here is an obscure URL to known bugs (still valid for Java 7?).

@@ -1,7 +1,0 @@
-
-	it hangs out in 'init' which only depends on that module's 'resolve' (not test-framework)
-	installing in init is not great because init is called often.
-
-
-
-easy way to see the bug: ant clean clean-jars. Then cd modules/analysis/icu and 'ant test'.

@@ -1,1 +1,0 @@
-Stored-only fields automatically enable norms and tf when added to document

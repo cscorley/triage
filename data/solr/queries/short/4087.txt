@@ -1,1 +1,0 @@
-MoreLikeThis missing MAX_DOC_FREQ option

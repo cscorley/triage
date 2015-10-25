@@ -1,1 +1,0 @@
-Add managed schema to the list of files the admin UI cannot edit

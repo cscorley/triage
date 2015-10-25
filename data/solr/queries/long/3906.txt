@@ -1,1 +1,0 @@
-We should add a factory for this to solr, and try to add a test/example using JapaneseReadingFormFilter, to see if we can at least get some basic auto-suggest working for this language.

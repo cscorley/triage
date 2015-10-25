@@ -1,1 +1,0 @@
-QueuedThreadPool's configuration in the current code is effectively dead (pools are initialized after server's startup, not upon instantiation).

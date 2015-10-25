@@ -1,1 +1,0 @@
-CloseableThreadLocal should allow null Objects

@@ -1,3 +1,0 @@
-Since we removed seeking from IndexOutput, you can just use
-.getFilePointer() to get the length.  Also, nothing uses .setLength,
-so I think we should remove it too.

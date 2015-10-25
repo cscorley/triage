@@ -1,1 +1,0 @@
-SolrResourceLoader.openResource(String) now throws only IOException, which causes the clustering component to issue resource loading warnings even if the fallback resources from Carrot2 JAR is available.

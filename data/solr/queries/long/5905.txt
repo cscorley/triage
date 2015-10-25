@@ -1,1 +1,0 @@
-A NullPointerException is thrown if the required 'field' param is missing (in the hashCode method). This might confuse the users if they forget or misspell it.

@@ -1,5 +1,0 @@
-Continuing from the config parsing/validation work done in SOLR-4953, we should improve SolrConfig so that parsing fails if multiple instances of a "plugin" are found for types of plugins where only one is allowed to be used at a time.
-
-at the moment, SolrConfig.loadPluginInfo happily initializes a List<PluginInfo> for whatever xpath it's given, and then later code can either call List<PluginInfo> getPluginInfos(String) or PluginInfo getPluginInfo(String) (the later just being shorthand for getting the first item in the list.
-
-we could make getPluginInfo(String) throw an error if the list has multiple items, but i think we should also change the signature of loadPluginInfo to be explicit about how many instances we expect to find, so we can error earlier, and have a redundant check.

@@ -1,2 +1,0 @@
-The SolrItas sample app does not support multicore - it hard-codes the Solr URL to the default.
-[comment about security removed - this issue is solely about fixing Itas to work natively on multicore]

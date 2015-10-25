@@ -1,1 +1,0 @@
-XPathEntityprocessor must allow slurping all text from a given xml node and its children

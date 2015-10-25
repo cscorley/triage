@@ -1,1 +1,0 @@
-Move Query.weight() to IndexSearcher as protected method

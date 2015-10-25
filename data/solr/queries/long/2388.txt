@@ -1,3 +1,0 @@
-Apache Xerces and Xalan prints all warnings happening during XML parsing to stderr.
-
-This patch initializes all parsers with a logger interface that prints warnings to slf4j.

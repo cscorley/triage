@@ -1,3 +1,0 @@
-SOLR-3056 discusses introducing a default field type text_ja for Japanese in schema.xml.  This configuration will be improved by also introducing default stopwords and stoptags configuration for the field type.  
-
-I believe this configuration should be easily available and tunable to Solr users and I'm proposing that we introduce the same stopwords and stoptags provided in LUCENE-3745 to Solr example configuration.  I'm proposing that files can live in solr/example/solr/conf as stopwords_ja.txt and stoptags_ja.txt alongside stopwords_en.txt for English.  (Longer term, I think should reconsider our overall approach to this across all languages, but that's perhaps a separate discussion.)

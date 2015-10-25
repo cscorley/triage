@@ -1,9 +1,0 @@
-The biggest issue is that many parts of Solr rely on a local file system based Directory implementation - most notably, replication. This should all be changed to use the Directory and DirectoryFactory abstractions.
-
-Other parts of the code that count on the local file system for making paths and getting file sizes should also be changed to use Directory and/or DirectoryFactory.
-
-Original title: Replication should work with any Directory impl, not just local filesystem based Directories.
-
-I've wanted to do this for a long time - there is no reason replication should not support any directory impl. This will let us use the mockdir for replication tests rather than having to force an FSDir and lose all the extra test checks and simulations. This will improve our testing around replication a lot, and allow custom Directory impls to be used on multi node Solr.
-
-Expanded scope - full first class support for DirectoryFactory and Directory.

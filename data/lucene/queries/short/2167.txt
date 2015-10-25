@@ -1,1 +1,0 @@
-Implement StandardTokenizer with the UAX#29 Standard

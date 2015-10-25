@@ -1,1 +1,0 @@
-CartesianPolyFilterBuilder doesn't properly account for which tiers actually exist in the index 

@@ -1,1 +1,0 @@
-packaging targets include unnecessary things (extracted jetty webapp, build/, etc)

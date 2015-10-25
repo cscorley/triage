@@ -1,1 +1,0 @@
-Logging isn't working in branch_4x or trunk

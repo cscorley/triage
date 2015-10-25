@@ -1,1 +1,0 @@
-While working on a new 5.0 format (LUCENE-5969) i hit a failure, because this index was not really created with the official index format.

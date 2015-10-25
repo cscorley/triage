@@ -1,1 +1,0 @@
-TwoDoublesStrategy is broken for Circles

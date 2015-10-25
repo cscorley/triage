@@ -1,1 +1,0 @@
-make Query.createWeight public (or add back Query.createQueryWeight())

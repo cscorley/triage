@@ -1,1 +1,0 @@
-Non UTF-8 Text files having other than english texts(Japanese/Hebrew) are no getting indexed correctly.

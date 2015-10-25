@@ -1,1 +1,0 @@
-IndexReader.isCurrent() lies if documents were only removed by latest commit

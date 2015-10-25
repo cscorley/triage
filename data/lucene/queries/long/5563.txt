@@ -1,3 +1,0 @@
-This has fallen behind feature wise, and isn't really performant (the 4.1 block format is a great improvement).
-
-I think we should remove it, its served its purpose but its time to retire...

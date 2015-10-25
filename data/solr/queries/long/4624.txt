@@ -1,1 +1,0 @@
-Our forceNew uses were essentially hacks that have been replaced with correct solutions. We should remove it.

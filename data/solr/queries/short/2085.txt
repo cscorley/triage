@@ -1,1 +1,0 @@
-SolrJ fails with a NullPointerException when the order of result components changes

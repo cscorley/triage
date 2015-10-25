@@ -1,1 +1,0 @@
-Admin UI - Analysis form doesn't render results correctly when a CharFilter is used.

@@ -1,1 +1,0 @@
-currently SimpleTextCodec uses binary docValues we should move that to a simple text impl.

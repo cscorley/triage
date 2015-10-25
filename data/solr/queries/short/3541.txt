@@ -1,1 +1,0 @@
-Not all libs are copied into solrj-lib

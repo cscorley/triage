@@ -1,1 +1,0 @@
-If a shard fails to return and shards.tolerant=true, the faceting module will get a null pointer.  We should avoid that NPE

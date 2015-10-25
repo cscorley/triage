@@ -1,1 +1,0 @@
-FilterIndexReader doesn't work correctly with post-flex SegmentMerger

@@ -1,1 +1,0 @@
-setting shardHandlerFactory in solr.xml/solr.properties does not work

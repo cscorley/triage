@@ -1,1 +1,0 @@
-currently we only have one impl for DocumentsWriterPerThreadPool. We should add some more to make sure the interface is sufficient and to beef up tests. For testing I'm working on a randomized impl. selecting and locking states randomly.

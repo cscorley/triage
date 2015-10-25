@@ -1,3 +1,0 @@
-This idea was mentioned by Robert on LUCENE-5300
-
-Some codecs or FieldCache impls use SingletonSortedSetDocValues when a field which is supposed to be multi-valued is actually single-valued. By having a getter on this class to get back the wrapped SortedDocValues instance, we could add more specialization (which often already exists, eg. Solr's DocValuesFacets already have a specialized impl for SortedDocValues).

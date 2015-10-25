@@ -1,1 +1,0 @@
-A new leader on cluster startup should also run the leader sync process in case there was a bad cluster shutdown.

@@ -1,1 +1,0 @@
-PrecedenceQueryParser misinterprets queries starting with NOT

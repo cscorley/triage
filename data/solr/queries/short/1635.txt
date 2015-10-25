@@ -1,1 +1,0 @@
-DOMUtils doesn't wrap NumberFormatExceptions with useful errors

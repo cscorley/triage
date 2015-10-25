@@ -1,1 +1,0 @@
-NPE when facetting using facet.prefix on an "empty" field

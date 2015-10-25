@@ -1,1 +1,0 @@
-Upgrade bundled Jetty with latest from vendor

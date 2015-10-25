@@ -1,1 +1,0 @@
-LuceneDictionary skips first word in enumeration

@@ -1,5 +1,0 @@
-SOLR-5623 included some conversation about the dilemmas of exception management and reporting in the analysis chain. 
-
-I've belatedly become educated about the infostream, and this situation is a job for it. The DocInverterPerField can note exceptions in the analysis chain, log out to the infostream, and then rethrow them as before. No wrapping, no muss, no fuss.
-
-There are comments on this JIRA from a more complex prior idea that readers might want to ignore.

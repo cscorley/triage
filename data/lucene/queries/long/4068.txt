@@ -1,2 +1,0 @@
-Improve IW#addDocuments(...) javadoc. 
-Describer how blocks can be used regarding to index updates.

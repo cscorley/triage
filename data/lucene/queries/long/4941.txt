@@ -1,1 +1,0 @@
-The sorting of the 'from' terms occurs as often as the number of segments. This only needs to happen once.

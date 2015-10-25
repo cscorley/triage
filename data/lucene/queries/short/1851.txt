@@ -1,1 +1,0 @@
-'ant javacc' in root project should also properly create contrib/surround Java files

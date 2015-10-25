@@ -1,1 +1,0 @@
-The new lucene token architecture causes bad indexing performance if you don't happen to use reusable token streams.

@@ -1,1 +1,0 @@
-Creating a collection via Collection API. Schema points to a file which is not in our config folder in ZooKeeper. Getting the infamous error message ZkSolrResourceLoader does not support getConfigDir() instead of the more helpful message about which resource is missing.

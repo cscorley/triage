@@ -1,1 +1,0 @@
-http://jenkins.thetaphi.de/job/Lucene-Solr-4.x-MacOSX/1211/

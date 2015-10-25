@@ -1,3 +1,0 @@
-TimSort (http://svn.python.org/projects/python/trunk/Objects/listsort.txt, used by python and Java's Arrays.sort(Object[]) in particular) is a sorting algorithm that performs very well on partially-sorted data. Indeed, with TimSort, sorting an array which is in reverse order or a finite concatenation of sorted arrays is a linear operation (instead of O(n ln)).
-
-The sorter API could benefit from this algorithm when using Sorter.REVERSE_DOCS or merging several sorted readers for example.

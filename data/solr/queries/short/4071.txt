@@ -1,1 +1,0 @@
-CollectionsHandler.handleCreateAction() doesn't validate parameter count and type

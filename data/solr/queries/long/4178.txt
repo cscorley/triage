@@ -1,1 +1,0 @@
-Should should help avoid deadlock situations as the replication handler threads attempt to open new index writers and what not even while and after directory factory close is occurring.

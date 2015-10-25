@@ -1,1 +1,0 @@
-The implementation for internal compression is currently broken. a Wrong parameter value is used to activate the feature in SnapPuller.

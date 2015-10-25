@@ -1,1 +1,0 @@
-It would be nice to have a -cmd list that would simply call zkClient.printLayoutToStdOut()

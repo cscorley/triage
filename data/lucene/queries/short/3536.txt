@@ -1,1 +1,0 @@
-lucene-join and lucene-facet artifacts are missing from 'ant generate-maven-artifacts' output

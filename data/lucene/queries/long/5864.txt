@@ -1,3 +1,0 @@
-Follow-up of LUCENE-5836.
-
-The fact that BytesRef (and CharsRef, IntsRef, LongsRef) can be used as either pointers to a section of a byte[] or as buffers raises issues. The idea would be to keep BytesRef but remove all the buffer methods like copyBytes, grow, etc. and add a new class BytesRefBuilder that wraps a byte[] and a length (but no offset), has grow/copyBytes/copyChars methods and the ability to build BytesRef instances.

@@ -1,1 +1,0 @@
-Allow current single core deployments to be specified by solr.xml

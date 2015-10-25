@@ -1,1 +1,0 @@
-Our binary doc values producers keep on creating new byte[] arrays and copying bytes when a value is requested, which likely doesn't help performance. This has been done because of the way fieldcache consumers used the API, but we should try to fix it in 5.0.

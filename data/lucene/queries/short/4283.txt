@@ -1,1 +1,0 @@
-Support more frequent skip with Block Postings Format

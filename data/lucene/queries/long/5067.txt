@@ -1,3 +1,0 @@
-Currently most directory code is tested indirectly. But there are still corner cases like LUCENE-5066, NRCachingDirectory.testNoDir, TestRAMDirectory.testSeekToEOFThenBack, that only target specific directories where some user reported the bug. If one of our other directories has these bugs, the best we can hope for is some other lucene test will trip it indirectly and we will find it after lots of debugging...
-
-Instead we should herd up all these tests into a base class and test every directory explicitly and directly with it (like we do with the codec API).

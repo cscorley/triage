@@ -1,1 +1,0 @@
-CachingDirectoryFactory#remove should not attempt to empty/remove the index right away but flag for removal after close.

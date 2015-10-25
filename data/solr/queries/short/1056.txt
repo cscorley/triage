@@ -1,1 +1,0 @@
-The comparison used with the Reader to evaluate the end of text in the class ClobTransformer must be '>' instead of '!='

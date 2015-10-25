@@ -1,1 +1,0 @@
-Currently group.truncate isn't supported when executing a distributed grouped search.

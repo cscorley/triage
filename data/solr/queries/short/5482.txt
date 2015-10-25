@@ -1,1 +1,0 @@
-We should add an option to the ChaosMonkey's to do more complicated partition failures on Linux, as well as simulate hard fails of Jetty.

@@ -1,1 +1,0 @@
-Use a native priority queue to order facet results

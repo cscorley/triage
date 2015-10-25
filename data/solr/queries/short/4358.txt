@@ -1,1 +1,0 @@
-SolrJ, by preventing multi-part post, loses key information about file name that Tika needs

@@ -1,1 +1,0 @@
-Because we have jcl-over-slf4j jar in core lib, commons-logging-1.1.1.jar can be removed from solr/contrib/extraction/lib.

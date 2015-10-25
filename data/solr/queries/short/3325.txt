@@ -1,1 +1,0 @@
-Linking to query page in UI with parameters should execute the query

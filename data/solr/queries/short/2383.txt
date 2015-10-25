@@ -1,1 +1,0 @@
-Velocity: Generalize range and date facet display

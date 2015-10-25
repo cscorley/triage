@@ -1,1 +1,0 @@
-NamedSPILoader.reload needs to be synchronized

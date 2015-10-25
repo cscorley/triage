@@ -1,1 +1,0 @@
-specialize payload processing from of DocsAndPositionsEnum

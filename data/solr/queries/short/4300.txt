@@ -1,1 +1,0 @@
-Possible race condition in CoreContainer.getCore() when lazily loading cores.

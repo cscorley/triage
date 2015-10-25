@@ -1,2 +1,0 @@
-An update will first go through processors until it gets to the point where it is forwarded to the leader (or forwarded to replicas if already on the leader).
-We need a way to skip over the processors that were already run (perhaps by using a processor chain dedicated to sub-updates?

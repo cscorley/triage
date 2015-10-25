@@ -1,1 +1,0 @@
-StatsComponent can work with DocValues, but it still required to use indexed=true for the "missing" stat to work. Missing values should be obtained from the docValues too.

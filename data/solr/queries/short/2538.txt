@@ -1,1 +1,0 @@
-Math overflow in LongRangeEndpointCalculator and DoubleRangeEndpointCalculator 

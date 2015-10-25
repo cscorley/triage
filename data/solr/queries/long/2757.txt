@@ -1,4 +1,0 @@
-Would like the ability to use min(1,5,10,11) to return 1. To do that today it is parenthesis nightmare:
-min(min(min(1,5),10),11)
-
-Should extend max() as well.

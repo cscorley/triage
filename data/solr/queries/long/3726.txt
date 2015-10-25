@@ -1,1 +1,0 @@
-The purpose of this issue is to allow customizing the configuration process of the http clients that solr uses internally.

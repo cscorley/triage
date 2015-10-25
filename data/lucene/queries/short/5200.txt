@@ -1,1 +1,0 @@
-HighFreqTerms has confusing behavior with -t option

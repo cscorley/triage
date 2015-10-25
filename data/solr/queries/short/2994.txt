@@ -1,1 +1,0 @@
-Solr no longer compiles in IntelliJ

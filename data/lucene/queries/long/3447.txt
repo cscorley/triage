@@ -1,1 +1,0 @@
-The prettify files are not included with the generated javadoc .jars, which means that if someone expands a certain javadocs .jar, and this .jar relies on prettify (such as highlighter and soon facet), the javadocs will not display properly.

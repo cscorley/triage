@@ -1,1 +1,0 @@
-clusterstate#getSlices and getSlicesMap should always return all slices.

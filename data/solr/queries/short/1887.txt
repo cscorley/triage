@@ -1,1 +1,0 @@
-Improve log message at DefaultSolrHighlighter when use.FastVectorHighlighter=true

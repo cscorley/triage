@@ -1,1 +1,0 @@
-During relevancy tuning it's important to know exactly which documents the client has seen. Right now the only way to get that list is to splice into the HTTP traffic. Preferably the IDs could be logged along with the query.

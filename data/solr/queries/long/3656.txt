@@ -1,2 +1,0 @@
-When a core reload is issued, we should use the same data dir.
-This causes problems for things like our test framework that reload the core and end up with the data dir in a different place.

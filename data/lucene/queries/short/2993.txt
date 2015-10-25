@@ -1,1 +1,0 @@
-Lucene Test Framework javadoc's main page should be specific to the framework, rather than using Lucene Core's overview.html

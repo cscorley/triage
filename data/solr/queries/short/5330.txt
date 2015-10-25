@@ -1,1 +1,0 @@
-PerSegmentSingleValuedFaceting overwrites facet values

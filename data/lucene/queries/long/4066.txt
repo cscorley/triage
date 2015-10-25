@@ -1,1 +1,0 @@
-ant test -Dtestcase=TestDocumentsWriterDeleteQueue -Dtests.method=testUpdateDelteSlices -Dtests.seed=37979D1CE2E7BD80 -Dtests.locale=nl_BE -Dtests.timezone=US/Mountain -Dtests.multiplier=3 -Dargs="-Dfile.encoding=UTF-8"

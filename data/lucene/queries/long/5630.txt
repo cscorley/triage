@@ -1,5 +1,0 @@
-This test wasn't working at all, it would always pass.
-
-It is sensitive to the strings inside exception messages, if we change those, it might suddenly stop working.
-
-It would be great to improve this thing to be less fragile.

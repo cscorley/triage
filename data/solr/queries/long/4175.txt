@@ -1,7 +1,0 @@
-steps to reproduce the issue:
-
-1) Add two components of the same type to the components chain of the request handler
-2) start solr with assertions enabled
-3) run a query to the request handler configured in 1 with debugQuery=true
-
-The query will throw a java.lang.AssertionError. I'll attach a test case to reproduce the issue.

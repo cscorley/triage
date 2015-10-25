@@ -1,1 +1,0 @@
-Allow case insensitive Hunspell stemming

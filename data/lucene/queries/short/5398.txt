@@ -1,1 +1,0 @@
-NormValueSource unable to read long field norm

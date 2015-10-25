@@ -1,1 +1,0 @@
-MoreLikeThis doesn't return a score when mlt.count is set to 10

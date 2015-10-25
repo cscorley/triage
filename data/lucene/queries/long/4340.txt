@@ -1,1 +1,0 @@
-We should move all concrete postings formats and codecs but Lucene40 to a module.

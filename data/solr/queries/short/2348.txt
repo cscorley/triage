@@ -1,1 +1,0 @@
-No error reported when using a FieldCached backed ValueSource for a field Solr knows won't work

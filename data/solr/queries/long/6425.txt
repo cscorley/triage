@@ -1,1 +1,0 @@
-Revealed by 'HdfsBasicDistributedZkTest frequently fails'.

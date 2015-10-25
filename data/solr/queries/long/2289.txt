@@ -1,1 +1,0 @@
-Half-dozen or so of the documents in the exampledocs directory all have the same location, which makes it a bit confusing when playing with geospatial, at least I scratched my head wondering whether it was working. Note that this another reason to include the distance in the returned doc .

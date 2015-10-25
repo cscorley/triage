@@ -1,1 +1,0 @@
-As not caught SolrException, leading OverseerCollectionProcessor abort.

@@ -1,1 +1,0 @@
-Update eclipse setting to match ivy configuration changes

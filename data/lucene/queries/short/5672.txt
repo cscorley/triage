@@ -1,1 +1,0 @@
-Addindexes does not call maybeMerge

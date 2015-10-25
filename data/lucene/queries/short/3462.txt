@@ -1,1 +1,0 @@
-Jenkins builds hang quite often in TestIndexWriterWithThreads.testCloseWithThreads

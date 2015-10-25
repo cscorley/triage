@@ -1,5 +1,0 @@
-Each ordinal in SortedDocValuesImpl has a corresponding address to find its location in the big byte[] to support lookupOrd()
-
-Today this uses GrowableWriter with absolute addresses.
-
-But it would be much better to use MonotonicAppendingLongBuffer.

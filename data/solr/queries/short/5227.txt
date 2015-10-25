@@ -1,1 +1,0 @@
-attempting to configured a dynamicField as required, or using a default value, should fail.

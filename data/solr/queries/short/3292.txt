@@ -1,1 +1,0 @@
-/browse example fails to load on 3x: "no field name specified in query and no default specified via 'df' param"

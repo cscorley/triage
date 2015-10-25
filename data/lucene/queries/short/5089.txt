@@ -1,1 +1,0 @@
-Update morfologik (polish stemmer) to 1.6.0

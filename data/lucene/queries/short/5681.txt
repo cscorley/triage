@@ -1,1 +1,0 @@
-Fix RAMDirectory's IndexInput to not double-buffer on slice()

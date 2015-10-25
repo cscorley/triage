@@ -1,1 +1,0 @@
-Solrj support for Field Collapsing / Grouping query results parsing

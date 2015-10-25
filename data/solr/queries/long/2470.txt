@@ -1,1 +1,0 @@
-/browse was broken w/o anyone realizing... we should have a basic test for it

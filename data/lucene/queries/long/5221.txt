@@ -1,9 +1,0 @@
-SimilarityBase.computeNorm Javadoc indicates that the doc length should be encoded in the same way as TFIDFSimilarity. However, when discountOverlaps is false, what gets encoded is SmallFloat.floatToByte315((boost / (float) Math.sqrt(docLen / boost))); rather than  SmallFloat.floatToByte315((boost / (float) Math.sqrt(length))); due to the extra / state.getBoost() term in SimilarityBase.computeNorm: 
-
-
-  final float numTerms;
-  if (discountOverlaps)
-    numTerms = state.getLength() - state.getNumOverlap();
-  else
-    numTerms = state.getLength() / state.getBoost();
-  return encodeNormValue(state.getBoost(), numTerms);

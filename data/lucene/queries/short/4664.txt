@@ -1,1 +1,0 @@
-oal.codec.compressing: Make Compressor and Decompressor public

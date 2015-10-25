@@ -1,1 +1,0 @@
-clean up Lucene410DVProducer concurrency

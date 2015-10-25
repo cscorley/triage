@@ -1,1 +1,0 @@
-Add missing entries to the .gitignore file 

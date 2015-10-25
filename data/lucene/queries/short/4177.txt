@@ -1,1 +1,0 @@
-TestPerfTasksLogic.testBGSearchTaskThreads sometimes fails or hangs on Windows

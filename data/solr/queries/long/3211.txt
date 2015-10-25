@@ -1,3 +1,0 @@
-A couple users on the mailing list recently asked about being able to override the "mm" parameter when SpellCheckComponent issues queries to check for # hits for a collation candidate.  The issue is if the query had mm=0, pretty much everything will generate hits.  But for collation checking purposes, a low "mm" is almost never desirable.
-
-It might be worthwhile to generalize this to let other parameters be overridden as well.

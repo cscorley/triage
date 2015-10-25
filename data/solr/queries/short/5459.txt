@@ -1,1 +1,0 @@
-Try loading a temporary core when saving a file in the admin UI config editing mode

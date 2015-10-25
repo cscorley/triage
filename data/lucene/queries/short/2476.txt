@@ -1,1 +1,0 @@
-Constructor of IndexWriter let's runtime exceptions pop up, while keeping the writeLock obtained

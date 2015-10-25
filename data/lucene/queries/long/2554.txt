@@ -1,3 +1,0 @@
-The surrogate dance in the preflex codec (which must dynamically remap terms from UTF16 order to unicode code point order) is buggy.
-
-To better test it, I want to add a test-only codec, preflexrw, that is able to write indices in the pre-flex format.  Then we should also fix tests to randomly pick codecs (including preflexrw) so we better test all of our codecs.

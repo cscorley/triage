@@ -1,8 +1,0 @@
-I reviewed the example solrconfig.xml on branch_3x to see if anything needs addressing prior to release.
-
-	the <lib/> includes don't bring in the DIH, yet it does for most other contribs.  It strictly isn't necessary, but the DIH is probably the most used contrib and some people will want to add a DIH request-handler declaration and expect it to work. I recall someone failed to do this recently on the user list for 3x. FYI the DIH was once included in the solr war by default but that changed.
-	facet.date is deprecated in favor of facet.range. Consequently the /browse interface should use facet.range instead.
-
-
-
-I could submit a patch but I'd like agreement first so I don't waste my time.

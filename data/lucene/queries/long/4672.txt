@@ -1,3 +1,0 @@
-just spun off from LUCENE-4670: this would be a good one to add as well.
-
-eventually we should probably try to cover the entire index.

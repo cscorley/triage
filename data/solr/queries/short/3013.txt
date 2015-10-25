@@ -1,1 +1,0 @@
-Add UIMA based tokenizers / filters that can be used in the schema.xml

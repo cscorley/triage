@@ -1,1 +1,0 @@
-Fix PayloadProcessorProvider to no longer use Directory for lookup, instead AtomicReader

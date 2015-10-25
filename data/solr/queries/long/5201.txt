@@ -1,1 +1,0 @@
-As reported in http://markmail.org/thread/2psiyl4ukaejl4fx UIMAUpdateRequestProcessor instantiates an AnalysisEngine for each request which is bad for performance therefore it'd be nice if such AEs could be reused whenever that's possible.

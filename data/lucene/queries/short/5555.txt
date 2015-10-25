@@ -1,1 +1,0 @@
-SortedInputIterator does not encode/decode contexts when payload is present

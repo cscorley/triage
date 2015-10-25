@@ -1,1 +1,0 @@
-This issue is to capture small changes to the Lucene spatial module that don't deserve their own issue.

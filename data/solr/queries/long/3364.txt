@@ -1,1 +1,0 @@
-Jan pointed out, that the Logging UI currently allows multiple open selections. Opening a new selection should close all others.

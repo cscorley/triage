@@ -1,1 +1,0 @@
-NPE when uniqueKey is not specified in schema

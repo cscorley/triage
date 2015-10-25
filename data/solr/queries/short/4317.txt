@@ -1,1 +1,0 @@
-SolrTestCaseJ4: Can't avoid "collection1" convention

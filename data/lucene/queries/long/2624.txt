@@ -1,5 +1,0 @@
-Snowball added new languages. This patch adds support for them.
-
-http://snowball.tartarus.org/algorithms/armenian/stemmer.html
-http://snowball.tartarus.org/algorithms/catalan/stemmer.html
-http://snowball.tartarus.org/algorithms/basque/stemmer.html

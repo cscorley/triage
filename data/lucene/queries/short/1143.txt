@@ -1,1 +1,0 @@
-DocumentsWriter.abort fails to clear docStoreOffset

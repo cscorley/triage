@@ -1,1 +1,0 @@
-In UIMAUpdateRequestProcessor the catch block in processAdd() method can have a StringIndexOutOfBoundsException while composing the error message if the logging field is not set and the text being processed is shorter than 100 chars (...append(text.substring(0, 100))...).

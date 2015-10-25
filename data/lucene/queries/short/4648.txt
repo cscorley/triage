@@ -1,1 +1,0 @@
-PostingsHighlighter should score only with within-document statistics

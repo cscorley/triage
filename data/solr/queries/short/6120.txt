@@ -1,1 +1,0 @@
-zkcli.sh class not fount error /opt/solr-4.8.1/example/solr-webapp is empty

@@ -1,3 +1,0 @@
-StandardTokenizer.setMaxTokenLength(int) is not exposed by StandardTokenizerFactory, but should be.
-
-From this solr-user email: http://www.lucidimagination.com/search/document/c31fde9a1dad7360/how_to_index_long_words_with_standardtokenizerfactory

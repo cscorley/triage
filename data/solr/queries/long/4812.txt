@@ -1,6 +1,0 @@
-When hl.q is an edismax query, Highligting will ignore the query specified in hl.q
-
-edismax highlighting query hl.q=
-{!edismax qf=title v=Software}
-
-function getHighlightQuery in edismax don't parse highlight query so it always return null so hl.q is ignored.

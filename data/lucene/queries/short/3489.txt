@@ -1,1 +1,0 @@
-Refactor test classes that use assumeFalse(codec != SimpleText, Memory) to use new annotation and move the expensive methods to separate classes

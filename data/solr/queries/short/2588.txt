@@ -1,1 +1,0 @@
-Make Velocity an optional dependency in SolrCore

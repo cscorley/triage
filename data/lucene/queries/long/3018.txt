@@ -1,4 +1,0 @@
-Currently the native directory impl in contrib/misc require manual action to compile the c code (partially) documented in 
- https://svn.apache.org/repos/asf/lucene/dev/trunk/lucene/contrib/misc/src/java/overview.html
-
-yet it would be nice if we had an ant task and documentation for all platforms how to compile them and set up the prerequisites.

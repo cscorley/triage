@@ -1,1 +1,0 @@
-lucene-jars-to-solr should fail if copying any of the jars fail, and clean should remove the jars in that directory

@@ -1,1 +1,0 @@
-The 'addreplica' API does not support an 'async' parameter which was added by SOLR-5477.

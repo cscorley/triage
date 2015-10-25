@@ -1,3 +1,0 @@
-SolrJ RangeFacets have no way of retrieving the before/after count specified by the facet.range.other parameter.
-
-Attached is a patch that adds this information.

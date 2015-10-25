@@ -1,1 +1,0 @@
-Improve Memory Consumption for merging DocValues SortedBytes variants

@@ -1,5 +1,0 @@
-If I execute a query in the Solr Admin Query UI, the default XML "writer" displays only the raw text of the Solr response XML element values, but none of the XML syntax itself, rendering the response display on the Query page almost completely useless. JSON, Ruby, et al display very reasonably formatted output, but XML does not.
-
-You can click on the icon next to the generated query URL to display the response in a browser tab of its own and then it does display the XML very reasonably, but the framed display on the query page is simply not readable.
-
-My recollection is that the old UI had this same problem.

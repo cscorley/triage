@@ -1,1 +1,0 @@
-The LukeRequestHandler could made much easier to follow, and the overloading of numTerms is confusing. This was made possible by th ework on SOLR-3121 and that patch should be applied first.

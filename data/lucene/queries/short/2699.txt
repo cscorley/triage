@@ -1,1 +1,0 @@
-Update StandardTokenizer and UAX29Tokenizer to Unicode 6.0.0

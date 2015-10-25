@@ -1,1 +1,0 @@
-TaxonomyReader drops empty string component from CategoryPath

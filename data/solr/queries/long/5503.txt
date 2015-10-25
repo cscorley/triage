@@ -1,1 +1,0 @@
-Most, we want to retry when a leader is not available - error 500 and IOExceptions are not as desirable for retries. We don't know if the request was successful or failed. Best to let the outside client get the error and deal with this.

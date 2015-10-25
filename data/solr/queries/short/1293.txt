@@ -1,1 +1,0 @@
-Support for large no:of cores and faster loading/unloading of cores

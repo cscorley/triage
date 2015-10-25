@@ -1,1 +1,0 @@
-TrecContentSource should use a fixed encoding, rather than system dependent

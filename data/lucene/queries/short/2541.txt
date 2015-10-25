@@ -1,1 +1,0 @@
-NumericRangeQuery errors with endpoints near long min and max values

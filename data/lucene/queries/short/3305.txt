@@ -1,1 +1,0 @@
-Kuromoji code donation - a new Japanese morphological analyzer

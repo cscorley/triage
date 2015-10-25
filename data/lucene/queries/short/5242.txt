@@ -1,1 +1,0 @@
-DirectoryTaxonomyWriter.replaceTaxonomy did not fully reset its state

@@ -1,1 +1,0 @@
-FastVectorHighlighter: Make FieldFragList "plugable"

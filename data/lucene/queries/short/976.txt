@@ -1,1 +1,0 @@
-MMapDirectory is missing newly added openInput method to FSDirectory

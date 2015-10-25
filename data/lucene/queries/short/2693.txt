@@ -1,1 +1,0 @@
-Add delete term and query need to more precisely record the bytes used

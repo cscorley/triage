@@ -1,3 +1,0 @@
-The memory graphs on the system dashboard don't show memory useage anymore.
-
- 

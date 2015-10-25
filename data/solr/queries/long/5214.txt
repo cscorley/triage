@@ -1,8 +1,0 @@
-The problem we saw was that splitting a shard with many segments and documents
-failed by running out of heap space.
-
-Increasing heap space so that all existing segments could be merged into one
-overall segment does not seem practical. Running the split without segment
-merging worked.
-
-Could split always run without merging, or merge=true/false be an optional parameter for the SPLITSHARD action?

@@ -1,1 +1,0 @@
-Spinoff from java-user thread "GroupingSearch return 0 when setAllGroups(true)" ( http://markmail.org/message/cv52f4nr3t5be5xw ).

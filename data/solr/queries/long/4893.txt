@@ -1,6 +1,0 @@
-Add a new field update processor selector that will configure the processor to select fields that match any schema field, or that don't match any schema field, depending on its boolean parameter, e.g. to select fields that don't match any schema field:
-
-
-
-<bool name="fieldNameMatchesSchemaField">false</bool>
-

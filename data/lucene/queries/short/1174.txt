@@ -1,1 +1,0 @@
-outdated information in Analyzer javadoc

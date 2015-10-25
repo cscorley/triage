@@ -1,1 +1,0 @@
-It would be great to allow custom synonym formats to work with SynonymFilterFactory.  There is already a comment in the code to make it pluggable.

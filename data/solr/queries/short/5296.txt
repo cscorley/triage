@@ -1,1 +1,0 @@
-Creating a collection with implicit router adds shard ranges to each shard

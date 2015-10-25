@@ -1,1 +1,0 @@
-spellcheck.collateMaxCollectDocs estimates seem to be meaninless -- can lead to "ArithmeticException: / by zero"

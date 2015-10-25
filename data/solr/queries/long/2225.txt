@@ -1,9 +1,0 @@
-fail case:
-
-start with default collection set to collection1
-remove core collection1
-default collection on CoreContainer is still set to collection1
-add core collection1
-it doesn't act like the default core
-
-we might do as the summary suggests, or when the default core is removed, we reset to no default core until one is again explicitly set

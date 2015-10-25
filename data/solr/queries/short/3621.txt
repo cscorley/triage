@@ -1,1 +1,0 @@
-Fix concurrency race around newIndexWriter 

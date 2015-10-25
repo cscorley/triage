@@ -1,1 +1,0 @@
-StatsComponent doesn`t have unit test. I can supply appropriate patch if needed. 

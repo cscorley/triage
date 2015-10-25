@@ -1,1 +1,0 @@
-Add Lucene Index heap usage to LukeRequestHandler 

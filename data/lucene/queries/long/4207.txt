@@ -1,3 +1,0 @@
-Was surprised to hear from Christian that lucene/solr tests take him 40 minutes on a modern mac.
-
-This is too much. Lets look at the slowest tests and make them reasonable.

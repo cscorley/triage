@@ -1,1 +1,0 @@
-indexwriter creates unwanted termvector info

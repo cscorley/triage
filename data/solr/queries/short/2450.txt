@@ -1,1 +1,0 @@
-Carrot2 clustering should use both its own and Solr's stop words

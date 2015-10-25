@@ -1,1 +1,0 @@
-JAR resolution/ cleanup should be done automatically for ant clean/ eclipse/ resolve.

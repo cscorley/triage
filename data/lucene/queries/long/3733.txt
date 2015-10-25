@@ -1,1 +1,0 @@
-This issue will handle the remaining issues in the commit last night (LUCENE-2858). A new branch will be created and several problems handled in sub-tasks.

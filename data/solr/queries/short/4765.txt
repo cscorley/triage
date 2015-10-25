@@ -1,1 +1,0 @@
-The new Collections API test deleteCollectionWithDownNodes fails often with a server 500 error.

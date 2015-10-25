@@ -1,4 +1,0 @@
-Right now when attempting to reload a non existent core, the CoreAdmin response just contains a stack trace and a message saying "Error handling 'reload' action" with no further information. 
-It'd be good to change it to continue printing stack trace in the log but returning a readable message with more information.
-
-Ideally, we should be fixing this for other CoreAdmin calls too.

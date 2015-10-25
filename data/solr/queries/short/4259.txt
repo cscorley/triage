@@ -1,1 +1,0 @@
-Carrot2 dependency should be declared on the mini version, not the core

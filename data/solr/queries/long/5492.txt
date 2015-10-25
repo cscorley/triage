@@ -1,1 +1,0 @@
-The shards.info returns all the replicas in the shard that returned the response but it is impossible to figure out which replica was actually used. I propose to add the actual shard that served the request as another attribute in the shards.info response.

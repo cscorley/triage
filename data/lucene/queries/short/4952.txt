@@ -1,1 +1,0 @@
-DrillSideways should expose "scoreSubDocsAtOnce" control

@@ -1,1 +1,0 @@
-move default example core config/data into a collection1 folder

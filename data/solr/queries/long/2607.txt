@@ -1,7 +1,0 @@
-The /clients directory is a bit of a mess.  The only actively maintained client SolrJ is actually in the /dist directory!   The other clients that used to be in here, /php and /javascript (I think!) have been moved.  The only one is /ruby, and it isn't actively maintained the way other ruby clients are.
-
-I'd recommend just removing the /clients directory since it's very confusing to a new user who would logically go here to find clients, and only find a ruby one!  It would also let us slim down the size of the download.
-
-Alterntively if we want the /clients directory, then lets copy over the solrj lib to this dir instead of /dist
-
-I am happy to submit a patch if this makes sense.

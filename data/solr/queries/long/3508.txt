@@ -1,7 +1,0 @@
-A small improvement to the JSON update format would be to allow for simpler delete-by-id
-
-
-
-{"delete":"myid"}
-{"delete":["id1","id2"]}
-

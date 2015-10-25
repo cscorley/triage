@@ -1,1 +1,0 @@
-Using cloudSolrServer.setDefaultCollection(collectionId) does not work as intended for an alias spanning more than 1 collection.

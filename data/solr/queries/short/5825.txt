@@ -1,1 +1,0 @@
-Separate http request creation and execution in SolrJ

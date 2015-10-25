@@ -1,1 +1,0 @@
-CloudSolrServer doesn't allow to index multiple collections with one instance of server

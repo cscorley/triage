@@ -1,1 +1,0 @@
-Misleading exception when creating collections in SolrCloud with bad configuration

@@ -1,3 +1,0 @@
-For some languages, the detector will detect sub-languages, such as LangDetect detecting zh-tw or zh-cn for Chinese. Tika detector only detects zh. Today you can use lcmap to map these two into one code, e.g. langid.map.lcmap=zh-cn:zh zh-tw:zh. But the langField output is not changed.
-
-We need an option for langField as well.

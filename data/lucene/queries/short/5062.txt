@@ -1,1 +1,0 @@
-Spatial CONTAINS is sometimes incorrect for overlapped indexed shapes

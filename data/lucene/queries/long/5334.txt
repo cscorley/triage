@@ -1,9 +1,0 @@
-I would like to add the concept of namespaces to the expressions javascript compiler using '.' as the operator.
-
-Example of namespace usage in functions:
-AccurateMath.sqrt(field)
-FastMath.sqrt(field)
-
-Example of namespace usage in variables:
-location.latitude
-location.longitude

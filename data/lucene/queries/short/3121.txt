@@ -1,1 +1,0 @@
-FST should offer lookup-by-output API when output strictly increases

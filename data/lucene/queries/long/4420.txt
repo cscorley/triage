@@ -1,5 +1,0 @@
-Currently it only expects a changes/ with html in the lucene/ directory.
-
-But now we have a changes2html running for solr, we should add the same checks.
-
-Also need to fix the fake-release-building in top-level build.xml to include this like it does for lucene.

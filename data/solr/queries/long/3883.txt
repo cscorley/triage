@@ -1,4 +1,0 @@
-Including all of the original request params can cause really undesirable stuff to happen.
-
-Reported by Dan Sutton:
-http://find.searchhub.org/document/c21c27f20e115ce9

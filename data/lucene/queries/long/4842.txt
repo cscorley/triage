@@ -1,1 +1,0 @@
-SynonymMap.Builder.join() throws ArrayIndexOutOfBounds when you give it more than one String: the amount it grows to add the word separator is off by one; it fails to set the length of the CharsRef it populates; and it needlessly calls CharsRef.grow() twice per word, first for the word separator and again for the word to be appended.

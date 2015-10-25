@@ -1,1 +1,0 @@
-background merge hit exception && Caused by: java.lang.ArrayIndexOutOfBoundsException

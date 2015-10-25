@@ -1,7 +1,0 @@
-In a few spots, but notably in the constructor for SolrZkClient, a try-catch block will catch Throwable and throw a new RuntimeException with no cause or message. Either the RuntimeException should wrap the Throwable that was caught, some sort of message should be added, or the type of the exception should be changed to SolrException so calling code can catch these exceptions without casting too broad of a net.
-
-Reproduce this by creating a CloudSolrServer that points to a URL that is valid, but has no server running:
-
-CloudSolrServer server = new CloudSolrServer("localhost:9983");
-
-server.connect();

@@ -1,1 +1,0 @@
-Consolidate Lucene's QueryParsers into a module

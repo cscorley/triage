@@ -1,1 +1,0 @@
-CachingDirectoryFactory should not return any directories after it has been closed.

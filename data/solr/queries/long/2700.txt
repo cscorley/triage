@@ -1,1 +1,0 @@
-A transaction log is needed for durability of updates, for a more performant realtime-get, and for replaying updates to recovering peers.

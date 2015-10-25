@@ -1,6 +1,0 @@
-Lucene is getting new Token APIs for better performance.
-
-	token reuse
-	char[] offset + len instead of String
-Requires a new version of lucene.
-

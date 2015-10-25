@@ -1,5 +1,0 @@
-I checked and historically this is always the case.
-
-I almost spun the first rc with -Dversion=4.0, but that would be inconsistent.
-
-currently 'ant nightly-smoke' bogusly uses versions like that as well.

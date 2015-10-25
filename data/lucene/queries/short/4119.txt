@@ -1,1 +1,0 @@
-SegmentInfoFormat.getSegmentInfos{Reader,Writer} should be singular

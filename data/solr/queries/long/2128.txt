@@ -1,2 +1,0 @@
-We should be able to specify function parameters as $foo (where foo is another request parameter).
-Ideally the parameter could itself be a full function.

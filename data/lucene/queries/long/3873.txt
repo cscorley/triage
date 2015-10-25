@@ -1,5 +1,0 @@
-Mike made a MockGraphTokenFilter on LUCENE-3848.
-
-Many filters currently arent tested with anything but a simple tokenstream.
-we should test them with this, too, it might find bugs (zero-length terms,
-stacked terms/synonyms, etc)

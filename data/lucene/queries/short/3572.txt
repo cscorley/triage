@@ -1,1 +1,0 @@
-MultiIndexDocValues pretends it can merge sorted sources

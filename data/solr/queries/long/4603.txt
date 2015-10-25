@@ -1,1 +1,0 @@
-This way, anyone with a custom Directory that impls hashcode/equals won't be able to interfere with proper directory handling.

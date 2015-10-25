@@ -1,1 +1,0 @@
-Add an option to delete index through CoreAdmin UNLOAD action

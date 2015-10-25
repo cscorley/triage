@@ -1,3 +1,0 @@
-Example schema defines int (TrieIntField), tint (TrieIntField) and pint (IntField) which is confusing. In particular, the comments for int fields tell users to use tint types (which is the same thing).
-
-Let us remove tint, tlong, tdouble, tdate types from example schemas and fix the comments - carefully noting the things trie fields do not work with.

@@ -1,1 +1,0 @@
-Don't rely on the computer locale to generate javadocs

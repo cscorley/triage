@@ -1,1 +1,0 @@
-Document that StreamingUpdateSolrServer swallows exceptions

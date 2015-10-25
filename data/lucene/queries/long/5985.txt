@@ -1,3 +1,0 @@
-We have the migration guide (formatted as markdown) in the Lucene root directory.
-
-Unfortunately, not all breaking changes are explained there (like NIO2 changes or removal of FieldCache). We should collect those breaking issues and give some instructions how to migrate your code to 5.0.

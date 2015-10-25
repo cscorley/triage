@@ -1,1 +1,0 @@
-Caching does not work when using RMI

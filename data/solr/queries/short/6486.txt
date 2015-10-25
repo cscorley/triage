@@ -1,1 +1,0 @@
-solr start script can have a debug flag option

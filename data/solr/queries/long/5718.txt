@@ -1,9 +1,0 @@
-The behaviour we saw was that shards were sometimes processing a lot of mysterious 
-
-rows=0&q=*:*
-
- requests. These we think came from 
-
-LBHttpSolrServer
-
- which was checking up on a zombie server.

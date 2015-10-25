@@ -1,1 +1,0 @@
-Spatial PrefixTreeStrategy shouldn't index center-points with shapes together

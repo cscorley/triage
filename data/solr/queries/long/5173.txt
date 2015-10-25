@@ -1,5 +1,0 @@
-Chris Collins reported on solr-user that solr-core 4.4 has dependencies on hadoop, and indirectly on jetty 6.
-
-As a workaround for Maven dependencies, the indirect jetty 6 dependency/ies can be excluded.
-
-The Maven configuration should exclude any compile-time (and also run-time) dependencies that are not Ant/Ivy compile- and run-time dependencies, including jetty 6.

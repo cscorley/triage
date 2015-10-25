@@ -1,6 +1,0 @@
-LUCENE-5648 introduced a date range index & search capability in the spatial module. This issue is for a corresponding Solr FieldType to be named "DateRangeField". LUCENE-5648 includes a parseCalendar(String) method that parses a superset of Solr's strict date format.  It also parses partial dates (e.g.: 2014-10  has month specificity), and the trailing 'Z' is optional, and a leading +/- may be present (minus indicates BC era), and "*" means all-time.  The proposed field type would use it to parse a string and also both ends of a range query, but furthermore it will also allow an arbitrary range query of the form <calspec> TO <calspec> such as:
-
-2000 TO 2014-05-21T10
-
-Which parses as the year 2000 thru 2014 May 21st 10am (GMT). 
-I suggest this syntax because it is aligned with Lucene's range query syntax.  

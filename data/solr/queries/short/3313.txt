@@ -1,1 +1,0 @@
-Rename "Query Type" to "Request Handler" in SolrJ APIs

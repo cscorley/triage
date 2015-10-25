@@ -1,8 +1,0 @@
-Performance degradation in Solr 1.4 was reported. See:
-
-http://www.lucidimagination.com/search/document/43c4bdaf5c9ec98d/html_stripping_slower_in_solr_1_4
-
-The inefficiency has been pointed out in BaseCharFilter javadoc by Mike:
-
-
-NOTE: This class is not particularly efficient. For example, a new class instance is created for every call to addOffCorrectMap(int, int), which is then appended to a private list. 

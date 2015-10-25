@@ -1,1 +1,0 @@
-Make CompressingStoredFieldsFormat the new default StoredFieldsFormat impl

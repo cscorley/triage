@@ -1,1 +1,0 @@
-The param should be carrot.fragSize but it's carrot.fragzise.

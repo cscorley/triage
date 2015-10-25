@@ -1,1 +1,0 @@
-SOLR-4196 took away the ability to use solr.core.name (and others) in solrconfig & etc.

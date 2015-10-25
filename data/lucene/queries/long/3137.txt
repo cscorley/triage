@@ -1,2 +1,0 @@
-See LUCENE-929 for context.
-As result, it might fail to create the temp dir at all.

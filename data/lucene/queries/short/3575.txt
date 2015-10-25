@@ -1,1 +1,0 @@
-Field names can be wrong for stored fields / term vectors after merging

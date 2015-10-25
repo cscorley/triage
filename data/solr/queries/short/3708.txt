@@ -1,1 +1,0 @@
-Add hashcode to ClusterState so that structures built based on the ClusterState can be easily cached.

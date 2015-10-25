@@ -1,1 +1,0 @@
-Stop throwing an error message from Overseer on Solr exit

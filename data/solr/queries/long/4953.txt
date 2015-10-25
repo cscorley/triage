@@ -1,7 +1,0 @@
-while reviewing some code i think i noticed that if there are multiple <indexConfig/> blocks in solrconfig.xml, one just "wins" and hte rest are ignored.
-
-this should be a hard failure situation, and we should have a "TestBadConfig" method to verify it.
-
-—
-
-broadened goal of issue to fail if configuration contains multiple nodes/values for any option where only one value is expected.

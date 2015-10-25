@@ -1,1 +1,0 @@
-Add AnalyzerFactoryTask to benchmark, and enable analyzer creation via the resulting factories using NewAnalyzerTask

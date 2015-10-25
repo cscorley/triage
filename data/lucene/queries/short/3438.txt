@@ -1,1 +1,0 @@
-Move some *TermsEnum.java from oal.search to oal.index

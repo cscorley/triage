@@ -1,1 +1,0 @@
-isOpen needs to be accessible by subclasses of Directory

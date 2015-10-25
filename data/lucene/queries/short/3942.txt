@@ -1,1 +1,0 @@
-SynonymFilter should set pos length att

@@ -1,7 +1,0 @@
-We should be able to create a collection where sharding is done based on the value of a given field
-
-collections can be created with shardField=fieldName, which will be persisted in DocCollection in ZK
-
-implicit DocRouter would look at this field instead of shard field
-
-CompositeIdDocRouter can also use this field instead of looking at the id field. 

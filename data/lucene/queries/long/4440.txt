@@ -1,3 +1,0 @@
-FilterCodec has a delegate() method through which an extension can return its delegate Codec. This method is called on every Codec method. Adrien, on LUCENE-4391, failed to pass a Codec in the ctor, since he couldn't called Codec.forName().
-
-Instead, we should just pass e.g. new Lucene40Codec(). I'll post a patch shortly.

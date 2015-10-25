@@ -1,1 +1,0 @@
-"Intersects" spatial query returns polygons it shouldn't

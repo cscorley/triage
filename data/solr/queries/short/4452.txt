@@ -1,1 +1,0 @@
-Hunspell stemmer should not merge duplicate dictionary entries

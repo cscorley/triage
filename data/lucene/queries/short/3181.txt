@@ -1,1 +1,0 @@
-changes2html.pl should collect release dates from JIRA REST API

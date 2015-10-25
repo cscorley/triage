@@ -1,1 +1,0 @@
-Allow readOnly OpenReader task

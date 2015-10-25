@@ -1,1 +1,0 @@
-Displaying Field-Flags on the Schema-Browser is currently a lot of (repeated) Text - a Table would fit better, because it's easier to understand (at least on the first look)

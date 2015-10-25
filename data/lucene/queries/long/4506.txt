@@ -1,6 +1,0 @@
-Currently smokeTester (ant nightly-smoke) fails, because it invokes
-this python script directly and the javadocs checker is more picky.
-
-However, java6's javadocs generates hopelessly broken html.
-
-We should fix it to only do this across the java7-generated javadocs and get smokeTesting passing again.

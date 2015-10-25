@@ -1,1 +1,0 @@
-Currently the DIH handler name is buried and private/package accessible.  It's useful to allow plugins access to it though.

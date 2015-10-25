@@ -1,1 +1,0 @@
-copyField logic in LukeRequestHandler is primitive, doesn't work well with dynamicFields

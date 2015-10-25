@@ -1,1 +1,0 @@
-Improve java client(s) test coverage

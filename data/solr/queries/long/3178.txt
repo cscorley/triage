@@ -1,9 +1,0 @@
-In order increase the ability of Solr to be used as a NoSql database (lots of concurrent inserts, updates, deletes and queries in the entire lifetime of the index) instead of just a search index (first: everything indexed (in one thread), after: only queries), I would like Solr to support versioning to be used for optimistic locking.
-When my intent (see SOLR-3173) is to update an existing document, I will need to provide a version-number equal to "the version number I got when I fetched the existing document for update" plus one. If this provided version-number does not correspond to "the newest version-number of that document at the time of update" plus one, I will get a VersionConflict error. If it does correspond the document will be updated with the new one, so that "the newest version-number of that document" is NOW one higher than before the update. Correct but efficient concurrency handling.
-When my intent (see SOLR-3173) is to insert a new document, the version number provided will not be used - instead a version-number 0 will be used. According to SOLR-3173 insert will only succeed if a document with the same value on uniqueKey-field does not already exist.
-
-In general when talking about different versions of "the same document", of course we need to be able to identify when a document "is the same" - that, per definition, is when the values of the uniqueKey-fields are equal. 
-
-The functionality provided by this issue is only really meaningfull when you run with "updateLog" activated.
-
-This issue might be solved more or less at the same time as SOLR-3173, and only one single SVN patch might be given to cover both issues.

@@ -1,1 +1,0 @@
-This can come in handy when running several Lucene indices in the same VM, and wishing to rate limit merge across all of them.

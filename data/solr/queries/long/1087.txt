@@ -1,1 +1,0 @@
-deprecate the 'where' syntax and  use explicit 'cacheKey ' and 'cacheLookup'

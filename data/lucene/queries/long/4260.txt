@@ -1,3 +1,0 @@
-From Uwe on LUCENE-4257:
-
-"The comment about the subpackages: This should in reality not be in ResourceLoader, its too Solr-specific. It is used internally by Solr, to resolve those "solr." fake packages depending on the context. We should remove that from the general interface and only handle it internally in SolrResourceLoader."

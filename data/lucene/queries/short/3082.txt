@@ -1,1 +1,0 @@
-Add tool to upgrade all segments of an index to last recent supported index format without optimizing

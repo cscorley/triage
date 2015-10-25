@@ -1,1 +1,0 @@
-Add dynamic numeric range faceting

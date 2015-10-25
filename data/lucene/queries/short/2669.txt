@@ -1,1 +1,0 @@
-NumericRangeQuery.NumericRangeTermsEnum sometimes seeks backwards

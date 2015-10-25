@@ -1,7 +1,0 @@
-The description of the ja_text field type in schema.xml is incomplete, doesn't describe user dictionaries and lacks a reference to the wiki page with extensive Japanese language support details (http://wiki.apache.org/solr/JapaneseLanguageSupport - currently a placeholder page).
-
-The attribute convention used by JapaneseTokenizerFactory doesn't comply with the standards and used user-dictionary and user-dictionary-encoding instead of userDictionary and userDictionaryEncoding.
-
-These changes are low risk and it would be a shame to not get this right in 3.6 with all the work done on Japanese.
-
-Patch coming up shortly.  I really hope it's okay to commit this.

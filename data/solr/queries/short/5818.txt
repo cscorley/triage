@@ -1,1 +1,0 @@
-distrib search with custom comparator does not quite work correctly

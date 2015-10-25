@@ -1,9 +1,0 @@
-Thanks to LUCENE-5898 there are many less places to increment version.  However, I still think this script can be useful in automating the entire process (minus the commit).  This would:
-
-	Add new sections to lucene/CHANGES.txt and solr/CHANGES.txt
-	Add new version constant
-	Change LATEST value
-	Change version.base in lucene/version.properties
-	Change version used in solr example configs
-	Create a BWC index and test if necessary
-

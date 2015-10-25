@@ -1,1 +1,0 @@
-The included jetty server does not support UTF-8

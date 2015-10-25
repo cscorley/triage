@@ -1,1 +1,0 @@
-ConstantScoreQuery's scorer does not return child scorers

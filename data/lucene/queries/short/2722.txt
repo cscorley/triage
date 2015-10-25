@@ -1,1 +1,0 @@
-Sep codec should store less in terms dict

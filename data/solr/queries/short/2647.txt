@@ -1,1 +1,0 @@
-DOMUtilTestBase should be abstract

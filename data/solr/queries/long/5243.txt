@@ -1,1 +1,0 @@
-Discovered while doing some more ad-hoc testing... if I create two collections with the same shard name and then kill the leader in one, it can sometimes cause a leader election in the other (leaving the first leaderless).

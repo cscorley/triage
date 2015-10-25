@@ -1,4 +1,0 @@
-Solr works on the lucene trunk, but uses a lot of deprecated APIs.
-Additionally two factories are missing, the Keyword and StemmerOverride filters.
-The code can be improved with 3.x's generics support, removing casts, etc.
-Finally there is some code duplication with lucene, and some cleanup (such as deprecating factories for stuff thats deprecated in trunk).

@@ -1,1 +1,0 @@
-SyncStrategy should have a close so it can abort earlier on shutdown.

@@ -1,1 +1,0 @@
-This is an add-on to SOLR-5020 to call the new DelegatingCollector.finish() method from inside the grouping flow. 

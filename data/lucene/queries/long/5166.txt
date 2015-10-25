@@ -1,1 +1,0 @@
-Given a document with a match at a startIndex < PostingsHighlighter.maxlength and an endIndex > PostingsHighlighter.maxLength, DefaultPassageFormatter will throw an IndexOutOfBoundsException when DefaultPassageFormatter.append() is invoked. 

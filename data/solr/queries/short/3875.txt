@@ -1,1 +1,0 @@
-Document boost does not work correctly when using multi-valued fields

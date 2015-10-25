@@ -1,1 +1,0 @@
-PatternTokenizerFactory should use parent's args

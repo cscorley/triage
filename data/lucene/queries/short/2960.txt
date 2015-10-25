@@ -1,1 +1,0 @@
-Allow (or bring back) the ability to setRAMBufferSizeMB on an open IndexWriter

@@ -1,4 +1,0 @@
-its a hassle to set this up currently. we should be able to
-just download javacc this way to run those tasks instead of
-making you download it yourself from the java.net site and
-setting build.properties options and stuff.

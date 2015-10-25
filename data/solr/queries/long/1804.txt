@@ -1,3 +1,0 @@
-http://project.carrot2.org/release-3.2.0-notes.html
-
-Carrot2 is now LGPL free, which means we should be able to bundle the binary!

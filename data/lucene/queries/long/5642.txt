@@ -1,3 +1,0 @@
-Lets do this first before worrying about switching any default factory. 
-
-We can ensure all this stuff is tested and fix the bugs.

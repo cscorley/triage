@@ -1,3 +1,0 @@
-Since SOLR-5446 introduced a "File-Browser" which enables one to see all the available Files in the conf-Directory, that includes the used Schema as well as the Configuration.
-
-So we should put a redirect from the existing urls in place to redirect them to the new location, inside the File-Browser.

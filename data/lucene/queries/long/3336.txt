@@ -1,1 +1,0 @@
-For building javadocs, the class files must not be compiled, so the dependency is useless and slows down build enormous. A simple ant javadocs ins solr takes several minutes because of that.

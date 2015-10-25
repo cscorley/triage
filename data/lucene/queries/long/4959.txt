@@ -1,3 +1,0 @@
-The local copy of BytesRef referenced by foundClass is affected by subsequent TermsEnum.iterator.next() calls as the shared BytesRef.bytes changes. 
-
-If a term "test" gives a good match and a next term in the terms collection is "classification" with a lower match score then the return result will be "clas"

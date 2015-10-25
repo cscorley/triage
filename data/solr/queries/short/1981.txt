@@ -1,1 +1,0 @@
-solr.xml should fail to load if multiple cores with the same name

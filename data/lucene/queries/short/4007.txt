@@ -1,1 +1,0 @@
-many versioned documents could/should be in javadocs instead.

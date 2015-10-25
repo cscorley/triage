@@ -1,1 +1,0 @@
-IndexWriter misses to apply all pending events in getReader() as well as close() / rollback(). This can lead to files that never get deleted or only very very late. If you are using RAM Directories for instance this quickly fills up a huge amount of memory. It might not be super critical in production and it also doesn't cause any data loss or index corruption.

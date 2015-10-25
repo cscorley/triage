@@ -1,5 +1,0 @@
-While checking 3.2 RC2 artifacts, I ran "ant prepare-release" and it failed because "get-svn-info" failed (since this is not a svn checkout). This makes sense indeed, but still annoying, so question is how to overcome it? It attempts to execute "svn info" as part of "package-tgz-src". When you run the latter to prepare the release, you want it to fail if "svn" does not exist, however in the source package there's no '.svn' so it cannot succeed.
-
-On the other hand, nobody should "prepare a release" from the source package, so perhaps the failure is ok, and we should disable the Ant target?
-
-I don't know how to solve it yet, so I'm marking it as a Blocker for 3.3, so that we at least revisit it before then.

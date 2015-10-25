@@ -1,1 +1,0 @@
-JavaDoc of SearcherManager#close is not crystal clear

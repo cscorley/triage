@@ -1,1 +1,0 @@
-replicate/index.jsp UI does not work with repeaters (both master and slave)

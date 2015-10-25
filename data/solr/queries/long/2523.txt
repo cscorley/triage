@@ -1,8 +1,0 @@
-It is possible to get date facets and pivot facets in SolrJ.
-
-
-queryResponse.getFacetDate();
-queryResponse.getFacetPivot();
-
-
-Having this also for range fields would be nice. Adding this is trivial. Maybe we should deprecate date facet methods in QueryResponse class? Since it is superseded by range facets. Also some set / add / remove methods for setting facet range parameters on the SolrQuery class would be nice.

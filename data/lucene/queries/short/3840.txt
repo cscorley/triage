@@ -1,1 +1,0 @@
-Threads leak out from Executors created in LuceneTestCase#newSearcher

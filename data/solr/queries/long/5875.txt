@@ -1,5 +1,0 @@
-SOLR-5354 added unmarshalling of distributed sort field values in QueryComponent.mergeIds(), but incorrectly performs this (unmarshalling all docs' sort field values) for every doc, and stores the result with each doc.  This is unnecessary, inefficient, and extremely wasteful of memory.
-
-In an offline conversation, Alexey Serba described the issue to me and located the likely problem, and Chris Hostetter located the problem code via inspection.
-
-This bug is very likely the problem described on the solr-user mailing list here: SolrCloud constantly crashes after upgrading to Solr 4.7

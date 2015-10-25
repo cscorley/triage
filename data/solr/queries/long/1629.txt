@@ -1,5 +1,0 @@
-The "Return to admin page" link on admin/registry.jsp links to the current page.
-
-http://svn.apache.org/viewvc/lucene/solr/trunk/src/webapp/web/admin/registry.xsl?revision=815587&view=markup
-
-Change <a href="">Return to Admin Page</a> to <a href=".">Return to Admin Page</a>.

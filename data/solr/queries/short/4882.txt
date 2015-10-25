@@ -1,1 +1,0 @@
-Restrict SolrResourceLoader to only classloader accessible files and instance dir

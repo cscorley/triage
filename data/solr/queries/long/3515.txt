@@ -1,7 +1,0 @@
-The Analysis page of the UI seems to be toggling the state of the "schema-browser_autoload" cookie when you toggle the "verbose" checkbox for the analysis output.
-
-this seems like a mistake.
-
-Note that it also does not seem to be possible to specify the "verbose" option as a URL param when loading the page (if it is i can't figure it out) which makes linking to specific examples from the tutorial somewhat difficult.
-
-http://localhost:8983/solr/#/collection1/analysis?analysis.fieldvalue=Canon+Power-Shot+SD500&analysis.query=&analysis.fieldtype=text_en_splitting

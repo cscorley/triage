@@ -1,3 +1,0 @@
-"info" section returned by the LukeRequestHandler does not contain legend for OMIT_TF and OMIT_POSITIONS flags.
-
-These flags are checked and outputted in LukeRequestHandler#getFieldFlags, but are not outputted in LukeRequestHandler#getFieldFlagsKey.

@@ -1,1 +1,0 @@
-Allowing the benchmarking algorithm to choose PostingsFormat

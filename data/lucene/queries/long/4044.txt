@@ -1,3 +1,0 @@
-In LUCENE-2510 I want to move all the analysis factories out of Solr and into the directories with what they create.  This is going to hamper Solr's existing strategy for supporting solr.* package names, where it replaces solr with various pre-defined package names.  One way to tackle this is to use NamedSPILoader so we simply look up StandardTokenizerFactory for example, and find it wherever it is, as long as it is defined as a service.  This is similar to how we support Codecs currently.
-
-As noted by Robert in LUCENE-2510, this would also have the benefit of meaning configurations could be less verbose, would aid in fully decoupling the analysis module from Solr, and make the analysis factories easier to interact with.

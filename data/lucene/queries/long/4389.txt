@@ -1,1 +1,0 @@
-The dateline support can easily be fixed.  After this, the TwoDoublesStrategy might not be particularly useful but at least it won't be buggy if you stay with Rectangle query shapes.

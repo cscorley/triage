@@ -1,1 +1,0 @@
-Solr Plugin for ComplexPhraseQueryParser (LUCENE-1486) which supports wildcards, ORs, ranges, fuzzies inside phrase queries.

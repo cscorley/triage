@@ -1,3 +1,0 @@
-The new DIH GUI should have "commit" checked by default.
-
-According to http://wiki.apache.org/solr/DataImportHandler#Commands the REST API has commit=true by default, so it makes sense that the GUI has the same.

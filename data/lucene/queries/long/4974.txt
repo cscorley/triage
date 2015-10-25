@@ -1,1 +1,0 @@
-If you put a CommitIndex in a benchmark algorithm with no params, you get NPE from IW.setCommitData, because you are not allowed to pass null. It's a trivial fix - CommitIndexTask should call setCommitData only if commitData is not null.

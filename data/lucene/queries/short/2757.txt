@@ -1,1 +1,0 @@
-Refactor RewriteMethods out of MultiTermQuery

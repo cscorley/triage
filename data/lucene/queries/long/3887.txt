@@ -1,6 +1,0 @@
-While reviewing the javadocs I noticed many packages are missing a basic package.html.
-
-For 3.x I committed some package.html files where they were missing (I will port forward to trunk).
-
-I think all packages should have this... really all public/protected classes/methods/constants,
-but this would be a good step.

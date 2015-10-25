@@ -1,3 +1,0 @@
-Reported by Reg on the java-user list, subject "TrackingIndexWriter.tryDeleteDocument(IndexReader, int) vs deleteDocuments(Query)":
-
-When IW.tryDeleteDocument succeeds, it marks the document as deleted in the pending BitVector in ReadersAndLiveDocs, but then when the NRT reader checks if it's still current by calling IW.nrtIsCurrent, we fail to catch changes to the BitVector, resulting in the NRT reader thinking it's current and not reopening.

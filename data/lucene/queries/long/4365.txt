@@ -1,7 +1,0 @@
-The Maven dependency model disallows cyclic dependencies, of which there are now several in the Ant build (considering test and compile dependencies together, as Maven does).  All of these cycles involve either the Lucene test-framework or the Solr test-framework.
-
-The current Maven build works around this problem by incorporating dependencies' sources into dependent modules' test sources, rather than literally declaring the problematic dependencies as such. (See SOLR-3780 for a recent example of putting this workaround in place for the Solrj module.)  
-
-But with the factoring out of the Lucene Codecs module, upon which Lucene test-framework has a compile-time dependency, the complexity of the workarounds required to make it all hang together is great enough that I want to attempt a (Maven-build-only) module refactoring.  It should require fewer contortions and be more maintainable.
-
-The Maven build is currently broken, as of the addition of the Codecs module (LUCENE-4340).

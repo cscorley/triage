@@ -1,1 +1,0 @@
-QueryComponent.mergeIds() unmarshals all docs' sort field values once per doc instead of once per shard

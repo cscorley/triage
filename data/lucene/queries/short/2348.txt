@@ -1,1 +1,0 @@
-DuplicateFilter incorrectly handles multiple calls to getDocIdSet for segment readers

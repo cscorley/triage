@@ -1,1 +1,0 @@
-FastVectorHighlighter SimpleBoundaryScanner does not work well when highlighting at the beginning of the text 

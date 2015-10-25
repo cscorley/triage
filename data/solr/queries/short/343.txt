@@ -1,1 +1,0 @@
-Constraining date facets by facet.mincount

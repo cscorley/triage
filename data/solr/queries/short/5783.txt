@@ -1,1 +1,0 @@
-Can we stop opening a new searcher when the index hasn't changed?

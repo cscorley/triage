@@ -1,1 +1,0 @@
-Distributed grouping output bug (NamedList used instead of SimpleOrderedMap)

@@ -1,1 +1,0 @@
-SolrEntityProcessor - DIH EntityProcessor that queries an external Solr via SolrJ

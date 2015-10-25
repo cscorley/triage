@@ -1,1 +1,0 @@
-David Smiley suggested that the default of hl.phraseLimit parameter should be 5000 (5000 was suggested by Mike). See LUCENE-3234.

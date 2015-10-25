@@ -1,6 +1,0 @@
-When we try to use the grouping function at the end of a result via solrj with the parameter group.main=true, 
-an ArrayIndexOutOfBoundsException is raised.
-
-For instance, on a result containing 3 groups, if the start & rows parameters are equal to 2 & 5 respectively.
-
-I will attach a patch.

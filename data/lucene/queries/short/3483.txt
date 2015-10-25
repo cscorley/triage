@@ -1,1 +1,0 @@
-Move Function grouping collectors from Solr to grouping module

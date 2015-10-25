@@ -1,3 +1,0 @@
-The MIGRATE.txt and other files are very simple formatted and can be converted using Markdown.
-
-We can use e.g. pegdown (a Java Markdown converter) to make HTML out of them and place those in the HTML documentation. Theoretically, also CHANGES.txt might be processed by Markdown, we have to try out. Pegdown is extensible, so it could handle LUCENE-xxx JIRA links correctly.

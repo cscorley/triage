@@ -1,1 +1,0 @@
-Add defensive checks against errant updates to distrib update processor.

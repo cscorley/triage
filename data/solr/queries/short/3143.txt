@@ -1,1 +1,0 @@
-Supply a phrase-oriented QueryConverter for Suggesters

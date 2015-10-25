@@ -1,1 +1,0 @@
-Rollback was calling a rollback and then close rather than just a rollback - an oversight on my part - somehow this allowed two indexwriters to be open at once in some seemingly rare cases...this could cause havoc and was easy to miss due to tests using the single lock type.

@@ -1,1 +1,0 @@
-Update LBHttpSolrServer docs to un-confuse the use in updates.

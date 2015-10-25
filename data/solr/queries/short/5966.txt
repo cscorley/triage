@@ -1,1 +1,0 @@
-Admin UI - menu is fixed, doesn't respect smaller viewports

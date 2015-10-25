@@ -1,1 +1,0 @@
-The PayloadTermWeight explanation hides the details of the payload score

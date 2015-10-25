@@ -1,1 +1,0 @@
-shard splitting does not respect router (docs with a compositeId may not go to correct shard)

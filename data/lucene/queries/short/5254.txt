@@ -1,1 +1,0 @@
-SegmentCoreReader's "owner" reference back to the first SegmentReader causes leaks

@@ -1,4 +1,0 @@
-Was looking at my old patch for LUCENE-2788, which isn't going to be easy,
-but besides that we can separately break out a nice refactoring to simplify the CharFilter logic.
-
-I think this would be a good idea for 4.0, since it gives us less API surface area.

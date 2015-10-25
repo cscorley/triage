@@ -1,1 +1,0 @@
-IndexWriter uses AppendingLongBuffer in several places, and in a few of them the mapping is monotonically increasing so we could save additional space by only encoding the delta from a linear projection.

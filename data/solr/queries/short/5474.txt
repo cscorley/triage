@@ -1,1 +1,0 @@
-Add  stateFormat=2 support to CloudSolrServer

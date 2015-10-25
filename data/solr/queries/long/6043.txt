@@ -1,1 +1,0 @@
-Add headers to SolrQueryResponse that are then copied to the HTTP response. This would allow handlers to add headers to the HTTP response. 

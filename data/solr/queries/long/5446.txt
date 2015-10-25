@@ -1,1 +1,0 @@
-As a follow up to SOLR-5287, this is the UI related part for implementing a file-viewer and the possibility to change files (like schema & config) via the UI.

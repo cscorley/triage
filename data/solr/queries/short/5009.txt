@@ -1,1 +1,0 @@
-CoreContainer instantiates 2 SolrResourceLoaders (implicit) but does not close all of them

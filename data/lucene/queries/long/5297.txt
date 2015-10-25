@@ -1,1 +1,0 @@
-Today RangeAccumulator assumes the ranges should be read from a NumericDocValues field. Would be good if we can modify it, or introduce a new ValueSourceAccumulator which allows you to range-facet on any ValueSource, e.g. one that is generated from an expression.

@@ -1,1 +1,0 @@
-Recovery issues a spurious commit to the cluster.

@@ -1,1 +1,0 @@
-openReaderPassed not populated in CheckIndex.Status.SegmentInfoStatus

@@ -1,1 +1,0 @@
-It would be useful to have the lucene misc jar file included with solr.  My immediate goal is to build several solr indexes in parallel on separate servers, then run the index merge utility at the end to combine them into a single index.  Erik H suggested I post an issue requesting including the misc jar with solr.  Thanks

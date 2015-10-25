@@ -1,1 +1,0 @@
-RawResponseWriter - doesn't use the configured "base" writer.

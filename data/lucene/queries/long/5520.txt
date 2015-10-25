@@ -1,4 +1,0 @@
-This problem is found in lucene 4.2.0 and reproduced in 4.7.0
-
-In our app when we delete a document we always delete all the children. 
-But not all parents have children. The exception happen for us when the parent without children is deleted.

@@ -1,1 +1,0 @@
-Constants causing NullPointerException when fetching metadata "Implementation Version" in MANIFEST

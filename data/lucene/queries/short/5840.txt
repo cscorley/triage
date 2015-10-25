@@ -1,1 +1,0 @@
-hunspell zero-affix handling doesn't work with continuation classes

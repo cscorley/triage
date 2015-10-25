@@ -1,1 +1,0 @@
-Add ShingleFilter option to output unigrams if no shingles can be generated

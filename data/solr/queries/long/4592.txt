@@ -1,1 +1,0 @@
-If we don't do this, in some cases a recovery thread can be left around after shutdown. Mostly just a test problem really.

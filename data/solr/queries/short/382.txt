@@ -1,1 +1,0 @@
-SpellCheckerRequestHandler does not apply the onlyMorePopular flag.

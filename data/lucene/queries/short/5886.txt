@@ -1,1 +1,0 @@
-current ecj-javadoc-lint crashes on SharedFSAutoReplicaFailoverUtilsTest / update build to work with Java 9

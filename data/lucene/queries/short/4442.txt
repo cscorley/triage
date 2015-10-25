@@ -1,1 +1,0 @@
-ant prepare-release needs to put changes/ and KEYS into the dist/package folders

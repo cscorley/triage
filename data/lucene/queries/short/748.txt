@@ -1,1 +1,0 @@
-Exception during IndexWriter.close() prevents release of the write.lock

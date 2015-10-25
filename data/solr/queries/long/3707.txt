@@ -1,1 +1,0 @@
-Tika 1.2 has been released with these improvements: http://tika.apache.org/1.2/index.html

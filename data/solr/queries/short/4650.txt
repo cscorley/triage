@@ -1,1 +1,0 @@
-copyField doesn't work with source globs that don't match dynamic fields

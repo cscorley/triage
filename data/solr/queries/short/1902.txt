@@ -1,1 +1,0 @@
-Tika no longer properly extracts content in Solr

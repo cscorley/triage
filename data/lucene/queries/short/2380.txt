@@ -1,1 +1,0 @@
-Add FieldCache.getTermBytes, to load term data as byte[]

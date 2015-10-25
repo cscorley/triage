@@ -1,1 +1,0 @@
-QueryElevationComponent does not fully support distributed search

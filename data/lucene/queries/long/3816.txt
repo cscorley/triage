@@ -1,3 +1,0 @@
-DocIdSet#iterator is allowed to return null, when used in FilteredDocIdSet, if null is returned from the inner set, the FilteredDocIdSetIterator fails since it does not allow for nulls to be passed to it.
-
-The fix is simple, return null in FilteredDocIdSet in the iterator method is the iterator is null.

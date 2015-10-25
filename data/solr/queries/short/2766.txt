@@ -1,1 +1,0 @@
-ant prepare-release fails to package the javadocs for solr-test-framework and solr-solrj

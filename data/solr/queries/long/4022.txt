@@ -1,1 +1,0 @@
-At the moment, you can't sort on ExternalFileFields, but plumbing this in turns out to be pretty trivial.

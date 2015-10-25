@@ -1,1 +1,0 @@
-CoreContainer#remove throws an NPE rather than returning null when a SolrCore does not exist.

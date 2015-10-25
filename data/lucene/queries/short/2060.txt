@@ -1,1 +1,0 @@
-CMS should default its maxThreadCount to 1 (not 3)

@@ -1,1 +1,0 @@
-Never update offsets in CompoundWordTokenFilterBase

@@ -1,1 +1,0 @@
-Just a few minor things to improve in AbstractSpatialField. (patch to follow)

@@ -1,1 +1,0 @@
-ASCIIFoldingFilter => MappingCharFilterFactory as a mapping file

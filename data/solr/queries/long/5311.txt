@@ -1,3 +1,0 @@
-If a replica is removed from the clusterstate and if it comes back up it should not be allowed to register. 
-
-Each core ,when comes up, checks if it was already registered and if yes is it still there. If not ,throw an error and do an unregister . If such a request come to overseer it should ignore such a core

@@ -1,1 +1,0 @@
-The realtime get component adds SolrDocuments to the response without running them though the transformer

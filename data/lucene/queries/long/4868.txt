@@ -1,1 +1,0 @@
-It indexes into the scores array using 'doc' while it should be using a separate index. I modified the test to fail an fixed it, will commit soon.

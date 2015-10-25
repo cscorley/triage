@@ -1,1 +1,0 @@
-HdfsUpdateLog can fail to close a FileSystem instance if init is called more than once.

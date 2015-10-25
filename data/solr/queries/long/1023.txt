@@ -1,9 +1,0 @@
-Currently, the StatsComponent only supports single-value numeric fields:
-
-http://wiki.apache.org/solr/StatsComponent
-
-trying to use it with a date field I get an exception like:  java.lang.NumberFormatException: For input string: "2009-01-27T20:04:04Z"
-
-trying to use it with a string I get an error 400  "Stats are valid for single valued numeric values."
-
-For constructing date facets it would be very useful to be able to get the minimum and maximum date from a DateField within a set of documents.  In general, it could be useful to get the minimum and maximum from any field type that can be compared, though that's of less importance.

@@ -1,1 +1,0 @@
-Allow DirectoryReader.openIfChanged to an IndexCommit when reader is NRT

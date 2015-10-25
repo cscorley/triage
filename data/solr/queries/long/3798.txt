@@ -1,3 +1,0 @@
-looking into SOLR-3795 i realized there is a much bigger problem with how LukeRequestHandler tries to get copyfield info for fields and dynamicFields the same way, and it just doesn't work.
-
-see the patch in SOLR-3795 for a commented out example of a test that still fails (ie: trying to get the "copySource" info for a dynamicField)

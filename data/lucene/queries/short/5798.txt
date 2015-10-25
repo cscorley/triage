@@ -1,1 +1,0 @@
-minor optimizations to MultiDocs(AndPositions)Enum.reset()

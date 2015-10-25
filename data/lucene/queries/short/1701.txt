@@ -1,1 +1,0 @@
-Add NumericField, make plain text numeric parsers public in FieldCache, move trie parsers to FieldCache

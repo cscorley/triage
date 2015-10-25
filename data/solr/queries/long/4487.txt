@@ -1,3 +1,0 @@
-Solr responds to excessively large queries with a 413 status code, but HttpSolrServer.request() loses this information when it tries to look up the code in SolrException.ErrorCode, resulting in a status code 0 in the thrown exception.
-
-Being able to see this status code would be helpful.

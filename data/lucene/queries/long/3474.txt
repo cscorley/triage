@@ -1,1 +1,0 @@
-Spinoff from LUCENE-1536, this would allow filters to work in a more flexible way (besides just cleaning up)

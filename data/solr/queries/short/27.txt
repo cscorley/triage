@@ -1,1 +1,0 @@
-PATCH: Configurable language for SnowballPorterFilterFactory

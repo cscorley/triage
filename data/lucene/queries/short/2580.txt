@@ -1,1 +1,0 @@
-MultiPhraseQuery throws AIOOBE

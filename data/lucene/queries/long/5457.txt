@@ -1,1 +1,0 @@
-LUCENE-5271 introduced a table in order to get approximate values of the diameter of the earth given a latitude. This could be useful for other computations so I think it would be nice to have a method that exposes this table.

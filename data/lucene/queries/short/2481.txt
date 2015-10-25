@@ -1,1 +1,0 @@
-Enhance SnapshotDeletionPolicy to allow taking multiple snapshots

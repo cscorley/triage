@@ -1,4 +1,0 @@
-It's useful to be able to store custom data (eg maybe a primary key or
-a URL or something) with each suggestion, so that the UI can do things
-like render an image along with each suggestion, or direct to a
-specific URL if the user clicks that suggestion, etc.

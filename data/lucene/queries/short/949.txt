@@ -1,1 +1,0 @@
-AnalyzingQueryParser can't work with leading wildcards.

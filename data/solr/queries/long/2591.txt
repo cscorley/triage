@@ -1,1 +1,0 @@
-I've noticed that commitLockTimeout option is loaded by the configuration but no longer used. This issue will be concerned with removing this option from all solrconfig.xml files (including example) and from the SolrConfig class.

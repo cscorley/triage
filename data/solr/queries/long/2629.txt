@@ -1,8 +1,0 @@
-The web admin interface uses the deprecated method org.apache.solr.request.SolrQueryResponse from within files:
-
-	solr/src/webapp/web/admin/replication/header.jsp
-	solr/src/webapp/web/admin/ping.jsp
-
-
-
-That should be changed to use org.apache.solr.response.SolrQueryResponse

@@ -1,1 +1,0 @@
-Supporting deleteDocuments in IndexWriter (Code and Performance Results Provided)

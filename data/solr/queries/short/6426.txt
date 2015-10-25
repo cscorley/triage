@@ -1,1 +1,0 @@
-SolrZkClient clean can fail due to a race with children nodes.

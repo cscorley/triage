@@ -1,1 +1,0 @@
-Improve cmd line tool for bootstrapping config sets. Rather than take a config set name and directory, make it work like -Dboostrap_conf=true and read solr.xml to find config sets. Config sets will be named after the collection and auto linked to the identically named collection.

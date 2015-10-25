@@ -1,1 +1,0 @@
-Show CharFilters in Schema Browser

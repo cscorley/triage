@@ -1,1 +1,0 @@
-FastVectorHighlighter: add wrapper class for Lucene's SingleFragListBuilder

@@ -1,3 +1,0 @@
-Having upper/lower bounds on terms could be useful for various optimizations in the future, e.g. to accelerate sorting (if a segment can't compete, don't even search it), and so on.
-
-Its pretty obvious how to get the smallest term, but the maximum term for a field is tricky, but worst case you can do it in ~ log(N) time by binary searching term space.

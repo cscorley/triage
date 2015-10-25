@@ -1,1 +1,0 @@
-Collapse Common module into Lucene core util

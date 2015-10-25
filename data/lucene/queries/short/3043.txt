@@ -1,1 +1,0 @@
-o.a.l.analysis.de.GermanStemmer crashes on some inputs

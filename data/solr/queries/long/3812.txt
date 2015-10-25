@@ -1,3 +1,0 @@
-When we lose our connection to ZooKeeper due to connectionloss (that does not lead to expiration), we can drop updates when replaying buffered updates and think we have successfully recovered.
-
-We need to detect this and fail recovery when it happens. We should also increase how long we wait for re connection when an update comes and we have lost our connection to zk (up to the session timeout).

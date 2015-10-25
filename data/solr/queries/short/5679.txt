@@ -1,1 +1,0 @@
-Shard splitting fails with ClassCastException on clusterstate.json with router as string

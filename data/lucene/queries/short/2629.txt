@@ -1,1 +1,0 @@
-In modules/analysys/icu, ant gennorm2 does not work

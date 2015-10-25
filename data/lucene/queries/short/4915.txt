@@ -1,1 +1,0 @@
-DrillSideways should accept drill down fields that are not faceted

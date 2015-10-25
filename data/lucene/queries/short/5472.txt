@@ -1,1 +1,0 @@
-Long terms should generate a RuntimeException, not just infoStream

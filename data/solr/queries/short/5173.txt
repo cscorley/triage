@@ -1,1 +1,0 @@
-Solr-core's Maven configuration includes test-only Hadoop dependencies as indirect compile-time dependencies

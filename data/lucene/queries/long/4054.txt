@@ -1,1 +1,0 @@
-The only exceptions are setUp/ tearDown methods in LuceneTestCase, which are historically designed for overriding (and for which chaining is verified). Any other override of am instance hook method should just be banned as it is very likely a mistake.

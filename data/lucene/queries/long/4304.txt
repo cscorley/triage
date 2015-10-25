@@ -1,7 +1,0 @@
-Now that we have pluggable codecs (well, PostingsFormat), an app should use a custom PostingsFormat if it really must change payloads while merging.
-
-Alternatively, use a FilteredIndexReader to modify anything during addIndexes (eg the facets use case, modifying payloads).
-
-Since this capability can be handled by existing more-generic functions I don't see why we need to keep PPP around in core.  PPP is also fragile because an app generally has no visibility on when a merge commits so it can't know if the payloads it retrieves are pre or post PPP.
-
-I think merging shouldn't change postings as a side-effect (by default, anyway, since a custom PF can of course override merge and do whatever it wants).

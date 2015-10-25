@@ -1,3 +1,0 @@
-Spinoff from LUCENE-4600.
-
-It makes me nervous to have allocation tied to our public APIs ... and the ability for Int/FloatArrayAllocator to hold onto N arrays indefinitely makes me even more nervous.  I think we should just trust java/GC to do their job here and free the storage as soon as faceting is done.

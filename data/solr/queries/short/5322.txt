@@ -1,1 +1,0 @@
-core discovery can fail w/NPE and no explanation if a non-readable directory exists

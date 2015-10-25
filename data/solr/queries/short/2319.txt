@@ -1,1 +1,0 @@
-Upgrade the noggit jar on branch_3x to the same version as on trunk

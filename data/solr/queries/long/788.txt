@@ -1,3 +1,0 @@
-The MoreLikeThis component should support distributed processing.
-
-See SOLR-303.

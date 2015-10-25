@@ -1,1 +1,0 @@
-The file exampledocs/books.json currently contains two books. But they do not show up in the default solr/browse interface because they use "title" instead of "name", which the Velocity template does not show. Also we should include a few more books

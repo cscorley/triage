@@ -1,1 +1,0 @@
-Because of misuse, many exceptions are now not logged at all - can be painful when doing dev. I think we should flip this setting and work at removing any double logging - losing logging is worse (and it almost looks like we lose more logging than we would get in double logging) - and bad solrexception/logging patterns are proliferating.

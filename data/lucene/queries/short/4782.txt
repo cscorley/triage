@@ -1,1 +1,0 @@
-Let the NaiveBayes classifier have a fallback docCount method if codec doesn't support Terms#docCount()

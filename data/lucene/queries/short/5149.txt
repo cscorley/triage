@@ -1,1 +1,0 @@
-CommonTermsQuery should allow minNrShouldMatch for high & low freq terms

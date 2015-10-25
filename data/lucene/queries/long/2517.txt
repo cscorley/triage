@@ -1,1 +1,0 @@
-The Lucene Hudson Changes.html looks bad because changes2html.pl doesn't properly handle some new usages in CHANGES.txt.

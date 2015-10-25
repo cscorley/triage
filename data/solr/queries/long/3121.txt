@@ -1,1 +1,0 @@
-As reported in SOLR-2667, the admin UI gets pretty bad with big indexes.  Mostly this seems the fault of excessive calls to luke and not limiting the number of terms

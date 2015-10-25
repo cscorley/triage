@@ -1,3 +1,0 @@
-?       dev-tools/scripts/_pycache_
-
-Can we not leave this around?

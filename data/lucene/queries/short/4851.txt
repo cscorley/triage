@@ -1,1 +1,0 @@
-Use Java 7's {Integer,Long,Float,Double}.compare instead of branches

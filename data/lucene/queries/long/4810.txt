@@ -1,5 +1,0 @@
-Edge ngrams should be like synonyms, with all the ngrams generated from a token having the same position as that original token. The current code increments position.
-
-For the text "molecular biology", the query "mol bio" should match as a phrase in neighboring positions. It does not.
-
-You can see this in the Analysis page in the admin UI.

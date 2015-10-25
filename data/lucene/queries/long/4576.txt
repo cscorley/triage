@@ -1,5 +1,0 @@
-I think this option is bad news, its just a trap that causes caches to be uselessly invalidated.
-
-If you really have a totally static index then just expunge your deletes.
-
-Let's remove the option and complexity.

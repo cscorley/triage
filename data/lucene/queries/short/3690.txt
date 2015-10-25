@@ -1,1 +1,0 @@
-JFlex-based HTMLStripCharFilter replacement

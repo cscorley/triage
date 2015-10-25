@@ -1,1 +1,0 @@
-JSONResponseWriter w/json.wrf can produce invalid javascript depending on unicode chars in response data

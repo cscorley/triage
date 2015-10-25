@@ -1,1 +1,0 @@
-Enable access to MultiCore from SolrCore

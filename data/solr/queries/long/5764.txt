@@ -1,9 +1,0 @@
-Tests that were recently added have the problems that some of them were using ExternalPaths.SOURCE_HOME and adding the absolute location of modules. This makes it impossible to move modules around or run them standalone.
-
-This issue fixes those tests to use SolrTestCaseJ4.getFile() or a simple openResourceAsStream from classpath, because all test-files are located in classpath. ExternalPaths.SOURCE_HOME will be hidden (private) so nothing can use it anymore - so no new tests should appear using them again.
-
-While doing this, I recognized that the recently added morphlines and mapreduce contribs are duplicating modified solr example folders into their test-files folder, while morphlines-core was referring from inside the tests to map-reduce/test-files (ignoring the whole megabytes of test-files of morphlines!!! Easy to see, because the config files in it were just broken and referring to non-existent classes). This is the reverse of the natural dependency, where map-reduce uses morphlines as dep.
-
-The fix here is to completely delete/empty the test-files folders of map-reduce and morphlines-cell and let those reuse the one from morphlines-core. Morphlines-core is now the only source folder for test-files, shared by all three contribs. Its contents are now the previous map-reduce/test-files folder.
-
-I will provide a patch with the code changes, but the cleanup of morphlines test-files cannot be described here, it is too crazy. I will just heavy commit the changes, sorry!

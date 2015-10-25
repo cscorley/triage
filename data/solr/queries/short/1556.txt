@@ -1,1 +1,0 @@
-TermVectorComponents should provide good error messages when fieldtype isn't compatible with requested options

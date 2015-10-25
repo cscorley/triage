@@ -1,1 +1,0 @@
-Make MemoryIndex thread-safe for queries

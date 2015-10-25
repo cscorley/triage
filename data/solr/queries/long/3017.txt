@@ -1,5 +1,0 @@
-Currently, the edismax query parser assumes that stopword filtering is being done by StopFilter: the removal of the stop filter is performed by looking for an instance of 'StopFilterFactory' (hard-coded) within the associated field's analysis chain.
-
-We'd like to be able to use our own stop filters whilst keeping the edismax stopword removal goodness. The supplied patch allows the stopword filter factory class to be supplied as a param, "stopwordFilterClassName". If no value is given, the default (StopFilterFactory) is used.
-
-Another option I looked into was to extend StopFilterFactory to create our own filter. Unfortunately, StopFilterFactory's 'create' method returns StopFilter, not TokenStream. StopFilter is also final.

@@ -1,4 +1,0 @@
-To offer better interoperability with other search engines and to provide an easier and more straight forward syntax,
-the operators >, >=, <, <= and = should be available to express an open range query.
-They should at least work for numeric queries.
-'=' can be made a synonym for ':'.

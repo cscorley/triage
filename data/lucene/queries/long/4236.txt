@@ -1,6 +1,0 @@
-After LUCENE-3505, I want to do a slight cleanup:
-
-	compute the term conjunctions optimization in scorer(), so its applied even if we have optional and prohibited clauses that dont exist in the segment (e.g. return null)
-	use the term conjunctions optimization when optional.size() == minShouldMatch, as that means they are all mandatory, too.
-	don't return booleanscorer1 when optional.size() == minShouldMatch, because it means we have required clauses and in general BS2 should do a much better job (e.g. use advance).
-

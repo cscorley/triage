@@ -1,1 +1,0 @@
-As Ryan points out on "[VOTE] Lucene Solr 4.3.0 RC3" thread, somehow the .war file in the binary packaging has different contents than the maven one (in particular, one contains logging jars, the other does not).

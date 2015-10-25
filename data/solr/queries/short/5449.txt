@@ -1,1 +1,0 @@
-Add more stress testing around creating and removing collections.

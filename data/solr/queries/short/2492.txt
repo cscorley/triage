@@ -1,1 +1,0 @@
-DIH does not commit if only Deletes are processed

@@ -1,1 +1,0 @@
-solr can't perform sort by long field

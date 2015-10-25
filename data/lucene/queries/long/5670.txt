@@ -1,3 +1,0 @@
-Currently the FST uses the read(DataInput) method from the Outputs class to skip over outputs it actually is not interested in. For most use cases this just creates some additional objects that are immediately destroyed again.
-
-When traversing an FST with non-trivial data however this can easily add up to several excess objects that nobody actually ever read.

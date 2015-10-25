@@ -1,1 +1,0 @@
-Corrupted segment file not detected and wipes index contents

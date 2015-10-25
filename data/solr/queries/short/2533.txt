@@ -1,1 +1,0 @@
-Improve API of ValueSource & FunctionQuery SortField weighting

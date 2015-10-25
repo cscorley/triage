@@ -1,1 +1,0 @@
-Contrib ant test targets do not respect sys props testcase,testpackage,and testpackageroot

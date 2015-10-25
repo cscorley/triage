@@ -1,1 +1,0 @@
-make precommit work for svn 1.8 or git checkouts

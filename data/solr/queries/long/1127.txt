@@ -1,6 +1,0 @@
-allow templates in field name
-
-
-
-<field column="x" name="hello${e.y}"/>
-

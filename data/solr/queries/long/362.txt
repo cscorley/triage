@@ -1,6 +1,0 @@
-http://marc.info/?t=119023363300004&r=1&w=2
-
-ant -version
-Apache Ant version 1.7.0 compiled on December 13 2006
-
-Trivial modification to the build.xml to include junit with solr.

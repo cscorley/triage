@@ -1,1 +1,0 @@
-Improve Javadocs of RAMDirectory to document its limitations

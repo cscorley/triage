@@ -1,1 +1,0 @@
-smokeTestRelease should accept a local (file://) staging URL

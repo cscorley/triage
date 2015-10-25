@@ -1,1 +1,0 @@
-SolrCore.initIndex should close the directory it gets for clearing the lock and use the DirectoryFactory

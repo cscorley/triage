@@ -1,5 +1,0 @@
-During a distributed grouping request, if rows is set to 0 a 500 error is returned.
-
-If groups are unique to a shard and the row count is set to 1, then the matches number is only the matches from one shard.
-
-I've put together a failing test.

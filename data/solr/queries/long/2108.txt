@@ -1,8 +1,0 @@
-Reported from the userlist: 
-
-
-"For instance, the query *zemog* matches documents that contain Gomez"
-
-
-
-http://www.lucidimagination.com/search/document/35abfdabfcec99b7/false_matches_with_reversedwildcardfilterfactory

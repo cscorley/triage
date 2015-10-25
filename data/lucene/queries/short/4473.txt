@@ -1,1 +1,0 @@
-BlockPF encodes offsets inefficiently

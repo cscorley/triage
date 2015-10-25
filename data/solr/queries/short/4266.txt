@@ -1,1 +1,0 @@
-HttpSolrServer does not release connection properly on exception when no response parser is used

@@ -1,1 +1,0 @@
-nuke jars from source tree and use ivy

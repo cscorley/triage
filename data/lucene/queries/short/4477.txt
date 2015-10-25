@@ -1,1 +1,0 @@
-Boolean query composed of spanqueries can return ArrayIndexOutOfBoundsException if one of the subqueries doesn't have a match 

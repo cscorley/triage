@@ -1,1 +1,0 @@
-The "/browse" Solritas GUI does not work under SolrCloud - 500 error

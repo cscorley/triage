@@ -1,1 +1,0 @@
-SSDVA should detect a mismatch in the SSDVReaderState

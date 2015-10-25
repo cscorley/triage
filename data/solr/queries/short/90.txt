@@ -1,1 +1,0 @@
-Typo in java docs of QueryParsing.java 

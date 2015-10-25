@@ -1,1 +1,0 @@
-PostingsHighlighter sometimes applies term to the wrong passage

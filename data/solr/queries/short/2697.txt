@@ -1,1 +1,0 @@
-commit and autocommit operations don't reset DirectUpdateHandler2.numDocsPending stats attribute

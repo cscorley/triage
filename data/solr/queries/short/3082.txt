@@ -1,1 +1,0 @@
-If you use a lazy replication request handler, the commit listener will not be registered right away, and might miss tracking the last commit.

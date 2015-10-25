@@ -1,5 +1,0 @@
-The problem is that fields that point to classes go and collect the size recursively. On IBM a class object contains LOTS of references so it goes up to megabytes for a single enumset.
-
-Another issue is that we count the same objects multiple times if they show up again referenced from different fields – we should be counting them once only.
-
-A temporary fix is to exclude enumsets from being counted.

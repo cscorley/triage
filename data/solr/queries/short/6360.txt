@@ -1,1 +1,0 @@
-Unnecessary Content-Charset header in HttpSolrServer

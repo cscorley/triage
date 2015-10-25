@@ -1,1 +1,0 @@
-IndexSearcher.search() with sort doesnt do min(maxdoc, n)

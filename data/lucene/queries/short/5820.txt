@@ -1,1 +1,0 @@
-SuggestStopFilter should have a factory

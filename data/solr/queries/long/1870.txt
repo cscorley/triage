@@ -1,1 +1,0 @@
-When the field type of a field in a SolrInputDocument is a Collection based on the Set interface, the JavaBinUpdate request fails. It works when sending the document data over XML.

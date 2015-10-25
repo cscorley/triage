@@ -1,1 +1,0 @@
-solr-commons-csv must not use the org.apache.commons.csv package

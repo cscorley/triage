@@ -1,1 +1,0 @@
-Remove Priority-Queue size trap in MultiTermQuery.TopTermsBooleanQueryRewrite

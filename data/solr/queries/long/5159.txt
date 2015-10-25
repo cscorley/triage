@@ -1,7 +1,0 @@
-When building Lucene/Solr with Apache Maven 3, all MANIFEST.MF files included into JAR artifacts contain non-parsed POM variables: namely, there are entries like
-
-Specification-Version: 5.0.0.${now.version}
-
-In the end, Solr displays these values on admin page in "Versions" section.
-
-This is caused by unresolved bug in maven-bundle-plugin (FELIX-3392). 

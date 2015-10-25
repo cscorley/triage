@@ -1,3 +1,0 @@
-When performing /browse, the Velocity generated UI does not support sorting in the generated pagination links.
-
-The link_to_previous_page and link_to_next_page macros found within [apache-solr-4.0.0]/example/solr/collection1/conf/velocity/VM_global_library.vm should be modified to maintain/preserve an existing sort parameter.

@@ -1,1 +1,0 @@
-NullPointerException encountered when /select query on solr.TextField.

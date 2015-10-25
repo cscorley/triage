@@ -1,1 +1,0 @@
-solr.xml is supposed to allow solr/cores/shardHandlerFactory setting (and likewise, the new solr.properties has shardHandlerFactory.class).  However, the code that reads this setting (ConfigSolrXmlBackCompat and SolrProperties) always instantiates an HttpShardHandlerFactory.

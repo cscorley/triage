@@ -1,5 +1,0 @@
-In the binary release, i noticed lucene contribs (for example benchmark)
-that rely upon jar files, don't include them, nor do they have a README telling
-you they depend upon them, nor is there any hint they actually have any dependencies at all!
-
-we should improve this either by including the jars you need or by including a README.txt telling you what a particular module/contrib depends upon.

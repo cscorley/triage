@@ -1,3 +1,0 @@
-See SOLR-981, the woodstox dependency should use a groupId of org.codehaus.woodstox and not woodstox
-
-Also, exclude the stax:stax-api dependency in favor of the org.apache.geronimo.specs:geronimo-stax-api_1.0_spec dependency as per http://www.lucidimagination.com/search/document/f02b22dc9d7848/replace_stax_api_with_geronimo_stax_woodstox#bd9168d12ef5b637

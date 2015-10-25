@@ -1,1 +1,0 @@
-Add estimateDocCount to DocIdSetIterator

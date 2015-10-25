@@ -1,1 +1,0 @@
-Tika 1.0 was released November 7th and includes a number of improvements: http://tika.apache.org/1.0/

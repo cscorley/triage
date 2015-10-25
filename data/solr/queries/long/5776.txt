@@ -1,3 +1,0 @@
-We have to disable SSL on a bunch of tests now because it appears to sometime be ridiculously slow - especially in slow envs (I never see timeouts on my machine).
-
-I was talking to Robert about this, and he mentioned that there might be some settings we could change to speed it up.

@@ -1,1 +1,0 @@
-Solr should consistently call SolrServer#shutdown

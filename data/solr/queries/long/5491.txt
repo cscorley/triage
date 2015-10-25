@@ -1,1 +1,0 @@
-As per Davig Smiley's comment it's certainly more correct to use beginsWith rather that indexOf() != -1.

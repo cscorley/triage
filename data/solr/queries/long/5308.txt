@@ -1,3 +1,0 @@
-Enable SolrCloud users to split out a set of documents from a source collection into another collection.
-
-This will be useful in multi-tenant environments. This feature will make it possible to split a tenant out of a collection and put them into their own collection which can be scaled separately.

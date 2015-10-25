@@ -1,1 +1,0 @@
-Improve message for CREATECOLLECTION failure due to missing numShards

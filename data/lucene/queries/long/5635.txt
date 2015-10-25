@@ -1,3 +1,0 @@
-Currently we only catch exc-handling bugs depending on where a codec does i/o.
-
-Instead we should add CrankyCodec and CrankyAnalyzer, which throw random exceptions from any method. 

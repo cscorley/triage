@@ -1,1 +1,0 @@
-Parsing Hunspell affix rules without regexp condition

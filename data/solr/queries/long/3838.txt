@@ -1,1 +1,0 @@
-The Solr Admin Query UI has only a single "fq" input field, which does not permit the user to enter multiple filter query parameters.

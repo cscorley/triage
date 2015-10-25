@@ -1,3 +1,0 @@
-It seems a stopword for a large collection could easily blow this out of the water.
-
-We need a Test2BPositions!

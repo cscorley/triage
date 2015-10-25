@@ -1,3 +1,0 @@
-In LUCENE-3877 Greg Bowyer has some asm.jar-based code to inspe ct class files for System.out/err class. I wanted to modify this code to run it in a jar-linter task on ant, so all compiled class files are parsed and method/ctor calls to e.g. new String(byte[]) without charset are forbidden. We would add a list of method signatures that we dont want to have (new FileReader(File), commons.IOUtils.loadFileToString()) and this linter will throw BuildException after static inspection, if any class file in Lucene/Solr (including line numbers) uses any method call.
-
-Greg's code would be changed to use visitMethodInsn visitor, very easy.

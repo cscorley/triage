@@ -1,3 +1,0 @@
-With the move of OrdinalPolicy to CategoryListParams, NonTopLevelOrdinalPolicy was nuked. It might be good to restore it, as another enum value of OrdinalPolicy.
-
-It's the same like ALL_PARENTS, only doesn't add the dimension ordinal, which could save space as well as computation time. It's good for when you don't care about the count of Date/, but only about its children counts.

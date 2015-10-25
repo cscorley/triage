@@ -1,2 +1,0 @@
-I am a window 7 user, i am new in solr, i downloaded the setup for solr 4.7.1 and when i start the server and opened the admin interface using this url: http://localhost:8983/solr/#/collection1, then I noticed that on selecting the collection1 from cores  menu, I was unable to view the full list for collection1.
-Please find this google doc link https://drive.google.com/file/d/0B5GzwVkR3aDzNzJheHVmWFRFYzA/edit?usp=sharing containing the screenshot.

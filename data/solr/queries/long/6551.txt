@@ -1,9 +1,0 @@
-
-
-null:java.util.ConcurrentModificationException
-       at java.util.LinkedList$ListItr.checkForComodification(Unknown Source)
-       at java.util.LinkedList$ListItr.next(Unknown Source)
-       at org.apache.solr.update.UpdateLog.getTotalLogsSize(UpdateLog.java:199)
-       at org.apache.solr.update.DirectUpdateHandler2.getStatistics(DirectUpdateHandler2.java:871)
-       at org.apache.solr.handler.admin.SolrInfoMBeanHandler.getMBeanInfo(SolrInfoMBeanHandler.java:159)
-

@@ -1,1 +1,0 @@
-nuke AtomicReader.termDocsEnum(termState) and termPositionsEnum(termState)

@@ -1,1 +1,0 @@
-Ignore or throw proper error message for bad delete containing bad composite ID

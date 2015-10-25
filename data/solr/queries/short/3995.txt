@@ -1,1 +1,0 @@
-Recovery may never finish on SolrCore shutdown if the last reference to a SolrCore is closed by the recovery process.

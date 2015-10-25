@@ -1,1 +1,0 @@
-Separate javadocs for core and contribs

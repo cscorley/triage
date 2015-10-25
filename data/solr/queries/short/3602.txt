@@ -1,1 +1,0 @@
-Look into updating to ZooKeeper 3.4.5

@@ -1,2 +1,0 @@
-LUCENE-2482 added an IndexSorter to 3.x, but we need to port this
-functionality to 4.0 apis.

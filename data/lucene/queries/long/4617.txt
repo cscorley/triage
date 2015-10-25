@@ -1,6 +1,0 @@
-Current method to make a packed FST:
-1. Create an FST Builder with willPack=true, telling it you are later going to pack() it.
-2. Create your fst with finish() as normal.
-3. Take that fst, and call pack() on it to get another FST.
-
-This makes no sense. if you pass willPack=true, then I think finish() should just return a packed fst.

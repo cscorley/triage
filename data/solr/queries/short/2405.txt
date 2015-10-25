@@ -1,1 +1,0 @@
-solrconfig.xml tweaks: add DIH lib & remove facet.date

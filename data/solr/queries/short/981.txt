@@ -1,1 +1,0 @@
-woodstox dependency in maven solrj has wrong groupId

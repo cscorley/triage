@@ -1,7 +1,0 @@
-Spinoff from java-user thread "question about Scorer.freq()" from Koji...
-
-BooleanScorer2 uses DisjunctionSumScorer to score only-SHOULD-clause boolean queries.
-
-But, this scorer does too much work for collectors that never call .score, because it scores while it's matching.  It should only call .score on the subs when the caller calls its .score.
-
-This also has the side effect of messing up advanced collectors that gather the freq() of the subs (using LUCENE-2590).

@@ -1,1 +1,0 @@
-Making these empty instances singletons would allow to use unwrapSingleton to check if they are single-valued.

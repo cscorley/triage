@@ -1,1 +1,0 @@
-Reworked Automaton.Builder.finish() to not allocate memory stepwise. Added growTransitions(int numTransitions) to be able to resize the transistions array just once.

@@ -1,1 +1,0 @@
-Fix NPE in OCP when non-existent sliceId is used for a deleteShard request

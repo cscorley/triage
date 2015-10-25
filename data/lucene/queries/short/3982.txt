@@ -1,1 +1,0 @@
-regex support in queryparser needs documented, and called out in CHANGES.txt

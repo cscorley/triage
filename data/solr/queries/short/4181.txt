@@ -1,1 +1,0 @@
-grouping response format inconsistent in distributed search when no docs match group.query

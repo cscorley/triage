@@ -1,1 +1,0 @@
-Move VelocityResponseWriter from contrib/ to core

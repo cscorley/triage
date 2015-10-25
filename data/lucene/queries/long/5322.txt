@@ -1,5 +1,0 @@
-Many Maven-related Ant targets are public when they don't need to be, e.g. dist-maven and filter-pom-templates, m2-deploy-lucene-parent-pom, etc.
-
-The arrangement of these targets could be simplified if the directories that have public entry points were minimized.
-
-generate-maven-artifacts should be runnable from the top level and from lucene/ and solr/. 

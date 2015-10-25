@@ -1,5 +1,0 @@
-This method has a lot of problems:
-1. it tracks 'stale files' as it writes (this seems pointless), and only actually fsyncs the intersection of that 'stale files' and the filenames passed as argument to sync(). So any bogus names passed to sync() are just silently ignored
-2. if "something bad happens" (e.g. two indexwriters/dirs on the same path, or some other shenanigans), and the file is actually in stale files, but was say actually deleted on the filesystem, the underlying fsync() call will create a new 0-byte file and fsync that.
-
-In my opinion we should do none of this. we should throw exceptions when this stuff is wrong.

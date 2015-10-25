@@ -1,1 +1,0 @@
-disk full can cause index corruption in certain cases

@@ -1,5 +1,0 @@
-XMLWriter includes support for a a pre 1.0 response format where multi-valued fields are not collected together in an <arr> tag.
-
-One problem is that many tests assume this format.
-
-In 4.0, lets remove support for the old style XML formats

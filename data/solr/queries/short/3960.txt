@@ -1,1 +1,0 @@
-Searching: PostFilter plugins ignored by solr cloud for queries with grouping

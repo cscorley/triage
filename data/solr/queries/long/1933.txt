@@ -1,1 +1,0 @@
-Improve the uniformity and scale of solr indenting (solr only supported 7 levels of indenting previously)

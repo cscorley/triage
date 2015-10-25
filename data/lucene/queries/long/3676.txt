@@ -1,1 +1,0 @@
-MultiDocValues doesn't support Sorted variant ie. SortedSource but throws UnsupportedOperationException. This forces users to work per segment. For consistency we should support sortedsource also if we wrap the DocValues in MDV.

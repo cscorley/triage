@@ -1,5 +1,0 @@
-SearcherTaxonomyManager now only allows working in NRT mode. It could be useful to have an STM which allows reopening a SearcherAndTaxonomy pair over Directories, e.g. for replication. The problem is that if the thread that calls maybeRefresh() is not the one that does the commit(), it could lead to a pair that is not synchronized.
-
-Perhaps at first we could have a simple version that works under some assumptions, i.e. that the app does the commit + reopen in the same thread in that order, so that it can be used by such apps + when replicating the indexes, and later we can figure out how to generalize it to work even if commit + reopen are done by separate threads/JVMs.
-
-I'll see if SearcherTaxonomyManager can be extended to support it, or a new STM is required.

@@ -1,1 +1,0 @@
-This issue will have the BytesHash separated out from LUCENE-2186

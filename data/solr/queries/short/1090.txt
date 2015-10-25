@@ -1,1 +1,0 @@
-DataImportHandler should load the data-config.xml using UTF-8 encoding

@@ -1,6 +1,0 @@
-When linking to the query page with parameters, this should execute the query.
-
-Right now linking to:
-http://localhost:8983/solr/#/singlecore/query?q=id:[*%20TO%20*]
-
-requires you to then hit the 'Execute Query' button

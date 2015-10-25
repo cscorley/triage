@@ -1,1 +1,0 @@
-There are still a couple things taking Version in their constructor (AnalyzingInfixSuggester/BlendedInfixSuggester), TEST_VERSION_CURRENT isn't needed anymore, and there are a number of places with :Post-Release-Update-Version:, which should be possible to remove completely.

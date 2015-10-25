@@ -1,3 +1,0 @@
-SOLR-3591 added support for tracking if a core failed to init properly, and reporting this data back in STATUS request to the CoreAdminHandler so they could be displayed in the UI.
-
-Attempts to use those cores anyway (for queries or updates, etc...) by users/clients that may not realize the core failed to init results in 404 errors because the core doesn't exist, however it should be fairly straight forward to intead return a 500 error wrapping the cause of the init failure.

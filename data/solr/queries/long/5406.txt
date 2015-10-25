@@ -1,1 +1,0 @@
-It appears that deletes using CloudSolrServer drop request parems.

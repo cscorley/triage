@@ -1,1 +1,0 @@
-Allow components to add fields to outgoing documents

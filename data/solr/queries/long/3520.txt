@@ -1,1 +1,0 @@
-JapaneseReadingFormFilterFactory and JapaneseKatakanaStemFilterFactory doesn't have any tests and it would be good to have some.

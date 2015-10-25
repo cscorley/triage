@@ -1,1 +1,0 @@
-Improve the defaults for the "text" field type in default schema.xml

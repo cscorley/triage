@@ -1,6 +1,0 @@
-RequestHandlers can disable HTTP Caching with the init-parameter:
-
-<bool name="httpCaching">false</bool>
-
-
-For UpdateHandlers, disabling caching by default makes more sense.

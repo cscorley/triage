@@ -1,1 +1,0 @@
-CachingDirectoryFactory should use an IdentityHashMap for byDirectoryCache.

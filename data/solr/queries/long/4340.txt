@@ -1,1 +1,0 @@
-The "Analyse Values" Button on the Analysis Screen should get one Spinner Icon while the analysis is loaded, but currently, the spinner is repeated all over the Button

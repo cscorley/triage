@@ -1,1 +1,0 @@
-spatial strategy- add multiplier to makeDistanceValueSource()

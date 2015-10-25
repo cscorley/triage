@@ -1,2 +1,0 @@
-The httpclient, httpmine and httpcore jars are missing in solrj-lib.
-I'll attach a patch

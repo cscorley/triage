@@ -1,4 +1,0 @@
-happens easily on java7: ant test -Dtestcase=TestPorterStemFilter -Dtests.iter=100
-
-might happen on 1.6.0_u26 too, a user reported something that looks like the same bug already:
-http://www.lucidimagination.com/search/document/3beaa082c4d2fdd4/porterstemfilter_kills_jvm

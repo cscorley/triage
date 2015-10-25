@@ -1,2 +1,0 @@
-DirectSpellchecker doesn't check that the resulting Terms is null,
-it should return an empty list here.

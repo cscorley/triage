@@ -1,1 +1,0 @@
-Refactor SolrCoreState so that it's managed by SolrCore .

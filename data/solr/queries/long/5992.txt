@@ -1,1 +1,0 @@
-Spinoff from SOLR-3862. If someone wants to pick it up, please do, create a patch and assign to me. See the discussion at SOLR-3862 for some things to bear in mind, especially the interface discussion.

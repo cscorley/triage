@@ -1,3 +1,0 @@
-For example, in a server, I may want to render the highlight result to JsonObject to send back to the front-end. Today since we render to string, I have to render to JSON string and then re-parse to JsonObject, which is inefficient...
-
-Or, if (Rob's idea we make a query that's like MoreLikeThis but it pulls terms from snippets instead, so you get proximity-influenced salient/expanded terms, then perhaps that renders to just an array of tokens or fragments or something from each snippet.

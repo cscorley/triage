@@ -1,1 +1,0 @@
-The cloud tree view works (the one that shows the raw contents of ZK), but the other views (like graph) don't work.  This is probably due to the recent custerstate.json changes.

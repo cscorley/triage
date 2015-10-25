@@ -1,1 +1,0 @@
-Brought up by Patrick Hunt while we worked on SOLR-5442

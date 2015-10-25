@@ -1,1 +1,0 @@
-Add configurable Sweetspot Similarity factory

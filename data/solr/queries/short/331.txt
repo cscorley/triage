@@ -1,1 +1,0 @@
-StringIndexOutOfBoundsException when using synonyms and highlighting

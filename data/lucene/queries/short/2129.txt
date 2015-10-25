@@ -1,1 +1,0 @@
-standard codec's terms dict seek should only scan if new term is in same index block

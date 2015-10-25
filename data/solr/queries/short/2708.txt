@@ -1,1 +1,0 @@
-Allow customizable bean mapping for QueryResponse.getBeans(..)

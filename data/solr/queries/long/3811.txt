@@ -1,1 +1,0 @@
-Alexandre Rafalovitch noticed on the solr-user mailing list that if you click on the "dismax" (or "edismax") checkbox in the Solr Admin UI, then you get an (unused) "dismax=true" param added to the URL instead of "defType=dismax"

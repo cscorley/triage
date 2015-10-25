@@ -1,1 +1,0 @@
-Add narrow API for loading stored fields, to replace FieldSelector

@@ -1,1 +1,0 @@
-While talking to yonik about some of the chaosmonkey issues we are investigating, it came up that we should harden this. I'm going to raise the timeouts for the call some and put the actual recovery kick off call in a new thread since the current code may end up waiting for a current recovery to stop before the request for recovery call can return.

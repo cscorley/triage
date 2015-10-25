@@ -1,1 +1,0 @@
-Solr sort no longer works on field names with some punctuation in them

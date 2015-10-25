@@ -1,6 +1,0 @@
-In LUCENE-2551 collation support was changed to use byte[] keys.
-
-Previously it encoded sort keys with IndexableBinaryString into char[],
-but this is wasteful with regards to RAM and disk when terms can be byte.
-
-A better solution would be [ICU]CollationFieldTypes, as this would also allow locale-sensitive range queries.

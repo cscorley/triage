@@ -1,1 +1,0 @@
-Lucene fails to close file handles under certain situations

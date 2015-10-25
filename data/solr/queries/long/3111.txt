@@ -1,3 +1,0 @@
-Specifying "&fl=field1 field2" for the LukeRequestHandler results in trying to find a field, you guessed it, "field field2".
-
-Additionally, it makes sense for some future enhancements, to support fl=*.

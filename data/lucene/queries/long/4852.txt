@@ -1,5 +1,0 @@
-The idea is similar to Base[Postings/DocValues/TermVectors]TestCase.
-
-We ensure each codec has certain checks and its easier to maintain and also easier to ensure new impls are correct.
-
-For example hunting around today, a lot of the best tests are actually tucked away in TestCompressingStoredFieldsFormat.

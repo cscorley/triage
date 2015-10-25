@@ -1,6 +1,0 @@
-Yago Riveiro mentioned on #solr that reloading the system information stopped working:
-
-<yriveiro> the system's button for reload graph on dashboard doesn't work for me on 4.5, someone else with the same behaviour?
-<yriveiro> the debugger console of chrome says: Uncaught ReferenceError: environment_basepath is not defined
-
-grep'ing the source shows one leftover from our Refactoring for SOLR-3633 which still (tries) to use the environment_basepath - which is infact for reloading the information on the dashboard.

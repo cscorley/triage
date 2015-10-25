@@ -1,9 +1,0 @@
-DrillSideways.DrillSidewaysResult uses Facets when the query does not filter by a facet, but it uses MultiFacets when it does, and MultiFacets implementation is not complete.
-
-See: https://github.com/apache/lucene-solr/blob/0b0bc89932622f5bc2c4d74f978178b9ae15c700/lucene/facet/src/java/org/apache/lucene/facet/MultiFacets.java#L67
-
-See http://pastebin.com/5eDbTM2v 
-
-This code works when DrillDownQuery.add is not called (when there is no facets selected), but it fails with an UnsupportedOperationException.
-
-Perhaps I'm not using Facets correctly, but I'm trying to figure it out to upgrade from 4.6.1 by my self as I could not find a documentation other than javadocs for facets.

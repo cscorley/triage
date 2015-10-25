@@ -1,1 +1,0 @@
-Make BytesRef.copy[Int,Short,Long] package private for DocValues

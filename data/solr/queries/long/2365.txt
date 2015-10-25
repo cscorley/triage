@@ -1,1 +1,0 @@
-The DIH has a build.xml that puts itself into the Solr war file.  This is the only contrib module that does this, and I don't think it should be this way. Granted there is a small dataimport.jsp file that would be most convenient to remain included, but the jar should not be.

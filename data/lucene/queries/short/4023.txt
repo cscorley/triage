@@ -1,1 +1,0 @@
-Scorer.visitSubScorers() is protected which make it impossible to implement it on a composite scorer in another package; DisjunctionMaxScorer does not implement it

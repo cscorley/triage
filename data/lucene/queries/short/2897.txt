@@ -1,1 +1,0 @@
-apply delete-by-Term and docID immediately to newly flushed segments

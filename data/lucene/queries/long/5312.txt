@@ -1,5 +1,0 @@
-It could be useful to have a block-join-friendly sorter implementation that doesn't break index-time blocks:
-
-	blocks must not interleave,
-	parents must remain at the end of the blocks
-

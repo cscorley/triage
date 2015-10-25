@@ -1,1 +1,0 @@
-[PATCH] fix various small issues with the "getting started" demo pages

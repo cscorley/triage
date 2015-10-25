@@ -1,1 +1,0 @@
-We need custom logging to decipher tests with multiple core containers, cores, in a single JVM.

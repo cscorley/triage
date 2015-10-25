@@ -1,1 +1,0 @@
-As part of "ant example" a sample tika setup should be generated.

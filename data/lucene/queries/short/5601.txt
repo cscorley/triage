@@ -1,1 +1,0 @@
-ThaiTokenizer ignores sentenceStart

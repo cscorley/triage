@@ -1,1 +1,0 @@
-A SolrIndexSearcher can be left open if the executor rejects a task.

@@ -1,1 +1,0 @@
-Using a copyField with * as the source doesn't work with LukeRequestHandler - breaks admin UI

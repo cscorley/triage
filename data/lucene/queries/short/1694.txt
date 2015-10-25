@@ -1,1 +1,0 @@
-Query#mergeBooleanQueries argument should be of type BooleanQuery[] instead of Query[]

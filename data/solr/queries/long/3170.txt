@@ -1,1 +1,0 @@
-The names iterator for DefaultSolrParams repeats entries.

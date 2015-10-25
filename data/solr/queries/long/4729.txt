@@ -1,7 +1,0 @@
-It seems you can no longer use a wildcard as the source when defining a copyField.  I don't believe that this was fixed as part of SOLR-4650 since I've tested it with the 4/17 nightly build and it doesn't work.
-
-I'm using the following line: <copyField source="*" dest="text"/>
-
-If I index something, this line is ignored.  If I go to the Analysis tab, the fields aren't populated and I see the error: 'org.apache.solr.common.SolrException: undefined field: "*"' in the log.
-
-This worked correctly in 4.0, but I didn't test it in 4.1.

@@ -1,2 +1,0 @@
-If close() is invoked around when an additional input stream reader is recreated for the 'forever' behavior, an uncaught NPE might occur.
-This bug was probably always there, just exposed now with the EnwikioContentSourceTest added in LUCENE-4588.

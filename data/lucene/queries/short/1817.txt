@@ -1,1 +1,0 @@
-it is impossible to use a custom dictionary for SmartChineseAnalyzer

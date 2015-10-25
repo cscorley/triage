@@ -1,1 +1,0 @@
-DateMath strings truncated to 32 chars by lucene qparser in simple term queries

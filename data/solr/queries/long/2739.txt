@@ -1,3 +1,0 @@
-Shawn Heisey noted on the mailing list that he was getting consistent failures from TestSqlEntityProcessorDelta.testNonWritablePersistFile on his machine.
-
-I can't reproduce his exact failures, but the test is hinky enough that i want to try and clean it up.

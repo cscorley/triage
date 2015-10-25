@@ -1,1 +1,0 @@
-Utilize indexInfo=false when gathering core names in UI

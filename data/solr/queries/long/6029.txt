@@ -1,7 +1,0 @@
-CollapsingQParserPlugin misidentifies if a document is not found in a segment if the docid previously existed in a segment ie.... was deleted. 
-
-Relevant code bit from CollapsingQParserPlugin needs to be changed from:
--if(doc != -1) {
-+if((doc != -1) && (doc != DocsEnum.NO_MORE_DOCS)) {
-
-What happens is if the doc is not found the returned value is DocsEnum.NO_MORE_DOCS. This would then get set in the fq bitSet array as the doc location causing an ArrayIndexOutOfBoundsException as the array is only as big as maxDocs. 

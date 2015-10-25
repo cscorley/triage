@@ -1,1 +1,0 @@
-Distributed sort on DateField, BoolField and BCD{Int,Long,Str}Field returns string cast exception

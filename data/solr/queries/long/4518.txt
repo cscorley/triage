@@ -1,1 +1,0 @@
-Got a generic "IllegalArgumentException" when trying to use a currency.xml file refering to "ZWL" on java6 ... need to wrap those errors with more context.

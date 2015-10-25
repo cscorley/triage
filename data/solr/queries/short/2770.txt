@@ -1,1 +1,0 @@
-The Solr 3.4.0 release's maven artifacts don't include the jdk1.5-compiled carrot2-core jar

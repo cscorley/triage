@@ -1,5 +1,0 @@
-In solr 4.0 environment, transaction log had been defined in three level, none/flush/fsync. The updateLog hard code the default sync level is SyncLevel.FLUSH.
-If user want to use the other levels, have to rewrite the RunUpdateProcess, to set the level.
-At best, user can set it in the solrconfig.xml, that it is easy to control and use.
-
-BTW, transaction log is very important for solr cloud, at best, invoke the sync to make sure kernel memory submit into the disk to avoid some corner case that maybe damage transaction log.

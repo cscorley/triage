@@ -1,3 +1,0 @@
-When ShingleFilter hits a hole, it uses _ as the token, e.g. bigrams for "the dog barked", if you have a StopFilter removing the, would be: "_ dog", "dog barked".
-
-But if the input ends with a stopword, e.g. "wizard of", ShingleFilter fails to produce "wizard _" due to LUCENE-3849 ... once we fix that I think we should fix ShingleFilter to make shingles for trailing holes too ...

@@ -1,1 +1,0 @@
-XMLResponseParser does not handle named lists in doc fields

@@ -1,2 +1,0 @@
-SOLR-5476 depends on Overseer restart.The current strategy is to remove the zk node for leader election and wait for STATUS_UPDATE_DELAY +100 ms and  start the new overseer.
-Though overseer ops are short running,  it is not a 100% foolproof strategy because if an operation takes longer than the wait period there can be race condition. 

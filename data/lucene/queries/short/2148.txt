@@ -1,1 +1,0 @@
-Improve Spatial Point2D and Rectangle Classes

@@ -1,1 +1,0 @@
-For consistency NRTCachingDirecotory should subclass FilterDirectory

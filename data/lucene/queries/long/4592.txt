@@ -1,3 +1,0 @@
-The formula in the JavaDocs of NumericRangeQuery that returns the maximum number of terms in the NRQ's TermsEnum is confusing tthe user.
-
-I will fix the documentation and also add some more numbers to the of NumericField (e.g. the average number of term in index).

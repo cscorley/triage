@@ -1,1 +1,0 @@
-CheckIndex modifies index without write.lock

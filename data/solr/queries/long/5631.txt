@@ -1,2 +1,0 @@
-Given that new SuggesterComponent can get suggestions from multiple suggesters at once, it would be nice to add support for FreeTextSuggester in Solr. 
-This suggester can be used as a fallback suggester in conjunction with other suggesters

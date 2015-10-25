@@ -1,1 +1,0 @@
-if payloads are used with AnalyzingSuggester and the payload is entirely stored on a cached root arc AnalyzingSuggester modifies the payload BytesRef.length during lookup causing assertions to trip and subsequent requests fail with an negative array index

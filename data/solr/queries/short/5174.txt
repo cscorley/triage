@@ -1,1 +1,0 @@
-Admin UI - Query View doesn't highlight (json) Result if it contains HTML Tags

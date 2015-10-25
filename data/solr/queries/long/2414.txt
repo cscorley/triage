@@ -1,3 +1,0 @@
-When SOLR-2381 is committed we no longer use the Writer supplied by the underlying Servlet Container. We can therefore assume that UTF-8 is not CESU, so the hack in PHPSerilaizedResponseWriter is obsolete.
-
-We should remove it or at least disable the system property, as this is explained in the Wiki and some people may already used it, now failing with 3.1, as we always produce UTF-8 and if the CESU property is true, the serialized output is suddenly wrong.

@@ -1,1 +1,0 @@
-One related piece of functionality needed for SOLR-3250 is the ability to dynamically add a field to the schema.

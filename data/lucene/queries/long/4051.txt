@@ -1,1 +1,0 @@
-Currently we still write the "old" file header format in Lucene40StoredFieldFormat & Lucene40TermVectorsFormat. We should cut over to use CodecUtil and reset the versioning before we release Lucene 4.0

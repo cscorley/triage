@@ -1,1 +1,0 @@
-SignatureUpdateProcessor does not fail on invalid config, can lead to deleting all docs (Deduplication)

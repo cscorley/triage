@@ -1,1 +1,0 @@
-SyncSliceTest on trunk is failing consistently

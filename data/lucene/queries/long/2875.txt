@@ -1,3 +1,0 @@
-During converting Solr's AnalysisRequestHandlers (LUCENE-2374) I noticed, that the current implementation of NumericTokenStream fails on cloneAttributes(), which is needed to buffer the tokens for structured display.
-
-This issue should fix this by refactoring the inner class.

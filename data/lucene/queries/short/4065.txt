@@ -1,1 +1,0 @@
-FilteringTokenFilter should never corrupt the tokenstream graph

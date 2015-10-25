@@ -1,1 +1,0 @@
-Allow customizing how WordDelimiterFilter tokenizes text.

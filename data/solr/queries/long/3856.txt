@@ -1,3 +1,0 @@
-The current tests for SqlEntityProcessor (& CachedSqlEntityProcessor), while many, do not reliably fail when bugs are introduced!  They are also difficult to look at and understand.  As we move Jenkins onto new environments, we have found several of them fail regularly leading to "@Ignore".  
-
-My aim here is to write all new tests for (Cached)SqlEntityProcessor, and to document (hopefully fix) any bugs this reveals.  

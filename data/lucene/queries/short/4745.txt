@@ -1,1 +1,0 @@
-Allow FuzzySlop customization in classic QueryParser

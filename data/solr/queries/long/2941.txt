@@ -1,1 +1,0 @@
-The clustering component should throw a server exception saying that unique key field is required for the clustering component to work.

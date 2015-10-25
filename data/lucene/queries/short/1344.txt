@@ -1,1 +1,0 @@
-Make the Lucene jar an OSGi bundle

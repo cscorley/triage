@@ -1,1 +1,0 @@
-Distributed Grouping fails if the uniqueKey is a UUID

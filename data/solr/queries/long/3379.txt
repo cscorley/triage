@@ -1,2 +1,0 @@
-SOLR-3221 allows configuration of the shard handler thread pool. When the thread pool configuration is changed the configuration changed is logged but the value reported is always the socket timeout.
-This patch will report the value of the configuration item changed.

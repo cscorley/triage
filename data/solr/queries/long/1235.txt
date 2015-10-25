@@ -1,1 +1,0 @@
-periods do not work because it is a special char for resolving namespaces

@@ -1,7 +1,0 @@
-David Boychuck reported on #solr that the Page for Logging/Level only shows a spinning wheel w/o actually finishing at some time.
-
-Uncaught RangeError: Maximum call stack size exceeded
-
-was the error message which led me to the suggestion, that the javascript goes crazy while building up the loglevel tree.
-
-the attached patch includes an additional check for an empty logger-name, which does not fix the root of the problem (will open another issue for that one) but at least avoid confusion because the page doesn't get loaded at all.

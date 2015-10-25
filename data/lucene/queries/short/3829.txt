@@ -1,1 +1,0 @@
-Lucene40 codec's DocValues DirectSource impls aren't thread-safe

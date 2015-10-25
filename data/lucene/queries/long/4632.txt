@@ -1,7 +1,0 @@
-Currently we restring wrting to tests.tempDir after SOLR-4195, but it would be better to restrict more and only let child JVMs write to their working dir and not outside (and maybe corrumpt other JVMs).
-
-The problem with current setup is that the child JVM's policy file does not know the runner number nor the absolute working directory (it must be absolute and platform-specific with backslash/slash/... -> new File(".").getAbsolutePath().
-
-Dawid will release a new Junit4 package with a new sysprop passed to every child with its full CWD: junit4.childvm.cwd
-
-In that case the policy file would use this property (and the clover.db.dir) to allow write access and allow only read/execute access for the rest of the  filesystem.

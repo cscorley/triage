@@ -1,1 +1,0 @@
-replicator IndexReplicationHandler method cleanupOldIndexFiles() does not log state in case of an exception, but there is a comment inside handler informing that the state should be logged.

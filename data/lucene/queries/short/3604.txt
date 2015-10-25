@@ -1,1 +1,0 @@
-3x/lucene/contrib/CHANGES.txt has two "API Changes" subsections for 3.5.0

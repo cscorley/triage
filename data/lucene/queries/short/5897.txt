@@ -1,1 +1,0 @@
-performance bug ("adversary") in StandardTokenizer

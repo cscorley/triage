@@ -1,3 +1,0 @@
-Uwe just pointed out to me on IRC that you can specify <luceneMatchVersion/> using X.Y instead of the more internal java variable esque LUCENE_XY.
-
-i have no idea why we haven't been doing this in the past ... it makes so much more sense for end users, we should absolutely do this moving forward.

@@ -1,1 +1,0 @@
-edismax query with escaped colon ignores AND and OR

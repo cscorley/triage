@@ -1,1 +1,0 @@
-There is no way short of close() for a user of AnalyzingInfixSuggester to cause it to commit() its underlying index: only refresh() is provided.  But callers might want to ensure the index is flushed to disk without closing.

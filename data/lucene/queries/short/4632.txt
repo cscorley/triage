@@ -1,1 +1,0 @@
-Restrict test-framework's write permissions more: Only allow write to per-JVM CWD and the clover.db.dir

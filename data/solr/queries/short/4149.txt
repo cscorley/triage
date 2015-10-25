@@ -1,1 +1,0 @@
-Lazy core test occasionally fails.

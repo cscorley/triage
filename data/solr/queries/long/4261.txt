@@ -1,1 +1,0 @@
-The Percentage Graphs on the Dashboard are calculated with a fixed width, it's calculated once on Pageload, afterwards it stays fixed even if you resize the Window. All the other elements are flexible ..

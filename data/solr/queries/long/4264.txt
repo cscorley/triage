@@ -1,1 +1,0 @@
-If you're running Solr not in "Cloud-Mode" but you're trying to access UI's Cloud-Page (for whatever reason) the Page stays blank and doesn't provide any information about what's happening or not

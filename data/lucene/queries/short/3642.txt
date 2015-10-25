@@ -1,1 +1,0 @@
-EdgeNgrams creates invalid offsets

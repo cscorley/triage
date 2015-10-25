@@ -1,1 +1,0 @@
-PagingFieldCollector is very slow with String fields

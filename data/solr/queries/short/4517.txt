@@ -1,1 +1,0 @@
-make FieldType.properties protected

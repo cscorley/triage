@@ -1,7 +1,0 @@
-I recently tried enabling facet.method=fcs for one of my indexes and found a significant performance improvement (with a large index, many facet values, and near-realtime updates). Unfortunately, the results were also wrong. Specifically, some facet values were being partially overwritten by other facet values. (That is, if I expected facet values like "abcdef" and "123", I would get a value like "123def".)
-
-Debugging through the code, it looks like the problem was in PerSegmentSingleValuedFaceting, specifically in the getFacetCounts method, when BytesRef val is shallow-copied from the temporary per-segment BytesRef. The byte array assigned to val is shared with the byte array for seg.tempBR, and is overwritten a few lines down by the call to seg.tenum.next().
-
-I managed to fix it locally by replacing the shallow copy with a deep copy.
-
-While I encountered this problem on Solr 4.2.1, I see that the code is identical in 4.5. Unless the behavior of TermsEnum.next() has changed, I believe this bug still exists.

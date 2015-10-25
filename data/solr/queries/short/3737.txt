@@ -1,1 +1,0 @@
-StempelPolishStemFilterFactory can't find resource '/org/apache/lucene/analysis/pl/stemmer_20000.tbl'

@@ -1,1 +1,0 @@
-Persist and use router,replicationFactor and maxShardsPerNode at Collection and Shard level

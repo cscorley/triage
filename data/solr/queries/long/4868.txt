@@ -1,1 +1,0 @@
-Root cause for SOLR-4867.  Trying to set the root logging category results in the addition of a category that's the empty string.

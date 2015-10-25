@@ -1,1 +1,0 @@
-Method org.apache.solr.request.UnInvertedField.getUnInvertedField unnecessary syncronize agiant cache object. The SolrCache implementations should them selves be thread safe. For example FastLRUCache uses ConcurrentLRUCache which in turn use java.util.concurrency structs to make the implementation threadsafe.

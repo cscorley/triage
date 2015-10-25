@@ -1,1 +1,0 @@
-dists include analyzer contrib in src dist but not binary dist

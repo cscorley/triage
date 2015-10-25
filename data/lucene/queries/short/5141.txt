@@ -1,1 +1,0 @@
-CheckIndex.fixIndex doesn't need a Codec

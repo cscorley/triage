@@ -1,1 +1,0 @@
-SolrDispatchFilter sets content type as NULL

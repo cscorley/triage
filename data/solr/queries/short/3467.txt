@@ -1,1 +1,0 @@
-ExtendedDismax escaping is missing several reserved characters

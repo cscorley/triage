@@ -1,1 +1,0 @@
-Cleanup enum/string action types in Overseer, OverseerCollectionProcessor and CollectionHandler

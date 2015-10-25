@@ -1,1 +1,0 @@
-Create a collections API to delete/cleanup a shard

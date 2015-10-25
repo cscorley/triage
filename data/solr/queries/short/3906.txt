@@ -1,1 +1,0 @@
-Add support for AnalyzingSuggester / coerce it to work for Japanese 

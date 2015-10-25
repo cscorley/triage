@@ -1,1 +1,0 @@
-SolrCmdDistributor retry logic stops if a leader for the request cannot be found in 1 second.

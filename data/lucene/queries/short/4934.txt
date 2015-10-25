@@ -1,1 +1,0 @@
-AssertingIndexSearcher should do basic QueryUtils/etc checks on every query

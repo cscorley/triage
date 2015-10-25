@@ -1,1 +1,0 @@
-Add TermAutomatonQuery, for proximity matching that generalizes MultiPhraseQuery/SpanNearQuery

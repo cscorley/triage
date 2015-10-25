@@ -1,1 +1,0 @@
-Using spellcheck.collate can result in extremely high memory usage

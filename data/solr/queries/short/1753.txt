@@ -1,1 +1,0 @@
-StatsComponent throws java.lang.NullPointerException when getting statistics for facets in distributed search

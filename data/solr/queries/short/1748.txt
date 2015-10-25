@@ -1,1 +1,0 @@
-RawResponseWriter doesn't close Reader

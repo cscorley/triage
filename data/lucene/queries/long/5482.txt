@@ -1,1 +1,0 @@
-Add a TokenFilter that strips characters after an apostrophe (including the apostrophe itself). 

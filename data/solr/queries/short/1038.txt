@@ -1,1 +1,0 @@
-Enhance CommonsHttpSolrServer to add docs in batch

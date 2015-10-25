@@ -1,1 +1,0 @@
-Spatial search with point query won't find identical indexed point

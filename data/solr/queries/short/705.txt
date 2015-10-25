@@ -1,1 +1,0 @@
-Distributed search should optionally return docID->shard map

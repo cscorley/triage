@@ -1,2 +1,0 @@
-When run in a SolrCloud configuration the Velocity searchHandler responds to a /browse request with an HTTP error 500 and a stack trace indicating org.apache.solr.common.cloud.ZooKeeperException:
-ZkSolrResourceLoader does not support getConfigDir() 

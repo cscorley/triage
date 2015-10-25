@@ -1,1 +1,0 @@
-LuceneTestCase's uncaught exceptions handler should check for AssumptionViolatedExceptions and then not trigger test failure

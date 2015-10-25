@@ -1,3 +1,0 @@
-SOLR-5287 adds the ability to shoot yourself in the foot by changing core config files such that the core can't load, leading to having to go out into the filesystem and manually edit the files until you can reload the core. This is clumsy at best.
-
-Mark Miller suggested creating a temporary core and trying to reload it before saving the "real" changes, which gives us an approach to the problem that seems relatively easy to implement.

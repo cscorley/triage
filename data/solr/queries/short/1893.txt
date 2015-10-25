@@ -1,1 +1,0 @@
-common code in LRUCache and FastLRUCache should be refactored into SolrCacheBase

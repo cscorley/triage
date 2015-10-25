@@ -1,7 +1,0 @@
-In trunk, we use FileChannel.open() when opening files from NIOFSDir and MMapDirectory. This new method (all new APIs in Java 7!) throw java.nio.file.NoSuchFileException if a file does not exist. The old-style FileNotFoundException is only thrown by old APIs.
-
-We have to decide how to correctly document the expected behaviour in the abstract Directory interface and how we fix this (Directory should clearly state which IOException type is to be thrown if we really depend on the specific type).
-
-The new exceptions are more specific, so you get the most "correct" exception (it may happen with old apis that you get FNFE if you open a file where you have no access because it is locked...). With Java 7's FileChannel.open() you get a separate and correct Exception.
-
-A possible fix for now may be to try/catch for the new Exceptions in the 2 directory impls (there is also a try-with-resources there) and rethrow as FNFE.

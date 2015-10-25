@@ -1,1 +1,0 @@
-OpenCloseCoreStressTest should be much faster on non nightly runs.

@@ -1,1 +1,0 @@
-Merge up Solr Morphlines contrib code to latest external changes.

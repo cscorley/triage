@@ -1,1 +1,0 @@
-Add SearcherLifetimeManager, so you can retrieve the same searcher you previously used

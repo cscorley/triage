@@ -1,1 +1,0 @@
-Replication can fail silently in some cases.

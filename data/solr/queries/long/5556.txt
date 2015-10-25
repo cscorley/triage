@@ -1,3 +1,0 @@
-Currently, you can specify the CoreAdminHandler class name in solr.xml, but not the CollectionsHandler nor the InfoHandler.
-
-I want to run some (access control) checks around the administrative commands.  I can do this with the CoreAdminHandler, but not the other two.

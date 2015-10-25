@@ -1,1 +1,0 @@
-Inconsistent locking when accessing cache in CachingDirectoryFactory

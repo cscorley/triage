@@ -1,5 +1,0 @@
-Solr is currently tested (and bundled) with a patched jetty-6 version.  
-
-Ideally we can release and test with a standard version.
-
-Jetty-6 (at codehaus) is just maintenance now.  New development and improvements are now hosted at eclipse.  Assuming performance is equivalent, I think we should switch to Jetty 8.

@@ -1,3 +1,0 @@
-Having a small index with n documents where each document has one of the following terms:
-WEBER, WEBE, WEB, WBR, WE, (and some more)
-The new FuzzyQuery (Automaton) with maxEdits=2 only delivers the expected terms WEBER and WEBE in the rewritten query. The expected terms WEB and WBR which have an edit distance of 2 as well are missing.

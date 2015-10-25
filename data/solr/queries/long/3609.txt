@@ -1,3 +1,0 @@
-I'd like to pin down the extracted webapp dir to a constant known location. I think this is a better user experience, in that the location is fixed, and it also would allow us to write scripts that can find all of our jars.
-
-For example, there is currently some functionality in ZkController.main to handle some ZooKeeper tasks before starting Solr - something you often want to be able to do. There are more tools that would be nice to add. To create the best user experience for these tools, it would be great to have an example/cloud-tools directory with some simple scripts to make for easy cmd line execution. These scripts will need to be able to easily locate the webapps jars.

@@ -1,5 +1,0 @@
-NumericField extends from AbstractField, which implements Serializable.
-
-NumericField cannot be serialized because it stores the precisionStep in the underlying NumericTokenStream, which is not serializable.  The NumericTokenStream should either be made serializable, or made transient in NumericField, and the precisionStep should be stored directly in NumericField, and recreated on deserialization.
-
-Not entirely related, but the real reason I found this bug was because Field and NumericField are not cloneable and there is no way to make a copy manually, since there is no getter method for precisionStep on NumericField, so I thought I was going to be clever and do a "poor man's clone" by serializing/deserializing a NumericField.  No such luck.

@@ -1,1 +1,0 @@
-Socket and Connection configuration are ignored in HttpSolrServer when passing in HttpClient

@@ -1,2 +1,0 @@
-When ReplicationClient.updateNow() using an HttpReplicator encounters a server error (like Status Code 500), it throws a runtime exception instead of an IOException.
-Furthermore, it does not close the HttpClient it used, which leads to an Error if a BasicClientConnectionManager is used

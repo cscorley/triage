@@ -1,5 +1,0 @@
-Spinoff from the discussion here: http://markmail.org/thread/vljiltccqgg7afxc
-
-Our Jenkins builds used to save heap dumps, which is really useful for tracking down OOMEs that are hard to reproduce: sometimes these OOMEs are due to real issues.
-
-From the thread it sounds like it's easy to fix TestIndexWriterOnJRECrash to not dump ...

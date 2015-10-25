@@ -1,1 +1,0 @@
-Now that Hunspell stemmer is added to Lucene (LUCENE-3414), let's make a Factory for it in Solr

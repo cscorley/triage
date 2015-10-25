@@ -1,1 +1,0 @@
-IndexReader's add/removeCloseListener should not use ConcurrentHashMap, just a synchronized set

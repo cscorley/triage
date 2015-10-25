@@ -1,1 +1,0 @@
-StandardDirectoryReader should decRef readers on exception, not close them

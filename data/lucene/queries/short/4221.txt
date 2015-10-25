@@ -1,1 +1,0 @@
-CheckIndex is overeager for term vector offsets bounds checks

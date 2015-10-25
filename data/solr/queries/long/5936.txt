@@ -1,1 +1,0 @@
-We've been discouraging people from using non-Trie numeric&date field types for years, it's time we made it official.

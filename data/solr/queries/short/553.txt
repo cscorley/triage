@@ -1,1 +1,0 @@
-Highlighter does not match phrase queries correctly

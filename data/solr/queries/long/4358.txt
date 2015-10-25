@@ -1,3 +1,0 @@
-SolrJ accepts a ContentStream, which has a name field.  Within HttpSolrServer.java, if SolrJ makes the decision to use multipart posts, this filename is transmitted as part of the form boundary information.  However, if SolrJ chooses not to use multipart post, the filename information is lost.
-
-This information is used by SolrCell (Tika) to make decisions about content extraction, so it is very important that it makes it into Solr in one way or another.  Either SolrJ should set appropriate equivalent headers to send the filename automatically, or it should force multipart posts when this information is present.

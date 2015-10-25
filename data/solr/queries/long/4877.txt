@@ -1,3 +1,0 @@
-In LUCENE-5023 it was reported that composite reader contexts should not contain null fields() readers. But this is wrong, as a null-fields() reader may contain documents, just no fields.
-
-fields() and terms() is documented to return null, so DocSets should check for null (like all queries do in Lucene). It seems that DocSetNC does not correctly check for null.

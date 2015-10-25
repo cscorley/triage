@@ -1,5 +1,0 @@
-The XML and JSON response writers return data from short schema fields as "java.lang.Short:<value>".
-
-In addition, binary fields (for sharded requests) are returned as "[B:[B@<hex address of array>", which makes them totally unusable.
-
-This appears to be due to their writeVal() methods not having cases to handle val instanceof Short and val instance of byte[]

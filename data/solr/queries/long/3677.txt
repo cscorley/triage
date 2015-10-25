@@ -1,1 +1,0 @@
-Since SOLR-3633 is demonstrating that it will be challenging to make the Admin UI useful even when there are no cores, it seems prudent to spin off a sub-issue to at least fix the error message to distinguish between no cores, and not having /admin in the cores.

@@ -1,1 +1,0 @@
-The analysis-extras contrib no longer has Morfologik, Stempel, or Smartcn analysis factories - these were moved as part of LUCENE-4044 - but jars for these remain in the build.xml and ivy.xml configuration files, and are mentioned in the README.txt.

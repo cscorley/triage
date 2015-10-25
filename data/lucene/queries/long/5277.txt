@@ -1,1 +1,0 @@
-FixedBitSet copy constructor is redundant the way it is now – one can call FBS.clone() to achieve that (and indeed, no code in Lucene calls this ctor). I think it will be useful to add a numBits parameter to that method to allow growing/shrinking the new bitset, while copying all relevant bits from the passed one.

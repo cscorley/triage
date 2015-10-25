@@ -1,1 +1,0 @@
-"maxNumberOfBackups" does not work with "backupAfter"=commit

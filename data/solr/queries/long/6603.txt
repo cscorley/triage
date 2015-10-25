@@ -1,1 +1,0 @@
-On the assumption that for most requests the list would actually remain empty lazy allocation would save a small amount of allocation/subsequent garbage collection for most requests.

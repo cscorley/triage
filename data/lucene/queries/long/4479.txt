@@ -1,9 +1,0 @@
-The javadocs for TokenSources.getTokenStream(Terms, boolean) state:
-
-"Low level api. Returns a token stream or null if no offset info available
-in index. This can be used to feed the highlighter with a pre-parsed token
-stream"
-
-However, if the Terms instance passed in has positions but no offsets stored, a TokenStream is incorrectly returned, rather than null.
-
-This has the effect of incorrectly highlighting fields with term vectors and positions, but no offsets.  All highlighting markup is prepended to the beginning of the field.

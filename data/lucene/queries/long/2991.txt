@@ -1,6 +1,0 @@
-because of leftover segments file (presumably cannot be deleted because its open).
-
-The real bug is that this doesn't fail on linux too, so there is a problem with
-the tests framework where mockdirectorywrapper doesn't properly simulate windows.
-
-i've disabled the assertion to unbreak the build for now.

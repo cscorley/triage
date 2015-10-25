@@ -1,1 +1,0 @@
-The "partialResults" header should be set for shards that error out using shards.tolerant

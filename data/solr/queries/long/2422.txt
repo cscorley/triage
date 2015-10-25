@@ -1,5 +1,0 @@
-The ZKSolrClient test is pretty unreliable, it seems to fail a significant portion of the time on hudson (often on my local as well).
-
-Additionally it seems to somehow sometimes (maybe depending upon retry loop?) leave a lot of zookeeper threads running.
-
-I ran into these issues when i discovered that trying to interrupt() these threads after the test completed was triggering a JRE bug, but by working through it I saw how unreliable the test is.

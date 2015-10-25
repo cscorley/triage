@@ -1,1 +1,0 @@
-When documents are very small (a few bytes), there can be so many of them in a single chunk that merging can become very slow. Making the maximum number of documents per chunk configurable could help.

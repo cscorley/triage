@@ -1,1 +1,0 @@
-CheckIndex shows wrong segment size in 4.0 because SegmentInfoPerCommit.sizeInBytes counts every file 2 times; check for deletions is negated and results in wrong output

@@ -1,5 +1,0 @@
-FacetResultNode is an interface with a bunch of getter methods. The purpose, I believe, was to return an object that does not allow you modify it. But that's overly defensive I think. I.e., we return to users ScoredDoc and they can happily modify 'doc' and 'score'. If users modify the members' values, they can only affect themselves, as this object is returned after the search has completed.
-
-Anyway, today it doesn't even defend itself right, because you can call getSubResults and remove/add elements from the list ...
-
-I want to make it a simple bin, w/ public members and get rid of MutableFacetResultNode. Will keep the class not final, since it might be useful for someone to extend it and add additional members, for his/her FacetsCollector purposes.

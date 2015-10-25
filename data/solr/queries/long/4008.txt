@@ -1,7 +1,0 @@
-If remove the collection doesn't exist, any collection command will be failed after that.
-
-The OverseerCollectionProcessor thread will be gone because the SolrException is run time exception. 
-
-Thread is death that cause doesn't accept any command again. 
-
-The worse case is the overall cloud create/delete collection will be failed, never recovery again except cleanup overseer collection queue in the zookeeper.  

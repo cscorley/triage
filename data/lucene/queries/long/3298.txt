@@ -1,5 +1,0 @@
-The FST uses a single contiguous byte[] under the hood, which in java is indexed by int so we cannot grow this over Integer.MAX_VALUE.  It also internally encodes references to this array as vInt.
-
-We could switch this to a paged byte[] and make the far larger.
-
-But I think this is low priority... I'm not going to work on it any time soon.

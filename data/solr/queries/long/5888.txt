@@ -1,3 +1,0 @@
-This test is surprisingly slow. Turns out, it's waiting around in many cases when it does not necessarily need to.
-
-Part of the fix should speed up some other tests a bit as well.

@@ -1,1 +1,0 @@
-Deprecate/Remove <indexDefaults> and <mainIndex> in favor of <indexConfig> in solrconfig.xml

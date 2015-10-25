@@ -1,7 +1,0 @@
-If you don't reuse your Doc/Field instances (which is very expert: I
-suspect few apps do) then there's a lot of garbage created to index each
-StringField because we make a new StringTokenStream or
-NumericTokenStream (and their Attributes).
-
-We should be able to re-use these instances via a static
-ThreadLocal...

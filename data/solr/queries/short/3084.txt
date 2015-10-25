@@ -1,1 +1,0 @@
-default="true" causes NPE -> SolrException from QueryResponseWriter initWriters

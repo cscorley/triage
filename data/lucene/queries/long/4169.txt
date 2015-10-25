@@ -1,1 +1,0 @@
-The more I dive into this code the more I worry about it, so I think we should give ourselves some leeway to make API changes as part of improvements.

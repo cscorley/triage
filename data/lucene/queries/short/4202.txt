@@ -1,1 +1,0 @@
-allow check-forbidden-apis to look for fields too

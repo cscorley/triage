@@ -1,3 +1,0 @@
-The Payload class offers a very similar functionality to BytesRef. The code internally uses BytesRef-s to represent payloads, and on indexing and on retrieval this data is repackaged from/to Payload.
-
-This seems wasteful. I propose to remove the Payload class and use BytesRef instead, thus avoid this re-wrapping and reducing the API footprint.

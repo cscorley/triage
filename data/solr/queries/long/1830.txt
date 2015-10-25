@@ -1,3 +1,0 @@
-Tests should be able to use RAMDirectoryFactory.
-We probably want the ability to have ant switch between FS and RAM so both can be tested (RAM normally, FS for nightly?)
-Some tests will need FS regardless, and those could use the same control mechanism as ant, presumably a system property.

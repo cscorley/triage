@@ -1,1 +1,0 @@
-The grouping function does not distinguish between missing values and their null type equivalents (0 for numeric types and an empty string for string types). 

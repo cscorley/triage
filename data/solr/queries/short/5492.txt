@@ -1,1 +1,0 @@
-Return the replica that actually served the query in shards.info response

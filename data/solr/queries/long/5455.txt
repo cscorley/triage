@@ -1,1 +1,0 @@
-The new ability to edit the config files via the admin screen should NOT allow editing the managed schema files.

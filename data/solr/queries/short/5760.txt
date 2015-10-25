@@ -1,1 +1,0 @@
-ConcurrentUpdateSolrServer has a blockUntilFinished call when streamDeletes is true that should be tucked into the if statement below it.

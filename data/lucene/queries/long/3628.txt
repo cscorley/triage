@@ -1,1 +1,0 @@
-since IR is now fully R/O and norms are inside codecs we can cut over to use a IDV impl for writing norms. LUCENE-3606 has some ideas about how this could be implemented

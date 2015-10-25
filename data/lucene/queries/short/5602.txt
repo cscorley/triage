@@ -1,1 +1,0 @@
-always verify term vectors on bulk merge

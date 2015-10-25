@@ -1,1 +1,0 @@
-Externalizing groupValue values

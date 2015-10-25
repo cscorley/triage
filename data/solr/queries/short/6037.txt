@@ -1,1 +1,0 @@
-Stats Component Reports Incorrect max/sum/stddev for date fields in Distributed Data

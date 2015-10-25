@@ -1,1 +1,0 @@
-thaiwordfilter uses attributesource.copyTo incorrectly

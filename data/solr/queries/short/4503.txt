@@ -1,1 +1,0 @@
-Add REST API methods to get schema information: fields, dynamicFields, fieldTypes, and copyFields

@@ -1,1 +1,0 @@
-Exception when using Query Function inside Scale Function

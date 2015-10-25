@@ -1,3 +1,0 @@
-As discussed in https://issues.apache.org/jira/browse/LUCENE-5251, it would be nice to make the older suggesters accepting of TermFreqPayloadIterator and throw an exception if payload is found (if it cannot be used). 
-
-This will also allow us to nuke most of the other interfaces for BytesRefIterator. 

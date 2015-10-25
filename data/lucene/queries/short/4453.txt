@@ -1,1 +1,0 @@
-Need to test BlockPostings with term df/ttfs that = blockSize or are a multiple of blockSize

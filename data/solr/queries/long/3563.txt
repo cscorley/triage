@@ -1,5 +1,0 @@
-Same scanario as SOLR-3561 - deleting shards/cores using CoreAdmin/UNLOAD command.
-
-I have noticed that when I have done CoreAdmin/UNLOAD for all shard under a collection, that the collection and all its slices are still present in ZK under /collections. I might be ok since the operation is called UNLOAD, but I basically want to delete an entire collection and all data related to it (including information about it in ZK).
-
-A delete-collection operation, that also deletes info about the collection under /collections in ZK, would be very nice! Or a delete-shard/core operation and then some nice logic that detects when all shards belonging to a collection has been deleted, and when that has happened deletes info about the collection under /collections in ZK.

@@ -1,1 +1,0 @@
-Indexes values to disk but at search time it loads/accesses the values via simple java arrays (i.e. no compression).

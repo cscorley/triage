@@ -1,3 +1,0 @@
-There is sometimes useful data at these nodes.
-
-For example, /collections/collection1 will have children nodes, but it also has data as well - some json that links the collection to the config name.

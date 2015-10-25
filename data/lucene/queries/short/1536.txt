@@ -1,1 +1,0 @@
-if a filter can support random access API, we should use it

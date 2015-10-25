@@ -1,1 +1,0 @@
-Improve TopDocs#merge for pagination

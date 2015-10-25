@@ -1,1 +1,0 @@
-need a test that uses termsenum.seekExact() (which returns true), then calls next()

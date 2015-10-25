@@ -1,3 +1,0 @@
-because of how the UI is laid out, the solr logo is all by itself above the main table, leaving a lot of whitespace to the right of the solr logo.
-
-this seems like a waste that should be easily curable?

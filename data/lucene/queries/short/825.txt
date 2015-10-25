@@ -1,1 +1,0 @@
-NullPointerException from SegmentInfos.FindSegmentsFile.run() if FSDirectory.list() returns NULL 

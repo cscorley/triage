@@ -1,1 +1,0 @@
-The Apache snapshot repo should be removed from the POMs

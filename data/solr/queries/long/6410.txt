@@ -1,3 +1,0 @@
-Spin off of bug uncovered in LUCENE-5889...
-
-the Suggester class needs to register a CloseHook for the Lookup instances returned by the LookupFactory – this is currently happening on trunk, but not on 4x.

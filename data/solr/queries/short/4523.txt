@@ -1,1 +1,0 @@
-Show if fields have docvalues or highlighting offsets in admin UI

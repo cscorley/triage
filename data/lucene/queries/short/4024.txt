@@ -1,1 +1,0 @@
-FuzzyQuery should never do edit distance > 2

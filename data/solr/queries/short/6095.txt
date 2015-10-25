@@ -1,1 +1,0 @@
-SolrCloud cluster can end up without an overseer with overseer roles 

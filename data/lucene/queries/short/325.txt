@@ -1,1 +1,0 @@
-[PATCH] new method expungeDeleted() added to IndexWriter

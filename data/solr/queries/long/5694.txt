@@ -1,8 +1,0 @@
-On 'ant idea' the following files show up as untracked files in git.
-
-solr/contrib/dataimporthandler/test-lib/
-solr/contrib/morphlines-core/test-lib/
-solr/core/test-lib/
-solr/example/start.jar 
-
-I'm attaching a small patch to add the above the the .gitignore file

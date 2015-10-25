@@ -1,1 +1,0 @@
-The external file field doesn't allow an equals-sign in the key. Instead of going through the hassle of escaping, this patch just uses lastIndexOf to get the float value.

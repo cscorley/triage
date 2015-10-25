@@ -1,1 +1,0 @@
-DIH should not depend on mail.jar,activation.jar

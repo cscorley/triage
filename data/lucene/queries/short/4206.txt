@@ -1,1 +1,0 @@
-Allow check-forbidden-apis to also investigate calls to subclasses of forbidden APIs

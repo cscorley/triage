@@ -1,1 +1,0 @@
-It would be good to include an up-to-date jetty version for the example.

@@ -1,1 +1,0 @@
-BaseCompositeReader should throw exception if docids overflow

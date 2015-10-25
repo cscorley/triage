@@ -1,1 +1,0 @@
-A spellchecker that generates suggestions by combining two or more terms and/or breaking terms into multiple words. This would typically be used in addition to one of the existing spell checkers to get both traditional and word-break suggestions for the end user.

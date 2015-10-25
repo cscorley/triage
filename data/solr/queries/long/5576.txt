@@ -1,5 +1,0 @@
-The behaviour we saw was that considerable time elapsed between
-different cores within the same solr instance publishing themselves as down.
-
-Separately it appears from the code that some cores would not be published as down if another core returns from the function early because it will be its
-shard leader (return vs. continue in for loop).

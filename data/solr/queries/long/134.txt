@@ -1,5 +1,0 @@
-Here's a patch for automatically converting Time objects in fields to the UTC/ISO 8601 format that Solr can parse.
-
-Which means this will work:
-
-  connection.add(:id => 1, :created_at => Time.now)

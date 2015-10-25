@@ -1,3 +1,0 @@
-The "example\webapps\solr.war" file contains a "jquery-1.7.2.min.js" file whose name suggests that it is version 1.7.2.  However, the file actually contains version 1.4.3 code.  (This code may be subject to CVE-2011-4969.) 
-
-(I think I read something about a functional roll-back from JQuery 1.5.1 to 1.4.3 in other issues - if so, could possibly be related?)   

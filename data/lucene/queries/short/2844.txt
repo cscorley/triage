@@ -1,1 +1,0 @@
-benchmark geospatial performance based on geonames.org

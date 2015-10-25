@@ -1,3 +1,0 @@
-In DefaultIndexingChain, when a MaxBytesLengthExceededException is caught, the original message is discarded, however, the message contains useful information like the size that exceeded the limit.
-
-Lucene should make this information included in the newly thrown IllegalArgumentException.

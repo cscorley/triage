@@ -1,3 +1,0 @@
-PhoneticFilterFactory has a static HashMap registry mapping an encoder name to an implementation. There is a ReentrantLock used when the map is modified (when the encoder config specifies a class name).  However, this map, which can be accessed by multiple indexing threads, isn't guarded on any of the reads, which isn't just the common path but also the error messages which dump the registry into the error message.
-
-I realize the likelihood of a problem is extremely slim, but a bug's a bug.

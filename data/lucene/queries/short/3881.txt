@@ -1,1 +1,0 @@
-Create UAX29URLEmailAnalyzer: a standard analyzer that recognizes URLs and emails

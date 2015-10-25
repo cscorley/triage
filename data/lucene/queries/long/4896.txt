@@ -1,5 +1,0 @@
-In my project I need a custom PassageFormatter to use with PostingsHighlighter.  I extended PassageFormatter  to override format(...)
-
-but if I do that, I don't have access to the private variables.  So instead of changing the scope to protected, it should be more usefull to use a interface for PassageFormatter.
-
-like public DefaultPassageFormatter implements PassageFormatter.

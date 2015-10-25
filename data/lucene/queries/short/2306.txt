@@ -1,1 +1,0 @@
-contrib/xml-query-parser: NumericRangeQuery and -Filter support

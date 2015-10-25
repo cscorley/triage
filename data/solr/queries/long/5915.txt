@@ -1,1 +1,0 @@
-Silly bug: PreAnalyzedField forgets to args.remove(PARSER_IMPL).

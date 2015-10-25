@@ -1,1 +1,0 @@
-Just attempting to inspect a BooleanQuery allocates two new arrays.  This could be cheaper.

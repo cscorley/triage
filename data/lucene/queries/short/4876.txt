@@ -1,1 +1,0 @@
-IndexWriterConfig.clone should clone the MergeScheduler

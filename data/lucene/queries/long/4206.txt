@@ -1,1 +1,0 @@
-Followup for LUCENE-4202: I think I found a solution, that only adds overhead of parsing all classes in FileSet 2 times (instead of one time) and dynamic investigation of system classes from classloader on demand.

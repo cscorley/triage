@@ -1,1 +1,0 @@
-Unable to delete documents via SQL and deletedPkQuery with deltaimport

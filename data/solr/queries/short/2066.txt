@@ -1,1 +1,0 @@
-Search Grouping: support distributed search

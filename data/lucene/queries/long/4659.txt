@@ -1,9 +1,0 @@
-CategoryPath is supposed to be a simple object which holds a category path's components, and offers some utility methods that can be used during indexing and search.
-
-Currently, it exposes lots of methods which aren't used, unless by tests - I want to get rid of them. Also, the internal implementation manages 3 char[] for holding the path components, while I think it would have been simpler if it maintained a String[]. I'd like to explore that option too (the input is anyway String, so why copy char[]?).
-
-Ultimately, I'd like CategoryPath to be immutable. I was able to get rid most of the mutable methods. The ones that remain will probably go away when I move from char[] to String[]. Immuntability is important because in various places in the code we convert a CategoryPath back and forth to String, with TODOs to stop doing that if CP was immutable.
-
-Will attach a patch that covers the first step - get rid of unneeded methods and beginning to make it immutable.
-
-Perhaps this can be done in multiple commits?

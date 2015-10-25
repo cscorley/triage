@@ -1,1 +1,0 @@
-On connection loss we don't know if we made our ephem election node or not - if we did, we correctly used it, but if we did not, instead of retrying like we should, we threw an exception.

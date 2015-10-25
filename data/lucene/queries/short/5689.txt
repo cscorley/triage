@@ -1,1 +1,0 @@
-FieldInfo.setDocValuesGen should not be public.

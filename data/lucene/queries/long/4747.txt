@@ -1,3 +1,0 @@
-Spinoff from LUCENE-4746. 
-
-I propose we make this change on trunk only. 

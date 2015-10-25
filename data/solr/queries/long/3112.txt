@@ -1,3 +1,0 @@
-This is especially confusing, as then it looks like you dont have a clean checkout.
-
-For now it should be under svn:ignore, but ultimately we really should not be creating files under src/test-files

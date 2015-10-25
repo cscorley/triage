@@ -1,1 +1,0 @@
-CSS, JS and other files in webapp without license

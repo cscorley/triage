@@ -1,1 +1,0 @@
-Core Admin UI gives no feedback if "Add Core" fails

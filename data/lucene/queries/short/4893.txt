@@ -1,1 +1,0 @@
-Facet counts in FacetsAccumulator.facetArrays are multiplied as many times as FacetsCollector.getFacetResults is called.

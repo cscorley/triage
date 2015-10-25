@@ -1,1 +1,0 @@
-Would be nice to have the option to access the payloads in a document-centric way by adding them to the Term Vectors.  Naturally, this makes the Term Vectors bigger, but it may be just what one needs.

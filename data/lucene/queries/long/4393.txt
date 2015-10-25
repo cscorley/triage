@@ -1,1 +1,0 @@
-It looks like RollingCharBuffer is only used by analyzers. Maybe it would make sense to move it to lucene-analysis-common?

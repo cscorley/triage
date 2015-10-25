@@ -1,7 +1,0 @@
-Provide components to enable Apache UIMA automatic metadata extraction to be exploited when indexing documents.
-The purpose of this is to get unstructured information "inside" a document and create structured metadata (as fields) to enrich each document.
-
-Basically this can be done with a custom UpdateRequestProcessor which triggers UIMA while indexing documents.
-The basic UIMA implementation of UpdateRequestProcessor extracts sentences (with a tokenizer and an hidden Markov model tagger), named entities, language, suggested category, keywords and concepts (exploiting external services from OpenCalais and AlchemyAPI). Such an implementation can be easily extended adding or selecting different UIMA analysis engines, both from UIMA repositories on the web or creating new ones from scratch.
-
-More information can be found on the dedicated wiki page: http://wiki.apache.org/solr/SolrUIMA

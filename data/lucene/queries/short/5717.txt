@@ -1,1 +1,0 @@
-Postings highlighter support for multi term queries within filtered and constant score queries

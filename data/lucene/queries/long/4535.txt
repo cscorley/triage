@@ -1,1 +1,0 @@
-FilterIterator has been release without the @lucene.internal tag, we should fix it for 5.0.

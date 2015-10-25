@@ -1,1 +1,0 @@
-BufferedTokenStream keeps state, but does not implement reset

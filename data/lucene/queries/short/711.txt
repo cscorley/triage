@@ -1,1 +1,0 @@
-BooleanWeight should size the weights Vector correctly

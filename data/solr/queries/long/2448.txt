@@ -1,1 +1,0 @@
-Carrot2 version 3.5.0 should be available very soon. After the upgrade, it will be possible to implement a few improvements to the clustering plugin; I'll file separate issues for these.

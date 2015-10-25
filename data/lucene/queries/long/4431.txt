@@ -1,7 +1,0 @@
-
-	The demo module has sevlet-api.jar with a ASF-named license file and the text "TODO: fill in"
-	This also affects Solr: It has a full ASF license file, but that is wrong.
-
-
-
-The servlet-apoi file is CDDL license: http://download.oracle.com/otndocs/jcp/servlet-3.0-fr-eval-oth-JSpec/ (same for 2.4). The 3.0.1 JAR file also contains License in its META-INF folder.

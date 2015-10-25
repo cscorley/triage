@@ -1,1 +1,0 @@
-DIH FileListEntityProcessor not multi-threading after applying patch SOLR-3011

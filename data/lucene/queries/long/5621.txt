@@ -1,3 +1,0 @@
-This method is extraneous: it just makes the API confusing. Its not actually used anywhere by Lucene, so it shouldn't be mandatory on IndexOutput.
-
-Maybe it had some use-case before things were append-only, i dont know, but now its time for it to go.

@@ -1,1 +1,0 @@
-FixedGapTermsIndex should use monotonic compression

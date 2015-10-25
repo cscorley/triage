@@ -1,2 +1,0 @@
-BasicZkTest has a beforClass that calls initCore, but then AbstractZkTestCase
-also instantiates it's own TestHarness.

@@ -1,1 +1,0 @@
-FastVectorHighlighter adds a multi value separator (space) to the end of the highlighted text

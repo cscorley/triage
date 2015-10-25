@@ -1,7 +1,0 @@
-UniqFieldsUpdateProcessorFactory has been arround for a while, but if we change it to subclass FieldValueSubsetUpdateProcessorFactory, a lot of redundent code could be eliminated from that class, and the factory could be made more configurable by supporting all of the field matching logic in FieldMutatingUpdateProcessorFactory, not just a list of field names.
-
-(the only new code that would be needed is handling the legacy config case currently supported by UniqFieldsUpdateProcessorFactory)
-
-—
-
-For users of 4.x starting with 4.5, the existing init param syntax will still be supported, but a warning will be logged recommending they switch to using <arr name="fieldName">...</arr> instead of <lst name="fields">..</lst>.  Starting with 5.0, the "fields" option won't be recognized at all.

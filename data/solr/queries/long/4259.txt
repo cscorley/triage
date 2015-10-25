@@ -1,1 +1,0 @@
-Check why we depend on the full core POM anyway; the mini version should be enough for algorithms (we wouldn't need so many exclusions then).

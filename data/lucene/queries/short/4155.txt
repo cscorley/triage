@@ -1,1 +1,0 @@
-Move & hide ReaderSlice and BitSlice classes (and possibly others) to oal.index package; move ReaderUtil to oal.index

@@ -1,1 +1,0 @@
-REGRESSION: in Solr 3.x and trunk the admin/file handler fails to show directory listings

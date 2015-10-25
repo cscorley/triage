@@ -1,1 +1,0 @@
-This is costly to have as a mandatory method on an interface: and its unrelated to resource loading, and only the factories use it.

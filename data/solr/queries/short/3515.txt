@@ -1,1 +1,0 @@
-"schema-browser_autoload" cookie used by "verbose" option on analysis page

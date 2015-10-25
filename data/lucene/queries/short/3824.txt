@@ -1,1 +1,0 @@
-TermOrdVal/DocValuesComparator does too much work in compareBottom

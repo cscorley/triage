@@ -1,1 +1,0 @@
-Precedence query parser using the contrib/queryparser framework

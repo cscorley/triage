@@ -1,1 +1,0 @@
-TestFSTs.testRealTerms produces a corrupt index

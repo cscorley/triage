@@ -1,9 +1,0 @@
-SloppyMath, intriduced in LUCENE-5258, uses earth's avg. (according to WGS84) ellipsoid radius as an approximation for computing the "spherical" distance. (The TO_KILOMETERS constant).
-
-While this is pretty accurate for long distances (latitude wise) this may introduce some small errors while computing distances close to the equator (as the earth radius there is larger than the avg.)
-
-A more accurate approximation would be taking the avg. earth radius at the source and destination points. But computing an ellipsoid radius at any given point is a heavy function, and this distance should be used in a scoring function.. So two optimizations are optional - 
-
-	Pre-compute a table with an earth radius per latitude (the longitude does not affect the radius)
-	Instead of using two point radius avg, figure out the avg. latitude (exactly between the src and dst points) and get its radius.
-

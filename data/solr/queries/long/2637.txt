@@ -1,1 +1,0 @@
-Patch ready for Field Collapsing query results parsing.

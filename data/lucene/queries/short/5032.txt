@@ -1,1 +1,0 @@
-PostingsHighlighter throws IndexOutOfBounds exception when using multivalued fields and get to maxLength

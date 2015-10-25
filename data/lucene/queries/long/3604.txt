@@ -1,2 +1,0 @@
-There are two "API Changes" sections which is confusing when looking at the txt version of the file. 
-The HTML expands only the first of the two, unless expand-all is clicked.

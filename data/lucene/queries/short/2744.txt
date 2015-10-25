@@ -1,1 +1,0 @@
-CheckIndex overstates how many fields have norms enabled

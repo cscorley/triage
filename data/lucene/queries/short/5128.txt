@@ -1,1 +1,0 @@
-Calling IndexSearcher.searchAfter beyond the number of stored documents causes ArrayIndexOutOfBoundsException

@@ -1,1 +1,0 @@
-Leader recovery process can select the wrong leader if all replicas for a shard are down and trying to recover as well as lose updates that should have been recovered.

@@ -1,3 +1,0 @@
-Shawn requested the following:
-
-You can't open more than one of the dropdown items at once, and you can't close a dropdown once it's open. It's very helpful for me to be able to see more than one set of cache statistics at the same time. If you can open more than one of them, you need to be able to close them as well.

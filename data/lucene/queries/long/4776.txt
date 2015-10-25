@@ -1,3 +1,0 @@
-we know the type here from the index: so if you ask for e.g. getDocTermsIndex on a numeric type -> exception (not trappy uninversion).
-
-Its easy for someone to do this (e.g. SOLR-3855). But this makes the whole point of docvalues stupid if we just silently do it.

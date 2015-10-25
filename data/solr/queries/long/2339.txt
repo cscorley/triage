@@ -1,3 +1,0 @@
-In the past, Solr has relied on the underlying FieldCache to throw an error in situations where sorting on a field was not possible.  however LUCENE-2142 has changed this, so that FieldCache never throws an error.
-
-In order to maintain the functionality of past Solr releases (ie: error when users attempt to sort on a field that we known will produce meaningless results) we should add some sort of check at the Solr level.

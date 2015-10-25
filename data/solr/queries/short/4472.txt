@@ -1,1 +1,0 @@
-update javadocs for DateField, TrieDateField, and UUIDField to warn about using NEW/NOW default in SolrCloud

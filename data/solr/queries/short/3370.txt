@@ -1,1 +1,0 @@
-CSVResponseWriter does not honor fl globs

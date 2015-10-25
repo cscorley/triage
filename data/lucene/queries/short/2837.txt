@@ -1,1 +1,0 @@
-Collapse Searcher/Searchable/IndexSearcher; remove contrib/remote; merge PMS into IndexSearcher

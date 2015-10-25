@@ -1,1 +1,0 @@
-queryparser precedence issues (regex versus wildcard)

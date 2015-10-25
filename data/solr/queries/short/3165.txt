@@ -1,1 +1,0 @@
-Cannot use DIH in Solrcloud + Zookeeper

@@ -1,1 +1,0 @@
-CachingWrapperFilter crashes if you call both bits() and getDocIdSet()

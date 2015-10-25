@@ -1,1 +1,0 @@
-Add shard name to SolrCore statistics

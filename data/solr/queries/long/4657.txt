@@ -1,1 +1,0 @@
-I have an idea what's happening with the test that apparently doesn't close a core, but it'll be something of a hit-or-miss process to fix it as it looks timing related. Might have a patch up later today other commitments willing.

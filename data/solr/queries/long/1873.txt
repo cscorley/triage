@@ -1,3 +1,0 @@
-See http://wiki.apache.org/solr/SolrCloud
-
-This is a real hassle - I didn't merge up to trunk before all the svn scrambling, so integrating cloud is now a bit difficult. I'm running through and just preparing a commit by hand though (applying changes/handling conflicts a file at a time).

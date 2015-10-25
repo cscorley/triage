@@ -1,1 +1,0 @@
-Stop command in the start scripts should only stop the instance that it had started

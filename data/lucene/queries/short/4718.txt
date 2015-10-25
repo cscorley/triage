@@ -1,1 +1,0 @@
-Default field in query syntax documentation has confusing error

@@ -1,1 +1,0 @@
-Unavoidable IllegalArgumentException occurs when SynonymFilterFactory's setting has tokenizer factory's parameter.

@@ -1,3 +1,0 @@
-More then a few users have gotten burned by thinking that "*" is the appropriate syntax for "match all docs" when what it really does (unless i'm mistaken) is create a prefix query on the default search field using a blank string as the prefix.
-
-since it seems very unlikely that anyone has a genuine usecase for making a prefix query with a blank prefix, we should change the default behavior of the LuceneQParser and EDismaxQParsers (and any other Qparsers that respect *:* if i'm forgetting them) to treat this situation the same as *:*.  we can offer a (local)param to force the old behavior if someone really wants it.

@@ -1,1 +1,0 @@
-Refactoring of FilteredTermsEnum and MultiTermQuery

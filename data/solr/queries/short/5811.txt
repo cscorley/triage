@@ -1,1 +1,0 @@
-The Overseer will retry work items until success.

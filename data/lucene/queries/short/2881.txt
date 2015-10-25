@@ -1,1 +1,0 @@
-Track FieldInfo per segment instead of per-IW-session

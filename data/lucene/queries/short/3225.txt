@@ -1,1 +1,0 @@
-Optimize TermsEnum.seek when caller doesn't need next term

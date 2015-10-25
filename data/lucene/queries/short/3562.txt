@@ -1,1 +1,0 @@
-Stop storing TermsEnum in CloseableThreadLocal inside Terms instance

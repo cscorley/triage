@@ -1,1 +1,0 @@
-Should we revisit the default numeric precision step?

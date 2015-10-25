@@ -1,1 +1,0 @@
-NumericTokenStream.NumericTermAttribute does not support cloning -> Solr analysis request handlers fail

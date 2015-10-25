@@ -1,1 +1,0 @@
-lazy core loading from SOLR-1028 occasionally fail.

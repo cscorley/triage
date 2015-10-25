@@ -1,1 +1,0 @@
-Avoid possible NPE in UIMAUpdateRequestProcessor

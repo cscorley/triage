@@ -1,1 +1,0 @@
-It would be nice to have this in the test framework for external use.

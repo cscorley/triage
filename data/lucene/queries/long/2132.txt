@@ -1,3 +1,0 @@
-the demo application does not work. QueryParser needs a Version argument.
-
-While I am here, remove @author too

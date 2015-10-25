@@ -1,1 +1,0 @@
-DistrubtedQueue should use our Solr zk client rather than the std zk client.

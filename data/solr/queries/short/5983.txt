@@ -1,1 +1,0 @@
-HTMLStripCharFilter is treating CDATA sections incorrectly

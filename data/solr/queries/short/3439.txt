@@ -1,1 +1,0 @@
-Make SolrCell easier to use out of the box

@@ -1,1 +1,0 @@
-The native FS lock used in test-framework's o.a.l.util.LuceneJUnitResultFormatter prohibits testing on a multi-user system

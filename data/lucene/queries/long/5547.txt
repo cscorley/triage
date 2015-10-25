@@ -1,3 +1,0 @@
-http://jenkins.thetaphi.de/job/Lucene-Solr-trunk-Linux/9864/
-
-ant test  -Dtestcase=TestICUNormalizer2CharFilter -Dtests.method=testRandomStrings -Dtests.seed=B1B3ACAEE3F9218F -Dtests.multiplier=3 -Dtests.slow=true -Dtests.locale=ko_KR -Dtests.timezone=Jamaica -Dtests.file.encoding=UTF-8

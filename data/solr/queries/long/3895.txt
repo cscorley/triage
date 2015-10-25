@@ -1,1 +1,0 @@
-The Solr UpdateRequestHandler for XML currently resolves so-called XML External Entities. Not resolving XML External Entities would - among other things - improve Solr's update performance.

@@ -1,3 +1,0 @@
-While doing some additional testing of SOLR-6565 I came across this issue, although the issue existed before SOLR-6565 with the HttpSolrServer queryParams.
-
-The issue is that calculating the query params removes the query params from "wparams" in order to use the remainder in the message body.  But for single stream messages, we send the stream as the body and the params in the query string.  So we were only sending the remaining wparams, deleting the queryParams.

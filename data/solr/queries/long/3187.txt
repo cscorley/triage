@@ -1,1 +1,0 @@
-The some of the input/output/error streams when running external process are not closed properly.

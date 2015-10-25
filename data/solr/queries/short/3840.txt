@@ -1,1 +1,0 @@
-XML query response display is unreadable in Solr Admin Query UI

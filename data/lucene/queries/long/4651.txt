@@ -1,3 +1,0 @@
-Currently Classifier#assignClass returns a ClassificationResult which holds the class as a String while there are use cases where this would be not optimal as assigned labels types could be known upfront, therefore having a Classifier<T> returning a ClassificationResult<T> would be better.
-
-Side node: current implementations could be improved by using BytesRef instead of String .

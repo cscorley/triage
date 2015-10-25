@@ -1,1 +1,0 @@
-Check dataimport.properties for write access before starting import

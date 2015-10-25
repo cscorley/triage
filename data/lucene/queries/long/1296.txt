@@ -1,1 +1,0 @@
-Extends CachingWrapperFilter with a protected method to determine the DocIdSet to be cached.

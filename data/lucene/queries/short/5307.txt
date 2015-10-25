@@ -1,1 +1,0 @@
-Inconsistency between Weight.scorer documentation and ConstantScoreQuery on top of a Filter

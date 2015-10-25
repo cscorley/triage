@@ -1,3 +1,0 @@
-The current available Output of the LogLevelSelection Servlet is plain HTML, which made it unpossible, to integrate the Logging-Information in the new Admin-UI. Format-Agnostic Output (like every [?] other Servlet offers) would be really nice!
-
-Just as an Idea for a future structure, the new admin-ui is actually based on that json-structure 

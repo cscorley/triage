@@ -1,1 +1,0 @@
-Problem with Solr Hunspell with French Dictionary

@@ -1,3 +1,0 @@
-Right now, because we pass the BreakIterator to the ctor, you have to make two instances if you sometimes want whole and sometimes want snippets.
-
-But I think this is a fairly common use case, eg I want entire title field (with matches highlighted) but I want body field (snippets + highlights).  It would be nice to have this work with a single instance ...

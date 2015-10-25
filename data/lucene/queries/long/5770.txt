@@ -1,3 +1,0 @@
-JFlex 1.6, to be released shortly, will have direct support for supplementary code points - JFlex 1.5 and earlier only support code points in the BMP.
-
-We can drop the use of ICU4J to generate surrogate pairs to extend our JFlex scanner specifications to handle supplementary code points.  

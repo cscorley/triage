@@ -1,3 +1,0 @@
-getDocSet(Query, DocSet) has this opto, but numDocs does not.
-
-Especially in this case, where we just want the intersection count, its faster to do a filtered query with TotalHitCountCollector and not create bitsets at all...

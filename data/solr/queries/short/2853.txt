@@ -1,1 +1,0 @@
-SpellCheckCollator.collate method creates the a PossibilityIterator with maxTries instead of maxCollations

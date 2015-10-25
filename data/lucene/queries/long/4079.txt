@@ -1,2 +1,0 @@
-OpenOffice dictionaries are often compressed via some aliases on the beginning of the affixe file. The french one for instance.
-Currently the hunspell filter does not read the aliases.

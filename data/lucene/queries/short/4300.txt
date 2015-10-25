@@ -1,1 +1,0 @@
-BooleanQuery inconsistently applies coord() if it rewrites itself

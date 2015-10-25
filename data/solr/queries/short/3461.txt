@@ -1,1 +1,0 @@
-TestRealTimeGet.testStressRecovery() is sometimes very slow on Windows, using al CPUs

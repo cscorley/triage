@@ -1,1 +1,0 @@
-build.xml in cnotrib/benchmark should auto build core java and demo if required

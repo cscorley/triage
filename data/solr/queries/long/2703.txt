@@ -1,1 +1,0 @@
-The Lucene/contrib surround parser provides support for span queries. This issue adds a Solr plugin for this parser

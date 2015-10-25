@@ -1,3 +1,0 @@
-The script diffSources.py is used for creating patches for feature branches.  I think the name createPatch.py would be more apt.  It also only works with certain file types and is one of the only python scripts written for python 2.
-
-I'd like to rename this script, upgrade it to python 3, and fix it to work with all files that git/svn would not ignore.

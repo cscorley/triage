@@ -1,1 +1,0 @@
-Normally we load up one core per jetty instance on startup for this test, but the test does not use them. If we avoid that, we can save 20-30 seconds in the test on my linux desktop.

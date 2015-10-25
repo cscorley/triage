@@ -1,1 +1,0 @@
-TestCollectionUtil fails on IBM JRE

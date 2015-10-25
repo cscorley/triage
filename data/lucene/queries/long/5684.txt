@@ -1,3 +1,0 @@
-I dug into the confusing NPE from the java-user email with subject "[lucene 4.6] NPE when calling IndexReader#openIfChanged".
-
-It happens because the app was opening an IndexReader, then rm -rf the entire index, build a new one, then calling reopen.  This is invalid usage (the app should instead use IW.deleteAll, or open new IW with OpenMode.CREATE), but I'd like to add a minor best effort check...

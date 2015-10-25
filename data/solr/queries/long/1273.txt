@@ -1,8 +1,0 @@
-Sine 1.0, the Solr Admin screen has had a "Distribution" link which points to "distributiondump.jsp" and displays stats according to data files created by the snappuller/snapinstaller scripts
-
-With the new java based replication, when a ReplicationHandler is enabled, we now have a "Replication" link on the admin page pointing to "replication/index.jsp" which displays stats/status for java based replication.
-
-In at least one instance, these two different links confused a user...
-http://www.nabble.com/Replication-In-1.4-to24356158.html#a24356158
-
-We need to rectify this confusion prior to releasing 1.4.

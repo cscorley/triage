@@ -1,1 +1,0 @@
-automaton termsenum bug when running with multithreaded search

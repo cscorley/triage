@@ -1,1 +1,0 @@
-today we need to pass in an explicit set of terms that we want to marks as keywords. It might make sense to allow patterns as well to prevent certain suffixes etc. to be keyworded.

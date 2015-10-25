@@ -1,1 +1,0 @@
-Buffered deletes under count RAM

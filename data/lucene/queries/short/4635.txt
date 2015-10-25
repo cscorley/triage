@@ -1,1 +1,0 @@
-ArrayIndexOutOfBoundsException when a segment has many, many terms

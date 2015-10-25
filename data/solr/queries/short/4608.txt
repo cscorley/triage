@@ -1,1 +1,0 @@
-Update Log replay should use the default processor chain

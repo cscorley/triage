@@ -1,1 +1,0 @@
-Improve Solr's use of spec version.

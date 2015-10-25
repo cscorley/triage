@@ -1,8 +1,0 @@
-StandardPostingsWriterImpl line 159 is:
-
-
-    assert delta > 0 || position == 0 || position == -1: "position=" + position + " lastPosition=" + lastPosition;            // not quite right (if pos=0 is repeated twice we don't catch it)
-
-
-
-I enable assertions when I run my unit tests and I've found this assertion to fail when delta is 0 which occurs when the same position value is sent in twice in arrow.  Once I added RemoveDuplicatesTokenFilter, this problem went away.  Should I really be forced to add this filter?  I think delta >= 0 would be a better assertion.

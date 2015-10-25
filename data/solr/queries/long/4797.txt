@@ -1,5 +1,0 @@
-The overseer collection processor always uses PlainIdRouter to partition the hash range. However, some router implementations (most notably CompositeIdRouter) can provide a different implementation to partition hash ranges. So there can be a mismatch between the hash ranges which are persisted in clusterstate.xml for sub shards and the actual index which is split using the collection's configured router impl.
-
-This bug does not affect collections using PlainIdRouter.
-
-The overseer collection processor should always use the collection's configured router to partition ranges.

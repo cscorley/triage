@@ -1,1 +1,0 @@
-During finishCommit(), we run checkpoint after we wrote the commit to disk, but if things go wrong here (e.g. IOError when IFD deletes a pending file, OOM), then everything will go wrong (we won't even properly incref things, and may end out deleting wrong files if the user calls rollback, leaving a corrupt index).

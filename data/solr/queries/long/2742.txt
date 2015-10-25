@@ -1,2 +1,0 @@
-Today you need to manually create an UpdateRequest in order to set the commitWithin value.
-We should provide an optional commitWithin parameter on all SolrServer.add(..) methods as a convenience

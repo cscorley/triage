@@ -1,1 +1,0 @@
-SolrDocument uses user-provided collections unsafely

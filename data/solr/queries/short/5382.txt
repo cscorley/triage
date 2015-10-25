@@ -1,1 +1,0 @@
-Update to Hadoop 2.2 GA release.

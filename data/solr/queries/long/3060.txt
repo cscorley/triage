@@ -1,3 +1,0 @@
-Highlighter does not recognize SrndQuery family.
-http://search-lucene.com/m/FuDsU1sTjgM
-http://search-lucene.com/m/wD8c11gNTb61

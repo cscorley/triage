@@ -1,8 +1,0 @@
-in TestBackwardsCompatibility in trunk we have:
-
-
-      // TODO: these are on 4x, but something is wrong (they seem to be a too old DV format):
-
-
-
-I put a nocommit above it, to draw as much attention as possible to this. What does this mean, that we aren't testing backwards compatibilty? are tests disabled? I don't see how this is possibly a valid TODO.

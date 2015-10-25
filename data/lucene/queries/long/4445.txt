@@ -1,7 +1,0 @@
-This is a very stupid problem, but after a long time sitting in fornt of the build.xml's I found it:
-
-1. The biggest problem was: the target "-clover.init" was made in a way that it used the clover.loaded sysprop to avoid permgen issues. Unfortunatley it not only loaded clover, it also set it up in this task (setting the java source file folders). If the taskdef was then loaded for the first time, it had its source folders set up with the module it was called first. The later coming compilation of another module did not run clover.setup anymore, so no new source folders were configured. I splitted the IVY-Load+Taskdef from the clover setup.
-
-2. I also improved the code duplication for compile in test-framework. I made it inherit from common-build, but disable clover instrumentation for test-framework by overriding -clover.setup target in the test-frameworks (Lucene+Solr).
-
-3. I fixed some permgen issues, so -clover.load is only executed onec. I had to use a trick to pass the classpath to ivy's cachepath down to the subants, because we don't inherit refs. The trick was to make the clover.loaded property contain a stringified version of the clover classpath instead of a simple "true". By that it is automatically passed down using the propertyset.

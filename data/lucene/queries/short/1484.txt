@@ -1,1 +1,0 @@
-Remove SegmentReader.document synchronization

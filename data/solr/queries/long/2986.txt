@@ -1,5 +1,0 @@
-If your uniqueKey is not stored, you get this warning:
-
-uniqueKey is not stored - distributed search will not work
-
-There is at least one other feature that relies on a stored uniqueKey - MoreLikeThis.  Attaching a patch that updates the warning message.  It may actually require a more generic message.  It's possible there are other features that will not work without storing the uniqueKey.

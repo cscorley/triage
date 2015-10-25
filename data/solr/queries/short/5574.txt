@@ -1,1 +1,0 @@
-CoreContainer shutdown publishes all nodes as down and waits to see that and then again publishes all nodes as down.

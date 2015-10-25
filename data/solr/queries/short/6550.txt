@@ -1,1 +1,0 @@
-Provide simple mechanism for passing additional metadata / context about a server-side SolrException back to the client-side

@@ -1,1 +1,0 @@
-While working on the consistency test for Replicator (LUCENE-4975), I noticed that I don't trip disk-full exceptions and tracked it down to MockIndexOutputWrapper.copyBytes not doing these checks like writeBytes. I'd like to add this check.

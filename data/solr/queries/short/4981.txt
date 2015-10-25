@@ -1,1 +1,0 @@
-BasicDistributedZkTest fails on FreeBSD jenkins due to thread leak.

@@ -1,1 +1,0 @@
-offshoot of an IRC conversation i had with rmuir while working on SOLR-2600 because i cloudn't understand the reason for not defaulting to SchemaSimilarityFactory.

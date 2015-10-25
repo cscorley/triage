@@ -1,2 +1,0 @@
-In version 1.9 of commons-codec project, there are a lot of optimizations in the Beider Morse encoder. This is used by the BeiderMorseFilter in Solr. 
-Do you think it is possible to upgrade this dependency ?

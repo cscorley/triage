@@ -1,1 +1,0 @@
-IndexReader overwrites future commits when you open it on a past commit

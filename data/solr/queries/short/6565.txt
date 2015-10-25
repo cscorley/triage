@@ -1,1 +1,0 @@
-SolrRequest support for query params

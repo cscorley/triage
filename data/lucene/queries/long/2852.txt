@@ -1,2 +1,0 @@
-TestLazyLoadThreadSafety fails in hudson, possibly an issue with RAMDirectory.
-If you hack lucene testcase to return another directory, the same seed will pass.

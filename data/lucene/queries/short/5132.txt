@@ -1,1 +1,0 @@
-Spatial RPT CONTAINS predicate will fail with NPE when there's no indexed data

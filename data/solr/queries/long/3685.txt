@@ -1,7 +1,0 @@
-There's a serious problem with restarting nodes, not cleaning old or unused index directories and sudden replication and Java being killed by the OS due to excessive memory allocation. Since SOLR-1781 was fixed index directories get cleaned up when a node is being restarted cleanly, however, old or unused index directories still pile up if Solr crashes or is being killed by the OS, happening here.
-
-We have a six-node 64-bit Linux test cluster with each node having two shards. There's 512MB RAM available and no swap. Each index is roughly 27MB so about 50MB per node, this fits easily and works fine. However, if a node is being restarted, Solr will consistently crash because it immediately eats up all RAM. If swap is enabled Solr will eat an additional few 100MB's right after start up.
-
-This cannot be solved by restarting Solr, it will just crash again and leave index directories in place until the disk is full. The only way i can restart a node safely is to delete the index directories and have it replicate from another node. If i then restart the node it will crash almost consistently.
-
-I'll attach a log of one of the nodes.

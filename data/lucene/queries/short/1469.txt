@@ -1,1 +1,0 @@
-isValid should be invoked after analyze rather than before it so it can validate the output of analyze

@@ -1,1 +1,0 @@
-To save on doubling up on resources, the SHF should have its http client protected (so subclasses can do things like custom status checks).

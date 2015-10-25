@@ -1,1 +1,0 @@
-ConcurrentSolrServer needs the option to stream pure delete requests.

@@ -1,1 +1,0 @@
-Readers wrapping other readers don't prevent usage if any of their subreaders was closed

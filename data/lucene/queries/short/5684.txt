@@ -1,1 +1,0 @@
-Add best effort detection when index is removed & recreated before openIfChanged

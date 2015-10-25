@@ -1,1 +1,0 @@
-ConstantScoreRangeQuery - fixes "too many clauses" exception

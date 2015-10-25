@@ -1,1 +1,0 @@
-Core names that contain a "-" fail in new Admin Gui

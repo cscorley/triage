@@ -1,9 +1,0 @@
-Some users have asked how to enable polish stemming:
-
-http://www.lucidimagination.com/search/document/2581073d836cec9a/how_to_use_polish_stemmer_stempel_in_schema_xml#c67acf3dddba1164
-http://www.lucidimagination.com/search/document/d115f17bd69a4dae/polish_stemmer#d115f17bd69a4dae
-http://www.lucidimagination.com/search/document/137d010682bb7367/polish_language_support
-
-etc.
-
-We should add the factory to make this easy.

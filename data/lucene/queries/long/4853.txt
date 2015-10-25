@@ -1,3 +1,0 @@
-Today it just takes TopDocs, which is very convenient, except if you are doing grouping and you have a TopGroups.
-
-I think it should let you pass in int[] docIDs ...

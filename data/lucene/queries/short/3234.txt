@@ -1,1 +1,0 @@
-Provide limit on phrase analysis in FastVectorHighlighter

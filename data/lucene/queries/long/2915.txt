@@ -1,3 +1,0 @@
-We already have DefaultCodecProvider, which simply registers all core codecs and uses Standard for all fields, but it's package private.
-
-We should make this public, and name it CoreCodecProvider.

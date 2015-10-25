@@ -1,1 +1,0 @@
-in advance(), don't try to skip if there is evidence it will fail

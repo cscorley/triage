@@ -1,1 +1,0 @@
-exceptions from other threads in beforeclass/etc do not fail the test

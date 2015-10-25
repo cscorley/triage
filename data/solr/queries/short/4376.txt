@@ -1,1 +1,0 @@
-dih.last_index_time has bad Date.toString() format during first delta import

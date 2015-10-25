@@ -1,1 +1,0 @@
-Spin-off of LUCENE-4752. The idea is to add a marker exception that tells IndexSearcher to terminate the collection of the current segment.

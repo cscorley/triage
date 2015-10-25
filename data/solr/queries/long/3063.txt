@@ -1,1 +1,0 @@
-#getLeader() tries to get leader props from stale zkStateReader (one that has not set watches).

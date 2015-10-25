@@ -1,1 +1,0 @@
-bin/solr -c doesn't set numShards for collection1

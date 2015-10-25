@@ -1,5 +1,0 @@
-Move facets associations to the new bulk FacetsAggregator API. Also, today when you index categories with associations, the categories are written to two fields redundantly - the associations field and the counting list field. However, when you aggregate them, you only need to read the associations field. The counting list field is redundant here.
-
-If an app requires indexing the categories into two lists, it can do so by adding the categories w/ associations using AssociationFacetFields and the plain categories (w/ their hierarchy etc.) using FacetFields.
-
-I will post a patch shortly.

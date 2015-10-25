@@ -1,1 +1,0 @@
-info stream doesn't work with merged segment warmer

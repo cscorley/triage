@@ -1,1 +1,0 @@
-StandardRequestHandler should support the 'sort' parameter

@@ -1,3 +1,0 @@
-The Schema  Browser JSP by default causes the Luke handler to "scan the world". In large indexes this make the UI useless.
-
-On an index with 64m documents & 8gb of disk space, the Schema Browser took 6 minutes to open and hogged all disk I/O, making Solr useless.

@@ -1,1 +1,0 @@
-CacheValue in CachingDirectoryFactory cannot be used outside of solr.core package

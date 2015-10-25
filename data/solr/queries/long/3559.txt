@@ -1,1 +1,0 @@
-We currently handle other update reorders (i.e. replica A may see update X then Y, and replica B may see update Y then X).  deleteByQuery also needs to handle reorders to ensure replicas are consistent.

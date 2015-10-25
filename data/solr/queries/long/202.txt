@@ -1,3 +1,0 @@
-update handler should explicitly use UTF-8 decoding  for parameters in the query string:
-
-   URLDecoder.decode( kv, "UTF-8" );

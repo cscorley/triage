@@ -1,1 +1,0 @@
-If the scorer returns null for a segment in QueryValueSource, we'll attempt to create a new scorer each time we're consulted about a doc in that segment.

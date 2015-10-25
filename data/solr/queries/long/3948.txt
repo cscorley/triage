@@ -1,7 +1,0 @@
-The admin interface shows you two totals that let you infer how many deleted documents exist in the index by subtracting Num Docs from Max Doc.  It would make things much easier for novice users and for automated statistics gathering if the number of deleted documents were calculated for you and displayed.
-
-Last Modified: 3 minutes ago
-Num Docs: 12924551
-Max Doc: 13011778
-Version: 862
-Segment Count: 23

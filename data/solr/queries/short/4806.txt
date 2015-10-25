@@ -1,1 +1,0 @@
-Shard splitting does not abort if WaitForState times out

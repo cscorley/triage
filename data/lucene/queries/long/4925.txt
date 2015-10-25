@@ -1,1 +1,0 @@
-When executor != null, IndexSearcher performs two passes to compute the top docs. This doesn't work when the sort contains SortField.FIELD_SCORE because the second pass doesn't have access to scores computed in the first pass.  Since search(...) doesn't compute scores when there is a sort, they are all Float.NaN.

@@ -1,1 +1,0 @@
-SegmentInfo.sizeInBytes ignore includeDocStore when caching

@@ -1,1 +1,0 @@
-Compressed stored fields: make the maximum number of docs in a chunk configurable

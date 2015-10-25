@@ -1,1 +1,0 @@
-Function Query "map" variant that allows "target" to be an arbitrary ValueSource

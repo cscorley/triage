@@ -1,1 +1,0 @@
-Suspect zookeeper client thread doesn't call back the watcher, that occur the overseer collection can't work normal.

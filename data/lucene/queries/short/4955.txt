@@ -1,1 +1,0 @@
-NGramTokenFilter increments positions for each gram

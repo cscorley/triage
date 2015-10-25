@@ -1,3 +1,0 @@
-During the second phase of a group query, the collator sends a query to each of the shards.  The purpose of this query is for shards to respond with the doc ids that match the set of group ids returned from the first phase.  The problem is that it sends this second query to each shard multiple times.  Specifically, in an environment with n shards, each shard will be hit with an identical query n times during the second phase of query processing, resulting in O(n 2) performance where n is the number of shards.
-
-I have traced this bug down to a single line in TopGroupsShardRequestFactory.java, and I am attaching a patch. 

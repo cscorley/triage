@@ -1,3 +1,0 @@
-While changing an antique 3.6 schema.xml to Solr 4.5, I noticed that some factories were deprecated in 3.x and were no longer available in 4.x (e.g. "solr._Language_PorterStemFilterFactory"). If the user would have got a notice before, this could have been prevented and user would have upgraded before.
-
-In fact the factories were @Deprecated in 3.6, but the Solr loader does not print any warning. My proposal is to add some simple code to SolrResourceLoader that it prints a warning about the deprecated class, if any configuartion setting loads a class with @Deprecated warning. So we can prevent that problem in the future.

@@ -1,3 +1,0 @@
-Currently the only way to know if shards error out while using the shards.tolerant flag is to set the shards.info flag and iterate through each shard's info to see if an error is reported.
-
-The "partialResults" response header value should be set when errors are detected from distributed searches. This header value is currently being used by the timeAllowed request parameter if shards don't respond in time. This change will provide a more consistent mechanism to detect distributed search errors.

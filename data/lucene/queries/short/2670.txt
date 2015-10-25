@@ -1,1 +1,0 @@
-allow automatontermsenum to work on full byte range

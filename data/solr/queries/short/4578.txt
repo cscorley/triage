@@ -1,1 +1,0 @@
-CoreAdminHandler#handleCreateAction gets a SolrCore and does not close it in SolrCloud mode when a core with the same name already exists.

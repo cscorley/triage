@@ -1,1 +1,0 @@
-Followup after LUCENE-5055: The prettify JS files have no license header (should be ASF according to Google Code). The minimized Javascript files were compressed with suppressing license headers (yui-compressor has an option to remove it, and this was done here, which does not conform to Apaches source code requirements).

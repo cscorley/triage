@@ -1,1 +1,0 @@
-DoubleMetaphone Filter Produces NullpointerException on zero-length token

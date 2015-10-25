@@ -1,1 +1,0 @@
-We are using a test method from the ZK project to pause the connection for a length of time. A while back, I found that the pause time did not really matter. All that happens is that the connection is closed and the zk client creates a new one. So it just causes a dc event, but never reaches expiration.

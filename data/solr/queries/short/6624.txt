@@ -1,1 +1,0 @@
-Spelling mistakes in the Java source

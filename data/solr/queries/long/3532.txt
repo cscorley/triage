@@ -1,1 +1,0 @@
-Currently every java client implements shutdown, (LBHttpSolrServer has close). I think it makes sense to promote #shutdown method to SolrServer.

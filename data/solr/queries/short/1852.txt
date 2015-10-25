@@ -1,1 +1,0 @@
-enablePositionIncrements="true" can cause searches to fail when they are parsed as phrase queries

@@ -1,9 +1,0 @@
-Uwe wrote on #lucene IRC:
-
-
-stax api 1.0 is also included in xmlapis for jaxp 1.4
-in solr 3.x the geromino stuff is needed
-because its java 5 only and java 5 has no javax.xml.stream stuff
-this geronimo blabla file is just containing those abstrcat interfaces and factory classes
-for trunk its included in java 6
-

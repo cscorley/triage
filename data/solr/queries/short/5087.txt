@@ -1,1 +1,0 @@
-CoreAdminHandler.handleMergeAction generating NullPointerException

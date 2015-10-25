@@ -1,3 +1,0 @@
-The XML QueryParser will be ported across to queryparser module.
-
-As part of this work, we'll move the QP's demo into the demo module.

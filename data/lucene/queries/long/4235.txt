@@ -1,5 +1,0 @@
-Back in Lucene 2.9, I hardcoded NRQ to always use filter rewrite based on the precisionStep. This is bogus and contradicts our autodetection (which may need some overhaul now in Lucene 4.0).
-
-If a query rewrites to only one term, using filter rewrite is stupid and slows down a lot, it can do a simple CSQ(TermQuery()) which is incredibly fast.
-
-This issue will remove the line from the CTOR.

@@ -1,1 +1,0 @@
-SolrJ QueryResponse doesn't support range facets

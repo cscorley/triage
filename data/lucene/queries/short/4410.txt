@@ -1,1 +1,0 @@
-Make FilteredQuery more flexible with regards to how filters are applied

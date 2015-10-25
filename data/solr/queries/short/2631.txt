@@ -1,1 +1,0 @@
-PingRequestHandler can infinite loop if called with a qt that points to itsself

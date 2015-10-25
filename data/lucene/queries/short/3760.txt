@@ -1,1 +1,0 @@
-Cleanup DR.getCurrentVersion/DR.getUserData/DR.getIndexCommit().getUserData()

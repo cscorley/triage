@@ -1,3 +1,0 @@
-When trying to run the ./backup and ./snapshooter scripts, they do not work. It seems like they are looking for differently named files.
-
-Are these deprecated or unsupported?

@@ -1,1 +1,0 @@
-Right now Solr defaults to Jaspell, but we've deprecated it in LUCENE-5775 ... and in trunk I'd like to remove it.  But first we need to fix Solr to not default to it.

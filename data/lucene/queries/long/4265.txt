@@ -1,1 +1,0 @@
-Right now when you run "ant eclipse" all the solr/lucene projects are called "lucene_solr", but what if I have both 4x and 3x, and now trunk?  I have to manually edit the classpath.  why not name them after the branch they are on.
