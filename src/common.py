@@ -171,7 +171,7 @@ def run_temporal(project, repos, corpus, create_other_corpus, queries, goldsets,
         force = True
 
     if force:
-        ranks = run_temporal_helper(project, repos, corpus, create_other_corpus, queries, goldsets)
+        ranks = run_temporal_helper_chunks(project, repos, corpus, create_other_corpus, queries, goldsets)
         write_ranks(project, rank_name, ranks)
 
     return get_frms(ranks, goldsets)
@@ -231,7 +231,6 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
             if project.model == "lda":
                 for i in xrange(start, end):
                     model.update([corpus[i]])
-                #model.update(docs) #, chunksize=len(docs)) # this will work better with a much higher decay
             if project.model == "lsi":
                 model.add_documents(docs)
 
@@ -259,7 +258,85 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
 
     return ranks
 
-def run_temporal_helper_full(project, repos, corpus, create_other_corpus, queries, goldsets):
+def run_temporal_helper_chunks(project, repos, corpus, create_other_corpus, queries, goldsets):
+    """
+    This function runs the experiment in over time. That is, it stops whenever
+    it reaches a commit linked with an issue/query. Will not work on all
+    projects.
+    """
+    ids = load_ids(project)
+    issue2git, git2issue = load_issue2git(project, ids, filter_ids=True)
+
+    logger.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
+
+    if project.model == "lda":
+        model, model_fname = create_model(project, None, corpus.id2word, LdaModel, 'temporal', force=True)
+    elif project.model == "hdp":
+        model, model_fname = create_model(project, None, corpus.id2word, HdpModel, 'temporal', force=True)
+    elif project.model == "lsi":
+        model, model_fname = create_model(project, None, corpus.id2word, LsiModel, 'temporal', force=True)
+
+    indices = list()
+    ranks = dict()
+    docs = list()
+    corpus.metadata = True
+    prev = 0
+
+    logger.info("Partitioning corpus")
+
+    # let's partition the corpus first
+    for idx, docmeta in enumerate(corpus):
+        doc, meta = docmeta
+        sha, _ = meta
+        if sha in git2issue:
+            indices.append((prev, idx+1, sha))
+            prev = idx
+
+    logger.info('Created %d partitions of the corpus', len(indices))
+    corpus.metadata = False
+
+
+    for counter, index  in enumerate(indices):
+        logger.info('At %d of %d partitions', counter, len(indices))
+        start, end, sha = index
+
+        sha_model_fname = model_fname % sha
+        if os.path.exists(sha_model_fname):
+            # need to be super careful that the way this one was built matches what we expect
+            # e.g., didn't come from a different run with a different update pattern
+            model = model.load(sha_model_fname)
+        else:
+            docs = corpus[start:end]
+            if project.model == "lda":
+                model.update(docs, chunksize=len(docs))
+            if project.model == "lsi":
+                model.add_documents(docs)
+
+            model.save(sha_model_fname) # thanks, gensim!
+
+
+        for qid in set(git2issue[sha]):
+            logger.info('Getting ranks for query id %s', qid)
+            try:
+                other_corpus = create_other_corpus(project, repos, changesets=corpus, ref=sha)
+            except TaserError:
+                continue
+
+            query_topic = get_topics(model, queries, by_ids=[qid])
+            doc_topic = get_topics(model, other_corpus)
+            subranks = get_rank(query_topic, doc_topic, goldsets)
+            if qid in subranks:
+                if qid not in ranks:
+                    ranks[qid] = list()
+
+                rank = subranks[qid]
+                ranks[qid].extend(rank)
+            else:
+                logger.info('Couldnt find qid %s', qid)
+
+    return ranks
+
+def run_temporal_helper_full_1(project, repos, corpus, create_other_corpus, queries, goldsets):
     """
     This function runs the experiment in over time. That is, it stops whenever
     it reaches a commit linked with an issue/query. Will not work on all
@@ -295,7 +372,6 @@ def run_temporal_helper_full(project, repos, corpus, create_other_corpus, querie
                 #docs.append(corpus[i])
             if project.model == "lda":
                 model.update([doc])
-                #model.update(docs) #, chunksize=len(docs)) # this will work better with a much higher decay
             if project.model == "lsi":
                 model.add_documents(docs)
 
@@ -653,8 +729,8 @@ def create_model(project, corpus, id2word, Kind, name, force=False):
             'chunksize': 1,
             'passes': 10,
             'eval_every': 0,
-            'decay': 1.0, #2.0
-            'offset': 1024, #1.0
+            'decay': 2.0,
+            'offset': 1
         })
         del project.model_config['max_bound_iterations']
 
