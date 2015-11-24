@@ -172,6 +172,7 @@ def run_temporal(project, repos, corpus, create_other_corpus, queries, goldsets,
 
     if force:
         ranks = run_temporal_helper_chunks(project, repos, corpus, create_other_corpus, queries, goldsets)
+        #ranks = run_temporal_helper(project, repos, corpus, create_other_corpus, queries, goldsets)
         write_ranks(project, rank_name, ranks)
 
     return get_frms(ranks, goldsets)
@@ -730,7 +731,7 @@ def create_model(project, corpus, id2word, Kind, name, force=False):
             'passes': 10,
             'eval_every': 0,
             'decay': 2.0,
-            'offset': 1
+            'offset': 1,
         })
         del project.model_config['max_bound_iterations']
 
