@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
-from __future__ import print_function
+from __future__ import print_function, division
 
 import logging
 logger = logging.getLogger('main')
@@ -17,6 +17,7 @@ from pprint import pprint
 import click
 import optunity
 import numpy
+import scipy
 
 import utils
 import common
@@ -74,8 +75,8 @@ def cli(verbose, name, version, *args, **kwargs):
     if kwargs['model'] == 'lda':
         model_config = {
             'num_topics': 500,
-            'alpha': 'auto',
-            'eta': 'auto',
+            'alpha': 1/500,
+            'eta': 1/500,
             'decay': 0.5,
             'offset': 1.0,
             'iterations': 1000,
@@ -278,7 +279,7 @@ def wrap(project, source):
 
 def do_science(a_first_rels, b_first_rels, ignore=False):
     # Build a dictionary with each of the results for stats.
-    x, y = merge_first_rels(a_first_rels, b_first_rels, ignore=ignore)
+    x, y = common.merge_first_rels(a_first_rels, b_first_rels, ignore=ignore)
     print(len(x), len(y))
 
     return { 'a_mrr': utils.calculate_mrr(x),
