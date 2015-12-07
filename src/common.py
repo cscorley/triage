@@ -24,7 +24,6 @@ from corpora import (ChangesetCorpus, SnapshotCorpus, ReleaseCorpus,
                      TaserSnapshotCorpus, TaserReleaseCorpus,
                      CorpusCombiner, GeneralCorpus)
 from errors import TaserError
-from goldsets import build_goldset, load_goldset
 from ownership import build_ownership
 
 def check_ranks(project, kind, experiment):

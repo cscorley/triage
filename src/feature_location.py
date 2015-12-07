@@ -9,6 +9,8 @@ logger = logging.getLogger('feature_location')
 import common
 from common import *
 
+from goldsets import build_goldset, load_goldset
+
 
 def run_experiment(project):
     logger.info("Running project on %s", str(project))
@@ -77,7 +79,10 @@ def create_goldsets(project):
                     if id_ not in goldsets:
                         goldsets[id_] = set()
 
-                    goldsets[id_].update([item for kind, item in changes])
+                    if project.level == 'file':
+                        goldsets[id_].update([item for kind, item in changes if item.endswith(".java")])
+                    else:
+                        goldsets[id_].update([item for kind, item in changes])
 
     logger.info("Returning %d goldsets", len(goldsets))
     return goldsets

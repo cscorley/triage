@@ -217,9 +217,13 @@ class SnapshotCorpus(GitCorpus):
 
         for entry in self.repo.object_store.iter_tree_contents(self.ref_tree):
             fname = entry.path
+            if not fname.endswith(".java"):
+                continue
+
             document = self.repo.object_store.get_raw(entry.sha)[1]
             if dulwich.patch.is_binary(document):
                 continue
+
 
             words = self.preprocess(document, [fname, self.ref])
             length += 1

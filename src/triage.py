@@ -9,6 +9,7 @@ logger = logging.getLogger('triage')
 import common
 from common import *
 
+from goldsets import build_goldset, load_goldset
 
 def run_experiment(project):
     logger.info("Running project on %s", str(project))
