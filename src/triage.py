@@ -79,12 +79,12 @@ def run_ownership(project, corpus, ownership, queries, goldsets, kind, rank_name
     doc_topic = get_topics(model, corpus)
 
     ranks = get_rank(query_topic, doc_topic)
-    owners = rank2owner(ranks, ownership)
+    owners = rank2owner(ranks, ownership, goldsets)
     write_ranks(project, rank_name, owners)
 
     return get_frms(owners, goldsets)
 
-def rank2owner(ranks, ownership):
+def rank2owner(ranks, ownership, goldsets):
     logger.info("Getting owner ranks from %d ranks over %d ownerships", len(ranks), len(ownership))
     owner_ranks = dict()
 
@@ -128,7 +128,8 @@ def rank2owner(ranks, ownership):
         for idx, data in enumerate(rank):
             dist, meta = data
             owner, score = meta
-            l.append((idx+1, dist, owner))
+            if owner in goldsets[qid]:
+                l.append((idx+1, dist, owner))
 
         return_ranks[qid] = l
 
