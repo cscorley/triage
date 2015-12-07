@@ -619,10 +619,10 @@ def load_issue2git(project, ids, filter_ids=False):
     return i2g, g2i
 
 
-def load_projects(config):
+def load_projects(config, path='data'):
     projects = list()
     refpaths = list()
-    for dirpath, dirname, filenames in os.walk('data'):
+    for dirpath, dirname, filenames in os.walk(path):
         for filename in filenames:
             if filename == 'ref':
                 refpaths.append(os.path.join(dirpath, filename))

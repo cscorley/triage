@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-runs="/mnt/6000/thesis-data/runs"
-logs="/mnt/6000/thesis-data/runs/logs"
+runs="~/runs"
+logs="~/runs/logs"
 mkdir -p ${logs}
 
 function run {
@@ -23,7 +23,7 @@ function run {
         echo "***********" >> ${log_dest}
         date >> ${log_dest}
         echo "***********" >> ${log_dest}
-        time cdi -v --model lda --experiment feature_location --source release --source changeset --name ${1} &>> ${log_dest}
+        time cdi -v --model lda --experiment feature_location --optimize_model --source changeset --name ${1} &>> ${log_dest}
 
         echo "running dit ${1} ${i}"
 
@@ -33,7 +33,7 @@ function run {
         echo "***********" >> ${log_dest}
         date >> ${log_dest}
         echo "***********" >> ${log_dest}
-        time cdi -v --model lda --experiment triage --source release --source changeset --name ${1} &>> ${log_dest}
+        time cdi -v --model lda --experiment triage --optimize_model --source changeset --name ${1} &>> ${log_dest}
 
         find data/${1} -name "*ranks*.csv.gz" | cpio -pvdmB ${data_dest} >> ${log_dest}
     done
