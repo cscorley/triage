@@ -50,8 +50,13 @@ def run_experiment(project):
 
         if 'release' in project.source and results['release'] is None:
             fn = 'release-%s' % project.level
-            results['release'] = run_ownership(project, release_corpus, ownership,
-                                               queries, goldsets, fn, names['release'])
+            # the kagdi approach
+            #results['release'] = run_ownership(project, release_corpus, ownership,
+            #                                   queries, goldsets, fn, names['release'])
+
+            # the matter approach
+            results['release'] = run_basic(project, release_corpus, developer_corpus,
+                                             queries, goldsets, fn, names['release'])
 
         if 'changeset' in project.source and results['changeset'] is None:
             fn = 'changeset-%s' % project.changeset_config_string
