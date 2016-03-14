@@ -28,42 +28,47 @@ import feature_location
 
 @click.command()
 @click.option('--verbose', '-v',
-              help="Enable verbose output",
+              help='Enable verbose output',
               count=True)
 @click.option('--force',
-              help="Overwrite existing data instead of reloading",
+              help='Overwrite existing data instead of reloading',
               is_flag=True)
 @click.option('--optimize_model',
-              help="Find an optimal configuration for experiment",
+              help='Find an optimal configuration for experiment',
               is_flag=True)
 @click.option('--optimize_corpus',
-              help="Find an optimal corpus for experiment",
+              help='Find an optimal corpus for experiment',
               is_flag=True)
 @click.option('--goldset',
-              help="Build a goldset for project (overrides other parameters)",
+              help='Build a goldset for project (overrides other parameters)',
               is_flag=True)
 @click.option('--name',
-              help="Name of project to run experiment on")
+              help='Name of project to run experiment on')
 @click.option('--version',
-              help="Version of project to run experiment on")
+              help='Version of project to run experiment on')
 @click.option('--source',
-              help="Run experiment on selected source",
-              type=click.Choice(["release", "changeset", "temporal"]),
-              default="release",
+              help='Run experiment on selected source',
+              type=click.Choice(['release', 'changeset', 'temporal']),
+              default='release',
               multiple=True)
 @click.option('--level',
-              help="Granularity level to run experiment on",
-              type=click.Choice(["file", "class", "method"]),
-              default="file")
+              help='Granularity level to run experiment on',
+              type=click.Choice(['file', 'class', 'method']),
+              default='file')
 @click.option('--experiment',
-              help="Run selected experiment",
-              type=click.Choice(["triage", "feature_location"]),
-              default="triage")
+              help='Run selected experiment',
+              type=click.Choice(['triage', 'feature_location']),
+              default='triage')
 @click.option('--model',
-              help="Evaluate using selected model",
-              type=click.Choice(["lsi", "lda", "hdp", "hpyp"]),
-              default="lda")
+              help='Evaluate using selected model',
+              type=click.Choice(['lsi', 'lda', 'hdp', 'hpyp']),
+              default='lda')
+@click.option('--use-random-seed',
+              is_flag=True)
 def cli(verbose, name, version, *args, **kwargs):
+
+    if not kwargs['use-random-seed']:
+        numpy.random.seed(ord('💩'))
 
     if verbose > 1:
         coloredlogs.set_level(level=logging.DEBUG)
