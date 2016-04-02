@@ -67,8 +67,8 @@ import feature_location
               is_flag=True)
 def cli(verbose, name, version, *args, **kwargs):
 
-    if not kwargs['use-random-seed']:
-        numpy.random.seed(ord('💩'))
+    if not kwargs['use_random_seed']:
+        numpy.random.seed(128169) # '💩'
 
     if verbose > 1:
         coloredlogs.set_level(level=logging.DEBUG)
