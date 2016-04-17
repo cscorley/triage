@@ -732,7 +732,8 @@ def create_model(project, corpus, id2word, Kind, name, force=False):
             'decay': 2.0,
             'offset': 1,
         })
-        del project.model_config['max_bound_iterations']
+        if 'max_bound_iterations' in project.model_config:
+            del project.model_config['max_bound_iterations']
 
         p = project._replace(model_config_string='-'.join(["%s"] + [unicode(v) for k, v in sorted(project.model_config.items())]))
     else:

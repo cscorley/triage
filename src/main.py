@@ -49,7 +49,7 @@ import feature_location
 @click.option('--source',
               help='Run experiment on selected source',
               type=click.Choice(['release', 'changeset', 'temporal']),
-              default='release',
+              default=['release'],
               multiple=True)
 @click.option('--level',
               help='Granularity level to run experiment on',
