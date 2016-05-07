@@ -7,7 +7,6 @@ import logging
 logger = logging.getLogger('main')
 
 import coloredlogs
-coloredlogs.install()
 
 import csv
 import os
@@ -70,6 +69,8 @@ def cli(verbose, name, version, *args, **kwargs):
     if not kwargs['use_random_seed']:
         numpy.random.seed(128169) # '💩'
 
+    coloredlogs.install()
+
     if verbose > 1:
         coloredlogs.set_level(level=logging.DEBUG)
     elif verbose == 1:
@@ -77,45 +78,14 @@ def cli(verbose, name, version, *args, **kwargs):
     elif verbose == 0:
         coloredlogs.set_level(level=logging.ERROR)
 
-    if kwargs['model'] == 'lda':
-        model_config = {
-            'num_topics': 500,
-            'alpha': 1/500,
-            'eta': 1/500,
-            'decay': 0.5,
-            'offset': 1.0,
-            'iterations': 1000,
-            'passes': 1,
-            'max_bound_iterations': 1000, # special
-            'algorithm': 'batch', # special
-        }
-    elif kwargs['model'] == 'hdp':
-        model_config = {
-            'K': 15,
-            'T': 150,
-            'alpha': 1,
-            'chunksize': 256,
-            'eta': 0.01,
-            'gamma': 1,
-            'kappa': 1.0,
-            'scale': 1.0,
-            'tau': 64.0,
-        }
-    else:
-        model_config = {}
+    model_config, model_config_string = get_default_model_config(kwargs)
+    changeset_config, changeset_config_string = get_default_changeset_config()
 
-    changeset_config = {
-        'include_additions': True,
-        'include_context': True,
-        'include_message': False,
-        'include_removals': True,
-    }
+    kwargs.update({'changeset_config': changeset_config,
+                   'changeset_config_string': changeset_config_string})
 
-    kwargs.update({'changeset_config': changeset_config})
-    kwargs.update({'changeset_config_string': '-'.join([unicode(v) for k, v in sorted(changeset_config.items())])})
-
-    kwargs.update({'model_config': model_config})
-    kwargs.update({'model_config_string': '-'.join([unicode(v) for k, v in sorted(model_config.items())])})
+    kwargs.update({'model_config': model_config,
+                   'model_config_string': model_config_string})
 
     # load project info
     projects = common.load_projects(kwargs)
@@ -148,6 +118,51 @@ def cli(verbose, name, version, *args, **kwargs):
                 mrr[pn][source] = utils.calculate_mrr(num for num, _, _ in firstrels[pn][source])
 
     pprint(mrr)
+
+def get_default_changeset_config():
+    changeset_config = {
+        'include_additions': True,
+        'include_context': True,
+        'include_message': False,
+        'include_removals': True,
+    }
+
+    changeset_config_string = '-'.join([unicode(v) for k, v in sorted(changeset_config.items())])
+
+    return changeset_config, changeset_config_string
+
+
+def get_default_model_config(kwargs):
+    if kwargs['model'] == 'lda':
+        model_config = {
+            'num_topics': 500,
+            'alpha': 1/500,
+            'eta': 1/500,
+            'decay': 0.5,
+            'offset': 1.0,
+            'iterations': 1000,
+            'passes': 1,
+            'max_bound_iterations': 1000, # special
+            'algorithm': 'batch', # special
+        }
+    elif kwargs['model'] == 'hdp':
+        model_config = {
+            'K': 15,
+            'T': 150,
+            'alpha': 1,
+            'chunksize': 256,
+            'eta': 0.01,
+            'gamma': 1,
+            'kappa': 1.0,
+            'scale': 1.0,
+            'tau': 64.0,
+        }
+    else:
+        model_config = {}
+
+    model_config_string =  '-'.join([unicode(v) for k, v in sorted(model_config.items())])
+
+    return model_config, model_config_string
 
 def run_experiments(project):
     results = dict()

@@ -643,7 +643,7 @@ def load_projects(config, path='data'):
 
         # find the project in the csv, adding it's info to config
         # do the os.path.join to force a trailing slash
-        row = [project_name, project_name + ' ' + project_version, project_version, ref,
+        row = [project_name, make_title(project_name) + ' ' + project_version, project_version, ref,
                os.path.join(data_path, ''),
                os.path.join(full_path, ''),
                os.path.join(src_path, '')]
@@ -652,6 +652,9 @@ def load_projects(config, path='data'):
         projects.append(Project(*row))
 
     return projects
+
+def make_title(name):
+    return name.title().replace("keeper", "Keeper").replace("jpa", "JPA")
 
 
 def load_repos(project):
