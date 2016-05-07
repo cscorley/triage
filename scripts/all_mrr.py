@@ -36,11 +36,11 @@ def print_em(desc, a, b, ignore=False, file=None):
     rsp1 = Td / S
     rsp2 = T / S
     r = rsp1 - rsp2
-# From this information alone, the remaining rank sum can be computed, because
-# it is the total sum S minus T, or in this case 45 - 18 = 27. Next, the two
-# rank-sum proportions are 27/45 = 60% and 18/45 = 40%. Finally, the rank
-# correlation is the difference between the two proportions (.60 minus .40),
-# hence r = .20.
+    # From this information alone, the remaining rank sum can be computed, because
+    # it is the total sum S minus T, or in this case 45 - 18 = 27. Next, the two
+    # rank-sum proportions are 27/45 = 60% and 18/45 = 40%. Finally, the rank
+    # correlation is the difference between the two proportions (.60 minus .40),
+    # hence r = .20.
 
     r = "%.4f" % r
 
