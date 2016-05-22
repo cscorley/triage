@@ -42,19 +42,19 @@ def print_em(desc, a, b, ignore=False, file=None):
     # correlation is the difference between the two proportions (.60 minus .40),
     # hence r = .20.
 
-    r = "%.4f" % r
+    r = "$%.4f$" % r
 
     changeset = round(src.utils.calculate_mrr(x), acc)
     snapshot = round(src.utils.calculate_mrr(y), acc)
 
     if changeset >= snapshot:
-        spread = "+%.4f" % (changeset - snapshot)
-        changeset = "{\\bf %.4f }" % changeset
-        snapshot = "%.4f" % snapshot
+        spread = "$+%.4f$" % (changeset - snapshot)
+        changeset = "$\\bm{%.4f}$" % changeset
+        snapshot = "$%.4f$" % snapshot
     else:
-        spread = "%.4f" % (changeset - snapshot)
-        snapshot = "{\\bf %.4f }" % snapshot
-        changeset = "%.4f" % changeset
+        spread = "$%.4f$" % (changeset - snapshot)
+        snapshot = "$\\bm{%.4f}$" % snapshot
+        changeset = "$%.4f$" % changeset
 
     if len(x) < 10:
         star = "^{*}"
@@ -62,9 +62,9 @@ def print_em(desc, a, b, ignore=False, file=None):
         star = ''
 
     if p < 0.01:
-        p = "$p < $ 0.01%s" % star
+        p = "$p < 0.01$%s" % star
     else:
-        p = "$p = $ %.4f%s" % (p, star)
+        p = "$p = %.4f$%s" % (p, star)
 
 
     l = [desc,
