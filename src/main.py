@@ -82,7 +82,7 @@ def cli(verbose, name, version, random_seed_value, *args, **kwargs):
     changeset_config, changeset_config_string = get_default_changeset_config()
 
     if random_seed_value != DEFAULT_RANDOM_SEED:
-        model_config_string = model_config_string + '-' + unicode(random_seed_value)
+        model_config_string = unicode(random_seed_value) + '-' + model_config_string
 
     kwargs.update({'changeset_config': changeset_config,
                    'changeset_config_string': changeset_config_string})
