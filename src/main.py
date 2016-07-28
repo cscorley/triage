@@ -66,7 +66,8 @@ DEFAULT_RANDOM_SEED = 128169  # '💩'
 @click.option('--random-seed-value',
               help='Set the RNG seed value',
               default=DEFAULT_RANDOM_SEED)
-def cli(verbose, name, version, random_seed_value, *args, **kwargs):
+def cli(verbose, name, version, *args, **kwargs):
+    random_seed_value = kwargs["random_seed_value"]
     numpy.random.seed(random_seed_value)
 
     coloredlogs.install()
@@ -82,7 +83,7 @@ def cli(verbose, name, version, random_seed_value, *args, **kwargs):
     changeset_config, changeset_config_string = get_default_changeset_config()
 
     if random_seed_value != DEFAULT_RANDOM_SEED:
-        model_config_string = unicode(random_seed_value) + '-' + model_config_string
+        model_config_string = 'seed' + unicode(random_seed_value) + '-' + model_config_string
 
     kwargs.update({'changeset_config': changeset_config,
                    'changeset_config_string': changeset_config_string})

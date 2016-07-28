@@ -724,6 +724,8 @@ def create_queries(project):
     return corpus
 
 def create_model(project, corpus, id2word, Kind, name, force=False):
+    numpy.random.seed(project.random_seed_value)
+
     if Kind is LdaModel and corpus is None:
         project.model_config.update({
             'algorithm': 'online', # special
@@ -744,7 +746,6 @@ def create_model(project, corpus, id2word, Kind, name, force=False):
 
     model_fname = p.full_path + name.lower() + '-' + p.model_config_string
     model_fname += '.' + p.model + '.gz'
-
 
     if not os.path.exists(model_fname) or p.force or force:
         params = dict(p.model_config) # make copy of config
