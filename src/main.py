@@ -82,8 +82,6 @@ def cli(verbose, name, version, *args, **kwargs):
     model_config, model_config_string = get_default_model_config(kwargs)
     changeset_config, changeset_config_string = get_default_changeset_config()
 
-    model_config_string = 'seed' + unicode(random_seed_value) + '-' + model_config_string
-
     kwargs.update({'changeset_config': changeset_config,
                    'changeset_config_string': changeset_config_string})
 
@@ -163,7 +161,13 @@ def get_default_model_config(kwargs):
     else:
         model_config = {}
 
-    model_config_string =  '-'.join([unicode(v) for k, v in sorted(model_config.items())])
+    if "random_seed_value" in kwargs:
+        random_seed_value = kwargs["random_seed_value"]
+    else:
+        random_seed_value = DEFAULT_RANDOM_SEED
+
+    model_config_string = ('seed' + unicode(random_seed_value) + '-' +
+            '-'.join([unicode(v) for k, v in sorted(model_config.items())]))
 
     return model_config, model_config_string
 
