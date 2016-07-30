@@ -24,7 +24,7 @@ import goldsets
 import triage
 import feature_location
 
-DEFAULT_RANDOM_SEED = 128169  # '💩'
+DEFAULT_RANDOM_SEED = 1 #128169  # '💩'
 
 @click.command()
 @click.option('--verbose', '-v',
@@ -82,8 +82,7 @@ def cli(verbose, name, version, *args, **kwargs):
     model_config, model_config_string = get_default_model_config(kwargs)
     changeset_config, changeset_config_string = get_default_changeset_config()
 
-    if random_seed_value != DEFAULT_RANDOM_SEED:
-        model_config_string = 'seed' + unicode(random_seed_value) + '-' + model_config_string
+    model_config_string = 'seed' + unicode(random_seed_value) + '-' + model_config_string
 
     kwargs.update({'changeset_config': changeset_config,
                    'changeset_config_string': changeset_config_string})
