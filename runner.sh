@@ -39,9 +39,6 @@ function run {
     done
 }
 
-run "bookkeeper"
-run "mahout"
-run "openjpa"
-run "pig"
-run "tika"
-run "zookeeper"
+for project in ${@}; do
+    run ${project}
+done

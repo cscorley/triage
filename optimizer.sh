@@ -2,7 +2,7 @@
 
 
 
-runs="/mnt/volume-nyc1-01/thesis-data/runs"
+runs="${HOME}/thesis-data/runs"
 logs="${runs}/logs"
 mkdir -p ${logs}
 
@@ -52,16 +52,7 @@ function run {
     done
 }
 
-run "bookkeeper" "model"
-run "mahout" "model"
-run "openjpa" "model"
-run "pig" "model"
-run "tika" "model"
-run "zookeeper" "model"
-
-run "bookkeeper" "corpus"
-run "mahout" "corpus"
-run "openjpa" "corpus"
-run "pig" "corpus"
-run "tika" "corpus"
-run "zookeeper" "corpus"
+for project in ${@}; do
+    run ${project} "model"
+    run ${project} "corpus"
+done
