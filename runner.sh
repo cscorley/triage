@@ -15,21 +15,21 @@ function run {
         find data/${1} -name '*.lda*' -exec rm {} \; >> ${log_dest}
         find data/${1} -name "*ranks*.csv.gz" -exec rm {} \; >> ${log_dest}
 
-        echo "running flt ${1} ${i}"
+        echo "running flt ${@} ${i}"
 
         echo "" >> ${log_dest}
         echo "***********" >> ${log_dest}
-        echo "running flt" >> ${log_dest}
+        echo "running flt ${@} ${i}" >> ${log_dest}
         echo "***********" >> ${log_dest}
         date >> ${log_dest}
         echo "***********" >> ${log_dest}
         time cdi -v --model lda --experiment feature_location --source release --source changeset --name ${1} --random-seed-value ${i} &>> ${log_dest}
 
-        echo "running dit ${1} ${i}"
+        echo "running dit ${@} ${i}"
 
         echo "" >> ${log_dest}
         echo "***********" >> ${log_dest}
-        echo "running dit" >> ${log_dest}
+        echo "running dit ${@} ${i}" >> ${log_dest}
         echo "***********" >> ${log_dest}
         date >> ${log_dest}
         echo "***********" >> ${log_dest}
@@ -39,9 +39,9 @@ function run {
     done
 }
 
-run "bookkeeper" &
-run "mahout" &
-run "openjpa" &
-run "pig" &
-run "tika" &
+run "bookkeeper"
+run "mahout"
+run "openjpa"
+run "pig"
+run "tika"
 run "zookeeper"
