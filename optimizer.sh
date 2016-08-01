@@ -8,12 +8,12 @@ mkdir -p ${logs}
 
 function run {
     for i in $(seq 1 1); do
-        find data/${1} -name 'LDA*' -exec rm {} \;
-        find data/${1} -name '*.lda*' -exec rm {} \;
-        find data/${1} -name "*ranks*.csv.gz" -exec rm {} \;
+#        find data/${1} -name 'LDA*' -exec rm {} \;
+#        find data/${1} -name '*.lda*' -exec rm {} \;
+#        find data/${1} -name "*ranks*.csv.gz" -exec rm {} \;
 
         experiments=(feature_location triage)
-        for experiment in ${experiments}; do
+        for experiment in ${experiments[@]}; do  # bash is fucking garbage.
             log_dest="${logs}/${i}-${1}-${2}-${experiment}.log"
             echo "running ${experiment} ${@} ${i}"
             date >> ${log_dest}
