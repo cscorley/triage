@@ -293,12 +293,7 @@ def wrap(project, source):
         p = project._replace(model_config_string='-'.join([unicode(v) for k, v in sorted(project.model_config.items())]),
                              changeset_config_string='-'.join([unicode(v) for k, v in sorted(project.changeset_config.items())]))
 
-        results = dict()
-
-        if project.experiment == 'triage':
-            results = triage.run_experiment(p)
-        elif project.experiment == 'feature_location':
-            results = feature_location.run_experiment(p)
+        results = run_experiments(p)
 
         return utils.calculate_mrr(num for num, _, _ in results[source])
 

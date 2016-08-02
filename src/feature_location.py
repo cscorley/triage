@@ -46,14 +46,18 @@ def run_experiment(project):
 
         if 'release' in project.source and results['release'] is None:
             fn = 'release-%s' % project.level
-            results['release'] = run_basic(project, release_corpus, release_corpus,
-                                           queries, goldsets, fn, names['release'])
+            result, train_perplexity, other_perplexity = run_basic(project,
+                    release_corpus, release_corpus, queries, goldsets, fn,
+                    names['release'])
+            results['release'] = result
 
         if 'changeset' in project.source and results['changeset'] is None:
             fn = 'changeset-%s' % project.changeset_config_string
-            results['changeset'] = run_basic(project, changeset_corpus, release_corpus,
-                                             queries, goldsets, fn, names['changeset'])
+            result, train_perplexity, other_perplexity = run_basic(project,
+                    changeset_corpus, release_corpus, queries, goldsets, fn,
+                    names['changeset'])
 
+            results['changeset'] = result
         if 'temporal' in project.source and results['temporal'] is None:
             results['temporal'] = run_temporal(project, repos, changeset_corpus,
                                                 create_release_corpus,

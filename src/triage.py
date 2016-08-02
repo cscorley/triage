@@ -55,13 +55,19 @@ def run_experiment(project):
             #                                   queries, goldsets, fn, names['release'])
 
             # the matter approach
-            results['release'] = run_basic(project, release_corpus, developer_corpus,
-                                             queries, goldsets, fn, names['release'])
+            result, train_perplexity, other_perplexity = run_basic(project,
+                    release_corpus, developer_corpus, queries, goldsets, fn,
+                    names['release'])
+
+            results['release'] = result
 
         if 'changeset' in project.source and results['changeset'] is None:
             fn = 'changeset-%s' % project.changeset_config_string
-            results['changeset'] = run_basic(project, changeset_corpus, developer_corpus,
-                                             queries, goldsets, fn, names['changeset'])
+            result, train_perplexity, other_perplexity = run_basic(project,
+                    changeset_corpus, developer_corpus, queries, goldsets, fn,
+                    names['changeset'])
+
+            results['changeset'] = result
 
         if 'temporal' in project.source and results['temporal'] is None:
             results['temporal'] = run_temporal(project, repos, changeset_corpus,
