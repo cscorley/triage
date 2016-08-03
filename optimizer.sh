@@ -13,7 +13,7 @@ function run {
 #        find data/${1} -name "*ranks*.csv.gz" -exec rm {} \;
 
         experiments=(feature_location triage)
-        for experiment in ${experiments[@]}; do  # bash is fucking garbage.
+        for experiment in ${experiments[@]}; do
             log_dest="${logs}/${i}-${1}-${2}-${experiment}.log"
             echo "running ${experiment} ${@} ${i}"
             date >> ${log_dest}
@@ -35,3 +35,4 @@ for project in ${@}; do
     run ${project} "model"
     run ${project} "corpus"
 done
+
