@@ -49,6 +49,10 @@ def run_experiment(project):
             result, train_perplexity, other_perplexity = run_basic(project,
                     release_corpus, release_corpus, queries, goldsets, fn,
                     names['release'])
+
+            common.append_perplexity(project, train_perplexity, "release-feature_location-train-perplexity")
+            common.append_perplexity(project, other_perplexity, "release-feature_location-other-perplexity")
+
             results['release'] = result
 
         if 'changeset' in project.source and results['changeset'] is None:
@@ -56,6 +60,9 @@ def run_experiment(project):
             result, train_perplexity, other_perplexity = run_basic(project,
                     changeset_corpus, release_corpus, queries, goldsets, fn,
                     names['changeset'])
+
+            common.append_perplexity(project, train_perplexity, "changeset-feature_location-train-perplexity")
+            common.append_perplexity(project, other_perplexity, "changeset-feature_location-other-perplexity")
 
             results['changeset'] = result
         if 'temporal' in project.source and results['temporal'] is None:

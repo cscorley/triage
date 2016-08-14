@@ -59,6 +59,9 @@ def run_experiment(project):
                     release_corpus, developer_corpus, queries, goldsets, fn,
                     names['release'])
 
+            common.append_perplexity(project, train_perplexity, "release-triage-train-perplexity")
+            common.append_perplexity(project, other_perplexity, "release-triage-other-perplexity")
+
             results['release'] = result
 
         if 'changeset' in project.source and results['changeset'] is None:
@@ -66,6 +69,9 @@ def run_experiment(project):
             result, train_perplexity, other_perplexity = run_basic(project,
                     changeset_corpus, developer_corpus, queries, goldsets, fn,
                     names['changeset'])
+
+            common.append_perplexity(project, train_perplexity, "changeset-triage-train-perplexity")
+            common.append_perplexity(project, other_perplexity, "changeset-triage-other-perplexity")
 
             results['changeset'] = result
 
