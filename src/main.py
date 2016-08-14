@@ -39,6 +39,9 @@ DEFAULT_RANDOM_SEED = 1 #128169  # '💩'
 @click.option('--optimize_corpus',
               help='Find an optimal corpus for experiment',
               is_flag=True)
+@click.option('--save_models',
+              help='Persist models to disk',
+              is_flag=True)
 @click.option('--goldset',
               help='Build a goldset for project (overrides other parameters)',
               is_flag=True)

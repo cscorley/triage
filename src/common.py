@@ -239,7 +239,8 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
             if project.model == "lsi":
                 model.add_documents(docs)
 
-            model.save(sha_model_fname) # thanks, gensim!
+            if project.save_models:
+                model.save(sha_model_fname) # thanks, gensim!
 
 
         for qid in set(git2issue[sha]):
@@ -317,7 +318,8 @@ def run_temporal_helper_chunks(project, repos, corpus, create_other_corpus, quer
             if project.model == "lsi":
                 model.add_documents(docs)
 
-            model.save(sha_model_fname) # thanks, gensim!
+            if project.save_models:
+                model.save(sha_model_fname) # thanks, gensim!
 
 
         for qid in set(git2issue[sha]):
@@ -380,7 +382,8 @@ def run_temporal_helper_full_1(project, repos, corpus, create_other_corpus, quer
             if project.model == "lsi":
                 model.add_documents(docs)
 
-            model.save(sha_model_fname) # thanks, gensim!
+            if project.save_models:
+                model.save(sha_model_fname) # thanks, gensim!
 
 
         if sha in git2issue:
@@ -759,7 +762,7 @@ def create_model(project, corpus, id2word, Kind, name, force=False):
 
         model = Kind(**params)
 
-        if corpus:
+        if corpus and project.save_models:
             model.save(model_fname)
     else:
         model = Kind.load(model_fname)
@@ -781,7 +784,8 @@ def create_mallet_model(project, corpus, name, use_level=True):
                           optimize_interval=10,
                           num_topics=project.num_topics)
 
-        model.save(model_fname)
+        if project.save_models:
+            model.save(model_fname)
     else:
         model = LdaMallet.load(model_fname)
 
