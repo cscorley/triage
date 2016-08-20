@@ -881,11 +881,13 @@ def create_release_corpus(project, repos, changesets=None, ref=None):
 
 def append_perplexity(project, perplexity, kind):
     path = os.path.join(project.data_path, kind + ".csv")
+    logger.info("writing perplexity: %s", ",".join([unicode(k) for k, v in sorted(project.model_config.items())] + ["random_seed_value", "perplexity"] + [unicode(k) for k, v in sorted(project.changeset_config.items())]))
+
     if not os.path.exists(path):
         with open(path, "wt") as f:
             writer = csv.writer(f)
-            writer.writerow([unicode(k) for k, v in sorted(project.model_config.items())] + ["random_seed_value", "perplexity"])
+            writer.writerow([unicode(k) for k, v in sorted(project.model_config.items())] + ["random_seed_value", "perplexity"] + [unicode(k) for k, v in sorted(project.changeset_config.items())])
 
     with open(path, "at") as f:
         writer = csv.writer(f)
-        writer.writerow([unicode(v) for k, v in sorted(project.model_config.items())] + [project.random_seed_value, unicode(perplexity)])
+        writer.writerow([unicode(v) for k, v in sorted(project.model_config.items())] + [project.random_seed_value, unicode(perplexity)] + [unicode(v) for k, v in sorted(project.changeset_config.items())])
