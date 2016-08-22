@@ -9,7 +9,7 @@ function run {
     for i in $(seq 1 50); do
         experiments=(feature_location triage)
         for experiment in ${experiments[@]}; do
-            log_dest="${logs}/${i}-${1}-${2}-${experiment}.log"
+            log_dest="${logs}/${i}-${1}-run-${experiment}.log"
             echo "running ${experiment} ${@} ${i}"
             date >> ${log_dest}
 

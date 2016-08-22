@@ -54,8 +54,8 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, eval_name, rank_
 
     if project.model == "lda":
         model, _ = create_model(project, corpus, corpus.id2word, LdaModel, eval_name)
-        train_perplexity = numpy.exp2(-model.log_perplexity(corpus))
-        other_perplexity = numpy.exp2(-model.log_perplexity(other_corpus))
+        train_perplexity = get_perplexity(model, corpus)
+        other_perplexity = get_perplexity(model, other_corpus)
     elif project.model == "hdp":
         model, _ = create_model(project, corpus, corpus.id2word, HdpModel, eval_name)
     elif project.model == "lsi":
@@ -69,6 +69,14 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, eval_name, rank_
     write_ranks(project, rank_name, ranks)
 
     return get_frms(ranks, goldsets), train_perplexity, other_perplexity
+
+def get_perplexity(model, corpus):
+    old_id2word = corpus.id2word
+    corpus.id2word = model.id2word
+    perplexity = numpy.exp2(-model.log_perplexity(corpus))
+    corpus.id2word = old_id2word
+
+    return perplexity
 
 def collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus):
     logger.info("Collecting corpus metadata info")
