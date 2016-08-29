@@ -33,7 +33,7 @@ function run {
                 --random-seed-value ${i} &>> ${log_dest}
         done
 
-        find data/${1} -name "*ranks*.csv.gz" | cpio -pvdmB ${runs} >> ${log_dest}
+        find data -name "*ranks.csv.gz" | cpio -pvdmB ${runs} >> ${log_dest}
     done
 }
 
