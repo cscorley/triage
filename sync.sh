@@ -19,16 +19,6 @@ DATA_DIR=${HOME}/thesis-data
 VOLUME="volume-nyc1-01"
 
 echo ${addresses}
-for each in ${addresses}; do
-    mounts=`ssh ${each} "mount | grep ${VOLUME}"`
-    mounts=$(echo ${mounts})
-    echo "${each} mounts='${mounts}'"
-    if [ ! -z "${mounts}" ]; then
-        echo "Found mounts. Copying."
-        rsync -avz -e ssh ${each}:/mnt/${VOLUME}/thesis-data ${HOME}
-    fi
-    echo ""
-done;
 
 echo "Copying from ${DATA_DIR}"
 for each in ${addresses}; do
