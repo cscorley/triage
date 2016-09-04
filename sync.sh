@@ -16,7 +16,6 @@ addresses=`echo ${droplets} | python -m json.tool | \
     grep -E ip_address | awk '{print $2}' | sed -E "s/[^0-9.]//g"`
 
 DATA_DIR=${HOME}/thesis-data
-VOLUME="volume-nyc1-01"
 
 echo ${addresses}
 
@@ -32,10 +31,9 @@ for each in ${addresses}; do
         -e ssh ${each}:${DATA_DIR} ${HOME}
 done;
 
-echo "Copying from local ./data"
+echo "Copying to local ./data"
 rsync -avz --include='*/' \
     --include='*ranks.csv.gz' \
-    --include='*.log' \
     --exclude='*' \
     --prune-empty-dirs \
-    data ${DATA_DIR}/runs/
+    ${DATA_DIR}/runs/data data
