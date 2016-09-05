@@ -20,7 +20,7 @@ def calculate_mrr(p):
     vals = list()
     for item in p:
         if item:
-            vals.append(1.0/item)
+            vals.append(1.0/float(item))
         else:
             vals.append(0.0)
 
