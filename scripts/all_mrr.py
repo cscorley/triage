@@ -2,12 +2,21 @@
 from __future__ import print_function, division
 
 import csv
+import src
 import src.main
 import src.utils
 import logging
 import sys
 import scipy.stats
 import os.path
+
+def fake(*args, **kwargs):
+    print('Fake called with', str(args), str(kwargs))
+    sys.exit(1)
+
+# fake out the create_model so we don't accidentally attempt to
+# create data
+src.common.create_model = fake
 
 def ap(project, t):
     goldsets = src.main.create_goldsets(project)
@@ -93,6 +102,7 @@ kwargs = dict(
     model='lda',
     level='file',
     force=False,
+    random_seed_value=1,
 )
 
 changeset_config = {
@@ -114,11 +124,14 @@ model_config = {
     'algorithm': 'batch', # special
 }
 
-kwargs.update({'changeset_config': changeset_config})
-kwargs.update({'changeset_config_string': '-'.join([unicode(v) for k, v in sorted(changeset_config.items())])})
+model_config, model_config_string = src.main.get_default_model_config(kwargs)
+changeset_config, changeset_config_string = src.main.get_default_changeset_config()
 
-kwargs.update({'model_config': model_config})
-kwargs.update({'model_config_string': '-'.join([unicode(v) for k, v in sorted(model_config.items())])})
+kwargs.update({'changeset_config': changeset_config,
+                'changeset_config_string': changeset_config_string})
+
+kwargs.update({'model_config': model_config,
+                'model_config_string': model_config_string})
 
 for kind, title in [('triage', 'Deverloper Identification'),
                         ('feature_location', 'Feature Location')]:
