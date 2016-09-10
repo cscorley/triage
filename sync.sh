@@ -36,4 +36,4 @@ rsync -avz --include='*/' \
     --include='*ranks.csv.gz' \
     --exclude='*' \
     --prune-empty-dirs \
-    ${DATA_DIR}/runs/data data
+    ${DATA_DIR}/runs/data .
