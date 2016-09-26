@@ -416,7 +416,8 @@ def run_temporal_helper_full_1(project, repos, corpus, create_other_corpus, quer
 
     return ranks
 
-def merge_first_rels(a, b, ignore=False):
+
+def merge_first_rels(a, b, ignore=False, exclude=True):
     first_rels = dict()
 
     for num, query_id, doc_meta in a:
@@ -437,13 +438,18 @@ def merge_first_rels(a, b, ignore=False):
         if qid in first_rels:
             first_rels[qid].append(num)
 
+    removals = list()
     for key, v in first_rels.items():
         if len(v) == 1:
             v.append(0)
 
-    x = [v[0] for v in first_rels.values()]
-    y = [v[1] for v in first_rels.values()]
+        if exclude and (v[0] == 0 or v[1] == 0):
+            removals.append(key)
+
+    x = [v[0] for k, v in first_rels.items() if k not in removals]
+    y = [v[1] for k, v in first_rels.items() if k not in removals]
     return x, y
+
 
 def get_frms(ranks, goldsets):
     logger.info('Getting FRMS for %d ranks', len(ranks))
