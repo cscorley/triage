@@ -30,7 +30,7 @@ def ap(project, t):
     return new
 
 
-def print_em(desc, a, b, ignore=False, file=None):
+def print_em(desc, a, b, ignore=True, file=None):
     acc = 6
     x, y = src.common.merge_first_rels(b, a, ignore=ignore)
     T, p = scipy.stats.wilcoxon(x, y, correction=True)
@@ -158,7 +158,7 @@ for kind, title in [('triage', 'Deverloper Identification'),
             alldict['changeset'].extend([(x, project.name + y, z) for x, y, z in results['changeset']])
 
         print('\\midrule', file=f)
-        print_em("All", alldict['release'], alldict['changeset'], ignore=False, file=f)
+        print_em("All", alldict['release'], alldict['changeset'], file=f)
         print(INNER_FOOTER % (kwargs['experiment'], 'rq1'), file=f)
 
         print(FOOTER, file=f)
@@ -183,7 +183,7 @@ for kind, title in [('triage', 'Deverloper Identification'),
             alldict['changeset'].extend([(x, project.name + y, z) for x, y, z in results['changeset']])
 
         print('\\midrule', file=f)
-        print_em("All", alldict['changeset'], alldict['temporal'], ignore=False, file=f)
+        print_em("All", alldict['changeset'], alldict['temporal'], file=f)
         print(INNER_FOOTER % (kwargs['experiment'], 'rq2'), file=f)
 
         print(FOOTER, file=f)
