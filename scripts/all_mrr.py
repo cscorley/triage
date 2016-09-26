@@ -53,6 +53,8 @@ def print_em(desc, a, b, ignore=False, file=None):
 
     r = "$%.4f$" % r
 
+    assert len(x) == len(y),  "Got different lengths in print_em! Results will be unfair"
+
     changeset = round(src.utils.calculate_mrr(x), acc)
     snapshot = round(src.utils.calculate_mrr(y), acc)
 
@@ -77,6 +79,7 @@ def print_em(desc, a, b, ignore=False, file=None):
 
 
     l = [desc,
+         len(x),
          snapshot, changeset,
          spread,
          p,
@@ -88,10 +91,10 @@ def print_em(desc, a, b, ignore=False, file=None):
 HEADER="""\\begin{table}[t]
 \\centering"""
 INNER_HEADER="""\\caption{%s: MRR, Wilcoxon $p$-values, and effect size}
-\\begin{tabular}{l|ccr|ll}
+\\begin{tabular}{l|r|ccr|ll}
 \\toprule
-Subject & & MRR & & Wilcoxon & Effect \\\\
-System  &  %s & %s & Spread & $p$-value & size \\\\
+Subject & Successful &    & MRR &        & Wilcoxon  & Effect \\\\
+System  & Queries    & %s & %s  & Spread & $p$-value & size \\\\
 \\midrule"""
 INNER_FOOTER= "\\bottomrule\n\\end{tabular}\n\\label{table:%s_%s}"
 FOOTER="\\end{table}"
@@ -167,7 +170,7 @@ for kind, title in [('triage', 'Deverloper Identification'),
     with open(os.path.expanduser('~/git/dissertation/tables/%s_rq2.tex' % kind), 'w') as f:
         print(HEADER, file=f)
         projects = src.common.load_projects(kwargs)
-        print(INNER_HEADER % (title, 'Batch', 'Historical Simulation'), file=f)
+        print(INNER_HEADER % (title, 'Batch', 'Historical Sim.'), file=f)
         for project in sorted(projects, key=lambda x: x.name):
             if project.name in ex:
                 continue
