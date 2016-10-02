@@ -153,7 +153,7 @@ for kind, title in [('triage', 'Developer Identification'),
             desc = ' '.join([project.printable_name, project.version])
 
             results = src.main.run_experiments(project)
-            print_em(project.printable_name.capitalize(), results['release'], results['changeset'], file=f)
+            print_em(project.printable_name, results['release'], results['changeset'], file=f)
             alldict['release'].extend([(x, project.name + y, z) for x, y, z in results['release']])
             alldict['changeset'].extend([(x, project.name + y, z) for x, y, z in results['changeset']])
 
@@ -177,8 +177,7 @@ for kind, title in [('triage', 'Developer Identification'),
             desc = ' '.join([project.printable_name, project.version])
 
             results = src.main.run_experiments(project)
-            print_em(project.printable_name.capitalize().replace("keeper", "Keeper").replace("Openjpa", "OpenJPA"),
-                     results['changeset'], results['temporal'], file=f)
+            print_em(project.printable_name, results['changeset'], results['temporal'], file=f)
             alldict['temporal'].extend([(x, project.name + y, z) for x, y, z in results['temporal']])
             alldict['changeset'].extend([(x, project.name + y, z) for x, y, z in results['changeset']])
 
