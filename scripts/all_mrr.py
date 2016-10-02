@@ -136,7 +136,7 @@ kwargs.update({'changeset_config': changeset_config,
 kwargs.update({'model_config': model_config,
                 'model_config_string': model_config_string})
 
-for kind, title in [('triage', 'Deverloper Identification'),
+for kind, title in [('triage', 'Developer Identification'),
                         ('feature_location', 'Feature Location')]:
     kwargs.update({'experiment': kind,
                    'source': ['release', 'changeset'],
