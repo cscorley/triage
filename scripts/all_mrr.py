@@ -18,6 +18,8 @@ def fake(*args, **kwargs):
 # create data
 src.common.create_model = fake
 
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.DEBUG)
+
 def ap(project, t):
     goldsets = src.main.create_goldsets(project)
     ranks = src.main.read_ranks(project, t)
@@ -33,11 +35,19 @@ def ap(project, t):
 def print_em(desc, a, b, ignore=True, file=None):
     acc = 6
     x, y = src.common.merge_first_rels(b, a, ignore=ignore)
+    print("a %s: Got %d from %d ranks (%f)" % (desc, len(y), len(a),
+                                               float(len(y)) / float(len(a))))
+
+    print("b %s: Got %d from %d ranks (%f)" % (desc, len(x), len(b),
+                                               float(len(x)) / float(len(b))))
+
     T, p = scipy.stats.wilcoxon(x, y, correction=True)
 
     nonzeros = sum(1 for a, b in zip(x, y) if (a - b) != 0)
     S = sum(range(1, nonzeros + 1))
 
+    #assert any([item == 0 for item in x]), "x has 0"
+    #assert any([item == 0 for item in y]), "y has 0"
 
     assert S >= T, "%f %f" % (S, T)
 
@@ -137,7 +147,7 @@ kwargs.update({'model_config': model_config,
                 'model_config_string': model_config_string})
 
 for kind, title in [('triage', 'Developer Identification'),
-                        ('feature_location', 'Feature Location')]:
+                    ('feature_location', 'Feature Location')]:
     kwargs.update({'experiment': kind,
                    'source': ['release', 'changeset'],
                    'level': 'file'})
@@ -166,6 +176,7 @@ for kind, title in [('triage', 'Developer Identification'),
     kwargs.update({'experiment': kind,
                    'source': ['temporal', 'changeset'],
                    'level': 'file'})
+
     alldict = dict(temporal=list(), changeset=list())
     with open(os.path.expanduser('~/git/dissertation/tables/%s_rq2.tex' % kind), 'w') as f:
         print(HEADER, file=f)

@@ -18,10 +18,11 @@ SQRT2 = numpy.sqrt(2)
 
 def calculate_mrr(p):
     vals = list()
-    for item in p:
+    for idx, item in enumerate(p):
         if item:
             vals.append(1.0/float(item))
         else:
+            logger.info('penalty added for index %d', idx)
             vals.append(0.0)
 
     return numpy.mean(vals)

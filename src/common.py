@@ -417,7 +417,8 @@ def run_temporal_helper_full_1(project, repos, corpus, create_other_corpus, quer
     return ranks
 
 
-def merge_first_rels(a, b, ignore=False, exclude=True):
+def merge_first_rels(a, b, ignore=False, penalty=None):
+    logger.info('merging %d rels with %d rels, ignore=%s, penalty=%s', len(a), len(b), str(ignore), str(penalty))
     first_rels = dict()
 
     for num, query_id, doc_meta in a:
@@ -432,8 +433,8 @@ def merge_first_rels(a, b, ignore=False, exclude=True):
         #qid = int(query_id)
         qid = query_id
         if qid not in first_rels and not ignore:
-            logger.info('qid not found: %s', qid)
-            first_rels[qid] = [0]
+            logger.info('added a penalty: %s', qid)
+            first_rels[qid] = [penalty]
 
         if qid in first_rels:
             first_rels[qid].append(num)
@@ -441,13 +442,17 @@ def merge_first_rels(a, b, ignore=False, exclude=True):
     removals = list()
     for key, v in first_rels.items():
         if len(v) == 1:
-            v.append(0)
+            logger.info('added b penalty: %s', key)
+            v.append(penalty)
 
-        if exclude and (v[0] == 0 or v[1] == 0):
+        if ignore and (v[0] == penalty or v[1] == penalty):
+            logger.info('removal added: %s', key)
             removals.append(key)
 
     x = [v[0] for k, v in first_rels.items() if k not in removals]
     y = [v[1] for k, v in first_rels.items() if k not in removals]
+    #assert any([i == 0 for i in x])
+    #assert any([i == 0 for i in y])
     return x, y
 
 
@@ -457,12 +462,18 @@ def get_frms(ranks, goldsets):
 
     for r_id, rank in ranks.items():
         if r_id not in goldsets:
+            logger.info('Skipping %s, not in goldset', str(r_id))
             continue
 
+        added = False
         for idx, dist, name in rank:
             if name in goldsets[r_id]:
+                added = True
                 frms.append((idx, r_id, name))
                 break # take only the first one
+
+        if not added:
+            logger.info('Found no FRM for %s goldset \n\t %s', str(r_id), str(goldsets[r_id]))
 
     logger.info('Returning %d FRMS', len(frms))
     return frms
