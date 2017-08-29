@@ -1,4 +1,4 @@
-all: test 
+all: test
 
 web: always_make
 	mkdir -p web
@@ -48,7 +48,9 @@ clean-results:
 
 install: requirements
 	pip install --editable .
+	pip install --editable ../gensim-mod
 
 requirements:
-	pip install numpy
-	pip install -r requirements.txt
+	pip install numpy==1.11.0
+	pip install scipy==0.15.1
+	pip install -r requirements-freeze.txt
