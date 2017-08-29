@@ -1,13 +1,15 @@
 #!/bin/bash
 
 
+number_of_runs=1
 runs="${HOME}/thesis-data/runs"
 logs="${runs}/logs"
 mkdir -p ${logs}
 
 function run {
-    for i in $(seq 1 50); do
-        experiments=(feature_location triage)
+    for i in $(seq 1 ${number_of_runs}); do
+        #experiments=(feature_location triage)
+        experiments=(feature_location)
         for experiment in ${experiments[@]}; do
             log_dest="${logs}/${i}-${1}-run-${experiment}.log"
             echo "running ${experiment} ${@} ${i}"
@@ -20,6 +22,7 @@ function run {
                 --experiment ${experiment} \
                 --source release \
                 --source changeset \
+                --level file \
                 --name ${1} \
                 --random-seed-value ${i} &>> ${log_dest}
         done
