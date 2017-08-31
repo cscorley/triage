@@ -905,7 +905,7 @@ def create_release_corpus(project, repos, changesets=None, ref=None):
             return create_corpus(project, repos, SC, forced_ref=ref)
 
 def append_perplexity(project, perplexity, kind):
-    path = os.path.join(project.data_path, kind + ".csv")
+    path = os.path.join(project.data_path, kind + '-' + project.level + ".csv")
     logger.info("writing perplexity: %s", ",".join([unicode(k) for k, v in sorted(project.model_config.items())] + ["random_seed_value", "perplexity"] + [unicode(k) for k, v in sorted(project.changeset_config.items())]))
 
     if not os.path.exists(path):

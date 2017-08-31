@@ -48,7 +48,7 @@ clean-results:
 
 install: requirements
 	pip install --editable .
-	pip install --editable ../gensim-mod
+	cd ../gensim-mod && git checkout eta_auto && pip install --editable .
 
 requirements:
 	pip install numpy==1.11.0
