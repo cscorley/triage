@@ -1,0 +1,2 @@
+algorithm,alpha,decay,eta,iterations,max_bound_iterations,num_topics,offset,passes,random_seed_value,perplexity,include_additions,include_context,include_message,include_removals
+batch,0.002,0.5,0.002,1000,1000,500,1.0,1,1,60.5312695124,True,True,False,True
