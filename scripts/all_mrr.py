@@ -100,7 +100,7 @@ def print_em(desc, a, b, ignore=True, file=None):
 
 HEADER="""\\begin{table}[t]
 \\centering"""
-INNER_HEADER="""\\caption{%s: MRR, Wilcoxon $p$-values, and effect size}
+INNER_HEADER="""\\caption{%s (%s): MRR, Wilcoxon $p$-values, and effect size}
 \\begin{tabular}{l|r|ccr|ll}
 \\toprule
 Subject & Successful &    & MRR &        & Wilcoxon  & Effect \\\\
@@ -146,6 +146,11 @@ kwargs.update({'changeset_config': changeset_config,
 kwargs.update({'model_config': model_config,
                 'model_config_string': model_config_string})
 
+rqs = {
+        'triage': {1: '\\done', 2: '\\dtwo' },
+        'feature_location': {1: '\\fone', 2: '\\ftwo' }
+}
+
 for kind, title in [('triage', 'Developer Identification'),
                     ('feature_location', 'Feature Location')]:
     kwargs.update({'experiment': kind,
@@ -156,7 +161,7 @@ for kind, title in [('triage', 'Developer Identification'),
     with open(os.path.expanduser('~/git/dissertation/tables/%s_rq1.tex' % kind), 'w') as f:
         print(HEADER, file=f)
         projects = src.common.load_projects(kwargs)
-        print(INNER_HEADER % (title, 'Snapshot', 'Changesets'), file=f)
+        print(INNER_HEADER % (title, rqs[kind][1], 'Snapshot', 'Changesets'), file=f)
         for project in sorted(projects, key=lambda x: x.name):
             if project.name in ex:
                 continue
@@ -181,7 +186,7 @@ for kind, title in [('triage', 'Developer Identification'),
     with open(os.path.expanduser('~/git/dissertation/tables/%s_rq2.tex' % kind), 'w') as f:
         print(HEADER, file=f)
         projects = src.common.load_projects(kwargs)
-        print(INNER_HEADER % (title, 'Batch', 'Historical Sim.'), file=f)
+        print(INNER_HEADER % (title, rqs[kind][2],'Batch', 'Historical Sim.'), file=f)
         for project in sorted(projects, key=lambda x: x.name):
             if project.name in ex:
                 continue
