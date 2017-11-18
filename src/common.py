@@ -4,8 +4,6 @@
 from __future__ import print_function
 
 import logging
-logger = logging.getLogger('common')
-
 import csv
 import os
 import os.path
@@ -25,6 +23,8 @@ from corpora import (ChangesetCorpus, SnapshotCorpus, ReleaseCorpus,
                      CorpusCombiner, GeneralCorpus)
 from errors import TaserError
 from ownership import build_ownership
+
+LOG = logging.getLogger('common')
 
 def check_ranks(project, kind, experiment):
     if project.force:
@@ -47,10 +47,10 @@ def run_basic(project, corpus, other_corpus, queries, goldsets, eval_name, rank_
     This function runs the experiment in one-shot. It does not evaluate the
     changesets over time.
     """
-    logger.info("Running basic evaluation on the %s", eval_name)
+    LOG.info("Running basic evaluation on the %s", eval_name)
 
     train_perplexity = None
-    infer_perpleixty = None
+    other_perplexity = None
 
     if project.model == "lda":
         model, _ = create_model(project, corpus, corpus.id2word, LdaModel, eval_name)
@@ -78,15 +78,15 @@ def get_perplexity(model, corpus):
 
     return perplexity
 
-def collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus):
-    logger.info("Collecting corpus metadata info")
+def collect_info(project, queries, goldsets, changeset_corpus, release_corpus):
+    LOG.info("Collecting corpus metadata info")
     changeset_corpus.metadata = True
     release_corpus.metadata = True
     queries.metadata = True
     ids = load_ids(project)
     try:
-        issue2git, git2issue = load_issue2git(project, ids)
-    except:
+        _, git2issue = load_issue2git(project, ids)
+    except Exception:
         return
 
     path = os.path.join(project.full_path, "general-info.csv")
@@ -97,7 +97,7 @@ def collect_info(project, repos, queries, goldsets, changeset_corpus, release_co
             row = list()
 
             for i, docmeta in enumerate(changeset_corpus):
-                doc, meta = docmeta
+                _, meta = docmeta
                 if meta[0] in git2issue:
                     row.append(i)
                     break
@@ -125,7 +125,7 @@ def collect_info(project, repos, queries, goldsets, changeset_corpus, release_co
     queries.metadata = False
 
 def collect_helper(project, corpus, name):
-    logger.info("Helper corpus metadata info of " + name)
+    LOG.info("Helper corpus metadata info of " + name)
     path = os.path.join(project.full_path, '-'.join([name, 'info.csv']))
 
     if os.path.exists(path):
@@ -144,7 +144,7 @@ def collect_helper(project, corpus, name):
 
 def write_ranks(project, prefix, ranks):
     path = os.path.join(project.full_path, '-'.join([prefix, project.level, 'ranks.csv.gz']))
-    logger.info("Attempting to write %d ranks to: %s", len(ranks), path)
+    LOG.info("Attempting to write %d ranks to: %s", len(ranks), path)
     with smart_open(path, 'w') as f:
         writer = csv.writer(f)
         writer.writerow(['id', 'rank', 'distance', 'item'])
@@ -155,7 +155,7 @@ def write_ranks(project, prefix, ranks):
 
 def read_ranks(project, prefix):
     path = os.path.join(project.full_path, '-'.join([prefix, project.level, 'ranks.csv.gz']))
-    logger.info("Attempting to read ranks from: %s", path)
+    LOG.info("Attempting to read ranks from: %s", path)
     ranks = dict()
     with smart_open(path) as f:
         reader = csv.reader(f)
@@ -166,19 +166,19 @@ def read_ranks(project, prefix):
 
             ranks[g_id].append((int(idx), float(dist), to_unicode(d_name)))
 
-    logger.info("Read %d ranks", len(ranks))
+    LOG.info("Read %d ranks", len(ranks))
 
     return ranks
 
 
 def run_temporal(project, repos, corpus, create_other_corpus, queries, goldsets, rank_name):
-    logger.info("Running temporal evaluation")
+    LOG.info("Running temporal evaluation")
 
     force = project.force
     try:
         ranks = read_ranks(project, rank_name)
 
-        logger.info("Sucessfully read previously written Temporal ranks")
+        LOG.info("Sucessfully read previously written Temporal ranks")
     except IOError:
         force = True
 
@@ -199,7 +199,7 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
     ids = load_ids(project)
     issue2git, git2issue = load_issue2git(project, ids, filter_ids=True)
 
-    logger.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
+    LOG.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
 
     if project.model == "lda":
         model, model_fname = create_model(project, None, corpus.id2word, LdaModel, 'temporal', force=True)
@@ -213,23 +213,26 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
     docs = list()
     corpus.metadata = True
     prev = 0
+    prev_sha = None
 
-    logger.info("Partitioning corpus")
+    LOG.info("Partitioning corpus")
 
     # let's partition the corpus first
     for idx, docmeta in enumerate(corpus):
-        doc, meta = docmeta
+        _, meta = docmeta
         sha, _ = meta
-        if sha in git2issue:
-            indices.append((prev, idx+1, sha))
+        if sha in git2issue and prev_sha is not None:
+            indices.append((prev, idx, prev_sha))
             prev = idx
 
-    logger.info('Created %d partitions of the corpus', len(indices))
+        prev_sha = sha
+
+    LOG.info('Created %d partitions of the corpus', len(indices))
     corpus.metadata = False
 
 
     for counter, index  in enumerate(indices):
-        logger.info('At %d of %d partitions', counter, len(indices))
+        LOG.info('At %d of %d partitions', counter, len(indices))
         start, end, sha = index
 
         sha_model_fname = model_fname % sha
@@ -252,7 +255,7 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
 
 
         for qid in set(git2issue[sha]):
-            logger.info('Getting ranks for query id %s', qid)
+            LOG.info('Getting ranks for query id %s', qid)
             try:
                 other_corpus = create_other_corpus(project, repos, changesets=corpus, ref=sha)
             except TaserError:
@@ -268,7 +271,7 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
                 rank = subranks[qid]
                 ranks[qid].extend(rank)
             else:
-                logger.info('Couldnt find qid %s', qid)
+                LOG.info('Couldnt find qid %s', qid)
 
     return ranks
 
@@ -281,7 +284,7 @@ def run_temporal_helper_chunks(project, repos, corpus, create_other_corpus, quer
     ids = load_ids(project)
     issue2git, git2issue = load_issue2git(project, ids, filter_ids=True)
 
-    logger.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
+    LOG.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
 
     if project.model == "lda":
         model, model_fname = create_model(project, None, corpus.id2word, LdaModel, 'temporal', force=True)
@@ -295,23 +298,26 @@ def run_temporal_helper_chunks(project, repos, corpus, create_other_corpus, quer
     docs = list()
     corpus.metadata = True
     prev = 0
+    prev_sha = None
 
-    logger.info("Partitioning corpus")
+    LOG.info("Partitioning corpus")
 
     # let's partition the corpus first
     for idx, docmeta in enumerate(corpus):
-        doc, meta = docmeta
+        _, meta = docmeta
         sha, _ = meta
-        if sha in git2issue:
-            indices.append((prev, idx+1, sha))
+        if sha in git2issue and prev_sha is not None:
+            indices.append((prev, idx, prev_sha))
             prev = idx
 
-    logger.info('Created %d partitions of the corpus', len(indices))
+        prev_sha = sha
+
+    LOG.info('Created %d partitions of the corpus', len(indices))
     corpus.metadata = False
 
 
     for counter, index  in enumerate(indices):
-        logger.info('At %d of %d partitions', counter, len(indices))
+        LOG.info('At %d of %d partitions', counter, len(indices))
         start, end, sha = index
 
         sha_model_fname = model_fname % sha
@@ -331,7 +337,7 @@ def run_temporal_helper_chunks(project, repos, corpus, create_other_corpus, quer
 
 
         for qid in set(git2issue[sha]):
-            logger.info('Getting ranks for query id %s', qid)
+            LOG.info('Getting ranks for query id %s', qid)
             try:
                 other_corpus = create_other_corpus(project, repos, changesets=corpus, ref=sha)
             except TaserError:
@@ -347,7 +353,7 @@ def run_temporal_helper_chunks(project, repos, corpus, create_other_corpus, quer
                 rank = subranks[qid]
                 ranks[qid].extend(rank)
             else:
-                logger.info('Couldnt find qid %s', qid)
+                LOG.info('Couldnt find qid %s', qid)
 
     return ranks
 
@@ -360,7 +366,7 @@ def run_temporal_helper_full_1(project, repos, corpus, create_other_corpus, quer
     ids = load_ids(project)
     issue2git, git2issue = load_issue2git(project, ids, filter_ids=True)
 
-    logger.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
+    LOG.info("Stopping at %d commits for %d issues", len(git2issue), len(issue2git))
 
     if project.model == "lda":
         model, model_fname = create_model(project, None, corpus.id2word, LdaModel, 'temporal', force=True)
@@ -372,7 +378,7 @@ def run_temporal_helper_full_1(project, repos, corpus, create_other_corpus, quer
     ranks = dict()
     corpus.metadata = True
 
-    for idx, docmeta in enumerate(corpus):
+    for _, docmeta in enumerate(corpus):
         doc, meta = docmeta
         sha, _ = meta
 
@@ -388,7 +394,7 @@ def run_temporal_helper_full_1(project, repos, corpus, create_other_corpus, quer
             if project.model == "lda":
                 model.update([doc])
             if project.model == "lsi":
-                model.add_documents(docs)
+                model.add_documents([doc])
 
             if project.save_models:
                 model.save(sha_model_fname) # thanks, gensim!
@@ -396,7 +402,7 @@ def run_temporal_helper_full_1(project, repos, corpus, create_other_corpus, quer
 
         if sha in git2issue:
             for qid in set(git2issue[sha]):
-                logger.info('Getting ranks for query id %s', qid)
+                LOG.info('Getting ranks for query id %s', qid)
                 try:
                     other_corpus = create_other_corpus(project, repos, changesets=corpus, ref=sha)
                 except TaserError:
@@ -412,28 +418,28 @@ def run_temporal_helper_full_1(project, repos, corpus, create_other_corpus, quer
                     rank = subranks[qid]
                     ranks[qid].extend(rank)
                 else:
-                    logger.info('Couldnt find qid %s', qid)
+                    LOG.info('Couldnt find qid %s', qid)
 
     return ranks
 
 
 def merge_first_rels(a, b, ignore=False, penalty=None):
-    logger.info('merging %d rels with %d rels, ignore=%s, penalty=%s', len(a), len(b), str(ignore), str(penalty))
+    LOG.info('merging %d rels with %d rels, ignore=%s, penalty=%s', len(a), len(b), str(ignore), str(penalty))
     first_rels = dict()
 
-    for num, query_id, doc_meta in a:
+    for num, query_id, _ in a:
         #qid = int(query_id)
         qid = query_id
         if qid not in first_rels:
             first_rels[qid] = [num]
         else:
-            logger.info('duplicate qid found: %s', query_id)
+            LOG.info('duplicate qid found: %s', query_id)
 
     for num, query_id, doc_meta in b:
         #qid = int(query_id)
         qid = query_id
         if qid not in first_rels and not ignore:
-            logger.info('added a penalty: %s', qid)
+            LOG.info('added a penalty: %s', qid)
             first_rels[qid] = [penalty]
 
         if qid in first_rels:
@@ -442,11 +448,11 @@ def merge_first_rels(a, b, ignore=False, penalty=None):
     removals = list()
     for key, v in first_rels.items():
         if len(v) == 1:
-            logger.info('added b penalty: %s', key)
+            LOG.info('added b penalty: %s', key)
             v.append(penalty)
 
         if ignore and (v[0] == penalty or v[1] == penalty):
-            logger.info('removal added: %s', key)
+            LOG.info('removal added: %s', key)
             removals.append(key)
 
     x = [v[0] for k, v in first_rels.items() if k not in removals]
@@ -457,25 +463,25 @@ def merge_first_rels(a, b, ignore=False, penalty=None):
 
 
 def get_frms(ranks, goldsets):
-    logger.info('Getting FRMS for %d ranks', len(ranks))
+    LOG.info('Getting FRMS for %d ranks', len(ranks))
     frms = list()
 
     for r_id, rank in ranks.items():
         if r_id not in goldsets:
-            logger.info('Skipping %s, not in goldset', str(r_id))
+            LOG.info('Skipping %s, not in goldset', str(r_id))
             continue
 
         added = False
-        for idx, dist, name in rank:
+        for idx, _, name in rank:
             if name in goldsets[r_id]:
                 added = True
                 frms.append((idx, r_id, name))
                 break # take only the first one
 
         if not added:
-            logger.info('Found no FRM for %s goldset \n\t %s', str(r_id), str(goldsets[r_id]))
+            LOG.info('Found no FRM for %s goldset \n\t %s', str(r_id), str(goldsets[r_id]))
 
-    logger.info('Returning %d FRMS', len(frms))
+    LOG.info('Returning %d FRMS', len(frms))
     return frms
 
 def get_rels(ranks, goldset=None):
@@ -504,7 +510,7 @@ def get_rels(ranks, goldset=None):
 
 
 def get_rank(query_topic, doc_topic, goldsets=None, distance_measure=utils.hellinger_distance):
-    logger.info('Getting ranks between %d query topics and %d doc topics',
+    LOG.info('Getting ranks between %d query topics and %d doc topics',
                 len(query_topic), len(doc_topic))
     ranks = dict()
     for q_meta, query in query_topic:
@@ -522,12 +528,12 @@ def get_rank(query_topic, doc_topic, goldsets=None, distance_measure=utils.helli
 
         ranks[qid] = get_rels(q_dist, goldset)
 
-    logger.info('Returning %d ranks', len(ranks))
+    LOG.info('Returning %d ranks', len(ranks))
     return ranks
 
 
 def get_topics(model, corpus, by_ids=None, full=True):
-    logger.info('Getting doc topic for corpus with length %d, by ids %s', len(corpus), str(by_ids))
+    LOG.info('Getting doc topic for corpus with length %d, by ids %s', len(corpus), str(by_ids))
     doc_topic = list()
     corpus.metadata = True
     old_id2word = corpus.id2word
@@ -536,10 +542,10 @@ def get_topics(model, corpus, by_ids=None, full=True):
     if by_ids:
         by_ids = set(by_ids)
         by_ids.update([str(x) for x in by_ids])
-    logger.debug("BYIDS:%s", by_ids)
+    LOG.debug("BYIDS:%s", by_ids)
 
     for doc, metadata in corpus:
-        logger.debug("METADATA:%s", str(metadata))
+        LOG.debug("METADATA:%s", str(metadata))
         if by_ids is None or metadata[0] in by_ids:
             # get a vector where low topic values are zeroed out.
             topics = model[doc]
@@ -554,7 +560,7 @@ def get_topics(model, corpus, by_ids=None, full=True):
 
     corpus.metadata = False
     corpus.id2word = old_id2word
-    logger.info('Returning doc topic of length %d', len(doc_topic))
+    LOG.info('Returning doc topic of length %d', len(doc_topic))
 
     return doc_topic
 
@@ -570,7 +576,7 @@ def load_ids(project):
 
 
 def load_issue2git(project, ids, filter_ids=False):
-    logger.info("Loading issue2git.csv")
+    LOG.info("Loading issue2git.csv")
     dest_fn = os.path.join(project.data_path, 'issue2git.csv')
     if os.path.exists(dest_fn):
         write_out = False
@@ -602,7 +608,7 @@ def load_issue2git(project, ids, filter_ids=False):
             reader = csv.reader(f)
             for svn,git in reader:
                 if svn in s2g and s2g[svn] != git:
-                    logger.info('Different gits sha for SVN revision number %s', svn)
+                    LOG.info('Different gits sha for SVN revision number %s', svn)
                 else:
                     s2g[svn] = git
 
@@ -615,15 +621,15 @@ def load_issue2git(project, ids, filter_ids=False):
                         i2g[issue] = list()
                     i2g[issue].append(s2g[svn])
                 else:
-                    logger.info('Could not find git sha for SVN revision number %s', svn)
+                    LOG.info('Could not find git sha for SVN revision number %s', svn)
 
-    logger.info("Loaded issue2git with %d entries", len(i2g))
+    LOG.info("Loaded issue2git with %d entries", len(i2g))
 
     # Make sure we have a commit for all issues
     keys = set(i2g.keys())
     ignore = set(ids) - keys
     if len(ignore):
-        logger.info("Ignoring evaluation for the following issues:\n\t%s",
+        LOG.info("Ignoring evaluation for the following issues:\n\t%s",
                     '\n\t'.join(ignore))
 
     # clean up by ids if needed:
@@ -647,7 +653,7 @@ def load_issue2git(project, ids, filter_ids=False):
             for issue, gits in i2g.items():
                 w.writerow([issue] + gits)
 
-    logger.info("Returning issue2git with len %d and git2issue with len %d", len(i2g), len(g2i))
+    LOG.info("Returning issue2git with len %d and git2issue with len %d", len(i2g), len(g2i))
 
     return i2g, g2i
 
@@ -906,7 +912,7 @@ def create_release_corpus(project, repos, changesets=None, ref=None):
 
 def append_perplexity(project, perplexity, kind):
     path = os.path.join(project.data_path, kind + '-' + project.level + ".csv")
-    logger.info("writing perplexity: %s", ",".join([unicode(k) for k, v in sorted(project.model_config.items())] + ["random_seed_value", "perplexity"] + [unicode(k) for k, v in sorted(project.changeset_config.items())]))
+    LOG.info("writing perplexity: %s", ",".join([unicode(k) for k, v in sorted(project.model_config.items())] + ["random_seed_value", "perplexity"] + [unicode(k) for k, v in sorted(project.changeset_config.items())]))
 
     if not os.path.exists(path):
         with open(path, "wt") as f:

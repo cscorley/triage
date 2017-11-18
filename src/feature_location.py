@@ -42,7 +42,7 @@ def run_experiment(project):
         release_corpus = create_release_corpus(project, repos)
         changeset_corpus = create_corpus(project, repos, ChangesetCorpus, use_level=False)
 
-        collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
+        collect_info(project, queries, goldsets, changeset_corpus, release_corpus)
 
         if 'release' in project.source and results['release'] is None:
             fn = 'release-%s' % project.level

@@ -46,7 +46,7 @@ def run_experiment(project):
         developer_corpus = create_developer_corpus(project, repos, changeset_corpus)
         release_corpus = create_release_corpus(project, repos)
 
-        collect_info(project, repos, queries, goldsets, changeset_corpus, release_corpus)
+        collect_info(project, queries, goldsets, changeset_corpus, release_corpus)
 
         if 'release' in project.source and results['release'] is None:
             fn = 'release-%s' % project.level

@@ -110,3 +110,4 @@ target/
 
 *.swp
 .vscode/
+.noseids
