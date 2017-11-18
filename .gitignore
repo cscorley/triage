@@ -109,3 +109,4 @@ target/
 *.pdf
 
 *.swp
+.vscode/
