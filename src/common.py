@@ -307,14 +307,13 @@ def run_temporal_helper_chunks(project, repos, corpus, create_other_corpus, quer
         _, meta = docmeta
         sha, _ = meta
         if sha in git2issue and prev_sha is not None:
-            indices.append((prev, idx, prev_sha))
+            indices.append((prev, idx, prev_sha, sha))
             prev = idx
 
         prev_sha = sha
 
     LOG.info('Created %d partitions of the corpus', len(indices))
     corpus.metadata = False
-
 
     for counter, index  in enumerate(indices):
         LOG.info('At %d of %d partitions', counter, len(indices))
