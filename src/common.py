@@ -222,7 +222,7 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
         _, meta = docmeta
         sha, _ = meta
         if sha in git2issue and prev_sha is not None:
-            indices.append((prev, idx, prev_sha))
+            indices.append((prev, idx, prev_sha, sha))
             prev = idx
 
         prev_sha = sha
@@ -233,9 +233,9 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
 
     for counter, index  in enumerate(indices):
         LOG.info('At %d of %d partitions', counter, len(indices))
-        start, end, sha = index
+        start, end, prev_sha, sha = index
 
-        sha_model_fname = model_fname % sha
+        sha_model_fname = model_fname % prev_sha
         if os.path.exists(sha_model_fname):
             # need to be super careful that the way this one was built matches what we expect
             # e.g., didn't come from a different run with a different update pattern
@@ -257,7 +257,7 @@ def run_temporal_helper(project, repos, corpus, create_other_corpus, queries, go
         for qid in set(git2issue[sha]):
             LOG.info('Getting ranks for query id %s', qid)
             try:
-                other_corpus = create_other_corpus(project, repos, changesets=corpus, ref=sha)
+                other_corpus = create_other_corpus(project, repos, changesets=corpus, ref=prev_sha)
             except TaserError:
                 continue
 
@@ -318,9 +318,9 @@ def run_temporal_helper_chunks(project, repos, corpus, create_other_corpus, quer
 
     for counter, index  in enumerate(indices):
         LOG.info('At %d of %d partitions', counter, len(indices))
-        start, end, sha = index
+        start, end, prev_sha, sha = index
 
-        sha_model_fname = model_fname % sha
+        sha_model_fname = model_fname % prev_sha
         if os.path.exists(sha_model_fname):
             # need to be super careful that the way this one was built matches what we expect
             # e.g., didn't come from a different run with a different update pattern
@@ -339,7 +339,7 @@ def run_temporal_helper_chunks(project, repos, corpus, create_other_corpus, quer
         for qid in set(git2issue[sha]):
             LOG.info('Getting ranks for query id %s', qid)
             try:
-                other_corpus = create_other_corpus(project, repos, changesets=corpus, ref=sha)
+                other_corpus = create_other_corpus(project, repos, changesets=corpus, ref=prev_sha)
             except TaserError:
                 continue
 
