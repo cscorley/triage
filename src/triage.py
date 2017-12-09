@@ -201,9 +201,6 @@ def create_developer_corpus(project, repos, changesets, ref=None):
                     break
 
             if commit:
-                if ref and ref == commit.id:
-                    break
-
                 dev = to_unicode(commit.committer)
                 dev = dev.replace(" ", "_") # mallet cant have spaces in ids
                 if dev not in dev_words:
@@ -211,6 +208,8 @@ def create_developer_corpus(project, repos, changesets, ref=None):
 
                 dev_words[dev].extend(doc)
 
+                if ref and ref == commit.id:
+                    break
 
         changesets.metadata = False
         dev_words = [(v, (k, 'dev')) for k, v in dev_words.items()]
