@@ -73,7 +73,7 @@ def commit_parser(f):
             line = next(f)
             while True:
                 ls = line.split()
-                if ls and ls[0] in ['M', 'D', 'A']:
+                if ls and line[0] in ['M', 'D', 'A']:
                     break
 
                 text.append(line)
