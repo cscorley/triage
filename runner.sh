@@ -2,10 +2,10 @@
 
 
 number_of_runs=1
-#experiments=(feature_location triage)
-experiments=(feature_location)
-level="method"
-runs="${HOME}/thesis-data/runs"
+experiments=(feature_location triage)
+#experiments=(feature_location)
+level="file"
+runs="${HOME}/thesis-data/new-runs"
 logs="${runs}/logs"
 mkdir -p ${logs}
 
@@ -23,12 +23,14 @@ function run {
                         --experiment ${experiment} \
                         --source release \
                         --source changeset \
+                        --source temporal \
                         --level ${level} \
                         --name ${1} \
                         --random-seed-value ${i} &>> ${log_dest}
         done
 
-        find data -name "*${level}*ranks.csv.gz" | cpio -pvdmB ${runs} >> ${log_dest}
+        #find data -name "*${level}*ranks.csv.gz" | cpio -pvdmB ${runs} >> ${log_dest}
+        find data -name "*ranks.csv.gz" | cpio -pvdmB ${runs} >> ${log_dest}
     done
 }
 
