@@ -9,6 +9,7 @@ import logging
 import sys
 import scipy.stats
 import os.path
+import numpy as np
 
 def fake(*args, **kwargs):
     print('Fake called with', str(args), str(kwargs))
@@ -30,6 +31,28 @@ def ap(project, t):
         new.append((r, c+str(i), g))
 
     return new
+
+# source: https://github.com/ttumkaya/CliffDelta/
+# https://www.slideshare.net/gaetanlion/effect-size-presentation
+def cliff(x, y):
+    lenx = len(x)
+    leny = len(y)
+
+    ## generate a matrix full of zeros
+    matrix = np.zeros((lenx,leny))
+
+    ## compare the two lists and put either 1 or -1 to the matrix (if they are equal, there is already a zero in the matrix)
+    for i in range(lenx):
+        for j in range(leny):
+            if x[i] > y[j]:
+                matrix[i,j] = 1
+            elif x[i] < y[j]:
+                matrix[i,j] = -1
+
+    ## get the average of the dominance matrix
+    delta = matrix.sum() / (lenx * leny)
+
+    return delta
 
 
 def print_em(desc, a, b, ignore=True, file=None):
@@ -63,6 +86,8 @@ def print_em(desc, a, b, ignore=True, file=None):
 
     r = "$%.4f$" % r
 
+    d = "$%.4f$" % cliff(x, y)
+
     assert len(x) == len(y),  "Got different lengths in print_em! Results will be unfair"
 
     changeset = round(src.utils.calculate_mrr(x), acc)
@@ -93,7 +118,7 @@ def print_em(desc, a, b, ignore=True, file=None):
          snapshot, changeset,
          spread,
          p,
-         r
+         d
          ]
 
     print(' & '.join(map(str, l)), '\\\\', file=file)
